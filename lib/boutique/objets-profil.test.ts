@@ -36,7 +36,9 @@ describe('normaliserObjetsProfil', () => {
       new Set(['equip-casque']),
     )
     expect(objets).toEqual([
-      { id: 'equip-casque', categorie: 'accessoire', nom: 'Casque audio', image: null, cle: 'cosmos', prixGemmes: 180, possede: true },
+      // Le casque a sa vignette dessinée (OBJETS_ILLUSTRES, 04/10/2026) ; la
+      // bannière cosmos n'est pas en vente, elle n'en a pas.
+      { id: 'equip-casque', categorie: 'accessoire', nom: 'Casque audio', image: '/images/boutique/objets/equip-casque.webp', cle: 'cosmos', prixGemmes: 180, possede: true },
       { id: 'banner-cosmos', categorie: 'banniere', nom: 'Cosmos studieux', image: null, cle: 'cosmos', prixGemmes: 200, possede: false },
     ])
   })

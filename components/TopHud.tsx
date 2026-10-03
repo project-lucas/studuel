@@ -9,6 +9,8 @@ import FlammeAnimee from '@/components/FlammeAnimee'
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import XpIcon from '@/components/ui/XpIcon'
+import FeteNiveau, { CoffresPalier } from '@/components/niveau/FeteNiveau'
+import { gemmesPalier, prochainPalier } from '@/lib/niveaux'
 import type { UniteGain } from '@/lib/gains'
 import { ecouterGains } from '@/lib/hud-gains'
 import { AMIS_MAX, libelleMultiplicateur, multiplicateurXp } from '@/lib/ligue'
@@ -65,6 +67,7 @@ export default function TopHud({
   avatar = null,
   nbAmis = null,
   xp = null,
+  paliersOuverts = [],
 }: {
   /** Solde de gemmes, ou null pour un visiteur non connecté. */
   gems: number | null
@@ -96,6 +99,8 @@ export default function TopHud({
   nbAmis?: number | null
   /** L'XP dans le niveau, pour la bulle « Encore N XP » ; null : inconnue. */
   xp?: XpHud | null
+  /** Les coffres de palier de niveau déjà ouverts (556). */
+  paliersOuverts?: number[]
 }) {
   const pathname = usePathname()
   // La bulle d'explication d'une monnaie (façon Brawl Stars). Une seule ouverte
@@ -194,6 +199,7 @@ export default function TopHud({
     <header className="pointer-events-none fixed inset-x-0 top-0 z-50 flex h-14 items-center gap-2 px-3 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none md:hidden [html.hud-replie_&]:-translate-y-full [html.hud-replie_&]:opacity-0">
       {connected ? (
         <>
+          <FeteNiveau level={level} levelTitle={levelTitle} paliersOuverts={paliersOuverts} />
           {/* Niveau : écusson de jeu flottant — disque violet ciselé (dégradé,
               reflet haut + liseré or, façon médaillon d'arène en miniature),
               libellé violet marqué, et ruban doré de progression surmonté du
@@ -317,7 +323,7 @@ export default function TopHud({
                     dark={dark}
                     pointeClassName="left-24"
                   >
-                    <BulleNiveau level={level} pct={pct} xp={xp} dark={dark} />
+                    <BulleNiveau level={level} pct={pct} xp={xp} dark={dark} paliersOuverts={paliersOuverts} />
                   </BulleHud>
                 ) : null}
               </div>
@@ -680,13 +686,42 @@ function ResourcePill({
  * gagner. Une barre de 0 % n'est pas une panne : c'est un niveau tout juste
  * atteint, et la bulle le dit en chiffres.
  */
-function BulleNiveau({ level, pct, xp, dark }: { level: number; pct: number; xp: XpHud | null; dark: boolean }) {
+function BulleNiveau({
+  level,
+  pct,
+  xp,
+  dark,
+  paliersOuverts,
+}: {
+  level: number
+  pct: number
+  xp: XpHud | null
+  dark: boolean
+  paliersOuverts: number[]
+}) {
+  const palier = prochainPalier(level)
+  const piedPalier = (
+    <>
+      <p className="mt-1.5">
+        Chaque niveau : <strong>+15 gemmes</strong>. Au niveau {palier}, un coffre de{' '}
+        <strong>{gemmesPalier(palier)} gemmes</strong>.
+      </p>
+      <div className="mt-2">
+        <CoffresPalier niveau={level} ouverts={paliersOuverts} />
+      </div>
+    </>
+  )
   if (!xp || xp.prochain === null) {
-    return <p>{xp ? 'Tu as atteint le dernier niveau.' : `${pct} % du chemin vers le niveau ${level + 1}.`}</p>
+    return (
+      <>
+        <p>{xp ? 'Tu as atteint le dernier niveau.' : `${pct} % du chemin vers le niveau ${level + 1}.`}</p>
+        {piedPalier}
+      </>
+    )
   }
   const reste = Math.max(0, xp.prochain - xp.actuel)
   const fait = Math.max(0, xp.actuel - xp.plancher)
-  const palier = Math.max(1, xp.prochain - xp.plancher)
+  const pas = Math.max(1, xp.prochain - xp.plancher)
   return (
     <>
       <p className="font-heading flex items-center gap-1 text-base font-extrabold">
@@ -697,8 +732,9 @@ function BulleNiveau({ level, pct, xp, dark }: { level: number; pct: number; xp:
       </p>
       <p>pour passer au niveau {level + 1}.</p>
       <p className="mt-1.5 tabular-nums">
-        {fait.toLocaleString('fr-FR')} / {palier.toLocaleString('fr-FR')} XP dans ce niveau
+        {fait.toLocaleString('fr-FR')} / {pas.toLocaleString('fr-FR')} XP dans ce niveau
       </p>
+      {piedPalier}
     </>
   )
 }

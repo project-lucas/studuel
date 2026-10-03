@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { createPortal } from 'react-dom'
@@ -26,6 +26,8 @@ import { DIVISION_SPAN, rankFor, type Rank } from '@/lib/rank'
 import { libelleTop, topPourcent } from '@/lib/defi/classement-arene'
 import { ordinal } from '@/lib/percentile'
 import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
+import { gameScene } from '@/lib/defi/modes-catalog'
+import s from './ClassementSheet.module.css'
 
 /**
  * LE CLASSEMENT — la plaque de l'angle droit de l'arène, sous Studuel+, et
@@ -55,6 +57,7 @@ import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 export default function ClassementSheet({
   trophees,
   classement = null,
+  ouvertAuDepart = false,
 }: {
   /**
    * Le total de trophées du profil. À défaut, la somme du plateau — ce que
@@ -63,9 +66,14 @@ export default function ClassementSheet({
   trophees?: number
   /** Mon rang parmi tous les élèves (`national_ranking`), ou null. */
   classement?: { rank: number | null; total: number } | null
+  /** Ouvert dès le montage (aperçu /dev/classement). */
+  ouvertAuDepart?: boolean
 }) {
   const { board, active } = useDuelSubject()
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(ouvertAuDepart)
+  // Le portail n'existe qu'une fois hydraté : rendu côté serveur, il ferait
+  // un écart d'hydratation (la feuille ouverte dès le montage de l'aperçu).
+  const monte = useSyncExternalStore(abonnerRien, () => true, () => false)
   useFermeAuMasquage(setOpen, false)
   const reduce = useReducedMotion()
   const panel = useRef<HTMLDivElement>(null)
@@ -122,7 +130,7 @@ export default function ClassementSheet({
         />
       </button>
 
-      {typeof document !== 'undefined'
+      {monte
         ? createPortal(
             <AnimatePresence>
               {open ? (
@@ -222,6 +230,8 @@ export default function ClassementSheet({
   )
 }
 
+const abonnerRien = () => () => {}
+
 /**
  * Le score qui MONTE de zéro à sa valeur à l'ouverture (700 ms) — coupé par
  * « moins de mouvement ». Un nombre posé d'un coup se lit ; un nombre qui
@@ -247,7 +257,11 @@ function useCompteur(cible: number, reduce: boolean): number {
   return reduce || cible <= 0 ? cible : valeur
 }
 
-/** MOI : le blason, le rang, le total, la bande parmi tous, la marche suivante. */
+/**
+ * MOI : la plaque héros (03/10/2026, façon Brawl Stars). Le blason sur ses
+ * rayons, le rang en blanc cerné, le total de trophées en grand, la bande
+ * parmi tous les élèves, et la barre d'OR épaisse qui mène au blason suivant.
+ */
 function CarteMoi({
   compte,
   rank,
@@ -263,86 +277,72 @@ function CarteMoi({
 }) {
   const affiche = useCompteur(compte, reduce)
   const suivant = rank.ceiling !== null ? rankFor(rank.ceiling) : null
+  const pct = Math.round(rank.progress * 100)
 
   return (
-    <section
-      aria-label="Mon classement"
-      className="carte p-4"
-    >
-      <div className="flex items-center gap-3">
-        <RankBadge rank={rank} size={68} className="drop-shadow-[0_3px_6px_rgba(36,48,79,0.25)]" />
+    <section aria-label="Mon classement" className={s.plaqueMoi}>
+      <span aria-hidden="true" className={s.rayons} />
+      <div className="relative flex items-center gap-3">
+        <RankBadge rank={rank} size={84} className="drop-shadow-[0_4px_8px_rgba(20,10,40,0.45)]" />
 
         <div className="min-w-0 flex-1">
-          {/* Titre de section en casse de phrase, plus de petites capitales :
-              « MON RANG » puis « Mes matières » étaient deux conventions sur le
-              même écran (audit du 23/09/2026). */}
-          <h3 className="titre-section">Mon rang</h3>
-          <p className="font-heading text-xl leading-tight font-extrabold text-foreground">
-            {rank.label}
-          </p>
+          <p className="text-[0.68rem] font-extrabold tracking-wide text-white/75 uppercase">Mon rang</p>
+          <p className={cn(s.chiffre, 'text-[1.6rem]')}>{rank.label}</p>
+          {classement?.rank ? (
+            <p className="mt-1 text-[0.7rem] font-bold text-white/80 tabular-nums">
+              {ordinal(classement.rank)} sur {classement.total} élèves
+            </p>
+          ) : null}
         </div>
 
-        <p className="flex shrink-0 flex-col items-end">
-          <span className="flex items-center gap-1.5 font-mono text-3xl leading-none font-extrabold text-foreground tabular-nums">
-            <TropheeIcone className="size-7" />
-            {formatTrophees(affiche)}
-          </span>
-          {classement?.rank ? (
-            <span className="mt-1 text-[0.66rem] font-bold text-muted-foreground tabular-nums">
-              {ordinal(classement.rank)} sur {classement.total} élèves
-            </span>
-          ) : null}
+        <p className="flex shrink-0 flex-col items-center gap-0.5">
+          <TropheeIcone className="size-10 drop-shadow-[0_3px_4px_rgba(20,10,40,0.45)]" />
+          <span className={cn(s.chiffre, 'text-3xl tabular-nums')}>{formatTrophees(affiche)}</span>
         </p>
       </div>
 
-      {/* La bande parmi TOUS les élèves — celle du compte de l'arène, en toutes
-          lettres. Sur sa propre ligne : entre le blason et le total, elle se
-          cassait en deux. */}
       {top !== null ? (
-        <p className="mt-3">
-          <span className="font-heading inline-flex items-center gap-1.5 rounded-full bg-highlight px-3 py-1 text-[0.78rem] font-extrabold text-foreground">
+        <p className="relative mt-3">
+          <span className="font-heading inline-flex items-center gap-1.5 rounded-full bg-highlight px-3 py-1 text-[0.78rem] font-extrabold text-foreground shadow-[0_2px_0_color-mix(in_oklch,var(--highlight),black_30%)]">
             {libelleTop(top)}
             <span className="font-bold opacity-80">de tous les élèves</span>
           </span>
         </p>
       ) : null}
 
-      <div className="mt-3">
+      <div className="relative mt-3">
         {suivant ? (
           <>
-            <span
-              className="block h-2 w-full overflow-hidden rounded-full bg-muted"
-              role="progressbar"
-              aria-label={`Progression vers ${suivant.label}`}
-              aria-valuemin={0}
-              aria-valuemax={100}
-              aria-valuenow={Math.round(rank.progress * 100)}
-            >
-              {/* Violet : c'est une progression de RANG. Le jaune veut dire XP
-                  partout ailleurs dans l'app — deux compteurs, deux couleurs. */}
-              <span
-                className="block h-full rounded-full bg-primary transition-[width] duration-500"
-                style={{ width: `${Math.round(rank.progress * 100)}%` }}
-              />
-            </span>
-            <p className="mt-1.5 text-xs font-medium text-muted-foreground">
-              Encore <strong className="font-bold text-foreground">{rank.toNext}</strong> pour{' '}
-              {suivant.label}
-              <span className="text-muted-foreground/70">
+            <div className="flex items-center gap-2">
+              <div
+                className={cn(s.gorge, 'flex-1')}
+                role="progressbar"
+                aria-label={`Progression vers ${suivant.label}`}
+                aria-valuemin={0}
+                aria-valuemax={100}
+                aria-valuenow={pct}
+              >
+                <span className={s.or} style={{ width: `${pct}%` }} />
+              </div>
+              <RankBadge rank={suivant} size={34} hideDivision />
+            </div>
+            <p className="mt-1.5 text-xs font-bold text-white/85">
+              Encore <strong className="text-white">{rank.toNext}</strong> pour {suivant.label}
+              <span className="text-white/60 tabular-nums">
                 {' '}
                 · {rank.inDivision}/{DIVISION_SPAN}
               </span>
             </p>
           </>
         ) : (
-          <p className="text-xs font-bold text-foreground">Rang maximal — reste Maître 👑</p>
+          <p className="text-xs font-bold text-white">Rang maximal — reste Maître 👑</p>
         )}
       </div>
     </section>
   )
 }
 
-/** UNE MATIÈRE : son blason, son compteur, sa prochaine victoire, ses jeux. */
+/** UNE MATIÈRE : son médaillon, son rang, ses trophées, sa barre, ses jeux en tuiles. */
 function CarteMatiere({
   entry,
   active,
@@ -359,29 +359,24 @@ function CarteMatiere({
   const blocked = rankedBlockedReason(entry)
   const cible = duelTarget(entry)
   const jouables = entry.games.filter((g) => g.href).length
+  const pct = Math.round(rank.progress * 100)
 
   return (
     <article
       aria-label={`${entry.subject} — ${entry.trophies} trophées, ${rank.label}`}
-      className={cn(
-        // Une seule recette de carte (tokens de globals.css, audit du 23/09/2026) ;
-        // seule la matière du duel garde son anneau violet.
-        'carte p-3.5',
-        active ? 'ring-2 ring-primary' : null,
-      )}
+      className={s.carteMatiere}
+      data-active={active || undefined}
     >
       <div className="flex items-center gap-3">
-        <span
-          className="grid size-12 shrink-0 place-items-center rounded-2xl bg-secondary"
-          aria-hidden="true"
-        >
+        <span className={s.medaillon} style={{ background: entry.pastel }} aria-hidden="true">
           {entry.vignette ? (
             <Image
               src={entry.vignette}
               alt=""
-              width={96}
-              height={96}
-              className="size-10 object-contain"
+              width={112}
+              height={112}
+              loading="eager"
+              className="size-11 object-contain"
             />
           ) : (
             <span className="text-2xl leading-none">{entry.emoji}</span>
@@ -390,7 +385,7 @@ function CarteMatiere({
 
         <div className="min-w-0 flex-1">
           <p className="flex flex-wrap items-center gap-x-2 gap-y-0.5">
-            <span className="font-heading truncate text-base leading-tight font-extrabold text-foreground">
+            <span className="font-heading truncate text-lg leading-tight font-extrabold text-foreground">
               {entry.subject}
             </span>
             {active ? (
@@ -404,23 +399,23 @@ function CarteMatiere({
               </span>
             ) : null}
           </p>
-          <p className="mt-1 flex items-center gap-1.5 text-xs font-bold text-muted-foreground">
-            <RankBadge rank={rank} size={22} hideDivision />
+          <div className="mt-0.5 flex items-center gap-1.5 text-xs font-extrabold text-muted-foreground">
+            <RankBadge rank={rank} size={26} hideDivision />
             {rank.label}
-          </p>
+          </div>
         </div>
 
         <p className="flex shrink-0 flex-col items-end gap-1">
-          <span className="flex items-center gap-1 font-mono text-lg leading-none font-extrabold text-foreground tabular-nums">
+          <span className={s.pastilleTrophees}>
             <TropheeIcone className="size-5" />
-            {entry.trophies}
+            <span className={cn(s.chiffre, 'text-base tabular-nums')}>{entry.trophies}</span>
           </span>
           {cible ? (
             <span
-              className="rounded-full bg-accent px-2 py-0.5 font-mono text-[0.7rem] font-extrabold text-accent-foreground tabular-nums"
+              className="font-heading text-[0.68rem] font-extrabold text-muted-foreground"
               aria-label={`Prochaine victoire : +${cible.nextWin}`}
             >
-              +{cible.nextWin}
+              victoire <span className="text-foreground">+{cible.nextWin}</span>
             </span>
           ) : null}
         </p>
@@ -429,32 +424,29 @@ function CarteMatiere({
       <div className="mt-2.5">
         {next ? (
           <>
-            <span
-              className="block h-1.5 w-full overflow-hidden rounded-full bg-muted"
-              role="progressbar"
-              aria-label={`Progression vers ${next.label} en ${entry.subject}`}
-              aria-valuemin={0}
-              aria-valuemax={100}
-              aria-valuenow={Math.round(rank.progress * 100)}
-            >
-              <span
-                className="block h-full rounded-full bg-primary transition-[width] duration-500"
-                style={{ width: `${Math.round(rank.progress * 100)}%` }}
-              />
-            </span>
+            <div className="flex items-center gap-2">
+              <div
+                className={cn(s.gorgeClaire, 'flex-1')}
+                role="progressbar"
+                aria-label={`Progression vers ${next.label} en ${entry.subject}`}
+                aria-valuemin={0}
+                aria-valuemax={100}
+                aria-valuenow={pct}
+              >
+                <span className={s.violet} style={{ width: `${pct}%` }} />
+              </div>
+              <RankBadge rank={next} size={24} hideDivision />
+            </div>
             <p className="mt-1 text-[11px] font-medium text-muted-foreground">
-              Encore <span className="font-bold text-foreground">{rank.toNext}</span> pour{' '}
-              {next.label}
-              <span className="text-muted-foreground/70">
+              Encore <span className="font-bold text-foreground">{rank.toNext}</span> pour {next.label}
+              <span className="text-muted-foreground/70 tabular-nums">
                 {' '}
                 · {rank.inDivision}/{SUBJECT_DIVISION_SPAN}
               </span>
             </p>
           </>
         ) : (
-          <p className="text-[11px] font-bold text-foreground">
-            Rang maximal en {entry.subject} — reste Maître 👑
-          </p>
+          <p className="text-[11px] font-bold text-foreground">Rang maximal en {entry.subject} — reste Maître 👑</p>
         )}
       </div>
 
@@ -465,26 +457,21 @@ function CarteMatiere({
         </p>
       ) : null}
 
-      {/* Les jeux de la matière : leur compteur et ce que vaut leur prochaine
-          victoire — « +10 » sur un jeu jamais touché, « +2 » sur un jeu monté :
-          c'est l'écart que l'élève doit lire d'un coup d'œil. */}
+      {/* Les jeux de la matière, en TUILES illustrées par leur scène : leur
+          compteur, et ce que vaut leur prochaine victoire — « +10 » sur un jeu
+          jamais touché, « +2 » sur un jeu monté. */}
       <details className="group mt-2.5" open={active}>
         <summary className="flex cursor-pointer list-none items-center justify-between rounded-xl bg-secondary px-3 py-1.5 text-xs font-extrabold text-secondary-foreground">
           <span>
             {entry.games.length} jeu{entry.games.length > 1 ? 'x' : ''}
-            {jouables < entry.games.length
-              ? ` · ${jouables} jouable${jouables > 1 ? 's' : ''}`
-              : ''}
+            {jouables < entry.games.length ? ` · ${jouables} jouable${jouables > 1 ? 's' : ''}` : ''}
           </span>
-          <ChevronDown
-            className="size-4 shrink-0 transition-transform group-open:rotate-180"
-            aria-hidden="true"
-          />
+          <ChevronDown className="size-4 shrink-0 transition-transform group-open:rotate-180" aria-hidden="true" />
         </summary>
-        <ul className="mt-1.5 flex flex-col gap-1.5">
+        <ul className="mt-2 grid grid-cols-3 gap-2">
           {entry.games.map((game) => (
             <li key={game.gameId}>
-              <LigneJeu game={game} conseille={conseil === game.gameId} />
+              <TuileJeu game={game} entry={entry} conseille={conseil === game.gameId} />
             </li>
           ))}
         </ul>
@@ -493,41 +480,42 @@ function CarteMatiere({
   )
 }
 
-/** Un jeu : son compteur, et ce que vaut sa prochaine victoire. */
-function LigneJeu({ game, conseille }: { game: RosterGame; conseille: boolean }) {
-  const body = (
+/** Un jeu, en tuile : sa scène, son compteur, ce que vaut sa prochaine victoire. */
+function TuileJeu({ game, entry, conseille }: { game: RosterGame; entry: DuelSubject; conseille: boolean }) {
+  const scene = gameScene(game.gameId)
+  const corps = (
     <>
-      <span className="text-base leading-none" aria-hidden="true">
-        {game.emoji}
+      {scene ? (
+        <Image src={scene} alt="" fill sizes="120px" loading="eager" className="object-cover" />
+      ) : (
+        <span className="absolute inset-0 grid place-items-center" style={{ background: entry.pastel }}>
+          {entry.vignette ? (
+            <Image src={entry.vignette} alt="" width={96} height={96} loading="eager" className="size-12 object-contain" />
+          ) : (
+            <span className="text-3xl">{game.emoji}</span>
+          )}
+        </span>
+      )}
+      <span aria-hidden="true" className={s.tuileVoile} />
+      <span className={s.tuileCompte}>
+        <TropheeIcone className="size-3.5" />
+        <span className="font-heading text-[0.7rem] font-extrabold text-white tabular-nums">{game.trophies}</span>
       </span>
-      <span className="min-w-0 flex-1">
-        <span className="block truncate text-[0.8rem] font-bold text-foreground">{game.name}</span>
-        {conseille ? (
-          <span className="font-heading block text-[0.62rem] font-extrabold tracking-wide text-primary uppercase">
-            Le plus rentable en ce moment
-          </span>
-        ) : null}
-      </span>
-      <span className="shrink-0 font-mono text-[0.85rem] font-extrabold text-foreground tabular-nums">
-        {game.trophies}
-      </span>
-      <span
-        className={cn(
-          'w-10 shrink-0 rounded-full py-0.5 text-center font-mono text-[0.72rem] font-extrabold tabular-nums',
-          game.href ? 'bg-accent text-accent-foreground' : 'bg-muted text-muted-foreground',
-        )}
-      >
-        {game.href ? `+${game.nextWin}` : '—'}
-      </span>
+      {game.href ? <span className={s.tuileGain}>+{game.nextWin}</span> : null}
+      {conseille ? <span className={s.ruban}>Top</span> : null}
+      {game.href ? null : (
+        <span className="absolute inset-0 grid place-items-center">
+          <Lock className="size-5 text-white drop-shadow" strokeWidth={2.8} aria-hidden="true" />
+        </span>
+      )}
+      <span className={s.tuileNom}>{game.name}</span>
     </>
   )
 
-  const shell = 'flex w-full items-center gap-2.5 rounded-xl px-2.5 py-2 text-left'
-
   if (!game.href) {
     return (
-      <div className={cn(shell, 'bg-muted/40 opacity-60')} aria-disabled="true">
-        {body}
+      <div className={s.tuileJeu} data-verrou aria-disabled="true" aria-label={`${game.name} — pas encore jouable`}>
+        {corps}
       </div>
     )
   }
@@ -537,12 +525,10 @@ function LigneJeu({ game, conseille }: { game: RosterGame; conseille: boolean })
       href={game.href}
       onClick={() => sfx.battle()}
       aria-label={`${game.name} — ${game.trophies} trophées, une victoire en rapporte ${game.nextWin}`}
-      className={cn(
-        shell,
-        'bg-background/70 ring-1 ring-black/5 transition-colors hover:bg-secondary active:scale-[0.99] focus-visible:ring-4 focus-visible:ring-primary/40 focus-visible:outline-none',
-      )}
+      className={cn(s.tuileJeu, 'focus-visible:ring-4 focus-visible:ring-primary/40 focus-visible:outline-none')}
+      data-conseil={conseille || undefined}
     >
-      {body}
+      {corps}
     </Link>
   )
 }

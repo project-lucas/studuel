@@ -137,7 +137,8 @@ function useDiaporama(nombre: number): number {
   const [index, setIndex] = useState(0)
   useEffect(() => {
     if (nombre < 2) return
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    // `matchMedia` manque dans certains environnements (jsdom des tests).
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return
     const minuteur = window.setInterval(() => setIndex((i) => (i + 1) % nombre), DUREE_SCENE_MS)
     return () => window.clearInterval(minuteur)
   }, [nombre])

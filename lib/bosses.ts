@@ -139,6 +139,8 @@ const CATALOG: BossEntry[] = [
     name: 'Mécatron',
     epithet: 'la Machine Impitoyable',
     emoji: '🤖',
+    image: '/images/boss/mecatron.webp',
+    scene: '/images/boss/mecatron-scene.webp',
     intro: 'Analyse terminée : adversaire obsolète.',
     defeat: 'Erreur… système… corrompu…',
     victory: 'Mise à jour requise. Reviens patché.',
@@ -187,9 +189,7 @@ const CATALOG: BossEntry[] = [
     name: 'Coach Turbo',
     epithet: 'le Sergent du Chrono',
     emoji: '🏋️',
-    // Buste pas encore produit (cf. docs/nano-banana-prompts.md, P1) : le
-    // déclarer quand même affichait une image cassée au lieu du repli emoji.
-    // Le champ se rétablit le jour où le fichier arrive.
+    image: '/images/boss/coach-turbo.webp',
     scene: '/images/boss/coach-turbo-scene.webp',
     intro: 'Échauffement terminé ? Le chrono tourne déjà.',
     defeat: 'Battu sur le fil… joli sprint, champion.',
@@ -228,6 +228,7 @@ export const FALLBACK_BOSS: Boss = {
   name: 'Nox',
   epithet: "l'Ombre du Bulletin",
   emoji: '🌑',
+  image: '/images/boss/nox.webp',
   scene: '/images/boss/nox-scene.webp',
   intro: 'Toutes les matières m’appartiennent.',
   defeat: 'La lumière… non !',

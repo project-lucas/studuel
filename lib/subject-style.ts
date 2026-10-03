@@ -323,6 +323,7 @@ const VIGNETTE_SLUGS: string[] = [
   'figures-historiques',
   'fiscalite',
   'francais',
+  'grand-oral',
   'grec',
   'hggsp',
   'histoire-geo',
@@ -337,9 +338,8 @@ const VIGNETTE_SLUGS: string[] = [
   'svt',
   'technologie',
   // Les matières absentes de cette liste passent par VIGNETTE_ALIASES quand une
-  // matière sœur peut leur prêter son dessin. Seul le Grand oral n'a ni l'un ni
-  // l'autre : il garde le médaillon d'icône (cf. lib/subject-catalogue.test.ts,
-  // qui tient la liste à jour).
+  // matière sœur peut leur prêter son dessin. Le Grand oral, dernier à n'avoir
+  // ni l'un ni l'autre, a reçu le sien le 03/10/2026 (le pupitre au micro).
 ]
 
 // Les matières qui EMPRUNTENT l'illustration d'une autre. Ce ne sont pas des

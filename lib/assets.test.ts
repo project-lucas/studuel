@@ -12,6 +12,8 @@ import { SALONS } from '@/lib/jeux/catalog'
 import { SCENES_VIVANTES, fichiersDeScene } from '@/lib/arena-vivante'
 import { SCENES_CAPSULES, scenesCapsule } from '@/lib/capsules-scenes'
 import { BADGES_ILLUSTRES, OBJETS_ILLUSTRES, imageBadge, imageObjet } from '@/lib/illustrations'
+import { PROFILE_BANNERS } from '@/lib/profile-banners'
+import { PERSONNAGES_HISTORIQUES, imagePersonnage } from '@/lib/personnages-historiques'
 
 // Garde des ASSETS DÉCLARÉS.
 //
@@ -102,10 +104,9 @@ describe('vignettes de matières', () => {
   })
 
   it('ne déclare pas de vignette pour une matière qui n’en a pas', () => {
-    // Repli médaillon assumé — cf. docs/nano-banana-prompts.md (P3). Le Grand
-    // oral est la dernière matière sans dessin : aucune sœur ne peut lui en
-    // prêter un (ce n'est ni une matière de lettres ni une science).
-    expect(subjectVignette('grand-oral')).toBeUndefined()
+    // Le Grand oral, dernière matière sans dessin, a reçu le sien le
+    // 03/10/2026 : seul un slug inconnu reste sans vignette.
+    expect(subjectVignette('grand-oral')).toBe('/images/matieres/vignettes/grand-oral.webp')
     expect(subjectVignette('slug-inconnu')).toBeUndefined()
   })
 
@@ -238,6 +239,26 @@ describe('illustrations famille nav (badges, objets de profil)', () => {
   it('un badge ou un objet non livré garde son repli', () => {
     expect(imageBadge('badge-inconnu')).toBeNull()
     expect(imageObjet('objet-inconnu')).toBeNull()
+  })
+})
+
+describe('bannières de profil', () => {
+  it('chaque bannière du catalogue a son visuel sur le disque', () => {
+    // Fabriquées par `node scripts/illustrations-lot-1004.mjs` (04/10/2026).
+    for (const b of PROFILE_BANNERS) {
+      expect(assetExists(b.image), `${b.key} : ${b.image} absent`).toBe(true)
+    }
+  })
+})
+
+describe('personnages historiques', () => {
+  it('chaque personnage a son blason, sous un identifiant unique', () => {
+    const ids = PERSONNAGES_HISTORIQUES.map((p) => p.id)
+    expect(new Set(ids).size).toBe(ids.length)
+    for (const p of PERSONNAGES_HISTORIQUES) {
+      expect(p.id.startsWith(`${p.matiere}-`), p.id).toBe(true)
+      expect(assetExists(imagePersonnage(p.id)), `${p.id} absent`).toBe(true)
+    }
   })
 })
 

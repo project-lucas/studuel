@@ -142,6 +142,9 @@ const GAME_SCENE_IDS = [
   'classe-moi-ca',
   'chasse-elements',
   'bonne-unite',
+  // Le duel classé de chaque matière (« Ton programme »), 03/10/2026
+  // (scripts/illustrations-lot-1003.mjs).
+  'programme',
 ]
 
 export function gameScene(id: string): string | undefined {
@@ -303,6 +306,8 @@ export function coopTicket(): ModeTicket {
     name: 'Mode Coop',
     tagline: 'À deux, par un code d’invitation : on s’entraide au lieu de s’affronter',
     emoji: '🤝',
+    image: '/images/defi/modes/coop.webp',
+    scene: '/images/defi/modes/coop-scene.webp',
     href: '/defi/jouer?mode=coop',
     chip: 'À deux, en direct',
   }

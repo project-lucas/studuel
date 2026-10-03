@@ -23,7 +23,7 @@ vitesse de l'app dépend des requêtes faites à chaque écran, pas de l'histori
 
 ## Ce qui reste à exécuter en production
 
-**Au 03/10/2026 au soir : la 555** (`schema/555_quetes_trois_gestes.sql`) — le catalogue SQL des quêtes du jour autour des trois gestes (apprendre, se tester, jouer). Une seule fonction remplacée (`quest_catalog`), idempotente. Sans elle, les nouvelles quêtes s'affichent mais n'avancent pas et ne se paient pas (seuls les deux duels avancent) ; rien ne casse.
+**Au 03/10/2026 au soir : la 555 et la 556** (`schema/556_niveau_paliers.sql` : les coffres de palier de niveau, tous les 5 niveaux ; sans elle, « Ouvrir » répond que le coffre arrive bientôt). **La 555** (`schema/555_quetes_trois_gestes.sql`) — le catalogue SQL des quêtes du jour autour des trois gestes (apprendre, se tester, jouer). Une seule fonction remplacée (`quest_catalog`), idempotente. Sans elle, les nouvelles quêtes s'affichent mais n'avancent pas et ne se paient pas (seuls les deux duels avancent) ; rien ne casse.
 
 **Plus tôt le 03/10/2026 : rien.** Les 466 → 554 (corrections de cours et cahier de toutes les classes) sont passées par l’API de gestion et contrôlées : 8 841 exercices, les 2 947 chapitres de classe ont chacun leurs trois exercices et leurs clés. **Au 01/10/2026 dans la nuit : rien.** La **465** (`schema/465_classement_amis.sql`)
 est passée la dernière : `classement_amis()`, qui sert le bloc « Toi et tes

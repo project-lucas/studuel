@@ -132,7 +132,8 @@ describe('subjectVignette', () => {
   })
 
   it('undefined pour un slug sans vignette ni sœur illustrée', () => {
-    expect(subjectVignette('grand-oral')).toBeUndefined()
+    // Le Grand oral a reçu sa vignette le 03/10/2026 : seul un slug inconnu
+    // reste sans dessin.
     expect(subjectVignette('matiere-fantome')).toBeUndefined()
   })
 })

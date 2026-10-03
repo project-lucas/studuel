@@ -4270,6 +4270,15 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     // La fonction existe déjà (205) : la clé anon ne distingue pas sa version.
     sonde: null,
   },
+  {
+    id: '556',
+    fichier: '556_niveau_paliers.sql',
+    feature:
+      'LES COFFRES DE PALIER DE NIVEAU — tous les 5 niveaux, un coffre que l’élève ouvre lui-même : 10 gemmes par niveau du palier, plafonné à 250 (`niveau_palier_gemmes`, `niveau_palier_reclamer`, source de gemmes `niveau_palier`). Les 15 gemmes de chaque niveau franchi restent versées d’office (368).',
+    siAbsente:
+      'La fête de niveau et la bulle du niveau annoncent le coffre, mais « Ouvrir » répond que le coffre arrive bientôt. Rien ne casse. À exécuter APRÈS la 379.',
+    sonde: { type: 'rpc', fn: 'niveau_palier_gemmes', args: { p_niveau: 5 } },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

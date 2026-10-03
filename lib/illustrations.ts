@@ -21,10 +21,44 @@
 // -----------------------------------------------------------------------------
 
 /** Slugs des badges (table `badges`) qui ont leur médaille dessinée. */
-export const BADGES_ILLUSTRES: ReadonlySet<string> = new Set<string>([])
+// Les 22 médailles, générées le 03/10/2026 (Nano Banana 2 Lite, références :
+// la barre d'onglets) depuis assets-sources/famille/commande-icones.json.
+export const BADGES_ILLUSTRES: ReadonlySet<string> = new Set<string>([
+  'capsule-argent',
+  'capsule-methode',
+  'capsule-nutrition',
+  'capsule-orientation',
+  'capsule-sommeil',
+  'capsule-stress',
+  'habitude-ancree',
+  'premiere-habitude',
+  'quiz-10',
+  'sans-faute',
+  'serie-100',
+  'serie-30',
+  'serie-7',
+  'temps-1000h',
+  'temps-100h',
+  'temps-10h',
+  'temps-1h',
+  'trajet-1',
+  'trajet-serie-20',
+  'trajet-serie-5',
+  'trajets-10',
+  'trajets-50',
+])
 
 /** Ids des objets de profil (`avatar_items`) qui ont leur vignette dessinée. */
-export const OBJETS_ILLUSTRES: ReadonlySet<string> = new Set<string>([])
+// Livrés le 04/10/2026 : les deux accessoires (scripts/illustrations-famille.mjs
+// objets) et les vignettes des trois bannières en vente, recadrées sur leur
+// bannière (scripts/illustrations-lot-1004.mjs).
+export const OBJETS_ILLUSTRES: ReadonlySet<string> = new Set<string>([
+  'banner-couronne-royale',
+  'banner-dragon-savoir',
+  'banner-vitrail',
+  'equip-casque',
+  'equip-lunettes',
+])
 
 export function imageBadge(slug: string): string | null {
   return BADGES_ILLUSTRES.has(slug) ? `/images/badges/${slug}.webp` : null

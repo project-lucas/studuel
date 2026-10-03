@@ -105,7 +105,7 @@ describe('le compteur qui encaisse', () => {
     render(<TopHud {...PROPS} />)
     act(() => emettreGain({ unite: 'gemme', montant: 7 }))
     expect(
-      screen.getByLabelText('47 cristaux — à quoi sert cette monnaie'),
+      screen.getByLabelText('47 gemmes — à quoi elles servent'),
     ).toBeInTheDocument()
   })
 })

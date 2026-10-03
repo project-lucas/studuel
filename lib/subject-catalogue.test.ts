@@ -288,7 +288,7 @@ describe('chaque matière est affichable', () => {
   // matière sœur). Elles gardent le médaillon d'icône, qui reste une sortie
   // propre — mais la liste doit rester courte et explicite : c'est la liste de
   // travail du prochain lot d'illustrations.
-  const SANS_DESSIN = new Set(['grand-oral'])
+  const SANS_DESSIN = new Set<string>([])
 
   it('a son illustration — ou figure dans la liste de celles qui manquent', () => {
     for (const s of all) {

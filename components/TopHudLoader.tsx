@@ -94,7 +94,9 @@ export default async function TopHudLoader() {
   // L'avatar vient avec le niveau (même ligne de profil), et le nombre d'amis
   // — le multiplicateur d'XP (migration 380) — part en parallèle : zéro vague
   // de plus.
-  const [{ data: hudRow }, gems, streak, boostXpJusqua, nbAmis] = await Promise.all([
+  // Les COFFRES DE PALIER déjà ouverts (556) : la bulle du niveau et la fête
+  // de niveau proposent ceux qui restent. Lecture tolérante, dans la vague.
+  const [{ data: hudRow }, gems, streak, boostXpJusqua, nbAmis, paliersOuverts] = await Promise.all([
     supabase
       .from('profiles')
       .select('avatar, user_wallet(xp, level)')
@@ -109,6 +111,12 @@ export default async function TopHudLoader() {
     fetchStreak(supabase),
     lireFinBoostXp(supabase, user.id),
     compterAmis(supabase, user.id),
+    supabase
+      .from('gem_events')
+      .select('source_key')
+      .eq('user_id', user.id)
+      .eq('source', 'niveau_palier')
+      .then(({ data }) => (data ?? []).map((r: { source_key: string }) => Number(r.source_key)).filter(Number.isFinite)),
   ])
   // L'AVATAR DANS LE DISQUE de l'écusson, à la place du numéro de niveau
   // (Lucas, 24/09/2026 : « le 7 fait doublon » avec « NIVEAU 7 ») — le même que
@@ -131,6 +139,7 @@ export default async function TopHudLoader() {
         levelTitle={info.title}
         progress={info.progress}
         xp={{ actuel: info.currentXp, plancher: xpForLevel(info.level), prochain: info.nextAt }}
+        paliersOuverts={paliersOuverts}
         userLabel={userLabel}
         boostXpJusqua={boostXpJusqua}
         avatar={avatar}

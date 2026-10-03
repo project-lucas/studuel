@@ -1,0 +1,198 @@
+/* L'ÉCRAN CLASSEMENT, FAÇON BRAWL STARS (03/10/2026, Lucas : « l'icône
+   classement est importante et doit être améliorée ; il faut une inspiration
+   de Brawl Stars pour appuyer le côté compétition »). Une PLAQUE héros pour
+   mon rang (violet profond, chiffres blancs cernés, barre d'or épaisse vers
+   le blason suivant), des cartes de matière en relief, et les jeux en TUILES
+   illustrées par leur scène. Pas d'animation continue ici. */
+
+/* Le chiffre de jeu : Baloo 2 extra-gras, blanc, cerné d'encre prune. */
+.chiffre {
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-weight: 800;
+  color: #fff;
+  -webkit-text-stroke: 4px color-mix(in oklch, var(--primary), black 62%);
+  paint-order: stroke fill;
+  line-height: 1;
+}
+
+/* --- La plaque de mon rang --------------------------------------------------- */
+.plaqueMoi {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  color: #fff;
+  background:
+    radial-gradient(circle at 18% 30%, rgb(255 255 255 / 0.22) 0%, transparent 42%),
+    linear-gradient(
+      160deg,
+      color-mix(in oklch, var(--primary), white 8%) 0%,
+      color-mix(in oklch, var(--primary), black 30%) 100%
+    );
+  border: 3px solid color-mix(in oklch, var(--primary), black 55%);
+  box-shadow:
+    inset 0 2px 0 rgb(255 255 255 / 0.3),
+    0 5px 0 color-mix(in oklch, var(--primary), black 55%),
+    0 10px 20px color-mix(in oklch, var(--primary), transparent 70%);
+}
+/* Les rayons derrière le blason : statiques, ils posent la scène. */
+.rayons {
+  position: absolute;
+  top: -40%;
+  left: -18%;
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 9999px;
+  background: repeating-conic-gradient(rgb(255 255 255 / 0.1) 0deg 10deg, transparent 10deg 24deg);
+  mask-image: radial-gradient(circle, black 20%, transparent 68%);
+  pointer-events: none;
+}
+
+/* La gorge sombre et l'or qui la remplit. */
+.gorge {
+  position: relative;
+  height: 1rem;
+  border-radius: 9999px;
+  background: rgb(0 0 0 / 0.32);
+  box-shadow: inset 0 2px 3px rgb(0 0 0 / 0.35);
+  overflow: hidden;
+}
+.or {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, #ffe58a 0%, var(--highlight) 55%, color-mix(in oklch, var(--highlight), black 18%) 100%);
+  box-shadow: inset 0 2px 0 rgb(255 255 255 / 0.55);
+  transition: width 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* --- Une carte de matière, en relief ------------------------------------------ */
+.carteMatiere {
+  border-radius: 1.25rem;
+  padding: 0.85rem;
+  background: var(--card);
+  border: 2px solid color-mix(in oklch, var(--foreground), transparent 88%);
+  box-shadow: 0 4px 0 color-mix(in oklch, var(--foreground), transparent 88%);
+}
+.carteMatiere[data-active] {
+  border-color: var(--primary);
+  box-shadow: 0 4px 0 color-mix(in oklch, var(--primary), black 30%);
+}
+.medaillon {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  flex-shrink: 0;
+  border-radius: 1rem;
+  border: 2px solid color-mix(in oklch, var(--foreground), transparent 85%);
+  box-shadow: inset 0 -3px 0 rgb(0 0 0 / 0.08);
+}
+.pastilleTrophees {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  border-radius: 9999px;
+  padding: 0.2rem 0.6rem 0.2rem 0.35rem;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--primary), black 20%),
+    color-mix(in oklch, var(--primary), black 45%)
+  );
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.2), 0 2px 0 color-mix(in oklch, var(--primary), black 60%);
+}
+.gorgeClaire {
+  position: relative;
+  height: 0.6rem;
+  border-radius: 9999px;
+  background: var(--muted);
+  box-shadow: inset 0 1px 2px rgb(0 0 0 / 0.15);
+  overflow: hidden;
+}
+.violet {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, color-mix(in oklch, var(--primary), white 15%), color-mix(in oklch, var(--primary), black 15%));
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.45);
+}
+
+/* --- Un jeu, en tuile illustrée --------------------------------------------- */
+.tuileJeu {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 0.9rem;
+  aspect-ratio: 4 / 3;
+  border: 2px solid color-mix(in oklch, var(--foreground), transparent 80%);
+  box-shadow: 0 3px 0 color-mix(in oklch, var(--foreground), transparent 82%);
+  background: var(--secondary);
+}
+.tuileJeu:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 color-mix(in oklch, var(--foreground), transparent 82%);
+}
+.tuileJeu[data-conseil] {
+  border-color: var(--highlight);
+  box-shadow: 0 3px 0 color-mix(in oklch, var(--highlight), black 25%);
+}
+.tuileJeu[data-verrou] {
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+.tuileVoile {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 35%, rgb(20 10 40 / 0.78) 100%);
+}
+.tuileNom {
+  position: absolute;
+  left: 0.4rem;
+  right: 0.4rem;
+  bottom: 0.3rem;
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 0.72rem;
+  line-height: 1.05;
+  color: #fff;
+  -webkit-text-stroke: 3px rgb(20 10 40 / 0.85);
+  paint-order: stroke fill;
+}
+.tuileCompte {
+  position: absolute;
+  top: 0.3rem;
+  left: 0.3rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  border-radius: 9999px;
+  padding: 0.05rem 0.4rem 0.05rem 0.2rem;
+  background: rgb(20 10 40 / 0.7);
+}
+.tuileGain {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  border-radius: 9999px;
+  padding: 0.05rem 0.4rem;
+  background: var(--highlight);
+  color: color-mix(in oklch, var(--primary), black 60%);
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 0.7rem;
+  box-shadow: 0 2px 0 color-mix(in oklch, var(--highlight), black 30%);
+}
+.ruban {
+  position: absolute;
+  top: 1.7rem;
+  right: -1.6rem;
+  transform: rotate(35deg);
+  padding: 0.05rem 1.8rem;
+  background: var(--highlight);
+  color: color-mix(in oklch, var(--primary), black 60%);
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 0.55rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}

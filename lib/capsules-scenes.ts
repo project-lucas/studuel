@@ -17,8 +17,14 @@
 
 /** id de la capsule → nombre de scènes livrées. */
 export const SCENES_CAPSULES: Readonly<Record<string, number>> = {
-  // 1 sur 4 le 24/09/2026 : Lucas voit le rendu avant de commander la suite.
-  sommeil: 1,
+  // Les six capsules complètes le 04/10/2026 (Nano Banana 2 Lite, la scène 1
+  // du sommeil en référence de style).
+  argent: 4,
+  methode: 4,
+  nutrition: 4,
+  orientation: 4,
+  sommeil: 4,
+  stress: 4,
 }
 
 /** Les scènes d'une capsule, dans l'ordre du défilement ; vide si elle n'en a pas. */

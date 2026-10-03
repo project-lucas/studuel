@@ -88,6 +88,15 @@
    text-white, rounded-none) garde le dernier mot.
    ========================================================================== */
 @layer components {
+  /* LE BANDEAU DU HAUT EN GÉLULE LAVANDE (maquette « D · Lavande douce »,
+     03/10/2026) : fond `bg-secondary`, liseré violet en creux, encre prune
+     dérivée du violet de marque — pas de couleur en dur. */
+  .hud-gelule {
+    box-shadow: inset 0 0 0 2px color-mix(in oklch, var(--primary), transparent 82%);
+  }
+  .hud-encre {
+    color: color-mix(in oklch, var(--primary), black 45%);
+  }
   .carte {
     background: var(--card);
     color: var(--card-foreground);

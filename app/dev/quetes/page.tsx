@@ -5,7 +5,7 @@ export const dynamic = 'force-dynamic'
 
 // L'APERÇU DES QUÊTES DU JOUR — en développement seulement.
 //
-// La pastille du bandeau, la carte de Réviser et la feuille des quêtes
+// La pastille du bandeau et la feuille des quêtes
 // (components/quetes) sur trois quêtes d'exemple, sans base ni compte. Les
 // boutons « Encaisser » appellent la vraie action : sans session, elle refuse
 // et la feuille relit l'état.

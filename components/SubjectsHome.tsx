@@ -540,6 +540,7 @@ export default function SubjectsHome({
   emptySlugs = EMPTY_SLUGS,
   gardiens = {},
   topSlot,
+  commandesSlot,
 }: {
   subjects: Subject[]
   selected: string[] | null
@@ -569,6 +570,10 @@ export default function SubjectsHome({
   // Blocs insérés au-dessus de la grille des matières (série/semaine, contrôles,
   // reprise…) — rendus côté serveur et passés en enfant.
   topSlot?: React.ReactNode
+  /** Posé à droite de l'étoile, dans la rangée des commandes : la puce de
+   *  classe (03/10/2026 — elle a quitté le bandeau du haut, qui porte
+   *  désormais les quêtes du jour). */
+  commandesSlot?: React.ReactNode
 }) {
   // UNE horloge pour toute la liste, et pas une par carte : c'est elle qui
   // égrène le compte à rebours des gardiens et qui éteint un dossier dès que sa
@@ -735,6 +740,7 @@ export default function SubjectsHome({
                 />
               </button>
             )}
+            {commandesSlot}
           </div>
         </div>
 

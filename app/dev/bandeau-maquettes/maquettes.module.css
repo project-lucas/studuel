@@ -1,0 +1,109 @@
+/* MAQUETTES DU BANDEAU DU HAUT (03/10/2026) — statiques, pour choisir. */
+
+.telephone {
+  position: relative;
+  width: 390px;
+  height: 330px;
+  overflow: hidden;
+  border-radius: 2rem;
+  border: 6px solid color-mix(in oklch, var(--foreground), transparent 20%);
+  background: var(--background);
+}
+
+/* Le chiffre de jeu : Baloo 2 extra-gras, blanc, cerné d'encre prune. */
+.chiffre {
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-weight: 800;
+  color: #fff;
+  -webkit-text-stroke: 4px #2b1650;
+  paint-order: stroke fill;
+  letter-spacing: 0.01em;
+  line-height: 1;
+}
+
+/* --- A · Plaques de jeu ------------------------------------------------------ */
+.plaque {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 34px;
+  padding: 0 10px 0 6px;
+  border-radius: 12px;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--primary), white 12%) 0%,
+    color-mix(in oklch, var(--primary), black 22%) 100%
+  );
+  border: 2px solid #2b1650;
+  box-shadow:
+    inset 0 2px 0 rgb(255 255 255 / 0.28),
+    0 3px 0 #2b1650;
+}
+.plaquePlus {
+  display: grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  margin-left: 2px;
+  border-radius: 6px;
+  border: 2px solid #2b1650;
+  background: linear-gradient(180deg, #ffe27a, var(--highlight));
+  color: #2b1650;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 1;
+}
+.barreXp {
+  position: relative;
+  height: 14px;
+  border-radius: 999px;
+  border: 2px solid #2b1650;
+  background: #2b1650;
+  overflow: hidden;
+}
+.barreXpPlein {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffe27a, var(--highlight));
+  box-shadow: inset 0 2px 0 rgb(255 255 255 / 0.5);
+}
+
+/* --- B · Bande violette ------------------------------------------------------ */
+.bande {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--primary), black 8%) 0%,
+    color-mix(in oklch, var(--primary), black 30%) 100%
+  );
+  box-shadow:
+    inset 0 -3px 0 color-mix(in oklch, var(--highlight), black 10%),
+    0 4px 10px rgb(43 22 80 / 0.25);
+}
+.bandeJeton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 30px;
+  padding: 0 9px 0 5px;
+  border-radius: 999px;
+  background: rgb(0 0 0 / 0.25);
+  box-shadow: inset 0 1px 2px rgb(0 0 0 / 0.35);
+}
+
+/* --- C · Objets posés (sans fond) -------------------------------------------- */
+.pose {
+  background: var(--background);
+  border-bottom: 2px solid color-mix(in oklch, var(--foreground), transparent 88%);
+}
+
+/* --- D · Lavande douce ------------------------------------------------------- */
+.lavande {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  border-radius: 999px;
+  background: var(--secondary);
+  box-shadow: inset 0 0 0 2px color-mix(in oklch, var(--primary), transparent 82%);
+}

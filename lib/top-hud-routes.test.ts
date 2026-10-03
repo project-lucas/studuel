@@ -124,12 +124,12 @@ describe('isHudSerieMasquee', () => {
 })
 
 describe('isHudQuetesMasquee', () => {
-  it('laisse la place à la puce de classe sur l’accueil Réviser, et à la tuile sur l’arène', () => {
-    expect(isHudQuetesMasquee('/reviser')).toBe(true)
+  it('laisse la place à la tuile Quêtes sur l’arène', () => {
     expect(isHudQuetesMasquee('/defi')).toBe(true)
   })
 
-  it('montre les quêtes partout ailleurs', () => {
+  it('montre les quêtes partout ailleurs, accueil Réviser compris', () => {
+    expect(isHudQuetesMasquee('/reviser')).toBe(false)
     expect(isHudQuetesMasquee('/reviser/maths')).toBe(false)
     expect(isHudQuetesMasquee('/amis')).toBe(false)
     expect(isHudQuetesMasquee('/moi')).toBe(false)

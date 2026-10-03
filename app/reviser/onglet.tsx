@@ -17,11 +17,9 @@ import SubjectsHome from '@/components/SubjectsHome'
 import ResumeSessions, { type ResumeItem } from '@/components/ResumeSessions'
 import CarnetButton from '@/components/carnet/CarnetButton'
 import ClasseChip from '@/components/reviser/ClasseChip'
-import QuetesReviser from '@/components/quetes/QuetesReviser'
 import { isGradeLevel } from '@/lib/grades'
 import SerieBar from '@/components/reviser/SerieBar'
 import MarcelFab from '@/components/reviser/MarcelFab'
-import PortailFixe from '@/components/PortailFixe'
 import SubjectMasteryCelebration from '@/components/SubjectMasteryCelebration'
 import { fetchGauges, gardiensSortis } from '@/lib/traque-server'
 import { createClient } from '@/lib/supabase/server'
@@ -592,26 +590,12 @@ export default async function OngletReviser() {
   return (
     <div className="flex flex-col gap-3 pt-3 md:pt-0">
       {/* Plus de titre « Réviser » (Lucas, 16/09/2026) : le mot vit sous
-          l'icône active de la barre. LA CLASSE tient l'ANGLE HAUT-DROIT
-          (Lucas, 17/09/2026) : sur mobile, elle se pose dans la bande du
-          bandeau du haut, au bord droit que les cristaux ont libéré en
-          rejoignant l'écusson de niveau — même hauteur (h-14), même ligne. Un
-          tap pour en changer : on s'aperçoit ici, devant le programme, qu'on
-          est dans la mauvaise année, pas dans le profil. Sur desktop, pas de
-          bandeau : elle reprend sa ligne, alignée à droite. La porte du carnet
-          est descendue dans la carte de série. */}
-      {/* Mobile : la puce vit dans <body> (PortailFixe) pour rester collée au
-          bandeau pendant le défilement. Desktop :
-          elle garde sa ligne, dans le flux. */}
-      <PortailFixe>
-        <div className="fixed top-0 right-3 z-50 flex h-14 items-center md:hidden">
-          {/* Libellé court : elle partage la bande avec l'écusson de niveau. */}
-          <ClasseChip court current={isGradeLevel(grade) ? grade : null} />
-        </div>
-      </PortailFixe>
-      <div className="hidden justify-end md:flex">
-        <ClasseChip current={isGradeLevel(grade) ? grade : null} />
-      </div>
+          l'icône active de la barre. LA CLASSE a quitté le bandeau du haut le
+          03/10/2026 (Lucas) : le bord droit y est rendu aux quêtes du jour, et
+          la puce se pose à droite de l'étoile, dans la rangée des commandes de
+          la grille (`commandesSlot`). Un tap pour en changer : on s'aperçoit
+          ici, devant le programme, qu'on est dans la mauvaise année. La porte
+          du carnet est descendue dans la carte de série. */}
       {/* Tour guidé post-onboarding (spotlights sur la nav + bulles). */}
       <TourGuide etatEnBase={profile.tutorial_completed} />
       {/* Fête (une seule fois) les matières arrivées à 90 % ou 100 %. */}
@@ -641,6 +625,7 @@ export default async function OngletReviser() {
           examBySubject={examBySubject}
           emptySlugs={emptySlugs}
           gardiens={gardiens}
+          commandesSlot={<ClasseChip court current={isGradeLevel(grade) ? grade : null} />}
           topSlot={
             /* DEUX blocs avant les matières, plus cinq. L'accueil empilait
                    la mission du jour, la ligne des contrôles, la boucle
@@ -672,9 +657,6 @@ export default async function OngletReviser() {
                   />
                 }
               />
-              {/* Les quêtes du jour : ici une carte, ailleurs la pastille
-                      du bandeau (la puce de classe en tient le bord). */}
-              <QuetesReviser />
               {/* 2. « On s'y remet ? » — deux sessions à reprendre, pas une
                       réserve qui défile. */}
               <ResumeSessions items={resumeItems} />

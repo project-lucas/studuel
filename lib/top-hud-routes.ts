@@ -122,10 +122,10 @@ export function isHudSerieMasquee(pathname: string): boolean {
 
 /**
  * LA PASTILLE DES QUÊTES DU JOUR (03/10/2026) vit dans le bandeau, sur tous les
- * écrans — sauf deux. Sur l'accueil Réviser, la puce de classe tient le bord
- * droit : les quêtes y sont une carte en tête de page (QuetesReviser). Sur
- * l'arène, le bandeau se masque et la tuile Quêtes du rail ouvre la même feuille.
+ * écrans, accueil Réviser compris (la puce de classe en est descendue, à
+ * droite de l'étoile de la grille). Seule exception : l'arène, où le bandeau se
+ * masque et où la tuile Quêtes du rail ouvre la même feuille.
  */
 export function isHudQuetesMasquee(pathname: string): boolean {
-  return pathname === '/reviser' || pathname === '/defi'
+  return pathname === '/defi'
 }

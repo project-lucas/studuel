@@ -3,7 +3,6 @@
 import { useEffect } from 'react'
 import FeuilleQuetes from '@/components/quetes/FeuilleQuetes'
 import PastilleQuetes from '@/components/quetes/PastilleQuetes'
-import QuetesReviser from '@/components/quetes/QuetesReviser'
 import { semerQuetes } from '@/components/quetes/store'
 import { BONUS_STEP_ID, QUEST_CATALOG, queteServie, questView, type QuetesDuJour } from '@/lib/quests'
 
@@ -33,7 +32,6 @@ export default function ApercuQuetes({ e, feuille }: { e: string; feuille: boole
         <span className="text-sm font-bold text-muted-foreground">Pastille du bandeau :</span>
         <PastilleQuetes />
       </div>
-      <QuetesReviser />
       <FeuilleQuetes />
     </div>
   )

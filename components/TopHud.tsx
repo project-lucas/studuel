@@ -8,6 +8,7 @@ import BadgeBoostXp, { useBoostEnCours } from '@/components/BadgeBoostXp'
 import FlammeAnimee from '@/components/FlammeAnimee'
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { CristalIcon } from '@/components/ui/MonnaieIcon'
+import XpIcon from '@/components/ui/XpIcon'
 import type { UniteGain } from '@/lib/gains'
 import { GEM_COST_CHAPTER } from '@/lib/gems'
 import { ecouterGains } from '@/lib/hud-gains'
@@ -23,6 +24,7 @@ import {
 } from '@/lib/top-hud-routes'
 import PastilleQuetes from '@/components/quetes/PastilleQuetes'
 import { cn } from '@/lib/utils'
+import { compteCourt } from '@/lib/compte-court'
 
 /** Quelle bulle est ouverte, s'il y en a une : les cristaux ou le multiplicateur d'XP. */
 type OpenPurse = 'cristal' | 'multiplicateur' | null
@@ -153,14 +155,11 @@ export default function TopHud({
   // visiteur, lui, garde la case — chez lui ce n'est pas un engrenage mais un
   // « Se connecter ». Voir lib/top-hud-routes.
   const accountHidden = isHudAccountHidden(pathname, connected)
-  // Le fond commun des pastilles : verre de nuit sur l'arène, carte crème
-  // ailleurs. Écrit une fois, appliqué aux trois pastilles du bandeau.
-  const pillSurface = dark
-    ? 'olympe-glass'
-    : // Plein, sans flou (18/09/2026) : le flou se recalculait sous la
-      // pastille à chaque image du défilement — des saccades sur les longues
-      // pages. Sur le crème, le blanc plein se lit pareil.
-      'bg-card ring-1 ring-black/5 shadow-lg'
+  // Le fond commun des pastilles : verre de nuit sur l'arène, GÉLULE LAVANDE
+  // ailleurs (maquette « D · Lavande douce », choisie par Lucas le 03/10/2026 :
+  // « le fond blanc, la police, cela ne me convient pas »). Plein, sans flou
+  // (18/09/2026) : le flou se recalculait à chaque image du défilement.
+  const pillSurface = dark ? 'olympe-glass' : 'bg-secondary hud-gelule'
   // UN SEUL ÉCUSSON (Lucas, 17/09/2026 : « le bloc gemme doit aller à côté de
   // la flamme série »). Niveau, série et cristaux tiennent dans la même
   // pastille, séparés par des filets ; le bord droit de la bande est libre —
@@ -187,7 +186,7 @@ export default function TopHud({
               // La cible du vol des récompenses (cf. lib/gains, UNITES).
               data-hud-cible="xp"
               className={cn(
-                'pointer-events-auto relative flex min-w-0 items-center gap-2 rounded-full py-1 pl-1',
+                'pointer-events-auto relative flex min-w-0 flex-1 items-center gap-2 rounded-full py-1 pl-1',
                 gems === null ? 'pr-3' : 'pr-0',
                 pillSurface,
               )}
@@ -224,45 +223,21 @@ export default function TopHud({
                   className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 px-1 text-[8px] whitespace-nowrap"
                 />
               </span>
-              <div className="min-w-0">
-                <p
+              {/* LE NIVEAU, COMME SUR LA MAQUETTE « D » (Lucas, 03/10/2026 :
+                  « la barre de niveau était mieux sur la maquette, elle prenait
+                  plus de place ; on ne voit pas l'éclair »). Une ligne
+                  « Niveau 7 ⚡ ×1,3 » — l'éclair d'XP, puis le multiplicateur
+                  qu'on touche pour savoir ce que c'est — et dessous la barre,
+                  sur TOUTE la largeur que l'écusson laisse libre. */}
+              <div className="flex min-w-0 flex-1 flex-col gap-1 pr-1">
+                <div
                   className={cn(
-                    'font-heading flex items-center gap-1 text-[10px] leading-none font-extrabold tracking-wide whitespace-nowrap uppercase',
-                    dark ? 'text-[#faf6ef]' : 'text-primary',
+                    'font-heading flex items-center gap-1 text-[13px] leading-none font-extrabold whitespace-nowrap',
+                    dark ? 'text-[#faf6ef]' : 'hud-encre',
                   )}
                 >
                   Niveau {level}
-                </p>
-                <div className="mt-1 flex items-center">
-                  <div
-                    className={cn(
-                      'h-2 overflow-hidden rounded-full',
-                      // 52 px contre le multiplicateur : « ×1,3 » tient en
-                      // 34 px, la barre reprend ce que le badge du coffre lui
-                      // avait pris (la puce de classe de Réviser borne
-                      // l'écusson).
-                      nbAmis === null ? 'w-16' : 'w-13',
-                      dark
-                        ? 'bg-black/35 ring-1 ring-white/15'
-                        : 'bg-muted ring-1 ring-black/[0.06]',
-                    )}
-                    role="progressbar"
-                    aria-label={`Progression vers le niveau ${level + 1}`}
-                    aria-valuemin={0}
-                    aria-valuemax={100}
-                    aria-valuenow={pct}
-                  >
-                    <div
-                      className="h-full rounded-full bg-gradient-to-r from-highlight to-accent shadow-[0_0_6px_color-mix(in_oklch,var(--highlight),transparent_45%)] transition-[width] duration-500"
-                      style={{ width: `${pct}%` }}
-                    />
-                  </div>
-                  {/* LE MULTIPLICATEUR D'XP, CONTRE LA BARRE QU'IL REMPLIT
-                      (Lucas, 24/09/2026 : « à côté de la barre de niveau,
-                      ajoute-le simplement : ×1,0, ×1,1, ×1,2… »). Il y a
-                      remplacé le badge du coffre d'équipe, qui vit dans
-                      l'onglet Amis. En bout d'écusson il coûterait 94 px, et
-                      sur Réviser l'écusson passerait sous la puce de classe. */}
+                  <XpIcon className="size-3.5" />
                   {nbAmis !== null ? (
                     <span ref={multiplicateurRef} className="pointer-events-auto flex shrink-0">
                       <MultiplicateurPill
@@ -274,6 +249,27 @@ export default function TopHud({
                       />
                     </span>
                   ) : null}
+                </div>
+                <div
+                  className={cn(
+                    'h-1.5 w-full min-w-10 overflow-hidden rounded-full',
+                    dark ? 'bg-black/35 ring-1 ring-white/15' : 'bg-card',
+                  )}
+                  role="progressbar"
+                  aria-label={`Progression vers le niveau ${level + 1}`}
+                  aria-valuemin={0}
+                  aria-valuemax={100}
+                  aria-valuenow={pct}
+                >
+                  <div
+                    className={cn(
+                      'h-full rounded-full transition-[width] duration-500',
+                      dark
+                        ? 'bg-gradient-to-r from-highlight to-accent shadow-[0_0_6px_color-mix(in_oklch,var(--highlight),transparent_45%)]'
+                        : 'bg-primary',
+                    )}
+                    style={{ width: `${pct}%` }}
+                  />
                 </div>
               </div>
 
@@ -302,18 +298,18 @@ export default function TopHud({
                 <span
                   className={cn(
                     'flex shrink-0 items-center gap-1 self-stretch border-l pl-2.5',
-                    dark ? 'border-white/15' : 'border-black/[0.07]',
+                    dark ? 'border-white/15' : 'border-primary/15',
                   )}
                 >
                   <FlammeAnimee className="size-7" eteinte={streak === 0} />
                   <span
                     aria-hidden="true"
                     className={cn(
-                      'font-mono text-sm font-extrabold tabular-nums',
+                      'font-heading text-base font-extrabold tabular-nums',
                       streak > 0
                         ? dark
                           ? 'text-highlight'
-                          : 'text-foreground'
+                          : 'hud-encre'
                         : 'text-muted-foreground',
                     )}
                   >
@@ -340,7 +336,7 @@ export default function TopHud({
                   <div
                     className={cn(
                       'flex shrink-0 items-center self-stretch border-l',
-                      dark ? 'border-white/15' : 'border-black/[0.07]',
+                      dark ? 'border-white/15' : 'border-primary/15',
                     )}
                   >
                     <ResourcePill
@@ -361,7 +357,7 @@ export default function TopHud({
                       value={gems}
                       icon={<CristalIcon className="size-5" />}
                       dark={dark}
-                      className={dark ? 'text-[#d8c9ff]' : 'text-primary'}
+                      className={dark ? 'text-[#d8c9ff]' : 'hud-encre'}
                     />
                   </div>
                 ) : null}
@@ -580,7 +576,7 @@ function ResourcePill({
         // La cible du vol des récompenses (cf. lib/gains, UNITES).
         data-hud-cible={unite}
         className={cn(
-          'flex min-h-11 items-center rounded-full font-mono text-sm font-extrabold tabular-nums',
+          'font-heading flex min-h-11 items-center rounded-full text-base font-extrabold tabular-nums',
           className,
         )}
       >
@@ -593,7 +589,7 @@ function ResourcePill({
           className="flex min-h-11 items-center gap-1.5 rounded-full py-1.5 pr-3.5 pl-3 transition active:scale-95"
         >
           {icon}
-          {affiche.toLocaleString('fr-FR')}
+          {compteCourt(affiche)}
         </button>
       </div>
 
@@ -712,7 +708,7 @@ function MultiplicateurPill({
         aria-label={`Multiplicateur d’XP ${libelle} — à quoi il sert`}
         // Petit à l'œil, large au doigt : les marges négatives agrandissent
         // la zone de tap sans pousser la barre.
-        className="-my-2 flex cursor-pointer items-center py-2 pl-1.5 transition active:scale-95"
+        className="-my-2 flex cursor-pointer items-center py-2 pl-0.5 transition active:scale-95"
       >
         <span
           className={cn(
@@ -721,7 +717,7 @@ function MultiplicateurPill({
               ? 'bg-highlight text-foreground'
               : dark
                 ? 'bg-white/15 text-[#faf6ef]'
-                : 'bg-primary/10 text-primary',
+                : 'px-0 text-primary',
           )}
         >
           {libelle}

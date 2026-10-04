@@ -52,11 +52,14 @@ export default function EnTeteMoi({
   data,
   gemmes,
   abonne = false,
+  sansAvatar = false,
 }: {
   data: IdentiteMoi
   gemmes: number
   /** Studuel+ : Marcel dessine l'avatar (sinon, l'atelier montre ce qu'il ouvrirait). */
   abonne?: boolean
+  /** L'avatar vit dans la vitrine (VitrineMoi) : la ligne ne garde que le nom. */
+  sansAvatar?: boolean
 }) {
   const [editing, setEditing] = useState(false)
   const [banner, setBanner] = useState(data.profileBanner)
@@ -94,7 +97,8 @@ export default function EnTeteMoi({
 
   return (
     <section aria-label="Mon profil">
-      <div className="flex items-center gap-3 px-1 pt-1 pb-4">
+      <div className="flex items-center gap-3 px-1 pt-1 pb-3">
+        {sansAvatar ? null : (
         <button
           type="button"
           onClick={() => {
@@ -127,12 +131,17 @@ export default function EnTeteMoi({
             Niv. {data.level}
           </span>
         </button>
+        )}
 
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-1.5">
-            <h1 className="font-heading min-w-0 truncate text-[23px] leading-[1.1] font-extrabold">
-              {data.displayName}
-            </h1>
+            {sansAvatar ? (
+              <p className="min-w-0 truncate text-[13px] font-extrabold text-foreground/75">{sousTitre}</p>
+            ) : (
+              <h1 className="font-heading min-w-0 truncate text-[23px] leading-[1.1] font-extrabold">
+                {data.displayName}
+              </h1>
+            )}
             {/* Le crayon, collé au nom : il règle l'identité (pseudo, bannière,
                 badges), pas le compte. */}
             <button
@@ -155,10 +164,10 @@ export default function EnTeteMoi({
               </span>
             </button>
           </div>
-          {sousTitre ? (
+          {sousTitre && !sansAvatar ? (
             <p className="mt-0.5 truncate text-[12.5px] font-bold text-muted-foreground">{sousTitre}</p>
           ) : null}
-          {enAvant.length > 0 ? (
+          {!sansAvatar && enAvant.length > 0 ? (
             <ul role="list" className="mt-1 flex items-center gap-1">
               {enAvant.map((b) => (
                 <li
@@ -183,7 +192,7 @@ export default function EnTeteMoi({
           >
             <CristalIcon className="size-6" />
             <span className="font-heading text-[15px] leading-none font-extrabold tabular-nums">
-              {gemmes.toLocaleString('fr-FR')}
+              {gemmes.toLocaleString('fr-FR').replace(/\u202f/g, '\u00a0')}
             </span>
           </Link>
           <Link
@@ -223,7 +232,7 @@ export default function EnTeteMoi({
         </div>
       ) : null}
 
-      <AtelierAvatarIa open={atelier} onClose={() => setAtelier(false)} abonne={abonne} />
+      {sansAvatar ? null : <AtelierAvatarIa open={atelier} onClose={() => setAtelier(false)} abonne={abonne} />}
     </section>
   )
 }

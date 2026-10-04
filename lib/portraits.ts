@@ -42,7 +42,8 @@ export function isPortraitKey(value: unknown): value is PortraitKey {
 
 /** L'URL publique d'un blason. */
 export function portraitSrc(key: PortraitKey): string {
-  return `/images/profil/${key}.webp`
+  // v2 : les portraits redessinés le 04/10/2026 (scripts/profil-ecusson.mjs).
+  return `/images/profil/v2/${key}.webp`
 }
 
 /**

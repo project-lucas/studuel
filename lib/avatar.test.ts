@@ -182,7 +182,7 @@ describe('portrait', () => {
   })
 
   it('avatarPortraitSrc rend l’URL du blason, ou null pour une config brute sans blason', () => {
-    expect(avatarPortraitSrc({ ...DEFAULT_AVATAR, portrait: '2' })).toBe('/images/profil/2.webp')
+    expect(avatarPortraitSrc({ ...DEFAULT_AVATAR, portrait: '2' })).toBe('/images/profil/v2/2.webp')
     expect(avatarPortraitSrc({ ...DEFAULT_AVATAR, portrait: '' })).toBeNull()
   })
 
@@ -194,9 +194,9 @@ describe('portrait', () => {
     expect(applyFreeAvatarField(DEFAULT_AVATAR, 'portrait', 'nawak')).toBe(DEFAULT_AVATAR)
   })
 
-  it('chaque blason déclaré existe dans public/images/profil', () => {
+  it('chaque portrait déclaré existe dans public/images/profil/v2', () => {
     for (const key of PORTRAIT_KEYS) {
-      expect(existsSync(join(process.cwd(), 'public', 'images', 'profil', `${key}.webp`))).toBe(true)
+      expect(existsSync(join(process.cwd(), 'public', 'images', 'profil', 'v2', `${key}.webp`))).toBe(true)
     }
   })
 })

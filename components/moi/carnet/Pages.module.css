@@ -1,0 +1,855 @@
+/* ----------------------------------------------------------------------------
+   LE CONTENU DES PAGES DU CARNET (04/10/2026).
+
+   Une page fait 1em = 10 unités de carnet (`.page` dans Carnet.module.css) :
+   toutes les cotes sont en em, le carnet garde son dessin à toute taille.
+   ⚠️ Un élément qui change sa taille de police change son em : les cotes de
+   ses enfants se lisent alors dans SA taille (voir `.nom`, `.chiffre`).
+
+   L'encre (`--encre`) vient du carnet ; le lavis de surligneur est le jaune
+   de la récompense (`--highlight`), le crayon de l'action reste violet.
+   ---------------------------------------------------------------------------- */
+
+/* --- Les briques communes ---------------------------------------------------- */
+
+.pagePleine {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  height: calc(100% - 2em);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.colonne {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: calc(100% - 2em);
+}
+
+.folio {
+  position: absolute;
+  right: 0;
+  bottom: 0.9em;
+  left: 0;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 0.95em;
+  font-weight: 700;
+  color: var(--encre-pale);
+  pointer-events: none;
+}
+
+.filet {
+  display: block;
+  flex: none;
+  width: 100%;
+  height: 0.6em;
+  margin: 0.15em 0;
+  color: var(--encre);
+  opacity: 0.32;
+}
+
+.titrePage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  margin-bottom: 0.9em;
+}
+.titre {
+  font-family: var(--font-heading);
+  font-size: 1.9em;
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--encre);
+}
+.titreDoodle {
+  width: 2.2em;
+  height: 2.2em;
+  margin-left: auto;
+}
+.titreSouligne {
+  position: absolute;
+  bottom: -0.55em;
+  left: 0;
+  width: 72%;
+  height: 0.65em;
+  color: var(--encre);
+  opacity: 0.75;
+}
+.pastille {
+  flex: none;
+  width: 0.95em;
+  height: 0.95em;
+  border-radius: 50%;
+  box-shadow: inset 0 -0.12em 0 rgb(0 0 0 / 0.15);
+}
+.pastille[data-teinte='jaune'] {
+  background: var(--highlight);
+}
+.pastille[data-teinte='rose'] {
+  background: #f272c4;
+}
+.pastille[data-teinte='vert'] {
+  background: #5fcf8e;
+}
+.pastille[data-teinte='violet'] {
+  background: #b38df2;
+}
+
+.sousTitre {
+  display: block;
+  margin: -0.35em 0 0.8em;
+  font-size: 0.98em;
+  font-weight: 700;
+  color: var(--encre-pale);
+}
+
+.etiquette {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  font-family: var(--font-heading);
+  font-size: 1.15em;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--encre);
+}
+.etiquetteDoodle {
+  width: 1.7em;
+  height: 1.7em;
+  flex: none;
+}
+
+.chiffre {
+  font-family: var(--font-heading);
+  font-size: 2.7em;
+  font-weight: 800;
+  line-height: 0.98;
+  color: var(--encre);
+  white-space: nowrap;
+}
+.sur {
+  margin-left: 0.12em;
+  font-size: 0.42em;
+  font-weight: 800;
+  color: var(--encre-pale);
+}
+.petit {
+  font-size: 0.98em;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--encre-pale);
+}
+.petitCentre {
+  display: block;
+  text-align: center;
+  font-size: 0.98em;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--encre-pale);
+}
+.legendeCentre {
+  display: block;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--encre);
+}
+
+/* Le lavis de surligneur, posé en biais comme un vrai trait de feutre. */
+.note {
+  align-self: center;
+  margin: 0.45em 0;
+  padding: 0.05em 0.35em;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 1.25em;
+  font-weight: 800;
+  color: var(--encre);
+  background: linear-gradient(
+    176deg,
+    transparent 18%,
+    color-mix(in oklab, var(--highlight) 45%, transparent) 18% 82%,
+    transparent 82%
+  );
+}
+.noteOr {
+  background: linear-gradient(176deg, transparent 12%, var(--highlight) 12% 88%, transparent 88%);
+}
+
+/* Le post-it du bas de page : la phrase qui dit l'enjeu. */
+.postit {
+  margin-top: auto;
+  padding: 0.6em 0.7em;
+  border-radius: 0.15em 0.15em 0.6em 0.15em;
+  background: color-mix(in oklab, var(--highlight) 38%, #fff8e1);
+  box-shadow: 0 0.2em 0.35em rgb(60 35 15 / 0.18);
+  rotate: -1.5deg;
+  font-family: var(--font-heading);
+  font-size: 1.08em;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--encre);
+  text-align: center;
+}
+
+.grandDoodle {
+  display: block;
+  width: 7em;
+  height: 7em;
+  margin: 1.2em auto 0.8em;
+}
+
+.boutonEncre {
+  align-self: center;
+  margin-top: 1.2em;
+  padding: 0.6em 1.1em;
+  border-radius: 999px;
+  background: var(--primary);
+  box-shadow: 0 0.28em 0 color-mix(in oklab, var(--primary) 60%, black);
+  font-family: var(--font-heading);
+  font-size: 1.2em;
+  font-weight: 800;
+  color: #fff;
+  white-space: nowrap;
+}
+.boutonEncre:active {
+  translate: 0 0.15em;
+  box-shadow: 0 0.12em 0 color-mix(in oklab, var(--primary) 60%, black);
+}
+
+.liste {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.jauge {
+  display: block;
+  height: 0.6em;
+  margin: 0.7em 0 0.3em;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--primary) 16%, transparent);
+  overflow: hidden;
+}
+.jauge > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--primary);
+}
+
+/* --- La page de garde, à gauche : la photo et le nom ----------------------- */
+
+.identite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100% - 2em);
+}
+
+.polaroid {
+  position: relative;
+  width: 11.6em;
+  margin-top: 0.8em;
+  padding: 0.65em 0.65em 1.7em;
+  border: 0;
+  border-radius: 0.2em;
+  background: #fffdf8;
+  box-shadow:
+    0 0.35em 0.7em rgb(60 35 15 / 0.22),
+    0 0.05em 0.1em rgb(60 35 15 / 0.2);
+  rotate: -3deg;
+  transition: rotate 0.25s ease, scale 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.polaroid:active {
+  scale: 0.97;
+  rotate: -1deg;
+}
+.photo {
+  display: block;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--primary) 70%, #2a1450);
+}
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.scotchHaut,
+.scotchBas {
+  position: absolute;
+  width: 4.6em;
+  height: 1.45em;
+  background: color-mix(in oklab, var(--primary) 34%, rgb(255 255 255 / 0.35));
+  opacity: 0.85;
+  box-shadow: 0 0.05em 0.12em rgb(40 20 60 / 0.15);
+  /* Les bouts déchirés du ruban adhésif. */
+  clip-path: polygon(0 8%, 6% 0, 12% 10%, 20% 2%, 100% 0, 96% 50%, 100% 100%, 90% 92%, 82% 100%, 0 100%, 4% 50%);
+}
+.scotchHaut {
+  top: -0.55em;
+  left: -1.6em;
+  rotate: -38deg;
+}
+.scotchBas {
+  right: -1.7em;
+  bottom: 0.3em;
+  rotate: -36deg;
+}
+.eclatsPolaroid {
+  position: absolute;
+  top: -1.9em;
+  left: -2.2em;
+  width: 2.6em;
+  height: 2.6em;
+  color: var(--encre);
+  rotate: 30deg;
+}
+
+.nomLigne {
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
+  max-width: 100%;
+  margin-top: 1.1em;
+}
+.nom {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-heading);
+  font-size: 2.6em;
+  font-weight: 800;
+  line-height: 1.05;
+  color: var(--encre);
+}
+.crayon {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2.2em;
+  height: 2.2em;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0.12em 0.3em rgb(60 35 15 / 0.22);
+  color: var(--primary);
+}
+.crayon svg {
+  width: 1.1em;
+  height: 1.1em;
+}
+.crayon:active {
+  scale: 0.9;
+}
+.souligneNom {
+  display: block;
+  width: 9.5em;
+  height: 0.7em;
+  margin-top: 0.05em;
+  color: var(--encre);
+}
+
+.surligne {
+  max-width: 100%;
+  margin-top: 0.9em;
+  padding: 0.3em 0.75em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: 0.35em;
+  background: color-mix(in oklab, var(--primary) 22%, #fff);
+  rotate: -1.5deg;
+  font-family: var(--font-heading);
+  font-size: 1.12em;
+  font-weight: 700;
+  color: var(--encre);
+}
+
+.rang {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  margin-top: auto;
+  margin-bottom: 0.4em;
+  color: var(--encre);
+}
+.blason {
+  width: 6em !important;
+  height: 6em !important;
+}
+.eclatsRangGauche,
+.eclatsRangDroite {
+  width: 2em;
+  height: 2em;
+}
+
+/* Les badges mis en avant, sous le nom. */
+.enAvant {
+  display: flex;
+  gap: 0.7em;
+  margin-top: 1.3em;
+  padding: 0;
+  list-style: none;
+}
+.autocollantPetit {
+  display: grid;
+  width: 3.3em;
+  height: 3.3em;
+  place-items: center;
+  padding: 0.35em;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0.16em 0.32em rgb(60 35 15 / 0.24);
+  font-size: 1em;
+}
+.autocollantPetit :global(img) {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* --- La page de garde, à droite : les quatre chiffres -------------------------- */
+
+.chiffres {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 2em);
+}
+.chiffreLigne {
+  display: grid;
+  flex: 1;
+  grid-template-columns: 4.8em 1fr;
+  align-items: center;
+  gap: 0.5em;
+}
+.chiffreDoodle {
+  width: 4.6em;
+  height: 4.6em;
+}
+.chiffreTexte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.legende {
+  margin-top: 0.1em;
+  padding: 0 0.2em 0.05em;
+  border-bottom: 0.13em solid color-mix(in oklab, var(--encre) 55%, transparent);
+  font-family: var(--font-heading);
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--encre);
+}
+
+.niveau {
+  display: flex;
+  flex: 1.1;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2em;
+  color: var(--encre);
+}
+.eclatsNiveau {
+  width: 1.9em;
+  height: 1.9em;
+}
+.bouclier {
+  position: relative;
+  width: 6em;
+  height: 6em;
+}
+.bouclierDoodle {
+  width: 100%;
+  height: 100%;
+}
+.bouclierTexte {
+  position: absolute;
+  inset: 0 0 0.6em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  color: var(--encre);
+}
+.bouclierNiv {
+  font-size: 1.05em;
+  font-weight: 800;
+  line-height: 1;
+}
+.bouclierChiffre {
+  font-size: 2.3em;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.semaine {
+  display: grid;
+  flex: 1.45;
+  place-items: center;
+}
+.anneau,
+.grandAnneau {
+  position: relative;
+  display: block;
+  color: var(--primary);
+}
+.anneau {
+  width: 8.8em;
+  height: 8.8em;
+}
+.grandAnneau {
+  align-self: center;
+  width: 10.8em;
+  height: 10.8em;
+  margin: 0.2em 0 0.6em;
+}
+.anneau svg,
+.grandAnneau svg {
+  width: 100%;
+  height: 100%;
+}
+.anneauOr {
+  color: var(--highlight);
+}
+.anneauTexte {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.anneauChiffre {
+  font-family: var(--font-heading);
+  font-size: 1.75em;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--encre);
+  white-space: nowrap;
+}
+.grandAnneauChiffre {
+  font-family: var(--font-heading);
+  font-size: 2.25em;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--encre);
+  white-space: nowrap;
+}
+.anneauLegende {
+  max-width: 6em;
+  margin-top: 0.15em;
+  font-size: 0.85em;
+  font-weight: 700;
+  line-height: 1.05;
+  color: var(--encre-pale);
+}
+
+/* --- Progrès --------------------------------------------------------------------- */
+
+.cible {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.4em;
+}
+.cibleValeur {
+  font-family: var(--font-heading);
+  font-size: 1.5em;
+  font-weight: 800;
+  color: var(--encre);
+  white-space: nowrap;
+}
+
+.jours {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.35em;
+  height: 6.4em;
+  margin-top: auto;
+}
+.jour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25em;
+}
+.jourBarre {
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 1.5em;
+  overflow: hidden;
+  border-radius: 0.45em;
+  background: color-mix(in oklab, var(--primary) 13%, transparent);
+}
+.jourBarre > span {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  border-radius: 0.45em;
+  background: var(--primary);
+}
+.jour[data-aujourdhui] .jourBarre {
+  box-shadow: inset 0 0 0 0.14em var(--primary);
+}
+.jour[data-avenir] {
+  opacity: 0.4;
+}
+.jourLettre {
+  font-family: var(--font-heading);
+  font-size: 1em;
+  font-weight: 800;
+  color: var(--encre);
+}
+
+.bloc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2em;
+  width: 100%;
+  padding: 0.45em 0.15em;
+  border: 0;
+  background: none;
+  color: inherit;
+  text-align: left;
+  -webkit-tap-highlight-color: transparent;
+}
+button.bloc:active {
+  opacity: 0.7;
+}
+.aEcrire {
+  margin-top: 0.2em;
+  padding: 0.3em 0.65em;
+  border: 0.13em dashed color-mix(in oklab, var(--primary) 70%, transparent);
+  border-radius: 0.6em;
+  font-family: var(--font-heading);
+  font-size: 1.25em;
+  font-weight: 800;
+  color: var(--primary);
+}
+.lien {
+  padding: 0.4em 0.15em;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: 1.2em;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+/* --- Amis -------------------------------------------------------------------------- */
+
+.ami {
+  display: grid;
+  grid-template-columns: 1.8em 3.1em minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.3em 0.25em;
+}
+.ami[data-moi] {
+  background: linear-gradient(
+    177deg,
+    transparent 10%,
+    color-mix(in oklab, var(--highlight) 50%, transparent) 10% 90%,
+    transparent 90%
+  );
+}
+.amiRang {
+  display: grid;
+  place-items: center;
+  font-family: var(--font-heading);
+  font-size: 1.45em;
+  font-weight: 800;
+  color: var(--encre);
+}
+.amiCouronne {
+  width: 1.45em;
+  height: 1.45em;
+}
+.amiPortrait {
+  display: block;
+  width: 3.1em;
+  height: 3.1em;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.12em var(--encre);
+  background: color-mix(in oklab, var(--primary) 20%, #fff);
+}
+.amiNom {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-heading);
+  font-size: 1.32em;
+  font-weight: 700;
+  color: var(--encre);
+}
+.amiEpees {
+  flex: none;
+  width: 1.15em;
+  height: 1.15em;
+}
+.amiValeur {
+  font-family: var(--font-heading);
+  font-size: 1.22em;
+  font-weight: 800;
+  color: var(--encre);
+  white-space: nowrap;
+}
+
+/* --- Collection ------------------------------------------------------------------ */
+
+.matiere {
+  display: grid;
+  grid-template-areas: 'couronne nom' 'couronne jauge';
+  grid-template-columns: 3em minmax(0, 1fr);
+  column-gap: 0.5em;
+  row-gap: 0.3em;
+  align-items: center;
+}
+.matiereCouronne {
+  grid-area: couronne;
+  width: 3em;
+  height: 3em;
+}
+.matiereNom {
+  grid-area: nom;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-heading);
+  font-size: 1.28em;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--encre);
+}
+.matiereJauge {
+  grid-area: jauge;
+  display: block;
+  height: 0.55em;
+  overflow: hidden;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--primary) 14%, transparent);
+}
+.matiereJauge > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--primary);
+}
+
+.autocollants {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85em 0.75em;
+  margin: 0.4em 0 0.8em;
+  padding: 0 0.3em;
+  list-style: none;
+}
+.autocollant,
+.caseVide {
+  display: grid;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 50%;
+}
+.autocollant {
+  padding: 0.4em;
+  border: 0.16em solid #fff;
+  background: #fff;
+  box-shadow: 0 0.18em 0.35em rgb(60 35 15 / 0.22);
+  font-size: 2em;
+}
+.autocollant :global(img) {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.caseVide {
+  border: 0.14em dashed color-mix(in oklab, var(--encre) 35%, transparent);
+  font-family: var(--font-heading);
+  font-size: 1.5em;
+  font-weight: 800;
+  color: color-mix(in oklab, var(--encre) 30%, transparent);
+}
+
+/* --- Palmarès -------------------------------------------------------------------- */
+
+.laurier {
+  position: relative;
+  align-self: center;
+  width: 9.4em;
+  height: 9.4em;
+  margin: 0.2em 0 0.3em;
+}
+.laurierDoodle {
+  width: 100%;
+  height: 100%;
+}
+.laurierChiffre {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-heading);
+  font-size: 3.4em;
+  font-weight: 800;
+  color: var(--encre);
+}
+
+.record {
+  display: grid;
+  grid-template-areas: 'nom score' 'rang rang';
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 0.4em;
+  padding: 0.45em 0.1em;
+  border-bottom: 0.1em dashed color-mix(in oklab, var(--encre) 30%, transparent);
+}
+.recordNom {
+  grid-area: nom;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-heading);
+  font-size: 1.15em;
+  font-weight: 700;
+  color: var(--encre);
+}
+.recordScore {
+  grid-area: score;
+  font-family: var(--font-heading);
+  font-size: 1.2em;
+  font-weight: 800;
+  color: var(--primary);
+  white-space: nowrap;
+}
+.recordRang {
+  grid-area: rang;
+  font-size: 0.92em;
+  font-weight: 700;
+  color: var(--encre-pale);
+}

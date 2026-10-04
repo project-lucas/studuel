@@ -188,6 +188,35 @@ export const sfx = {
     playTones(battleTones())
     uiVibrate([14, 30, 22])
   },
+  // Une page du carnet de Moi qui tourne : un souffle de papier — du bruit
+  // blanc passé dans un filtre qui balaie de l'aigu vers le médium, comme une
+  // feuille qui fend l'air puis se pose. `vite` : feuilleté (onglet), plus
+  // court et plus doux.
+  page(vite = false) {
+    if (!isSoundOn()) return
+    const audio = ensureCtx()
+    if (!audio) return
+    const duree = vite ? 0.16 : 0.32
+    const t0 = audio.currentTime
+    const tampon = audio.createBuffer(1, Math.ceil(audio.sampleRate * duree), audio.sampleRate)
+    const canal = tampon.getChannelData(0)
+    for (let i = 0; i < canal.length; i++) canal[i] = Math.random() * 2 - 1
+    const source = audio.createBufferSource()
+    source.buffer = tampon
+    const filtre = audio.createBiquadFilter()
+    filtre.type = 'bandpass'
+    filtre.Q.value = 0.9
+    filtre.frequency.setValueAtTime(5200, t0)
+    filtre.frequency.exponentialRampToValueAtTime(1400, t0 + duree)
+    const gain = audio.createGain()
+    gain.gain.setValueAtTime(0.0001, t0)
+    gain.gain.exponentialRampToValueAtTime(vite ? 0.05 : 0.09, t0 + duree * 0.35)
+    gain.gain.exponentialRampToValueAtTime(0.0001, t0 + duree)
+    source.connect(filtre).connect(gain).connect(audio.destination)
+    source.start(t0)
+    source.stop(t0 + duree + 0.02)
+    if (!vite) uiVibrate(6)
+  },
   // Retournement de carte : petit clic doux.
   flip() {
     if (!isSoundOn()) return

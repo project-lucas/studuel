@@ -316,3 +316,81 @@ button.tuile:active {
   border-radius: 0;
   box-shadow: none;
 }
+
+/* Classement · Moyenne · Palmarès : trois cases d'une même carte, séparées
+   par un filet (04/10/2026 : moins de blocs blancs empilés). */
+.rangee {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 0;
+}
+.rangee > * + * {
+  border-left: 1px solid var(--border);
+}
+.rangee .tuile {
+  padding: 0.85rem 0.6rem;
+}
+.rangee .grand {
+  font-size: 1.45rem;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+/* --- LE FOND DE MOI (04/10/2026) ----------------------------------------------
+   Lucas : « le fond beige s'étire, les blocs au-dessus, et le violet juste
+   au-dessus de la barre de navigation, comme un habillage ». Le mur crème
+   semé des CRAYONS CROISÉS du logo (masque de public/images/moi/banniere/
+   embleme.webp, en highlight très pâle) — les couronnes sont parties : trop
+   Clash Royale —, fixe (il ne vit que tant que l'onglet est visible : un
+   onglet caché est en display:none). Puis la silhouette violette de
+   l'ACADÉMIE, fixée au-dessus de la barre d'onglets ; le contenu passe dessous
+   et la page s'allonge d'autant. */
+.fondMotif {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  background: var(--background);
+  pointer-events: none;
+}
+.fondMotif::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background: var(--highlight);
+  -webkit-mask: url('/images/moi/banniere/motif.webp') 0 0 / 120px 120px repeat;
+  mask: url('/images/moi/banniere/motif.webp') 0 0 / 120px 120px repeat;
+}
+
+.academie {
+  position: fixed;
+  inset-inline: 0;
+  bottom: calc(4rem + env(safe-area-inset-bottom));
+  z-index: 40;
+  height: min(calc(100vw / 3.68), 8rem);
+  pointer-events: none;
+  background: url('/images/moi/banniere/academie.webp') bottom center / 100% 100% no-repeat;
+}
+@media (min-width: 768px) {
+  .academie {
+    display: none;
+  }
+}
+
+.salle {
+  margin-top: 0.25rem;
+  padding-bottom: 5.5rem;
+}
+
+/* Dans la salle, chaque bloc est une plaque crème cerclée d'or, posée sur son
+   socle — la langue de l'écusson, pas celle des cartes blanches de Réviser. */
+.salle :global(.carte) {
+  background: color-mix(in oklch, var(--card) 88%, var(--highlight));
+  box-shadow:
+    0 0 0 3px var(--highlight),
+    0 0 0 5px color-mix(in oklch, var(--primary) 45%, black),
+    0 6px 0 5px color-mix(in oklch, var(--primary) 45%, black);
+}
+.salle :global(.titre-section) {
+  color: var(--primary);
+}

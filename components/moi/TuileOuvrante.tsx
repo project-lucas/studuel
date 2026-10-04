@@ -23,6 +23,7 @@ export default function TuileOuvrante({
   children,
   className,
   etat,
+  nu = false,
 }: {
   /** Ce que le bouton dit au lecteur d'écran : le chiffre et ce qu'il ouvre. */
   label: string
@@ -33,6 +34,8 @@ export default function TuileOuvrante({
   className?: string
   /** Posé en `data-etat` sur la tuile (le record battu se cercle d'or). */
   etat?: string
+  /** Sans carte : une case d'une rangée qui porte déjà la sienne. */
+  nu?: boolean
 }) {
   const [ouvert, setOuvert] = useState(false)
   useFermeAuMasquage(setOuvert, false)
@@ -48,7 +51,7 @@ export default function TuileOuvrante({
         aria-haspopup="dialog"
         aria-label={label}
         data-etat={etat}
-        className={cn('carte', styles.tuile, className)}
+        className={cn(!nu && 'carte', styles.tuile, className)}
       >
         {apercu}
       </button>

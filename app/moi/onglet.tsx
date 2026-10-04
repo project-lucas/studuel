@@ -152,6 +152,13 @@ type MoiProfileRow = {
 // palmarès. Chaque tuile ouvre son détail dans une feuille ; les trois onglets
 // et la carte de joueur ont disparu. Aucune lecture de plus : le record vient
 // du journal déjà lu pour le rythme, la meilleure série des jours actifs.
+//
+// REFONTE DU 2026-10-04 (maquette « cahier ouvert » choisie par Lucas). LE
+// CARNET : un carnet à spirale posé sur un bureau, dont on tourne les pages au
+// doigt ou par ses intercalaires — page de garde (photo, nom, quatre
+// chiffres), Progrès, Amis, Collection, Palmarès (components/moi/carnet). Mêmes
+// données, aucune lecture de plus : chaque page ouvre le bloc complet d'avant
+// dans une feuille.
 // -----------------------------------------------------------------------------
 /**
  * L'ONGLET MOI, construit dès l'ouverture de l'app et gardé vivant,
@@ -426,7 +433,15 @@ export default async function OngletMoi() {
       .reduce((somme, j) => somme + (Number(j.seconds) || 0), 0),
     secondes: secondesTotal,
   }
-  const amis = resoudreClassementAmis(classementAmisBrut, maLigne)
+  // Ma ligne ne dit jamais MOINS que l'anneau du temps de travail, lu dans le
+  // même journal (04/10/2026 : « Toi · 0 min » sous un anneau à 5 h 55).
+  const amisLus = resoudreClassementAmis(classementAmisBrut, maLigne)
+  const amis = {
+    ...amisLus,
+    joueurs: amisLus.joueurs.map((j) =>
+      j.moi ? { ...j, secondesSemaine: Math.max(j.secondesSemaine, maLigne.secondesSemaine) } : j,
+    ),
+  }
   // Mes trophées de la semaine ne se lisent que dans la réponse de la 465.
   const tropheesSemaine = amis.complet
     ? (amis.joueurs.find((j) => j.moi)?.tropheesSemaine ?? null)

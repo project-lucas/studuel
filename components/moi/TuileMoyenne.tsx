@@ -53,11 +53,14 @@ export default function TuileMoyenne({
   bilan,
   terms,
   disabled = false,
+  nu = false,
 }: {
   bilan: BilanMoyenne
   terms: readonly TermPoint[]
   /** La migration 187 n'est pas passée : la saisie n'a nulle part où aller. */
   disabled?: boolean
+  /** Sans carte : une case d'une rangée qui porte déjà la sienne. */
+  nu?: boolean
 }) {
   const [open, setOpen] = useState(false)
   // L'onglet reste monté : on ne retrouve pas la saisie ouverte au retour.
@@ -68,7 +71,7 @@ export default function TuileMoyenne({
 
   if (disabled) {
     return (
-      <div className={cn('carte', styles.tuile)}>
+      <div className={cn(!nu && 'carte', styles.tuile)}>
         <span className="surtitre">Moyenne</span>
         <span className="mt-2 text-sm font-bold text-muted-foreground">Bientôt</span>
       </div>
@@ -89,7 +92,7 @@ export default function TuileMoyenne({
             ? `Moyenne générale : ${moyenne} sur 20. Modifier mes moyennes.`
             : 'Ajouter mes moyennes de trimestre'
         }
-        className={cn('carte', styles.tuile)}
+        className={cn(!nu && 'carte', styles.tuile)}
       >
         <span className="surtitre">Moyenne</span>
         {moyenne ? (

@@ -103,7 +103,7 @@ export async function compresserAvatar(image: Buffer): Promise<Buffer> {
 /** Un blason de l'app, joint au modèle comme référence de style. Null en cas d'échec. */
 export async function chargerReference(origine: string): Promise<{ mimeType: string; data: string } | null> {
   try {
-    const r = await fetch(`${origine}/images/profil/7.webp`, { signal: AbortSignal.timeout(5_000) })
+    const r = await fetch(`${origine}/images/profil/v2/7.webp`, { signal: AbortSignal.timeout(5_000) })
     if (!r.ok) return null
     // Le modèle lit mieux un PNG : la référence est convertie au passage.
     const png = await sharp(Buffer.from(await r.arrayBuffer())).png().toBuffer()

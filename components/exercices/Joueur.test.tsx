@@ -95,7 +95,7 @@ describe('Joueur — un exercice du cahier joué de bout en bout', () => {
     // Bilan : 1 + 2 = 3 points sur 4, réussi, les gains du barème ★.
     expect(await screen.findByText(/3 points sur 4/)).toBeTruthy()
     expect(screen.getByText(/Exercice réussi/)).toBeTruthy()
-    expect(screen.getByText(/Gains : 5 gemme, 20 xp/)).toBeTruthy()
+    expect(screen.getByText(/Gains : 20 xp/)).toBeTruthy()
     expect(screen.getByRole('link', { name: /Exercice suivant/ }).getAttribute('href')).toBe('/cahier/2')
   })
 

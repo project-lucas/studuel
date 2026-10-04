@@ -4,12 +4,10 @@ import Image from 'next/image'
 import { useRef, useSyncExternalStore, useTransition } from 'react'
 import { Check, Clock } from 'lucide-react'
 import Feuille from '@/components/boutique/Feuille'
-import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import XpIcon from '@/components/ui/XpIcon'
 import { origineUnique, useRecompenses } from '@/components/recompenses/RecompensesProvider'
 import { claimDailyQuests } from '@/app/defi/hebdo-actions'
 import {
-  ALL_DONE_GEMS,
   ALL_DONE_XP,
   BONUS_STEP_ID,
   PILIER_LIBELLE,
@@ -84,10 +82,7 @@ function ContenuQuetes({ etat }: { etat: QuetesDuJour }) {
         dues.map((q) => q.id),
         r.allDone,
       )
-      const gains: Gain[] = [
-        { unite: 'xp', montant: r.xp },
-        { unite: 'gemme', montant: r.gems },
-      ].filter((g) => g.montant > 0) as Gain[]
+      const gains: Gain[] = [{ unite: 'xp', montant: r.xp }].filter((g) => g.montant > 0) as Gain[]
       celebrer(gains, origineUnique(declencheur.current, gains))
     })
   }
@@ -160,10 +155,6 @@ function LigneQuete({
               <XpIcon className="size-3.5" />
               {q.xp}
             </span>
-            <span className="inline-flex items-center gap-0.5">
-              <CristalIcon className="size-4" />
-              {q.gems}
-            </span>
           </span>
         </div>
       </div>
@@ -175,7 +166,6 @@ function LigneQuete({
         <BoutonEncaisser
           ref={bouton}
           xp={q.xp}
-          gemmes={q.gems}
           disabled={pending}
           onClick={() => onEncaisser(bouton.current)}
         />
@@ -207,13 +197,9 @@ function CoffreDuJour({ faites, total, ouvert }: { faites: number; total: number
         </div>
       </div>
       <span className="flex shrink-0 flex-col items-end gap-1 text-xs font-extrabold tabular-nums">
-        <span className="inline-flex items-center gap-0.5">
-          <XpIcon className="size-3.5" />
+        <span className="inline-flex items-center gap-0.5 text-sm">
+          <XpIcon className="size-4" />
           {ALL_DONE_XP}
-        </span>
-        <span className="inline-flex items-center gap-0.5">
-          <CristalIcon className="size-4" />
-          {ALL_DONE_GEMS}
         </span>
       </span>
     </div>

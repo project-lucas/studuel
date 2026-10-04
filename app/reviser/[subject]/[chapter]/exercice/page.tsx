@@ -97,7 +97,7 @@ function PorteStudueLPlus({ titre, retour, cahier = false }: { titre: string; re
       </p>
       <p className="text-muted-foreground mt-2 text-sm text-balance">
         {cahier
-          ? `Trois exercices sur « ${titre} », avec des cartes, des graphiques et des textes à analyser, qui rapportent des gemmes. En attendant, le cours et le quiz du chapitre sont ouverts.`
+          ? `Trois exercices sur « ${titre} », avec des cartes, des graphiques et des textes à analyser, qui rapportent de l’XP — et des gemmes pour le plus corsé. En attendant, le cours et le quiz du chapitre sont ouverts.`
           : `Un vrai sujet écrit sur le cours de « ${titre} », que l’IA corrige et note sur 20, avec le corrigé. En attendant, le cours et le quiz du chapitre sont ouverts.`}
       </p>
       <div className="mt-4 flex flex-col items-center gap-2">

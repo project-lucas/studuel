@@ -20,6 +20,7 @@ import {
   etiquetteOffre,
   type BoostsActifs,
   type EtatOffre,
+  MAX_GELS,
   type IdOffre,
   type Offre,
 } from '@/lib/boutique/offres'
@@ -29,6 +30,7 @@ import { cn } from '@/lib/utils'
 import xpIllustration from '@/public/images/boutique/marche/xp.webp'
 import bouclierIllustration from '@/public/images/boutique/marche/bouclier.webp'
 import ficheIllustration from '@/public/images/boutique/marche/fiche.webp'
+import gelIllustration from '@/public/images/serie/gel-serie.webp'
 import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 
 /**
@@ -38,6 +40,7 @@ import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
  * bouclier rappelle la pervenche des cartes du magasin de Clash Royale.
  */
 const TEINTES: Record<IdOffre, TeinteMagasin> = {
+  'gel-serie': 'turquoise',
   'double-xp-2h': 'ambre',
   'bouclier-trophees': 'bleu',
 }
@@ -49,6 +52,8 @@ const TEINTES: Record<IdOffre, TeinteMagasin> = {
  * illustration dessinerait son emoji à la place (ReplisBoost).
  */
 const ILLUSTRATIONS: Partial<Record<IdOffre, IllustrationMagasin>> = {
+  // Le glaçon de la semaine de série (scripts/serie-jours.mjs).
+  'gel-serie': { image: gelIllustration, largeur: 78 },
   'double-xp-2h': { image: xpIllustration, largeur: 82 },
   'bouclier-trophees': { image: bouclierIllustration, largeur: 82 },
 }
@@ -62,7 +67,12 @@ function ReplisBoost({ offre }: { offre: Offre }) {
 /** Le bas de la carte d'un boost : son prix, ou ce que l'élève en a déjà. */
 function BasCarte({ offre, etat }: { offre: Offre; etat: EtatOffre }) {
   if (etat.kind === 'active') return <EnCours texte={etat.reste} lecteur="En cours, encore" />
-  if (etat.kind === 'en-reserve') return <EnCours texte="Prêt" lecteur="Bouclier en réserve :" />
+  if (etat.kind === 'en-reserve')
+    return offre.kind === 'gel_serie' ? (
+      <EnCours texte="2 / 2" lecteur="Réserve de gels pleine :" />
+    ) : (
+      <EnCours texte="Prêt" lecteur="Bouclier en réserve :" />
+    )
   // Celui du jour est parti : on dit QUAND il revient, pas un prix qu'on ne
   // peut pas payer (un Boost XP par jour, migration 373).
   if (etat.kind === 'demain') return <span className="text-[16cqw]">Demain</span>
@@ -71,7 +81,10 @@ function BasCarte({ offre, etat }: { offre: Offre; etat: EtatOffre }) {
 
 function libelleCarte(offre: Offre, etat: EtatOffre): string {
   if (etat.kind === 'active') return `${offre.titre} : en cours, encore ${etat.reste}`
-  if (etat.kind === 'en-reserve') return `${offre.titre} : prêt, il protège ta prochaine défaite`
+  if (etat.kind === 'en-reserve')
+    return offre.kind === 'gel_serie'
+      ? `${offre.titre} : réserve pleine, deux gels protègent ta série`
+      : `${offre.titre} : prêt, il protège ta prochaine défaite`
   if (etat.kind === 'demain') return `${offre.titre} : déjà pris aujourd’hui, de retour demain`
   return `${offre.titre} pour ${offre.prixGemmes} gemmes`
 }
@@ -188,6 +201,7 @@ export default function Marche({
           open={choix.open}
           offre={offre}
           etat={etatOffre(offre, boosts, gemmes, maintenant)}
+          gels={boosts.gels}
           connecte={connecte}
           onClose={() => setChoix((c) => ({ ...c, open: false }))}
         />
@@ -200,12 +214,15 @@ function FeuilleOffre({
   open,
   offre,
   etat,
+  gels,
   connecte,
   onClose,
 }: {
   open: boolean
   offre: Offre
   etat: EtatOffre
+  /** Gels déjà en réserve (le gel de série se cumule, deux au plus). */
+  gels: number
   connecte: boolean
   onClose: () => void
 }) {
@@ -222,7 +239,10 @@ function FeuilleOffre({
         return
       }
       sfx.unlock()
-      setMessage({ ok: true, texte: 'C’est activé ! Profites-en.' })
+      setMessage({
+        ok: true,
+        texte: offre.kind === 'gel_serie' ? 'Gel en réserve : ta série est protégée.' : 'C’est activé ! Profites-en.',
+      })
       router.refresh()
     })
   }
@@ -241,6 +261,11 @@ function FeuilleOffre({
       <div className="mt-3 flex flex-col items-center gap-1 text-center">
         <h2 className="font-heading text-2xl font-extrabold">{offre.titre}</h2>
         <p className="max-w-xs text-sm font-semibold text-muted-foreground">{offre.description}</p>
+        {offre.kind === 'gel_serie' && connecte ? (
+          <p className="mt-1 rounded-full bg-secondary px-3 py-1 text-xs font-extrabold text-primary">
+            En réserve : {gels} / {MAX_GELS}
+          </p>
+        ) : null}
       </div>
 
       <div className="mt-5 flex flex-col gap-2">
@@ -274,7 +299,9 @@ function FeuilleOffre({
           </p>
         ) : etat.kind === 'en-reserve' ? (
           <p className="rounded-2xl bg-success/12 px-3 py-2.5 text-center text-sm font-bold">
-            Ton bouclier est prêt : il protège ta prochaine défaite.
+            {offre.kind === 'gel_serie'
+              ? 'Tes deux gels sont prêts : ta série est protégée.'
+              : 'Ton bouclier est prêt : il protège ta prochaine défaite.'}
           </p>
         ) : (
           <>

@@ -15,19 +15,19 @@ import {
 } from '@/lib/jeux/palier-gemmes'
 
 /**
- * Fait payer en gemmes les étoiles de ce jeu que le serveur n'a pas encore
- * payées (migration 373 : palier N → N gemmes par étoile, une fois pour
- * toujours). Appelée à la fin d'une partie qui a décroché une étoile, et par
+ * Fait payer en XP les étoiles de ce jeu que le serveur n'a pas encore payées
+ * (migration 557 : palier N → 5 × N XP par étoile, une fois pour toujours ;
+ * c'étaient des gemmes depuis la 373). Appelée à la fin d'une partie qui a décroché une étoile, et par
  * la carte du jeu quand le stockage local porte des étoiles jamais payées.
  *
- * Rend les gemmes versées PAR CET APPEL et les étoiles désormais payées, ou
+ * Rend l'XP versée PAR CET APPEL et les étoiles désormais payées, ou
  * `null` sans bruit quand il n'y a rien à dire : visiteur, jeu hors catalogue,
  * migration 373 pas encore exécutée.
  */
-export async function reclamerGemmesPalier(
+export async function reclamerEtoilesPalier(
   gameId: string,
   etoiles: readonly number[],
-): Promise<{ gemmes: number; etoiles: EtoilesParPalier } | null> {
+): Promise<{ xp: number; etoiles: EtoilesParPalier } | null> {
   if (!playableSalonGame(String(gameId))) return null
   if (!Array.isArray(etoiles) || etoiles.length !== 5) return null
   const propres = etoiles.map((n) => {
@@ -45,12 +45,12 @@ export async function reclamerGemmesPalier(
   })
   if (error) {
     if (!isMissingSchemaObject(error)) {
-      console.error('[defi] gemmes de palier non versées:', error.message)
+      console.error('[defi] XP des étoiles de palier non versée:', error.message)
     }
     return null
   }
   const reponse = lireReclamation(data)
-  return reponse.ok ? { gemmes: reponse.gemmes, etoiles: reponse.etoiles } : null
+  return reponse.ok ? { xp: reponse.xp, etoiles: reponse.etoiles } : null
 }
 
 /**

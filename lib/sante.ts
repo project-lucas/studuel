@@ -4274,10 +4274,19 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     id: '556',
     fichier: '556_niveau_paliers.sql',
     feature:
-      'LES COFFRES DE PALIER DE NIVEAU — tous les 5 niveaux, un coffre que l’élève ouvre lui-même : 10 gemmes par niveau du palier, plafonné à 250 (`niveau_palier_gemmes`, `niveau_palier_reclamer`, source de gemmes `niveau_palier`). Les 15 gemmes de chaque niveau franchi restent versées d’office (368).',
+      'LES COFFRES DE PALIER DE NIVEAU — tous les 5 niveaux, un coffre que l’élève ouvre lui-même : 10 gemmes par niveau du palier, plafonné à 250 (`niveau_palier_gemmes`, `niveau_palier_reclamer`, source de gemmes `niveau_palier`). Les 15 gemmes de chaque niveau franchi restaient versées d’office (368) ; la 557 les retire et ramène le coffre à 10 gemmes (25 tous les 25 niveaux).',
     siAbsente:
       'La fête de niveau et la bulle du niveau annoncent le coffre, mais « Ouvrir » répond que le coffre arrive bientôt. Rien ne casse. À exécuter APRÈS la 379.',
     sonde: { type: 'rpc', fn: 'niveau_palier_gemmes', args: { p_niveau: 5 } },
+  },
+  {
+    id: '557',
+    fichier: '557_economie_xp_partout.sql',
+    feature:
+      'L’XP PARTOUT, LES GEMMES RARES (lib/economie) — chaque geste de travail verse de l’XP au barème, dans un plafond par jour (`xp_activite` : quiz, révision, capsule, encyclopédie, flashcards, jeux, arène, défi du jour, duel, première partie) ; les ÉPREUVES (`epreuve_recompenser` : dictée, contrôle blanc, examen blanc, annale — `annale_commencer` lance le chrono) versent XP et, au-dessus d’un seuil, des gemmes, 40 par semaine au plus. Plus de gemmes au passage de niveau, à la série, au chapitre à 3 couronnes, aux quêtes, aux étoiles de jeu, au coffre d’équipe, au clan ni à la Traque (ils paient en XP) ; coffre de palier de niveau à 10 gemmes (25 tous les 25 niveaux) ; leçon à 10 XP.',
+    siAbsente:
+      'Les nouvelles activités ne versent pas d’XP (l’écran de fin n’annonce rien), les annales ne se valident pas, et l’ancienne économie continue de verser ses gemmes. Rien ne casse. À exécuter APRÈS la 556.',
+    sonde: { type: 'rpc', fn: 'xp_activite_bareme', args: { p_source: 'quiz', p_points: 1, p_total: 1 } },
   },
 ] as const
 

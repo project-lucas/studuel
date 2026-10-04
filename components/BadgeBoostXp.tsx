@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Zap } from 'lucide-react'
+import XpIcon from '@/components/ui/XpIcon'
 import { cn } from '@/lib/utils'
 
 /**
@@ -49,7 +49,7 @@ export default function BadgeBoostXp({
         className,
       )}
     >
-      <Zap className="size-2.5 fill-current" aria-hidden="true" />
+      <XpIcon className="size-3" />
       ×2 XP
       <span className="sr-only"> : Boost XP actif</span>
     </span>

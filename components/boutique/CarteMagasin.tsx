@@ -10,7 +10,7 @@ import styles from './CarteMagasin.module.css'
  * `data-teinte` des outils de Marcel, globals.css). Violet pour les gemmes,
  * ambre pour le boost XP, bleu pour le boost trophées, rose pour la fiche.
  */
-export type TeinteMagasin = 'violet' | 'ambre' | 'bleu' | 'rose'
+export type TeinteMagasin = 'violet' | 'ambre' | 'bleu' | 'rose' | 'turquoise'
 
 /**
  * L'illustration d'un article, en import statique (URL à empreinte de

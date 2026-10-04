@@ -1,4 +1,5 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
+import type { ActiviteXp, Epreuve } from '@/lib/economie'
 import type { Gain } from '@/lib/gains'
 import { walletLevelInfo, type XpSource } from '@/lib/wallet'
 import { levelFor, type LevelInfo } from '@/lib/xp'
@@ -98,8 +99,8 @@ export async function awardXp(
 }
 
 /**
- * Marque une ACTIVITÉ sans verser d'XP : la série stockée avance, et le palier
- * de 7 jours paye sa gemme.
+ * Marque une ACTIVITÉ sans verser d'XP de barème : la série stockée avance, et
+ * le palier de 7 jours paie ses 50 XP (557 — ses 20 gemmes d'avant).
  *
  * ⚠️ CETTE FONCTION EXISTE PARCE QUE LA SÉRIE ÉTAIT ACCROCHÉE À L'XP. Avant,
  * `wallet_award_xp` faisait les deux : verser l'XP ET faire avancer la série.
@@ -119,21 +120,58 @@ export async function walletTouch(
   return (data as WalletAward | null) ?? null
 }
 
-/** Tente un versement de gemmes de jeu. Renvoie les gemmes versées (0 sinon). */
-export async function awardGems(
+/**
+ * L'XP D'UNE ACTIVITÉ FINIE (migration 557, barème `lib/economie`) : quiz,
+ * révision, capsule, fiche d'encyclopédie, flashcards, jeu, mode de l'arène,
+ * défi du jour, duel, première partie. Le SERVEUR fixe le montant (barème et
+ * plafond du jour) et fait avancer la série ; on ne lui envoie que le score.
+ *
+ * `cle` rend la partie unique : la même clé ne paie qu'une fois. Choisir une
+ * clé qui dit l'acquisition — « quiz:<id>:<jour> » paie un quiz une fois par
+ * jour, un identifiant de session paie chaque partie (dans le plafond).
+ *
+ * Tolère une base sans la 557 : rien n'est versé, rien ne casse.
+ */
+export async function xpActivite(
   supabase: SupabaseClient,
-  source: 'chapter_crowns' | 'defi_win' | 'achievement' | 'filon',
-  key: string,
-): Promise<number> {
-  const { data, error } = await supabase.rpc('wallet_award_gems', {
-    p_source: source,
-    p_key: key,
+  activite: ActiviteXp,
+  cle: string,
+  points = 0,
+  total = 0,
+): Promise<WalletAward | null> {
+  const { data, error } = await supabase.rpc('xp_activite', {
+    p_source: activite,
+    p_cle: cle.slice(0, 70),
+    p_points: Math.max(0, Math.floor(points) || 0),
+    p_total: Math.max(0, Math.floor(total) || 0),
   })
   if (error) {
-    console.error('[wallet] gemmes non versées:', error.message)
-    return 0
+    console.error(`[wallet] XP de ${activite} non versée:`, error.message)
+    return null
   }
-  return Number(data ?? 0)
+  return (data as WalletAward | null) ?? null
+}
+
+/** Ce que rend une épreuve récompensée (et, pour l'annale, pourquoi pas encore). */
+export type EpreuveAward = WalletAward & { raison?: 'pas_commencee' | 'trop_tot'; minutes?: number }
+
+/**
+ * L'XP ET LES GEMMES D'UNE ÉPREUVE (557) — dictée, contrôle blanc, examen
+ * blanc, annale. Le serveur relit la note EN BASE (la tentative, la copie, la
+ * session) : on ne lui envoie que l'identifiant. Les gemmes ne tombent qu'au-
+ * dessus du seuil de `lib/economie.gemmesEpreuve`, dans un plafond par semaine.
+ */
+export async function recompenserEpreuve(
+  supabase: SupabaseClient,
+  epreuve: Epreuve,
+  id: string,
+): Promise<EpreuveAward | null> {
+  const { data, error } = await supabase.rpc('epreuve_recompenser', { p_type: epreuve, p_id: id })
+  if (error) {
+    console.error(`[wallet] épreuve ${epreuve} non récompensée:`, error.message)
+    return null
+  }
+  return (data as EpreuveAward | null) ?? null
 }
 
 /**
@@ -175,8 +213,8 @@ export function gainsVerses(
 ): Gain[] {
   const gains: Gain[] = [
     { unite: 'xp', montant: (award?.awarded ?? 0) + (extra.xp ?? 0) },
-    // La gemme du palier de série sort de `wallet_touch` : elle se gagne en
-    // étant là, pas en réussissant — mais elle se fête au même endroit.
+    // Les gemmes ne sortent plus que d'une ÉPREUVE réussie (557) : dictée,
+    // contrôle blanc, examen blanc, annale — `gems_gained` les porte.
     { unite: 'gemme', montant: (award?.gems_gained ?? 0) + (extra.gemmes ?? 0) },
     { unite: 'couronne', montant: extra.couronnes ?? 0 },
   ]
@@ -185,27 +223,29 @@ export function gainsVerses(
   return gains
 }
 
+/** La clé du jour UTC (« 2026-10-04 ») : un quiz se paie une fois par jour. */
+export function jourUtc(date = new Date()): string {
+  return date.toISOString().slice(0, 10)
+}
+
 /**
- * Progression d'un quiz terminé : la gemme des 3 couronnes si ce quiz vient de
- * compléter son chapitre (le seuil est re-vérifié en SQL).
- *
- * L'XP, elle, ne passe plus par ici : elle se verse sur les COURONNES
- * (awardCouronnes), qui sont l'acquis réel — un quiz raté n'acquiert rien.
+ * Progression d'un quiz terminé (557) : l'XP du quiz lui-même — 10 + 2 par
+ * bonne réponse, +10 si tout est juste, une fois par quiz et par jour, dans le
+ * plafond du jour — PLUS l'XP des couronnes qu'il allume (30 · 40 · 60, une
+ * fois pour toutes, seuil recalculé en SQL). Plus de gemme : le chapitre à
+ * trois couronnes paie en XP.
  *
  * Renvoie les gains à faire voler vers le bandeau, en plus de l'état du
  * portefeuille.
  */
 export async function awardQuizProgression(
   supabase: SupabaseClient,
-  quizId?: string,
+  quizId: string,
+  score: number,
+  total: number,
 ): Promise<{ award: WalletAward | null; gains: Gain[] }> {
-  const award = await walletTouch(supabase)
-  if (!quizId) return { award, gains: gainsVerses(award) }
-
-  const [gemmes, couronnes] = await Promise.all([
-    awardGems(supabase, 'chapter_crowns', quizId),
-    // L'XP du quiz ne vient plus du quiz : elle vient des COURONNES qu'il
-    // allume. Un quiz raté n'acquiert rien, donc ne paye rien.
+  const [award, couronnes] = await Promise.all([
+    xpActivite(supabase, 'quiz', `${quizId}:${jourUtc()}`, score, total),
     supabase
       .rpc('wallet_award_crowns_by_quiz', { p_quiz: quizId })
       .then(({ data, error }) => {
@@ -217,5 +257,5 @@ export async function awardQuizProgression(
       }),
   ])
 
-  return { award, gains: gainsVerses(award, { gemmes, xp: couronnes }) }
+  return { award, gains: gainsVerses(award, { xp: couronnes }) }
 }

@@ -6,7 +6,7 @@
 // gardien sort de sa tanière, un message éclair l'annonce, sa silhouette se
 // pose sur l'île de l'arène — et il n'est défiable que pendant UNE HEURE.
 //
-// La boucle : je révise → le boss sort → je le bats → gemmes → j'ouvre la fiche
+// La boucle : je révise → le boss sort → je le bats → XP (gemmes avant la 557)
 // du chapitre → de quoi mieux réviser. Le combat porte sur les chapitres qui
 // ont rempli la jauge : il interroge littéralement ce qui vient d'être travaillé.
 //
@@ -430,40 +430,30 @@ export function noxUnlocked(weekVictories: number, dayKey: string): boolean {
 
 // ------------------------------------------------------------ les récompenses
 
-/** Gemmes d'une victoire, par rang du boss. Miroir de la migration 212. */
-export const TRAQUE_GEMS: Readonly<Record<BossRank, number>> = {
-  1: 10,
-  2: 15,
-  3: 20,
+/**
+ * XP d'une victoire, par rang du boss. Miroir de `traque_victoire` (557) :
+ * c'étaient des gemmes (10 / 15 / 20) jusqu'au 04/10/2026 — « le gain de
+ * gemmes doit être très rare » —, c'est désormais de l'XP, trois fois plus.
+ */
+export const TRAQUE_XP: Readonly<Record<BossRank, number>> = {
+  1: 30,
+  2: 45,
+  3: 60,
 }
 
-/** Nox vaut un chapitre entier (GEM_COST_CHAPTER = 30). */
-export const NOX_GEMS = 30
+/** Nox, le boss de la semaine : 90 XP, jamais doublé. */
+export const NOX_XP = 90
 
 /** Bonus du boss en chasse du jour. */
 export const CHASSE_MULTIPLIER = 2
 
-/**
- * Plafond HEBDOMADAIRE de gemmes gagnables à la traque. Les quêtes du jour
- * versent déjà 3 à 12 💎 ×3 : sans borne, le catalogue s'ouvre en trois
- * semaines et Studuel+ perd sa contrepartie (cf. la mise en garde de
- * lib/gems.ts). 90 = trois chapitres par semaine — généreux, pas ruineux.
- */
-export const TRAQUE_GEMS_WEEK_CAP = 90
-
-export function gemsForVictory(
+export function xpForVictory(
   rank: BossRank,
   enChasse: boolean,
   isNox = false,
 ): number {
-  const base = isNox ? NOX_GEMS : TRAQUE_GEMS[rank]
+  const base = isNox ? NOX_XP : TRAQUE_XP[rank]
   return enChasse && !isNox ? base * CHASSE_MULTIPLIER : base
-}
-
-/** Gemmes réellement versables compte tenu du plafond de la semaine. */
-export function gemsAfterCap(amount: number, alreadyThisWeek: number): number {
-  const left = Math.max(0, TRAQUE_GEMS_WEEK_CAP - Math.max(0, alreadyThisWeek))
-  return Math.max(0, Math.min(Math.floor(amount), left))
 }
 
 // ------------------------------------------------------------- vue d'une carte
@@ -497,8 +487,8 @@ export type TraqueCard = {
   endsAt: number | null
   /** Ce qu'il reste à faire, en gestes. */
   hint: string
-  /** Gemmes en jeu si on le bat maintenant. */
-  gems: number
+  /** XP en jeu si on le bat maintenant (557). */
+  xp: number
 }
 
 function rankOf(victories: number): BossRank {
@@ -537,7 +527,7 @@ export function traqueCard(
       status === 'debusque'
         ? `Il disparaît dans ${countdownLabel(remainingMs(gauge, nowMs))}`
         : teaseLabel(boss.name, points),
-    gems: gemsForVictory(rank, enChasse, boss.id === NOX_BOSS_ID),
+    xp: xpForVictory(rank, enChasse, boss.id === NOX_BOSS_ID),
   }
 }
 

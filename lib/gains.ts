@@ -57,7 +57,7 @@ export const UNITES: readonly DefinitionUnite[] = [
   { unite: 'xp', un: 'XP', plusieurs: 'XP', cible: 'xp' },
   { unite: 'couronne', un: 'couronne', plusieurs: 'couronnes', cible: null },
   { unite: 'trophee', un: 'trophée', plusieurs: 'trophées', cible: null },
-  { unite: 'gemme', un: 'cristal', plusieurs: 'cristaux', cible: 'gemme' },
+  { unite: 'gemme', un: 'gemme', plusieurs: 'gemmes', cible: 'gemme' },
 ] as const
 
 const RANG = new Map(UNITES.map((d, i) => [d.unite, i]))

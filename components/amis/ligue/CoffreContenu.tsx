@@ -47,9 +47,12 @@ export default function CoffreContenu({ points, xpMoi }: { points: number; xpMoi
               <span className="flex items-center gap-0.5">
                 <XpIcon className="size-4" />+{nombreFr(n.xp)}
               </span>
-              <span className="flex items-center gap-0.5">
-                <CristalIcon className="-my-1 size-5" />+{n.gemmes}
-              </span>
+              {/* Des gemmes seulement pour une semaine close avant la 557. */}
+              {n.gemmes > 0 ? (
+                <span className="flex items-center gap-0.5">
+                  <CristalIcon className="-my-1 size-5" />+{n.gemmes}
+                </span>
+              ) : null}
             </span>
           </li>
         ))}

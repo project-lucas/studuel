@@ -34,7 +34,7 @@ import {
 } from '@/lib/carnet/planification'
 import { chargerEtats, ecrireEtat } from '@/lib/carnet/etats-server'
 import { nettoyerSaisie } from '@/lib/carnet/import-colle'
-import { awardXp, walletTouch } from '@/lib/wallet-server'
+import { awardXp, xpActivite } from '@/lib/wallet-server'
 import {
   comparerReponse,
   corrigerTrous,
@@ -951,9 +951,13 @@ export async function recordAttempt(
   }
 }
 
-export async function endReviewSession(sessionId: string): Promise<Ok> {
+export async function endReviewSession(
+  sessionId: string,
+  /** Cartes revues pendant la session (bornées : 1 XP chacune, 20 au plus). */
+  cartes = 0,
+): Promise<Ok & { xp: number }> {
   const { supabase, userId } = await requireUserId()
-  if (!userId || typeof sessionId !== 'string') return { ok: false }
+  if (!userId || typeof sessionId !== 'string') return { ok: false, xp: 0 }
 
   const { error } = await supabase
     .from('carnet_review_sessions')
@@ -962,24 +966,18 @@ export async function endReviewSession(sessionId: string): Promise<Ok> {
     .eq('user_id', userId)
   if (error) {
     console.error('[carnet-cours] clôture de session impossible:', error.message)
-    return { ok: false }
+    return { ok: false, xp: 0 }
   }
 
-  // L'XP de la session. Réviser son propre carnet ne rapportait RIEN : ni XP,
-  // ni couronne, ni série — un élève qui travaillait une heure sur ses cartes
-  // voyait sa flamme s'éteindre le soir même. La source `flashcards` était
-  // pourtant déjà prévue par `wallet_award_xp` (migration 192) et n'avait
-  // jamais été appelée depuis ici.
-  //
+  // L'XP DE LA SESSION (557) : 1 par carte revue, 20 au plus, 60 par jour —
+  // en plus des 5 XP de chaque carte qui devient « acquise » (recordAttempt).
   // La clé, c'est l'identifiant de session : la RPC dédoublonne, donc rejouer
-  // la fin d'une même session ne verse pas deux fois. Un échec de versement
-  // n'annule pas la session (elle est déjà close ci-dessus) — il se lit dans
-  // les logs de `awardXp`.
-  await walletTouch(supabase)
+  // la fin d'une même session ne verse pas deux fois. La série avance aussi.
+  const award = await xpActivite(supabase, 'flashcards', sessionId, cartes, cartes)
 
   // La série, elle, se lit sur `carnet_review_sessions` depuis la 317 : rien
   // à écrire ici, la ligne de session suffit.
   revalidatePath('/carnet')
   revalidatePath('/reviser')
-  return { ok: true }
+  return { ok: true, xp: award?.awarded ?? 0 }
 }

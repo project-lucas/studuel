@@ -16,7 +16,7 @@ import { gameSfx, sfx, buzz } from '@/lib/sounds'
 import type { GameFormat } from '@/lib/jeux/formats'
 import { readGameBest, writeGameBest } from '@/lib/jeux/records'
 import { usePalierRun } from '@/lib/jeux/use-palier-run'
-import { avecGemmesPalier } from '@/lib/jeux/palier-gemmes'
+import { avecXpPalier } from '@/lib/jeux/palier-gemmes'
 import type { PalierRun } from '@/lib/jeux/paliers'
 import { hasTimeRecord } from '@/lib/jeux/palier-format'
 import { useGameReport } from '@/lib/jeux/use-game-report'
@@ -89,7 +89,7 @@ export default function AnatomyTable({
     standing: palierStanding,
     record: recordPalier,
     reset: resetPalier,
-    gemmes: palierGemmes,
+    xpEtoiles: palierXp,
   } = usePalierRun(format.id, palier)
   const { saved, gains, trophies, bilan, report, reset } = useGameReport(
     subject,
@@ -295,7 +295,7 @@ export default function AnatomyTable({
             best={best}
             isRecord={isRecord}
             saved={saved}
-            gains={avecGemmesPalier(gains, palierGemmes)}
+            gains={avecXpPalier(gains, palierXp)}
             trophies={trophies}
             bilan={bilan}
             ghost={ghost}

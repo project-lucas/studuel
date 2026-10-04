@@ -71,7 +71,11 @@ export function coffreMessage(niveau: number): PushMessage | null {
   return {
     kind: 'coffre',
     title: 'Ton coffre d’équipe est ouvert !',
-    body: `Niveau ${contenu.niveau} : ${nombreFr(contenu.xp)} XP et ${contenu.gemmes} gemmes t’attendent. Viens l’ouvrir !`,
+    // De l'XP seulement depuis la 557 : on ne parle de gemmes que s'il y en a.
+    body:
+      contenu.gemmes > 0
+        ? `Niveau ${contenu.niveau} : ${nombreFr(contenu.xp)} XP et ${contenu.gemmes} gemmes t’attendent. Viens l’ouvrir !`
+        : `Niveau ${contenu.niveau} : ${nombreFr(contenu.xp)} XP t’attendent. Viens l’ouvrir !`,
     url: COFFRE_URL,
   }
 }

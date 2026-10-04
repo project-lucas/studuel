@@ -323,7 +323,7 @@ export default async function OngletReviser() {
 
   // Série vivante pour la flamme du header.
   const streak = computeStreak(activityDays, new Date(), gelsSerie)
-  const week = weekProgress(activityDays)
+  const week = weekProgress(activityDays, new Date(), gelsSerie.joursGeles)
 
   // L'objectif quotidien ne s'AFFICHE plus sur cet écran (l'anneau de minutes
   // est parti avec la carte de mission — le HUD et l'onglet Moi portent déjà le
@@ -648,6 +648,7 @@ export default async function OngletReviser() {
                 chaptersBySubject={chaptersBySubject}
                 existingExamChapters={[...existingExamChapters]}
                 goalMinutes={goalMinutes}
+                gelsEnReserve={gelsSerie.gelsDisponibles}
                 carnetSlot={
                   <CarnetButton
                     coursesCount={carnetCoursesCount}

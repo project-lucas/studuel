@@ -162,7 +162,7 @@ describe('GameTable — une partie de salon se termine, et son écran de fin ne 
     await repondre('Faux')
     await act(async () => {})
 
-    expect(screen.getByText(/20 cristaux/)).toBeInTheDocument()
+    expect(screen.getByText(/20 gemmes/)).toBeInTheDocument()
     expect(screen.getByText(/série continue/)).toBeInTheDocument()
     // Aucune XP : la partie n'en verse plus.
     expect(screen.queryByText(/XP/)).not.toBeInTheDocument()
@@ -200,12 +200,12 @@ describe('GameTable — une partie de salon se termine, et son écran de fin ne 
     await act(async () => {
       repondre1({ saved: true, gains: [{ unite: 'gemme', montant: 11 }] })
     })
-    expect(screen.queryByText(/11 cristaux/)).not.toBeInTheDocument()
+    expect(screen.queryByText(/11 gemmes/)).not.toBeInTheDocument()
 
     // Celle de la partie 2, elle, fait foi.
     await act(async () => {
       repondre2({ saved: true, gains: [{ unite: 'gemme', montant: 99 }] })
     })
-    expect(screen.getByText(/99 cristaux/)).toBeInTheDocument()
+    expect(screen.getByText(/99 gemmes/)).toBeInTheDocument()
   })
 })

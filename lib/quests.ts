@@ -71,19 +71,19 @@ export type QuestDef = {
 
 export const QUEST_CATALOG: readonly QuestDef[] = [
   // --- apprendre --------------------------------------------------------------
-  { id: 'lecon1', kind: 'lecon', pilier: 'apprendre', goal: 1, label: 'Terminer 1 cours', detail: 'Lis un cours jusqu’au bout', href: '/reviser', xp: 30, gems: 3 },
-  { id: 'lecon2', kind: 'lecon', pilier: 'apprendre', goal: 2, label: 'Terminer 2 cours', detail: 'Dans la matière de ton choix', href: '/reviser', xp: 50, gems: 5 },
+  { id: 'lecon1', kind: 'lecon', pilier: 'apprendre', goal: 1, label: 'Terminer 1 cours', detail: 'Lis un cours jusqu’au bout', href: '/reviser', xp: 30, gems: 0 },
+  { id: 'lecon2', kind: 'lecon', pilier: 'apprendre', goal: 2, label: 'Terminer 2 cours', detail: 'Dans la matière de ton choix', href: '/reviser', xp: 50, gems: 0 },
 
   // --- se tester --------------------------------------------------------------
-  { id: 'quiz1', kind: 'quiz', pilier: 'tester', goal: 1, label: 'Terminer 1 quiz', detail: 'N’importe quel chapitre', href: '/reviser', xp: 30, gems: 3 },
-  { id: 'quiz80', kind: 'quiz_reussi', pilier: 'tester', goal: 1, label: 'Réussir 1 quiz à 80 %', detail: 'Au moins 8 bonnes réponses sur 10', href: '/reviser', xp: 40, gems: 4 },
-  { id: 'correct20', kind: 'correct', pilier: 'tester', goal: 20, label: 'Trouver 20 bonnes réponses', detail: 'Quiz, révisions, jeux et duels comptent', href: '/reviser', xp: 40, gems: 4 },
-  { id: 'exercice1', kind: 'exercice', pilier: 'tester', goal: 1, label: 'Réussir 1 exercice du cahier', detail: 'Dans le cahier d’un chapitre', href: '/reviser', xp: 50, gems: 5, cahier: true },
+  { id: 'quiz1', kind: 'quiz', pilier: 'tester', goal: 1, label: 'Terminer 1 quiz', detail: 'N’importe quel chapitre', href: '/reviser', xp: 30, gems: 0 },
+  { id: 'quiz80', kind: 'quiz_reussi', pilier: 'tester', goal: 1, label: 'Réussir 1 quiz à 80 %', detail: 'Au moins 8 bonnes réponses sur 10', href: '/reviser', xp: 40, gems: 0 },
+  { id: 'correct20', kind: 'correct', pilier: 'tester', goal: 20, label: 'Trouver 20 bonnes réponses', detail: 'Quiz, révisions, jeux et duels comptent', href: '/reviser', xp: 40, gems: 0 },
+  { id: 'exercice1', kind: 'exercice', pilier: 'tester', goal: 1, label: 'Réussir 1 exercice du cahier', detail: 'Dans le cahier d’un chapitre', href: '/reviser', xp: 50, gems: 0, cahier: true },
 
   // --- jouer ------------------------------------------------------------------
-  { id: 'duel1', kind: 'duel_play', pilier: 'jouer', goal: 1, label: 'Jouer 1 duel', detail: 'Dans l’arène', href: '/defi', xp: 30, gems: 3 },
-  { id: 'win1', kind: 'duel_win', pilier: 'jouer', goal: 1, label: 'Gagner 1 duel', detail: 'Dans l’arène', href: '/defi', xp: 40, gems: 4 },
-  { id: 'partie2', kind: 'partie', pilier: 'jouer', goal: 2, label: 'Jouer 2 parties', detail: 'Un jeu ou un mode de l’arène', href: '/defi', xp: 30, gems: 3 },
+  { id: 'duel1', kind: 'duel_play', pilier: 'jouer', goal: 1, label: 'Jouer 1 duel', detail: 'Dans l’arène', href: '/defi', xp: 30, gems: 0 },
+  { id: 'win1', kind: 'duel_win', pilier: 'jouer', goal: 1, label: 'Gagner 1 duel', detail: 'Dans l’arène', href: '/defi', xp: 40, gems: 0 },
+  { id: 'partie2', kind: 'partie', pilier: 'jouer', goal: 2, label: 'Jouer 2 parties', detail: 'Un jeu ou un mode de l’arène', href: '/defi', xp: 30, gems: 0 },
 ]
 
 /** Les quêtes retirées le 03/10/2026 : la base les connaît encore (555), pour
@@ -107,9 +107,9 @@ export const QUESTS_PER_DAY = 3
 
 /** Bonus versé quand les trois quêtes du jour sont bouclées (le coffre du
  *  jour). Il doit valoir plus que la somme des trois : c'est LUI qu'on vient
- *  chercher. */
+ *  chercher. De l'XP seulement depuis la 557 : la gemme est réservée aux épreuves. */
 export const ALL_DONE_XP = 100
-export const ALL_DONE_GEMS = 15
+export const ALL_DONE_GEMS = 0
 
 /** Ce que l'on sait de l'élève pour tirer ses quêtes. */
 export type QuestContext = {

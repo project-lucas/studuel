@@ -26,6 +26,9 @@ import {
   type SupportDictee,
 } from '@/lib/francais/dictee/niveaux'
 import { enregistrerDictee } from '@/app/reviser/francais/dictee/actions'
+import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
+import { SEUIL_GEMMES } from '@/lib/economie'
+import type { Gain } from '@/lib/gains'
 import { useLecteurDictee } from '@/components/francais/dictee/LecteurDictee'
 import CorrectionDictee from '@/components/francais/dictee/CorrectionDictee'
 
@@ -73,6 +76,8 @@ export default function DicteeSession({
   const [resultat, setResultat] = useState<{
     note: number
     correction: Correction | null
+    gains: Gain[]
+    support: SupportDictee
   } | null>(null)
   const [voirCorrection, setVoirCorrection] = useState(false)
   const [pending, startTransition] = useTransition()
@@ -114,7 +119,7 @@ export default function DicteeSession({
         support === 'papier' ? '' : copie,
         erreursPapier,
       )
-      setResultat({ note: res.note, correction: res.correction })
+      setResultat({ note: res.note, correction: res.correction, gains: res.gains, support })
       setEtape('score')
       sfx.complete()
     })
@@ -449,6 +454,19 @@ export default function DicteeSession({
           <p className="font-heading mt-1 text-7xl font-extrabold tabular-nums">
             {formatNote(note)} / 20
           </p>
+          {/* Une dictée est une ÉPREUVE (557) : l'XP suit la note, et dès
+              16/20 sur le téléphone elle rapporte des gemmes — c'est l'une
+              des rares portes vers elles, on le dit. */}
+          <PanneauRecompenses
+            gains={resultat?.gains ?? []}
+            titre="Gagné"
+            className="mt-6 w-full max-w-xs bg-card text-foreground"
+          />
+          {resultat && resultat.support === 'telephone' && note < SEUIL_GEMMES.dictee ? (
+            <p className="mt-3 max-w-xs text-center text-sm font-semibold text-white/75">
+              Dès {SEUIL_GEMMES.dictee}/20, une dictée écrite ici rapporte des gemmes.
+            </p>
+          ) : null}
         </div>
 
         <div className="mx-auto flex w-full max-w-xl flex-col gap-2.5">

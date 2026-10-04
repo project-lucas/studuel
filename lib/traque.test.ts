@@ -14,8 +14,7 @@ import {
   gaugePercent,
   gaugeRatio,
   gaugeStatus,
-  gemsAfterCap,
-  gemsForVictory,
+  xpForVictory,
   isEnChasse,
   isRattrapage,
   nextChasseDay,
@@ -33,12 +32,11 @@ import {
   traqueCard,
   weekdayIndex,
   windowEndMs,
-  NOX_GEMS,
+  NOX_XP,
   TRAQUE_APRES_DEFAITE,
   TRAQUE_CHAPTERS_KEPT,
   TRAQUE_FENETRE_MS,
-  TRAQUE_GEMS,
-  TRAQUE_GEMS_WEEK_CAP,
+  TRAQUE_XP,
   TRAQUE_POINTS,
   TRAQUE_POOL_CHAPTERS,
   TRAQUE_SEUIL,
@@ -228,23 +226,16 @@ describe('Nox — le boss du dimanche', () => {
 
 describe('récompenses', () => {
   it('paie plus cher les rangs élevés', () => {
-    expect(gemsForVictory(1, false)).toBe(TRAQUE_GEMS[1])
-    expect(gemsForVictory(3, false)).toBe(TRAQUE_GEMS[3])
+    expect(xpForVictory(1, false)).toBe(TRAQUE_XP[1])
+    expect(xpForVictory(3, false)).toBe(TRAQUE_XP[3])
   })
 
   it('double la mise pour le boss en chasse du jour', () => {
-    expect(gemsForVictory(2, true)).toBe(TRAQUE_GEMS[2] * 2)
+    expect(xpForVictory(2, true)).toBe(TRAQUE_XP[2] * 2)
   })
 
-  it('verse un chapitre entier pour Nox, sans doubler', () => {
-    expect(gemsForVictory(1, true, true)).toBe(NOX_GEMS)
-  })
-
-  it('respecte le plafond hebdomadaire — l’inflation tuerait Studuel+', () => {
-    expect(gemsAfterCap(20, 0)).toBe(20)
-    expect(gemsAfterCap(20, TRAQUE_GEMS_WEEK_CAP - 5)).toBe(5)
-    expect(gemsAfterCap(20, TRAQUE_GEMS_WEEK_CAP)).toBe(0)
-    expect(gemsAfterCap(20, 999)).toBe(0)
+  it('verse le gros lot pour Nox, sans doubler', () => {
+    expect(xpForVictory(1, true, true)).toBe(NOX_XP)
   })
 })
 
@@ -284,9 +275,9 @@ describe('cartes de la feuille Boss', () => {
     expect(card({ victories: 9 }).rank).toBe(3)
   })
 
-  it('annonce les gemmes en jeu, bonus du jour compris', () => {
-    expect(card({}).gems).toBe(TRAQUE_GEMS[1] * 2) // Delta chasse le lundi
-    expect(card({}, GRAMMATORK).gems).toBe(TRAQUE_GEMS[1])
+  it('annonce l’XP en jeu, bonus du jour compris', () => {
+    expect(card({}).xp).toBe(TRAQUE_XP[1] * 2) // Delta chasse le lundi
+    expect(card({}, GRAMMATORK).xp).toBe(TRAQUE_XP[1])
     expect(card({}, GRAMMATORK).backOn).toBe('mardi')
   })
 })

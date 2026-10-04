@@ -1,0 +1,315 @@
+/* LA FÊTE DE NIVEAU (04/10/2026) — un passage de niveau est un MOMENT, pas une
+   ligne de texte. Trois temps, comme l'écran de fin de semaine de la ligue :
+   0,0 s  le voile violet tombe ;
+   0,25 s L'ÉCLAIR jaillit (de petit et penché à grand et droit), les rayons
+          s'ouvrent derrière lui et tournent, une onde part, les étincelles
+          fusent en couronne ;
+   0,7 s  « Niveau », l'ancien chiffre s'envole vers le haut et le nouveau
+          tombe à sa place ; puis le titre, la suite et « Continuer ».
+
+   Règle de l'app : on n'anime QUE `transform` et `opacity`, avec des valeurs
+   littérales dans les images-clés. L'état FINAL est l'état de base de chaque
+   élément : sous « mouvement réduit », tout saute et l'écran montre le
+   résultat directement. */
+
+.voile {
+  position: fixed;
+  inset: 0;
+  /* Au-dessus du bandeau et de la barre (50), sous le vol des gains (60). */
+  z-index: 55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: max(1.25rem, env(safe-area-inset-top)) 1.25rem max(1.25rem, env(safe-area-inset-bottom));
+  color: var(--ink-on-dark);
+  background:
+    radial-gradient(85% 50% at 50% 30%, color-mix(in oklch, var(--primary) 75%, transparent), transparent 72%),
+    var(--carte-sombre-fond);
+  animation: voileEntre 300ms ease-out both;
+}
+
+.confettis {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  animation: apparait 200ms 600ms both;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  max-width: 23rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  text-align: center;
+}
+
+/* --------------------------------------------------------------- l'éclair */
+
+.embleme {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 11rem;
+  height: 11rem;
+}
+.embleme > * {
+  grid-area: 1 / 1;
+}
+
+.halo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in oklch, var(--highlight) 60%, transparent), transparent 66%);
+  animation:
+    haloEntre 500ms 250ms ease-out both,
+    haloRespire 2.4s 900ms ease-in-out infinite;
+}
+
+.rayonsCadre {
+  width: 190%;
+  height: 190%;
+  animation: rayonsEntre 650ms 250ms cubic-bezier(0.2, 1.2, 0.4, 1) both;
+}
+.rayons {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    from 0deg,
+    color-mix(in oklch, var(--highlight) 45%, transparent) 0deg 7deg,
+    transparent 7deg 20deg
+  );
+  mask-image: radial-gradient(circle, black 18%, transparent 68%);
+  animation: tourne 18s linear infinite;
+}
+
+.onde {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  border: 3px solid color-mix(in oklch, var(--highlight) 80%, white);
+  opacity: 0;
+  animation: onde 900ms 300ms ease-out both;
+}
+.onde2 {
+  animation-delay: 480ms;
+}
+
+.eclair {
+  width: 8.5rem;
+  height: 8.5rem;
+  filter: drop-shadow(0 10px 18px rgb(0 0 0 / 0.35));
+  animation:
+    eclairJaillit 700ms 200ms cubic-bezier(0.18, 1.5, 0.45, 1) both,
+    flotte 3s 1100ms ease-in-out infinite;
+}
+
+/* Les étincelles : chaque bras est TOURNÉ par son style en ligne (un angle
+   fixe), l'étincelle qu'il porte file le long du bras. */
+.bras {
+  width: 0;
+  height: 0;
+  position: relative;
+}
+.etincelle {
+  position: absolute;
+  left: -0.45rem;
+  top: -0.45rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, white, var(--highlight) 55%, transparent 70%);
+  opacity: 0;
+  animation: fuse 800ms 330ms cubic-bezier(0.1, 0.8, 0.3, 1) both;
+}
+.etincelle[data-loin='1'] {
+  animation-name: fuseLoin;
+  animation-delay: 380ms;
+}
+
+/* ------------------------------------------------------------- le chiffre */
+
+.surtitre {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: color-mix(in oklch, var(--highlight) 80%, white);
+  animation: monte 400ms 650ms ease-out both;
+}
+
+.chiffres {
+  position: relative;
+  display: grid;
+  height: 5.2rem;
+  overflow: hidden;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 5rem;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.chiffres > span {
+  grid-area: 1 / 1;
+}
+.ancien {
+  opacity: 0;
+  color: color-mix(in oklch, var(--ink-on-dark) 70%, transparent);
+  animation: ancienSort 520ms 750ms ease-in both;
+}
+.nouveau {
+  color: white;
+  text-shadow:
+    0 3px 0 color-mix(in oklch, var(--primary) 60%, black),
+    0 0 24px color-mix(in oklch, var(--highlight) 55%, transparent);
+  animation: nouveauTombe 560ms 1050ms cubic-bezier(0.2, 1.4, 0.4, 1) both;
+}
+
+.titre {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  animation: monte 400ms 1350ms ease-out both;
+}
+.phrase {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: color-mix(in oklch, var(--ink-on-dark) 78%, transparent);
+  animation: monte 400ms 1450ms ease-out both;
+}
+
+/* -------------------------------------------------------------- la suite */
+
+.suite {
+  width: 100%;
+  margin-top: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  animation: monte 450ms 1600ms ease-out both;
+}
+
+.prochain {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: var(--carte-rayon);
+  padding: 0.75rem 0.9rem;
+  text-align: left;
+  background: color-mix(in oklch, white 9%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in oklch, white 14%, transparent);
+}
+.prochain p {
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+.prochain strong {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: white;
+}
+
+.barre {
+  margin-top: 0.4rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  overflow: hidden;
+  background: color-mix(in oklch, white 14%, transparent);
+}
+.barre > i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  transform-origin: left;
+  background: var(--highlight);
+  /* La largeur finale est en ligne (transform: scaleX(part)) : l'animation
+     part de zéro et rejoint ce style, sans var() dans les images-clés. */
+  animation: barre 700ms 1900ms ease-out backwards;
+}
+
+/* ------------------------------------------------------------ images-clés */
+
+@keyframes voileEntre {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes apparait {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes monte {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes haloEntre {
+  from { opacity: 0; transform: scale(0.4); }
+  to { opacity: 0.8; transform: scale(1); }
+}
+@keyframes haloRespire {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(1.08); }
+}
+@keyframes rayonsEntre {
+  from { opacity: 0; transform: scale(0.3); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes tourne {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes onde {
+  0% { opacity: 0.9; transform: scale(0.6); }
+  100% { opacity: 0; transform: scale(2.1); }
+}
+@keyframes eclairJaillit {
+  0% { opacity: 0; transform: scale(0.25) rotate(-28deg); }
+  60% { opacity: 1; transform: scale(1.18) rotate(6deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+@keyframes flotte {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(-2deg); }
+}
+@keyframes fuse {
+  0% { opacity: 0; transform: translateY(0) scale(0.4); }
+  20% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-5.5rem) scale(1); }
+}
+@keyframes fuseLoin {
+  0% { opacity: 0; transform: translateY(0) scale(0.4); }
+  20% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-7.5rem) scale(0.7); }
+}
+@keyframes ancienSort {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-110%); }
+}
+@keyframes nouveauTombe {
+  0% { opacity: 0; transform: translateY(110%) scale(0.8); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes barre {
+  from { transform: scaleX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .voile,
+  .voile * {
+    animation: none !important;
+  }
+  .ancien,
+  .onde,
+  .etincelle {
+    display: none;
+  }
+}

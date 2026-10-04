@@ -101,7 +101,7 @@ export function useGameReport(subject: string, gameId: string): GameReport {
 
       // Pas de mode passé : les bonus de mode appartiennent à l'Arène, pas aux
       // salons.
-      recordChallenge(run.correct, run.answered)
+      recordChallenge(run.correct, run.answered, undefined, 'jeu')
         .then((r) => {
           if (!fresh()) return
           setSaved(r.saved)

@@ -4,11 +4,13 @@ import { useState, useTransition } from 'react'
 import { Check, Medal, RotateCcw, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { terminerCapsule } from '@/app/carnet/capsules/actions'
+import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
+import type { Gain } from '@/lib/gains'
 import { SEUIL_QUIZ_REUSSI, quizReussi, type CapsuleQuiz } from '@/lib/capsules'
 import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
 
-type Fin = { badge: string | null; nouveau: boolean } | null
+type Fin = { badge: string | null; nouveau: boolean; gains: Gain[] } | null
 
 /**
  * Le quiz d'une capsule : une question à la fois, la correction expliquée,
@@ -62,7 +64,7 @@ export default function QuizCapsule({
       sfx.complete()
       demarrer(async () => {
         const r = await terminerCapsule(capsuleId)
-        if (r.ok) setFin({ badge: r.badge, nouveau: r.nouveau })
+        if (r.ok) setFin({ badge: r.badge, nouveau: r.nouveau, gains: r.gains })
       })
     }
   }
@@ -92,6 +94,7 @@ export default function QuizCapsule({
                 ? `Badge « ${fin?.badge ?? badge} » débloqué : il rejoint ton profil.`
                 : `Ton badge « ${badge} » est déjà sur ton profil.`}
             </p>
+            <PanneauRecompenses gains={fin?.gains ?? []} titre="Gagné" className="w-full" />
           </>
         ) : (
           <p className="text-sm font-bold text-muted-foreground">

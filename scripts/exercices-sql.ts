@@ -107,7 +107,7 @@ const sql = `-- ================================================================
 -- documents (cartes, graphiques, textes, schémas…) et leurs questions. Le
 -- contenu public va dans \`exercices\`, les réponses et explications dans
 -- \`exercices_cles\` (qu'aucun élève ne lit). Gemmes et XP selon les étoiles
--- (5/10/15 gemmes, 20/35/50 XP), réglables ensuite en base.
+-- (0/0/5 gemmes depuis la 557, 20/35/50 XP), réglables ensuite en base.
 --
 ${parMatiere.join('\n')}
 --

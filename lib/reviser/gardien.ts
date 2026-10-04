@@ -55,7 +55,7 @@ export type GardienVue = {
   /** Étiquette de la bulle posée sur l'onglet « Mode de jeu », ou null. */
   bulle: string | null
   /** Gemmes en jeu si on le bat maintenant. */
-  gems: number
+  xp: number
   /** Ce qu'annonce un lecteur d'écran sur l'écusson. */
   aria: string
 }
@@ -70,7 +70,7 @@ const ABSENT: GardienVue = {
   detail: '',
   phrase: '',
   bulle: null,
-  gems: 0,
+  xp: 0,
   aria: '',
 }
 
@@ -114,7 +114,7 @@ export function gardienVue(card: TraqueCard | null): GardienVue {
     detail,
     phrase: card.hint,
     bulle: sorti ? BULLE_DISPONIBLE : null,
-    gems: card.gems,
+    xp: card.xp,
     aria: sorti
       ? `${card.boss.name}, ${card.boss.epithet}, est sorti de sa tanière — il disparaît dans ${countdownLabel(card.remainingMs)}`
       : `${card.boss.name} rôde — jauge à ${card.percent} %, ${restantLabel(card.points)}`,

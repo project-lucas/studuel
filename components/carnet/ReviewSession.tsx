@@ -83,6 +83,8 @@ export default function ReviewSession({
   // (intervalle ≥ 21 jours franchi). Zéro sur une session de révision
   // ordinaire — et le panneau ne s'affiche alors pas du tout.
   const [xpSession, setXpSession] = useState(0)
+  // L'XP de la clôture de session (557), null tant que le serveur n'a pas répondu.
+  const [xpFin, setXpFin] = useState<number | null>(null)
   // Les questions ratées de CETTE session : la matière du « rejouer mes erreurs ».
   const [rates, setRates] = useState<PlayableQuestion[]>([])
   // La file jouée — remplacée par les erreurs quand on les rejoue.
@@ -157,7 +159,13 @@ export default function ReviewSession({
       setFinished(true)
       if (!endedRef.current && sessionIdRef.current) {
         endedRef.current = true
-        void endReviewSession(sessionIdRef.current)
+        endReviewSession(sessionIdRef.current, index + 1)
+          .then((r) => setXpFin(r.xp))
+          .catch(() => setXpFin(0))
+      } else {
+        // Pas de session en base (création ratée) : on montre quand même l'XP
+        // des cartes acquises.
+        setXpFin((v) => v ?? 0)
       }
       sfx.complete()
       return
@@ -220,11 +228,15 @@ export default function ReviewSession({
               les 21 jours de mémoire, une fois pour toutes. Une session de
               révision ordinaire n'affiche donc rien ici, et c'est juste — elle
               entretient, elle n'acquiert pas. */}
-          <PanneauRecompenses
-            gains={[{ unite: 'xp', montant: xpSession }]}
-            titre="Acquis"
-            className="mt-4"
-          />
+          {/* Le panneau attend la clôture : l'XP de la session (557) s'ajoute
+              à celle des cartes acquises, et les deux volent ensemble. */}
+          {xpFin !== null || tourErreurs ? (
+            <PanneauRecompenses
+              gains={[{ unite: 'xp', montant: xpSession + (xpFin ?? 0) }]}
+              titre="Gagné"
+              className="mt-4"
+            />
+          ) : null}
 
           <div className="mt-5 flex flex-col gap-2">
             {/* LA porte de sortie utile : refermer la boucle sur ce qui a raté,

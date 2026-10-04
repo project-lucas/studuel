@@ -20,8 +20,13 @@ export const POINTS_SECOND_ESSAI = 1
 /** Part des points à atteindre pour réussir (et débloquer la suite). */
 export const SEUIL_REUSSITE = 0.5
 
-/** Les gemmes d'un exercice réussi, selon ses étoiles (réglables en base). */
-export const GEMMES_PAR_ETOILES: Record<Etoiles, number> = { 1: 5, 2: 10, 3: 15 }
+/**
+ * Les gemmes d'un exercice réussi, selon ses étoiles (réglables en base).
+ * Depuis la 557, seul l'exercice ★★★ — le plus corsé, celui qui ressemble à
+ * une vraie question de contrôle — en rapporte : 5 (c'étaient 5 / 10 / 15).
+ * Miroir de `lib/economie.gemmesExerciceCahier`.
+ */
+export const GEMMES_PAR_ETOILES: Record<Etoiles, number> = { 1: 0, 2: 0, 3: 5 }
 /** L'XP d'un exercice réussi. */
 export const XP_PAR_ETOILES: Record<Etoiles, number> = { 1: 20, 2: 35, 3: 50 }
 

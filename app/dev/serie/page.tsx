@@ -5,37 +5,63 @@ import { toDayKey } from '@/lib/streak'
 
 export const dynamic = 'force-dynamic'
 
-// L'APERÇU DE LA BARRE DE SÉRIE — en développement seulement.
+// L'APERÇU DE LA CARTE DE SÉRIE — en développement seulement.
 //
-// La validation du jour ne se joue qu'une fois par jour, au retour d'une
-// vraie session : pour la relire (le retournement, la coche qui se trace,
-// l'onde), cette page rend la barre avec une semaine de démonstration où le
-// jour est fait, sans base ni compte.
+// La semaine en flammes (04/10/2026) : une semaine de démonstration, sans base
+// ni compte. La date du jour est forcée au DIMANCHE de la semaine courante
+// pour que chaque cas ait ses sept jours.
 //
-//   /dev/serie            la barre, le jour fait (la validation se joue une fois)
-//   /dev/serie?fete=1     la validation rejoue à chaque chargement
-//
-// Le bouton « Ma bibliothèque » est posé en pied de carte, comme dans Réviser.
-export default function ApercuSerie() {
+//   /dev/serie                 en série : cinq jours d'affilée, aujourd'hui fait
+//   /dev/serie?etat=parfaite   sept jours sur sept : la semaine passe à l'or
+//   /dev/serie?etat=trous      des jours manqués (braises), aujourd'hui à faire
+//   /dev/serie?etat=avant      aujourd'hui pas encore fait, la veille faite
+//   /dev/serie?etat=gel        un jour manqué couvert par un gel (glaçon)
+//   ?serie=5                   la flamme bleue (dès 5 jours)
+//   ?gels=0|1|2                la réserve de gels posée sur la flamme (1 par défaut)
+//   ?fete=1                    rejoue la validation du jour (et la fête parfaite
+//                              se rejoue en vidant le stockage du navigateur)
+export default async function ApercuSerie({
+  searchParams,
+}: {
+  searchParams: Promise<{ etat?: string; serie?: string; gels?: string }>
+}) {
   if (process.env.NODE_ENV === 'production') notFound()
+  const { etat = 'serie', serie, gels = '1' } = await searchParams
   const now = new Date()
-  const today = toDayKey(now)
-  const dow = (now.getUTCDay() + 6) % 7 // lundi = 0
-  const week = Array.from({ length: 7 }, (_, i) => ({
-    done: i === dow || i === Math.max(0, dow - 1),
-    isToday: i === dow,
-    isFuture: i > dow,
+  const lundi = new Date(now)
+  lundi.setUTCDate(now.getUTCDate() - ((now.getUTCDay() + 6) % 7))
+  const dimanche = new Date(lundi)
+  dimanche.setUTCDate(lundi.getUTCDate() + 6)
+  const today = toDayKey(dimanche)
+
+  const motifs: Record<string, string> = {
+    serie: '..xxxxX',
+    parfaite: 'xxxxxxX',
+    trous: 'xx.x..T',
+    avant: '.xxxxxT',
+    gel: '.xxgxxX',
+  }
+  const motif = motifs[etat] ?? motifs.serie
+  const week = [...motif].map((c) => ({
+    done: c === 'x' || c === 'X',
+    isToday: c === 'T' || c === 'X',
+    isFuture: false,
+    ...(c === 'g' ? { gele: true } : {}),
   }))
+  const parDefaut = etat === 'parfaite' ? 12 : etat === 'serie' ? 3 : etat === 'avant' || etat === 'gel' ? 5 : 0
+  const streak = Number.isFinite(Number(serie)) && serie ? Math.max(0, Math.floor(Number(serie))) : parDefaut
+
   return (
     <div className="rev-monde mx-auto w-full max-w-md px-4 py-6">
       <SerieBar
-        streak={2}
+        streak={streak}
         week={week}
         today={today}
         controles={[]}
         subjectMeta={{}}
         subjects={[]}
         goalMinutes={15}
+        gelsEnReserve={Math.min(2, Math.max(0, Math.floor(Number(gels)) || 0))}
         carnetSlot={<CarnetButton coursesCount={3} questionsCount={42} pleineLargeur />}
       />
     </div>

@@ -35,7 +35,7 @@ describe('messages de refus', () => {
     const phrases = raisons.map(messageRefusOffre)
     expect(new Set(phrases).size).toBe(raisons.length)
     expect(phrases).not.toContain(MESSAGE_PANNE)
-    expect(messageRefusOffre('plein')).toContain('bouclier')
+    expect(messageRefusOffre('plein')).toMatch(/réserve est déjà pleine/)
     // Un Boost XP par jour (373) : on dit QUAND il revient.
     expect(messageRefusOffre('deja_aujourdhui')).toMatch(/demain/)
     expect(messageRefusOffre('anonyme')).toBe(MESSAGE_ANONYME)

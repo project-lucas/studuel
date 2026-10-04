@@ -3,18 +3,18 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
 import Image from 'next/image'
-import { Heart, Star, Flag, Swords, Zap, Check, X, RotateCcw } from 'lucide-react'
+import { Heart, Star, Flag, Swords, Check, X, RotateCcw } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { gameSfx, sfx } from '@/lib/sounds'
-import { XP_RULES } from '@/lib/xp'
 import { recordChallenge } from '@/app/defi/actions'
+import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
+import type { Gain } from '@/lib/gains'
 import { recordReviewAnswers } from '@/app/reviser/actions'
 import { useDialogFocus } from '@/lib/use-dialog'
 import DialogCloseButton from '@/components/DialogCloseButton'
 import {
   MODE_TIMBRE,
-  MODE_XP_BONUS,
   bossAfterAnswer,
   bossOutcome,
   type BossState,
@@ -82,6 +82,8 @@ export default function BossArena({
   const [outcome, setOutcome] = useState<'won' | 'lost' | null>(null)
   const [rankedUp, setRankedUp] = useState(false)
   const [saved, setSaved] = useState<boolean | null>(null)
+  // Ce que le serveur a VRAIMENT versé (557), pour l'écran de fin.
+  const [gains, setGains] = useState<Gain[]>([])
   const [exiting, setExiting] = useState(false)
 
   // Réaction du gardien au dernier coup : `tick` (re-jouer l'anim via key),
@@ -134,6 +136,7 @@ export default function BossArena({
     setOutcome(null)
     setRankedUp(false)
     setSaved(null)
+    setGains([])
     setShaking(false)
     setReaction({ tick: 0, good: true })
     reviewsRef.current = []
@@ -178,7 +181,10 @@ export default function BossArena({
       finalAnswered,
       result === 'won' ? 'boss' : undefined,
     )
-      .then((r) => setSaved(r.saved))
+      .then((r) => {
+        setSaved(r.saved)
+        setGains(r.gains)
+      })
       .catch(() => setSaved(false))
     recordReviewAnswers(reviewsRef.current).catch(() => {})
   }
@@ -327,6 +333,7 @@ export default function BossArena({
           rank={rank}
           rankedUp={rankedUp}
           saved={saved}
+          gains={gains}
           onReplay={beginFight}
           onLeave={leaveArena}
         />
@@ -513,24 +520,6 @@ function PlayerHearts({
   )
 }
 
-// Décompte animé de l'XP à la fin — count-up via rAF (timestamp, pas Date.now).
-function CountUp({ value }: { value: number }) {
-  const [n, setN] = useState(0)
-  useEffect(() => {
-    let raf = 0
-    let start: number | null = null
-    const step = (t: number) => {
-      if (start === null) start = t
-      const p = Math.min(1, (t - start) / 900)
-      const eased = 1 - Math.pow(1 - p, 3)
-      setN(Math.round(value * eased))
-      if (p < 1) raf = requestAnimationFrame(step)
-    }
-    raf = requestAnimationFrame(step)
-    return () => cancelAnimationFrame(raf)
-  }, [value])
-  return <>{n}</>
-}
 
 // Écran de fin, dans l'arène : victoire (le boss se dissout, XP qui compte,
 // montée de rang) ou défaite (message court + revanche / retour).
@@ -543,6 +532,7 @@ function Outcome({
   rank,
   rankedUp,
   saved,
+  gains,
   onReplay,
   onLeave,
 }: {
@@ -554,14 +544,11 @@ function Outcome({
   rank: BossRank
   rankedUp: boolean
   saved: boolean | null
+  gains: Gain[]
   onReplay: () => void
   onLeave: () => void
 }) {
   const won = outcome === 'won'
-  const xp =
-    correct * XP_RULES.challengePerCorrect +
-    XP_RULES.challengeBonus +
-    (won ? MODE_XP_BONUS.boss : 0)
   return (
     <div className="mx-auto mt-4 flex w-full max-w-md flex-1 flex-col items-center justify-center gap-4 text-center">
       <div className="text-5xl">
@@ -601,9 +588,8 @@ function Outcome({
         </p>
       ) : null}
 
-      <div className="flex items-center gap-2 rounded-full bg-highlight px-6 py-3 font-mono text-2xl font-bold text-foreground shadow-lg tabular-nums">
-        <Zap className="size-6" /> +<CountUp value={xp} /> XP
-      </div>
+      {/* L'XP RÉELLEMENT versée (557), plus un calcul local qui mentait. */}
+      <PanneauRecompenses gains={gains} titre="Gagné" className="w-full max-w-xs bg-card text-foreground" />
 
       {won ? (
         <p className="text-sm text-white/60">

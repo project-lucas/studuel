@@ -1,6 +1,5 @@
 import { describe, expect, it } from 'vitest'
 import {
-  GEM_AWARDS,
   XP_AWARDS,
   couronneSource,
   isStreakMilestone,
@@ -55,10 +54,12 @@ describe('barème XP — l’XP mesure l’acquis, pas le clic', () => {
     expect(XP_AWARDS.couronne2).toBeLessThan(XP_AWARDS.couronne3)
   })
 
-  it('paye la leçon et la carte au même petit tarif', () => {
-    // Ce sont les deux acquisitions unitaires : elles doivent se valoir, sinon
-    // l’élève arbitre entre lire et réviser sur le prix plutôt que sur l’utilité.
-    expect(XP_AWARDS.lecon).toBe(XP_AWARDS.carte)
+  it('paye la leçon 10 et la carte acquise 5 (557)', () => {
+    // Depuis la 557, la séance de flashcards paie aussi chaque carte revue
+    // (lib/economie) : la carte « acquise » n'est plus le seul salaire de la
+    // révision, la leçon lue peut valoir un peu plus.
+    expect(XP_AWARDS.lecon).toBe(10)
+    expect(XP_AWARDS.carte).toBe(5)
   })
 })
 
@@ -139,16 +140,6 @@ describe('série stockée', () => {
   })
 })
 
-describe('gemmes de jeu', () => {
-  it('garde des montants rares et jalonnés (échelle ×30)', () => {
-    expect(GEM_AWARDS).toEqual({
-      chapterCrowns: 30,
-      streak7: 20,
-      defiWin: 10,
-      levelUp: 15,
-    })
-  })
-})
 
 describe('libellés', () => {
   it('affiche la promesse « +20 XP »', () => {

@@ -1,31 +1,30 @@
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 /**
- * L'ICÔNE D'XP — un éclair d'or cerclé, façon Duolingo (Lucas, 24/09/2026 :
- * « un icône d'expérience comme Duolingo »). Là où l'app écrivait « XP » avec
- * l'étincelle ou l'éclair en trait de lucide, la ligue, le classement des amis
- * et le multiplicateur lisent le même dessin. Couleurs en jetons : l'or de la
- * progression (`--highlight`), le cerne de l'encre.
+ * L'ÉCLAIR D'XP, UNE SEULE ILLUSTRATION PARTOUT (04/10/2026, Lucas : « tout doit
+ * être associé à un gain d'XP avec cet éclair, de la 6e à la Terminale »). Le
+ * dessin de la famille de la barre d'onglets (cerne prune, volumes brillants),
+ * fabriqué par `node scripts/icone-xp.mjs` : il remplace l'éclair SVG de 2024 et
+ * tout pictogramme au trait (`Zap`, étincelle) qui disait « XP ».
+ *
+ * `eclats` : la version entourée de ses étincelles, pour un grand éclair (fête
+ * de niveau, écran de fin) — à moins de ~40 px, elles ne font que des points.
  */
-export default function XpIcon({ className }: { className?: string }) {
+export default function XpIcon({ className, eclats = false }: { className?: string; eclats?: boolean }) {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" className={cn('size-4 shrink-0', className)}>
-      <path
-        d="M13.7 1.9 4.9 13.3c-.5.6 0 1.4.7 1.4h5.1l-1.5 7.3c-.2.8.9 1.3 1.4.6l8.6-11.3c.5-.6 0-1.4-.7-1.4h-5l1.6-7.4c.2-.8-.9-1.2-1.4-.6Z"
-        style={{
-          fill: 'var(--highlight)',
-          stroke: 'color-mix(in oklch, var(--foreground), black 35%)',
-        }}
-        strokeWidth={1.7}
-        strokeLinejoin="round"
-      />
-      <path
-        d="M12.6 5.6 8.4 11.2"
-        style={{ stroke: 'color-mix(in oklch, var(--highlight), white 70%)' }}
-        strokeWidth={1.5}
-        strokeLinecap="round"
-        fill="none"
-      />
-    </svg>
+    <Image
+      src={eclats ? '/images/xp/eclair-eclats.webp' : '/images/xp/eclair.webp'}
+      alt=""
+      aria-hidden="true"
+      width={eclats ? 384 : 128}
+      height={eclats ? 384 : 128}
+      draggable={false}
+      // Déjà un WebP de 5 Ko (25 avec les étincelles), fait pour ces tailles :
+      // l'optimiseur d'images n'ajouterait qu'un aller-retour à une icône
+      // présente sur tous les écrans.
+      unoptimized
+      className={cn('inline-block size-4 shrink-0 object-contain', className)}
+    />
   )
 }

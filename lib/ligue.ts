@@ -117,14 +117,17 @@ export function classer<T extends MembreBrut>(membres: readonly T[]): (T & { ran
 
 // ------------------------------------------------------------------ les gemmes
 
-export const GEMMES_DIVISION = 10
-export const GEMMES_RANG = 25
-export const GEMMES_PODIUM = [15, 10, 5] as const
+// Depuis la 557 (« le gain de gemmes doit être très rare »), seul le passage à
+// un NOUVEAU RANG (Bronze 1 → Argent 4…) rapporte : 10 gemmes, quelques fois
+// par an. La division et le podium se fêtent sans gemme (c'étaient 10 et
+// 15 / 10 / 5). Miroir de `ligue_gemmes` (557).
+export const GEMMES_DIVISION = 0
+export const GEMMES_RANG = 10
+export const GEMMES_PODIUM = [0, 0, 0] as const
 
 /**
- * Les gemmes de fin de semaine : la montée d'une division (10), ou le passage
- * au rang suivant (25, Bronze 1 → Argent 4) ; plus le podium (15, 10, 5).
- * Rien sans XP dans la semaine.
+ * Les gemmes de fin de semaine : le passage au rang suivant (10). Rien sans XP
+ * dans la semaine.
  */
 export function gemmesDeFinDeSemaine({
   avant,
@@ -477,11 +480,12 @@ export function railLigue(index: number): { rang: RankTier; etat: EtatRail }[] {
 
 /** Les cinq niveaux du coffre : le seuil de points, et ce qu'il contient. */
 export const COFFRE_NIVEAUX = [
-  { niveau: 1, seuil: 100, xp: 100, gemmes: 5 },
-  { niveau: 2, seuil: 250, xp: 250, gemmes: 10 },
-  { niveau: 3, seuil: 450, xp: 450, gemmes: 15 },
-  { niveau: 4, seuil: 700, xp: 700, gemmes: 25 },
-  { niveau: 5, seuil: 1000, xp: 1000, gemmes: 40 },
+  // De l'XP seulement depuis la 557 (c'étaient aussi 5 à 40 gemmes).
+  { niveau: 1, seuil: 100, xp: 100, gemmes: 0 },
+  { niveau: 2, seuil: 250, xp: 250, gemmes: 0 },
+  { niveau: 3, seuil: 450, xp: 450, gemmes: 0 },
+  { niveau: 4, seuil: 700, xp: 700, gemmes: 0 },
+  { niveau: 5, seuil: 1000, xp: 1000, gemmes: 0 },
 ] as const
 
 export const COFFRE_NIVEAU_MAX = COFFRE_NIVEAUX.length
@@ -845,7 +849,14 @@ export function lignesGainsBilan(bilan: BilanLigue): LigneGain[] {
       unite: 'gemme',
     })
   }
-  if (bilan.niveauAvant !== null && bilan.niveauApres !== null && bilan.niveauApres > bilan.niveauAvant) {
+  // Les gemmes de niveau d'avant la 557 (15 par niveau) : une semaine close
+  // depuis n'en porte plus, et une ligne « +0 » ne se montre pas.
+  if (
+    bilan.niveauAvant !== null &&
+    bilan.niveauApres !== null &&
+    bilan.niveauApres > bilan.niveauAvant &&
+    bilan.gemmesNiveau > 0
+  ) {
     lignes.push({
       cle: 'niveau',
       libelle: `Niveau ${bilan.niveauAvant} → ${bilan.niveauApres}`,

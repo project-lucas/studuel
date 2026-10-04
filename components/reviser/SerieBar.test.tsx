@@ -7,7 +7,9 @@ import { POSE_MS } from '@/lib/scene-prete'
 // Le son passe par l'AudioContext, absent de jsdom : on ne teste pas la note,
 // seulement qu'elle est demandée au bon moment.
 const correct = vi.fn()
-vi.mock('@/lib/sounds', () => ({ sfx: { tap: vi.fn(), correct: () => correct() } }))
+vi.mock('@/lib/sounds', () => ({
+  sfx: { tap: vi.fn(), dayComplete: () => correct(), weekComplete: vi.fn() },
+}))
 // Les deux feuilles ne s'ouvrent qu'au tap : inutiles ici, et lourdes.
 vi.mock('@/components/YearHistory', () => ({ default: () => null }))
 vi.mock('@/components/AddExamSheet', () => ({ default: () => null }))
@@ -63,15 +65,17 @@ describe('SerieBar — la validation du jour', () => {
       rendre(true)
     })
     const mardi = screen.getByRole('img', { name: /mardi 22 — fait/ })
-    // Rien tant que le premier écran n'est pas peint : la coche est posée, la
-    // vague fait son travail, le marqueur n'est pas écrit.
-    expect(mardi.className).toContain('vague')
+    const flamme = () => mardi.querySelector('img') as HTMLImageElement
+    // Rien tant que le premier écran n'est pas peint : la flamme s'allume
+    // simplement, le marqueur n'est pas écrit.
+    expect(flamme().className).toContain('allume')
     expect(window.localStorage.getItem(CLE)).toBeNull()
 
     await scenePrete()
-    expect(mardi.className).toContain('jour-valide')
-    expect(mardi.className).not.toContain('vague')
-    expect(mardi.querySelector('.jour-valide-onde')).not.toBeNull()
+    // La flamme du jour JAILLIT, avec son onde.
+    expect(flamme().className).toContain('jaillit')
+    expect(flamme().className).not.toContain('allume')
+    expect(mardi.querySelector('[class*="onde"]')).not.toBeNull()
     expect(correct).toHaveBeenCalledTimes(1)
     expect(window.localStorage.getItem(CLE)).toBe('1')
   })
@@ -83,9 +87,10 @@ describe('SerieBar — la validation du jour', () => {
     })
     await scenePrete()
     const mardi = screen.getByRole('img', { name: /mardi 22 — fait/ })
-    expect(mardi.className).toContain('vague')
-    expect(mardi.className).not.toContain('jour-valide')
-    expect(mardi.querySelector('.jour-valide-onde')).toBeNull()
+    const flamme = mardi.querySelector('img') as HTMLImageElement
+    expect(flamme.className).toContain('allume')
+    expect(flamme.className).not.toContain('jaillit')
+    expect(mardi.querySelector('[class*="onde"]')).toBeNull()
     expect(correct).not.toHaveBeenCalled()
   })
 
@@ -96,7 +101,7 @@ describe('SerieBar — la validation du jour', () => {
     await scenePrete()
     expect(window.localStorage.getItem(CLE)).toBeNull()
     expect(correct).not.toHaveBeenCalled()
-    expect(document.querySelector('.jour-valide')).toBeNull()
+    expect(document.querySelector('[class*="jaillit"]')).toBeNull()
   })
 
   it('attend que le rideau de chargement soit parti', async () => {

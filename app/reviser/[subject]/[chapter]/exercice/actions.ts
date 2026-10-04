@@ -7,6 +7,8 @@ import { aiClient, aiModel, extractJsonObject, quotaOk } from '@/lib/ia-server'
 import { canAccessPremiumTests, getUserTierFor } from '@/lib/subscription'
 import { gradeLabel } from '@/lib/grades'
 import { isMissingSchemaObject } from '@/lib/schema-fallback'
+import { gainsVerses, recompenserEpreuve } from '@/lib/wallet-server'
+import type { Gain } from '@/lib/gains'
 import {
   DIFFICULTE_DEFAUT,
   estDifficulte,
@@ -61,7 +63,8 @@ export type ResultatExercice =
   | { ok: false; raison: RaisonExercice }
 
 export type ResultatCopie =
-  | { ok: true; correction: Correction }
+  /** `gains` : l'XP de l'épreuve (20 + 2 par point) et, à 14/20, ses gemmes (557). */
+  | { ok: true; correction: Correction; gains: Gain[] }
   | { ok: false; raison: RaisonExercice }
 
 type ChapitreRow = {
@@ -320,7 +323,7 @@ export async function rendreCopie(
     return { ok: false, raison: 'erreur' }
   }
 
-  const { error } = await supabase.from('chapter_exercice_reponses').insert({
+  const { data: copieRangee, error } = await supabase.from('chapter_exercice_reponses').insert({
     user_id: user.id,
     exercice_id: row.id,
     chapter_id: row.chapter_id,
@@ -332,13 +335,19 @@ export async function rendreCopie(
       bilan: correction.bilan,
       corrige: correction.corrige,
     },
-  })
+  }).select('id').single<{ id: string }>()
   if (error) {
     // La correction est là, l'élève la voit : on la lui montre même si la
     // mémoire a raté — mais on le dit dans les logs.
     console.error('[exercice] copie non enregistrée:', error.message)
   }
 
+  // UNE ÉPREUVE (557) : le serveur relit la note de la copie rangée — l'XP
+  // suit la note, et un contrôle blanc à 14/20 rapporte des gemmes.
+  const gains = copieRangee
+    ? gainsVerses(await recompenserEpreuve(supabase, 'controle', copieRangee.id))
+    : []
+
   revalidatePath('/reviser')
-  return { ok: true, correction }
+  return { ok: true, correction, gains }
 }

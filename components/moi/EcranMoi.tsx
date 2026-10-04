@@ -170,7 +170,7 @@ export default function EcranMoi({
         <div className={cn('carte', styles.tuile)}>
           <span className="surtitre">Série</span>
           <span className="mt-1.5 flex items-center gap-2">
-            <FlammeAnimee className="size-[38px]" eteinte={serie.jours <= 0} />
+            <FlammeAnimee className="size-[38px]" eteinte={serie.jours <= 0} vive serie={serie.jours} />
             <span className={styles.grand}>
               {serie.jours}&nbsp;j
             </span>

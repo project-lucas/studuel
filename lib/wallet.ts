@@ -8,11 +8,11 @@
 //   • le NIVEAU est un palier cumulatif simple : passer du niveau n au niveau
 //     n+1 coûte 100 × n XP (niveau 2 à 100 XP, niveau 3 à 300, niveau 4 à
 //     600…) ;
-//   • les GEMMES 💎 restent la monnaie du contenu (lib/gems.ts) mais gagnent
-//     ici leurs sources de JEU — rares et jalonnées, jamais sur une activité
-//     standard : chapitre 3 couronnes, palier de série, victoire de défi,
-//     passage de niveau.
+//   • les GEMMES 💎 restent la monnaie du contenu (lib/gems.ts) ; depuis la
+//     557 elles ne se gagnent plus que sur une ÉPREUVE réussie (lib/economie).
 //
+import { XP_LECON } from '@/lib/economie'
+
 // Miroir SQL assumé : les fonctions `wallet_award_xp` / `wallet_award_gems`
 // de la migration 192 reprennent CES montants et CETTE formule de niveau.
 // Toute évolution doit toucher les deux.
@@ -42,10 +42,12 @@
 // 250 × 5 + 60 × 130 ≈ 9 000 XP, soit le niveau 14 pour une année entièrement
 // travaillée. Le niveau est donc BORNÉ par le programme, plus par l'endurance.
 
-/** XP forfaitaire par acquisition — affichée avant le geste (« +5 XP »). */
+/** XP forfaitaire par acquisition — affichée avant le geste (« +10 XP »).
+ *  Depuis la 557, chaque ACTIVITÉ verse aussi son XP (lib/economie) : ce
+ *  barème-ci ne garde que les acquisitions « une fois pour toutes ». */
 export const XP_AWARDS = {
-  /** Une leçon lue, la première fois. */
-  lecon: 5,
+  /** Une leçon lue, la première fois (5 → 10 avec la 557). */
+  lecon: XP_LECON,
   /** Une carte de révision qui passe en « acquise » (intervalle ≥ 21 j). */
   carte: 5,
   /** La 1re couronne d'un chapitre. */
@@ -165,27 +167,13 @@ export function walletLevelInfo(xp: number): WalletLevelInfo {
 
 // -------------------------------------------------------------- gains de 💎
 
-/**
- * Les SEULES sources de gemmes en jeu — jamais sur une activité standard,
- * sinon la monnaie du contenu perd sa rareté (cf. doctrine de lib/gems.ts).
- * Montants dans l'échelle ×30 de la migration 192 (un chapitre coûte 30).
- */
-export const GEM_AWARDS = {
-  /** Chapitre complété 3 couronnes (une seule fois par chapitre). */
-  chapterCrowns: 30,
-  /** Palier de série : tous les 7 jours consécutifs. */
-  streak7: 20,
-  /** Victoire d'un défi — UNE FOIS PAR JOUR, toutes leçons confondues.
-   *  La clé valait « leçon:jour » : la migration 348 la ramène au seul jour,
-   *  et c'est le serveur qui la fixe — celle de l'appelant est ignorée. */
-  defiWin: 10,
-  /** Passage de niveau (une seule fois par niveau). */
-  levelUp: 15,
-} as const
+// Depuis la 557 (04/10/2026), les gemmes ne se GAGNENT plus en jouant : ni au
+// passage de niveau, ni au palier de série, ni au chapitre à trois couronnes.
+// Elles ne tombent que sur une ÉPREUVE réussie — dictée, contrôle blanc,
+// examen blanc, annale, exercice ★★★ — cf. lib/economie (gemmesEpreuve).
 
-export type GemSource = keyof typeof GEM_AWARDS
-
-/** Un palier de série (multiple de 7 jours) vient-il d'être atteint ? */
+/** Un palier de série (multiple de 7 jours) vient-il d'être atteint ?
+ *  Il verse XP_SERIE_7 (50 XP) — c'étaient 20 gemmes avant la 557. */
 export const STREAK_REWARD_EVERY = 7
 
 export function isStreakMilestone(streakDays: number): boolean {

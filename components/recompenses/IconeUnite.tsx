@@ -1,6 +1,7 @@
-import { Crown, Sparkles } from 'lucide-react'
+import { Crown } from 'lucide-react'
 import TropheeIcone from '@/components/ui/TropheeIcone'
 import { CristalIcon } from '@/components/ui/MonnaieIcon'
+import XpIcon from '@/components/ui/XpIcon'
 import type { UniteGain } from '@/lib/gains'
 import { cn } from '@/lib/utils'
 
@@ -13,9 +14,8 @@ import { cn } from '@/lib/utils'
  * arrive là-haut comme celui qui vient de partir d'ici. Deux dessins
  * différents pour la même monnaie, et le vol ne raconte plus rien.
  *
- * Le cristal est une ILLUSTRATION (le même fichier que la pastille du
- * bandeau) ; les autres sont des pictogrammes, faute de dessin — et c'est
- * cohérent : couronnes et trophées ne volent pas.
+ * Le cristal, l'éclair d'XP et le trophée sont des ILLUSTRATIONS (les mêmes
+ * fichiers que le bandeau) ; la couronne reste un pictogramme — elle ne vole pas.
  */
 export default function IconeUnite({
   unite,
@@ -38,11 +38,5 @@ export default function IconeUnite({
     return (
       <TropheeIcone className={cn('size-4', className)} />
     )
-  return (
-    <Sparkles
-      className={cn('size-4', className)}
-      strokeWidth={2.6}
-      aria-hidden="true"
-    />
-  )
+  return <XpIcon className={cn('size-5', className)} />
 }

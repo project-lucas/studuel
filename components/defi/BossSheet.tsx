@@ -2,7 +2,8 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Flame, Gem, Hourglass, Swords, Star } from 'lucide-react'
+import { Flame, Hourglass, Swords, Star } from 'lucide-react'
+import XpIcon from '@/components/ui/XpIcon'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { CLOCK_STEP_MS, useClock } from '@/lib/use-clock'
@@ -223,14 +224,14 @@ function TraqueRow({ card, now }: { card: TraqueCard; now: number | null }) {
           </Link>
         )}
 
-        {/* Ce qui est en jeu : la gemme est la monnaie du CONTENU — la battre
-            ouvre une fiche de révision. La boucle se referme là. */}
+        {/* Ce qui est en jeu : de l'XP (557 — la gemme est réservée aux
+            épreuves notées). */}
         <span
           className="olympe-glass flex h-11 shrink-0 items-center gap-1 rounded-full px-3 font-heading text-sm font-extrabold tabular-nums"
-          aria-label={`${card.gems} gemmes en cas de victoire`}
+          aria-label={`${card.xp} XP en cas de victoire`}
         >
-          <Gem className="size-4 text-highlight" strokeWidth={2.4} aria-hidden="true" />
-          {card.gems}
+          <XpIcon className="size-4" />
+          {card.xp}
         </span>
       </div>
 

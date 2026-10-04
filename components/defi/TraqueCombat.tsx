@@ -3,7 +3,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { Gem, Sparkles } from 'lucide-react'
+import { Sparkles } from 'lucide-react'
+import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
 import BossMode from '@/components/BossMode'
 import { sfx } from '@/lib/sounds'
 import type { Boss, BossRank } from '@/lib/bosses'
@@ -76,22 +77,17 @@ export default function TraqueCombat({
     claimTraqueVictory(boss.id)
       .then((r) => {
         setResult(r)
-        if (r.gems > 0) sfx.complete()
+        if (r.xp > 0) sfx.complete()
       })
       .catch(() => {})
   }
 
   // Le bandeau de récompense de l'écran de fin. Tant que le serveur n'a pas
-  // répondu, on n'annonce RIEN : promettre des gemmes puis les retirer serait
+  // répondu, on n'annonce RIEN : promettre de l'XP puis la retirer serait
   // pire que d'attendre une seconde.
   const rewardSlot = result?.won ? (
     <div className="flex w-full max-w-sm flex-col items-center gap-3">
-      <p className="animate-in zoom-in flex items-center gap-2 rounded-full bg-highlight px-5 py-2 text-base font-extrabold text-foreground duration-500">
-        <Gem className="size-5" aria-hidden="true" />
-        {result.gems > 0
-          ? `+${result.gems} gemmes`
-          : 'Plafond de gemmes atteint cette semaine'}
-      </p>
+      <PanneauRecompenses gains={[{ unite: 'xp', montant: result.xp }]} titre="Gagné" className="w-full" />
 
       {/* LE geste qui referme la boucle : la gemme ouvre les supports écrits
           d'un chapitre, à vie. On le propose là, à chaud, sur le chapitre que

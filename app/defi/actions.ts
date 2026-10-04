@@ -11,7 +11,7 @@ import { XP_RULES } from '@/lib/xp'
 import { MODE_XP_BONUS, modeXpBonus, type GameModeId } from '@/lib/defi-modes'
 import { weeklyBoss, weeklyTrophyId, WEEKLY_TROPHY_COINS } from '@/lib/bosses'
 import { toDayKey } from '@/lib/streak'
-import { gainsVerses, walletTouch, type WalletAward } from '@/lib/wallet-server'
+import { gainsVerses, xpActivite, type WalletAward } from '@/lib/wallet-server'
 import type { Gain } from '@/lib/gains'
 import type { CommuteSlot } from '@/lib/types'
 
@@ -27,6 +27,13 @@ export async function recordChallenge(
   score: number,
   total: number,
   mode?: GameModeId,
+  /**
+   * Ce qu'était la partie, pour le barème d'XP (557) : un jeu de salon
+   * (« jeu », 1 par bonne réponse), le défi du jour (30, une fois par jour),
+   * ou — par défaut, et dès qu'un `mode` est donné — un mode de l'arène
+   * (5 + 1 par bonne réponse).
+   */
+  contexte?: 'jeu' | 'defi_jour',
 ): Promise<{ saved: boolean; gains: Gain[] }> {
   const supabase = await createClient()
   const user = await getCurrentUser()
@@ -89,20 +96,27 @@ export async function recordChallenge(
     const [, , touche] = await Promise.all([
       validateRevisionToday(supabase, user.id),
       validateCommuteToday(supabase, user.id, slots),
-      // JOUER N'ACQUIERT RIEN, ET N'EN PAYE DONC PLUS L'XP (migration 348).
-      // La colonne `challenge_sessions.xp` ci-dessus reste la trace historique
-      // de la partie ; le portefeuille, lui, ne bouge que sur la SÉRIE — et
-      // c'est elle qui peut faire tomber la gemme des 7 jours.
-      session?.id ? walletTouch(supabase) : Promise.resolve(null),
+      // L'XP DE LA PARTIE (557) : jouer paie, mais moins que travailler, et
+      // dans un plafond du jour (60 pour les jeux, 100 pour l'arène). La clé
+      // est la session écrite ci-dessus : une partie ne paie qu'une fois. La
+      // colonne `challenge_sessions.xp` reste une trace, jamais un versement.
+      session?.id
+        ? xpActivite(
+            supabase,
+            mode ? 'arene' : (contexte ?? 'arene'),
+            session.id,
+            cleanScore,
+            cleanTotal,
+          )
+        : Promise.resolve(null),
     ])
     award = touche
   }
 
   revalidatePath('/defi')
   revalidatePath('/moi')
-  // ⚠️ ON NE REND QUE CE QUI A ÉTÉ VERSÉ. Le `xp` calculé plus haut n'a JAMAIS
-  // été crédité au portefeuille depuis la 348 : le rendre à l'écran de fin
-  // ferait annoncer « +85 XP » par-dessus un compteur qui ne bouge pas.
+  // ⚠️ ON NE REND QUE CE QUI A ÉTÉ VERSÉ (le barème de 557, plafond compris) —
+  // jamais le `xp` calculé plus haut, qui n'est qu'une trace.
   return { saved: !error, gains: error ? [] : gainsVerses(award) }
 }
 

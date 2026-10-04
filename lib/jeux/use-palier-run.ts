@@ -1,7 +1,7 @@
 'use client'
 
 import { useCallback, useRef, useState } from 'react'
-import { reclamerGemmesPalier, recordPalierTime } from '@/app/defi/palier-actions'
+import { reclamerEtoilesPalier, recordPalierTime } from '@/app/defi/palier-actions'
 import { etoilesDeProgression } from '@/lib/jeux/palier-gemmes'
 import {
   applyRun,
@@ -35,9 +35,9 @@ import type { GameRun } from '@/lib/jeux/run'
 export function usePalierRun(gameId: string, palier: PalierRun | null) {
   const [outcome, setOutcome] = useState<PalierOutcome | null>(null)
   const [standing, setStanding] = useState<PalierTimeStanding | null>(null)
-  // Les gemmes que les étoiles de CETTE partie ont rapportées (migration 373),
+  // L'XP que les étoiles de CETTE partie ont rapportée (migration 557),
   // null tant que le serveur n'a pas répondu — ou quand il n'y a rien eu.
-  const [gemmes, setGemmes] = useState<number | null>(null)
+  const [xpEtoiles, setXpEtoiles] = useState<number | null>(null)
   const partieRef = useRef(0)
   // Éclatées ici plutôt que lues dans le callback : deux nombres ont une
   // identité stable d'un rendu à l'autre, un objet de props non.
@@ -61,14 +61,14 @@ export function usePalierRun(gameId: string, palier: PalierRun | null) {
       setOutcome(next)
       const partie = partieRef.current
 
-      // LES GEMMES DES ÉTOILES : une étoile neuve se paie tout de suite. On
+      // L'XP DES ÉTOILES : une étoile neuve se paie tout de suite. On
       // envoie TOUTES les étoiles du jeu, pas seulement celle-ci : le serveur
       // ne paie que ce qu'il n'a jamais payé, et rattrape au passage une
       // étoile dont la réclamation aurait échoué.
       if (next.gained > 0) {
-        reclamerGemmesPalier(gameId, [...etoilesDeProgression(progress)])
+        reclamerEtoilesPalier(gameId, [...etoilesDeProgression(progress)])
           .then((r) => {
-            if (partie === partieRef.current && r && r.gemmes > 0) setGemmes(r.gemmes)
+            if (partie === partieRef.current && r && r.xp > 0) setXpEtoiles(r.xp)
           })
           .catch(() => {
             // Réseau ou migration 373 absente : la carte du jeu réclamera plus tard.
@@ -96,9 +96,9 @@ export function usePalierRun(gameId: string, palier: PalierRun | null) {
   const reset = useCallback(() => {
     setOutcome(null)
     setStanding(null)
-    setGemmes(null)
+    setXpEtoiles(null)
     partieRef.current += 1
   }, [])
 
-  return { outcome, standing, gemmes, record, reset }
+  return { outcome, standing, xpEtoiles, record, reset }
 }

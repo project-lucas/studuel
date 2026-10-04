@@ -10,7 +10,7 @@ import NiveauOrthographe from '@/components/francais/NiveauOrthographe'
 import NiveauOrthographeCarte from '@/components/francais/NiveauOrthographeCarte'
 import { sfx } from '@/lib/sounds'
 import { bossForSubject } from '@/lib/bosses'
-import GemIcon from '@/components/ui/GemIcon'
+import XpIcon from '@/components/ui/XpIcon'
 import { peutAffronter, type GardienVue } from '@/lib/reviser/gardien'
 import type { ModeQuestion } from '@/lib/defi-modes'
 
@@ -121,10 +121,10 @@ export default function TrainingPanel({
                 : `${boss.epithet} · le gardien de ${subject.name}`}
             </span>
           </span>
-          {gardien.etat === 'debusque' && gardien.gems > 0 ? (
+          {gardien.etat === 'debusque' && gardien.xp > 0 ? (
             <span className="flex shrink-0 items-center gap-1 rounded-full bg-black/25 px-2 py-1 text-xs font-bold tabular-nums">
-              <GemIcon className="size-3.5" aria-hidden="true" />
-              {gardien.gems}
+              <XpIcon className="size-3.5" />
+              {gardien.xp}
             </span>
           ) : null}
           <ChevronRight

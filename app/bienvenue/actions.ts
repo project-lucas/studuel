@@ -3,6 +3,7 @@
 import { revalidatePath } from 'next/cache'
 import { contentLevelFor } from '@/lib/grades'
 import { createClient } from '@/lib/supabase/server'
+import { xpActivite } from '@/lib/wallet-server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { claimPendingReferral } from '@/lib/referral-claim'
 import { GRADE_LEVELS } from '@/lib/types'
@@ -256,6 +257,11 @@ export async function applyOnboarding(
     .eq('id', user.id)
 
   if (error) return { ok: false }
+
+  // Les 50 premières XP (557) : l'élève arrive avec sa barre déjà entamée — le
+  // quiz de placement était sa première partie. Une fois par compte (clé fixée
+  // par le serveur). Un parent n'en a pas l'usage.
+  if (!isParentOnboarding) await xpActivite(supabase, 'bienvenue', 'bienvenue')
 
   // Chemin OAuth : la query string du lien d'invitation a été perdue dans la
   // redirection, mais le cookie a survécu — c'est ici qu'on le réclame.

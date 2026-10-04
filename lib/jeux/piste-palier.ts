@@ -11,7 +11,7 @@
 //
 // L'AXE EST LA PRÉCISION, pas le score : les étoiles se gagnent à 60, 80 et
 // 95 % de bonnes réponses (lib/jeux/paliers, STAR_ACCURACY), et chaque étoile
-// paie ses gemmes. Le curseur se place donc au meilleur taux de réussite du
+// paie son XP (ses gemmes avant la 557). Le curseur se place donc au meilleur taux de réussite du
 // palier ; le score, lui, s'écrit sur l'étiquette du curseur (« Record 6000 »).
 // Les trois segments de la piste ont la même longueur à l'écran quelle que
 // soit leur largeur en pourcentage (0 → 60, 60 → 80, 80 → 95) : ce qui se lit,
@@ -20,7 +20,7 @@
 // Pur, testé.
 
 import { STAR_ACCURACY, type PalierLevel, type StarCount } from './paliers'
-import { gemmesParEtoile } from './palier-gemmes'
+import { xpParEtoile } from './palier-gemmes'
 
 export type Jalon = {
   rang: 1 | 2 | 3
@@ -28,7 +28,7 @@ export type Jalon = {
   at: number
   /** Le taux de réussite qui l'ouvre. */
   seuil: number
-  gemmes: number
+  xp: number
   /** L'étoile est décrochée (localement ou déjà payée) : jeton gagné. */
   gagne: boolean
 }
@@ -73,7 +73,7 @@ export function pistePalier(input: {
   /** Meilleur taux de réussite mémorisé, ou null. */
   accuracy: number | null
 }): PistePalier {
-  const gemmes = gemmesParEtoile(input.level)
+  const xp = xpParEtoile(input.level)
   // Le curseur ne recule jamais sous ce que les étoiles prouvent.
   const plancher = plancherDesEtoiles(input.stars)
   const accuracy =
@@ -85,7 +85,7 @@ export function pistePalier(input: {
     rang: (i + 1) as 1 | 2 | 3,
     at: (i + 1) / 3,
     seuil,
-    gemmes,
+    xp,
     gagne: input.acquises >= i + 1,
   })) as [Jalon, Jalon, Jalon]
   const prochain = jalons.find((j) => !j.gagne)

@@ -8,7 +8,8 @@ import {
   noteSur20,
   type Correction,
 } from '@/lib/francais/dictee/correction'
-import { walletTouch } from '@/lib/wallet-server'
+import { gainsVerses, recompenserEpreuve } from '@/lib/wallet-server'
+import type { Gain } from '@/lib/gains'
 import { estDemo, texteAttenduDemo } from '@/lib/francais/dictee/demo'
 
 // Le mode Dictée (migration 318) : enregistrement d'une tentative. La
@@ -23,6 +24,9 @@ export type ResultatDictee = {
   note: number
   erreurs: number
   correction: Correction | null
+  /** Ce que la dictée a rapporté (557) : son XP et, à 16/20 sur le
+   *  téléphone, ses gemmes. Vide pour la démo et en cas d'échec. */
+  gains: Gain[]
 }
 
 const ECHEC: ResultatDictee = {
@@ -30,6 +34,7 @@ const ECHEC: ResultatDictee = {
   note: 0,
   erreurs: 0,
   correction: null,
+  gains: [],
 }
 
 /**
@@ -96,9 +101,9 @@ export async function enregistrerDictee(
 
   // La démo s'arrête ici : la note et la correction sont rendues, rien n'est
   // écrit, aucune XP n'est versée. Un aperçu ne fait pas progresser.
-  if (demo) return { ok: true, note, erreurs, correction }
+  if (demo) return { ok: true, note, erreurs, correction, gains: [] }
 
-  const { error: erreurEcriture } = await supabase
+  const { data: tentative, error: erreurEcriture } = await supabase
     .from('dictee_attempts')
     .insert({
       user_id: user.id,
@@ -110,16 +115,18 @@ export async function enregistrerDictee(
       // ferait croire à une copie rendue blanche.
       copie: support === 'papier' ? null : propre,
     })
-  if (erreurEcriture) {
-    console.error('[dictee] tentative non enregistrée:', erreurEcriture.message)
+    .select('id')
+    .single<{ id: string }>()
+  if (erreurEcriture || !tentative) {
+    console.error('[dictee] tentative non enregistrée:', erreurEcriture?.message)
     return { ...ECHEC, note, erreurs, correction }
   }
 
-  // Une dictée est du travail : elle fait avancer la série. Elle ne verse plus
-  // d'XP par elle-même — l'XP se gagne sur ce qu'on ACQUIERT (cf. lib/wallet),
-  // et une dictée réussie le prouve par les cartes qu'elle fait progresser.
-  await walletTouch(supabase)
+  // UNE ÉPREUVE (557) : la série avance, l'XP suit la note (10 + 2 par point),
+  // et une dictée écrite dans l'app rapporte des gemmes à 16/20, puis 19/20 —
+  // le serveur relit la note dans la tentative, pas ici.
+  const gains = gainsVerses(await recompenserEpreuve(supabase, 'dictee', tentative.id))
 
   revalidatePath('/reviser/francais/dictee')
-  return { ok: true, note, erreurs, correction }
+  return { ok: true, note, erreurs, correction, gains }
 }

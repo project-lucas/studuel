@@ -17,8 +17,9 @@ import type { Gain } from '@/lib/gains'
 import {
   awardChapterCrowns,
   gainsVerses,
-  awardQuizProgression,
   awardXp,
+  recompenserEpreuve,
+  xpActivite,
 } from '@/lib/wallet-server'
 import {
   creditTraque,
@@ -189,20 +190,23 @@ async function lireEtatsBilan(
 }
 
 // Fin d'une session « À revoir » (/reviser/revoir) : enregistre les réponses,
-// crédite l'XP (session de révision = test_sessions sans quiz), et si la
-// Revanche vient d'être vidée, verse le bonus en pièces (une fois par jour,
-// vérifié en SQL). Renvoie ce qui s'est réellement passé pour l'écran de fin.
+// verse l'XP de la révision (557 : 2 par carte retrouvée, plafond du jour), et
+// si la Revanche vient d'être vidée, verse le bonus en pièces (une fois par
+// jour, vérifié en SQL). Renvoie ce qui s'est réellement passé pour l'écran de
+// fin — dont les GAINS, qui volent vers le bandeau.
 export async function finishReviewSession(answers: ReviewAnswer[]): Promise<{
   saved: boolean
   revancheCleared: boolean
   coins: number
   apparition: TraqueApparition | null
+  gains: Gain[]
 }> {
   const vide = {
     saved: false,
     revancheCleared: false,
     coins: 0,
     apparition: null,
+    gains: [],
   }
   const supabase = await createClient()
   const user = await getCurrentUser()
@@ -224,6 +228,7 @@ export async function finishReviewSession(answers: ReviewAnswer[]): Promise<{
     total: clean.length,
   })
   let apparition: TraqueApparition | null = null
+  let gains: Gain[] = []
   if (!error) {
     // Chaque bonne réponse revue compte pour « Trouver N bonnes réponses ».
     avancerQuetesApres(supabase, user.id, { correct: score })
@@ -232,13 +237,15 @@ export async function finishReviewSession(answers: ReviewAnswer[]): Promise<{
     // Son résultat est attendu : c'est lui qui dit si un gardien vient de
     // sortir, donc si l'écran de fin ouvre le rideau.
     const traqueCredits = creditTraqueFromAnswers(supabase, clean, 'carte')
-    await Promise.all([
+    const [, , award] = await Promise.all([
       validateRevisionToday(supabase, user.id),
       validateCommuteToday(supabase, user.id),
-      // Une session « À revoir » paye comme un quiz (portefeuille 192).
-      awardQuizProgression(supabase),
+      // L'XP de la révision : chaque session est une partie (clé neuve), le
+      // plafond du jour (120 XP) empêche d'en faire une rente.
+      xpActivite(supabase, 'revision', crypto.randomUUID(), score, clean.length),
       traqueCredits,
     ])
+    gains = gainsVerses(award)
     apparition = apparitionOf(await traqueCredits, Date.now())
   }
 
@@ -258,20 +265,23 @@ export async function finishReviewSession(answers: ReviewAnswer[]): Promise<{
     revancheCleared: cleared === true,
     coins: cleared === true ? REVANCHE_CLEAR_COINS : 0,
     apparition,
+    gains,
   }
 }
 
-// Fin d'un examen blanc : historique (exam_blanc_sessions) + XP et série
-// (test_sessions, comme un gros quiz). Score et bilan sont bornés côté
-// serveur — le client n'écrit jamais de valeur libre.
+// Fin d'un examen blanc : historique (exam_blanc_sessions) + série
+// (test_sessions, comme un gros quiz), puis la RÉCOMPENSE D'ÉPREUVE (557) :
+// 20 + 2 XP par bonne réponse, et 10 gemmes à 15/20 sur un examen d'au moins
+// 20 questions (une fois par semaine) — relu en base depuis la session. Score
+// et bilan sont bornés côté serveur — le client n'écrit jamais de valeur libre.
 export async function finishExamBlanc(
   score: number,
   total: number,
   report: unknown,
-): Promise<{ saved: boolean }> {
+): Promise<{ saved: boolean; gains: Gain[] }> {
   const supabase = await createClient()
   const user = await getCurrentUser()
-  if (!user) return { saved: false }
+  if (!user) return { saved: false, gains: [] }
 
   const clean = (n: number, max: number) =>
     Number.isFinite(n) ? Math.max(0, Math.min(Math.round(n), max)) : 0
@@ -307,13 +317,17 @@ export async function finishExamBlanc(
       ]
     })
 
-  const [{ error: examError }, { error: xpError }] = await Promise.all([
-    supabase.from('exam_blanc_sessions').insert({
-      user_id: user.id,
-      score: cleanScore,
-      total: cleanTotal,
-      report: cleanReport,
-    }),
+  const [{ data: examen, error: examError }, { error: xpError }] = await Promise.all([
+    supabase
+      .from('exam_blanc_sessions')
+      .insert({
+        user_id: user.id,
+        score: cleanScore,
+        total: cleanTotal,
+        report: cleanReport,
+      })
+      .select('id')
+      .single<{ id: string }>(),
     supabase.from('test_sessions').insert({
       user_id: user.id,
       quiz_id: null,
@@ -321,18 +335,19 @@ export async function finishExamBlanc(
       total: cleanTotal,
     }),
   ])
+  let gains: Gain[] = []
   if (!xpError) {
-    await Promise.all([
+    const [, , award] = await Promise.all([
       validateRevisionToday(supabase, user.id),
       validateCommuteToday(supabase, user.id),
-      // L'examen blanc paye comme un gros quiz (portefeuille 192).
-      awardQuizProgression(supabase),
+      examen ? recompenserEpreuve(supabase, 'examen_blanc', examen.id) : Promise.resolve(null),
     ])
+    gains = gainsVerses(award)
   }
 
   revalidatePath('/reviser')
   revalidatePath('/moi')
-  return { saved: !examError && !xpError }
+  return { saved: !examError && !xpError, gains }
 }
 
 // Persiste la sélection de matières de l'élève (bouton « Éditer »).

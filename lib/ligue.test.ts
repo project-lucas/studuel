@@ -118,16 +118,15 @@ describe('le classement', () => {
 })
 
 describe('les gemmes de fin de semaine', () => {
-  it('paient la montée d’une division, davantage le passage de rang', () => {
-    expect(gemmesDeFinDeSemaine({ avant: 1, apres: 2, rang: 5, xp: 100 })).toBe(10)
-    expect(gemmesDeFinDeSemaine({ avant: 3, apres: 4, rang: 5, xp: 100 })).toBe(25)
+  it('ne paient que le passage à un nouveau rang (557 : la gemme est rare)', () => {
+    expect(gemmesDeFinDeSemaine({ avant: 1, apres: 2, rang: 5, xp: 100 })).toBe(0)
+    expect(gemmesDeFinDeSemaine({ avant: 3, apres: 4, rang: 5, xp: 100 })).toBe(10)
   })
 
-  it('ajoutent le podium, jamais sans XP', () => {
-    expect(gemmesDeFinDeSemaine({ avant: 1, apres: 2, rang: 1, xp: 100 })).toBe(25)
-    expect(gemmesDeFinDeSemaine({ avant: 1, apres: 1, rang: 3, xp: 100 })).toBe(5)
-    expect(gemmesDeFinDeSemaine({ avant: 1, apres: 1, rang: 1, xp: 0 })).toBe(0)
-    expect(gemmesDeFinDeSemaine({ avant: 2, apres: 1, rang: 30, xp: 0 })).toBe(0)
+  it('ne paient plus le podium, et jamais sans XP', () => {
+    expect(gemmesDeFinDeSemaine({ avant: 1, apres: 2, rang: 1, xp: 100 })).toBe(0)
+    expect(gemmesDeFinDeSemaine({ avant: 1, apres: 1, rang: 3, xp: 100 })).toBe(0)
+    expect(gemmesDeFinDeSemaine({ avant: 3, apres: 4, rang: 1, xp: 0 })).toBe(0)
   })
 })
 
@@ -318,12 +317,17 @@ describe('les gains de fin de semaine', () => {
     ...patch,
   })
 
-  it('détaille la montée de rang, le podium, le bonus et le niveau', () => {
-    expect(lignesGainsBilan(bilan({}))).toEqual([
-      { cle: 'montee', libelle: 'Nouveau rang\u00a0: Argent', montant: 25, unite: 'gemme' },
-      { cle: 'podium', libelle: 'Podium\u00a0: 2e place', montant: 10, unite: 'gemme' },
+  it('détaille la montée de rang, le bonus et le niveau (gemmes d’avant la 557)', () => {
+    expect(lignesGainsBilan(bilan({ gemmes: 10 }))).toEqual([
+      { cle: 'montee', libelle: 'Nouveau rang\u00a0: Argent', montant: 10, unite: 'gemme' },
       { cle: 'tirelire', libelle: 'Tirelire d’amis', montant: 180, unite: 'xp' },
       { cle: 'niveau', libelle: 'Niveau 7 → 8', montant: 15, unite: 'gemme' },
+    ])
+  })
+
+  it('ne montre pas de ligne « +0 » pour un niveau gagné sans gemme', () => {
+    expect(lignesGainsBilan(bilan({ gemmes: 10, bonusXp: 0, gemmesNiveau: 0 }))).toEqual([
+      { cle: 'montee', libelle: 'Nouveau rang\u00a0: Argent', montant: 10, unite: 'gemme' },
     ])
   })
 
@@ -415,13 +419,13 @@ describe('le coffre d’équipe', () => {
     expect(calculerCoffre(-5, [])).toEqual({ partAmis: 0, points: 0 })
   })
 
-  it('suit les niveaux de la migration 379', () => {
+  it('suit les niveaux de la migration 379, sans gemme depuis la 557', () => {
     expect(COFFRE_NIVEAUX.map((n) => [n.niveau, n.seuil, n.xp, n.gemmes])).toEqual([
-      [1, 100, 100, 5],
-      [2, 250, 250, 10],
-      [3, 450, 450, 15],
-      [4, 700, 700, 25],
-      [5, 1000, 1000, 40],
+      [1, 100, 100, 0],
+      [2, 250, 250, 0],
+      [3, 450, 450, 0],
+      [4, 700, 700, 0],
+      [5, 1000, 1000, 0],
     ])
   })
 
@@ -430,7 +434,7 @@ describe('le coffre d’équipe', () => {
       0, 0, 1, 1, 2, 3, 4, 4, 5, 5,
     ])
     expect(contenuCoffre(0)).toBeNull()
-    expect(contenuCoffre(3)).toMatchObject({ xp: 450, gemmes: 15 })
+    expect(contenuCoffre(3)).toMatchObject({ xp: 450, gemmes: 0 })
   })
 
   it('dit le chemin vers le niveau suivant', () => {

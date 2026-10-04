@@ -26,7 +26,7 @@ describe('pistePalier', () => {
   it('pose trois jalons aux tiers, au tarif du palier, gagnés selon les étoiles acquises', () => {
     const p = pistePalier({ level: 3, stars: 2, acquises: 2, accuracy: 0.85 })
     expect(p.jalons.map((j) => j.at)).toEqual([1 / 3, 2 / 3, 1])
-    expect(p.jalons.map((j) => j.gemmes)).toEqual([3, 3, 3])
+    expect(p.jalons.map((j) => j.xp)).toEqual([15, 15, 15])
     expect(p.jalons.map((j) => j.gagne)).toEqual([true, true, false])
     expect(p.jalons.map((j) => j.seuil)).toEqual([0.6, 0.8, 0.95])
     expect(p.prochainSeuil).toBe(0.95)
@@ -52,10 +52,10 @@ describe('pistePalier', () => {
   })
 
   it('les jetons suivent les étoiles PAYÉES, pas seulement les locales', () => {
-    // Un appareil neuf : rien en local, mais les gemmes ont déjà été versées.
+    // Un appareil neuf : rien en local, mais les étoiles ont déjà été payées.
     const p = pistePalier({ level: 5, stars: 0, acquises: 3, accuracy: null })
     expect(p.jalons.every((j) => j.gagne)).toBe(true)
-    expect(p.jalons[0].gemmes).toBe(5)
+    expect(p.jalons[0].xp).toBe(25)
   })
 })
 

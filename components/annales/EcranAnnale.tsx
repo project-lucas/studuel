@@ -12,6 +12,7 @@ import { Button } from '@/components/ui/button'
 import BlocsCorrige from '@/components/annales/BlocsCorrige'
 import PartiesCorrige from '@/components/annales/PartiesCorrige'
 import TexteCorrige from '@/components/annales/TexteCorrige'
+import ValiderAnnale from '@/components/annales/ValiderAnnale'
 
 /**
  * L'écran d'une annale corrigée : le sujet officiel (le PDF habillé, à lire ou
@@ -103,6 +104,9 @@ export default function EcranAnnale({
           }))}
         />
       </section>
+
+      {/* L'annale est une ÉPREUVE (557) : la valider paie XP et gemmes. */}
+      <ValiderAnnale annaleId={annale.id} />
 
       <p className="px-1 text-[11px] leading-relaxed text-muted-foreground">
         Sujet officiel du baccalauréat, ministère de l’Éducation nationale. Corrigé

@@ -492,70 +492,8 @@
   animation: jour-onde 2.5s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
 }
 
-/* 1bis. LA VALIDATION DU JOUR (Lucas, 22/09/2026). Une fois par jour, la
-      première fois que la semaine s'affiche avec le jour fait (marqueur local
-      dans SerieBar) : la pastille se RETOURNE comme une pièce sur son axe
-      vertical et arrive violette, la coche se TRACE d'un trait, une onde
-      violette s'écarte. Sept dixièmes de seconde en tout — c'est la validation
-      qui doit se sentir, pas la relecture : les autres jours faits gardent la
-      vague. Les couleurs sont les rôles de la charte (muted → primary). */
-@keyframes jour-valide-flip {
-  0% {
-    transform: rotateY(90deg) scale(0.9);
-    background-color: var(--muted);
-  }
-  45% {
-    background-color: var(--muted);
-  }
-  55% {
-    background-color: var(--primary);
-  }
-  100% {
-    transform: rotateY(0deg) scale(1);
-    background-color: var(--primary);
-  }
-}
-.jour-valide {
-  animation: jour-valide-flip 0.45s cubic-bezier(0.22, 0.61, 0.36, 1) both;
-}
-@keyframes coche-trace {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-.jour-valide svg path {
-  stroke-dasharray: 24;
-  stroke-dashoffset: 24;
-  animation: coche-trace 0.25s ease-out 0.35s forwards;
-}
-@keyframes jour-valide-onde {
-  0% {
-    transform: scale(0.7);
-    opacity: 0.9;
-  }
-  100% {
-    transform: scale(2.2);
-    opacity: 0;
-  }
-}
-.jour-valide-onde {
-  /* Un peu plus vive que le retournement (Lucas, 22/09 : « accélère
-     légèrement la vague autour, mais peu ») : elle part dès que la coche
-     commence à se tracer, et s'efface avant qu'on ait fini de la lire. */
-  animation: jour-valide-onde 0.5s ease-out 0.25s both;
-}
-@media (prefers-reduced-motion: reduce) {
-  .jour-valide {
-    animation: none;
-  }
-  .jour-valide svg path {
-    animation: none;
-    stroke-dashoffset: 0;
-  }
-  .jour-valide-onde {
-    display: none;
-  }
-}
+/* 1bis. La validation du jour vit désormais dans la semaine en flammes
+      (components/reviser/SemaineFlammes.module.css, 04/10/2026). */
 
 /* LES ONDES D'APPEL (2, 3, 4 ci-dessous, et le « C'est parti » d'AreneIntro) :
    un halo qui s'écarte d'un objet pour dire « ici ». Elles animaient la

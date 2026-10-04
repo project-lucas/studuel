@@ -143,22 +143,23 @@ export const MIN_POINTS_TO_CLAIM = 50
 
 /**
  * La récompense de fin de semaine, selon la place du clan ET la contribution
- * personnelle. Le classement fait le prestige, la contribution fait le droit.
+ * personnelle. De l'XP seulement depuis la 557 (c'étaient aussi 20 à 150
+ * gemmes) : la gemme est réservée aux épreuves notées. Le classement fait le prestige, la contribution fait le droit.
  */
 export function clanWeekReward(rank: number | null, myPoints: number): ClanReward {
   if (myPoints < MIN_POINTS_TO_CLAIM || rank === null || rank < 1) return NO_REWARD
   if (rank === 1) {
-    return { tier: 'or', gems: 150, xp: 300, label: 'Clan n°1 — coffre d’or' }
+    return { tier: 'or', gems: 0, xp: 300, label: 'Clan n°1 — coffre d’or' }
   }
   if (rank <= 3) {
-    return { tier: 'argent', gems: 90, xp: 200, label: 'Podium — coffre d’argent' }
+    return { tier: 'argent', gems: 0, xp: 200, label: 'Podium — coffre d’argent' }
   }
   if (rank <= 10) {
-    return { tier: 'bronze', gems: 50, xp: 120, label: 'Top 10 — coffre de bronze' }
+    return { tier: 'bronze', gems: 0, xp: 120, label: 'Top 10 — coffre de bronze' }
   }
   return {
     tier: 'participation',
-    gems: 20,
+    gems: 0,
     xp: 60,
     label: 'Coffre de participation',
   }

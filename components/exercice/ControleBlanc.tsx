@@ -15,6 +15,9 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import LessonRichContent from '@/components/LessonRichContent'
+import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
+import { SEUIL_GEMMES } from '@/lib/economie'
+import type { Gain } from '@/lib/gains'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { chronoTick, formatChrono, tempsEcoule } from '@/lib/quiz-chrono'
@@ -46,7 +49,7 @@ type Phase =
   | { nom: 'consigne'; servi: ExerciceServi }
   | { nom: 'redaction'; servi: ExerciceServi }
   | { nom: 'correction-en-cours'; servi: ExerciceServi }
-  | { nom: 'correction'; servi: ExerciceServi; correction: Correction }
+  | { nom: 'correction'; servi: ExerciceServi; correction: Correction; gains: Gain[] }
 
 /**
  * LE CONTRÔLE BLANC d'un chapitre — l'écran de la tuile « Exercice ».
@@ -131,7 +134,7 @@ export default function ControleBlanc({
     setPhase({ nom: 'correction-en-cours', servi })
     rendreCopie(servi.id, texte)
       .then((r) => {
-        if (r.ok) setPhase({ nom: 'correction', servi, correction: r.correction })
+        if (r.ok) setPhase({ nom: 'correction', servi, correction: r.correction, gains: r.gains })
         else setPhase({ nom: 'erreur', raison: r.raison })
       })
       .catch(() => setPhase({ nom: 'erreur', raison: 'erreur' }))
@@ -287,8 +290,9 @@ export default function ControleBlanc({
 
   // ------------------------------------------------------------ correction
   if (phase.nom === 'correction') {
-    const { correction } = phase
+    const { correction, gains } = phase
     const ratio = noteRatio(correction.note, correction.sur)
+    const sur20 = correction.sur > 0 ? (20 * correction.note) / correction.sur : 0
     return (
       <div className="mx-auto flex w-full max-w-md flex-col gap-5">
         <div className="rounded-3xl bg-card p-6 text-center shadow-sm ring-1 ring-black/5">
@@ -311,6 +315,15 @@ export default function ControleBlanc({
             {correction.bilan}
           </p>
         </div>
+
+        {/* Un contrôle blanc est une ÉPREUVE (557) : son XP suit la note, et
+            dès 14/20 il rapporte des gemmes — l'une des rares portes vers elles. */}
+        <PanneauRecompenses gains={gains} titre="Gagné" />
+        {sur20 < SEUIL_GEMMES.controle ? (
+          <p className="-mt-3 text-center text-xs font-semibold text-muted-foreground">
+            Dès {SEUIL_GEMMES.controle}/20, un contrôle blanc rapporte des gemmes.
+          </p>
+        ) : null}
 
         <section className="rounded-3xl bg-card p-5 shadow-sm ring-1 ring-black/5">
           <h3 className="titre-section">

@@ -4,8 +4,8 @@
 // Une coche sur une carte déjà ouverte : dans une liste de deux cents entrées,
 // c'est ce qui permet de savoir où on en est sans compter. Ça ne mérite ni une
 // table, ni une migration, ni un aller-retour réseau — c'est un confort de
-// lecture, pas un acquis de progression (l'encyclopédie ne donne ni XP, ni
-// gemmes, ni couronnes : on la lit parce qu'on est curieux).
+// lecture, pas un acquis de progression (l'encyclopédie ne donne que 5 XP par
+// fiche lue — 557, versés par le serveur —, ni gemme ni couronne : on la lit par curiosité).
 //
 // Même précédent que les étoiles des jeux de salon, qui vivent aussi dans le
 // navigateur. Et mêmes précautions : `localStorage` lève en navigation privée

@@ -103,7 +103,8 @@ describe('le rappel du coffre d’équipe (migration 379)', () => {
   it('annonce le niveau et le contenu du coffre, et mène à l’onglet Amis', () => {
     const m = coffreMessage(3)
     expect(m).toMatchObject({ kind: 'coffre', title: 'Ton coffre d’équipe est ouvert !', url: COFFRE_URL })
-    expect(m?.body).toBe('Niveau 3 : 450 XP et 15 gemmes t’attendent. Viens l’ouvrir !')
+    // De l'XP seulement depuis la 557.
+    expect(m?.body).toBe('Niveau 3 : 450 XP t’attendent. Viens l’ouvrir !')
   })
 
   it('ne dit rien d’un coffre vide', () => {

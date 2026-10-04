@@ -57,7 +57,7 @@ describe('ce que le panneau affiche', () => {
     expect(screen.getByText('+30')).toBeInTheDocument()
     expect(screen.getByText('+1')).toBeInTheDocument()
     // Singulier pour 1, pluriel au-delà.
-    expect(screen.getByText('cristal')).toBeInTheDocument()
+    expect(screen.getByText('gemme')).toBeInTheDocument()
   })
 
   it('ADDITIONNE deux versements de la même unité', () => {
@@ -87,7 +87,7 @@ describe('ce que le panneau affiche', () => {
       />,
     )
     expect(
-      screen.getByText('Tu as gagné 100 XP, 30 cristaux.'),
+      screen.getByText('Tu as gagné 100 XP, 30 gemmes.'),
     ).toBeInTheDocument()
   })
 })

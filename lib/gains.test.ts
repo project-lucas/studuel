@@ -32,8 +32,8 @@ describe('le catalogue', () => {
   })
 
   it('accorde le libellé en nombre', () => {
-    expect(libelleGain({ unite: 'gemme', montant: 1 })).toBe('1 cristal')
-    expect(libelleGain({ unite: 'gemme', montant: 12 })).toBe('12 cristaux')
+    expect(libelleGain({ unite: 'gemme', montant: 1 })).toBe('1 gemme')
+    expect(libelleGain({ unite: 'gemme', montant: 12 })).toBe('12 gemmes')
     // L'XP est invariable — le pluriel naïf « 5 XPs » se lit mal.
     expect(libelleGain({ unite: 'xp', montant: 5 })).toBe('5 XP')
   })

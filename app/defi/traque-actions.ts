@@ -16,17 +16,17 @@ import { getCurrentUser } from '@/lib/supabase/user'
 export type TraqueVictory = {
   /** Le serveur a bien reconnu la victoire (fenêtre ouverte, boss sorti). */
   won: boolean
-  /** Gemmes réellement versées (0 si le plafond de la semaine est atteint). */
-  gems: number
+  /** XP réellement versée (557 — c'étaient des gemmes, plafonnées par semaine). */
+  xp: number
   /** Nouveau rang du gardien (I → III) : il revient plus fort. */
   rank: number
   /** La victoire comptait, mais le plafond hebdomadaire a mangé les gemmes. */
   capped: boolean
 }
 
-const NO_VICTORY: TraqueVictory = { won: false, gems: 0, rank: 1, capped: false }
+const NO_VICTORY: TraqueVictory = { won: false, xp: 0, rank: 1, capped: false }
 
-/** Encaisse une victoire de traque : gemmes, rang +1, le boss se recouche. */
+/** Encaisse une victoire de traque : XP, rang +1, le boss se recouche. */
 export async function claimTraqueVictory(
   bossId: string,
 ): Promise<TraqueVictory> {
@@ -50,7 +50,7 @@ export async function claimTraqueVictory(
   const row = data as Record<string, unknown> | null
   return {
     won: row?.won === true,
-    gems: Math.max(0, Number(row?.gems) || 0),
+    xp: Math.max(0, Number(row?.xp) || 0),
     rank: Math.min(3, Math.max(1, Number(row?.rank) || 1)),
     capped: row?.capped === true,
   }

@@ -39,6 +39,8 @@ import ModeStage from '@/components/defi/ModeStage'
 import type { RankPlayer } from '@/lib/trophies'
 import { bossForSubject, dominantSubject } from '@/lib/bosses'
 import { XP_RULES, type LevelInfo } from '@/lib/xp'
+import { BAREME_XP } from '@/lib/economie'
+import XpIcon from '@/components/ui/XpIcon'
 import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
 import type { Gain } from '@/lib/gains'
 import { isCommuteNow } from '@/lib/trajet'
@@ -51,8 +53,6 @@ import type { ReviewAnswer } from '@/lib/srs'
 import type { FriendGhost } from '@/lib/social'
 import {
   GAME_MODES,
-  MODE_XP_BONUS,
-  FEATURED_XP_MULTIPLIER,
   modeImage,
   modeScene,
   modeStatus,
@@ -257,7 +257,7 @@ export default function DefiHome({
     setPhase('done')
     sfx.complete()
     // L'XP envoyée n'est qu'un affichage local : le serveur la recalcule.
-    recordChallenge(finalCorrect, items.length)
+    recordChallenge(finalCorrect, items.length, undefined, 'defi_jour')
       .then((r) => {
         setSaved(r.saved)
         setGains(r.gains)
@@ -429,8 +429,8 @@ export default function DefiHome({
   // ---------------------------------------------------------------- landing
   if (phase === 'landing') {
     // Récompense affichée sur le bouton Jouer : le potentiel du défi du jour.
-    const dailyXp =
-      items.length * XP_RULES.challengePerCorrect + XP_RULES.challengeBonus
+    // Ce que le défi du jour verse VRAIMENT (557) : 30 XP, une fois par jour.
+    const dailyXp = BAREME_XP.defi_jour.maxPartie
     // Classement : moi (trophées suivis localement) + mes amis.
     const rankedPlayers: RankPlayer[] = [
       {
@@ -506,7 +506,7 @@ export default function DefiHome({
         {commuteMode ? (
           <p className="flex items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-sm font-semibold text-primary-foreground">
             <BusFront className="size-4 text-highlight" />
-            Mode trajet · +{XP_RULES.commuteBonus} XP bonus
+            Mode trajet
             {commuteStreak > 0 ? (
               <span className="text-primary-foreground/75">
                 · {commuteStreak} d&apos;affilée
@@ -557,7 +557,7 @@ export default function DefiHome({
               </div>
               {items.length > 0 && !doneToday ? (
                 <span className="flex shrink-0 items-center gap-1 rounded-full bg-highlight px-2.5 py-1 font-mono text-xs font-bold text-foreground tabular-nums shadow-sm">
-                  <Zap className="size-3.5" aria-hidden="true" />+{dailyXp} XP
+                  <XpIcon className="size-4" />+{dailyXp} XP
                 </span>
               ) : null}
             </div>
@@ -621,7 +621,9 @@ export default function DefiHome({
               className="pop-spring absolute -top-3 left-1/2 -translate-x-1/2 rotate-[-4deg] rounded-full border-2 border-foreground bg-highlight px-2 py-0.5 font-mono text-[11px] font-bold text-foreground shadow-md tabular-nums"
               style={{ animationDelay: '500ms' }}
             >
-              +{dailyXp} XP
+              <span className="inline-flex items-center gap-0.5">
+                <XpIcon className="size-3.5" />+{dailyXp} XP
+              </span>
             </span>
           ) : null}
         </div>
@@ -646,8 +648,9 @@ export default function DefiHome({
               const isBoss = mode.id === 'boss'
               // Mode du jour : bonus doublé, tuile cerclée d'or.
               const featured = playable && mode.id === featuredId
-              const xpChip =
-                MODE_XP_BONUS[mode.id] * (featured ? FEATURED_XP_MULTIPLIER : 1)
+              // Ce qu'une partie de l'arène verse VRAIMENT (557) : 5 + 1 par
+              // bonne réponse, 25 au plus — le même pour tous les modes.
+              const xpChip = BAREME_XP.arene.maxPartie
               // La tuile Boss annonce le personnage : matière dominante du pool.
               const arenaBoss = isBoss
                 ? bossForSubject(dominantSubject(pool))
@@ -735,7 +738,9 @@ export default function DefiHome({
                             : TILE_CHIP[mode.id],
                         )}
                       >
-                        +{xpChip} XP{featured ? ' ·×2' : ''}
+                        <span className="inline-flex items-center gap-0.5">
+                          <XpIcon className="size-3" />+{xpChip}
+                        </span>
                       </span>
                     ) : status === 'locked' ? (
                       <span className="flex items-center gap-1 rounded-full bg-muted px-2 py-0.5 text-[10px] font-bold text-muted-foreground">
@@ -890,7 +895,7 @@ export default function DefiHome({
           {index + 1}/{items.length}
         </span>
         <span className="flex items-center gap-1 font-mono font-semibold text-white tabular-nums">
-          <Zap className="size-3.5 text-highlight" /> {xp} XP
+          <Check className="size-3.5 text-highlight" aria-hidden="true" /> {correct}
         </span>
         <SoundToggle />
       </div>

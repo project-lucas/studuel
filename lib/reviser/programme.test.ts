@@ -26,7 +26,7 @@ const fiche = (over: Partial<ChapterRow> & { id: string }): ChapterRow => ({
   discipline: null,
   aQuiz: true,
   quizTeste: false,
-  xpRestant: 135,
+  xpRestant: 140,
   ...over,
 })
 
@@ -86,14 +86,14 @@ describe('jaugeDesFiches', () => {
 })
 
 describe('xpRestantFiche', () => {
-  test('une fiche vierge à une leçon vaut 135 XP', () => {
-    expect(xpRestantFiche({ leconsALire: 1, couronnes: 0 })).toBe(135)
+  test('une fiche vierge à une leçon vaut 140 XP (leçon à 10 depuis la 557)', () => {
+    expect(xpRestantFiche({ leconsALire: 1, couronnes: 0 })).toBe(140)
   })
 
   test('ne compte que ce qui reste', () => {
     expect(xpRestantFiche({ leconsALire: 0, couronnes: 1 })).toBe(100)
     expect(xpRestantFiche({ leconsALire: 0, couronnes: 3 })).toBe(0)
-    expect(xpRestantFiche({ leconsALire: 2, couronnes: 3 })).toBe(10)
+    expect(xpRestantFiche({ leconsALire: 2, couronnes: 3 })).toBe(20)
   })
 })
 

@@ -26,7 +26,6 @@ import {
 } from '@/lib/ligue'
 import type { AvatarAffiche } from '@/lib/avatar-affiche'
 import { REFERRAL_GEM_REWARD, type ReferralSummary } from '@/lib/gems'
-import { DUEL_XP_BONUS } from '@/lib/social'
 import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
 
@@ -64,7 +63,7 @@ function BoutonDefi({ id, nom, onBlocked }: { id: string; nom: string; onBlocked
     <Button
       type="button"
       size="icon-sm"
-      aria-label={`Défier ${nom} (+${DUEL_XP_BONUS} XP)`}
+      aria-label={`Défier ${nom}`}
       disabled={launching}
       onClick={() => launch(id)}
     >

@@ -1,17 +1,17 @@
-// LES GEMMES DES PALIERS — ce que rapporte chaque étoile d'un jeu de salon.
+// L'XP DES PALIERS — ce que rapporte chaque étoile d'un jeu de salon.
 //
-// Lucas, 19/09/2026 : « il faut ajouter les gains en gemmes avec
-// l'illustration pour chaque palier […] vrai pour tous les modes de jeu ».
-// Chaque étoile décrochée sur un palier rapporte des gemmes UNE fois, au tarif
-// de son palier : palier N → N gemmes par étoile (Éveil 1, Apprenti 2,
-// Confirmé 3, Expert 4, Maître 5). Un jeu entier vaut 45 gemmes — un peu plus
-// d'un Boost XP par palier de Maître, jamais de quoi remplacer les quêtes.
+// Lucas, 19/09/2026 : « il faut ajouter les gains […] pour chaque palier ». Ce
+// furent des gemmes (palier N → N gemmes) jusqu'au 04/10/2026 ; la 557 les a
+// changées en XP (« le gain de gemmes doit être très rare ») : palier N →
+// 5 × N XP par étoile (Éveil 5, Apprenti 10, Confirmé 15, Expert 20, Maître
+// 25), soit 225 XP pour un jeu entier. Chaque étoile ne paie qu'UNE fois ; les
+// étoiles déjà payées en gemmes ne repaient rien.
 //
-// Le VERSEMENT est au serveur (RPC `palier_gemmes_reclamer`, migration 373) :
-// il ne paie une étoile qu'une fois, pour toujours. Ce module en est le miroir
-// pur — le tarif affiché, la lecture de sa réponse et des lignes
-// `palier_gemmes`. Aucune lecture de base ici (voir palier-gemmes-server.ts).
+// Le VERSEMENT est au serveur (RPC `palier_gemmes_reclamer`, 373 → 557 — le nom
+// est resté) : ce module en est le miroir pur — le tarif affiché, la lecture de
+// sa réponse et des lignes `palier_gemmes`. Aucune lecture de base ici.
 
+import { xpEtoilePalier } from '@/lib/economie'
 import type { Gain } from '@/lib/gains'
 import {
   MAX_STARS,
@@ -26,18 +26,18 @@ export type EtoilesParPalier = readonly [number, number, number, number, number]
 
 export const AUCUNE_ETOILE: EtoilesParPalier = [0, 0, 0, 0, 0]
 
-/** Gemmes d'UNE étoile de ce palier (miroir de la 373 : le numéro du palier). */
-export function gemmesParEtoile(level: PalierLevel): number {
-  return level
+/** XP d'UNE étoile de ce palier (miroir de la 557 : 5 × le numéro du palier). */
+export function xpParEtoile(level: PalierLevel): number {
+  return xpEtoilePalier(level)
 }
 
-/** Gemmes des trois étoiles d'un palier. */
-export function gemmesDuPalier(level: PalierLevel): number {
-  return gemmesParEtoile(level) * MAX_STARS
+/** XP des trois étoiles d'un palier. */
+export function xpDuPalier(level: PalierLevel): number {
+  return xpParEtoile(level) * MAX_STARS
 }
 
-/** Tout ce qu'un jeu peut rapporter en étoiles (45). */
-export const GEMMES_PAR_JEU = PALIER_LEVELS.reduce((s, l) => s + gemmesDuPalier(l), 0)
+/** Tout ce qu'un jeu peut rapporter en étoiles (225 XP). */
+export const XP_PAR_JEU = PALIER_LEVELS.reduce((s, l) => s + xpDuPalier(l), 0)
 
 function borne(n: unknown): number {
   const v = Math.floor(Number(n))
@@ -50,9 +50,9 @@ export function etoilesDeProgression(progress: PalierProgress): EtoilesParPalier
   return [a, b, c, d, e]
 }
 
-/** Gemmes que valent ces étoiles (sans le bonus du week-end). */
-export function gemmesDesEtoiles(etoiles: EtoilesParPalier): number {
-  return PALIER_LEVELS.reduce((s, l, i) => s + borne(etoiles[i]) * gemmesParEtoile(l), 0)
+/** XP de base que valent ces étoiles (avant le multiplicateur). */
+export function xpDesEtoiles(etoiles: EtoilesParPalier): number {
+  return PALIER_LEVELS.reduce((s, l, i) => s + borne(etoiles[i]) * xpParEtoile(l), 0)
 }
 
 /**
@@ -83,7 +83,7 @@ export function lirePalierGemmes(rows: unknown): EtoilesParPalier {
 }
 
 export type ReponseReclamation =
-  | { ok: true; gemmes: number; solde: number; etoiles: EtoilesParPalier }
+  | { ok: true; xp: number; etoiles: EtoilesParPalier }
   | { ok: false; raison: string }
 
 /** JSON de la RPC → réponse sûre. Illisible = refus « panne », jamais un gain. */
@@ -93,27 +93,24 @@ export function lireReclamation(data: unknown): ReponseReclamation {
   if (r.ok !== true) {
     return { ok: false, raison: typeof r.raison === 'string' ? r.raison : 'panne' }
   }
-  const gemmes = Math.floor(Number(r.gemmes))
-  const solde = Math.floor(Number(r.solde))
+  const xp = Math.floor(Number(r.xp))
   const liste = Array.isArray(r.etoiles) ? r.etoiles : []
   const [a, b, c, d, e] = [0, 1, 2, 3, 4].map((i) => borne(liste[i]))
   return {
     ok: true,
-    gemmes: Number.isFinite(gemmes) ? Math.max(0, gemmes) : 0,
-    solde: Number.isFinite(solde) ? Math.max(0, solde) : 0,
+    xp: Number.isFinite(xp) ? Math.max(0, xp) : 0,
     etoiles: [a, b, c, d, e],
   }
 }
 
 /**
- * Les gains d'une fin de partie, plus les gemmes des étoiles qu'elle vient de
- * décrocher : UNE ligne de gemmes, jamais deux (le gain de série et celui du
- * palier s'additionnent), pour que le panneau et le vol vers le bandeau ne
- * comptent pas la même unité deux fois.
+ * Les gains d'une fin de partie, plus l'XP des étoiles qu'elle vient de
+ * décrocher : UNE ligne d'XP, jamais deux, pour que le panneau et le vol vers
+ * le bandeau ne comptent pas la même unité deux fois.
  */
-export function avecGemmesPalier(gains: readonly Gain[], gemmes: number | null): Gain[] {
-  if (gemmes === null || !(gemmes > 0)) return [...gains]
-  const deja = gains.find((g) => g.unite === 'gemme')
-  if (!deja) return [...gains, { unite: 'gemme', montant: gemmes }]
-  return gains.map((g) => (g === deja ? { ...g, montant: g.montant + gemmes } : g))
+export function avecXpPalier(gains: readonly Gain[], xp: number | null): Gain[] {
+  if (xp === null || !(xp > 0)) return [...gains]
+  const deja = gains.find((g) => g.unite === 'xp')
+  if (!deja) return [...gains, { unite: 'xp', montant: xp }]
+  return gains.map((g) => (g === deja ? { ...g, montant: g.montant + xp } : g))
 }

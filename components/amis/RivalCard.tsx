@@ -1,8 +1,10 @@
 'use client'
 
-import { Swords, Zap } from 'lucide-react'
-import PortraitJoueur from '@/components/amis/PortraitJoueur'
+import { Swords } from 'lucide-react'
+import XpIcon from '@/components/ui/XpIcon'
+import { BAREME_XP } from '@/lib/economie'
 import { DUEL_XP_BONUS } from '@/lib/social'
+import PortraitJoueur from '@/components/amis/PortraitJoueur'
 import { useDuelLaunch } from '@/components/amis/useDuelLaunch'
 
 /**
@@ -47,13 +49,13 @@ export default function RivalCard({
         type="button"
         disabled={launching}
         onClick={() => launch(rival.id)}
-        aria-label={`Défier ${rival.nom} (+${DUEL_XP_BONUS} XP)`}
+        aria-label={`Défier ${rival.nom} (jusqu’à +${BAREME_XP.arene.maxPartie} XP)`}
         className="font-heading flex shrink-0 cursor-pointer items-center gap-1 rounded-full bg-primary px-3.5 py-2 text-sm font-extrabold text-primary-foreground shadow-sm transition active:translate-y-px disabled:opacity-60"
       >
         <Swords className="size-4" strokeWidth={2.6} aria-hidden="true" />
         Défier
         <span className="flex items-center font-mono text-[11px] font-bold text-highlight tabular-nums">
-          <Zap className="size-3" aria-hidden="true" />+{DUEL_XP_BONUS}
+          <XpIcon className="size-3.5" />+{BAREME_XP.arene.maxPartie}
         </span>
       </button>
     </section>

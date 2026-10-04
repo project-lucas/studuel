@@ -1,28 +1,27 @@
 // -----------------------------------------------------------------------------
-// LES RÉCOMPENSES DE NIVEAU (03/10/2026, Lucas : « établis le système de
-// récompense des paliers d'XP pour monter de niveau »).
+// LES RÉCOMPENSES DE NIVEAU (03/10/2026 ; revues le 04/10/2026, migration 557 :
+// « le gain de gemmes doit être très rare »).
 //
-// Deux étages, comme la route des trophées de Brawl Stars :
-//   · CHAQUE niveau franchi verse 15 gemmes, tout seul (migrations 192 → 368,
-//     `wallet_grant_xp` / `wallet_award_xp`) — ce montant n'est pas réécrit ici ;
-//   · TOUS LES 5 NIVEAUX, un COFFRE DE PALIER, que l'élève ouvre lui-même
-//     (`niveau_palier_reclamer`, migration 556) : 10 gemmes par niveau du
-//     palier, plafonné à 250 — 50 au niveau 5, 100 au 10, 250 dès le 25.
-// Le passage d'un niveau devient un moment (la fête de niveau, le bandeau), et
-// le prochain palier se voit à l'avance (la bulle du niveau).
+// Un niveau franchi est une FÊTE, plus un versement : la fête de niveau
+// (components/niveau/FeteNiveau) le dit en grand, sans gemme — les 15 gemmes
+// d'office de chaque niveau (192 → 368) ont disparu avec la 557.
+// Reste un étage rare : TOUS LES 5 NIVEAUX, un COFFRE DE PALIER que l'élève
+// ouvre lui-même (`niveau_palier_reclamer`, 556) — 10 gemmes, 25 tous les 25
+// niveaux. Le prochain palier se voit à l'avance (la bulle du niveau).
 //
-// MIROIR de `niveau_palier_gemmes` (556). Pur et testé.
+// MIROIR de `niveau_palier_gemmes` (557). Pur et testé.
 // -----------------------------------------------------------------------------
 
-/** Ce que verse chaque niveau franchi, sans rien demander (192 → 368). */
-export const GEMMES_PAR_NIVEAU = 15
+/** Ce que verse chaque niveau franchi : plus rien depuis la 557 (c'était 15). */
+export const GEMMES_PAR_NIVEAU = 0
 
 /** Un palier tous les N niveaux. */
 export const PAS_PALIER = 5
 
-/** Gemmes d'un coffre de palier : 10 par niveau, au plus 250. */
-export const GEMMES_PALIER_PAR_NIVEAU = 10
-export const GEMMES_PALIER_MAX = 250
+/** Gemmes d'un coffre de palier : 10, et 25 tous les 25 niveaux. */
+export const GEMMES_PALIER = 10
+export const GEMMES_GRAND_PALIER = 25
+export const PAS_GRAND_PALIER = 25
 
 export function estPalier(niveau: number): boolean {
   return Number.isInteger(niveau) && niveau >= PAS_PALIER && niveau % PAS_PALIER === 0
@@ -30,7 +29,8 @@ export function estPalier(niveau: number): boolean {
 
 /** Gemmes du coffre de palier d'un niveau (0 si ce n'est pas un palier). */
 export function gemmesPalier(niveau: number): number {
-  return estPalier(niveau) ? Math.min(GEMMES_PALIER_MAX, GEMMES_PALIER_PAR_NIVEAU * niveau) : 0
+  if (!estPalier(niveau)) return 0
+  return niveau % PAS_GRAND_PALIER === 0 ? GEMMES_GRAND_PALIER : GEMMES_PALIER
 }
 
 /** Le premier palier strictement après `niveau`. */
@@ -49,8 +49,6 @@ export function paliersAOuvrir(niveau: number, ouverts: readonly number[]): numb
 
 export type RecompenseNiveau = {
   niveau: number
-  /** Les 15 gemmes du passage, versées d'office. */
-  gemmes: number
   /** Le coffre de palier, à ouvrir (null hors palier). */
   coffre: { gemmes: number } | null
 }
@@ -58,7 +56,7 @@ export type RecompenseNiveau = {
 /** Ce que rapporte l'arrivée à un niveau. */
 export function recompenseNiveau(niveau: number): RecompenseNiveau {
   const coffre = gemmesPalier(niveau)
-  return { niveau, gemmes: GEMMES_PAR_NIVEAU, coffre: coffre > 0 ? { gemmes: coffre } : null }
+  return { niveau, coffre: coffre > 0 ? { gemmes: coffre } : null }
 }
 
 /**

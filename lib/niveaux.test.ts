@@ -13,11 +13,12 @@ describe('les paliers de niveau', () => {
     expect([1, 4, 5, 6, 10, 15].map(estPalier)).toEqual([false, false, true, false, true, true])
   })
 
-  it('rapportent 10 gemmes par niveau, plafonnés à 250', () => {
-    expect(gemmesPalier(5)).toBe(50)
-    expect(gemmesPalier(10)).toBe(100)
-    expect(gemmesPalier(25)).toBe(250)
-    expect(gemmesPalier(40)).toBe(250)
+  it('rapportent 10 gemmes, 25 tous les 25 niveaux (557 : la gemme est rare)', () => {
+    expect(gemmesPalier(5)).toBe(10)
+    expect(gemmesPalier(10)).toBe(10)
+    expect(gemmesPalier(25)).toBe(25)
+    expect(gemmesPalier(40)).toBe(10)
+    expect(gemmesPalier(50)).toBe(25)
     expect(gemmesPalier(7)).toBe(0)
   })
 
@@ -35,9 +36,9 @@ describe('les paliers de niveau', () => {
 })
 
 describe('la récompense d’un niveau', () => {
-  it('verse toujours 15 gemmes, et un coffre sur un palier', () => {
-    expect(recompenseNiveau(7)).toEqual({ niveau: 7, gemmes: 15, coffre: null })
-    expect(recompenseNiveau(10)).toEqual({ niveau: 10, gemmes: 15, coffre: { gemmes: 100 } })
+  it('ne verse plus de gemme d’office, seulement un coffre sur un palier', () => {
+    expect(recompenseNiveau(7)).toEqual({ niveau: 7, coffre: null })
+    expect(recompenseNiveau(10)).toEqual({ niveau: 10, coffre: { gemmes: 10 } })
   })
 })
 
@@ -52,13 +53,13 @@ describe('la fête de niveau', () => {
   })
 })
 
-describe('miroir SQL : niveau_palier_gemmes (556)', () => {
+describe('miroir SQL : niveau_palier_gemmes (556 → 557)', () => {
   it('suit le même barème que gemmesPalier', async () => {
     const { derniereDefinition } = await import('@/lib/migrations-lecture')
     const def = derniereDefinition('niveau_palier_gemmes')
     expect(def, 'aucune migration ne définit niveau_palier_gemmes').not.toBeNull()
     expect(def!.sql).toMatch(/p_niveau\s*<\s*5\s+OR\s+p_niveau\s*%\s*5\s*<>\s*0\s+THEN\s+0/)
-    expect(def!.sql).toMatch(/LEAST\(250,\s*10\s*\*\s*p_niveau\)/)
+    expect(def!.sql).toMatch(/p_niveau\s*%\s*25\s*=\s*0\s+THEN\s+25\s+ELSE\s+10/)
     // Lire toutes les migrations prend du temps : même délai que les autres miroirs.
   }, 60_000)
 })

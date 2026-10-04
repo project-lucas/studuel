@@ -57,10 +57,10 @@ import {
   RotateCcw,
   Target,
   TimerOff,
-  Zap,
   ArrowLeft,
   X,
 } from 'lucide-react'
+import XpIcon from '@/components/ui/XpIcon'
 import { Button } from '@/components/ui/button'
 import IllustrationQuiz from '@/components/quiz/IllustrationQuiz'
 import { cn } from '@/lib/utils'
@@ -730,7 +730,7 @@ export default function QuizPlayer({
                   className="grid size-9 shrink-0 place-items-center rounded-full bg-highlight/25 text-[color-mix(in_oklch,var(--highlight),black_25%)]"
                   aria-hidden="true"
                 >
-                  <Zap className="size-4.5 fill-current" strokeWidth={2.4} />
+                  <XpIcon className="size-6" />
                 </span>
                 <span className="flex flex-col items-start leading-none">
                   <span className="font-heading text-2xl leading-none font-extrabold tabular-nums">

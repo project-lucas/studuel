@@ -12,8 +12,8 @@ vi.mock('@/lib/sounds', () => ({
   sfx: { tap: vi.fn(), correct: vi.fn(), wrong: vi.fn(), complete: vi.fn(), back: vi.fn() },
 }))
 const ouvrirCapsule = vi.fn<(id: string) => Promise<void>>(async () => {})
-const terminerCapsule = vi.fn<(id: string) => Promise<{ ok: true; badge: string; nouveau: boolean }>>(
-  async () => ({ ok: true, badge: 'Pro du sommeil', nouveau: true }),
+const terminerCapsule = vi.fn<(id: string) => Promise<{ ok: true; badge: string; nouveau: boolean; gains: never[] }>>(
+  async () => ({ ok: true, badge: 'Pro du sommeil', nouveau: true, gains: [] }),
 )
 vi.mock('@/app/carnet/capsules/actions', () => ({
   ouvrirCapsule: (id: string) => ouvrirCapsule(id),

@@ -114,10 +114,13 @@ export function computeStreak(
 }
 
 // Semaine courante (lundi → dimanche) : [fait ?, est aujourd'hui ?] par jour.
+// Un jour sans activité couvert par un gel porte `gele: true` (la semaine le
+// dessine en glaçon) ; la clé n'existe pas sur les autres jours.
 export function weekProgress(
   activeDays: Set<string>,
   now = new Date(),
-): { done: boolean; isToday: boolean; isFuture: boolean }[] {
+  joursGeles: ReadonlySet<string> = new Set(),
+): { done: boolean; isToday: boolean; isFuture: boolean; gele?: boolean }[] {
   const todayKey = toDayKey(now)
   // getUTCDay() : 0 = dimanche → on ramène lundi = 0.
   const mondayOffset = (now.getUTCDay() + 6) % 7
@@ -126,10 +129,12 @@ export function weekProgress(
   return Array.from({ length: 7 }, (_, i) => {
     const day = shiftDays(monday, i)
     const key = toDayKey(day)
+    const done = activeDays.has(key)
     return {
-      done: activeDays.has(key),
+      done,
       isToday: key === todayKey,
       isFuture: key > todayKey,
+      ...(!done && joursGeles.has(key) ? { gele: true } : {}),
     }
   })
 }

@@ -82,7 +82,7 @@ export default function ClanWeekCard({
       ) : null}
       {claimed ? (
         <p className="animate-in zoom-in mt-3 rounded-xl bg-highlight px-4 py-2.5 text-center text-sm font-bold">
-          Coffre du clan ouvert : +{claimed.gems} 💎 · +{claimed.xp} XP
+          Coffre du clan ouvert : +{claimed.xp} XP
         </p>
       ) : null}
 

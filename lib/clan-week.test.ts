@@ -133,15 +133,15 @@ describe('clanWeekReward', () => {
     expect(clanWeekReward(1, MIN_POINTS_TO_CLAIM).tier).toBe('or')
   })
 
-  it('décroît avec le rang', () => {
+  it('décroît avec le rang (en XP depuis la 557)', () => {
     const or = clanWeekReward(1, 500)
     const argent = clanWeekReward(3, 500)
     const bronze = clanWeekReward(10, 500)
     const part = clanWeekReward(42, 500)
-    expect(or.gems).toBeGreaterThan(argent.gems)
-    expect(argent.gems).toBeGreaterThan(bronze.gems)
-    expect(bronze.gems).toBeGreaterThan(part.gems)
-    expect(part.gems).toBeGreaterThan(0)
+    expect(or.xp).toBeGreaterThan(argent.xp)
+    expect(argent.xp).toBeGreaterThan(bronze.xp)
+    expect(bronze.xp).toBeGreaterThan(part.xp)
+    expect(part.xp).toBeGreaterThan(0)
   })
 
   it('ne récompense pas un clan sans classement', () => {

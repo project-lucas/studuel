@@ -1,11 +1,11 @@
 import { Check, Timer, Trophy } from 'lucide-react'
-import { CristalIcon } from '@/components/ui/MonnaieIcon'
+import XpIcon from '@/components/ui/XpIcon'
 import { cn } from '@/lib/utils'
 import { formatDuration, type PalierLevel, type StarCount } from '@/lib/jeux/paliers'
 import { formatAccuracy, pistePalier } from '@/lib/jeux/piste-palier'
 
 /**
- * LA PISTE D'UN PALIER — une ligne, trois jalons de gemmes, un curseur.
+ * LA PISTE D'UN PALIER — une ligne, trois jalons d'XP, un curseur.
  *
  * Elle remplace deux lignes de la carte : les jetons « Gains +3 +3 +3 » et la
  * ligne « Record 6000 ». Les jalons sont les trois étoiles (une par tiers de
@@ -40,17 +40,17 @@ export default function PistePalier({
   unlocked: boolean
 }) {
   const piste = pistePalier({ level, stars, acquises, accuracy })
-  const parEtoile = piste.jalons[0].gemmes
+  const parEtoile = piste.jalons[0].xp
   const joue = piste.accuracy !== null
   const [s1, s2, s3] = piste.jalons.map((j) => formatAccuracy(j.seuil))
   const seuils = `étoiles à ${s1}, ${s2} et ${s3} de bonnes réponses`
   const libelle = joue
-    ? `Record ${best}, ${formatAccuracy(piste.accuracy as number)} de réussite. ${acquises} étoile${acquises > 1 ? 's' : ''} sur 3, ${parEtoile} gemme${parEtoile > 1 ? 's' : ''} par étoile, ${seuils}.`
-    : `${parEtoile} gemme${parEtoile > 1 ? 's' : ''} par étoile, ${seuils}.`
+    ? `Record ${best}, ${formatAccuracy(piste.accuracy as number)} de réussite. ${acquises} étoile${acquises > 1 ? 's' : ''} sur 3, ${parEtoile} XP par étoile, ${seuils}.`
+    : `${parEtoile} XP par étoile, ${seuils}.`
 
   return (
     <span className="mt-2.5 block" role="img" aria-label={libelle}>
-      {/* De haut en bas, dans une seule boîte de 56 px : les jetons de gemmes,
+      {/* De haut en bas, dans une seule boîte de 56 px : les jetons d'XP,
           la ligne et ses crans, puis SOUS chaque cran le taux de réussite qui
           l'ouvre (Lucas, 24/09/2026 : « supprime le texte en dessous, mets le
           pourcentage sous les checkpoints » — la phrase « 1 gemme par étoile —
@@ -72,7 +72,7 @@ export default function PistePalier({
             )}
             style={{ left: `${j.at * 100}%` }}
           >
-            <CristalIcon className={cn('size-4', !unlocked && 'opacity-60 grayscale')} />+{j.gemmes}
+            <XpIcon className={cn('size-4', !unlocked && 'opacity-60 grayscale')} />+{j.xp}
             {j.gagne ? (
               <Check
                 className="absolute -top-1 -right-1 size-3 rounded-full bg-success p-px text-white"

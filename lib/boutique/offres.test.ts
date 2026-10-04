@@ -4,6 +4,7 @@ import { describe, expect, it } from 'vitest'
 import {
   AUCUN_BOOST,
   MAX_BOUCLIERS,
+  MAX_GELS,
   OFFRES,
   boostXpDejaAchete,
   finBoostXp,
@@ -30,9 +31,10 @@ const offre = (id: IdOffre): Offre => {
 const boosts = (patch: Partial<BoostsActifs>): BoostsActifs => ({ ...AUCUN_BOOST, ...patch })
 
 describe('le Marché (OFFRES)', () => {
-  it('le boost XP et le bouclier, aux prix provisoires annoncés', () => {
+  it('le gel, le boost XP et le bouclier, aux prix annoncés', () => {
     const prix = Object.fromEntries(OFFRES.map((o) => [o.id, o.prixGemmes]))
-    expect(prix).toEqual({ 'double-xp-2h': 20, 'bouclier-trophees': 25 })
+    expect(prix).toEqual({ 'gel-serie': 20, 'double-xp-2h': 20, 'bouclier-trophees': 25 })
+    expect(offre('gel-serie').kind).toBe('gel_serie')
     expect(offre('double-xp-2h').kind).toBe('double_xp')
     expect(offre('bouclier-trophees').kind).toBe('bouclier_trophees')
   })
@@ -46,6 +48,7 @@ describe('le Marché (OFFRES)', () => {
     expect(offre('bouclier-trophees').nom).toBe('Bouclier (PVP)')
     expect(etiquetteOffre(offre('double-xp-2h'))).toBe('×2 · 2 h')
     expect(etiquetteOffre(offre('bouclier-trophees'))).toBe('1 fois')
+    expect(etiquetteOffre(offre('gel-serie'))).toBe('1 jour')
   })
 
   it('la valeur dit la durée (boost XP) ou le nombre de boucliers', () => {
@@ -53,20 +56,27 @@ describe('le Marché (OFFRES)', () => {
     expect(offre('bouclier-trophees').valeur).toBe(MAX_BOUCLIERS)
   })
 
-  it('est le miroir exact des seeds de boutique_offres (migrations 370 et 371)', () => {
+  it('est le miroir exact des seeds de boutique_offres (migrations 370, 371 et 557)', () => {
     // Le prix DÉBITÉ est lu en base : un écart ici afficherait un prix et en
     // prélèverait un autre. Les INSERT sont alignés à la main : on compare
     // sans les espaces.
-    const sql = ['370_boutique_marche.sql', '371_bouclier_trophees.sql']
+    const sql = ['370_boutique_marche.sql', '371_bouclier_trophees.sql', '557_economie_xp_partout.sql']
       .map((f) => readFileSync(cheminMigration(f), 'utf8'))
       .join('\n')
       .split(' ')
       .join('')
     for (const o of OFFRES) {
-      expect(sql, `${o.id} absente ou mal payée dans la 370/371`).toContain(
+      expect(sql, `${o.id} absente ou mal payée dans la 370/371/557`).toContain(
         `('${o.id}','${o.kind}',${o.prixGemmes},${o.valeur})`,
       )
     }
+  })
+
+  it('la réserve de gels se plafonne à deux, comme Duolingo', () => {
+    expect(MAX_GELS).toBe(2)
+    expect(normaliserBoosts({ gels_serie: 7 }).gels).toBe(2)
+    expect(etatOffre(offre('gel-serie'), { ...AUCUN_BOOST, gels: 2 }, 100, VENDREDI)).toEqual({ kind: 'en-reserve' })
+    expect(etatOffre(offre('gel-serie'), { ...AUCUN_BOOST, gels: 1 }, 20, VENDREDI)).toEqual({ kind: 'achetable' })
   })
 
   it('le plafond de boucliers est celui du CHECK de la 371', () => {
@@ -77,7 +87,8 @@ describe('le Marché (OFFRES)', () => {
   it('retrouve une offre du Marché, et rien pour une ancienne ou une inconnue', () => {
     expect(offreDuMarche('bouclier-trophees')?.prixGemmes).toBe(25)
     expect(offreDuMarche('trophees-x2-2h')).toBeNull()
-    expect(offreDuMarche('gel-serie')).toBeNull()
+    expect(offreDuMarche('gel-serie')?.prixGemmes).toBe(20)
+    expect(offreDuMarche('gel-serie-x2')).toBeNull()
     expect(offreDuMarche('n’importe quoi')).toBeNull()
   })
 })
@@ -116,7 +127,7 @@ describe('normaliserBoosts', () => {
   it('lit les colonnes de la 368 et de la 371', () => {
     expect(
       normaliserBoosts({ double_xp_jusqua: '2026-09-18T14:00:00+00:00', boucliers_trophees: 1 }),
-    ).toEqual({ doubleXpJusqua: '2026-09-18T14:00:00+00:00', doubleXpAcheteLe: null, boucliers: 1 })
+    ).toEqual({ doubleXpJusqua: '2026-09-18T14:00:00+00:00', doubleXpAcheteLe: null, boucliers: 1, gels: 0 })
   })
 
   it('colonne 371 absente (migration en attente) : aucun bouclier, le boost XP reste lu', () => {
@@ -124,6 +135,7 @@ describe('normaliserBoosts', () => {
       doubleXpJusqua: '2026-09-18T14:00:00+00:00',
       doubleXpAcheteLe: null,
       boucliers: 0,
+      gels: 0,
     })
   })
 

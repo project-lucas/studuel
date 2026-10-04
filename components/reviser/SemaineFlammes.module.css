@@ -1,0 +1,486 @@
+/* LA SEMAINE EN FLAMMES (04/10/2026) — remplace les pastilles violettes
+   cochées (« ça ne me plaît toujours pas »). Un jour fait est une FLAMME, un
+   jour manqué une BRAISE qui fume, aujourd'hui une flamme fantôme dans son
+   anneau en pointillés ; les jours faits d'affilée sont reliés par une MÈCHE.
+
+   L'ALLUMAGE, à chaque affichage : une étincelle court le long de la mèche,
+   la mèche s'embrase derrière elle, et chaque flamme s'allume quand
+   l'étincelle passe (les retards viennent de lib/serie-semaine). EN SÉRIE, la
+   flamme du jour danse. SEMAINE PARFAITE : les flammes passent à l'or
+   couronné, la mèche devient dorée et un reflet la parcourt, la médaille
+   s'affiche — et la première fois de la semaine, elle jaillit avec des
+   confettis.
+
+   Règle de l'app : transform et opacité seulement, valeurs littérales dans
+   les images-clés. L'état FINAL est l'état de base : sous « mouvement
+   réduit », tout est simplement allumé. */
+
+/* La couleur de la série (dérogation de la DA : la flamme, ambre → orange,
+   n'appartient qu'à la série). */
+.semaine {
+  --feu-clair: #ffc23d;
+  --feu: #ff9500;
+  --feu-sombre: #e0640b;
+  position: relative;
+}
+
+/* Tant que la scène n'est pas prête (rideau de chargement, onglet caché), tout
+   attend sur sa première image : l'allumage ne se joue pas pour personne. */
+.semaine[data-pret='0'] *,
+.semaine[data-pret='0'] *::after {
+  animation-play-state: paused;
+}
+
+/* ------------------------------------------------------------------ libellés */
+
+.libelles,
+.jetons,
+.reperes {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+.libelle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  line-height: 1;
+  font-weight: 800;
+}
+.libelle > :first-child {
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted-foreground);
+}
+.libelle > :last-child {
+  font-size: 8.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: color-mix(in oklch, var(--muted-foreground) 70%, transparent);
+}
+.libelle[data-aujourdhui='1'] > * {
+  color: var(--feu-sombre);
+}
+
+/* ------------------------------------------------------------------- la piste */
+
+.piste {
+  position: relative;
+  margin-top: 0.6rem;
+  height: 2.9rem;
+}
+.jetons {
+  position: relative;
+  height: 100%;
+  align-items: center;
+}
+.case {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+/* La mèche : un fond éteint, le feu qui s'embrase, l'étincelle qui court. */
+.meche {
+  position: absolute;
+  top: 50%;
+  height: 0.55rem;
+  margin-top: 0.15rem;
+  border-radius: 999px;
+  overflow: visible;
+  background: color-mix(in oklch, var(--feu) 18%, transparent);
+}
+.mecheFeu {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  transform-origin: left center;
+  background: linear-gradient(90deg, var(--feu-clair), var(--feu) 60%, var(--feu-sombre));
+  box-shadow: 0 0 10px color-mix(in oklch, var(--feu) 55%, transparent);
+  animation: embrase linear backwards;
+}
+.course {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  animation: court linear both;
+}
+.etincelle {
+  position: absolute;
+  left: -0.45rem;
+  top: 50%;
+  width: 0.9rem;
+  height: 0.9rem;
+  margin-top: -0.45rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, white 0 25%, var(--feu-clair) 45%, transparent 70%);
+}
+
+/* Semaine parfaite : la mèche d'or, et un reflet qui la parcourt. */
+.semaine[data-parfaite='1'] .mecheFeu {
+  background: linear-gradient(90deg, #fff1a8, var(--highlight) 45%, #f0a900);
+  box-shadow: 0 0 12px color-mix(in oklch, var(--highlight) 70%, transparent);
+}
+.reflet {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+}
+.reflet::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -30%;
+  width: 30%;
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.85), transparent);
+  animation: reflet 2.6s 1.4s ease-in-out infinite;
+}
+
+/* ------------------------------------------------------------------ les jetons */
+
+.jeton {
+  position: relative;
+  width: 2.35rem;
+  height: 2.35rem;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 2px rgb(60 20 70 / 0.25));
+}
+.allume {
+  animation: allume 520ms cubic-bezier(0.3, 1.6, 0.5, 1) backwards;
+}
+/* La tête de la série : sa flamme est ANIMÉE (le WebP qui danse, une vidéo
+   détourée) ; ici, elle s'allume un peu plus grande que les autres. */
+.tete {
+  animation: allume 520ms cubic-bezier(0.3, 1.6, 0.5, 1) backwards;
+  transform-origin: 50% 90%;
+  scale: 1.12;
+}
+/* Le jour qui VIENT d'être fait : il jaillit plus haut, plus fort. */
+.jaillit {
+  animation: jaillit 900ms cubic-bezier(0.2, 1.7, 0.45, 1) backwards;
+  transform-origin: 50% 90%;
+  scale: 1.12;
+}
+.onde {
+  position: absolute;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  border: 3px solid var(--feu);
+  opacity: 0;
+  animation: onde 800ms ease-out both;
+}
+
+/* La surprise : l'enveloppe d'une flamme faite. Figée, elle SURSAUTE (un
+   bond, elle s'étire) et se PENCHE vers la nouvelle flamme, un « ! » au-dessus
+   d'elle ; puis elle se tasse et reprend. Le sens du regard est une classe
+   (droite / gauche), pour garder des valeurs littérales. */
+.sursaut {
+  position: relative;
+  display: grid;
+  place-items: center;
+  transform-origin: 50% 92%;
+}
+.etonneDroite {
+  animation: etonneDroite 1400ms cubic-bezier(0.3, 1.6, 0.5, 1) both;
+}
+.etonneGauche {
+  animation: etonneGauche 1400ms cubic-bezier(0.3, 1.6, 0.5, 1) both;
+}
+.reprend {
+  animation: reprend 520ms ease-out backwards;
+}
+.exclam {
+  position: absolute;
+  z-index: 1;
+  top: -0.35rem;
+  right: -0.35rem;
+  width: 0.85rem;
+  height: 0.85rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 800;
+  line-height: 1;
+  color: white;
+  background: var(--feu-sombre);
+  border: 1.5px solid white;
+  box-shadow: 0 2px 0 rgb(0 0 0 / 0.15);
+  animation: exclam 1400ms cubic-bezier(0.3, 1.8, 0.5, 1) both;
+}
+
+/* Gelé : le glaçon de la réserve, posé, que traverse un reflet. Le cube est
+   aussi le masque du reflet (overflow + rayon), pour que la lumière ne
+   déborde pas sur le mur. */
+.glaceCadre {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  border-radius: 28%;
+  overflow: hidden;
+}
+.glace {
+  width: 2.15rem;
+  height: 2.15rem;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 2px rgb(30 80 120 / 0.25));
+  animation: glaceRespire 3.6s ease-in-out infinite;
+  animation-delay: var(--phase, 0s);
+}
+.reflet {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 0.45rem;
+  height: 140%;
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.85), transparent);
+  transform: translateX(-1.2rem) rotate(20deg);
+  opacity: 0;
+  animation: reflet 3.6s ease-in-out infinite;
+  animation-delay: var(--phase, 0s);
+}
+
+/* Manqué : la braise, en retrait, qui FUME en continu. */
+.braiseCadre {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.braise {
+  position: relative;
+  width: 1.95rem;
+  height: 1.95rem;
+  object-fit: contain;
+  opacity: 0.85;
+  animation: refroidit 3.2s ease-in-out infinite;
+  animation-delay: var(--phase, 0s);
+}
+/* Une volute : un nuage gris flou (dégradé radial, sans filtre) qui part de
+   la pointe, monte en grossissant, dérive et s'efface. Le retard est posé
+   par la phase du jour PLUS le décalage propre de chaque volute — en
+   additionnant dans le style en ligne, jamais dans les images-clés. */
+.fumee {
+  position: absolute;
+  left: 50%;
+  top: 0.15rem;
+  width: 0.85rem;
+  height: 0.85rem;
+  margin-left: -0.425rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(150 146 160 / 0.55) 0%, rgb(170 166 180 / 0.25) 45%, transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  animation: fume 2.4s linear infinite;
+}
+.f1 { animation-delay: var(--phase, 0s); }
+.f2 { animation-delay: calc(var(--phase, 0s) - 0.8s); animation-name: fumeGauche; }
+.f3 { animation-delay: calc(var(--phase, 0s) - 1.6s); }
+
+/* Aujourd'hui, pas encore fait : la flamme fantôme dans l'anneau qui tourne. */
+.fantome {
+  width: 1.7rem;
+  height: 1.7rem;
+  object-fit: contain;
+  opacity: 0.32;
+  filter: grayscale(1);
+  animation: respire 2.2s ease-in-out infinite;
+}
+.anneau {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 2.5px dashed var(--feu);
+  animation: tourne 9s linear infinite;
+}
+
+/* À venir : une place réservée. */
+.avenir {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: color-mix(in oklch, var(--muted-foreground) 35%, transparent);
+}
+
+/* --------------------------------------------------------- les repères en pied */
+
+.reperes {
+  margin-top: 0.15rem;
+  justify-items: center;
+}
+.repere {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+}
+
+.phrase {
+  margin-top: 0.4rem;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted-foreground);
+}
+.semaine[data-parfaite='1'] .phrase {
+  color: color-mix(in oklch, var(--highlight), black 38%);
+}
+
+/* ---------------------------------------------------- la semaine parfaite */
+
+.parfaite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+.medaille {
+  width: 2.6rem;
+  height: 2.6rem;
+  object-fit: contain;
+}
+.parfaiteTitre {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1rem;
+  color: color-mix(in oklch, var(--highlight), black 40%);
+}
+/* La première fois de la semaine : la médaille jaillit, le titre suit. */
+.parfaite[data-fete='1'] .medaille {
+  animation: medaille 900ms 700ms cubic-bezier(0.2, 1.6, 0.4, 1) backwards;
+}
+.parfaite[data-fete='1'] .parfaiteTitre {
+  animation: monte 400ms 1200ms ease-out backwards;
+}
+.confettis {
+  position: absolute;
+  inset: -0.75rem;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: var(--carte-rayon);
+  animation: eteint 600ms 2600ms ease-in forwards;
+}
+
+/* ------------------------------------------------------------ images-clés */
+
+@keyframes embrase {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+@keyframes court {
+  0% { opacity: 0; transform: translateX(0); }
+  8% { opacity: 1; }
+  92% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(100%); }
+}
+@keyframes allume {
+  0% { opacity: 0; transform: translateY(6px) scale(0.2); }
+  65% { opacity: 1; transform: translateY(-3px) scale(1.18); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes jaillit {
+  0% { opacity: 0; transform: translateY(10px) scale(0.1); }
+  55% { opacity: 1; transform: translateY(-8px) scale(1.45); }
+  80% { transform: translateY(1px) scale(0.92); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes onde {
+  0% { opacity: 0.9; transform: scale(0.5); }
+  100% { opacity: 0; transform: scale(1.9); }
+}
+@keyframes etonneDroite {
+  0% { transform: translateY(0) scale(1, 1) rotate(0deg); }
+  12% { transform: translateY(-7px) scale(0.92, 1.16) rotate(0deg); }
+  26% { transform: translateY(-2px) scale(1, 1.06) rotate(9deg); }
+  85% { transform: translateY(-2px) scale(1, 1.06) rotate(9deg); }
+  100% { transform: translateY(0) scale(1, 1) rotate(0deg); }
+}
+@keyframes etonneGauche {
+  0% { transform: translateY(0) scale(1, 1) rotate(0deg); }
+  12% { transform: translateY(-7px) scale(0.92, 1.16) rotate(0deg); }
+  26% { transform: translateY(-2px) scale(1, 1.06) rotate(-9deg); }
+  85% { transform: translateY(-2px) scale(1, 1.06) rotate(-9deg); }
+  100% { transform: translateY(0) scale(1, 1) rotate(0deg); }
+}
+@keyframes reprend {
+  0% { transform: scale(1.08, 0.9); }
+  60% { transform: scale(0.97, 1.04); }
+  100% { transform: scale(1, 1); }
+}
+@keyframes exclam {
+  0% { opacity: 0; transform: translateY(6px) scale(0.2); }
+  14% { opacity: 1; transform: translateY(-3px) scale(1.25); }
+  24% { transform: translateY(0) scale(1); }
+  85% { opacity: 1; transform: translateY(0) scale(1); }
+  100% { opacity: 0; transform: translateY(-4px) scale(0.6); }
+}
+@keyframes glaceRespire {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-1px) scale(1.03); }
+}
+@keyframes reflet {
+  0%, 55% { opacity: 0; transform: translateX(-1.2rem) rotate(20deg); }
+  62% { opacity: 1; }
+  80% { opacity: 1; }
+  88%, 100% { opacity: 0; transform: translateX(2.6rem) rotate(20deg); }
+}
+@keyframes fume {
+  0% { opacity: 0; transform: translate(0, 0) scale(0.4); }
+  15% { opacity: 0.9; }
+  60% { opacity: 0.55; transform: translate(3px, -0.8rem) scale(1.25); }
+  100% { opacity: 0; transform: translate(-2px, -1.35rem) scale(1.75); }
+}
+@keyframes fumeGauche {
+  0% { opacity: 0; transform: translate(0, 0) scale(0.4); }
+  15% { opacity: 0.9; }
+  60% { opacity: 0.55; transform: translate(-4px, -0.8rem) scale(1.25); }
+  100% { opacity: 0; transform: translate(3px, -1.35rem) scale(1.75); }
+}
+@keyframes refroidit {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(0.96) rotate(-2deg); }
+}
+@keyframes respire {
+  0%, 100% { opacity: 0.25; transform: scale(0.94); }
+  50% { opacity: 0.42; transform: scale(1); }
+}
+@keyframes tourne {
+  to { transform: rotate(360deg); }
+}
+@keyframes reflet {
+  0% { transform: translateX(0); }
+  60%, 100% { transform: translateX(460%); }
+}
+@keyframes medaille {
+  0% { opacity: 0; transform: scale(0.2) rotate(-25deg); }
+  60% { opacity: 1; transform: scale(1.3) rotate(8deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+@keyframes monte {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes eteint {
+  to { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .semaine *,
+  .semaine *::after {
+    animation: none !important;
+  }
+  .course,
+  .fumee,
+  .exclam,
+  .onde,
+  .confettis {
+    display: none;
+  }
+}

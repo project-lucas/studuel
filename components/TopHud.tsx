@@ -199,7 +199,7 @@ export default function TopHud({
     <header className="pointer-events-none fixed inset-x-0 top-0 z-50 flex h-14 items-center gap-2 px-3 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none md:hidden [html.hud-replie_&]:-translate-y-full [html.hud-replie_&]:opacity-0">
       {connected ? (
         <>
-          <FeteNiveau level={level} levelTitle={levelTitle} paliersOuverts={paliersOuverts} />
+          <FeteNiveau level={level} levelTitle={levelTitle} paliersOuverts={paliersOuverts} xp={xp} />
           {/* Niveau : écusson de jeu flottant — disque violet ciselé (dégradé,
               reflet haut + liseré or, façon médaillon d'arène en miniature),
               libellé violet marqué, et ruban doré de progression surmonté du
@@ -356,7 +356,7 @@ export default function TopHud({
                     dark ? 'border-white/15' : 'border-primary/15',
                   )}
                 >
-                  <FlammeAnimee className="size-7" eteinte={streak === 0} />
+                  <FlammeAnimee className="size-7" eteinte={streak === 0} serie={streak} />
                   <span
                     aria-hidden="true"
                     className={cn(
@@ -400,7 +400,7 @@ export default function TopHud({
                       nameClassName={dark ? 'text-[#c9b4ff]' : 'text-primary'}
                       // Deux phrases (Lucas, 03/10/2026 : « une bulle avec
                       // beaucoup trop de texte, et elle s'affiche à gauche »).
-                      description={<>Elles ouvrent les fiches et les capsules. Tu en gagnes avec les quêtes et tes amis.</>}
+                      description={<>Elles ouvrent les fiches et les capsules. Elles se gagnent rarement&nbsp;: une dictée, un contrôle blanc ou une annale réussis.</>}
                       open={openPurse === 'cristal'}
                       onToggle={() => togglePurse('cristal')}
                       label={(n) => `${n} gemmes — à quoi elles servent`}
@@ -703,8 +703,8 @@ function BulleNiveau({
   const piedPalier = (
     <>
       <p className="mt-1.5">
-        Chaque niveau : <strong>+15 gemmes</strong>. Au niveau {palier}, un coffre de{' '}
-        <strong>{gemmesPalier(palier)} gemmes</strong>.
+        Tout ce que tu travailles rapporte de l’XP&nbsp;: cours, quiz, révisions, dictées, jeux.
+        Au niveau {palier}, un coffre de <strong>{gemmesPalier(palier)} gemmes</strong>.
       </p>
       <div className="mt-2">
         <CoffresPalier niveau={level} ouverts={paliersOuverts} />

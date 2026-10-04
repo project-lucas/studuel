@@ -43,8 +43,8 @@ export function messageRefusOffre(raison: string): string {
     case 'deja_aujourdhui':
       return MESSAGE_BOOST_DEMAIN
     case 'plein':
-      // Au Marché, seul le bouclier a une réserve (les gels ne se vendent plus).
-      return 'Tu as déjà un bouclier en réserve : il protège ta prochaine défaite.'
+      // Le bouclier (un en réserve) et le gel de série (deux) ont une réserve.
+      return 'Ta réserve est déjà pleine : utilise-la avant d’en racheter.'
     case 'pas_assez':
       return MESSAGE_PAS_ASSEZ
     case 'anonyme':

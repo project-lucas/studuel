@@ -1,8 +1,8 @@
 'use client'
 
 import { useEffect, useState, type ReactNode } from 'react'
+import Link from 'next/link'
 import { CalendarDays, Plus } from 'lucide-react'
-import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { quandLaScenePrete } from '@/lib/scene-prete'
 import { subjectTheme } from '@/lib/subject-style'
@@ -13,22 +13,10 @@ import AddExamSheet, {
   type ChapterLite,
 } from '@/components/AddExamSheet'
 import { addDays, type Controle, type ControleSubjectMeta } from '@/lib/prep-plan'
-import semaine from './SemaineSerie.module.css'
+import SemaineFlammes from '@/components/reviser/SemaineFlammes'
+import { avantPalierSuivant, nomPalier } from '@/lib/flamme-serie'
 
-// Jours de la semaine, lundi → dimanche (index 0 = lundi, cf. lib/streak). Trois
-// lettres à l'écran : fini le « L M M J V S D » où l'on devine quel M est mardi.
-const DAY_SHORT = ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim']
-const DAY_FULL = [
-  'lundi',
-  'mardi',
-  'mercredi',
-  'jeudi',
-  'vendredi',
-  'samedi',
-  'dimanche',
-]
-
-export type WeekDay = { done: boolean; isToday: boolean; isFuture: boolean }
+export type WeekDay = { done: boolean; isToday: boolean; isFuture: boolean; gele?: boolean }
 
 // Le marqueur « la validation du jour a déjà été jouée », par jour : elle ne
 // se joue qu'une fois, la première fois qu'on revoit la semaine avec le jour
@@ -78,6 +66,7 @@ export default function SerieBar({
   chaptersBySubject = {},
   existingExamChapters = [],
   goalMinutes,
+  gelsEnReserve = 0,
   carnetSlot,
 }: {
   streak: number
@@ -90,6 +79,8 @@ export default function SerieBar({
   chaptersBySubject?: Record<string, ChapterLite[]>
   existingExamChapters?: string[]
   goalMinutes: number
+  /** Gels de série en réserve (0 à 2) : un glaçon posé sur la flamme. */
+  gelsEnReserve?: number
   /**
    * La porte de « Mon carnet », SOUS la semaine (Lucas, 17/09/2026 : « Mon
    * carnet va dans le bloc semaine, dans le bloc blanc en dessous de samedi
@@ -114,19 +105,29 @@ export default function SerieBar({
     })
   }
 
+  // La même chose, avec la classe de couleur prête pour le repère sous le jour.
+  const examFlammes = new Map(
+    [...examByDate].map(([date, e]) => [date, { barClass: subjectTheme(e.color).bar, name: e.name }]),
+  )
+
   const todayDone = week.some((d) => d.isToday && d.done)
+  // Le prochain palier de la flamme (lib/flamme-serie) : c'est lui qu'on dit
+  // une fois le jour fait — la raison de revenir demain.
+  const suivant = avantPalierSuivant(streak)
   const subline =
     streak > 0
       ? todayDone
-        ? 'Série en cours — reviens demain pour la prolonger.'
+        ? suivant
+          ? `Encore ${suivant.jours} jour${suivant.jours > 1 ? 's' : ''} pour la ${nomPalier(suivant.palier)}.`
+          : 'Flamme bleue : reviens demain pour la garder.'
         : 'Travaille un peu aujourd’hui pour la garder.'
       : 'Une session aujourd’hui, et la flamme repart.'
 
-  // LA VALIDATION DU JOUR (Lucas, 22/09/2026). La première fois qu'on revoit
-  // la semaine avec le jour fait — au retour du quiz, de la leçon, de la
-  // dictée —, la pastille du jour se RETOURNE comme une pièce (grise →
-  // violette), la coche se TRACE, une onde s'écarte, deux notes montent
-  // (`jour-valide*`, globals.css). Les visites suivantes la montrent posée :
+  // LA VALIDATION DU JOUR (Lucas, 22/09/2026 ; en flammes depuis le
+  // 04/10/2026). La première fois qu'on revoit la semaine avec le jour fait —
+  // au retour du quiz, de la leçon, de la dictée —, la flamme du jour JAILLIT
+  // (plus haut, plus fort que les autres, avec une onde) et le carillon de la
+  // journée sonne (SemaineFlammes). Les visites suivantes la montrent posée :
   // un marqueur local par jour s'en souvient. Décidé APRÈS montage, jamais au
   // rendu : le serveur ne connaît pas le marqueur, et un écart d'hydratation
   // sur la barre la plus regardée de l'écran se verrait.
@@ -153,7 +154,7 @@ export default function SerieBar({
         // Stockage indisponible : la fête aura lieu, elle ne sera pas mémorisée.
       }
       setValidation(true)
-      sfx.correct()
+      sfx.dayComplete()
     })
   }, [todayDone, today])
 
@@ -169,7 +170,41 @@ export default function SerieBar({
             cerne sombre, un fond coloré ne ferait que la répéter. Série à
             zéro = flamme éteinte (désaturée, en retrait) plutôt qu'absente :
             c'est la même place, à rallumer. */}
-        <FlammeAnimee className="size-12" eteinte={streak === 0} />
+        {/* LA RÉSERVE DE GELS (04/10/2026) : un glaçon posé au pied de la
+            flamme, « ×2 » s'il y en a deux — comme Duolingo. Il mène au
+            Marché, où le gel se rachète. Sans gel, rien : pas de pastille
+            vide qui ferait la morale. */}
+        <div className="relative shrink-0">
+          <FlammeAnimee
+            className="size-12"
+            eteinte={streak === 0}
+            vive
+            serie={streak}
+          />
+          {gelsEnReserve > 0 ? (
+            <Link
+              href="/tresor#marche"
+              onClick={() => sfx.tap()}
+              aria-label={`${gelsEnReserve} gel${gelsEnReserve > 1 ? 's' : ''} de série en réserve : ta série est protégée`}
+              className="absolute -right-1.5 -bottom-1 flex items-center rounded-full bg-card pr-1 shadow-sm ring-1 ring-border"
+            >
+              <img
+                src="/images/serie/jour-gele.webp"
+                alt=""
+                aria-hidden="true"
+                width={128}
+                height={128}
+                draggable={false}
+                className="size-5"
+              />
+              {gelsEnReserve > 1 ? (
+                <span className="font-heading text-[10px] leading-none font-extrabold text-foreground">
+                  ×{gelsEnReserve}
+                </span>
+              ) : null}
+            </Link>
+          ) : null}
+        </div>
 
         <div className="min-w-0 flex-1">
           <p className="font-heading text-base leading-tight font-extrabold text-foreground">
@@ -223,121 +258,20 @@ export default function SerieBar({
         </button>
       </div>
 
-      {/* LA SEMAINE, façon carte de salle de sport : la DATE au-dessus, et
-          dans le cercle ce qu'on est venu voir — un V quand c'est fait.
-          Le chiffre du jour vivait dans le cercle : il fallait le lire pour
-          savoir si la journée comptait, alors que la coche se voit sans lire.
-          Date et jour restent au-dessus, en petit, pour se repérer.
-
-          LA VAGUE : les jours faits s'allument de gauche à droite, l'un après
-          l'autre, à chaque affichage de l'écran. Ce n'est pas une décoration —
-          c'est le mouvement de la semaine qui se remplit, et il s'arrête net
-          là où l'élève s'est arrêté. Le retard sur la case suivante est ce qui
-          donne envie de la remplir. */}
-      <ul className="mt-3 flex items-start justify-between gap-1">
-        {week.map((d, i) => {
-          const dayNum = Number(weekDates[i]?.slice(8, 10)) || 0
-          const exam = examByDate.get(weekDates[i])
-          return (
-            <li key={i} className="flex flex-1 flex-col items-center gap-1">
-              {/* Date + jour, au-dessus du cercle. Ils portent l'info de
-                  repérage ; le cercle porte l'état. */}
-              <span
-                aria-hidden="true"
-                className={cn(
-                  'text-[10px] leading-none font-extrabold tabular-nums',
-                  d.isToday ? 'text-primary' : 'text-muted-foreground',
-                )}
-              >
-                {dayNum}
-              </span>
-              <span
-                aria-hidden="true"
-                className={cn(
-                  'text-[8.5px] leading-none font-extrabold tracking-wide uppercase',
-                  d.isToday ? 'text-primary' : 'text-muted-foreground/70',
-                )}
-              >
-                {DAY_SHORT[i]}
-              </span>
-
-              <span
-                // `role="img"` n'est pas décoratif ici : un `aria-label` posé
-                // sur un span SANS rôle n'est pas exposé par la plupart des
-                // lecteurs d'écran. Les dates et les noms de jours voisins étant
-                // `aria-hidden`, la semaine entière était muette — l'élève qui
-                // navigue au lecteur d'écran ne pouvait pas savoir combien de
-                // jours il avait faits.
-                role="img"
-                aria-label={`${DAY_FULL[i]} ${dayNum}${
-                  d.done ? ' — fait' : d.isToday ? " — aujourd'hui" : ''
-                }${exam ? ` — contrôle de ${exam.name}` : ''}`}
-                // LA VAGUE suit le RANG DU JOUR, pas celui des jours faits : un
-                // trou au milieu de la semaine se voit, la vague passe
-                // par-dessus sans se resserrer. 70 ms entre deux jours.
-                style={d.done ? { animationDelay: `${i * 70}ms` } : undefined}
-                className={cn(
-                  semaine.jour,
-                  d.done
-                    ? cn(
-                        semaine.fait,
-                        // Le jour qui vient d'être validé se retourne au lieu
-                        // d'arriver par la vague : une animation par élément.
-                        d.isToday && validation ? 'jour-valide' : semaine.vague,
-                      )
-                    : d.isToday
-                      ? semaine.aujourdhui
-                      : d.isFuture
-                        ? semaine.avenir
-                        : semaine.manque,
-                )}
-              >
-                {/* AUJOURD'HUI, PAS ENCORE FAIT : un anneau en pointillés qui
-                    tourne lentement autour d'un point violet — la journée est
-                    « en cours », c'est le seul mouvement de la barre. Il
-                    disparaît dès que la journée est faite. */}
-                {d.isToday && !d.done ? (
-                  <>
-                    <span aria-hidden="true" className={semaine.anneau} />
-                    <span aria-hidden="true" className={semaine.pointCentre} />
-                  </>
-                ) : null}
-                {/* L'onde de la validation : elle ne vit que le temps de son
-                    animation, sur le seul jour qui vient d'être fait. */}
-                {d.done && d.isToday && validation ? (
-                  <span
-                    aria-hidden="true"
-                    className="jour-valide-onde pointer-events-none absolute inset-0 rounded-full ring-2 ring-primary"
-                  />
-                ) : null}
-                {/* La coche se TRACE juste après l'arrivée du jeton. */}
-                {d.done ? (
-                  <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    className={cn('size-4.5', semaine.coche)}
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth={3.4}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M5 12.5 10 17.5 19 7" style={{ animationDelay: `${i * 70 + 280}ms` }} />
-                  </svg>
-                ) : null}
-              </span>
-
-              <span
-                aria-hidden="true"
-                className={cn(
-                  'size-1.5 rounded-full',
-                  exam ? subjectTheme(exam.color).bar : 'bg-transparent',
-                )}
-              />
-            </li>
-          )
-        })}
-      </ul>
+      {/* LA SEMAINE EN FLAMMES (04/10/2026, Lucas : « il faut trouver autre
+          chose — le côté animation, une animation particulière s'il est en
+          série et s'il a fait une semaine parfaite »). Les pastilles violettes
+          cochées sont parties : flammes, braises, mèche qui relie la série,
+          semaine parfaite en or — components/reviser/SemaineFlammes. */}
+      <div className="mt-3">
+        <SemaineFlammes
+          week={week}
+          weekDates={weekDates}
+          streak={streak}
+          validation={validation}
+          examByDate={examFlammes}
+        />
+      </div>
 
       {carnetSlot ? <div className="mt-3">{carnetSlot}</div> : null}
 

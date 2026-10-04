@@ -3,12 +3,12 @@ import { describe, expect, it } from 'vitest'
 
 import {
   AUCUNE_ETOILE,
-  GEMMES_PAR_JEU,
-  avecGemmesPalier,
+  XP_PAR_JEU,
+  avecXpPalier,
   etoilesDeProgression,
-  gemmesDesEtoiles,
-  gemmesDuPalier,
-  gemmesParEtoile,
+  xpDesEtoiles,
+  xpDuPalier,
+  xpParEtoile,
   lirePalierGemmes,
   lireReclamation,
   resteAReclamer,
@@ -16,28 +16,25 @@ import {
 import { cheminMigration } from '@/lib/migrations-lecture'
 
 describe('le tarif des étoiles', () => {
-  it('palier N → N gemmes par étoile, de l’Éveil au Maître', () => {
-    expect([1, 2, 3, 4, 5].map((l) => gemmesParEtoile(l as 1 | 2 | 3 | 4 | 5))).toEqual([1, 2, 3, 4, 5])
-    expect(gemmesDuPalier(1)).toBe(3)
-    expect(gemmesDuPalier(5)).toBe(15)
+  it('palier N → 5 × N XP par étoile, de l’Éveil au Maître (557)', () => {
+    expect([1, 2, 3, 4, 5].map((l) => xpParEtoile(l as 1 | 2 | 3 | 4 | 5))).toEqual([5, 10, 15, 20, 25])
+    expect(xpDuPalier(1)).toBe(15)
+    expect(xpDuPalier(5)).toBe(75)
   })
 
-  it('un jeu entier vaut 45 gemmes', () => {
-    expect(GEMMES_PAR_JEU).toBe(45)
+  it('un jeu entier vaut 225 XP', () => {
+    expect(XP_PAR_JEU).toBe(225)
   })
 
-  it('est le miroir du tarif de la migration 373 (le numéro du palier)', () => {
-    const sql = readFileSync(
-      cheminMigration('373_boost_jour_gemmes_paliers.sql'),
-      'utf8',
-    )
-    expect(sql).toContain('v_montant := public.gemmes_avec_bonus(v_user, v_palier);')
+  it('est le miroir du tarif de la migration 557 (5 × le numéro du palier)', () => {
+    const sql = readFileSync(cheminMigration('557_economie_xp_partout.sql'), 'utf8')
+    expect(sql).toContain('5 * v_palier);')
   })
 
   it('compte ce que valent des étoiles, bornées à 0..3', () => {
-    expect(gemmesDesEtoiles([3, 3, 3, 3, 3])).toBe(45)
-    expect(gemmesDesEtoiles([2, 1, 0, 0, 0])).toBe(2 + 2)
-    expect(gemmesDesEtoiles([9, -1, 0, 0, 0])).toBe(3)
+    expect(xpDesEtoiles([3, 3, 3, 3, 3])).toBe(225)
+    expect(xpDesEtoiles([2, 1, 0, 0, 0])).toBe(10 + 10)
+    expect(xpDesEtoiles([9, -1, 0, 0, 0])).toBe(15)
   })
 })
 
@@ -80,10 +77,9 @@ describe('lirePalierGemmes', () => {
 
 describe('lireReclamation', () => {
   it('lit une réponse réussie', () => {
-    expect(lireReclamation({ ok: true, gemmes: 6, solde: 51, etoiles: [3, 1, 0, 0, 0] })).toEqual({
+    expect(lireReclamation({ ok: true, gemmes: 0, xp: 30, solde: 51, etoiles: [3, 1, 0, 0, 0] })).toEqual({
       ok: true,
-      gemmes: 6,
-      solde: 51,
+      xp: 30,
       etoiles: [3, 1, 0, 0, 0],
     })
   })
@@ -95,23 +91,21 @@ describe('lireReclamation', () => {
   })
 })
 
-describe('avecGemmesPalier', () => {
-  it('ajoute une ligne de gemmes quand la partie en a rapporté', () => {
-    expect(avecGemmesPalier([{ unite: 'xp', montant: 10 }], 4)).toEqual([
-      { unite: 'xp', montant: 10 },
-      { unite: 'gemme', montant: 4 },
+describe('avecXpPalier', () => {
+  it('ajoute une ligne d’XP quand la partie n’en avait pas', () => {
+    expect(avecXpPalier([{ unite: 'trophee', montant: 8 }], 15)).toEqual([
+      { unite: 'trophee', montant: 8 },
+      { unite: 'xp', montant: 15 },
     ])
   })
 
-  it('additionne au gain de gemmes déjà là, jamais deux lignes', () => {
-    expect(avecGemmesPalier([{ unite: 'gemme', montant: 20 }], 3)).toEqual([
-      { unite: 'gemme', montant: 23 },
-    ])
+  it('additionne à l’XP déjà là, jamais deux lignes', () => {
+    expect(avecXpPalier([{ unite: 'xp', montant: 12 }], 10)).toEqual([{ unite: 'xp', montant: 22 }])
   })
 
-  it('rien de plus sans gemmes de palier', () => {
+  it('rien de plus sans XP d’étoiles', () => {
     const gains = [{ unite: 'xp' as const, montant: 5 }]
-    expect(avecGemmesPalier(gains, null)).toEqual(gains)
-    expect(avecGemmesPalier(gains, 0)).toEqual(gains)
+    expect(avecXpPalier(gains, null)).toEqual(gains)
+    expect(avecXpPalier(gains, 0)).toEqual(gains)
   })
 })

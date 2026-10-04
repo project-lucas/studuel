@@ -28,12 +28,17 @@
 // Pur et testable : aucune lecture de base ici (voir boosts-server.ts).
 // -----------------------------------------------------------------------------
 
-export type KindOffre = 'double_xp' | 'bouclier_trophees'
+import { MAX_GELS_SERIE } from '@/lib/streak'
 
-export type IdOffre = 'double-xp-2h' | 'bouclier-trophees'
+export type KindOffre = 'double_xp' | 'bouclier_trophees' | 'gel_serie'
+
+export type IdOffre = 'double-xp-2h' | 'bouclier-trophees' | 'gel-serie'
 
 /** Un bouclier à la fois en réserve (miroir du CHECK de la migration 371). */
 export const MAX_BOUCLIERS = 1
+
+/** Deux gels en réserve au plus, comme Duolingo (miroir du CHECK de la 368). */
+export const MAX_GELS = MAX_GELS_SERIE
 
 export type Offre = {
   id: IdOffre
@@ -54,6 +59,23 @@ export type Offre = {
 // Moins d'une journée de quêtes (un élève actif gagne 25 à 40 gemmes par jour) :
 // un boost se lance sur un coup de tête, avant une séance.
 export const OFFRES: readonly Offre[] = [
+  {
+    // LE GEL DE SÉRIE (04/10/2026, Lucas : « une sorte de glace pour le gel,
+    // achetable et cumulable autant que Duolingo ») : il protège la série un
+    // jour manqué, deux en réserve au plus ; consommé tout seul par la base
+    // (serie_appliquer_gels, 368), le jour gelé se dessine en glaçon dans la
+    // semaine. 20 gemmes depuis la 557 (il en coûtait 60 quand les gemmes
+    // tombaient partout).
+    id: 'gel-serie',
+    kind: 'gel_serie',
+    nom: 'Gel de série',
+    titre: 'Gel de série',
+    description:
+      'Un jour sans réviser ne casse plus ta série : le gel la protège tout seul. Tu peux en garder deux d’avance.',
+    prixGemmes: 20,
+    valeur: 1,
+    emoji: '🧊',
+  },
   {
     id: 'double-xp-2h',
     kind: 'double_xp',
@@ -81,7 +103,9 @@ export const OFFRES: readonly Offre[] = [
 
 /** L'étiquette de l'écrin d'une carte du Marché : « ×2 · 2 h », « 1 fois ». */
 export function etiquetteOffre(offre: Offre): string {
-  return offre.kind === 'double_xp' ? `×2 · ${offre.valeur} h` : `${offre.valeur} fois`
+  if (offre.kind === 'double_xp') return `×2 · ${offre.valeur} h`
+  if (offre.kind === 'gel_serie') return `${offre.valeur} jour`
+  return `${offre.valeur} fois`
 }
 
 /** L'offre de cet id, si elle est au Marché. */
@@ -117,12 +141,15 @@ export type BoostsActifs = {
   doubleXpAcheteLe: string | null
   /** Boucliers de trophées en réserve (0 ou 1). */
   boucliers: number
+  /** Gels de série en réserve (0 à 2). */
+  gels: number
 }
 
 export const AUCUN_BOOST: BoostsActifs = {
   doubleXpJusqua: null,
   doubleXpAcheteLe: null,
   boucliers: 0,
+  gels: 0,
 }
 
 function instantLisible(v: unknown): string | null {
@@ -141,7 +168,9 @@ export function normaliserBoosts(row: unknown, acheteLe: unknown = null): Boosts
   }
   const r = row as Record<string, unknown>
   const boucliers = Number(r.boucliers_trophees)
+  const gels = Number(r.gels_serie)
   return {
+    gels: Number.isFinite(gels) ? Math.min(MAX_GELS, Math.max(0, Math.floor(gels))) : 0,
     doubleXpJusqua: instantLisible(r.double_xp_jusqua),
     doubleXpAcheteLe: instantLisible(acheteLe),
     boucliers: Number.isFinite(boucliers)
@@ -204,6 +233,8 @@ export function etatOffre(
       return { kind: 'active', libelle: `Actif · ${reste}`, reste }
     }
     if (boostXpDejaAchete(boosts.doubleXpAcheteLe, maintenant)) return { kind: 'demain' }
+  } else if (offre.kind === 'gel_serie') {
+    if (boosts.gels + offre.valeur > MAX_GELS) return { kind: 'en-reserve' }
   } else if (boosts.boucliers + offre.valeur > MAX_BOUCLIERS) {
     return { kind: 'en-reserve' }
   }

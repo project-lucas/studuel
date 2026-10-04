@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import Image from 'next/image'
 import { Heart, Zap, RotateCcw, Star, Swords } from 'lucide-react'
 import XpIcon from '@/components/ui/XpIcon'
+import { BAREME_XP } from '@/lib/economie'
 import BossPortrait from '@/components/defi/BossPortrait'
 import { Button } from '@/components/ui/button'
 import AnswerBoard from '@/components/jeux/AnswerBoard'
@@ -14,7 +15,6 @@ import type { Gain } from '@/lib/gains'
 import { recordChallenge } from '@/app/defi/actions'
 import {
   MODE_TIMBRE,
-  MODE_XP_BONUS,
   bossAfterAnswer,
   bossOutcome,
   nowMs,
@@ -406,8 +406,8 @@ export default function BossMode({
             },
             {
               icone: <XpIcon className="size-6" />,
-              valeur: `+${MODE_XP_BONUS.boss} XP`,
-              regle: 'si tu le bats',
+              valeur: `+${BAREME_XP.arene.maxPartie} XP`,
+              regle: 'au plus, en tapant juste',
             },
           ].map((c) => (
             <li

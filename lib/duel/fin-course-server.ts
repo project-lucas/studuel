@@ -1,7 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { validateRevisionToday } from '@/lib/habits'
-import { gainsVerses, walletTouch, type WalletAward } from '@/lib/wallet-server'
+import { gainsVerses, walletTouch, xpActivite, type WalletAward } from '@/lib/wallet-server'
 import { advanceQuests } from '@/lib/quests-server'
 import { contributeToClan } from '@/lib/clan-week-server'
 import { addCrowns } from '@/lib/saison-server'
@@ -135,13 +135,18 @@ export async function enregistrerFinCourse(input: DuelCourseInput): Promise<Duel
     coeur ?? (await cheminSansTransaction(supabase, user.id, { subjectSlug, stats, verifie, won, steps }))
 
   // ---------------------------- ce qui se décide en TypeScript, à côté
-  const [quests] = await Promise.all([
+  const [quests, , xpCourse] = await Promise.all([
     advanceQuests(supabase, user.id, {
       duelsPlayed: 1,
       duelsWon: won ? 1 : 0,
       correct: stats.correct,
     }),
     coeurPaye.saved ? validateRevisionToday(supabase, user.id) : Promise.resolve(),
+    // L'XP DE LA COURSE (557) : 10 pour l'avoir courue, 20 gagnée, 100 par
+    // jour au plus — une fois par course (clé : son identifiant).
+    coeurPaye.saved
+      ? xpActivite(supabase, 'duel', courseId ?? crypto.randomUUID(), won ? 1 : 0, 1)
+      : Promise.resolve(null),
     answers.length > 0
       ? enregistrerReponsesRevision(supabase, user.id, answers).catch(() => false)
       : Promise.resolve(true),
@@ -167,7 +172,10 @@ export async function enregistrerFinCourse(input: DuelCourseInput): Promise<Duel
     clanPoints: coeurPaye.clanPoints + clanJour,
     questsCompleted: quests.justCompleted,
     questDayDone: quests.allDone,
-    gains: gainsVerses(coeurPaye.award, { couronnes: coeurPaye.couronnes + couronnesJour }),
+    gains: gainsVerses(coeurPaye.award, {
+      xp: xpCourse?.awarded ?? 0,
+      couronnes: coeurPaye.couronnes + couronnesJour,
+    }),
     replaySaved: coeurPaye.replaySaved,
   }
 }

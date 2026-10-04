@@ -4,6 +4,8 @@ import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { isMissingSchemaObject } from '@/lib/schema-fallback'
+import { gainsVerses, xpActivite } from '@/lib/wallet-server'
+import type { Gain } from '@/lib/gains'
 
 // -----------------------------------------------------------------------------
 // La vie d'une capsule dans le carnet (migration 366) : la première ouverture
@@ -37,7 +39,7 @@ export async function ouvrirCapsule(id: string): Promise<void> {
 
 export async function terminerCapsule(
   id: string,
-): Promise<{ ok: true; badge: string | null; nouveau: boolean } | { ok: false }> {
+): Promise<{ ok: true; badge: string | null; nouveau: boolean; gains: Gain[] } | { ok: false }> {
   if (!idValide(id)) return { ok: false }
   const user = await getCurrentUser()
   if (!user) return { ok: false }
@@ -51,7 +53,15 @@ export async function terminerCapsule(
   }
   const r = (data ?? {}) as { ok?: boolean; badge?: string | null; nouveau?: boolean }
   if (!r.ok) return { ok: false }
+  // 557 · une capsule terminée vaut 80 XP, une fois (le serveur vérifie
+  // qu'elle l'est bien : terminee_le).
+  const gains = gainsVerses(await xpActivite(supabase, 'capsule', id))
   revalidatePath('/carnet')
   revalidatePath('/moi')
-  return { ok: true, badge: typeof r.badge === 'string' ? r.badge : null, nouveau: r.nouveau === true }
+  return {
+    ok: true,
+    badge: typeof r.badge === 'string' ? r.badge : null,
+    nouveau: r.nouveau === true,
+    gains,
+  }
 }

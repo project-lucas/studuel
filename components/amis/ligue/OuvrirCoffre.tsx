@@ -117,10 +117,13 @@ export default function OuvrirCoffre({ pret }: { pret: CoffrePret }) {
                 <li className="font-heading flex flex-1 flex-col items-center gap-1 rounded-2xl bg-highlight/15 px-3 py-3 text-xl font-extrabold tabular-nums ring-2 ring-highlight/50">
                   <XpIcon className="size-8" />+{nombreFr(resultat.xp)}&nbsp;XP
                 </li>
-                <li className="font-heading flex flex-1 flex-col items-center gap-1 rounded-2xl bg-primary/10 px-3 py-3 text-xl font-extrabold tabular-nums ring-2 ring-primary/30">
-                  <CristalIcon className="size-8" />+{resultat.gemmes}
-                  <span className="sr-only"> gemmes</span>
-                </li>
+                {/* Un coffre d'avant la 557 peut encore porter des gemmes. */}
+                {resultat.gemmes > 0 ? (
+                  <li className="font-heading flex flex-1 flex-col items-center gap-1 rounded-2xl bg-primary/10 px-3 py-3 text-xl font-extrabold tabular-nums ring-2 ring-primary/30">
+                    <CristalIcon className="size-8" />+{resultat.gemmes}
+                    <span className="sr-only"> gemmes</span>
+                  </li>
+                ) : null}
               </ul>
               {resultat.niveauAvant !== null &&
               resultat.niveauApres !== null &&

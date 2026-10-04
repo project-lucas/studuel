@@ -4,11 +4,11 @@ import {
   Swords,
   Trophy,
   Flame,
-  Zap,
   Clock,
   Target,
   type LucideIcon,
 } from 'lucide-react'
+import XpIcon from '@/components/ui/XpIcon'
 import type { ReactNode } from 'react'
 import type { ProfileSummary } from '@/lib/profile-stats'
 import StandingLine from '@/components/StandingLine'
@@ -23,7 +23,8 @@ function StatTile({
   note,
   extra = null,
 }: {
-  Icon: LucideIcon
+  /** Un pictogramme lucide, ou l'éclair d'XP dessiné (même signature). */
+  Icon: LucideIcon | typeof XpIcon
   value: string
   label: string
   note?: string
@@ -32,7 +33,7 @@ function StatTile({
 }) {
   return (
     <div className="olympe-glass flex flex-col gap-1 rounded-2xl p-3">
-      <Icon className="size-5 text-highlight" aria-hidden="true" />
+      <Icon className="size-5 text-highlight" />
       <p className="font-heading text-xl font-extrabold text-white tabular-nums">
         {value}
       </p>
@@ -91,7 +92,7 @@ export default function StatDashboard({
         note={`Record ${summary.bestStreak} j`}
       />
       <StatTile
-        Icon={Zap}
+        Icon={XpIcon}
         value={summary.totalXp.toLocaleString('fr-FR')}
         label="XP total"
         note={`Niveau ${summary.level}`}

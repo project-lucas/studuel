@@ -8,6 +8,8 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import QuitGuardButton from '@/components/QuitGuardButton'
+import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
+import type { Gain } from '@/lib/gains'
 import { finishExamBlanc, recordReviewAnswers } from '@/app/reviser/actions'
 import {
   buildReport,
@@ -72,6 +74,8 @@ export default function ExamBlancPlayer({
   const [report, setReport] = useState<ChapterReport[]>([])
   const [score, setScore] = useState(0)
   const [saved, setSaved] = useState<boolean | null>(null)
+  // L'XP et, à 15/20, les gemmes de l'épreuve (557) — ce que la base a versé.
+  const [gains, setGains] = useState<Gain[]>([])
 
   // Réponses par question (id → juste ?) — un ref : la fin peut venir du
   // chrono, qui ne voit pas les states frais.
@@ -98,6 +102,7 @@ export default function ExamBlancPlayer({
   const start = () => {
     sfx.flip()
     clearAdvance()
+    setGains([])
     lockedRef.current = false
     goodByIdRef.current = new Map()
     finishedRef.current = false
@@ -123,7 +128,10 @@ export default function ExamBlancPlayer({
     // Historique + XP côté serveur, et chaque question rejoint la file SRS
     // (les erreurs de l'examen blanc tombent dans la Revanche).
     finishExamBlanc(finalScore, questions.length, finalReport)
-      .then((r) => setSaved(r.saved))
+      .then((r) => {
+        setSaved(r.saved)
+        setGains(r.gains)
+      })
       .catch(() => setSaved(false))
     const reviews: ReviewAnswer[] = questions.map((q) => ({
       kind: 'question',
@@ -313,6 +321,8 @@ export default function ExamBlancPlayer({
             })}
           </ul>
         </section>
+
+        <PanneauRecompenses gains={gains} titre="Gagné" className="w-full" />
 
         <p className="text-sm text-muted-foreground">
           {saved === true

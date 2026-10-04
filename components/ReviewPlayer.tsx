@@ -11,6 +11,8 @@ import QuitGuardButton from '@/components/QuitGuardButton'
 import SoundToggle from '@/components/ui/SoundToggle'
 import { finishReviewSession } from '@/app/reviser/actions'
 import BossApparition from '@/components/defi/BossApparition'
+import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
+import type { Gain } from '@/lib/gains'
 import type { TraqueApparition } from '@/lib/traque'
 import type { ReviewAnswer } from '@/lib/srs'
 
@@ -42,6 +44,8 @@ type Result = {
   coins: number
   // Un gardien vient-il de sortir grâce à cette session ? (La Traque.)
   apparition: TraqueApparition | null
+  /** Ce que la session a réellement rapporté (557) : l'XP de la révision. */
+  gains: Gain[]
 }
 
 // La session « À revoir aujourd'hui » : la file SRS + Revanche, jouée d'une
@@ -89,6 +93,7 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
           revancheCleared: false,
           coins: 0,
           apparition: null,
+          gains: [],
         }),
       )
   }
@@ -161,6 +166,12 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
             au bon moment.
           </p>
         </div>
+
+        {/* L'XP de la révision vole vers le bandeau — une fois le rideau du
+            gardien refermé, sinon les jetons voleraient derrière lui. */}
+        {result && !result.apparition ? (
+          <PanneauRecompenses gains={result.gains} titre="Gagné" className="w-full max-w-xs" />
+        ) : null}
 
         {result?.revancheCleared ? (
           <p className="animate-in slide-in-from-bottom-2 flex items-center gap-2 rounded-full bg-highlight px-5 py-2 text-sm font-bold duration-500">

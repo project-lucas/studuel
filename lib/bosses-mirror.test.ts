@@ -8,11 +8,10 @@ import { DAILY_GOAL_OPTIONS } from '@/lib/daily-goal'
 import {
   chasseOfDay,
   CHASSE_MULTIPLIER,
-  NOX_GEMS,
+  NOX_XP,
   TRAQUE_APRES_DEFAITE,
   TRAQUE_FENETRE_MINUTES,
-  TRAQUE_GEMS,
-  TRAQUE_GEMS_WEEK_CAP,
+  TRAQUE_XP,
   TRAQUE_PLAFOND_JOUR,
   TRAQUE_SEUIL,
 } from '@/lib/traque'
@@ -140,7 +139,6 @@ describe('La Traque : lib/traque.ts ↔ migrations SQL', () => {
     expect(Number(constant('traque_seuil'))).toBe(TRAQUE_SEUIL)
     expect(Number(constant('traque_plafond_jour'))).toBe(TRAQUE_PLAFOND_JOUR)
     expect(Number(constant('traque_apres_defaite'))).toBe(TRAQUE_APRES_DEFAITE)
-    expect(Number(constant('traque_gems_week_cap'))).toBe(TRAQUE_GEMS_WEEK_CAP)
   })
 
   it('ouvre la MÊME fenêtre de combat', () => {
@@ -169,12 +167,12 @@ describe('La Traque : lib/traque.ts ↔ migrations SQL', () => {
     }
   })
 
-  it('paie les mêmes gemmes, rang par rang', () => {
+  it('paie la même XP, rang par rang (557)', () => {
     const m = effective(
       /CASE v_rank WHEN 1 THEN (\d+) WHEN 2 THEN (\d+) ELSE (\d+) END/,
-      'barème de gemmes',
+      'barème de la victoire',
     )
-    expect([1, 2, 3].map((r) => TRAQUE_GEMS[r as 1 | 2 | 3])).toEqual([
+    expect([1, 2, 3].map((r) => TRAQUE_XP[r as 1 | 2 | 3])).toEqual([
       Number(m[1]),
       Number(m[2]),
       Number(m[3]),
@@ -184,17 +182,17 @@ describe('La Traque : lib/traque.ts ↔ migrations SQL', () => {
       /v_boss = 'nox' THEN\s*\n\s*v_amount := (\d+)/,
       'montant de Nox',
     )
-    expect(Number(nox[1])).toBe(NOX_GEMS)
+    expect(Number(nox[1])).toBe(NOX_XP)
     effective(
       new RegExp(`v_amount \\* ${CHASSE_MULTIPLIER}`),
       'bonus du boss en chasse',
     )
   })
 
-  it('déclare bien la nouvelle source de gemmes', () => {
-    // Sans l'ALTER du CHECK, l'INSERT de traque_victoire lèverait — la victoire
-    // serait comptée et la gemme jamais versée.
-    effective(/gem_events_source_check[\s\S]*?'traque_win'/, 'source traque_win')
+  it('déclare bien la source d’XP de la victoire', () => {
+    // Sans l'ALTER du CHECK, l'INSERT de wallet_grant_xp lèverait — la victoire
+    // serait comptée et l'XP jamais versée.
+    effective(/'traque'\]/, 'source traque')
   })
 
   // LE contrat de la traque, celui que la 212 trahissait : le gardien sort

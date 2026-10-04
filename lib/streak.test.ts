@@ -118,6 +118,13 @@ describe('parseGelsSerie', () => {
 })
 
 describe('weekProgress', () => {
+  it('marque en gelés les jours sans activité couverts par un gel', () => {
+    const week = weekProgress(new Set(['2026-07-08']), NOW, new Set(['2026-07-07', '2026-07-08']))
+    expect(week[1]).toEqual({ done: false, isToday: false, isFuture: false, gele: true })
+    // Un jour fait reste fait, même inscrit gelé.
+    expect(week[2]).toEqual({ done: true, isToday: true, isFuture: false })
+  })
+
   it('aligne la semaine sur lundi et marque aujourd’hui + le futur', () => {
     const days = new Set(['2026-07-06', '2026-07-08'])
     const week = weekProgress(days, NOW)

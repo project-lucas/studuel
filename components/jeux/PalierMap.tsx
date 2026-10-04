@@ -7,8 +7,8 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { Infinity as InfinityIcon, Lock, Play, Star } from 'lucide-react'
 import ModeStage from '@/components/defi/ModeStage'
 import ModeHero from '@/components/defi/ModeHero'
-import { CristalIcon } from '@/components/ui/MonnaieIcon'
-import { reclamerGemmesPalier } from '@/app/defi/palier-actions'
+import XpIcon from '@/components/ui/XpIcon'
+import { reclamerEtoilesPalier } from '@/app/defi/palier-actions'
 import PalierStars from '@/components/jeux/PalierStars'
 import PistePalier from '@/components/jeux/PistePalier'
 import { MECHANIC_ICON } from '@/components/jeux/icons'
@@ -33,9 +33,9 @@ import {
   type PalierProgress,
 } from '@/lib/jeux/paliers'
 import {
-  GEMMES_PAR_JEU,
+  XP_PAR_JEU,
   etoilesDeProgression,
-  gemmesDesEtoiles,
+  xpDesEtoiles,
   resteAReclamer,
   type EtoilesParPalier,
 } from '@/lib/jeux/palier-gemmes'
@@ -148,13 +148,13 @@ export default function PalierMap({
     const [f, g, h, i, j] = deja
     if (!resteAReclamer([a, b, c, d, e], [f, g, h, i, j])) return
     let vivant = true
-    reclamerGemmesPalier(format.id, loc)
+    reclamerEtoilesPalier(format.id, loc)
       .then((r) => {
         if (!vivant || !r) return
         setPayees(r.etoiles)
-        if (r.gemmes > 0) {
-          setRattrapage(r.gemmes)
-          // Le bandeau du haut relit son solde de gemmes.
+        if (r.xp > 0) {
+          setRattrapage(r.xp)
+          // Le bandeau du haut relit sa barre d'XP.
           router.refresh()
         }
       })
@@ -170,7 +170,7 @@ export default function PalierMap({
   // vidé n'efface pas ce que le serveur a versé).
   const acquises = locales.map((n, index) => Math.max(n, payees?.[index] ?? 0))
   const [a1, a2, a3, a4, a5] = acquises
-  const gemmesGagnees = gemmesDesEtoiles([a1, a2, a3, a4, a5])
+  const xpGagnee = xpDesEtoiles([a1, a2, a3, a4, a5])
 
   return (
     <ModeStage
@@ -197,7 +197,7 @@ export default function PalierMap({
       <div className="relative z-10 -mt-1 pb-6">
         {/* CE QU'IL RESTE À GAGNER, et rien d'autre (Lucas, 24/09/2026 : « à
             l'arrivée, je veux voir les étoiles et les gemmes à compléter, et
-            c'est tout »). Le bloc « Ta collection » — titre, barre, phrase sur
+            c'est tout » ; l'XP a remplacé les gemmes le 04/10/2026). Le bloc « Ta collection » — titre, barre, phrase sur
             la règle des paliers — est parti : deux compteurs, au centre. */}
         <section
           aria-label="Progression sur ce jeu"
@@ -212,14 +212,14 @@ export default function PalierMap({
               {stars}
               <span className="text-foreground/50">/{TOTAL_STARS}</span>
             </span>
-            {/* Les gemmes que ces étoiles ont rapportées, sur tout le jeu. */}
+            {/* L'XP que ces étoiles ont rapportée, sur tout le jeu (557). */}
             <span
               className="flex items-center gap-1 rounded-full bg-card py-1.5 pr-3.5 pl-2 font-mono text-base font-extrabold tabular-nums shadow-sm ring-1 ring-black/5"
-              aria-label={`${gemmesGagnees} gemmes gagnées sur ${GEMMES_PAR_JEU}`}
+              aria-label={`${xpGagnee} XP gagnée sur ${XP_PAR_JEU}`}
             >
-              <CristalIcon className="size-6" />
-              {gemmesGagnees}
-              <span className="text-foreground/50">/{GEMMES_PAR_JEU}</span>
+              <XpIcon className="size-6" />
+              {xpGagnee}
+              <span className="text-foreground/50">/{XP_PAR_JEU}</span>
             </span>
           </span>
           {rattrapage ? (
@@ -227,9 +227,8 @@ export default function PalierMap({
               role="status"
               className="flex items-center gap-2 rounded-2xl bg-highlight/20 px-3 py-2 text-sm font-bold"
             >
-              <CristalIcon className="size-6 shrink-0" />
-              Tes étoiles déjà décrochées t’ont rapporté {rattrapage} gemme
-              {rattrapage > 1 ? 's' : ''} !
+              <XpIcon className="size-6 shrink-0" />
+              Tes étoiles déjà décrochées t’ont rapporté {rattrapage} XP !
             </p>
           ) : null}
         </section>

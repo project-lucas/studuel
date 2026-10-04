@@ -4,6 +4,7 @@ import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
+import { xpActivite } from '@/lib/wallet-server'
 import { GRADE_LEVELS } from '@/lib/types'
 import { isDailyGoalMinutes, minutesToSessions } from '@/lib/welcome'
 
@@ -48,6 +49,9 @@ export async function saveOnboarding(formData: FormData): Promise<void> {
       onboarded: true,
     })
     .eq('id', user.id)
+
+  // Les 50 premières XP (557), une fois par compte — comme /bienvenue.
+  await xpActivite(supabase, 'bienvenue', 'bienvenue')
 
   revalidatePath('/', 'layout')
   // Direction l'onglet Moi : le bilan de capacités s'ouvre pour être rempli.

@@ -152,7 +152,7 @@ export async function recordTestSession(
         chapterIds: ctx.chapterId ? [ctx.chapterId] : [],
       }),
     )
-    const versement = awardQuizProgression(supabase, quizId)
+    const versement = awardQuizProgression(supabase, quizId, cleanScore, cleanTotal)
     await Promise.all([
       validateRevisionToday(supabase, user.id),
       validateCommuteToday(supabase, user.id),

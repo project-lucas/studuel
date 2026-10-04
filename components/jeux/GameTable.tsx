@@ -20,7 +20,7 @@ import type { ModeQuestion } from '@/lib/defi-modes'
 import type { GameFormat } from '@/lib/jeux/formats'
 import { readGameBest, writeGameBest } from '@/lib/jeux/records'
 import { usePalierRun } from '@/lib/jeux/use-palier-run'
-import { avecGemmesPalier } from '@/lib/jeux/palier-gemmes'
+import { avecXpPalier } from '@/lib/jeux/palier-gemmes'
 import type { PalierRun } from '@/lib/jeux/paliers'
 import { hasTimeRecord } from '@/lib/jeux/palier-format'
 import { useUltimeRun } from '@/lib/jeux/use-ultime-run'
@@ -110,7 +110,7 @@ export default function GameTable({
     standing: palierStanding,
     record: recordPalier,
     reset: resetPalier,
-    gemmes: palierGemmes,
+    xpEtoiles: palierXp,
   } = usePalierRun(format.id, palier)
   // L'épreuve ultime : sa place se calcule côté serveur (une cote n'a de sens
   // que comparée aux autres). Inerte quand la table ne joue pas l'épreuve.
@@ -416,7 +416,7 @@ export default function GameTable({
             best={best}
             isRecord={isRecord}
             saved={saved}
-            gains={avecGemmesPalier(gains, palierGemmes)}
+            gains={avecXpPalier(gains, palierXp)}
             trophies={trophies}
             bilan={bilan}
             ghost={ghost}

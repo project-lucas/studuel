@@ -203,12 +203,6 @@ export function apparitionMessage(boss: Boss, attempts = 0): string {
     : `${boss.name} a surgi de sa tanière !`
 }
 
-/** « 2e essai » — l'écran de combat rappelle qu'on peut encore le reprendre. */
-export function attemptLabel(attempts: number): string {
-  const n = Math.max(0, Math.floor(attempts)) + 1
-  return n === 1 ? '1er essai' : `${n}e essai`
-}
-
 // ------------------------------------------------------ LE RIDEAU D'APPARITION
 
 /**

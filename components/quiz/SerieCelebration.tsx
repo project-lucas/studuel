@@ -11,7 +11,6 @@ import {
   phraseSerie,
   type Celebration,
 } from '@/lib/serie-celebration'
-import { COMPANION_CELEBRATION_IMAGE, stageForStreak } from '@/lib/compagnon'
 
 // Lundi → dimanche, en une lettre : c'est une bande de sept pastilles, pas un
 // calendrier. Le jour complet vit dans l'`aria-label`.
@@ -78,28 +77,22 @@ export default function SerieCelebration({
           />
         </p>
 
-        {/* LA FLAMME DU COMPAGNON — celle de son palier, pas une icône.
-            Le projet a ses six illustrations d'évolution (`lib/compagnon`) et
-            une flamme de fête : les réutiliser garde une seule voix visuelle
-            d'un bout à l'autre de l'app, et évite d'inventer un dessin de plus.
-            Avant remplissage on montre le palier ATTEINT, après on bascule sur
-            la célébration — le changement d'image fait partie de l'événement. */}
+        {/* MARCEL FÉLICITE (04/10/2026, Lucas : « la flamme n'est plus trop
+            d'actualité, il faudrait utiliser Marcel ») : le coach de l'app,
+            poing levé et pouce en l'air, plutôt que la mascotte flamme
+            d'avant. Il bondit quand la case du jour se remplit. */}
         <div className="flex items-center justify-center">
           <Image
-            src={
-              rempli
-                ? COMPANION_CELEBRATION_IMAGE
-                : stageForStreak(Math.max(0, celebration.serie - 1)).image
-            }
+            src="/images/mascotte/marcel-bravo.webp"
             alt=""
             aria-hidden="true"
             width={512}
             height={512}
-            sizes="176px"
+            sizes="208px"
             priority
             className={cn(
-              'h-auto w-44 max-w-full transition-all duration-500',
-              rempli ? 'scale-100' : 'scale-90 opacity-80',
+              'h-auto w-52 max-w-full transition-all duration-500',
+              rempli ? 'scale-100 opacity-100' : 'translate-y-2 scale-90 opacity-70',
             )}
           />
         </div>

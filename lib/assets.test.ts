@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
-import { ALL_BOSSES } from '@/lib/bosses'
+import { ALL_BOSSES, portraitBoss } from '@/lib/bosses'
 import { RANK_TIERS } from '@/lib/rank'
 import { subjectVignette } from '@/lib/subject-style'
 import { gameScene } from '@/lib/defi/modes-catalog'
@@ -169,6 +169,15 @@ describe('boss', () => {
           `${boss.id} : scène ${boss.scene} absente`,
         ).toBe(true)
       }
+    }
+  })
+
+  it('chaque portrait en pied déclaré existe, et tous les boss en ont un', () => {
+    // Fabriqués par `node scripts/boss-pied.mjs` (04/10/2026).
+    for (const boss of ALL_BOSSES) {
+      const portrait = portraitBoss(boss)
+      expect(portrait, `${boss.id} : pas de portrait en pied`).not.toBeNull()
+      expect(assetExists(portrait!), `${boss.id} : ${portrait} absent`).toBe(true)
     }
   })
 

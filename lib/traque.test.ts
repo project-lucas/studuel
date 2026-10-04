@@ -5,7 +5,6 @@ import {
   apparitionAlive,
   apparitionMessage,
   apparitionOf,
-  attemptLabel,
   chasseOfDay,
   countdownLabel,
   crossedPalier,
@@ -370,12 +369,6 @@ describe('la défaite ne referme pas la fenêtre', () => {
   it('change le message éclair quand il est déjà retenté', () => {
     expect(apparitionMessage(DELTA)).toContain('a surgi')
     expect(apparitionMessage(DELTA, 1)).toContain('t’attend toujours')
-  })
-
-  it('numérote les essais à partir de 1', () => {
-    expect(attemptLabel(0)).toBe('1er essai')
-    expect(attemptLabel(2)).toBe('3e essai')
-    expect(attemptLabel(-4)).toBe('1er essai')
   })
 })
 

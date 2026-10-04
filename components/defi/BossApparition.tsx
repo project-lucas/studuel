@@ -2,12 +2,12 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { motion, useReducedMotion } from 'framer-motion'
 import { Swords } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { bossById } from '@/lib/bosses'
+import BossPortrait from '@/components/defi/BossPortrait'
 import { sfx } from '@/lib/sounds'
 import { CLOCK_STEP_MS, useClock } from '@/lib/use-clock'
 import { useDialogFocus } from '@/lib/use-dialog'
@@ -24,17 +24,17 @@ import {
  * Le geste est repris du Death Match de 7DS Grand Cross, et il tient à quatre
  * choses, dans cet ordre d'importance :
  *
- *  1. LE GARDIEN SORT D'UNE MASSE D'ENCRE. Elle occupe le haut de l'écran, son
- *     bord bas est bombé et irrégulier, et le personnage y est PRIS : il n'est
- *     pas posé sur un fond. Un portrait dans un rectangle est une illustration ;
- *     un portrait sans bord est une présence. C'est 80 % de l'effet.
+ *  1. LE GARDIEN EST LÀ EN ENTIER, DANS SON DÉCOR (04/10/2026 : la masse
+ *     d'encre et le buste détouré ont cédé la place au portrait en pied,
+ *     `BossPortrait`). Il remplit le haut de l'écran, sans cadre, et son bas
+ *     se dissout dans le voile — un portrait sans bord est une présence.
  *  2. C'EST UNE INTERRUPTION, PAS UNE PAGE. L'écran de fin reste visible sous
  *     un voile LÉGER — on le devine encore derrière les mots. Le message est
  *     « tu faisais autre chose, et ça vient de te tomber dessus », pas « voici
  *     un nouvel écran ».
- *  3. LE CADRAGE EST SERRÉ. Nos images sont des bustes détourés : affichées
- *     ÉNORMES, débordant des deux bords, elles donnent exactement ça. Un
- *     plein-pied centré ferait l'inverse — petit, sage, lointain.
+ *  3. LE PORTRAIT EST VERTICAL (9:16) : il occupe 80 % de la hauteur d'un
+ *     téléphone, le boss y est grand, et rien ne flotte autour de lui hors de
+ *     son illustration (les petits pictogrammes des bustes sont partis).
  *  4. LE TEXTE N'A PAS DE PANNEAU. Nom orné de filets, ligne de danger,
  *     punchline du boss, et deux issues — une qui fuit, une qui engage. Un
  *     panneau opaque rendrait à l'écran le cadre qu'on vient de lui retirer.
@@ -125,59 +125,23 @@ export default function BossApparition({
       aria-label={`${apparitionMessage(boss)} ${boss.name}, ${boss.epithet}. Défiable pendant encore ${remaining === null ? 'une heure' : countdownLabel(remaining)}.`}
       className="traque-rideau fixed inset-0 z-50 flex flex-col justify-end"
     >
-      {/* --- LA TACHE ET LE GARDIEN DEDANS. Il n'est pas posé sur un fond : il
-          ÉMERGE d'une masse noire au bord déchiré, et déborde des deux côtés
-          de l'écran. --- */}
-      <div className="traque-rideau-encre" aria-hidden="true">
-        <div className="traque-rideau-halo" />
-        {/* Boîte volontairement plus LARGE que l'écran : sans elle l'image
-            carrée se cale sur la largeur et le gardien tient sagement dedans. */}
-        <div className="traque-rideau-scene">
-          <motion.div
-            className="traque-rideau-buste"
-            // `scale: 1.04` est l'état de REPOS, pas un effet : c'est lui qui fait
-            // déborder le gardien des deux bords de l'écran (cf. .traque-rideau-buste).
-            // L'entrée part de plus loin encore — il fond sur le joueur.
-            initial={
-              reduce
-                ? { opacity: 0, scale: 1.04 }
-                : { opacity: 0, scale: 1.5, y: '5%' }
-            }
-            animate={{ opacity: 1, scale: 1.04, y: '0%' }}
-            transition={{ type: 'spring', stiffness: 160, damping: 18 }}
-          >
-            {boss.image ? (
-              <Image
-                src={boss.image}
-                alt=""
-                fill
-                sizes="150vw"
-                priority
-                className="object-contain object-bottom"
-              />
-            ) : (
-              <span className="grid size-full place-items-center text-[7rem]">
-                {boss.emoji}
-              </span>
-            )}
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Éclaboussures détachées, sous la tache. Sans elles le bord se lit
-          comme une découpe ; avec elles, comme de l'encre qui a giclé. */}
-      <span
-        className="traque-rideau-goutte traque-rideau-goutte-1"
+      {/* --- LE GARDIEN EN PIED (04/10/2026, Lucas : « je veux voir l'image
+          pleine », Big Ben dans sa rue de Londres, pieds compris). Son
+          portrait vertical remplit le haut de l'écran et son bas se fond dans
+          le voile, où le texte se pose. Il fond sur le joueur : il entre de
+          plus près et recule à sa place (transform et opacité seulement). --- */}
+      <motion.div
         aria-hidden="true"
-      />
-      <span
-        className="traque-rideau-goutte traque-rideau-goutte-2"
-        aria-hidden="true"
-      />
-      <span
-        className="traque-rideau-goutte traque-rideau-goutte-3"
-        aria-hidden="true"
-      />
+        className="absolute inset-x-0 top-0 h-[80dvh] sm:mx-auto sm:max-w-md"
+        initial={reduce ? { opacity: 0 } : { opacity: 0, scale: 1.18, y: '4%' }}
+        animate={{ opacity: 1, scale: 1, y: '0%' }}
+        transition={{ type: 'spring', stiffness: 140, damping: 20 }}
+      >
+        <BossPortrait boss={boss} priority fondu="from-[rgb(6,2,12)]" className="size-full" />
+      </motion.div>
+      {/* Sous le portrait, le fond prend la couleur exacte où son fondu
+          s'achève : sans lui, le voile translucide laissait une couture. */}
+      <span aria-hidden="true" className="absolute inset-x-0 top-[80dvh] bottom-0 bg-[rgb(6,2,12)]" />
 
       {/* --- LE TEXTE. Posé À MÊME le voile, sans panneau ni liseré : sur la
           maquette on voit encore le jeu derrière les mots, et c'est ce qui

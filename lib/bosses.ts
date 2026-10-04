@@ -247,6 +247,23 @@ const stripMatch = ({ match, ...boss }: BossEntry): Boss => {
 
 export const ALL_BOSSES: Boss[] = [...CATALOG.map(stripMatch), FALLBACK_BOSS]
 
+// LES PORTRAITS EN PIED (04/10/2026, Lucas : « je veux voir l'illustration de
+// Big Ben, la grande, celle où on voit ses pieds, dans la rue de Londres ») :
+// le boss de la tête aux pieds dans son décor, en 9:16, montré dès qu'il sort
+// de sa tanière, à l'accueil de son combat et à la fin. Même base de fichier
+// que le buste (`bigben.webp` → `bigben-pied.webp`), fabriqués par
+// `node scripts/boss-pied.mjs` ; lib/assets.test.ts vérifie qu'ils existent.
+const PORTRAITS_PIED: ReadonlySet<string> = new Set([
+  'astro', 'atlas', 'bigben', 'coach-turbo', 'delta', 'eltoro', 'fiscus', 'glitch', 'grammatork',
+  'imperator', 'kaiser-fang', 'krach', 'mecatron', 'nox', 'plasma', 'socratus', 'sylvarok',
+])
+
+/** Le portrait en pied d'un boss (9:16), ou `null` s'il n'en a pas encore. */
+export function portraitBoss(boss: Boss): string | null {
+  const base = boss.image?.match(/\/images\/boss\/([a-z-]+)\.webp$/)?.[1]
+  return base && PORTRAITS_PIED.has(base) ? `/images/boss/${base}-pied.webp` : null
+}
+
 /** Un boss par son id — `undefined` si l'id ne désigne rien (lien trafiqué). */
 export function bossById(id: string): Boss | undefined {
   return ALL_BOSSES.find((b) => b.id === id)

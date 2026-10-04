@@ -9,13 +9,12 @@ import { sfx } from '@/lib/sounds'
 import type { Boss, BossRank } from '@/lib/bosses'
 import type { ModeQuestion } from '@/lib/defi-modes'
 import { GEM_COST_CHAPTER } from '@/lib/gems'
-import { attemptLabel, countdownLabel } from '@/lib/traque'
+import { countdownLabel } from '@/lib/traque'
 import { CLOCK_STEP_MS, useClock } from '@/lib/use-clock'
 import { Hourglass } from 'lucide-react'
 import {
   claimTraqueVictory,
   recordTraqueDefeat,
-  type TraqueDefeat,
   type TraqueVictory,
 } from '@/app/defi/traque-actions'
 
@@ -41,7 +40,6 @@ export default function TraqueCombat({
   pool,
   chapter,
   endsAt,
-  attempts,
 }: {
   boss: Boss
   rank: BossRank
@@ -49,8 +47,8 @@ export default function TraqueCombat({
   pool: ModeQuestion[]
   /** Fin de la fenêtre de combat (ms epoch) — null si le gardien s'est recouché. */
   endsAt: number | null
-  /** Combats déjà perdus sur cette sortie de tanière. */
-  attempts: number
+  /** Combats déjà perdus sur cette sortie de tanière (plus affiché depuis le 04/10/2026). */
+  attempts?: number
   /**
    * Le chapitre le plus récemment révisé — celui dont la fiche s'ouvrira. Son
    * lien est composé côté serveur (il lui faut le slug de la matière) : le
@@ -60,7 +58,6 @@ export default function TraqueCombat({
 }) {
   const router = useRouter()
   const [result, setResult] = useState<TraqueVictory | null>(null)
-  const [defeat, setDefeat] = useState<TraqueDefeat | null>(null)
 
   // Le compte à rebours rendu par le serveur se périme à la seconde suivante :
   // on repart de la borne de fin et on l'égrène ici (même pattern que l'éclair
@@ -68,15 +65,12 @@ export default function TraqueCombat({
   const now = useClock(CLOCK_STEP_MS)
   const remaining = endsAt !== null && now !== null ? Math.max(0, endsAt - now) : null
   const windowOpen = endsAt !== null && (now === null || now < endsAt)
-  const essais = defeat?.attempts ?? attempts
 
   const onOutcome = (outcome: 'won' | 'lost') => {
     if (outcome === 'lost') {
       // La défaite ne coûte que le temps : le serveur ne fait que compter
       // l'essai et confirme que la fenêtre court toujours.
-      recordTraqueDefeat(boss.id)
-        .then(setDefeat)
-        .catch(() => {})
+      recordTraqueDefeat(boss.id).catch(() => {})
       return
     }
     claimTraqueVictory(boss.id)
@@ -130,7 +124,7 @@ export default function TraqueCombat({
         >
           <Hourglass className="size-3.5 shrink-0" strokeWidth={2.8} aria-hidden="true" />
           {windowOpen
-            ? `${boss.name} reste défiable ${remaining === null ? 'encore un moment' : countdownLabel(remaining)} · ${attemptLabel(essais)}`
+            ? `${boss.name} reste défiable ${remaining === null ? 'encore un moment' : countdownLabel(remaining)}`
             : `${boss.name} s’est recouché — il faudra le redébusquer en révisant.`}
         </p>
       ) : null}

@@ -3,6 +3,8 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import Image from 'next/image'
 import { Heart, Zap, RotateCcw, Star, Swords } from 'lucide-react'
+import XpIcon from '@/components/ui/XpIcon'
+import BossPortrait from '@/components/defi/BossPortrait'
 import { Button } from '@/components/ui/button'
 import AnswerBoard from '@/components/jeux/AnswerBoard'
 import { cn } from '@/lib/utils'
@@ -36,6 +38,7 @@ import {
   RANK_STATS,
   RANK_LABELS,
   MAX_BOSS_RANK,
+  portraitBoss,
   type Boss,
   type BossRank,
 } from '@/lib/bosses'
@@ -357,47 +360,69 @@ export default function BossMode({
           onDark && 'text-white',
         )}
       >
-        {scene ? <ModeHero scene={scene} titre="Boss de la semaine" dansIntro /> : null}
-        <div className="flex flex-col items-center gap-2">
-          <span
-            className={cn(
-              'flex size-24 items-center justify-center overflow-hidden rounded-full bg-primary text-5xl shadow-lg shadow-primary/30',
-              onDark && 'size-32 border-4 border-highlight/70 shadow-2xl',
-            )}
-          >
-            <BossFace boss={character} px={onDark ? 128 : 96} />
-          </span>
-          <div className="flex items-center gap-2">
-            <h1 className="font-heading text-3xl font-extrabold">{character.name}</h1>
-            {rankStars}
+        {/* Le billet « Boss de la semaine » garde sa scène tant que le boss n'a
+            pas de portrait en pied ; sinon le portrait fait l'ambiance. */}
+        {scene && !portraitBoss(character) ? (
+          <ModeHero scene={scene} titre="Boss de la semaine" dansIntro />
+        ) : null}
+
+        {/* LE BOSS, GRAND, EN PIED (04/10/2026, Lucas : « le boss en plus gros,
+            moins de texte, plus clair dans le déroulé ») : son portrait, et
+            son nom posé dans le fondu du bas. */}
+        <div className="relative w-full max-w-sm">
+          <BossPortrait
+            boss={character}
+            priority
+            className="aspect-[4/5] w-full rounded-carte shadow-carte"
+            fondu="from-black/80"
+            sizes="24rem"
+          />
+          <div className="absolute inset-x-0 bottom-0 flex flex-col items-center gap-1 px-4 pb-4 text-white">
+            <div className="flex items-center gap-2">
+              <h1 className="font-heading text-3xl font-extrabold drop-shadow">{character.name}</h1>
+              {rankStars}
+            </div>
+            <p className="text-xs font-extrabold tracking-wide text-highlight uppercase">
+              {character.epithet} · {RANK_LABELS[rank]}
+            </p>
           </div>
-          <p
-            className={cn(
-              'text-sm font-semibold uppercase tracking-wide',
-              onDark ? 'text-highlight' : 'text-muted-foreground',
-            )}
-          >
-            {character.epithet} · {RANK_LABELS[rank]}
-          </p>
-          <p className="font-heading text-lg italic">« {character.intro} »</p>
         </div>
 
-        <p className={cn('text-sm', inkSoft)}>
-          {character.name} a {stats.hp} points de vie, tu as {stats.lives} cœur
-          {stats.lives > 1 ? 's' : ''}.
-          <br />
-          Chaque bonne réponse le frappe, chaque erreur te coûte un cœur.
-          <br />
-          {variant === 'traque'
-            ? 'Il t’interroge sur ce que tu viens de réviser — c’est ton travail qui l’a fait sortir.'
-            : 'Il garde ton chapitre le plus fragile — bats-le, prends l’XP.'}
-        </p>
+        <p className="font-heading -mt-1 text-lg italic text-balance">« {character.intro} »</p>
 
-        {/* text-foreground explicite : sur la scène sombre, le texte hérité
-            serait blanc sur jaune solaire — illisible. */}
-        <p className="flex items-center gap-1.5 rounded-full bg-highlight px-4 py-1.5 font-mono text-sm font-bold text-foreground shadow-sm tabular-nums">
-          <Zap className="size-4" /> +{MODE_XP_BONUS.boss} XP en cas de victoire
-        </p>
+        {/* LE DÉROULÉ, en trois cases : ce qu'on lui retire, ce qu'on risque,
+            ce qu'on gagne. Il remplace le paragraphe d'explication. */}
+        <ol className="grid w-full max-w-sm grid-cols-3 gap-2">
+          {[
+            {
+              icone: <Swords className="size-6 text-primary" strokeWidth={2.6} aria-hidden="true" />,
+              valeur: `${stats.hp} PV`,
+              regle: '1 bonne réponse = 1 coup',
+            },
+            {
+              icone: <Heart className="size-6 fill-destructive text-destructive" aria-hidden="true" />,
+              valeur: `${stats.lives} cœur${stats.lives > 1 ? 's' : ''}`,
+              regle: '1 erreur = 1 cœur perdu',
+            },
+            {
+              icone: <XpIcon className="size-6" />,
+              valeur: `+${MODE_XP_BONUS.boss} XP`,
+              regle: 'si tu le bats',
+            },
+          ].map((c) => (
+            <li
+              key={c.regle}
+              className={cn(
+                'flex flex-col items-center gap-1 rounded-2xl px-2 py-3',
+                onDark ? 'border border-white/10 bg-white/[0.07]' : 'carte',
+              )}
+            >
+              {c.icone}
+              <span className="font-heading text-lg leading-none font-extrabold">{c.valeur}</span>
+              <span className={cn('text-[0.7rem] leading-tight font-bold text-balance', inkSoft)}>{c.regle}</span>
+            </li>
+          ))}
+        </ol>
 
         {/* L'action unique de l'écran : le gros bouton de l'app, plus le rond
             « GO » maison (audit du 23/09/2026). */}
@@ -548,119 +573,103 @@ export default function BossMode({
   }
 
   if (phase === 'done') {
+    // La Traque (04/10/2026, Lucas : « améliore le rendu, ne compte pas le
+    // nombre d'essais ; le bouton Retour à l'arène ne va pas ») : le portrait
+    // du boss, le verdict et sa réplique, les PV qu'il lui restait en barre,
+    // puis deux boutons pleins l'un sous l'autre.
+    const pvRestants = Math.max(0, boss.hp)
     return (
       <div
         className={cn(
-          'mx-auto flex max-w-xl flex-col items-center gap-5 pt-8 text-center',
+          'mx-auto flex w-full max-w-xl flex-col items-center gap-4 pt-2 text-center',
           onDark && 'text-white',
         )}
       >
-        <div className="animate-in zoom-in text-6xl duration-500">
-          {outcome === 'won' ? (
-            '👑'
-          ) : character.image ? (
-            <Image
-              src={character.image}
-              alt=""
-              width={112}
-              height={112}
-              aria-hidden="true"
-              className="mx-auto"
-            />
-          ) : (
-            character.emoji
-          )}
-        </div>
-        <div>
-          <h1 className="font-heading text-3xl font-extrabold">
-            {outcome === 'won'
-              ? `${character.name} est vaincu !`
-              : `${character.name} t’a eu…`}
-          </h1>
-          <p className="font-heading mt-1 text-base italic">
-            « {outcome === 'won' ? character.defeat : character.victory} »
-          </p>
-          <p className={cn('mt-1 text-sm', inkSoft)}>
-            {outcome === 'won'
-              ? `${correct} coups portés en ${answeredCount} questions.`
-              : canRetry
-                ? `Il lui restait ${boss.hp} PV. Il est encore là — reprends-le tout de suite.`
-                : `Il lui restait ${boss.hp} PV. Reviens plus fort — il t'attend.`}
-          </p>
+        <div className="animate-in zoom-in-95 relative w-full max-w-sm duration-500">
+          <BossPortrait
+            boss={character}
+            priority
+            className={cn('aspect-[5/4] w-full rounded-carte shadow-carte', outcome === 'won' && 'grayscale-[0.6]')}
+            fondu="from-black/80"
+            sizes="24rem"
+          />
+          <div className="absolute inset-x-0 bottom-0 px-4 pb-4 text-white">
+            <h1 className="font-heading text-3xl leading-tight font-extrabold drop-shadow">
+              {outcome === 'won' ? `${character.name} est vaincu !` : `${character.name} t’a eu…`}
+            </h1>
+          </div>
         </div>
 
-        {outcome === 'won' && eventFight ? (
-          <p className="animate-in slide-in-from-bottom-2 flex items-center gap-2 rounded-full bg-highlight px-4 py-1.5 text-sm font-bold text-foreground duration-500">
-            <span aria-hidden="true">🏆</span>
-            {trophy === false
-              ? 'Trophée déjà en poche cette semaine.'
-              : `Trophée ${character.name} débloqué !`}
+        <p className="font-heading text-lg italic text-balance">
+          « {outcome === 'won' ? character.defeat : character.victory} »
+        </p>
+
+        {outcome === 'won' ? (
+          <p className={cn('text-sm font-bold', inkSoft)}>
+            {correct} coups portés en {answeredCount} questions.
           </p>
-        ) : outcome === 'won' ? (
-          <p
-            className={cn(
-              'animate-in slide-in-from-bottom-2 rounded-full px-4 py-1.5 text-sm font-bold duration-500',
-              onDark ? 'bg-white/10 text-highlight' : 'bg-primary/10 text-primary',
-            )}
-          >
-            {rankedUp
-              ? `${character.name} passe au ${RANK_LABELS[rank].toLowerCase()} — ${RANK_STATS[rank].hp} PV. Il reviendra plus fort.`
-              : rank === MAX_BOSS_RANK
-                ? `Rang max — tu domines ${character.name}. 👑`
-                : ''}
+        ) : (
+          <div className="w-full max-w-sm">
+            <div className="mb-1.5 flex items-baseline justify-between text-sm font-extrabold">
+              <span>Il lui restait</span>
+              <span className="tabular-nums">
+                {pvRestants} / {stats.hp} PV
+              </span>
+            </div>
+            <div
+              className="h-3 w-full overflow-hidden rounded-full bg-white/15"
+              role="progressbar"
+              aria-label={`Points de vie restants de ${character.name}`}
+              aria-valuemin={0}
+              aria-valuemax={stats.hp}
+              aria-valuenow={pvRestants}
+            >
+              <div
+                className="h-full rounded-full bg-destructive"
+                style={{ width: `${(pvRestants / stats.hp) * 100}%` }}
+              />
+            </div>
+            <p className={cn('mt-2 text-sm font-bold', inkSoft)}>
+              {canRetry ? 'Il est encore là : reprends-le tout de suite.' : 'Reviens plus fort, il t’attend.'}
+            </p>
+          </div>
+        )}
+
+        {outcome === 'won' && rankedUp ? (
+          <p className="animate-in slide-in-from-bottom-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-bold text-highlight duration-500">
+            {`${character.name} passe au ${RANK_LABELS[rank].toLowerCase()} — ${RANK_STATS[rank].hp} PV. Il reviendra plus fort.`}
           </p>
         ) : null}
 
-        {/* La Traque : gemmes versées et « ouvrir la fiche » viennent de
-            l'appelant — c'est lui qui a parlé au serveur. */}
+        {/* Gemmes versées et « ouvrir la fiche » : c'est l'appelant qui a parlé
+            au serveur. */}
         {rewardSlot}
 
-        {/* CE QUE LE COMBAT A RAPPORTÉ, et le geste de Clash Royale qui va
-            avec. ⚠️ C'était un « +XX XP » calculé côté client (`XP_RULES` +
-            `MODE_XP_BONUS.boss`) que le portefeuille ne versait plus depuis la
-            migration 348 — jouer n'acquiert rien. */}
         <PanneauRecompenses gains={gains} className="w-full max-w-sm" />
 
-        <p className={cn('text-sm', inkSoft)}>
-          {saved === true
-            ? '✓ Journée validée — ta série continue 🔥'
-            : saved === false
-              ? 'Combat non enregistré (connecte-toi pour garder ta progression).'
-              : ''}
-        </p>
+        {saved === true ? (
+          <p className={cn('text-sm font-bold', inkSoft)}>Journée validée, ta série continue.</p>
+        ) : saved === false ? (
+          <p className={cn('text-sm', inkSoft)}>Combat non enregistré (connecte-toi pour garder ta progression).</p>
+        ) : null}
 
-        <div className="flex gap-2">
-          {/* La Traque : la victoire consomme la fenêtre (le gardien retourne
-              dans sa tanière), la DÉFAITE non — tant que l'heure court, la
-              revanche est là. C'est l'appelant qui le dit : lui seul connaît
-              l'heure de fin. */}
+        <div className="flex w-full max-w-sm flex-col gap-2.5">
+          {/* La victoire consomme la fenêtre, la DÉFAITE non : tant que l'heure
+              court, la revanche est là. C'est l'appelant qui le dit. */}
           {variant === 'traque' ? (
             canRetry ? (
-              <Button size="lg" onClick={() => start(false)}>
-                <RotateCcw className="size-4" /> Revanche
+              <Button size="xl" shine className="w-full" onClick={() => start(false)}>
+                <RotateCcw /> Revanche
               </Button>
             ) : null
           ) : (
-            <Button
-              size="lg"
-              onClick={() => start(eventFight && outcome !== 'won')}
-            >
-              <RotateCcw className="size-4" />{' '}
-              {outcome === 'won' ? 'Rejouer' : 'Revanche'}
+            <Button size="xl" className="w-full" onClick={() => start(eventFight && outcome !== 'won')}>
+              <RotateCcw /> {outcome === 'won' ? 'Rejouer' : 'Revanche'}
             </Button>
           )}
           {variant === 'arena' ? null : (
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={onExit}
-              className={
-                onDark
-                  ? 'border-white/40 bg-transparent text-white hover:bg-white/10 hover:text-white'
-                  : ''
-              }
-            >
-              {variant === 'traque' ? "Retour à l'arène" : 'Retour'}
+            <Button variant="secondary" size="lg" className="w-full" onClick={onExit}>
+              {variant === 'traque' ? 'Retour à l’arène' : 'Retour'}
             </Button>
           )}
         </div>

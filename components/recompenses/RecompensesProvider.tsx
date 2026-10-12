@@ -13,6 +13,7 @@ import {
 } from 'react'
 import { createPortal } from 'react-dom'
 import { CristalIcon } from '@/components/ui/MonnaieIcon'
+import XpIcon from '@/components/ui/XpIcon'
 import {
   agregerGains,
   definition,
@@ -106,9 +107,37 @@ type Jeton = {
   retard: number
   duree: number
   arc: number
+  saut: Origine
 }
 
 let prochainId = 0
+
+/** La classe qui fait descendre le bandeau caché le temps d'une volée. */
+const CLASSE_VOLEE = 'hud-volee'
+/** Après l'atterrissage, le temps de voir la barre se remplir (ms). */
+const BANDEAU_TENU = 1600
+
+/**
+ * Le centre d'une cible, À LA PLACE QU'ELLE AURA une fois le bandeau descendu.
+ *
+ * En plein écran (quiz, dictée, course), le bandeau est monté mais rangé
+ * au-dessus de l'écran (`data-hud-dissimule`) : c'est ce qui manquait — sans
+ * cible, rien ne volait à la fin d'un quiz. Le bandeau est `fixed top-0` et ne
+ * bouge qu'en `translateY` : on retire ce décalage pour viser sa place finale,
+ * sans attendre la fin de sa descente.
+ */
+function cibleDe(cible: string): { arrivee: Origine; dissimule: boolean } | null {
+  const elements = document.querySelectorAll(selecteurCible(cible))
+  const arrivee = premierCentreVisible(elements)
+  if (!arrivee) return null
+  for (const el of elements) {
+    const bandeau = el.closest('[data-hud-dissimule]')
+    if (!bandeau) continue
+    const decalage = bandeau.getBoundingClientRect().top
+    return { arrivee: { x: arrivee.x, y: arrivee.y - decalage }, dissimule: true }
+  }
+  return { arrivee, dissimule: false }
+}
 
 export default function RecompensesProvider({
   children,
@@ -120,10 +149,13 @@ export default function RecompensesProvider({
   // Le rafraîchissement de fin de volée, annulé si une seconde volée part
   // avant : deux `router.refresh()` rapprochés rejoueraient la page pour rien.
   const resyncRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const voleeRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(
     () => () => {
       if (resyncRef.current) clearTimeout(resyncRef.current)
+      if (voleeRef.current) clearTimeout(voleeRef.current)
+      document.documentElement.classList.remove(CLASSE_VOLEE)
     },
     [],
   )
@@ -148,16 +180,17 @@ export default function RecompensesProvider({
 
       const nouveaux: Jeton[] = []
       let finDeVolee = 0
+      let bandeauCache = false
 
       for (const gain of propres) {
         const cible = definition(gain.unite).cible
         // Aucune pastille pour cette unité (couronnes, trophées), ou bandeau
         // masqué (écran large) : le gain reste affiché dans le panneau, il ne
         // traverse pas l'écran vers un compteur qui n'existe pas.
-        const arrivee = cible
-          ? premierCentreVisible(document.querySelectorAll(selecteurCible(cible)))
-          : null
-        if (!arrivee) continue
+        const trouvee = cible ? cibleDe(cible) : null
+        if (!trouvee) continue
+        const { arrivee } = trouvee
+        if (trouvee.dissimule) bandeauCache = true
 
         const depart = origines?.[gain.unite] ?? centreEcran
 
@@ -180,6 +213,7 @@ export default function RecompensesProvider({
             retard: v.retard,
             duree: v.duree,
             arc: v.arc,
+            saut: { x: v.sautX, y: v.sautY },
           })
         }
         finDeVolee = Math.max(finDeVolee, dureeVolee(n))
@@ -192,6 +226,17 @@ export default function RecompensesProvider({
 
       if (finDeVolee === 0) return
 
+      // Le bandeau caché du plein écran descend le temps de la volée, puis
+      // remonte une fois la barre remplie : l'élève VOIT son XP arriver.
+      if (bandeauCache) {
+        document.documentElement.classList.add(CLASSE_VOLEE)
+        if (voleeRef.current) clearTimeout(voleeRef.current)
+        voleeRef.current = setTimeout(
+          () => document.documentElement.classList.remove(CLASSE_VOLEE),
+          finDeVolee + BANDEAU_TENU,
+        )
+      }
+
       // LE RECALAGE, UNE FOIS LA VOLÉE POSÉE. Les compteurs ont monté de façon
       // optimiste ; ce rafraîchissement va rechercher les vraies valeurs et
       // remet les deltas à zéro. Le faire AVANT l'atterrissage ferait sauter le
@@ -203,6 +248,17 @@ export default function RecompensesProvider({
   )
 
   const valeur = useMemo<Contexte>(() => ({ celebrer }), [celebrer])
+
+  // Développement seulement : rejouer une volée depuis la console
+  // (`__celebrer([{ unite: 'xp', montant: 40 }])`) sans finir un quiz.
+  useEffect(() => {
+    if (process.env.NODE_ENV !== 'development') return
+    const w = window as unknown as { __celebrer?: Contexte['celebrer'] }
+    w.__celebrer = celebrer
+    return () => {
+      delete w.__celebrer
+    }
+  }, [celebrer])
 
   const retirer = useCallback((id: number) => {
     setJetons((prec) => prec.filter((j) => j.id !== id))
@@ -250,17 +306,20 @@ function JetonEnVol({
   onFin: (id: number) => void
 }) {
   const ref = useRef<HTMLDivElement>(null)
+  const eclatRef = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
     const el = ref.current
     if (!el) return
 
-    const { depart, arrivee, arc } = jeton
-    // Le sommet de l'arc : à mi-chemin, remonté. Sans lui les jetons suivent
-    // une ligne droite — le geste devient un glissement, pas un jet.
+    const { depart, arrivee, arc, saut } = jeton
+    // LE JAILLISSEMENT : le jeton est projeté autour du départ, s'y suspend,
+    // puis part (Clash Royale). Le sommet de l'arc est pris depuis ce point.
+    const projete = { x: depart.x + saut.x, y: depart.y + saut.y }
+    const suspendu = { x: projete.x, y: projete.y - 6 }
     const sommet = {
-      x: (depart.x + arrivee.x) / 2,
-      y: (depart.y + arrivee.y) / 2 - arc,
+      x: (projete.x + arrivee.x) / 2,
+      y: (projete.y + arrivee.y) / 2 - arc,
     }
     const pose = (p: Origine, echelle: number) =>
       `translate3d(${p.x}px, ${p.y}px, 0) translate(-50%, -50%) scale(${echelle})`
@@ -271,6 +330,19 @@ function JetonEnVol({
       // Le compteur monte À L'ATTERRISSAGE, jeton par jeton — c'est là qu'est
       // tout l'effet : le solde ne saute pas, il s'égrène.
       emettreGain({ unite: jeton.unite, montant: jeton.part })
+      // L'éclat à l'arrivée : un anneau qui s'ouvre sur la pastille.
+      const eclat = eclatRef.current
+      if (eclat && typeof eclat.animate === 'function') {
+        const fin = eclat.animate(
+          [
+            { transform: pose(arrivee, 0.3), opacity: 0.95 },
+            { transform: pose(arrivee, 1.5), opacity: 0 },
+          ],
+          { duration: 360, easing: 'cubic-bezier(0.2, 0.7, 0.3, 1)', fill: 'both' },
+        )
+        fin.addEventListener('finish', () => onFin(jeton.id))
+        return
+      }
       onFin(jeton.id)
     }
 
@@ -286,16 +358,15 @@ function JetonEnVol({
 
     const animation = el.animate(
       [
-        { transform: pose(depart, 0.4), opacity: 0, offset: 0 },
-        { transform: pose(depart, 1), opacity: 1, offset: 0.14 },
-        { transform: pose(sommet, 1.08), opacity: 1, offset: 0.56 },
-        { transform: pose(arrivee, 0.42), opacity: 0.9, offset: 1 },
+        { transform: pose(depart, 0.2), opacity: 0, offset: 0, easing: 'cubic-bezier(0.2, 0.9, 0.3, 1.25)' },
+        { transform: pose(projete, 1.25), opacity: 1, offset: 0.2, easing: 'ease-out' },
+        { transform: pose(suspendu, 1.1), opacity: 1, offset: 0.36, easing: 'cubic-bezier(0.5, 0, 0.75, 0.3)' },
+        { transform: pose(sommet, 1), opacity: 1, offset: 0.72, easing: 'cubic-bezier(0.3, 0.2, 0.6, 1)' },
+        { transform: pose(arrivee, 0.5), opacity: 1, offset: 1 },
       ],
       {
         duration: jeton.duree,
         delay: jeton.retard,
-        // Départ vif, arrivée qui se pose : la courbe d'un objet lancé.
-        easing: 'cubic-bezier(0.32, 0, 0.28, 1)',
         fill: 'both',
       },
     )
@@ -311,13 +382,23 @@ function JetonEnVol({
   }, [])
 
   return (
-    <div
-      ref={ref}
-      className="absolute top-0 left-0 will-change-transform"
-      style={{ opacity: 0 }}
-    >
-      <IconeJeton unite={jeton.unite} />
-    </div>
+    <>
+      <div
+        ref={ref}
+        className="absolute top-0 left-0 will-change-transform"
+        style={{ opacity: 0 }}
+      >
+        <IconeJeton unite={jeton.unite} />
+      </div>
+      <span
+        ref={eclatRef}
+        className={
+          'absolute top-0 left-0 block size-9 rounded-full border-[3px] ' +
+          (jeton.unite === 'gemme' ? 'border-primary/80' : 'border-highlight')
+        }
+        style={{ opacity: 0 }}
+      />
+    </>
   )
 }
 
@@ -326,12 +407,12 @@ function JetonEnVol({
  * la pastille visée — c'est ce qui fait qu'on reconnaît l'objet qui arrive
  * comme celui qui est déjà là-haut.
  *
- * L'XP n'a pas d'illustration : elle prend le médaillon violet à liseré or de
- * l'écusson de niveau, en miniature. Même raison, même effet.
+ * L'XP vole en ÉCLAIRS, l'icône unique de l'XP (Lucas, 05/10/2026 : « je n'ai
+ * pas vu d'éclairs apparaître et se diriger vers la barre de niveau »).
  */
 function IconeJeton({ unite }: { unite: UniteGain }) {
-  if (unite === 'gemme') return <CristalIcon className="size-6 drop-shadow-md" />
-  return (
-    <span className="block size-5 rounded-full bg-gradient-to-b from-primary to-[color-mix(in_oklch,var(--primary),black_24%)] ring-2 ring-highlight/80 shadow-[inset_0_1px_0_rgba(255,255,255,0.5),0_2px_6px_rgba(0,0,0,0.35)]" />
-  )
+  if (unite === 'gemme') {
+    return <CristalIcon className="size-8 drop-shadow-[0_3px_4px_rgba(40,20,80,0.45)]" />
+  }
+  return <XpIcon className="size-8 drop-shadow-[0_3px_4px_rgba(40,20,80,0.45)]" />
 }

@@ -5,6 +5,7 @@ import { getCurrentUser } from '@/lib/supabase/user'
 import { parseBilan, type BilanPartie } from '@/lib/palmares/bilan'
 import { parseEchelle, type LigneEchelle, type Periode } from '@/lib/palmares/echelle'
 import { isEpreuveId, scorePlausible } from '@/lib/palmares/epreuves'
+import { deposerScoreDuDefi } from '@/app/amis/defi-actions'
 
 /**
  * Enregistre le SCORE d'une partie d'un mode de l'Arène et rend son bilan en
@@ -30,6 +31,10 @@ export async function recordModeScore(
   const user = await getCurrentUser()
   if (!user) return null
 
+  // Un défi d'ami court sur ce mode (cookie posé par l'onglet Amis) : le score
+  // y est déposé aussi, en même temps que le palmarès.
+  const defiP = deposerScoreDuDefi(mode, cleanScore).catch(() => {})
+
   const supabase = await createClient()
   const { data, error } = await supabase.rpc('record_mode_score', {
     p_mode_id: mode,
@@ -37,6 +42,7 @@ export async function recordModeScore(
     p_ms: cleanMs,
   })
 
+  await defiP
   if (error || !data) {
     if (error) {
       console.error('[defi] score de mode non enregistré:', error.message)

@@ -176,6 +176,13 @@ export type VolJeton = {
   ecartX: number
   /** Hauteur de l'arc, en px — le jeton monte avant de tomber sur la cible. */
   arc: number
+  /**
+   * LE JAILLISSEMENT, façon Clash Royale : avant de filer vers le bandeau, le
+   * jeton est projeté autour de son point de départ (px), s'y suspend un
+   * instant, puis part. Sans ce temps, la volée se lit comme un glissement.
+   */
+  sautX: number
+  sautY: number
 }
 
 /**
@@ -193,6 +200,9 @@ export type VolJeton = {
  *  · ils s'écartent en éventail (`ecartX`) puis se rejoignent sur la cible,
  *    ce qui donne l'entonnoir caractéristique du geste.
  */
+/** L'angle d'or (rad) : la répartition la plus régulière d'une gerbe. */
+const ANGLE_OR = Math.PI * (3 - Math.sqrt(5))
+
 export function volJeton(i: number, n: number): VolJeton {
   const total = Math.max(1, Math.floor(n))
   const index = Math.min(Math.max(0, Math.floor(i)), total - 1)
@@ -200,12 +210,16 @@ export function volJeton(i: number, n: number): VolJeton {
 
   return {
     retard: Math.round(index * ecart),
-    duree: 620 + (index % 3) * 70,
+    duree: 980 + (index % 3) * 70,
     // Éventail centré : le jeton du milieu part droit, les autres s'écartent.
     ecartX: Math.round((index - (total - 1) / 2) * 22),
     // L'arc alterne haut/bas d'un jeton à l'autre pour que les trajectoires ne
     // se superposent pas en une seule courbe épaisse.
     arc: 54 + (index % 4) * 16,
+    // L'angle d'or répartit les jetons autour du départ sans tirage au sort :
+    // aucun ne tombe sur un autre, et l'image se rejoue à l'identique.
+    sautX: Math.round(Math.cos(index * ANGLE_OR) * (46 + (index % 3) * 14)),
+    sautY: Math.round(Math.sin(index * ANGLE_OR) * (34 + (index % 3) * 10) - 18),
   }
 }
 

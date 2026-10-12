@@ -124,7 +124,9 @@ export default function TopHud({
   //
   // ⚠️ APPELÉ ICI, AVANT le `return null` du parcours plein écran : un hook
   // placé après un retour anticipé ne s'exécute pas à tous les rendus.
-  const { ref: refXp } = useEncaissement('xp', level)
+  // La base est l'XP cumulée (et non plus le niveau) : chaque éclair qui tombe
+  // fait AVANCER LA BARRE, jeton après jeton, comme chez Clash Royale.
+  const { ref: encaisseXpRef, delta: xpGagnee } = useEncaissement('xp', xp?.actuel ?? level)
 
   const togglePurse = (purse: Exclude<OpenPurse, null>) =>
     setOpened({ purse: openPurse === purse ? null : purse, path: pathname })
@@ -162,14 +164,28 @@ export default function TopHud({
   // Parcours d'accueil plein écran (façon Duolingo) : aucun bandeau. Garde
   // indispensable même si le serveur filtre déjà : en navigation CLIENT, le
   // layout racine n'est pas re-rendu, donc ce composant reste monté.
-  if (isHudHidden(pathname)) {
+  //
+  // ⚠️ SAUF POUR UN ÉLÈVE CONNECTÉ : le bandeau reste alors monté, rangé
+  // au-dessus de l'écran (`data-hud-dissimule`). Une fin de quiz y fait voler
+  // ses éclairs et ses gemmes ; il descend le temps de la volée
+  // (`html.hud-volee`, posée par RecompensesProvider) puis remonte.
+  const dissimule = isHudHidden(pathname)
+  if (dissimule && level === null) {
     return null
   }
 
   const accountHref = userLabel ? '/compte' : '/login'
   const accountActive = pathname === '/compte' || pathname.startsWith('/login')
   const connected = level !== null
-  const pct = Math.round(progress * 100)
+  // La barre suit l'XP encaissée pendant la volée ; elle plafonne à 100 % —
+  // la fête de niveau prend le relais au rafraîchissement qui suit.
+  const pct =
+    xp && xp.prochain !== null && xp.prochain > xp.plancher
+      ? Math.min(
+          100,
+          Math.round(((xp.actuel + xpGagnee - xp.plancher) / (xp.prochain - xp.plancher)) * 100),
+        )
+      : Math.round(progress * 100)
   // Scène sombre (arène) : les pastilles prennent le verre de nuit du HUD de
   // jeu au lieu du crème des onglets clairs. Un seul matériau par écran.
   // L'arène elle-même porte la gélule lavande, comme les onglets clairs
@@ -196,10 +212,18 @@ export default function TopHud({
   return (
     // Sur un mode de jeu, le bandeau s'efface dès qu'on défile et revient en
     // haut de page (`html.hud-replie`, posée par components/useHudAuDefilement).
-    <header className="pointer-events-none fixed inset-x-0 top-0 z-50 flex h-14 items-center gap-2 px-3 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none md:hidden [html.hud-replie_&]:-translate-y-full [html.hud-replie_&]:opacity-0">
+    <header
+      data-hud-dissimule={dissimule ? '' : undefined}
+      aria-hidden={dissimule ? true : undefined}
+      className={cn(
+        'pointer-events-none fixed inset-x-0 top-0 z-50 flex h-14 items-center gap-2 px-3 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none md:hidden [html.hud-replie_&]:-translate-y-full [html.hud-replie_&]:opacity-0',
+        dissimule &&
+          'invisible -translate-y-[130%] opacity-0 duration-300 [html.hud-volee_&]:visible [html.hud-volee_&]:translate-y-0 [html.hud-volee_&]:opacity-100 [&_*]:pointer-events-none!',
+      )}
+    >
       {connected ? (
         <>
-          <FeteNiveau level={level} levelTitle={levelTitle} paliersOuverts={paliersOuverts} xp={xp} />
+          {dissimule ? null : <FeteNiveau level={level} levelTitle={levelTitle} paliersOuverts={paliersOuverts} xp={xp} />}
           {/* Niveau : écusson de jeu flottant — disque violet ciselé (dégradé,
               reflet haut + liseré or, façon médaillon d'arène en miniature),
               libellé violet marqué, et ruban doré de progression surmonté du
@@ -208,9 +232,6 @@ export default function TopHud({
               pour tenir dans l'écran depuis le bord gauche. */}
           {
             <div
-              ref={refXp}
-              // La cible du vol des récompenses (cf. lib/gains, UNITES).
-              data-hud-cible="xp"
               className={cn(
                 'pointer-events-auto relative flex min-w-0 flex-1 items-center gap-2 rounded-full py-1 pl-1',
                 gems === null ? 'pr-3' : 'pr-0',
@@ -224,7 +245,7 @@ export default function TopHud({
                   le numéro de niveau. */}
               <span className="relative shrink-0">
                 <span
-                  className="font-heading relative flex size-9 items-center justify-center overflow-hidden rounded-full bg-gradient-to-b from-primary to-[color-mix(in_oklch,var(--primary),black_24%)] text-sm font-extrabold text-primary-foreground tabular-nums ring-2 ring-highlight/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_2px_5px_rgba(0,0,0,0.3)]"
+                  className="font-heading relative flex size-10 items-center justify-center overflow-hidden rounded-full bg-gradient-to-b from-primary to-[color-mix(in_oklch,var(--primary),black_24%)] text-sm font-extrabold text-primary-foreground tabular-nums ring-2 ring-highlight/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.45),0_2px_5px_rgba(0,0,0,0.3)]"
                   aria-hidden="true"
                 >
                   {avatar ? (
@@ -255,7 +276,16 @@ export default function TopHud({
                   « Niveau 7 ⚡ ×1,3 » — l'éclair d'XP, puis le multiplicateur
                   qu'on touche pour savoir ce que c'est — et dessous la barre,
                   sur TOUTE la largeur que l'écusson laisse libre. */}
-              <div ref={niveauRef} className="flex min-w-0 flex-1 flex-col gap-1 pr-1">
+              {/* LA CIBLE DES ÉCLAIRS : le bloc « Niveau + barre », pas tout
+                  l'écusson — dont le centre tombait sur les gemmes. */}
+              <div
+                ref={(el) => {
+                  niveauRef.current = el
+                  encaisseXpRef.current = el
+                }}
+                data-hud-cible="xp"
+                className="relative flex min-w-0 flex-1 flex-col gap-1 pr-1"
+              >
                 <div
                   className={cn(
                     'font-heading flex items-center gap-1 text-[13px] leading-none font-extrabold whitespace-nowrap',
@@ -275,6 +305,14 @@ export default function TopHud({
                     Niveau {level}
                     <XpIcon className="size-3.5" />
                   </button>
+                  {xpGagnee > 0 ? (
+                    <span
+                      key={xpGagnee}
+                      className="hud-gain-xp font-heading absolute -top-1 right-1 rounded-full bg-highlight px-1.5 py-0.5 text-[11px] leading-none font-extrabold text-foreground tabular-nums"
+                    >
+                      +{xpGagnee}
+                    </span>
+                  ) : null}
                   {nbAmis !== null ? (
                     <span ref={multiplicateurRef} className="pointer-events-auto flex shrink-0">
                       <MultiplicateurPill
@@ -306,7 +344,8 @@ export default function TopHud({
                   >
                     <span
                       className={cn(
-                        'block h-full rounded-full transition-[width] duration-500',
+                        'block h-full rounded-full transition-[width] duration-300 ease-out',
+                        xpGagnee > 0 && 'hud-barre-lueur',
                         dark
                           ? 'bg-gradient-to-r from-highlight to-accent shadow-[0_0_6px_color-mix(in_oklch,var(--highlight),transparent_45%)]'
                           : 'bg-primary',

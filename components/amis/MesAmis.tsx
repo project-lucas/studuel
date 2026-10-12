@@ -9,7 +9,10 @@ import { FenetreAjouterAmi } from '@/components/FriendAddButton'
 import PortraitJoueur from '@/components/amis/PortraitJoueur'
 import CompteXp from '@/components/amis/ligue/CompteXp'
 import CoffreLigne from '@/components/amis/ligue/CoffreLigne'
-import { useDuelLaunch } from '@/components/amis/useDuelLaunch'
+import { BoutonDefierCoin, PanneauDefi } from '@/components/amis/DefiAmis'
+import FicheJoueur from '@/components/amis/FicheJoueur'
+import { inviterAmiAuDefi } from '@/app/amis/defi-actions'
+import { toast } from '@/lib/toast'
 import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 import { renameSquad } from '@/app/amis/actions'
 import {
@@ -56,18 +59,20 @@ import { cn } from '@/lib/utils'
 
 const NOM_PAR_DEFAUT = 'Mes amis'
 
-/** Le bouton ⚔️ d'une ligne : défier cet ami sur le Défi du jour (+XP). */
-function BoutonDefi({ id, nom, onBlocked }: { id: string; nom: string; onBlocked: () => void }) {
-  const { launch, launching } = useDuelLaunch(onBlocked)
+/** L'épée d'une ligne : défier cet ami (invitation, puis choix du mode). */
+function BoutonDefi({ nom, onDefier, enCours }: { nom: string; onDefier: () => void; enCours: boolean }) {
   return (
     <Button
       type="button"
       size="icon-sm"
       aria-label={`Défier ${nom}`}
-      disabled={launching}
-      onClick={() => launch(id)}
+      disabled={enCours}
+      onClick={(e) => {
+        e.stopPropagation()
+        onDefier()
+      }}
     >
-      {launching ? (
+      {enCours ? (
         <Check className="size-4" aria-hidden="true" />
       ) : (
         <Swords className="size-4" strokeWidth={2.6} aria-hidden="true" />
@@ -165,11 +170,16 @@ function Places({
   amis,
   nbAmis,
   onInviter,
+  onToucher,
+  enDefi,
 }: {
   amis: (JoueurAmi & { rang: number })[]
   /** Le nombre d'amis compté par le serveur (celui du multiplicateur). */
   nbAmis: number
   onInviter: () => void
+  /** Toucher un ami : sa fiche, ou le défier en mode défi. */
+  onToucher: (ami: JoueurAmi) => void
+  enDefi: boolean
 }) {
   const { occupees, anonymes, libres } = placesAmis(amis, nbAmis)
   const bonus = (
@@ -183,13 +193,22 @@ function Places({
       className="grid grid-cols-5 justify-items-center gap-x-1.5 gap-y-4"
     >
       {occupees.map((ami) => (
-        <li key={ami.id} className="relative">
-          <PortraitJoueur
-            id={ami.id}
-            portrait={ami.portrait}
-            className="size-[54px] ring-[3px] ring-primary"
-          />
-          <span className="sr-only">{ami.nom}, </span>
+        <li key={ami.id} className="relative" data-teinte="bleu">
+          <button
+            type="button"
+            onClick={() => {
+              sfx.tap()
+              onToucher(ami)
+            }}
+            aria-label={enDefi ? `Défier ${ami.nom}` : `Voir la fiche de ${ami.nom}`}
+            className={cn('block rounded-full transition-transform active:scale-90', enDefi && 'animate-pulse')}
+          >
+            <PortraitJoueur
+              id={ami.id}
+              portrait={ami.portrait}
+              className={cn('size-[54px] ring-[3px]', enDefi ? 'ring-[var(--outil)]' : 'ring-primary')}
+            />
+          </button>
           {bonus}
         </li>
       ))}
@@ -242,6 +261,8 @@ export default function MesAmis({
   canRenameSquad,
   referral,
   monAvatar = null,
+  premium = false,
+  dayKey,
 }: {
   /** Moi et mes amis, avec l'XP de la semaine et l'échelon de ligue. */
   joueurs: JoueurAmi[]
@@ -258,10 +279,43 @@ export default function MesAmis({
   canRenameSquad: boolean
   referral: ReferralSummary
   monAvatar?: AvatarAffiche | null
+  /** Studuel+ : tous les jeux se défient. */
+  premium?: boolean
+  /** Le jour (clé UTC) : le mode du jour des billets ; par défaut, celui de `maintenantIso`. */
+  dayKey?: string
 }) {
-  const [duelNotice, setDuelNotice] = useState(false)
   const [ajout, setAjout] = useState(false)
   useFermeAuMasquage(setAjout, false)
+  // LE DÉFI (05/10/2026) : l'épée de l'angle passe le bloc en mode défi ;
+  // toucher un ami l'invite (il est notifié), puis le panneau des modes
+  // s'ouvre. Hors mode défi, toucher un ami ouvre sa FICHE.
+  const [enDefi, setEnDefi] = useState(false)
+  const [cible, setCible] = useState<{ id: string; nom: string; portrait: string } | null>(null)
+  const [invitant, setInvitant] = useState<string | null>(null)
+  const [fiche, setFiche] = useState<string | null>(null)
+  const [, startDefi] = useTransition()
+  useFermeAuMasquage(setEnDefi, false)
+  useFermeAuMasquage(setFiche, null)
+
+  const defier = (ami: { id: string; nom: string; portrait: string }) => {
+    if (invitant) return
+    sfx.tap()
+    setInvitant(ami.id)
+    setFiche(null)
+    startDefi(async () => {
+      const r = await inviterAmiAuDefi(ami.id)
+      setInvitant(null)
+      setEnDefi(false)
+      if (r.ok) {
+        setCible(ami)
+      } else if (r.raison === 'absent') {
+        toast('Le défi entre amis arrive très bientôt.')
+      } else {
+        toast(`Impossible de défier ${ami.nom} pour le moment.`, 'error')
+      }
+    })
+  }
+  const toucher = (ami: JoueurAmi) => (enDefi ? defier(ami) : setFiche(ami.id))
 
   const lignes = classerAmis(joueurs)
   const amis = lignes.filter((l) => !l.moi)
@@ -280,7 +334,19 @@ export default function MesAmis({
 
   return (
     <section aria-label="Mes amis" className="carte flex flex-col gap-4 p-3.5 text-foreground">
-      <NomDuGroupe squadName={squadName} canRename={canRenameSquad} />
+      <div className="flex items-center justify-between gap-2">
+        <NomDuGroupe squadName={squadName} canRename={canRenameSquad} />
+        {amis.length > 0 ? <BoutonDefierCoin actif={enDefi} onClick={() => setEnDefi((v) => !v)} /> : null}
+      </div>
+      {enDefi ? (
+        <p
+          role="status"
+          data-teinte="bleu"
+          className="font-heading -mt-2 rounded-2xl bg-[color-mix(in_oklch,var(--outil),white_85%)] px-3 py-2 text-center text-sm font-extrabold text-[var(--outil)]"
+        >
+          Touche l’ami que tu veux défier
+        </p>
+      ) : null}
 
       {/* LE MULTIPLICATEUR, en grand : c'est lui que les amis font monter. */}
       <div className="flex items-center gap-3.5">
@@ -307,7 +373,7 @@ export default function MesAmis({
         </div>
       </div>
 
-      <Places amis={amis} nbAmis={nbAmis} onInviter={() => setAjout(true)} />
+      <Places amis={amis} nbAmis={nbAmis} onInviter={() => setAjout(true)} onToucher={toucher} enDefi={enDefi} />
 
       <p className="-mb-1 text-center text-xs font-semibold text-muted-foreground">
         {complet ? (
@@ -363,7 +429,14 @@ export default function MesAmis({
               <li
                 key={l.id}
                 data-moi={l.moi || undefined}
-                className={cn('flex items-center gap-2 rounded-2xl px-2 py-1.5', l.moi && 'bg-primary/10 ring-2 ring-primary/50')}
+                data-teinte="bleu"
+                onClick={l.moi ? undefined : () => toucher(l)}
+                className={cn(
+                  'flex items-center gap-2 rounded-2xl px-2 py-1.5',
+                  l.moi && 'bg-primary/10 ring-2 ring-primary/50',
+                  !l.moi && 'cursor-pointer active:bg-muted/60',
+                  !l.moi && enDefi && 'ring-2 ring-[var(--outil)]',
+                )}
               >
                 <span className="font-heading w-4 shrink-0 text-center text-sm font-extrabold text-muted-foreground tabular-nums">
                   {l.rang}
@@ -405,17 +478,14 @@ export default function MesAmis({
                   </span>
                 </span>
                 <CompteXp xp={l.xp} accent={l.moi} />
-                {l.moi ? null : <BoutonDefi id={l.id} nom={l.nom} onBlocked={() => setDuelNotice(true)} />}
+                {l.moi ? null : <BoutonDefi nom={l.nom} enCours={invitant === l.id} onDefier={() => defier(l)} />}
               </li>
             )
           })}
         </ol>
       ) : null}
-      {duelNotice ? (
-        <p role="status" className="rounded-2xl bg-muted/60 p-2.5 text-xs font-medium text-foreground/80">
-          Ton défi du jour est déjà lancé — une seule mission par jour, reviens demain ⚔️
-        </p>
-      ) : null}
+      <PanneauDefi cible={cible} dayKey={dayKey ?? maintenantIso.slice(0, 10)} premium={premium} onClose={() => setCible(null)} />
+      <FicheJoueur id={fiche} onClose={() => setFiche(null)} onDefier={(id, nom) => defier({ id, nom, portrait: amis.find((a) => a.id === id)?.portrait ?? '' })} />
 
       <FenetreAjouterAmi
         open={ajout}

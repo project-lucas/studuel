@@ -29,7 +29,8 @@ import styles from '@/components/moi/carnet/Bureau.module.css'
 // la photo du user et son nom »). Un carnet à spirale posé sur un bureau :
 //   · la page de garde — la photo scotchée et le nom ; en face, la série, les
 //     trophées, le niveau et le travail de la semaine ;
-//   · quatre intercalaires — Progrès, Amis, Collection, Palmarès — dont le
+//   · trois intercalaires — Palmarès, Amis, Collection (05/10/2026 : Progrès
+//     est parti, sa semaine de travail tient sur la page de garde) — dont le
 //     rôle de chaque double page est écrit dans components/moi/carnet/pagesMoi.
 // Les pages tournent au doigt ou à l'onglet (components/moi/carnet/Carnet) ;
 // chaque page ouvre son détail complet dans une feuille, comme les tuiles du
@@ -82,10 +83,9 @@ export type EcranMoiProps = {
 
 /** Les intercalaires, dans l'ordre des doubles pages (la page de garde n'en a pas). */
 const ONGLETS: readonly OngletCarnet[] = [
-  { titre: 'Progrès', teinte: 'jaune' },
+  { titre: 'Palmarès', teinte: 'violet' },
   { titre: 'Amis', teinte: 'rose' },
   { titre: 'Collection', teinte: 'vert' },
-  { titre: 'Palmarès', teinte: 'violet' },
 ]
 
 export default function EcranMoi(props: EcranMoiProps) {

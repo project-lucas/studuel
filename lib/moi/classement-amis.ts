@@ -40,6 +40,10 @@ export type AmiClasse = {
   secondesSemaine: number
   /** Le cumul de toujours, en secondes. */
   secondes: number
+  /** L'XP cumulée ; null tant que la 558 n'est pas en base. */
+  xp?: number | null
+  /** L'XP gagnée depuis lundi ; null tant que la 558 n'est pas en base. */
+  xpSemaine?: number | null
 }
 
 export type Mesure = 'trophees' | 'temps'
@@ -76,6 +80,9 @@ export function lireClassementAmis(brut: unknown): AmiClasse[] {
         tropheesSemaine: entier(l.trophees_semaine),
         secondesSemaine: Math.max(0, entier(l.secondes_semaine)),
         secondes: Math.max(0, entier(l.secondes)),
+        xp: l.xp === undefined || l.xp === null ? null : Math.max(0, entier(l.xp)),
+        xpSemaine:
+          l.xp_semaine === undefined || l.xp_semaine === null ? null : Math.max(0, entier(l.xp_semaine)),
       },
     ]
   })

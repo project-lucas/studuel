@@ -1,0 +1,636 @@
+/* ==========================================================================
+   LE SOMMAIRE — le contenu de la porte « Cours » d'un dossier (05/10/2026).
+
+   Maquette validée par Lucas (assets-sources/maquettes/matiere-contenu.html) :
+   les thèmes en cartes pleine largeur, celui à travailler DÉJÀ ouvert, chaque
+   fiche sur une ligne avec SON bouton (« Cours », « Quiz », « Revoir »).
+
+   Trois règles de toucher, tenues ici :
+     · toute cible fait au moins 44 px de haut (la ligne, le bouton, l'étoile) ;
+     · tout ce qui se touche RÉPOND dans l'image qui suit, par `transform` ou
+       `opacity` — jamais par une hauteur, une ombre ou un fond animés ;
+     · rien ne flotte sur le contenu : la loupe est dans la rangée des rayons.
+
+   Module et non globals.css : la feuille globale ne se recompilait plus en
+   développement.
+   ========================================================================== */
+
+/* ─────────────────────────────── les outils : rayons et recherche */
+
+.outils {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+/* Les rayons de la porte Cours, en segment lavande. */
+.segment {
+  display: flex;
+  flex: 1;
+  gap: 2px;
+  min-width: 0;
+  padding: 3px;
+  border-radius: 999px;
+  background: var(--secondary);
+  box-shadow: inset 0 0 0 1.5px color-mix(in oklch, var(--primary), transparent 86%);
+}
+.rayon {
+  display: grid;
+  flex: 1 1 auto;
+  place-items: center;
+  min-width: 0;
+  height: 2.375rem;
+  padding: 0 0.375rem;
+  border-radius: 999px;
+  color: color-mix(in oklch, var(--secondary-foreground), transparent 25%);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: transform 90ms ease-out;
+}
+.rayon:active {
+  transform: scale(0.96);
+}
+.rayon[aria-current='page'] {
+  background: var(--card);
+  color: var(--primary);
+  box-shadow: 0 1px 3px color-mix(in oklch, var(--primary), transparent 70%);
+  cursor: default;
+}
+.rayon:focus-visible,
+.loupe:focus-visible,
+.fauxChamp:focus-visible,
+.etoile:focus-visible,
+.teteCorps:focus-visible,
+.ficheCorps:focus-visible,
+.aller:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.loupe {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--card);
+  color: var(--primary);
+  box-shadow: var(--carte-ombre);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: transform 90ms ease-out;
+}
+.loupe:active {
+  transform: scale(0.92);
+}
+
+/* Sans rayons, la rangée entière EST la recherche : un faux champ, qui devient
+   le vrai au toucher. */
+.fauxChamp {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 0.5rem;
+  height: 2.75rem;
+  padding: 0 1rem;
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--muted-foreground);
+  box-shadow: var(--carte-ombre);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-align: left;
+  cursor: text;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.fauxChamp svg {
+  color: var(--primary);
+}
+
+.champ {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+.champ > svg {
+  position: absolute;
+  top: 50%;
+  left: 0.9375rem;
+  transform: translateY(-50%);
+  color: var(--primary);
+  pointer-events: none;
+}
+.saisie {
+  width: 100%;
+  height: 2.75rem;
+  padding: 0 2.875rem 0 2.75rem;
+  border-radius: 999px;
+  border: 2px solid var(--primary);
+  background: var(--card);
+  color: var(--foreground);
+  /* 16 px : en dessous, iOS zoome sur le champ au focus. */
+  font-size: 1rem;
+  font-weight: 700;
+  outline: none;
+  box-shadow: 0 0 0 4px color-mix(in oklch, var(--primary), transparent 84%);
+}
+.saisie::placeholder {
+  color: var(--muted-foreground);
+  font-weight: 600;
+}
+.fermer {
+  position: absolute;
+  top: 50%;
+  right: 0.375rem;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--secondary);
+  color: var(--primary);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+/* 32 px dessinés, 44 touchés. */
+.fermer::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+}
+.bilan {
+  margin-top: 0.625rem;
+  padding-left: 0.25rem;
+  font-size: 0.78125rem;
+  font-weight: 800;
+  color: var(--muted-foreground);
+}
+
+/* ─────────────────────────────── les thèmes */
+
+.liste {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-top: 0.75rem;
+}
+.monde {
+  overflow: hidden;
+  border-radius: 1.375rem;
+  background: var(--card);
+  color: var(--card-foreground);
+  box-shadow: var(--carte-ombre);
+}
+/* Un contrôle annoncé : le thème est cerclé de jaune, la couleur de ce qui
+   compte (une ombre intérieure : la carte ne bouge pas d'un pixel). */
+.monde[data-presse] {
+  position: relative;
+}
+/* Le cercle est posé PAR-DESSUS les lignes : en ombre intérieure de la carte,
+   il passait sous le fond d'une fiche dépliée et s'interrompait à sa hauteur. */
+.monde[data-presse]::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 2.5px var(--highlight);
+  pointer-events: none;
+}
+
+.tete {
+  display: flex;
+  align-items: center;
+}
+.teteCorps {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 0.6875rem;
+  min-width: 0;
+  min-height: 4rem;
+  padding: 0.625rem 0 0.625rem 0.625rem;
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.teteCorps:active .anneau {
+  transform: scale(0.94);
+}
+.anneau {
+  position: relative;
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  color: var(--primary);
+  transition: transform 90ms ease-out;
+}
+.anneau > svg {
+  position: absolute;
+  inset: 0;
+  transform: rotate(-90deg);
+}
+.anneauRond {
+  display: grid;
+  place-items: center;
+  width: 1.9375rem;
+  height: 1.9375rem;
+  border-radius: 50%;
+  background: var(--secondary);
+}
+.anneau[data-etat='termine'] .anneauRond {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+.teteQuoi {
+  flex: 1;
+  min-width: 0;
+}
+.teteTitre {
+  display: block;
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 0.96875rem;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.teteMeta {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--muted-foreground);
+}
+.teteMeta[data-etat='termine'] {
+  color: var(--success);
+}
+.chevron {
+  flex: none;
+  color: var(--muted-foreground);
+  transition: transform 160ms ease-out;
+}
+.monde[data-ouvert] .chevron {
+  transform: rotate(180deg);
+}
+/* 36 px dessinés, 44 touchés : la zone déborde, le dessin non. */
+.etoile {
+  position: relative;
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.75rem;
+  margin-right: 0.25rem;
+  border-radius: 50%;
+  color: color-mix(in oklch, var(--foreground), transparent 78%);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: transform 90ms ease-out;
+}
+.etoile::after {
+  content: '';
+  position: absolute;
+  inset: 0 -4px;
+}
+.etoile:active {
+  transform: scale(0.86);
+}
+.etoile[aria-pressed='true'] {
+  color: var(--highlight);
+}
+.etoile[aria-pressed='true'] svg {
+  fill: var(--highlight);
+}
+
+/* ─────────────────────────────── les fiches */
+
+.fiches {
+  border-top: 1px solid color-mix(in oklch, var(--foreground), transparent 92%);
+}
+.fiche {
+  display: flex;
+  align-items: center;
+}
+.ligne + .ligne {
+  border-top: 1px solid color-mix(in oklch, var(--foreground), transparent 94%);
+}
+.fiche[data-depliee],
+.supports {
+  background: color-mix(in oklch, var(--secondary), white 55%);
+}
+/* La ligne se touche partout : elle déplie les quatre supports de la fiche. */
+.ficheCorps {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 0.625rem;
+  min-width: 0;
+  min-height: 3.5rem;
+  padding: 0.5625rem 0.375rem 0.5625rem 0.875rem;
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.ficheCorps:active .num {
+  transform: scale(0.9);
+}
+.num {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 0.625rem;
+  background: color-mix(in oklch, var(--primary), transparent 90%);
+  color: var(--primary);
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 0.9375rem;
+  transition: transform 90ms ease-out;
+}
+/* Un rang à trois chiffres (le rayon des 260 fiches de lecture). */
+.num[data-long] {
+  font-size: 0.75rem;
+}
+/* Le vert est un ÉTAT : la fiche est terminée. */
+.num[data-fait] {
+  background: var(--success);
+  color: var(--success-foreground);
+}
+.ficheQuoi {
+  flex: 1;
+  min-width: 0;
+}
+.ficheTitre {
+  display: block;
+  font-size: 0.90625rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+.ficheMeta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.125rem 0.375rem;
+  margin-top: 2px;
+  font-size: 0.71875rem;
+  font-weight: 700;
+  color: var(--muted-foreground);
+}
+.ficheOu {
+  color: var(--primary);
+  font-weight: 800;
+}
+.couronnes {
+  display: inline-flex;
+  gap: 1px;
+  color: var(--highlight);
+}
+.controle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.1875rem;
+  padding: 0 0.4375rem;
+  border-radius: 999px;
+  background: var(--highlight);
+  color: var(--foreground);
+  font-size: 0.65625rem;
+  font-weight: 800;
+  line-height: 1.5;
+}
+.controle[data-proche] {
+  background: var(--destructive);
+  color: white;
+}
+
+/* LE BOUTON DE LA FICHE : un lien, droit vers son cours ou son quiz. 34 px
+   dessinés, 48 touchés (la marge fait partie du lien). */
+.aller {
+  display: grid;
+  flex: none;
+  place-items: center;
+  padding: 0.4375rem 0.75rem 0.4375rem 0.375rem;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.allerPlaque {
+  display: grid;
+  place-items: center;
+  min-width: 4.25rem;
+  height: 2.125rem;
+  padding: 0 0.75rem;
+  border-radius: 999px;
+  background: var(--secondary);
+  color: var(--primary);
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 0.90625rem;
+  transition: transform 90ms ease-out;
+}
+.aller:active .allerPlaque {
+  transform: translateY(2px) scale(0.97);
+}
+/* La fiche à reprendre : la seule plaque violette pleine de la liste. */
+.aller[data-suite] .allerPlaque {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: 0 3px 0 color-mix(in oklch, var(--primary), black 28%);
+}
+.aller[data-genre='revoir'] .allerPlaque {
+  background: none;
+  color: var(--muted-foreground);
+  box-shadow: inset 0 0 0 1.5px color-mix(in oklch, var(--foreground), transparent 84%);
+}
+
+/* Les quatre supports d'une fiche dépliée, et le squelette qui tient leur
+   place le temps qu'ils arrivent. */
+.supports {
+  padding: 0 0.625rem 0.625rem;
+}
+.apparait {
+  animation: apparait 180ms ease-out backwards;
+}
+@keyframes apparait {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quizChapitre {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.625rem 0.875rem 0.75rem;
+  border-top: 1px solid color-mix(in oklch, var(--foreground), transparent 94%);
+  font-size: 0.78125rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--muted-foreground);
+}
+.quizChapitre strong {
+  color: var(--foreground);
+  font-weight: 800;
+}
+.quizOuvert {
+  padding: 0.625rem 0.75rem 0.75rem;
+  border-top: 1px solid color-mix(in oklch, var(--foreground), transparent 94%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .apparait {
+    animation: none;
+  }
+  .chevron,
+  .anneau,
+  .num,
+  .allerPlaque,
+  .etoile,
+  .loupe,
+  .rayon {
+    transition: none;
+  }
+}
+
+/* ─────────────────────────────── la porte « Exercices » : le cahier de la matière */
+
+/* Le marque-page : la première page qu'il reste à faire, liseré violet. */
+.marque {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-top: 0.75rem;
+  padding: 0.6875rem 0.75rem 0.6875rem 0.9375rem;
+  border-radius: 1.25rem;
+  background: var(--card);
+  color: var(--card-foreground);
+  box-shadow:
+    inset 4px 0 0 var(--primary),
+    var(--carte-ombre);
+}
+.marqueSur {
+  display: block;
+  font-size: 0.65625rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+.marqueTitre {
+  display: block;
+  margin-top: 1px;
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 0.96875rem;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+/* Un manuel : la ligne entière est le lien vers sa première page à faire. */
+.manuel {
+  display: flex;
+  align-items: center;
+  gap: 0.6875rem;
+  min-height: 4rem;
+  padding: 0.5625rem 0.875rem 0.5625rem 0.5625rem;
+  border-radius: 1.125rem;
+  background: var(--card);
+  color: var(--card-foreground);
+  box-shadow: var(--carte-ombre);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  transition: transform 90ms ease-out;
+}
+.manuel:active {
+  transform: translateY(2px) scale(0.99);
+}
+.manuel:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+/* La couverture : un petit livre violet, sa tranche à gauche, ses pages en bas. */
+.couverture {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2.375rem;
+  height: 3rem;
+  border-radius: 5px 9px 9px 5px;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--primary), white 14%),
+    color-mix(in oklch, var(--primary), black 22%)
+  );
+  color: var(--primary-foreground);
+  box-shadow:
+    inset 5px 0 0 rgb(0 0 0 / 0.2),
+    inset 0 -3px 0 rgb(255 255 255 / 0.55),
+    0 2px 0 color-mix(in oklch, var(--primary), black 60%);
+}
+.couverture[data-fini] {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--highlight), white 30%),
+    var(--highlight)
+  );
+  color: var(--foreground);
+}
+.manuelTitre {
+  display: block;
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 0.90625rem;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.manuelMeta {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--muted-foreground);
+}
+.pages {
+  display: block;
+  height: 5px;
+  margin-top: 0.3125rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--muted);
+}
+.pagesFaites {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--primary);
+}
+.manuelCompte {
+  flex: none;
+  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .manuel {
+    transition: none;
+  }
+}

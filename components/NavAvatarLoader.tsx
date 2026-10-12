@@ -38,15 +38,19 @@ export default async function NavAvatarLoader() {
 
   const config = normalizeAvatarConfig(data?.avatar)
 
-  // Un blason choisi (lib/portraits) : l'ÉCU ENTIER, tel que l'élève l'a
-  // choisi, sans cadre ni disque de rognage (16/09/2026). Le blason est déjà un
-  // objet détouré — écu, cerne, couronne d'or — de la même famille graphique
-  // que les quatre autres icônes de la barre ; il se pose comme elles, en
-  // `object-contain` dans toute la case.
+  // UN MÉDAILLON ROND, plus un carré (Lucas, 05/10/2026 : « que le cadre ne
+  // soit pas carré, plus propre niveau design »). Les portraits v2 sont des
+  // bustes carrés sur fond violet : posés tels quels, ils faisaient un pavé
+  // au milieu des quatre objets détourés. Le disque garde la bague d'or et le
+  // cerne prune de la famille nav, comme l'écusson du bandeau.
   const portrait = avatarPortraitSrc(config)
   if (portrait) {
-    // eslint-disable-next-line @next/next/no-img-element
-    return <img src={portrait} alt="" aria-hidden="true" className="size-full object-contain" />
+    return (
+      <span className="nav-medaillon block size-full overflow-hidden rounded-full" aria-hidden="true">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={portrait} alt="" className="size-full object-cover" />
+      </span>
+    )
   }
 
   // 96 px de rendu pour 40 px servis : net sur les écrans à densité doublée.
@@ -56,7 +60,7 @@ export default async function NavAvatarLoader() {
   // garde au moins un rond pour ne pas poser un pavé au milieu des dessins
   // détourés. Un rond nu, sans couronne ni liseré.
   return (
-    <span className="block size-full overflow-hidden rounded-full" aria-hidden="true">
+    <span className="nav-medaillon block size-full overflow-hidden rounded-full" aria-hidden="true">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={uri} alt="" className="size-full" />
     </span>

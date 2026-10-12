@@ -1,39 +1,29 @@
 import Link from 'next/link'
-import BadgeIcone from '@/components/BadgeIcone'
 import PortraitJoueur from '@/components/amis/PortraitJoueur'
-import BadgesVitrine from '@/components/moi/BadgesVitrine'
-import Classement from '@/components/moi/Classement'
 import ClassementAmis from '@/components/moi/ClassementAmis'
 import CouronneArt from '@/components/moi/CouronneArt'
 import Palmares from '@/components/moi/Palmares'
 import RythmeBarres from '@/components/moi/RythmeBarres'
-import TrajectoryCard from '@/components/moi/TrajectoryCard'
 import Vitrine from '@/components/moi/Vitrine'
 import type { DoublePage } from '@/components/moi/carnet/Carnet'
-import { AnneauCrayon, Doodle, Eclats, Filet, Souligne, type NomDoodle } from '@/components/moi/carnet/Croquis'
-import EntreeMoyenne from '@/components/moi/carnet/EntreeMoyenne'
+import { Doodle, Eclats, Filet, Souligne, type NomDoodle } from '@/components/moi/carnet/Croquis'
+import BadgesCarnet from '@/components/moi/carnet/BadgesCarnet'
 import Ouvrir from '@/components/moi/carnet/Ouvrir'
 import PageIdentite, { type IdentiteMoi } from '@/components/moi/carnet/PageIdentite'
 import type { EcranMoiProps } from '@/components/moi/EcranMoi'
-import { cadreClassement, invitationClassement, titreClassement } from '@/lib/moi/classement'
-import {
-  challengerDe,
-  classerAmisPar,
-  couronneDe,
-  libelleValeur,
-  phraseDuClassement,
-  type AmiRange,
-  type Mesure,
-} from '@/lib/moi/classement-amis'
-import { anneauRecord, libellesRecord } from '@/lib/moi/record'
+import { challengerDe } from '@/lib/moi/classement-amis'
+import { courseDeLaSemaine, libelleEpreuve, type Course, type LigneCourse } from '@/lib/moi/course-amis'
+import { libellesRecord } from '@/lib/moi/record'
+import { libelleTop, topPourcent } from '@/lib/defi/classement-arene'
 import { formatDuree } from '@/lib/moi/temps'
 import { etatVitrine, libelleBanniere } from '@/lib/moi/vitrine'
 import { epreuve, formatScore } from '@/lib/palmares/epreuves'
-import { cn } from '@/lib/utils'
 import styles from '@/components/moi/carnet/Pages.module.css'
 
 // -----------------------------------------------------------------------------
-// LES PAGES DU CARNET DE MOI (04/10/2026) — cinq doubles pages, chacune répond
+// LES PAGES DU CARNET DE MOI (04/10/2026, réordonnées le 05/10/2026 : Progrès a
+// cédé sa place au Palmarès, la semaine de travail tient sur la page de garde,
+// les amis se mesurent en COURSE) — quatre doubles pages, chacune répond
 // à UNE question que l'élève se pose en ouvrant son profil :
 //
 //   · LA PAGE DE GARDE — « Qui je suis » : la photo, le nom, la classe et le
@@ -84,10 +74,9 @@ function Folio({ n }: { n: number }) {
 export function pagesDuCarnet(p: EcranMoiProps & { identite: NonNullable<EcranMoiProps['identite']> }): DoublePage[] {
   return [
     { gauche: <GardeGauche data={p.identite.data} abonne={p.identite.abonne} />, droite: <GardeDroite {...p} /> },
-    { gauche: <ProgresGauche {...p} />, droite: <ProgresDroite {...p} /> },
-    { gauche: <AmisPage {...p} mesure="temps" />, droite: <AmisPage {...p} mesure="trophees" /> },
-    { gauche: <CollectionGauche {...p} />, droite: <CollectionDroite {...p} /> },
     { gauche: <PalmaresGauche {...p} />, droite: <PalmaresDroite {...p} /> },
+    { gauche: <CourseGauche {...p} />, droite: <CourseDroite {...p} /> },
+    { gauche: <CollectionGauche {...p} />, droite: <CollectionDroite {...p} /> },
   ]
 }
 
@@ -102,9 +91,26 @@ function GardeGauche({ data, abonne }: { data: IdentiteMoi; abonne: boolean }) {
   )
 }
 
-function GardeDroite({ serie, trophees, identite, record }: EcranMoiProps & { identite: NonNullable<EcranMoiProps['identite']> }) {
+function GardeDroite({ serie, trophees, identite, record, rythme, travail }: EcranMoiProps & { identite: NonNullable<EcranMoiProps['identite']> }) {
   const mots = libellesRecord(record)
-  const { fait, surplus } = anneauRecord(record)
+  // Le record de la semaine, AU-DESSUS du travail de cette semaine (Lucas,
+  // 05/10/2026 : « oublie le cercle, précise simplement le temps de travail de
+  // cette semaine, avec au-dessus son record de la semaine »). Battu, le record
+  // EST cette semaine.
+  const recordAffiche = record.etat === 'battu' || record.etat === 'premier' ? mots.valeur : mots.cible
+  const semaine = (
+    <>
+      <span className={styles.etiquette}>Record de la semaine</span>
+      <span className={styles.recordSemaine} data-battu={record.etat === 'battu' || undefined}>
+        {recordAffiche}
+      </span>
+      <span className={styles.etiquette}>Cette semaine</span>
+      <span className={styles.chiffre}>{mots.valeur}</span>
+      {record.etat !== 'vide' ? (
+        <span className={record.etat === 'battu' ? styles.noteOr : styles.petit}>{mots.pastille}</span>
+      ) : null}
+    </>
+  )
   return (
     <div className={styles.chiffres}>
       <div className={styles.chiffreLigne} role="group" aria-label={`Série : ${pluriel(serie.jours, 'jour')}`}>
@@ -135,60 +141,11 @@ function GardeDroite({ serie, trophees, identite, record }: EcranMoiProps & { id
         <Eclats className={styles.eclatsNiveau} sens="droite" />
       </div>
       <Filet className={styles.filet} />
-      <div className={styles.semaine} role="group" aria-label={`${mots.valeur} de travail cette semaine`}>
-        <AnneauCrayon part={fait + surplus} className={cn(styles.anneau, record.etat === 'battu' && styles.anneauOr)}>
-          <span className={styles.anneauTexte}>
-            <span className={styles.anneauChiffre}>{mots.valeur}</span>
-            <span className={styles.anneauLegende}>cette semaine</span>
-          </span>
-        </AnneauCrayon>
-      </div>
-      <Folio n={2} />
-    </div>
-  )
-}
-
-// --- Progrès -------------------------------------------------------------------
-
-const JOURS = ['L', 'M', 'M', 'J', 'V', 'S', 'D'] as const
-
-function ProgresGauche({ record, rythme, travail }: EcranMoiProps) {
-  const mots = libellesRecord(record)
-  const { fait, surplus } = anneauRecord(record)
-  const maxJour = Math.max(1, ...record.jours.map((j) => j.secondes))
-  const contenu = (
-    <>
-      <TitrePage teinte="jaune">Ma semaine</TitrePage>
-      <AnneauCrayon part={fait + surplus} className={cn(styles.grandAnneau, record.etat === 'battu' && styles.anneauOr)}>
-        <span className={styles.anneauTexte}>
-          <span className={styles.grandAnneauChiffre}>{mots.valeur}</span>
-          <span className={styles.anneauLegende}>de travail</span>
-        </span>
-      </AnneauCrayon>
-      <p className={styles.cible}>
-        <span className={styles.etiquette}>{mots.sourcil}</span>
-        <span className={styles.cibleValeur}>{mots.cible}</span>
-      </p>
-      <p className={cn(styles.note, mots.ton === 'battu' && styles.noteOr)}>{mots.pastille}</p>
-      <div className={styles.jours} aria-hidden="true">
-        {record.jours.map((j, i) => (
-          <span key={i} className={styles.jour} data-aujourdhui={j.aujourdhui || undefined} data-avenir={j.aVenir || undefined}>
-            <span className={styles.jourBarre}>
-              <span style={{ height: `${Math.round((j.secondes / maxJour) * 100)}%` }} />
-            </span>
-            <span className={styles.jourLettre}>{JOURS[i]}</span>
-          </span>
-        ))}
-      </div>
-    </>
-  )
-  return (
-    <>
       {rythme ? (
         <Ouvrir
-          label={`${mots.valeur} de travail cette semaine. ${mots.sourcil} : ${mots.cible}. ${mots.pastille}. Voir mon rythme.`}
+          label={`${mots.valeur} de travail cette semaine. Record de la semaine : ${recordAffiche}. Voir mon rythme.`}
           titre="Ton rythme"
-          className={styles.pagePleine}
+          className={styles.semaineTexte}
           detail={
             <>
               <RythmeBarres semaines={rythme.semaines} phrase={rythme.phrase} nu />
@@ -199,93 +156,61 @@ function ProgresGauche({ record, rythme, travail }: EcranMoiProps) {
             </>
           }
         >
-          {contenu}
+          {semaine}
         </Ouvrir>
       ) : (
-        <div className={styles.pagePleine}>{contenu}</div>
+        <div className={styles.semaineTexte}>{semaine}</div>
       )}
-      <Folio n={3} />
-    </>
-  )
-}
-
-function ProgresDroite({ classement, notes, travail, trajectoire }: EcranMoiProps) {
-  const cadre = cadreClassement('travail', classement.grade)
-  const place = titreClassement(classement.mesures.travail, cadre)
-  return (
-    <div className={styles.colonne}>
-      <Ouvrir
-        label={
-          place
-            ? `Ma place : ${place.grand} ${place.petit}. Voir le classement.`
-            : `Ma place : ${invitationClassement('travail').titre} Voir le classement.`
-        }
-        titre="Ton classement"
-        className={styles.bloc}
-        detail={<Classement mesures={classement.mesures} grade={classement.grade} initiale={classement.initiale} />}
-      >
-        <span className={styles.etiquette}>
-          <Doodle nom="courbe" className={styles.etiquetteDoodle} />
-          Ma place
-        </span>
-        {place ? (
-          <>
-            <span className={styles.chiffre}>{place.grand}</span>
-            <span className={styles.petit}>{place.petit}</span>
-          </>
-        ) : (
-          <span className={styles.petit}>{invitationClassement('travail').titre}</span>
-        )}
-      </Ouvrir>
-      <Filet className={styles.filet} />
-      <EntreeMoyenne bilan={notes.bilan} terms={notes.terms} disabled={notes.indisponible} />
-      <Filet className={styles.filet} />
-      <div className={styles.bloc}>
-        <span className={styles.etiquette}>
-          <Doodle nom="chrono" className={styles.etiquetteDoodle} />
-          Depuis le début
-        </span>
-        <span className={styles.chiffre}>{formatDuree(travail.total)}</span>
-        <span className={styles.petit}>de travail · {travail.titre}</span>
-      </div>
-      {trajectoire ? (
-        <>
-          <Filet className={styles.filet} />
-          <Ouvrir
-            label="Ma trajectoire jusqu'au bac. Voir le détail."
-            titre="Ta trajectoire"
-            className={styles.lien}
-            detail={<TrajectoryCard trajectory={trajectoire.trajectory} needsMigration={trajectoire.needsMigration} />}
-          >
-            Ma trajectoire bac ›
-          </Ouvrir>
-        </>
-      ) : null}
-      <Folio n={4} />
+      <Folio n={2} />
     </div>
   )
 }
 
-// --- Amis ----------------------------------------------------------------------
+// --- La course entre amis ------------------------------------------------------
 
-/** Les lignes à montrer sur une page : les premiers, et moi toujours. */
-function lignesVisibles(classes: readonly AmiRange[], max: number): AmiRange[] {
-  if (classes.length <= max) return [...classes]
-  const tete = classes.slice(0, max)
+/** Les lignes à montrer : les premiers, et moi toujours. */
+function lignesVisibles(lignes: readonly LigneCourse[], max: number): LigneCourse[] {
+  if (lignes.length <= max) return [...lignes]
+  const tete = lignes.slice(0, max)
   if (tete.some((j) => j.moi)) return tete
-  const moi = classes.find((j) => j.moi)
-  return moi ? [...classes.slice(0, max - 1), moi] : tete
+  const moi = lignes.find((j) => j.moi)
+  return moi ? [...lignes.slice(0, max - 1), moi] : tete
 }
 
-function AmisPage({ amis, mesure }: EcranMoiProps & { mesure: Mesure }) {
-  const gauche = mesure === 'temps'
-  const classes = classerAmisPar(amis.joueurs, mesure)
-  const seul = classes.length <= 1
-  const couronne = couronneDe(classes, mesure)
-  const challenger = challengerDe(amis.joueurs)
+/** Une épreuve de la course : qui mène, ma place, et l'écart à combler. */
+function Epreuve({ course, monAvatar }: { course: Course; monAvatar: EcranMoiProps['amis']['monAvatar'] }) {
+  const { tete, moi } = course
+  return (
+    <div className={styles.epreuve}>
+      <span className={styles.epreuveTitre}>{course.titre}</span>
+      <div className={styles.epreuveLigne}>
+        {tete ? (
+          <>
+            <Doodle nom="couronne" className={styles.epreuveCouronne} />
+            <span className={styles.amiPortrait}>
+              <PortraitJoueur id={tete.id} portrait={tete.portrait} avatar={tete.moi ? monAvatar : null} className="size-full" />
+            </span>
+            <span className={styles.amiNom}>{tete.moi ? 'Toi' : tete.nom}</span>
+            <span className={styles.amiValeur}>{libelleEpreuve(course.epreuve, tete.valeur)}</span>
+          </>
+        ) : (
+          <span className={styles.petit}>Personne n’a encore marqué</span>
+        )}
+      </div>
+      {moi && moi.rang > 1 ? (
+        <span className={styles.epreuveMoi}>
+          Toi : {moi.rang}e · {libelleEpreuve(course.epreuve, moi.valeur)}
+        </span>
+      ) : null}
+      {course.phrase ? <span className={styles.epreuvePhrase}>{course.phrase}</span> : null}
+    </div>
+  )
+}
 
-  if (seul) {
-    return gauche ? (
+function CourseGauche({ amis }: EcranMoiProps) {
+  const courses = courseDeLaSemaine(amis.joueurs)
+  if (courses.length === 0) {
+    return (
       <>
         <div className={styles.pagePleine}>
           <TitrePage teinte="rose">Mes amis</TitrePage>
@@ -295,52 +220,81 @@ function AmisPage({ amis, mesure }: EcranMoiProps & { mesure: Mesure }) {
         </div>
         <Folio n={5} />
       </>
-    ) : (
+    )
+  }
+  return (
+    <>
+      <Ouvrir
+        label={`La course de la semaine. ${courses.map((c) => `${c.titre} : ${c.phrase}`).join(' ')} Voir le détail.`}
+        titre="Toi et tes amis"
+        className={styles.pagePleine}
+        detail={<ClassementAmis joueurs={amis.joueurs} complet={amis.complet} monAvatar={amis.monAvatar} />}
+      >
+        <TitrePage teinte="rose">La course</TitrePage>
+        <span className={styles.sousTitre}>depuis lundi, qui mène ?</span>
+        {courses.map((c) => (
+          <Epreuve key={c.epreuve} course={c} monAvatar={amis.monAvatar} />
+        ))}
+      </Ouvrir>
+      <Folio n={5} />
+    </>
+  )
+}
+
+function CourseDroite({ amis }: EcranMoiProps) {
+  const courses = courseDeLaSemaine(amis.joueurs)
+  // Le classement de la page de droite : l'XP de la semaine (tout le travail),
+  // à défaut les trophées gagnés.
+  const course = courses.find((c) => c.epreuve === 'xp') ?? courses[0]
+  if (!course) {
+    return (
       <>
         <div className={styles.pagePleine}>
-          <TitrePage>Défie-les</TitrePage>
+          <TitrePage>La course</TitrePage>
           <Doodle nom="epees" className={styles.grandDoodle} />
-          <p className={styles.petitCentre}>Compare ton travail et tes trophées, semaine après semaine.</p>
+          <p className={styles.petitCentre}>
+            Dès ton premier ami, vous vous mesurez chaque semaine : XP, trophées et niveaux gagnés.
+          </p>
           <Link href="/amis" className={styles.boutonEncre}>
-            Ajouter un ami
+            Voir mes amis
           </Link>
         </div>
         <Folio n={6} />
       </>
     )
   }
-
-  const lignes = lignesVisibles(classes, 6)
+  const challenger = challengerDe(amis.joueurs)
+  const lignes = lignesVisibles(course.lignes, 7)
   return (
     <>
       <Ouvrir
-        label={`${gauche ? 'Toi et tes amis au temps de travail de la semaine' : 'Toi et tes amis aux trophées'}. ${phraseDuClassement(classes, mesure)} Voir le détail.`}
+        label={`Le classement de la semaine, ${course.titre.toLowerCase()}. ${course.phrase} Voir le détail.`}
         titre="Toi et tes amis"
         className={styles.pagePleine}
         detail={<ClassementAmis joueurs={amis.joueurs} complet={amis.complet} monAvatar={amis.monAvatar} />}
       >
-        <TitrePage teinte={gauche ? 'rose' : undefined}>{gauche ? 'Cette semaine' : 'Aux trophées'}</TitrePage>
-        <span className={styles.sousTitre}>{gauche ? 'au temps de travail' : 'depuis le début'}</span>
+        <TitrePage>Cette semaine</TitrePage>
+        <span className={styles.sousTitre}>{course.titre.toLowerCase()}</span>
         <ol className={styles.liste}>
           {lignes.map((j) => (
             <li key={j.id} className={styles.ami} data-moi={j.moi || undefined}>
               <span className={styles.amiRang}>
-                {couronne === j.id ? <Doodle nom="couronne" className={styles.amiCouronne} /> : j.rang}
+                {j.rang === 1 && j.valeur > 0 ? <Doodle nom="couronne" className={styles.amiCouronne} /> : j.rang}
               </span>
               <span className={styles.amiPortrait}>
                 <PortraitJoueur id={j.id} portrait={j.portrait} avatar={j.moi ? amis.monAvatar : null} className="size-full" />
               </span>
               <span className={styles.amiNom}>
                 {j.moi ? 'Toi' : j.nom}
-                {!gauche && challenger === j.id ? <Doodle nom="epees" className={styles.amiEpees} /> : null}
+                {challenger === j.id ? <Doodle nom="epees" className={styles.amiEpees} /> : null}
               </span>
-              <span className={styles.amiValeur}>{libelleValeur(j, mesure)}</span>
+              <span className={styles.amiValeur}>{libelleEpreuve(course.epreuve, j.valeur)}</span>
             </li>
           ))}
         </ol>
-        <p className={styles.postit}>{phraseDuClassement(classes, mesure)}</p>
+        <p className={styles.postit}>{course.phrase}</p>
       </Ouvrir>
-      <Folio n={gauche ? 5 : 6} />
+      <Folio n={6} />
     </>
   )
 }
@@ -390,40 +344,20 @@ const CASES_BADGES = 12
 
 function CollectionDroite({ identite, badges, couronnes }: EcranMoiProps) {
   const tous = identite?.data.badges ?? []
-  const gagnes = tous.filter((b) => b.earned)
   const vitrine = etatVitrine(badges.gagnes, couronnes.bilan.gagnees)
-  // Autant de cases que de badges à gagner (douze au plus) : une case vide est une promesse.
-  const cases = Array.from({ length: Math.min(CASES_BADGES, Math.max(badges.total, gagnes.length)) }, (_, i) => gagnes[i] ?? null)
   return (
     <>
-      <Ouvrir
-        label={`Mes badges : ${badges.gagnes} sur ${badges.total}. Voir la collection.`}
-        titre="Mes badges"
-        className={styles.pagePleine}
-        detail={<BadgesVitrine badges={tous} enAvant={identite?.data.equippedBadgeIds ?? []} />}
-      >
+      <div className={styles.pagePleine}>
         <TitrePage>Mes badges</TitrePage>
         <span className={styles.sousTitre}>
-          {badges.gagnes}/{badges.total} collés
+          {badges.gagnes}/{badges.total} gagnés · touche-les
         </span>
-        <ul className={styles.autocollants}>
-          {cases.map((b, i) =>
-            b ? (
-              <li key={b.id} className={styles.autocollant} title={b.title} style={{ rotate: `${((i * 37) % 13) - 6}deg` }}>
-                <BadgeIcone slug={b.slug} icon={b.icon} tailleImage="size-full" />
-              </li>
-            ) : (
-              <li key={`vide-${i}`} className={styles.caseVide} aria-hidden="true">
-                ?
-              </li>
-            ),
-          )}
-        </ul>
+        <BadgesCarnet badges={tous} max={CASES_BADGES} />
         <p className={styles.postit}>
           Bannière {libelleBanniere(vitrine.palier.nom)}
           {vitrine.suivant ? ` · ${vitrine.manque} pt${vitrine.manque > 1 ? 's' : ''} pour l’${vitrine.suivant.nom.toLowerCase()}` : ''}
         </p>
-      </Ouvrir>
+      </div>
       <Folio n={8} />
     </>
   )
@@ -463,9 +397,33 @@ function PalmaresGauche({ palmares }: EcranMoiProps) {
           <p className={styles.petitCentre}>Lance un duel dans l’arène : ta première victoire s’écrira ici.</p>
         )}
       </Ouvrir>
-      <Folio n={9} />
+      <Folio n={3} />
     </>
   )
+}
+
+/**
+ * LA PLACE D'UN RECORD, EN POURCENTAGE (Lucas, 05/10/2026 : « 6 000 points
+ * serait égal à top 10 % par exemple, car là ce n'est pas parlant »). Le rang
+ * de toujours parmi les élèves de mon niveau (`my_mode_palmares`, 352), en
+ * bande de 5 arrondie CONTRE l'élève, comme le compte de l'arène.
+ */
+function RangRecord({ rang, total, semaine }: { rang: number | null; total: number | null; semaine: number | null }) {
+  const top = topPourcent(rang, total)
+  if (top !== null) {
+    return (
+      <span className={styles.recordRang}>
+        <span className={styles.recordTop} data-elite={top <= 10 || undefined}>
+          {libelleTop(top)}
+        </span>{' '}
+        de ton niveau
+      </span>
+    )
+  }
+  if (semaine) {
+    return <span className={styles.recordRang}>{semaine === 1 ? '1er' : `${semaine}e`} de la semaine</span>
+  }
+  return null
 }
 
 function PalmaresDroite({ palmares }: EcranMoiProps) {
@@ -485,11 +443,7 @@ function PalmaresDroite({ palmares }: EcranMoiProps) {
               <li key={l.mode} className={styles.record}>
                 <span className={styles.recordNom}>{epreuve(l.mode).nom}</span>
                 <span className={styles.recordScore}>{formatScore(l.mode, l.best)}</span>
-                {l.weekRank ? (
-                  <span className={styles.recordRang}>
-                    {l.weekRank === 1 ? '1er' : `${l.weekRank}e`} de la semaine
-                  </span>
-                ) : null}
+                <RangRecord rang={l.allRank} total={l.allTotal} semaine={l.weekRank} />
               </li>
             ))}
           </ul>
@@ -500,7 +454,7 @@ function PalmaresDroite({ palmares }: EcranMoiProps) {
           </>
         )}
       </Ouvrir>
-      <Folio n={10} />
+      <Folio n={4} />
     </>
   )
 }

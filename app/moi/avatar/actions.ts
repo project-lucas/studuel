@@ -12,6 +12,8 @@ import {
   type AvatarItem,
 } from '@/lib/avatar-studio'
 import type { SupabaseClient } from '@supabase/supabase-js'
+import { personnageDebloque, personnageParId, portraitDePersonnage } from '@/lib/personnages-historiques'
+import { levelFromXp } from '@/lib/wallet'
 
 // -----------------------------------------------------------------------------
 // Actions du vestiaire. L'équipement est validé CÔTÉ SERVEUR (l'item doit être
@@ -193,4 +195,29 @@ export async function purchaseAvatarItemAction(
 
   await equipAvatarItemAction(itemId)
   return { bought: true, coins: await currentCoins(supabase, userId) }
+}
+
+/**
+ * Équipe un PERSONNAGE HISTORIQUE (05/10/2026). Le niveau est relu EN BASE
+ * (portefeuille, user_wallet) avant d'écrire : le client ne fait que demander.
+ */
+export async function choisirPersonnageAction(id: string): Promise<{ ok: boolean }> {
+  const { supabase, userId } = await requireUser()
+  const perso = typeof id === 'string' ? personnageParId(id) : null
+  if (!userId || !perso) return { ok: false }
+
+  const [{ data: wallet }, { data: row }] = await Promise.all([
+    supabase.from('user_wallet').select('xp').eq('user_id', userId).maybeSingle(),
+    supabase.from('profiles').select('avatar').eq('id', userId).maybeSingle(),
+  ])
+  if (!personnageDebloque(perso, levelFromXp(Number(wallet?.xp ?? 0) || 0))) return { ok: false }
+
+  const next = { ...normalizeAvatarConfig(row?.avatar), portrait: portraitDePersonnage(perso.id) }
+  const { error } = await supabase.from('profiles').update({ avatar: next }).eq('id', userId)
+  if (error) {
+    console.error('[vestiaire] personnage non équipé:', error.message)
+    return { ok: false }
+  }
+  for (const path of AVATAR_PATHS) revalidatePath(path)
+  return { ok: true }
 }

@@ -4,12 +4,15 @@ import {
   CLE_SANS_THEME,
   afficheEnMondes,
   basculerFavori,
+  dureeLisible,
   estFavori,
   jaugeDesFiches,
   mondesDuProgramme,
   ordonnerMondes,
   progressionAffichee,
   repriseDuProgramme,
+  resumeDuMonde,
+  themeOuvertParDefaut,
   xpRestantFiche,
 } from './programme'
 
@@ -219,5 +222,91 @@ describe('repriseDuProgramme', () => {
   test('une fiche hors thème n’a pas de rang', () => {
     const r = repriseDuProgramme([fiche({ id: 'a', theme: null })], null)
     expect(r?.rang).toBeNull()
+  })
+})
+
+describe('themeOuvertParDefaut — le thème déjà ouvert à l’arrivée', () => {
+  const mondes = mondesDuProgramme([
+    finie('a', 'Nombres et calculs'),
+    entamee('b', 'Fonctions'),
+    fiche({ id: 'c', theme: 'Géométrie' }),
+  ])
+
+  test('celui que l’élève avait ouvert, quand il revient d’une fiche', () => {
+    expect(themeOuvertParDefaut(mondes, 'Fonctions', 'Géométrie')).toBe('Géométrie')
+  })
+
+  test('un thème demandé qui n’existe plus ne compte pas', () => {
+    expect(themeOuvertParDefaut(mondes, 'Fonctions', 'Disparu')).toBe('Fonctions')
+  })
+
+  test('le contrôle annoncé passe avant la fiche à reprendre, le plus proche d’abord', () => {
+    const presses = mondesDuProgramme([
+      entamee('a', 'Fonctions'),
+      fiche({ id: 'b', theme: 'Géométrie', examHint: { label: 'Contrôle dans 9 jours', proximity: 'far' } }),
+      fiche({ id: 'c', theme: 'Probabilités', examHint: { label: 'Contrôle demain', proximity: 'imminent' } }),
+    ])
+    expect(themeOuvertParDefaut(presses, 'Fonctions')).toBe('Probabilités')
+  })
+
+  test('un thème terminé ne s’ouvre pas pour son contrôle', () => {
+    const fini = mondesDuProgramme([
+      { ...finie('a', 'Géométrie'), examHint: { label: 'Contrôle demain', proximity: 'imminent' } },
+      entamee('b', 'Fonctions'),
+    ])
+    expect(themeOuvertParDefaut(fini, 'Fonctions')).toBe('Fonctions')
+  })
+
+  test('sinon le thème de la fiche à reprendre, puis le premier qui n’est pas terminé', () => {
+    expect(themeOuvertParDefaut(mondes, 'Géométrie')).toBe('Géométrie')
+    expect(themeOuvertParDefaut(mondes, null)).toBe('Fonctions')
+  })
+
+  test('tout est terminé : le premier ; aucun thème : rien', () => {
+    expect(themeOuvertParDefaut(mondesDuProgramme([finie('a', 'A'), finie('b', 'B')]), null)).toBe('A')
+    expect(themeOuvertParDefaut([], null)).toBeNull()
+  })
+})
+
+describe('resumeDuMonde — la ligne grise sous le titre d’un thème', () => {
+  const resume = (fiches: ChapterRow[]) => resumeDuMonde(mondesDuProgramme(fiches)[0])
+
+  test('un thème neuf dit ses fiches et le temps à y passer', () => {
+    expect(resume([fiche({ id: 'a', minutes: 8 }), fiche({ id: 'b', minutes: 30 })])).toBe(
+      '2 fiches · ~38 min',
+    )
+  })
+
+  test('un thème entamé compte ses fiches terminées, et seulement le temps qui reste', () => {
+    expect(
+      resume([
+        finie('a', 'T'),
+        { ...entamee('b', 'T'), minutes: 9 },
+        fiche({ id: 'c', theme: 'T', minutes: 6 }),
+      ]),
+    ).toBe('1/3 fiches · ~15 min')
+  })
+
+  test('le contrôle annoncé prend la place de la durée', () => {
+    expect(
+      resume([fiche({ id: 'a', examHint: { label: 'Contrôle dans 3 jours', proximity: 'soon' } })]),
+    ).toBe('1 fiche · Contrôle dans 3 jours')
+  })
+
+  test('un thème terminé le dit', () => {
+    expect(resume([finie('a', 'T'), finie('b', 'T')])).toBe('2/2 fiches · Terminé')
+  })
+
+  test('sans durée connue, le compte seul', () => {
+    expect(resume([fiche({ id: 'a', minutes: null })])).toBe('1 fiche')
+  })
+})
+
+describe('dureeLisible', () => {
+  test('en minutes sous l’heure, en heures au-delà', () => {
+    expect(dureeLisible(38)).toBe('~38 min')
+    expect(dureeLisible(60)).toBe('~1 h')
+    expect(dureeLisible(65)).toBe('~1 h 05')
+    expect(dureeLisible(130)).toBe('~2 h 10')
   })
 })

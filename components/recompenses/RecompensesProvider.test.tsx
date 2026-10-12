@@ -116,7 +116,7 @@ describe('le vol des récompenses', () => {
     // d'un rechargement de page.
     monter([{ unite: 'gemme', montant: 37 }])
 
-    await act(async () => void vi.advanceTimersByTime(700))
+    await act(async () => void vi.advanceTimersByTime(1100))
     const apresUnPeu = recus.reduce((s, d) => s + d.montant, 0)
     expect(apresUnPeu).toBeGreaterThan(0)
     expect(apresUnPeu).toBeLessThan(37)

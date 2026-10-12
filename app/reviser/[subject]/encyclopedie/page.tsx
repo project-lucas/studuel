@@ -65,7 +65,9 @@ export default async function EncyclopediePage({
   // barre d'onglets soit EXACTEMENT celle de la page d'à côté. Une barre qui
   // change d'un écran à l'autre donne l'impression d'avoir quitté le dossier.
   const disciplines = await getDisciplinesCached(subject.id, grade)
-  const modes = modesFor(grade, disciplines, slug)
+  // `true` : le dossier d'histoire-géo a son cahier d'exercices à tous les
+  // niveaux, et cette page ne le compte pas — la porte doit rester à sa place.
+  const modes = modesFor(grade, disciplines, slug, true)
 
   const liste = apercus(TOUTES)
   // La citation du jour : le même tirage pour tout le monde, une journée

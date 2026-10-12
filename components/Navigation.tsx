@@ -234,7 +234,7 @@ export default function Navigation({
                         // c'est un écu avec un visage dedans, et à 44 px le
                         // visage ne se voyait pas assez. Seulement lui — les
                         // autres dessins remplissent déjà leur case.
-                        icon === AVATAR_ICON ? 'size-12' : 'size-11',
+                        icon === AVATAR_ICON ? 'size-13' : 'size-11',
                         active
                           ? // L'agrandissement ET le débordement, c'est LE
                             // signal de sélection : l'icône enfle d'un tiers

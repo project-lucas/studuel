@@ -73,7 +73,50 @@ export const PERSONNAGES_HISTORIQUES: readonly PersonnageHistorique[] = [
   { id: 'nsi-alan-turing', nom: 'Alan Turing', matiere: 'nsi', rarete: 'legendaire' },
 ]
 
-/** Le blason d'un personnage. */
+
+/** Le portrait d'un personnage. */
 export function imagePersonnage(id: string): string {
   return `/images/profil/personnages/${id}.webp`
+}
+
+// ------------------------------------------------------------ le déblocage
+//
+// RÈGLE CHOISIE LE 05/10/2026 (Lucas : « eux aussi doivent faire partie du mid
+// et end game ») : LE NIVEAU, par rareté. Le niveau dit tout le travail de
+// l'élève (l'XP est versée par chaque geste, lib/economie) et se vérifie en
+// base : le serveur relit l'XP du portefeuille avant d'équiper un personnage.
+// Rare au niveau 10, Épique au 20, Légendaire au 35 — quand le cadre est déjà
+// d'argent, d'or, puis de diamant (lib/moi/cadre-profil).
+
+export const NIVEAU_RARETE: Record<RaretePersonnage, number> = {
+  rare: 10,
+  epique: 20,
+  legendaire: 35,
+}
+
+export const LIBELLE_RARETE: Record<RaretePersonnage, string> = {
+  rare: 'Rare',
+  epique: 'Épique',
+  legendaire: 'Légendaire',
+}
+
+/** Le préfixe d'un portrait de personnage dans `profiles.avatar.portrait`. */
+const PREFIXE = 'perso:'
+
+export function personnageParId(id: string): PersonnageHistorique | null {
+  return PERSONNAGES_HISTORIQUES.find((p) => p.id === id) ?? null
+}
+
+/** `perso:histoire-charlemagne` → le personnage, ou null. */
+export function personnageDuPortrait(portrait: unknown): PersonnageHistorique | null {
+  if (typeof portrait !== 'string' || !portrait.startsWith(PREFIXE)) return null
+  return personnageParId(portrait.slice(PREFIXE.length))
+}
+
+export function portraitDePersonnage(id: string): string {
+  return `${PREFIXE}${id}`
+}
+
+export function personnageDebloque(p: PersonnageHistorique, niveau: number): boolean {
+  return niveau >= NIVEAU_RARETE[p.rarete]
 }

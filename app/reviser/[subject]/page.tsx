@@ -43,6 +43,7 @@ import {
 } from '@/lib/derniere-session'
 import { getReviewItems } from '@/lib/srs'
 import { xpRestantFiche } from '@/lib/reviser/programme'
+import { suiteDeFiche } from '@/lib/reviser/suite'
 import { parseGradeStandings } from '@/lib/percentile'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
 import type { ModeQuestion } from '@/lib/defi-modes'
@@ -89,10 +90,10 @@ export default async function SubjectPage({
   searchParams,
 }: {
   params: Promise<{ subject: string }>
-  searchParams: Promise<{ onglet?: string }>
+  searchParams: Promise<{ onglet?: string; theme?: string }>
 }) {
   const { subject: slug } = await params
-  const { onglet } = await searchParams
+  const { onglet, theme: themeOuvert } = await searchParams
   const supabase = await createClient()
   const user = await getCurrentUser()
   if (!user) redirect('/login')
@@ -165,7 +166,12 @@ export default async function SubjectPage({
   // - la jauge du gardien (« La Traque », 212) : sans elle, la page perd son
   //   écusson et rien d'autre ;
   // - les cours du CARNET rattachés à la matière (316), isolés : sans la
-  //   colonne, la liste est vide et le dossier est exactement ce qu'il était.
+  //   colonne, la liste est vide et le dossier est exactement ce qu'il était ;
+  // - le COMPTE des exercices du cahier (372), sans une seule ligne (`head`) :
+  //   il décide si la porte « Exercices » existe et ce qu'elle annonce. Filtré
+  //   par la jointure, pas par une liste d'identifiants (260 fiches de lecture
+  //   ne tiennent pas dans une adresse). Le cahier lui-même se lit quand on
+  //   ouvre la porte (app/api/reviser/cahier). Table absente : pas de porte.
   //
   // ⚠️ NI GEMMES NI SÉRIE : elles étaient lues ici pour deux pastilles du
   // header qui DOUBLONNAIENT le bandeau du haut (`TopHud`, présent sur toutes
@@ -201,6 +207,11 @@ export default async function SubjectPage({
       .eq('owner_id', user.id)
       .eq('subject_id', subject.id)
       .limit(20),
+    supabase
+      .from('exercices')
+      .select('id, chapters!inner(subject_id, level)', { count: 'exact', head: true })
+      .eq('chapters.subject_id', subject.id)
+      .eq('chapters.level', level),
   ])
   // La vague est attendue plus bas ; si la page sort avant (programme vide,
   // erreur), son rejet éventuel ne doit pas devenir un « rejet non géré ».
@@ -235,6 +246,7 @@ export default async function SubjectPage({
     { data: paperRows },
     gardien,
     { data: carnetRows },
+    { count: exercicesDuCahier },
   ] = await vagueB
   const carnetIds = (carnetRows ?? []).map((c) => String(c.id))
 
@@ -488,6 +500,23 @@ export default async function SubjectPage({
       leconsALire: chapter.lessons.filter((l) => !completed.has(l.id)).length,
       couronnes: crowns(values[i]),
     }),
+    // Où mène le bouton de la fiche : son cours, puis son quiz, puis
+    // « Revoir ». Tout est déjà lu (le programme, les leçons terminées, les
+    // meilleurs scores) — pas une requête de plus (lib/reviser/suite).
+    suite: suiteDeFiche({
+      subjectSlug: subject.slug,
+      chapterId: chapter.id,
+      lecons: chapter.lessons.map((l) => {
+        const quizId = l.quizzes[0]?.id ?? null
+        return {
+          id: l.id,
+          lue: completed.has(l.id),
+          quizId,
+          meilleur: quizId ? (bestByQuiz.get(quizId)?.ratio ?? null) : null,
+        }
+      }),
+      terminee: chapterStatus(values[i]) === 'complete',
+    }),
   }))
 
   const progress = subjectProgress(values)
@@ -561,6 +590,8 @@ export default async function SubjectPage({
     gardien,
     papers: parseExamPapers(paperRows),
     annalesCorrigees: annalesParAnnee(ANNALES_CORRIGEES, subject.slug, level),
+    cahier: exercicesDuCahier ? { total: exercicesDuCahier } : null,
+    themeOuvert: themeOuvert ?? null,
   }
 
   // Onglet demandé dans l'URL (`?onglet=boss` depuis la feuille Modes de jeu,
@@ -570,7 +601,7 @@ export default async function SubjectPage({
   // n'existerait pas encore au moment de résoudre le paramètre.
   const initialMode = modeFromParam(
     onglet,
-    modesFor(standings.grade, disciplinesOf(chapters), subject.slug),
+    modesFor(standings.grade, disciplinesOf(chapters), subject.slug, Boolean(exercicesDuCahier)),
   )
   // L'ENCYCLOPÉDIE EST UNE AUTRE PAGE. Un lien `?onglet=encyclopedie` — partagé,
   // ou reconstruit par une barre d'onglets — ne doit pas ouvrir ce dossier avec
@@ -617,8 +648,13 @@ export default async function SubjectPage({
       <SubjectMasteryCelebration
         entries={[{ slug: subject.slug, name: subject.name, pct: progress.pct }]}
       />
-      <CarnetDeLaMatiere cours={coursDuCarnet} matiere={subject.name} />
-      <SubjectTemplate data={data} initialMode={initialMode} />
+      {/* « Tes cours » se pose DANS la porte Cours, au-dessus du sommaire : la
+          bannière de la matière ouvre la page, rien ne passe avant elle. */}
+      <SubjectTemplate
+        data={data}
+        initialMode={initialMode}
+        carnet={<CarnetDeLaMatiere cours={coursDuCarnet} matiere={subject.name} />}
+      />
     </>
   )
 }

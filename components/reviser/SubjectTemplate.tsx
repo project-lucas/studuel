@@ -1,247 +1,291 @@
 'use client'
 
-import { useState } from 'react'
+import { useMemo, useState, type ReactNode } from 'react'
 import { useRouter } from 'next/navigation'
 import StandingLine from '@/components/StandingLine'
 import GardienBadge from '@/components/reviser/GardienBadge'
-import SubjectHeader from '@/components/reviser/SubjectHeader'
+import BanniereMatiere from '@/components/reviser/BanniereMatiere'
+import PortesMatiere, { type PorteVue } from '@/components/reviser/PortesMatiere'
+import SegmentRayons from '@/components/reviser/SegmentRayons'
 import SubjectStickyBar from '@/components/reviser/SubjectStickyBar'
-import ModeTabs from '@/components/reviser/ModeTabs'
-import ChapterList from '@/components/reviser/ChapterList'
-import ProgrammeMondes from '@/components/reviser/ProgrammeMondes'
+import Sommaire from '@/components/reviser/Sommaire'
+import CahierMatiere from '@/components/reviser/CahierMatiere'
+import { prechargerCahier } from '@/components/reviser/useCahierMatiere'
 import TrainingPanel from '@/components/reviser/TrainingPanel'
 import CarteDictee from '@/components/francais/dictee/CarteDictee'
 import ExamBanner from '@/components/reviser/ExamBanner'
 import AnnalesPanel from '@/components/reviser/AnnalesPanel'
-import MarcelFab from '@/components/reviser/MarcelFab'
 import {
   chapterUnit,
   disciplineLabel,
   disciplinesOf,
   modesFor,
+  porteDe,
+  portesDe,
+  rayonsDe,
   tabId,
+  type ClePorte,
   type SubjectTemplateData,
 } from '@/lib/subject-template'
 import { examYearFor } from '@/lib/annales'
+import { salonSubjectFor, subjectGameTickets } from '@/lib/defi/modes-catalog'
 import { hrefEncyclopedie } from '@/lib/encyclopedie/matieres'
 import { afficheEcusson, gardienVue } from '@/lib/reviser/gardien'
-import { afficheEnMondes, jaugeDesFiches } from '@/lib/reviser/programme'
+import { jaugeDesFiches, repriseDuProgramme } from '@/lib/reviser/programme'
 
-// Template GÉNÉRIQUE de page matière : valable pour toutes les matières, tout
-// vient de Supabase (via le vue-modèle sérialisable calculé côté serveur).
-// Header + trois onglets + vues, FAB IA. Seule interactivité : les onglets.
+/** Écrit un paramètre de l'adresse sans empiler d'entrée d'historique. */
+function ecrireParametre(nom: string, valeur: string | null) {
+  const url = new URL(window.location.href)
+  if (valeur === null) url.searchParams.delete(nom)
+  else url.searchParams.set(nom, valeur)
+  window.history.replaceState(window.history.state, '', `${url.pathname}${url.search}`)
+}
+
+const pluriel = (n: number, mot: string) => `${n} ${mot}${n > 1 ? 's' : ''}`
+
+// Template GÉNÉRIQUE de page matière : valable pour toutes les matières et
+// toutes les classes, tout vient de Supabase (via le vue-modèle sérialisable
+// calculé côté serveur).
+//
+// DEPUIS LE 05/10/2026 (maquettes d'assets-sources/maquettes/matiere*.html,
+// choisies par Lucas) :
+//
+//   · LA BANNIÈRE à la teinte de la matière — son nom, sa barre d'or, le
+//     gardien, Marcel, et « Commencer / Reprendre » qui mène droit au cours ;
+//   · LE RAIL DE PORTES — Cours · Exercices · Jeux · Annales, au lieu de six
+//     pilules à plat ; le cahier d'exercices de la matière y a sa porte ;
+//   · LE SOMMAIRE derrière la porte Cours, avec ses rayons en segment.
+//
+// L'état des portes et des rayons vit ici ; l'adresse le suit (`?onglet=`,
+// `?theme=`, écrits sans empiler d'historique) : revenir d'un cours rouvre la
+// porte, le rayon et le thème quittés.
 export default function SubjectTemplate({
   data,
   initialMode,
+  carnet = null,
 }: {
   data: SubjectTemplateData
-  // Onglet ouvert à l'arrivée (`?onglet=boss` depuis la feuille Modes de jeu),
-  // sous forme d'identifiant (« jeu », « programme:geographie »).
+  // Onglet ouvert à l'arrivée (`?onglet=exercices`, `?onglet=programme:geographie`),
+  // sous forme d'identifiant.
   initialMode?: string
+  /** « Tes cours » du carnet rattachés à la matière, posés dans la porte Cours. */
+  carnet?: ReactNode
 }) {
-  // Les onglets dépendent de la CLASSE (« Annales » n'existe que les années à
-  // examen) ET de la matière : celle qui réunit deux disciplines — histoire-géo
-  // — remplace « Programme » par « Histoire » et « Géographie ».
   const router = useRouter()
-  const disciplines = disciplinesOf(data.chapters)
-  const modes = modesFor(data.gradeLevel, disciplines, data.subject.slug)
+  const { slug } = data.subject
+  // Les onglets dépendent de la CLASSE (« Annales » n'existe que les années à
+  // examen) ET de la matière (ses rayons, son cahier, son encyclopédie).
+  const modes = useMemo(
+    () => modesFor(data.gradeLevel, disciplinesOf(data.chapters), slug, Boolean(data.cahier)),
+    [data.gradeLevel, data.chapters, slug, data.cahier],
+  )
+  const portes = portesDe(modes)
+  const rayons = rayonsDe(modes)
   const [tab, setTab] = useState<string>(initialMode ?? tabId(modes[0]))
+  // Un identifiant inconnu (onglet disparu, lien ancien) retombe sur le premier.
+  const active = modes.find((m) => tabId(m) === tab) ?? modes[0]
+  const porte = porteDe(active.key)
 
-  // L'ENCYCLOPÉDIE N'EST PAS UN PANNEAU DE CETTE PAGE, c'est un rayon à part —
-  // et l'onglet y conduit au lieu de changer d'état. Deux raisons : une fiche
-  // doit avoir SON adresse (on partage « Jeanne d'Arc », on ne partage pas
-  // « le dossier d'histoire, quatrième onglet »), et le corpus fait des
-  // centaines de kilo-octets que le bundle du dossier n'a pas à porter.
+  // LE RAYON DE LA PORTE COURS : celui qu'on regarde, ou le dernier regardé
+  // quand une autre porte est ouverte — la bannière compte SES fiches, et
+  // revenir à Cours le rouvre.
+  const premierRayon = modes.find((m) => m.key === 'programme') ?? modes[0]
+  const [dernierRayon, setDernierRayon] = useState<string>(
+    active.key === 'programme' ? tabId(active) : tabId(premierRayon),
+  )
+  const rayon = modes.find((m) => tabId(m) === dernierRayon) ?? premierRayon
+
   const changerOnglet = (id: string) => {
+    // L'ENCYCLOPÉDIE N'EST PAS UN PANNEAU DE CETTE PAGE, c'est un rayon qui a
+    // ses propres adresses (une fiche se partage) et son propre corpus (des
+    // centaines de kilo-octets que ce dossier n'a pas à porter) : on y va.
     if (id === 'encyclopedie') {
-      router.push(hrefEncyclopedie(data.subject.slug))
+      router.push(hrefEncyclopedie(slug))
       return
     }
     setTab(id)
+    if (id.startsWith('programme')) setDernierRayon(id)
+    ecrireParametre('onglet', id === tabId(modes[0]) ? null : id)
   }
-  // Un identifiant inconnu (onglet disparu, lien ancien) retombe sur le premier.
-  const active = modes.find((m) => tabId(m) === tab) ?? modes[0]
-  const mode = active.key
+  const ouvrirPorte = (cle: ClePorte) => {
+    changerOnglet(cle === 'programme' ? tabId(rayon) : cle)
+  }
+
+  // Le rayon ne montre QUE ses chapitres — et ne compte que les siens : une
+  // bannière qui annoncerait les 300 fiches du dossier au-dessus de la liste de
+  // grammaire mentirait sur ce qu'elle chapeaute. La fiche à reprendre est
+  // recalculée pour la même raison.
+  const chapters = useMemo(
+    () =>
+      rayon.discipline
+        ? data.chapters.filter((c) => c.discipline === rayon.discipline)
+        : data.chapters,
+    [data.chapters, rayon.discipline],
+  )
+  const progress = rayon.discipline
+    ? (data.progressByDiscipline[rayon.discipline] ?? data.progress)
+    : data.progress
+  // Le repère de la dernière session ne vaut que si sa fiche est dans le rayon.
+  const resume =
+    data.resume && chapters.some((c) => c.id === data.resume?.chapterId) ? data.resume : null
+  const reprise = useMemo(() => repriseDuProgramme(chapters, resume), [chapters, resume])
+  // Une matière rangée sous les chapitres du programme compte ses lignes en
+  // FICHES : le mot « chapitre » y désigne les thèmes.
+  const unit = chapterUnit(chapters)
+  // La barre suit la courbe d'encouragement (« elle doit se remplir même si
+  // l'élève a fait un chapitre ») ; le compte écrit dessus reste exact.
+  const jauge = jaugeDesFiches(chapters)
+  const nomDuRayon = rayon.discipline ? disciplineLabel(rayon.discipline) : null
   const exam = examYearFor(data.gradeLevel)
 
-  // L'onglet d'une discipline ne montre QUE ses chapitres — et ne compte que
-  // les siens : un header qui annoncerait les 53 fiches du dossier au-dessus de
-  // la liste de géographie mentirait sur ce qu'il chapeaute. Le CTA
-  // « Reprendre » est recalculé pour la même raison : celui du dossier entier
-  // désignerait souvent un chapitre invisible dans l'onglet ouvert.
-  const chapters = active.discipline
-    ? data.chapters.filter((c) => c.discipline === active.discipline)
-    : data.chapters
-  const progress = active.discipline
-    ? (data.progressByDiscipline[active.discipline] ?? data.progress)
-    : data.progress
-  // Le drapeau de la dernière session ne se montre que si sa fiche est dans
-  // l'onglet ouvert (une discipline n'affiche que ses chapitres).
-  const resume =
-    data.resume && chapters.some((c) => c.id === data.resume?.chapterId)
-      ? data.resume
-      : null
-  // Une matière rangée sous les chapitres du programme compte ses lignes en
-  // FICHES : le mot « chapitre » y désigne les en-têtes de la liste.
-  const unit = chapterUnit(chapters)
-  // La barre de l'en-tête suit la courbe d'encouragement (Lucas, 01/10/2026 :
-  // « elle doit se remplir même si l'élève a fait un chapitre ») ; le compte
-  // écrit à côté reste exact.
-  const jauge = jaugeDesFiches(chapters)
-  // Un programme rangé en plusieurs thèmes s'affiche en GRILLE de tuiles ; une
-  // liste à plat ou un rayon d'un seul bloc garde sa liste.
-  const enMondes = afficheEnMondes(chapters)
-  const nomAffiche = active.discipline
-    ? disciplineLabel(active.discipline)
-    : data.subject.name
-
-  // LE GARDIEN. Un seul modèle de vue, lu par l'écusson du header, par celui de
-  // la barre collante, par la bulle de l'onglet et par le billet : quatre
-  // lectures indépendantes de la même jauge finiraient par se contredire.
+  // LE GARDIEN. Un seul modèle de vue, lu par l'écusson de la bannière, par
+  // celui de la barre collante, par la bulle de la porte et par le billet :
+  // quatre lectures indépendantes de la même jauge finiraient par se contredire.
   const gardien = gardienVue(data.gardien)
+  const aEcusson = afficheEcusson(gardien)
   // Le dossier de français — le seul à porter les dictées. On teste le SLUG et
-  // non le nom affiché : celui-ci change avec la classe (« Français », « Français
-  // 1re »), le slug non.
-  const estFrancais = data.subject.slug === 'francais'
-  const ongletJeu = modes.find((m) => m.key === 'jeu')
-  const jeuId = ongletJeu ? tabId(ongletJeu) : null
-  // Taper l'écusson mène là où le gardien se combat, quel que soit l'onglet ouvert.
-  const versLeGardien = () => {
-    if (jeuId) setTab(jeuId)
+  // non le nom affiché : celui-ci change avec la classe, le slug non.
+  const estFrancais = slug === 'francais'
+  // Toucher l'écusson mène là où le gardien se combat.
+  const versLeGardien = () => changerOnglet('jeu')
+
+  const jeux = (() => {
+    const salon = salonSubjectFor(data.subject)
+    return salon ? subjectGameTickets(salon, { premium: data.premium ?? false }).length : 0
+  })()
+  const comptes: Record<ClePorte, string | null> = {
+    programme: pluriel(progress.total, unit),
+    exercices: data.cahier ? pluriel(data.cahier.total, 'exercice') : null,
+    jeu:
+      [jeux > 0 ? `${jeux} jeu${jeux > 1 ? 'x' : ''}` : null, gardien.boss ? '1 boss' : null]
+        .filter(Boolean)
+        .join(' · ') || 'Défis',
+    annales: exam ? exam.short : null,
   }
-  // `tone="light"` : l'en-tête est posé sur le mur crème depuis le 23/09/2026,
-  // plus sur un bandeau sombre — une silhouette blanche y disparaîtrait.
-  const ecusson = afficheEcusson(gardien) ? (
-    <GardienBadge vue={gardien} tone="light" onSelect={versLeGardien} />
-  ) : null
+  const portesVues: PorteVue[] = portes.map((p) => ({
+    ...p,
+    compte: comptes[p.key],
+    // L'exercice est de l'offre Studuel+ : la couronne nomme l'offre.
+    couronne: p.key === 'exercices' && !data.premium,
+    bulle: p.key === 'jeu' ? gardien.bulle : null,
+  }))
 
   return (
-    // Plus de marges négatives ni de bandeau plein écran : l'en-tête est celui
-    // de toutes les pages de Réviser, sur le mur crème de l'app (audit du
-    // 23/09/2026), dans les marges de lecture du gabarit.
     <div>
-      <SubjectHeader
+      <BanniereMatiere
         subject={data.subject}
         grade={data.grade}
+        rayon={nomDuRayon}
+        unit={unit}
         progress={progress}
         jauge={jauge}
-        unit={unit}
-        discipline={
-          active.discipline ? disciplineLabel(active.discipline) : null
-        }
-        gardien={ecusson}
-        standing={
-          data.standing ? (
-            <StandingLine
-              standing={data.standing}
-              grade={data.gradeLevel}
-              className="mt-0.5"
-            />
+        reprise={reprise}
+        gardien={
+          aEcusson ? (
+            <GardienBadge vue={gardien} size="sm" tone="light" onSelect={versLeGardien} />
           ) : null
         }
-      >
-        <ModeTabs
-          modes={modes}
-          active={tabId(active)}
-          onChange={changerOnglet}
-          bulle={
-            gardien.bulle && jeuId ? { tab: jeuId, label: gardien.bulle } : null
-          }
-        />
-      </SubjectHeader>
-
-      <SubjectStickyBar
-        name={data.subject.name}
-        progress={progress}
-        jauge={jauge}
-        gardien={
-          afficheEcusson(gardien) ? (
-            <GardienBadge
-              vue={gardien}
-              size="sm"
-              tone="light"
-              onSelect={versLeGardien}
-            />
+        standing={
+          data.standing ? (
+            <StandingLine standing={data.standing} grade={data.gradeLevel} className="mt-0.5" />
           ) : null
         }
       />
 
-      {/* Panneau de contenu, posé directement sur le mur quadrillé — plus de
-          feuille opaque qui le couvrait (audit du 23/09/2026). Le `key` rejoue
-          la petite animation d'entrée à chaque changement d'onglet — la seule
+      <PortesMatiere
+        portes={portesVues}
+        active={porte}
+        onChange={ouvrirPorte}
+        // Le doigt se pose sur « Exercices » : le cahier part se lire tout de
+        // suite, une centaine de millisecondes avant le clic.
+        onIntention={(cle) => {
+          if (cle === 'exercices') prechargerCahier(slug)
+        }}
+      />
+
+      <SubjectStickyBar
+        name={data.subject.name}
+        slug={slug}
+        progress={progress}
+        jauge={jauge}
+        gardien={
+          aEcusson ? (
+            <GardienBadge vue={gardien} size="sm" tone="light" onSelect={versLeGardien} />
+          ) : null
+        }
+      />
+
+      {/* Le contenu de la porte ouverte, posé sur le mur quadrillé. Le `key`
+          rejoue la petite animation d'entrée à chaque changement — la seule
           animation de la page. */}
-      <div>
-        <div key={tabId(active)} className="pop-in mt-5">
-          {mode === 'programme' ? (
-            <>
-              {/* PLUS DE BANDEAU « n notions à revoir » NI DE CARTE « On commence
-                  par ça » (Lucas, 17/09/2026 : « supprime ces blocs ») : la
-                  liste s'ouvre directement, et la fiche de la dernière session
-                  porte un drapeau (ChapterItem). */}
-              {/* L'examen blanc n'apparaît ici que si l'onglet Annales n'existe
-                  pas (année sans examen) — sinon c'est là-bas qu'il vit, et le
-                  répéter ferait deux portes pour la même épreuve. Sans Annales,
-                  il ne prend la tête que lorsqu'il a du sens (`examBannerOnTop`),
-                  et attend en pied de liste le reste du temps. */}
-              {!exam && data.examOnTop ? (
+      <div key={porte === 'programme' ? tabId(rayon) : porte} className="pop-in">
+        {porte === 'programme' ? (
+          <>
+            {/* L'examen blanc n'apparaît ici que si la porte Annales n'existe
+                pas (année sans examen) — sinon c'est là-bas qu'il vit. Il ne
+                prend la tête que lorsqu'il a du sens (`examBannerOnTop`), et
+                attend en pied de liste le reste du temps. */}
+            {!exam && data.examOnTop ? (
+              <div className="mt-3.5">
                 <ExamBanner subject={data.subject} />
-              ) : null}
-              {enMondes ? (
-                <ProgrammeMondes
-                  chapters={chapters}
-                  resume={resume}
-                  subjectSlug={data.subject.slug}
-                  subjectName={nomAffiche}
-                  grade={data.grade}
-                />
-              ) : (
-                <ChapterList
-                  chapters={chapters}
-                  resume={resume}
-                  subjectSlug={data.subject.slug}
-                  subjectName={nomAffiche}
-                  grade={data.grade}
-                />
-              )}
-              {!exam && !data.examOnTop ? (
-                <div className="mt-6">
-                  <ExamBanner subject={data.subject} />
-                </div>
-              ) : null}
-            </>
-          ) : mode === 'annales' && exam ? (
+              </div>
+            ) : null}
+            <Sommaire
+              chapters={chapters}
+              resume={resume}
+              subjectSlug={slug}
+              subjectName={nomDuRayon ?? data.subject.name}
+              grade={data.grade}
+              rayons={
+                rayons.length > 0 ? (
+                  <SegmentRayons rayons={rayons} actif={tabId(rayon)} onChange={changerOnglet} />
+                ) : null
+              }
+              themeOuvert={data.themeOuvert ?? null}
+              onTheme={(cle) => ecrireParametre('theme', cle)}
+              avant={carnet ? <div className="mt-3 empty:hidden">{carnet}</div> : null}
+            />
+            {!exam && !data.examOnTop ? (
+              <div className="mt-6">
+                <ExamBanner subject={data.subject} />
+              </div>
+            ) : null}
+          </>
+        ) : porte === 'exercices' && data.cahier ? (
+          <div className="mt-4">
+            <CahierMatiere
+              matiere={slug}
+              nom={data.subject.name}
+              total={data.cahier.total}
+              premium={data.premium ?? false}
+            />
+          </div>
+        ) : porte === 'annales' && exam ? (
+          <div className="mt-4">
             <AnnalesPanel
               subject={data.subject}
               exam={exam}
               papers={data.papers}
               annales={data.annalesCorrigees}
             />
-          ) : (
-            // L'onglet « Mode de jeu » porte DEUX familles, dans cet ordre :
-            // le gardien de la matière (le rendez-vous), puis les jeux de
-            // l'arène (on joue tout de suite). Rien dessous : la liste des
-            // chapitres et de leurs formats y redisait le Programme.
-            <div className="flex flex-col gap-3">
-              {/* LES DICTÉES — français seulement. Une dictée d'histoire-géo
-                  n'existe pas, et une carte grisée « bientôt » dans les autres
-                  dossiers serait une porte qui ne s'ouvre pas : le projet a
-                  déjà refusé ça ailleurs (menu de création du carnet). */}
-              {estFrancais ? <CarteDictee /> : null}
-              <TrainingPanel
-                subject={data.subject}
-                bossPool={data.bossPool}
-                gardien={gardien}
-                premium={data.premium ?? false}
-              />
-            </div>
-          )}
-        </div>
+          </div>
+        ) : (
+          // La porte « Jeux » porte DEUX familles, dans cet ordre : le gardien
+          // de la matière (le rendez-vous), puis les jeux de l'arène (on joue
+          // tout de suite).
+          <div className="mt-4 flex flex-col gap-3">
+            {/* LES DICTÉES — français seulement. Une carte grisée « bientôt »
+                dans les autres dossiers serait une porte qui ne s'ouvre pas. */}
+            {estFrancais ? <CarteDictee /> : null}
+            <TrainingPanel
+              subject={data.subject}
+              bossPool={data.bossPool}
+              gardien={gardien}
+              premium={data.premium ?? false}
+            />
+          </div>
+        )}
       </div>
-
-      {/* Marcel, avec la matière sous le bras : c'est lui qui génère fiches,
-          exercices et flashcards sur mesure — l'ancienne baguette « IA,
-          bientôt » promettait exactement cela sans jamais le faire. */}
-      <MarcelFab matiere={data.subject.slug} />
     </div>
   )
 }

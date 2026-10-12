@@ -261,6 +261,32 @@
   height: calc(100% - 2em);
 }
 
+/* LA PHOTO DANS SON CADRE (05/10/2026, lib/moi/cadre-profil) : le carré du
+   dessin a de la marge autour du cadre — on la mange par des marges négatives
+   pour que la photo garde sa taille de polaroid. */
+.photoCadree {
+  display: block;
+  width: 15.5em;
+  margin: -0.9em 0 -1.6em;
+  transition: scale 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  filter: drop-shadow(0 0.35em 0.45em rgb(60 35 15 / 0.25));
+}
+.photoCadree:active {
+  scale: 0.97;
+}
+.identite > .nom {
+  max-width: 100%;
+  margin-top: 0.4em;
+}
+.cadreLigne {
+  margin-top: 0.45em;
+  font-size: 0.95em;
+  font-weight: 700;
+  color: var(--encre-pale);
+  text-align: center;
+}
+
 .polaroid {
   position: relative;
   width: 11.6em;
@@ -852,4 +878,142 @@ button.bloc:active {
   font-size: 0.92em;
   font-weight: 700;
   color: var(--encre-pale);
+}
+
+/* --- Les badges, à même le papier (05/10/2026) -------------------------------- */
+
+.badgesGrille {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5em 0.4em;
+  margin: 0.2em 0 0.6em;
+  padding: 0;
+  list-style: none;
+}
+.badgeCase {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 1;
+  place-items: center;
+  padding: 0.15em;
+  border: 0;
+  background: none;
+  font-size: 3.4em;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: scale 0.15s ease;
+}
+.badgeCase:active {
+  scale: 0.92;
+}
+.badgeDessin {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* Gagné : le dessin en couleurs, posé avec une ombre portée. */
+.badgeCase[data-gagne] .badgeDessin,
+.badgeFiche[data-gagne] .badgeDessin {
+  filter: drop-shadow(0 0.06em 0.05em rgb(60 35 15 / 0.35));
+}
+/* À gagner : son OMBRE — la silhouette noircie, à peine posée sur le papier. */
+.badgeCase:not([data-gagne]) .badgeDessin,
+.badgeFiche:not([data-gagne]) .badgeDessin {
+  filter: brightness(0);
+  opacity: 0.2;
+}
+.badgeFiche {
+  display: grid;
+  width: 8rem;
+  height: 8rem;
+  place-items: center;
+  font-size: 5.5rem;
+  line-height: 1;
+}
+
+/* --- La semaine de la page de garde : le record AU-DESSUS du travail -------- */
+
+.semaineTexte {
+  display: flex;
+  flex: 1.45;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15em;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  text-align: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.recordSemaine {
+  margin-bottom: 0.45em;
+  font-family: var(--font-heading);
+  font-size: 1.7em;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--primary);
+}
+.recordSemaine[data-battu] {
+  padding: 0 0.25em;
+  background: linear-gradient(176deg, transparent 12%, var(--highlight) 12% 88%, transparent 88%);
+  color: var(--encre);
+}
+
+/* --- La course entre amis ------------------------------------------------------ */
+
+.epreuve {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  padding: 0.45em 0 0.55em;
+  border-bottom: 0.1em dashed color-mix(in oklab, var(--encre) 30%, transparent);
+}
+.epreuveTitre {
+  font-family: var(--font-heading);
+  font-size: 1.05em;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--encre-pale);
+}
+.epreuveLigne {
+  display: grid;
+  grid-template-columns: 1.8em 3.1em minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.4em;
+}
+.epreuveCouronne {
+  width: 1.8em;
+  height: 1.8em;
+  color: var(--encre);
+}
+.epreuveMoi {
+  font-family: var(--font-heading);
+  font-size: 1.05em;
+  font-weight: 800;
+  color: var(--primary);
+}
+.epreuvePhrase {
+  font-size: 0.95em;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--encre-pale);
+}
+
+/* --- Le Top % d'un record ----------------------------------------------------- */
+
+.recordTop {
+  padding: 0 0.3em;
+  border-radius: 0.3em;
+  background: color-mix(in oklab, var(--primary) 16%, #fff);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  color: var(--primary);
+}
+.recordTop[data-elite] {
+  background: var(--highlight);
+  color: var(--encre);
 }

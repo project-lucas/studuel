@@ -13,6 +13,7 @@ import type { TraqueCard } from '@/lib/traque'
 import type { ExamPaper } from '@/lib/exam-papers'
 import type { AnneeAnnales } from '@/lib/annales-corrigees/apercu'
 import type { Standing } from '@/lib/percentile'
+import type { SuiteFiche } from '@/lib/reviser/suite'
 
 // ---------------------------------------------------------------------------
 // Onglets de la page matière.
@@ -25,7 +26,7 @@ import type { Standing } from '@/lib/percentile'
 // Boss (un panneau, pas une liste) prend la tête. « Annales » ne s'ajoute que
 // les années à examen.
 
-export type ModeKey = 'programme' | 'encyclopedie' | 'jeu' | 'annales'
+export type ModeKey = 'programme' | 'encyclopedie' | 'exercices' | 'jeu' | 'annales'
 
 /**
  * Pictogramme d'un onglet, désigné par son NOM (le composant fait la
@@ -139,6 +140,12 @@ export function modesFor(
    * barre d'onglets (composant client) n'embarque pas le corpus.
    */
   subjectSlug?: string | null,
+  /**
+   * La matière a-t-elle un CAHIER D'EXERCICES à ce niveau ? C'est la page qui
+   * le sait (elle compte ses exercices en base) : une porte qui ne mènerait à
+   * rien n'est pas proposée.
+   */
+  aCahier = false,
 ): ModeTab[] {
   const tabs: ModeTab[] =
     disciplines.length > 1
@@ -163,10 +170,78 @@ export function modesFor(
   if (aUneEncyclopedie(subjectSlug)) {
     tabs.push({ key: 'encyclopedie', label: 'Encyclopédie', icon: 'livre' })
   }
+  // LE CAHIER D'EXERCICES de la matière, en accès direct (Lucas, 05/10/2026 :
+  // « il n'est pas accessible tout de suite, il faut fouiller »). Il ne
+  // s'ouvrait que depuis un chapitre : thème, fiche, support, cahier.
+  if (aCahier) tabs.push({ key: 'exercices', label: 'Exercices' })
   // La manette : c'est l'onglet qui se JOUE (boss, jeux de l'arène, défis).
   tabs.push({ key: 'jeu', label: 'Mode de jeu', icon: 'manette' })
   if (isExamYear(grade)) tabs.push({ key: 'annales', label: 'Annales' })
   return tabs
+}
+
+// ---------------------------------------------------------------------------
+// LES PORTES ET LES RAYONS (05/10/2026).
+//
+// Le dossier alignait jusqu'à six pilules à plat — Programme, Fiches,
+// Grammaire, Anciens programmes, Mode de jeu, Annales — de trois natures
+// différentes. Elles se rangent sur DEUX étages :
+//
+//   · les PORTES, trois ou quatre objets illustrés : Cours, Exercices, Jeux,
+//     (Annales) — ce qu'on vient FAIRE ;
+//   · les RAYONS de la porte Cours, en segment : Programme, Fiches, Grammaire…
+//     — où chercher, une fois qu'on apprend. L'ENCYCLOPÉDIE de l'histoire-géo
+//     en est un (« le troisième rayon du dossier ») : on y cherche un nom, on
+//     n'y fait pas autre chose qu'apprendre.
+//
+// `modesFor` reste la seule source (et le seul format d'URL, `?onglet=`) : une
+// porte est une CLÉ d'onglet, un rayon est un onglet « programme » (qui porte
+// une discipline) ou l'encyclopédie.
+
+/** Une porte : toute clé d'onglet, sauf l'encyclopédie, qui est un rayon. */
+export type ClePorte = Exclude<ModeKey, 'encyclopedie'>
+
+/** Le nom d'une porte. « Cours » coiffe les rayons, dont l'un s'appelle « Programme ». */
+export const PORTE_LABELS: Record<ClePorte, string> = {
+  programme: 'Cours',
+  exercices: 'Exercices',
+  jeu: 'Jeux',
+  annales: 'Annales',
+}
+
+export type Porte = { key: ClePorte; label: string }
+
+/** La porte qui abrite un onglet : l'encyclopédie est rangée sous Cours. */
+export function porteDe(key: ModeKey): ClePorte {
+  return key === 'encyclopedie' ? 'programme' : key
+}
+
+/** Les portes du dossier, dans l'ordre des onglets, une par clé. */
+export function portesDe(modes: readonly ModeTab[]): Porte[] {
+  const portes: Porte[] = []
+  for (const mode of modes) {
+    const key = porteDe(mode.key)
+    if (!portes.some((p) => p.key === key)) portes.push({ key, label: PORTE_LABELS[key] })
+  }
+  return portes
+}
+
+/**
+ * Les rayons de la porte Cours. Vide quand il n'y en a qu'un : un segment d'une
+ * seule case ne trie rien.
+ */
+export function rayonsDe(modes: readonly ModeTab[]): ModeTab[] {
+  const rayons = modes.filter((m) => porteDe(m.key) === 'programme')
+  return rayons.length > 1 ? rayons : []
+}
+
+/**
+ * Le nom COURT d'un rayon, pour le segment : quatre cases tiennent sur 390 px
+ * avec la loupe à côté, « Anciens programmes » non. Le nom long reste celui des
+ * lecteurs d'écran.
+ */
+export function rayonCourt(label: string): string {
+  return label === 'Anciens programmes' ? 'Anciens' : label
 }
 
 // Anciennes clés d'URL (`?onglet=boss`, `?onglet=quiz`… depuis la feuille Modes
@@ -175,6 +250,9 @@ export function modesFor(
 // sur l'onglet qui porte désormais leur contenu. Valeur inconnue — ou onglet
 // absent pour cette classe — → undefined, c'est-à-dire Programme.
 const LEGACY_MODE_ALIASES: Record<string, ModeKey> = {
+  // Le nom que l'élève donne à la porte Exercices.
+  cahier: 'exercices',
+  exercice: 'exercices',
   chapitres: 'programme',
   erreurs: 'programme',
   entrainement: 'jeu',
@@ -204,7 +282,7 @@ export function modeFromParam(
   if (exact) return tabId(exact)
   // 2. une clé seule : on ouvre le PREMIER onglet qui la porte — sur une
   //    matière à deux disciplines, `?onglet=programme` ouvre l'histoire.
-  const key = (['programme', 'encyclopedie', 'jeu', 'annales'] as ModeKey[]).includes(
+  const key = (['programme', 'encyclopedie', 'exercices', 'jeu', 'annales'] as ModeKey[]).includes(
     raw as ModeKey,
   )
     ? (raw as ModeKey)
@@ -509,6 +587,12 @@ export type ChapterRow = {
    * ce que la carte « Reprendre » annonce à côté de l'éclair.
    */
   xpRestant: number
+  /**
+   * Où mène le bouton de la fiche (lib/reviser/suite) : son cours, puis son
+   * quiz, puis « Revoir ». Calculé par la page avec ce qu'elle lit déjà.
+   * Absent ou `null` : la fiche n'a pas de leçon, la ligne n'a pas de bouton.
+   */
+  suite?: SuiteFiche | null
 }
 
 // ---------------------------------------------------------------------------
@@ -942,6 +1026,14 @@ export type SubjectTemplateData = {
    * lui-même ne descend jamais dans le navigateur.
    */
   annalesCorrigees: AnneeAnnales[]
+  /**
+   * Le cahier d'exercices de la matière à ce niveau : combien d'exercices il
+   * compte. `null` ou absent quand elle n'en a pas — la porte Exercices ne
+   * s'affiche alors pas. Son contenu, lui, se lit quand on ouvre la porte.
+   */
+  cahier?: { total: number } | null
+  /** Le thème ouvert à l'arrivée (`?theme=`), quand l'élève revient d'une fiche. */
+  themeOuvert?: string | null
 }
 
 /**

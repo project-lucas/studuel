@@ -663,11 +663,46 @@
   animation: hud-encaisse 0.28s var(--ease);
 }
 
+/* L'XP QUI ARRIVE (05/10/2026) : le « +N » qui saute contre « Niveau 7 » à
+   chaque éclair encaissé, et la lueur de la barre qui se remplit. Transform et
+   opacité seulement. */
+@keyframes hud-gain-xp {
+  0% {
+    transform: scale(0.4) translateY(4px);
+    opacity: 0;
+  }
+  45% {
+    transform: scale(1.25) translateY(-2px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+.hud-gain-xp {
+  animation: hud-gain-xp 0.32s var(--ease) both;
+}
+@keyframes hud-barre-lueur {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.72;
+  }
+}
+.hud-barre-lueur {
+  animation: hud-barre-lueur 0.5s ease-in-out infinite;
+}
+
 /* Mouvement réduit : les pastilles apparaissent sans rebond et le compteur ne
    sursaute pas. Le NOMBRE, lui, monte toujours — c'est l'information, pas la
    décoration (le fournisseur verse alors le gain d'un coup, sans vol). */
 @media (prefers-reduced-motion: reduce) {
   .gain-apparait,
+  .hud-gain-xp,
+  .hud-barre-lueur,
   .hud-encaisse {
     animation: none;
   }

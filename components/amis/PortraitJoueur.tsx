@@ -2,6 +2,7 @@ import Image from 'next/image'
 import type { AvatarAffiche } from '@/lib/avatar-affiche'
 import { PORTRAIT_FACE_CROP, portraitDe, portraitSrc } from '@/lib/portraits'
 import { idAvatarIa, srcAvatarIa } from '@/lib/avatar-ia'
+import { imagePersonnage, personnageDuPortrait } from '@/lib/personnages-historiques'
 import { cn } from '@/lib/utils'
 
 /**
@@ -29,7 +30,15 @@ export default function PortraitJoueur({
   // Un avatar dessiné par Marcel, venu d'une liste (`ia:<uuid>`) : l'image
   // entière, comme mon propre avatar résolu par le serveur.
   const ia = idAvatarIa(portrait)
-  const affiche = avatar ?? (ia ? { src: srcAvatarIa(ia), visage: false } : null)
+  // Un personnage historique débloqué (`perso:<id>`) : son portrait entier.
+  const perso = personnageDuPortrait(portrait)
+  const affiche =
+    avatar ??
+    (ia
+      ? { src: srcAvatarIa(ia), visage: false }
+      : perso
+        ? { src: imagePersonnage(perso.id), visage: false }
+        : null)
   return (
     <span
       aria-hidden="true"

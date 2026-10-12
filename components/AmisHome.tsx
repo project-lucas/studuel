@@ -32,6 +32,8 @@ import type { Friend, PendingRequest } from '@/lib/social'
 import type { AvatarAffiche } from '@/lib/avatar-affiche'
 import { acceptFriend, removeFriend } from '@/app/amis/actions'
 import { sfx } from '@/lib/sounds'
+import DefisRecus from '@/components/amis/DefisRecus'
+import type { DefiRecu } from '@/lib/amis/defi-ami'
 
 // -----------------------------------------------------------------------------
 // L'ONGLET AMIS — la LIGUE DE LA SEMAINE au centre, façon Duolingo (Lucas,
@@ -178,6 +180,8 @@ export default function AmisHome({
   referral,
   squadIds,
   maintenantIso,
+  defisRecus = [],
+  premium = false,
 }: {
   connecte: boolean
   /** La fenêtre d'invitation peut s'ouvrir d'elle-même (faux : page d'aperçu). */
@@ -206,6 +210,10 @@ export default function AmisHome({
   squadIds: string[]
   // Clan hebdo (migration 204) — null tant que la migration n'est pas passée.
   maintenantIso: string
+  /** Les défis qu'on m'a lancés (558), en tête de l'onglet. */
+  defisRecus?: DefiRecu[]
+  /** Studuel+ : tous les jeux se défient. */
+  premium?: boolean
 }) {
   const router = useRouter()
   const [duelNotice, setDuelNotice] = useState(false)
@@ -284,6 +292,8 @@ export default function AmisHome({
 
   return (
     <div className="flex flex-col gap-6">
+      <DefisRecus defis={defisRecus.filter((d) => d.mode !== null)} />
+
       <DemandesRecues demandes={pendingRequests} />
 
       <LigueSemaine etat={ligue} apercu={ligueApercu} maintenantIso={maintenantIso} monAvatar={monAvatar} />
@@ -316,6 +326,7 @@ export default function AmisHome({
           canRenameSquad={canRenameSquad}
           referral={referral}
           monAvatar={monAvatar}
+          premium={premium}
         />
       ) : null}
 

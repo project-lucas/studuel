@@ -13,6 +13,13 @@ vi.mock('@/components/amis/useDuelLaunch', () => ({
   useDuelLaunch: () => ({ launch: vi.fn(), launching: false }),
 }))
 vi.mock('@/components/amis/ligue/OuvrirCoffre', () => ({ default: () => null }))
+// Le défi d'un ami et la fiche d'un joueur ont leurs propres chemins.
+vi.mock('@/components/amis/DefiAmis', () => ({
+  BoutonDefierCoin: () => <button type="button">Défier</button>,
+  PanneauDefi: () => null,
+}))
+vi.mock('@/components/amis/FicheJoueur', () => ({ default: () => null }))
+vi.mock('@/app/amis/defi-actions', () => ({ inviterAmiAuDefi: vi.fn(async () => ({ ok: false, raison: 'absent' })) }))
 vi.mock('@/components/FriendQrButton', () => ({ default: () => null }))
 vi.mock('@/components/ParrainageCard', () => ({
   default: () => <p>Carte de parrainage</p>,

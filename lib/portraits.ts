@@ -59,10 +59,14 @@ export function portraitSrc(key: PortraitKey): string {
  * Vérifié à l'œil sur les treize (scratch du 16/09/2026).
  */
 export const PORTRAIT_FACE_CROP = {
-  width: '180%',
-  height: '180%',
-  left: '-40%',
-  top: '-20%',
+  // 05/10/2026 : 180 % convenait aux écus d'avant ; les portraits v2 sont des
+  // bustes carrés, la tête en remplit déjà le haut — 180 % rognait le front et
+  // le menton (Lucas : « la tête est comme compactée »). 125 % garde la tête
+  // entière et le haut du sweat.
+  width: '125%',
+  height: '125%',
+  left: '-12.5%',
+  top: '-6%',
 } as const
 
 /**

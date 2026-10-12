@@ -148,6 +148,69 @@ export function afficheEnMondes(chapters: readonly { theme: string | null }[]): 
   return themes.size >= 2
 }
 
+/** « ~38 min », « ~1 h 10 » : ce qu'il reste à passer sur un thème. */
+export function dureeLisible(minutes: number): string {
+  const total = Math.max(0, Math.round(minutes))
+  if (total < 60) return `~${total} min`
+  const reste = total % 60
+  return `~${Math.floor(total / 60)} h${reste > 0 ? ` ${String(reste).padStart(2, '0')}` : ''}`
+}
+
+/**
+ * LA LIGNE GRISE SOUS LE TITRE D'UN THÈME, dans le sommaire : le compte EXACT
+ * de ses fiches, puis ce qui presse — le contrôle annoncé — ou, à défaut, le
+ * temps qu'il reste à y passer (les fiches terminées ne comptent plus).
+ *
+ *   « 5 fiches · ~38 min »   « 1/4 fiches · Contrôle dans 3 jours »
+ *   « 5/5 fiches · Terminé »
+ */
+export function resumeDuMonde(monde: Monde): string {
+  const { done, total } = monde.avancement
+  const fiches = `${total} fiche${total > 1 ? 's' : ''}`
+  if (monde.etat === 'termine') return `${total}/${fiches} · Terminé`
+  const compte = monde.etat === 'entame' ? `${done}/${fiches}` : fiches
+  if (monde.controle) return `${compte} · ${monde.controle.label}`
+  const minutes = monde.fiches.reduce(
+    (somme, f) => somme + (f.status === 'complete' ? 0 : (f.minutes ?? 0)),
+    0,
+  )
+  return minutes > 0 ? `${compte} · ${dureeLisible(minutes)}` : compte
+}
+
+/**
+ * LE THÈME OUVERT À L'ARRIVÉE (le sommaire, 05/10/2026).
+ *
+ * Le sommaire s'ouvre sur les fiches d'UN thème : l'élève lit des titres de
+ * fiches tout de suite, pas une rangée de thèmes fermés. Dans l'ordre :
+ *
+ *   1. celui qu'il avait ouvert (`?theme=`), quand il revient d'une fiche ;
+ *   2. celui du contrôle annoncé le plus proche — c'est ce qui presse ;
+ *   3. celui de la fiche à reprendre (le bouton de la bannière y conduit) ;
+ *   4. sinon le premier qui n'est pas terminé.
+ *
+ * `null` quand il n'y a aucun thème.
+ */
+export function themeOuvertParDefaut(
+  mondes: readonly Monde[],
+  repriseCle: string | null,
+  demande?: string | null,
+): string | null {
+  const existe = (cle: string | null | undefined) =>
+    cle ? mondes.some((m) => m.cle === cle) : false
+  if (demande && existe(demande)) return demande
+
+  let presse: Monde | null = null
+  for (const monde of mondes) {
+    if (!monde.controle || monde.etat === 'termine') continue
+    if (!presse?.controle || URGENCE[monde.controle.proximity] < URGENCE[presse.controle.proximity]) {
+      presse = monde
+    }
+  }
+  if (presse) return presse.cle
+  if (repriseCle && existe(repriseCle)) return repriseCle
+  return (mondes.find((m) => m.etat !== 'termine') ?? mondes[0])?.cle ?? null
+}
+
 // ------------------------------------------------------------------ les favoris
 
 /**

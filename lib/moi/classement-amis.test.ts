@@ -35,9 +35,14 @@ describe('lireClassementAmis', () => {
       { id: 'b', nom: 'Sacha', portrait: '', moi: true, trophees: 120, trophees_semaine: -4, secondes: 0, secondes_semaine: 0 },
     ])
     expect(lus).toEqual([
-      { id: 'a', nom: 'Léa', portrait: '5', moi: false, trophees: 300, tropheesSemaine: 8, secondes: 72000, secondesSemaine: 3600 },
-      { id: 'b', nom: 'Sacha', portrait: '', moi: true, trophees: 120, tropheesSemaine: -4, secondes: 0, secondesSemaine: 0 },
+      { id: 'a', nom: 'Léa', portrait: '5', moi: false, trophees: 300, tropheesSemaine: 8, secondes: 72000, secondesSemaine: 3600, xp: null, xpSemaine: null },
+      { id: 'b', nom: 'Sacha', portrait: '', moi: true, trophees: 120, tropheesSemaine: -4, secondes: 0, secondesSemaine: 0, xp: null, xpSemaine: null },
     ])
+  })
+
+  it('lit l’XP de la 558, et la laisse inconnue sans elle', () => {
+    const [l] = lireClassementAmis([{ id: 'a', xp: '1200', xp_semaine: 150 }])
+    expect(l).toMatchObject({ xp: 1200, xpSemaine: 150 })
   })
 
   it('écarte ce qui n’est pas une ligne et répare ce qui manque', () => {

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import BackButton from '@/components/BackButton'
+import MarcelTete from '@/components/reviser/MarcelTete'
 import { cn } from '@/lib/utils'
 import type { SubjectProgress } from '@/lib/subject-template'
 
@@ -20,11 +21,18 @@ import type { SubjectProgress } from '@/lib/subject-template'
  */
 export default function SubjectStickyBar({
   name,
+  slug,
   progress,
   jauge,
   gardien = null,
 }: {
   name: string
+  /**
+   * Le slug de la matière : Marcel s'amarre ici dès que la bannière quitte
+   * l'écran (il ne flotte plus sur le contenu, cf. `MarcelTete`). Absent : pas
+   * de Marcel dans la barre.
+   */
+  slug?: string
   progress: SubjectProgress
   /**
    * Le remplissage de la barre, sur la courbe d'encouragement (cf.
@@ -103,6 +111,11 @@ export default function SubjectStickyBar({
               {jauge === undefined ? `${progress.pct}%` : `${progress.done}/${progress.total}`}
             </span>
           </span>
+          {slug ? (
+            <span className="-mr-2 flex shrink-0">
+              <MarcelTete matiere={slug} taille="sm" />
+            </span>
+          ) : null}
         </div>
       </div>
     </>

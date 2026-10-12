@@ -1,6 +1,7 @@
 'use client'
 
-import { Fragment, useEffect, useRef } from 'react'
+import { Fragment, useEffect, useRef, useState } from 'react'
+import FicheJoueur from '@/components/amis/FicheJoueur'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { ChevronsDown, ChevronsUp, Clock } from 'lucide-react'
@@ -171,6 +172,9 @@ function ListeLigue({
 }) {
   const boite = useRef<HTMLDivElement>(null)
   const maLigne = useRef<HTMLLIElement>(null)
+  // Toucher un joueur de la ligue ouvre sa FICHE (05/10/2026, Lucas : « il
+  // faut pouvoir regarder les autres »). Les rivaux IA n'en ont pas.
+  const [fiche, setFiche] = useState<string | null>(null)
   const taille = groupe.length
   const promus = nbPromus(taille, index)
   const relegues = nbRelegues(taille, index)
@@ -202,13 +206,20 @@ function ListeLigue({
             return (
               <Fragment key={m.cle}>
                 {relegues > 0 && m.rang === taille - relegues + 1 ? <BandeauZone zone="relegation" /> : null}
-                <LigneLigue membre={m} zone={zone} ref={m.moi ? maLigne : undefined} avatar={m.moi ? monAvatar : null} />
+                <LigneLigue
+                  membre={m}
+                  zone={zone}
+                  ref={m.moi ? maLigne : undefined}
+                  avatar={m.moi ? monAvatar : null}
+                  onOuvrir={!m.moi && !m.robot && m.id ? () => setFiche(m.id ?? null) : undefined}
+                />
                 {promus > 0 && m.rang === promus ? <BandeauZone zone="promotion" /> : null}
               </Fragment>
             )
           })}
         </ol>
       </div>
+      <FicheJoueur id={fiche} onClose={() => setFiche(null)} />
     </div>
   )
 }
@@ -227,18 +238,23 @@ function LigneLigue({
   zone,
   ref,
   avatar,
+  onOuvrir,
 }: {
   membre: MembreLigue
   zone: Zone
   ref?: React.Ref<HTMLLIElement>
   avatar: AvatarAffiche | null
+  /** Ouvre la fiche du joueur (élève réel seulement). */
+  onOuvrir?: () => void
 }) {
   return (
     <li
       ref={ref}
+      onClick={onOuvrir}
       className={cn(
         'flex items-center gap-3 rounded-2xl px-2 py-1.5',
         m.moi && 'bg-primary/10 ring-2 ring-primary/50',
+        onOuvrir && 'cursor-pointer active:bg-muted/60',
       )}
     >
       <span

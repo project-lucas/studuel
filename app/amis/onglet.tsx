@@ -1,4 +1,5 @@
 import AmisHome from '@/components/AmisHome'
+import { lireDefisRecus } from '@/lib/amis/defi-ami'
 import OralListenCard from '@/components/amis/OralListenCard'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
@@ -10,7 +11,8 @@ import {
   type PendingRequest,
 } from '@/lib/social'
 import { getDemandesRecues } from '@/lib/coach/oral-server'
-import { referralSummary } from '@/lib/gems'
+import { isPremiumTier, referralSummary } from '@/lib/gems'
+import type { Tier } from '@/lib/subscription'
 import { fetchReferralCounts, fetchSquadIds } from '@/lib/gems-access'
 import { lireLigue } from '@/lib/ligue-server'
 import { ligueApercu } from '@/lib/ligue-apercu'
@@ -22,6 +24,7 @@ type AmisProfileRow = {
   friend_code: string | null
   squad_name: string | null
   avatar: unknown
+  subscription_tier: string | null
 }
 
 /**
@@ -78,6 +81,7 @@ export default async function OngletAmis() {
     squadSet,
     { data: portraitRows },
     ecoutes,
+    { data: defisRows },
   ] = await Promise.all([
     // Une seule lecture de `profiles` ; `readRowTolerant` retire les colonnes
     // que le schéma ne connaît pas encore.
@@ -85,6 +89,7 @@ export default async function OngletAmis() {
       'friend_code',
       'squad_name',
       'avatar',
+      'subscription_tier',
     ]),
     // La ligue de la semaine (376) : clôture, groupe, amis et bilan en un appel.
     // null tant que la migration n'est pas passée — « La ligue ouvre bientôt ».
@@ -103,6 +108,8 @@ export default async function OngletAmis() {
     // Barreau 4 de l'échelle de l'oral (222) : les amis qui demandent qu'on
     // les écoute.
     getDemandesRecues(supabase),
+    // Les défis qu'on m'a lancés (558). Absente : aucun bandeau.
+    supabase.rpc('defis_recus'),
   ])
 
   const portraitById = new Map<string, string>(
@@ -173,6 +180,8 @@ export default async function OngletAmis() {
         referral={referralSummary(referralCounts.pending, referralCounts.activated)}
         squadIds={[...squadSet]}
         maintenantIso={maintenant.toISOString()}
+        defisRecus={lireDefisRecus(defisRows)}
+        premium={isPremiumTier((profile?.subscription_tier ?? 'free') as Tier)}
       />
     </div>
   )

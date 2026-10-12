@@ -22,6 +22,10 @@ import {
   minutesLabel,
   modeFromParam,
   modesFor,
+  porteDe,
+  portesDe,
+  rayonCourt,
+  rayonsDe,
   openGroupIndex,
   quizBadge,
   searchKey,
@@ -199,6 +203,82 @@ describe('modesFor', () => {
 
   test('sans classe connue, on reste sur les deux onglets sûrs', () => {
     expect(modesFor(null).map((m) => m.key)).toEqual(['programme', 'jeu'])
+  })
+})
+
+describe('la porte Exercices — le cahier de la matière', () => {
+  test('elle n’existe que si la matière a un cahier', () => {
+    expect(modesFor('4e', [], 'maths').map((m) => m.key)).toEqual(['programme', 'jeu'])
+    expect(modesFor('4e', [], 'maths', true).map((m) => m.key)).toEqual([
+      'programme',
+      'exercices',
+      'jeu',
+    ])
+  })
+
+  test('elle se place après les rayons et l’encyclopédie, avant les jeux', () => {
+    expect(
+      modesFor('3e', ['histoire', 'geographie'], 'histoire-geo', true).map((m) => tabId(m)),
+    ).toEqual([
+      'programme:histoire',
+      'programme:geographie',
+      'encyclopedie',
+      'exercices',
+      'jeu',
+      'annales',
+    ])
+  })
+
+  test('elle s’ouvre par son nom, ou par celui que l’élève lui donne', () => {
+    const tabs = modesFor('3e', [], 'maths', true)
+    expect(modeFromParam('exercices', tabs)).toBe('exercices')
+    expect(modeFromParam('cahier', tabs)).toBe('exercices')
+    // Sans cahier, le lien retombe sur le programme.
+    expect(modeFromParam('exercices', modesFor('3e', [], 'maths'))).toBeUndefined()
+  })
+})
+
+describe('les portes et les rayons', () => {
+  const francais = modesFor('1re', ['programme', 'fiches', 'grammaire', 'anciens'], 'francais', true)
+  const histoireGeo = modesFor('3e', ['histoire', 'geographie'], 'histoire-geo', true)
+
+  test('quatre portes au plus, une par clé, « Cours » en tête', () => {
+    expect(portesDe(francais).map((p) => p.label)).toEqual(['Cours', 'Exercices', 'Jeux', 'Annales'])
+    expect(portesDe(modesFor('5e', [], 'maths')).map((p) => p.label)).toEqual(['Cours', 'Jeux'])
+  })
+
+  test('l’encyclopédie n’est pas une porte : c’est un rayon de Cours', () => {
+    expect(portesDe(histoireGeo).map((p) => p.key)).toEqual([
+      'programme',
+      'exercices',
+      'jeu',
+      'annales',
+    ])
+    expect(rayonsDe(histoireGeo).map((r) => r.label)).toEqual([
+      'Histoire',
+      'Géographie',
+      'Encyclopédie',
+    ])
+    expect(porteDe('encyclopedie')).toBe('programme')
+    expect(porteDe('jeu')).toBe('jeu')
+  })
+
+  test('les rayons du français, dans l’ordre du dossier', () => {
+    expect(rayonsDe(francais).map((r) => tabId(r))).toEqual([
+      'programme:programme',
+      'programme:fiches',
+      'programme:grammaire',
+      'programme:anciens',
+    ])
+  })
+
+  test('un seul rayon : pas de segment', () => {
+    expect(rayonsDe(modesFor('3e', [], 'maths', true))).toEqual([])
+  })
+
+  test('le segment écrit « Anciens », pas « Anciens programmes »', () => {
+    expect(rayonCourt('Anciens programmes')).toBe('Anciens')
+    expect(rayonCourt('Grammaire')).toBe('Grammaire')
   })
 })
 

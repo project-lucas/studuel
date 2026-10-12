@@ -4288,6 +4288,15 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
       'Les nouvelles activités ne versent pas d’XP (l’écran de fin n’annonce rien), les annales ne se valident pas, et l’ancienne économie continue de verser ses gemmes. Rien ne casse. À exécuter APRÈS la 556.',
     sonde: { type: 'rpc', fn: 'xp_activite_bareme', args: { p_source: 'quiz', p_points: 1, p_total: 1 } },
   },
+  {
+    id: '558',
+    fichier: '558_amis_competition_defis.sql',
+    feature:
+      'LES AMIS EN COMPÉTITION — `classement_amis()` rend aussi l’XP et l’XP de la semaine (la course de la semaine du carnet de Moi : XP, trophées et niveaux gagnés) ; un duel entre amis porte un MODE DE JEU (`creer_defi_ami`, un duel par ami et par jour, score jusqu’à 100 000), les défis reçus (`defis_recus`) et la notification push de l’ami défié (`defi_ami_cibles_push`, rôle service seulement) ; `fiche_joueur` : le résumé d’un ami ou d’un membre de la ligue (victoires, défaites, records, badges).',
+    siAbsente:
+      'La course de la semaine ne montre que les trophées, le bouton Défier répond que le défi arrive bientôt, et toucher un ami n’ouvre pas sa fiche. Rien ne casse. À exécuter APRÈS la 557.',
+    sonde: { type: 'rpc', fn: 'defis_recus', args: {} },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

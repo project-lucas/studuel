@@ -38,6 +38,7 @@ import { createAvatar } from '@dicebear/core'
 import { estAvatarIa, idAvatarIa, srcAvatarIa } from '@/lib/avatar-ia'
 import { openPeeps } from '@dicebear/collection'
 import { PORTRAIT_KEYS, isPortraitKey, portraitSrc } from '@/lib/portraits'
+import { imagePersonnage, personnageDuPortrait } from '@/lib/personnages-historiques'
 
 // -----------------------------------------------------------------------------
 // LE PORTRAIT (16/09/2026) — UNE COUCHE AU-DESSUS DE TOUT ÇA.
@@ -349,6 +350,9 @@ export function normalizeAvatarConfig(input: unknown): AvatarConfig {
       : DEFAULT_BANNER
   // L'avatar DESSINÉ PAR MARCEL (migration 378) : `ia:<uuid>`, gardé tel quel.
   if (estAvatarIa(raw.portrait)) out.portrait = raw.portrait
+  // Un PERSONNAGE HISTORIQUE débloqué (lib/personnages-historiques) :
+  // `perso:<id>`, gardé tel quel — le serveur a vérifié le niveau à l'équipement.
+  if (personnageDuPortrait(raw.portrait)) out.portrait = raw.portrait as string
   return out
 }
 
@@ -389,12 +393,14 @@ export function avatarSvg(cfg: AvatarConfig, size = 96): string {
 export function avatarPortraitSrc(cfg: AvatarConfig): string | null {
   const ia = idAvatarIa(cfg.portrait)
   if (ia) return srcAvatarIa(ia)
+  const perso = personnageDuPortrait(cfg.portrait)
+  if (perso) return imagePersonnage(perso.id)
   return isPortraitKey(cfg.portrait) ? portraitSrc(cfg.portrait) : null
 }
 
 /** Un avatar dessiné est un portrait carré entier : on ne le recadre pas sur le visage. */
 export function avatarEstDessine(cfg: AvatarConfig): boolean {
-  return estAvatarIa(cfg.portrait)
+  return estAvatarIa(cfg.portrait) || personnageDuPortrait(cfg.portrait) !== null
 }
 
 // Data-URI de l'avatar — à passer directement à <img src> (aucun HTML injecté,

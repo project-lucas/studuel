@@ -14,6 +14,8 @@ import { SCENES_CAPSULES, scenesCapsule } from '@/lib/capsules-scenes'
 import { BADGES_ILLUSTRES, OBJETS_ILLUSTRES, imageBadge, imageObjet } from '@/lib/illustrations'
 import { PROFILE_BANNERS } from '@/lib/profile-banners'
 import { PERSONNAGES_HISTORIQUES, imagePersonnage } from '@/lib/personnages-historiques'
+import { CADRES, imageCadre } from '@/lib/moi/cadre-profil'
+import { FENETRES_CADRES } from '@/lib/moi/cadres-geometrie'
 
 // Garde des ASSETS DÉCLARÉS.
 //
@@ -268,6 +270,21 @@ describe('personnages historiques', () => {
       expect(p.id.startsWith(`${p.matiere}-`), p.id).toBe(true)
       expect(assetExists(imagePersonnage(p.id)), `${p.id} absent`).toBe(true)
     }
+  })
+})
+
+describe('cadres de profil', () => {
+  it('chaque cadre a son dessin et sa fenêtre', () => {
+    // Fabriqués par `node scripts/cadres-profil.mjs` (05/10/2026).
+    for (const c of CADRES) {
+      const src = imageCadre(c)
+      if (!src) continue
+      expect(assetExists(src), `${c.id} : ${src} absent`).toBe(true)
+      expect(FENETRES_CADRES[c.id], `${c.id} sans fenêtre`).toBeDefined()
+    }
+  })
+  it('le bouclier « Défier » de l’onglet Amis existe', () => {
+    expect(assetExists('/images/amis/defier.webp')).toBe(true)
   })
 })
 

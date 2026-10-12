@@ -11,7 +11,83 @@ cycle terminal, la grammaire y est la même. Réaligné le 04/09/2026 sur le cod
 (plus de numéro de chapitre, carte d'entrée, quiz du chapitre, jauge à la
 moyenne).
 
-## Depuis le 01/10/2026 : la grille des thèmes
+## Depuis le 05/10/2026 : la bannière, les portes, le sommaire
+
+**C'est l'écran d'aujourd'hui, pour toutes les matières et toutes les classes.**
+Lucas trouvait le haut du dossier « plat, pas pratique », le cahier
+d'exercices introuvable, et la grille de tuiles lente à mener à un cours. Deux
+planches de maquettes (`assets-sources/maquettes/matiere.html` et
+`matiere-contenu.html`), puis le gabarit :
+
+```
+┌──────────────────────────────────────────────┐
+│ ╔══════════════════════════════════════════╗ │   LA BANNIÈRE (BanniereMatiere)
+│ ║ (←) Français                  (l'objet) ║ │   à la TEINTE de la matière,
+│ ║     Programme de 1re · Top 8 % des 1re  ║ │   son objet qui en sort
+│ ║ [==== 3/19 fiches ====] (gardien)(Marcel)║ │   barre d'or, compte EXACT
+│ ║ ┌──────────────────────────────────────┐ ║ │
+│ ║ │ REPRENDRE · FICHE 4 · ~8 MIN     (→) │ ║ │   LE bouton de l'écran : un lien
+│ ║ │ Titre de la fiche   ⚡ +110 XP       │ ║ │   DROIT vers le cours ou le quiz
+│ ║ └──────────────────────────────────────┘ ║ │
+│ ╚══════════════════════════════════════════╝ │
+│ [ Cours ] [Exercices👑] [ Jeux ] [ Annales ] │   LE RAIL DE PORTES (PortesMatiere)
+│ ( Programme | Fiches | Grammaire | Anciens )(🔍)│  les RAYONS de Cours, et la loupe
+│ ┌──────────────────────────────────────────┐ │
+│ │ (◔) La poésie du XIXe au XXIe siècle ⌃ ☆ │ │   LE SOMMAIRE (Sommaire) : un thème
+│ │     4 fiches · ~30 min                   │ │   par carte, pleine largeur ; celui
+│ │ ──────────────────────────────────────── │ │   qu'on travaille est DÉJÀ ouvert
+│ │ [1] Rimbaud, Cahier de Douai    ( Cours )│ │   chaque fiche : SON bouton
+│ │ [2] Ponge, La rage de l'expr.   ( Cours )│ │   (Cours → Quiz → Revoir)
+│ │ 🔒 Quiz du chapitre · encore 4 fiches…   │ │
+│ └──────────────────────────────────────────┘ │
+│ ┌──────────────────────────────────────────┐ │
+│ │ (○) La littérature d'idées…          ⌄ ☆ │ │   les autres thèmes, fermés
+│ └──────────────────────────────────────────┘ │
+└──────────────────────────────────────────────┘
+```
+
+### Ce qui est réglé par le gabarit, sans rien écrire par matière
+
+- **La teinte de la bannière** : `lib/reviser/teinte.ts`. Les sept matières de
+  l'arène portent la teinte de leurs billets de jeu ; les autres suivent
+  `subjects.color`. Une couleur nouvelle en base → une ligne dans `PAR_COULEUR`
+  (le test le réclame).
+- **L'objet de la bannière** : la vignette de la matière (`subjectVignette`).
+  Sans vignette, son pictogramme sur un disque blanc.
+- **Les portes** (`portesDe`, lib/subject-template) : Cours toujours ;
+  Exercices si la matière a un cahier à ce niveau (la page compte ses exercices,
+  une lecture `head` dans sa vague) ; Jeux toujours ; Annales les années à examen.
+- **Les rayons** (`rayonsDe`) : les disciplines de la matière (`chapters.discipline`)
+  et, en histoire-géo, l'Encyclopédie — qui est un rayon de Cours, pas une porte.
+  Un seul rayon : pas de segment, la rangée devient le champ de recherche.
+- **Le bouton d'une fiche** (`ChapterRow.suite`, lib/reviser/suite) : calculé par
+  la page avec ce qu'elle lit déjà — zéro requête de plus.
+- **Un programme sans thème** (philosophie) ou d'un seul bloc (les 260 fiches de
+  lecture) : une seule carte de lignes, la même ligne et le même bouton.
+
+### Les règles à tenir si l'on y touche
+
+1. **Rien ne flotte sur le contenu.** La loupe est dans la rangée des rayons ;
+   Marcel est dans la bannière, puis dans la barre collante (`MarcelTete`).
+2. **Toute cible fait au moins 44 px**, et répond dans l'image qui suit par
+   `transform` ou `opacity` seulement.
+3. **Un seul lien préchargé** : le bouton de la bannière. Les boutons de fiche
+   préchargent À L'INTENTION (`pointerdown`), jamais à l'affichage.
+4. **Un titre n'est jamais coupé** : pas de `line-clamp` sur un thème ou une fiche.
+5. **Le cahier ne se lit pas avec la page** : il arrive par
+   `/api/reviser/cahier` quand la porte s'ouvre (`useCahierMatiere`).
+6. **L'état vit dans l'adresse** (`?onglet=`, `?theme=`, écrits par
+   `replaceState`) : revenir d'un cours rouvre la porte, le rayon et le thème.
+
+Aperçu sans compte : `/dev/programme` (ses variantes sont en tête du fichier).
+
+Les deux sections qui suivent décrivent les écrans d'AVANT (la grille du
+01/10/2026 et la liste), gardées pour l'histoire des décisions : leurs
+composants (`ProgrammeMondes`, `ChapterList`, `ChapterItem`, `CarteReprendre`,
+`SubjectHeader`, `ModeTabs`) n'existent plus. Le contrat de données, lui, n'a
+pas changé.
+
+## Le 01/10/2026 : la grille des thèmes (remplacée le 05/10/2026)
 
 Un programme rangé en **au moins deux thèmes** ne s'affiche plus en plaques
 violettes empilées mais en **grille de tuiles** (`components/reviser/ProgrammeMondes.tsx`,

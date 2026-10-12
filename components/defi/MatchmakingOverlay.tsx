@@ -256,7 +256,7 @@ export default function MatchmakingOverlay({
         <div className="md:px-8">
           <div className="mx-auto w-full max-w-4xl px-3">
             <div className="px-1">
-              <div className="flex h-[92px] items-stretch gap-3">
+              <div className="flex h-[92px] items-center gap-3">
                 <span className={FLANK_CLASS} aria-hidden="true" />
                 <button
                   type="button"

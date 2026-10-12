@@ -1128,13 +1128,16 @@ a:hover > .wiggle-on-hover {
    posée sur le décor et jamais dans la plaque — chez Clash Royale, le « 5j 15h »
    du ticket vit sous l'objet, pas dedans. */
 .arena-legende {
-  color: #faf6ef;
-  text-shadow:
-    0 1px 0 #1e1638,
-    0 -1px 0 #1e1638,
-    1px 0 0 #1e1638,
-    -1px 0 0 #1e1638,
-    0 2px 3px rgba(0, 0, 0, 0.55);
+  /* Même matière que la plaque claire au-dessus d'elle (12/10/2026) : une
+     petite pilule blanche à bague lavande, l'encre en violet — plus de crème
+     cernée de marine, seule écriture « jeu » qui restait sur le bord. */
+  padding: 3px 8px;
+  border-radius: 999px;
+  color: var(--primary);
+  background: #ffffff;
+  box-shadow:
+    inset 0 0 0 1.5px color-mix(in oklch, var(--primary), transparent 78%),
+    0 2px 0 color-mix(in oklch, var(--primary), transparent 66%);
 }
 
 /* --- Scène du héros : les étincelles ----------------------------------------
@@ -2374,14 +2377,22 @@ a:hover > .wiggle-on-hover {
    Contour d'encre dehors, filet de lumière en haut, creux d'ombre en bas,
    ombre dure + ombre douce dessous. Seul le remplissage change d'une plaque à
    l'autre : c'est la règle qui rend la rangée lisible comme une seule pièce. */
+/* REFAITE LE 12/10/2026 (maquette « A · Ronds et pilule » choisie par Lucas,
+   `assets-sources/maquettes/defi-chrome.html`) : la rangée parle désormais la
+   langue du HAUT de l'arène — plus de cerne noir ni de rectangle. Les deux
+   flancs sont des RONDS de 72 px, le DUEL une PILULE, tous sur la plaque
+   blanche à bague lavande et socle violet clair des plaques du bord
+   (`.arena-plaque--claire`) ; l'or garde le centre, l'encre devient prune. La
+   rangée reste haute de 92 px (la page la réserve) : les plaques s'y centrent,
+   et les flèches de la matière rebondissent dans la marge. */
 .arena-plate {
-  border-radius: 20px;
-  border: 3px solid #1e1638;
+  height: 72px;
+  border-radius: 999px;
   box-shadow:
-    inset 0 2px 0 rgba(255, 255, 255, 0.35),
-    inset 0 -4px 0 rgba(0, 0, 0, 0.35),
-    0 4px 0 #1e1638,
-    0 6px 12px rgba(0, 0, 0, 0.45);
+    inset 0 0 0 2px color-mix(in oklch, var(--primary), transparent 76%),
+    inset 0 -3px 0 color-mix(in oklch, var(--primary), transparent 88%),
+    0 4px 0 color-mix(in oklch, var(--primary), transparent 66%),
+    0 10px 18px -6px rgba(43, 22, 80, 0.45);
   transition:
     transform 0.1s var(--ease),
     box-shadow 0.1s var(--ease);
@@ -2391,13 +2402,20 @@ a:hover > .wiggle-on-hover {
    et non opaque — le décor de l'arène passe dessous, donc les plaques
    appartiennent à l'écran au lieu d'être posées dessus. */
 .arena-plate--dark {
-  background: rgba(45, 28, 74, 0.82);
+  background: color-mix(in oklch, var(--primary), black 40%);
   color: #faf6ef;
 }
 
 /* Le centre : le SEUL doré saturé de tout l'écran. */
 .arena-plate--gold {
-  background: linear-gradient(180deg, #ffd66b 0%, #e8a020 100%);
+  background: linear-gradient(180deg, #ffe27a 0%, var(--highlight) 60%, #e59f0c 100%);
+  /* La bague passe au blanc sur l'or (la lavande s'y perdait), le socle à
+     l'ambre : même épaisseur que les flancs, même ombre portée. */
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.55),
+    inset 0 -3px 0 rgba(160, 100, 0, 0.28),
+    0 4px 0 #b97d05,
+    0 10px 18px -6px rgba(43, 22, 80, 0.45);
 }
 
 /* La MÊME plaque, en CLAIR : les deux flancs de la barre d'action.
@@ -2421,7 +2439,8 @@ a:hover > .wiggle-on-hover {
    c'est la SATURATION — l'or reste la seule couleur pleine de la rangée, les
    deux flancs étant des pastels — et le cerne d'encre qui les sépare. */
 .arena-plate--clair {
-  color: #24304f;
+  background: linear-gradient(180deg, #ffffff, color-mix(in oklch, var(--secondary), white 45%));
+  color: var(--foreground);
 }
 
 /* La MÊME plaque, en rouge : « Annuler » pendant la recherche d'adversaire.
@@ -2431,6 +2450,11 @@ a:hover > .wiggle-on-hover {
    le pouce à chercher : ici il retombe exactement où il vient de frapper. */
 .arena-plate--rouge {
   background: linear-gradient(180deg, #ff7d7d 0%, #d3323d 100%);
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.5),
+    inset 0 -3px 0 rgba(120, 20, 30, 0.3),
+    0 4px 0 #8f1d28,
+    0 10px 18px -6px rgba(43, 22, 80, 0.45);
 }
 
 /* L'enfoncement au tap : la plaque descend de 3 px et son ombre portée se
@@ -2438,9 +2462,24 @@ a:hover > .wiggle-on-hover {
 .arena-plate--press:active {
   transform: translateY(3px);
   box-shadow:
-    inset 0 2px 0 rgba(255, 255, 255, 0.35),
-    inset 0 -4px 0 rgba(0, 0, 0, 0.35),
-    0 1px 0 #1e1638;
+    inset 0 0 0 2px color-mix(in oklch, var(--primary), transparent 76%),
+    inset 0 -3px 0 color-mix(in oklch, var(--primary), transparent 88%),
+    0 1px 0 color-mix(in oklch, var(--primary), transparent 66%),
+    0 4px 10px -4px rgba(43, 22, 80, 0.35);
+}
+.arena-plate--gold.arena-plate--press:active {
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.55),
+    inset 0 -3px 0 rgba(160, 100, 0, 0.28),
+    0 1px 0 #b97d05,
+    0 4px 10px -4px rgba(43, 22, 80, 0.35);
+}
+.arena-plate--rouge.arena-plate--press:active {
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.5),
+    inset 0 -3px 0 rgba(120, 20, 30, 0.3),
+    0 1px 0 #8f1d28,
+    0 4px 10px -4px rgba(43, 22, 80, 0.35);
 }
 @media (prefers-reduced-motion: reduce) {
   .arena-plate {
@@ -2453,12 +2492,10 @@ a:hover > .wiggle-on-hover {
    il ne reste plus assez au centre pour que le mot COMBAT tienne. Ils se
    resserrent alors à 76 px et rendent la place au roi. */
 .arena-plate-flank {
-  width: 92px;
-}
-@media (max-width: 359px) {
-  .arena-plate-flank {
-    width: 76px;
-  }
+  /* Un ROND de 72 px depuis le 12/10/2026 : même cote que la hauteur des
+     plaques, à tout format — un rond ne se resserre pas. */
+  width: 72px;
+  height: 72px;
 }
 
 /* Le mot sous l'icône des deux flancs. DANS la plaque, jamais dessous ni à
@@ -2480,7 +2517,7 @@ a:hover > .wiggle-on-hover {
   height: 8px;
   border-radius: 9999px;
   background: #c9922e;
-  box-shadow: 0 0 0 2px #1e1638;
+  box-shadow: 0 0 0 2px #ffffff;
 }
 
 /* LE MOT « COMBAT », et rien d'autre sur la plaque. Blanc cerné d'ambre brûlé :
@@ -2489,19 +2526,21 @@ a:hover > .wiggle-on-hover {
    tient sur toute la hauteur. `paint-order` est indispensable : sans lui le
    cerne se peint PAR-DESSUS le remplissage et mange la moitié du trait, ce qui
    épaissit les lettres jusqu'à les coller entre elles à 360 px de large. */
+/* Sur la plaque rouge (« Annuler »), le mot reste blanc. */
 .combat-word--rouge {
-  -webkit-text-stroke-color: #7d1420;
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(120, 20, 30, 0.5);
 }
 
+/* Encre PRUNE sur l'or depuis le 12/10/2026 — la même que les chiffres de la
+   gélule (`.hud-encre`) : plus de blanc cerné d'ambre, qui était la seule
+   écriture « jeu » de l'écran. */
 .combat-word {
   font-size: 26px;
   font-weight: 800;
   letter-spacing: 1px;
   line-height: 1;
-  color: #ffffff;
-  -webkit-text-stroke: 2px #8a4a00;
-  paint-order: stroke fill;
-  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  color: color-mix(in oklch, var(--primary), black 45%);
 }
 
 /* Sous 360 px, le mot descend d'un cran avec les flancs. Le TEST de la refonte
@@ -4048,8 +4087,8 @@ body {
 .duel-lueur {
   position: absolute;
   inset: 0;
-  /* Le rayon extérieur de `.arena-plate` : le calque épouse la plaque. */
-  border-radius: 20px;
+  /* Le rayon extérieur de `.arena-plate` : le calque épouse la pilule. */
+  border-radius: 999px;
   box-shadow:
     0 0 0 6px rgba(255, 214, 107, 0.12),
     0 0 26px 8px rgba(255, 198, 74, 0.55);
@@ -4081,8 +4120,8 @@ body {
   font-weight: 800;
   letter-spacing: 0.2px;
   line-height: 1;
-  color: #7c4a06;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+  color: color-mix(in oklch, var(--primary), black 45%);
+  opacity: 0.85;
 }
 
 /* --- LE VERRE SCULPTÉ (arène) ------------------------------------------------
@@ -6168,22 +6207,35 @@ html.arene-figee body {
    verre translucide qui laisse voir le décor, un liseré blanc, le même socle
    que la plaque violette. Portée par les plaques d'ICÔNES (burger, quêtes,
    boss, classement) ; le compte de trophées et Studuel+ gardent leur robe. */
+/* Refaite BLANCHE et OPAQUE le 12/10/2026 (Lucas : « fond gris, fond violet,
+   arrondi des blocs… plusieurs incohérences ») : le verre translucide se lisait
+   gris sur le ciel, et le compte de trophées restait violet profond. Une seule
+   matière pour TOUT le bord de l'arène désormais — la plaque blanche à bague
+   lavande de la pastille des quêtes du bandeau (`PastilleQuetes`) : blanc,
+   liseré lavande, socle violet clair. Le compte de trophées la porte aussi.
+   Les illustrations gardent leur ombre portée ; seule Studuel+ reste or. */
 .arena-plaque--claire {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.46),
-    rgba(255, 255, 255, 0.22)
-  );
-  border-color: rgba(255, 255, 255, 0.72);
+  background: linear-gradient(180deg, #ffffff, color-mix(in oklch, var(--secondary), white 45%));
+  border-color: color-mix(in oklch, var(--primary), transparent 76%);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.7),
-    inset 0 -3px 0 rgba(30, 22, 56, 0.12),
-    0 4px 0 rgba(30, 22, 56, 0.32),
-    0 8px 16px rgba(0, 0, 0, 0.28);
+    inset 0 1px 0 #ffffff,
+    inset 0 -3px 0 color-mix(in oklch, var(--primary), transparent 88%),
+    0 4px 0 color-mix(in oklch, var(--primary), transparent 66%),
+    0 10px 18px -6px rgba(43, 22, 80, 0.45);
 }
 .arena-plaque--claire.defi2-press:active {
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.7),
-    inset 0 -3px 0 rgba(30, 22, 56, 0.12),
-    0 1px 0 rgba(30, 22, 56, 0.32);
+    inset 0 1px 0 #ffffff,
+    inset 0 -3px 0 color-mix(in oklch, var(--primary), transparent 88%),
+    0 1px 0 color-mix(in oklch, var(--primary), transparent 66%),
+    0 4px 10px -4px rgba(43, 22, 80, 0.35);
+}
+
+/* L'avatar de l'onglet Moi : médaillon rond, bague d'or et cerne prune (la
+   famille nav). Ombres fixes, jamais animées. */
+.nav-medaillon {
+  box-shadow:
+    0 0 0 2px var(--highlight),
+    0 0 0 4px color-mix(in oklch, var(--primary), black 45%),
+    0 3px 5px rgb(40 20 80 / 0.3);
 }

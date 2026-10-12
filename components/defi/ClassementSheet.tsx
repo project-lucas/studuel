@@ -118,7 +118,7 @@ export default function ClassementSheet({
         aria-haspopup="dialog"
         aria-label={libelle}
         title="Classement"
-        className="arena-plaque arena-plaque--claire defi2-press relative grid size-[68px] cursor-pointer place-items-center focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
+        className="arena-plaque arena-plaque--claire arena-plaque--ronde defi2-press relative grid size-[68px] cursor-pointer place-items-center focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
       >
         <Image
           src="/images/defi/icones/classement-v3.webp"

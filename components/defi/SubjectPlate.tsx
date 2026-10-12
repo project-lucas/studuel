@@ -7,7 +7,7 @@ import { Check, Lock } from 'lucide-react'
 import SheetShell from '@/components/defi/SheetShell'
 import { FLANK_CLASS } from '@/components/defi/ArenaActionBar'
 import { useDuelSubject } from '@/components/defi/DuelSubjectProvider'
-import { plaqueClaire } from '@/lib/defi/plaque-claire'
+import { plaqueBlanche } from '@/lib/defi/plaque-claire'
 import Image from 'next/image'
 import SubjectIcon from '@/components/SubjectIcon'
 import { sfx } from '@/lib/sounds'
@@ -113,16 +113,19 @@ function Fleche({
       <span className={styles.fleche} data-sens={direction} aria-hidden="true">
         <svg viewBox="0 0 28 20" className={`size-full ${haut ? '' : 'rotate-180'}`}>
           <defs>
+            {/* VIOLET depuis le 12/10/2026 (plaques blanches, cf. .arena-plate) :
+                le triangle est une COMMANDE, et l'action est violette ; l'or
+                ne reste qu'au DUEL. Cerné de blanc pour se détacher du rond. */}
             <linearGradient id={orId} x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stopColor="#fff3a8" />
-              <stop offset="0.45" stopColor="#ffd13d" />
-              <stop offset="1" stopColor="#ef9410" />
+              <stop offset="0" stopColor="#b48cf5" />
+              <stop offset="0.45" stopColor="#7a3fe0" />
+              <stop offset="1" stopColor="#5b2bb8" />
             </linearGradient>
           </defs>
           <path
             d="M14 2.2 25.6 17.4H2.4Z"
             fill={`url(#${orId})`}
-            stroke="#1e1638"
+            stroke="#ffffff"
             strokeWidth="3.2"
             strokeLinejoin="round"
           />
@@ -184,7 +187,7 @@ export default function SubjectPlate() {
           // matière, une classe ne peut pas la connaître) et hors d'ici : les
           // deux flancs doivent baisser du même cran, sinon la rangée se
           // déséquilibre au premier réglage. Cf. `lib/defi/plaque-claire`.
-          style={{ background: plaqueClaire() }}
+          style={{ background: plaqueBlanche() }}
         >
           {active.vignette ? (
             <Image

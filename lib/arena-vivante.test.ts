@@ -115,22 +115,38 @@ describe('SCENES_VIVANTES', () => {
 })
 
 describe('sceneVivanteDe', () => {
-  it('rend undefined sans plage ou pour une plage restée fixe', () => {
+  it('rend undefined sans plage', () => {
     expect(sceneVivanteDe(null)).toBeUndefined()
     expect(sceneVivanteDe(undefined)).toBeUndefined()
-    expect(sceneVivanteDe('noon')).toBeUndefined()
+  })
+
+  it('les six plages horaires ont leur scène : l’arène vit en continu (12/10/2026)', () => {
+    for (const period of ['dawn', 'morning', 'noon', 'afternoon', 'evening', 'night'] as const) {
+      expect(sceneVivanteDe(period)?.period, period).toBe(period)
+    }
   })
 })
 
 describe('fichiersDeScene', () => {
-  it('liste la planche, ses nuages et ses rochers, tous en webp sous le dossier de la scène', () => {
+  it('liste la planche, ses nuages et ses rochers, tous en webp sous les images de l’arène', () => {
     for (const scene of scenes) {
       const fichiers = fichiersDeScene(scene)
       expect(fichiers[0]).toBe(scene.plate)
-      expect(fichiers).toHaveLength(1 + scene.nuages.length + scene.rochers.length)
-      for (const f of fichiers) {
+      // + les deux voiles d'eau de la cascade, communs à toutes les scènes.
+      expect(fichiers).toHaveLength(1 + scene.nuages.length + scene.rochers.length + 2)
+      // La planche : celle de l'export (sous vivante/) ou, depuis le
+      // 12/10/2026, le décor horaire lui-même (arena-<plage>.webp, puis
+      // cour-<plage>.webp depuis la cour d'honneur).
+      expect(scene.plate).toMatch(
+        new RegExp(
+          `^/images/arene/(vivante/${scene.period}-plate|arena-${scene.period}|cour-${scene.period})\\.webp$`,
+        ),
+      )
+      // Les éléments : ceux de la plage, les nuages partagés de jour / de
+      // nuit, les voiles de la cascade.
+      for (const f of fichiers.slice(1)) {
         expect(f).toMatch(
-          new RegExp(`^/images/arene/vivante/${scene.period}-[a-z0-9-]+\\.webp$`),
+          new RegExp(`^/images/arene/vivante/(${scene.period}|jour|nuit|cascade)-[a-z0-9-]+\\.webp$`),
         )
       }
       expect(new Set(fichiers).size).toBe(fichiers.length)

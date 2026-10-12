@@ -59,3 +59,15 @@ export function plaqueClaire(): string {
     `color-mix(in oklch, var(--primary), white ${PLAQUE_BLANC_BAS}%) 100%)`,
   ].join(' ')
 }
+
+/**
+ * DEPUIS LE 12/10/2026 (maquette « A · Ronds et pilule », Lucas) : les deux
+ * flancs sont BLANCS, comme toutes les plaques du bord de l'arène
+ * (`.arena-plaque--claire`) — blanc en haut, un souffle de lavande en bas. La
+ * pierre violette ci-dessus était pensée contre un cerne noir qui n'existe
+ * plus ; à côté de plaques blanches à bague lavande, elle faisait la rangée
+ * plus foncée que le reste de l'écran. Une seule matière, du haut en bas.
+ */
+export function plaqueBlanche(): string {
+  return 'linear-gradient(180deg, #ffffff 0%, color-mix(in oklch, var(--secondary), white 45%) 100%)'
+}

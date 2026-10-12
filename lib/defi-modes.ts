@@ -8,7 +8,7 @@ import type { GameTimbre } from '@/lib/game-audio'
 // Le décor de l'Arène (écran VS, résultats de duel). Le hub Défi a son fond
 // dynamique à 6 variantes horaires (lib/arena-background) ; ici on garde la
 // variante de midi, la plus lumineuse, comme décor fixe des écrans de match.
-export const ARENA_IMAGE = '/images/arene/arena-noon.webp'
+export const ARENA_IMAGE = '/images/arene/cour-noon.webp'
 
 export type GameModeId = 'duel' | 'blitz' | 'chrono' | 'survie' | 'boss'
 

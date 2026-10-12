@@ -109,42 +109,96 @@ export default function ArenaVivante({
           <div
             key={`lanterne-${i}`}
             className={styles.lanterne}
-            style={joue(m.lanternes[i], carre(lanterne.x, lanterne.y, LANTERNE_TAILLE))}
+            style={joue(
+              m.lanternes[i],
+              carre(lanterne.x, lanterne.y, lanterne.taille ?? LANTERNE_TAILLE),
+            )}
           />
         ))}
 
         <div
-          className={styles.cascade}
+          className={cn(styles.cascade, scene.cascade.sens === 'monte' && styles.monte)}
           style={vars({
             ...zone(scene.cascade),
             '--passages': String(scene.cascade.passages),
           })}
         >
-          {REFLETS.map((phase, i) => (
-            // Le RAIL est haut de la course : il glisse de sa propre hauteur
-            // (`translateY(100%)`, sans variable dans l'image-clé).
-            <span
-              key={i}
-              className={styles.rail}
-              style={{
-                left: u(8 + i * 14),
-                height: u(scene.cascade.course),
-                // Figé (mouvement réduit, rideau), le reflet reste là où la
-                // boucle le prend à l'instant zéro — sans cela il resterait
-                // au-dessus de la colonne, caché. Animé, l'animation l'emporte.
-                transform: `translateY(${phase * 100}%)`,
-                animationDelay: `${delaiDePhase(
-                  phase,
-                  BOUCLE_SECONDES / scene.cascade.passages,
-                )}s`,
-              }}
-            >
-              <span className={styles.reflet} />
-            </span>
-          ))}
+          {/* Les trois voiles d'eau (module CSS) : nappes, nappes décalées,
+              filets — figés, ils montrent l'instant zéro ; animés, ils
+              descendent en boucle, le raccord tombant sur le tuilage. */}
+          <div className={styles.chute}>
+            <span className={cn(styles.voile, styles.voileEau)} />
+            <span className={cn(styles.voile, styles.voileEau, styles.voileDecale)} />
+            <span className={cn(styles.voile, styles.voileFilets)} />
+          </div>
         </div>
 
         <div className={styles.ecume} style={joue(m.ecume, zone(scene.ecume))} />
+
+        {/* L'écume qui BOUILLONNE (12/10/2026) : des gouttes qui jaillissent en
+            éventail du pied de la chute — chaque jet est un repère tourné, la
+            goutte y monte tout droit — et des bulles qui crèvent sur place. */}
+        <div
+          className={styles.jaillissement}
+          style={zone(scene.cascade.sens === 'monte' ? zonePointe(scene) : scene.ecume)}
+        >
+          {(scene.cascade.sens === 'monte' ? RETOMBEES : GOUTTES).map((g, i) => (
+            <span
+              key={`jet-${i}`}
+              className={styles.jet}
+              style={{ transform: `rotate(${g.angle}deg)` }}
+            >
+              <span
+                className={cn(styles.goutte, g.courte && styles.goutteCourte)}
+                style={{
+                  width: u(g.taille),
+                  height: u(g.taille),
+                  animationDelay: `${g.delai}s`,
+                  animationDuration: `${g.duree}s`,
+                }}
+              />
+            </span>
+          ))}
+        </div>
+        {/* Les bulles, toujours dans l'eau qui reçoit : le pied de la chute
+            ou le bassin de la fontaine. */}
+        <div className={styles.jaillissement} style={zone(scene.ecume)}>
+          {BULLES.map((b, i) => (
+            <span
+              key={`bulle-${i}`}
+              className={styles.bulle}
+              style={{
+                left: `${b.x}%`,
+                top: `${b.y}%`,
+                width: u(b.taille),
+                height: u(b.taille),
+                animationDelay: `${b.delai}s`,
+                animationDuration: `${b.duree}s`,
+              }}
+            />
+          ))}
+        </div>
+
+        {/* La BRUME qui remonte le long de la chute : des bouffées qui naissent
+            au pied, s'ouvrent et se dissipent à mi-hauteur. */}
+        <div
+          className={styles.vapeur}
+          style={zone(scene.cascade.sens === 'monte' ? zoneEmbrun(scene) : zoneVapeur(scene))}
+        >
+          {(scene.cascade.sens === 'monte' ? VAPEURS_JET : VAPEURS).map((v, i) => (
+            <span
+              key={`vapeur-${i}`}
+              className={styles.bouffee}
+              style={{
+                left: `${v.x}%`,
+                width: u(v.taille),
+                height: u(v.taille),
+                animationDelay: `${v.delai}s`,
+                animationDuration: `${v.duree}s`,
+              }}
+            />
+          ))}
+        </div>
 
         {scene.brume.map((nappe, i) => (
           <div
@@ -177,10 +231,85 @@ export default function ArenaVivante({
   )
 }
 
-/** Les trois reflets de la cascade, décalés d'un tiers de passage chacun. */
-const REFLETS = [0, 1 / 3, 2 / 3] as const
 /** Les trois copies d'une nappe de brume : à gauche, au centre, à droite. */
 const COPIES = [-1, 0, 1] as const
+
+/**
+ * Les gouttes de l'écume : l'angle du jet (degrés, 0 = tout droit vers le
+ * haut), la taille (pixels de planche), le délai et la durée (secondes) ; les
+ * courtes retombent à mi-course. Huit jets en éventail, jamais deux au même
+ * instant.
+ */
+const GOUTTES = [
+  { angle: -38, taille: 14, delai: 0, duree: 1.1, courte: false },
+  { angle: -22, taille: 11, delai: 0.35, duree: 0.9, courte: true },
+  { angle: -8, taille: 16, delai: 0.6, duree: 1.3, courte: false },
+  { angle: 6, taille: 12, delai: 0.15, duree: 1.0, courte: true },
+  { angle: 18, taille: 15, delai: 0.8, duree: 1.2, courte: false },
+  { angle: 32, taille: 11, delai: 0.45, duree: 0.95, courte: true },
+  { angle: 44, taille: 13, delai: 1.0, duree: 1.15, courte: false },
+  { angle: -50, taille: 10, delai: 0.25, duree: 0.85, courte: true },
+] as const
+
+/** Les bulles qui crèvent : position dans la zone d'écume (%), taille, délai, durée. */
+const BULLES = [
+  { x: 30, y: 60, taille: 18, delai: 0, duree: 1.6 },
+  { x: 48, y: 70, taille: 22, delai: 0.5, duree: 1.9 },
+  { x: 62, y: 55, taille: 16, delai: 1.1, duree: 1.5 },
+  { x: 40, y: 45, taille: 14, delai: 0.8, duree: 1.3 },
+  { x: 70, y: 65, taille: 20, delai: 0.3, duree: 1.7 },
+] as const
+
+/** Les bouffées de brume : abscisse dans sa zone (%), taille, délai, durée. */
+const VAPEURS = [
+  { x: 35, taille: 90, delai: 0, duree: 5 },
+  { x: 55, taille: 110, delai: 1.7, duree: 6 },
+  { x: 65, taille: 80, delai: 3.2, duree: 4.5 },
+  { x: 45, taille: 100, delai: 4.4, duree: 5.5 },
+] as const
+
+/**
+ * Les RETOMBÉES d'un jet de fontaine : les mêmes gouttes, mais lancées depuis
+ * la pointe et tournées vers le bas et l'extérieur (au-delà de ±90°, le « haut »
+ * du repère pointe vers le sol) — l'eau qui retombe de chaque côté du jet.
+ */
+const RETOMBEES = [
+  { angle: -150, taille: 13, delai: 0, duree: 1.2, courte: false },
+  { angle: -130, taille: 11, delai: 0.4, duree: 1.0, courte: true },
+  { angle: -115, taille: 14, delai: 0.75, duree: 1.3, courte: false },
+  { angle: -100, taille: 10, delai: 0.2, duree: 0.9, courte: true },
+  { angle: 100, taille: 10, delai: 0.55, duree: 0.9, courte: true },
+  { angle: 115, taille: 14, delai: 0.1, duree: 1.3, courte: false },
+  { angle: 130, taille: 11, delai: 0.9, duree: 1.0, courte: true },
+  { angle: 150, taille: 13, delai: 0.35, duree: 1.2, courte: false },
+] as const
+
+/** Les embruns à la pointe d'un jet : des bouffées plus petites et plus vives. */
+const VAPEURS_JET = [
+  { x: 40, taille: 50, delai: 0, duree: 3 },
+  { x: 60, taille: 60, delai: 1.1, duree: 3.5 },
+  { x: 50, taille: 44, delai: 2.2, duree: 2.8 },
+] as const
+
+/** La pointe d'un jet : une boîte autour du sommet de la colonne, d'où l'eau retombe. */
+function zonePointe({ cascade }: SceneVivante): Zone {
+  return { x: cascade.x - cascade.w, y: cascade.y - 30, w: cascade.w * 3, h: 120 }
+}
+
+/** Les embruns : juste au-dessus de la pointe du jet. */
+function zoneEmbrun({ cascade }: SceneVivante): Zone {
+  return { x: cascade.x - cascade.w * 0.75, y: cascade.y - 70, w: cascade.w * 2.5, h: 110 }
+}
+
+/** Là où la brume monte : la moitié basse de la chute, élargie, jusqu'à l'écume. */
+function zoneVapeur({ cascade, ecume }: SceneVivante): Zone {
+  return {
+    x: cascade.x - cascade.w * 0.75,
+    y: cascade.y + cascade.h * 0.4,
+    w: cascade.w * 2.5,
+    h: cascade.h * 0.6 + ecume.h * 0.8,
+  }
+}
 
 /**
  * La feuille d'images-clés d'une scène, écrite une fois : elle ne dépend que

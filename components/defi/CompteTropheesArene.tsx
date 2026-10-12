@@ -216,7 +216,10 @@ export default function CompteTropheesArene({
       // `grid-flow-col` : la plaque est une grille (globals.css) — on la couche
       // en ligne plutôt que de se battre avec son `display`.
       className={cn(
-        'arena-plaque arena-plaque--ronde relative h-11 grid-flow-col gap-1.5 pr-3.5 pl-1',
+        // Plaque CLAIRE depuis le 12/10/2026 : la même matière que tout le bord
+        // (burger, boss, classement) — le violet profond était la seule plaque
+        // sombre du HUD. Le nombre passe en violet, la bande en pastille jaune.
+        'arena-plaque arena-plaque--claire arena-plaque--ronde relative h-11 grid-flow-col gap-1.5 pr-1.5 pl-1',
         className,
       )}
     >
@@ -257,7 +260,7 @@ export default function CompteTropheesArene({
       <span className="relative" aria-hidden="true">
         <motion.span
           key={`nombre-${bond}`}
-          className="font-heading block text-[1.45rem] leading-none font-extrabold text-highlight tabular-nums [text-shadow:0_2px_0_rgba(0,0,0,0.45)]"
+          className="font-heading block text-[1.45rem] leading-none font-extrabold text-primary tabular-nums"
           animate={bond > 0 ? { scale: [1, 1.22, 1] } : undefined}
           transition={{ duration: 0.55, delay: DEFILEMENT_MS / 1000 }}
         >
@@ -268,8 +271,8 @@ export default function CompteTropheesArene({
             <motion.span
               key="delta"
               className={cn(
-                'font-heading pointer-events-none absolute top-0 left-1/2 text-sm leading-none font-extrabold whitespace-nowrap [text-shadow:0_1px_0_rgba(0,0,0,0.5)]',
-                delta > 0 ? 'text-highlight' : 'text-[#faf6ef]/80',
+                'font-heading pointer-events-none absolute top-0 left-1/2 text-sm leading-none font-extrabold whitespace-nowrap',
+                delta > 0 ? 'text-primary' : 'text-muted-foreground',
               )}
               initial={{ x: '-50%', y: 2, opacity: 0, scale: 0.8 }}
               animate={{ x: '-50%', y: -28, opacity: [0, 1, 1, 0], scale: [0.8, 1.2, 1, 1] }}
@@ -286,13 +289,18 @@ export default function CompteTropheesArene({
           place et la plaque la souligne d'un battement. Sans bande, le rang. */}
       <span
         aria-hidden="true"
-        className="relative flex h-4 min-w-[3.4rem] items-center overflow-hidden"
+        className="relative flex h-5 min-w-[3.4rem] items-center overflow-hidden"
       >
+        {/* La bande est une PASTILLE jaune (l'or du gain) à encre marine : sur
+            la plaque blanche, le jaune seul ne se lisait plus. Sans bande, le
+            rang, en gris. */}
         <motion.span
           key={phase === 'top' ? 'nouvelle' : 'ancienne'}
           className={cn(
-            'font-heading text-[0.62rem] leading-none font-extrabold tracking-wider whitespace-nowrap uppercase',
-            topAffiche === null ? 'text-[#faf6ef]/85' : 'text-highlight',
+            'font-heading rounded-full px-1.5 py-0.5 text-[0.62rem] leading-none font-extrabold tracking-wider whitespace-nowrap uppercase',
+            topAffiche === null
+              ? 'text-muted-foreground'
+              : 'bg-highlight text-foreground',
           )}
           initial={phase === 'top' ? { y: 14, opacity: 0, scale: 1.25 } : false}
           animate={{ y: 0, opacity: 1, scale: 1 }}

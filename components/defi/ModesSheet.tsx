@@ -6,7 +6,7 @@ import { AnimatePresence, motion, useDragControls, useReducedMotion } from 'fram
 import { ChevronDown, LayoutGrid } from 'lucide-react'
 import ModeTicketCard from '@/components/defi/ModeTicket'
 import DeAnime from '@/components/defi/DeAnime'
-import { plaqueClaire } from '@/lib/defi/plaque-claire'
+import { plaqueBlanche } from '@/lib/defi/plaque-claire'
 import { casesPalmares, type LignePalmares } from '@/lib/palmares/palmares'
 import { isEpreuveId } from '@/lib/palmares/epreuves'
 import { ordinal } from '@/lib/percentile'
@@ -163,7 +163,7 @@ export default function ModesSheet({
         aria-label="Modes de jeu — jeux par matière, Blitz, Chrono, Survie et boss"
         title="Modes de jeu — Blitz, Chrono, Survie, Boss"
         className={`arena-plate arena-plate--clair arena-plate--press ${FLANK_CLASS} flex cursor-pointer flex-col items-center justify-center focus-visible:ring-4 focus-visible:ring-white/60 focus-visible:outline-none`}
-        style={{ background: plaqueClaire() }}
+        style={{ background: plaqueBlanche() }}
       >
         {/* Le dé qui roule (Lucas, 23/09/2026) : il a remplacé l'image fixe
             `modes-v4.webp`. Sa scène (le dé, son saut, son ombre au sol)

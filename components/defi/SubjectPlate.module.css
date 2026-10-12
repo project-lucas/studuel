@@ -16,7 +16,9 @@
   display: block;
   width: 26px;
   height: 19px;
-  filter: drop-shadow(0 1.5px 0 #120d24);
+  /* Ombre violette depuis le 12/10/2026 : le triangle est violet cerné de
+     blanc sur un rond blanc, l'encre marine d'avant le salissait. */
+  filter: drop-shadow(0 1.5px 0 rgba(91, 43, 184, 0.45));
   animation: rebond-haut 1.15s ease-in-out infinite;
 }
 .fleche[data-sens='bas'] {

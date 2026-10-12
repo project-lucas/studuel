@@ -51,10 +51,11 @@ export default function ArenaActionBar({
 }) {
   return (
     <div className="px-1">
-      {/* `items-stretch` + hauteur fixe : les trois plaques partagent la même
-          ligne de base ET le même sommet. C'est la condition pour que leurs
-          trois ombres portées se lisent comme une seule élévation. */}
-      <div className="flex h-[92px] items-stretch gap-3">
+      {/* Hauteur fixe de 92 px (la page la réserve), les trois plaques de 72 px
+          CENTRÉES dedans (12/10/2026 : deux ronds et une pilule, cf.
+          `.arena-plate`) : même ligne de base, même sommet, et 10 px de marge
+          où les flèches de la matière rebondissent. */}
+      <div className="flex h-[92px] items-center gap-3">
         {left}
         {center}
         {right}

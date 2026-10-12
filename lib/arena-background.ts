@@ -37,12 +37,14 @@ export interface ArenaSlot {
  * les heures avant le premier début (0h-4h59) retombent sur la dernière plage.
  */
 export const ARENA_SCHEDULE: readonly ArenaSlot[] = [
-  { start: 5, period: 'dawn', src: '/images/arene/arena-dawn.webp' },
-  { start: 8, period: 'morning', src: '/images/arene/arena-morning.webp' },
-  { start: 12, period: 'noon', src: '/images/arene/arena-noon.webp' },
-  { start: 15, period: 'afternoon', src: '/images/arene/arena-afternoon.webp' },
-  { start: 18, period: 'evening', src: '/images/arene/arena-evening.webp' },
-  { start: 21, period: 'night', src: '/images/arene/arena-night.webp' },
+  // La COUR D'HONNEUR depuis le 12/10/2026 (scripts/arene-cour.mjs) ; les
+  // décors du château sur son île (`arena-<plage>.webp`) restent sur le disque.
+  { start: 5, period: 'dawn', src: '/images/arene/cour-dawn.webp' },
+  { start: 8, period: 'morning', src: '/images/arene/cour-morning.webp' },
+  { start: 12, period: 'noon', src: '/images/arene/cour-noon.webp' },
+  { start: 15, period: 'afternoon', src: '/images/arene/cour-afternoon.webp' },
+  { start: 18, period: 'evening', src: '/images/arene/cour-evening.webp' },
+  { start: 21, period: 'night', src: '/images/arene/cour-night.webp' },
 ]
 
 /** La plage active pour une heure donnée (0-23). */

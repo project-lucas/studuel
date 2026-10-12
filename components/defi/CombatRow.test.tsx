@@ -181,7 +181,7 @@ describe('le bouton COMBAT', () => {
     const rangeeAnnuler = annuler.parentElement as HTMLElement
 
     // Les trois classes qui portent toute la géométrie de la rangée.
-    for (const classe of ['h-[92px]', 'items-stretch', 'gap-3']) {
+    for (const classe of ['h-[92px]', 'items-center', 'gap-3']) {
       expect(rangeeDuel.className).toContain(classe)
       expect(rangeeAnnuler.className).toContain(classe)
     }

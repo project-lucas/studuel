@@ -32,6 +32,7 @@
  */
 
 import type { ArenaPeriod } from './arena-background'
+import { SCENES_COUR } from './arena-vivante-cour'
 
 /** Cotes de la planche, le repère de tous les nombres de ce fichier. */
 export const PLANCHE_LARGEUR = 1080
@@ -127,14 +128,22 @@ export type BougieVivante = Zone & Vacillement
 export interface LanterneVivante extends Vacillement {
   x: number
   y: number
+  /** Côté du halo (pixels de planche) ; LANTERNE_TAILLE à défaut. */
+  taille?: number
 }
 
 /** La colonne de la cascade, où glissent trois reflets. */
 export interface CascadeVivante extends Zone {
-  /** Passages d'un reflet par boucle. */
+  /** Passages d'un voile d'eau par boucle (un passage = une colonne). */
   passages: number
-  /** Chemin d'un reflet, du haut de la colonne (pixels de planche). */
+  /** Hauteur de la colonne d'eau servie aux voiles (pixels de planche), > h. */
   course: number
+  /**
+   * Le sens de l'eau : une chute DESCEND (défaut), le jet d'une fontaine
+   * MONTE — mêmes voiles, joués à l'envers, et les gouttes retombent de la
+   * pointe au lieu de jaillir du pied (12/10/2026, la cour d'honneur).
+   */
+  sens?: 'descend' | 'monte'
 }
 
 /** L'écume au pied de la cascade : elle palpite `k` fois par boucle. */
@@ -176,149 +185,12 @@ export interface SceneVivante {
 const DOSSIER = '/images/arene/vivante'
 
 /**
- * L'AUBE (5 h → 8 h) : l'export « Château animé » du 23/09/2026, recopié nombre
- * pour nombre. Les cotes des éléments sont celles de l'export (l'image source
- * fait le double : nette sur Retina).
+ * LES SCÈNES : depuis le 12/10/2026, les six plages vivent dans LA COUR
+ * D'HONNEUR de l'académie (`lib/arena-vivante-cour.ts`). Les scènes du
+ * château sur son île — l'aube et le soir recopiés de l'export de Lucas, les
+ * quatre autres du 12/10 au matin — sont dans l'historique git.
  */
-const AUBE: SceneVivante = {
-  period: 'dawn',
-  plate: `${DOSSIER}/dawn-plate.webp`,
-  etoiles: [],
-  lueur: {
-    x: 20,
-    y: 120,
-    w: 1040,
-    h: 1040,
-    centre: 'rgba(255, 214, 170, 0.55)',
-    halo: 'rgba(255, 190, 160, 0.2)',
-    min: 0.35,
-    amplitude: 0.35,
-  },
-  nuages: [
-    { src: `${DOSSIER}/dawn-cloud-1.webp`, x: 0, y: 200, w: 390, h: 230, amplitude: 34, phase: 0 },
-    { src: `${DOSSIER}/dawn-cloud-2.webp`, x: 550, y: 125, w: 420, h: 120, amplitude: 46, phase: 0.3 },
-    { src: `${DOSSIER}/dawn-cloud-3.webp`, x: 700, y: 210, w: 380, h: 230, amplitude: 30, phase: 0.55 },
-    { src: `${DOSSIER}/dawn-cloud-4.webp`, x: 0, y: 500, w: 215, h: 95, amplitude: 22, phase: 0.8 },
-    { src: `${DOSSIER}/dawn-cloud-5.webp`, x: 850, y: 475, w: 230, h: 107.5, amplitude: 24, phase: 0.15 },
-  ],
-  balancementVertical: 3,
-  rochers: [],
-  bougie: {
-    x: 250,
-    y: 620,
-    w: 520,
-    h: 260,
-    base: 0.25,
-    amplitude: 0.25,
-    ondes: [
-      { k: 3, phase: 0.1 },
-      { k: 5, phase: 0.4 },
-    ],
-  },
-  lanternes: [],
-  cascade: { x: 880, y: 918, w: 64, h: 270, passages: 4, course: 350 },
-  ecume: { x: 850, y: 1150, w: 130, h: 60, min: 0.4, amplitude: 0.35, k: 3 },
-  brume: [
-    { y: 1085, h: 120, phase: 0, sens: 1, opacite: 0.55 },
-    { y: 1125, h: 90, phase: 0.5, sens: -1, opacite: 0.45 },
-    { y: 1155, h: 70, phase: 0.25, sens: 1, opacite: 0.4 },
-  ],
-  couleurBrume: '240, 236, 250',
-}
-
-/** Les quatre lanternes du parvis, chacune à son rythme (6 à 9 battements). */
-const LANTERNES_SOIR: readonly LanterneVivante[] = (
-  [
-    [335, 884],
-    [462, 884],
-    [641, 874],
-    [803, 881],
-  ] as const
-).map(([x, y], i) => ({
-  x,
-  y,
-  base: 0.55,
-  amplitude: 0.45,
-  ondes: [
-    { k: 6 + i, phase: i * 0.23 },
-    { k: 9, phase: i * 0.41 },
-  ],
-}))
-
-/** Les dix étoiles peintes qui scintillent, à 2, 3 ou 4 battements. */
-const ETOILES_SOIR: readonly EtoileVivante[] = (
-  [
-    [113, 51, 0],
-    [475, 32, 0.4],
-    [624, 54, 0.7],
-    [761, 102, 0.2],
-    [951, 127, 0.55],
-    [147, 162, 0.85],
-    [344, 103, 0.3],
-    [548, 72, 0.65],
-    [883, 64, 0.1],
-    [998, 44, 0.45],
-  ] as const
-).map(([x, y, phase], i) => ({ x, y, phase, k: 2 + (i % 3) }))
-
-/**
- * LE SOIR (18 h → 21 h) : l'export « Château Nuit » du 23/09/2026 — nommé
- * « nuit » dans l'outil, mais peint sur `arena-evening` (les étoiles se
- * lèvent, le couchant rosit encore l'horizon, les lanternes s'allument).
- */
-const SOIR: SceneVivante = {
-  period: 'evening',
-  plate: `${DOSSIER}/evening-plate.webp`,
-  etoiles: ETOILES_SOIR,
-  lueur: {
-    x: 4,
-    y: 180,
-    w: 1080,
-    h: 1080,
-    centre: 'rgba(255, 190, 170, 0.5)',
-    halo: 'rgba(230, 160, 190, 0.18)',
-    min: 0.3,
-    amplitude: 0.35,
-  },
-  nuages: [
-    { src: `${DOSSIER}/evening-cloud-a.webp`, x: 0, y: 223.5, w: 440, h: 194, amplitude: 38, phase: 0 },
-    { src: `${DOSSIER}/evening-cloud-b.webp`, x: 0, y: 553, w: 227.5, h: 106.5, amplitude: 22, phase: 0.6 },
-    { src: `${DOSSIER}/evening-cloud-c.webp`, x: 693, y: 118, w: 387, h: 263.5, amplitude: 34, phase: 0.35 },
-    { src: `${DOSSIER}/evening-cloud-d.webp`, x: 838.5, y: 527.5, w: 241.5, h: 206.5, amplitude: 26, phase: 0.8 },
-  ],
-  balancementVertical: 3,
-  rochers: [
-    { src: `${DOSSIER}/evening-rock-l.webp`, x: 77.5, y: 432.5, w: 140, h: 147.5, phase: 0.1 },
-  ],
-  bougie: {
-    x: 250,
-    y: 620,
-    w: 520,
-    h: 260,
-    base: 0.25,
-    amplitude: 0.25,
-    ondes: [
-      { k: 5, phase: 0.1 },
-      { k: 7, phase: 0.4 },
-    ],
-  },
-  lanternes: LANTERNES_SOIR,
-  cascade: { x: 884, y: 935, w: 62, h: 215, passages: 6, course: 300 },
-  ecume: { x: 850, y: 1110, w: 130, h: 60, min: 0.35, amplitude: 0.35, k: 5 },
-  brume: [
-    { y: 1010, h: 130, phase: 0, sens: 1, opacite: 0.45 },
-    { y: 1070, h: 110, phase: 0.5, sens: -1, opacite: 0.4 },
-    { y: 1300, h: 90, phase: 0.25, sens: 1, opacite: 0.22 },
-    { y: 1470, h: 80, phase: 0.7, sens: -1, opacite: 0.18 },
-  ],
-  couleurBrume: '225, 228, 250',
-}
-
-/** Les plages horaires qui ont leur scène vivante. */
-export const SCENES_VIVANTES: Partial<Record<ArenaPeriod, SceneVivante>> = {
-  dawn: AUBE,
-  evening: SOIR,
-}
+export const SCENES_VIVANTES: Partial<Record<ArenaPeriod, SceneVivante>> = SCENES_COUR
 
 /** La scène vivante d'une plage, ou `undefined` si elle garde son image fixe. */
 export function sceneVivanteDe(
@@ -326,6 +198,15 @@ export function sceneVivanteDe(
 ): SceneVivante | undefined {
   return period ? SCENES_VIVANTES[period] : undefined
 }
+
+/**
+ * Les voiles d'eau de la cascade (12/10/2026, `scripts/cascade-texture.mjs`),
+ * communs à toutes les scènes : posés par `ArenaVivante.module.css`.
+ */
+export const FICHIERS_CASCADE = [
+  `${DOSSIER}/cascade-eau.webp`,
+  `${DOSSIER}/cascade-filets.webp`,
+] as const
 
 /**
  * Tout ce qu'une scène fait charger : à précharger d'un bloc quand la plage
@@ -337,6 +218,7 @@ export function fichiersDeScene(scene: SceneVivante): string[] {
     scene.plate,
     ...scene.nuages.map((n) => n.src),
     ...scene.rochers.map((r) => r.src),
+    ...FICHIERS_CASCADE,
   ]
 }
 

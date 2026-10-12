@@ -112,51 +112,94 @@
   mix-blend-mode: screen;
 }
 
-/* --- La cascade : trois reflets qui glissent dans sa colonne. -------------- */
+/* --- La cascade : des VOILES D'EAU qui coulent dans sa colonne. ------------
+   Trois reflets en barres y glissaient (23/09/2026) ; ils se lisaient comme
+   des tubes de néon (Lucas, 12/10/2026 : « améliorer le rendu de la rivière
+   qui coule »). L'eau est maintenant trois voiles TEXTURÉS (nappes larges,
+   nappes décalées, filets fins — `scripts/cascade-texture.mjs`, tuilables en
+   hauteur), chacun haut de DEUX colonnes et tuilé deux fois, qui descendent
+   de la MOITIÉ de leur hauteur par passage : le raccord tombe pile sur le
+   tuilage, invisible ; les filets vont deux fois plus vite que les nappes, et
+   c'est cette différence qui fait l'épaisseur de la chute. Le masque est FIXE
+   (bords de la colonne fondus, haut et pied fondus) ; seul `transform` bouge. */
 .cascade {
   composes: couche;
   overflow: hidden;
-  border-radius: calc(18 * var(--u));
   mix-blend-mode: screen;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 24%, #000 76%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 24%, #000 76%, transparent);
 }
-/* Le RAIL d'un reflet : une colonne haute de la course du reflet (posée en
-   ligne par le composant), qui glisse de SA PROPRE HAUTEUR — `translateY(100%)`.
-   La course était lue dans une variable par les images-clés, ce qui faisait
-   tourner l'animation sur le fil principal (23/09/2026) : un pourcentage de
-   l'élément lui-même se passe de variable. */
-.rail {
+.chute {
   position: absolute;
-  top: calc(-80 * var(--u));
-  width: calc(10 * var(--u));
+  inset: 0;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 8%, #000 86%, transparent);
+  mask-image: linear-gradient(180deg, transparent, #000 8%, #000 86%, transparent);
 }
-.reflet {
+.voile {
   position: absolute;
-  top: 0;
   left: 0;
+  top: 0;
   width: 100%;
-  height: calc(70 * var(--u));
-  border-radius: calc(6 * var(--u));
-  background: linear-gradient(
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0.75),
-    rgba(255, 255, 255, 0)
-  );
-  opacity: 0.8;
+  height: 200%;
+  background-repeat: repeat-y;
+  background-size: 100% 50%;
 }
-@keyframes glisse {
+.voileEau {
+  background-image: url('/images/arene/vivante/cascade-eau.webp');
+  opacity: 0.7;
+}
+/* La seconde nappe : même texture, retournée (l'eau n'est pas la même deux
+   fois) et un peu plus étroite — vue à travers la première, elle fait la
+   profondeur. */
+.voileDecale {
+  left: 10%;
+  width: 80%;
+  opacity: 0.45;
+  transform: translateY(-25%) scaleX(-1);
+}
+.voileFilets {
+  background-image: url('/images/arene/vivante/cascade-filets.webp');
+  opacity: 0.85;
+}
+@keyframes coule {
   from {
     transform: translateY(0);
   }
   to {
-    transform: translateY(100%);
+    transform: translateY(-50%);
   }
 }
-.animee .rail {
-  animation-name: glisse;
-  /* `--passages` passages par boucle. */
+@keyframes couleDecale {
+  from {
+    transform: translateY(-25%) scaleX(-1);
+  }
+  to {
+    transform: translateY(-75%) scaleX(-1);
+  }
+}
+.animee .voile {
+  animation-name: coule;
+  /* `--passages` passages par boucle : un passage = une colonne d'eau. */
   animation-duration: calc(var(--boucle) / var(--passages));
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+}
+.animee .voileDecale {
+  animation-name: couleDecale;
+  animation-duration: calc(var(--boucle) / var(--passages) * 1.25);
+}
+.animee .voileFilets {
+  animation-duration: calc(var(--boucle) / var(--passages) / 2);
+}
+/* LE JET D'UNE FONTAINE (12/10/2026, la cour d'honneur) : les mêmes voiles,
+   joués À L'ENVERS — l'eau monte —, dans une colonne fondue vers sa pointe. */
+.monte .chute {
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 30%, #000 92%, transparent);
+  mask-image: linear-gradient(180deg, transparent, #000 30%, #000 92%, transparent);
+}
+.animee .monte .voile {
+  animation-direction: reverse;
 }
 
 /* --- L'écume au pied de la cascade. ---------------------------------------- */
@@ -219,6 +262,141 @@
 }
 .animee .brumeGauche {
   animation-name: rouleGauche;
+}
+
+/* --- L'écume qui bouillonne et la brume qui remonte (12/10/2026) ----------
+   Lucas : « ajoute l'écume qui bouillonne et la brume ». Au pied de la chute,
+   des GOUTTES jaillissent en éventail : chaque jet est un repère TOURNÉ (une
+   transformation fixe, posée en ligne par le composant) dans lequel la goutte
+   ne fait que monter tout droit — `translateY` en % de SA taille, une valeur
+   littérale, sans variable, donc sur le compositeur — et s'éteindre ; des
+   BULLES gonflent et crèvent sur place. Le long de la chute, des BOUFFÉES de
+   brume naissent au pied, s'ouvrent et se dissipent à mi-hauteur. Délais et
+   durées varient d'un élément à l'autre, en PROPRIÉTÉS, jamais dans les
+   images-clés. Figés (rideau, mouvement réduit), gouttes, bulles et bouffées
+   sont invisibles : l'instant zéro de chacun est l'opacité nulle. */
+.jaillissement {
+  composes: couche;
+}
+.jet {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  width: 0;
+  height: 0;
+}
+.goutte {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    #ffffff 0 35%,
+    rgba(255, 255, 255, 0.85) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.5);
+}
+@keyframes jaillit {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.95;
+  }
+  70% {
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate(-50%, -850%) scale(0.35);
+    opacity: 0;
+  }
+}
+@keyframes jaillitCourt {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(-50%, -500%) scale(0.3);
+    opacity: 0;
+  }
+}
+.animee .goutte {
+  animation-name: jaillit;
+  animation-timing-function: cubic-bezier(0.2, 0.7, 0.5, 1);
+  animation-iteration-count: infinite;
+}
+.animee .goutteCourte {
+  animation-name: jaillitCourt;
+}
+.bulle {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 0 1.5px rgba(255, 255, 255, 0.85),
+    inset 0 0 6px rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.3);
+}
+@keyframes creve {
+  0% {
+    transform: translate(-50%, -50%) scale(0.3);
+    opacity: 0;
+  }
+  35% {
+    opacity: 0.8;
+  }
+  85% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -80%) scale(1.15);
+    opacity: 0;
+  }
+}
+.animee .bulle {
+  animation-name: creve;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+.vapeur {
+  composes: couche;
+}
+.bouffee {
+  position: absolute;
+  bottom: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.18) 45%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  opacity: 0;
+  transform: translate(-50%, 0) scale(0.5);
+}
+@keyframes monte {
+  0% {
+    transform: translate(-50%, 0) scale(0.5);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate(-50%, -230%) scale(1.5);
+    opacity: 0;
+  }
+}
+.animee .bouffee {
+  animation-name: monte;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
 }
 
 /* Réduire le mouvement : la scène reste, figée à sa première image — c'est

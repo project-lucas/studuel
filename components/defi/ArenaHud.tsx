@@ -325,7 +325,7 @@ export default function ArenaHud({
               alerts > 0 ? ` ${alerts} à voir` : ''
             }`}
             title="Menu de l'arène"
-            className="arena-plaque arena-plaque--claire arena-plaque--ronde defi2-press relative grid size-12 cursor-pointer place-items-center focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
+            className="arena-plaque arena-plaque--claire arena-plaque--ronde defi2-press relative grid size-11 cursor-pointer place-items-center focus-visible:ring-4 focus-visible:ring-highlight/60 focus-visible:outline-none"
           >
             {/* Toujours un burger : c'est le panneau ouvert, posé par-dessus,
                 qui porte la croix. Le bouton ne se transforme plus. */}
@@ -420,7 +420,10 @@ function RailTileFace({
   const face = (
     <span
       className={cn(
-        'hud-face arena-plaque arena-plaque--claire relative grid size-[68px] place-items-center text-foreground',
+        // RONDE depuis le 12/10/2026 : le bord de l'arène ne connaît plus que
+        // des ronds et des pilules (burger, quêtes, trophées) — un carré
+        // arrondi de plus y faisait un troisième rayon pour rien.
+        'hud-face arena-plaque arena-plaque--claire arena-plaque--ronde relative grid size-[68px] place-items-center text-foreground',
         tile.family === 'amber' && 'arena-plaque--ambre',
       )}
     >

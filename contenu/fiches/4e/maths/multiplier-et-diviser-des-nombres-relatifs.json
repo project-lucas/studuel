@@ -1,0 +1,152 @@
+{
+  "titre": "Relatifs : × et ÷",
+  "titreSurligne": "Relatifs",
+  "accroche": "Même signe, plus. Signes contraires, moins.",
+  "bonus": "Un produit est **nul** si et seulement si l’un de ses facteurs est nul.",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/multiplier-et-diviser-des-nombres-relatifs.webp",
+    "prompt": "a glossy violet balance scale with a golden plus sign on one pan and a golden minus sign on the other, tiny golden sparkles"
+  },
+  "marcel": "Deux moins font\nun plus&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle des signes",
+          "lignes": [
+            "(+) × (+) = +",
+            "(−) × (−) = +",
+            "(+) × (−) = −",
+            "(−) × (+) = −"
+          ],
+          "regle": "**Signes identiques** : résultat ==positif==. **Signes contraires** : résultat ==négatif==. Pareil pour ÷.",
+          "note": "valable pour × et pour ÷&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Plusieurs facteurs",
+          "entetes": [
+            "Facteurs négatifs",
+            "Le produit est"
+          ],
+          "lignes": [
+            [
+              "Un nombre **pair**",
+              "**positif**"
+            ],
+            [
+              "Un nombre **impair**",
+              "**négatif**"
+            ],
+            [
+              "(−2) × (−3) × (−5)",
+              "3 négatifs : **−30**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Signe",
+              "texte": "je compare les signes des deux nombres"
+            },
+            {
+              "titre": "Distances",
+              "texte": "je calcule avec les nombres sans leur signe"
+            },
+            {
+              "titre": "Écrire",
+              "texte": "je recolle le signe devant le résultat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Calculer (−36) ÷ (−4) puis (−7) × 3.",
+          "calcul": "(−36) ÷ (−4) → signes identiques → +\n36 ÷ 4 = 9",
+          "aparte": "même signe\n= plus",
+          "resultat": "(−7) × 3 = [[−21]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le carré et le signe",
+          "oui": {
+            "titre": "Avec parenthèses",
+            "texte": "(−3)<sup>2</sup> = (−3) × (−3) = **+9**."
+          },
+          "non": {
+            "titre": "Sans parenthèses",
+            "texte": "−3<sup>2</sup> = −(3 × 3) = **−9**. Le carré ne porte que sur le 3."
+          },
+          "essai": {
+            "texte": "Que vaut (−2)<sup>3</sup>&nbsp;? <i>(−2) × (−2) × (−2) = 4 × (−2)</i> = **−8**&nbsp;: trois facteurs négatifs, résultat négatif."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "(−7) × (+3)",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "Signes contraires, donc le résultat est négatif.",
+              "quoi": "la phrase"
+            },
+            {
+              "texte": "= −(7 × 3) = −21",
+              "quoi": "le résultat"
+            }
+          ],
+          "pied": "On ==dit== le signe avant de calculer."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **(−3)<sup>2</sup>** (+9) et **−3<sup>2</sup>** (−9).",
+            "Oublier qu’un **opposé** (−5 → +5) n’est pas un **inverse** (−5 → −1/5).",
+            "Écrire que (−6) + (−2) = +8&nbsp;: la règle des signes ne sert **que** pour × et ÷.",
+            "Compter les signes **+** au lieu des facteurs **négatifs**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "(−8) × (−5) = &nbsp;?",
+            "(−42) ÷ 6 = &nbsp;?",
+            "Signe de (−1) × (−2) × (−3) × (−4)&nbsp;?"
+          ],
+          "reponses": "1) +40 · 2) −7 · 3) positif (4 négatifs), +24"
+        }
+      ]
+    }
+  ]
+}

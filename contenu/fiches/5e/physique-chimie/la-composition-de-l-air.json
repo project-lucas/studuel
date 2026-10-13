@@ -1,0 +1,198 @@
+{
+  "titre": "Composition de l’air",
+  "titreSurligne": "air",
+  "accroche": "Un mélange de gaz, avec une vraie masse.",
+  "bonus": "**78 %** diazote · **21 %** dioxygène · **1 %** autres · 1 L d’air ≈ **1,2 g** · pression ≈ **1 013 hPa**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/la-composition-de-l-air.webp",
+    "prompt": "a glossy violet balloon with golden swirls of air inside, a small barometer dial beside it, tiny golden bubbles and sparkles"
+  },
+  "marcel": "L’air pèse,\nmême si on ne le voit pas !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Sa composition, en volume",
+          "entetes": [
+            "Gaz",
+            "Proportion"
+          ],
+          "lignes": [
+            [
+              "**Diazote** (N<sub>2</sub>)",
+              "environ **78 %**"
+            ],
+            [
+              "**Dioxygène** (O<sub>2</sub>)",
+              "environ **21 %**"
+            ],
+            [
+              "Argon, CO<sub>2</sub>, vapeur d’eau",
+              "environ **1 %**"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux tests à connaître",
+          "entetes": [
+            "Gaz",
+            "Test",
+            "Résultat"
+          ],
+          "lignes": [
+            [
+              "**Dioxygène**",
+              "bûchette incandescente",
+              "elle se **rallume**"
+            ],
+            [
+              "**Dioxyde de carbone**",
+              "eau de chaux",
+              "elle se **trouble**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Prouver que l’air a une masse",
+          "etapes": [
+            {
+              "titre": "Peser",
+              "texte": "un ballon gonflé sur une balance"
+            },
+            {
+              "titre": "Dégonfler",
+              "texte": "le ballon, puis le peser à nouveau"
+            },
+            {
+              "titre": "Soustraire",
+              "texte": "la différence est la masse de l’air (1 L ≈ 1,2 g)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Ballon gonflé&nbsp;: __12,6 g__. Dégonflé&nbsp;: __11,4 g__. Masse de l’air&nbsp;?",
+          "calcul": "12,6 − 11,4 = 1,2 g",
+          "aparte": "c’est environ 1 L d’air",
+          "resultat": "[[1,2 g]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "L’atmosphère",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "La pression",
+              "texte": "environ **1 013 hPa**, mesurée au **baromètre**, dans toutes les directions."
+            },
+            {
+              "titre": "En altitude",
+              "texte": "elle **diminue**&nbsp;: la colonne d’air est plus courte."
+            },
+            {
+              "titre": "Compressible",
+              "texte": "dans une bouteille de plongée, l’air est très serré."
+            },
+            {
+              "titre": "Les humains",
+              "texte": "plus de **CO<sub>2</sub>** et de polluants&nbsp;: l’air change."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À savoir refaire",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Les proportions",
+              "texte": "78 % de diazote, 21 % de dioxygène, 1 % d’autres gaz"
+            },
+            {
+              "titre": "La masse",
+              "texte": "1 L d’air pèse environ 1,2 g : l’air n’est pas rien"
+            },
+            {
+              "titre": "Les deux tests",
+              "texte": "bûchette qui se rallume, eau de chaux qui se trouble"
+            },
+            {
+              "titre": "La pression",
+              "texte": "1 013 hPa au niveau de la mer, elle baisse en montant"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "On approche une bûchette incandescente.",
+              "quoi": "le test"
+            },
+            {
+              "texte": "Elle se rallume.",
+              "quoi": "l’observation"
+            },
+            {
+              "texte": "Le gaz est du dioxygène.",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "L’air est un ==mélange homogène==, pas un corps pur."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que l’air est du **dioxygène** pur&nbsp;: il en contient 21 %.",
+            "Penser que l’air **ne pèse rien**.",
+            "Confondre le test du **dioxygène** et celui du **CO<sub>2</sub>**.",
+            "Oublier que la pression **baisse** en altitude.",
+            "Croire que le **CO<sub>2</sub>** est le gaz principal de l’air."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel gaz est le **plus abondant** dans l’air&nbsp;?",
+            "Quel test reconnaît le **dioxyde de carbone**&nbsp;?",
+            "Que mesure un **baromètre**&nbsp;?"
+          ],
+          "reponses": "1) le diazote (78 %) · 2) l’eau de chaux se trouble · 3) la pression"
+        }
+      ]
+    }
+  ]
+}

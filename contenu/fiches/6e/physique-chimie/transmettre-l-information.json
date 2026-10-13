@@ -1,0 +1,149 @@
+{
+  "titre": "Transmettre l’info",
+  "titreSurligne": "info",
+  "accroche": "De la fumée au fil de verre.",
+  "bonus": "émetteur → **canal** → récepteur · **0 et 1** · 1 octet · ko, Mo, Go",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/physique-chimie/transmettre-l-information.webp",
+    "prompt": "a glossy violet fiber optic cable glowing golden with a small satellite dish and a paper airplane message, tiny sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Un message,\ndes 0 et des 1 !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 1,
+          "titre": "La chaîne de transmission",
+          "etapes": [
+            { "titre": "Émetteur", "texte": "il **code** le message" },
+            { "titre": "Canal", "texte": "il **transporte** le message" },
+            { "titre": "Récepteur", "texte": "il **décode** le message" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les supports d’aujourd’hui",
+          "entetes": ["Support", "Ce qui voyage"],
+          "lignes": [
+            ["Le **câble**", "un **courant** électrique"],
+            ["Les **ondes** (radio, wifi)", "dans l’air, **sans fil**"],
+            ["La **fibre optique**", "de la **lumière** dans le verre"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "Le numérique",
+          "petite": true,
+          "lignes": ["0 et 1"],
+          "regle": "Un texte, une image, un son sont convertis en ==0 et 1==, transmis, puis reconvertis. Unité&nbsp;: l’**octet** (ko, Mo, Go).",
+          "note": "que des nombres de 0 et de 1&nbsp;!"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Quel support transporte le plus de données, et le plus vite&nbsp;?",
+          "calcul": "câble, ondes ou fibre ?",
+          "aparte": "de la lumière",
+          "resultat": "la [[fibre optique]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Une longue histoire",
+          "items": [
+            { "titre": "Avant", "texte": "fumée, tambours, pigeons, sémaphores." },
+            { "titre": "Puis", "texte": "télégraphe, téléphone, radio." },
+            { "titre": "Aujourd’hui", "texte": "satellites et fibre&nbsp;: plus **vite**, plus **loin**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 5,
+          "titre": "Un usage responsable",
+          "paragraphes": [
+            "Ce qu’on publie peut être **copié**, **conservé** et **rediffusé** sans qu’on le sache. Cela ==échappe vite à son auteur==."
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le **cloud** est un nuage&nbsp;: c’est l’ordinateur de quelqu’un d’autre.",
+            "Penser qu’un message publié peut être **effacé** pour de bon.",
+            "Confondre **canal** et **récepteur**."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 6,
+          "titre": "Du signal de fumée à la fibre",
+          "etapes": [
+            { "date": "Autrefois", "texte": "fumée, tambours, pigeons" },
+            { "date": "XIX<sup>e</sup>", "texte": "télégraphe, téléphone" },
+            { "date": "Aujourd’hui", "texte": "satellites, fibre optique" }
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 7,
+          "titre": "Le stockage",
+          "items": [
+            { "titre": "Sur l’appareil", "texte": "disque dur, clé USB, carte mémoire." },
+            { "titre": "À distance", "texte": "un serveur&nbsp;: le « cloud »." },
+            { "titre": "Le bon réflexe", "texte": "réfléchir avant de **publier**." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 8,
+          "titre": "Ce qui a progressé",
+          "deux": true,
+          "items": [
+            { "titre": "La vitesse", "texte": "le message arrive plus vite." },
+            { "titre": "La distance", "texte": "il va toujours plus loin." },
+            { "titre": "La quantité", "texte": "il transporte plus de données." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Qui **code** le message dans la chaîne&nbsp;?",
+            "Quels deux chiffres forment le **binaire**&nbsp;?",
+            "Que transporte la **fibre optique**&nbsp;?"
+          ],
+          "reponses": "1) l’émetteur · 2) 0 et 1 · 3) de la lumière"
+        }
+      ]
+    }
+  ]
+}

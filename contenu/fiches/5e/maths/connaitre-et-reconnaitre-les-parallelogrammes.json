@@ -1,0 +1,172 @@
+{
+  "titre": "Les parallélogrammes",
+  "titreSurligne": "parallélogrammes",
+  "accroche": "Une famille et trois cas particuliers.",
+  "bonus": "Axes de symétrie&nbsp;: parallélogramme **0** · rectangle **2** · losange **2** · carré **4**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/connaitre-et-reconnaitre-les-parallelogrammes.webp",
+    "prompt": "a glossy violet slanted parallelogram with two golden diagonals crossing at a shiny center point, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Les diagonales\ndisent tout !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Le parallélogramme",
+          "deux": false,
+          "items": [
+            {
+              "titre": "Côtés opposés",
+              "texte": "parallèles et de même longueur"
+            },
+            {
+              "titre": "Angles opposés",
+              "texte": "égaux&nbsp;; consécutifs&nbsp;: 180°"
+            },
+            {
+              "titre": "Diagonales",
+              "texte": "elles se coupent en leur **milieu**"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les diagonales",
+          "entetes": [
+            "Figure",
+            "Même long.",
+            "Perpend."
+          ],
+          "lignes": [
+            [
+              "Parallélogramme",
+              "non",
+              "non"
+            ],
+            [
+              "**Rectangle**",
+              "**oui**",
+              "non"
+            ],
+            [
+              "**Losange**",
+              "non",
+              "**oui**"
+            ],
+            [
+              "**Carré**",
+              "**oui**",
+              "**oui**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les trois cas particuliers",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Rectangle",
+              "texte": "Un **angle droit**&nbsp;: quatre angles droits."
+            },
+            {
+              "titre": "Losange",
+              "texte": "Deux côtés consécutifs **égaux**&nbsp;: quatre côtés égaux."
+            },
+            {
+              "titre": "Carré",
+              "texte": "Rectangle **et** losange à la fois."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Prouver un parallélogramme (un seul suffit)",
+          "etapes": [
+            {
+              "titre": "Côtés",
+              "texte": "opposés parallèles deux à deux, ou de même longueur deux à deux"
+            },
+            {
+              "titre": "Diagonales",
+              "texte": "elles se coupent en leur milieu"
+            },
+            {
+              "titre": "Mixte",
+              "texte": "deux côtés opposés parallèles ET égaux"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Parallélogramme de base __8 cm__ et de hauteur 3 cm. Aire&nbsp;?",
+          "calcul": "8 × 3",
+          "aparte": "base × hauteur",
+          "resultat": "[[24 cm²]]"
+        },
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Les diagonales de ABCD ont le même milieu,",
+              "quoi": "l’hypothèse"
+            },
+            {
+              "texte": "donc ABCD est un parallélogramme.",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Aires&nbsp;: losange (D × d) ÷ 2, rectangle L × l."
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que le parallélogramme a un **axe** de symétrie&nbsp;: il a seulement un centre.",
+            "Prendre le **côté oblique** pour la hauteur dans l’aire.",
+            "Un quadrilatère aux diagonales **perpendiculaires** n’est pas forcément un losange.",
+            "Croire que les diagonales d’un parallélogramme sont **égales**&nbsp;: seulement dans un rectangle.",
+            "Oublier qu’un carré est aussi un **losange** et un **rectangle**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelles diagonales sont **perpendiculaires**, de même longueur et de même milieu&nbsp;?",
+            "Quel est l’**aire** d’un losange de diagonales 6 et 4 cm&nbsp;?",
+            "Un parallélogramme a-t-il un **centre** de symétrie&nbsp;?"
+          ],
+          "reponses": "1) le carré · 2) 12 cm² ((6 × 4) ÷ 2) · 3) oui, l’intersection des diagonales"
+        }
+      ]
+    }
+  ]
+}

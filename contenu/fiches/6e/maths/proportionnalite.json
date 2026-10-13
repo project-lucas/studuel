@@ -1,0 +1,179 @@
+{
+  "titre": "Proportionnalité",
+  "titreSurligne": "Proportionnalité",
+  "accroche": "Toujours multiplier par le même nombre.",
+  "bonus": "Le double donne le **double** · et 0 donne **0** · échelle 1/100 : 1 cm = **1 m**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/maths/proportionnalite.webp",
+    "prompt": "a glossy violet shopping basket full of golden apples with a golden price tag, tiny sparkles, same art style as the reference icons"
+  },
+  "marcel": "Même nombre\npartout !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Des pommes à 3 € le kilo",
+          "entetes": [
+            "Masse",
+            "2 kg",
+            "5 kg",
+            "10 kg"
+          ],
+          "lignes": [
+            [
+              "Prix",
+              "6 €",
+              "15 €",
+              "30 €"
+            ],
+            [
+              "Prix ÷ masse",
+              "3",
+              "3",
+              "3"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le coefficient",
+          "lignes": [
+            "prix = 3 × masse"
+          ],
+          "regle": "On passe d’une grandeur à l’autre en multipliant toujours par le ==même nombre==&nbsp;: le coefficient de proportionnalité.",
+          "note": "3 € par kilo&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Reconnaître une situation proportionnelle",
+          "etapes": [
+            {
+              "titre": "Le double",
+              "texte": "doubler une grandeur doit doubler l’autre"
+            },
+            {
+              "titre": "Le zéro",
+              "texte": "0 doit donner 0, sans prix de départ"
+            },
+            {
+              "titre": "Le quotient",
+              "texte": "toutes les colonnes donnent le même nombre"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les quatre méthodes, même résultat",
+          "colonnes": 4,
+          "cartes": [
+            {
+              "titre": "Coefficient",
+              "texte": "on divise, puis on applique"
+            },
+            {
+              "titre": "Passage à l’unité",
+              "texte": "valeur pour 1, puis on multiplie"
+            },
+            {
+              "titre": "Produit en croix",
+              "texte": "a × d = b × c"
+            },
+            {
+              "titre": "Linéarité",
+              "texte": "on additionne : 6 € + 9 € = 15 €"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "4 stylos coûtent 6 €. __Prix de 10 stylos__&nbsp;?",
+          "calcul": "1 stylo = 6 ÷ 4 = 1,5 €",
+          "aparte": "passage à l’unité",
+          "resultat": "10 × 1,5 = [[15 €]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Proportionnel ou pas&nbsp;?",
+          "oui": {
+            "titre": "Oui",
+            "texte": "Pommes à 3 € le kilo&nbsp;: 2 kg → 6 €, 4 kg → 12 €."
+          },
+          "non": {
+            "titre": "Non",
+            "texte": "Âge et taille&nbsp;; un tarif avec abonnement, car le prix ne part pas de 0."
+          },
+          "essai": {
+            "texte": "Un carré de côté 2 puis 4&nbsp;: son aire passe de 4 à 16, soit **× 4** et non × 2. **Pas** proportionnel."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "6 ÷ 4 = 1,5 €",
+              "quoi": "le prix d’un stylo"
+            },
+            {
+              "texte": "10 × 1,5 = 15",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "10 stylos coûtent 15 €",
+              "quoi": "la phrase"
+            }
+          ],
+          "pied": "Échelle 1/100&nbsp;: 1 cm sur le plan = ==100 cm== en vrai."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que **tout** est proportionnel.",
+            "**Additionner** au lieu de multiplier.",
+            "Oublier de vérifier **toutes** les colonnes du tableau.",
+            "Mélanger les **unités** (cm sur le plan, m en vrai)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**3 kg** coûtent 9 €&nbsp;: le prix de **5 kg**&nbsp;?",
+            "Le **coefficient** si 4 cahiers coûtent 10 €&nbsp;?",
+            "Au 1/100, **3 cm** sur le plan font combien en vrai&nbsp;?"
+          ],
+          "reponses": "1) 15 € · 2) 2,5 · 3) 300 cm, soit 3 m"
+        }
+      ]
+    }
+  ]
+}

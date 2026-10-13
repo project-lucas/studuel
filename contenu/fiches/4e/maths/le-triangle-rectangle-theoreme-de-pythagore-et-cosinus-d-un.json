@@ -1,0 +1,144 @@
+{
+  "titre": "Pythagore et cosinus",
+  "titreSurligne": "cosinus",
+  "accroche": "Trois longueurs, ou deux et un angle.",
+  "bonus": "cos 0° = **1** · cos 60° = **0,5** · cos 90° = **0** · un cosinus est **entre 0 et 1**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/le-triangle-rectangle-theoreme-de-pythagore-et-cosinus-d-un.webp",
+    "prompt": "a glossy violet right triangle with golden squares on its sides and a golden angle arc with a small calculator, sparkles"
+  },
+  "marcel": "Longueurs, Pythagore.\nAngle, cosinus&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "Le triangle rectangle",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><polygon points='40,150 40,34 196,150' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><line x1='40' y1='34' x2='196' y2='150' stroke='#7a3fe0' stroke-width='4.5' stroke-linecap='round'></line><path d='M40,134 h16 v16' fill='none' stroke='#f1566c' stroke-width='3'></path><path d='M164,150 A32,32 0 0 1 170,131' fill='none' stroke='#f1566c' stroke-width='3'></path><g fill='#2b2350'><circle cx='40' cy='150' r='4.5'></circle><circle cx='40' cy='34' r='4.5'></circle><circle cx='196' cy='150' r='4.5'></circle></g><g font-family=\"'Baloo 2'\" font-weight='800' font-size='20' fill='#2b2350'><text x='22' y='164'>A</text><text x='22' y='30'>B</text><text x='202' y='164'>C</text></g><g font-family='Nunito' font-weight='800' font-size='12.5' fill='#4b2a9a'><text x='128' y='80' fill='#7a3fe0' transform='rotate(37 128 80)'>hypoténuse</text><text x='78' y='166'>adjacent à C</text><text x='18' y='96' transform='rotate(-90 18 96)'>AB</text></g></svg>",
+              "legende": "ABC rectangle en A",
+              "sous": "l’hypoténuse [BC] fait face à l’angle droit"
+            }
+          ],
+          "legende": {
+            "jeton": "le plus long",
+            "texte": "L’hypoténuse est toujours le plus grand côté."
+          }
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Les deux outils",
+          "taille": "mini",
+          "lignes": [
+            "BC² = AB² + AC²",
+            "cos(<i>C</i>) = {AC/BC}"
+          ],
+          "regle": "**Pythagore** relie trois longueurs. Le **cosinus** = côté ==adjacent== ÷ ==hypoténuse==.",
+          "note": "un cosinus est toujours entre 0 et 1&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Choisir",
+              "texte": "3 longueurs&nbsp;: Pythagore. 2 longueurs et un angle&nbsp;: cosinus"
+            },
+            {
+              "titre": "Écrire",
+              "texte": "l’égalité, l’hypoténuse seule au carré (ou au dénominateur)"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "puis √ ou cos⁻¹ (calculatrice en degrés)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "ABC rectangle en A, BC = 13 et AB = 5. __AC__&nbsp;?",
+          "calcul": "AC² = 13² − 5²\n= 169 − 25 = 144",
+          "aparte": "on soustrait&nbsp;!",
+          "resultat": "AC = √144 = [[12 cm]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Rectangle ou pas&nbsp;?",
+          "oui": {
+            "titre": "La réciproque",
+            "texte": "Si le carré du plus grand côté est **égal** à la somme des deux autres, le triangle est **rectangle**."
+          },
+          "non": {
+            "titre": "La contraposée",
+            "texte": "Si l’égalité est **fausse**, le triangle n’est **pas** rectangle."
+          },
+          "essai": {
+            "texte": "5, 12, 13&nbsp;: <i>13² = 169</i> et <i>5² + 12² = 169</i>&nbsp;: **rectangle**. Avec 4, 5, 7&nbsp;: 49 ≠ 16 + 25, il ne l’est pas."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Dans le triangle ABC rectangle en A&nbsp;:",
+              "quoi": "les conditions"
+            },
+            {
+              "texte": "D’après le théorème de Pythagore&nbsp;:",
+              "quoi": "le nom"
+            },
+            {
+              "texte": "AC² = BC² − AB²",
+              "quoi": "l’égalité"
+            }
+          ],
+          "pied": "Pour un angle&nbsp;: cos(<i>C</i>) = {4/8} = 0,5, donc <i>C</i> = ==60°==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Pour un côté de l’angle droit, **additionner** au lieu de soustraire.",
+            "Oublier la **racine carrée** à la fin.",
+            "Calculatrice en **radians** au lieu de **degrés**.",
+            "Un cosinus **supérieur à 1**&nbsp;: c’est une erreur de calcul."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Rectangle en A, AB = 3 et AC = 4&nbsp;: **BC**&nbsp;?",
+            "cos(<i>C</i>) = 0,5&nbsp;: l’**angle** <i>C</i>&nbsp;?",
+            "Un angle aigu peut-il avoir un cosinus de **1,3**&nbsp;?"
+          ],
+          "reponses": "1) 5 · 2) 60° · 3) non, un cosinus est entre 0 et 1"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "titre": "Solides et patrons",
+  "titreSurligne": "patrons",
+  "accroche": "Mettre l’espace sur une feuille.",
+  "bonus": "Cube&nbsp;: 6 faces, 12 arêtes, 8 sommets",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/visualiser-et-representer-des-solides.webp",
+    "prompt": "a glossy violet cube drawn in cavalier perspective with dashed golden hidden edges and a flat unfolded net beside it, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Les arêtes cachées,\nen pointillés !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Une face",
+              "definition": "une surface qui limite le solide"
+            },
+            {
+              "terme": "Une arête",
+              "definition": "le segment où deux faces se rencontrent"
+            },
+            {
+              "terme": "Un sommet",
+              "definition": "le point où des arêtes se rejoignent"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux familles",
+          "entetes": [
+            "Famille",
+            "Exemples"
+          ],
+          "lignes": [
+            [
+              "**Polyèdres** (faces planes)",
+              "cube, pavé, prisme, pyramide"
+            ],
+            [
+              "**Solides de révolution**",
+              "cylindre, cône, sphère"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La perspective cavalière",
+          "etapes": [
+            {
+              "titre": "Face avant",
+              "texte": "en **vraie grandeur**"
+            },
+            {
+              "titre": "Fuyantes",
+              "texte": "parallèles entre elles, selon un même angle"
+            },
+            {
+              "titre": "Cachées",
+              "texte": "les arêtes cachées en **pointillés**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un __cylindre__ a pour patron…",
+          "calcul": "2 disques",
+          "aparte": "les deux bases",
+          "resultat": "+ 1 [[rectangle]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Les patrons",
+          "entetes": [
+            "Solide",
+            "Patron"
+          ],
+          "lignes": [
+            [
+              "**Cube**",
+              "6 carrés (11 dispositions)"
+            ],
+            [
+              "**Pavé droit**",
+              "6 rectangles"
+            ],
+            [
+              "**Cylindre**",
+              "2 disques + 1 rectangle"
+            ],
+            [
+              "**Cône**",
+              "1 disque + 1 secteur"
+            ],
+            [
+              "**Pyramide**",
+              "la base + des triangles"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Ce que la perspective garde",
+          "oui": {
+            "titre": "Conservé",
+            "texte": "Le **parallélisme**, les **milieux**, l’**alignement**."
+          },
+          "non": {
+            "titre": "Pas conservé",
+            "texte": "Les **angles droits** et les **longueurs** des fuyantes."
+          },
+          "essai": {
+            "texte": "Un carré de côté peut apparaître comme un **parallélogramme**&nbsp;: c’est un code de lecture, pas une photo."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Vérifier un patron",
+          "lignes": [
+            {
+              "texte": "Je compte les faces.",
+              "quoi": "le nombre"
+            },
+            {
+              "texte": "Les longueurs qui se rejoignent sont égales.",
+              "quoi": "les côtés"
+            },
+            {
+              "texte": "Je plie mentalement.",
+              "quoi": "le test final"
+            }
+          ],
+          "pied": "Pas de ==recouvrement==, pas de manque."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dessiner **toutes** les arêtes en trait plein.",
+            "Croire qu’un seul patron existe pour le cube (il y en a **onze**).",
+            "Compter les arêtes d’un solide deux fois.",
+            "Oublier que le rectangle du cylindre a pour côté le **tour du disque**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de **sommets** a une pyramide à base carrée&nbsp;?",
+            "Quel solide a pour patron **6 rectangles**&nbsp;?",
+            "Le cône est-il un **polyèdre**&nbsp;?"
+          ],
+          "reponses": "1) 5 · 2) le pavé droit · 3) non, c’est un solide de révolution"
+        }
+      ]
+    }
+  ]
+}

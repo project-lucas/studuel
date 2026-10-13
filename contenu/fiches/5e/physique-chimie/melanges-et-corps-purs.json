@@ -1,0 +1,159 @@
+{
+  "titre": "Mélanges et corps purs",
+  "titreSurligne": "corps purs",
+  "accroche": "Un seul constituant, ou plusieurs ?",
+  "bonus": "**Homogène** = on ne voit rien · **hétérogène** = on voit au moins 2 constituants · **corps pur** = température constante",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/melanges-et-corps-purs.webp",
+    "prompt": "a glossy violet beaker of cloudy water next to a golden funnel with filter paper dripping into a clear flask, tiny golden bubbles, sparkles"
+  },
+  "marcel": "Un seul ingrédient,\nou une recette ?",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Trois mots clés",
+          "items": [
+            {
+              "terme": "Corps pur",
+              "definition": "une **seule** espèce chimique (eau pure)"
+            },
+            {
+              "terme": "Mélange homogène",
+              "definition": "on ne distingue **pas** les constituants&nbsp;: eau salée, air, vinaigre"
+            },
+            {
+              "terme": "Mélange hétérogène",
+              "definition": "on distingue **au moins deux** constituants&nbsp;: eau boueuse, huile dans l’eau"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Séparer les constituants",
+          "entetes": [
+            "Technique",
+            "Elle sépare"
+          ],
+          "lignes": [
+            [
+              "**Décantation** (on laisse reposer)",
+              "un mélange hétérogène"
+            ],
+            [
+              "**Filtration** (le filtre retient le solide)",
+              "un mélange hétérogène"
+            ],
+            [
+              "**Distillation** (on chauffe, on refroidit la vapeur)",
+              "un mélange homogène"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Choisir comment séparer",
+          "etapes": [
+            {
+              "titre": "Regarder",
+              "texte": "voit-on plusieurs constituants ? Oui → hétérogène, non → homogène"
+            },
+            {
+              "titre": "Choisir",
+              "texte": "hétérogène : décantation ou filtration · homogène : distillation"
+            },
+            {
+              "titre": "Recueillir",
+              "texte": "le **filtrat** après le filtre, le **distillat** après la distillation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une eau salée est limpide. Comment récupérer __l’eau pure__ ?",
+          "calcul": "on ne voit qu’un constituant",
+          "aparte": "mélange homogène : le sel passe le filtre",
+          "resultat": "la [[distillation]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Corps pur ou mélange ?",
+          "oui": {
+            "titre": "Corps pur",
+            "texte": "pendant l’ébullition, la température **reste constante** (eau pure&nbsp;: 100 °C)."
+          },
+          "non": {
+            "titre": "Mélange",
+            "texte": "il change d’état sur un **intervalle** de températures."
+          },
+          "essai": {
+            "texte": "Le **sulfate de cuivre anhydre**, blanc, devient **bleu** au contact de l’eau. Une eau pure ne laisse **aucun résidu** quand elle s’évapore."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "On ne distingue qu’un seul constituant.",
+              "quoi": "l’observation"
+            },
+            {
+              "texte": "C’est donc un mélange homogène.",
+              "quoi": "la conclusion"
+            },
+            {
+              "texte": "On utilise la distillation.",
+              "quoi": "la technique"
+            }
+          ],
+          "pied": "==Filtrer de l’eau salée== ne donne pas de l’eau pure&nbsp;: le sel est dissous."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que **limpide** veut dire **pur**.",
+            "Filtrer un mélange **homogène**&nbsp;: le filtre ne retient rien.",
+            "Confondre **filtrat** et **distillat**.",
+            "Dire que l’air est un corps pur&nbsp;: c’est un mélange.",
+            "Oublier le **résidu** : une eau minérale en laisse."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Eau et huile&nbsp;: mélange **homogène** ou **hétérogène**&nbsp;?",
+            "Quelle technique sépare **l’eau et le sel dissous**&nbsp;?",
+            "Que devient le sulfate de cuivre **anhydre** avec de l’eau&nbsp;?"
+          ],
+          "reponses": "1) hétérogène · 2) distillation · 3) il devient bleu"
+        }
+      ]
+    }
+  ]
+}

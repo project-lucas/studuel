@@ -1,0 +1,171 @@
+{
+  "titre": "Les pourcentages",
+  "titreSurligne": "pourcentages",
+  "accroche": "Compter pour cent.",
+  "bonus": "**50 %** ÷ 2 · **25 %** ÷ 4 · **10 %** ÷ 10 · **1 %** ÷ 100",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/maths/pourcentages.webp",
+    "prompt": "a golden price tag with a big glossy violet percent sign and sparkles"
+  },
+  "marcel": "50 %, c’est\nla moitié !",
+  "rangs": [
+    {
+      "colonnes": "1fr 330px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Un pourcentage, c’est une fraction",
+          "taille": "mini",
+          "lignes": [
+            "25 % = {25/100} = 0,25",
+            "−20 % ⟺ × 0,8"
+          ],
+          "regle": "**t %** veut dire **t pour 100**. Prendre t % d’une quantité, c’est la multiplier par ==t/100==.",
+          "note": "+20 % ⟺ × 1,2"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les repères de calcul mental",
+          "items": [
+            {
+              "terme": "50 %",
+              "definition": "on divise par **2**"
+            },
+            {
+              "terme": "25 %",
+              "definition": "on divise par **4**"
+            },
+            {
+              "terme": "10 %",
+              "definition": "on divise par **10**"
+            },
+            {
+              "terme": "75 % ou 35 %",
+              "definition": "50 % + 25 %, ou 25 % + 10 %"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Traduire",
+              "texte": "le pourcentage en fraction de 100, ou en repère simple"
+            },
+            {
+              "titre": "Appliquer",
+              "texte": "multiplier la quantité par t/100"
+            },
+            {
+              "titre": "Vérifier",
+              "texte": "avec un repère (50 %, 10 %…) : le résultat est-il plausible ?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "__30 %__ de 80.",
+          "calcul": "80 × 30 ÷ 100",
+          "aparte": "10 % = 8, donc 30 % = 24",
+          "resultat": "= [[24]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Réduction de 20 %",
+              "texte": "On garde **80 %** : × 0,8. Sur 50 €, c’est **40 €**."
+            },
+            {
+              "titre": "Augmentation de 20 %",
+              "texte": "On garde **120 %** : × 1,2. Sur 50 €, c’est **60 €**."
+            },
+            {
+              "titre": "Calculer un pourcentage",
+              "texte": "12 sur 40&nbsp;: 12 ÷ 40 = 0,3 = **30 %**."
+            },
+            {
+              "titre": "Baisse puis hausse",
+              "texte": "100 € → −20 % → 80 € → +20 % → **96 €**, pas 100."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "30 % de 80 = 80 × 30 ÷ 100",
+              "quoi": "on traduit"
+            },
+            {
+              "texte": "= 24",
+              "quoi": "le résultat"
+            },
+            {
+              "texte": "12 ÷ 40 = 0,3 = 30 %",
+              "quoi": "calculer un pourcentage"
+            }
+          ],
+          "pied": "Une baisse de 20 % puis une hausse de 20 %&nbsp;: ==pas== le même prix."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que −20 % puis +20 % **ramène** au départ.",
+            "Calculer **puis soustraire** au lieu de multiplier par 0,8.",
+            "Confondre **30 %** et 0,3 × 100.",
+            "Diviser par **100** sans multiplier par t."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "À retenir",
+          "paragraphes": [
+            "Multiplier par 0,8 au lieu de calculer puis soustraire, c’est une étape de moins, donc une erreur de moins. Les pourcentages ne s’additionnent pas comme des nombres&nbsp;: ils ne portent pas sur la même quantité. Pour 35 %, on fait 25 % + 10 %&nbsp;: sur 80, 20 + 8 = 28."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**50 %** de 36&nbsp;?",
+            "50 € avec **20 %** de réduction&nbsp;?",
+            "**12 sur 40**, en pourcentage&nbsp;?"
+          ],
+          "reponses": "1) 18 · 2) 40 € · 3) 30 %"
+        }
+      ]
+    }
+  ]
+}

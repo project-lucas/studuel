@@ -1,0 +1,190 @@
+{
+  "titre": "Poids et gravitation",
+  "titreSurligne": "gravitation",
+  "accroche": "La force qui fait tomber les pommes.",
+  "bonus": "**P = m × g** · g ≈ **9,8 N/kg** (Terre), **1,6 N/kg** (Lune) · masse en **kg**, poids en **N**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/poids-et-gravitation.webp",
+    "prompt": "a glossy golden apple falling toward a small violet planet with a dotted arrow, a tiny moon in orbit, sparkles"
+  },
+  "marcel": "Ma masse ne change pas,\nmon poids si !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le poids",
+          "petite": true,
+          "lignes": [
+            "P = m × g"
+          ],
+          "regle": "**P** le poids en **N**, **m** la masse en **kg**, **g** l’intensité de la pesanteur en **N/kg**. Le poids est **vertical**, vers le **bas**, appliqué au **centre de gravité**.",
+          "note": "g change selon l’astre"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Masse ou poids&nbsp;?",
+          "entetes": [
+            "",
+            "Masse",
+            "Poids"
+          ],
+          "lignes": [
+            [
+              "Ce que c’est",
+              "quantité de matière",
+              "force d’attraction"
+            ],
+            [
+              "Unité",
+              "**kg**",
+              "**N**"
+            ],
+            [
+              "Instrument",
+              "balance",
+              "dynamomètre"
+            ],
+            [
+              "Sur la Lune",
+              "**inchangée**",
+              "**÷ 6** environ"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer un poids en trois temps",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "la masse m en **kg** et la valeur de g de l’astre"
+            },
+            {
+              "titre": "Remplacer",
+              "texte": "dans P = m × g"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "en **newtons**, avec la direction (verticale) et le sens (vers le bas)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "Le poids selon l’astre",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Sur Terre",
+              "texte": "g ≈ 9,8 N/kg&nbsp;: un élève de 50 kg pèse ≈ 490 N"
+            },
+            {
+              "titre": "Sur la Lune",
+              "texte": "g ≈ 1,6 N/kg&nbsp;: le même élève pèse ≈ 80 N"
+            },
+            {
+              "titre": "Sa masse",
+              "texte": "toujours 50 kg, partout&nbsp;: elle ne dépend pas de l’astre où il se trouve"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un astronaute de __50 kg__ sur la Lune (g = 1,6 N/kg). Son poids&nbsp;?",
+          "calcul": "P = 50 × 1,6",
+          "aparte": "sur Terre&nbsp;: 490 N",
+          "resultat": "P = [[80 N]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "La gravitation",
+          "items": [
+            {
+              "titre": "À distance",
+              "texte": "interaction **attractive** entre deux corps qui ont une masse."
+            },
+            {
+              "titre": "Plus grande si…",
+              "texte": "les masses sont **grandes** et la distance **petite**."
+            },
+            {
+              "titre": "Dans le ciel",
+              "texte": "elle garde les planètes autour du Soleil et la Lune autour de la Terre."
+            },
+            {
+              "titre": "Entre deux élèves",
+              "texte": "elle existe, mais les masses sont si petites qu’on ne la sent pas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "m = 50 kg et g = 1,6 N/kg",
+              "quoi": "les données"
+            },
+            {
+              "texte": "P = m × g = 50 × 1,6",
+              "quoi": "lettres puis nombres"
+            },
+            {
+              "texte": "P = 80 N",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "La ==masse== ne change pas d’un astre à l’autre&nbsp;; le ==poids== change."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire « mon poids est 50 **kg** ».",
+            "Croire que la **masse** change sur la Lune.",
+            "Peser avec un **dynamomètre** et lire des kilogrammes.",
+            "Oublier que le poids est dirigé **vers le bas**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle **unité** pour le poids&nbsp;?",
+            "Poids d’un objet de **2 kg** sur Terre (g = 10 N/kg)&nbsp;?",
+            "Quel instrument mesure la **masse**&nbsp;?"
+          ],
+          "reponses": "1) le newton (N) · 2) 20 N · 3) la balance"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "titre": "La résistance",
+  "titreSurligne": "résistance",
+  "accroche": "La loi d’Ohm et l’effet Joule.",
+  "bonus": "**U = R × I** · U en V, R en **Ω**, I en A · ohmmètre **hors circuit** · résistance + LED en **série**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/la-resistance-electrique.webp",
+    "prompt": "a glossy violet electronic resistor with golden colored bands, golden wires on both sides, small warm glow and sparkles"
+  },
+  "marcel": "U = R × I,\nla loi d’Ohm !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La loi d’Ohm",
+          "petite": true,
+          "lignes": [
+            "U = R × I",
+            "R = {U/I}  ·  I = {U/R}"
+          ],
+          "regle": "**U** en volts (V), **R** en ohms (Ω), **I** en ampères (A). À tension constante, si **R augmente**, l’intensité **diminue**.",
+          "note": "le graphique U(I) est une droite !"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Mesurer une résistance",
+          "entetes": [
+            "Méthode",
+            "Condition"
+          ],
+          "lignes": [
+            [
+              "**Ohmmètre**",
+              "dipôle **hors circuit**"
+            ],
+            [
+              "**Voltampèremétrique**",
+              "mesurer U et I, puis R = U ÷ I"
+            ],
+            [
+              "**Code des couleurs**",
+              "lu sur le composant"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer avec la loi d’Ohm",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "la grandeur **cherchée** (U, R ou I)"
+            },
+            {
+              "titre": "Choisir",
+              "texte": "la bonne forme de la formule"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "en unités du SI, puis écrire l’unité"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": "★",
+          "titre": "Ce que dit la loi",
+          "deux": true,
+          "items": [
+            {
+              "titre": "R grande",
+              "texte": "peu de courant passe"
+            },
+            {
+              "titre": "Graphique",
+              "texte": "une droite passant par l’origine"
+            },
+            {
+              "titre": "Pente",
+              "texte": "elle vaut R"
+            },
+            {
+              "titre": "Protection",
+              "texte": "une résistance protège une LED"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une résistance de __100 Ω__ est traversée par __0,05 A__. Tension __U__&nbsp;?",
+          "calcul": "U = R × I = 100 × 0,05",
+          "aparte": "loi d’Ohm",
+          "resultat": "U = [[5 V]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "L’effet Joule",
+          "oui": {
+            "titre": "Recherché",
+            "texte": "Radiateur, grille-pain, sèche-cheveux, ampoule à filament."
+          },
+          "non": {
+            "titre": "Subi",
+            "texte": "Fils, moteurs, électronique&nbsp;: **énergie perdue**, risque d’incendie."
+          },
+          "essai": {
+            "texte": "Toute résistance parcourue par un courant <i>s’échauffe</i>&nbsp;: c’est ce qui rend le court-circuit dangereux."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "D’après la loi d’Ohm&nbsp;: U = R × I",
+              "quoi": "la loi"
+            },
+            {
+              "texte": "U = 100 × 0,05",
+              "quoi": "on remplace"
+            },
+            {
+              "texte": "U = 5 V",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Une résistance en ==série avec une LED== limite l’intensité et l’empêche de griller."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mesurer une résistance **dans** un circuit allumé.",
+            "Oublier de convertir les **mA** en **A**.",
+            "Confondre **U**, **R** et **I** dans la formule.",
+            "Écrire **V** au lieu de **Ω** pour une résistance."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "R = 20 Ω et I = 0,5 A&nbsp;: **U**&nbsp;?",
+            "U = 12 V et I = 2 A&nbsp;: **R**&nbsp;?",
+            "Unité de la **résistance**&nbsp;?"
+          ],
+          "reponses": "1) 10 V · 2) 6 Ω · 3) l’ohm (Ω)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "titre": "Produire et économiser",
+  "titreSurligne": "économiser",
+  "accroche": "Produire de l’électricité, consommer moins.",
+  "bonus": "turbine → **alternateur** → électricité · **mix énergétique** = plusieurs sources combinées",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/physique-chimie/l-energie-une-production-diverse-et-une-consommation-a-redui.webp",
+    "prompt": "a glossy golden wind turbine and a violet dam wall with a small solar panel beside them, tiny sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Moins consommer,\nc’est gagner !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 1,
+          "titre": "Le principe commun des centrales",
+          "etapes": [
+            { "titre": "Turbine", "texte": "quelque chose la fait tourner" },
+            { "titre": "Alternateur", "texte": "la turbine l’entraîne" },
+            { "titre": "Électricité", "texte": "l’alternateur la produit" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Qui fait tourner la turbine ?",
+          "entetes": ["Centrale", "Ce qui l’entraîne"],
+          "lignes": [
+            ["**Thermique**", "vapeur (charbon, gaz, fioul brûlés)"],
+            ["**Nucléaire**", "vapeur (fission de l’uranium)"],
+            ["**Hydraulique**", "l’eau d’un barrage"],
+            ["**Éolienne**", "le vent"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Les inconvénients",
+          "entetes": ["Source", "Problème"],
+          "lignes": [
+            ["**Thermique**", "rejette du **CO₂**"],
+            ["**Nucléaire**", "**déchets** radioactifs"],
+            ["**Renouvelables**", "dépendent de la **météo**"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "À retenir",
+          "donnees": "Quelle source produit l’électricité sans turbine&nbsp;?",
+          "calcul": "le panneau photovoltaïque la produit directement",
+          "aparte": "l’exception",
+          "resultat": "le [[photovoltaïque]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Réduire sa consommation",
+          "deux": true,
+          "items": [
+            { "titre": "Isoler", "texte": "les bâtiments&nbsp;: premier poste de consommation." },
+            { "titre": "Éteindre", "texte": "les veilles des appareils." },
+            { "titre": "Lire", "texte": "l’étiquette énergie avant d’acheter." },
+            { "titre": "Se déplacer", "texte": "train, vélo, marche." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 5,
+          "titre": "Le mix énergétique",
+          "paragraphes": [
+            "Aucune source ne convient à tout. Un pays **combine** plusieurs moyens de production&nbsp;: c’est son ==mix énergétique==."
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que **toutes** les centrales ont une turbine.",
+            "Dire que le nucléaire rejette beaucoup de **CO₂**.",
+            "Penser qu’une énergie renouvelable n’a **aucun** défaut.",
+            "Oublier que **réduire** est aussi une solution."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Trois idées à retenir",
+          "deux": true,
+          "items": [
+            { "titre": "Même principe", "texte": "turbine, alternateur, électricité." },
+            { "titre": "Pas de source parfaite", "texte": "chacune a un inconvénient." },
+            { "titre": "Consommer moins", "texte": "c’est la meilleure énergie." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que produit l’**alternateur**&nbsp;?",
+            "Quel gaz rejette surtout une centrale **thermique**&nbsp;?",
+            "Comment s’appelle l’association de plusieurs sources&nbsp;?"
+          ],
+          "reponses": "1) l’électricité · 2) le dioxyde de carbone · 3) le mix énergétique"
+        }
+      ]
+    }
+  ]
+}

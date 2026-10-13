@@ -1,0 +1,184 @@
+{
+  "titre": "La lumière",
+  "titreSurligne": "lumière",
+  "accroche": "Sources, propagation, couleurs.",
+  "bonus": "Vitesse dans le vide&nbsp;: **300 000 km/s** · propagation **en ligne droite** · lumière blanche = **toutes les couleurs** · écrans&nbsp;: **RVB**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/la-lumiere.webp",
+    "prompt": "a glossy golden glass prism splitting a bright white beam into a rainbow of colors, a violet lamp as the source, sparkles"
+  },
+  "marcel": "La lumière va tout droit,\net très vite !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Source ou objet diffusant",
+          "entetes": [
+            "Type",
+            "Exemples"
+          ],
+          "lignes": [
+            [
+              "Source **primaire**",
+              "Soleil, flamme, lampe, LED, écran"
+            ],
+            [
+              "Objet **diffusant**",
+              "Lune, mur, page de livre"
+            ]
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "La propagation",
+          "items": [
+            {
+              "titre": "En ligne droite",
+              "texte": "dans un milieu homogène et transparent"
+            },
+            {
+              "titre": "Rayon",
+              "texte": "on la dessine par une flèche"
+            },
+            {
+              "titre": "Vitesse",
+              "texte": "300 000 km/s dans le vide"
+            },
+            {
+              "titre": "Chambre noire",
+              "texte": "chaque point envoie un rayon par le trou"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Prévoir la couleur d’un objet",
+          "etapes": [
+            {
+              "titre": "Éclairage",
+              "texte": "quelles couleurs la lumière envoie-t-elle&nbsp;?"
+            },
+            {
+              "titre": "Objet",
+              "texte": "il **diffuse** sa couleur et **absorbe** le reste"
+            },
+            {
+              "titre": "Conclusion",
+              "texte": "de sa couleur, ou **noir** s’il n’a rien à renvoyer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": "★",
+          "titre": "Un tissu rouge, deux éclairages",
+          "entetes": [
+            "Éclairage",
+            "Couleur vue",
+            "Pourquoi"
+          ],
+          "lignes": [
+            [
+              "Lumière **blanche**",
+              "**rouge**",
+              "il diffuse le rouge, absorbe le reste"
+            ],
+            [
+              "Lumière **verte**",
+              "**noir**",
+              "il n’a aucun rouge à renvoyer"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un tissu __rouge__ est éclairé en lumière __verte__. Sa couleur&nbsp;?",
+          "calcul": "il ne diffuse que du rouge",
+          "aparte": "or la lumière n’a pas de rouge",
+          "resultat": "il paraît [[noir]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Les deux synthèses",
+          "oui": {
+            "titre": "Additive",
+            "texte": "Écrans&nbsp;: **rouge, vert, bleu** (RVB) font le **blanc**."
+          },
+          "non": {
+            "titre": "Soustractive",
+            "texte": "Peinture&nbsp;: cyan, magenta, jaune, chaque pigment **retire** des couleurs."
+          },
+          "essai": {
+            "texte": "Un <i>prisme</i> disperse la lumière blanche en un <i>spectre continu</i>&nbsp;: l’arc-en-ciel en est un."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Ombres et éclipses",
+          "items": [
+            {
+              "titre": "Ombre propre",
+              "texte": "la face non éclairée de l’objet"
+            },
+            {
+              "titre": "Ombre portée",
+              "texte": "sur le sol ou l’écran"
+            },
+            {
+              "titre": "Éclipse",
+              "texte": "un astre dans l’ombre d’un autre"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Prendre la **Lune** pour une source primaire.",
+            "Croire que la lumière a besoin de **matière**&nbsp;: elle traverse le vide.",
+            "Oublier que la lumière blanche est **composée**.",
+            "Croire qu’on voit **sans** lumière dans l’œil."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Vitesse de la lumière dans le **vide**&nbsp;?",
+            "Rouge + vert + bleu donnent quelle lumière&nbsp;?",
+            "Un objet **rouge** sous une lumière verte&nbsp;?"
+          ],
+          "reponses": "1) 300 000 km/s · 2) blanche · 3) noir"
+        }
+      ]
+    }
+  ]
+}

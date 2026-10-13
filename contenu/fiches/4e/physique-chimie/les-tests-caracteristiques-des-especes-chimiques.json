@@ -1,0 +1,183 @@
+{
+  "titre": "Les tests chimiques",
+  "titreSurligne": "tests",
+  "accroche": "Un test, une espèce reconnue.",
+  "bonus": "O<sub>2</sub> : bûchette qui se rallume · H<sub>2</sub> : détonation · CO<sub>2</sub> : eau de chaux trouble · eau : sulfate de cuivre bleu",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/les-tests-caracteristiques-des-especes-chimiques.webp",
+    "prompt": "three glossy glass test tubes in a golden rack with a blue, a green and a white cloudy liquid, a small dropper, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Une couleur,\nune espèce !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Reconnaître un gaz ou l’eau",
+          "entetes": [
+            "Espèce",
+            "Test",
+            "Résultat"
+          ],
+          "lignes": [
+            [
+              "**Dioxygène** O<sub>2</sub>",
+              "bûchette incandescente",
+              "elle se **rallume**"
+            ],
+            [
+              "**Dihydrogène** H<sub>2</sub>",
+              "flamme approchée",
+              "une **détonation**"
+            ],
+            [
+              "**Dioxyde de carbone** CO<sub>2</sub>",
+              "eau de chaux",
+              "elle se **trouble**"
+            ],
+            [
+              "**Eau**",
+              "sulfate de cuivre anhydre",
+              "blanc → **bleu**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Reconnaître un ion",
+          "entetes": [
+            "Ion",
+            "Réactif",
+            "Précipité"
+          ],
+          "lignes": [
+            [
+              "Cuivre II Cu²⁺",
+              "soude",
+              "**bleu**"
+            ],
+            [
+              "Fer II Fe²⁺",
+              "soude",
+              "**vert**"
+            ],
+            [
+              "Fer III Fe³⁺",
+              "soude",
+              "**rouille**"
+            ],
+            [
+              "Chlorure Cl⁻",
+              "nitrate d’argent",
+              "**blanc**, noircit à la lumière"
+            ]
+          ]
+        },
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Rédiger en quatre temps",
+          "etapes": [
+            {
+              "titre": "Prélever",
+              "texte": "un peu de solution dans un tube"
+            },
+            {
+              "titre": "Ajouter",
+              "texte": "le réactif"
+            },
+            {
+              "titre": "Observer",
+              "texte": "et comparer au tableau"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "en nommant l’espèce"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "On ajoute de la soude : précipité __bleu__. Que contient la solution&nbsp;?",
+          "calcul": "bleu + soude → Cu²⁺",
+          "aparte": "on nomme l’ion",
+          "resultat": "des ions [[cuivre II]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Sécurité",
+          "items": [
+            {
+              "titre": "La soude",
+              "texte": "**corrosive** : lunettes, gants, blouse"
+            },
+            {
+              "titre": "Le nitrate d’argent",
+              "texte": "corrosif, **tache** la peau et les vêtements"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "J’ajoute de la soude dans la solution.",
+              "quoi": "le réactif"
+            },
+            {
+              "texte": "Il se forme un précipité bleu.",
+              "quoi": "l’observation"
+            },
+            {
+              "texte": "La solution contient des ions cuivre II.",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Un test ne se conclut jamais par ==une couleur==, mais par le nom d’une espèce."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Répondre « précipité bleu » sans nommer l’**ion**.",
+            "Confondre le test de **O<sub>2</sub>** et celui de **H<sub>2</sub>**.",
+            "Oublier le **réactif** utilisé.",
+            "Négliger les **lunettes** et les gants."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Comment reconnaît-on le **dioxygène**&nbsp;?",
+            "Soude + ion **fer III**&nbsp;: quelle couleur&nbsp;?",
+            "Que devient le sulfate de cuivre anhydre au contact de l’**eau**&nbsp;?"
+          ],
+          "reponses": "1) bûchette qui se rallume · 2) précipité rouille · 3) il devient bleu"
+        }
+      ]
+    }
+  ]
+}

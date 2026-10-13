@@ -1,0 +1,147 @@
+{
+  "titre": "Le théorème de Thalès",
+  "titreSurligne": "Thalès",
+  "accroche": "Des parallèles, des quotients égaux.",
+  "bonus": "Écris toujours **petit sur grand**&nbsp;: AM/AB, AN/AC, MN/BC",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/le-theoreme-de-thales.webp",
+    "prompt": "a small cartoon ancient Greek scholar in a white tunic beside a golden pyramid at sunset, measuring its shadow with a stick, nested violet triangles drawn on the sand, sparkles"
+  },
+  "marcel": "Pas de parallèles,\npas de Thalès&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "348px 1fr",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "Les deux figures",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><polygon points='108,16 59,98 157,98' fill='#eee7fc'></polygon><polygon points='108,16 24,156 192,156' fill='none' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><g stroke='#7a3fe0' stroke-width='4' stroke-linecap='round'><line x1='59' y1='98' x2='157' y2='98'></line><line x1='108' y1='16' x2='59' y2='98'></line><line x1='108' y1='16' x2='157' y2='98'></line></g><g fill='none' stroke='#f1566c' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M101,91 l7,7 l-7,7 M110,91 l7,7 l-7,7'></path><path d='M101,149 l7,7 l-7,7 M110,149 l7,7 l-7,7'></path></g><g fill='#2b2350'><circle cx='108' cy='16' r='4.5'></circle><circle cx='24' cy='156' r='4.5'></circle><circle cx='192' cy='156' r='4.5'></circle></g><g fill='#7a3fe0'><circle cx='59' cy='98' r='4.5'></circle><circle cx='157' cy='98' r='4.5'></circle></g><g font-family=''Baloo 2'' font-weight='800' font-size='22' fill='#2b2350'><text x='119' y='22'>A</text><text x='3' y='168'>B</text><text x='199' y='168'>C</text><text x='33' y='100' fill='#7a3fe0'>M</text><text x='165' y='100' fill='#7a3fe0'>N</text></g></svg>",
+              "legende": "Les triangles emboîtés",
+              "sous": "M et N du même côté de A"
+            },
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><polygon points='110,70 150,16 70,16' fill='#eee7fc'></polygon><g stroke='#2b2350' stroke-width='3.5' stroke-linecap='round'><line x1='110' y1='70' x2='46' y2='156'></line><line x1='110' y1='70' x2='174' y2='156'></line><line x1='46' y1='156' x2='174' y2='156'></line></g><g stroke='#7a3fe0' stroke-width='4' stroke-linecap='round'><line x1='110' y1='70' x2='150' y2='16'></line><line x1='110' y1='70' x2='70' y2='16'></line><line x1='70' y1='16' x2='150' y2='16'></line></g><g fill='none' stroke='#f1566c' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M103,9 l7,7 l-7,7 M112,9 l7,7 l-7,7'></path><path d='M103,149 l7,7 l-7,7 M112,149 l7,7 l-7,7'></path></g><g fill='#2b2350'><circle cx='110' cy='70' r='4.5'></circle><circle cx='46' cy='156' r='4.5'></circle><circle cx='174' cy='156' r='4.5'></circle></g><g fill='#7a3fe0'><circle cx='150' cy='16' r='4.5'></circle><circle cx='70' cy='16' r='4.5'></circle></g><g font-family=''Baloo 2'' font-weight='800' font-size='22' fill='#2b2350'><text x='124' y='78'>A</text><text x='24' y='168'>B</text><text x='181' y='168'>C</text><text x='157' y='26' fill='#7a3fe0'>M</text><text x='44' y='26' fill='#7a3fe0'>N</text></g></svg>",
+              "legende": "Le papillon",
+              "sous": "M et N de l’autre côté de A"
+            }
+          ],
+          "legende": {
+            "jeton": "(MN) // (BC)",
+            "texte": "Même théorème dans les deux cas."
+          }
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La formule",
+          "lignes": [
+            "{AM/AB} = {AN/AC} = {MN/BC}"
+          ],
+          "regle": "Si **(BC) // (MN)**, les trois quotients sont égaux. Chacun commence par le sommet ==A==.",
+          "note": "petit sur grand, jamais de mélange&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Vérifier",
+              "texte": "les points alignés et les droites parallèles"
+            },
+            {
+              "titre": "Écrire",
+              "texte": "les trois quotients, petit sur grand"
+            },
+            {
+              "titre": "Résoudre",
+              "texte": "par le produit en croix, avec trois longueurs connues"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "(MN) // (BC), AM = 2, AB = 6, AN = 3. __AC__&nbsp;?",
+          "calcul": "{2/6} = {3/AC}\nAC = 3 × 6 ÷ 2",
+          "aparte": "produit en croix",
+          "resultat": "AC = [[9 cm]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Parallèles ou pas&nbsp;?",
+          "oui": {
+            "titre": "La réciproque",
+            "texte": "Points alignés **dans le même ordre** et quotients égaux&nbsp;: **(MN) // (BC)**."
+          },
+          "non": {
+            "titre": "La contraposée",
+            "texte": "Quotients **différents**&nbsp;: les droites ne sont **pas** parallèles."
+          },
+          "essai": {
+            "texte": "<i>AM/AB = 2/6 = 1/3</i> et <i>AN/AC = 3/10</i>&nbsp;: 1/3 ≠ 3/10, donc **(MN) n’est pas parallèle à (BC)**."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "A, M, B et A, N, C sont alignés, (MN) // (BC)",
+              "quoi": "les conditions"
+            },
+            {
+              "texte": "D’après le théorème de Thalès&nbsp;:",
+              "quoi": "le nom"
+            },
+            {
+              "texte": "{AM/AB} = {AN/AC} = {MN/BC}",
+              "quoi": "les quotients"
+            }
+          ],
+          "pied": "Pour la contraposée&nbsp;: les deux quotients calculés ==séparément==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mélanger un **petit** et un **grand** segment dans un quotient.",
+            "Oublier de citer les **parallèles** et les **alignements**.",
+            "Appliquer la réciproque sans vérifier l’**ordre** des points.",
+            "Utiliser Thalès **sans** droites parallèles."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "AM = 3, AB = 9, MN = 4&nbsp;: **BC**&nbsp;?",
+            "AM/AB = 2/5 et AN/AC = 4/10, points alignés dans l’ordre&nbsp;: **parallèles**&nbsp;?",
+            "M et N de part et d’autre de A&nbsp;: quelle **figure**&nbsp;?"
+          ],
+          "reponses": "1) 12 · 2) oui (2/5 = 4/10) · 3) le papillon"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "titre": "Puissances et notation",
+  "titreSurligne": "Puissances",
+  "accroche": "Écrire court le très grand et le très petit.",
+  "bonus": "10ⁿ = 1 suivi de **n zéros** · 10⁻ⁿ = **n chiffres** après la virgule · a⁰ = **1**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/puissances-et-notations-scientifiques.webp",
+    "prompt": "a glossy violet atom and a small cartoon planet on the two pans of a golden balance, floating golden tiles reading 10 with exponents, sparkles"
+  },
+  "marcel": "a × 10ⁿ avec\n1 ≤ a < 10 !",
+  "rangs": [
+    {
+      "colonnes": "1fr 330px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les règles de calcul",
+          "taille": "mini",
+          "lignes": [
+            "a<sup>m</sup> × a<sup>n</sup> = a<sup>m + n</sup>",
+            "a<sup>m</sup> ÷ a<sup>n</sup> = a<sup>m − n</sup>",
+            "(a<sup>m</sup>)<sup>n</sup> = a<sup>m × n</sup>",
+            "(a × b)<sup>n</sup> = a<sup>n</sup> × b<sup>n</sup>"
+          ],
+          "regle": "**Même base** : on ==additionne== les exposants dans un produit, on ==soustrait== dans un quotient.",
+          "note": "2³ × 2⁴ = 2⁷, pas 4⁷&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les conventions",
+          "items": [
+            {
+              "terme": "aⁿ",
+              "definition": "a × a × … × a, **n facteurs**&nbsp;: 5³ = 125"
+            },
+            {
+              "terme": "a⁰",
+              "definition": "**1** (a non nul)"
+            },
+            {
+              "terme": "a⁻ⁿ",
+              "definition": "l’**inverse** de aⁿ&nbsp;: 2⁻³ = 1/8"
+            },
+            {
+              "terme": "10⁻ⁿ",
+              "definition": "**n chiffres** après la virgule&nbsp;: 10⁻³ = 0,001"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "L’écriture scientifique en trois temps",
+          "etapes": [
+            {
+              "titre": "Décaler",
+              "texte": "la virgule pour avoir un nombre entre 1 et 10"
+            },
+            {
+              "titre": "Compter",
+              "texte": "les rangs décalés&nbsp;: c’est l’exposant"
+            },
+            {
+              "titre": "Signer",
+              "texte": "grand nombre, exposant positif&nbsp;; petit, négatif"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Écrire 45 300 et 0,00072 en __écriture scientifique__.",
+          "calcul": "45 300 = 4,53 × 10⁴",
+          "aparte": "4 rangs",
+          "resultat": "0,00072 = [[7,2 × 10⁻⁴]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "La forme",
+              "texte": "a × 10ⁿ avec **1 ≤ a < 10**. 45,3 × 10³ n’en est pas une."
+            },
+            {
+              "titre": "Comparer",
+              "texte": "On regarde l’**exposant** d’abord, puis a."
+            },
+            {
+              "titre": "Préfixes",
+              "texte": "kilo 10³ · méga 10⁶ · milli 10⁻³ · micro 10⁻⁶."
+            },
+            {
+              "titre": "Ordre de grandeur",
+              "texte": "La puissance de 10 la **plus proche**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 5,
+          "titre": "Un exemple de bout en bout",
+          "paragraphes": [
+            "Une année-lumière vaut environ 9,46 × 10¹² km&nbsp;: c’est un **grand** nombre, donc l’exposant est **positif**. Un atome mesure environ 10⁻¹⁰ m&nbsp;: c’est un **petit** nombre, donc l’exposant est **négatif**."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "(3 × 10⁵) × (8 × 10⁻²) = 3 × 8 × 10⁵ × 10⁻²",
+              "quoi": "on regroupe"
+            },
+            {
+              "texte": "= 24 × 10³",
+              "quoi": "5 + (−2) = 3"
+            },
+            {
+              "texte": "= 2,4 × 10⁴",
+              "quoi": "écriture scientifique"
+            }
+          ],
+          "pied": "Le calcul n’est fini que ==remis== en écriture scientifique."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "2³ × 2⁴ = 4⁷&nbsp;: on **n’additionne pas** les bases.",
+            "10⁻³ n’est **pas** négatif&nbsp;: c’est 0,001.",
+            "Laisser 24 × 10³&nbsp;: a doit être **entre 1 et 10**.",
+            "(2³)² = 2⁵&nbsp;: les exposants se **multiplient** (2⁶)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "5³ × 5² = &nbsp;?",
+            "0,00041 en **écriture scientifique**&nbsp;?",
+            "Que vaut **7⁰**&nbsp;?"
+          ],
+          "reponses": "1) 5⁵ = 3 125 · 2) 4,1 × 10⁻⁴ · 3) 1"
+        }
+      ]
+    }
+  ]
+}

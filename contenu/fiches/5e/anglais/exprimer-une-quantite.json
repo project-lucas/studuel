@@ -1,0 +1,185 @@
+{
+  "titre": "Exprimer une quantité",
+  "titreSurligne": "quantité",
+  "accroche": "Some, any, much, many, a few…",
+  "bonus": "**many** + dénombrable · **much** + indénombrable · **a lot of** + les deux",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/anglais/exprimer-une-quantite.webp",
+    "prompt": "a glossy violet measuring cup half full of golden liquid next to a small stack of golden coins, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Combien&nbsp;? Much\nou many&nbsp;?",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Deux questions",
+          "lignes": [
+            "compte-t-on&nbsp;? **many / much**"
+          ],
+          "petite": true,
+          "regle": "Le choix dépend du nom (**dénombrable** ou **indénombrable**) et de la phrase (**affirmative** ou non).",
+          "note": "a lot of va partout"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Some, any, many, much",
+          "entetes": [
+            "Le mot",
+            "Quand",
+            "L’exemple"
+          ],
+          "lignes": [
+            [
+              "**some**",
+              "affirmative, offre polie",
+              "<i>I have some money. Some tea?</i>"
+            ],
+            [
+              "**any**",
+              "négative, question",
+              "<i>I don’t have any money.</i>"
+            ],
+            [
+              "**many**",
+              "dénombrable pluriel",
+              "<i>How many books?</i>"
+            ],
+            [
+              "**much**",
+              "indénombrable",
+              "<i>How much water?</i>"
+            ],
+            [
+              "**a lot of**",
+              "les deux, surtout affirmatif",
+              "<i>a lot of work / friends</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Un peu, ou trop peu&nbsp;?",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "a few / a little",
+              "texte": "**Quelques**, **un peu**&nbsp;: c’est positif. <i>a few friends, a little milk</i>"
+            },
+            {
+              "titre": "few / little",
+              "texte": "**Peu**&nbsp;: c’est trop peu. <i>few friends, little time</i>"
+            },
+            {
+              "titre": "Le nom décide",
+              "texte": "**a few / few** + dénombrable · **a little / little** + indénombrable"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Dénombrable ou non&nbsp;?",
+          "oui": {
+            "titre": "Le bon mot",
+            "texte": "<i>How **many** books? How **much** water?</i>"
+          },
+          "non": {
+            "titre": "Le mauvais mot",
+            "texte": "<i>How **much** books? How **many** water?</i>"
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>There isn’t ___ milk.</i> → **any**&nbsp;: phrase négative."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Choisir le quantifieur",
+          "etapes": [
+            {
+              "titre": "Le nom",
+              "texte": "On peut le compter&nbsp;? → **many, a few**. Non → **much, a little**."
+            },
+            {
+              "titre": "La phrase",
+              "texte": "Affirmative → **some**. Négative ou question → **any**."
+            },
+            {
+              "titre": "Le sens",
+              "texte": "Assez → **enough**. Trop → **too much / too many**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les autres mots",
+          "deux": true,
+          "items": [
+            {
+              "titre": "no",
+              "texte": "= <i>not any</i>&nbsp;: <i>There is no milk.</i>"
+            },
+            {
+              "titre": "enough",
+              "texte": "<i>enough money</i> · <i>fast enough</i> (après l’adjectif)"
+            },
+            {
+              "titre": "both / all",
+              "texte": "les deux, tous."
+            },
+            {
+              "titre": "every / each",
+              "texte": "chaque, + singulier."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>much friends</i> → <i>**many** friends</i>.",
+            "<i>I have not some money</i> → <i>I don’t have **any** money</i>.",
+            "<i>few</i> ≠ <i>a few</i>&nbsp;: <i>few</i> veut dire « presque pas ».",
+            "<i>enough</i> se place **avant** le nom mais **après** l’adjectif."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>How ___ books? How ___ water?</i>",
+            "<i>I don’t have ___ money.</i> (some ou any)",
+            "Traduis&nbsp;: «&nbsp;quelques amis&nbsp;»."
+          ],
+          "reponses": "1) many, much 2) any 3) a few friends"
+        }
+      ]
+    }
+  ]
+}

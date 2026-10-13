@@ -1,0 +1,147 @@
+{
+  "titre": "Les quatre opérations",
+  "titreSurligne": "opérations",
+  "accroche": "Additionner exige un dénominateur commun.",
+  "bonus": "Priorités : parenthèses · puissances · × et ÷ · + et −",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/additionner-soustraire-multiplier-et-diviser-les-nombres-rat.webp",
+    "prompt": "four glossy golden pizza slices arranged around a violet plus, minus, times and divide sign, tiny golden sparkles"
+  },
+  "marcel": "Pas de + sans\ndénominateur commun&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les règles",
+          "taille": "mini",
+          "lignes": [
+            "{a/c} + {b/c} = {a + b/c}",
+            "{a/b} × {c/d} = {a × c/b × d}",
+            "{a/b} ÷ {c/d} = {a/b} × {d/c}"
+          ],
+          "regle": "**+ et −** : même dénominateur. **×** : aucun besoin. **÷** : on multiplie par l’==inverse==."
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les mots",
+          "items": [
+            {
+              "terme": "Rationnel",
+              "definition": "un nombre qui s’écrit a/b, avec b non nul"
+            },
+            {
+              "terme": "Inverse",
+              "definition": "l’inverse de a/b est **b/a**"
+            },
+            {
+              "terme": "Opposé",
+              "definition": "l’opposé de a/b est **−a/b**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Additionner en trois temps",
+          "etapes": [
+            {
+              "titre": "Réduire",
+              "texte": "au même dénominateur"
+            },
+            {
+              "titre": "Additionner",
+              "texte": "les numérateurs"
+            },
+            {
+              "titre": "Garder",
+              "texte": "le dénominateur commun, puis simplifier"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Calculer {2/3} + {1/4}.",
+          "calcul": "{8/12} + {3/12} = {11/12}",
+          "aparte": "dénominateur\ncommun&nbsp;: 12",
+          "resultat": "{2/3} + {1/4} = [[{11/12}]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Additionner : bien ou mal&nbsp;?",
+          "oui": {
+            "titre": "Bien",
+            "texte": "1/2 + 1/3 = 3/6 + 2/6 = **5/6**."
+          },
+          "non": {
+            "titre": "Mal",
+            "texte": "1/2 + 1/3 = 2/5&nbsp;? Faux&nbsp;: 2/5 est plus petit que 1/2."
+          },
+          "essai": {
+            "texte": "(2/3) ÷ (5/7) = 2/3 × 7/5 = **14/15**&nbsp;: on retourne la **deuxième** fraction."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "4/9 × 3/8 = (4 × 3) / (9 × 8)",
+              "quoi": "je multiplie"
+            },
+            {
+              "texte": "= (4 × 3) / (3 × 3 × 4 × 2)",
+              "quoi": "je simplifie"
+            },
+            {
+              "texte": "= 1/6",
+              "quoi": "le résultat"
+            }
+          ],
+          "pied": "On simplifie ==avant== de multiplier."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Additionner les **dénominateurs**&nbsp;: 1/2 + 1/3 ≠ 2/5.",
+            "Confondre **inverse** (b/a) et **opposé** (−a/b).",
+            "Retourner la **première** fraction dans une division.",
+            "Oublier la **barre de fraction**&nbsp;: c’est une parenthèse."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "3/5 × 2/7 = &nbsp;?",
+            "1/2 + 1/4 = &nbsp;?",
+            "Quel est l’**inverse** de 3/4&nbsp;?"
+          ],
+          "reponses": "1) 6/35 · 2) 3/4 · 3) 4/3"
+        }
+      ]
+    }
+  ]
+}

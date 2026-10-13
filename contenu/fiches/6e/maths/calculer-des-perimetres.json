@@ -1,0 +1,167 @@
+{
+  "titre": "Les périmètres",
+  "titreSurligne": "périmètres",
+  "accroche": "La longueur du tour d’une figure.",
+  "bonus": "**π ≈ 3,14** · **1 m = 100 cm** · **1 km = 1 000 m**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/maths/calculer-des-perimetres.webp",
+    "prompt": "a glossy golden string wrapped around a violet rectangle and a violet circle, sparkles"
+  },
+  "marcel": "Le tour,\npas la place !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "Rectangle et cercle",
+          "colonnes": 2,
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><rect x='25' y='40' width='170' height='85' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></rect><g font-family='Nunito' font-weight='800' font-size='14' fill='#4b2a9a'><text x='102' y='148' >L</text><text x='8' y='88' >l</text></g></svg>",
+              "legende": "P = 2 × (L + l)",
+              "sous": "longueur L, largeur l"
+            },
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><circle cx='110' cy='85' r='62' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></circle><line x1='110' y1='85' x2='172' y2='85' stroke='#7a3fe0' stroke-width='4.5' stroke-linecap='round'></line><circle cx='110' cy='85' r='4.5' fill='#2b2350'></circle><g font-family='Nunito' font-weight='800' font-size='14' fill='#4b2a9a'><text x='136' y='76' >r</text></g></svg>",
+              "legende": "P = 2 × π × r",
+              "sous": "rayon r, diamètre d = 2 × r"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Les formules",
+          "taille": "mini",
+          "lignes": [
+            "carré : P = 4 × c",
+            "rectangle : P = 2 × (L + l)",
+            "cercle : P = 2 × π × r"
+          ],
+          "regle": "Le triangle ou une figure quelconque&nbsp;: on ==additionne== les longueurs de tous les côtés.",
+          "note": "La circonférence est le périmètre du cercle."
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Convertir",
+              "texte": "toutes les longueurs dans la même unité, avant de calculer"
+            },
+            {
+              "titre": "Choisir",
+              "texte": "la formule de la figure (ou additionner les côtés du contour)"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "et écrire l’unité dans la réponse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Cercle de rayon __5 cm__ (π ≈ 3,14).",
+          "calcul": "P = 2 × 3,14 × 5",
+          "aparte": "2 × 5 = 10",
+          "resultat": "P ≈ [[31,4 cm]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Conversions",
+              "texte": "Chaque rang vaut **10 fois** le suivant&nbsp;: 1 km = 1 000 m."
+            },
+            {
+              "titre": "Figure composée",
+              "texte": "On compte seulement le **contour**, pas les traits intérieurs."
+            },
+            {
+              "titre": "Périmètre ≠ aire",
+              "texte": "Rectangle 1 × 5 et carré de côté 3&nbsp;: **P = 12** pour les deux, aires 5 et 9."
+            },
+            {
+              "titre": "Diamètre",
+              "texte": "Il passe par le centre&nbsp;: **d = 2 × r**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "P = 2 × π × r",
+              "quoi": "la formule"
+            },
+            {
+              "texte": "P = 2 × 3,14 × 5",
+              "quoi": "on remplace"
+            },
+            {
+              "texte": "P ≈ 31,4 cm",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Avec π ≈ 3,14 on écrit ==≈==, pas =."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mélanger des **cm** et des **m** dans un calcul.",
+            "Prendre le **diamètre** pour le rayon.",
+            "Compter les traits **intérieurs** d’une figure composée.",
+            "Écrire **=** avec π ≈ 3,14."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "Même périmètre, aires différentes",
+          "paragraphes": [
+            "Le tour d’une figure ne dit rien de la place qu’elle occupe&nbsp;: un rectangle 1 × 5 et un carré de côté 3 ont tous deux un périmètre de 12, mais des aires de 5 et de 9."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Périmètre d’un **carré de 7 cm**&nbsp;?",
+            "Rectangle **8 cm** sur **3 cm**&nbsp;: périmètre&nbsp;?",
+            "Cercle de **rayon 2 cm** (π ≈ 3,14)&nbsp;?"
+          ],
+          "reponses": "1) 28 cm · 2) 2 × (8 + 3) = 22 cm · 3) 12,56 cm"
+        }
+      ]
+    }
+  ]
+}

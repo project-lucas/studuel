@@ -1,0 +1,111 @@
+{
+  "titre": "La proportionnalité",
+  "titreSurligne": "proportionnalité",
+  "accroche": "Un quotient qui ne change jamais.",
+  "bonus": "Test graphique&nbsp;: des points **alignés avec l’origine** (0&nbsp;;&nbsp;0)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/la-proportionnalite.webp",
+    "prompt": "a glossy violet balance scale with golden coins on one side and golden bags on the other, a straight golden line going through the middle, sparkles"
+  },
+  "marcel": "Si l’un double,\nl’autre aussi&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois tests",
+          "entetes": ["Où", "Ce qu’on vérifie"],
+          "lignes": [
+            ["**Dans un tableau**", "le quotient de chaque colonne est **constant**"],
+            ["**Sur un graphique**", "les points sont **alignés avec l’origine**"],
+            ["**Concrètement**", "l’un double, l’autre double&nbsp;; l’un est nul, l’autre aussi"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le coefficient",
+          "taille": "mini",
+          "lignes": ["y = k × x", "k = {y/x}"],
+          "regle": "Le **coefficient de proportionnalité** k est le quotient ==constant== de chaque colonne.",
+          "note": "un seul k pour tout le tableau&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Les quatre méthodes",
+          "etapes": [
+            { "titre": "Le coefficient", "texte": "on le calcule une fois, on l’applique partout" },
+            { "titre": "L’unité", "texte": "la valeur pour 1, puis on multiplie" },
+            { "titre": "Produit en croix", "texte": "{a/b} = {c/d} donne a × d = b × c" },
+            { "titre": "Additivité", "texte": "3 objets à 12 € et 5 objets à 20 € : 8 objets à 32 €" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "3 stylos coûtent 4,50 €. Prix de __7 stylos__&nbsp;?",
+          "calcul": "1 stylo : 4,50 ÷ 3 = 1,50\n7 stylos : 7 × 1,50",
+          "aparte": "passage à l’unité",
+          "resultat": "prix = [[10,50 €]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Proportionnel ou pas&nbsp;?",
+          "oui": { "titre": "Proportionnel", "texte": "Le **périmètre** d’un carré&nbsp;: P = 4 × c. La droite passe par l’origine." },
+          "non": { "titre": "Pas proportionnel", "texte": "L’**aire** d’un carré (c²), l’**âge** de deux personnes, un tarif avec **abonnement fixe**." },
+          "essai": { "texte": "Tableau 2 → 6, 5 → 15, 8 → 24. <i>6 ÷ 2 = 15 ÷ 5 = 24 ÷ 8 = 3</i>&nbsp;: le quotient est constant, c’est **proportionnel**." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "6 ÷ 2 = 3 et 15 ÷ 5 = 3", "quoi": "les quotients" },
+            { "texte": "Les quotients sont égaux", "quoi": "la preuve" },
+            { "texte": "Donc c’est proportionnel, k = 3", "quoi": "la conclusion" }
+          ],
+          "pied": "Un seul quotient différent suffit pour dire ==non==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’une **droite** est toujours proportionnelle&nbsp;: elle doit passer par **l’origine**.",
+            "Dire «&nbsp;l’un augmente, l’autre aussi&nbsp;» = proportionnel.",
+            "Confondre **écart constant** et **rapport constant**.",
+            "Un tarif avec **abonnement** n’est pas proportionnel."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "5 kg de pommes coûtent 12 €. Prix de **8 kg**&nbsp;?",
+            "Tableau 3 → 9 et 4 → 13&nbsp;: **proportionnel**&nbsp;?",
+            "L’âge de Léa est-il **proportionnel** à celui de son frère&nbsp;?"
+          ],
+          "reponses": "1) 19,20 € · 2) non (9 ÷ 3 = 3, 13 ÷ 4 = 3,25) · 3) non, l’écart reste le même"
+        }
+      ]
+    }
+  ]
+}

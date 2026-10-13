@@ -1,0 +1,192 @@
+{
+  "titre": "Articles et trois genres",
+  "titreSurligne": "trois genres",
+  "accroche": "Der, die, das : un nom, un genre.",
+  "bonus": "**der** masculin · **die** féminin · **das** neutre · seul le masculin change à l’accusatif&nbsp;: **den**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/allemand/les-articles-et-les-trois-genres.webp",
+    "prompt": "a glossy violet cube with three golden faces, each marked with a different golden shape, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Der, die, das&nbsp;:\nlequel choisir&nbsp;?",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Trois genres",
+          "lignes": [
+            "**der · die · das**"
+          ],
+          "petite": true,
+          "regle": "Le genre ne suit pas le français&nbsp;: <i>das Mädchen</i> (la jeune fille) est **neutre**. On apprend toujours le nom **avec son article**.",
+          "note": "jamais Tisch seul"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les articles",
+          "entetes": [
+            "Genre",
+            "Défini / indéfini",
+            "L’exemple"
+          ],
+          "lignes": [
+            [
+              "Masculin",
+              "**der** / <i>ein</i>",
+              "<i>der Tisch</i> (la table)"
+            ],
+            [
+              "Féminin",
+              "**die** / <i>eine</i>",
+              "<i>die Lampe</i> (la lampe)"
+            ],
+            [
+              "Neutre",
+              "**das** / <i>ein</i>",
+              "<i>das Buch</i> (le livre)"
+            ],
+            [
+              "Pluriel",
+              "**die** / rien",
+              "<i>Bücher</i> (des livres)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Sujet ou COD&nbsp;: nominatif et accusatif",
+          "entetes": [
+            "Genre",
+            "Nominatif (sujet)",
+            "Accusatif (COD)"
+          ],
+          "lignes": [
+            [
+              "Masculin",
+              "<i>der / ein</i>",
+              "**den / einen**"
+            ],
+            [
+              "Féminin",
+              "<i>die / eine</i>",
+              "<i>die / eine</i> (pareil)"
+            ],
+            [
+              "Neutre",
+              "<i>das / ein</i>",
+              "<i>das / ein</i> (pareil)"
+            ],
+            [
+              "Pluriel",
+              "<i>die</i>",
+              "<i>die</i> (pareil)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Qui fait l’action&nbsp;?",
+          "oui": {
+            "titre": "Den = le COD",
+            "texte": "<i>Der Hund sieht **den** Mann.</i> — le chien voit l’homme."
+          },
+          "non": {
+            "titre": "Der = le sujet",
+            "texte": "<i>**Den** Hund sieht **der** Mann.</i> — c’est l’homme qui voit le chien."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Ich sehe ___ Tisch.</i> (masculin, COD) → <i>**den** Tisch</i>"
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Choisir l’article",
+          "etapes": [
+            {
+              "titre": "Le genre",
+              "texte": "Cherche <i>der, die</i> ou <i>das</i> dans ton vocabulaire."
+            },
+            {
+              "titre": "Le rôle",
+              "texte": "Sujet → nominatif. COD → accusatif."
+            },
+            {
+              "titre": "Le masculin",
+              "texte": "Seul lui change&nbsp;: <i>der</i> → **den**, <i>ein</i> → **einen**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Majuscule",
+              "texte": "tous les **noms communs**&nbsp;: <i>das Haus, die Schule</i>"
+            },
+            {
+              "titre": "Pluriel",
+              "texte": "toujours <i>die</i>, pas d’article indéfini"
+            },
+            {
+              "titre": "Ordre des mots",
+              "texte": "le sens vient des **cas**, pas de la place"
+            },
+            {
+              "titre": "Le neutre",
+              "texte": "<i>das Mädchen</i>, <i>das Kind</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le genre est le même qu’en français&nbsp;: <i>die Lampe</i>, mais <i>der Tisch</i>.",
+            "Oublier <i>den</i> pour un **masculin COD**&nbsp;: <i>Ich sehe der Mann</i> → <i>den Mann</i>.",
+            "Changer aussi le féminin et le neutre à l’accusatif&nbsp;: ils **ne changent pas**.",
+            "Écrire <i>das haus</i>&nbsp;: un nom prend toujours une majuscule."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel est l’article de <i>Buch</i>&nbsp;?",
+            "<i>Ich sehe ___ Mann.</i> (le, COD masculin)",
+            "Quel article change à l’accusatif&nbsp;?"
+          ],
+          "reponses": "1) das 2) den 3) le masculin (der → den)"
+        }
+      ]
+    }
+  ]
+}

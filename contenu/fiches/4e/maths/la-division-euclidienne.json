@@ -1,0 +1,157 @@
+{
+  "titre": "Division euclidienne",
+  "titreSurligne": "euclidienne",
+  "accroche": "Quotient et reste, dans les entiers.",
+  "bonus": "**a = b × q + r** avec **0 ≤ r < b** · reste nul = a divisible par b",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/la-division-euclidienne.webp",
+    "prompt": "a glossy violet box holding golden marbles with a few loose marbles left beside it, sparkles"
+  },
+  "marcel": "Le reste est\ntoujours plus petit !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La définition",
+          "taille": "mini",
+          "lignes": [
+            "a = b × q + r",
+            "0 ≤ r < b"
+          ],
+          "regle": "On partage **a** (le dividende) en parts de **b** (le diviseur, jamais nul). **q** est le quotient, **r** le reste. Le reste est ==toujours plus petit== que le diviseur.",
+          "note": "47 = 5 × 9 + 2, et 2 < 5&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les mots",
+          "items": [
+            {
+              "terme": "Dividende",
+              "definition": "a, ce qu’on partage"
+            },
+            {
+              "terme": "Diviseur",
+              "definition": "b, la taille d’une part"
+            },
+            {
+              "terme": "Quotient",
+              "definition": "q, le nombre de parts pleines"
+            },
+            {
+              "terme": "Reste",
+              "definition": "r, ce qui reste après le partage"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Léa range __47 œufs__ dans des boîtes de __6__. Combien de boîtes __pleines__&nbsp;? Combien d’œufs __en trop__&nbsp;?",
+          "calcul": "47 = 6 × 7 + 5 et 5 < 6",
+          "aparte": "q = 7, r = 5",
+          "resultat": "[[7 boîtes]] et [[5 œufs]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "À quoi ça sert",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Partage",
+              "texte": "« Combien de paquets complets&nbsp;? » → le **quotient**."
+            },
+            {
+              "titre": "Parité",
+              "texte": "le reste de la division par 2 : 0 = pair, 1 = impair."
+            },
+            {
+              "titre": "Durées",
+              "texte": "200 min = 60 × 3 + 20, soit **3 h 20**."
+            },
+            {
+              "titre": "Cycles",
+              "texte": "quel jour dans 100 jours&nbsp;? Le reste par 7 le dit."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quotient ou reste&nbsp;?",
+          "oui": {
+            "titre": "Le quotient",
+            "texte": "« Combien de boîtes **pleines**&nbsp;? » → 47 ÷ 6 donne 7."
+          },
+          "non": {
+            "titre": "Le reste",
+            "texte": "« Combien d’œufs **en trop**&nbsp;? » → il reste 5."
+          },
+          "essai": {
+            "titre": "À toi",
+            "texte": "« Combien de boîtes faut-il pour tout ranger&nbsp;? »"
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "47 = 6 × 7 + 5 avec 0 ≤ 5 < 6",
+              "quoi": "la division"
+            },
+            {
+              "texte": "Le quotient est 7, le reste est 5.",
+              "quoi": "on lit"
+            },
+            {
+              "texte": "Léa remplit 7 boîtes, il reste 5 œufs.",
+              "quoi": "la phrase"
+            }
+          ],
+          "pied": "Un reste ==nul== : a est divisible par b."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Un reste **supérieur ou égal** au diviseur&nbsp;: le quotient est trop petit.",
+            "Donner le **reste** quand on demande le quotient.",
+            "Oublier de **vérifier** a = b × q + r.",
+            "Dire « divisible » alors que le reste n’est **pas nul**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**Quotient** et **reste** de 53 par 8&nbsp;?",
+            "Le reste de la division d’un nombre par 2 vaut 1&nbsp;: **pair** ou impair&nbsp;?",
+            "48 est-il **divisible** par 6&nbsp;?"
+          ],
+          "reponses": "1) q = 6, r = 5 · 2) impair · 3) oui (48 = 6 × 8 + 0)"
+        }
+      ]
+    }
+  ]
+}

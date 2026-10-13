@@ -1,0 +1,149 @@
+{
+  "titre": "Décimal et fraction",
+  "titreSurligne": "fraction",
+  "accroche": "Un même nombre, deux écritures.",
+  "bonus": "Décimales : **1/2 · 1/4 · 1/5 · 1/8 · 1/20 · 1/25** · pas décimales : **1/3 · 1/6 · 1/7 · 1/9**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/passer-d-une-ecriture-decimale-a-une-ecriture-fractionnaire.webp",
+    "prompt": "a glossy violet shirt and a golden jacket hanging side by side on a hanger, each with a number tag, a curved arrow between them, sparkles"
+  },
+  "marcel": "Même nombre,\ndeux vêtements !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "De la virgule à la fraction",
+          "taille": "mini",
+          "lignes": [
+            "0,7 = {7/10}",
+            "3,45 = {345/100}",
+            "0,008 = {8/1000}"
+          ],
+          "regle": "Le nombre de **chiffres après la virgule** donne le nombre de ==zéros== du dénominateur.",
+          "note": "dans l’autre sens, la virgule recule d’autant de rangs&nbsp;!"
+        },
+        {
+          "type": "cartes",
+          "numero": 2,
+          "titre": "Trois mots",
+          "colonnes": 1,
+          "cartes": [
+            {
+              "titre": "Fraction",
+              "texte": "une **écriture** a/b."
+            },
+            {
+              "titre": "Quotient",
+              "texte": "le **résultat** de la division."
+            },
+            {
+              "titre": "Décimal",
+              "texte": "son écriture **s’arrête**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Compter",
+              "texte": "les chiffres après la virgule : 3,45 en a 2"
+            },
+            {
+              "titre": "Écrire",
+              "texte": "tout le nombre sans virgule, sur 1 et des zéros : 345/100"
+            },
+            {
+              "titre": "Simplifier",
+              "texte": "avec un diviseur commun : 25/100 = 1/4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Écrire __0,75__ en fraction irréductible.",
+          "calcul": "0,75 = 75/100",
+          "aparte": "2 chiffres → 100",
+          "resultat": "75/100 = 3/4 = [[3/4]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Décimale ou pas&nbsp;?",
+          "oui": {
+            "titre": "Un nombre décimal",
+            "texte": "Le dénominateur irréductible n’a que des **2** et des **5**&nbsp;: 3/4 = 0,75."
+          },
+          "non": {
+            "titre": "Pas décimal",
+            "texte": "Un autre facteur apparaît (3, 7…)&nbsp;: 1/3 = 0,333… ne s’arrête jamais."
+          },
+          "essai": {
+            "texte": "<i>6/15</i> = <i>2/5</i>&nbsp;: seul un 5 en bas, donc **décimal** (0,4). On simplifie ==avant==."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "0,6 a un chiffre après la virgule&nbsp;:",
+              "quoi": "je compte"
+            },
+            {
+              "texte": "0,6 = 6/10",
+              "quoi": "j’écris"
+            },
+            {
+              "texte": "6/10 = 3/5",
+              "quoi": "je simplifie"
+            }
+          ],
+          "pied": "La fraction reste ==exacte== jusqu’au bout."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire 0,08 = 8/10 au lieu de **8/100**.",
+            "**Oublier de simplifier** une fraction.",
+            "Croire que 1/3 est un nombre décimal.",
+            "Confondre **fraction** et **quotient**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Écris **0,9** et **2,35** sous forme de fractions.",
+            "Donne **9/100** et **27/10** en écriture décimale.",
+            "**1/8** est-il un nombre décimal&nbsp;? Et **1/6**&nbsp;?"
+          ],
+          "reponses": "1) 9/10 et 235/100 · 2) 0,09 et 2,7 · 3) 1/8 oui (0,125), 1/6 non"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "titre": "Convertir des unités",
+  "titreSurligne": "unités",
+  "accroche": "De 10 en 10, sauf pour les durées.",
+  "bonus": "1 L = 1 dm³ · 1 mL = 1 cm³ · 1 h = 60 min · **1 h 30 = 1,5 h**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/convertir-des-unites-de-grandeurs-simples.webp",
+    "prompt": "a glossy violet conversion table with golden columns and a sliding comma marker, sparkles"
+  },
+  "marcel": "Plus petite unité,\nplus grand nombre !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les préfixes",
+          "taille": "mini",
+          "lignes": [
+            "km · hm · dam · m · dm · cm · mm"
+          ],
+          "regle": "Chaque colonne vaut ==10 fois== la suivante. kilo = ×1 000, hecto = ×100, déca = ×10, déci = ÷10, centi = ÷100, milli = ÷1 000.",
+          "note": "1 km = 1 000 m&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "À connaître",
+          "entetes": [
+            "Grandeur",
+            "Égalités"
+          ],
+          "lignes": [
+            [
+              "Longueurs",
+              "1 m = 100 cm · 1 cm = 10 mm"
+            ],
+            [
+              "Masses",
+              "1 t = 1 000 kg · 1 kg = 1 000 g"
+            ],
+            [
+              "Contenances",
+              "1 L = 100 cL = 1 000 mL"
+            ],
+            [
+              "Durées",
+              "1 h = 60 min · 1 min = 60 s"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le tableau de conversion",
+          "etapes": [
+            {
+              "titre": "Placer",
+              "texte": "un chiffre par colonne, la virgule après l’unité de départ"
+            },
+            {
+              "titre": "Déplacer",
+              "texte": "la virgule jusqu’à l’unité d’arrivée"
+            },
+            {
+              "titre": "Compléter",
+              "texte": "avec des zéros, puis tester la vraisemblance"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Convertir __3,5 km__ en __m__, et __2 h 15__ en __heures décimales__.",
+          "calcul": "3,5 km = 3 500 m",
+          "aparte": "15 min = 15 ÷ 60",
+          "resultat": "[[3 500 m]] et 2 h 15 = [[2,25 h]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les durées",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "1 h 30",
+              "texte": "= **1,5 h** (30 ÷ 60), jamais 1,30 h."
+            },
+            {
+              "titre": "45 min",
+              "texte": "= 45 ÷ 60 = **0,75 h**."
+            },
+            {
+              "titre": "1 jour",
+              "texte": "= 24 h."
+            },
+            {
+              "titre": "Contenances",
+              "texte": "1 L = 1 dm³ et 1 mL = 1 cm³."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Minutes en heures",
+          "oui": {
+            "titre": "Juste",
+            "texte": "1 h 30 = 1 + 30 ÷ 60 = **1,5 h**."
+          },
+          "non": {
+            "titre": "Faux",
+            "texte": "1 h 30 = 1,30 h&nbsp;: les minutes **ne sont pas décimales**."
+          },
+          "essai": {
+            "titre": "À toi",
+            "texte": "1 h 45 en heures&nbsp;?"
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "1 km = 1 000 m",
+              "quoi": "la relation"
+            },
+            {
+              "texte": "3,5 km = 3,5 × 1 000 = 3 500 m",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "Il y a 3 500 m.",
+              "quoi": "la phrase"
+            }
+          ],
+          "pied": "Vers une unité ==plus petite==, le nombre grandit."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire **1 h 30 = 1,30 h** (il faut diviser par 60).",
+            "Déplacer la **virgule** dans le mauvais sens.",
+            "Oublier les **zéros** à compléter.",
+            "Mélanger les unités dans un même calcul."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**250 cm** en m&nbsp;?",
+            "**1 h 30** en heures décimales&nbsp;?",
+            "**2 L** en cm³&nbsp;?"
+          ],
+          "reponses": "1) 2,5 m · 2) 1,5 h · 3) 2 000 cm³ (2 dm³)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "titre": "Angles et parallèles",
+  "titreSurligne": "parallèles",
+  "accroche": "Calculer un angle, prouver un parallélisme.",
+  "bonus": "Somme des angles d’un triangle&nbsp;: **180°** · complémentaires **90°** · supplémentaires **180°**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/angles-et-parallelisme.webp",
+    "prompt": "two glossy golden parallel rails crossed by a violet diagonal bar, with two matching small arcs marking equal angles, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Parallèles ?\nAngles égaux !",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "La configuration",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><line x1='15' y1='60' x2='205' y2='60' stroke='#2b2350' stroke-width='3.5' stroke-linecap='round'></line><line x1='15' y1='120' x2='205' y2='120' stroke='#2b2350' stroke-width='3.5' stroke-linecap='round'></line><line x1='66' y1='168' x2='154' y2='14' stroke='#7a3fe0' stroke-width='4.5' stroke-linecap='round'></line><path d='M109,60 A18,18 0 0 0 118,75.6' fill='none' stroke='#f1566c' stroke-width='4'></path><path d='M111,120 A18,18 0 0 0 102,104.4' fill='none' stroke='#f1566c' stroke-width='4'></path><g fill='#2b2350'><circle cx='127' cy='60' r='4.5'></circle><circle cx='93' cy='120' r='4.5'></circle></g><g font-family=\"'Baloo 2'\" font-weight='800' font-size='16' fill='#2b2350'><text x='190' y='52'>(d)</text><text x='190' y='112'>(d′)</text></g><g font-family='Nunito' font-weight='800' font-size='11.5' fill='#4b2a9a'><text x='150' y='92'>sécante</text></g></svg>",
+              "legende": "(d) // (d′)",
+              "sous": "les deux arcs rouges&nbsp;: alternes-internes, égaux"
+            }
+          ],
+          "legende": { "jeton": "égaux", "texte": "Parallèles ⟹ alternes-internes égaux, correspondants égaux." }
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Rappels et couples",
+          "entetes": ["Les angles", "Propriété"],
+          "lignes": [
+            ["Complémentaires", "somme **90°**"],
+            ["Supplémentaires", "somme **180°**"],
+            ["Opposés par le sommet", "toujours **égaux**"],
+            ["Alternes-internes", "entre les droites, de part et d’autre"],
+            ["Correspondants", "même position, même côté"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Calculer ou démontrer&nbsp;?",
+          "oui": { "titre": "Pour calculer", "texte": "Si les droites sont **parallèles**, alors les alternes-internes (et les correspondants) sont **égaux**." },
+          "non": { "titre": "Pour démontrer", "texte": "Si deux alternes-internes sont **égaux**, alors les droites sont **parallèles**." },
+          "essai": { "texte": "Si les alternes-internes ne sont **pas** égaux, les droites ne sont **pas** parallèles (contraposée)." }
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "(d) // (d′), un angle alterne-interne de __65°__. L’autre&nbsp;?",
+          "calcul": "(d) // (d′) donc alternes-internes égaux",
+          "aparte": "on cite la propriété",
+          "resultat": "angle = [[65°]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Dans un triangle",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "La somme", "texte": "A + B + C = **180°**." },
+            { "titre": "Rectangle", "texte": "Les deux angles aigus sont **complémentaires**." },
+            { "titre": "Équilatéral", "texte": "Chaque angle vaut **60°**." },
+            { "titre": "Isocèle", "texte": "Les deux angles à la base sont **égaux**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "(d) et (d′) sont parallèles, donc", "quoi": "l’hypothèse" },
+            { "texte": "les angles alternes-internes sont égaux.", "quoi": "la propriété" },
+            { "texte": "Donc l’angle mesure 65°.", "quoi": "la conclusion" }
+          ],
+          "pied": "Une réponse sans ==nom de propriété== ne vaut rien."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Utiliser l’égalité **sans** savoir que les droites sont parallèles.",
+            "Confondre alternes-internes et alternes-externes.",
+            "Se fier au **dessin**&nbsp;: une figure ne prouve rien.",
+            "Confondre complémentaires (90°) et supplémentaires (180°)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Deux angles **supplémentaires**&nbsp;: l’un fait 110°, l’autre&nbsp;?",
+            "Triangle avec des angles de 50° et 60°&nbsp;: le **troisième**&nbsp;?",
+            "Alternes-internes de 70° et 75°&nbsp;: droites **parallèles**&nbsp;?"
+          ],
+          "reponses": "1) 70° · 2) 70° (180 − 110) · 3) non, les angles ne sont pas égaux"
+        }
+      ]
+    }
+  ]
+}

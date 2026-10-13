@@ -1,0 +1,162 @@
+{
+  "titre": "Aires et conversions",
+  "titreSurligne": "Aires",
+  "accroche": "La surface, et ses unités piégeuses.",
+  "bonus": "**1 m² = 10 000 cm²** · **1 a = 100 m²** · **1 ha = 10 000 m²**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/maths/calculer-et-convertir-des-aires.webp",
+    "prompt": "a glossy golden grid of square tiles filling a violet rectangle, a tiny golden ruler beside it, sparkles"
+  },
+  "marcel": "Une aire,\nce sont des carrés !",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "La hauteur d’un triangle",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><polygon points='25,140 195,140 135,35' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><line x1='135' y1='35' x2='135' y2='140' stroke='#7a3fe0' stroke-width='4' stroke-dasharray='7 6' stroke-linecap='round'></line><path d='M121,140 v-14 h14' fill='none' stroke='#f1566c' stroke-width='3'></path><g font-family='Nunito' font-weight='800' font-size='14' fill='#4b2a9a'><text x='60' y='162' >base</text><text x='142' y='92' fill='#7a3fe0'>hauteur</text></g></svg>",
+              "legende": "A = (base × hauteur) ÷ 2",
+              "sous": "la hauteur est perpendiculaire à la base"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Les formules",
+          "taille": "mini",
+          "lignes": [
+            "carré : A = c × c",
+            "rectangle : A = L × l",
+            "triangle : A = (b × h) ÷ 2",
+            "disque : A = π × r × r"
+          ],
+          "regle": "La hauteur n’est ==pas toujours== un côté du triangle.",
+          "note": "Parallélogramme : base × hauteur"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Convertir",
+              "texte": "les longueurs dans la même unité, avant de calculer"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "avec la formule, ou en découpant en figures connues"
+            },
+            {
+              "titre": "Écrire",
+              "texte": "l’unité d’aire&nbsp;: cm², m²…"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Triangle de base __6 cm__ et de hauteur 4 cm.",
+          "calcul": "A = (6 × 4) ÷ 2",
+          "aparte": "6 × 4 = 24",
+          "resultat": "A = [[12 cm²]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les conversions",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Chaque rang × 100",
+              "texte": "1 m² = **10 000** cm² · 1 cm² = 100 mm²."
+            },
+            {
+              "titre": "Pourquoi 100&nbsp;?",
+              "texte": "On multiplie **deux** longueurs : 100 cm × 100 cm."
+            },
+            {
+              "titre": "Unités agraires",
+              "texte": "1 are = 100 m² · 1 hectare = 10 000 m² = 100 ares."
+            },
+            {
+              "titre": "Figure composée",
+              "texte": "On découpe, on calcule chaque aire, on **additionne** (ou on retire un trou)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "A = (base × hauteur) ÷ 2",
+              "quoi": "la formule"
+            },
+            {
+              "texte": "A = (6 × 4) ÷ 2 = 12",
+              "quoi": "on calcule"
+            },
+            {
+              "texte": "L’aire est de 12 cm².",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Une aire se compte en ==carrés==&nbsp;: l’unité porte un petit 2."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Prendre un **côté** au hasard pour la hauteur.",
+            "Convertir avec **10** au lieu de 100.",
+            "Oublier de **diviser par 2** pour le triangle.",
+            "Écrire **cm** au lieu de **cm²**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "Unités agraires",
+          "paragraphes": [
+            "1 **are** (a) = 100 m² et 1 **hectare** (ha) = 10 000 m² = 100 ares. Un terrain de football fait environ **0,7 ha**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Aire d’un rectangle **5 cm × 3 cm**&nbsp;?",
+            "**1 m²** en cm²&nbsp;?",
+            "Triangle de base **10 cm**, hauteur **3 cm**&nbsp;?"
+          ],
+          "reponses": "1) 15 cm² · 2) 10 000 cm² · 3) 15 cm²"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "titre": "Triangles particuliers",
+  "titreSurligne": "particuliers",
+  "accroche": "Des angles qu’on connaît sans mesurer.",
+  "bonus": "Isocèle rectangle&nbsp;: **90° · 45° · 45°** · équilatéral&nbsp;: **60° · 60° · 60°**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/maths/connaitre-les-triangles-isoceles-equilateraux-et-rectangles.webp",
+    "prompt": "three glossy triangles side by side, one violet isosceles, one golden equilateral and one violet right-angled with a small square corner, tiny sparkles, same art style as the reference icons"
+  },
+  "marcel": "Le codage dit\ntout !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "Trois triangles à reconnaître",
+          "colonnes": 3,
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 15 220 140' aria-hidden='true'><polygon points='110,28 40,146 180,146' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><g stroke='#f1566c' stroke-width='3.5' stroke-linecap='round'><line x1='68' y1='82' x2='82' y2='90'></line><line x1='152' y1='82' x2='138' y2='90'></line></g></svg>",
+              "legende": "isocèle",
+              "sous": "deux côtés égaux, angles à la base égaux"
+            },
+            {
+              "svg": "<svg viewBox='0 15 220 140' aria-hidden='true'><polygon points='110,28 40,146 180,146' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><g stroke='#f1566c' stroke-width='3.5' stroke-linecap='round'><line x1='68' y1='82' x2='82' y2='90'></line><line x1='152' y1='82' x2='138' y2='90'></line><line x1='110' y1='140' x2='110' y2='152'></line></g></svg>",
+              "legende": "équilatéral",
+              "sous": "trois côtés égaux, trois angles de 60°"
+            },
+            {
+              "svg": "<svg viewBox='0 15 220 140' aria-hidden='true'><polygon points='40,146 40,34 190,146' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><path d='M40,128 h18 v18' fill='none' stroke='#f1566c' stroke-width='3'></path><text x='104' y='84' font-family='Nunito' font-weight='800' font-size='13' fill='#7a3fe0' transform='rotate(36 104 84)'>hypoténuse</text></svg>",
+              "legende": "rectangle",
+              "sous": "un angle droit, l’hypoténuse est le plus long côté"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Ce qu’on sait sans mesurer",
+          "entetes": [
+            "Triangle",
+            "Ce qu’on sait"
+          ],
+          "lignes": [
+            [
+              "Isocèle",
+              "angles à la base égaux, **1** axe"
+            ],
+            [
+              "Équilatéral",
+              "3 angles de **60°**, **3** axes"
+            ],
+            [
+              "Rectangle",
+              "2 angles aigus : **90°** en tout"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "Angle à la base",
+          "lignes": [
+            "(180° − sommet) ÷ 2"
+          ],
+          "regle": "Dans un isocèle, les deux angles à la base sont ==égaux==. On retire l’angle au sommet, puis on partage en deux.",
+          "note": "équilatéral&nbsp;: 180 ÷ 3 = 60°"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "ABC est isocèle en A, avec un angle de 40° en A. __Angle B__&nbsp;?",
+          "calcul": "180 − 40 = 140",
+          "aparte": "140 ÷ 2",
+          "resultat": "B = C = [[70°]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Isocèle ou équilatéral&nbsp;?",
+          "oui": {
+            "titre": "Vrai",
+            "texte": "Tout triangle équilatéral est **aussi** isocèle."
+          },
+          "non": {
+            "titre": "Faux",
+            "texte": "Tout isocèle est équilatéral&nbsp;: il n’a que **deux** côtés égaux."
+          },
+          "essai": {
+            "texte": "Un triangle de 5 cm, 5 cm et 3 cm est isocèle, pas équilatéral. Avec 5, 5 et 5, il est les deux."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "ABC est isocèle en A",
+              "quoi": "la donnée"
+            },
+            {
+              "texte": "Les angles à la base sont égaux, B = C",
+              "quoi": "la propriété"
+            },
+            {
+              "texte": "B = (180° − 40°) ÷ 2 = 70°",
+              "quoi": "le calcul"
+            }
+          ],
+          "pied": "On lit le ==codage==, pas la règle graduée."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mesurer au lieu de lire le **codage**.",
+            "Oublier de **diviser par 2** pour un angle à la base.",
+            "Dire qu’un isocèle est **toujours** équilatéral.",
+            "Placer l’hypoténuse **ailleurs** qu’en face de l’angle droit."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Isocèle, angle au sommet **50°**&nbsp;: un angle à la base&nbsp;?",
+            "Un triangle **équilatéral**&nbsp;: la mesure de chaque angle&nbsp;?",
+            "Isocèle rectangle&nbsp;: les **deux angles aigus**&nbsp;?"
+          ],
+          "reponses": "1) 65° · 2) 60° · 3) 45° et 45°"
+        }
+      ]
+    }
+  ]
+}

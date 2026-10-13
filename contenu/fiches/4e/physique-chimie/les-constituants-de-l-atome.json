@@ -1,0 +1,110 @@
+{
+  "titre": "Les parties de l’atome",
+  "titreSurligne": "atome",
+  "accroche": "Un petit noyau, un grand vide.",
+  "bonus": "Atome **neutre** : autant de **protons** que d’**électrons** · le **nombre de protons** donne l’élément · noyau ≈ **100 000 fois** plus petit",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/les-constituants-de-l-atome.webp",
+    "prompt": "a glossy golden nucleus made of small spheres, three small glossy violet electrons orbiting on dotted rings, sparkles"
+  },
+  "marcel": "Un atome, c’est\nsurtout du vide !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois particules",
+          "entetes": ["Particule", "Charge", "Où ?"],
+          "lignes": [
+            ["**Proton**", "positive (+)", "noyau"],
+            ["**Neutron**", "nulle", "noyau"],
+            ["**Électron**", "négative (−)", "autour du noyau"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Un atome est neutre",
+          "petite": true,
+          "lignes": ["nombre de protons", "= nombre d’électrons"],
+          "regle": "Les charges **+** et **−** se compensent&nbsp;: l’atome est **neutre**. Le noyau porte presque **toute la masse**, l’électron est ~2 000 fois plus léger.",
+          "note": "devenir un ion = gagner ou perdre des électrons"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Identifier un atome en trois temps",
+          "etapes": [
+            { "titre": "Lire", "texte": "le nombre de protons du noyau" },
+            { "titre": "Chercher", "texte": "l’élément qui a ce nombre (H&nbsp;: 1, C&nbsp;: 6, O&nbsp;: 8)" },
+            { "titre": "Déduire", "texte": "le nombre d’électrons&nbsp;: le même, car l’atome est neutre" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un atome a __6 protons__. Quel élément, et combien d’électrons&nbsp;?",
+          "calcul": "6 protons → carbone (C)\nneutre → autant d’électrons",
+          "aparte": "= 6",
+          "resultat": "[[carbone, 6 électrons]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Que peut changer&nbsp;?",
+          "oui": { "titre": "Les électrons", "texte": "Gagner ou perdre des électrons&nbsp;: l’atome devient un **ion**, même élément." },
+          "non": { "titre": "Les protons", "texte": "Changer le nombre de protons&nbsp;: c’est un **autre élément**." },
+          "essai": { "texte": "Dans une formule, l’indice compte les atomes&nbsp;: H<sub>2</sub>O a <i>2 H et 1 O</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le noyau contient 8 protons", "quoi": "la donnée" },
+            { "texte": "Le nombre de protons définit l’élément", "quoi": "la règle" },
+            { "texte": "C’est donc l’oxygène (O), avec 8 électrons", "quoi": "la conclusion" }
+          ],
+          "pied": "Le ==noyau== est minuscule&nbsp;: une bille au centre d’un ==stade== de football."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que l’électron est dans le **noyau**.",
+            "Confondre **Co** (cobalt) et **CO** (monoxyde de carbone).",
+            "Dire qu’un ion **perd des protons**.",
+            "Penser que l’atome est « **plein** »."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle particule est de charge **négative**&nbsp;?",
+            "L’hydrogène a combien de **protons**&nbsp;?",
+            "Atome de 8 protons&nbsp;: combien d’**électrons**&nbsp;?"
+          ],
+          "reponses": "1) l’électron · 2) 1 · 3) 8"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "titre": "Les mouvements",
+  "titreSurligne": "mouvements",
+  "accroche": "Par rapport à quoi, et à quelle vitesse&nbsp;?",
+  "bonus": "v = d ÷ t · **km/h ÷ 3,6 = m/s** · 36 km/h = **10 m/s**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/les-mouvements.webp",
+    "prompt": "a glossy violet toy train moving along a golden track with speed lines, a small golden stopwatch beside it, sparkles"
+  },
+  "marcel": "Tout dépend\ndu référentiel !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La vitesse",
+          "petite": true,
+          "lignes": [
+            "v = {d/t}"
+          ],
+          "regle": "**d** en **m** et **t** en **s** donnent **v** en **m/s**&nbsp;; **d** en **km** et **t** en **h** donnent des **km/h**. Pour passer de km/h à m/s, on ==divise par 3,6==.",
+          "note": "la vitesse moyenne, sur tout le trajet"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Décrire un mouvement",
+          "entetes": [
+            "On précise",
+            "Exemples"
+          ],
+          "lignes": [
+            [
+              "Le **référentiel**",
+              "train ou quai"
+            ],
+            [
+              "La **trajectoire**",
+              "rectiligne, circulaire, curviligne"
+            ],
+            [
+              "Le **régime**",
+              "uniforme, accéléré, ralenti"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer une vitesse",
+          "etapes": [
+            {
+              "titre": "Convertir",
+              "texte": "d en **m** et t en **s** si on veut des m/s"
+            },
+            {
+              "titre": "Appliquer",
+              "texte": "v = d ÷ t"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "le nombre, avec son **unité**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un cycliste parcourt __300 m__ en __20 s__. Sa vitesse en km/h&nbsp;?",
+          "calcul": "v = 300 ÷ 20 = 15 m/s\n15 × 3,6",
+          "aparte": "m/s → km/h : ×3,6",
+          "resultat": "v = [[54 km/h]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le passager du train",
+          "oui": {
+            "titre": "Dans le train",
+            "texte": "Le passager assis est **immobile** par rapport au train."
+          },
+          "non": {
+            "titre": "Sur le quai",
+            "texte": "Le même passager est **en mouvement** par rapport au quai."
+          },
+          "essai": {
+            "texte": "Les deux sont vrais&nbsp;: un mouvement ne se décrit <i>jamais dans l’absolu</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Chronophotographie",
+          "items": [
+            {
+              "titre": "Positions espacées",
+              "texte": "l’objet va **vite**"
+            },
+            {
+              "titre": "Espacement constant",
+              "texte": "mouvement **uniforme**"
+            },
+            {
+              "titre": "Espacement croissant",
+              "texte": "mouvement **accéléré**"
+            },
+            {
+              "titre": "Espacement réduit",
+              "texte": "mouvement **ralenti**"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire « il bouge » **sans** préciser le référentiel.",
+            "Diviser par 3,6 pour passer de m/s à km/h&nbsp;: c’est l’**inverse**.",
+            "Oublier de convertir les **minutes** en secondes.",
+            "Confondre vitesse **moyenne** et vitesse du **compteur**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 6,
+          "titre": "Les trois régimes",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Uniforme",
+              "texte": "la vitesse **ne change pas**"
+            },
+            {
+              "titre": "Accéléré",
+              "texte": "la vitesse **augmente**"
+            },
+            {
+              "titre": "Ralenti",
+              "texte": "la vitesse **diminue**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Convertir **72 km/h** en m/s.",
+            "Une trajectoire en ligne droite se dit comment&nbsp;?",
+            "Un objet parcourt 100 m en 5 s&nbsp;: **v**&nbsp;?"
+          ],
+          "reponses": "1) 20 m/s · 2) rectiligne · 3) 20 m/s"
+        }
+      ]
+    }
+  ]
+}

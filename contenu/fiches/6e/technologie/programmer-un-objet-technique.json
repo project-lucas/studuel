@@ -1,0 +1,162 @@
+{
+  "titre": "Programmer un objet",
+  "titreSurligne": "Programmer",
+  "accroche": "Une machine fait exactement ce qu’on écrit.",
+  "bonus": "**Instruction · boucle · condition · variable** · tester, isoler, corriger, retester",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/technologie/programmer-un-objet-technique.webp",
+    "prompt": "a glossy violet microcontroller board with a golden LED lit up and three colorful code blocks stacked above, sparkles"
+  },
+  "marcel": "Un bug, c’est\nnormal : corrige !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les briques de base",
+          "items": [
+            {
+              "terme": "Instruction",
+              "definition": "une **action simple** : allumer, attendre"
+            },
+            {
+              "terme": "Boucle",
+              "definition": "**répéter** sans réécrire"
+            },
+            {
+              "terme": "Condition",
+              "definition": "**si… alors… sinon…** : réagir"
+            },
+            {
+              "terme": "Variable",
+              "definition": "une case mémoire nommée"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "L’organigramme",
+          "entetes": [
+            "Symbole",
+            "Sens"
+          ],
+          "lignes": [
+            [
+              "**Rectangle**",
+              "une action"
+            ],
+            [
+              "**Losange**",
+              "une décision"
+            ],
+            [
+              "**Flèche**",
+              "l’ordre à suivre"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Déboguer un programme",
+          "etapes": [
+            {
+              "titre": "Tester",
+              "texte": "lancer et observer ce qui se passe"
+            },
+            {
+              "titre": "Isoler",
+              "texte": "trouver l’instruction fautive"
+            },
+            {
+              "titre": "Corriger",
+              "texte": "puis retester"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "La lampe doit s’allumer si quelqu’un est __présent__. Écris le programme.",
+          "calcul": "répéter indéfiniment :\nsi présence alors allumer\nsinon éteindre",
+          "aparte": "boucle + condition",
+          "resultat": "lampe [[automatique]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le bon ordre&nbsp;?",
+          "oui": {
+            "titre": "Dans l’ordre",
+            "texte": "Lire le capteur, **puis** allumer la lampe."
+          },
+          "non": {
+            "titre": "À l’envers",
+            "texte": "Allumer la lampe **avant** de lire le capteur."
+          },
+          "essai": {
+            "texte": "La carte exécute les instructions <i>dans l’ordre</i>, sans deviner ce qu’on voulait."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Le programme est une suite d’instructions.",
+              "quoi": "la définition"
+            },
+            {
+              "texte": "Une condition rend l’objet capable de réagir.",
+              "quoi": "la condition"
+            },
+            {
+              "texte": "On téléverse le programme dans la carte.",
+              "quoi": "l’envoi"
+            }
+          ],
+          "pied": "Un ==objet connecté== pose des questions de sécurité et de données personnelles."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’un bug est un **échec**.",
+            "Penser que la machine **devine** l’intention.",
+            "Oublier la **condition** : l’objet ne réagit pas.",
+            "Confondre **boucle** et condition."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle brique permet de **répéter**&nbsp;?",
+            "Quelle forme représente une **décision**&nbsp;?",
+            "Que veut dire **téléverser**&nbsp;?"
+          ],
+          "reponses": "1) la boucle · 2) le losange · 3) envoyer le programme dans la carte"
+        }
+      ]
+    }
+  ]
+}

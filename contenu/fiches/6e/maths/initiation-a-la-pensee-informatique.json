@@ -1,0 +1,180 @@
+{
+  "titre": "Pensée informatique",
+  "titreSurligne": "informatique",
+  "accroche": "Donner des ordres précis à une machine.",
+  "bonus": "Polygone à n côtés&nbsp;: on tourne de **360 ÷ n** degrés à chaque tour",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/maths/initiation-a-la-pensee-informatique.webp",
+    "prompt": "glossy violet puzzle-like code blocks snapped together with a golden loop arrow, and a small golden robot cat, tiny sparkles, same art style as the reference icons"
+  },
+  "marcel": "Une machine\nne devine pas !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Algorithme",
+              "definition": "suite **finie** et **ordonnée** d’instructions qui résout un problème"
+            },
+            {
+              "terme": "Programme",
+              "definition": "un algorithme écrit dans un langage de machine, ici Scratch"
+            },
+            {
+              "terme": "Variable",
+              "definition": "une case mémoire avec un nom, par exemple un score"
+            },
+            {
+              "terme": "Bug",
+              "definition": "une erreur dans le programme"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La boucle",
+          "taille": "mini",
+          "lignes": [
+            "répéter 4 fois",
+            "[avancer de 100 ;",
+            "tourner de 90°]"
+          ],
+          "regle": "Une boucle ==répète== des instructions sans les réécrire&nbsp;: plus court, et plus facile à corriger.",
+          "note": "un carré en 3 lignes&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Déboguer en trois temps",
+          "etapes": [
+            {
+              "titre": "Tester",
+              "texte": "pas à pas, une instruction après l’autre"
+            },
+            {
+              "titre": "Isoler",
+              "texte": "l’instruction fautive"
+            },
+            {
+              "titre": "Corriger",
+              "texte": "puis retester tout le programme"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Pourquoi une boucle ?",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Plus court",
+              "texte": "8 instructions deviennent 3"
+            },
+            {
+              "titre": "Plus facile à corriger",
+              "texte": "un seul endroit à modifier"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Dessiner un triangle équilatéral avec Scratch. __Angle de rotation__&nbsp;?",
+          "calcul": "3 côtés, donc répéter 3 fois\nangle = 360 ÷ 3",
+          "aparte": "polygone à 3 côtés",
+          "resultat": "tourner de [[120°]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 5,
+          "titre": "Les instructions de base",
+          "entetes": [
+            "L’instruction",
+            "Ce qu’elle fait"
+          ],
+          "lignes": [
+            [
+              "Avancer de n pas",
+              "déplacement en ligne droite"
+            ],
+            [
+              "Tourner de 90° à droite",
+              "rotation sur place"
+            ],
+            [
+              "Aller à (x ; y)",
+              "déplacement vers un point"
+            ],
+            [
+              "Si … alors … sinon …",
+              "le programme **choisit** selon une condition"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 6,
+          "titre": "Une bonne instruction",
+          "oui": {
+            "titre": "Précise",
+            "texte": "Avance de 100 pas."
+          },
+          "non": {
+            "titre": "Vague",
+            "texte": "Avance un peu."
+          },
+          "essai": {
+            "texte": "Dans (x ; y), l’abscisse (horizontale) vient **en premier**. (3 ; 5)&nbsp;: 3 vers la droite, 5 vers le haut."
+          }
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Une instruction **floue**&nbsp;: la machine ne devine pas.",
+            "Mettre l’**ordonnée** avant l’abscisse.",
+            "Réécrire dix fois au lieu d’une **boucle**.",
+            "Croire qu’un programme marche **du premier coup**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Pour un **carré**, de quel angle tourne-t-on à chaque tour&nbsp;?",
+            "Dans le couple **(2 ; 7)**, laquelle est l’abscisse&nbsp;?",
+            "Comment s’appelle une **erreur** dans un programme&nbsp;?"
+          ],
+          "reponses": "1) 90° (360 ÷ 4) · 2) 2 · 3) un bug"
+        }
+      ]
+    }
+  ]
+}

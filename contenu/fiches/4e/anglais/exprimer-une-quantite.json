@@ -1,0 +1,120 @@
+{
+  "titre": "Exprimer une quantité",
+  "titreSurligne": "quantité",
+  "accroche": "Some, any, much, many&nbsp;: lequel&nbsp;?",
+  "bonus": "**many** + pluriel · **much** + indénombrable · **a few** / **a little**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/anglais/exprimer-une-quantite.webp",
+    "prompt": "a glossy violet measuring cup half full of golden liquid next to a small pile of golden coins, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Combien&nbsp;?\nBeaucoup&nbsp;? Un peu&nbsp;?",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Deux questions",
+          "lignes": ["je **compte**&nbsp;? · phrase **positive**&nbsp;?"],
+          "petite": true,
+          "regle": "Le nom est-il **dénombrable** ou non&nbsp;? La phrase est-elle **affirmative**, négative ou une question&nbsp;?",
+          "note": "a lot of : les deux"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Some et any",
+          "entetes": ["Le mot", "Quand", "L’exemple"],
+          "lignes": [
+            ["**some**", "phrase affirmative", "<i>I have **some** money.</i>"],
+            ["**some**", "offre ou demande polie", "<i>Would you like **some** tea?</i>"],
+            ["**any**", "négation, question", "<i>I don’t have **any** money.</i>"],
+            ["**no**", "= not any", "<i>There is **no** milk.</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Beaucoup, un peu, peu",
+          "entetes": ["Dénombrable", "Indénombrable", "Le sens"],
+          "lignes": [
+            ["**many** <i>books</i>", "**much** <i>water</i>", "beaucoup"],
+            ["**a few** <i>friends</i>", "**a little** <i>time</i>", "quelques, un peu (positif)"],
+            ["**few** <i>friends</i>", "**little** <i>time</i>", "très peu (négatif)"],
+            ["**a lot of** <i>friends</i>", "**a lot of** <i>work</i>", "beaucoup (les deux)"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "A few ou few&nbsp;?",
+          "oui": { "titre": "A few = positif", "texte": "<i>I have **a few** friends here.</i> (J’ai quelques amis ici.)" },
+          "non": { "titre": "Few = trop peu", "texte": "<i>I have **few** friends here.</i> — presque personne, c’est triste." },
+          "essai": { "titre": "Essai", "texte": "<i>How ___ water do you need?</i> → **much**&nbsp;: <i>water</i> ne se compte pas." }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            { "titre": "Je compte&nbsp;?", "texte": "Oui → <i>many, a few, few</i>. Non → <i>much, a little, little</i>." },
+            { "titre": "Quel type de phrase&nbsp;?", "texte": "Affirmative → **some**. Négative ou question → **any**." },
+            { "titre": "Je ne sais pas&nbsp;?", "texte": "<i>a lot of</i> marche avec les deux, surtout à l’affirmative." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les autres mots",
+          "deux": true,
+          "items": [
+            { "titre": "enough", "texte": "assez&nbsp;: <i>enough money</i>, <i>fast enough</i>" },
+            { "titre": "too much / too many", "texte": "trop (selon le nom)" },
+            { "titre": "every + singulier", "texte": "<i>every student</i>, chaque" },
+            { "titre": "both / all", "texte": "les deux / tous" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>How many water?</i> → <i>How **much** water?</i>",
+            "<i>I don’t have some money</i> → <i>I don’t have **any** money.</i>",
+            "<i>Few</i> ≠ <i>a few</i> : le <i>a</i> change le sens.",
+            "<i>enough</i> se place **avant** le nom : <i>enough money.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>How ___ students are there?</i> (much / many)",
+            "<i>There isn’t ___ milk.</i> (some / any)",
+            "<i>I have ___ time.</i> (peu, c’est triste)"
+          ],
+          "reponses": "1) many 2) any 3) little"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "titre": "Grandeurs composées",
+  "titreSurligne": "composées",
+  "accroche": "L’unité dit comment on calcule.",
+  "bonus": "vitesse = **d ÷ t** · masse volumique = **m ÷ V** · débit = **V ÷ t** · énergie = **P × t**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/grandeurs-simples-et-grandeurs-composees.webp",
+    "prompt": "a glossy violet stopwatch and a golden ruler joined by a small plus sign, sparkles"
+  },
+  "marcel": "Regarde l’unité,\nelle te guide !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Grandeurs simples",
+          "entetes": [
+            "Grandeur",
+            "Unité",
+            "Instrument"
+          ],
+          "lignes": [
+            [
+              "Longueur",
+              "mètre",
+              "règle"
+            ],
+            [
+              "Masse",
+              "kilogramme",
+              "balance"
+            ],
+            [
+              "Durée",
+              "seconde",
+              "chronomètre"
+            ],
+            [
+              "Température",
+              "°C",
+              "thermomètre"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Grandeurs composées",
+          "entetes": [
+            "Formule",
+            "Unité"
+          ],
+          "lignes": [
+            [
+              "Aire = L × L",
+              "m²"
+            ],
+            [
+              "Vitesse = distance ÷ durée",
+              "m/s, km/h"
+            ],
+            [
+              "Masse volumique = m ÷ V",
+              "g/cm³"
+            ],
+            [
+              "Débit = volume ÷ durée",
+              "L/min"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire l’unité",
+          "etapes": [
+            {
+              "titre": "Regarder",
+              "texte": "km/h : le « / » dit une division"
+            },
+            {
+              "titre": "Choisir",
+              "texte": "distance ÷ durée, ou kWh : puissance × durée"
+            },
+            {
+              "titre": "Contrôler",
+              "texte": "l’unité obtenue doit être celle demandée"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un cycliste roule __30 km__ en __2 h__. Sa __vitesse__&nbsp;?",
+          "calcul": "vitesse = distance ÷ durée = 30 ÷ 2",
+          "aparte": "km ÷ h = km/h",
+          "resultat": "v = [[15 km/h]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les mots",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Grandeur",
+              "texte": "ce qu’on mesure&nbsp;: la longueur d’une table."
+            },
+            {
+              "titre": "Mesure",
+              "texte": "le nombre trouvé&nbsp;: 1,20."
+            },
+            {
+              "titre": "Unité",
+              "texte": "ce qu’on compte&nbsp;: le mètre."
+            },
+            {
+              "titre": "Les trois",
+              "texte": "« 1,20 » seul ne dit rien&nbsp;: **1,20 m**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Quelle opération ?",
+          "oui": {
+            "titre": "Juste",
+            "texte": "30 km en 2 h&nbsp;: 30 ÷ 2 = **15 km/h**."
+          },
+          "non": {
+            "titre": "Faux",
+            "texte": "30 × 2 = 60&nbsp;: une vitesse ne se **multiplie** pas."
+          },
+          "essai": {
+            "titre": "À toi",
+            "texte": "100 km en 4 h&nbsp;?"
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "v = d ÷ t",
+              "quoi": "la formule"
+            },
+            {
+              "texte": "v = 30 km ÷ 2 h = 15 km/h",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "Le cycliste roule à 15 km/h.",
+              "quoi": "la phrase"
+            }
+          ],
+          "pied": "Pas d’==unité==, pas de point."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier l’**unité** du résultat.",
+            "**Multiplier** distance et durée pour une vitesse.",
+            "Mélanger **minutes** et heures dans un même calcul.",
+            "Confondre **grandeur**, mesure et unité."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**60 km** en 3 h&nbsp;: la vitesse&nbsp;?",
+            "Que dit l’unité **kWh**&nbsp;?",
+            "**12 L** en 4 min&nbsp;: le débit&nbsp;?"
+          ],
+          "reponses": "1) 20 km/h · 2) puissance × durée · 3) 3 L/min"
+        }
+      ]
+    }
+  ]
+}

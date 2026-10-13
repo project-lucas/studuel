@@ -1,0 +1,158 @@
+{
+  "titre": "Fraction et quotient",
+  "titreSurligne": "quotient",
+  "accroche": "Un partage, et aussi une division.",
+  "bonus": "**1/2 = 0,5** · **1/4 = 0,25** · **3/4 = 0,75** · **1/5 = 0,2** · **1/10 = 0,1**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/maths/fraction-sens-quotient.webp",
+    "prompt": "a glossy golden pie cut in four slices, three slices violet, one slice pulled out, sparkles"
+  },
+  "marcel": "Trois quarts,\nc’est 3 ÷ 4 !",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "Un partage",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><rect x='20' y='55' width='45' height='55' fill='#7a3fe0' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></rect><rect x='65' y='55' width='45' height='55' fill='#7a3fe0' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></rect><rect x='110' y='55' width='45' height='55' fill='#7a3fe0' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></rect><rect x='155' y='55' width='45' height='55' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></rect><g font-family='Nunito' font-weight='800' font-size='14' fill='#4b2a9a'><text x='38' y='142' fill='#7a3fe0'>3 parts prises</text></g><g font-family='Nunito' font-weight='800' font-size='14' fill='#4b2a9a'><text x='30' y='40' >4 parts égales</text></g></svg>",
+              "legende": "3/4 de la barre",
+              "sous": "4 parts égales, on en prend 3"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Une division",
+          "lignes": [
+            "{3/4} = 3 ÷ 4 = 0,75"
+          ],
+          "regle": "Le **numérateur** (en haut) dit combien de parts on prend, le **dénominateur** (en bas) en combien on coupe. Il n’est ==jamais 0==.",
+          "note": "Numérateur < dénominateur ⟹ fraction < 1"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Prendre une fraction d’une quantité",
+          "etapes": [
+            {
+              "titre": "Traduire",
+              "texte": "« de » veut dire ×&nbsp;: les 3/4 de 20 = 3/4 × 20"
+            },
+            {
+              "titre": "Diviser",
+              "texte": "la quantité par le dénominateur&nbsp;: 20 ÷ 4 = 5"
+            },
+            {
+              "titre": "Multiplier",
+              "texte": "par le numérateur&nbsp;: 5 × 3 = 15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Les __3/4__ de 20 élèves sont présents.",
+          "calcul": "20 ÷ 4 × 3",
+          "aparte": "20 ÷ 4 = 5",
+          "resultat": "= [[15 élèves]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Fractions égales",
+              "texte": "On multiplie ou divise **en haut et en bas** par le même nombre&nbsp;: 1/2 = 2/4 = 50/100."
+            },
+            {
+              "titre": "Simplifier",
+              "texte": "12/18 → 6/9 → **2/3**&nbsp;: la fraction est alors **irréductible**."
+            },
+            {
+              "titre": "Égale à 1",
+              "texte": "Numérateur = dénominateur&nbsp;: 4/4 = **1**."
+            },
+            {
+              "titre": "Plus grande que 1",
+              "texte": "Numérateur > dénominateur&nbsp;: 7/4 > **1**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Les 3/4 de 20 = 3/4 × 20",
+              "quoi": "on traduit"
+            },
+            {
+              "texte": "= 20 ÷ 4 × 3 = 15",
+              "quoi": "on calcule"
+            },
+            {
+              "texte": "15 élèves sur 20 sont présents.",
+              "quoi": "la phrase"
+            }
+          ],
+          "pied": "Le résultat doit être ==plus petit== que 20&nbsp;: 3/4 est plus petit que 1."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mettre le **dénominateur** au numérateur, et l’inverse.",
+            "Oublier de **diviser** avant de multiplier.",
+            "Changer **seulement** le haut en simplifiant.",
+            "Un dénominateur égal à **0**&nbsp;: impossible."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "Fraction décimale",
+          "paragraphes": [
+            "Une fraction **décimale** a pour dénominateur 10, 100 ou 1 000&nbsp;: {7/10} = 0,7 et {25/100} = 0,25. Ce sont celles qui s’écrivent facilement avec une virgule."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Simplifie **12/18**.",
+            "Les **2/5** de 30&nbsp;?",
+            "**7/4** est-il plus grand que 1&nbsp;?"
+          ],
+          "reponses": "1) 2/3 · 2) 12 (30 ÷ 5 × 2) · 3) oui, 7 > 4"
+        }
+      ]
+    }
+  ]
+}

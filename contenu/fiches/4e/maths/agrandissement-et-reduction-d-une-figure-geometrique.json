@@ -1,0 +1,122 @@
+{
+  "titre": "Agrandir et réduire",
+  "titreSurligne": "Agrandir",
+  "accroche": "Longueurs × k, aires × k², volumes × k³.",
+  "bonus": "**k > 1** agrandissement · **k < 1** réduction · **k = 1** rien ne change",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/agrandissement-et-reduction-d-une-figure-geometrique.webp",
+    "prompt": "a small glossy violet cube and a big golden cube side by side with a magnifying glass between them, sparkles"
+  },
+  "marcel": "Aire × k²,\nvolume × k³&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le rapport k",
+          "taille": "mini",
+          "lignes": ["longueurs × k", "aires × k²", "volumes × k³"],
+          "regle": "Les **angles**, la forme, le parallélisme sont ==conservés==. Seules les mesures changent.",
+          "note": "k = 3&nbsp;: aire × 9, volume × 27&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "La valeur de k",
+          "entetes": ["Si", "Alors"],
+          "lignes": [
+            ["**k > 1**", "agrandissement"],
+            ["**k < 1**", "réduction"],
+            ["**k = 1**", "la figure ne change pas"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Trouver k", "texte": "le quotient de deux longueurs correspondantes" },
+            { "titre": "Choisir", "texte": "k pour une longueur, k² pour une aire, k³ pour un volume" },
+            { "titre": "Convertir", "texte": "l’unité à la fin (cm² → m², cm³ → m³)" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Maquette au 1/50&nbsp;: une aire de 4 cm². __Aire réelle__&nbsp;?",
+          "calcul": "4 × 50² = 4 × 2 500\n= 10 000 cm²",
+          "aparte": "k = 50, donc k² = 2 500",
+          "resultat": "aire = [[1 m²]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Que devient la figure&nbsp;?",
+          "oui": { "titre": "Conservé", "texte": "La **forme**, les **angles** (même mesure), le parallélisme et l’alignement." },
+          "non": { "titre": "Multiplié", "texte": "Les longueurs par **k**, les aires par **k²**, les volumes par **k³**." },
+          "essai": { "texte": "Agrandissement de rapport 3&nbsp;: longueurs <i>× 3</i>, aire <i>× 9</i>, volume <i>× 27</i>." }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "Où on le rencontre",
+          "paragraphes": [
+            "Les **échelles** (cartes, plans, maquettes), les **sections** de solides, la configuration de **Thalès** et les **triangles semblables**&nbsp;: tout repose sur le même rapport k."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Échelle 1/50, donc k = 50", "quoi": "le rapport" },
+            { "texte": "Les aires sont multipliées par k²", "quoi": "la règle" },
+            { "texte": "4 × 50² = 10 000 cm² = 1 m²", "quoi": "le calcul" }
+          ],
+          "pied": "Deux figures sont agrandies l’une de l’autre si ==tous== les rapports de côtés sont égaux."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Multiplier l’aire par **k** au lieu de **k²**.",
+            "Oublier que **1 m² = 10 000 cm²**.",
+            "Croire que les **angles** changent.",
+            "Mélanger **petite** et **grande** figure dans le quotient."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "k = 2&nbsp;: un carré de 3 cm de côté a une nouvelle **aire** de…&nbsp;?",
+            "k = 3&nbsp;: un volume de 4 cm³ devient…&nbsp;?",
+            "Plan au 1/100&nbsp;: 5 cm sur le plan, **longueur réelle**&nbsp;?"
+          ],
+          "reponses": "1) 36 cm² (6 × 6) · 2) 108 cm³ · 3) 5 m (500 cm)"
+        }
+      ]
+    }
+  ]
+}

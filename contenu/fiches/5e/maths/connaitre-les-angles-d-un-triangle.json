@@ -1,0 +1,155 @@
+{
+  "titre": "Angles d’un triangle",
+  "titreSurligne": "triangle",
+  "accroche": "180°, et tout ce qu’on en déduit.",
+  "bonus": "Isocèle d’angle au sommet a&nbsp;: angle à la base = **(180 − a) ÷ 2**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/connaitre-les-angles-d-un-triangle.webp",
+    "prompt": "a glossy violet triangle with three small golden arcs at its corners that line up into a straight line below it, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Trois angles,\n180° en tout !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La propriété",
+          "lignes": [
+            "A + B + C = 180°"
+          ],
+          "regle": "Dans **tout** triangle, la somme des trois angles vaut ==180°==. Connaissant deux angles, on trouve le troisième.",
+          "note": "même un triangle «&nbsp;bizarre&nbsp;»&nbsp;!"
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "A = 65° et B = 40°. Angle __C__&nbsp;?",
+          "calcul": "C = 180 − 65 − 40",
+          "aparte": "180 − 105",
+          "resultat": "C = [[75°]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les conséquences",
+          "entetes": [
+            "Le triangle",
+            "Ce qu’on en déduit"
+          ],
+          "lignes": [
+            [
+              "**Rectangle**",
+              "les deux angles aigus sont complémentaires (90°)"
+            ],
+            [
+              "**Équilatéral**",
+              "**60°** chacun"
+            ],
+            [
+              "**Isocèle**",
+              "les deux angles à la base sont égaux"
+            ],
+            [
+              "**Rectangle isocèle**",
+              "90°, 45°, 45°"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Pourquoi 180°&nbsp;?",
+          "etapes": [
+            {
+              "titre": "Parallèle",
+              "texte": "tracer par un sommet la parallèle au côté opposé"
+            },
+            {
+              "titre": "Alternes-internes",
+              "texte": "ils sont égaux aux deux autres angles"
+            },
+            {
+              "titre": "Angle plat",
+              "texte": "les trois angles s’alignent : 180°"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "L’angle extérieur",
+          "oui": {
+            "titre": "Le raccourci",
+            "texte": "L’angle **extérieur** en un sommet est égal à la **somme des deux autres** angles intérieurs."
+          },
+          "non": {
+            "titre": "Impossible",
+            "texte": "Un triangle n’a qu’**un seul** angle droit ou obtus&nbsp;: deux dépasseraient 180°."
+          },
+          "essai": {
+            "texte": "Angles intérieurs de 50° et 60°&nbsp;: l’angle extérieur au troisième sommet vaut 50 + 60 = **110°**."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "A = 65° et B = 40°.",
+              "quoi": "les données"
+            },
+            {
+              "texte": "Dans le triangle ABC, la somme des angles est 180°,",
+              "quoi": "la propriété"
+            },
+            {
+              "texte": "donc C = 180 − 65 − 40 = 75°.",
+              "quoi": "le calcul"
+            }
+          ],
+          "pied": "Une figure ne prouve rien&nbsp;: ==cite la propriété==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre l’angle **au sommet** et les angles **à la base** d’un isocèle&nbsp;: ce sont trois angles.",
+            "Se fier au **dessin** plutôt qu’au calcul.",
+            "Oublier de soustraire **les deux** angles connus."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Angles de 30° et 70°&nbsp;: le **troisième**&nbsp;?",
+            "Isocèle, angle au sommet 40°&nbsp;: un **angle à la base**&nbsp;?",
+            "Triangle rectangle, un angle aigu de 35°&nbsp;: l’**autre**&nbsp;?"
+          ],
+          "reponses": "1) 80° · 2) 70° ((180 − 40) ÷ 2) · 3) 55° (90 − 35)"
+        }
+      ]
+    }
+  ]
+}

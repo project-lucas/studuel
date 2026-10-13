@@ -1,0 +1,116 @@
+{
+  "titre": "Changements d’état",
+  "titreSurligne": "état",
+  "accroche": "Six passages, six noms à connaître.",
+  "bonus": "Eau pure : fusion **0 °C** · ébullition **100 °C** (sous 1 013 hPa) · pendant un changement d’état, la température **reste constante**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/les-changements-d-etat-de-l-eau.webp",
+    "prompt": "a glossy golden ice cube melting into a violet water drop and rising as a small steam cloud, a thermometer beside it, sparkles"
+  },
+  "marcel": "0 °C et 100 °C,\nles deux repères !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les six changements",
+          "entetes": ["De → à", "Nom"],
+          "lignes": [
+            ["solide → liquide", "**fusion**"],
+            ["liquide → solide", "**solidification**"],
+            ["liquide → gaz", "**vaporisation**"],
+            ["gaz → liquide", "**liquéfaction**"],
+            ["solide → gaz", "**sublimation**"],
+            ["gaz → solide", "**condensation solide**"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Deux vaporisations",
+          "items": [
+            { "terme": "Évaporation", "definition": "en **surface**, à toute température" },
+            { "terme": "Ébullition", "definition": "dans **toute la masse**, à température fixe" },
+            { "terme": "Palier", "definition": "la température **reste constante** pendant le changement&nbsp;: signature d’un corps pur" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Dans la nature",
+          "colonnes": 4,
+          "cartes": [
+            { "titre": "Rosée", "texte": "une liquéfaction" },
+            { "titre": "Givre", "texte": "une condensation solide" },
+            { "titre": "Buée", "texte": "une liquéfaction sur la vitre froide" },
+            { "titre": "Brouillard", "texte": "des gouttelettes, pas de la vapeur" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "De l’eau bouillante est chauffée encore plus fort. Sa température&nbsp;?",
+          "calcul": "palier : l’eau pure reste à 100 °C",
+          "aparte": "elle se vaporise juste plus vite",
+          "resultat": "toujours [[100 °C]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Ce qui change les valeurs",
+          "oui": { "titre": "L’altitude", "texte": "la pression baisse&nbsp;: l’eau bout **en dessous** de 100 °C." },
+          "non": { "titre": "Le sel", "texte": "la fusion **descend** sous 0 °C&nbsp;: on sale les routes." },
+          "essai": { "texte": "La vapeur d’eau est **invisible**. Ce qu’on voit au-dessus d’une casserole, ce sont déjà des gouttelettes." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "L’eau passe de l’état liquide à l’état gaz.", "quoi": "le passage" },
+            { "texte": "C’est une vaporisation.", "quoi": "le nom" },
+            { "texte": "Elle a lieu à 100 °C sous 1 013 hPa.", "quoi": "la valeur" }
+          ],
+          "pied": "Sur une courbe de refroidissement, le ==palier== est la signature d’un corps pur."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **liquéfaction** et **solidification**.",
+            "Croire que la température **monte** pendant l’ébullition.",
+            "Appeler **vapeur** le brouillard ou la buée.",
+            "Oublier la **pression** : 100 °C vaut sous 1 013 hPa."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Comment s’appelle le passage **gaz → liquide**&nbsp;?",
+            "À quelle température l’eau pure **fond**-elle&nbsp;?",
+            "La **rosée** est quel changement d’état&nbsp;?"
+          ],
+          "reponses": "1) liquéfaction · 2) 0 °C · 3) une liquéfaction"
+        }
+      ]
+    }
+  ]
+}

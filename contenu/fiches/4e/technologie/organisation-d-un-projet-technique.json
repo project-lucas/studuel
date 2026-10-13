@@ -1,0 +1,179 @@
+{
+  "titre": "Organiser un projet",
+  "titreSurligne": "projet",
+  "accroche": "Des tâches, des délais, une équipe.",
+  "bonus": "**Gantt** : abscisse = temps, ordonnée = tâches · **chemin critique** = aucun retard permis",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/technologie/organisation-d-un-projet-technique.webp",
+    "prompt": "a glossy violet Gantt chart with golden horizontal bars and a small calendar and flag, sparkles, same art style as the reference icons, no text, magenta background"
+  },
+  "marcel": "Bien planifié,\nà moitié réussi !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Les six phases",
+          "items": [
+            {
+              "titre": "Analyse",
+              "texte": "cahier des charges"
+            },
+            {
+              "titre": "Recherche",
+              "texte": "pistes comparées"
+            },
+            {
+              "titre": "Conception",
+              "texte": "plans, calculs"
+            },
+            {
+              "titre": "Réalisation",
+              "texte": "prototype ou objet"
+            },
+            {
+              "titre": "Tests",
+              "texte": "verdict face au cahier"
+            },
+            {
+              "titre": "Bilan",
+              "texte": "ce qui est à améliorer"
+            }
+          ],
+          "deux": true
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Planifier",
+          "items": [
+            {
+              "terme": "Tâche",
+              "definition": "durée estimée, responsable, **antériorités**"
+            },
+            {
+              "terme": "Antériorité",
+              "definition": "ce qui doit être **fini avant**"
+            },
+            {
+              "terme": "Chemin critique",
+              "definition": "tâches dont le retard **décale la fin**"
+            },
+            {
+              "terme": "Marge",
+              "definition": "retard possible hors chemin critique"
+            },
+            {
+              "terme": "Revue de projet",
+              "definition": "point régulier pour corriger la trajectoire"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Construire un Gantt",
+          "etapes": [
+            {
+              "titre": "Lister",
+              "texte": "les tâches, leur durée et leurs antériorités"
+            },
+            {
+              "titre": "Placer",
+              "texte": "une barre par tâche, longueur = durée"
+            },
+            {
+              "titre": "Lire",
+              "texte": "parallèles, attentes, date de fin, chemin critique"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "A dure __2 j__, B (après A) dure __3 j__. Fin&nbsp;?",
+          "calcul": "B attend A : 2 + 3",
+          "aparte": "en série",
+          "resultat": "[[5 jours]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Retard : grave ou pas&nbsp;?",
+          "oui": {
+            "titre": "Chemin critique",
+            "texte": "Un retard **décale tout** le projet : surveillance maximale."
+          },
+          "non": {
+            "titre": "Hors chemin",
+            "texte": "La tâche a une **marge** : un petit retard est sans effet."
+          },
+          "essai": {
+            "texte": "Deux tâches <i>en parallèle</i> n’additionnent pas leurs durées."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Abscisse : le temps ; ordonnée : les tâches.",
+              "quoi": "lire le Gantt"
+            },
+            {
+              "texte": "Les tâches du chemin critique n’ont aucune marge.",
+              "quoi": "le repère"
+            },
+            {
+              "texte": "Le carnet de bord garde essais et décisions.",
+              "quoi": "la trace"
+            },
+            {
+              "texte": "Je répartis les rôles : conception, code, dossier.",
+              "quoi": "l’équipe"
+            }
+          ],
+          "pied": "On lit ==les axes== puis on conclut sur ==la date de fin==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Inverser **temps** et **tâches** sur les axes.",
+            "**Additionner** des tâches parallèles.",
+            "Oublier les **antériorités**.",
+            "Ne pas noter les **essais ratés** au carnet de bord."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que porte l’**abscisse** d’un Gantt&nbsp;?",
+            "Qu’est-ce que le **chemin critique**&nbsp;?",
+            "Quelle phase produit le **cahier des charges**&nbsp;?"
+          ],
+          "reponses": "1) le temps · 2) tâches sans marge · 3) l’analyse du besoin"
+        }
+      ]
+    }
+  ]
+}

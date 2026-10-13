@@ -1,0 +1,116 @@
+{
+  "titre": "Vitesse, débit, conso",
+  "titreSurligne": "Vitesse",
+  "accroche": "Calculer, convertir, vérifier.",
+  "bonus": "**1 h 30 = 1,5 h**, jamais 1,30 h · 1 h = 60 min = 3 600 s",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/etudier-des-grandeurs-quotients.webp",
+    "prompt": "a glossy violet stopwatch with a golden speed arrow and a small golden fuel drop, sparkles"
+  },
+  "marcel": "Convertis les durées,\npuis calcule&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La vitesse moyenne",
+          "taille": "mini",
+          "lignes": ["v = {d/t}", "d = v × t", "t = {d/v}"],
+          "regle": "**d** en haut, **v** et **t** en bas du triangle&nbsp;: on ==masque== la grandeur cherchée pour lire l’opération.",
+          "note": "durées en heures pour des km/h&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les conversions",
+          "items": [
+            { "terme": "km/h → m/s", "definition": "on **divise** par 3,6&nbsp;: 36 km/h = **10 m/s**" },
+            { "terme": "m/s → km/h", "definition": "on **multiplie** par 3,6&nbsp;: 20 m/s = **72 km/h**" },
+            { "terme": "Débit", "definition": "volume ÷ durée, en L/min" },
+            { "terme": "Consommation", "definition": "(volume ÷ distance) × 100, en L/100 km" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en quatre temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "l’unité demandée&nbsp;: elle donne l’opération" },
+            { "titre": "Convertir", "texte": "les données en unités compatibles" },
+            { "titre": "Calculer", "texte": "avec la bonne formule" },
+            { "titre": "Vérifier", "texte": "l’ordre de grandeur" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "150 km en 1 h 30. __Vitesse moyenne__&nbsp;?",
+          "calcul": "1 h 30 = 1,5 h\nv = 150 ÷ 1,5",
+          "aparte": "30 min = 0,5 h",
+          "resultat": "v = [[100 km/h]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Moyenne ≠ instantanée", "texte": "La **moyenne** porte sur tout le trajet, l’**instantanée** est celle du compteur." },
+            { "titre": "Aller-retour", "texte": "On repasse par la **distance totale** et la **durée totale**." },
+            { "titre": "Débit", "texte": "Baignoire de 150 L, robinet à 12 L/min&nbsp;: 150 ÷ 12 = **12,5 min**." },
+            { "titre": "Consommation", "texte": "6,5 L/100 km sur 420 km&nbsp;: 6,5 × 4,2 = **27,3 L**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "1 h 30 min = 1,5 h", "quoi": "la conversion" },
+            { "texte": "v = d ÷ t = 150 ÷ 1,5", "quoi": "la formule" },
+            { "texte": "v = 100 km/h", "quoi": "l’unité" },
+            { "texte": "Plausible pour une voiture&nbsp;: ✔", "quoi": "le bon sens" }
+          ],
+          "pied": "Un piéton à 300 km/h&nbsp;? ==Vérifie== l’ordre de grandeur."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire **1 h 30 = 1,30 h**&nbsp;: les durées ne sont pas décimales.",
+            "Faire la **moyenne des vitesses** d’un aller-retour.",
+            "Mélanger **m/s** et **km/h**.",
+            "Oublier le «&nbsp;× 100&nbsp;» de la consommation."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**36 km/h** en m/s&nbsp;?",
+            "**2 h 15 min** en heures&nbsp;?",
+            "5 L/100 km sur 300 km&nbsp;: **combien de litres**&nbsp;?"
+          ],
+          "reponses": "1) 10 m/s · 2) 2,25 h · 3) 15 L (5 × 3)"
+        }
+      ]
+    }
+  ]
+}

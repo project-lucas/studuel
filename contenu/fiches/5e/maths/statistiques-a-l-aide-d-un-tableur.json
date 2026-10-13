@@ -1,0 +1,194 @@
+{
+  "titre": "Stats au tableur",
+  "titreSurligne": "tableur",
+  "accroche": "La machine calcule, tu vérifies.",
+  "bonus": "Une formule commence par **=** · **$B$12** reste figée · vérifie **une valeur à la main**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/statistiques-a-l-aide-d-un-tableur.webp",
+    "prompt": "a glossy violet spreadsheet grid with a golden highlighted cell and a small bar chart popping out, sparkles"
+  },
+  "marcel": "Vérifie une valeur\nà la main !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les formules utiles",
+          "entetes": [
+            "La formule",
+            "Elle donne"
+          ],
+          "lignes": [
+            [
+              "=A1+B1",
+              "l’addition de deux cellules"
+            ],
+            [
+              "=SOMME(A1:A20)",
+              "la somme d’une plage"
+            ],
+            [
+              "=MOYENNE(A1:A20)",
+              "la moyenne"
+            ],
+            [
+              "=MAX(…) − MIN(…)",
+              "l’étendue"
+            ],
+            [
+              "=NB(A1:A20)",
+              "le nombre de valeurs"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Cellule",
+              "definition": "colonne (lettre) + ligne (numéro) : **B3**"
+            },
+            {
+              "terme": "Plage",
+              "definition": "deux cellules et deux-points : **A1:A20**"
+            },
+            {
+              "terme": "Formule",
+              "definition": "elle commence **toujours** par ="
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Un graphique en trois temps",
+          "etapes": [
+            {
+              "titre": "Sélectionner",
+              "texte": "les données à représenter"
+            },
+            {
+              "titre": "Choisir",
+              "texte": "le type de graphique adapté au caractère"
+            },
+            {
+              "titre": "Vérifier",
+              "texte": "le titre, la légende et les axes avec leurs unités"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "La formule =A1+B1 est recopiée __une ligne plus bas__.",
+          "calcul": "=A1+B1 devient =A2+B2",
+          "aparte": "référence relative",
+          "resultat": "elle se [[décale]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Relative ou absolue&nbsp;?",
+          "oui": {
+            "titre": "Absolue",
+            "texte": "Avec des **dollars** ($B$12), la référence reste **figée** à la recopie."
+          },
+          "non": {
+            "titre": "Relative",
+            "texte": "Sans dollars (A1), elle se **décale** : les fréquences deviennent fausses."
+          },
+          "essai": {
+            "texte": "Fréquence = effectif ÷ total&nbsp;: le total doit rester **$B$12**. Sans les dollars, les résultats sont ==faux mais plausibles==."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Pourquoi un tableur",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Changer une note",
+              "texte": "la moyenne se recalcule toute seule."
+            },
+            {
+              "titre": "Tester une idée",
+              "texte": "on modifie une valeur et on regarde l’effet."
+            },
+            {
+              "titre": "Un graphique en trois clics",
+              "texte": "le temps gagné va à l’interprétation."
+            },
+            {
+              "titre": "La règle d’or",
+              "texte": "avant de se fier à une colonne, vérifier une valeur à la main."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "En B13, j’écris =SOMME(B2:B12)",
+              "quoi": "la formule"
+            },
+            {
+              "texte": "Je recopie vers le bas",
+              "quoi": "la poignée"
+            },
+            {
+              "texte": "Je contrôle une ligne à la main",
+              "quoi": "la vérification"
+            }
+          ],
+          "pied": "Le temps gagné sur le calcul va à l’==interprétation==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **=** devant la formule.",
+            "Recopier sans **figer** la bonne cellule.",
+            "Un graphique **sans titre** ni unité.",
+            "Faire **confiance** sans vérifier."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle formule donne la **moyenne** de A1 à A20&nbsp;?",
+            "**=A1+B1** recopiée en dessous devient quoi&nbsp;?",
+            "Comment **figer** la cellule B12&nbsp;?"
+          ],
+          "reponses": "1) =MOYENNE(A1:A20) · 2) =A2+B2 · 3) avec des dollars : $B$12"
+        }
+      ]
+    }
+  ]
+}

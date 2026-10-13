@@ -1,0 +1,124 @@
+{
+  "titre": "Les pourcentages",
+  "titreSurligne": "pourcentages",
+  "accroche": "Une proportion rapportée à cent.",
+  "bonus": "50 % = ÷ 2 · 25 % = ÷ 4 · 10 % = ÷ 10 · 20 % = ÷ 5 · 1 % = ÷ 100",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/pourcentages-definition-et-application.webp",
+    "prompt": "a glossy golden percent sign with a violet pie chart quarter slice beside it, small coins and sparkles, same art style as the reference icons"
+  },
+  "marcel": "Un pourcentage,\nc’est sur cent !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La définition",
+          "lignes": ["25 % = {25/100} = 0,25"],
+          "regle": "**t %** veut dire «&nbsp;t pour cent&nbsp;». C’est de la proportionnalité&nbsp;: le coefficient est ==t/100==.",
+          "note": "30 % de 80 € = 80 × 0,30 = 24 €"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "À connaître par cœur",
+          "entetes": ["Le %", "La fraction", "Le geste"],
+          "lignes": [
+            ["**50 %**", "1/2", "÷ 2"],
+            ["**25 %**", "1/4", "÷ 4"],
+            ["**75 %**", "3/4", "50 % + 25 %"],
+            ["**10 %**", "1/10", "÷ 10"],
+            ["**20 %**", "1/5", "÷ 5"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Les trois questions du chapitre",
+          "etapes": [
+            { "titre": "La partie", "texte": "on **multiplie** : 30 % de 80 = 80 × 0,30 = 24" },
+            { "titre": "Le pourcentage", "texte": "partie ÷ tout × 100 : 15 sur 25 → 60 %" },
+            { "titre": "Le tout", "texte": "on **divise** : 24 ÷ 0,30 = 80" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un livre à 45 € baisse de __20 %__. Quelle réduction&nbsp;?",
+          "calcul": "45 ÷ 5 = 9",
+          "aparte": "20 % = 1/5",
+          "resultat": "Réduction&nbsp;: [[9 €]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Augmenter, diminuer",
+          "entetes": ["L’évolution", "Le coefficient"],
+          "lignes": [
+            ["**Augmenter** de t %", "× (1 + t/100)&nbsp;: +15 % → **× 1,15**"],
+            ["**Diminuer** de t %", "× (1 − t/100)&nbsp;: −15 % → **× 0,85**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Deux hausses de 10 %",
+          "oui": { "titre": "Le bon calcul", "texte": "Les coefficients se **multiplient**&nbsp;: 1,1 × 1,1 = 1,21, soit **+21 %**." },
+          "non": { "titre": "Le piège", "texte": "Additionner&nbsp;: 10 % + 10 % = 20 %. **Faux**&nbsp;!" },
+          "essai": { "texte": "100 € → 110 € → 121 €. Le deuxième 10 % porte sur **110**, pas sur 100." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "20 % de 45 = 45 × 0,20", "quoi": "la partie" },
+            { "texte": "= 9 €", "quoi": "le résultat" },
+            { "texte": "Prix final&nbsp;: 45 − 9 = 36 €", "quoi": "la phrase" }
+          ],
+          "pied": "Écris toujours **de quoi** on prend le pourcentage."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "**Additionner** deux pourcentages successifs.",
+            "Un pourcentage ne veut rien dire sans **le tout**&nbsp;: +50 % sur 2 € pèse moins que +5 % sur 100 €.",
+            "−15 %, c’est × **0,85**, pas × 0,15."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**15 %** de 200&nbsp;?",
+            "**18 sur 24**&nbsp;: quel pourcentage&nbsp;?",
+            "Un article à 80 € gagne **+10 %**. Nouveau prix&nbsp;?"
+          ],
+          "reponses": "1) 30 · 2) 75 % · 3) 88 € (80 × 1,1)"
+        }
+      ]
+    }
+  ]
+}

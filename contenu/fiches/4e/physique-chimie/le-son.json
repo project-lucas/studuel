@@ -1,0 +1,116 @@
+{
+  "titre": "Le son",
+  "titreSurligne": "son",
+  "accroche": "Une vibration qui a besoin de matière.",
+  "bonus": "Air&nbsp;: **340 m/s** · **d = v × t** · pas de son **dans le vide** · audible&nbsp;: **20 Hz à 20 000 Hz** · danger dès **85 dB**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/le-son.webp",
+    "prompt": "a glossy violet loudspeaker with golden sound wave rings spreading out, a small golden bell ringing beside it, sparkles"
+  },
+  "marcel": "Dans le vide,\npersonne ne t’entend !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Distance et vitesse du son",
+          "taille": "mini",
+          "lignes": ["d = v × t", "v ≈ 340 m/s (air)"],
+          "regle": "**d** distance en **mètres**, **v** vitesse en m/s, **t** durée en **secondes**. Pour un **écho** ou un sonar, le son fait l’aller-retour : la distance est la **moitié**.",
+          "note": "écho&nbsp;: on divise par 2&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Vitesse du son",
+          "entetes": ["Le milieu", "Vitesse"],
+          "lignes": [
+            ["L’**air**", "environ **340 m/s**"],
+            ["L’**eau**", "environ 1 500 m/s"],
+            ["L’**acier**", "environ 5 000 m/s"],
+            ["La **lumière**", "300 000 km/s (bien plus vite)"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Du son à l’oreille",
+          "etapes": [
+            { "titre": "Vibration", "texte": "un objet qui vibre&nbsp;: corde, membrane, cordes vocales" },
+            { "titre": "Propagation", "texte": "les particules du milieu se **compriment** puis se **dilatent**" },
+            { "titre": "Réception", "texte": "il faut un **milieu matériel** : dans le vide, aucun son" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Le tonnerre arrive __3 s__ après l’éclair. Distance de l’orage (v = 340 m/s)&nbsp;?",
+          "calcul": "d = 340 × 3",
+          "aparte": "≈ 1 km, soit 3 s ÷ 3",
+          "resultat": "d = [[1 020 m]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Fréquence ou niveau&nbsp;?",
+          "oui": { "titre": "Fréquence (Hz)", "texte": "Elle donne la **hauteur**&nbsp;: grave ou aigu. L’oreille entend de **20 à 20 000 Hz**." },
+          "non": { "titre": "Niveau sonore (dB)", "texte": "Il donne le **volume** perçu&nbsp;: faible ou fort." },
+          "essai": { "texte": "On voit l’éclair <i>avant</i> d’entendre le tonnerre&nbsp;: la lumière va bien plus vite." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Protéger son oreille",
+          "deux": true,
+          "items": [
+            { "titre": "Dès 85 dB", "texte": "une exposition **longue** abîme l’oreille" },
+            { "titre": "120 dB", "texte": "le **seuil de douleur**" },
+            { "titre": "Définitif", "texte": "les cellules **ne repoussent pas**" },
+            { "titre": "Les bons gestes", "texte": "volume modéré, pauses, **bouchons** en concert" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le son passe dans le **vide**.",
+            "Confondre **fréquence** (Hz) et **niveau sonore** (dB).",
+            "Oublier de **diviser par 2** pour un écho.",
+            "Compter le temps en **ms** au lieu de secondes.",
+            "Dire que la **lumière** et le son vont à la même vitesse.",
+            "Croire qu’un son fort est forcément **aigu**.",
+            "Penser que l’oreille abîmée **se régénère** : c’est définitif."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Vitesse du son dans l’**air**&nbsp;?",
+            "Un son met **2 s** à parcourir la distance&nbsp;: **d**&nbsp;?",
+            "Unité du **niveau sonore**&nbsp;?"
+          ],
+          "reponses": "1) 340 m/s · 2) 680 m · 3) le décibel (dB)"
+        }
+      ]
+    }
+  ]
+}

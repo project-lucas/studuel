@@ -1,0 +1,174 @@
+{
+  "titre": "Circulation de l’info",
+  "titreSurligne": "info",
+  "accroche": "Des 0 et des 1 qui voyagent.",
+  "bonus": "**1 octet = 8 bits** · ko, Mo, Go, To · le « cloud » est un vrai bâtiment",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/technologie/l-information-et-sa-circulation.webp",
+    "prompt": "a glossy violet cloud with golden zeros and ones inside, small arrows and a fiber optic cable, sparkles"
+  },
+  "marcel": "Tout voyage\nen 0 et en 1 !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les mots à connaître",
+          "items": [
+            {
+              "terme": "Binaire",
+              "definition": "deux états : **0** et **1**"
+            },
+            {
+              "terme": "Bit",
+              "definition": "l’unité de base"
+            },
+            {
+              "terme": "Octet",
+              "definition": "**8 bits**"
+            },
+            {
+              "terme": "Réseau",
+              "definition": "des machines reliées"
+            },
+            {
+              "terme": "Adresse IP",
+              "definition": "l’adresse d’une machine"
+            },
+            {
+              "terme": "Cloud",
+              "definition": "des serveurs à distance"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les supports",
+          "entetes": [
+            "Support",
+            "Sous quelle forme"
+          ],
+          "lignes": [
+            [
+              "**Câble électrique**",
+              "un courant"
+            ],
+            [
+              "**Ondes** (wifi, Bluetooth)",
+              "dans l’air, sans fil"
+            ],
+            [
+              "**Fibre optique**",
+              "de la lumière, la plus rapide"
+            ],
+            [
+              "**Stockage**",
+              "disque, carte SD, serveur distant"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Envoyer une photo",
+          "etapes": [
+            {
+              "titre": "Convertir",
+              "texte": "l’image devient des 0 et des 1"
+            },
+            {
+              "titre": "Découper",
+              "texte": "en paquets qui prennent chacun leur chemin"
+            },
+            {
+              "titre": "Réassembler",
+              "texte": "à l’arrivée, l’image réapparaît"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un fichier fait __2 octets__. Combien de bits&nbsp;?",
+          "calcul": "1 octet = 8 bits\n2 × 8 = 16",
+          "aparte": "un octet, c’est 8 bits",
+          "resultat": "[[16 bits]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le « cloud »&nbsp;?",
+          "oui": {
+            "titre": "La réalité",
+            "texte": "Des **machines** dans un centre de données, qui consomme de l’électricité."
+          },
+          "non": {
+            "titre": "L’idée fausse",
+            "texte": "Un nuage **immatériel**, qui n’est nulle part."
+          },
+          "essai": {
+            "texte": "Le cloud, c’est <i>l’ordinateur de quelqu’un d’autre</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "L’information est convertie en 0 et 1.",
+              "quoi": "le codage"
+            },
+            {
+              "texte": "Elle circule par câble, ondes ou fibre.",
+              "quoi": "le support"
+            },
+            {
+              "texte": "Internet est le réseau des réseaux.",
+              "quoi": "le réseau"
+            }
+          ],
+          "pied": "Ce qu’on met en ligne ==échappe vite== à son auteur : on réfléchit avant de publier."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **bit** et **octet**.",
+            "Croire le « cloud » **immatériel**.",
+            "Penser que les données **disparaissent** quand on les efface.",
+            "Oublier le **mot de passe** solide."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de bits dans **un octet**&nbsp;?",
+            "Quel support transmet de la **lumière**&nbsp;?",
+            "Que sont les **paquets**&nbsp;?"
+          ],
+          "reponses": "1) 8 bits · 2) la fibre optique · 3) des morceaux de données envoyés puis réassemblés"
+        }
+      ]
+    }
+  ]
+}

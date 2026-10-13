@@ -1,0 +1,182 @@
+{
+  "titre": "Modéliser un problème",
+  "titreSurligne": "Modéliser",
+  "accroche": "Écrire le problème avant de le résoudre.",
+  "bonus": "Vraisemblance : pas d’âge négatif, pas de moitié de personne",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/modeliser-une-situation.webp",
+    "prompt": "a glossy violet speech bubble turning into a golden equation on a notebook page, a pencil, tiny golden sparkles"
+  },
+  "marcel": "Soit x…\nOn y va&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les traductions",
+          "entetes": [
+            "L’énoncé",
+            "En maths"
+          ],
+          "lignes": [
+            [
+              "La somme de x et 5",
+              "**x + 5**"
+            ],
+            [
+              "Le double de x",
+              "**2x**"
+            ],
+            [
+              "Le triple de x, plus 4",
+              "**3x + 4**"
+            ],
+            [
+              "Trois entiers consécutifs",
+              "**x, x + 1, x + 2**"
+            ],
+            [
+              "Prix après +20 %",
+              "**1,2 × p**"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Choisir le modèle",
+          "entetes": [
+            "La situation",
+            "Le modèle"
+          ],
+          "lignes": [
+            [
+              "Proportionnalité",
+              "tableau et coefficient"
+            ],
+            [
+              "Une égalité à trouver",
+              "une **équation**"
+            ],
+            [
+              "Comparer deux tarifs",
+              "équation, puis discussion"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Les étapes clés",
+          "etapes": [
+            {
+              "titre": "Inconnue",
+              "texte": "écrire « soit x le nombre de… »"
+            },
+            {
+              "titre": "Traduire",
+              "texte": "et résoudre l’équation obtenue"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "vérifier le sens, puis faire une phrase"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Programme : nombre x, ajoute 3, double, retire 6.",
+          "calcul": "2(x + 3) − 6 = 2x + 6 − 6",
+          "aparte": "on développe",
+          "resultat": "On obtient [[2x]], le double de x"
+        },
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Une inconnue bien définie",
+          "oui": {
+            "titre": "Précise",
+            "texte": "« Soit x le **prix d’un cahier**, en euros. »"
+          },
+          "non": {
+            "titre": "Floue",
+            "texte": "« Soit x le cahier. » On ne sait pas ce qu’on cherche."
+          },
+          "essai": {
+            "texte": "Résultat −3 pour un nombre d’élèves&nbsp;: le calcul est peut-être juste, mais le résultat **n’est pas vraisemblable**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 4,
+          "titre": "Vérifier la vraisemblance",
+          "paragraphes": [
+            "Un âge négatif, un nombre de personnes décimal, une longueur nulle&nbsp;: ces résultats **signalent une erreur**, même quand le calcul est juste. On relit alors l’énoncé et la définition de l’inconnue."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Soit x le prix d’un cahier, en euros.",
+              "quoi": "l’inconnue"
+            },
+            {
+              "texte": "3x + 2 = 11",
+              "quoi": "l’équation"
+            },
+            {
+              "texte": "Un cahier coûte 3 €.",
+              "quoi": "la phrase finale"
+            }
+          ],
+          "pied": "La réponse est une ==phrase==, pas « x = 3 »."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Bâcler l’**inconnue**&nbsp;: tout en dépend.",
+            "« x diminué de 7 » s’écrit **x − 7**, pas 7 − x.",
+            "Oublier de **conclure** par une phrase.",
+            "Ne pas vérifier la **vraisemblance** du résultat."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Traduire « le triple de x, augmenté de 4 ».",
+            "Trois entiers consécutifs, en commençant par n&nbsp;?",
+            "Que fait le programme +3, ×2, −6&nbsp;?"
+          ],
+          "reponses": "1) 3x + 4 · 2) n, n + 1, n + 2 · 3) on obtient le double du nombre"
+        }
+      ]
+    }
+  ]
+}

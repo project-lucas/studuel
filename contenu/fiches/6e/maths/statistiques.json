@@ -1,0 +1,182 @@
+{
+  "titre": "Statistiques",
+  "titreSurligne": "Statistiques",
+  "accroche": "Recueillir, représenter, résumer.",
+  "bonus": "fréquence = effectif ÷ total · angle = fréquence × **360°** · moyenne = somme ÷ nombre",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/maths/statistiques.webp",
+    "prompt": "a glossy violet bar chart with golden bars of different heights and a small golden pie chart beside it, tiny sparkles, same art style as the reference icons"
+  },
+  "marcel": "Un axe sans zéro\nmaquille !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Population",
+              "definition": "l’ensemble étudié, par exemple les élèves de la classe"
+            },
+            {
+              "terme": "Caractère",
+              "definition": "ce qu’on observe, par exemple la couleur des yeux"
+            },
+            {
+              "terme": "Effectif",
+              "definition": "le nombre d’individus d’une catégorie"
+            },
+            {
+              "terme": "Fréquence",
+              "definition": "effectif ÷ effectif total, souvent en %"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La moyenne",
+          "taille": "mini",
+          "lignes": [
+            "{somme des valeurs/nombre de valeurs}"
+          ],
+          "regle": "Elle ne dit ==rien== de la dispersion&nbsp;: 13 peut venir de « tous à 13 » ou de « la moitié à 6, la moitié à 20 ».",
+          "note": "regarde aussi le détail&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Choisir son graphique",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Barres",
+              "texte": "**comparer** des catégories entre elles"
+            },
+            {
+              "titre": "Circulaire",
+              "texte": "les **parts d’un tout**. Disque entier = 360°, 25 % = 90°"
+            },
+            {
+              "titre": "Cartésien",
+              "texte": "une **évolution** dans le temps"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Les formules à connaître",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Fréquence",
+              "texte": "effectif ÷ effectif total"
+            },
+            {
+              "titre": "Angle du disque",
+              "texte": "fréquence × 360°"
+            },
+            {
+              "titre": "Effectif total",
+              "texte": "la somme de tous les effectifs"
+            },
+            {
+              "titre": "Moyenne",
+              "texte": "somme des valeurs ÷ nombre de valeurs"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Quatre notes&nbsp;: 12, 15, 9 et 16. __Moyenne__&nbsp;?",
+          "calcul": "12 + 15 + 9 + 16 = 52",
+          "aparte": "52 ÷ 4",
+          "resultat": "moyenne = [[13]]"
+        },
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Lire un graphique sans se faire avoir",
+          "etapes": [
+            {
+              "titre": "Titre et axes",
+              "texte": "que mesure chaque axe&nbsp;?"
+            },
+            {
+              "titre": "Unités",
+              "texte": "vérifier ce qu’elles comptent"
+            },
+            {
+              "titre": "Départ",
+              "texte": "l’échelle commence-t-elle à zéro&nbsp;?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Effectif total&nbsp;: 8 + 12 + 10 = 30",
+              "quoi": "le total"
+            },
+            {
+              "texte": "Fréquence = 12 ÷ 30 = 0,4 = 40 %",
+              "quoi": "la fréquence"
+            },
+            {
+              "texte": "Angle = 0,4 × 360° = 144°",
+              "quoi": "le disque"
+            }
+          ],
+          "pied": "La somme des effectifs doit donner ==l’effectif total==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Un axe qui ne part pas de **zéro**&nbsp;: les écarts sont exagérés.",
+            "Oublier de **vérifier** la somme des effectifs.",
+            "Confondre **effectif** et **fréquence**.",
+            "Croire que la moyenne dit tout."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Moyenne de **8, 10 et 12**&nbsp;?",
+            "Une catégorie de **50 %** sur un diagramme circulaire&nbsp;: quel angle&nbsp;?",
+            "**6** élèves sur **24**&nbsp;: la fréquence en %&nbsp;?"
+          ],
+          "reponses": "1) 10 · 2) 180° · 3) 25 %"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "titre": "Utiliser une échelle",
+  "titreSurligne": "échelle",
+  "accroche": "Du plan au terrain, et retour.",
+  "bonus": "échelle = **plan ÷ réel** · longueurs ÷ **k** · aires ÷ **k²** · volumes ÷ **k³**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/utiliser-une-echelle.webp",
+    "prompt": "a glossy violet ruler lying on a small folded golden map with a tiny pin, sparkles"
+  },
+  "marcel": "Même unité\navant de calculer !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La définition",
+          "taille": "mini",
+          "lignes": [
+            "échelle = {plan/réel}",
+            "au 1/25 000 : 1 cm = 25 000 cm"
+          ],
+          "regle": "Les deux distances sont dans ==la même unité==, donc l’échelle n’a **pas d’unité**. Moins de 1&nbsp;: réduction (plan, carte). Plus de 1&nbsp;: agrandissement.",
+          "note": "convertir d’abord&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les deux sens",
+          "entetes": [
+            "Sens",
+            "Opération",
+            "Au 1/25 000"
+          ],
+          "lignes": [
+            [
+              "plan → **réel**",
+              "÷ l’échelle, soit × 25 000",
+              "3 cm → 75 000 cm = 750 m"
+            ],
+            [
+              "réel → **plan**",
+              "on multiplie",
+              "2 km → 200 000 cm → 8 cm"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Convertir",
+              "texte": "tout dans la même unité (1 km = 100 000 cm)"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "diviser ou multiplier par l’échelle"
+            },
+            {
+              "titre": "Reconvertir",
+              "texte": "dans l’unité demandée, avec l’unité écrite"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Sur une carte au __1/25 000__, deux villages sont à __6 cm__. Distance __réelle__&nbsp;?",
+          "calcul": "6 × 25 000 = 150 000 cm",
+          "aparte": "100 000 cm = 1 km",
+          "resultat": "150 000 cm = [[1,5 km]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Aires et volumes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Au 1/100",
+              "texte": "les longueurs sont divisées par **100**."
+            },
+            {
+              "titre": "Les aires",
+              "texte": "divisées par 100² = **10 000**."
+            },
+            {
+              "titre": "Les volumes",
+              "texte": "divisés par 100³ = **1 000 000**."
+            },
+            {
+              "titre": "Un salon",
+              "texte": "20 m² font 20 cm² sur un plan au 1/100."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Convertir d’abord",
+          "oui": {
+            "titre": "Juste",
+            "texte": "6 × 25 000 = 150 000 cm = **1,5 km**."
+          },
+          "non": {
+            "titre": "Faux",
+            "texte": "6 × 25 000 = 150 000 **km**&nbsp;: unité oubliée."
+          },
+          "essai": {
+            "titre": "À toi",
+            "texte": "4 cm sur une carte au 1/10 000&nbsp;?"
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Échelle 1/25 000 : 1 cm sur la carte = 25 000 cm.",
+              "quoi": "l’échelle"
+            },
+            {
+              "texte": "6 × 25 000 = 150 000 cm",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "150 000 cm = 1,5 km",
+              "quoi": "la conversion"
+            }
+          ],
+          "pied": "Une carte ==réduit==, donc le réel est plus grand que le plan."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Calculer **sans convertir** : cm avec m ou km.",
+            "**Diviser par 25 000** au lieu de multiplier, du plan au réel.",
+            "Diviser les **aires** par k au lieu de k².",
+            "Oublier l’**unité** à la fin."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Au 1/100 000, **2 cm** sur la carte&nbsp;?",
+            "**1 km** en cm&nbsp;?",
+            "Les aires au 1/10 sont divisées par&nbsp;?"
+          ],
+          "reponses": "1) 2 km (200 000 cm) · 2) 100 000 cm · 3) 100 (10²)"
+        }
+      ]
+    }
+  ]
+}

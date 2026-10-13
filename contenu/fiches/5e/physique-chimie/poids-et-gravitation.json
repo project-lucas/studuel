@@ -1,0 +1,171 @@
+{
+  "titre": "Poids et gravitation",
+  "titreSurligne": "gravitation",
+  "accroche": "La force qui fait tomber les pommes.",
+  "bonus": "P = m × g · P en **N**, m en **kg**, g = **9,8 N/kg** sur Terre, **1,6 N/kg** sur la Lune · la masse ne change pas",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/poids-et-gravitation.webp",
+    "prompt": "a glossy violet apple falling toward a small golden planet along a curved arrow, a moon and a bigger planet pulling each other with dotted lines, sparkles"
+  },
+  "marcel": "La masse reste,\nle poids change !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le poids",
+          "petite": true,
+          "lignes": [
+            "P = m × g"
+          ],
+          "regle": "**P** le poids en **newtons (N)**, **m** la masse en **kilogrammes (kg)**, **g** l’**intensité de la pesanteur** en **N/kg**&nbsp;: 9,8 sur Terre, 1,6 sur la Lune. Le poids est **vertical**, **vers le bas**, appliqué au **centre de gravité**.",
+          "note": "sur la Lune&nbsp;: même masse, poids six fois plus petit&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "La gravitation",
+          "items": [
+            {
+              "terme": "Gravitation",
+              "definition": "une interaction **attractive**, **à distance**, entre deux objets qui ont une **masse**"
+            },
+            {
+              "terme": "Elle augmente",
+              "definition": "quand les **masses** sont grandes et la **distance** petite"
+            },
+            {
+              "terme": "Système solaire",
+              "definition": "elle garde les planètes en orbite autour du Soleil"
+            },
+            {
+              "terme": "Le poids",
+              "definition": "l’attraction d’un astre sur un objet proche"
+            },
+            {
+              "terme": "Lune",
+              "definition": "on y est six fois plus léger : **g** y est plus petit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Convertir",
+              "texte": "la masse en kg : 500 g = 0,5 kg"
+            },
+            {
+              "titre": "Choisir g",
+              "texte": "9,8 N/kg sur Terre, 1,6 N/kg sur la Lune"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "P = m × g, et l’unité : des newtons"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un astronaute de 70 kg. __Son poids__ sur Terre, puis sur la Lune&nbsp;?",
+          "calcul": "P = 70 × 9,8 = 686 N",
+          "aparte": "sur Terre",
+          "resultat": "sur la Lune&nbsp;: 70 × 1,6 = [[112 N]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Masse et poids, à ne jamais confondre",
+          "entetes": [
+            "",
+            "Masse",
+            "Poids"
+          ],
+          "lignes": [
+            [
+              "Ce que c’est",
+              "la **quantité de matière**",
+              "la **force** d’attraction de l’astre"
+            ],
+            [
+              "Unité",
+              "kg",
+              "N"
+            ],
+            [
+              "Instrument",
+              "balance",
+              "dynamomètre"
+            ],
+            [
+              "Sur la Lune",
+              "**inchangée**",
+              "divisé par 6"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "m = 70 kg et g = 9,8 N/kg",
+              "quoi": "les données"
+            },
+            {
+              "texte": "P = m × g = 70 × 9,8",
+              "quoi": "lettres puis nombres"
+            },
+            {
+              "texte": "P = 686 N",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Le poids se dessine par une ==flèche verticale== vers le bas."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire « je pèse 60 kg »&nbsp;: 60 kg est une **masse**.",
+            "Donner un poids en **kg**.",
+            "Croire que la masse **change** sur la Lune.",
+            "Oublier de convertir les **grammes** en kg.",
+            "Mettre g = **9,8** sur la Lune : c’est **1,6**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "m = 2 kg sur Terre&nbsp;: **P**&nbsp;?",
+            "Que mesure un **dynamomètre**&nbsp;?",
+            "La gravitation est-elle **attractive** ou répulsive&nbsp;?"
+          ],
+          "reponses": "1) 19,6 N · 2) une force, en N · 3) attractive"
+        }
+      ]
+    }
+  ]
+}

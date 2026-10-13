@@ -1,0 +1,166 @@
+{
+  "titre": "Comparer des fractions",
+  "titreSurligne": "Comparer",
+  "accroche": "Le coup d’œil avant le calcul.",
+  "bonus": "**1/2 = 50 %** · **1/4 = 25 %** · **3/4 = 75 %** · **1/10 = 10 %**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/maths/fraction-encadrer-comparer-ordonner.webp",
+    "prompt": "a glossy golden balance scale weighing two violet pie slices of different sizes, sparkles"
+  },
+  "marcel": "Même numérateur,\nc’est à l’envers !",
+  "rangs": [
+    {
+      "colonnes": "1fr 330px",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Quel cas&nbsp;?",
+          "entetes": [
+            "Si…",
+            "On fait",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "même dénominateur",
+              "on compare les numérateurs",
+              "3/7 < 5/7"
+            ],
+            [
+              "même numérateur",
+              "on compare **à l’envers**",
+              "3/5 > 3/8"
+            ],
+            [
+              "rien de commun",
+              "même dénominateur ou décimal",
+              "2/3 < 3/4"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le piège du chapitre",
+          "taille": "mini",
+          "lignes": [
+            "{3/5} > {3/8}"
+          ],
+          "regle": "Même numérateur&nbsp;: le ==plus grand dénominateur== donne la plus petite fraction (parts plus petites).",
+          "note": "Plus on coupe, plus la part est petite&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Comparer à 1",
+              "texte": "numérateur < dénominateur ⟹ moins que 1 : 5/8 < 1 < 9/7"
+            },
+            {
+              "titre": "Chercher un cas simple",
+              "texte": "même dénominateur ? même numérateur ?"
+            },
+            {
+              "titre": "Sinon",
+              "texte": "réduire au même dénominateur, ou diviser pour passer en décimal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Comparer __2/3__ et __3/4__.",
+          "calcul": "2/3 = 8/12 et 3/4 = 9/12",
+          "aparte": "dénominateur 12",
+          "resultat": "8/12 < 9/12 : [[2/3 < 3/4]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Qui est le plus grand&nbsp;?",
+          "oui": {
+            "titre": "À l’envers",
+            "texte": "3/5 **>** 3/8 : même numérateur, on regarde les dénominateurs à l’envers."
+          },
+          "non": {
+            "titre": "Le piège",
+            "texte": "3/8 plus grand parce que 8 > 5. **Faux&nbsp;!**"
+          },
+          "essai": {
+            "texte": "Encadrer **17/5**&nbsp;: 17 ÷ 5 = 3,4, donc 3 < 17/5 < 4."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "2/3 = 8/12 et 3/4 = 9/12",
+              "quoi": "même dénominateur"
+            },
+            {
+              "texte": "8/12 < 9/12",
+              "quoi": "on compare"
+            },
+            {
+              "texte": "Donc 2/3 < 3/4",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Autre méthode&nbsp;: 2/3 ≈ 0,67 et 3/4 = 0,75, même ==réponse==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que **le plus grand dénominateur** donne la plus grande fraction.",
+            "Comparer les **numérateurs** quand les dénominateurs sont différents.",
+            "Multiplier **un seul** des deux nombres pour réduire.",
+            "Oublier de comparer d’abord à **1**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "Placer sur une demi-droite",
+          "paragraphes": [
+            "On partage chaque unité en autant de parts que le **dénominateur**, puis on compte autant de parts que le **numérateur**. Une fraction est un nombre comme un autre, avec sa place sur la droite."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**5/8** ou **9/7**, le plus grand&nbsp;?",
+            "Compare **3/7** et **5/7**.",
+            "Encadre **17/5** entre deux entiers."
+          ],
+          "reponses": "1) 9/7 (> 1) · 2) 3/7 < 5/7 · 3) 3 < 17/5 < 4"
+        }
+      ]
+    }
+  ]
+}

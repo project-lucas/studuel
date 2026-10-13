@@ -1,0 +1,106 @@
+{
+  "titre": "Les formes d’énergie",
+  "titreSurligne": "énergie",
+  "accroche": "Ce qui permet d’agir.",
+  "bonus": "l’énergie se mesure en **joules (J)** · l’électricité en **kWh** · le **Soleil** est la source d’origine",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/physique-chimie/les-differentes-formes-d-energie.webp",
+    "prompt": "a glossy golden lightning bolt above a violet battery, a small sun and a wind turbine blade, tiny sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Bouger, chauffer,\nl’énergie fait tout !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les principales formes",
+          "entetes": ["Forme", "À quoi elle est liée"],
+          "lignes": [
+            ["**Cinétique**", "le **mouvement** (masse, et surtout vitesse)"],
+            ["**De position**", "la **hauteur** (l’eau d’un barrage)"],
+            ["**Thermique**", "la **température**"],
+            ["**Électrique**", "ce qui circule dans les fils"],
+            ["**Lumineuse**", "transportée par la lumière"],
+            ["**Chimique**", "stockée dans les aliments, le bois, une pile"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les sources",
+          "entetes": ["Famille", "Membres"],
+          "lignes": [
+            ["**Renouvelables**<br>(se reconstituent)", "Soleil, vent, eau, biomasse"],
+            ["**Non renouvelables**<br>(s’épuisent)", "charbon, pétrole, gaz, uranium"]
+          ]
+        },
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Une chaîne d’énergie",
+          "etapes": [
+            { "titre": "Source", "texte": "la pile (chimique)" },
+            { "titre": "Convertisseur", "texte": "l’ampoule" },
+            { "titre": "Utilisation", "texte": "lumière et chaleur" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un skieur dévale une pente. Quelle forme d’énergie augmente&nbsp;?",
+          "calcul": "il va de plus en plus vite",
+          "aparte": "mouvement = cinétique",
+          "resultat": "l’énergie [[cinétique]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le **pétrole** est renouvelable.",
+            "Confondre **joule** et **kWh** (la facture).",
+            "Oublier que l’énergie cinétique dépend de la **vitesse**.",
+            "Croire que la **pile** produit l’énergie à partir de rien."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Les unités et l’origine",
+          "deux": true,
+          "items": [
+            { "titre": "Le joule (J)", "texte": "l’unité de l’énergie." },
+            { "titre": "Le kilowattheure", "texte": "pour l’électricité de la maison (kWh)." },
+            { "titre": "Le Soleil", "texte": "origine du vent, de la pluie, des plantes et même du pétrole." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "L’eau d’un **barrage** possède quelle énergie&nbsp;?",
+            "Le **vent** est-il une source renouvelable&nbsp;?",
+            "Quelle unité figure sur la **facture** d’électricité&nbsp;?"
+          ],
+          "reponses": "1) de position · 2) oui · 3) le kilowattheure (kWh)"
+        }
+      ]
+    }
+  ]
+}

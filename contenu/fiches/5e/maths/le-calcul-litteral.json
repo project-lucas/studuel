@@ -1,0 +1,183 @@
+{
+  "titre": "Le calcul littéral",
+  "titreSurligne": "littéral",
+  "accroche": "Une lettre à la place d’un nombre.",
+  "bonus": "k(a + b) = **ka + kb** · 3x + 5x = **8x** · 3x et 3x² **ne se réduisent pas**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/le-calcul-litteral.webp",
+    "prompt": "a glossy golden letter x on a violet mystery box with a question mark, small golden numbers popping out, sparkles"
+  },
+  "marcel": "Une lettre, mille\nnombres possibles !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Développer, factoriser",
+          "taille": "mini",
+          "lignes": [
+            "k(a + b) = ka + kb",
+            "3(x + 5) = 3x + 15"
+          ],
+          "regle": "**Développer**, c’est distribuer&nbsp;; **factoriser**, c’est repérer le ==facteur commun==.",
+          "note": "5x + 15 = 5(x + 3)&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les conventions",
+          "entetes": [
+            "On écrit",
+            "Et non"
+          ],
+          "lignes": [
+            [
+              "3x",
+              "3 × x"
+            ],
+            [
+              "5(x + 2)",
+              "5 × (x + 2)"
+            ],
+            [
+              "x",
+              "1 × x"
+            ],
+            [
+              "x²",
+              "x × x"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Substituer en trois temps",
+          "etapes": [
+            {
+              "titre": "Remplacer",
+              "texte": "la lettre par le nombre, entre parenthèses si besoin"
+            },
+            {
+              "titre": "Rétablir",
+              "texte": "les signes × cachés : 3x devient 3 × 4"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "en respectant les priorités : la multiplication d’abord"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Calcule __A = 3x + 5__ pour x = 4.",
+          "calcul": "A = 3 × 4 + 5 = 12 + 5",
+          "aparte": "× avant +",
+          "resultat": "A = [[17]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Réduire une expression",
+          "oui": {
+            "titre": "On regroupe",
+            "texte": "3x + 5 + 2x − 1 = **5x + 4**&nbsp;: même lettre, même puissance."
+          },
+          "non": {
+            "titre": "On ne regroupe pas",
+            "texte": "3x + 3x² n’est **pas** 6x²&nbsp;: ce ne sont pas les mêmes objets."
+          },
+          "essai": {
+            "texte": "<i>−(x − 4)</i>&nbsp;: le moins change ==tous== les signes, donc <i>−x + 4</i>, et pas <i>−x − 4</i>."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Pourquoi des lettres",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Une règle pour tous",
+              "texte": "le périmètre d’un carré de côté c vaut 4 × c, quel que soit c."
+            },
+            {
+              "titre": "Programme de calcul",
+              "texte": "une lettre prouve qu’il marche pour tous les nombres."
+            },
+            {
+              "titre": "Égalité vraie",
+              "texte": "on développe et on réduit les deux membres jusqu’à les rendre identiques."
+            },
+            {
+              "titre": "Égalité fausse",
+              "texte": "un seul contre-exemple suffit."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Pour x = 4 : A = 3 × 4 + 5",
+              "quoi": "je remplace"
+            },
+            {
+              "texte": "A = 12 + 5",
+              "quoi": "la multiplication"
+            },
+            {
+              "texte": "A = 17",
+              "quoi": "le résultat"
+            }
+          ],
+          "pied": "Pour **prouver** qu’une égalité est fausse&nbsp;: ==un seul== contre-exemple suffit."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Calculer 3 × 4 + 5 comme **3 × 9 = 27**.",
+            "Réduire **3x + 3x²** en 6x².",
+            "Oublier le **2ᵉ terme** : 3(x + 5) = 3x + 5.",
+            "Changer **un seul signe** après un moins."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Calcule **3x + 5** pour **x = 4**.",
+            "Développe **4(2x − 3)** et réduis **3x + 5 + 2x − 1**.",
+            "Factorise **5x + 15** et **7a − 7b**."
+          ],
+          "reponses": "1) 17 · 2) 8x − 12 et 5x + 4 · 3) 5(x + 3) et 7(a − b)"
+        }
+      ]
+    }
+  ]
+}

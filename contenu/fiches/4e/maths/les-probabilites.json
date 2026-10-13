@@ -1,0 +1,160 @@
+{
+  "titre": "Les probabilités",
+  "titreSurligne": "probabilités",
+  "accroche": "Mesurer une chance entre 0 et 1.",
+  "bonus": "0 = **impossible** · 0,5 = une chance sur deux · 1 = **certain**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/les-probabilites.webp",
+    "prompt": "a glossy violet six-sided die and a golden coin floating with a small golden arrow scale from zero to one, tiny golden sparkles"
+  },
+  "marcel": "Une pièce n’a\npas de mémoire&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les formules",
+          "teinte": "jaune",
+          "taille": "mini",
+          "lignes": [
+            "P(A) = {issues favorables/issues possibles}",
+            "P(non A) = 1 − P(A)",
+            "P(A ou B) = P(A) + P(B)"
+          ],
+          "regle": "La dernière formule vaut pour deux événements ==incompatibles==."
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Expérience aléatoire",
+              "definition": "plusieurs issues possibles, aucune prévisible"
+            },
+            {
+              "terme": "Issue",
+              "definition": "un résultat possible&nbsp;; un **événement** est un ensemble d’issues"
+            },
+            {
+              "terme": "Incompatibles",
+              "definition": "ne peuvent pas arriver en même temps"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer une probabilité",
+          "etapes": [
+            {
+              "titre": "Lister",
+              "texte": "les issues possibles (toutes aussi probables)"
+            },
+            {
+              "titre": "Compter",
+              "texte": "celles qui conviennent à l’événement"
+            },
+            {
+              "titre": "Diviser",
+              "texte": "favorables ÷ possibles, résultat entre 0 et 1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un sac&nbsp;: 5 billes rouges, 3 bleues. On tire une bille.",
+          "calcul": "8 issues, dont 5 rouges",
+          "aparte": "5 favorables\nsur 8",
+          "resultat": "P(rouge) = [[5/8]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Le contraire, malin",
+          "oui": {
+            "titre": "Par le contraire",
+            "texte": "« Au moins une rouge » = 1 − P(aucune rouge)."
+          },
+          "non": {
+            "titre": "Prédire",
+            "texte": "Après 5 piles, le 6e lancer n’a **pas** plus de chances d’être face."
+          },
+          "essai": {
+            "texte": "Dé à six faces&nbsp;: <i>P(pair) = 3/6</i> = **1/2**, donc <i>P(impair) = 1 − 1/2</i> = 1/2."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 4,
+          "titre": "Loi des grands nombres",
+          "paragraphes": [
+            "Plus on répète l’expérience, plus la **fréquence** observée se rapproche de la **probabilité** théorique. La probabilité se calcule avant l’expérience, la fréquence se constate après."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "On est dans une situation d’équiprobabilité.",
+              "quoi": "la condition"
+            },
+            {
+              "texte": "P(A) = 5 / 8",
+              "quoi": "favorables / possibles"
+            },
+            {
+              "texte": "Deux épreuves&nbsp;: on multiplie le long d’une branche.",
+              "quoi": "un arbre"
+            }
+          ],
+          "pied": "Le long d’une branche on ==multiplie==, entre branches on ==additionne==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire une probabilité **supérieure à 1** ou négative.",
+            "Croire que la probabilité **prédit** le prochain tirage.",
+            "Oublier la condition d’**équiprobabilité**.",
+            "Additionner pour **deux épreuves** à la suite&nbsp;: on multiplie."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dé à six faces&nbsp;: probabilité d’un nombre pair&nbsp;?",
+            "P(A) = 0,3. Que vaut P(non A)&nbsp;?",
+            "Une probabilité peut-elle valoir 1,2&nbsp;?"
+          ],
+          "reponses": "1) 1/2 · 2) 0,7 · 3) non, toujours entre 0 et 1"
+        }
+      ]
+    }
+  ]
+}

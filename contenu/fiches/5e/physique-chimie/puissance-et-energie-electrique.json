@@ -1,0 +1,191 @@
+{
+  "titre": "Puissance et énergie",
+  "titreSurligne": "énergie",
+  "accroche": "Ce qui consomme, et ce que ça coûte.",
+  "bonus": "**P = U × I** · **E = P × t** · 1 kWh = **3,6 × 10<sup>6</sup> J** · la **LED** consomme moins que le filament",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/puissance-et-energie-electrique.webp",
+    "prompt": "a glossy violet electricity meter with golden digits dial, a golden light bulb and small coins, sparks and sparkles"
+  },
+  "marcel": "Puissance&nbsp;: la vitesse.\nÉnergie&nbsp;: le total !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les deux formules",
+          "petite": true,
+          "lignes": [
+            "P = U × I",
+            "E = P × t"
+          ],
+          "regle": "**P** en watts (W), **U** en volts, **I** en ampères. **E** en **joules** si t est en secondes, en **Wh** si t est en heures.",
+          "note": "1 kWh = 1 000 Wh !"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Ordres de grandeur",
+          "entetes": [
+            "Appareil",
+            "Puissance"
+          ],
+          "lignes": [
+            [
+              "Chargeur de téléphone",
+              "≈ 5 W"
+            ],
+            [
+              "Ampoule **LED**",
+              "8 W"
+            ],
+            [
+              "Ampoule à filament",
+              "60 W"
+            ],
+            [
+              "Réfrigérateur",
+              "150 W"
+            ],
+            [
+              "Four",
+              "2 000 W"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer un coût en trois temps",
+          "etapes": [
+            {
+              "titre": "Convertir",
+              "texte": "la puissance en **kW**, la durée en **heures**"
+            },
+            {
+              "titre": "Énergie",
+              "texte": "**E = P × t**, en kWh"
+            },
+            {
+              "titre": "Coût",
+              "texte": "E multipliée par le **prix du kWh**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": "★",
+          "titre": "La plaque signalétique",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Lecture",
+              "texte": "«&nbsp;230 V — 2 000 W&nbsp;»&nbsp;: tension et puissance"
+            },
+            {
+              "titre": "Intensité",
+              "texte": "I = P ÷ U = 2 000 ÷ 230"
+            },
+            {
+              "titre": "Résultat",
+              "texte": "I ≈ 8,7 A"
+            },
+            {
+              "titre": "Utilité",
+              "texte": "vérifier que la prise et le fil suivent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un four de __2 000 W__ marche __1 h 30__. Le kWh coûte 0,20 €. Coût&nbsp;?",
+          "calcul": "E = 2 kW × 1,5 h = 3 kWh\n3 × 0,20",
+          "aparte": "kW × h = kWh",
+          "resultat": "coût = [[0,60 €]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Puissance ou énergie&nbsp;?",
+          "oui": {
+            "titre": "Puissance",
+            "texte": "La **vitesse** à laquelle on consomme, en **W**."
+          },
+          "non": {
+            "titre": "Énergie",
+            "texte": "La **quantité totale** consommée, en **J** ou en **kWh**."
+          },
+          "essai": {
+            "texte": "60 W pendant 1 h consomment autant que 6 W pendant 10 h&nbsp;: <i>60 Wh</i> dans les deux cas."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Consommer moins",
+          "items": [
+            {
+              "titre": "Étiquette énergie",
+              "texte": "choisir le meilleur rendement"
+            },
+            {
+              "titre": "LED",
+              "texte": "autant de lumière, bien moins de watts"
+            },
+            {
+              "titre": "Veilles",
+              "texte": "les éteindre vraiment"
+            },
+            {
+              "titre": "Appareils puissants",
+              "texte": "limiter leur durée"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **puissance** (W) et **énergie** (kWh).",
+            "Garder les **W** au lieu de passer en **kW**.",
+            "Oublier de passer **1 h 30** en **1,5 h**.",
+            "Penser que la **tension** change quand on branche plus d’appareils."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "U = 230 V et I = 2 A&nbsp;: **P**&nbsp;?",
+            "Un appareil de 1 kW marche 3 h&nbsp;: **E**&nbsp;?",
+            "Unité de la **puissance**&nbsp;?"
+          ],
+          "reponses": "1) 460 W · 2) 3 kWh · 3) le watt (W)"
+        }
+      ]
+    }
+  ]
+}

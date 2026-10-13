@@ -1,0 +1,132 @@
+{
+  "titre": "Rythme et tempo",
+  "titreSurligne": "tempo",
+  "accroche": "Pulsation, tempo, rythme : ne pas confondre.",
+  "bonus": "Tempo en **bpm** : battements par minute",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/musique/rythme-pulsation-et-tempo.webp",
+    "prompt": "a glossy violet metronome with a golden pendulum and golden notes, sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Je tape du pied :\nc’est la pulsation !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Trois notions",
+          "items": [
+            { "terme": "Pulsation", "definition": "Le **battement régulier** qu’on tape du pied." },
+            { "terme": "Tempo", "definition": "La **vitesse** de la pulsation, en bpm." },
+            { "terme": "Rythme", "definition": "Les notes **longues et courtes** posées sur la pulsation." }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les tempi",
+          "entetes": ["Mot italien", "Vitesse"],
+          "lignes": [
+            ["<i>largo</i>", "très lent"],
+            ["<i>adagio</i>", "lent"],
+            ["<i>andante</i>", "allant"],
+            ["<i>allegro</i>", "vif"],
+            ["<i>presto</i>", "très rapide"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les mesures",
+          "colonnes": 4,
+          "cartes": [
+            { "titre": "À 2 temps", "texte": "La **marche**." },
+            { "titre": "À 3 temps", "texte": "La **valse**." },
+            { "titre": "À 4 temps", "texte": "La mesure la plus **courante**." },
+            { "titre": "Temps fort", "texte": "Le **premier** temps de la mesure." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Dans l’ordre",
+          "deux": false,
+          "items": [
+            { "titre": "Pulsation", "texte": "le battement qu’on **sent**" },
+            { "titre": "Tempo", "texte": "sa vitesse" },
+            { "titre": "Rythme", "texte": "ce qu’on pose **dessus**" },
+            { "titre": "Mesure", "texte": "comment on **groupe** les pulsations" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **pulsation** et **rythme**.",
+            "Croire que même tempo veut dire même **rythme**.",
+            "Penser que la pulsation s’**entend** toujours : on la sent.",
+            "Oublier que le **premier temps** est le temps fort."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Retrouver la mesure",
+          "etapes": [
+            { "titre": "Taper", "texte": "la pulsation, du pied" },
+            { "titre": "Chercher", "texte": "le temps fort, le plus appuyé" },
+            { "titre": "Compter", "texte": "jusqu’au prochain temps fort" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple",
+          "donnees": "Tu comptes 1-2-3, 1-2-3 : un temps fort tous les trois.",
+          "calcul": "3 temps par mesure",
+          "resultat": "[[valse]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "La pulsation est le battement régulier ; le tempo est sa vitesse.", "quoi": "définir" },
+            { "texte": "Deux morceaux au même tempo peuvent avoir des rythmes très différents.", "quoi": "distinguer" },
+            { "texte": "La mesure à trois temps donne la valse.", "quoi": "illustrer" }
+          ],
+          "pied": "Le rythme, c’est ce qu’on pose ==sur== la pulsation."
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Comment appelle-t-on la **vitesse** de la pulsation&nbsp;?",
+            "Que veut dire <i>presto</i>&nbsp;?",
+            "Quelle mesure donne la **valse**&nbsp;?"
+          ],
+          "reponses": "1) le tempo · 2) très rapide · 3) la mesure à 3 temps"
+        }
+      ]
+    }
+  ]
+}

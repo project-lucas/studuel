@@ -1,0 +1,167 @@
+{
+  "titre": "Mélanges et corps purs",
+  "titreSurligne": "corps purs",
+  "accroche": "Un seul constituant, ou plusieurs ?",
+  "bonus": "**Corps pur** : une seule espèce, température **constante** au changement d’état · **mélange** : plusieurs, intervalle de températures",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/melanges-et-corps-purs.webp",
+    "prompt": "a glossy glass beaker of cloudy violet liquid next to a clear beaker with golden sparkling water, a small paper filter funnel, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Un seul ingrédient,\nou plusieurs ?",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Deux familles",
+          "items": [
+            {
+              "terme": "Corps pur",
+              "definition": "une seule **espèce chimique** (eau pure, sucre)"
+            },
+            {
+              "terme": "Mélange homogène",
+              "definition": "on ne voit **pas** les constituants, même après repos&nbsp;: eau salée, air, vinaigre"
+            },
+            {
+              "terme": "Mélange hétérogène",
+              "definition": "on voit **au moins deux** constituants&nbsp;: eau boueuse, huile dans l’eau"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Reconnaître un corps pur",
+          "entetes": [
+            "Le corps",
+            "Au changement d’état"
+          ],
+          "lignes": [
+            [
+              "**Corps pur**",
+              "température **constante** (eau pure : 100 °C)"
+            ],
+            [
+              "**Mélange**",
+              "elle varie sur un **intervalle**"
+            ],
+            [
+              "Eau **pure**",
+              "évaporée, ne laisse **aucun résidu**"
+            ],
+            [
+              "Eau **minérale**",
+              "laisse un dépôt de sels"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Choisir la bonne technique",
+          "etapes": [
+            {
+              "titre": "Décantation",
+              "texte": "on laisse reposer&nbsp;: le plus **dense** tombe au fond (mélange hétérogène)"
+            },
+            {
+              "titre": "Filtration",
+              "texte": "le filtre retient le solide, le liquide qui passe est le **filtrat**"
+            },
+            {
+              "titre": "Distillation",
+              "texte": "on chauffe, on refroidit la vapeur&nbsp;: le **distillat** (mélange homogène)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "On filtre de l’__eau salée__. Le filtrat est-il de l’eau pure&nbsp;?",
+          "calcul": "le sel est dissous : il traverse le filtre",
+          "aparte": "il faut distiller",
+          "resultat": "[[non]], c’est un mélange"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Un test pour l’eau",
+          "oui": {
+            "titre": "Sulfate de cuivre bleu",
+            "texte": "Il était blanc (**anhydre**) : il y a de l’**eau**."
+          },
+          "non": {
+            "titre": "Il reste blanc",
+            "texte": "Pas d’eau dans le produit testé."
+          },
+          "essai": {
+            "texte": "Un liquide **limpide** n’est pas forcément pur&nbsp;: l’eau salée est limpide, c’est un mélange **homogène**."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "On ne voit qu’une seule phase.",
+              "quoi": "l’observation"
+            },
+            {
+              "texte": "C’est donc un mélange homogène.",
+              "quoi": "le type"
+            },
+            {
+              "texte": "On sépare par distillation.",
+              "quoi": "la technique"
+            },
+            {
+              "texte": "Le sel est dissous, il traverse le filtre.",
+              "quoi": "l’explication"
+            }
+          ],
+          "pied": "Un mélange homogène ne se sépare ==pas== par filtration."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’un liquide **limpide** est un corps pur.",
+            "Filtrer de l’eau salée pour récupérer le sel.",
+            "Dire que l’air est un **corps pur**.",
+            "Confondre **filtrat** et **distillat**.",
+            "Croire que « pur » veut dire « bon à boire »."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "L’**eau du robinet** est-elle un corps pur&nbsp;?",
+            "Quelle technique sépare de l’**eau salée**&nbsp;?",
+            "Que fait un **corps pur** quand il bout&nbsp;?"
+          ],
+          "reponses": "1) non, c’est un mélange · 2) la distillation · 3) sa température reste constante"
+        }
+      ]
+    }
+  ]
+}

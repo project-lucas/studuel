@@ -1,0 +1,158 @@
+{
+  "titre": "La réaction chimique",
+  "titreSurligne": "chimique",
+  "accroche": "Les atomes se réorganisent, rien ne se perd.",
+  "bonus": "**Réactifs** → **produits** · les **atomes** et la **masse** se conservent (Lavoisier) · le **limitant** fixe la quantité de produits",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/les-atomes-et-la-transformation-chimique.webp",
+    "prompt": "glossy violet and golden atom balls rearranging from one molecule into two new molecules with an arrow between them, a small bubbling flask, sparkles"
+  },
+  "marcel": "Les atomes bougent,\nmais aucun ne disparaît !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Physique ou chimique ?",
+          "entetes": [
+            "Type",
+            "Ce qui change",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "**Physique**",
+              "seul l’arrangement des molécules",
+              "la glace fond, c’est encore de l’eau"
+            ],
+            [
+              "**Chimique**",
+              "les atomes se réorganisent",
+              "le bois brûle : CO<sub>2</sub> et eau"
+            ]
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Les signes d’une transformation",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Gaz",
+              "texte": "un gaz se dégage"
+            },
+            {
+              "titre": "Couleur",
+              "texte": "la couleur change"
+            },
+            {
+              "titre": "Solide",
+              "texte": "un **précipité** apparaît"
+            },
+            {
+              "titre": "Chaleur",
+              "texte": "ça chauffe, un réactif disparaît"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "L’équation de réaction",
+          "lignes": [
+            "CH<sub>4</sub> + 2 O<sub>2</sub> → CO<sub>2</sub> + 2 H<sub>2</sub>O"
+          ],
+          "regle": "La **flèche** veut dire « donne ». Les nombres devant les formules **ajustent** l’équation&nbsp;: il y a ==autant d’atomes de chaque sorte== à gauche et à droite.",
+          "note": "méthane + dioxygène donne dioxyde de carbone + eau",
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "On brûle __16 g__ de méthane avec __64 g__ de dioxygène. Masse des produits&nbsp;?",
+          "calcul": "16 + 64 = 80 g",
+          "aparte": "masse des réactifs = masse des produits",
+          "resultat": "[[80 g]]"
+        },
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Ajuster une équation",
+          "etapes": [
+            {
+              "titre": "Écrire",
+              "texte": "réactifs → produits avec les formules"
+            },
+            {
+              "titre": "Compter",
+              "texte": "chaque sorte d’atome, à gauche puis à droite"
+            },
+            {
+              "titre": "Ajuster",
+              "texte": "avec des nombres devant les formules, jamais dedans"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Les réactifs sont le méthane et le dioxygène.",
+              "quoi": "les réactifs"
+            },
+            {
+              "texte": "Les produits sont le CO<sub>2</sub> et l’eau.",
+              "quoi": "les produits"
+            },
+            {
+              "texte": "Les atomes sont conservés.",
+              "quoi": "la loi"
+            }
+          ],
+          "pied": "Un réactif **entièrement consommé** arrête la réaction&nbsp;: c’est le ==réactif limitant==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **changement d’état** et transformation chimique.",
+            "Laisser une équation **non ajustée**&nbsp;: elle est fausse.",
+            "Changer un **indice** (H<sub>2</sub>O) au lieu d’un nombre devant.",
+            "Croire qu’un atome peut **disparaître**.",
+            "Oublier qu’un **réactif** peut rester en excès."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "La glace qui fond&nbsp;: transformation **physique** ou **chimique**&nbsp;?",
+            "Que se conserve-t-il dans une transformation chimique&nbsp;?",
+            "Que fait le réactif **limitant**&nbsp;?"
+          ],
+          "reponses": "1) physique · 2) les atomes et la masse · 3) il s’épuise et arrête la réaction"
+        }
+      ]
+    }
+  ]
+}

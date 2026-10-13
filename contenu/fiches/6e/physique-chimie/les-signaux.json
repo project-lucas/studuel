@@ -1,0 +1,148 @@
+{
+  "titre": "Les signaux",
+  "titreSurligne": "signaux",
+  "accroche": "Lumière et son, deux messagers.",
+  "bonus": "lumière&nbsp;: **300 000 km/s** · son dans l’air&nbsp;: **340 m/s** · pas de son dans le **vide**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/physique-chimie/les-signaux.webp",
+    "prompt": "a glossy golden flashlight beam next to a violet loudspeaker with curved sound waves, tiny sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "L’éclair d’abord,\nle tonnerre après !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les sources de lumière",
+          "entetes": ["Source", "Ce qu’elle fait"],
+          "lignes": [
+            ["**Primaire**", "**produit** sa lumière (Soleil, lampe)"],
+            ["**Diffusante**", "**renvoie** la lumière reçue (Lune, mur)"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Lumière ou son ?",
+          "entetes": ["", "Lumière", "Son"],
+          "lignes": [
+            ["Vide", "**oui**", "**non**"],
+            ["Vitesse", "300 000 km/s", "340 m/s"],
+            ["Origine", "une source", "un objet qui **vibre**"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "La lumière",
+          "petite": true,
+          "lignes": ["ligne droite"],
+          "regle": "Dans un milieu transparent et homogène, la lumière se propage ==en ligne droite==. On voit un objet quand sa lumière **entre dans l’œil**.",
+          "note": "la Lune renvoie, elle n’éclaire pas&nbsp;!"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "L’ombre",
+          "items": [
+            { "titre": "Ombre propre", "texte": "la face **non éclairée** de l’objet." },
+            { "titre": "Ombre portée", "texte": "sur le **sol** ou l’écran." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Pendant un orage, pourquoi voit-on l’éclair avant d’entendre le tonnerre&nbsp;?",
+          "calcul": "lumière 300 000 km/s ; son 340 m/s",
+          "aparte": "bien plus lente",
+          "resultat": "la lumière va [[plus vite]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le son traverse le **vide**.",
+            "Dire que la Lune **produit** sa lumière.",
+            "Penser que la lumière met **autant** de temps que le son.",
+            "Minimiser le **bruit**&nbsp;: les cellules de l’oreille ne repoussent pas.",
+            "Croire qu’on voit un objet sans que sa lumière arrive à l’**œil**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Pourquoi voit-on un objet ?",
+          "etapes": [
+            { "titre": "Source", "texte": "il émet ou **diffuse** de la lumière" },
+            { "titre": "Trajet", "texte": "la lumière voyage **en ligne droite**" },
+            { "titre": "Œil", "texte": "elle **entre dans l’œil**&nbsp;: on voit" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Le danger du bruit",
+          "items": [
+            { "titre": "Trop fort, trop long", "texte": "détruit les **cellules** de l’oreille interne." },
+            { "titre": "Définitif", "texte": "elles ne se **régénèrent pas**." }
+          ]
+        },
+        {
+          "type": "texte",
+          "numero": 7,
+          "titre": "Le son et la matière",
+          "paragraphes": [
+            "Le son passe dans l’**air**, l’**eau** et les **solides**. Dans le vide, ==il n’y a rien à faire vibrer==&nbsp;: pas de son."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 8,
+          "titre": "Ce qui les distingue",
+          "deux": true,
+          "items": [
+            { "titre": "La lumière", "texte": "traverse le vide, très rapide." },
+            { "titre": "Le son", "texte": "il lui faut un milieu, presque un million de fois plus lent." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "La **Lune** est-elle une source primaire ou diffusante&nbsp;?",
+            "Le son se propage-t-il dans le **vide**&nbsp;?",
+            "Comment se propage la lumière&nbsp;?"
+          ],
+          "reponses": "1) diffusante · 2) non · 3) en ligne droite"
+        }
+      ]
+    }
+  ]
+}

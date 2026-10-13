@@ -1,0 +1,186 @@
+{
+  "titre": "Additions de relatifs",
+  "titreSurligne": "relatifs",
+  "accroche": "Un bilan de gains et de dettes.",
+  "bonus": "a − b = **a + (opposé de b)** · − (−a) = **+ a** · + (−a) = **− a**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/additionner-et-soustraire-des-nombres-relatifs.webp",
+    "prompt": "a glossy golden balance scale with golden coins on one side and a violet debt sack on the other, small plus and minus signs floating, sparkles"
+  },
+  "marcel": "Soustraire un négatif,\nc’est ajouter !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Additionner",
+          "entetes": [
+            "Les signes",
+            "On fait",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "Identiques",
+              "on additionne, on garde le signe",
+              "(−5) + (−3) = −8"
+            ],
+            [
+              "Différents",
+              "on soustrait, signe du plus « fort »",
+              "(−9) + (+4) = −5"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Soustraire",
+          "taille": "mini",
+          "lignes": [
+            "a − b = a + (−b)",
+            "5 − (−3) = 5 + 3 = 8"
+          ],
+          "regle": "Soustraire, c’est ==ajouter l’opposé==.",
+          "note": "moins un négatif, ça devient plus&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Une somme longue en trois temps",
+          "etapes": [
+            {
+              "titre": "Simplifier",
+              "texte": "les signes : + (−a) devient − a, − (−a) devient + a"
+            },
+            {
+              "titre": "Regrouper",
+              "texte": "tous les positifs d’un côté, tous les négatifs de l’autre"
+            },
+            {
+              "titre": "Faire le bilan",
+              "texte": "des deux totaux, avec le signe du plus gros"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 5,
+          "titre": "Simplifier l’écriture",
+          "entetes": [
+            "On lit",
+            "On écrit",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "+ (+a)",
+              "+ a",
+              "3 + (+2) = 3 + 2"
+            ],
+            [
+              "+ (−a)",
+              "− a",
+              "3 + (−2) = 3 − 2"
+            ],
+            [
+              "− (+a)",
+              "− a",
+              "3 − (+2) = 3 − 2"
+            ],
+            [
+              "− (−a)",
+              "+ a",
+              "3 − (−2) = 3 + 2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Calcule __B = −7 + 12 − 4 + 3 − 6__.",
+          "calcul": "positifs : 12 + 3 = 15 · négatifs : 7 + 4 + 6 = 17",
+          "aparte": "bilan : 15 − 17",
+          "resultat": "B = [[−2]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Soustraire un négatif",
+          "oui": {
+            "titre": "Bon réflexe",
+            "texte": "(−4) − (−7) = (−4) + (+7) = **+3**."
+          },
+          "non": {
+            "titre": "Erreur classique",
+            "texte": "(−4) − (−7) = −11&nbsp;: on a gardé les deux signes moins."
+          },
+          "essai": {
+            "texte": "<i>3 + (−5) − (−2)</i> devient <i>3 − 5 + 2</i> = **0**. Les négatifs sont des ==dettes==, les positifs des gains."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "B = −7 + 12 − 4 + 3 − 6",
+              "quoi": "l’expression"
+            },
+            {
+              "texte": "B = 15 − 17",
+              "quoi": "positifs et négatifs"
+            },
+            {
+              "texte": "B = −2",
+              "quoi": "le bilan"
+            }
+          ],
+          "pied": "Contrôle&nbsp;: les négatifs l’emportent, donc le résultat est ==négatif==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Garder **deux signes** à la suite : 5 − −3.",
+            "Garder le signe du **plus petit** nombre.",
+            "Penser qu’un « moins » **rend toujours** plus petit.",
+            "Oublier le signe **devant** le premier nombre."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Calcule **(−5) + (−3)** et **(−9) + (+4)**.",
+            "Calcule **5 − (−3)** et **(−4) − (+6)**.",
+            "Calcule **−2 + 8 − 5 − 3**."
+          ],
+          "reponses": "1) −8 et −5 · 2) 8 et −10 · 3) positifs 8, négatifs 10 : −2"
+        }
+      ]
+    }
+  ]
+}

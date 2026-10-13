@@ -1,0 +1,180 @@
+{
+  "titre": "La probabilité",
+  "titreSurligne": "probabilité",
+  "accroche": "Du certain à l’impossible, avec les modaux.",
+  "bonus": "**must** (sûr) · **should** (probable) · **may / might / could** (possible) · **can’t** (impossible)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/anglais/expression-de-la-modalite-la-probabilite.webp",
+    "prompt": "a glossy violet gauge dial with a golden needle pointing between a question mark and a check mark shape, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Sûr ou pas sûr&nbsp;?\nChoisis ton modal&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’échelle de certitude",
+          "lignes": [
+            "**must** > **should** > **may / might**"
+          ],
+          "petite": true,
+          "regle": "Du plus sûr au moins sûr. Un modal est suivi de la **base verbale**, sans <i>to</i>. Pour dire « c’est impossible », on prend **can’t**.",
+          "note": "pas mustn’t !"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le degré de certitude",
+          "entetes": [
+            "Le degré",
+            "Le modal",
+            "L’exemple"
+          ],
+          "lignes": [
+            [
+              "Sûr à 100 %",
+              "must",
+              "<i>He **must** be tired.</i> (il doit être fatigué)"
+            ],
+            [
+              "Probable",
+              "should",
+              "<i>She **should** be home now.</i>"
+            ],
+            [
+              "Possible",
+              "may, might, could",
+              "<i>It **might** rain.</i> (il se peut qu’il pleuve)"
+            ],
+            [
+              "Impossible",
+              "can’t",
+              "<i>He **can’t** be serious!</i> (c’est impossible)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Parler du passé, et autres moyens",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Modal + have + participe",
+              "texte": "<i>He **must have** missed the train.</i> (il a dû le rater) <i>She **may have** forgotten.</i> (elle a peut-être oublié)"
+            },
+            {
+              "titre": "Impossible au passé",
+              "texte": "<i>They **can’t have** arrived yet.</i> (ils ne peuvent pas être déjà arrivés)"
+            },
+            {
+              "titre": "Sans modal",
+              "texte": "<i>It’s **likely to** rain.</i> <i>He’s **probably** at work.</i> <i>I’m **sure** he knows.</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Dire « c’est impossible »",
+          "oui": {
+            "titre": "can’t",
+            "texte": "<i>He **can’t** be at home.</i> (il ne peut pas être chez lui)"
+          },
+          "non": {
+            "titre": "mustn’t",
+            "texte": "<i>He **mustn’t** be at home.</i> — faux&nbsp;: <i>mustn’t</i> veut dire « il est interdit de »."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Tom is ill. He ___ be at school.</i> → **can’t**&nbsp;: c’est impossible."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Quel degré&nbsp;?",
+              "texte": "Sûr, probable, possible ou impossible&nbsp;?"
+            },
+            {
+              "titre": "Choisis le modal",
+              "texte": "**must**, **should**, **may / might**, **can’t**."
+            },
+            {
+              "titre": "Présent ou passé&nbsp;?",
+              "texte": "Présent → **base verbale**. Passé → **have** + participe passé."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À savoir encore",
+          "deux": true,
+          "items": [
+            {
+              "titre": "may et might",
+              "texte": "<i>might</i> est un peu moins sûr, mais on les échange souvent."
+            },
+            {
+              "titre": "probably",
+              "texte": "après l’auxiliaire, avant le verbe&nbsp;: <i>He is **probably** at work.</i>"
+            },
+            {
+              "titre": "maybe, perhaps",
+              "texte": "en début de phrase&nbsp;: <i>Maybe he knows.</i>"
+            },
+            {
+              "titre": "I doubt",
+              "texte": "<i>I doubt he knows.</i> (je doute qu’il sache)"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>He mustn’t be tired</i> (sens « c’est impossible ») → <i>He **can’t** be tired.</i>",
+            "<i>He must to be</i> → <i>He must **be**.</i>",
+            "<i>She may forgot</i> → <i>She may **have forgotten**.</i>",
+            "<i>He probably is</i> → <i>He is **probably**…</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Sûr à 100 %&nbsp;: <i>She ___ be home, her car is here.</i>",
+            "Peut-être qu’ils ont oublié&nbsp;: <i>They ___ have forgotten.</i>",
+            "Impossible&nbsp;: <i>He ___ be serious!</i>"
+          ],
+          "reponses": "1) must 2) may / might 3) can’t"
+        }
+      ]
+    }
+  ]
+}

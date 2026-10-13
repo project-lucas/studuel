@@ -1,0 +1,171 @@
+{
+  "titre": "Les mouvements",
+  "titreSurligne": "mouvements",
+  "accroche": "Par rapport à quoi, et à quelle vitesse.",
+  "bonus": "**v = d ÷ t** · km/h → m/s&nbsp;: **÷ 3,6** · un mouvement se décrit **par rapport à un référentiel**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/les-mouvements.webp",
+    "prompt": "a glossy violet toy train on a golden track, a dotted line of ball positions showing a trajectory, a small stopwatch, sparkles"
+  },
+  "marcel": "Immobile ou pas ?\nÇa dépend !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La vitesse",
+          "petite": true,
+          "lignes": [
+            "v = d ÷ t",
+            "km/h ÷ 3,6 = m/s"
+          ],
+          "regle": "**v** en **m/s** si **d** est en **m** et **t** en **s**&nbsp;; en **km/h** si **d** est en **km** et **t** en **h**.",
+          "note": "36 km/h = 10 m/s"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Décrire un mouvement",
+          "entetes": [
+            "On précise",
+            "Les cas"
+          ],
+          "lignes": [
+            [
+              "Le **référentiel**",
+              "train, quai, Terre…"
+            ],
+            [
+              "La **trajectoire**",
+              "rectiligne · circulaire · curviligne"
+            ],
+            [
+              "Le **régime**",
+              "uniforme · accéléré · ralenti"
+            ],
+            [
+              "Vitesse **moyenne**",
+              "sur tout le trajet"
+            ],
+            [
+              "Vitesse **instantanée**",
+              "à un instant (compteur)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer une vitesse en trois temps",
+          "etapes": [
+            {
+              "titre": "Convertir",
+              "texte": "d et t dans des unités qui vont ensemble (m et s, ou km et h)"
+            },
+            {
+              "titre": "Remplacer",
+              "texte": "dans v = d ÷ t, puis calculer"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "avec l’unité, et convertir (÷ 3,6) si on le demande"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "Le cas particulier à connaître",
+          "paragraphes": [
+            "Un mouvement **rectiligne uniforme** a une trajectoire **droite** et une vitesse **constante**. C’est le seul cas où les forces qui s’exercent sur l’objet se **compensent**. La trajectoire dépend elle aussi du **référentiel** choisi."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un train parcourt __240 km__ en __3 h__. Sa vitesse en m/s&nbsp;?",
+          "calcul": "v = 240 ÷ 3 = 80 km/h",
+          "aparte": "÷ 3,6",
+          "resultat": "v ≈ [[22 m/s]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Lire une chronophotographie",
+          "oui": {
+            "titre": "Écarts égaux",
+            "texte": "Les positions sont **régulièrement** espacées&nbsp;: mouvement **uniforme**."
+          },
+          "non": {
+            "titre": "Écarts qui grandissent",
+            "texte": "L’espacement **augmente**&nbsp;: mouvement **accéléré**."
+          },
+          "essai": {
+            "texte": "Positions très écartées = objet <i>rapide</i>&nbsp;; positions serrées = objet <i>lent</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "d = 240 km et t = 3 h",
+              "quoi": "les données"
+            },
+            {
+              "texte": "v = d ÷ t = 240 ÷ 3",
+              "quoi": "lettres puis nombres"
+            },
+            {
+              "texte": "v = 80 km/h, soit environ 22 m/s",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "On dit toujours ==par rapport à quoi==&nbsp;: le passager est ==immobile== dans le train, ==en mouvement== sur le quai."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **référentiel**.",
+            "Mélanger **minutes** et mètres.",
+            "Confondre vitesse **moyenne** et **instantanée**.",
+            "**Multiplier** par 3,6 pour passer de km/h à m/s."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Passager d’un train&nbsp;: **immobile** par rapport à quoi&nbsp;?",
+            "54 km/h en **m/s**&nbsp;?",
+            "Une trajectoire en cercle est dite comment&nbsp;?"
+          ],
+          "reponses": "1) au train · 2) 15 m/s · 3) circulaire"
+        }
+      ]
+    }
+  ]
+}

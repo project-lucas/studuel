@@ -1,0 +1,115 @@
+{
+  "titre": "Utiliser une translation",
+  "titreSurligne": "translation",
+  "accroche": "Glisser une figure, sans la tourner.",
+  "bonus": "Une translation conserve **tout** : longueurs, angles, aires, **orientation**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/utiliser-une-translation.webp",
+    "prompt": "a glossy violet arrow sliding a small golden square along a straight path, dotted trail behind it, sparkles"
+  },
+  "marcel": "Ça glisse,\nça ne tourne pas !",
+  "rangs": [
+    {
+      "colonnes": "320px 1fr",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "Le glissement",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><g stroke='#2b2350' stroke-width='1.8' stroke-dasharray='4 4' opacity='0.6'><line x1='34' y1='120' x2='134' y2='120'></line><line x1='60' y1='60' x2='160' y2='60'></line><line x1='34' y1='120' x2='60' y2='60'></line></g><polygon points='34,120 60,60 90,120' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><polygon points='114,120 140,60 170,120' fill='#fdecc7' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><g fill='#2b2350'><circle cx='34' cy='120' r='4'></circle></g><g font-family=\"'Baloo 2'\" font-weight='800' font-size='16' fill='#2b2350'><text x='20' y='140'>A</text><text x='44' y='52'>M</text><text x='108' y='140' fill='#4b2a9a'>B</text><text x='142' y='52' fill='#4b2a9a'>M’</text></g></svg>",
+              "legende": "A glisse vers B, M glisse vers M’",
+              "sous": "même direction, même sens, même longueur"
+            }
+          ],
+          "legende": { "jeton": "ABM’M", "texte": "est un parallélogramme." }
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Ce qui la définit",
+          "petite": true,
+          "lignes": ["direction + sens + longueur"],
+          "regle": "Ces trois informations se résument par **une flèche**. L’image M’ de M est le point tel que ==ABM’M est un parallélogramme==.",
+          "note": "On reporte la flèche A→B à partir de M&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Construire l’image d’un point",
+          "etapes": [
+            { "titre": "Lire la flèche", "texte": "de A vers B : direction, sens, longueur AB" },
+            { "titre": "Reporter", "texte": "depuis M, tracer la parallèle à (AB), de même longueur AB" },
+            { "titre": "Nommer", "texte": "M’ est au bout : ABM’M est un parallélogramme" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Dans ABC, __AB = 5 cm__ et __Â = 40°__. On glisse le triangle&nbsp;: __A’B’__ et __Â’__&nbsp;?",
+          "calcul": "longueurs et angles conservés",
+          "aparte": "rien ne change",
+          "resultat": "A’B’ = [[5 cm]] et Â’ = [[40°]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Comparer les transformations",
+          "entetes": ["Transformation", "Définie par", "Retourne ?"],
+          "lignes": [
+            ["**Translation**", "une flèche", "non"],
+            ["Symétrie axiale", "un axe", "oui"],
+            ["Rotation", "un centre et un angle", "non"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "A’B’C’ est l’image de ABC par une translation.", "quoi": "les données" },
+            { "texte": "Une translation conserve les longueurs.", "quoi": "la propriété" },
+            { "texte": "Donc A’B’ = AB = 5 cm.", "quoi": "la conclusion" }
+          ],
+          "pied": "Deux translations de suite = ==une seule== translation."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Tracer M’ avec **une autre direction** que (AB).",
+            "Oublier le **sens** de la flèche (A vers B, pas B vers A).",
+            "Croire que la figure **tourne** ou se retourne.",
+            "Dire que les **aires** changent&nbsp;: non, elles sont conservées."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Une translation **retourne**-t-elle une figure&nbsp;?",
+            "Un segment de 7 cm a pour image un segment de **combien**&nbsp;?",
+            "ABM’M est un… **quoi**&nbsp;?"
+          ],
+          "reponses": "1) non, elle la fait glisser · 2) 7 cm · 3) parallélogramme"
+        }
+      ]
+    }
+  ]
+}

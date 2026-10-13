@@ -1,0 +1,193 @@
+{
+  "titre": "Exprimer la durée",
+  "titreSurligne": "durée",
+  "accroche": "For, since, ago&nbsp;: trois « depuis ».",
+  "bonus": "**for** + durée · **since** + point de départ · **ago** + prétérit",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/anglais/exprimer-la-duree.webp",
+    "prompt": "a glossy violet stopwatch with a golden timeline arrow, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Depuis quand&nbsp;?\nSince&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le test",
+          "lignes": [
+            "**for** · **since** · **ago**"
+          ],
+          "petite": true,
+          "regle": "« Combien de temps&nbsp;? » → **for**. « Depuis quand&nbsp;? » → **since**.",
+          "note": "ago : il y a"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le tableau",
+          "entetes": [
+            "Mot",
+            "Suivi de",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "for",
+              "une durée",
+              "<i>I have lived here **for** five years.</i>"
+            ],
+            [
+              "since",
+              "un point de départ",
+              "<i>She has worked here **since** 2020.</i>"
+            ],
+            [
+              "ago",
+              "durée, placée après",
+              "<i>I met him three years **ago**.</i>"
+            ],
+            [
+              "during",
+              "un nom",
+              "<i>**during** the holidays</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Quel temps&nbsp;?",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "For",
+              "texte": "Tous les temps&nbsp;: <i>I worked there **for** two years.</i> (fini) / <i>I have worked here **for** two years.</i> (en cours)"
+            },
+            {
+              "titre": "Since",
+              "texte": "Presque toujours le **present perfect**&nbsp;: <i>since Monday, since 2020, since I was ten.</i>"
+            },
+            {
+              "titre": "Ago",
+              "texte": "Toujours le **prétérit**&nbsp;: <i>three years **ago**.</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Ago veut le prétérit",
+          "oui": {
+            "titre": "Prétérit",
+            "texte": "<i>I **met** him three years ago.</i>"
+          },
+          "non": {
+            "titre": "Present perfect",
+            "texte": "<i>I **have met** him three years ago.</i>"
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>She has lived here ___ 2020.</i> → **since**&nbsp;: un point de départ."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Quelle question&nbsp;?",
+              "texte": "« Combien de temps&nbsp;? » → **for**. « Depuis quand&nbsp;? » → **since**."
+            },
+            {
+              "titre": "Il y a…&nbsp;?",
+              "texte": "**durée + ago** et prétérit."
+            },
+            {
+              "titre": "Le temps du verbe",
+              "texte": "<i>for</i> et <i>since</i> avec le **present perfect** si c’est en cours."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "À retenir",
+          "paragraphes": [
+            "Un seul réflexe&nbsp;: **combien de temps&nbsp;?** → <i>for</i>. **Depuis quand&nbsp;?** → <i>since</i>. **Il y a combien de temps&nbsp;?** → <i>ago</i>."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Deux autres outils",
+          "deux": true,
+          "items": [
+            {
+              "titre": "How long",
+              "texte": "<i>**How long** have you been here?</i>"
+            },
+            {
+              "titre": "When",
+              "texte": "<i>**When** did you arrive?</i> (moment précis)"
+            },
+            {
+              "titre": "It’s been",
+              "texte": "<i>It’s been two years **since** I saw him.</i>"
+            },
+            {
+              "titre": "During",
+              "texte": "<i>during the holidays</i>, jamais <i>during two hours</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "« J’habite ici depuis 5 ans » → <i>I **have lived** here for five years.</i>",
+            "<i>I live here since 2020</i> → <i>I **have lived** here since 2020.</i>",
+            "<i>during two hours</i> → <i>**for** two hours</i>",
+            "<i>I have met him three years ago</i> → <i>I **met** him.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>I have lived here ___ five years.</i>",
+            "<i>She has worked here ___ 2020.</i>",
+            "<i>I met him three years ___.</i>"
+          ],
+          "reponses": "1) for 2) since 3) ago"
+        }
+      ]
+    }
+  ]
+}

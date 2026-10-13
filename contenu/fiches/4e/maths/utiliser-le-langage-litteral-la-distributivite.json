@@ -1,0 +1,202 @@
+{
+  "titre": "La distributivité",
+  "titreSurligne": "distributivité",
+  "accroche": "Développer, factoriser : changer l’habit.",
+  "bonus": "Écrire **3x**, jamais 3 × x · **x** et non 1 × x · **x²** = x × x",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/utiliser-le-langage-litteral-la-distributivite.webp",
+    "prompt": "a glossy violet parenthesis opening to release golden letters x and numbers like confetti, tiny golden sparkles"
+  },
+  "marcel": "Je distribue,\nje ne change rien&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Développer",
+          "taille": "mini",
+          "lignes": [
+            "k(a + b) = ka + kb",
+            "(a + b)(c + d) = ac + ad + bc + bd"
+          ],
+          "regle": "On multiplie **chaque** terme par **chaque** terme.",
+          "note": "3(x + 5) = 3x + 15"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Factoriser",
+          "entetes": [
+            "L’expression",
+            "Factorisée"
+          ],
+          "lignes": [
+            [
+              "5x + 15",
+              "**5(x + 3)**"
+            ],
+            [
+              "x² + 3x",
+              "**x(x + 3)**"
+            ],
+            [
+              "(x+1)(x+2) + (x+1)(x−5)",
+              "**(x+1)(2x−3)**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Développer (x + 2)(x + 3) en trois temps",
+          "etapes": [
+            {
+              "titre": "Distribuer",
+              "texte": "x × x, x × 3, 2 × x, 2 × 3"
+            },
+            {
+              "titre": "Écrire",
+              "texte": "x² + 3x + 2x + 6"
+            },
+            {
+              "titre": "Réduire",
+              "texte": "on regroupe 3x + 2x = 5x"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Développer et réduire (x + 2)(x + 3).",
+          "calcul": "x² + 3x + 2x + 6",
+          "aparte": "on regroupe\nles x",
+          "resultat": "= [[x² + 5x + 6]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Moins devant une parenthèse",
+          "oui": {
+            "titre": "Tous les signes",
+            "texte": "−(x − 4) = **−x + 4**&nbsp;: tout change."
+          },
+          "non": {
+            "titre": "Un seul signe",
+            "texte": "−(x − 4) = −x − 4&nbsp;: **faux**."
+          },
+          "essai": {
+            "texte": "Réduire 3x + 5 + 2x − 1&nbsp;: <i>3x + 2x = 5x</i> et <i>5 − 1 = 4</i>, soit **5x + 4**."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Tester une égalité",
+          "entetes": [
+            "Pour prouver",
+            "Il faut"
+          ],
+          "lignes": [
+            [
+              "Qu’elle est **vraie**",
+              "développer les **deux** membres jusqu’à les rendre identiques"
+            ],
+            [
+              "Qu’elle est **fausse**",
+              "**un seul** contre-exemple"
+            ],
+            [
+              "Exemple",
+              "avec x = 1&nbsp;: (x + 1)² = 4 mais x² + 1 = 2"
+            ]
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Les conventions",
+          "items": [
+            {
+              "titre": "3x",
+              "texte": "et non 3 × x ni x3"
+            },
+            {
+              "titre": "x",
+              "texte": "et non 1 × x"
+            },
+            {
+              "titre": "x²",
+              "texte": "veut dire x × x"
+            },
+            {
+              "titre": "2(x + 1)",
+              "texte": "on n’écrit pas le signe × devant une parenthèse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "A = 7a − 7b",
+              "quoi": "l’expression"
+            },
+            {
+              "texte": "= 7 × a − 7 × b",
+              "quoi": "facteur commun 7"
+            },
+            {
+              "texte": "= 7(a − b)",
+              "quoi": "factorisée"
+            }
+          ],
+          "pied": "Pour prouver une égalité fausse, ==un contre-exemple== suffit."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier de changer **tous** les signes après un moins.",
+            "Regrouper **3x** et **3x²**&nbsp;: ce ne sont pas les mêmes objets.",
+            "Développer (x + 2)² en écrivant **x² + 4**&nbsp;: il manque un terme.",
+            "Prouver une égalité sur **un** exemple&nbsp;: un exemple ne prouve rien."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Développer 3(x + 5).",
+            "Factoriser 5x + 15.",
+            "Réduire 4x + 2 + x − 7."
+          ],
+          "reponses": "1) 3x + 15 · 2) 5(x + 3) · 3) 5x − 5"
+        }
+      ]
+    }
+  ]
+}

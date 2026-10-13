@@ -1,0 +1,116 @@
+{
+  "titre": "Les propriétés matière",
+  "titreSurligne": "propriétés",
+  "accroche": "Mesurer pour reconnaître.",
+  "bonus": "1 kg = 1 000 g · 1 L = 1 000 mL · 1 mL = 1 cm³ · un litre d’air pèse **1,2 g**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/physique-chimie/les-proprietes-de-la-matiere.webp",
+    "prompt": "a glossy golden kitchen scale with a violet graduated cylinder and a small thermometer beside it, tiny golden sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Je mesure,\ndonc je reconnais !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Trois grandeurs, trois instruments",
+          "entetes": ["Grandeur", "Instrument", "Unité"],
+          "lignes": [
+            ["La **masse**", "la **balance**", "le kilogramme (kg)"],
+            ["Le **volume**", "l’**éprouvette graduée**", "le litre (L)"],
+            ["La **température**", "le **thermomètre**", "le degré Celsius (°C)"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Les conversions",
+          "petite": true,
+          "lignes": ["1 kg = 1 000 g", "1 L = 1 000 mL"],
+          "regle": "Pour passer à l’unité plus **petite**, on multiplie par 1 000. Et ==1 mL = 1 cm<sup>3</sup>==.",
+          "note": "la masse ne dépend pas du lieu&nbsp;!"
+        },
+        {
+          "type": "liste",
+          "numero": 3,
+          "titre": "À ne pas confondre",
+          "items": [
+            { "titre": "Masse", "texte": "la quantité de matière, en **kg**." },
+            { "titre": "Volume", "texte": "la place occupée, en **L**." },
+            { "titre": "Poids", "texte": "l’attraction de la Terre&nbsp;: ce n’est **pas** la masse." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Lire un volume dans l’éprouvette",
+          "etapes": [
+            { "titre": "Poser", "texte": "l’éprouvette bien à plat" },
+            { "titre": "Se placer", "texte": "les yeux à hauteur de la graduation" },
+            { "titre": "Lire", "texte": "au **bas** du ménisque (la courbe du liquide)" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un ballon dégonflé, puis gonflé, est pesé deux fois. Que constate-t-on&nbsp;?",
+          "calcul": "l’air gonfle le ballon et ajoute de la matière",
+          "aparte": "invisible ≠ sans masse",
+          "resultat": "il est [[plus lourd]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **masse** et **poids**.",
+            "Lire le **haut** du ménisque au lieu du bas.",
+            "Croire que l’air n’a **pas de masse**.",
+            "Penser que la masse **change** sur la Lune."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Une carte d’identité",
+          "deux": true,
+          "items": [
+            { "titre": "Corps pur", "texte": "ses températures de changement d’état sont **toujours les mêmes**." },
+            { "titre": "L’eau pure", "texte": "fond à **0 °C**, alors que l’alcool fond bien plus bas." },
+            { "titre": "Mesurer", "texte": "ces températures permet d’**identifier** une substance." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel instrument mesure la **masse**&nbsp;?",
+            "Combien de mL dans **2 L**&nbsp;?",
+            "Où lit-on le volume dans l’éprouvette&nbsp;?"
+          ],
+          "reponses": "1) la balance · 2) 2 000 mL · 3) au bas du ménisque"
+        }
+      ]
+    }
+  ]
+}

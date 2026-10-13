@@ -1,0 +1,115 @@
+{
+  "titre": "Multiple et diviseur",
+  "titreSurligne": "diviseur",
+  "accroche": "Deux mots pour une même relation.",
+  "bonus": "Diviseurs d’un nombre : **par paires**, en s’arrêtant quand les facteurs se croisent",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/reconnaitre-un-multiple-et-un-diviseur.webp",
+    "prompt": "a glossy golden rectangle made of small violet tiles in 3 rows of 4, sparkles"
+  },
+  "marcel": "Multiple et diviseur,\nmême relation !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La définition",
+          "taille": "mini",
+          "lignes": ["a = b × k", "k entier"],
+          "regle": "Alors **a est un multiple de b** et **b est un diviseur de a**. Exemple&nbsp;: 42 = 6 × 7, donc 42 est un ==multiple== de 6 et 7, et 6 et 7 sont des ==diviseurs== de 42.",
+          "note": "on ne divise jamais par 0&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Multiples et diviseurs",
+          "entetes": ["", "Multiples", "Diviseurs"],
+          "lignes": [
+            ["Combien", "une infinité", "un nombre fini"],
+            ["Exemple", "7 : 0, 7, 14, 21…", "12 : 1, 2, 3, 4, 6, 12"],
+            ["Le nombre 0", "multiple de tous", "ne divise rien"],
+            ["Le nombre 1", "—", "divise tout"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lister tous les diviseurs",
+          "etapes": [
+            { "titre": "Tester", "texte": "1, 2, 3… dans l’ordre : 12 = 1 × 12 = 2 × 6 = 3 × 4" },
+            { "titre": "Former des paires", "texte": "chaque produit donne deux diviseurs" },
+            { "titre": "S’arrêter", "texte": "quand les deux facteurs se croisent (3 puis 4)" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Simplifier __{18/24}__ avec les diviseurs de 18 et de 24.",
+          "calcul": "18 : 1, 2, 3, 6, 9, 18 · 24 : 1, 2, 3, 4, 6, 8, 12, 24",
+          "aparte": "communs : 1, 2, 3, 6",
+          "resultat": "{18/24} = [[{3/4}]] (÷ 6)"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Premiers entre eux", "texte": "seul diviseur commun : **1**. La fraction est déjà irréductible." },
+            { "titre": "Nombre premier", "texte": "il n’a que **deux** diviseurs : 1 et lui-même." },
+            { "titre": "Tout nombre", "texte": "est multiple de **lui-même** et de **1**." },
+            { "titre": "Plus grand commun", "texte": "le plus grand diviseur commun sert à simplifier d’un coup." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "42 = 6 × 7 avec 7 entier.", "quoi": "l’égalité" },
+            { "texte": "Donc 42 est un multiple de 6.", "quoi": "le multiple" },
+            { "texte": "Donc 6 est un diviseur de 42.", "quoi": "le diviseur" }
+          ],
+          "pied": "Il faut un ==entier== : 42 = 4 × 10,5 ne prouve rien."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "**Oublier** 1 et le nombre lui-même dans la liste.",
+            "Se croire sûr de la liste **sans les paires**.",
+            "Dire que 0 est un diviseur&nbsp;: il n’en est **jamais** un.",
+            "Confondre **multiple** (plus grand) et diviseur (plus petit)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Les **diviseurs** de 18&nbsp;?",
+            "**56** est-il un multiple de 7&nbsp;?",
+            "Les nombres **premiers** n’ont combien de diviseurs&nbsp;?"
+          ],
+          "reponses": "1) 1, 2, 3, 6, 9, 18 · 2) oui (7 × 8) · 3) exactement deux"
+        }
+      ]
+    }
+  ]
+}

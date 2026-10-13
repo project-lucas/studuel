@@ -1,0 +1,163 @@
+{
+  "titre": "Entiers et décimaux",
+  "titreSurligne": "décimaux",
+  "accroche": "Lire, ranger et comparer les nombres.",
+  "bonus": "246,305 : le **3** = 3 dixièmes · le **5** = 5 millièmes",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/maths/nombres-entiers-et-decimaux-definition-reperage-et-comparais.webp",
+    "prompt": "a glossy violet number line with golden tick marks and a small golden marker on a decimal point, sparkles"
+  },
+  "marcel": "Le plus long\nn’est pas le plus grand !",
+  "rangs": [
+    {
+      "colonnes": "1fr 330px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Comparer deux décimaux",
+          "taille": "mini",
+          "lignes": [
+            "12,7 > 12,25",
+            "12,70 > 12,25"
+          ],
+          "regle": "On compare les **parties entières**, puis les **dixièmes**, puis les centièmes. Pour s’y retrouver, on complète par des ==zéros== à droite.",
+          "note": "7 dixièmes valent plus que 2 dixièmes&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Entier",
+              "definition": "sans virgule&nbsp;: 0, 7, 254"
+            },
+            {
+              "terme": "Décimal",
+              "definition": "avec une partie décimale&nbsp;: 3,5 · 0,08"
+            },
+            {
+              "terme": "Chiffre / nombre",
+              "definition": "dans 246, le chiffre des dizaines est **4**, le nombre de dizaines est **24**"
+            },
+            {
+              "terme": "Abscisse",
+              "definition": "le nom du point d’un nombre sur la demi-droite graduée"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Ranger des nombres en trois temps",
+          "etapes": [
+            {
+              "titre": "Compléter",
+              "texte": "par des zéros pour avoir le même nombre de décimales"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "les parties entières, puis les dixièmes, puis les centièmes"
+            },
+            {
+              "titre": "Écrire",
+              "texte": "dans l’ordre demandé&nbsp;: croissant (petit → grand) ou décroissant"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Ranger dans l’ordre __croissant__&nbsp;: 3,5 · 3,09 · 3,41",
+          "calcul": "3,50 · 3,09 · 3,41",
+          "aparte": "on complète les zéros",
+          "resultat": "[[3,09 < 3,41 < 3,5]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Qui est le plus grand&nbsp;?",
+          "oui": {
+            "titre": "Bien comparé",
+            "texte": "12,7 **>** 12,25 : 12,70 contre 12,25, 70 centièmes **>** 25."
+          },
+          "non": {
+            "titre": "Le piège",
+            "texte": "12,25 plus grand parce qu’il est « plus long ». **Faux&nbsp;!**"
+          },
+          "essai": {
+            "texte": "Arrondir 3,47 **au dixième**&nbsp;: le chiffre suivant est 7 (≥ 5), donc **3,5**. Encadrer à l’unité&nbsp;: 3 < 3,47 < 4."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "3,5 = 3,50 ; 3,09 ; 3,41",
+              "quoi": "on complète"
+            },
+            {
+              "texte": "3,09 < 3,41 < 3,50",
+              "quoi": "on compare"
+            },
+            {
+              "texte": "Dans l’ordre croissant&nbsp;: 3,09 ; 3,41 ; 3,5",
+              "quoi": "la réponse"
+            }
+          ],
+          "pied": "Arrondir&nbsp;: ==5 ou plus== → on monte, sinon on garde."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le nombre le plus **long** est le plus grand.",
+            "Confondre le **chiffre** des dizaines et le **nombre** de dizaines.",
+            "Écrire 3,4 et 3,40 comme deux nombres **différents**.",
+            "Ranger dans le mauvais sens (croissant ≠ décroissant)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "Trois écritures du même nombre",
+          "paragraphes": [
+            "3,25 s’écrit aussi **{325/100}** (fraction) et **3 + {2/10} + {5/100}** (décomposée). Ajouter des zéros **à droite** ne change rien&nbsp;: 3,25 = 3,250."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Le plus grand&nbsp;: **4,6** ou **4,59**&nbsp;?",
+            "Dans **246,305**, que vaut le chiffre **5**&nbsp;?",
+            "Arrondis **3,47** au dixième."
+          ],
+          "reponses": "1) 4,6 · 2) 5 millièmes · 3) 3,5"
+        }
+      ]
+    }
+  ]
+}

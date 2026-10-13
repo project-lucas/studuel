@@ -1,0 +1,118 @@
+{
+  "titre": "Les nombres relatifs",
+  "titreSurligne": "relatifs",
+  "accroche": "Au-dessus et en dessous de zéro.",
+  "bonus": "Chez les négatifs : **−3 > −7** · l’opposé de −3 est **+3** · distance à zéro = sans le signe",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/les-nombres-relatifs.webp",
+    "prompt": "a glossy violet thermometer with a golden mercury line crossing the zero mark, snowflake and sun on each side, sparkles"
+  },
+  "marcel": "Plus c’est négatif,\nplus c’est petit !",
+  "rangs": [
+    {
+      "colonnes": "340px 1fr",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "La droite graduée",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><line x1='14' y1='90' x2='206' y2='90' stroke='#2b2350' stroke-width='3.5' stroke-linecap='round'></line><path d='M198,82 L208,90 L198,98' fill='none' stroke='#2b2350' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'></path><g stroke='#2b2350' stroke-width='3'><line x1='30' y1='82' x2='30' y2='98'></line><line x1='70' y1='82' x2='70' y2='98'></line><line x1='110' y1='80' x2='110' y2='100'></line><line x1='150' y1='82' x2='150' y2='98'></line><line x1='190' y1='82' x2='190' y2='98'></line></g><g font-family=\"'Baloo 2'\" font-weight='800' font-size='17' fill='#2b2350' text-anchor='middle'><text x='30' y='122'>−3</text><text x='70' y='122'>−1</text><text x='110' y='124'>0</text><text x='150' y='122'>+1</text><text x='190' y='122'>+3</text></g><path d='M30,72 Q110,22 190,72' fill='none' stroke='#7a3fe0' stroke-width='3.5' stroke-dasharray='6 5' stroke-linecap='round'></path><g font-family='Nunito' font-weight='800' font-size='12.5' fill='#7a3fe0' text-anchor='middle'><text x='110' y='44'>opposés</text><text x='56' y='150' fill='#f1566c'>négatifs</text><text x='164' y='150'>positifs</text></g></svg>",
+              "legende": "−3 et +3 sont opposés",
+              "sous": "symétriques par rapport à 0"
+            }
+          ],
+          "legende": { "jeton": "à droite", "texte": "Les positifs sont à droite de 0, les négatifs à gauche." }
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Comparer deux relatifs",
+          "entetes": ["Le cas", "Le gagnant", "Exemple"],
+          "lignes": [
+            ["Un + et un −", "le positif", "2 > −100"],
+            ["Deux positifs", "le plus loin de 0", "7 > 3"],
+            ["Deux négatifs", "le plus près de 0", "−3 > −7"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Comparer en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "le signe de chaque nombre : + ou −" },
+            { "titre": "Placer", "texte": "sur la droite graduée : le plus à droite est le plus grand" },
+            { "titre": "Conclure", "texte": "avec le signe &lt; ou &gt;, le plus petit à gauche" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Range −15 °C et −5 °C&nbsp;: __quel jour est le plus froid__&nbsp;?",
+          "calcul": "distances à 0 : 15 et 5",
+          "aparte": "chez les négatifs, c’est l’inverse",
+          "resultat": "−15 < −5 : [[−15 °C]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Le vocabulaire",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Positif, négatif", "texte": "le signe + ou −. Zéro est **les deux à la fois**. +5 s’écrit 5." },
+            { "titre": "Distance à zéro", "texte": "le nombre **sans son signe**&nbsp;: −7 et +7 sont à 7." },
+            { "titre": "Opposés", "texte": "même distance à zéro, signes contraires&nbsp;: −3 et +3." },
+            { "titre": "Repère du plan", "texte": "(abscisse&nbsp;; ordonnée), d’abord à l’**horizontale**. Origine (0&nbsp;; 0)." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Les deux nombres sont négatifs.", "quoi": "je repère" },
+            { "texte": "15 > 5, donc −15 est plus loin de 0", "quoi": "les distances" },
+            { "texte": "−15 < −5", "quoi": "je conclus" }
+          ],
+          "pied": "Un positif est ==toujours== plus grand qu’un négatif."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que **−7 > −3** parce que 7 > 3.",
+            "Écrire (**ordonnée** ; abscisse) à l’envers.",
+            "Croire que **−0** existe, ou que 0 a un signe.",
+            "Confondre **opposé** et distance à zéro."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Compare **−8** et **−2**, puis **−1** et **+4**.",
+            "Quel est l’**opposé** de **−12**&nbsp;? Sa distance à zéro&nbsp;?",
+            "Place **A(3&nbsp;; −2)** : combien vers la droite, vers le bas&nbsp;?"
+          ],
+          "reponses": "1) −8 < −2 et −1 < 4 · 2) +12, distance 12 · 3) 3 à droite, 2 vers le bas"
+        }
+      ]
+    }
+  ]
+}

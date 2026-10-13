@@ -1,0 +1,185 @@
+{
+  "titre": "Les statistiques",
+  "titreSurligne": "statistiques",
+  "accroche": "Recueillir, ranger, représenter.",
+  "bonus": "fréquence = **effectif ÷ effectif total** · étendue = **max − min** · angle = **fréquence × 360°**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/les-statistiques.webp",
+    "prompt": "a glossy bar chart with violet and golden bars and a small pie chart beside it, a magnifying glass over the tallest bar, sparkles"
+  },
+  "marcel": "Un axe tronqué\nmontre n’importe quoi !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Population, individu",
+              "definition": "l’**ensemble** étudié, et un **élément** de cet ensemble"
+            },
+            {
+              "terme": "Caractère",
+              "definition": "ce qu’on observe&nbsp;: **quantitatif** (on le mesure) ou **qualitatif**"
+            },
+            {
+              "terme": "Effectif, fréquence",
+              "definition": "combien d’individus&nbsp;; effectif ÷ effectif total"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "L’étendue",
+          "taille": "mini",
+          "lignes": [
+            "étendue = max − min"
+          ],
+          "regle": "Elle mesure la ==dispersion== des valeurs.",
+          "note": "la somme des fréquences vaut 1&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire un graphique en trois temps",
+          "etapes": [
+            {
+              "titre": "Titre",
+              "texte": "de quoi parle-t-on&nbsp;?"
+            },
+            {
+              "titre": "Axes",
+              "texte": "lire les axes et leurs unités"
+            },
+            {
+              "titre": "Zéro",
+              "texte": "l’axe vertical part-il de 0&nbsp;? Alors seulement, comparer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Notes : 8, 12, 12, 16, 17. __Étendue et fréquence de 12__&nbsp;?",
+          "calcul": "17 − 8 = 9 · effectif de 12 : 2",
+          "aparte": "2 sur 5",
+          "resultat": "étendue [[9]], f = 2/5 = 40 %"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Quel graphique&nbsp;?",
+          "entetes": [
+            "Le graphique",
+            "Pour quoi"
+          ],
+          "lignes": [
+            [
+              "Bâtons",
+              "valeurs isolées (quantitatif)"
+            ],
+            [
+              "Barres",
+              "un caractère qualitatif"
+            ],
+            [
+              "Circulaire",
+              "des parts d’un tout"
+            ],
+            [
+              "Courbe",
+              "une évolution dans le temps"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Les bons réflexes",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Tableau d’effectifs",
+              "texte": "ranger valeur par valeur, avec fréquences et effectifs cumulés."
+            },
+            {
+              "titre": "Somme des fréquences",
+              "texte": "toujours 1, soit 100 %."
+            },
+            {
+              "titre": "Même moyenne",
+              "texte": "deux classes peuvent avoir des étendues très différentes."
+            },
+            {
+              "titre": "Qualitatif",
+              "texte": "sport pratiqué, couleur des yeux : on ne mesure pas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "effectif total : 1 + 2 + 1 + 1 = 5",
+              "quoi": "le total"
+            },
+            {
+              "texte": "f = 2/5 = 0,4",
+              "quoi": "la fréquence"
+            },
+            {
+              "texte": "0,4 × 100 = 40 %",
+              "quoi": "en pourcentage"
+            }
+          ],
+          "pied": "Un diagramme circulaire&nbsp;: ==angle = fréquence × 360°==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Un **axe tronqué** qui exagère les écarts.",
+            "Une échelle **irrégulière** ou un graphique en 3D.",
+            "Confondre **effectif** et fréquence.",
+            "Oublier l’**unité** sur les axes."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Notes 8, 12, 12, 16, 17&nbsp;: quelle **étendue**&nbsp;?",
+            "Taille ou couleur des yeux&nbsp;: lequel est **quantitatif**&nbsp;?",
+            "Une fréquence de **0,25** vaut combien en **angle**&nbsp;?"
+          ],
+          "reponses": "1) 9 · 2) la taille · 3) 0,25 × 360° = 90°"
+        }
+      ]
+    }
+  ]
+}

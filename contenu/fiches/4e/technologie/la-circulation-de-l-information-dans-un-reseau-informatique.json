@@ -1,0 +1,170 @@
+{
+  "titre": "Réseau informatique",
+  "titreSurligne": "Réseau",
+  "accroche": "Le chemin d’un message, machine à machine.",
+  "bonus": "**Switch** = même réseau · **routeur** = deux réseaux · **DNS** = nom → adresse IP · **HTTPS** = HTTP sécurisé · l’info voyage en **paquets**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/technologie/la-circulation-de-l-information-dans-un-reseau-informatique.webp",
+    "prompt": "a glossy violet router with golden cables linking a laptop, a phone and a server rack, small glowing data packets traveling along the lines, sparkles"
+  },
+  "marcel": "Le message voyage\nen petits paquets !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Réseaux et machines",
+          "items": [
+            {
+              "terme": "LAN · WAN",
+              "definition": "réseau **local** (maison, collège) · réseau **étendu** (ville, pays)"
+            },
+            {
+              "terme": "Internet",
+              "definition": "le réseau mondial qui relie des milliers de réseaux"
+            },
+            {
+              "terme": "Serveur · client",
+              "definition": "le **serveur** rend un **service** ; le **client** le demande"
+            },
+            {
+              "terme": "Adresse IP",
+              "definition": "identifie une machine sur le réseau"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les protocoles",
+          "entetes": [
+            "Protocole",
+            "Rôle"
+          ],
+          "lignes": [
+            [
+              "**DNS**",
+              "traduit un nom en adresse IP"
+            ],
+            [
+              "**HTTP**",
+              "affiche les pages web"
+            ],
+            [
+              "**HTTPS**",
+              "HTTP avec échange **sécurisé**"
+            ],
+            [
+              "**FTP**",
+              "transfère des fichiers"
+            ],
+            [
+              "**SMTP**",
+              "envoie des courriers électroniques"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Suivre un message en trois temps",
+          "etapes": [
+            {
+              "titre": "Découper",
+              "texte": "le message est coupé en paquets, chacun avec l’adresse IP"
+            },
+            {
+              "titre": "Acheminer",
+              "texte": "switch dans le réseau local, routeur vers l’extérieur"
+            },
+            {
+              "titre": "Reconstituer",
+              "texte": "le destinataire rassemble les paquets dans l’ordre"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Tu tapes le nom d’un site. Qui le __traduit__ en adresse IP&nbsp;?",
+          "calcul": "nom → adresse IP",
+          "aparte": "puis la requête",
+          "resultat": "le service [[DNS]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quel équipement&nbsp;?",
+          "oui": {
+            "titre": "Switch",
+            "texte": "Il relie des machines du **même réseau**."
+          },
+          "non": {
+            "titre": "Routeur",
+            "texte": "Il relie **deux réseaux différents** (ton réseau et Internet)."
+          },
+          "essai": {
+            "texte": "La <i>box</i> d’accès à Internet joue le rôle de routeur, avec le <i>Wi-Fi</i> en plus."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Mon ordinateur est le client.",
+              "quoi": "le rôle"
+            },
+            {
+              "texte": "Le DNS donne l’adresse IP du serveur.",
+              "quoi": "l’adressage"
+            },
+            {
+              "texte": "Les paquets circulent via le routeur.",
+              "quoi": "l’acheminement"
+            }
+          ],
+          "pied": "Le ==S== de HTTPS signifie que l’échange est ==sécurisé==. Filaire ou Wi-Fi, c’est le même principe."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **switch** et **routeur**.",
+            "Croire qu’un message voyage **en un seul bloc**.",
+            "Confondre **Internet** et le **Web** (Internet est le réseau).",
+            "Oublier que le **DNS** traduit les noms."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel protocole **envoie** un courriel&nbsp;?",
+            "Que signifie le **S** de HTTPS&nbsp;?",
+            "Qui **rend un service** : client ou serveur&nbsp;?"
+          ],
+          "reponses": "1) SMTP · 2) sécurisé · 3) le serveur"
+        }
+      ]
+    }
+  ]
+}

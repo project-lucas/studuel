@@ -1,0 +1,116 @@
+{
+  "titre": "Signal et information",
+  "titreSurligne": "information",
+  "accroche": "Transporter sans déplacer de matière.",
+  "bonus": "Chaîne&nbsp;: **émetteur → milieu → récepteur** · lumière et ondes&nbsp;: **300 000 km/s** · son&nbsp;: **pas de vide** · 1 octet = **8 bits**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/signal-et-information.webp",
+    "prompt": "a glossy violet antenna sending golden wave rings towards a small phone, tiny glowing zeros and ones floating in the air, sparkles"
+  },
+  "marcel": "Un signal voyage,\nla matière reste !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les mots clés",
+          "items": [
+            { "terme": "Signal", "definition": "un phénomène physique qui transporte une **information**, sans transport de matière." },
+            { "terme": "Émetteur", "definition": "il envoie le signal." },
+            { "terme": "Récepteur", "definition": "il le reçoit et le décode." },
+            { "terme": "Capteur", "definition": "il transforme une grandeur (lumière, température) en **signal électrique**." },
+            { "terme": "Bit", "definition": "un chiffre binaire&nbsp;: **0** ou **1**." }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois familles de signaux",
+          "entetes": ["Famille", "Dans le vide&nbsp;?"],
+          "lignes": [
+            ["**Lumineux** (fibre, télécommande)", "**oui**"],
+            ["**Sonores** (voix, klaxon)", "**non**"],
+            ["**Électriques et ondes** (radio, Wi-Fi)", "**oui**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La chaîne de transmission",
+          "etapes": [
+            { "titre": "Émetteur", "texte": "il produit le signal (voix, lampe, antenne)" },
+            { "titre": "Milieu", "texte": "air, fil, fibre, vide&nbsp;: le signal s’y **propage**" },
+            { "titre": "Récepteur", "texte": "oreille, œil, téléphone&nbsp;: il **reçoit** l’information" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un fichier de __5 Mo__. Combien d’__octets__&nbsp;?",
+          "calcul": "1 Mo = 10<sup>6</sup> octets",
+          "aparte": "5 × 1 000 000",
+          "resultat": "[[5 000 000]] octets"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Analogique ou numérique&nbsp;?",
+          "oui": { "titre": "Numérique", "texte": "Une suite de **0 et de 1**&nbsp;: il se copie **sans perte** et se compresse." },
+          "non": { "titre": "Analogique", "texte": "Il varie de façon **continue** (disque vinyle, aiguille)&nbsp;: il se **dégrade** à chaque copie." },
+          "essai": { "texte": "Photo, musique, télévision, téléphone sont passés au <i>numérique</i> grâce à cette robustesse." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 5,
+          "titre": "Les unités de l’information",
+          "entetes": ["Unité", "Valeur"],
+          "lignes": [
+            ["1 **octet**", "8 bits"],
+            ["1 **ko**", "1 000 octets"],
+            ["1 **Mo**", "10<sup>6</sup> octets"],
+            ["1 **Go**", "10<sup>9</sup> octets"]
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’un signal **transporte de la matière**.",
+            "Dire que le **son** traverse le vide.",
+            "Confondre **bit** et **octet** : 1 octet = 8 bits.",
+            "Penser qu’une copie **numérique** s’abîme comme une cassette.",
+            "Oublier que radio et Wi-Fi vont à **300 000 km/s**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Le **son** se propage-t-il dans le vide&nbsp;?",
+            "Combien de **bits** dans un octet&nbsp;?",
+            "Qui **transforme** une grandeur en signal électrique&nbsp;?"
+          ],
+          "reponses": "1) non · 2) 8 · 3) le capteur"
+        }
+      ]
+    }
+  ]
+}

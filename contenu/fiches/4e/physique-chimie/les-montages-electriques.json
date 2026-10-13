@@ -1,0 +1,116 @@
+{
+  "titre": "Les montages",
+  "titreSurligne": "montages",
+  "accroche": "En série ou en dérivation&nbsp;?",
+  "bonus": "Série&nbsp;: **I** partout pareil, **U** s’additionne · dérivation&nbsp;: **U** pareil, **I** s’additionne · ampèremètre **en série** · voltmètre **en dérivation**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/les-montages-electriques.webp",
+    "prompt": "two glossy violet lamps wired in a golden circuit, one on a single loop and one on a branching fork, tiny golden sparks, sparkles"
+  },
+  "marcel": "Une lampe grille :\ntout s’éteint ?",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Série contre dérivation",
+          "entetes": ["Le point", "En série", "En dérivation"],
+          "lignes": [
+            ["Structure", "**une seule** boucle", "des **branches** entre deux **nœuds**"],
+            ["Intensité I", "la **même** partout", "elles **s’additionnent**"],
+            ["Tension U", "elles **s’additionnent**", "la **même** dans chaque branche"],
+            ["Un dipôle grille", "**tout** s’éteint", "les **autres** continuent"],
+            ["Ajouter une lampe", "elles brillent **moins**", "I totale **augmente**"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "La maison est en dérivation",
+          "items": [
+            { "titre": "Même tension", "texte": "**230 V** pour chaque appareil" },
+            { "titre": "Indépendance", "texte": "chaque appareil marche seul" },
+            { "titre": "Commande séparée", "texte": "chacun son interrupteur" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Brancher les appareils de mesure",
+          "entetes": ["L’appareil", "Branchement"],
+          "lignes": [
+            ["**Ampèremètre** (I)", "**en série**"],
+            ["**Voltmètre** (U)", "**en dérivation**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Reconnaître un montage",
+          "etapes": [
+            { "titre": "Compter les boucles", "texte": "une seule boucle&nbsp;? c’est une **série**" },
+            { "titre": "Chercher les nœuds", "texte": "le courant se partage&nbsp;? c’est une **dérivation**" },
+            { "titre": "Tester", "texte": "on retire une lampe&nbsp;: les autres brillent-elles encore&nbsp;?" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Deux lampes en __dérivation__ sur une pile. Une lampe grille. L’autre&nbsp;?",
+          "calcul": "chaque branche a sa propre boucle",
+          "aparte": "les branches sont indépendantes",
+          "resultat": "elle [[continue de briller]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "L’ampèremètre",
+          "oui": { "titre": "En série", "texte": "Le courant doit **le traverser** pour être mesuré." },
+          "non": { "titre": "En dérivation", "texte": "Aux bornes d’un générateur, c’est un **court-circuit**&nbsp;!" },
+          "essai": { "texte": "Une <i>guirlande</i> est en série&nbsp;: une ampoule grillée éteint toute la chaîne." }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "pieges",
+          "items": [
+            "Brancher l’ampèremètre **en dérivation**.",
+            "Dire que l’intensité s’additionne **en série**.",
+            "Confondre **nœud** et **branche**.",
+            "Croire que la maison est câblée **en série**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Voltmètre&nbsp;: **série** ou **dérivation**&nbsp;?",
+            "Que vaut la **tension** dans deux branches en dérivation&nbsp;?",
+            "Une lampe grille **en série**&nbsp;: que se passe-t-il&nbsp;?"
+          ],
+          "reponses": "1) dérivation · 2) la même · 3) tout s’éteint"
+        }
+      ]
+    }
+  ]
+}

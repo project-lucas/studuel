@@ -1,0 +1,197 @@
+{
+  "titre": "Cellules et organes",
+  "titreSurligne": "organes",
+  "accroche": "Chaque cellule réclame sa ration.",
+  "bonus": "Cellule → **tissu** → **organe** → **appareil** → **organisme** · cerveau = **20 %** du glucose",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/svt/les-besoins-nutritifs-des-cellules-et-l-organisation-des-org.webp",
+    "prompt": "a glossy violet round cell with a golden nucleus, tiny golden glucose spheres and small bubbles around it, sparkles"
+  },
+  "marcel": "Toutes les cellules\nont faim !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les besoins d’une cellule",
+          "entetes": [
+            "Besoin",
+            "Rôle"
+          ],
+          "lignes": [
+            [
+              "**Dioxygène**",
+              "respiration cellulaire"
+            ],
+            [
+              "**Glucose**",
+              "source d’énergie"
+            ],
+            [
+              "**Acides aminés**",
+              "fabriquer les protéines"
+            ],
+            [
+              "**Acides gras**",
+              "membranes, réserve"
+            ],
+            [
+              "Eau, sels, vitamines",
+              "fonctionnement général"
+            ]
+          ]
+        },
+        {
+          "type": "frise",
+          "numero": 2,
+          "titre": "Les niveaux d’organisation",
+          "etapes": [
+            {
+              "date": "Cellule",
+              "texte": "L’**unité** du vivant."
+            },
+            {
+              "date": "Tissu, organe",
+              "texte": "Cellules **semblables**, puis plusieurs tissus pour une fonction."
+            },
+            {
+              "date": "Appareil",
+              "texte": "Des organes qui ont un **même but**&nbsp;; l’ensemble = l’**organisme**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Un même service, plusieurs appareils",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Digestif",
+              "texte": "Fournit les **nutriments**, aliments simplifiés."
+            },
+            {
+              "titre": "Respiratoire",
+              "texte": "Fournit le **dioxygène**, évacue le CO₂."
+            },
+            {
+              "titre": "Circulatoire",
+              "texte": "**Transporte** tout jusqu’à chaque cellule."
+            },
+            {
+              "titre": "Excréteur",
+              "texte": "Élimine les **déchets**."
+            },
+            {
+              "titre": "Coordination",
+              "texte": "Aucun appareil ne se suffit&nbsp;: ils travaillent **ensemble**."
+            },
+            {
+              "titre": "Besoins variables",
+              "texte": "Un muscle en **effort** consomme bien plus qu’au repos."
+            },
+            {
+              "titre": "Le cerveau",
+              "texte": "**20 %** du glucose pour **2 %** de la masse."
+            },
+            {
+              "titre": "Surfaces d’échange",
+              "texte": "Alvéoles ≈ 100&nbsp;m², villosités ≈ 200&nbsp;m²."
+            },
+            {
+              "titre": "Capillaires",
+              "texte": "Paroi d’**une seule cellule**&nbsp;: échanges faciles."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 4,
+          "titre": "La respiration cellulaire",
+          "lignes": [
+            "glucose + dioxygène"
+          ],
+          "petite": "donne dioxyde de carbone + eau + énergie",
+          "regle": "Les cellules « brûlent » le glucose avec le dioxygène.",
+          "teinte": "jaune"
+        },
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Relier besoin et appareil",
+          "etapes": [
+            {
+              "titre": "Besoin",
+              "texte": "glucose ou dioxygène"
+            },
+            {
+              "titre": "Entrée",
+              "texte": "digestif ou respiratoire"
+            },
+            {
+              "titre": "Livraison",
+              "texte": "circulatoire jusqu’à la cellule"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Chaque cellule a besoin de dioxygène et de nutriments.",
+              "quoi": "besoin"
+            },
+            {
+              "texte": "Ils sont apportés par les appareils digestif, respiratoire et circulatoire.",
+              "quoi": "appareils"
+            },
+            {
+              "texte": "Le cerveau consomme environ 20 % du glucose pour 2 % de la masse.",
+              "quoi": "exemple"
+            }
+          ],
+          "pied": "Même solution partout&nbsp;: ==maximiser la surface== dans un petit volume."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **tissu** (cellules semblables) et **organe** (plusieurs tissus).",
+            "Oublier l’appareil **circulatoire**, qui livre aux cellules.",
+            "Croire que la consommation est **constante** selon l’effort.",
+            "Penser que seuls les **muscles** consomment du glucose."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle est la **source d’énergie** des cellules&nbsp;?",
+            "Quel niveau regroupe plusieurs **tissus**&nbsp;?",
+            "Quelle part du glucose consomme le **cerveau**&nbsp;?"
+          ],
+          "reponses": "1) le glucose · 2) l’organe · 3) environ 20 %"
+        }
+      ]
+    }
+  ]
+}

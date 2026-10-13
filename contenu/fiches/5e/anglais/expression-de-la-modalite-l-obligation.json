@@ -1,0 +1,185 @@
+{
+  "titre": "L’obligation",
+  "titreSurligne": "obligation",
+  "accroche": "Must, have to, mustn’t, needn’t.",
+  "bonus": "**mustn’t** = interdit · **don’t have to** = pas obligé",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/anglais/expression-de-la-modalite-l-obligation.webp",
+    "prompt": "a glossy violet road sign with a golden exclamation mark and a small golden chain, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Interdit ou pas\nobligé&nbsp;? Attention&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La forme",
+          "lignes": [
+            "**must** + base · **have to** + base"
+          ],
+          "petite": true,
+          "regle": "**must** est invariable (pas de -s, pas de to). **have to** se conjugue&nbsp;: <i>he has to</i>, <i>I had to</i>. Au passé, **must** n’existe pas.",
+          "note": "passé : had to"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Must ou have to&nbsp;?",
+          "entetes": [
+            "",
+            "MUST",
+            "HAVE TO"
+          ],
+          "lignes": [
+            [
+              "D’où vient l’ordre",
+              "de **moi**, ma conviction",
+              "de l’**extérieur**, une règle"
+            ],
+            [
+              "Exemple",
+              "<i>I must stop smoking.</i> (j’ai décidé)",
+              "<i>I have to stop.</i> (le médecin l’a dit)"
+            ],
+            [
+              "Question",
+              "<i>Must I go?</i>",
+              "<i>Do you have to go?</i>"
+            ],
+            [
+              "Passé",
+              "— (il n’en a pas)",
+              "<i>I **had to** stay.</i>"
+            ],
+            [
+              "Négation",
+              "<i>must</i> : mustn’t (interdit)",
+              "<i>don’t have to</i> (pas obligé)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les négations",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "mustn’t = interdit",
+              "texte": "<i>You **mustn’t** smoke here.</i> (c’est interdit)"
+            },
+            {
+              "titre": "don’t have to = pas obligé",
+              "texte": "<i>You **don’t have to** come.</i> (ce n’est pas obligatoire)"
+            },
+            {
+              "titre": "needn’t = pas besoin",
+              "texte": "<i>You **needn’t** worry.</i> (même sens que don’t have to)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Interdit ou pas obligé&nbsp;?",
+          "oui": {
+            "titre": "Interdit",
+            "texte": "<i>You **mustn’t** run in the corridor.</i> — il ne faut pas."
+          },
+          "non": {
+            "titre": "Pas obligé",
+            "texte": "<i>You **don’t have to** run.</i> — tu peux, mais rien ne t’y force."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Sunday: we ___ go to school.</i> (pas obligés) → **don’t have to**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Choisir la bonne forme",
+          "etapes": [
+            {
+              "titre": "Au passé&nbsp;?",
+              "texte": "Oui → **had to**. Non → présent."
+            },
+            {
+              "titre": "Qui impose&nbsp;?",
+              "texte": "Moi → **must**. Une règle ou les circonstances → **have to**."
+            },
+            {
+              "titre": "Négation&nbsp;?",
+              "texte": "Interdit → **mustn’t**. Pas obligé → **don’t have to**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Et le conseil&nbsp;?",
+          "deux": true,
+          "items": [
+            {
+              "titre": "should",
+              "texte": "conseil, moins fort&nbsp;: <i>You should see a doctor.</i>"
+            },
+            {
+              "titre": "Passé interdit",
+              "texte": "<i>couldn’t</i> ou <i>wasn’t allowed to</i>"
+            },
+            {
+              "titre": "Passé obligé",
+              "texte": "<i>I **had to** stay home.</i>"
+            },
+            {
+              "titre": "Question have to",
+              "texte": "avec **do**&nbsp;: <i>Do you have to go?</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>You don’t must</i> → <i>You **mustn’t**</i> ou <i>don’t **have to**</i>.",
+            "<i>mustn’t</i> n’est pas «&nbsp;pas obligé&nbsp;»&nbsp;: c’est «&nbsp;interdit&nbsp;».",
+            "<i>He musts</i> / <i>he must to go</i> → <i>he **must** go</i>.",
+            "<i>I musted</i> → <i>I **had to**</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>You ___ smoke here.</i> (interdit)",
+            "<i>You ___ come.</i> (pas obligé)",
+            "Passé de <i>I must stay</i>&nbsp;?"
+          ],
+          "reponses": "1) mustn’t 2) don’t have to 3) I had to stay"
+        }
+      ]
+    }
+  ]
+}

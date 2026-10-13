@@ -1,0 +1,191 @@
+{
+  "titre": "La masse volumique",
+  "titreSurligne": "volumique",
+  "accroche": "Ce qui identifie un matériau.",
+  "bonus": "**ρ = m ÷ V** · eau&nbsp;: **1 g/cm³** = 1 000 kg/m³ · 1 mL = 1 cm³ · 1 L = 1 dm³ · ρ < 1&nbsp;: **flotte** sur l’eau",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/la-masse-volumique.webp",
+    "prompt": "a glossy graduated cylinder filled with water, a violet metal cube sinking inside and a small wooden ball floating on top, sparkles, same art style as the reference icons"
+  },
+  "marcel": "À volume égal,\nle plus dense gagne",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La formule",
+          "petite": true,
+          "lignes": [
+            "ρ = m ÷ V",
+            "m = ρ × V"
+          ],
+          "regle": "**ρ** en **g/cm³**, **m** la masse en **g**, **V** le volume en **cm³**. Elle ne dépend pas de la quantité&nbsp;: elle ==identifie== le matériau.",
+          "note": "g avec cm³, kg avec m³&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Valeurs de référence",
+          "entetes": [
+            "Matériau",
+            "ρ (g/cm³)"
+          ],
+          "lignes": [
+            [
+              "**Eau**",
+              "1"
+            ],
+            [
+              "Huile",
+              "environ 0,92"
+            ],
+            [
+              "**Fer**",
+              "environ 7,9"
+            ],
+            [
+              "Air",
+              "environ 0,0012"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Identifier un matériau en trois temps",
+          "etapes": [
+            {
+              "titre": "Mesurer",
+              "texte": "la masse (balance) et le volume (éprouvette)"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "ρ = m ÷ V, avec g et cm³"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "au tableau de référence pour conclure"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": "★",
+          "titre": "Unités à convertir",
+          "entetes": [
+            "Équivalence",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "1 mL = 1 cm³",
+              "50 mL = 50 cm³"
+            ],
+            [
+              "1 L = 1 dm³",
+              "2 L = 2 dm³"
+            ],
+            [
+              "1 g/cm³ = 1 000 kg/m³",
+              "eau : 1 000 kg/m³"
+            ]
+          ]
+        },
+        {
+          "type": "texte",
+          "numero": "?",
+          "titre": "Plumes ou plomb ?",
+          "paragraphes": [
+            "1 kg de plumes et 1 kg de plomb ont la **même masse**, mais pas le même **volume**. C’est ce que mesure la masse volumique."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un objet de __237 g__ occupe __30 cm³__. Le matériau&nbsp;?",
+          "calcul": "ρ = 237 ÷ 30 = 7,9 g/cm³",
+          "aparte": "dans le tableau",
+          "resultat": "c’est du [[fer]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Flotte ou coule&nbsp;?",
+          "oui": {
+            "titre": "ρ plus petite",
+            "texte": "Plus petite que celle du liquide&nbsp;: l’objet **flotte** (bois sur l’eau)."
+          },
+          "non": {
+            "titre": "ρ plus grande",
+            "texte": "Plus grande que celle du liquide&nbsp;: l’objet **coule** (fer)."
+          },
+          "essai": {
+            "texte": "Volume irrégulier&nbsp;: on plonge l’objet. <i>V = V<sub>final</sub> − V<sub>initial</sub></i> (50 mL → 80 mL&nbsp;: 30 cm³)."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "m = 237 g et V = 30 cm³",
+              "quoi": "les données"
+            },
+            {
+              "texte": "ρ = m ÷ V = 237 ÷ 30",
+              "quoi": "lettres puis nombres"
+            },
+            {
+              "texte": "ρ = 7,9 g/cm³ : c’est du fer",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Le plomb est plus lourd que le bois ==à volume égal== seulement."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **masse** et **masse volumique**.",
+            "Mélanger **g avec m³** ou **kg avec cm³**.",
+            "Croire qu’un gros objet a une **plus grande** masse volumique.",
+            "Oublier l’**unité** dans la réponse."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "m = 54 g, V = 20 cm³&nbsp;: **ρ**&nbsp;?",
+            "Un objet de ρ = 0,8 g/cm³ **flotte**-t-il sur l’eau&nbsp;?",
+            "Masse de 10 cm³ de fer (ρ = 7,9)&nbsp;?"
+          ],
+          "reponses": "1) 2,7 g/cm³ · 2) oui · 3) 79 g"
+        }
+      ]
+    }
+  ]
+}

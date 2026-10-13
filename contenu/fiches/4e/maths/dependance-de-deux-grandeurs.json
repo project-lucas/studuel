@@ -1,0 +1,136 @@
+{
+  "titre": "Grandeurs dépendantes",
+  "titreSurligne": "dépendantes",
+  "accroche": "Une grandeur en commande une autre.",
+  "bonus": "Lecture&nbsp;: partir de **x** en abscisse → monter à la courbe → lire en ordonnée",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/dependance-de-deux-grandeurs.webp",
+    "prompt": "a glossy violet curve on a small golden graph with two axes, a golden dot sliding on the curve, sparkles"
+  },
+  "marcel": "Je choisis x,\nil décide de y&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Variable", "definition": "la grandeur qu’on **choisit** (en abscisse)" },
+            { "terme": "Grandeur dépendante", "definition": "celle qui **en découle** (en ordonnée)" },
+            { "terme": "Une seule valeur", "definition": "à chaque x correspond **un seul** y" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois façons de la décrire",
+          "entetes": ["La description", "Sa forme"],
+          "lignes": [
+            ["Une **formule**", "P = 2,50 × n"],
+            ["Un **tableau**", "x en haut, y dessous"],
+            ["Un **graphique**", "x en abscisse, y en ordonnée"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire un graphique",
+          "etapes": [
+            { "titre": "Partir", "texte": "de la valeur de x, sur l’axe des abscisses" },
+            { "titre": "Monter", "texte": "jusqu’à la courbe" },
+            { "titre": "Lire", "texte": "la valeur de y sur l’axe des ordonnées" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Le prix de n croissants est P = 2,50 × n. __Prix de 6 croissants__&nbsp;?",
+          "calcul": "P = 2,50 × 6",
+          "aparte": "on remplace n par 6",
+          "resultat": "P = [[15 €]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Dépendance ou proportionnalité&nbsp;?",
+          "oui": { "titre": "Les deux", "texte": "Prix de n croissants à 2,50 €&nbsp;: la droite passe par l’**origine**." },
+          "non": { "titre": "Dépendance seule", "texte": "10 € par mois + 5 € de frais&nbsp;: le prix ne part **pas de 0**." },
+          "essai": { "texte": "L’aire d’un disque dépend de R, mais en <i>R²</i>&nbsp;: **pas** proportionnelle. Toute proportionnalité est une dépendance, **l’inverse est faux**." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "L’allure d’une courbe",
+          "deux": true,
+          "items": [
+            { "titre": "Croissante", "texte": "y augmente avec x" },
+            { "titre": "Décroissante", "texte": "y diminue" },
+            { "titre": "Palier", "texte": "y ne change pas" },
+            { "titre": "Tableur", "texte": "une colonne de formule" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Lire l’**ordonnée** quand on cherche l’abscisse.",
+            "Croire que toute droite est proportionnelle.",
+            "Prendre la courbe d’un tableau pour une **formule**.",
+            "Oublier l’**unité** de chaque axe."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Sur le graphique, pour x = 3…", "quoi": "le point de départ" },
+            { "texte": "…la courbe est à la hauteur y = 7,5", "quoi": "la lecture" },
+            { "texte": "Donc pour 3 croissants, on paie 7,50 €", "quoi": "la phrase" }
+          ],
+          "pied": "Réponse en ==phrase==, avec l’unité."
+        },
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "Le tableur",
+          "paragraphes": [
+            "Une colonne pour **x**, une colonne de **formule** pour y, un graphique sur les deux&nbsp;: le moyen le plus rapide d’explorer."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "P = 2,50 × n&nbsp;: la **variable** est…&nbsp;?",
+            "Prix = 10 + 5 × n&nbsp;: **proportionnel**&nbsp;?",
+            "Une courbe qui monte est…&nbsp;?"
+          ],
+          "reponses": "1) n, le nombre de croissants · 2) non (il ne part pas de 0) · 3) croissante"
+        }
+      ]
+    }
+  ]
+}

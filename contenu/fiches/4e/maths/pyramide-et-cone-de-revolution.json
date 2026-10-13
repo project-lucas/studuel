@@ -1,0 +1,131 @@
+{
+  "titre": "Pyramide et cône",
+  "titreSurligne": "cône",
+  "accroche": "Deux solides pointus, un même tiers.",
+  "bonus": "**1 L = 1 dm³** · 1 cm³ = 1 mL · 1 m³ = 1 000 L",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/pyramide-et-cone-de-revolution.webp",
+    "prompt": "a glossy golden pyramid next to a glossy violet cone, a small sand-filled jar showing one third, sparkles"
+  },
+  "marcel": "N’oublie pas\nle tiers&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "348px 1fr",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "Les deux solides",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><polygon points='110,16 30,140 150,140' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><polyline points='110,16 200,110 150,140' fill='#e3d8fa' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polyline><g stroke='#2b2350' stroke-width='2.5' stroke-dasharray='5 5' fill='none'><line x1='30' y1='140' x2='80' y2='110'></line><line x1='80' y1='110' x2='200' y2='110'></line><line x1='110' y1='16' x2='80' y2='110'></line></g><line x1='110' y1='16' x2='110' y2='128' stroke='#7a3fe0' stroke-width='4' stroke-dasharray='3 5' stroke-linecap='round'></line><path d='M110,128 h10 v-10' fill='none' stroke='#f1566c' stroke-width='3'></path><g font-family='Nunito' font-weight='800' font-size='14' fill='#7a3fe0'><text x='116' y='80'>h</text></g></svg>",
+              "legende": "Pyramide",
+              "sous": "h ⟂ à la base"
+            },
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><path d='M110,16 L40,135 A70,18 0 0 0 180,135 Z' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></path><path d='M40,135 A70,18 0 0 1 180,135' fill='none' stroke='#2b2350' stroke-width='2.5' stroke-dasharray='5 5'></path><line x1='110' y1='16' x2='110' y2='135' stroke='#7a3fe0' stroke-width='4' stroke-dasharray='3 5' stroke-linecap='round'></line><line x1='110' y1='135' x2='180' y2='135' stroke='#7a3fe0' stroke-width='4' stroke-linecap='round'></line><g font-family='Nunito' font-weight='800' font-size='14' fill='#7a3fe0'><text x='116' y='80'>h</text><text x='138' y='152'>R</text><text x='146' y='58' font-size='12' fill='#4b2a9a'>génératrice</text></g></svg>",
+              "legende": "Cône de révolution",
+              "sous": "base = un disque"
+            }
+          ],
+          "legende": { "jeton": "la hauteur", "texte": "Perpendiculaire à la base, pas l’arête." }
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le volume",
+          "taille": "mini",
+          "lignes": ["V = {1/3} × B × h", "cône&nbsp;: {1/3} × π R² × h"],
+          "regle": "**B** est l’aire de la base. Une pyramide occupe le ==tiers== du prisme de même base et de même hauteur.",
+          "note": "le tiers, c’est ce qu’on oublie&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer un volume",
+          "etapes": [
+            { "titre": "Base", "texte": "aire de la base (π × R² pour le cône)" },
+            { "titre": "Hauteur", "texte": "la multiplier par la hauteur h" },
+            { "titre": "Tiers", "texte": "diviser par 3, unité en cm³" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Cône de rayon 3 cm et de hauteur 5 cm. __Volume__&nbsp;?",
+          "calcul": "V = {1/3} × π × 3² × 5",
+          "aparte": "9 × 5 ÷ 3 = 15",
+          "resultat": "V = [[15π ≈ 47,1 cm³]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quelle est la hauteur&nbsp;?",
+          "oui": { "titre": "La hauteur", "texte": "Du sommet, **perpendiculaire** à la base." },
+          "non": { "titre": "Pas la hauteur", "texte": "L’**arête latérale** ou la **génératrice**&nbsp;: elles sont plus longues." },
+          "essai": { "texte": "Base carrée de 6 cm, h = 5 cm&nbsp;: <i>{1/3} × 36 × 5</i> = **60 cm³**." }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "D’où vient le cône&nbsp;?",
+          "paragraphes": [
+            "On fait **tourner** un triangle rectangle autour d’un côté de l’angle droit. L’hypoténuse dessine la surface latérale&nbsp;: c’est la **génératrice**."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Patrons et sections",
+          "deux": false,
+          "items": [
+            { "titre": "Patron pyramide", "texte": "la base + un triangle par côté" },
+            { "titre": "Patron cône", "texte": "un disque + un **secteur circulaire**" },
+            { "titre": "Section parallèle", "texte": "polygone semblable, ou **disque**" },
+            { "titre": "Réduction k", "texte": "longueurs × k, aires × k², volumes × k³" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **tiers**.",
+            "Prendre l’**arête** pour la hauteur.",
+            "Dessiner le patron d’un cône avec un **triangle**.",
+            "Mélanger **cm²** et **cm³**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Pyramide d’aire de base 12 cm² et h = 5 cm&nbsp;: **volume**&nbsp;?",
+            "Une pyramide occupe quelle **fraction** du prisme de même base et hauteur&nbsp;?",
+            "1 L, c’est combien de **dm³**&nbsp;?"
+          ],
+          "reponses": "1) 20 cm³ · 2) le tiers · 3) 1 dm³"
+        }
+      ]
+    }
+  ]
+}

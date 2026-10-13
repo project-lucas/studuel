@@ -1,0 +1,187 @@
+{
+  "titre": "La tension",
+  "titreSurligne": "tension",
+  "accroche": "Ce que mesure un voltmètre.",
+  "bonus": "Série&nbsp;: **U = U₁ + U₂** · dérivation&nbsp;: **U égales** · voltmètre **en dérivation** · secteur&nbsp;: **230 V**, mortel",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/la-tension-electrique.webp",
+    "prompt": "a glossy violet voltmeter with a round dial and a golden needle, two crocodile clips on wires attached to a battery, small sparks, sparkles"
+  },
+  "marcel": "Une pile a de la tension\nmême sans courant !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les lois de la tension",
+          "petite": true,
+          "lignes": [
+            "Série&nbsp;: U = U₁ + U₂",
+            "Dérivation&nbsp;: U₁ = U₂"
+          ],
+          "regle": "**U** la tension en **volts (V)**. En **série**, les tensions **s’additionnent**&nbsp;; en **dérivation**, elles sont **égales**.",
+          "note": "le voltmètre se branche en dérivation&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Valeurs usuelles",
+          "entetes": [
+            "Source",
+            "Tension"
+          ],
+          "lignes": [
+            [
+              "Pile bâton",
+              "1,5 V"
+            ],
+            [
+              "Pile plate",
+              "4,5 V"
+            ],
+            [
+              "Batterie de voiture",
+              "12 V"
+            ],
+            [
+              "**Secteur**",
+              "**230 V**"
+            ],
+            [
+              "Seuil de sécurité",
+              "≈ 25 V"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Mesurer une tension en trois temps",
+          "etapes": [
+            {
+              "titre": "Brancher",
+              "texte": "le voltmètre **en dérivation**, aux bornes du dipôle"
+            },
+            {
+              "titre": "Orienter",
+              "texte": "borne **V** vers le **+**, borne **COM** vers l’autre"
+            },
+            {
+              "titre": "Lire",
+              "texte": "la valeur et écrire l’unité (V)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Deux lampes en __série__ sur une pile de 4,5 V. U₁ = 2,2 V. __U₂__&nbsp;?",
+          "calcul": "U₂ = 4,5 − 2,2",
+          "aparte": "loi d’additivité",
+          "resultat": "U₂ = [[2,3 V]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Aux bornes d’un interrupteur",
+          "oui": {
+            "titre": "Fermé",
+            "texte": "La tension à ses bornes est **≈ 0 V**&nbsp;: il ne consomme rien."
+          },
+          "non": {
+            "titre": "Ouvert",
+            "texte": "Il a **toute** la tension du générateur à ses bornes."
+          },
+          "essai": {
+            "texte": "<i>Continu</i> (=)&nbsp;: constante, comme une pile. <i>Alternatif</i> (~)&nbsp;: change de signe, comme le secteur (50 Hz)."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Les lampes sont en série&nbsp;: U = U₁ + U₂",
+              "quoi": "la loi"
+            },
+            {
+              "texte": "U₂ = U − U₁ = 4,5 − 2,2",
+              "quoi": "lettres puis nombres"
+            },
+            {
+              "texte": "U₂ = 2,3 V",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Il faut ==nommer la loi== utilisée (série ou dérivation) avant de calculer."
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Bon à savoir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Sans courant",
+              "texte": "une pile posée a bien 1,5 V à ses bornes"
+            },
+            {
+              "titre": "Branchement inversé",
+              "texte": "valeur négative, sans danger"
+            },
+            {
+              "titre": "Analogie",
+              "texte": "la tension est comme la pression de l’eau"
+            },
+            {
+              "titre": "Secteur",
+              "texte": "il alterne 50 fois par seconde"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Brancher le voltmètre **en série**.",
+            "Additionner les tensions **en dérivation**.",
+            "Oublier l’**unité**&nbsp;: le volt (V).",
+            "Dire que la tension « **circule** »&nbsp;: elle existe **aux bornes**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Tension du **secteur** domestique&nbsp;?",
+            "Deux dipôles en dérivation, U₁ = 6 V&nbsp;: **U₂**&nbsp;?",
+            "Série&nbsp;: U₁ = 3 V et U₂ = 2 V, **U**&nbsp;?"
+          ],
+          "reponses": "1) 230 V · 2) 6 V · 3) 5 V"
+        }
+      ]
+    }
+  ]
+}

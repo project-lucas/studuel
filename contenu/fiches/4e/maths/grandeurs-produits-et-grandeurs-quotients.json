@@ -1,0 +1,128 @@
+{
+  "titre": "Produits et quotients",
+  "titreSurligne": "quotients",
+  "accroche": "L’unité te dit quelle opération faire.",
+  "bonus": "**km/h** = km ÷ h · **kWh** = kW × h · **g/cm³** = g ÷ cm³ · **€/kg** = € ÷ kg",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/grandeurs-produits-et-grandeurs-quotients.webp",
+    "prompt": "a glossy violet speedometer dial next to a golden measuring jug with liquid, small sparkles"
+  },
+  "marcel": "Lis l’unité,\ntu as la formule&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les grandeurs produits",
+          "entetes": ["La grandeur", "Son calcul"],
+          "lignes": [
+            ["**Aire**", "longueur × longueur (m²)"],
+            ["**Volume**", "long. × long. × long. (m³)"],
+            ["**Énergie**", "puissance × durée (kWh)"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les grandeurs quotients",
+          "entetes": ["La grandeur", "Son calcul"],
+          "lignes": [
+            ["**Vitesse**", "distance ÷ durée (km/h)"],
+            ["**Débit**", "volume ÷ durée (L/min)"],
+            ["**Masse volumique**", "masse ÷ volume (g/cm³)"],
+            ["**Prix au kilo**", "prix ÷ masse (€/kg)"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Lire", "texte": "l’unité demandée" },
+            { "titre": "Choisir", "texte": "× ou ÷ selon l’unité" },
+            { "titre": "Vérifier", "texte": "les unités compatibles" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un robinet remplit 45 L en 5 min. __Débit__&nbsp;?",
+          "calcul": "45 ÷ 5",
+          "aparte": "volume ÷ durée",
+          "resultat": "débit = [[9 L/min]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Les unités vont-elles ensemble&nbsp;?",
+          "oui": { "titre": "Cohérent", "texte": "Des **kilomètres** et des **heures** donnent des **km/h**." },
+          "non": { "titre": "Incohérent", "texte": "Des kilomètres et des **minutes**&nbsp;: le résultat n’a aucun nom." },
+          "essai": { "texte": "120 km en 90 min. On passe **90 min = 1,5 h**, puis <i>120 ÷ 1,5 = 80</i>&nbsp;: **80 km/h**." }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "L’unité raconte la formule",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "km/h", "texte": "kilomètres **par** heure&nbsp;: une division." },
+            { "titre": "kWh", "texte": "une puissance **multipliée** par une durée." },
+            { "titre": "g/cm³", "texte": "une masse divisée par un volume." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le débit est un volume par durée", "quoi": "la grandeur" },
+            { "texte": "débit = 45 ÷ 5", "quoi": "le calcul" },
+            { "texte": "débit = 9 L/min", "quoi": "l’unité" }
+          ],
+          "pied": "Toujours écrire l’==unité== avec le résultat."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mélanger **minutes** et **heures**.",
+            "Multiplier alors que l’unité contient «&nbsp;**par**&nbsp;».",
+            "Oublier l’**unité** du résultat.",
+            "Ne pas vérifier l’**ordre de grandeur**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "150 km en 3 h&nbsp;: la **vitesse**&nbsp;?",
+            "600 g pour 200 cm³&nbsp;: la **masse volumique**&nbsp;?",
+            "Un radiateur de 2 kW chauffe 3 h&nbsp;: l’**énergie**&nbsp;?"
+          ],
+          "reponses": "1) 50 km/h · 2) 3 g/cm³ · 3) 6 kWh"
+        }
+      ]
+    }
+  ]
+}

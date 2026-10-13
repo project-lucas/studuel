@@ -1,0 +1,165 @@
+{
+  "titre": "Les nombres premiers",
+  "titreSurligne": "premiers",
+  "accroche": "Les briques de tous les entiers.",
+  "bonus": "2 est le seul premier **pair** · 1 n’est **pas** premier · il y en a une **infinité**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/les-nombres-premiers.webp",
+    "prompt": "glossy violet and golden building bricks each carrying a prime number shape, forming a small tower, tiny golden sparkles"
+  },
+  "marcel": "Deux diviseurs,\nrien de plus&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "La définition",
+          "items": [
+            {
+              "terme": "Nombre premier",
+              "definition": "un entier **supérieur à 1** qui n’a que **deux** diviseurs&nbsp;: 1 et lui-même"
+            },
+            {
+              "terme": "Décomposition",
+              "definition": "tout entier supérieur à 1 s’écrit d’**une seule façon** en produit de premiers"
+            },
+            {
+              "terme": "Premiers entre eux",
+              "definition": "aucun facteur commun&nbsp;: la fraction est déjà irréductible"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Les premiers à connaître",
+          "teinte": "jaune",
+          "taille": "mini",
+          "lignes": [
+            "2 · 3 · 5 · 7 · 11 · 13",
+            "17 · 19 · 23 · 29 · 31",
+            "37 · 41 · 43 · 47"
+          ],
+          "regle": "Pour tester un nombre, on divise par **2, 3, 5, 7, 11…** et on s’arrête quand le carré du diviseur dépasse le nombre."
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Décomposer en trois temps",
+          "etapes": [
+            {
+              "titre": "Diviser",
+              "texte": "par le plus petit premier possible"
+            },
+            {
+              "titre": "Recommencer",
+              "texte": "avec le quotient obtenu"
+            },
+            {
+              "titre": "S’arrêter",
+              "texte": "quand on arrive à 1, puis écrire avec des puissances"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Décomposer 360.",
+          "calcul": "360 = 2 × 180 = 2² × 90 = 2³ × 45",
+          "aparte": "puis 45 = 3² × 5",
+          "resultat": "360 = [[2³ × 3² × 5]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "À quoi ça sert",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Simplifier",
+              "texte": "On décompose haut et bas, on barre les facteurs **communs**."
+            },
+            {
+              "titre": "Les diviseurs",
+              "texte": "On **combine** les facteurs premiers."
+            },
+            {
+              "titre": "Tester 97",
+              "texte": "Ni 2, 3, 5, 7, et 11² = 121 > 97&nbsp;: **premier**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 4,
+          "titre": "Pourquoi c’est utile",
+          "paragraphes": [
+            "Les nombres premiers sont aux entiers ce que les atomes sont à la matière. Euclide a démontré, il y a plus de deux mille ans, qu’il en existe une **infinité**&nbsp;: on n’arrive jamais au dernier.",
+            "Décomposer en facteurs premiers sert à **simplifier une fraction** et à trouver **tous les diviseurs** d’un nombre."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "91 = 7 × 13",
+              "quoi": "un produit"
+            },
+            {
+              "texte": "Il a d’autres diviseurs que 1 et 91.",
+              "quoi": "la raison"
+            },
+            {
+              "texte": "Donc 91 n’est pas premier.",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Pour dire « pas premier », ==un seul diviseur== suffit."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que **1** est premier&nbsp;: il n’a qu’un diviseur.",
+            "Croire que tous les nombres impairs sont premiers&nbsp;: **9, 15, 21**…",
+            "Oublier que **2** est premier, et pair.",
+            "S’arrêter avant 1 dans la **décomposition**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "37 est-il premier&nbsp;?",
+            "Décomposer 60.",
+            "Pourquoi 91 n’est-il pas premier&nbsp;?"
+          ],
+          "reponses": "1) oui · 2) 2² × 3 × 5 · 3) 91 = 7 × 13"
+        }
+      ]
+    }
+  ]
+}

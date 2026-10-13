@@ -1,0 +1,185 @@
+{
+  "titre": "Verbes et auxiliaires",
+  "titreSurligne": "auxiliaires",
+  "accroche": "Repère l’auxiliaire, le reste suit.",
+  "bonus": "**be** · **have** · **do** · les modaux (can, must, should, will)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/anglais/les-verbes-lexicaux-et-les-auxiliaires.webp",
+    "prompt": "a glossy violet toolbox with a golden wrench and a golden gear, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "L’auxiliaire\nfait la phrase&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Deux familles",
+          "lignes": [
+            "**lexical** = sens · **auxiliaire** = règle"
+          ],
+          "petite": true,
+          "regle": "Le verbe **lexical** porte le sens (<i>work, eat, think</i>). L’**auxiliaire** construit la phrase. Un verbe lexical seul ne forme ni question ni négation.",
+          "note": "il lui faut un auxiliaire"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les auxiliaires",
+          "entetes": [
+            "L’auxiliaire",
+            "Ce qu’il forme",
+            "L’exemple"
+          ],
+          "lignes": [
+            [
+              "**be**",
+              "formes en -ING, passif",
+              "<i>She is working. It was built.</i>"
+            ],
+            [
+              "**have**",
+              "temps composés",
+              "<i>I have finished.</i>"
+            ],
+            [
+              "**do**",
+              "négation, question (temps simples)",
+              "<i>I don’t know. Do you know?</i>"
+            ],
+            [
+              "**modaux**",
+              "can, must, should, may, will",
+              "<i>You can go.</i> (invariables)"
+            ],
+            [
+              "**Sans auxiliaire**",
+              "le verbe lexical seul ne peut pas",
+              "<i>Work you? ✗</i> → <i>Do you work?</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les trois pouvoirs de l’auxiliaire",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "La question",
+              "texte": "Il passe **devant** le sujet&nbsp;: <i>**Are** you ready? **Have** you finished?</i>"
+            },
+            {
+              "titre": "La négation",
+              "texte": "**not** se place **après** lui&nbsp;: <i>isn’t, hasn’t, doesn’t, can’t</i>"
+            },
+            {
+              "titre": "La réponse courte",
+              "texte": "Il évite de répéter le verbe&nbsp;: <i>Yes, I **do**. No, she **isn’t**.</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Be et have, lexicaux&nbsp;?",
+          "oui": {
+            "titre": "Be : il reste auxiliaire",
+            "texte": "<i>I am French.</i> → <i>**Am** I French?</i> (pas besoin de do)"
+          },
+          "non": {
+            "titre": "Have lexical : il faut do",
+            "texte": "<i>I have a car.</i> → <i>**Do** you have a car?</i>"
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>She works here.</i> → question&nbsp;: <i>**Does** she work here?</i>"
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Faire une question ou une négation",
+          "etapes": [
+            {
+              "titre": "Cherche l’auxiliaire",
+              "texte": "be, have, un modal&nbsp;? Il est déjà là."
+            },
+            {
+              "titre": "Aucun&nbsp;?",
+              "texte": "Au présent simple et au prétérit, on ajoute **do**."
+            },
+            {
+              "titre": "Place-le",
+              "texte": "Question&nbsp;: devant le sujet. Négation&nbsp;: **not** après lui."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Exemples de verbes lexicaux",
+          "deux": true,
+          "items": [
+            {
+              "titre": "work, eat",
+              "texte": "<i>I work. We eat.</i>"
+            },
+            {
+              "titre": "run, think",
+              "texte": "<i>He runs. They think.</i>"
+            },
+            {
+              "titre": "believe",
+              "texte": "<i>I believe you.</i>"
+            },
+            {
+              "titre": "do lexical",
+              "texte": "<i>I do my homework.</i> (sens « faire »)"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Like you music?</i> → <i>**Do** you like music?</i>",
+            "<i>I no like</i> → <i>I **don’t** like</i>.",
+            "<i>Have you a car?</i> (vieilli) → <i>**Do** you have a car?</i> avec <i>have</i> qui veut dire « posséder ».",
+            "<i>She can to swim</i> → <i>She **can** swim</i> (pas de to)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Mets en question&nbsp;: <i>You are ready.</i>",
+            "Mets à la négative&nbsp;: <i>She has finished.</i>",
+            "Question&nbsp;: <i>They play football.</i>"
+          ],
+          "reponses": "1) Are you ready? 2) She hasn’t finished 3) Do they play football?"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "titre": "Le pH",
+  "titreSurligne": "pH",
+  "accroche": "Mesurer l’acidité d’une solution.",
+  "bonus": "pH **< 7** acide · **= 7** neutre · **> 7** basique · plus le pH est petit, plus c’est acide · acide **dans** l’eau, jamais l’inverse",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/le-ph-ou-potentiel-hydrogene.webp",
+    "prompt": "a glossy pH strip scale going from golden to violet colours, a drop falling on it, a small beaker, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Petit pH,\nbeaucoup d’acide !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "L’échelle du pH",
+          "entetes": [
+            "pH",
+            "Solution",
+            "Exemples"
+          ],
+          "lignes": [
+            [
+              "**< 7**",
+              "**acide**",
+              "citron (≈ 2), vinaigre (≈ 3)"
+            ],
+            [
+              "**= 7**",
+              "**neutre**",
+              "eau pure"
+            ],
+            [
+              "**> 7**",
+              "**basique**",
+              "eau savonneuse (≈ 9), déboucheur (≈ 13)"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le lien avec les ions",
+          "items": [
+            {
+              "terme": "Acide",
+              "definition": "ions **hydrogène H⁺** en majorité"
+            },
+            {
+              "terme": "Basique",
+              "definition": "ions **hydroxyde OH⁻** en majorité"
+            },
+            {
+              "terme": "Neutre",
+              "definition": "autant des deux"
+            },
+            {
+              "terme": "pH",
+              "definition": "un nombre **sans unité**, de 0 à 14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Comment le mesurer ?",
+          "entetes": [
+            "Outil",
+            "Précision",
+            "Usage"
+          ],
+          "lignes": [
+            [
+              "**Papier pH**",
+              "environ 1 unité",
+              "une goutte, on compare la couleur"
+            ],
+            [
+              "**pH-mètre**",
+              "au dixième",
+              "on le plonge, après étalonnage"
+            ],
+            [
+              "**Indicateur coloré** (BBT)",
+              "aucune mesure",
+              "change de couleur autour d’une valeur"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "On dilue du __vinaigre__ (pH 3) avec beaucoup d’eau. Son pH&nbsp;?",
+          "calcul": "il monte vers 7",
+          "aparte": "sans jamais le dépasser",
+          "resultat": "il reste [[acide]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Diluer une solution",
+          "oui": {
+            "titre": "Un acide",
+            "texte": "Son pH **monte** vers 7."
+          },
+          "non": {
+            "titre": "Une base",
+            "texte": "Son pH **descend** vers 7."
+          },
+          "essai": {
+            "texte": "Le nombre d’ions H⁺ ne change pas&nbsp;: leur **concentration** diminue."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Le pH du vinaigre vaut 3.",
+              "quoi": "la donnée"
+            },
+            {
+              "texte": "3 est inférieur à 7.",
+              "quoi": "la comparaison"
+            },
+            {
+              "texte": "La solution est acide.",
+              "quoi": "la conclusion"
+            },
+            {
+              "texte": "Je porte des lunettes et des gants.",
+              "quoi": "la sécurité"
+            }
+          ],
+          "pied": "On verse l’==acide dans l’eau==, jamais l’inverse, avec lunettes et gants."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que plus le pH est grand, plus c’est **acide**.",
+            "Dire qu’en diluant un acide on obtient une **base**.",
+            "Verser l’**eau** dans l’acide (projections !).",
+            "Chercher une **unité** au pH : il n’en a pas.",
+            "Croire que le papier pH donne une valeur **précise**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Une solution de pH **9** est-elle acide&nbsp;?",
+            "Quel ion domine dans une solution **acide**&nbsp;?",
+            "Quel outil mesure le pH **au dixième**&nbsp;?"
+          ],
+          "reponses": "1) non, basique · 2) l’ion H⁺ · 3) le pH-mètre"
+        }
+      ]
+    }
+  ]
+}

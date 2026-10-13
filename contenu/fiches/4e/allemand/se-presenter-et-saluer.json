@@ -1,0 +1,185 @@
+{
+  "titre": "Se présenter et saluer",
+  "titreSurligne": "saluer",
+  "accroche": "Dire bonjour, son nom, son âge.",
+  "bonus": "**du** = tu · **Sie** = vous (toujours avec une majuscule) · **Ich bin 13 Jahre alt**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/allemand/se-presenter-et-saluer.webp",
+    "prompt": "a glossy violet speech bubble with a golden waving hand inside, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Hallo&nbsp;! Ich bin\nMarcel&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Se présenter",
+          "lignes": [
+            "**Ich heiße** Anna."
+          ],
+          "petite": true,
+          "regle": "Pour l’âge, on **est** vieux en allemand&nbsp;: <i>Ich **bin** 13 Jahre alt.</i> (J’ai 13 ans.)",
+          "note": "bin, pas habe"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Saluer",
+          "entetes": [
+            "La formule",
+            "Quand",
+            "Registre"
+          ],
+          "lignes": [
+            [
+              "<i>Hallo</i>",
+              "à toute heure",
+              "familier"
+            ],
+            [
+              "<i>Guten Morgen</i>",
+              "le matin",
+              "neutre"
+            ],
+            [
+              "<i>Guten Tag</i>",
+              "dans la journée",
+              "poli"
+            ],
+            [
+              "<i>Guten Abend</i>",
+              "le soir",
+              "poli"
+            ],
+            [
+              "<i>Tschüss</i> / <i>Auf Wiedersehen</i>",
+              "au revoir",
+              "familier / poli"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les phrases utiles",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Le nom",
+              "texte": "<i>Wie heißt du?</i> (Comment t’appelles-tu&nbsp;?) — <i>Ich heiße Anna.</i>"
+            },
+            {
+              "titre": "L’origine",
+              "texte": "<i>Ich komme aus Frankreich.</i> (Je viens de France.)"
+            },
+            {
+              "titre": "La ville",
+              "texte": "<i>Ich wohne in Lyon.</i> (J’habite à Lyon.)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Dire son âge",
+          "oui": {
+            "titre": "Avec sein",
+            "texte": "<i>Ich **bin** 13 Jahre alt.</i> — on **est** âgé de 13 ans."
+          },
+          "non": {
+            "titre": "Avec haben",
+            "texte": "<i>Ich habe 13 Jahre.</i> — c’est un calque du français, ça s’entend tout de suite."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Wie alt bist du?</i> → <i>Ich **bin** 12 Jahre alt.</i>"
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Tutoyer ou vouvoyer",
+          "etapes": [
+            {
+              "titre": "Qui est-ce&nbsp;?",
+              "texte": "Un ami, un enfant → <i>du</i>. Un adulte inconnu → <i>Sie</i>."
+            },
+            {
+              "titre": "Choisis",
+              "texte": "<i>Wie heißt **du**?</i> ou <i>Wie heißen **Sie**?</i>"
+            },
+            {
+              "titre": "Écris",
+              "texte": "<i>Sie</i> prend **toujours une majuscule**, même au milieu d’une phrase."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les nombres de 1 à 10",
+          "deux": true,
+          "items": [
+            {
+              "titre": "1 – 3",
+              "texte": "<i>eins, zwei, drei</i>"
+            },
+            {
+              "titre": "4 – 6",
+              "texte": "<i>vier, fünf, sechs</i>"
+            },
+            {
+              "titre": "7 – 10",
+              "texte": "<i>sieben, acht, neun, zehn</i>"
+            },
+            {
+              "titre": "Après 20",
+              "texte": "à l’envers&nbsp;: <i>einundzwanzig</i> = un-et-vingt (21)"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Ich habe 13 Jahre</i> → <i>Ich **bin** 13 Jahre alt.</i>",
+            "Écrire <i>sie</i> sans majuscule pour dire « vous »&nbsp;: c’est <i>**S**ie</i>.",
+            "Tutoyer un adulte inconnu&nbsp;: on dit <i>Sie</i> à un commerçant ou un professeur.",
+            "<i>Vierundsechzig</i> = 4 + 60 = **64**, pas 46."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dis « J’ai 13 ans »&nbsp;: <i>Ich ___ 13 Jahre alt.</i>",
+            "Comment dit-on « vous » de politesse&nbsp;?",
+            "Que veut dire <i>Guten Abend</i>&nbsp;?"
+          ],
+          "reponses": "1) bin 2) Sie (majuscule) 3) Bonsoir"
+        }
+      ]
+    }
+  ]
+}

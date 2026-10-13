@@ -1,0 +1,168 @@
+{
+  "titre": "Échelles et ratios",
+  "titreSurligne": "ratios",
+  "accroche": "Réduire un plan, partager en parts.",
+  "bonus": "1 km = 100 000 cm · 1 m = 100 cm · convertis **avant** de calculer",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/proportionnalite-echelles-et-ratios.webp",
+    "prompt": "a glossy golden folded map with a violet ruler across it and a small pie split in unequal slices, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Convertis d’abord,\ncalcule ensuite !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’échelle",
+          "lignes": [
+            "échelle = {plan/réel}"
+          ],
+          "regle": "Les deux distances sont dans la **même unité**&nbsp;: l’échelle n’a ==pas d’unité==. On l’écrit 1/25&nbsp;000 ou 1&nbsp;:&nbsp;25&nbsp;000.",
+          "note": "Plus petit que 1&nbsp;: une carte"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Plan ↔ réel (1/25 000)",
+          "entetes": [
+            "Le sens",
+            "Le calcul"
+          ],
+          "lignes": [
+            [
+              "Plan → **réel**",
+              "× 25 000&nbsp;: 3 cm → 75 000 cm = **750 m**"
+            ],
+            [
+              "Réel → **plan**",
+              "÷ 25 000&nbsp;: 2 km = 200 000 cm → **8 cm**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Partager selon un ratio",
+          "etapes": [
+            {
+              "titre": "Compter",
+              "texte": "le total des parts : 2 + 3 = 5"
+            },
+            {
+              "titre": "Une part",
+              "texte": "60 ÷ 5 = 12 €"
+            },
+            {
+              "titre": "Multiplier",
+              "texte": "2 × 12 = 24 € et 3 × 12 = 36 €"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Carte au 1/50&nbsp;000 : 4 cm sur la carte. Distance __réelle__&nbsp;?",
+          "calcul": "4 × 50 000 = 200 000",
+          "aparte": "ça fait des cm",
+          "resultat": "= [[2 km]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Ratio à 3 termes",
+              "texte": "1&nbsp;:&nbsp;2&nbsp;:&nbsp;3 sur 120 € → 6 parts de 20 € → **20, 40, 60 €**."
+            },
+            {
+              "titre": "Agrandissement",
+              "texte": "Une échelle **plus grande que 1** agrandit (schéma d’un insecte)."
+            },
+            {
+              "titre": "Vérifier",
+              "texte": "Les parts **additionnées** redonnent le total."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Ratio 2 : 3 sur 60 €",
+          "oui": {
+            "titre": "Le bon calcul",
+            "texte": "5 parts, une part = 12 €. Premier : **2/5** du total = 24 €."
+          },
+          "non": {
+            "titre": "Le piège",
+            "texte": "Prendre 2/3 de 60 € = 40 €. **Faux**, le ratio parle de parts."
+          },
+          "essai": {
+            "texte": "24 + 36 = 60 €. ✔"
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "1 cm = 50 000 cm réels",
+              "quoi": "on lit l’échelle"
+            },
+            {
+              "texte": "4 × 50 000 = 200 000 cm",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "200 000 cm = 2 km",
+              "quoi": "la conversion"
+            }
+          ],
+          "pied": "Donne l’==unité==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "**Convertir** de travers&nbsp;: 1 km = 100&nbsp;000 cm.",
+            "Diviser au lieu de multiplier en changeant de sens.",
+            "Prendre 2/3 pour le ratio 2&nbsp;:&nbsp;3&nbsp;: le dénominateur est le **total des parts**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Échelle 1/1&nbsp;000, 5 cm sur le plan&nbsp;: **longueur réelle**&nbsp;?",
+            "Partager 40 € selon le ratio **1&nbsp;:&nbsp;4**.",
+            "Réel 3 km, échelle 1/100&nbsp;000&nbsp;: longueur **sur la carte**&nbsp;?"
+          ],
+          "reponses": "1) 50 m · 2) 8 € et 32 € · 3) 3 cm (300 000 cm ÷ 100 000)"
+        }
+      ]
+    }
+  ]
+}

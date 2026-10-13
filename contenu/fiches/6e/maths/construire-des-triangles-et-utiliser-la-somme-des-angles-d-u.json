@@ -1,0 +1,166 @@
+{
+  "titre": "Triangles et 180°",
+  "titreSurligne": "180°",
+  "accroche": "Trois angles, toujours 180°.",
+  "bonus": "Le plus grand côté doit être **plus petit** que la somme des deux autres",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/maths/construire-des-triangles-et-utiliser-la-somme-des-angles-d-u.webp",
+    "prompt": "a glossy violet triangle with three golden arcs marking its three corners, a golden protractor beside it, tiny sparkles, same art style as the reference icons"
+  },
+  "marcel": "Trois angles,\n180° pile !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "Un triangle, deux angles connus",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 20 220 140' aria-hidden='true'><polygon points='30,140 190,140 75,44' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><g font-family=\"'Baloo 2'\" font-weight='800' font-size='17' fill='#4b2a9a'><text x='46' y='132'>65°</text><text x='142' y='132'>40°</text><text x='62' y='86' fill='#f1566c'>?</text></g></svg>",
+              "legende": "65° + 40° + ? = 180°",
+              "sous": "le troisième angle se trouve par soustraction"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La somme des angles",
+          "lignes": [
+            "A + B + C = 180°"
+          ],
+          "regle": "Dans **tout** triangle, les trois angles font ==180°==, quelle que soit sa forme.",
+          "note": "un seul angle droit, un seul obtus"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Construire un triangle en trois temps",
+          "etapes": [
+            {
+              "titre": "Vérifier",
+              "texte": "le plus grand côté est plus petit que la somme des deux autres"
+            },
+            {
+              "titre": "Choisir",
+              "texte": "3 côtés&nbsp;: règle et compas. 2 côtés et l’angle&nbsp;: rapporteur"
+            },
+            {
+              "titre": "Coder",
+              "texte": "marques d’égalité et petit carré de l’angle droit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un triangle a des angles de 65° et 40°. __Le troisième__&nbsp;?",
+          "calcul": "180 − 65 − 40",
+          "aparte": "65 + 40 = 105",
+          "resultat": "angle = 180 − 105 = [[75°]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le triangle existe-t-il&nbsp;?",
+          "oui": {
+            "titre": "Il existe",
+            "texte": "4 cm, 5 cm et 7 cm&nbsp;: 7 &lt; 4 + 5, les arcs se croisent."
+          },
+          "non": {
+            "titre": "Impossible",
+            "texte": "3 cm, 4 cm et 9 cm&nbsp;: 9 &gt; 3 + 4, les arcs ne se croisent pas."
+          },
+          "essai": {
+            "texte": "On vérifie **avant** de construire. Avec 3, 4 et 7&nbsp;: 7 = 3 + 4, le triangle est **aplati**, il n’existe pas."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Dans un triangle, la somme des angles vaut 180°",
+              "quoi": "la propriété"
+            },
+            {
+              "texte": "A = 180° − 65° − 40°",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "A = 75°",
+              "quoi": "la réponse"
+            }
+          ],
+          "pied": "Triangle rectangle&nbsp;: les deux angles aigus font ==90°== ensemble."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier de **vérifier** les côtés avant de construire.",
+            "Soustraire à **90°** ou à 360° au lieu de 180°.",
+            "Un triangle avec **deux** angles droits&nbsp;: impossible.",
+            "Oublier le **codage** de la figure."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Ce qu’on en déduit",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Un seul angle droit",
+              "texte": "deux angles droits font déjà 180°"
+            },
+            {
+              "titre": "Un seul angle obtus",
+              "texte": "deux obtus dépasseraient 180°"
+            },
+            {
+              "titre": "Triangle rectangle",
+              "texte": "les deux angles aigus sont complémentaires"
+            },
+            {
+              "titre": "Deux angles connus",
+              "texte": "le troisième s’obtient par soustraction"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Angles de **50°** et **60°**&nbsp;: le troisième&nbsp;?",
+            "**2 cm, 3 cm, 8 cm**&nbsp;: le triangle existe-t-il&nbsp;?",
+            "Triangle rectangle, un angle aigu de **30°**&nbsp;: l’autre&nbsp;?"
+          ],
+          "reponses": "1) 70° · 2) non, 8 &gt; 2 + 3 · 3) 60°"
+        }
+      ]
+    }
+  ]
+}

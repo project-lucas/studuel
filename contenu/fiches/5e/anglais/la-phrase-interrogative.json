@@ -1,0 +1,193 @@
+{
+  "titre": "Poser une question",
+  "titreSurligne": "question",
+  "accroche": "Un auxiliaire devant le sujet.",
+  "bonus": "**do / does / did** pour un temps simple · **question indirecte** = ordre normal",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/anglais/la-phrase-interrogative.webp",
+    "prompt": "a glossy violet question mark with a golden dot and a small golden magnifying glass, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Où est l’auxiliaire&nbsp;?\nDevant&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Question ouverte",
+          "lignes": [
+            "mot + aux. + **S** + **V**"
+          ],
+          "petite": true,
+          "regle": "mot interrogatif + **auxiliaire** + sujet + verbe",
+          "note": "what, where, when…"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les questions",
+          "entetes": [
+            "Type",
+            "Exemple",
+            "En français"
+          ],
+          "lignes": [
+            [
+              "Avec be",
+              "<i>**Are** you ready?</i>",
+              "Es-tu prêt&nbsp;?"
+            ],
+            [
+              "Auxiliaire",
+              "<i>**Have** you finished?</i> / <i>**Can** you swim?</i>",
+              "As-tu fini&nbsp;? / Sais-tu nager&nbsp;?"
+            ],
+            [
+              "Temps simple",
+              "<i>**Do** you like it?</i>",
+              "Tu aimes ça&nbsp;?"
+            ],
+            [
+              "Ouverte",
+              "<i>**Where** do you live?</i>",
+              "Où habites-tu&nbsp;?"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les mots interrogatifs",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "what · who · which",
+              "texte": "**quoi**, **qui**, **lequel** (choix limité)&nbsp;: <i>Which do you prefer?</i>"
+            },
+            {
+              "titre": "where · when · why · how",
+              "texte": "**où**, **quand**, **pourquoi**, **comment**&nbsp;: <i>How do you go to school?</i>"
+            },
+            {
+              "titre": "how + mot",
+              "texte": "<i>how much / many</i>, <i>how long</i>, <i>how often</i>, <i>how old</i>, <i>how far</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "La question indirecte",
+          "oui": {
+            "titre": "Ordre normal",
+            "texte": "<i>Do you know where he **lives**?</i>"
+          },
+          "non": {
+            "titre": "Ordre d’une question",
+            "texte": "<i>Do you know where **does** he live?</i>"
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Could you tell me where ___ (the station / be)?</i> → **the station is**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Réponse oui / non&nbsp;?",
+              "texte": "Auxiliaire devant le sujet&nbsp;; sinon **do / does / did**."
+            },
+            {
+              "titre": "Un mot interrogatif&nbsp;?",
+              "texte": "Il passe **en tête**, l’auxiliaire suit."
+            },
+            {
+              "titre": "Il est le sujet&nbsp;?",
+              "texte": "Ordre de l’affirmative, **sans do**&nbsp;: <i>Who broke it?</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "À retenir",
+          "paragraphes": [
+            "Dans une question, l’**auxiliaire passe devant le sujet**. Si le verbe est à un temps simple, c’est <i>do / does / did</i> qui joue ce rôle."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Who sujet ou complément",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Sujet",
+              "texte": "<i>**Who** broke the window?</i> — pas de do"
+            },
+            {
+              "titre": "Complément",
+              "texte": "<i>**Who** did you see?</i> — avec do"
+            },
+            {
+              "titre": "Durée",
+              "texte": "<i>How long have you been here?</i>"
+            },
+            {
+              "titre": "Passé",
+              "texte": "<i>What did she say?</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>You like it?</i> sans auxiliaire → <i>**Do** you like it?</i>",
+            "<i>Who did break it?</i> → <i>Who **broke** it?</i>",
+            "<i>Where does he lives?</i> → <i>Where does he **live**?</i>",
+            "Après <i>I wonder, Do you know</i> : plus d’inversion."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>___ you like pizza?</i>",
+            "<i>Where ___ she live?</i>",
+            "Mets en ordre&nbsp;: <i>know / do / lives / you / where / he</i>?"
+          ],
+          "reponses": "1) Do 2) does 3) Do you know where he lives?"
+        }
+      ]
+    }
+  ]
+}

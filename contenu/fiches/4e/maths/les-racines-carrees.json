@@ -1,0 +1,171 @@
+{
+  "titre": "Les racines carrées",
+  "titreSurligne": "racines",
+  "accroche": "Le nombre positif dont le carré vaut a.",
+  "bonus": "Carrés parfaits : 1 · 4 · 9 · 16 · 25 · 36 · 49 · 64 · 81 · 100 · 121 · 144 · 169 · 196 · 225",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/les-racines-carrees.webp",
+    "prompt": "a glossy golden square tile with a violet square root sign leaning on it, tiny golden sparkles"
+  },
+  "marcel": "Racine de 9&nbsp;?\nTrois, pas moins 3&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les règles",
+          "taille": "mini",
+          "lignes": [
+            "(√a)<sup>2</sup> = a",
+            "√a × √b = √(a × b)",
+            "√a ÷ √b = √(a ÷ b)"
+          ],
+          "regle": "√9 = 3 parce que 3² = 9 et que 3 est ==positif==.",
+          "note": "pas de racine d’un négatif"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les mots",
+          "items": [
+            {
+              "terme": "Racine carrée",
+              "definition": "le nombre **positif** dont le carré vaut a"
+            },
+            {
+              "terme": "Carré parfait",
+              "definition": "un entier comme 49 = 7², dont la racine est entière"
+            },
+            {
+              "terme": "Irrationnel",
+              "definition": "√2 ≈ 1,414, décimales sans fin ni période"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Simplifier une racine en trois temps",
+          "etapes": [
+            {
+              "titre": "Chercher",
+              "texte": "le plus grand carré parfait qui divise"
+            },
+            {
+              "titre": "Séparer",
+              "texte": "le nombre en produit, √(a × b) = √a × √b"
+            },
+            {
+              "titre": "Sortir",
+              "texte": "la racine du carré parfait"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Simplifier √50.",
+          "calcul": "√50 = √(25 × 2) = √25 × √2",
+          "aparte": "25 est un\ncarré parfait",
+          "resultat": "√50 = [[5√2]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Somme ou produit&nbsp;?",
+          "oui": {
+            "titre": "Produit",
+            "texte": "√2 × √8 = √16 = **4**."
+          },
+          "non": {
+            "titre": "Somme",
+            "texte": "√(9 + 16) = √25 = 5, mais √9 + √16 = 7."
+          },
+          "essai": {
+            "texte": "Que vaut √18 ÷ √2&nbsp;? <i>√(18 ÷ 2) = √9</i> = **3**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 4,
+          "titre": "Les valeurs approchées",
+          "items": [
+            {
+              "terme": "√2",
+              "definition": "≈ 1,414 (diagonale d’un carré de côté 1)"
+            },
+            {
+              "terme": "√3",
+              "definition": "≈ 1,732"
+            },
+            {
+              "terme": "√5",
+              "definition": "≈ 2,236"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "ABC rectangle en B, donc AC² = AB² + BC²",
+              "quoi": "Pythagore"
+            },
+            {
+              "texte": "AC² = 9 + 16 = 25",
+              "quoi": "je calcule"
+            },
+            {
+              "texte": "AC = √25 = 5 cm",
+              "quoi": "je prends la racine"
+            }
+          ],
+          "pied": "Une longueur est ==positive==, on ne garde qu’une racine."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "**√(a + b) = √a + √b**&nbsp;: faux, c’est l’erreur n°1.",
+            "Écrire √(−4) = −2&nbsp;: **aucun** carré n’est négatif.",
+            "Oublier que √(a²) = a **si a est positif**.",
+            "Laisser √50 sans chercher un **carré parfait**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que vaut √81&nbsp;?",
+            "Simplifier √12.",
+            "√(16 + 9) est-il égal à 7&nbsp;?"
+          ],
+          "reponses": "1) 9 · 2) 2√3 · 3) non, √25 = 5"
+        }
+      ]
+    }
+  ]
+}

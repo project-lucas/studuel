@@ -1,0 +1,115 @@
+{
+  "titre": "Familles de matériaux",
+  "titreSurligne": "matériaux",
+  "accroche": "Chaque matière a ses qualités.",
+  "bonus": "**Métaux · Plastiques · Céramiques et verres · Organiques · Composites**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/technologie/les-familles-de-materiaux.webp",
+    "prompt": "glossy violet and golden blocks of metal, wood and glass stacked together, sparkles"
+  },
+  "marcel": "Le bon matériau\npour le bon rôle !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Cinq familles",
+          "entetes": ["Famille", "Qualité / limite"],
+          "lignes": [
+            ["**Métaux** (acier)", "résistants / lourds"],
+            ["**Plastiques**", "légers / issus du pétrole"],
+            ["**Céramiques**, verre", "durs / **fragiles**"],
+            ["**Organiques** (bois)", "renouvelables"],
+            ["**Composites**", "cumulent / durs à recycler"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les propriétés",
+          "items": [
+            { "terme": "Dureté", "definition": "résiste à la **rayure**" },
+            { "terme": "Élasticité", "definition": "reprend sa **forme**" },
+            { "terme": "Masse volumique", "definition": "léger ou lourd à volume égal" },
+            { "terme": "Conductivité", "definition": "laisse passer courant ou chaleur" },
+            { "terme": "Corrosion", "definition": "attaque par l’eau ou l’air" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Choisir un matériau",
+          "etapes": [
+            { "titre": "Lister", "texte": "les contraintes de l’objet" },
+            { "titre": "Repérer", "texte": "les propriétés qui comptent" },
+            { "titre": "Retenir", "texte": "la famille qui correspond" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une casserole&nbsp;: quel matériau pour le __corps__, et lequel pour le __manche__&nbsp;?",
+          "calcul": "corps : il conduit la chaleur\nmanche : il isole",
+          "aparte": "deux rôles opposés",
+          "resultat": "[[métal]] puis plastique"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Se recycle-t-il&nbsp;?",
+          "oui": { "titre": "Presque toujours", "texte": "Le **verre** et les **métaux**, presque à l’infini." },
+          "non": { "titre": "Avec perte", "texte": "Le **plastique** se dégrade à chaque cycle." },
+          "essai": { "texte": "Recyclable ne veut pas dire <i>bon marché</i> à produire : l’aluminium consomme beaucoup d’électricité." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "La casserole doit conduire la chaleur.", "quoi": "la contrainte" },
+            { "texte": "Les métaux sont de bons conducteurs.", "quoi": "la propriété" },
+            { "texte": "Je choisis donc un métal.", "quoi": "le choix" }
+          ],
+          "pied": "On justifie par ==les propriétés==, jamais par « c’est le meilleur »."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Chercher « le **meilleur** » matériau.",
+            "Oublier que le verre est **fragile**.",
+            "Confondre **dureté** et résistance.",
+            "Croire que **recyclable** veut dire peu coûteux."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Le **béton armé** est de quelle famille&nbsp;?",
+            "Quelle propriété dit si un objet est **léger**&nbsp;?",
+            "Le **verre** est dur, mais il est…&nbsp;?"
+          ],
+          "reponses": "1) composite · 2) la masse volumique · 3) fragile"
+        }
+      ]
+    }
+  ]
+}

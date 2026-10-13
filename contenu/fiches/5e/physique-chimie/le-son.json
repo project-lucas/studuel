@@ -1,0 +1,182 @@
+{
+  "titre": "Le son",
+  "titreSurligne": "son",
+  "accroche": "Une vibration qui a besoin de matière.",
+  "bonus": "Air&nbsp;: **340 m/s** · **d = v × t** · pas de son **dans le vide** · danger dès **85 dB**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/le-son.webp",
+    "prompt": "a glossy violet loudspeaker sending golden sound wave rings, a small golden tuning fork, sparkles"
+  },
+  "marcel": "Dans le vide,\npersonne ne t’entend !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Mesurer une distance",
+          "petite": true,
+          "lignes": [
+            "d = v × t",
+            "v = 340 m/s dans l’air"
+          ],
+          "regle": "**d** en mètres, **v** en m/s, **t** en secondes. Pour un **écho** ou un **sonar**, le son fait l’**aller-retour**&nbsp;: la distance est la **moitié**.",
+          "note": "le son a besoin d’un milieu !"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "La vitesse du son",
+          "entetes": [
+            "Milieu",
+            "Vitesse"
+          ],
+          "lignes": [
+            [
+              "**Air**",
+              "≈ 340 m/s"
+            ],
+            [
+              "Eau",
+              "≈ 1 500 m/s"
+            ],
+            [
+              "Acier",
+              "≈ 5 000 m/s"
+            ],
+            [
+              "**Vide**",
+              "pas de son"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer la distance d’un orage",
+          "etapes": [
+            {
+              "titre": "Compter",
+              "texte": "les secondes entre l’éclair et le tonnerre"
+            },
+            {
+              "titre": "Diviser",
+              "texte": "ce nombre **par 3**"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "la distance est en **kilomètres**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Le tonnerre arrive __3 s__ après l’éclair. Distance de l’orage&nbsp;?",
+          "calcul": "d = v × t = 340 × 3",
+          "aparte": "1 020 m",
+          "resultat": "d ≈ [[1 km]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Hauteur ou volume&nbsp;?",
+          "oui": {
+            "titre": "Fréquence",
+            "texte": "En **hertz (Hz)**&nbsp;: elle donne la **hauteur** (grave ou aigu)."
+          },
+          "non": {
+            "titre": "Niveau sonore",
+            "texte": "En **décibels (dB)**&nbsp;: il donne le **volume** perçu."
+          },
+          "essai": {
+            "texte": "L’oreille humaine entend de <i>20 Hz à 20 000 Hz</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Protéger ses oreilles",
+          "items": [
+            {
+              "titre": "85 dB",
+              "texte": "exposition longue = oreille abîmée"
+            },
+            {
+              "titre": "120 dB",
+              "texte": "seuil de douleur"
+            },
+            {
+              "titre": "Définitif",
+              "texte": "les cellules de l’oreille ne repoussent pas"
+            },
+            {
+              "titre": "Gestes",
+              "texte": "volume modéré, pauses, bouchons"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le son se propage **dans le vide**.",
+            "Confondre **fréquence** (Hz) et **niveau** (dB).",
+            "Oublier de diviser par **2** pour un écho.",
+            "Penser que le son va plus vite que la **lumière**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "d = v × t, avec v = 340 m/s",
+              "quoi": "la formule"
+            },
+            {
+              "texte": "d = 340 × 3",
+              "quoi": "on remplace"
+            },
+            {
+              "texte": "d = 1 020 m, soit environ 1 km",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Pour un ==écho==, le son fait l’aller-retour&nbsp;: divise la distance par 2."
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Vitesse du son dans l’**air**&nbsp;?",
+            "Le son se propage-t-il **dans le vide**&nbsp;?",
+            "Unité du **niveau sonore**&nbsp;?"
+          ],
+          "reponses": "1) 340 m/s · 2) non · 3) le décibel (dB)"
+        }
+      ]
+    }
+  ]
+}

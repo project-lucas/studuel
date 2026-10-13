@@ -1,0 +1,163 @@
+{
+  "titre": "Division décimale",
+  "titreSurligne": "décimale",
+  "accroche": "Continuer la division après la virgule.",
+  "bonus": "Vérifier : **quotient × diviseur = dividende**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/maths/division-decimale.webp",
+    "prompt": "a glossy violet pie cut in four golden slices with a golden decimal comma beside it, sparkles"
+  },
+  "marcel": "On ne s’arrête pas\nau reste !",
+  "rangs": [
+    {
+      "colonnes": "1fr 330px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Diviser par un décimal",
+          "taille": "mini",
+          "lignes": [
+            "7,5 ÷ 0,25",
+            "= 750 ÷ 25 = 30"
+          ],
+          "regle": "On ne divise jamais par un décimal. On multiplie ==les deux nombres== par le même 10, 100 ou 1 000&nbsp;: le quotient ne change pas.",
+          "note": "Un seul des deux&nbsp;? Faux&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Valeurs approchées de 1 ÷ 3",
+          "items": [
+            {
+              "terme": "Par défaut",
+              "definition": "on tronque&nbsp;: **0,33**"
+            },
+            {
+              "terme": "Par excès",
+              "definition": "la valeur juste au-dessus&nbsp;: **0,34**"
+            },
+            {
+              "terme": "Arrondie",
+              "definition": "la plus proche&nbsp;: **0,33**"
+            },
+            {
+              "terme": "Le signe ≈",
+              "definition": "il annonce une valeur **approchée** (jamais =)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Diviser",
+              "texte": "la partie entière, puis noter le reste"
+            },
+            {
+              "titre": "Abaisser un zéro",
+              "texte": "après la virgule du quotient, et continuer à diviser"
+            },
+            {
+              "titre": "Vérifier",
+              "texte": "quotient × diviseur doit redonner le dividende"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Calculer __13 ÷ 4__.",
+          "calcul": "13 = 4 × 3 + 1 ; 10 ÷ 4 = 2 reste 2 ; 20 ÷ 4 = 5 reste 0",
+          "aparte": "on abaisse des zéros",
+          "resultat": "= [[3,25]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Égal ou presque&nbsp;?",
+          "oui": {
+            "titre": "Le bon signe",
+            "texte": "1 ÷ 3 **≈** 0,33 : une valeur approchée."
+          },
+          "non": {
+            "titre": "Le faux signe",
+            "texte": "1 ÷ 3 **=** 0,33 : le signe = annonce une égalité **exacte**."
+          },
+          "essai": {
+            "texte": "3,25 × 4 = 13&nbsp;: on retrouve le dividende, la division est **juste**."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "7,5 ÷ 0,25 = 750 ÷ 25",
+              "quoi": "on multiplie par 100"
+            },
+            {
+              "texte": "= 30",
+              "quoi": "le résultat"
+            },
+            {
+              "texte": "Vérification&nbsp;: 30 × 0,25 = 7,5",
+              "quoi": "la preuve"
+            }
+          ],
+          "pied": "Quotient qui ne finit pas&nbsp;: écris **≈** et précise l’==arrondi==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Multiplier **un seul** des deux nombres par 10.",
+            "Écrire **=** à la place de **≈** pour une valeur approchée.",
+            "Oublier la **virgule** dans le quotient en abaissant un zéro.",
+            "Ne pas **vérifier** par la multiplication."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "Dans la vie",
+          "paragraphes": [
+            "Partager une addition, calculer un prix au kilo, une consommation aux 100 km&nbsp;: la division décimale est l’outil du quotidien. Cinq secondes de **vérification** rattrapent la moitié des erreurs."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**9 ÷ 4**&nbsp;?",
+            "**6 ÷ 0,5**&nbsp;?",
+            "**2 ÷ 3** arrondi au centième&nbsp;?"
+          ],
+          "reponses": "1) 2,25 · 2) 12 (60 ÷ 5) · 3) 0,67"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "titre": "La résistance",
+  "titreSurligne": "résistance",
+  "accroche": "La loi d’Ohm et l’effet Joule.",
+  "bonus": "**U = R × I** · U en **V**, R en **Ω**, I en **A** · graphique U(I)&nbsp;: **droite** par l’origine, pente **R** · effet Joule&nbsp;: elle **chauffe**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/la-resistance-electrique.webp",
+    "prompt": "a glossy violet resistor with golden color bands on a golden wire, a small glowing heat aura and tiny sparks, sparkles"
+  },
+  "marcel": "U égale R fois I,\nretiens-le !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La loi d’Ohm",
+          "taille": "mini",
+          "lignes": ["U = R × I", "R = U ÷ I · I = U ÷ R"],
+          "regle": "**U** tension en **volts (V)**, **R** résistance en **ohms (Ω)**, **I** intensité en **ampères (A)**. À tension constante, plus **R** grandit, plus **I** diminue.",
+          "note": "le triangle U, R, I&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Mesurer une résistance",
+          "entetes": ["La méthode", "Sa condition"],
+          "lignes": [
+            ["**Ohmmètre**", "dipôle **hors circuit**"],
+            ["**Voltampèremétrique**", "mesurer U et I, puis R = U ÷ I"],
+            ["**Code des couleurs**", "lu sur le composant"],
+            ["Graphique U(I)", "droite, la **pente** vaut R"],
+            ["Une LED seule", "brûle : il faut une résistance **en série**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Utiliser la loi d’Ohm",
+          "etapes": [
+            { "titre": "Repérer", "texte": "quelle grandeur cherche-t-on&nbsp;: U, R ou I&nbsp;?" },
+            { "titre": "Convertir", "texte": "tout en **V**, **Ω**, **A** (1 kΩ = 1 000 Ω)" },
+            { "titre": "Calculer", "texte": "on choisit la bonne forme, puis on écrit l’**unité**" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une résistance de __R = 100 Ω__ est soumise à __U = 5 V__. Intensité I&nbsp;?",
+          "calcul": "I = U ÷ R = 5 ÷ 100",
+          "aparte": "forme I = U ÷ R",
+          "resultat": "I = [[0,05 A]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "L’effet Joule",
+          "oui": { "titre": "Recherché", "texte": "Radiateur, grille-pain, sèche-cheveux, ampoule à filament." },
+          "non": { "titre": "Subi", "texte": "Fils, moteurs, électronique&nbsp;: **perte d’énergie** et risque d’incendie." },
+          "essai": { "texte": "Placée <i>en série</i> avec une LED, une résistance limite l’intensité et l’empêche de griller." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "D’après la loi d’Ohm&nbsp;: U = R × I", "quoi": "la loi" },
+            { "texte": "I = U ÷ R = 5 ÷ 100", "quoi": "lettres puis nombres" },
+            { "texte": "I = 0,05 A", "quoi": "avec l’unité" },
+            { "texte": "Elle est traversée par 0,05 A.", "quoi": "la phrase" }
+          ],
+          "pied": "Toute résistance traversée par un courant ==s’échauffe==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mesurer R à l’ohmmètre **dans** le circuit.",
+            "Oublier de convertir **kΩ** en Ω.",
+            "Écrire R = U × I : c’est **U ÷ I**.",
+            "Croire que R **augmente** quand I augmente : R ne dépend pas de I.",
+            "Oublier que l’effet Joule rend un **court-circuit** dangereux.",
+            "Confondre **ohm** (Ω) et **volt** (V).",
+            "Brancher une LED **sans** résistance de protection."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Unité de la **résistance**&nbsp;?",
+            "R = 10 Ω et I = 2 A&nbsp;: **U**&nbsp;?",
+            "U = 12 V et I = 3 A&nbsp;: **R**&nbsp;?"
+          ],
+          "reponses": "1) l’ohm (Ω) · 2) 20 V · 3) 4 Ω"
+        }
+      ]
+    }
+  ]
+}

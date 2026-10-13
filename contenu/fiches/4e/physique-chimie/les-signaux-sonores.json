@@ -1,0 +1,116 @@
+{
+  "titre": "Les signaux sonores",
+  "titreSurligne": "sonores",
+  "accroche": "Lire un son sur un écran.",
+  "bonus": "**f = 1 ÷ T** · période **courte** = son **aigu** · amplitude **grande** = son **fort** · infrasons sous **20 Hz** · ultrasons au-dessus de **20 000 Hz**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/les-signaux-sonores.webp",
+    "prompt": "a glossy violet oscilloscope screen showing a golden sine wave, a small microphone with golden wires, tiny sparks, sparkles"
+  },
+  "marcel": "Courte période,\nson aigu !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Période et fréquence",
+          "taille": "mini",
+          "lignes": ["f = 1 ÷ T", "T = 1 ÷ f"],
+          "regle": "**T** la période en **secondes (s)**, durée d’un motif qui se répète. **f** la fréquence en **hertz (Hz)**, nombre de motifs par seconde.",
+          "note": "T courte, f grande&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux grandeurs indépendantes",
+          "entetes": ["Grandeur", "Ce qu’elle donne"],
+          "lignes": [
+            ["**Fréquence** (Hz)", "la **hauteur** : grave ou aigu"],
+            ["**Amplitude**", "la **force** : faible ou fort"],
+            ["Son **pur**", "courbe sinusoïdale (diapason)"],
+            ["**Bruit**", "courbe sans période"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire un son sur l’oscilloscope",
+          "etapes": [
+            { "titre": "Capter", "texte": "le **microphone** transforme la vibration en signal électrique" },
+            { "titre": "Mesurer T", "texte": "on lit la durée d’un motif, en secondes (4 ms = 0,004 s)" },
+            { "titre": "Calculer f", "texte": "on divise 1 par T, et on écrit **Hz**" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un son a une période __T = 4 ms__. Sa fréquence&nbsp;?",
+          "calcul": "f = 1 ÷ 0,004",
+          "aparte": "4 ms = 0,004 s",
+          "resultat": "f = [[250 Hz]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Amplitude ou fréquence&nbsp;?",
+          "oui": { "titre": "Amplitude", "texte": "La **hauteur du motif** à l’écran&nbsp;: plus elle est grande, plus le son est **fort**." },
+          "non": { "titre": "Fréquence", "texte": "Le nombre de motifs par seconde&nbsp;: elle donne la **hauteur** du son." },
+          "essai": { "texte": "On peut jouer la <i>même note</i> plus ou moins fort&nbsp;: la fréquence ne change pas." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Infrasons et ultrasons",
+          "deux": true,
+          "items": [
+            { "titre": "Infrasons", "texte": "moins de **20 Hz** : éléphants, séismes" },
+            { "titre": "Audible", "texte": "de **20 à 20 000 Hz**" },
+            { "titre": "Ultrasons", "texte": "plus de **20 000 Hz** : chauves-souris, échographie" },
+            { "titre": "Sonar", "texte": "l’écho revient plus tôt si l’obstacle est **proche**" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire T en **ms** dans f = 1 ÷ T : il faut des **secondes**.",
+            "Croire qu’une grande amplitude rend le son plus **aigu**.",
+            "Confondre **période** (s) et **fréquence** (Hz).",
+            "Oublier l’unité **Hz** dans la réponse.",
+            "Dire qu’un **bruit** a une période bien régulière.",
+            "Croire que le microphone **fabrique** le son : il le convertit.",
+            "Confondre **infrasons** (sous 20 Hz) et **ultrasons**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "T = 0,01 s&nbsp;: **f**&nbsp;?",
+            "Une grande **amplitude** donne un son plus&nbsp;?",
+            "Un son de **30 000 Hz** est-il audible&nbsp;?"
+          ],
+          "reponses": "1) 100 Hz · 2) fort · 3) non, c’est un ultrason"
+        }
+      ]
+    }
+  ]
+}

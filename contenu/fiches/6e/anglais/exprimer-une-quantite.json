@@ -1,0 +1,182 @@
+{
+  "titre": "Exprimer une quantité",
+  "titreSurligne": "quantité",
+  "accroche": "Some, any, much, many&nbsp;: lequel choisir&nbsp;?",
+  "bonus": "**some** (oui) · **any** (non, ?) · **many** + pluriel · **much** + indénombrable · **a lot of** (oui)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/anglais/exprimer-une-quantite.webp",
+    "prompt": "a glossy violet basket full of golden coins and apples, a golden measuring scale beside it, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Beaucoup de quoi&nbsp;?\nOn compte, ou pas&nbsp;?",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Some ou any&nbsp;?",
+          "lignes": [
+            "**some** = oui",
+            "**any** = non / ?"
+          ],
+          "petite": true,
+          "regle": "**some** dans une phrase affirmative, **any** dans une négation ou une question.",
+          "note": "sauf si je propose"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les mots de quantité",
+          "entetes": [
+            "Le mot",
+            "Avec quoi",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "**many**",
+              "dénombrable pluriel",
+              "<i>How many books?</i> (Combien de livres&nbsp;?)"
+            ],
+            [
+              "**much**",
+              "indénombrable",
+              "<i>How much money?</i> (Combien d’argent&nbsp;?)"
+            ],
+            [
+              "**a lot of**",
+              "les deux, phrase affirmative",
+              "<i>I have a lot of friends.</i>"
+            ],
+            [
+              "**a few / few**",
+              "dénombrable",
+              "<i>a few friends</i> (quelques) · <i>few friends</i> (peu)"
+            ],
+            [
+              "**a little / little**",
+              "indénombrable",
+              "<i>a little milk</i> (un peu) · <i>little hope</i> (peu)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": "★",
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Quel type de phrase&nbsp;?",
+              "texte": "Affirmative → **some**. Négative ou question → **any**."
+            },
+            {
+              "titre": "Je peux compter&nbsp;?",
+              "texte": "Oui (apples) → **many**. Non (water) → **much**."
+            },
+            {
+              "titre": "Phrase affirmative&nbsp;?",
+              "texte": "J’emploie **a lot of**, ça marche avec tout."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Some ou any&nbsp;?",
+          "oui": {
+            "titre": "Juste",
+            "texte": "<i>I have **some** money. I don’t have **any** money.</i>"
+          },
+          "non": {
+            "titre": "Faux",
+            "texte": "<i>I don’t have **some** money.</i> ✗ — négative, donc **any**."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Would you like ___ tea?</i> (j’offre) → **some**&nbsp;: une proposition garde some."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "There is / there are",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "there is",
+              "texte": "Un seul ou un indénombrable&nbsp;: <i>There is a cat. There is some water.</i>"
+            },
+            {
+              "titre": "there are",
+              "texte": "Plusieurs&nbsp;: <i>There are two cats. There are many books.</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Proposer",
+              "texte": "<i>Would you like **some** tea?</i>"
+            },
+            {
+              "titre": "Demander",
+              "texte": "<i>Can I have **some** water?</i>"
+            },
+            {
+              "titre": "Beaucoup, en phrase négative",
+              "texte": "<i>I don’t have **many** friends.</i>"
+            },
+            {
+              "titre": "Indénombrables",
+              "texte": "<i>water, money, milk, bread, homework</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>I have **much** money</i> ✗ → <i>I have **a lot of** money.</i>",
+            "<i>few</i> est négatif (peu), <i>a few</i> est positif (quelques).",
+            "<i>How **much** books?</i> ✗ → <i>How **many** books?</i>",
+            "<i>There **is** two cats</i> ✗ → <i>There **are** two cats.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>I don’t have ___ apples.</i> (some / any)",
+            "<i>How ___ water do you drink?</i> (much / many)",
+            "<i>There ___ three dogs.</i> (is / are)"
+          ],
+          "reponses": "1) any 2) much 3) are"
+        }
+      ]
+    }
+  ]
+}

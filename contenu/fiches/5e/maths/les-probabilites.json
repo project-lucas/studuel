@@ -1,0 +1,183 @@
+{
+  "titre": "Les probabilités",
+  "titreSurligne": "probabilités",
+  "accroche": "Mesurer une chance entre 0 et 1.",
+  "bonus": "0 = **impossible** · 0,5 = **une chance sur deux** · 1 = **certain** · P(non A) = **1 − P(A)**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/les-probabilites.webp",
+    "prompt": "a glossy golden die next to a violet coin in mid-air and a small urn with colored balls, sparkles"
+  },
+  "marcel": "Pas de mémoire :\nchaque lancer est neuf !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le calcul de base",
+          "taille": "mini",
+          "lignes": [
+            "P(A) = {favorables/possibles}",
+            "P(non A) = 1 − P(A)"
+          ],
+          "regle": "Quand toutes les issues ont la ==même chance==, on compte les favorables et les possibles.",
+          "note": "toujours entre 0 et 1&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Expérience aléatoire",
+              "definition": "plusieurs résultats possibles, aucun prévisible"
+            },
+            {
+              "terme": "Issue",
+              "definition": "un résultat possible"
+            },
+            {
+              "terme": "Événement",
+              "definition": "un ensemble d’issues : « nombre pair »"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Lister",
+              "texte": "toutes les issues possibles et vérifier qu’elles sont équiprobables"
+            },
+            {
+              "titre": "Compter",
+              "texte": "les issues favorables à l’événement"
+            },
+            {
+              "titre": "Diviser",
+              "texte": "favorables ÷ possibles, simplifier ou écrire en %"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Urne de 5 boules rouges et 3 bleues&nbsp;: __P(rouge)__&nbsp;?",
+          "calcul": "5 favorables sur 5 + 3 possibles",
+          "aparte": "8 issues",
+          "resultat": "P = [[5/8]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Événement contraire",
+              "texte": "P(6) = 1/6 donc P(pas de 6) = **5/6**."
+            },
+            {
+              "titre": "Une chance sur deux",
+              "texte": "1/2 = 0,5 = **50 %**. Deux chances sur cinq : 2/5 = 40 %."
+            },
+            {
+              "titre": "Fréquence",
+              "texte": "constatée après. Plus on répète, plus elle se **rapproche** de P."
+            },
+            {
+              "titre": "Pas de mémoire",
+              "texte": "Pile 5 fois de suite&nbsp;: au 6ᵉ lancer, c’est encore **1/2**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Quelques situations",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Dé à six faces",
+              "texte": "nombre pair : 3/6 = 1/2."
+            },
+            {
+              "titre": "Jeu de 32 cartes",
+              "texte": "un cœur : 8/32 = 1/4."
+            },
+            {
+              "titre": "Pour traduire",
+              "texte": "« deux chances sur cinq » = 2/5 = 40 %."
+            },
+            {
+              "titre": "Loi des grands nombres",
+              "texte": "sur beaucoup d’essais, fréquence ≈ probabilité."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Il y a 5 + 3 = 8 issues équiprobables.",
+              "quoi": "les possibles"
+            },
+            {
+              "texte": "5 issues sont favorables.",
+              "quoi": "les favorables"
+            },
+            {
+              "texte": "P(rouge) = 5/8",
+              "quoi": "la probabilité"
+            }
+          ],
+          "pied": "Pour un événement compliqué, pense à son ==contraire==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Une probabilité **supérieure à 1**.",
+            "Croire qu’un tirage **compense** les précédents.",
+            "Oublier de dire « issues **équiprobables** ».",
+            "Compter 5 + 3 = 8 **favorables**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dé à six faces&nbsp;: **P(nombre pair)**&nbsp;?",
+            "Jeu de 32 cartes&nbsp;: **P(cœur)**&nbsp;?",
+            "Si **P(A) = 0,3**, que vaut **P(non A)**&nbsp;?"
+          ],
+          "reponses": "1) 3/6 = 1/2 · 2) 8/32 = 1/4 · 3) 1 − 0,3 = 0,7"
+        }
+      ]
+    }
+  ]
+}

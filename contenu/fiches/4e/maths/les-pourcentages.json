@@ -1,0 +1,126 @@
+{
+  "titre": "Les pourcentages",
+  "titreSurligne": "pourcentages",
+  "accroche": "Un pourcentage, c’est une multiplication.",
+  "bonus": "+t % → × (1 + t/100) · −t % → × (1 − t/100) · taux = **variation ÷ départ** × 100",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/les-pourcentages.webp",
+    "prompt": "a golden price tag with a big glossy violet percent sign, small golden coins around, sparkles"
+  },
+  "marcel": "Un pourcentage,\nc’est × quelque chose&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le coefficient multiplicateur",
+          "taille": "mini",
+          "lignes": ["t % de x = x × {t/100}", "+15 % ⟺ × 1,15", "−15 % ⟺ × 0,85"],
+          "regle": "Une hausse de **t %** multiplie par ==1 + t/100==. Une baisse de **t %** multiplie par ==1 − t/100==.",
+          "note": "on multiplie, on n’ajoute pas&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les trois questions",
+          "items": [
+            { "terme": "La partie", "definition": "30 % de 80 = 80 × 0,3 = **24**" },
+            { "terme": "Le pourcentage", "definition": "15 sur 25 = 15 ÷ 25 = 0,6 = **60 %**" },
+            { "terme": "Le tout", "definition": "24 est 30 % du tout&nbsp;: 24 ÷ 0,3 = **80**" },
+            { "terme": "Le taux d’évolution", "definition": "de 50 à 60&nbsp;: (60 − 50) ÷ 50 = **+20 %**" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Traduire", "texte": "le pourcentage en coefficient&nbsp;: −15 % → × 0,85" },
+            { "titre": "Multiplier", "texte": "la valeur de départ par ce coefficient" },
+            { "titre": "Vérifier", "texte": "le sens&nbsp;: une baisse doit donner un résultat plus petit" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une veste à 80 € est soldée à −15 %. __Nouveau prix__&nbsp;?",
+          "calcul": "80 × 0,85",
+          "aparte": "−15 % → × 0,85",
+          "resultat": "prix = [[68 €]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Deux évolutions de suite",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Deux hausses", "texte": "+10 % puis +10 %&nbsp;: 1,1 × 1,1 = 1,21, soit **+21 %**." },
+            { "titre": "Baisse puis hausse", "texte": "−20 % puis +20 %&nbsp;: 0,8 × 1,2 = 0,96, soit **−4 %**." },
+            { "titre": "La règle", "texte": "On **multiplie** les coefficients, on ne les additionne jamais." },
+            { "titre": "Pourquoi", "texte": "Les deux pourcentages ne portent pas sur la **même** quantité." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "Un pourcentage de quoi&nbsp;?",
+          "paragraphes": [
+            "Un pourcentage ne veut rien dire sans le **tout** sur lequel il porte&nbsp;: «&nbsp;+50 %&nbsp;» sur 2 € ajoute 1 €, «&nbsp;+5 %&nbsp;» sur 200 € ajoute 10 €."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Baisse de 15 %&nbsp;: 1 − 15/100 = 0,85", "quoi": "le coefficient" },
+            { "texte": "Nouveau prix = 80 × 0,85", "quoi": "le calcul" },
+            { "texte": "Nouveau prix = 68 €", "quoi": "la réponse" }
+          ],
+          "pied": "Vérification&nbsp;: 15 % de 80 = 12 et 80 − 12 = ==68==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Additionner deux pourcentages **successifs**.",
+            "−20 %, c’est × **0,8**, pas × 0,2.",
+            "Diviser par l’arrivée dans un taux&nbsp;: toujours par le **départ**.",
+            "Croire que «&nbsp;−20 % puis +20 %&nbsp;» ramène au départ."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**20 %** de 150&nbsp;?",
+            "De 50 € à 60 €&nbsp;: le **taux d’évolution**&nbsp;?",
+            "**+10 %** puis **+10 %**&nbsp;: évolution totale&nbsp;?"
+          ],
+          "reponses": "1) 30 · 2) +20 % · 3) +21 % (1,1 × 1,1 = 1,21)"
+        }
+      ]
+    }
+  ]
+}

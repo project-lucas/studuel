@@ -1,0 +1,162 @@
+{
+  "titre": "Fabrication",
+  "titreSurligne": "Fabrication",
+  "accroche": "Enlever, déformer, ajouter, assembler.",
+  "bonus": "**Enlèvement · Déformation · Ajout · Assemblage** · c’est la **quantité** qui décide du procédé",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/technologie/procedes-de-fabrication.webp",
+    "prompt": "a glossy violet 3D printer building a small golden gear layer by layer, tiny golden shavings nearby, sparkles"
+  },
+  "marcel": "Une pièce unique,\nou mille pièces&nbsp;?",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Quatre familles",
+          "entetes": [
+            "Famille",
+            "Exemples"
+          ],
+          "lignes": [
+            [
+              "**Enlèvement**",
+              "sciage, perçage, fraisage"
+            ],
+            [
+              "**Déformation**",
+              "pliage, emboutissage"
+            ],
+            [
+              "**Ajout**",
+              "impression 3D"
+            ],
+            [
+              "**Assemblage**",
+              "vis, soudure, collage"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "À savoir",
+          "items": [
+            {
+              "terme": "Démontable",
+              "definition": "vis, clips&nbsp;: on peut **réparer**"
+            },
+            {
+              "terme": "Non démontable",
+              "definition": "soudure, collage&nbsp;: **définitif**"
+            },
+            {
+              "terme": "MOCN",
+              "definition": "machine à **commande numérique** : répétable, précise"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Choisir un procédé",
+          "etapes": [
+            {
+              "titre": "Regarder",
+              "texte": "le matériau, la forme et la précision voulue"
+            },
+            {
+              "titre": "Compter",
+              "texte": "la quantité à produire, critère décisif"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "outillage contre temps machine, donc le coût"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un __prototype__ en une pièce, ou __100&nbsp;000__ boîtiers plastique&nbsp;?",
+          "calcul": "1 pièce → ajout · 100&nbsp;000 → injection",
+          "aparte": "la quantité décide",
+          "resultat": "[[impression 3D]] puis [[injection]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Enlèvement ou déformation&nbsp;?",
+          "oui": {
+            "titre": "Déformation",
+            "texte": "La matière change de forme&nbsp;: **aucune perte**, rapide en série."
+          },
+          "non": {
+            "titre": "Enlèvement",
+            "texte": "On retire ce qui est en trop&nbsp;: précis, mais des **copeaux** perdus."
+          },
+          "essai": {
+            "texte": "Le pliage d’une tôle est une <i>déformation</i> ; le perçage, un <i>enlèvement</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Une seule pièce à réaliser, forme complexe.",
+              "quoi": "le besoin"
+            },
+            {
+              "texte": "L’impression 3D ajoute la matière couche par couche.",
+              "quoi": "le procédé"
+            },
+            {
+              "texte": "En grande série, on choisirait l’injection.",
+              "quoi": "l’ouverture"
+            }
+          ],
+          "pied": "Un prototype et une série n’appellent ==presque jamais== le même procédé."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **enlèvement** et déformation.",
+            "Utiliser l’impression 3D pour **100&nbsp;000** pièces.",
+            "Oublier qu’un assemblage soudé est **définitif**.",
+            "Négliger la **quantité**, critère décisif."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Le **perçage** relève de quelle famille&nbsp;?",
+            "Une **vis** donne un assemblage démontable ou non&nbsp;?",
+            "Que garantit une **MOCN**&nbsp;?"
+          ],
+          "reponses": "1) l’enlèvement · 2) démontable · 3) la répétabilité et la précision"
+        }
+      ]
+    }
+  ]
+}

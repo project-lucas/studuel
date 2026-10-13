@@ -1,0 +1,214 @@
+{
+  "titre": "Sécurité et secours",
+  "titreSurligne": "secours",
+  "accroche": "Prévenir d’abord, secourir ensuite.",
+  "bonus": "**15** SAMU · **18** pompiers · **112** européen · **114** par SMS",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/sport/la-securite-et-les-premiers-secours.webp",
+    "prompt": "a glossy violet first-aid kit with a golden cross and a small golden whistle, sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Protéger, alerter,\nsecourir !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Prévenir d’abord",
+          "entetes": [
+            "Règle",
+            "Raison"
+          ],
+          "lignes": [
+            [
+              "**Tenue** adaptée",
+              "chaussures lacées, rien qui gêne"
+            ],
+            [
+              "**Pas de bijoux**",
+              "ils accrochent et blessent"
+            ],
+            [
+              "**Cheveux** attachés",
+              "ils gênent la vue"
+            ],
+            [
+              "**Échauffement**",
+              "il protège le muscle"
+            ],
+            [
+              "**Matériel** vérifié",
+              "tapis en place, terrain dégagé"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Chaque activité sa règle",
+          "entetes": [
+            "Activité",
+            "Règle non négociable"
+          ],
+          "lignes": [
+            [
+              "**Gymnastique**",
+              "la parade"
+            ],
+            [
+              "**Escalade**",
+              "l’assurage"
+            ],
+            [
+              "**Athlétisme**",
+              "zone de lancer dégagée"
+            ],
+            [
+              "**Sports de combat**",
+              "aucun contact hors cadre"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Reconnaître une blessure",
+          "colonnes": 4,
+          "cartes": [
+            {
+              "titre": "Entorse",
+              "texte": "Articulation tordue, douleur, **gonflement**."
+            },
+            {
+              "titre": "Claquage",
+              "texte": "Douleur musculaire **brutale** en plein effort."
+            },
+            {
+              "titre": "Fracture",
+              "texte": "Douleur intense, **déformation**, mouvement impossible."
+            },
+            {
+              "titre": "Malaise",
+              "texte": "**Pâleur**, sueurs, vertiges."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Le protocole RICE",
+          "deux": false,
+          "items": [
+            {
+              "titre": "R – Repos",
+              "texte": "arrêter l’effort"
+            },
+            {
+              "titre": "I – Ice",
+              "texte": "glace 15 à 20 min, jamais sur la peau"
+            },
+            {
+              "titre": "C – Compression",
+              "texte": "bandage sans couper la circulation"
+            },
+            {
+              "titre": "E – Élévation",
+              "texte": "surélever le membre"
+            },
+            {
+              "titre": "Ensuite",
+              "texte": "avis médical"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mettre la **glace** à même la peau.",
+            "Se mettre **en danger** pour secourir.",
+            "**Raccrocher** le premier au téléphone.",
+            "Ignorer une consigne : c’est la trace d’un **vrai accident**.",
+            "Confondre **entorse** et **claquage**."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Protéger, alerter, secourir",
+          "etapes": [
+            {
+              "titre": "Protéger",
+              "texte": "supprimer le danger, sans risque"
+            },
+            {
+              "titre": "Alerter",
+              "texte": "15, 18, 112 ou 114"
+            },
+            {
+              "titre": "Secourir",
+              "texte": "dans la limite de ce qu’on sait"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple",
+          "donnees": "Camarade inerte au sol, gymnase.",
+          "calcul": "Danger écarté, puis",
+          "resultat": "[[15 ou 112]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "La prévention passe avant les secours : tenue, matériel, échauffement.",
+              "quoi": "définir"
+            },
+            {
+              "texte": "Face à un accident : protéger, alerter, secourir.",
+              "quoi": "décrire"
+            },
+            {
+              "texte": "Au téléphone : le lieu, ce qui s’est passé, l’état de la victime.",
+              "quoi": "préciser"
+            }
+          ],
+          "pied": "On ne raccroche ==jamais le premier==."
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel numéro appeler pour le **SAMU**&nbsp;?",
+            "Que signifie le **I** de RICE&nbsp;?",
+            "Quelles sont les **trois étapes** face à un accident&nbsp;?"
+          ],
+          "reponses": "1) le 15 · 2) Ice : la glace · 3) protéger, alerter, secourir"
+        }
+      ]
+    }
+  ]
+}

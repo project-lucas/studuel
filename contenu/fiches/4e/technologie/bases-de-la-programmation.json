@@ -1,0 +1,170 @@
+{
+  "titre": "Programmation",
+  "titreSurligne": "Programmation",
+  "accroche": "Séquence, condition, boucle, variable.",
+  "bonus": "**Séquence** · **condition** (si… alors…) · **boucle** (répéter) · **variable** (une boîte nommée qui stocke une valeur)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/technologie/bases-de-la-programmation.webp",
+    "prompt": "glossy violet and golden puzzle-like code blocks snapped together in a stack, a looping circular arrow beside them, a small robot waving, sparkles"
+  },
+  "marcel": "Un programme,\nc’est une recette !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les quatre structures",
+          "items": [
+            {
+              "terme": "Séquence",
+              "definition": "les instructions s’exécutent **l’une après l’autre**, dans l’ordre"
+            },
+            {
+              "terme": "Condition",
+              "definition": "une action **seulement si** un test est vrai (sinon…)"
+            },
+            {
+              "terme": "Boucle",
+              "definition": "**répète** des instructions&nbsp;: **bornée** (nombre de tours connu) ou **non bornée**"
+            },
+            {
+              "terme": "Variable",
+              "definition": "elle **stocke** une valeur qui peut changer (score, vies)"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les opérateurs",
+          "entetes": [
+            "Famille",
+            "Exemples"
+          ],
+          "lignes": [
+            [
+              "**Comparaison**",
+              "<   >   =   ≠"
+            ],
+            [
+              "**Logiques**",
+              "et · ou · **non**"
+            ],
+            [
+              "**Arithmétiques**",
+              "+  −  ×  ÷"
+            ],
+            [
+              "**Entrée**",
+              "un capteur, une touche"
+            ],
+            [
+              "**Sortie**",
+              "écran, LED, moteur"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Écrire un algorithme en trois temps",
+          "etapes": [
+            {
+              "titre": "Décomposer",
+              "texte": "le problème en actions simples, dans l’ordre"
+            },
+            {
+              "titre": "Structurer",
+              "texte": "choisir condition, boucle, variable si besoin"
+            },
+            {
+              "titre": "Tester",
+              "texte": "le programme à la main avec des valeurs, puis sur la machine"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "score ← 0, puis __répéter 3 fois__&nbsp;: ajouter 2 au score. Valeur finale&nbsp;?",
+          "calcul": "0 → 2 → 4 → 6",
+          "aparte": "boucle bornée",
+          "resultat": "score = [[6]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quelle boucle&nbsp;?",
+          "oui": {
+            "titre": "Bornée",
+            "texte": "Le **nombre de tours** est connu&nbsp;: « répéter 10 fois »."
+          },
+          "non": {
+            "titre": "Non bornée",
+            "texte": "Elle tourne **jusqu’à ce qu’une condition** soit vraie."
+          },
+          "essai": {
+            "texte": "<i>Si</i> la touche est pressée <i>alors</i> le personnage saute&nbsp;: c’est une <i>condition</i>, pas une boucle."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Au départ, score = 0.",
+              "quoi": "l’initialisation"
+            },
+            {
+              "texte": "La boucle fait 3 tours&nbsp;: 3 × 2 = 6.",
+              "quoi": "le déroulé"
+            },
+            {
+              "texte": "À la fin, score = 6.",
+              "quoi": "la valeur finale"
+            }
+          ],
+          "pied": "Pour un algorithme, on déroule ==pas à pas== en notant la valeur des variables."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier d’**initialiser** une variable.",
+            "Confondre **=** (test) et **←** (affectation).",
+            "Une boucle **sans fin** : la condition d’arrêt n’arrive jamais.",
+            "Mettre les instructions **dans le désordre**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle structure répète des instructions&nbsp;?",
+            "score = 4, on ajoute 3 deux fois&nbsp;: **score**&nbsp;?",
+            "Un capteur est une **entrée** ou une sortie&nbsp;?"
+          ],
+          "reponses": "1) la boucle · 2) 10 · 3) une entrée"
+        }
+      ]
+    }
+  ]
+}

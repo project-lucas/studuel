@@ -1,0 +1,194 @@
+{
+  "titre": "Le pH",
+  "titreSurligne": "pH",
+  "accroche": "Mesurer l’acidité d’une solution.",
+  "bonus": "pH **< 7** acide · **= 7** neutre · **> 7** basique · acide : ions **H<sup>+</sup>** · basique : ions **OH<sup>−</sup>**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/le-ph-ou-potentiel-hydrogene.webp",
+    "prompt": "a glossy golden pH paper strip with a rainbow color scale beside a violet beaker with a lemon slice, tiny bubbles, sparkles"
+  },
+  "marcel": "Petit pH,\ngrande acidité !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "L’échelle du pH",
+          "entetes": [
+            "pH",
+            "Solution",
+            "Exemples"
+          ],
+          "lignes": [
+            [
+              "inférieur à 7",
+              "**acide**",
+              "citron (≈ 2), vinaigre (≈ 3)"
+            ],
+            [
+              "égal à 7",
+              "**neutre**",
+              "eau pure"
+            ],
+            [
+              "supérieur à 7",
+              "**basique**",
+              "eau savonneuse (≈ 9), déboucheur (≈ 13)"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le mesurer",
+          "entetes": [
+            "Outil",
+            "Précision"
+          ],
+          "lignes": [
+            [
+              "**Papier pH** (on compare la couleur)",
+              "environ 1 unité"
+            ],
+            [
+              "**pH-mètre** (étalonné)",
+              "au dixième"
+            ],
+            [
+              "**Indicateur coloré** (BBT)",
+              "aucune mesure"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Mesurer avec du papier pH",
+          "etapes": [
+            {
+              "titre": "Déposer",
+              "texte": "une goutte de solution sur le papier"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "la couleur obtenue à l’échelle de la boîte"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "lire le pH puis dire : acide, neutre ou basique"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "On dilue une solution de pH __3__ avec beaucoup d’eau. Son pH&nbsp;?",
+          "calcul": "solution acide diluée : le pH monte vers 7",
+          "aparte": "sans jamais dépasser 7",
+          "resultat": "un pH [[plus proche de 7]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Dilution",
+          "oui": {
+            "titre": "Solution acide",
+            "texte": "diluée, son pH **monte** vers 7."
+          },
+          "non": {
+            "titre": "Solution basique",
+            "texte": "diluée, son pH **descend** vers 7."
+          },
+          "essai": {
+            "texte": "Le nombre d’ions H<sup>+</sup> ne change pas&nbsp;: leur **concentration** diminue. On ne rend jamais un acide basique en le diluant."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Le lien avec les ions",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Acide",
+              "texte": "beaucoup d’ions **H<sup>+</sup>**"
+            },
+            {
+              "titre": "Basique",
+              "texte": "beaucoup d’ions **OH<sup>−</sup>**"
+            },
+            {
+              "titre": "Neutre",
+              "texte": "autant des deux : l’eau pure"
+            },
+            {
+              "titre": "Corrosif",
+              "texte": "un acide ou une base forts attaquent la peau"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Le papier pH indique 3.",
+              "quoi": "la mesure"
+            },
+            {
+              "texte": "3 est inférieur à 7.",
+              "quoi": "la comparaison"
+            },
+            {
+              "texte": "La solution est acide.",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Sécurité&nbsp;: verser ==toujours l’acide dans l’eau==, jamais l’inverse, avec lunettes, gants et blouse."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que plus le pH est grand, plus c’est **acide**.",
+            "Dire que le pH a une **unité**&nbsp;: il n’en a pas.",
+            "Penser qu’une dilution rend un acide **basique**.",
+            "Verser l’**eau dans l’acide**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "pH = 9&nbsp;: la solution est-elle **acide** ou **basique**&nbsp;?",
+            "Quel ion domine dans une solution **acide**&nbsp;?",
+            "Quel outil mesure le pH **au dixième**&nbsp;?"
+          ],
+          "reponses": "1) basique · 2) l’ion H⁺ · 3) le pH-mètre"
+        }
+      ]
+    }
+  ]
+}

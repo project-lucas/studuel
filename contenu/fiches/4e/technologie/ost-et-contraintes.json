@@ -1,0 +1,170 @@
+{
+  "titre": "Les contraintes",
+  "titreSurligne": "contraintes",
+  "accroche": "Concevoir, c’est arbitrer.",
+  "bonus": "**Critère** (ce qu’on mesure) + **niveau** (la valeur) + **flexibilité** (F0 impératif · F1 · F2 négociable)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/technologie/ost-et-contraintes.webp",
+    "prompt": "a glossy violet balance scale with a golden feather on one side and a golden coin on the other, a small helmet beside it, sparkles"
+  },
+  "marcel": "Léger, sûr, pas cher :\nil faut choisir !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les familles de contraintes",
+          "entetes": [
+            "Famille",
+            "Contenu"
+          ],
+          "lignes": [
+            [
+              "**Techniques**",
+              "matériaux, dimensions, poids"
+            ],
+            [
+              "**Économiques**",
+              "coût, prix de vente"
+            ],
+            [
+              "**Réglementaires**",
+              "lois, normes NF ou CE"
+            ],
+            [
+              "**Environnementales**",
+              "recyclabilité, consommation"
+            ],
+            [
+              "**Ergonomiques**",
+              "confort, accessibilité"
+            ],
+            [
+              "**De sécurité**",
+              "aucun danger"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le cahier des charges",
+          "items": [
+            {
+              "terme": "Critère",
+              "definition": "ce qu’on **mesure**"
+            },
+            {
+              "terme": "Niveau",
+              "definition": "la valeur à **atteindre**"
+            },
+            {
+              "terme": "Flexibilité",
+              "definition": "**F0** impératif · **F1** peu négociable · **F2** négociable"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Écrire une exigence mesurable",
+          "etapes": [
+            {
+              "titre": "Choisir",
+              "texte": "le critère, ce qu’on peut mesurer (masse)"
+            },
+            {
+              "titre": "Fixer",
+              "texte": "le niveau&nbsp;: inférieure à 300&nbsp;g"
+            },
+            {
+              "titre": "Préciser",
+              "texte": "la flexibilité&nbsp;: ±20&nbsp;g, puis tester en fin de projet"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "« Le casque doit être __léger__ ». Est-ce une exigence&nbsp;?",
+          "calcul": "pas de niveau, pas de critère chiffré",
+          "aparte": "invérifiable",
+          "resultat": "non&nbsp;: [[masse sous 300&nbsp;g]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Exigence ou vœu&nbsp;?",
+          "oui": {
+            "titre": "Exigence",
+            "texte": "« Masse inférieure à 300&nbsp;g, tolérance ±20&nbsp;g »&nbsp;: **testable**."
+          },
+          "non": {
+            "titre": "Vœu",
+            "texte": "« Le casque doit être léger »&nbsp;: **invérifiable**."
+          },
+          "essai": {
+            "texte": "Alléger un casque le rend moins <i>résistant</i> ou plus cher&nbsp;: les contraintes s’opposent."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Alléger réduit la résistance ou augmente le prix.",
+              "quoi": "le conflit"
+            },
+            {
+              "texte": "On respecte d’abord les exigences en F0.",
+              "quoi": "la priorité"
+            },
+            {
+              "texte": "On arbitre selon le cahier des charges.",
+              "quoi": "la décision"
+            }
+          ],
+          "pied": "On ne satisfait jamais ==toutes== les contraintes au maximum&nbsp;: on arbitre."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire une exigence **sans niveau** chiffré.",
+            "Croire qu’on peut tout **maximiser** en même temps.",
+            "Confondre **F0** (impératif) et F2 (négociable).",
+            "Oublier la **sécurité** parmi les contraintes."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que signifie **F0**&nbsp;?",
+            "Une **norme CE** est quelle famille de contrainte&nbsp;?",
+            "Pourquoi chiffrer une **exigence**&nbsp;?"
+          ],
+          "reponses": "1) impératif · 2) réglementaire · 3) pour pouvoir la tester et la vérifier"
+        }
+      ]
+    }
+  ]
+}

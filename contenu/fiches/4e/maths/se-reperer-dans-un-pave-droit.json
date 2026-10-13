@@ -1,0 +1,114 @@
+{
+  "titre": "Le pavé droit",
+  "titreSurligne": "pavé droit",
+  "accroche": "Trois coordonnées pour situer un point.",
+  "bonus": "Pavé droit&nbsp;: **6 faces · 12 arêtes · 8 sommets** · 1 L = 1 dm³",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/se-reperer-dans-un-pave-droit.webp",
+    "prompt": "a glossy violet transparent box with golden edges and three golden axis arrows from one corner, small sparkles"
+  },
+  "marcel": "Une coordonnée\nde plus&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "Le pavé en perspective",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><polygon points='40,150 140,150 140,60 40,60' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><polyline points='40,60 90,20 190,20 190,110 140,150' fill='none' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polyline><line x1='140' y1='60' x2='190' y2='20' stroke='#2b2350' stroke-width='3.5'></line><g stroke='#2b2350' stroke-width='2.5' stroke-dasharray='5 5' fill='none'><line x1='40' y1='150' x2='90' y2='110'></line><line x1='90' y1='110' x2='190' y2='110'></line><line x1='90' y1='110' x2='90' y2='20'></line></g><g stroke='#7a3fe0' stroke-width='4.5' stroke-linecap='round'><line x1='40' y1='150' x2='140' y2='150'></line><line x1='40' y1='150' x2='40' y2='60'></line></g><g fill='#2b2350'><circle cx='40' cy='150' r='4.5'></circle></g><g font-family=\"'Baloo 2'\" font-weight='800' font-size='18' fill='#2b2350'><text x='20' y='166'>O</text></g><g font-family='Nunito' font-weight='800' font-size='13' fill='#7a3fe0'><text x='80' y='166'>L</text><text x='22' y='108'>h</text><text x='56' y='134' fill='#4b2a9a'>l</text></g></svg>",
+              "legende": "Perspective cavalière",
+              "sous": "arêtes cachées en pointillés"
+            }
+          ],
+          "legende": { "jeton": "O(0 ; 0 ; 0)", "texte": "Sommet opposé&nbsp;: (L ; l ; h)." }
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Les calculs",
+          "lignes": ["V = L × l × h", "A = 2(L×l + L×h + l×h)"],
+          "regle": "Le **volume** multiplie les trois dimensions. L’**aire totale** additionne les ==6 faces==, deux par deux.",
+          "note": "diagonale d’une face&nbsp;: Pythagore&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Se repérer en quatre temps",
+          "etapes": [
+            { "titre": "Origine", "texte": "choisir un sommet comme origine O" },
+            { "titre": "Axes", "texte": "prendre les trois arêtes qui en partent" },
+            { "titre": "Coordonnées", "texte": "lire (x ; y ; z) en suivant chaque axe, l’un après l’autre" },
+            { "titre": "Placer", "texte": "un point en avançant de x, puis y, puis z" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Pavé de 5 cm × 3 cm × 2 cm. __Aire totale__&nbsp;?",
+          "calcul": "2 × (5×3 + 5×2 + 3×2)\n= 2 × 31",
+          "aparte": "15 + 10 + 6 = 31",
+          "resultat": "A = [[62 cm²]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Que devient la perspective&nbsp;?",
+          "oui": { "titre": "Conservé", "texte": "Le **parallélisme** et l’**alignement**. La face avant est en vraie grandeur." },
+          "non": { "titre": "Déformé", "texte": "Les **angles droits** (sauf face avant) et les **longueurs** des fuyantes." },
+          "essai": { "texte": "Une face **carrée** peut apparaître comme un <i>parallélogramme</i>&nbsp;: c’est normal, le dessin n’est pas faux." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Positions dans l’espace",
+          "deux": true,
+          "items": [
+            { "titre": "Deux droites", "texte": "parallèles, sécantes ou **non coplanaires**" },
+            { "titre": "Droite et plan", "texte": "parallèles, sécants, ou la droite est dans le plan" },
+            { "titre": "Deux plans", "texte": "parallèles ou sécants selon une **droite**" },
+            { "titre": "Nouveauté", "texte": "non coplanaires&nbsp;: elles ne se coupent jamais" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier la **troisième** coordonnée.",
+            "Croire que deux droites qui ne se coupent pas sont **parallèles**.",
+            "Mesurer une **fuyante** comme une vraie longueur.",
+            "Confondre **volume** (cm³) et **aire** (cm²)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Pavé 4 × 3 × 2&nbsp;: **coordonnées** du sommet opposé à l’origine&nbsp;?",
+            "**Volume** d’un pavé 6 × 2 × 5 (cm)&nbsp;?",
+            "Deux droites qui ne se coupent jamais sans être parallèles&nbsp;?"
+          ],
+          "reponses": "1) (4 ; 3 ; 2) · 2) 60 cm³ · 3) elles sont non coplanaires"
+        }
+      ]
+    }
+  ]
+}

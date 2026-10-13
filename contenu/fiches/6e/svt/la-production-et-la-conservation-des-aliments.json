@@ -1,0 +1,177 @@
+{
+  "titre": "Conserver les aliments",
+  "titreSurligne": "Conserver",
+  "accroche": "Priver les microbes de ce qu’ils aiment.",
+  "bonus": "Le froid **ne tue pas** : il met en pause · DLC = danger, DDM = qualité",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/svt/la-production-et-la-conservation-des-aliments.webp",
+    "prompt": "a glossy violet glass jar with a golden lid holding golden jam, a tiny golden snowflake beside it, sparkles"
+  },
+  "marcel": "Microbes utiles ou pas,\nje fais le tri !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les microbes qui transforment",
+          "entetes": [
+            "Aliment",
+            "Micro-organisme"
+          ],
+          "lignes": [
+            [
+              "**Pain**",
+              "**levure** : la pâte lève"
+            ],
+            [
+              "**Yaourt**, fromage",
+              "**bactéries** : elles transforment le lait"
+            ],
+            [
+              "Vin, bière, choucroute",
+              "d’autres fermentations"
+            ]
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Ceux qui abîment ont besoin de",
+          "items": [
+            {
+              "titre": "Chaleur",
+              "texte": "une température douce"
+            },
+            {
+              "titre": "Eau",
+              "texte": "de l’humidité"
+            },
+            {
+              "titre": "Nutriments",
+              "texte": "de quoi se nourrir"
+            },
+            {
+              "titre": "Règle",
+              "texte": "en **retirer au moins un** pour conserver"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Les techniques de conservation",
+          "entetes": [
+            "Technique",
+            "Effet",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "**Réfrigérateur** (≈ 4 °C)",
+              "**ralentit**",
+              "lait, yaourt"
+            ],
+            [
+              "**Congélateur** (−18 °C)",
+              "**arrête presque**",
+              "poisson, légumes"
+            ],
+            [
+              "**Pasteurisation** (≈ 70 °C)",
+              "**détruit** une grande part",
+              "lait"
+            ],
+            [
+              "**Stérilisation** (> 100 °C)",
+              "**élimine**",
+              "conserves"
+            ],
+            [
+              "**Séchage**, sel, sucre",
+              "retire l’**eau** disponible",
+              "fruits secs, jambon, confiture"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Hygiène à la cuisine",
+          "etapes": [
+            {
+              "titre": "Mains",
+              "texte": "Les **laver**."
+            },
+            {
+              "titre": "Froid",
+              "texte": "Respecter la chaîne."
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un steak décongelé reste 2 h dehors. Le recongeler&nbsp;?",
+          "calcul": "Les microbes se sont<br>multipliés dehors",
+          "resultat": "[[non, jamais]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le **froid tue** les microbes.",
+            "**Recongeler** un produit décongelé.",
+            "Confondre **DLC** et **DDM**.",
+            "Mélanger le **cru** et le **cuit**."
+          ]
+        },
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Les microbes ont besoin de chaleur, d’eau et de nutriments.",
+              "quoi": "principe"
+            },
+            {
+              "texte": "Conserver, c’est leur retirer au moins l’un des trois.",
+              "quoi": "conclure"
+            },
+            {
+              "texte": "DLC : on ne la dépasse pas ; DDM : baisse de qualité seulement.",
+              "quoi": "étiquette"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel micro-organisme fait **lever le pain**&nbsp;?",
+            "Que fait la **stérilisation**&nbsp;?",
+            "La **DLC** peut-elle être dépassée&nbsp;?"
+          ],
+          "reponses": "1) la levure · 2) elle élimine les microbes · 3) non, jamais"
+        }
+      ]
+    }
+  ]
+}

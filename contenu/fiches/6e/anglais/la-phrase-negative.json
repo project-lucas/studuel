@@ -1,0 +1,195 @@
+{
+  "titre": "La phrase négative",
+  "titreSurligne": "négative",
+  "accroche": "Dire non, une seule fois.",
+  "bonus": "**not** après l’auxiliaire · **don’t**, **doesn’t**, **didn’t** · une seule négation",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/anglais/la-phrase-negative.webp",
+    "prompt": "a glossy violet circle with a golden diagonal bar and a small golden hand showing stop, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Non&nbsp;?\nUne seule fois&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le principe",
+          "lignes": [
+            "auxiliaire + **not**",
+            "+ verbe"
+          ],
+          "petite": true,
+          "regle": "<i>I **don’t** like fish.</i> (Je n’aime pas le poisson.) Un seul mot de négation par phrase.",
+          "note": "not = après"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Quel verbe&nbsp;?",
+          "entetes": [
+            "Le verbe",
+            "La négation",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "**be**",
+              "be + not",
+              "<i>I’m not French. He isn’t here.</i>"
+            ],
+            [
+              "**can, will…**",
+              "modal + not",
+              "<i>I can’t swim. I won’t go.</i>"
+            ],
+            [
+              "**les autres**",
+              "don’t / doesn’t",
+              "<i>I don’t like fish. She doesn’t…</i>"
+            ],
+            [
+              "**au passé**",
+              "didn’t",
+              "<i>I didn’t go.</i>"
+            ],
+            [
+              "**ordre**",
+              "Don’t + base",
+              "<i>Don’t touch that!</i>"
+            ],
+            [
+              "**be (court)**",
+              "isn’t, aren’t",
+              "<i>They aren’t ready.</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les mots déjà négatifs",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "no, nothing",
+              "texte": "<i>I see **nothing**. There is **no** milk.</i>"
+            },
+            {
+              "titre": "nobody, never",
+              "texte": "<i>**Nobody** came. I **never** eat meat.</i>"
+            },
+            {
+              "titre": "nowhere",
+              "texte": "<i>I go **nowhere**.</i> (Je ne vais nulle part.)"
+            },
+            {
+              "titre": "Pas de not avec eux",
+              "texte": "On ne dit pas <i>don’t never</i> : ils sont déjà négatifs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Une seule négation",
+          "oui": {
+            "titre": "Une négation",
+            "texte": "<i>I **don’t** see **anything**.</i> ou <i>I see **nothing**.</i>"
+          },
+          "non": {
+            "titre": "Deux négations",
+            "texte": "<i>I don’t see nothing.</i> — les deux se détruisent."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>He ___ (not like) milk.</i> → **doesn’t like**"
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Quel verbe&nbsp;?",
+              "texte": "be, modal ou autre verbe&nbsp;?"
+            },
+            {
+              "titre": "Ajoute not",
+              "texte": "Après l’auxiliaire, ou don’t / doesn’t / didn’t."
+            },
+            {
+              "titre": "Base verbale",
+              "texte": "Après <i>doesn’t</i> et <i>didn’t</i> : le verbe sans -s ni -ed."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les contractions",
+          "deux": true,
+          "items": [
+            {
+              "titre": "isn’t, aren’t",
+              "texte": "<i>She isn’t here.</i>"
+            },
+            {
+              "titre": "don’t, doesn’t, didn’t",
+              "texte": "<i>He doesn’t know.</i>"
+            },
+            {
+              "titre": "can’t, won’t",
+              "texte": "<i>I can’t come.</i>"
+            },
+            {
+              "titre": "No ou not&nbsp;?",
+              "texte": "<i>no</i> + nom&nbsp;: <i>no milk</i> · <i>not</i> + le reste&nbsp;: <i>isn’t any milk</i>."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>I don’t see nothing</i> → <i>I don’t see **anything**.</i>",
+            "<i>She doesn’t likes</i> → <i>She doesn’t **like**.</i>",
+            "<i>I don’t never go</i> → <i>I **never** go.</i>",
+            "<i>I no like it</i> → <i>I **don’t** like it.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>I ___ (not play) tennis.</i>",
+            "<i>She ___ (not go) to school yesterday.</i>",
+            "<i>I don’t see nothing → corrige</i>"
+          ],
+          "reponses": "1) don’t play 2) didn’t go 3) I don’t see anything / I see nothing"
+        }
+      ]
+    }
+  ]
+}

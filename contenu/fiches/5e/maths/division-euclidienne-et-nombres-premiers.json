@@ -1,0 +1,191 @@
+{
+  "titre": "Division et premiers",
+  "titreSurligne": "premiers",
+  "accroche": "Quotient, reste et briques des nombres.",
+  "bonus": "Premiers : **2 · 3 · 5 · 7 · 11 · 13 · 17 · 19 · 23 · 29** · 1 n’est **pas** premier",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/division-euclidienne-et-nombres-premiers.webp",
+    "prompt": "a glossy golden number block being split into small violet building bricks marked with prime shapes, sparkles"
+  },
+  "marcel": "Le reste est toujours\nplus petit !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La division euclidienne",
+          "taille": "mini",
+          "lignes": [
+            "a = b × q + r",
+            "47 = 5 × 9 + 2"
+          ],
+          "regle": "Avec ==0 ≤ r &lt; b==&nbsp;: le **reste** est toujours plus petit que le diviseur.",
+          "note": "reste nul : b divise a&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Critères de divisibilité",
+          "entetes": [
+            "Par",
+            "Si…"
+          ],
+          "lignes": [
+            [
+              "2",
+              "il finit par 0, 2, 4, 6, 8"
+            ],
+            [
+              "3 ou 9",
+              "la somme des chiffres est dans la table"
+            ],
+            [
+              "4",
+              "les 2 derniers chiffres : multiple de 4"
+            ],
+            [
+              "5 ; 10",
+              "il finit par 0 ou 5 ; par 0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Décomposer en facteurs premiers",
+          "etapes": [
+            {
+              "titre": "Diviser",
+              "texte": "par le plus petit premier possible : 2, puis 3, puis 5…"
+            },
+            {
+              "titre": "Continuer",
+              "texte": "avec le quotient jusqu’à obtenir 1"
+            },
+            {
+              "titre": "Écrire",
+              "texte": "le produit, avec des puissances : 60 = 2² × 3 × 5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Simplifie __18/24__ avec les facteurs premiers.",
+          "calcul": "(2 × 3 × 3)/(2 × 2 × 2 × 3)",
+          "aparte": "on barre 2 et 3",
+          "resultat": "= [[3/4]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Le vocabulaire",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Multiples",
+              "texte": "**infinis**&nbsp;: 12, 24, 36, 48…"
+            },
+            {
+              "titre": "Diviseurs",
+              "texte": "en nombre **fini**&nbsp;: 1, 2, 3, 4, 6, 12."
+            },
+            {
+              "titre": "Nombre premier",
+              "texte": "plus grand que 1, **deux** diviseurs seulement : 1 et lui-même."
+            },
+            {
+              "titre": "Premiers entre eux",
+              "texte": "aucun facteur commun : la fraction est irréductible."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À quoi ça sert",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Simplifier",
+              "texte": "on décompose haut et bas, on barre les facteurs communs."
+            },
+            {
+              "titre": "Dénominateur commun",
+              "texte": "on assemble les facteurs des deux dénominateurs."
+            },
+            {
+              "titre": "Premiers entre eux",
+              "texte": "aucun facteur commun : fraction déjà irréductible."
+            },
+            {
+              "titre": "Les infinis",
+              "texte": "il existe une infinité de nombres premiers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "47 = 5 × 9 + 2 et 2 &lt; 5",
+              "quoi": "division euclidienne"
+            },
+            {
+              "texte": "6 + 3 = 9, donc 63 est divisible par 9",
+              "quoi": "un critère"
+            },
+            {
+              "texte": "60 = 2² × 3 × 5",
+              "quoi": "la décomposition"
+            }
+          ],
+          "pied": "Quatre phrases, un même sens&nbsp;: ==b divise a== = a est multiple de b."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Un reste **plus grand** que le diviseur.",
+            "Croire que **1** est premier.",
+            "Oublier que **2** est le seul premier **pair**.",
+            "Confondre **multiples** et diviseurs."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Effectue la division euclidienne de **47** par **5**.",
+            "**123** est-il divisible par **3**&nbsp;? Par **5**&nbsp;?",
+            "Décompose **60** en facteurs premiers."
+          ],
+          "reponses": "1) 47 = 5 × 9 + 2 · 2) 3 oui (1+2+3 = 6), 5 non · 3) 2² × 3 × 5"
+        }
+      ]
+    }
+  ]
+}

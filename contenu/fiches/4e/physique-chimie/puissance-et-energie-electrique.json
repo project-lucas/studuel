@@ -1,0 +1,117 @@
+{
+  "titre": "Puissance et énergie",
+  "titreSurligne": "énergie",
+  "accroche": "Ce qui consomme, et ce que ça coûte.",
+  "bonus": "**P = U × I** · **E = P × t** · 1 kWh = **3,6 × 10<sup>6</sup> J** · puissance = vitesse de consommation, énergie = quantité totale",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/puissance-et-energie-electrique.webp",
+    "prompt": "a glossy violet electricity meter with a golden dial and a small glowing bulb beside it, golden coins and tiny sparks, sparkles"
+  },
+  "marcel": "Watts et kWh :\nne les mélange pas !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Puissance et énergie",
+          "taille": "mini",
+          "lignes": ["P = U × I", "E = P × t"],
+          "regle": "**P** puissance en **watts (W)**, **U** en volts, **I** en ampères. **E** énergie en **joules** si t est en secondes, en **Wh** si t est en heures.",
+          "note": "1 kWh = 1 000 Wh&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Ordres de grandeur",
+          "entetes": ["L’appareil", "Puissance"],
+          "lignes": [
+            ["Chargeur de téléphone", "environ 5 W"],
+            ["Ampoule **LED**", "8 W"],
+            ["Ampoule à filament", "60 W"],
+            ["Réfrigérateur", "150 W"],
+            ["Four", "2 000 W"],
+            ["Plaque de cuisson", "3 000 W"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer le coût d’un appareil",
+          "etapes": [
+            { "titre": "Convertir", "texte": "la puissance en **kW** (2 000 W = 2 kW), le temps en **heures**" },
+            { "titre": "Énergie", "texte": "E = P × t, en **kWh**" },
+            { "titre": "Coût", "texte": "on multiplie par le prix du kWh (ici 0,20 €)" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un four de __2 000 W__ marche __1 h 30__. Prix du kWh&nbsp;: 0,20 €. Coût&nbsp;?",
+          "calcul": "E = 2 × 1,5 = 3 kWh",
+          "aparte": "puis 3 × 0,20",
+          "resultat": "coût = [[0,60 €]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "La plaque signalétique",
+          "oui": { "titre": "230 V — 2 000 W", "texte": "On en déduit l’intensité&nbsp;: I = P ÷ U = 2 000 ÷ 230 ≈ **8,7 A**." },
+          "non": { "titre": "Puissance ≠ énergie", "texte": "La puissance dit la **vitesse**, l’énergie la **quantité** consommée." },
+          "essai": { "texte": "Une ampoule de 60 W allumée <i>1 h</i> consomme autant qu’une ampoule de 6 W allumée <i>10 h</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Réduire sa consommation",
+          "deux": true,
+          "items": [
+            { "titre": "Étiquette énergie", "texte": "choisir le meilleur **rendement**" },
+            { "titre": "LED", "texte": "bien plus de lumière par watt" },
+            { "titre": "Veilles", "texte": "les **éteindre**" },
+            { "titre": "Appareils puissants", "texte": "four, chauffage&nbsp;: durée **limitée**" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Garder les **W** au lieu de passer en **kW** pour le coût.",
+            "Compter le temps en **minutes** dans E = P × t.",
+            "Confondre **puissance** (W) et **énergie** (Wh, J).",
+            "Oublier l’unité du résultat : **€**, **kWh** ou **A**.",
+            "Croire qu’un appareil en **veille** ne consomme rien.",
+            "Oublier que **LED** = même lumière avec bien moins de watts."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "U = 230 V et I = 2 A&nbsp;: **P**&nbsp;?",
+            "Un appareil de **1 kW** marche **3 h**&nbsp;: **E**&nbsp;?",
+            "Unité de la **puissance**&nbsp;?"
+          ],
+          "reponses": "1) 460 W · 2) 3 kWh · 3) le watt (W)"
+        }
+      ]
+    }
+  ]
+}

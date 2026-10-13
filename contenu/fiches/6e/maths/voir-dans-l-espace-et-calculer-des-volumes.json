@@ -1,0 +1,192 @@
+{
+  "titre": "Solides et volumes",
+  "titreSurligne": "volumes",
+  "accroche": "Des cubes qui se comptent en litres.",
+  "bonus": "**1 L = 1 dm³** · 1 mL = 1 cm³ · chaque rang de volume vaut **1 000** fois le suivant",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/maths/voir-dans-l-espace-et-calculer-des-volumes.webp",
+    "prompt": "a glossy violet cube and a golden rectangular box side by side, with a small glass of golden liquid, tiny sparkles, same art style as the reference icons"
+  },
+  "marcel": "1 litre,\nc’est 1 dm³ !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "Le cube et le pavé droit",
+          "colonnes": 2,
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 35 190 145' aria-hidden='true'><polygon points='30,80 70,45 140,45 100,80' fill='#eee7fc'></polygon><polygon points='100,80 140,45 140,115 100,150' fill='#d9ccf7'></polygon><rect x='30' y='80' width='70' height='70' fill='#f6f2ff' stroke='#2b2350' stroke-width='3.5'></rect><g stroke='#2b2350' stroke-width='3.5' stroke-linecap='round' fill='none'><line x1='30' y1='80' x2='70' y2='45'></line><line x1='100' y1='80' x2='140' y2='45'></line><line x1='100' y1='150' x2='140' y2='115'></line><line x1='70' y1='45' x2='140' y2='45'></line><line x1='140' y1='45' x2='140' y2='115'></line></g><g stroke='#2b2350' stroke-width='2.5' stroke-dasharray='5 5' fill='none'><line x1='70' y1='45' x2='70' y2='115'></line><line x1='70' y1='115' x2='140' y2='115'></line><line x1='30' y1='150' x2='70' y2='115'></line></g><text x='58' y='170' font-family=\"'Baloo 2'\" font-weight='800' font-size='18' fill='#7a3fe0'>c</text></svg>",
+              "legende": "cube",
+              "sous": "6 faces, 12 arêtes, 8 sommets"
+            },
+            {
+              "svg": "<svg viewBox='0 35 190 145' aria-hidden='true'><polygon points='20,85 60,50 150,50 110,85' fill='#eee7fc'></polygon><polygon points='110,85 150,50 150,115 110,150' fill='#d9ccf7'></polygon><rect x='20' y='85' width='90' height='65' fill='#f6f2ff' stroke='#2b2350' stroke-width='3.5'></rect><g stroke='#2b2350' stroke-width='3.5' stroke-linecap='round' fill='none'><line x1='20' y1='85' x2='60' y2='50'></line><line x1='110' y1='85' x2='150' y2='50'></line><line x1='110' y1='150' x2='150' y2='115'></line><line x1='60' y1='50' x2='150' y2='50'></line><line x1='150' y1='50' x2='150' y2='115'></line></g><g stroke='#2b2350' stroke-width='2.5' stroke-dasharray='5 5' fill='none'><line x1='60' y1='50' x2='60' y2='115'></line><line x1='60' y1='115' x2='150' y2='115'></line><line x1='20' y1='150' x2='60' y2='115'></line></g><g font-family=\"'Baloo 2'\" font-weight='800' font-size='18' fill='#7a3fe0'><text x='58' y='170'>L</text><text x='162' y='84'>l</text><text x='4' y='122'>h</text></g></svg>",
+              "legende": "pavé droit",
+              "sous": "6 rectangles, pointillés = arêtes cachées"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Les volumes",
+          "taille": "mini",
+          "lignes": [
+            "cube : c × c × c",
+            "pavé : L × l × h",
+            "cylindre : π × r × r × h"
+          ],
+          "regle": "Le volume compte les ==cubes== qui remplissent le solide.",
+          "note": "unités : cm³, dm³, m³"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Choisir",
+              "texte": "la bonne formule selon le solide"
+            },
+            {
+              "titre": "Même unité",
+              "texte": "convertir toutes les longueurs avant de multiplier"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "puis écrire le volume avec son unité en cube"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Le vocabulaire",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Face",
+              "texte": "une surface du solide"
+            },
+            {
+              "titre": "Arête",
+              "texte": "là où deux faces se rencontrent"
+            },
+            {
+              "titre": "Sommet",
+              "texte": "un point, au bout des arêtes"
+            },
+            {
+              "titre": "Patron",
+              "texte": "le solide déplié à plat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un aquarium pavé fait 5 dm de long, 3 dm de large, 2 dm de haut. __Combien de litres__&nbsp;?",
+          "calcul": "V = 5 × 3 × 2 = 30 dm³",
+          "aparte": "1 dm³ = 1 L",
+          "resultat": "V = [[30 L]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 5,
+          "titre": "Convertir un volume",
+          "entetes": [
+            "On passe de",
+            "À",
+            "Facteur"
+          ],
+          "lignes": [
+            [
+              "1 m³",
+              "dm³",
+              "× 1 000"
+            ],
+            [
+              "1 dm³",
+              "cm³",
+              "× 1 000"
+            ],
+            [
+              "1 L",
+              "dm³",
+              "égal"
+            ],
+            [
+              "1 mL",
+              "cm³",
+              "égal"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Le solide est un pavé droit",
+              "quoi": "le solide"
+            },
+            {
+              "texte": "V = L × l × h = 5 × 3 × 2",
+              "quoi": "la formule"
+            },
+            {
+              "texte": "V = 30 dm³ = 30 L",
+              "quoi": "le résultat"
+            }
+          ],
+          "pied": "Un patron plié doit redonner le solide. Le cube en a ==11==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Multiplier des longueurs en **unités différentes**.",
+            "Convertir un volume en **× 100** au lieu de × 1 000.",
+            "Oublier l’unité **au cube**&nbsp;: dm³, pas dm.",
+            "Croire que **6 carrés** suffisent à faire un patron de cube."
+          ],
+          "numero": 6
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Un **cube** de 3 cm de côté&nbsp;: son volume&nbsp;?",
+            "**2 dm³** valent combien de litres&nbsp;?",
+            "Un pavé de 4 cm, 5 cm et 2 cm&nbsp;: son **volume**&nbsp;?"
+          ],
+          "reponses": "1) 27 cm³ · 2) 2 L · 3) 40 cm³"
+        }
+      ]
+    }
+  ]
+}

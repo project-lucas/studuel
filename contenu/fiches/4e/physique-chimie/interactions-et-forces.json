@@ -1,0 +1,183 @@
+{
+  "titre": "Interactions et forces",
+  "titreSurligne": "forces",
+  "accroche": "Ce qui pousse, freine ou déforme.",
+  "bonus": "Force en **newtons (N)** · mesurée au **dynamomètre** · A agit sur B ⇒ **B agit sur A**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/interactions-et-forces.webp",
+    "prompt": "a glossy violet hand pushing a golden box, a bold golden arrow showing the force, a small spring dynamometer, sparkles"
+  },
+  "marcel": "Une force,\nc’est une flèche !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les deux interactions",
+          "entetes": [
+            "Famille",
+            "Exemples"
+          ],
+          "lignes": [
+            [
+              "**De contact**",
+              "main qui pousse, sol qui soutient, frottements"
+            ],
+            [
+              "**À distance**",
+              "gravitation, magnétisme, électrostatique"
+            ]
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Les effets d’une force",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Mettre en mouvement",
+              "texte": "pousser un objet immobile."
+            },
+            {
+              "titre": "Changer la vitesse",
+              "texte": "freiner, accélérer."
+            },
+            {
+              "titre": "Changer la trajectoire",
+              "texte": "dévier une balle."
+            },
+            {
+              "titre": "Déformer",
+              "texte": "écraser une éponge."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Représenter une force en trois temps",
+          "etapes": [
+            {
+              "titre": "Placer",
+              "texte": "le **point d’application**&nbsp;: là où la force s’exerce"
+            },
+            {
+              "titre": "Orienter",
+              "texte": "la flèche selon la **direction** et le **sens** de la force"
+            },
+            {
+              "titre": "Mesurer",
+              "texte": "sa **longueur** avec une échelle (1 cm = 10 N, par exemple)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "Le principe des actions réciproques",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "A agit sur B",
+              "texte": "le pied pousse le ballon vers l’avant"
+            },
+            {
+              "titre": "B agit sur A",
+              "texte": "le ballon pousse le pied vers l’arrière"
+            },
+            {
+              "titre": "Les deux forces",
+              "texte": "même direction, même valeur, sens opposé"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Échelle __1 cm = 10 N__. Longueur de la flèche d’une force de __30 N__&nbsp;?",
+          "calcul": "30 ÷ 10",
+          "aparte": "= 3",
+          "resultat": "[[3 cm]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Forces qui se compensent&nbsp;?",
+          "oui": {
+            "titre": "Elles se compensent",
+            "texte": "L’objet est **immobile** ou en mouvement **rectiligne uniforme**."
+          },
+          "non": {
+            "titre": "Elles ne se compensent pas",
+            "texte": "Sa **vitesse** ou sa **trajectoire** change."
+          },
+          "essai": {
+            "texte": "Pas besoin de force pour <i>continuer</i> d’avancer&nbsp;: il en faut pour <i>changer</i> de mouvement."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Le nageur exerce une force sur l’eau",
+              "quoi": "l’action"
+            },
+            {
+              "texte": "L’eau exerce une force sur le nageur",
+              "quoi": "la réaction"
+            },
+            {
+              "texte": "Même direction, même valeur, sens opposé",
+              "quoi": "la règle"
+            }
+          ],
+          "pied": "Une force se décrit par son ==point d’application==, sa ==direction==, son ==sens== et sa ==valeur==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **sens** ou l’**unité** (N).",
+            "Croire qu’il faut une force pour **continuer** à avancer.",
+            "Dire que l’action est **plus forte** que la réaction.",
+            "Penser que le magnétisme demande un **contact**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel **instrument** mesure une force&nbsp;?",
+            "La gravitation est-elle de **contact**&nbsp;?",
+            "Échelle 1 cm = 5 N&nbsp;: flèche de **20 N**&nbsp;?"
+          ],
+          "reponses": "1) le dynamomètre · 2) non, à distance · 3) 4 cm"
+        }
+      ]
+    }
+  ]
+}

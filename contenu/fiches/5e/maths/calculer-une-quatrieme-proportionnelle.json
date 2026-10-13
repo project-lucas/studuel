@@ -1,0 +1,170 @@
+{
+  "titre": "Le produit en croix",
+  "titreSurligne": "croix",
+  "accroche": "Trois valeurs connues, trouve la dernière.",
+  "bonus": "Le produit en croix marche **toujours**, si c’est bien proportionnel.",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/calculer-une-quatrieme-proportionnelle.webp",
+    "prompt": "a glossy violet table with a golden question mark in the empty cell, two golden arrows crossing in an X shape, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Trois connues,\nune à trouver !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "La situation",
+          "entetes": [
+            "Quantité",
+            "4",
+            "12"
+          ],
+          "lignes": [
+            [
+              "Prix (€)",
+              "5",
+              "**x**"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le produit en croix",
+          "lignes": [
+            "4 × x = 5 × 12"
+          ],
+          "regle": "On multiplie les nombres **en diagonale**, puis on divise par le nombre qui reste. Ici x = 60 ÷ 4 = ==15==.",
+          "note": "Le plus utile quand rien ne tombe rond&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Trois méthodes, toutes valables",
+          "etapes": [
+            {
+              "titre": "Le coefficient",
+              "texte": "5 ÷ 4 = 1,25 puis 12 × 1,25 = 15"
+            },
+            {
+              "titre": "L’unité",
+              "texte": "1 objet coûte 1,25 €, donc 12 objets coûtent 15 €"
+            },
+            {
+              "titre": "La linéarité",
+              "texte": "4 × 3 = 12, donc le prix aussi × 3 : 5 × 3 = 15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "3 cahiers coûtent 4,50 €. Prix de __7 cahiers__&nbsp;?",
+          "calcul": "1 cahier = 4,50 ÷ 3 = 1,50",
+          "aparte": "passage à l’unité",
+          "resultat": "7 × 1,50 = [[10,50 €]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Choisir sa méthode",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Nombres multiples",
+              "texte": "12 = 4 × 3&nbsp;? La **linéarité**, de tête."
+            },
+            {
+              "titre": "Coefficient juste",
+              "texte": "5 ÷ 4 = 1,25 tombe rond&nbsp;? Le **coefficient**."
+            },
+            {
+              "titre": "Additivité",
+              "texte": "3 objets 12 € et 5 objets 20 €&nbsp;: 8 objets coûtent **32 €**."
+            },
+            {
+              "titre": "Sinon",
+              "texte": "Le **produit en croix**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Proportionnel ou pas&nbsp;?",
+          "oui": {
+            "titre": "Oui",
+            "texte": "Le prix de **1 kg** de pommes ne change pas&nbsp;: 2 kg → 5 €, 4 kg → 10 €."
+          },
+          "non": {
+            "titre": "Non",
+            "texte": "Un abonnement de 10 € **plus** 2 € par séance&nbsp;: 0 séance coûte déjà 10 €."
+          },
+          "essai": {
+            "texte": "Test&nbsp;: si on **double** la quantité, le prix est-il **doublé**&nbsp;?"
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Le prix est proportionnel au nombre d’objets.",
+              "quoi": "on le dit"
+            },
+            {
+              "texte": "4 × x = 5 × 12",
+              "quoi": "le produit en croix"
+            },
+            {
+              "texte": "x = 60 ÷ 4 = 15 €",
+              "quoi": "la réponse"
+            }
+          ],
+          "pied": "Plus d’objets doit donner ==plus cher==&nbsp;: vérifie."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Appliquer la méthode à un tarif avec **abonnement fixe**&nbsp;: ce n’est pas proportionnel.",
+            "L’aire d’un carré n’est **pas** proportionnelle à son côté.",
+            "Diviser dans le mauvais sens&nbsp;: un prix qui baisse quand la quantité monte est faux."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "5 stylos coûtent 8 €. Prix de **15 stylos**&nbsp;?",
+            "6 m de tissu coûtent 21 €. Prix de **10 m**&nbsp;?",
+            "2 kg de pommes coûtent 5 €. Combien de kg pour **12,50 €**&nbsp;?"
+          ],
+          "reponses": "1) 24 € (× 3) · 2) 35 € (21 ÷ 6 = 3,5) · 3) 5 kg (12,5 ÷ 2,5)"
+        }
+      ]
+    }
+  ]
+}

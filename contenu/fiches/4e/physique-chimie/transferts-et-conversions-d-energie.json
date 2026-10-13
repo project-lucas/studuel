@@ -1,0 +1,114 @@
+{
+  "titre": "Transfert, conversion",
+  "titreSurligne": "conversion",
+  "accroche": "L’énergie change de forme ou de lieu.",
+  "bonus": "**Transfert** = change de lieu · **conversion** = change de forme · chaleur&nbsp;: du **chaud** vers le **froid**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/transferts-et-conversions-d-energie.webp",
+    "prompt": "a glossy violet lightbulb connected by golden arrows to a battery and a small solar panel, sparkles"
+  },
+  "marcel": "Elle ne disparaît pas,\nelle voyage !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les transferts thermiques",
+          "entetes": ["Mode", "Où ?", "Exemple"],
+          "lignes": [
+            ["**Conduction**", "solide, de proche en proche", "cuillère dans la casserole"],
+            ["**Convection**", "fluide, matière qui bouge", "air chaud qui monte"],
+            ["**Rayonnement**", "même dans le vide", "chaleur du Soleil"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les convertisseurs",
+          "entetes": ["Appareil", "Conversion"],
+          "lignes": [
+            ["**Lampe**", "électrique → lumineuse (+ thermique)"],
+            ["**Moteur**", "électrique → cinétique (+ thermique)"],
+            ["**Panneau solaire**", "lumineuse → électrique"],
+            ["**Alternateur**", "cinétique → électrique"],
+            ["**Pile**", "chimique → électrique"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Écrire une chaîne énergétique en trois temps",
+          "etapes": [
+            { "titre": "Source", "texte": "d’où vient l’énergie&nbsp;? (charbon, vent, pile…)" },
+            { "titre": "Convertisseur", "texte": "ce qui change la forme&nbsp;: chaudière, turbine, alternateur…" },
+            { "titre": "Utilisation", "texte": "et une flèche de côté pour les **pertes**, souvent thermiques" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Chaîne d’une centrale au __charbon__&nbsp;?",
+          "calcul": "charbon → chaudière → turbine → alternateur",
+          "aparte": "chimique → … → électrique",
+          "resultat": "[[chimique → thermique → cinétique → électrique]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Transfert ou conversion&nbsp;?",
+          "oui": { "titre": "Transfert", "texte": "Un radiateur chauffe la pièce&nbsp;: l’énergie **change de lieu**." },
+          "non": { "titre": "Conversion", "texte": "Une lampe s’allume&nbsp;: l’énergie électrique **change de forme**." },
+          "essai": { "texte": "Un transfert thermique va toujours du corps <i>chaud</i> vers le corps <i>froid</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le moteur reçoit de l’énergie électrique", "quoi": "l’entrée" },
+            { "texte": "Il la convertit en énergie cinétique", "quoi": "la conversion" },
+            { "texte": "Une partie est perdue sous forme thermique", "quoi": "les pertes" }
+          ],
+          "pied": "Une ==conversion== change la forme&nbsp;; un ==transfert== change le lieu."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **transfert** et **conversion**.",
+            "Oublier les **pertes thermiques** du schéma.",
+            "Dire que la chaleur va du **froid** vers le chaud.",
+            "Croire que le rayonnement a besoin d’**air**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel mode de transfert passe par le **vide**&nbsp;?",
+            "Que convertit un **alternateur**&nbsp;?",
+            "Que convertit une **pile**&nbsp;?"
+          ],
+          "reponses": "1) le rayonnement · 2) cinétique → électrique · 3) chimique → électrique"
+        }
+      ]
+    }
+  ]
+}

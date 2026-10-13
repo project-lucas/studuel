@@ -1,0 +1,163 @@
+{
+  "titre": "Mélanger et dissoudre",
+  "titreSurligne": "dissoudre",
+  "accroche": "Ce qui se mélange, ce qui se dissout.",
+  "bonus": "Miscibilité : **2 liquides** · solubilité en **g/L** · masse solution = masse solvant **+** masse soluté",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/la-miscibilite-et-la-solubilite.webp",
+    "prompt": "a glossy glass of golden oil floating above violet water in two layers, a sugar cube dissolving in a small violet cup, tiny sparkles"
+  },
+  "marcel": "Le sucre ne disparaît\npas, il se disperse !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les mots à connaître",
+          "items": [
+            {
+              "terme": "Miscibles",
+              "definition": "deux liquides qui forment un mélange **homogène** (eau et vinaigre)"
+            },
+            {
+              "terme": "Non miscibles",
+              "definition": "deux phases superposées (eau et huile)"
+            },
+            {
+              "terme": "Solvant · soluté",
+              "definition": "le liquide qui **dissout** · l’espèce **dissoute**"
+            },
+            {
+              "terme": "Solution",
+              "definition": "le mélange homogène obtenu"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La masse se conserve",
+          "petite": true,
+          "lignes": [
+            "m<sub>solution</sub> = m<sub>solvant</sub> + m<sub>soluté</sub>"
+          ],
+          "regle": "La **solubilité** est la masse **maximale** de soluté dissoute dans **1 L** de solvant, à une température donnée (en **g/L**).",
+          "note": "le sucre est dispersé, pas perdu !"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Savoir si tout va se dissoudre",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "la masse de soluté et le volume de solvant"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "à la solubilité (g/L) du soluté"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "en dessous : tout se dissout · au-dessus : le surplus reste au fond"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Je dissous __20 g__ de sucre dans __100 g__ d’eau. Masse de la solution&nbsp;?",
+          "calcul": "20 + 100 = 120 g",
+          "aparte": "solvant + soluté",
+          "resultat": "[[120 g]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Chaud ou froid ?",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Un solide",
+              "texte": "sa solubilité **augmente** en général avec la température."
+            },
+            {
+              "titre": "Un gaz",
+              "texte": "elle **diminue**&nbsp;: un soda tiède pétille moins."
+            },
+            {
+              "titre": "Solution saturée",
+              "texte": "elle a atteint sa limite&nbsp;: le surplus reste au fond."
+            },
+            {
+              "titre": "Au-dessus ?",
+              "texte": "le moins **dense** : l’huile surnage sur l’eau."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "L’eau et l’huile ne sont pas miscibles.",
+              "quoi": "la notion"
+            },
+            {
+              "texte": "On voit deux phases superposées.",
+              "quoi": "l’observation"
+            },
+            {
+              "texte": "On les sépare avec une ampoule à décanter.",
+              "quoi": "la technique"
+            },
+            {
+              "texte": "Le liquide du dessus est le moins dense.",
+              "quoi": "le rappel"
+            }
+          ],
+          "pied": "Une eau réchauffée contient ==moins de dioxygène== dissous : la vie aquatique en souffre."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que le sucre **disparaît**&nbsp;: il est dispersé.",
+            "Confondre **solvant** et **soluté**.",
+            "Croire qu’une solution saturée est **ratée**.",
+            "Penser qu’un gaz se dissout **mieux** à chaud.",
+            "Placer l’**huile** sous l’eau."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dans l’eau sucrée, qui est le **soluté**&nbsp;?",
+            "50 g de sel + 200 g d’eau&nbsp;: masse de la **solution**&nbsp;?",
+            "Une solution **saturée**, c’est quoi&nbsp;?"
+          ],
+          "reponses": "1) le sucre · 2) 250 g · 3) elle a atteint sa limite de dissolution"
+        }
+      ]
+    }
+  ]
+}

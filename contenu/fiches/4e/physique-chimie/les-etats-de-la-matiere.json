@@ -1,0 +1,174 @@
+{
+  "titre": "États de la matière",
+  "titreSurligne": "États",
+  "accroche": "La même matière, trois organisations.",
+  "bonus": "Solide : forme et volume **propres** · liquide : volume propre · gaz : **aucun** · la **masse** se conserve, le volume varie",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/les-etats-de-la-matiere.webp",
+    "prompt": "three glossy glass flasks in a row, one with a golden ice cube, one with golden liquid, one with violet swirling gas, tiny glossy bead molecules, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Même matière,\n3 organisations !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois états",
+          "entetes": [
+            "État",
+            "Forme",
+            "Volume",
+            "Molécules"
+          ],
+          "lignes": [
+            [
+              "**Solide**",
+              "propre",
+              "propre",
+              "serrées, **ordonnées**, elles vibrent sur place"
+            ],
+            [
+              "**Liquide**",
+              "celle du récipient",
+              "propre",
+              "serrées, **désordonnées**, elles glissent"
+            ],
+            [
+              "**Gaz**",
+              "aucune",
+              "aucun (occupe tout)",
+              "très **éloignées**, très agitées"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Ce que ça explique",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Gaz compressible",
+              "texte": "beaucoup de **vide** entre ses molécules"
+            },
+            {
+              "titre": "Liquide, solide",
+              "texte": "molécules déjà au contact : presque pas compressibles"
+            },
+            {
+              "titre": "Surface plane",
+              "texte": "un liquide au repos est **horizontal** : pas de forme propre"
+            },
+            {
+              "titre": "Gaz expansible",
+              "texte": "il remplit tout le volume offert"
+            }
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 3,
+          "titre": "L’agitation",
+          "items": [
+            {
+              "terme": "Température",
+              "definition": "plus elle monte, plus les molécules sont **agitées**"
+            },
+            {
+              "terme": "Zéro absolu",
+              "definition": "−273 °C&nbsp;: l’agitation cesserait"
+            },
+            {
+              "terme": "Masse",
+              "definition": "elle se **conserve** quand l’état change"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Reconnaître un état en trois temps",
+          "etapes": [
+            {
+              "titre": "Forme",
+              "texte": "garde-t-il sa forme tout seul&nbsp;? oui : solide"
+            },
+            {
+              "titre": "Volume",
+              "texte": "garde-t-il son volume dans un récipient&nbsp;? oui : liquide"
+            },
+            {
+              "titre": "Sinon",
+              "texte": "il occupe tout l’espace : c’est un **gaz**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un litre d’eau gèle. La __masse__ change-t-elle&nbsp;?",
+          "calcul": "les molécules sont les mêmes",
+          "aparte": "le volume augmente un peu",
+          "resultat": "la masse [[ne change pas]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que la **matière** change d’état (ce sont les molécules qui s’arrangent autrement).",
+            "Dire que la **masse** varie quand l’eau gèle.",
+            "Oublier que l’eau **augmente** de volume en gelant (la bouteille éclate).",
+            "Croire que les molécules d’un solide sont **immobiles**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Compressible ou pas&nbsp;?",
+          "oui": {
+            "titre": "Un gaz",
+            "texte": "On peut le **comprimer** : il y a du vide entre ses molécules."
+          },
+          "non": {
+            "titre": "Un liquide, un solide",
+            "texte": "Molécules déjà **au contact** : volume presque fixe."
+          },
+          "essai": {
+            "texte": "Une seringue fermée pleine d’air se comprime ; pleine d’eau, **non**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel état n’a **ni forme ni volume propres**&nbsp;?",
+            "Pourquoi un **gaz** est-il compressible&nbsp;?",
+            "Que devient la **masse** quand un liquide gèle&nbsp;?"
+          ],
+          "reponses": "1) le gaz · 2) beaucoup de vide entre les molécules · 3) elle se conserve"
+        }
+      ]
+    }
+  ]
+}

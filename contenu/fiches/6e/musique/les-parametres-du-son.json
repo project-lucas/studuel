@@ -1,0 +1,133 @@
+{
+  "titre": "Les paramètres du son",
+  "titreSurligne": "son",
+  "accroche": "Quatre mots pour décrire un son.",
+  "bonus": "Le **la** du diapason : **440 Hz**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/musique/les-parametres-du-son.webp",
+    "prompt": "a glossy violet tuning fork with golden sound waves and golden notes, sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Aigu, long, fort,\nde quelle couleur ?",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les quatre paramètres",
+          "entetes": ["Paramètre", "Il décrit", "Mot clé"],
+          "lignes": [
+            ["**Hauteur**", "aigu ou grave", "fréquence (Hz)"],
+            ["**Durée**", "long ou court", "ronde, noire…"],
+            ["**Intensité**", "le volume", "<i>piano</i>, <i>forte</i>"],
+            ["**Timbre**", "la « couleur »", "harmoniques"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les nuances",
+          "entetes": ["Nuance", "Sens"],
+          "lignes": [
+            ["<i>piano</i>", "doux"],
+            ["<i>mezzo forte</i>", "moyennement fort"],
+            ["<i>forte</i>", "fort"],
+            ["<i>fortissimo</i>", "très fort"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les idées à retenir",
+          "colonnes": 4,
+          "cartes": [
+            { "titre": "Fréquence", "texte": "Élevée : son **aigu**. Basse : son **grave**." },
+            { "titre": "Les durées", "texte": "Ronde, blanche, noire, croche : chacune vaut la **moitié** de la précédente." },
+            { "titre": "Crescendo", "texte": "L’intensité **augmente** peu à peu." },
+            { "titre": "Decrescendo", "texte": "L’intensité **diminue** peu à peu." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Le timbre",
+          "deux": false,
+          "items": [
+            { "titre": "Définition", "texte": "la « couleur » du son" },
+            { "titre": "Origine", "texte": "les **harmoniques** de l’instrument" },
+            { "titre": "Exemple", "texte": "flûte et violon, **même note**" },
+            { "titre": "Ce qu’il permet", "texte": "reconnaître **qui** joue" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **intensité** (volume) et **hauteur** (aigu/grave).",
+            "Apprendre les durées par cœur : c’est une **division par deux**.",
+            "Croire que le **timbre** change si la note change.",
+            "Mélanger **crescendo** et **decrescendo**."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Décrire un son",
+          "etapes": [
+            { "titre": "Hauteur", "texte": "aigu ou grave ?" },
+            { "titre": "Durée", "texte": "note longue ou courte ?" },
+            { "titre": "Timbre", "texte": "quel instrument, quelle voix ?" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple",
+          "donnees": "Flûte et violon jouent la même note. Qu’est-ce qui change ?",
+          "calcul": "Même hauteur, même durée",
+          "resultat": "[[le timbre]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Un son se décrit avec quatre paramètres : hauteur, durée, intensité, timbre.", "quoi": "lister" },
+            { "texte": "Plus la fréquence est élevée, plus le son est aigu.", "quoi": "expliquer" },
+            { "texte": "Le timbre permet de distinguer une flûte d’un violon.", "quoi": "illustrer" }
+          ],
+          "pied": "Le timbre, c’est la ==couleur== du son."
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel paramètre dit si un son est **aigu** ou **grave**&nbsp;?",
+            "Que veut dire <i>forte</i>&nbsp;?",
+            "Quel paramètre distingue une flûte d’un violon&nbsp;?"
+          ],
+          "reponses": "1) la hauteur · 2) fort · 3) le timbre"
+        }
+      ]
+    }
+  ]
+}

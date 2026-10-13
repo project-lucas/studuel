@@ -1,0 +1,118 @@
+{
+  "titre": "Les articles",
+  "titreSurligne": "articles",
+  "accroche": "A, an, the… ou rien du tout&nbsp;!",
+  "bonus": "**a / an** = un son · **the** = déjà connu · **zéro** = en général",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/anglais/les-articles-definis-et-les-articles-indefinis.webp",
+    "prompt": "a glossy violet signpost with three golden arrow-shaped boards pointing different ways, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "A, an, the&nbsp;?\nOu rien&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le bon son",
+          "lignes": ["**a** + consonne · **an** + voyelle"],
+          "petite": true,
+          "regle": "C’est le **son** qui décide, pas la lettre&nbsp;: <i>a university</i> (son «&nbsp;you&nbsp;»), <i>an hour</i> (le h est muet).",
+          "note": "a/an : singulier seulement"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois choix devant un nom",
+          "entetes": ["L’article", "Quand", "L’exemple"],
+          "lignes": [
+            ["**a / an**", "un élément pas encore identifié", "<i>I bought **a** car.</i> (J’ai acheté une voiture.)"],
+            ["**the**", "déjà mentionné, unique", "<i>**The** car is red. **The** sun is hot.</i>"],
+            ["**zéro**", "pluriel ou indénombrable en général", "<i>I like dogs. Water is essential.</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Où mettre the&nbsp;?",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Avec the", "texte": "Les fleuves, océans, chaînes de montagnes&nbsp;: <i>the Thames, the Atlantic, the Alps</i>. Les superlatifs&nbsp;: <i>the best</i>." },
+            { "titre": "Sans article", "texte": "Les pays, villes, langues&nbsp;: <i>France, Paris, English</i>. Les repas&nbsp;: <i>for breakfast</i>." },
+            { "titre": "Avec a", "texte": "Un métier&nbsp;: <i>She is **a** dentist.</i> Une fréquence&nbsp;: <i>twice **a** week</i>." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Instrument ou sport&nbsp;?",
+          "oui": { "titre": "Un instrument = the", "texte": "<i>I play **the** piano.</i> (Je joue du piano.)" },
+          "non": { "titre": "Un sport = rien", "texte": "<i>I play football.</i> — jamais <i>I play the football.</i>" },
+          "essai": { "titre": "Essai", "texte": "<i>She goes to ___ school by bus.</i> (pour étudier) → **rien**&nbsp;: pas d’article." }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            { "titre": "Compte-t-on&nbsp;?", "texte": "Pluriel ou indénombrable, sens général → **zéro article**." },
+            { "titre": "Connu ou nouveau&nbsp;?", "texte": "Déjà cité ou unique → **the**. Nouveau → **a / an**." },
+            { "titre": "Écoute le son", "texte": "Consonne → **a**. Voyelle → **an**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            { "titre": "an apple, an hour", "texte": "son de voyelle" },
+            { "titre": "a university, a European", "texte": "son «&nbsp;you&nbsp;»&nbsp;: consonne" },
+            { "titre": "at school / at the school", "texte": "étudier / le bâtiment précis" },
+            { "titre": "in winter, at home", "texte": "saisons, lieux courants&nbsp;: sans article" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>I like the dogs</i> (en général) → <i>I like dogs.</i>",
+            "<i>She is dentist</i> → <i>She is **a** dentist.</i>",
+            "<i>a apple</i> → <i>**an** apple.</i>",
+            "<i>I play football</i> ≠ <i>I play the piano</i> : sport sans, instrument avec."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>She is ___ engineer.</i> (a / an)",
+            "<i>I play ___ guitar.</i> (the / rien)",
+            "<i>I bought a book. ___ book is great.</i>"
+          ],
+          "reponses": "1) an 2) the 3) The"
+        }
+      ]
+    }
+  ]
+}

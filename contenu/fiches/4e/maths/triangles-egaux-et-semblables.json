@@ -1,0 +1,110 @@
+{
+  "titre": "Égaux et semblables",
+  "titreSurligne": "semblables",
+  "accroche": "Même taille, ou seulement même forme.",
+  "bonus": "Deux angles égaux suffisent&nbsp;: le **troisième** suit (somme = 180°)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/triangles-egaux-et-semblables.webp",
+    "prompt": "a small glossy violet triangle and a bigger golden triangle with the same shape, nested like dolls, sparkles"
+  },
+  "marcel": "Deux angles égaux,\nc’est gagné&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Égaux ou semblables",
+          "items": [
+            { "terme": "Triangles égaux", "definition": "mêmes côtés et mêmes angles&nbsp;: ils se **superposent**" },
+            { "terme": "Cas d’égalité", "definition": "3 côtés · 2 côtés et l’angle compris · 1 côté et 2 angles" },
+            { "terme": "Triangles semblables", "definition": "mêmes **angles**, côtés **proportionnels**" },
+            { "terme": "Égaux = semblables", "definition": "avec un rapport **k = 1**" }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le rapport k",
+          "taille": "mini",
+          "lignes": ["{AB/DE} = {AC/DF} = {BC/EF} = k", "aires × k²"],
+          "regle": "L’**ordre des lettres** compte&nbsp;: ABC ~ DEF veut dire A↔D, B↔E, C↔F.",
+          "note": "même ordre en haut et en bas&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "deux angles égaux dans chaque triangle" },
+            { "titre": "Conclure", "texte": "les triangles sont semblables, avec les correspondances" },
+            { "titre": "Écrire", "texte": "les quotients égaux, puis le produit en croix" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "ABC ~ DEF, AB = 4, DE = 6, AC = 6. __DF__&nbsp;?",
+          "calcul": "{DF/AC} = {DE/AB}\nDF = 6 × 6 ÷ 4",
+          "aparte": "k = 6 ÷ 4 = 1,5",
+          "resultat": "DF = [[9 cm]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Semblables ou pas&nbsp;?",
+          "oui": { "titre": "Semblables", "texte": "Deux angles égaux deux à deux suffisent." },
+          "non": { "titre": "Pas semblables", "texte": "Les côtés ne sont **pas** proportionnels, ou les lettres sont mal appariées." },
+          "essai": { "texte": "Angles 50° et 60° d’un côté, 60° et 50° de l’autre&nbsp;: troisième angle <i>70°</i> partout, donc **semblables**." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Dans ABC et DEF&nbsp;: Â = D̂ et B̂ = Ê", "quoi": "les angles" },
+            { "texte": "Donc ABC et DEF sont semblables", "quoi": "la conclusion" },
+            { "texte": "Par conséquent {AB/DE} = {AC/DF}", "quoi": "les rapports" }
+          ],
+          "pied": "On cite ==toujours== les deux angles égaux."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Intervertir les **lettres** (A↔D, B↔E, C↔F).",
+            "Croire qu’un seul angle égal suffit.",
+            "Mettre l’aire × **k** au lieu de × **k²**.",
+            "Mélanger les côtés des **deux** triangles."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Angles 40° et 70° dans l’un, 70° et 40° dans l’autre&nbsp;: **semblables**&nbsp;?",
+            "Rapport k = 3&nbsp;: les **aires** sont multipliées par…&nbsp;?",
+            "Deux triangles égaux ont un rapport k égal à…&nbsp;?"
+          ],
+          "reponses": "1) oui (deux angles égaux) · 2) 9 · 3) k = 1"
+        }
+      ]
+    }
+  ]
+}

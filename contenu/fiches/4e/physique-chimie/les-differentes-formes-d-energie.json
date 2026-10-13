@@ -1,0 +1,171 @@
+{
+  "titre": "Les formes d’énergie",
+  "titreSurligne": "énergie",
+  "accroche": "Ce qui permet d’agir.",
+  "bonus": "Énergie en **joules (J)** · 1 kWh = **3,6 × 10<sup>6</sup> J** · 1 cal ≈ **4,18 J** · une **source** n’est pas une **forme**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/les-differentes-formes-d-energie.webp",
+    "prompt": "a glossy golden lightning bolt surrounded by small violet icons of a flame, a battery, a wind turbine and a rolling ball, sparkles"
+  },
+  "marcel": "Une source n’est\npas une forme !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les principales formes",
+          "entetes": [
+            "Forme",
+            "Liée à"
+          ],
+          "lignes": [
+            [
+              "**Cinétique**",
+              "le mouvement"
+            ],
+            [
+              "**De position**",
+              "la hauteur"
+            ],
+            [
+              "**Thermique**",
+              "l’agitation des particules"
+            ],
+            [
+              "**Chimique**",
+              "les liaisons entre atomes"
+            ],
+            [
+              "**Électrique · lumineuse · nucléaire**",
+              "charges · lumière · noyau"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Les unités",
+          "petite": true,
+          "lignes": [
+            "1 kWh = 3,6 × 10<sup>6</sup> J",
+            "1 cal ≈ 4,18 J"
+          ],
+          "regle": "Le **joule** est l’unité légale. Le **kWh** sert pour l’électricité de la maison, la **calorie** pour la nutrition.",
+          "note": "le watt, c’est une puissance&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Reconnaître la forme en trois temps",
+          "etapes": [
+            {
+              "titre": "Observer",
+              "texte": "ce que fait l’objet&nbsp;: bouge, chauffe, éclaire, est en hauteur"
+            },
+            {
+              "titre": "Nommer",
+              "texte": "la forme&nbsp;: cinétique, thermique, lumineuse, de position…"
+            },
+            {
+              "titre": "Convertir",
+              "texte": "l’unité si besoin&nbsp;: kWh → J en multipliant par 3,6 × 10<sup>6</sup>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "Un ordre de grandeur",
+          "paragraphes": [
+            "Soulever une pomme d’un mètre demande environ **1 J**. Une barre chocolatée contient environ **10<sup>6</sup> J**. Un radiateur de 1 000 W qui chauffe pendant une heure consomme **1 kWh**."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un radiateur de 1 000 W chauffe __30 min__ (0,5 kWh). Énergie en joules&nbsp;?",
+          "calcul": "0,5 × 3,6 × 10<sup>6</sup>",
+          "aparte": "× 3,6 × 10<sup>6</sup>",
+          "resultat": "E = [[1,8 × 10<sup>6</sup> J]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Source d’énergie&nbsp;?",
+          "oui": {
+            "titre": "Renouvelables",
+            "texte": "Solaire, éolien, hydraulique, géothermie, biomasse&nbsp;: elles se **reconstituent**."
+          },
+          "non": {
+            "titre": "Non renouvelables",
+            "texte": "Charbon, pétrole, gaz, uranium&nbsp;: réserves **limitées**."
+          },
+          "essai": {
+            "texte": "Le pétrole est une <i>source</i>&nbsp;; l’énergie <i>chimique</i> qu’il contient est une <i>forme</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "E = 0,5 kWh",
+              "quoi": "la donnée"
+            },
+            {
+              "texte": "1 kWh = 3,6 × 10<sup>6</sup> J donc E = 0,5 × 3,6 × 10<sup>6</sup>",
+              "quoi": "lettres puis nombres"
+            },
+            {
+              "texte": "E = 1,8 × 10<sup>6</sup> J",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "On nomme la ==forme== d’énergie, puis la ==source== qui l’apporte."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **source** et **forme** d’énergie.",
+            "Écrire une énergie en **watts**.",
+            "Oublier de convertir les **kWh** en joules.",
+            "Croire qu’une énergie est « **produite** »&nbsp;: elle est convertie."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle forme d’énergie dépend de la **hauteur**&nbsp;?",
+            "Le **gaz** est-il renouvelable&nbsp;?",
+            "Quelle énergie pour un objet qui **bouge**&nbsp;?"
+          ],
+          "reponses": "1) de position · 2) non · 3) cinétique"
+        }
+      ]
+    }
+  ]
+}

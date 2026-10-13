@@ -1,0 +1,185 @@
+{
+  "titre": "Exprimer la possession",
+  "titreSurligne": "possession",
+  "accroche": "À qui est-ce&nbsp;? Trois façons de le dire.",
+  "bonus": "**’s** (êtres vivants) · **of** (objets) · **my / mine** (possessifs)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/anglais/exprimer-la-possession.webp",
+    "prompt": "a glossy violet backpack with a golden apostrophe-shaped tag hanging from it, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "C’est à qui&nbsp;?\nC’est à Kate’s&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le génitif",
+          "lignes": [
+            "possesseur + **’s** + objet"
+          ],
+          "petite": true,
+          "regle": "L’ordre est **inverse du français**&nbsp;: «&nbsp;la voiture de mon père&nbsp;» = <i>my father’s car</i>. Pour les personnes et les animaux.",
+          "note": "pluriel en -s : ’ seule"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les possessifs",
+          "entetes": [
+            "Sujet",
+            "Adjectif",
+            "Pronom"
+          ],
+          "lignes": [
+            [
+              "I / you",
+              "**my** / **your**",
+              "**mine** / **yours**"
+            ],
+            [
+              "he / she / it",
+              "**his** / **her** / **its**",
+              "**his** / **hers** / —"
+            ],
+            [
+              "we / they",
+              "**our** / **their**",
+              "**ours** / **theirs**"
+            ],
+            [
+              "Place",
+              "avant le nom&nbsp;: <i>my book</i>",
+              "seul&nbsp;: <i>it’s mine</i>"
+            ],
+            [
+              "Question",
+              "**Whose**…&nbsp;?",
+              "<i>Whose bag? — Kate’s.</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Quelle forme choisir&nbsp;?",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "’s",
+              "texte": "Une personne, un animal, le temps&nbsp;: <i>my brother**’s** bike</i>, <i>today**’s** newspaper</i>"
+            },
+            {
+              "titre": "of",
+              "texte": "Un objet, une idée&nbsp;: <i>the roof **of** the house</i>, <i>the end **of** the film</i>"
+            },
+            {
+              "titre": "Pluriel",
+              "texte": "<i>the girls**’** room</i> · <i>the children**’s** toys</i> (pluriel irrégulier)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Adjectif ou pronom&nbsp;?",
+          "oui": {
+            "titre": "Adjectif + nom",
+            "texte": "<i>This is **my** book.</i> — le possessif est devant un nom."
+          },
+          "non": {
+            "titre": "Pronom, sans nom",
+            "texte": "<i>This book is **mine**.</i> — jamais <i>mine book</i>."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>The bag is ___ (à elle).</i> → **hers**&nbsp;: pas de nom derrière."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Trouver le bon possessif",
+          "etapes": [
+            {
+              "titre": "Qui possède&nbsp;?",
+              "texte": "On regarde le **possesseur**, pas l’objet&nbsp;: <i>Paul and **his** sister</i>."
+            },
+            {
+              "titre": "Un nom suit&nbsp;?",
+              "texte": "Oui → **my, your, his…** Non → **mine, yours, hers…**"
+            },
+            {
+              "titre": "Une question&nbsp;?",
+              "texte": "<i>**Whose** bag is this? — It’s Kate’s.</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "its",
+              "texte": "possessif, **sans** apostrophe."
+            },
+            {
+              "titre": "it’s",
+              "texte": "= <i>it is</i> ou <i>it has</i>."
+            },
+            {
+              "titre": "Whose",
+              "texte": "pose la question de la possession."
+            },
+            {
+              "titre": "Temps",
+              "texte": "<i>a week**’s** holiday</i> (une semaine de vacances)"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>the car of my father</i> → <i>**my father’s** car</i>.",
+            "<i>mine book</i> → <i>**my** book</i> ou <i>the book is **mine**</i>.",
+            "<i>The dog wags it’s tail</i> → <i>**its** tail</i>.",
+            "Paul et sa sœur → <i>Paul and **his** sister</i> (le possesseur est un garçon)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Traduis&nbsp;: «&nbsp;la chambre de ma sœur&nbsp;».",
+            "<i>This pen is ___</i> (à moi)",
+            "<i>the students_ books</i>&nbsp;: où mettre l’apostrophe&nbsp;?"
+          ],
+          "reponses": "1) my sister’s room 2) mine 3) students’ books"
+        }
+      ]
+    }
+  ]
+}

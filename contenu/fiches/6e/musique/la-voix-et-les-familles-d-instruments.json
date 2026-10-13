@@ -1,0 +1,130 @@
+{
+  "titre": "Voix et instruments",
+  "titreSurligne": "instruments",
+  "accroche": "On classe par la façon dont naît le son.",
+  "bonus": "Le **saxophone** est un **bois**, malgré son métal",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/musique/la-voix-et-les-familles-d-instruments.webp",
+    "prompt": "a glossy violet violin and a golden trumpet crossed, with golden notes, sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Archet, souffle,\nbaguette : en famille !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les cordes",
+          "entetes": ["Type", "Le son naît…", "Exemples"],
+          "lignes": [
+            ["**Frottées**", "avec l’archet", "violon, violoncelle"],
+            ["**Pincées**", "avec le doigt", "harpe, guitare"],
+            ["**Frappées**", "avec un marteau", "piano"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les vents",
+          "entetes": ["Famille", "Le son naît…", "Exemples"],
+          "lignes": [
+            ["**Bois**", "anche ou souffle sur un biseau", "flûte, hautbois, saxophone"],
+            ["**Cuivres**", "lèvres qui vibrent", "trompette, trombone, tuba"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les idées à retenir",
+          "colonnes": 4,
+          "cartes": [
+            { "titre": "Du plus aigu au plus grave", "texte": "Violon, alto, violoncelle, contrebasse." },
+            { "titre": "Percussions déterminées", "texte": "Une **hauteur précise** : xylophone, timbales." },
+            { "titre": "Indéterminées", "texte": "**Pas** de hauteur : caisse claire, cymbales, triangle." },
+            { "titre": "A cappella", "texte": "Un chœur **sans** accompagnement." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Les voix",
+          "deux": false,
+          "items": [
+            { "titre": "Femmes", "texte": "soprano, mezzo-soprano, alto" },
+            { "titre": "Hommes", "texte": "ténor, baryton, basse" },
+            { "titre": "Du plus aigu", "texte": "au plus grave, dans cet ordre" },
+            { "titre": "Chœur", "texte": "plusieurs voix qui chantent ensemble" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Classer le **saxophone** dans les cuivres à cause du métal.",
+            "Croire que c’est la **matière** qui fait la famille.",
+            "Oublier que le **piano** est un instrument à cordes frappées.",
+            "Dire que la caisse claire joue une **note** précise."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Classer un instrument",
+          "etapes": [
+            { "titre": "Écouter", "texte": "comment le son naît-il ?" },
+            { "titre": "Famille", "texte": "cordes, vents ou percussions" },
+            { "titre": "Précision", "texte": "frottée, bois, déterminée…" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple",
+          "donnees": "Un trombone : les lèvres font vibrer l’air.",
+          "calcul": "Famille : vents",
+          "resultat": "[[cuivre]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "On classe un instrument selon la façon dont naît le son, pas selon sa matière.", "quoi": "règle" },
+            { "texte": "Le saxophone est un bois : le son naît d’une anche.", "quoi": "exemple" },
+            { "texte": "Le ténor, le baryton et la basse sont des voix d’hommes.", "quoi": "citer" }
+          ],
+          "pied": "Pas la matière, ==la façon== de produire le son."
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dans quelle famille range-t-on le **saxophone**&nbsp;?",
+            "Comment naît le son d’une **harpe**&nbsp;?",
+            "Que veut dire **a cappella**&nbsp;?"
+          ],
+          "reponses": "1) les bois · 2) en pinçant les cordes · 3) sans accompagnement"
+        }
+      ]
+    }
+  ]
+}

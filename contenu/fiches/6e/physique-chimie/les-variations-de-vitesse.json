@@ -1,0 +1,114 @@
+{
+  "titre": "Variations de vitesse",
+  "titreSurligne": "vitesse",
+  "accroche": "Uniforme, accéléré ou ralenti.",
+  "bonus": "écarts **égaux** = uniforme · écarts qui **grandissent** = accéléré · qui se **resserrent** = ralenti",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/physique-chimie/les-variations-de-vitesse.webp",
+    "prompt": "a glossy golden ball shown at several positions along a curved violet path with growing gaps between positions, tiny sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Regarde l’écart,\nil dit tout !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois cas",
+          "entetes": ["Mouvement", "Sa vitesse", "Exemple"],
+          "lignes": [
+            ["**Uniforme**", "ne change **pas**", "un escalator, un tapis roulant"],
+            ["**Accéléré**", "**augmente**", "une voiture qui démarre"],
+            ["**Ralenti**", "**diminue**", "un vélo qui freine"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les mots",
+          "items": [
+            { "terme": "Chronophotographie", "definition": "photos prises à intervalles de temps **réguliers**." },
+            { "terme": "Rectiligne uniforme", "definition": "chemin droit **et** vitesse constante." }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "Deux choses séparées",
+          "petite": true,
+          "lignes": ["trajectoire ≠ vitesse"],
+          "regle": "La **forme du chemin** et l’**évolution de la vitesse** sont ==indépendantes==. Une nacelle de grande roue est circulaire uniforme.",
+          "note": "deux questions, deux réponses&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Lire une chronophotographie",
+          "etapes": [
+            { "titre": "Repérer", "texte": "les positions successives de l’objet" },
+            { "titre": "Mesurer", "texte": "les écarts entre deux positions voisines" },
+            { "titre": "Conclure", "texte": "égaux&nbsp;: uniforme · plus grands&nbsp;: accéléré · plus petits&nbsp;: ralenti" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Écarts mesurés entre photos&nbsp;: __2 cm__, __4 cm__, __6 cm__. Quel mouvement&nbsp;?",
+          "calcul": "même durée entre photos, écarts de plus en plus grands",
+          "aparte": "la vitesse augmente",
+          "resultat": "[[accéléré]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **trajectoire** et **vitesse**.",
+            "Croire qu’un objet ralenti **s’arrête tout de suite**.",
+            "Oublier que le temps entre deux photos est **toujours le même**.",
+            "Croire que « circulaire » veut dire « **rapide** »."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Pourquoi ça compte",
+          "deux": true,
+          "items": [
+            { "titre": "Freinage", "texte": "la distance de freinage grandit **très vite** avec la vitesse." },
+            { "titre": "Sécurité", "texte": "un véhicule ralenti **ne s’arrête pas** instantanément." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Écarts de plus en plus **petits**&nbsp;: quel mouvement&nbsp;?",
+            "Un escalator a un mouvement…&nbsp;?",
+            "Pourquoi ne traverse-t-on pas devant une voiture qui **freine**&nbsp;?"
+          ],
+          "reponses": "1) ralenti · 2) uniforme · 3) elle ne s’arrête pas tout de suite"
+        }
+      ]
+    }
+  ]
+}

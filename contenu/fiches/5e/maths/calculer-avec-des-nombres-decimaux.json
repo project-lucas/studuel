@@ -1,0 +1,174 @@
+{
+  "titre": "Calculs décimaux",
+  "titreSurligne": "décimaux",
+  "accroche": "Quatre opérations, dans le bon ordre.",
+  "bonus": "×10, ×100 : virgule à **droite** · ÷10, ÷100 : virgule à **gauche**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/calculer-avec-des-nombres-decimaux.webp",
+    "prompt": "a glossy violet calculator with a golden comma key lit up, small golden digits floating around it, sparkles"
+  },
+  "marcel": "Aligne les virgules,\nestime d’abord !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les quatre opérations",
+          "items": [
+            {
+              "terme": "Addition, soustraction",
+              "definition": "on **aligne les virgules** : 12,50 + 3,75 = **16,25**"
+            },
+            {
+              "terme": "Multiplication",
+              "definition": "on oublie les virgules, puis on les compte&nbsp;: 32 × 15 = 480, 2 décimales → **4,80**"
+            },
+            {
+              "terme": "Division",
+              "definition": "jamais par un décimal&nbsp;: 7,5 ÷ 0,25 = 750 ÷ 25 = **30**"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Les priorités",
+          "taille": "mini",
+          "lignes": [
+            "2 + 3 × 4 = 2 + 12 = 14"
+          ],
+          "regle": "Dans l’ordre&nbsp;: ==parenthèses==, puissances, **× et ÷**, puis **+ et −**, de gauche à droite.",
+          "note": "2 + 3 × 4 ne fait pas 20&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Estimer",
+              "texte": "arrondir pour avoir un ordre de grandeur : 19,8 × 4,9 ≈ 20 × 5 = 100"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "poser l’opération, en respectant les priorités"
+            },
+            {
+              "titre": "Vérifier",
+              "texte": "comparer au résultat estimé : une virgule a-t-elle bougé&nbsp;?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Calcule __A = 2,5 + 4 × 1,5__.",
+          "calcul": "A = 2,5 + 6",
+          "aparte": "4 × 1,5 = 6",
+          "resultat": "A = [[8,5]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Multiplier par 10",
+              "texte": "la virgule recule d’un rang vers la **droite**&nbsp;: 3,2 × 10 = 32."
+            },
+            {
+              "titre": "Diviser par 100",
+              "texte": "la virgule va de 2 rangs vers la **gauche**&nbsp;: 45 ÷ 100 = 0,45."
+            },
+            {
+              "titre": "Arrondir au dixième",
+              "texte": "on regarde le chiffre suivant&nbsp;: 5 ou plus, on monte. 3,47 → **3,5**."
+            },
+            {
+              "titre": "Compter les décimales",
+              "texte": "le produit en a autant que les deux facteurs réunis."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Diviser par un décimal",
+          "oui": {
+            "titre": "On transforme",
+            "texte": "On multiplie le dividende ET le diviseur par 100&nbsp;: 7,5 ÷ 0,25 = **750 ÷ 25 = 30**."
+          },
+          "non": {
+            "titre": "On ne divise pas",
+            "texte": "Garder la virgule au diviseur&nbsp;: 7,5 ÷ 0,25 se pose mal et donne un résultat faux."
+          },
+          "essai": {
+            "texte": "<i>4,8 ÷ 0,6</i> : ×10 en haut et en bas, <i>48 ÷ 6</i> = **8**. Même quotient, plus de virgule."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "A = 2,5 + 4 × 1,5",
+              "quoi": "l’expression"
+            },
+            {
+              "texte": "A = 2,5 + 6",
+              "quoi": "la multiplication d’abord"
+            },
+            {
+              "texte": "A = 8,5",
+              "quoi": "le résultat"
+            }
+          ],
+          "pied": "Une ligne par calcul, ==un seul signe égal== par étape."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Calculer **de gauche à droite** sans priorités.",
+            "Oublier de **compléter par des zéros** pour aligner.",
+            "Diviser par un **décimal** sans le transformer.",
+            "Ne pas **estimer** : 970 au lieu de 9,7."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Calcule **12,5 + 3,75** et **8,2 × 0,3**.",
+            "Calcule **5 + 2 × (4 − 1)**.",
+            "Arrondis **6,382** au dixième, puis au centième."
+          ],
+          "reponses": "1) 16,25 et 2,46 · 2) 5 + 2 × 3 = 11 · 3) 6,4 puis 6,38"
+        }
+      ]
+    }
+  ]
+}

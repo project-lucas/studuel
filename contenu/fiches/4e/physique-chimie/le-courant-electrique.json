@@ -1,0 +1,117 @@
+{
+  "titre": "Le courant électrique",
+  "titreSurligne": "courant",
+  "accroche": "Des charges qui tournent en boucle.",
+  "bonus": "Circuit **fermé** = courant · sens conventionnel **+ vers −** · électrons en **sens inverse** · corps humain **conducteur**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/le-courant-electrique.webp",
+    "prompt": "a glossy violet battery connected by golden wires to a small round lamp glowing in a closed loop, tiny golden sparks traveling along the wire, sparkles"
+  },
+  "marcel": "Pas de boucle fermée,\npas de courant !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire du circuit",
+          "items": [
+            { "terme": "Courant électrique", "definition": "un déplacement ordonné de **porteurs de charge**." },
+            { "terme": "Générateur", "definition": "il fournit l’énergie&nbsp;: pile, batterie." },
+            { "terme": "Récepteur", "definition": "il la consomme&nbsp;: lampe, moteur." },
+            { "terme": "Dipôle", "definition": "un composant à **deux bornes**&nbsp;: lampe, pile, résistance." },
+            { "terme": "Court-circuit", "definition": "un fil relie les deux bornes du générateur&nbsp;: **danger d’incendie**." }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Qui porte le courant&nbsp;?",
+          "entetes": ["Le milieu", "Ses porteurs"],
+          "lignes": [
+            ["Un **métal**", "les **électrons libres**"],
+            ["Une **solution ionique**", "les **ions**"],
+            ["**Conducteurs**", "métaux, graphite, corps humain"],
+            ["**Isolants**", "verre, plastique, bois sec, air sec"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le courant circule si&nbsp;…",
+          "etapes": [
+            { "titre": "Une boucle", "texte": "générateur, récepteurs et fils forment un **circuit fermé**" },
+            { "titre": "Des conducteurs", "texte": "tout le trajet est fait de matériaux **conducteurs**" },
+            { "titre": "Interrupteur fermé", "texte": "s’il est ouvert, la boucle est coupée et **rien ne circule**" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une pile, une lampe et un __interrupteur ouvert__ en série. La lampe brille-t-elle&nbsp;?",
+          "calcul": "boucle coupée → plus de circulation",
+          "aparte": "le courant a besoin d’une boucle",
+          "resultat": "[[Non]], elle reste éteinte"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Deux sens à distinguer",
+          "oui": { "titre": "Courant conventionnel", "texte": "Il va de la borne **+** vers la borne **−** à l’extérieur du générateur&nbsp;: c’est le sens des schémas." },
+          "non": { "titre": "Les électrons", "texte": "Ils se déplacent en **sens inverse**, de **−** vers **+**." },
+          "essai": { "texte": "Le sens du courant est une <i>convention historique</i>, choisie avant qu’on connaisse l’électron." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Les symboles à savoir",
+          "deux": true,
+          "items": [
+            { "titre": "Pile", "texte": "deux traits **inégaux**" },
+            { "titre": "Lampe", "texte": "un cercle **barré d’une croix**" },
+            { "titre": "Résistance", "texte": "un **rectangle**" },
+            { "titre": "Schéma", "texte": "traits **droits**, angles **droits**" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le courant **circule** sans boucle fermée.",
+            "Dire que les électrons vont de **+ vers −**.",
+            "Oublier que le **corps humain** conduit le courant.",
+            "Laisser un **court-circuit** : fils chauds, incendie.",
+            "Penser que le courant est **consommé** : c’est l’**énergie** qui l’est."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quels sont les porteurs de charge dans un **métal**&nbsp;?",
+            "Dans quel sens va le **courant conventionnel**&nbsp;?",
+            "Le **bois sec** est-il conducteur ou isolant&nbsp;?"
+          ],
+          "reponses": "1) les électrons libres · 2) de + vers − · 3) isolant"
+        }
+      ]
+    }
+  ]
+}

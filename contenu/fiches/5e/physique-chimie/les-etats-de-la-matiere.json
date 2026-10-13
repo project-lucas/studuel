@@ -1,0 +1,173 @@
+{
+  "titre": "États de la matière",
+  "titreSurligne": "États",
+  "accroche": "Même matière, trois organisations.",
+  "bonus": "**Solide** : forme propre · **liquide** : forme du récipient · **gaz** : occupe tout l’espace · la **masse** se conserve",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/les-etats-de-la-matiere.webp",
+    "prompt": "three glossy violet and golden containers side by side: an ice cube, a drop of liquid, a swirl of gas bubbles, tiny golden molecule balls, sparkles"
+  },
+  "marcel": "Seule la distance\nentre molécules change !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois états",
+          "entetes": [
+            "État",
+            "Forme",
+            "Volume",
+            "Molécules"
+          ],
+          "lignes": [
+            [
+              "**Solide**",
+              "propre",
+              "propre",
+              "serrées, **ordonnées**, elles vibrent sur place"
+            ],
+            [
+              "**Liquide**",
+              "celle du récipient",
+              "propre",
+              "serrées, **désordonnées**, elles glissent"
+            ],
+            [
+              "**Gaz**",
+              "aucune",
+              "aucun : il remplit tout",
+              "très **éloignées**, très agitées"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Ce que ça explique",
+          "items": [
+            {
+              "titre": "Un gaz se comprime",
+              "texte": "beaucoup de **vide** entre ses molécules"
+            },
+            {
+              "titre": "Un liquide, un solide : non",
+              "texte": "leurs molécules se touchent déjà"
+            },
+            {
+              "titre": "Surface plane",
+              "texte": "un liquide au repos est **horizontal** : il n’a pas de forme propre"
+            },
+            {
+              "titre": "Un gaz s’étale",
+              "texte": "il remplit tout le volume offert"
+            }
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 3,
+          "titre": "À savoir",
+          "items": [
+            {
+              "terme": "Agitation thermique",
+              "definition": "plus la température monte, plus les molécules s’agitent"
+            },
+            {
+              "terme": "Zéro absolu",
+              "definition": "−273 °C&nbsp;: l’agitation cesserait"
+            },
+            {
+              "terme": "Conservation",
+              "definition": "la **masse** reste la même, seul le **volume** varie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une bouteille d’eau pleine éclate au congélateur. __Pourquoi__&nbsp;?",
+          "calcul": "l’eau gèle : son volume augmente",
+          "aparte": "exception de l’eau",
+          "resultat": "la glace [[prend plus de place]]"
+        },
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Reconnaître un état",
+          "etapes": [
+            {
+              "titre": "Forme",
+              "texte": "propre ? alors solide"
+            },
+            {
+              "titre": "Volume",
+              "texte": "propre mais forme libre ? liquide"
+            },
+            {
+              "titre": "Sinon",
+              "texte": "ni forme ni volume : gaz"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Les molécules d’un gaz sont éloignées.",
+              "quoi": "le modèle"
+            },
+            {
+              "texte": "Il y a beaucoup de vide entre elles.",
+              "quoi": "l’explication"
+            },
+            {
+              "texte": "Donc un gaz est compressible.",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Ce qui distingue les trois états, ce n’est pas la matière&nbsp;: c’est la ==distance== entre molécules."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que les molécules **changent** d’un état à l’autre.",
+            "Dire que la **masse** change quand l’eau gèle.",
+            "Penser que les molécules d’un solide sont **immobiles** : elles vibrent.",
+            "Oublier que l’**eau** gonfle en gelant."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel état a une **forme propre**&nbsp;?",
+            "Pourquoi un gaz est-il **compressible**&nbsp;?",
+            "Que devient la **masse** quand l’eau gèle&nbsp;?"
+          ],
+          "reponses": "1) le solide · 2) beaucoup de vide · 3) elle ne change pas"
+        }
+      ]
+    }
+  ]
+}

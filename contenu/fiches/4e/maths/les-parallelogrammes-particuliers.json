@@ -1,0 +1,194 @@
+{
+  "titre": "Parallélogrammes",
+  "titreSurligne": "Parallélogrammes",
+  "accroche": "Rectangle, losange, carré : qui a quoi.",
+  "bonus": "Axes de symétrie&nbsp;: parallélogramme **0** · rectangle **2** · losange **2** · carré **4**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/les-parallelogrammes-particuliers.webp",
+    "prompt": "a glossy violet parallelogram, a golden rectangle, a golden rhombus and a violet square arranged like a family, sparkles"
+  },
+  "marcel": "Les diagonales\ntrahissent tout&nbsp;!",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "Les trois cas particuliers",
+          "colonnes": 3,
+          "figures": [
+            {
+              "svg": "<svg style='max-height:84px' viewBox='0 0 220 170' aria-hidden='true'><polygon points='30,40 190,40 190,130 30,130' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><line x1='30' y1='40' x2='190' y2='130' stroke='#7a3fe0' stroke-width='3.5' stroke-linecap='round'></line><line x1='190' y1='40' x2='30' y2='130' stroke='#7a3fe0' stroke-width='3.5' stroke-linecap='round'></line><path d='M30,114 h16 v16' fill='none' stroke='#f1566c' stroke-width='3'></path></svg>",
+              "legende": "Rectangle",
+              "sous": "un angle droit"
+            },
+            {
+              "svg": "<svg style='max-height:84px' viewBox='0 0 220 170' aria-hidden='true'><polygon points='110,12 190,85 110,158 30,85' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><line x1='110' y1='12' x2='110' y2='158' stroke='#7a3fe0' stroke-width='3.5' stroke-linecap='round'></line><line x1='30' y1='85' x2='190' y2='85' stroke='#7a3fe0' stroke-width='3.5' stroke-linecap='round'></line><path d='M110,70 h15 v15' fill='none' stroke='#f1566c' stroke-width='3'></path></svg>",
+              "legende": "Losange",
+              "sous": "deux côtés consécutifs égaux"
+            },
+            {
+              "svg": "<svg style='max-height:84px' viewBox='0 0 220 170' aria-hidden='true'><polygon points='50,20 170,20 170,150 50,150' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><line x1='50' y1='20' x2='170' y2='150' stroke='#7a3fe0' stroke-width='3.5' stroke-linecap='round'></line><line x1='170' y1='20' x2='50' y2='150' stroke='#7a3fe0' stroke-width='3.5' stroke-linecap='round'></line><path d='M110,85 h-15 v-15' fill='none' stroke='#f1566c' stroke-width='3'></path></svg>",
+              "legende": "Carré",
+              "sous": "rectangle et losange"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les diagonales",
+          "entetes": [
+            "Figure",
+            "Milieu commun",
+            "Même longueur",
+            "Perpendiculaires"
+          ],
+          "lignes": [
+            [
+              "Parallélogramme",
+              "oui",
+              "non",
+              "non"
+            ],
+            [
+              "**Rectangle**",
+              "oui",
+              "**oui**",
+              "non"
+            ],
+            [
+              "**Losange**",
+              "oui",
+              "non",
+              "**oui**"
+            ],
+            [
+              "**Carré**",
+              "oui",
+              "**oui**",
+              "**oui**"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 3,
+          "titre": "Le parallélogramme",
+          "items": [
+            {
+              "terme": "Définition",
+              "definition": "côtés opposés **parallèles** deux à deux"
+            },
+            {
+              "terme": "Côtés et angles",
+              "definition": "opposés de même longueur, de même mesure"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Démontrer en trois temps",
+          "etapes": [
+            {
+              "titre": "Partir",
+              "texte": "d’un parallélogramme"
+            },
+            {
+              "titre": "Ajouter",
+              "texte": "angle droit, côtés égaux ou diagonales"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "avec le mot «&nbsp;donc&nbsp;» et le nom de la figure"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "ABCD a des diagonales de même milieu **et** de même longueur. __Nature__&nbsp;?",
+          "calcul": "milieu + longueur",
+          "aparte": "deux propriétés",
+          "resultat": "ABCD est un [[rectangle]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Quelle figure&nbsp;?",
+          "oui": {
+            "titre": "Losange",
+            "texte": "Parallélogramme aux diagonales **perpendiculaires**."
+          },
+          "non": {
+            "titre": "Pas un losange",
+            "texte": "Des diagonales de **même longueur** seules&nbsp;: c’est un **rectangle**."
+          },
+          "essai": {
+            "texte": "Diagonales de même milieu, de même longueur **et** perpendiculaires&nbsp;: c’est un **carré**."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Les diagonales de ABCD se coupent en leur milieu",
+              "quoi": "première propriété"
+            },
+            {
+              "texte": "et elles ont la même longueur",
+              "quoi": "seconde propriété"
+            },
+            {
+              "texte": "donc ABCD est un rectangle",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Citer ==les deux== propriétés."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire «&nbsp;même longueur&nbsp;» sans le **milieu commun**.",
+            "Confondre diagonales **égales** (rectangle) et **perpendiculaires** (losange).",
+            "Croire que le parallélogramme a des **axes** de symétrie."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Diagonales perpendiculaires **et** égales&nbsp;?",
+            "Combien d’**axes de symétrie** pour un losange&nbsp;?",
+            "Un parallélogramme quelconque a-t-il un **axe**&nbsp;?"
+          ],
+          "reponses": "1) un carré · 2) 2 · 3) non, seulement un centre de symétrie"
+        }
+      ]
+    }
+  ]
+}

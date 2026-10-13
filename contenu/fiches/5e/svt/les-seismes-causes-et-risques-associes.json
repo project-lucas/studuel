@@ -1,0 +1,173 @@
+{
+  "titre": "Les séismes",
+  "titreSurligne": "séismes",
+  "accroche": "De la roche qui casse au risque humain.",
+  "bonus": "**Foyer** (profondeur) → **épicentre** (surface) · **magnitude** (échelle log.) ≠ **intensité** · **risque = aléa × vulnérabilité**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/svt/les-seismes-causes-et-risques-associes.webp",
+    "prompt": "a glossy violet block of earth cracking along a golden fault line, concentric golden waves spreading out, small toy houses tilting, sparkles"
+  },
+  "marcel": "La roche casse,\nles ondes partent !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Foyer",
+              "definition": "le point **en profondeur** où la roche casse"
+            },
+            {
+              "terme": "Épicentre",
+              "definition": "le point de la **surface** juste au-dessus du foyer"
+            },
+            {
+              "terme": "Ondes sismiques",
+              "definition": "les vibrations émises par la rupture, qui se propagent dans la Terre"
+            },
+            {
+              "terme": "Répliques",
+              "definition": "les secousses plus faibles qui suivent la secousse principale"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Magnitude et intensité",
+          "entetes": [
+            "",
+            "Magnitude",
+            "Intensité"
+          ],
+          "lignes": [
+            [
+              "**Mesure**",
+              "l’**énergie libérée**",
+              "les **effets** observés"
+            ],
+            [
+              "**Valeurs**",
+              "**une seule** par séisme",
+              "**une par lieu**"
+            ],
+            [
+              "**Échelle**",
+              "**logarithmique**",
+              "selon les dégâts"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Du mécanisme au risque",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Le mécanisme",
+              "texte": "Les roches se **déforment**, stockent de l’**énergie élastique**, puis **cassent**."
+            },
+            {
+              "titre": "Les ondes",
+              "texte": "La rupture libère des **ondes sismiques** qui font trembler le sol."
+            },
+            {
+              "titre": "L’échelle",
+              "texte": "Logarithmique&nbsp;: +1 en magnitude ≈ énergie **30 fois** plus grande."
+            },
+            {
+              "titre": "L’aléa",
+              "texte": "La probabilité d’un séisme&nbsp;: on ne peut **pas** le prévoir."
+            },
+            {
+              "titre": "La vulnérabilité",
+              "texte": "Ce qu’il y a à perdre&nbsp;: habitants, bâtiments, réseaux."
+            },
+            {
+              "titre": "Se protéger",
+              "texte": "Constructions parasismiques, plans d’alerte, gestes à connaître."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Analyser le risque sismique d’un lieu",
+          "etapes": [
+            {
+              "titre": "Situer",
+              "texte": "l’aléa&nbsp;: zone de plaques, séismes passés"
+            },
+            {
+              "titre": "Évaluer",
+              "texte": "la vulnérabilité&nbsp;: population, bâti, préparation"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "sur le risque et les mesures de prévention"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Les roches se déforment puis cassent&nbsp;: elles libèrent des ondes sismiques.",
+              "quoi": "expliquer"
+            },
+            {
+              "texte": "L’aléa est élevé dans cette zone de convergence de plaques.",
+              "quoi": "l’aléa"
+            },
+            {
+              "texte": "Le risque dépend aussi de la vulnérabilité de la population.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Au brevet&nbsp;: ==aléa + vulnérabilité== = risque."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **foyer** (profondeur) et **épicentre** (surface).",
+            "Confondre **magnitude** (énergie) et **intensité** (effets).",
+            "Dire qu’on peut **prévoir** la date d’un séisme.",
+            "Penser que +1 de magnitude est une énergie **doublée**&nbsp;: c’est ×30."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Où se situe l’**épicentre**&nbsp;?",
+            "Combien de **magnitudes** pour un même séisme&nbsp;?",
+            "Que représente la **vulnérabilité**&nbsp;?"
+          ],
+          "reponses": "1) en surface, au-dessus du foyer · 2) une seule · 3) ce qu’on peut perdre (personnes, biens)"
+        }
+      ]
+    }
+  ]
+}

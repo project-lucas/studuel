@@ -1,0 +1,184 @@
+{
+  "titre": "Retrouver le total",
+  "titreSurligne": "total",
+  "accroche": "La partie se multiplie, le tout se divise.",
+  "bonus": "taux = **(finale − initiale) ÷ initiale** × 100 · évolutions successives : on **multiplie** les coefficients",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/pourcentages-calculs-et-quantite-totale-suite.webp",
+    "prompt": "a glossy golden price tag with a percent sign and a violet arrow pointing back to a bigger tag, sparkles"
+  },
+  "marcel": "Le tout se divise,\nla partie se multiplie !",
+  "rangs": [
+    {
+      "colonnes": "1fr 340px",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois questions",
+          "entetes": [
+            "La question",
+            "L’opération",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "**18 % de 250**&nbsp;?",
+              "on multiplie",
+              "250 × 0,18 = 45"
+            ],
+            [
+              "45 est quel **pourcentage** de 250&nbsp;?",
+              "on divise, × 100",
+              "45 ÷ 250 × 100 = 18 %"
+            ],
+            [
+              "45 est 18 % de **quoi**&nbsp;?",
+              "on divise par 0,18",
+              "45 ÷ 0,18 = 250"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le coefficient",
+          "taille": "mini",
+          "lignes": [
+            "−15 % ⟺ × 0,85",
+            "+20 % ⟺ × 1,2"
+          ],
+          "regle": "Pour **remonter** au départ, on ==divise== par le coefficient, on n’ajoute pas le pourcentage.",
+          "note": "le tout &gt; la partie&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Retrouver un prix de départ",
+          "etapes": [
+            {
+              "titre": "Traduire",
+              "texte": "−15 % devient × 0,85"
+            },
+            {
+              "titre": "Écrire",
+              "texte": "prix payé = départ × coefficient : 68 = départ × 0,85"
+            },
+            {
+              "titre": "Diviser",
+              "texte": "départ = 68 ÷ 0,85, puis on vérifie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un article soldé à __68 €__ après __−15 %__. Son __prix avant solde__&nbsp;?",
+          "calcul": "68 = départ × 0,85",
+          "aparte": "−15 % → × 0,85",
+          "resultat": "départ = 68 ÷ 0,85 = [[80 €]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Hausse",
+              "texte": "96 € après +20 %&nbsp;: 96 ÷ 1,2 = **80 €**."
+            },
+            {
+              "titre": "Taux d’évolution",
+              "texte": "de 80 à 96&nbsp;: (96 − 80) ÷ 80 × 100 = **+20 %**."
+            },
+            {
+              "titre": "Évolutions successives",
+              "texte": "+10 % puis −10 %&nbsp;: 1,1 × 0,9 = 0,99, soit **−1 %**."
+            },
+            {
+              "titre": "Vérifier",
+              "texte": "le tout doit être **plus grand** que la partie."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Remonter au départ",
+          "oui": {
+            "titre": "Bonne méthode",
+            "texte": "68 ÷ 0,85 = **80 €**&nbsp;: on divise par le coefficient."
+          },
+          "non": {
+            "titre": "Mauvaise méthode",
+            "texte": "68 + 15 % = 78,20 €&nbsp;: **faux**, 15 % de quoi&nbsp;?"
+          },
+          "essai": {
+            "titre": "À toi",
+            "texte": "45 € après −10 %&nbsp;: prix de départ&nbsp;?"
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Une baisse de 15 % : coefficient 1 − 0,15 = 0,85",
+              "quoi": "le coefficient"
+            },
+            {
+              "texte": "68 = départ × 0,85",
+              "quoi": "l’équation"
+            },
+            {
+              "texte": "départ = 68 ÷ 0,85 = 80 €",
+              "quoi": "on remonte"
+            }
+          ],
+          "pied": "Vérification&nbsp;: 80 × 0,85 = ==68==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Ajouter 15 % à 68 € (78,20 €)&nbsp;: **faux**, les 15 % portent sur le prix initial.",
+            "**Multiplier** au lieu de diviser pour remonter.",
+            "+10 % puis −10 % ne **ramène pas** au départ.",
+            "Diviser par l’arrivée dans un taux (toujours par le **départ**)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**20 %** de 150&nbsp;?",
+            "90 € après **−10 %**&nbsp;: le prix de départ&nbsp;?",
+            "De 50 à 60&nbsp;: le **taux d’évolution**&nbsp;?"
+          ],
+          "reponses": "1) 30 · 2) 100 € (90 ÷ 0,9) · 3) +20 %"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "titre": "Mettre au point",
+  "titreSurligne": "point",
+  "accroche": "Écrire, tester, corriger, recommencer.",
+  "bonus": "**Analyser → Algorithme → Traduire → Tester → Corriger** · un programme qui « marche une fois » n’est **pas validé**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/technologie/ecrire-mettre-au-point-et-executer-un-programme-simple.webp",
+    "prompt": "a glossy violet laptop with a golden magnifying glass over a small bug and a green check mark, sparkles, same art style as the reference icons, no text, magenta background"
+  },
+  "marcel": "Un bug ? Pas grave,\non corrige !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Les cinq étapes",
+          "items": [
+            {
+              "titre": "Analyser",
+              "texte": "le besoin : entrées, sorties"
+            },
+            {
+              "titre": "Algorithme",
+              "texte": "en pseudo-code, avant le clavier"
+            },
+            {
+              "titre": "Traduire",
+              "texte": "dans le langage choisi"
+            },
+            {
+              "titre": "Tester",
+              "texte": "comparer à l’attendu"
+            },
+            {
+              "titre": "Déboguer",
+              "texte": "corriger puis retester"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les types d’erreurs",
+          "entetes": [
+            "Erreur",
+            "Symptôme"
+          ],
+          "lignes": [
+            [
+              "**Syntaxe**",
+              "ne démarre pas, message : la plus facile"
+            ],
+            [
+              "**Logique**",
+              "tourne mais fait autre chose : la plus difficile"
+            ],
+            [
+              "**Exécution**",
+              "s’arrête en route (division par zéro)"
+            ],
+            [
+              "**Documenter**",
+              "commentaires, noms clairs, mode d’emploi"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Traquer une erreur de logique",
+          "etapes": [
+            {
+              "titre": "Afficher",
+              "texte": "les valeurs intermédiaires pour voir où ça dévie"
+            },
+            {
+              "titre": "Isoler",
+              "texte": "tester par morceaux, une fonction à la fois"
+            },
+            {
+              "titre": "Rejouer",
+              "texte": "avec un cas normal, un cas limite, un cas interdit"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un programme affiche __15__ au lieu de 10, sans message d’erreur.",
+          "calcul": "il s’exécute, mais faux",
+          "aparte": "aucun message",
+          "resultat": "erreur de [[logique]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Jeu d’essai ou pas&nbsp;?",
+          "oui": {
+            "titre": "Bon jeu d’essai",
+            "texte": "Un cas **normal**, un cas **limite** (zéro, maximum), un cas **interdit**."
+          },
+          "non": {
+            "titre": "Test insuffisant",
+            "texte": "Une seule valeur « qui marche » : les défauts restent cachés."
+          },
+          "essai": {
+            "texte": "Tester <i>0</i> et la valeur maximale révèle plus de défauts qu’un seul calcul réussi."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Le programme s’exécute mais le résultat est faux.",
+              "quoi": "le constat"
+            },
+            {
+              "texte": "C’est une erreur de logique, sans message.",
+              "quoi": "le type"
+            },
+            {
+              "texte": "J’affiche les valeurs puis je reteste.",
+              "quoi": "la méthode"
+            },
+            {
+              "texte": "Je commente le code et nomme bien mes variables.",
+              "quoi": "la trace"
+            }
+          ],
+          "pied": "On nomme ==le type d’erreur== puis on propose ==la technique==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Coder **sans algorithme** préalable.",
+            "Valider après **un seul** essai réussi.",
+            "Chercher un message pour une erreur de **logique** : il n’y en a pas.",
+            "Nommer ses variables **v2** : préférer **vitesse**.",
+            "Oublier les **commentaires** et le mode d’emploi."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle erreur est la plus **difficile** à trouver&nbsp;?",
+            "Que fait-on **avant** de coder&nbsp;?",
+            "Citer un **cas limite** à tester."
+          ],
+          "reponses": "1) la logique · 2) l’algorithme · 3) zéro ou valeur maximale"
+        }
+      ]
+    }
+  ]
+}

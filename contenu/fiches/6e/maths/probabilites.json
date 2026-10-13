@@ -1,0 +1,115 @@
+{
+  "titre": "Probabilités",
+  "titreSurligne": "Probabilités",
+  "accroche": "Mesurer la chance, entre 0 et 1.",
+  "bonus": "0 = **impossible** · 0,5 = **une chance sur deux** · 1 = **certain**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/maths/probabilites.webp",
+    "prompt": "two glossy violet dice with golden dots rolling next to a golden coin, tiny sparkles, same art style as the reference icons"
+  },
+  "marcel": "La pièce n’a\npas de mémoire !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "L’échelle des probabilités",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 40 220 100' aria-hidden='true'><line x1='20' y1='90' x2='200' y2='90' stroke='#7a3fe0' stroke-width='5' stroke-linecap='round'></line><g fill='#2b2350'><circle cx='20' cy='90' r='6'></circle><circle cx='110' cy='90' r='6'></circle><circle cx='200' cy='90' r='6'></circle></g><g font-family=\"'Baloo 2'\" font-weight='800' font-size='19' fill='#2b2350' text-anchor='middle'><text x='20' y='122'>0</text><text x='110' y='122'>0,5</text><text x='200' y='122'>1</text></g><g font-family='Nunito' font-weight='800' font-size='12' fill='#4b2a9a' text-anchor='middle'><text x='28' y='68'>impossible</text><text x='110' y='68'>1 sur 2</text><text x='194' y='68'>certain</text></g></svg>",
+              "legende": "toujours entre 0 et 1",
+              "sous": "1/2 = 0,5 = 50 %"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Quand toutes les issues se valent",
+          "taille": "mini",
+          "lignes": ["P = {cas favorables/cas possibles}"],
+          "regle": "On compte les issues qui ==réalisent== l’événement, puis on divise par toutes les issues possibles.",
+          "note": "P(A) + P(contraire) = 1"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Lister", "texte": "toutes les issues possibles, par exemple les six faces d’un dé" },
+            { "titre": "Compter", "texte": "les cas favorables à l’événement" },
+            { "titre": "Diviser", "texte": "favorables ÷ possibles, et simplifier la fraction" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Dé à six faces. __Probabilité d’un nombre pair__&nbsp;?",
+          "calcul": "pairs&nbsp;: 2, 4, 6 → 3 cas\nP = {3/6}",
+          "aparte": "3 favorables sur 6",
+          "resultat": "P = 3 ÷ 6 = [[0,5]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Un dé à six faces",
+          "entetes": ["L’événement", "Sa probabilité"],
+          "lignes": [
+            ["Obtenir 4", "1/6"],
+            ["Un nombre pair", "3/6 = **1/2**"],
+            ["Un nombre inférieur à 7", "6/6 = **1**, certain"],
+            ["Obtenir 7", "**0**, impossible"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Il y a 6 issues possibles", "quoi": "les cas possibles" },
+            { "texte": "3 issues sont favorables&nbsp;: 2, 4 et 6", "quoi": "les cas favorables" },
+            { "texte": "P = 3 ÷ 6 = 1/2", "quoi": "la probabilité" }
+          ],
+          "pied": "La fréquence s’approche de la probabilité quand on ==répète== beaucoup."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’après **5 piles**, face est « due »&nbsp;: toujours 1 sur 2.",
+            "Écrire une probabilité **plus grande que 1**.",
+            "Oublier de **simplifier** la fraction.",
+            "Compter les issues **dans le désordre** et en oublier."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dé à six faces&nbsp;: la probabilité d’obtenir **un 5**&nbsp;?",
+            "**P(A) = 0,3**&nbsp;: la probabilité du **contraire**&nbsp;?",
+            "Obtenir **8** avec un dé à six faces&nbsp;?"
+          ],
+          "reponses": "1) 1/6 · 2) 0,7 · 3) 0, impossible"
+        }
+      ]
+    }
+  ]
+}

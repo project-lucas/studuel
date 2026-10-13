@@ -1,0 +1,175 @@
+{
+  "titre": "Transferts d’énergie",
+  "titreSurligne": "Transferts",
+  "accroche": "L’énergie change de forme et de lieu.",
+  "bonus": "**source → convertisseur → utilisation** · rendement = énergie utile ÷ énergie reçue · toujours **< 100 %**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/transferts-et-conversions-d-energie.webp",
+    "prompt": "a glossy violet light bulb glowing next to a golden electric motor and a small battery, curved arrows passing energy from one to the next, little heat waves rising, sparkles"
+  },
+  "marcel": "L’énergie voyage\net se déguise !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Deux mots à distinguer",
+          "items": [
+            {
+              "terme": "Transfert",
+              "definition": "l’énergie **se déplace** d’un objet à un autre"
+            },
+            {
+              "terme": "Conversion",
+              "definition": "l’énergie **change de forme**"
+            },
+            {
+              "terme": "Rendement",
+              "definition": "énergie **utile** ÷ énergie **reçue** (toujours inférieur à 100&nbsp;%)"
+            },
+            {
+              "terme": "Pertes",
+              "definition": "la part d’énergie non utile, presque toujours **thermique**"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les convertisseurs",
+          "entetes": [
+            "Appareil",
+            "Conversion"
+          ],
+          "lignes": [
+            [
+              "**Lampe**",
+              "électrique → lumineuse"
+            ],
+            [
+              "**Moteur électrique**",
+              "électrique → cinétique"
+            ],
+            [
+              "**Panneau photovoltaïque**",
+              "lumineuse → électrique"
+            ],
+            [
+              "**Alternateur**",
+              "cinétique → électrique"
+            ],
+            [
+              "**Pile** · **chaudière**",
+              "chimique → électrique · thermique"
+            ],
+            [
+              "**Bougie**",
+              "chimique → thermique + lumineuse"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Construire une chaîne énergétique",
+          "etapes": [
+            {
+              "titre": "Source",
+              "texte": "d’où vient l’énergie&nbsp;: pile, secteur, soleil…"
+            },
+            {
+              "titre": "Convertisseur",
+              "texte": "ce qui change la forme&nbsp;: moteur, lampe…"
+            },
+            {
+              "titre": "Utilisation",
+              "texte": "ce qu’on obtient, et les pertes à côté"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une lampe reçoit __10 J__ électriques et rend __2 J__ en lumière. Rendement&nbsp;?",
+          "calcul": "2 ÷ 10 = 0,2",
+          "aparte": "8 J en chaleur",
+          "resultat": "rendement = [[20 %]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Les trois transferts thermiques",
+          "oui": {
+            "titre": "Conduction",
+            "texte": "Dans un **solide**, de proche en proche&nbsp;: la cuillère chauffe."
+          },
+          "non": {
+            "titre": "Convection",
+            "texte": "Dans un **fluide**, avec **déplacement de matière**&nbsp;: l’air chaud monte."
+          },
+          "essai": {
+            "texte": "<i>Rayonnement</i>&nbsp;: **sans support matériel**, même dans le vide. La chaleur va **toujours du plus chaud vers le plus froid**."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Le charbon : énergie chimique",
+              "quoi": "la source"
+            },
+            {
+              "texte": "chaudière → turbine → alternateur",
+              "quoi": "les convertisseurs"
+            },
+            {
+              "texte": "énergie électrique + pertes thermiques",
+              "quoi": "le résultat"
+            }
+          ],
+          "pied": "Les pertes sont ==presque toujours thermiques==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que l’énergie est « **consommée** »&nbsp;: elle est convertie.",
+            "Un transfert thermique **du froid vers le chaud**.",
+            "Oublier les **pertes** dans la chaîne.",
+            "Confondre **conduction** (solide) et **convection** (fluide).",
+            "Oublier que la **lampe** donne aussi de la chaleur."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que convertit un **panneau photovoltaïque**&nbsp;?",
+            "Quel transfert se fait **dans le vide**&nbsp;?",
+            "Un moteur reçoit 50 J et rend 40 J&nbsp;: **rendement**&nbsp;?"
+          ],
+          "reponses": "1) lumineuse → électrique · 2) rayonnement · 3) 0,8 soit 80 %"
+        }
+      ]
+    }
+  ]
+}

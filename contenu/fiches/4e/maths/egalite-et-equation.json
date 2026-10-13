@@ -1,0 +1,184 @@
+{
+  "titre": "Égalité et équation",
+  "titreSurligne": "équation",
+  "accroche": "Trouver la valeur qui rend l’égalité vraie.",
+  "bonus": "0x = 0 : **tous** les nombres · 0x = 7 : **aucune** solution",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/egalite-et-equation.webp",
+    "prompt": "a glossy golden balance scale in perfect equilibrium with a violet x on one pan and golden numbers on the other, tiny golden sparkles"
+  },
+  "marcel": "Ce qu’on fait à gauche,\non le fait à droite&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle d’or",
+          "teinte": "jaune",
+          "taille": "mini",
+          "lignes": [
+            "A = B ⇒ A + k = B + k",
+            "A = B ⇒ A × k = B × k (k ≠ 0)"
+          ],
+          "regle": "On ==ajoute==, ==soustrait==, ==multiplie== ou ==divise== **les deux membres** par le même nombre (jamais 0).",
+          "note": "les solutions ne changent pas"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Inconnue",
+              "definition": "la lettre cherchée, souvent x"
+            },
+            {
+              "terme": "Membres",
+              "definition": "ce qui est à gauche et à droite du signe ="
+            },
+            {
+              "terme": "Solution",
+              "definition": "une valeur qui rend l’égalité **vraie**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre en quatre temps",
+          "etapes": [
+            {
+              "titre": "Réduire",
+              "texte": "développer et réduire chaque membre"
+            },
+            {
+              "titre": "Regrouper",
+              "texte": "les x d’un côté, les nombres de l’autre"
+            },
+            {
+              "titre": "Diviser",
+              "texte": "par le coefficient de x, puis vérifier"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Résoudre 5x − 3 = 2x + 9.",
+          "calcul": "3x = 12",
+          "aparte": "on regroupe\nles x",
+          "resultat": "x = 12 ÷ 3 = [[4]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Produit nul",
+          "oui": {
+            "titre": "Un facteur nul",
+            "texte": "(x − 2)(x + 5) = 0&nbsp;: x − 2 = 0 **ou** x + 5 = 0, soit 2 et −5."
+          },
+          "non": {
+            "titre": "Pas de zéro",
+            "texte": "(x − 2)(x + 5) = 7 ne se résout **pas** ainsi."
+          },
+          "essai": {
+            "texte": "Vérifier x = 4&nbsp;: <i>5 × 4 − 3 = 17</i> et <i>2 × 4 + 9 = 17</i>&nbsp;: **les deux membres sont égaux**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Cas particuliers et problèmes",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "0x = 0",
+              "texte": "**Tous** les nombres sont solutions."
+            },
+            {
+              "titre": "0x = 7",
+              "texte": "**Aucune** solution&nbsp;: 0 fois un nombre ne fait jamais 7."
+            },
+            {
+              "titre": "Un problème",
+              "texte": "Inconnue, équation, résolution, puis **phrase** de conclusion."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 5,
+          "titre": "Résoudre, c’est vérifier",
+          "paragraphes": [
+            "Résoudre une équation, c’est trouver **toutes** les valeurs qui la rendent vraie. La solution de l’équation n’est pas encore la réponse au problème&nbsp;: « x = 4 » ne dit pas ce que 4 désigne."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "5x − 3 = 2x + 9",
+              "quoi": "l’équation"
+            },
+            {
+              "texte": "3x = 12 donc x = 4",
+              "quoi": "la résolution"
+            },
+            {
+              "texte": "Pour x = 4&nbsp;: 17 = 17.",
+              "quoi": "la vérification"
+            }
+          ],
+          "pied": "On ==vérifie== toujours dans l’équation de départ."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Faire une opération d’**un seul côté** du signe =.",
+            "Diviser par **0**&nbsp;: interdit.",
+            "Croire que « x = 4 » est la réponse du **problème**.",
+            "Oublier la **vérification** finale."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Résoudre x + 7 = 10.",
+            "Résoudre 4x = 20.",
+            "Solutions de (x − 1)(x + 3) = 0&nbsp;?"
+          ],
+          "reponses": "1) x = 3 · 2) x = 5 · 3) 1 et −3"
+        }
+      ]
+    }
+  ]
+}

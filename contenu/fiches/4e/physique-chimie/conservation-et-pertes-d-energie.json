@@ -1,0 +1,167 @@
+{
+  "titre": "Conservation d’énergie",
+  "titreSurligne": "énergie",
+  "accroche": "Rien ne se perd, tout se dégrade.",
+  "bonus": "**énergie reçue = utile + dissipée** · rendement **toujours < 100 %** · une « perte » est de la chaleur dispersée",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/conservation-et-pertes-d-energie.webp",
+    "prompt": "a glossy golden ball rolling down a violet ramp, small golden heat waves rising from it, sparkles"
+  },
+  "marcel": "Rien ne disparaît,\nça se disperse !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Bilan et rendement",
+          "petite": true,
+          "lignes": [
+            "E<sub>reçue</sub> = E<sub>utile</sub> + E<sub>dissipée</sub>",
+            "rendement = {E<sub>utile</sub>/E<sub>reçue</sub>}"
+          ],
+          "regle": "L’énergie ne se crée pas, ne se détruit pas&nbsp;: elle **se transforme**. Le rendement s’exprime en **%** et reste **inférieur à 100 %**.",
+          "note": "× 100 pour avoir des %"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Quelques rendements",
+          "entetes": [
+            "Appareil",
+            "Rendement"
+          ],
+          "lignes": [
+            [
+              "Moteur thermique",
+              "environ **30 %**"
+            ],
+            [
+              "Moteur électrique",
+              "jusqu’à **90 %**"
+            ],
+            [
+              "Lampe à incandescence",
+              "environ **5 %**"
+            ],
+            [
+              "LED",
+              "plus de **30 %**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Faire un bilan d’énergie en trois temps",
+          "etapes": [
+            {
+              "titre": "Lister",
+              "texte": "l’énergie **reçue** et l’énergie **utile**"
+            },
+            {
+              "titre": "Soustraire",
+              "texte": "pour trouver l’énergie **dissipée** (thermique)"
+            },
+            {
+              "titre": "Diviser",
+              "texte": "utile ÷ reçue pour obtenir le **rendement**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "Économiser l’énergie",
+          "paragraphes": [
+            "**Isoler** un logement limite les transferts thermiques. Choisir un appareil à bon **rendement** (étiquette énergie) et éteindre les **veilles** évitent de gaspiller. Rouler moins vite évite une énergie cinétique inutile."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une lampe reçoit __100 J__ et en donne __5 J__ en lumière. Énergie dissipée et rendement&nbsp;?",
+          "calcul": "100 − 5 = 95 J\n5 ÷ 100",
+          "aparte": "= 0,05",
+          "resultat": "[[95 J dissipés · 5 %]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Perdue ou dégradée&nbsp;?",
+          "oui": {
+            "titre": "Dégradée",
+            "texte": "Elle devient **thermique**, trop diluée pour être récupérée."
+          },
+          "non": {
+            "titre": "Détruite",
+            "texte": "Faux&nbsp;: rien ne manque au **bilan**, c’est l’usage qui est perdu."
+          },
+          "essai": {
+            "texte": "Une bille qui descend convertit l’énergie de <i>position</i> en énergie <i>cinétique</i>, sans frottements, la somme est <i>constante</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "E reçue = 100 J et E utile = 5 J",
+              "quoi": "les données"
+            },
+            {
+              "texte": "E dissipée = 100 − 5 = 95 J",
+              "quoi": "le bilan"
+            },
+            {
+              "texte": "rendement = 5 ÷ 100 = 5 %",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "L’énergie dissipée est ==thermique== : elle est ==dégradée==, pas ==détruite==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que l’énergie est **détruite**.",
+            "Trouver un rendement **supérieur à 100 %**.",
+            "Oublier la **chaleur** dans le bilan.",
+            "Confondre énergie **utile** et énergie **reçue**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que devient l’énergie « **perdue** »&nbsp;?",
+            "Un appareil reçoit 50 J et rend 40 J **utiles**&nbsp;: dissipée&nbsp;?",
+            "Un geste qui **économise** l’énergie&nbsp;?"
+          ],
+          "reponses": "1) de la chaleur · 2) 10 J · 3) isoler, éteindre les veilles"
+        }
+      ]
+    }
+  ]
+}

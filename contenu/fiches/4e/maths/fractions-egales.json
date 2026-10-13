@@ -1,0 +1,145 @@
+{
+  "titre": "Fractions égales",
+  "titreSurligne": "égales",
+  "accroche": "Le même nombre, écrit autrement.",
+  "bonus": "a/1 = **a** · a/a = **1** · 0/a = **0** · 20/5 = **4** (un entier)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/fractions-egales.webp",
+    "prompt": "two glossy violet pizzas cut in 2 and in 4 equal slices, golden equals sign between them, tiny golden sparkles"
+  },
+  "marcel": "Haut et bas,\nmême opération&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La propriété clé",
+          "lignes": [
+            "{a/b} = {a × k/b × k}"
+          ],
+          "regle": "Multiplier ou diviser **le haut ET le bas** par le même nombre ==non nul== (× ou ÷) ne change pas la valeur.",
+          "note": "{1/2} = {2/4} = {50/100}"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les mots",
+          "items": [
+            {
+              "terme": "Simplifier",
+              "definition": "**diviser** haut et bas par un même nombre"
+            },
+            {
+              "terme": "Irréductible",
+              "definition": "plus aucun diviseur commun autre que 1"
+            },
+            {
+              "terme": "Produit en croix",
+              "definition": "{a/b} = {c/d} si a × d = b × c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Simplifier en trois temps",
+          "etapes": [
+            {
+              "titre": "Chercher",
+              "texte": "un diviseur commun au haut et au bas"
+            },
+            {
+              "titre": "Diviser",
+              "texte": "les deux nombres par ce diviseur"
+            },
+            {
+              "titre": "Vérifier",
+              "texte": "qu’on ne peut plus simplifier"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Simplifier {24/36}.",
+          "calcul": "{24/36} = {24 ÷ 12/36 ÷ 12}",
+          "aparte": "12 divise\nles deux",
+          "resultat": "{24/36} = [[{2/3}]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Égales ou pas&nbsp;?",
+          "oui": {
+            "titre": "Produits égaux",
+            "texte": "{6/9} et {8/12}&nbsp;: 6 × 12 = 72 et 9 × 8 = 72. **Égales**."
+          },
+          "non": {
+            "titre": "Produits différents",
+            "texte": "{2/3} et {3/5}&nbsp;: 2 × 5 = 10 et 3 × 3 = 9. **Pas égales**."
+          },
+          "essai": {
+            "texte": "{4/6} et {10/15}&nbsp;? 4 × 15 = 60 = 6 × 10&nbsp;: **égales**."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "12/18 = (12 ÷ 6) / (18 ÷ 6)",
+              "quoi": "je divise"
+            },
+            {
+              "texte": "= 2/3",
+              "quoi": "le résultat"
+            },
+            {
+              "texte": "2 et 3 n’ont pas de diviseur commun.",
+              "quoi": "irréductible"
+            }
+          ],
+          "pied": "On ==écrit== le diviseur utilisé."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Simplifier {2 + 3/2 + 5} en barrant les 2&nbsp;: on ne barre pas dans une **somme**.",
+            "Diviser le haut **sans** diviser le bas.",
+            "S’arrêter trop tôt&nbsp;: {4/8} n’est pas **irréductible**.",
+            "Oublier que {a/a} = **1** (a non nul)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Simplifier {18/24}.",
+            "{6/8} et {9/12} sont-elles égales&nbsp;?",
+            "Que vaut {20/5}&nbsp;?"
+          ],
+          "reponses": "1) 3/4 · 2) oui, 6×12 = 8×9 · 3) 4"
+        }
+      ]
+    }
+  ]
+}

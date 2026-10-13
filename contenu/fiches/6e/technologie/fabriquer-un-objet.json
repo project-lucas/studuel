@@ -1,0 +1,174 @@
+{
+  "titre": "Fabriquer un objet",
+  "titreSurligne": "Fabriquer",
+  "accroche": "Du plan à l’objet réel.",
+  "bonus": "**Mesurer → découper → usiner → assembler → contrôler → finir**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/technologie/fabriquer-un-objet.webp",
+    "prompt": "a glossy violet hand saw and a golden screwdriver crossed over a small wooden box, sparkles"
+  },
+  "marcel": "Sécurité d’abord,\nbricolage ensuite !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "La gamme de fabrication",
+          "etapes": [
+            {
+              "date": "Mesurer",
+              "texte": "reporter les cotes du plan"
+            },
+            {
+              "date": "Découper",
+              "texte": "scie, cisaille, laser"
+            },
+            {
+              "date": "Assembler",
+              "texte": "vis, colle, soudure"
+            },
+            {
+              "date": "Contrôler",
+              "texte": "conforme au plan ?"
+            },
+            {
+              "date": "Finir",
+              "texte": "peinture, vernis"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux assemblages",
+          "entetes": [
+            "Type",
+            "Conséquence"
+          ],
+          "lignes": [
+            [
+              "**Démontable** (vis, clips)",
+              "on peut **réparer**"
+            ],
+            [
+              "**Permanent** (colle, soudure)",
+              "solide, mais dur à réparer"
+            ],
+            [
+              "**Prototype**",
+              "le 1<sup>er</sup> exemplaire, pour tester"
+            ],
+            [
+              "**Série**",
+              "des pièces toutes identiques"
+            ],
+            [
+              "**Tolérance**",
+              "écart accepté autour de la cote"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Contrôler une pièce",
+          "etapes": [
+            {
+              "titre": "Dimensions",
+              "texte": "pied à coulisse ou gabarit"
+            },
+            {
+              "titre": "Aspect",
+              "texte": "regarder la pièce à l’œil"
+            },
+            {
+              "titre": "Essai",
+              "texte": "vérifier qu’elle fonctionne"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une pièce doit mesurer __50&nbsp;mm__, avec une tolérance de 1&nbsp;mm. Elle mesure 53&nbsp;mm. Acceptée&nbsp;?",
+          "calcul": "écart : 53 − 50 = 3 mm\n3 mm > 1 mm",
+          "aparte": "hors tolérance",
+          "resultat": "pièce [[refusée]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Règle de sécurité&nbsp;?",
+          "oui": {
+            "titre": "Bien",
+            "texte": "**Lunettes**, cheveux attachés, machine arrêtée avant tout réglage."
+          },
+          "non": {
+            "titre": "Danger",
+            "texte": "**Des gants** près d’une pièce qui tourne&nbsp;: ils peuvent être happés."
+          },
+          "essai": {
+            "texte": "Les consignes ne sont pas des formalités&nbsp;: les machines <i>coupent, percent et chauffent</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "On suit la gamme de fabrication.",
+              "quoi": "l’ordre"
+            },
+            {
+              "texte": "La pièce est contrôlée au pied à coulisse.",
+              "quoi": "le contrôle"
+            },
+            {
+              "texte": "Une pièce hors tolérance est refusée.",
+              "quoi": "la règle"
+            }
+          ],
+          "pied": "La ==tolérance== est l’écart acceptable autour de la cote."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Choisir la **colle** sans penser à la réparation.",
+            "Régler une machine **encore en marche**.",
+            "Oublier de **contrôler** la pièce.",
+            "Confondre **prototype** et série."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel assemblage est **démontable**&nbsp;?",
+            "Que fait-on d’une pièce **hors tolérance**&nbsp;?",
+            "Le **prototype**, c’est quoi&nbsp;?"
+          ],
+          "reponses": "1) la vis · 2) on la refuse · 3) le premier exemplaire, pour tester"
+        }
+      ]
+    }
+  ]
+}

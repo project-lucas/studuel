@@ -1,0 +1,162 @@
+{
+  "titre": "Fractions et calculs",
+  "titreSurligne": "calculs",
+  "accroche": "On additionne des parts de même taille.",
+  "bonus": "Toujours donner le résultat **irréductible** : 6/12 = **1/2**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/maths/fractions-et-calculs.webp",
+    "prompt": "two glossy violet pie slices joining a golden pie slice to complete a pie, with a golden plus sign, sparkles"
+  },
+  "marcel": "On garde le\ndénominateur !",
+  "rangs": [
+    {
+      "colonnes": "1fr 360px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Additionner et soustraire",
+          "taille": "mini",
+          "lignes": [
+            "{2/7} + {3/7} = {5/7}",
+            "{5/8} − {2/8} = {3/8}"
+          ],
+          "regle": "Au même dénominateur&nbsp;: on ajoute (ou retranche) les ==numérateurs== et on **garde** le dénominateur.",
+          "note": "Jamais 2/7 + 3/7 = 5/14&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Multiplier",
+          "entetes": [
+            "Le cas",
+            "La règle",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "par un **entier**",
+              "on multiplie le numérateur",
+              "3 × 2/5 = 6/5"
+            ],
+            [
+              "par une **fraction**",
+              "haut × haut, bas × bas",
+              "2/3 × 3/4 = 6/12 = 1/2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Rendre égaux",
+              "texte": "les dénominateurs (souvent en les multipliant entre eux)"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "sur les numérateurs, le dénominateur ne bouge pas"
+            },
+            {
+              "titre": "Simplifier",
+              "texte": "le résultat jusqu’à la fraction irréductible"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Calculer __1/2 + 1/3__.",
+          "calcul": "{3/6} + {2/6}",
+          "aparte": "2 × 3 = 6",
+          "resultat": "= [[5/6]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Bien additionné&nbsp;?",
+          "oui": {
+            "titre": "On garde",
+            "texte": "2/7 + 3/7 = **5/7** : les parts ont la même taille."
+          },
+          "non": {
+            "titre": "On additionne tout",
+            "texte": "2/7 + 3/7 = 5/14. **Faux&nbsp;!**"
+          },
+          "essai": {
+            "texte": "Les 2/5 de 30&nbsp;: 30 ÷ 5 × 2 = **12**. Le mot « de » veut dire **×**."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "1/2 + 1/3 = 3/6 + 2/6",
+              "quoi": "même dénominateur"
+            },
+            {
+              "texte": "= 5/6",
+              "quoi": "on additionne"
+            },
+            {
+              "texte": "5/6 est irréductible",
+              "quoi": "on conclut"
+            }
+          ],
+          "pied": "Simplifie **avant** de multiplier&nbsp;: les ==nombres== restent petits."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Additionner les **dénominateurs**.",
+            "Oublier de rendre les dénominateurs **égaux**.",
+            "Multiplier le numérateur **et** le dénominateur d’un entier.",
+            "Laisser un résultat **non simplifié**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "La phrase à retenir",
+          "paragraphes": [
+            "On additionne des parts **de même taille**&nbsp;: leur nombre change, pas leur taille. Voilà pourquoi on ne touche jamais au dénominateur dans une addition."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**3/8 + 2/8**&nbsp;?",
+            "**1/2 + 1/4**&nbsp;?",
+            "Les **2/5** de 30&nbsp;?"
+          ],
+          "reponses": "1) 5/8 · 2) 3/4 (2/4 + 1/4) · 3) 12"
+        }
+      ]
+    }
+  ]
+}

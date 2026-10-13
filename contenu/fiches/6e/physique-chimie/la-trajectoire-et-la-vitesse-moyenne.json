@@ -1,0 +1,124 @@
+{
+  "titre": "Trajectoire et vitesse",
+  "titreSurligne": "vitesse",
+  "accroche": "D’où on regarde, et à quelle vitesse.",
+  "bonus": "**v = d ÷ t** · km/h ÷ 3,6 = m/s · 36 km/h = **10 m/s**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/physique-chimie/la-trajectoire-et-la-vitesse-moyenne.webp",
+    "prompt": "a glossy violet toy bicycle with a golden dotted path curving behind it and a small golden stopwatch, tiny sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Sans référentiel,\npas de mouvement !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les mots",
+          "items": [
+            { "terme": "Référentiel", "definition": "l’objet par rapport auquel on décrit le mouvement." },
+            { "terme": "Trajectoire", "definition": "la ligne décrite par un point de l’objet." }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois trajectoires",
+          "entetes": ["Forme", "Exemple"],
+          "lignes": [
+            ["**Rectiligne** (droite)", "une bille sur une table"],
+            ["**Circulaire**", "la nacelle d’une grande roue"],
+            ["**Curviligne**", "un ballon lancé"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "La vitesse moyenne",
+          "lignes": ["v = d ÷ t", "d = v × t"],
+          "regle": "**v** la vitesse, **d** la distance, **t** la durée. Pour la durée&nbsp;: ==t = d ÷ v==.",
+          "note": "mêmes unités partout&nbsp;!"
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un cycliste fait __30 km__ en __2 h__. Sa vitesse moyenne&nbsp;?",
+          "calcul": "v = 30 ÷ 2 = 15",
+          "aparte": "km et h → km/h",
+          "resultat": "[[15 km/h]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Résoudre un problème de vitesse",
+          "etapes": [
+            { "titre": "Unités", "texte": "distance et durée dans les unités de la vitesse demandée" },
+            { "titre": "Formule", "texte": "choisir <i>v = d ÷ t</i>, <i>d = v × t</i> ou <i>t = d ÷ v</i>" },
+            { "titre": "Calculer", "texte": "écrire le calcul, puis la réponse avec son unité" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Bien raisonner",
+          "items": [
+            { "titre": "Dans le train", "texte": "le passager est **immobile** par rapport au train, **en mouvement** par rapport au quai." },
+            { "titre": "Km/h en m/s", "texte": "on **divise** par 3,6." }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Ne pas préciser le **référentiel**.",
+            "Mélanger **km** et **secondes**.",
+            "Croire que la vitesse **moyenne** est celle de chaque instant.",
+            "Oublier l’**unité** dans la réponse."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 6,
+          "titre": "Changer d’unité",
+          "entetes": ["Je pars de…", "Je fais…", "Exemple"],
+          "lignes": [
+            ["km/h", "je **divise** par 3,6", "36 km/h = 10 m/s"],
+            ["m/s", "je **multiplie** par 3,6", "10 m/s = 36 km/h"],
+            ["m et s", "j’obtiens des **m/s**", "100 m en 10 s = 10 m/s"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Un train fait **120 km** en **2 h**&nbsp;: sa vitesse moyenne&nbsp;?",
+            "Un ballon lancé suit une trajectoire de quelle forme&nbsp;?",
+            "**36 km/h** en m/s&nbsp;?"
+          ],
+          "reponses": "1) 60 km/h · 2) curviligne · 3) 10 m/s"
+        }
+      ]
+    }
+  ]
+}

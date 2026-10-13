@@ -1,0 +1,179 @@
+{
+  "titre": "Information et énergie",
+  "titreSurligne": "énergie",
+  "accroche": "Les deux circuits de tout objet.",
+  "bonus": "**Capteur** = l’oreille · **carte** = le cerveau · **actionneur** = le muscle",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/technologie/la-chaine-d-information-et-la-chaine-d-energie.webp",
+    "prompt": "a glossy violet sensor, a golden microchip and a small motor linked by arrows and a lightning bolt, sparkles"
+  },
+  "marcel": "Il y a un cerveau\net un muscle !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Chaîne d’information",
+          "entetes": [
+            "Étape",
+            "Composant"
+          ],
+          "lignes": [
+            [
+              "**Acquérir**",
+              "le **capteur**"
+            ],
+            [
+              "**Traiter**",
+              "la carte programmable"
+            ],
+            [
+              "**Communiquer**",
+              "écran, LED, haut-parleur"
+            ],
+            [
+              "**Exemple de capteur**",
+              "température, lumière, présence"
+            ],
+            [
+              "**Le programme**",
+              "dit à la carte quoi décider"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Chaîne d’énergie",
+          "entetes": [
+            "Étape",
+            "Composant"
+          ],
+          "lignes": [
+            [
+              "**Alimenter**",
+              "pile, batterie, secteur"
+            ],
+            [
+              "**Distribuer**",
+              "interrupteur, relais"
+            ],
+            [
+              "**Convertir**",
+              "l’**actionneur** (moteur, lampe)"
+            ],
+            [
+              "**Transmettre**",
+              "engrenages, courroies, roues"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Chercher une panne",
+          "etapes": [
+            {
+              "titre": "Information",
+              "texte": "le capteur a-t-il bien détecté&nbsp;?"
+            },
+            {
+              "titre": "Énergie",
+              "texte": "l’alimentation est-elle branchée&nbsp;?"
+            },
+            {
+              "titre": "Programme",
+              "texte": "décide-t-il bien&nbsp;?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une lampe s’allume quand quelqu’un passe. Quels sont les composants&nbsp;?",
+          "calcul": "présence → carte → relais → lampe",
+          "aparte": "info à gauche, énergie à droite",
+          "resultat": "[[capteur]] → carte → lampe"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Capteur ou actionneur&nbsp;?",
+          "oui": {
+            "titre": "Capteur",
+            "texte": "Il **mesure ou détecte** : bouton, lumière, présence."
+          },
+          "non": {
+            "titre": "Actionneur",
+            "texte": "Il **agit** : moteur, lampe, buzzer."
+          },
+          "essai": {
+            "texte": "Un bouton-poussoir est un <i>capteur</i>&nbsp;; un moteur est un <i>actionneur</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Le capteur de présence acquiert l’information.",
+              "quoi": "acquérir"
+            },
+            {
+              "texte": "La carte programmable décide.",
+              "quoi": "traiter"
+            },
+            {
+              "texte": "Le relais laisse passer l’énergie à la lampe.",
+              "quoi": "distribuer"
+            },
+            {
+              "texte": "La lampe convertit l’énergie en lumière.",
+              "quoi": "convertir"
+            }
+          ],
+          "pied": "Séparer les deux chaînes, c’est ==diviser le problème== en deux."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **capteur** et **actionneur**.",
+            "Oublier le **programme** au milieu.",
+            "Chercher la panne **partout** sans méthode.",
+            "Mettre l’**écran** dans « acquérir ».",
+            "Oublier que l’**alimentation** peut être coupée."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel composant **traite** l’information&nbsp;?",
+            "Que fait l’**actionneur**&nbsp;?",
+            "Cite deux sources d’**énergie**."
+          ],
+          "reponses": "1) la carte programmable · 2) il convertit l’énergie · 3) pile, batterie"
+        }
+      ]
+    }
+  ]
+}

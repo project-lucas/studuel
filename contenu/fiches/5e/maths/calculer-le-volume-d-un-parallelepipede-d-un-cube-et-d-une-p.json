@@ -1,0 +1,172 @@
+{
+  "titre": "Volumes",
+  "titreSurligne": "Volumes",
+  "accroche": "Pavé, cube, pyramide : n’oublie pas le tiers.",
+  "bonus": "1 m³ = 1 000 dm³ = 1 000 000 cm³ · 1 dm³ = 1 L · 1 cm³ = 1 mL",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/calculer-le-volume-d-un-parallelepipede-d-un-cube-et-d-une-p.webp",
+    "prompt": "a glossy violet cube and a golden pyramid side by side, tiny golden cubes stacking inside the cube, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Pyramide ?\nN’oublie pas ÷ 3 !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Pavé droit et cube",
+          "entetes": [
+            "Solide",
+            "Formule",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "**Pavé droit**",
+              "L × l × h",
+              "5 × 3 × 2 = 30 cm³"
+            ],
+            [
+              "**Cube**",
+              "c × c × c",
+              "4³ = 64 cm³"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La pyramide",
+          "lignes": [
+            "V = {B × h/3}"
+          ],
+          "regle": "B est l’aire de la base. Le **tiers** du prisme de même base et de même hauteur.",
+          "note": "le ÷ 3, on l’oublie souvent&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode d’un exercice",
+          "etapes": [
+            {
+              "titre": "Identifier",
+              "texte": "le solide, puis sa formule"
+            },
+            {
+              "titre": "Unifier",
+              "texte": "toutes les dimensions dans la **même unité**"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "puis écrire l’unité **cube**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Pyramide, base carrée de 6 cm de côté, hauteur __10 cm__.",
+          "calcul": "(36 × 10) ÷ 3 = 360 ÷ 3",
+          "aparte": "aire de base 6 × 6 = 36",
+          "resultat": "V = [[120 cm³]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "La hauteur&nbsp;?",
+          "oui": {
+            "titre": "Bonne hauteur",
+            "texte": "Le segment du sommet, **perpendiculaire** à la base."
+          },
+          "non": {
+            "titre": "Mauvaise",
+            "texte": "L’**arête latérale**, plus longue."
+          },
+          "essai": {
+            "texte": "Un volume se convertit **de 1 000 en 1 000** : il y a trois longueurs."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "Volume et contenance",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "1 dm³",
+              "texte": "contient **1 L**."
+            },
+            {
+              "titre": "1 cm³",
+              "texte": "contient **1 mL**."
+            },
+            {
+              "titre": "1 m³",
+              "texte": "contient **1 000 L**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "V = (aire de la base × h) ÷ 3",
+              "quoi": "la formule"
+            },
+            {
+              "texte": "V = (36 × 10) ÷ 3 = 120",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "Le volume est 120 cm³.",
+              "quoi": "la phrase"
+            }
+          ],
+          "pied": "Ne mélange jamais ==m et cm==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **÷ 3** de la pyramide.",
+            "Prendre l’**arête** au lieu de la hauteur.",
+            "Mélanger deux unités&nbsp;: volume faux d’un facteur 1&nbsp;000&nbsp;000.",
+            "Écrire cm² au lieu de cm³."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**Volume** d’un cube de 3 cm d’arête&nbsp;?",
+            "Pavé 4 × 5 × 6 cm&nbsp;: **volume**&nbsp;?",
+            "Pyramide, base 9 cm², hauteur 5 cm&nbsp;: **volume**&nbsp;?"
+          ],
+          "reponses": "1) 27 cm³ · 2) 120 cm³ · 3) 15 cm³ ((9 × 5) ÷ 3)"
+        }
+      ]
+    }
+  ]
+}

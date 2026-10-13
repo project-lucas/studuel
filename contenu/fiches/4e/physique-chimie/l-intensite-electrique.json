@@ -1,0 +1,115 @@
+{
+  "titre": "L’intensité",
+  "titreSurligne": "intensité",
+  "accroche": "Le débit du courant, en ampères.",
+  "bonus": "Série&nbsp;: **I** partout pareil · dérivation&nbsp;: **I = I<sub>1</sub> + I<sub>2</sub>** (loi des nœuds) · ampèremètre **en série** · 1 mA = **0,001 A**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/l-intensite-electrique.webp",
+    "prompt": "a glossy violet ammeter with a round dial and a golden needle, golden wires with a flow of tiny glowing golden beads, small electric sparks, sparkles"
+  },
+  "marcel": "Série : même débit.\nDérivation : on partage !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les lois de l’intensité",
+          "taille": "mini",
+          "lignes": ["Série&nbsp;: I<sub>1</sub> = I<sub>2</sub> = I", "Nœud&nbsp;: I = I<sub>1</sub> + I<sub>2</sub>"],
+          "regle": "**I** l’intensité en **ampères (A)**. En **série**, elle est **la même** partout&nbsp;; en **dérivation**, celles des branches **s’additionnent**.",
+          "note": "comme un débit d’eau&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Ordres de grandeur",
+          "entetes": ["L’appareil", "Intensité"],
+          "lignes": [
+            ["Une **LED**", "quelques mA"],
+            ["Lampe de poche", "environ 0,3 A"],
+            ["Réfrigérateur", "environ 1 A"],
+            ["Plaque de cuisson", "plus de 10 A"],
+            ["Fusible de maison", "coupe vers 16 A"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Mesurer une intensité",
+          "etapes": [
+            { "titre": "Ouvrir", "texte": "on ouvre le circuit et on y place l’ampèremètre **en série**" },
+            { "titre": "Choisir le calibre", "texte": "on démarre sur le **plus grand**, puis on descend" },
+            { "titre": "Lire", "texte": "borne A côté du **+**, COM de l’autre côté&nbsp;; unité **A**" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Deux branches en __dérivation__. I<sub>1</sub> = 0,3 A et I<sub>2</sub> = 0,5 A. Courant total I&nbsp;?",
+          "calcul": "I = I<sub>1</sub> + I<sub>2</sub> = 0,3 + 0,5",
+          "aparte": "loi des nœuds",
+          "resultat": "I = [[0,8 A]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Fusible ou disjoncteur&nbsp;?",
+          "oui": { "titre": "Fusible", "texte": "Il **fond** au-delà d’une intensité limite&nbsp;: on doit le **remplacer**." },
+          "non": { "titre": "Disjoncteur", "texte": "Il **coupe** le circuit&nbsp;: on peut le **réarmer**." },
+          "essai": { "texte": "Tous deux coupent <i>avant</i> que les fils ne chauffent assez pour déclencher un incendie." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Les branches sont en dérivation&nbsp;: I = I<sub>1</sub> + I<sub>2</sub>", "quoi": "la loi" },
+            { "texte": "I = 0,3 + 0,5", "quoi": "lettres puis nombres" },
+            { "texte": "I = 0,8 A", "quoi": "avec l’unité" },
+            { "texte": "Le courant total est de 0,8 A.", "quoi": "la phrase" }
+          ],
+          "pied": "Un ampèremètre en dérivation aux bornes d’une pile fait un ==court-circuit==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Brancher l’ampèremètre **en dérivation**.",
+            "Confondre **mA** et **A** : 1 mA = 0,001 A.",
+            "Penser que l’intensité **diminue** après une lampe en série.",
+            "Brancher trop d’appareils sur une prise : les **intensités s’additionnent**.",
+            "Partir du plus **petit** calibre : on démarre toujours sur le plus **grand**.",
+            "Oublier que le **fusible** fondu doit être **remplacé**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Où brancher un **ampèremètre**&nbsp;?",
+            "En série, I<sub>1</sub> = 0,4 A&nbsp;: que vaut **I<sub>2</sub>**&nbsp;?",
+            "En dérivation, 1 A et 2 A&nbsp;: **I totale**&nbsp;?"
+          ],
+          "reponses": "1) en série · 2) 0,4 A · 3) 3 A"
+        }
+      ]
+    }
+  ]
+}

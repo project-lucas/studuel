@@ -1,0 +1,158 @@
+{
+  "titre": "Prisme et cylindre",
+  "titreSurligne": "cylindre",
+  "accroche": "Deux bases, une hauteur, un volume.",
+  "bonus": "1 L = 1 dm³ · 1 cm³ = 1 mL · 1 m³ = 1 000 L",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/prisme-droit-et-cylindre-de-revolution.webp",
+    "prompt": "a glossy violet triangular prism and a golden cylinder standing side by side, with a thin dotted line showing the height, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Aire de la base\n× hauteur !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les deux solides",
+          "items": [
+            {
+              "terme": "Prisme droit",
+              "definition": "2 bases **polygones** identiques, faces latérales **rectangles**"
+            },
+            {
+              "terme": "Cylindre",
+              "definition": "2 **disques** identiques et une surface latérale courbe"
+            },
+            {
+              "terme": "Hauteur",
+              "definition": "la distance entre les deux bases"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le volume",
+          "lignes": [
+            "V = aire de la base × h",
+            "cylindre&nbsp;: π × R<sup>2</sup> × h"
+          ],
+          "regle": "**Pas de ÷ 3** ici&nbsp;: le tiers est pour la ==pyramide== et le cône.",
+          "note": "unités en cm³, m³…"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer une aire totale",
+          "etapes": [
+            {
+              "titre": "Latérale",
+              "texte": "périmètre de la base × hauteur"
+            },
+            {
+              "titre": "Les bases",
+              "texte": "2 × aire d’une base"
+            },
+            {
+              "titre": "Additionner",
+              "texte": "aire totale = latérale + 2 bases"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Prisme, base de __12 cm²__, hauteur 5 cm.",
+          "calcul": "V = 12 × 5",
+          "aparte": "aire × h",
+          "resultat": "V = [[60 cm³]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Le patron",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Prisme droit",
+              "texte": "Surface latérale = rectangle de longueur **périmètre de la base**."
+            },
+            {
+              "titre": "Cylindre",
+              "texte": "Rectangle de longueur **2 × π × R**, de largeur h."
+            },
+            {
+              "titre": "Prisme à n côtés",
+              "texte": "**2n** sommets, **3n** arêtes, **n + 2** faces."
+            },
+            {
+              "titre": "Pavé droit",
+              "texte": "Prisme à base **rectangulaire**&nbsp;; le cube en est un cas."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Cylindre : R = 3 cm, h = 10 cm",
+              "quoi": "les données"
+            },
+            {
+              "texte": "V = π × R<sup>2</sup> × h",
+              "quoi": "la formule"
+            },
+            {
+              "texte": "V = π × 3<sup>2</sup> × 10 ≈ 282,7",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "Le volume est environ 282,7 cm³.",
+              "quoi": "la phrase"
+            }
+          ],
+          "pied": "Rayon = ==moitié== du diamètre."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Ajouter un **÷ 3** (réservé à la pyramide et au cône).",
+            "Prendre le **diamètre** au lieu du rayon.",
+            "Oublier le **carré** de R.",
+            "Mélanger cm et m dans le même calcul."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Base 20 cm², hauteur 4 cm&nbsp;: **volume** du prisme&nbsp;?",
+            "Un prisme à base **hexagonale**&nbsp;: combien de faces&nbsp;?",
+            "1 dm³ contient combien de **litres**&nbsp;?"
+          ],
+          "reponses": "1) 80 cm³ · 2) 8 faces (6 + 2) · 3) 1 litre"
+        }
+      ]
+    }
+  ]
+}

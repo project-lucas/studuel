@@ -1,0 +1,180 @@
+{
+  "titre": "Les triangles",
+  "titreSurligne": "triangles",
+  "accroche": "Les reconnaître, les construire.",
+  "bonus": "Équilatéral&nbsp;: 3 côtés égaux, 3 angles de **60°**, 3 axes de symétrie",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/connaitre-et-utiliser-les-triangles.webp",
+    "prompt": "three glossy triangles side by side, one violet isosceles, one golden equilateral, one violet right triangle with a small square corner, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Deux façons de\nclasser un triangle !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Selon les côtés",
+          "entetes": [
+            "Triangle",
+            "Ses côtés"
+          ],
+          "lignes": [
+            [
+              "**Quelconque**",
+              "trois côtés différents"
+            ],
+            [
+              "**Isocèle**",
+              "deux côtés égaux"
+            ],
+            [
+              "**Équilatéral**",
+              "trois côtés égaux"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Selon les angles",
+          "entetes": [
+            "Triangle",
+            "Ses angles"
+          ],
+          "lignes": [
+            [
+              "**Rectangle**",
+              "un angle droit"
+            ],
+            [
+              "**Acutangle**",
+              "trois angles aigus"
+            ],
+            [
+              "**Obtusangle**",
+              "un angle obtus"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "L’inégalité triangulaire",
+          "lignes": [
+            "plus grand côté &lt; somme des deux autres"
+          ],
+          "regle": "À vérifier ==avant== toute construction.",
+          "note": "égalité&nbsp;: les points sont alignés"
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un triangle de côtés __3, 4 et 9__ existe-t-il&nbsp;? On compare le plus grand côté à la somme des autres.",
+          "calcul": "3 + 4 = 7, et 7 &lt; 9",
+          "aparte": "le plus grand : 9",
+          "resultat": "[[impossible]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les triangles particuliers",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Isocèle",
+              "texte": "Angles à la base **égaux**. Un axe de symétrie&nbsp;: la médiatrice de la base."
+            },
+            {
+              "titre": "Équilatéral",
+              "texte": "Trois angles de **60°**, trois axes. C’est un cas d’isocèle."
+            },
+            {
+              "titre": "Rectangle",
+              "texte": "L’**hypoténuse** est le côté opposé à l’angle droit, le plus long."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Construire un triangle",
+          "etapes": [
+            {
+              "titre": "Croquis",
+              "texte": "à main levée, données codées"
+            },
+            {
+              "titre": "Vérifier",
+              "texte": "l’inégalité triangulaire"
+            },
+            {
+              "titre": "Construire",
+              "texte": "compas (3 côtés), rapporteur (angle)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "ABC est isocèle en A (AB = AC).",
+              "quoi": "les données"
+            },
+            {
+              "texte": "Dans un triangle isocèle, les angles à la base sont égaux,",
+              "quoi": "la propriété"
+            },
+            {
+              "texte": "donc B = C.",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Cite toujours la ==propriété== utilisée."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Construire **sans** vérifier l’inégalité triangulaire.",
+            "Croire qu’un triangle rectangle ne peut pas être isocèle&nbsp;: il le peut.",
+            "Confondre sommet principal et angles à la base.",
+            "Dire «&nbsp;triangle équilatéral&nbsp;» quand seuls **deux** côtés sont égaux."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Côtés 5, 6 et 12&nbsp;: le triangle **existe**-t-il&nbsp;?",
+            "Combien d’**axes de symétrie** a un triangle équilatéral&nbsp;?",
+            "Où se trouve l’**hypoténuse**&nbsp;?"
+          ],
+          "reponses": "1) non (5 + 6 = 11 &lt; 12) · 2) 3 · 3) en face de l’angle droit"
+        }
+      ]
+    }
+  ]
+}

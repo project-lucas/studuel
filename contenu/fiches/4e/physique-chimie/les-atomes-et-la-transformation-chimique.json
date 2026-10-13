@@ -1,0 +1,159 @@
+{
+  "titre": "Réaction chimique",
+  "titreSurligne": "chimique",
+  "accroche": "Réactifs, produits, équation équilibrée.",
+  "bonus": "**Réactifs** → **produits** · les **atomes** et la **masse** se conservent (Lavoisier) · le **limitant** s’arrête le premier",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/les-atomes-et-la-transformation-chimique.webp",
+    "prompt": "a glossy golden flask with a small violet flame, glossy atom balls rearranging into new molecules with an arrow, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Rien ne se perd,\nrien ne se crée !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Physique ou chimique ?",
+          "entetes": [
+            "Transformation",
+            "Ce qui change"
+          ],
+          "lignes": [
+            [
+              "**Physique**",
+              "seul l’arrangement des molécules (glace qui fond)"
+            ],
+            [
+              "**Chimique**",
+              "les atomes se **réorganisent** en nouvelles molécules (bois qui brûle)"
+            ],
+            [
+              "**Exemple**",
+              "l’eau qui bout reste de l’eau : c’est physique"
+            ]
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Les signes",
+          "items": [
+            {
+              "titre": "Un gaz",
+              "texte": "se dégage"
+            },
+            {
+              "titre": "Une couleur",
+              "texte": "qui change"
+            },
+            {
+              "titre": "Un solide",
+              "texte": "apparaît : le **précipité**"
+            },
+            {
+              "titre": "De la chaleur",
+              "texte": "se dégage, un réactif disparaît"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "L’équation de réaction",
+          "taille": "mini",
+          "lignes": [
+            "CH<sub>4</sub> + 2 O<sub>2</sub> → CO<sub>2</sub> + 2 H<sub>2</sub>O"
+          ],
+          "regle": "À gauche les **réactifs**, à droite les **produits**. La flèche veut dire « donne ». Les **nombres devant** ajustent l’équation.",
+          "note": "même nombre d’atomes des deux côtés !"
+        },
+        {
+          "type": "definitions",
+          "numero": 4,
+          "titre": "Ce qui se conserve",
+          "items": [
+            {
+              "terme": "Les atomes",
+              "definition": "ni créés, ni détruits : **réarrangés**"
+            },
+            {
+              "terme": "La masse",
+              "definition": "masse des réactifs consommés = masse des produits formés"
+            },
+            {
+              "terme": "Réactif limitant",
+              "definition": "consommé en entier : la réaction **s’arrête**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Équilibrer une équation en trois temps",
+          "etapes": [
+            {
+              "titre": "Écrire",
+              "texte": "les formules des réactifs et des produits"
+            },
+            {
+              "titre": "Compter",
+              "texte": "les atomes de chaque sorte, à gauche puis à droite"
+            },
+            {
+              "titre": "Ajuster",
+              "texte": "avec des nombres devant les formules, jamais dedans"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "CH<sub>4</sub> + 2 O<sub>2</sub> → CO<sub>2</sub> + 2 H<sub>2</sub>O&nbsp;: les atomes sont-ils conservés&nbsp;?",
+          "calcul": "H : 4 à gauche, 2 × 2 = 4 à droite\nO : 2 × 2 = 4 à gauche, 2 + 2 = 4 à droite\nC : 1 de chaque côté",
+          "aparte": "tout est conservé",
+          "resultat": "équation [[équilibrée]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Changer un **indice** pour équilibrer (H<sub>2</sub>O ne devient pas H<sub>3</sub>O).",
+            "Croire qu’une équation fausse est « presque juste ».",
+            "Confondre **fusion** (physique) et **combustion** (chimique).",
+            "Dire que la masse **diminue** quand le gaz s’échappe.",
+            "Croire que les atomes **disparaissent** quand le bois brûle.",
+            "Oublier que le **limitant** fixe la quantité de produits."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Une glace qui fond est-elle une transformation **chimique**&nbsp;?",
+            "Que se conserve-t-il pendant une réaction&nbsp;?",
+            "Que devient la réaction quand le **limitant** est épuisé&nbsp;?"
+          ],
+          "reponses": "1) non, physique · 2) les atomes et la masse · 3) elle s’arrête"
+        }
+      ]
+    }
+  ]
+}

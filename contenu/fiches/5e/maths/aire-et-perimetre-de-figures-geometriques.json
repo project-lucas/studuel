@@ -1,0 +1,198 @@
+{
+  "titre": "Aire et périmètre",
+  "titreSurligne": "périmètre",
+  "accroche": "Le tour et la surface, sans confondre.",
+  "bonus": "1 m² = 10 000 cm² · 1 ha = 10 000 m² · π ≈ 3,14",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/aire-et-perimetre-de-figures-geometriques.webp",
+    "prompt": "a glossy violet square with a golden tiled grid inside and a golden measuring tape running around its edge, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Le tour, c’est\nle périmètre !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le périmètre (le tour)",
+          "entetes": [
+            "La figure",
+            "Formule"
+          ],
+          "lignes": [
+            [
+              "Carré",
+              "**4 × c**"
+            ],
+            [
+              "Rectangle",
+              "**2 × (L + l)**"
+            ],
+            [
+              "Triangle",
+              "somme des 3 côtés"
+            ],
+            [
+              "Cercle",
+              "**2 × π × R**"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "L’aire (la surface)",
+          "entetes": [
+            "La figure",
+            "Formule"
+          ],
+          "lignes": [
+            [
+              "Carré",
+              "**c²**"
+            ],
+            [
+              "Rectangle",
+              "**L × l**"
+            ],
+            [
+              "Triangle",
+              "**(b × h) ÷ 2**"
+            ],
+            [
+              "Parallélogramme",
+              "**b × h**"
+            ],
+            [
+              "Disque",
+              "**π × R²**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Une figure composée",
+          "etapes": [
+            {
+              "titre": "Découper",
+              "texte": "en figures simples (rectangle, triangle…)"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "l’aire de chaque morceau"
+            },
+            {
+              "titre": "Additionner",
+              "texte": "ou soustraire un trou"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À ne pas oublier",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "La hauteur",
+              "texte": "Segment **perpendiculaire** à la base, issu du sommet opposé."
+            },
+            {
+              "titre": "Le losange",
+              "texte": "**(D × d) ÷ 2**, avec ses deux diagonales."
+            },
+            {
+              "titre": "Le trapèze",
+              "texte": "**((B + b) × h) ÷ 2**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Triangle, base __8 cm__, hauteur 5 cm. Aire&nbsp;?",
+          "calcul": "(8 × 5) ÷ 2 = 40 ÷ 2",
+          "aparte": "on divise par 2",
+          "resultat": "Aire = [[20 cm²]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Même tour, même surface&nbsp;?",
+          "oui": {
+            "titre": "Rectangle 1 × 9",
+            "texte": "Périmètre **20**, aire **9**."
+          },
+          "non": {
+            "titre": "Carré 5 × 5",
+            "texte": "Périmètre **20**, aire **25**."
+          },
+          "essai": {
+            "texte": "Même périmètre, aires du simple au triple&nbsp;: le tour ne dit rien de la place occupée."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Aire du triangle = (b × h) ÷ 2",
+              "quoi": "la formule"
+            },
+            {
+              "texte": "= (8 × 5) ÷ 2 = 20",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "L’aire est 20 cm².",
+              "quoi": "la phrase"
+            }
+          ],
+          "pied": "Une aire s’écrit avec une unité ==au carré==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Convertir les aires **de 10 en 10**&nbsp;: c’est de 100 en 100.",
+            "Prendre le côté oblique au lieu de la **hauteur** (perpendiculaire).",
+            "Oublier le **÷ 2** du triangle.",
+            "Écrire cm pour une aire."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Rectangle 7 cm sur 3 cm&nbsp;: **périmètre** et **aire**&nbsp;?",
+            "Quelle est l’aire d’un carré de **6 m** de côté&nbsp;?",
+            "Convertis **2 m²** en cm²."
+          ],
+          "reponses": "1) 20 cm et 21 cm² · 2) 36 m² · 3) 20 000 cm²"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "titre": "Verbes à diphtongue",
+  "titreSurligne": "diphtongue",
+  "accroche": "L’accent tonique change la voyelle.",
+  "bonus": "**e → ie** · **o → ue** · **jugar** (u → ue) · **oler** → <i>huelo</i> · la botte exclut nosotros et vosotros",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/espagnol/les-verbes-a-diphtongue.webp",
+    "prompt": "a glossy violet boot with a golden spur and golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Pienso, puedo…\nla botte&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle",
+          "lignes": [
+            "**e → ie** · **o → ue**"
+          ],
+          "petite": true,
+          "regle": "Si l’**accent tonique** tombe sur la voyelle du radical, elle **diphtongue**. Sur la terminaison, elle revient simple.",
+          "note": "u → ue : jugar seul"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "La botte",
+          "entetes": [
+            "Personne",
+            "<i>pensar</i>",
+            "Diphtongue ?"
+          ],
+          "lignes": [
+            [
+              "yo · tú · él",
+              "<i>pienso, piensas, piensa</i>",
+              "oui"
+            ],
+            [
+              "**nosotros**",
+              "<i>pensamos</i>",
+              "**non**"
+            ],
+            [
+              "**vosotros**",
+              "<i>pensáis</i>",
+              "**non**"
+            ],
+            [
+              "ellos",
+              "<i>piensan</i>",
+              "oui"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les verbes à connaître",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "e → ie",
+              "texte": "<i>pensar, empezar, cerrar, despertar, querer, entender, perder, preferir, sentir, mentir</i>"
+            },
+            {
+              "titre": "o → ue",
+              "texte": "<i>poder, contar, encontrar, recordar, volver, mover, doler, morir, dormir, soñar</i>"
+            },
+            {
+              "titre": "Cas à part",
+              "texte": "<i>jugar → juego</i> (u → ue) · <i>oler → **h**uelo, **h**ueles…</i> (un **h** à l’écrit)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Où la botte joue",
+          "oui": {
+            "titre": "Elle diphtongue",
+            "texte": "présent de l’indicatif <i>pienso</i>, présent du subjonctif <i>piense, pensemos…</i>, impératif <i>¡piensa!</i>"
+          },
+          "non": {
+            "titre": "Elle ne diphtongue pas",
+            "texte": "passé simple <i>pensé</i>, imparfait <i>pensaba</i>, futur <i>pensaré</i>."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Nosotros ___ (poder) venir.</i> → **podemos**&nbsp;: l’accent est sur la terminaison."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Où est l’accent&nbsp;?",
+              "texte": "Sur le radical (yo, tú, él, ellos) ou sur la terminaison (nosotros, vosotros)."
+            },
+            {
+              "titre": "Radical accentué",
+              "texte": "**e → ie**, **o → ue**&nbsp;: <i>quiero, vuelvo</i>."
+            },
+            {
+              "titre": "Terminaison accentuée",
+              "texte": "Le radical reste simple&nbsp;: <i>queremos, volvemos</i>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Ne pas confondre",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Diphtongue",
+              "texte": "e → **ie**&nbsp;: <i>pensar → pienso</i>"
+            },
+            {
+              "titre": "Affaiblissement",
+              "texte": "e → **i**&nbsp;: <i>pedir → pido</i> (verbes en <i>-ir</i>)"
+            },
+            {
+              "titre": "Soler",
+              "texte": "<i>suelo, sueles, suele, solemos, soléis, suelen</i>"
+            },
+            {
+              "titre": "Même botte",
+              "texte": "au subjonctif présent&nbsp;: <i>piense… pensemos… piensen</i>"
+            },
+            {
+              "titre": "Impératif",
+              "texte": "<i>¡piensa!</i> · <i>¡vuelve!</i> · <i>¡cierra!</i>"
+            },
+            {
+              "titre": "Nosotros / vosotros",
+              "texte": "radical simple&nbsp;: <i>empezamos, volvéis, dormimos</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>pensamos</i> et jamais « piensamos »&nbsp;: la botte exclut **nosotros**.",
+            "<i>pensé</i> et non « pienso » au passé : le passé simple ne diphtongue pas.",
+            "<i>pedir → pido</i>, pas « piedo »&nbsp;: c’est l’autre famille.",
+            "<i>oler</i> prend un **h**&nbsp;: <i>huelo</i>, non « uelo »."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Yo ___ (querer) un café.</i>",
+            "<i>Vosotros ___ (poder) venir.</i>",
+            "<i>Él ___ (oler) bien.</i>"
+          ],
+          "reponses": "1) quiero 2) podéis 3) huele"
+        }
+      ]
+    }
+  ]
+}

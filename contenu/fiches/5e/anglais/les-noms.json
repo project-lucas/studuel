@@ -1,0 +1,185 @@
+{
+  "titre": "Les noms",
+  "titreSurligne": "noms",
+  "accroche": "Compter ou ne pas compter&nbsp;?",
+  "bonus": "**-s** · **-es** · **-ies** · **-ves** · men, women, children, feet, teeth, mice, people",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/anglais/les-noms.webp",
+    "prompt": "a glossy violet shopping basket with golden apples and a golden number tag, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Un nom, deux\nfamilles&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle",
+          "lignes": [
+            "on peut le compter&nbsp;? **a / an + s**"
+          ],
+          "petite": true,
+          "regle": "**Dénombrable** : on le compte, il a un pluriel (<i>two books</i>). **Indénombrable** : pas de pluriel, pas de <i>a</i>, verbe au singulier.",
+          "note": "water, money, news…"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le pluriel régulier",
+          "entetes": [
+            "Le nom finit par",
+            "On ajoute",
+            "L’exemple"
+          ],
+          "lignes": [
+            [
+              "Cas général",
+              "**-s**",
+              "<i>car → cars</i>"
+            ],
+            [
+              "-s, -sh, -ch, -x (souvent -o)",
+              "**-es**",
+              "<i>box → boxes, potato → potatoes</i>"
+            ],
+            [
+              "consonne + y",
+              "**-ies**",
+              "<i>city → cities</i>"
+            ],
+            [
+              "voyelle + y",
+              "**-s**",
+              "<i>boy → boys, day → days</i>"
+            ],
+            [
+              "-f / -fe",
+              "souvent **-ves**",
+              "<i>leaf → leaves, knife → knives</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les pluriels irréguliers",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Le mot change",
+              "texte": "<i>man → **men**, woman → **women**, child → **children**, person → **people**</i>"
+            },
+            {
+              "titre": "La voyelle change",
+              "texte": "<i>foot → **feet**, tooth → **teeth**, mouse → **mice**</i>"
+            },
+            {
+              "titre": "Rien ne change",
+              "texte": "<i>one **sheep**, two **sheep** · one **fish**, two **fish** · **deer**</i>\nLe même mot au singulier et au pluriel."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Les indénombrables",
+          "oui": {
+            "titre": "Singulier, sans a",
+            "texte": "<i>The **news is** good. I need **some advice**.</i>"
+          },
+          "non": {
+            "titre": "Comme en français",
+            "texte": "<i>The news **are** good. I need **an advice**, **advices**.</i>"
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>My ___ (information) is / are wrong.</i> → **is**&nbsp;: <i>information</i> est indénombrable."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Compter un indénombrable",
+          "etapes": [
+            {
+              "titre": "Repère-le",
+              "texte": "water, money, advice, news, furniture, homework, music."
+            },
+            {
+              "titre": "Prends un partitif",
+              "texte": "**a glass of**, **a piece of**, **a bit of**."
+            },
+            {
+              "titre": "Compte le partitif",
+              "texte": "<i>two **pieces of** furniture</i>, jamais <i>two furnitures</i>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Le génitif (la possession)",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Singulier",
+              "texte": "**’s**&nbsp;: <i>my sister**’s** phone</i>"
+            },
+            {
+              "titre": "Pluriel en -s",
+              "texte": "apostrophe seule&nbsp;: <i>the students**’** books</i>"
+            },
+            {
+              "titre": "Pluriel irrégulier",
+              "texte": "<i>the children**’s** toys</i>"
+            },
+            {
+              "titre": "L’ordre",
+              "texte": "possesseur + ’s + objet, à l’inverse du français."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>two childs</i> → <i>two **children**</i>.",
+            "<i>an advice</i> → <i>**a piece of** advice</i>.",
+            "<i>My homeworks are done</i> → <i>My homework **is** done</i>.",
+            "« Des informations » → <i>**some** information</i>, sans -s."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Pluriel de <i>city</i> et de <i>foot</i>&nbsp;?",
+            "<i>The news ___ (be) good.</i>",
+            "Comment dire «&nbsp;deux conseils&nbsp;»&nbsp;?"
+          ],
+          "reponses": "1) cities, feet 2) is 3) two pieces of advice"
+        }
+      ]
+    }
+  ]
+}

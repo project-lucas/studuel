@@ -1,0 +1,112 @@
+{
+  "titre": "Énergie cinétique",
+  "titreSurligne": "cinétique",
+  "accroche": "Vitesse × 2, énergie × 4.",
+  "bonus": "**Ec = ½ × m × v²** · v en **m/s** (jamais en km/h) · vitesse × 2 ⇒ Ec × **4**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/calculer-la-vitesse-et-l-energie-cinetique.webp",
+    "prompt": "a glossy violet toy car speeding with golden motion lines and a small golden lightning bolt, sparkles"
+  },
+  "marcel": "Deux fois plus vite,\nquatre fois plus fort !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’énergie cinétique",
+          "petite": true,
+          "lignes": ["Ec = {1/2} × m × v<sup>2</sup>", "v = d ÷ t"],
+          "regle": "**Ec** en **joules**, **m** en **kg**, **v** en **m/s**. Pour passer de km/h à m/s, on **divise par 3,6**.",
+          "note": "v² = v × v"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "L’effet du carré",
+          "entetes": ["On change", "Ec devient"],
+          "lignes": [
+            ["La **masse** × 2", "× 2"],
+            ["La **vitesse** × 2", "× **4**"],
+            ["La **vitesse** × 3", "× **9**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer Ec en trois temps",
+          "etapes": [
+            { "titre": "Convertir", "texte": "la vitesse en **m/s** (km/h ÷ 3,6)" },
+            { "titre": "Appliquer", "texte": "Ec = 0,5 × m × v², en commençant par le **carré**" },
+            { "titre": "Conclure", "texte": "en **joules**, avec l’unité" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Voiture de __1 000 kg__ à __72 km/h__. Son énergie cinétique&nbsp;?",
+          "calcul": "v = 72 ÷ 3,6 = 20 m/s\nEc = 0,5 × 1 000 × 20<sup>2</sup>",
+          "aparte": "20² = 400",
+          "resultat": "Ec = [[200 000 J]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "La distance d’arrêt",
+          "items": [
+            { "titre": "Réaction", "texte": "trajet pendant ~1 s&nbsp;; allongée par alcool, fatigue, téléphone." },
+            { "titre": "Freinage", "texte": "croît comme le **carré** de la vitesse&nbsp;; allongée par pluie, pneus usés." },
+            { "titre": "Au freinage", "texte": "Ec est convertie en énergie **thermique**&nbsp;: les freins chauffent." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du contrôle",
+          "lignes": [
+            { "texte": "m = 1 000 kg et v = 72 ÷ 3,6 = 20 m/s", "quoi": "les données" },
+            { "texte": "Ec = 0,5 × m × v<sup>2</sup> = 0,5 × 1 000 × 20<sup>2</sup>", "quoi": "lettres puis nombres" },
+            { "texte": "Ec = 200 000 J", "quoi": "avec l’unité" }
+          ],
+          "pied": "Doubler la ==vitesse== multiplie l’énergie par ==4==&nbsp;: c’est la raison des limitations de vitesse."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Garder la vitesse en **km/h**.",
+            "Oublier de mettre **v au carré**.",
+            "Croire que doubler la vitesse **double** Ec.",
+            "Oublier le **½** de la formule."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**36 km/h** en m/s&nbsp;?",
+            "Ec d’un objet de **2 kg** à 3 m/s&nbsp;?",
+            "Vitesse × 3&nbsp;: Ec est multipliée par&nbsp;?"
+          ],
+          "reponses": "1) 10 m/s · 2) 9 J · 3) 9"
+        }
+      ]
+    }
+  ]
+}

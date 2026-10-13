@@ -1,0 +1,113 @@
+{
+  "titre": "Horaires et durées",
+  "titreSurligne": "durées",
+  "accroche": "Le temps se compte en base 60.",
+  "bonus": "1 jour = **24 h** · 1 h = **60 min** · 1 min = **60 s**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/maths/calculer-des-horaires-et-des-durees-convertir-des-durees.webp",
+    "prompt": "a glossy violet alarm clock with golden bells and a golden stopwatch beside it, tiny golden sparkles, same art style as the reference icons"
+  },
+  "marcel": "Le temps,\nc’est en base 60 !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Convertir une durée",
+          "entetes": ["Le passage", "L’opération", "Exemple"],
+          "lignes": [
+            ["h → min", "**× 60**", "2 h 30 = 150 min"],
+            ["min → s", "**× 60**", "3 min = 180 s"],
+            ["min → h", "**÷ 60**", "90 min = 1,5 h"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Attention à la virgule",
+          "lignes": ["2,5 h = 2 h 30", "1,25 h = 1 h 15", "0,75 h = 45 min"],
+          "regle": "Après la virgule, on convertit en minutes&nbsp;: 0,5 × 60 = ==30 min==.",
+          "note": "2,5 h n’est pas 2 h 5&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Durée entre deux horaires, en trois temps",
+          "etapes": [
+            { "titre": "Aller à l’heure ronde", "texte": "du départ jusqu’à la prochaine heure pile" },
+            { "titre": "Avancer en heures", "texte": "d’heure pile en heure pile jusqu’à l’arrivée" },
+            { "titre": "Finir et additionner", "texte": "les dernières minutes, puis on ajoute tout" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un film commence à 8 h 45 et finit à 11 h 20. __Durée__&nbsp;?",
+          "calcul": "8 h 45 → 9 h&nbsp;: 15 min\n9 h → 11 h&nbsp;: 2 h\n11 h → 11 h 20&nbsp;: 20 min",
+          "aparte": "15 + 20 = 35 min",
+          "resultat": "durée = [[2 h 35]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Ajouter une durée", "texte": "14 h 50 + 35 min = 14 h 85. On retire 60 min et on ajoute 1 h&nbsp;: **15 h 25**." },
+            { "titre": "Format 24 h", "texte": "**14 h**, c’est 2 h de l’après-midi. On lit l’heure entière." },
+            { "titre": "Tableau d’horaires", "texte": "Chaque **colonne** est un trajet. On ne mélange pas deux colonnes." },
+            { "titre": "Vitesse", "texte": "v = d ÷ t · d = v × t · t = d ÷ v. Km/h avec des heures." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "De 8 h 45 à 9 h&nbsp;: 15 min", "quoi": "premier saut" },
+            { "texte": "De 9 h à 11 h 20&nbsp;: 2 h 20 min", "quoi": "le reste" },
+            { "texte": "15 min + 2 h 20 min = 2 h 35 min", "quoi": "le total" }
+          ],
+          "pied": "On emprunte ==60==, jamais 10."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire 2,5 h = 2 h **5**&nbsp;: c’est 2 h 30.",
+            "Emprunter **10** au lieu de 60 dans une soustraction.",
+            "Écrire **14 h 85** au lieu de 15 h 25.",
+            "Mélanger des **km/h** avec des minutes."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**2 h 30** en minutes&nbsp;?",
+            "De **13 h 40** à **15 h 10**&nbsp;: quelle durée&nbsp;?",
+            "**1,5 h** s’écrit comment en heures et minutes&nbsp;?"
+          ],
+          "reponses": "1) 150 min · 2) 1 h 30 · 3) 1 h 30"
+        }
+      ]
+    }
+  ]
+}

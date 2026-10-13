@@ -1,0 +1,174 @@
+{
+  "titre": "Croquis et plans",
+  "titreSurligne": "plans",
+  "accroche": "Dessiner pour se faire comprendre.",
+  "bonus": "**Croquis** = l’idée · **schéma** = comment ça marche · **plan** = comment le faire",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/technologie/croquis-schemas-et-plans.webp",
+    "prompt": "a glossy violet pencil and a golden ruler over a blueprint sheet with a small cube drawing, sparkles"
+  },
+  "marcel": "Un dessin que\ntout le monde lit !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Trois dessins",
+          "entetes": [
+            "Dessin",
+            "Ce qu’il montre"
+          ],
+          "lignes": [
+            [
+              "**Croquis**",
+              "une idée, à main levée"
+            ],
+            [
+              "**Schéma**",
+              "le fonctionnement, avec des symboles"
+            ],
+            [
+              "**Plan**",
+              "comment fabriquer, à l’échelle, coté"
+            ],
+            [
+              "**Perspective**",
+              "donne le volume, ne se mesure pas"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les mots à connaître",
+          "items": [
+            {
+              "terme": "Échelle",
+              "definition": "rapport entre dessin et réalité"
+            },
+            {
+              "terme": "Cote",
+              "definition": "dimension **réelle**, en millimètres"
+            },
+            {
+              "terme": "Vue",
+              "definition": "face, dessus, gauche"
+            },
+            {
+              "terme": "CAO",
+              "definition": "dessin 3D sur ordinateur"
+            },
+            {
+              "terme": "Symbole normalisé",
+              "definition": "le même pour tout le monde"
+            },
+            {
+              "terme": "Dessin technique",
+              "definition": "un autre nom du plan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire un plan",
+          "etapes": [
+            {
+              "titre": "Les vues",
+              "texte": "repérer face, dessus et gauche"
+            },
+            {
+              "titre": "L’échelle",
+              "texte": "1:10 = dessin 10 fois plus petit"
+            },
+            {
+              "titre": "Les cotes",
+              "texte": "les lire, sans mesurer le papier"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un plan à l’échelle __1:10__ montre une pièce de 3&nbsp;cm sur le papier. Quelle est sa taille réelle&nbsp;?",
+          "calcul": "3 cm × 10 = 30 cm",
+          "aparte": "1:10 = dessin plus petit",
+          "resultat": "[[30 cm]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quel dessin choisir&nbsp;?",
+          "oui": {
+            "titre": "Plan",
+            "texte": "Pour **fabriquer** : à l’échelle et coté."
+          },
+          "non": {
+            "titre": "Perspective",
+            "texte": "Elle donne le volume, mais on ne peut pas y **mesurer**."
+          },
+          "essai": {
+            "texte": "Le schéma ne ressemble pas à l’objet&nbsp;: il montre <i>comment ça marche</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Un croquis montre une idée.",
+              "quoi": "le dessin"
+            },
+            {
+              "texte": "Le plan est à l’échelle et coté.",
+              "quoi": "ses règles"
+            },
+            {
+              "texte": "On lit la cote, on ne mesure pas.",
+              "quoi": "la lecture"
+            }
+          ],
+          "pied": "Les ==trois vues== décrivent l’objet sans ambiguïté."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "**Mesurer** sur le papier au lieu de lire la cote.",
+            "Croire qu’un schéma **ressemble** à l’objet.",
+            "Confondre **1:10** et **10:1**.",
+            "Fabriquer à partir d’une simple **perspective**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel dessin sert à **fabriquer**&nbsp;?",
+            "En quelle unité sont les **cotes**&nbsp;?",
+            "À l’échelle **1:1**, la taille est…&nbsp;?"
+          ],
+          "reponses": "1) le plan · 2) en millimètres · 3) la taille réelle"
+        }
+      ]
+    }
+  ]
+}

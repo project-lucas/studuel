@@ -1,0 +1,185 @@
+{
+  "titre": "L’intensité",
+  "titreSurligne": "intensité",
+  "accroche": "Le débit du courant, en ampères.",
+  "bonus": "I en **ampères (A)** · 1 mA = **0,001 A** · ampèremètre **en série** · dérivation&nbsp;: **les I s’additionnent**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/l-intensite-electrique.webp",
+    "prompt": "a glossy violet ammeter with a round dial and a golden needle, golden wires and a small lamp, tiny sparks, sparkles"
+  },
+  "marcel": "L’intensité, c’est\nle débit du courant !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "L’analogie de l’eau",
+          "entetes": [
+            "Tuyau d’eau",
+            "Circuit"
+          ],
+          "lignes": [
+            [
+              "Le **débit**",
+              "l’**intensité** I (A)"
+            ],
+            [
+              "La **pression**",
+              "la **tension** U (V)"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Ordres de grandeur",
+          "entetes": [
+            "Appareil",
+            "Intensité"
+          ],
+          "lignes": [
+            [
+              "LED",
+              "quelques **mA**"
+            ],
+            [
+              "Lampe de poche",
+              "≈ 0,3 A"
+            ],
+            [
+              "Réfrigérateur",
+              "≈ 1 A"
+            ],
+            [
+              "Plaque de cuisson",
+              "> 10 A"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Mesurer une intensité en trois temps",
+          "etapes": [
+            {
+              "titre": "Brancher",
+              "texte": "l’ampèremètre **en série**&nbsp;: le courant le traverse"
+            },
+            {
+              "titre": "Calibre",
+              "texte": "partir du **plus grand**, puis descendre"
+            },
+            {
+              "titre": "Lire",
+              "texte": "la valeur et écrire l’unité (A)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Dérivation&nbsp;: I₁ = 0,3 A et I₂ = 0,2 A. Intensité __I__ du générateur&nbsp;?",
+          "calcul": "I = I₁ + I₂ = 0,3 + 0,2",
+          "aparte": "loi des nœuds",
+          "resultat": "I = [[0,5 A]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Fusible ou disjoncteur&nbsp;?",
+          "oui": {
+            "titre": "Fusible",
+            "texte": "Il **fond** si l’intensité est trop grande&nbsp;: il faut le **remplacer**."
+          },
+          "non": {
+            "titre": "Disjoncteur",
+            "texte": "Il **coupe** le circuit&nbsp;: on peut le **réarmer**."
+          },
+          "essai": {
+            "texte": "Tous deux coupent <i>avant</i> que les fils ne chauffent assez pour provoquer un incendie."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Les branches sont en dérivation&nbsp;: I = I₁ + I₂",
+              "quoi": "la loi"
+            },
+            {
+              "texte": "I = 0,3 + 0,2",
+              "quoi": "on remplace"
+            },
+            {
+              "texte": "I = 0,5 A",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Écris toujours ==le nom de la loi== (loi des nœuds) avant de calculer."
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Les lois de l’intensité",
+          "items": [
+            {
+              "titre": "En série",
+              "texte": "même intensité en tout point"
+            },
+            {
+              "titre": "En dérivation",
+              "texte": "les intensités des branches s’additionnent"
+            },
+            {
+              "titre": "Multiprises",
+              "texte": "elles additionnent les intensités"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Brancher l’ampèremètre **en dérivation**&nbsp;: **court-circuit**&nbsp;!",
+            "Confondre **mA** et **A**&nbsp;: 1 mA = 0,001 A.",
+            "Croire que l’intensité **diminue** après une lampe en série.",
+            "Brancher trop d’appareils sur **une prise**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Comment branche-t-on un **ampèremètre**&nbsp;?",
+            "Dérivation, I₁ = 1 A et I₂ = 2 A&nbsp;: **I**&nbsp;?",
+            "Combien d’ampères font **50 mA**&nbsp;?"
+          ],
+          "reponses": "1) en série · 2) 3 A · 3) 0,05 A"
+        }
+      ]
+    }
+  ]
+}

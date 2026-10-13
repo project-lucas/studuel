@@ -1,0 +1,159 @@
+{
+  "titre": "Fraction d’un nombre",
+  "titreSurligne": "Fraction",
+  "accroche": "« De » veut dire « multiplier ».",
+  "bonus": "**{3/4}** de 60 = 60 × {3/4} = 45 · retrouver le tout = **diviser** par la fraction",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/prendre-une-fraction-d-un-nombre.webp",
+    "prompt": "a glossy golden pizza cut in four slices with three slices highlighted in violet, sparkles"
+  },
+  "marcel": "« De » = ×\nTout est là !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle",
+          "taille": "mini",
+          "lignes": [
+            "{a/b} de N = N × {a/b}",
+            "{3/4} de 60 = 60 × {3/4} = 45"
+          ],
+          "regle": "Le mot « de » se traduit toujours par ==le signe ×==. Une fraction **plus petite que 1** réduit, une fraction **plus grande que 1** agrandit.",
+          "note": "les {5/4} de 60 = 75, ça augmente&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Fractions et pourcentages",
+          "items": [
+            {
+              "terme": "50 %",
+              "definition": "= {1/2}, la moitié"
+            },
+            {
+              "terme": "25 %",
+              "definition": "= {1/4}, le quart"
+            },
+            {
+              "terme": "10 %",
+              "definition": "= {1/10}, le dixième"
+            },
+            {
+              "terme": "20 %",
+              "definition": "= {1/5}, le cinquième"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Deux méthodes, même résultat",
+          "etapes": [
+            {
+              "titre": "Diviser puis multiplier",
+              "texte": "60 ÷ 4 = 15, puis 15 × 3 = 45"
+            },
+            {
+              "titre": "Multiplier puis diviser",
+              "texte": "60 × 3 = 180, puis 180 ÷ 4 = 45"
+            },
+            {
+              "titre": "Choisir",
+              "texte": "on commence par la division si elle tombe juste"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une classe a 28 élèves. Les __{3/4}__ ont fait leurs devoirs. __Combien__&nbsp;?",
+          "calcul": "28 ÷ 4 = 7",
+          "aparte": "un quart",
+          "resultat": "7 × 3 = [[21 élèves]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Fraction d’une fraction",
+              "texte": "on multiplie&nbsp;: {1/2} des {3/4} = {1/2} × {3/4} = {3/8}."
+            },
+            {
+              "titre": "Retrouver le tout",
+              "texte": "on **divise** par la fraction&nbsp;: 45 ÷ {3/4} = 45 × {4/3} = 60."
+            },
+            {
+              "titre": "Un pourcentage",
+              "texte": "25 % de 80 = 80 × 0,25 = **20**."
+            },
+            {
+              "titre": "Vraisemblance",
+              "texte": "si la fraction est < 1, la partie est **plus petite** que le tout."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Les {3/4} de 28 = 28 × {3/4}",
+              "quoi": "on traduit « de »"
+            },
+            {
+              "texte": "28 ÷ 4 = 7 puis 7 × 3 = 21",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "21 élèves ont fini leurs devoirs.",
+              "quoi": "la phrase"
+            }
+          ],
+          "pied": "Vérifie&nbsp;: 21 est ==plus petit== que 28. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "**Diviser** au lieu de multiplier pour prendre une fraction.",
+            "Multiplier pour **retrouver le tout** (il faut diviser).",
+            "Croire qu’une fraction > 1 **diminue** la quantité.",
+            "Oublier de **multiplier par le numérateur** après la division."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Les **{2/5}** de 50&nbsp;?",
+            "**25 %** de 80&nbsp;?",
+            "Les {3/4} d’un nombre valent 45. **Le nombre**&nbsp;?"
+          ],
+          "reponses": "1) 20 · 2) 20 · 3) 60 (45 ÷ {3/4})"
+        }
+      ]
+    }
+  ]
+}

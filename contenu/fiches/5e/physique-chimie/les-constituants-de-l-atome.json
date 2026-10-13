@@ -1,0 +1,180 @@
+{
+  "titre": "Les constituants",
+  "titreSurligne": "constituants",
+  "accroche": "Un noyau minuscule, un immense vide.",
+  "bonus": "protons **+** · électrons **−** · neutrons **0** · atome neutre : **autant de protons que d’électrons**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/les-constituants-de-l-atome.webp",
+    "prompt": "a glossy golden atom with a violet nucleus made of tiny balls and three small orbiting electrons on thin rings, sparkles"
+  },
+  "marcel": "Le noyau est petit,\nl’atome est vide !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois particules",
+          "entetes": [
+            "Particule",
+            "Charge",
+            "Où ?"
+          ],
+          "lignes": [
+            [
+              "**Proton**",
+              "positive (+)",
+              "noyau"
+            ],
+            [
+              "**Neutron**",
+              "nulle",
+              "noyau"
+            ],
+            [
+              "**Électron**",
+              "négative (−)",
+              "autour du noyau"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "À savoir",
+          "items": [
+            {
+              "terme": "Noyau",
+              "definition": "il concentre presque **toute la masse** de l’atome"
+            },
+            {
+              "terme": "Électron",
+              "definition": "environ **2 000 fois** plus léger qu’un nucléon"
+            },
+            {
+              "terme": "Taille",
+              "definition": "noyau **100 000 fois** plus petit que l’atome : une bille dans un stade"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Identifier l’élément",
+          "etapes": [
+            {
+              "titre": "Compter",
+              "texte": "le nombre de **protons** du noyau"
+            },
+            {
+              "titre": "Chercher",
+              "texte": "H : 1 · C : 6 · O : 8"
+            },
+            {
+              "titre": "Écrire",
+              "texte": "le symbole : une **majuscule**, parfois une minuscule"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un atome de carbone a __6 protons__. Combien d’électrons&nbsp;?",
+          "calcul": "atome neutre\nprotons = électrons",
+          "aparte": "charges égales",
+          "resultat": "[[6 électrons]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Atome ou ion&nbsp;?",
+          "oui": {
+            "titre": "Atome",
+            "texte": "**Autant** de protons que d’électrons&nbsp;: il est **neutre**."
+          },
+          "non": {
+            "titre": "Ion",
+            "texte": "Il a **perdu ou gagné des électrons**&nbsp;: il est **chargé**."
+          },
+          "essai": {
+            "texte": "On ne change **jamais** le nombre de <i>protons</i>&nbsp;: sinon, c’est un **autre élément**."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Symboles et formules",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Symboles",
+              "texte": "H, C, O, N, Fe, Cu, Na, Cl"
+            },
+            {
+              "titre": "La casse",
+              "texte": "**Co** (cobalt) ≠ **CO** (gaz)"
+            },
+            {
+              "titre": "Indice",
+              "texte": "il compte les atomes avant lui"
+            },
+            {
+              "titre": "H<sub>2</sub>O",
+              "texte": "2 atomes H et 1 atome O"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que le **neutron** est chargé&nbsp;: sa charge est **nulle**.",
+            "Croire qu’un ion a gagné des **protons**.",
+            "Écrire **CO** pour le cobalt&nbsp;: la casse compte.",
+            "Placer les **électrons** dans le noyau."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 6,
+          "titre": "Un atome, c’est surtout du vide",
+          "paragraphes": [
+            "Si l’atome était un **stade de football**, le noyau serait une **bille** posée au centre du terrain. Les électrons tournent loin autour&nbsp;: entre les deux, il n’y a ==rien==.",
+            "Le noyau est pourtant très lourd&nbsp;: c’est lui qui porte presque toute la **masse** de l’atome."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Où sont les **protons** et les **neutrons**&nbsp;?",
+            "Un atome d’oxygène a combien de **protons**&nbsp;?",
+            "Que contient la molécule **CO<sub>2</sub>**&nbsp;?"
+          ],
+          "reponses": "1) dans le noyau · 2) 8 · 3) 1 atome C et 2 atomes O"
+        }
+      ]
+    }
+  ]
+}

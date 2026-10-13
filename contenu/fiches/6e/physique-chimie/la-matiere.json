@@ -1,0 +1,114 @@
+{
+  "titre": "La matière",
+  "titreSurligne": "matière",
+  "accroche": "Trois états, une seule matière.",
+  "bonus": "eau pure&nbsp;: fond à **0 °C** · bout à **100 °C** · la **masse** se conserve · le **volume** change",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/physique-chimie/la-matiere.webp",
+    "prompt": "a glossy violet ice cube, a golden water drop and a puffy golden cloud lined up side by side, tiny golden sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Glace, eau, vapeur :\ntoujours de l’eau !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois états",
+          "entetes": ["État", "Forme", "Volume", "Exemple"],
+          "lignes": [
+            ["**Solide**", "propre", "propre", "un glaçon garde sa forme"],
+            ["**Liquide**", "aucune (celle du verre)", "propre", "l’eau, surface libre **horizontale**"],
+            ["**Gaz**", "aucune", "aucun", "il occupe **tout** l’espace"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Les changements d’état",
+          "items": [
+            { "titre": "Solide → liquide", "texte": "la **fusion**." },
+            { "titre": "Liquide → solide", "texte": "la **solidification**." },
+            { "titre": "Liquide → gaz", "texte": "la **vaporisation**." },
+            { "titre": "Gaz → liquide", "texte": "la **liquéfaction**." },
+            { "titre": "Solide → gaz", "texte": "la **sublimation**." }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "Ce qui se conserve",
+          "petite": true,
+          "lignes": ["100 g de glace", "= 100 g d’eau"],
+          "regle": "La ==masse se conserve== quand l’état change. Le **volume**, lui, peut changer. La matière reste la même&nbsp;: c’est toujours de l’eau.",
+          "note": "la glace prend plus de place&nbsp;!"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un glaçon fond dans un verre. Sa température pendant la fusion&nbsp;?",
+          "calcul": "il reste de la glace → la température est bloquée",
+          "aparte": "l’énergie sert à fondre",
+          "resultat": "elle reste à [[0 °C]]"
+        },
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Reconnaître un état en trois temps",
+          "etapes": [
+            { "titre": "Forme", "texte": "garde-t-il sa forme dans un récipient&nbsp;?" },
+            { "titre": "Volume", "texte": "occupe-t-il tout l’espace disponible&nbsp;?" },
+            { "titre": "Conclure", "texte": "forme propre&nbsp;: solide · volume propre&nbsp;: liquide · tout l’espace&nbsp;: gaz" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Solide compact ou divisé",
+          "items": [
+            { "titre": "Compact", "texte": "un seul bloc (un caillou)." },
+            { "titre": "Divisé", "texte": "sable, farine&nbsp;: ça coule, mais **chaque grain** garde sa forme." }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le sable est un **liquide**.",
+            "Penser que la **masse** change quand la glace fond.",
+            "Croire que la température **monte** pendant la fusion.",
+            "Oublier que la glace prend **plus de place** que l’eau.",
+            "Dire qu’un gaz a un **volume propre**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel est le nom du passage **liquide → gaz**&nbsp;?",
+            "100 g de glace fondent&nbsp;: masse de l’eau obtenue&nbsp;?",
+            "À quelle température l’eau pure **bout**-elle&nbsp;?"
+          ],
+          "reponses": "1) la vaporisation · 2) 100 g · 3) 100 °C"
+        }
+      ]
+    }
+  ]
+}

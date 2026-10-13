@@ -1,0 +1,185 @@
+{
+  "titre": "Les articles",
+  "titreSurligne": "articles",
+  "accroche": "A, an, the… ou rien du tout.",
+  "bonus": "**a** + son de consonne · **an** + son de voyelle · **the** · article zéro",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/anglais/les-articles-definis-et-les-articles-indefinis.webp",
+    "prompt": "a glossy violet open book with a golden letter shaped like a small flag above it, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "A, an, the&nbsp;?\nC’est le son&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "A ou an&nbsp;?",
+          "lignes": [
+            "**a** + consonne · **an** + voyelle"
+          ],
+          "petite": true,
+          "regle": "C’est le **son** qui décide, jamais la lettre. Seulement devant un nom **singulier dénombrable**.",
+          "note": "an hour, a university"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois possibilités",
+          "entetes": [
+            "L’article",
+            "Quand",
+            "L’exemple"
+          ],
+          "lignes": [
+            [
+              "**a / an**",
+              "quelque chose de **nouveau**",
+              "<i>I bought **a** car.</i>"
+            ],
+            [
+              "**the**",
+              "déjà **connu** ou unique",
+              "<i>**The** car is red.</i>"
+            ],
+            [
+              "**rien**",
+              "sens **général**",
+              "<i>I like dogs.</i> (j’aime les chiens)"
+            ],
+            [
+              "**a** (métier)",
+              "dire un **métier**",
+              "<i>She is **a** dentist.</i>"
+            ],
+            [
+              "**the** (lieux)",
+              "fleuves, océans, chaînes",
+              "<i>the Thames, the Alps</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "On emploie THE pour…",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Ce qu’on a déjà dit",
+              "texte": "<i>I have a dog. **The** dog is big.</i> (le chien dont je parle)"
+            },
+            {
+              "titre": "Ce qui est unique",
+              "texte": "<i>**the** sun, **the** moon, **the** best</i> (superlatif)"
+            },
+            {
+              "titre": "Les noms de lieux",
+              "texte": "<i>**the** Thames, **the** Atlantic, **the** Alps, **the** Netherlands</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Un sport ou un instrument&nbsp;?",
+          "oui": {
+            "titre": "Instrument = the",
+            "texte": "<i>I play **the** piano.</i> (je joue du piano)"
+          },
+          "non": {
+            "titre": "Sport = rien",
+            "texte": "<i>I play football.</i> — jamais <i>I play the football</i>."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>She plays ___ guitar.</i> → **the**&nbsp;: une guitare est un instrument."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Quel article&nbsp;?",
+          "etapes": [
+            {
+              "titre": "Pluriel ou général&nbsp;?",
+              "texte": "Un pluriel ou un indénombrable au sens général → **rien**."
+            },
+            {
+              "titre": "Déjà connu&nbsp;?",
+              "texte": "On l’a déjà cité, ou il est unique → **the**."
+            },
+            {
+              "titre": "Sinon",
+              "texte": "Un élément nouveau → **a** (consonne) ou **an** (voyelle)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Pas d’article devant…",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Noms propres",
+              "texte": "<i>France, Paris, English</i>"
+            },
+            {
+              "titre": "Repas",
+              "texte": "<i>for breakfast, at lunch</i>"
+            },
+            {
+              "titre": "Saisons",
+              "texte": "<i>in winter, in summer</i>"
+            },
+            {
+              "titre": "L’école, pour étudier",
+              "texte": "<i>she goes to school</i> (mais <i>to **the** school</i>&nbsp;: le bâtiment)"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>a hour</i> → <i>**an** hour</i> (le h ne se prononce pas).",
+            "<i>a university</i>&nbsp;: on dit «&nbsp;you&nbsp;», un son de consonne.",
+            "<i>I like the dogs</i> pour «&nbsp;j’aime les chiens&nbsp;» → <i>I like dogs</i>.",
+            "<i>twice **a** week</i>&nbsp;: «&nbsp;deux fois par semaine&nbsp;» prend <i>a</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>___ apple</i> ou <i>___ banana</i>&nbsp;: a ou an&nbsp;?",
+            "<i>I play ___ football.</i> (the ou rien)",
+            "<i>I have a cat. ___ cat is black.</i>"
+          ],
+          "reponses": "1) an apple, a banana 2) rien 3) The"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "titre": "Symétries",
+  "titreSurligne": "Symétries",
+  "accroche": "Le miroir et le demi-tour.",
+  "bonus": "Elles conservent **longueurs, angles, aires** : figure et image se superposent",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/symetrie-axiale-et-centrale.webp",
+    "prompt": "a glossy violet butterfly-like shape mirrored across a golden dotted axis line, with a small golden dot at the center, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Miroir ou\ndemi-tour ?",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Axiale (le miroir)",
+          "lignes": ["l’axe est la médiatrice de [MM’]"],
+          "regle": "Symétrie par rapport à une **droite**. Un point **sur l’axe** est sa propre image.",
+          "note": "perpendiculaire, même distance"
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Centrale (le demi-tour)",
+          "lignes": ["O est le milieu de [MM’]"],
+          "regle": "Symétrie par rapport à un **point**. M, O et M’ sont ==alignés==.",
+          "note": "le centre est sa propre image"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Construire le symétrique d’un point (axiale)",
+          "etapes": [
+            { "titre": "Perpendiculaire", "texte": "à l’axe, passant par M" },
+            { "titre": "Reporter", "texte": "la même distance de l’autre côté" },
+            { "titre": "Nommer", "texte": "le point obtenu M’" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Les figures et leurs symétries",
+          "entetes": ["Figure", "Axes", "Centre"],
+          "lignes": [
+            ["Carré", "4", "oui"],
+            ["Rectangle, losange", "2", "oui"],
+            ["Parallélogramme", "**0**", "oui"],
+            ["Triangle isocèle", "1", "**non**"],
+            ["Triangle équilatéral", "3", "**non**"]
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "M est à 3 cm de l’axe. __M’__ est à quelle distance de l’axe&nbsp;?",
+          "calcul": "même distance, autre côté",
+          "aparte": "l’axe est la médiatrice",
+          "resultat": "[[3 cm]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Le test du texte",
+          "oui": { "titre": "Axiale", "texte": "Elle **retourne**&nbsp;: le texte est inversé, comme dans un miroir." },
+          "non": { "titre": "Centrale", "texte": "Elle **pivote**&nbsp;: le texte est à l’envers, mais dans le bon ordre." },
+          "essai": { "texte": "Les deux conservent les longueurs, les angles, le parallélisme et les milieux." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "M’ est le symétrique de M par rapport à (d),", "quoi": "l’énoncé" },
+            { "texte": "donc (d) est la médiatrice de [MM’].", "quoi": "la propriété" }
+          ],
+          "pied": "Une symétrie ==conserve== les longueurs."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **axe** et **centre** de symétrie.",
+            "Croire que le parallélogramme a des axes&nbsp;: il n’en a **aucun**.",
+            "Reporter la distance du **même côté** de l’axe."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien d’**axes** a un rectangle&nbsp;?",
+            "O est le centre, OM = 4 cm&nbsp;: **OM’**&nbsp;?",
+            "Un triangle équilatéral a-t-il un **centre** de symétrie&nbsp;?"
+          ],
+          "reponses": "1) 2 · 2) 4 cm (O est le milieu de [MM’]) · 3) non"
+        }
+      ]
+    }
+  ]
+}

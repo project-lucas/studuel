@@ -1,0 +1,179 @@
+{
+  "titre": "Cycle de vie d’un OST",
+  "titreSurligne": "Cycle de vie",
+  "accroche": "Du minerai jusqu’à la déchèterie.",
+  "bonus": "**Extraction → Fabrication → Distribution → Utilisation → Fin de vie** · **réduire, réparer, recycler**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/technologie/cycle-de-vie-d-un-ost.webp",
+    "prompt": "a glossy violet circular recycling arrow loop around a golden smartphone, tiny golden leaves and gems, sparkles"
+  },
+  "marcel": "La vie d’un objet\nest un cercle !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les cinq étapes",
+          "entetes": [
+            "Étape",
+            "Contenu"
+          ],
+          "lignes": [
+            [
+              "**1. Extraction**",
+              "minerai, pétrole, bois"
+            ],
+            [
+              "**2. Fabrication**",
+              "transformer, assembler"
+            ],
+            [
+              "**3. Distribution**",
+              "transport et vente"
+            ],
+            [
+              "**4. Utilisation**",
+              "usage, entretien, réparation"
+            ],
+            [
+              "**5. Fin de vie**",
+              "tri, recyclage, enfouissement"
+            ],
+            [
+              "**Bilan**",
+              "énergie, eau, déchets"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les mots à connaître",
+          "items": [
+            {
+              "terme": "ACV",
+              "definition": "mesure les **impacts** sur toute la chaîne"
+            },
+            {
+              "terme": "Économie circulaire",
+              "definition": "on **referme la boucle** au lieu de jeter"
+            },
+            {
+              "terme": "DEEE",
+              "definition": "déchets **électriques et électroniques**"
+            },
+            {
+              "terme": "Obsolescence",
+              "definition": "technique, logicielle ou esthétique"
+            },
+            {
+              "terme": "Réparabilité",
+              "definition": "un **indice** est imposé par la loi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Réduire l’impact d’un objet",
+          "etapes": [
+            {
+              "titre": "Réduire",
+              "texte": "écoconception&nbsp;: moins de matière et d’emballage"
+            },
+            {
+              "titre": "Réemployer",
+              "texte": "réparer, grâce aux pièces détachées"
+            },
+            {
+              "titre": "Recycler",
+              "texte": "le déchet redevient matière première"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un __téléphone__ en panne et plus mis à jour. Quelle obsolescence&nbsp;?",
+          "calcul": "plus de mises à jour",
+          "aparte": "côté programme",
+          "resultat": "obsolescence [[logicielle]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quel modèle&nbsp;?",
+          "oui": {
+            "titre": "Circulaire",
+            "texte": "On **réutilise**, répare et recycle&nbsp;: la boucle se referme."
+          },
+          "non": {
+            "titre": "Linéaire",
+            "texte": "Extraire, fabriquer, **jeter**&nbsp;: les ressources s’épuisent."
+          },
+          "essai": {
+            "texte": "Un téléphone rapporté au point de collecte entre dans un modèle <i>circulaire</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Chaque étape consomme énergie et ressources.",
+              "quoi": "les entrées"
+            },
+            {
+              "texte": "Elle produit des déchets et des émissions.",
+              "quoi": "les sorties"
+            },
+            {
+              "texte": "L’ACV mesure ces impacts sur toute la chaîne.",
+              "quoi": "la méthode"
+            }
+          ],
+          "pied": "Un DEEE va ==à la déchèterie==, jamais à la poubelle ordinaire."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier la **fin de vie** et la distribution.",
+            "Jeter un **DEEE** à la poubelle ordinaire.",
+            "Croire que le plus cher à fabriquer pollue plus **sur la durée**.",
+            "Confondre **recycler** et réutiliser.",
+            "Penser que le recyclage supprime **tout** impact."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien d’**étapes** compte le cycle de vie&nbsp;?",
+            "Que signifie **ACV**&nbsp;?",
+            "Où dépose-t-on un **vieil ordinateur**&nbsp;?"
+          ],
+          "reponses": "1) cinq · 2) analyse du cycle de vie · 3) à la déchèterie ou en point de collecte"
+        }
+      ]
+    }
+  ]
+}

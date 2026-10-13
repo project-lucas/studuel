@@ -1,0 +1,174 @@
+{
+  "titre": "Moyenne pondérée",
+  "titreSurligne": "pondérée",
+  "accroche": "Quand chaque valeur pèse son poids.",
+  "bonus": "moyenne = **somme des (valeur × poids) ÷ somme des poids** · toujours entre min et max",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/calculer-une-moyenne-et-une-moyenne-ponderee.webp",
+    "prompt": "a glossy golden balance scale with violet weights of different sizes, a small star at the balance point, sparkles"
+  },
+  "marcel": "Divise par les poids,\npas par les valeurs !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La moyenne pondérée",
+          "taille": "mini",
+          "lignes": [
+            "{somme des valeurs × poids/somme des poids}"
+          ],
+          "regle": "On divise par la **somme des POIDS**, jamais par le nombre de valeurs ==distinctes==.",
+          "note": "moyenne simple : poids de 1&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les mots",
+          "items": [
+            {
+              "terme": "Moyenne simple",
+              "definition": "somme des valeurs ÷ nombre de valeurs"
+            },
+            {
+              "terme": "Poids",
+              "definition": "un **effectif** ou un **coefficient**"
+            },
+            {
+              "terme": "Étendue",
+              "definition": "à donner avec la moyenne : elle dit la **dispersion**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Multiplier",
+              "texte": "chaque valeur par son poids : 8 × 3, 12 × 5, 16 × 2"
+            },
+            {
+              "titre": "Additionner",
+              "texte": "les produits, puis les poids : 116 et 10"
+            },
+            {
+              "titre": "Diviser",
+              "texte": "le total des produits par le total des poids : 11,6"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "30 élèves à 12 et 10 élèves à 16&nbsp;: __moyenne des 40__&nbsp;?",
+          "calcul": "(30 × 12 + 10 × 16) ÷ 40",
+          "aparte": "360 + 160 = 520",
+          "resultat": "520 ÷ 40 = [[13]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Plusieurs groupes",
+          "oui": {
+            "titre": "Les totaux",
+            "texte": "On repasse par les **totaux** de chaque groupe&nbsp;: résultat **13**."
+          },
+          "non": {
+            "titre": "Moyenne des moyennes",
+            "texte": "(12 + 16) ÷ 2 = **14**&nbsp;: faux, les groupes n’ont pas le même poids."
+          },
+          "essai": {
+            "texte": "Maths 14 (coef 4), français 10 (coef 4), histoire 16 (coef 2)&nbsp;: <i>128 ÷ 10</i> = **12,8**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Ce que la moyenne ne dit pas",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Même moyenne",
+              "texte": "10 et 10, ou 0 et 20 : moyenne 10 dans les deux cas."
+            },
+            {
+              "titre": "Avec l’étendue",
+              "texte": "on accompagne la moyenne de l’étendue."
+            },
+            {
+              "titre": "Comprise entre",
+              "texte": "la moyenne est entre la plus petite et la plus grande valeur."
+            },
+            {
+              "titre": "Avec des effectifs",
+              "texte": "chaque valeur est comptée autant de fois que son effectif."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "8 × 3 + 12 × 5 + 16 × 2 = 116",
+              "quoi": "somme des produits"
+            },
+            {
+              "texte": "3 + 5 + 2 = 10",
+              "quoi": "somme des poids"
+            },
+            {
+              "texte": "116 ÷ 10 = 11,6",
+              "quoi": "la moyenne"
+            }
+          ],
+          "pied": "Contrôle&nbsp;: 11,6 est bien ==entre 8 et 16==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Diviser par **3** au lieu de **10**.",
+            "Faire la moyenne des **moyennes**.",
+            "Un résultat **hors** de [min ; max].",
+            "Oublier de **multiplier** par les poids."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Moyenne de **8, 12, 12, 16, 17**&nbsp;?",
+            "Notes 8 (×3), 12 (×5), 16 (×2)&nbsp;: **moyenne**&nbsp;?",
+            "20 élèves à 10 et 20 à 14&nbsp;: **moyenne** des 40&nbsp;?"
+          ],
+          "reponses": "1) 13 · 2) 11,6 · 3) 12 (même poids : (10+14) ÷ 2)"
+        }
+      ]
+    }
+  ]
+}

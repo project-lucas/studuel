@@ -1,0 +1,190 @@
+{
+  "titre": "La phrase interrogative",
+  "titreSurligne": "interrogative",
+  "accroche": "Fermée, ouverte, indirecte.",
+  "bonus": "mot interrogatif + auxiliaire + sujet + verbe",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/anglais/la-phrase-interrogative.webp",
+    "prompt": "a glossy violet question mark with a golden dot and small golden speech bubbles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Auxiliaire d’abord,\nsujet ensuite&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La question ouverte",
+          "lignes": [
+            "**mot** + **aux** + **sujet** + **verbe**"
+          ],
+          "petite": true,
+          "regle": "**Where** **do** **you** **live**&nbsp;? L’auxiliaire passe devant le sujet. Sans auxiliaire → **do / does / did**.",
+          "note": "yes/no : sans mot"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les mots interrogatifs",
+          "entetes": [
+            "Le mot",
+            "Il demande",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "what / who",
+              "quoi / qui",
+              "<i>What did she say?</i>"
+            ],
+            [
+              "where / when",
+              "où / quand",
+              "<i>Where do you live?</i>"
+            ],
+            [
+              "why / how",
+              "pourquoi / comment",
+              "<i>How are you?</i>"
+            ],
+            [
+              "which / whose",
+              "lequel / à qui",
+              "<i>Whose bag is it?</i>"
+            ],
+            [
+              "how much / many",
+              "combien",
+              "<i>How many books?</i>"
+            ],
+            [
+              "how long / often",
+              "durée, fréquence",
+              "<i>How long have you been here?</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Trois cas",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Avec be",
+              "texte": "<i>Are you ready?</i> — be passe devant."
+            },
+            {
+              "titre": "Avec un auxiliaire",
+              "texte": "<i>Have you finished? Can you swim?</i>"
+            },
+            {
+              "titre": "Temps simple",
+              "texte": "On ajoute **do / does / did**&nbsp;: <i>Do you like it?</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Question indirecte",
+          "oui": {
+            "titre": "Ordre de l’affirmative",
+            "texte": "<i>Do you know where he lives?</i>"
+          },
+          "non": {
+            "titre": "Ordre de la question",
+            "texte": "<i>Do you know where does he live?</i> — c’est fautif."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Could you tell me where ___? (the station is / is the station)</i> → **the station is**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Poser une question",
+          "etapes": [
+            {
+              "titre": "Le mot&nbsp;?",
+              "texte": "Choisis le **mot interrogatif** (ou aucun)."
+            },
+            {
+              "titre": "L’auxiliaire",
+              "texte": "be, have, can… ou **do / does / did**."
+            },
+            {
+              "titre": "Sujet + verbe",
+              "texte": "Verbe à la **base** après do."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Le mot est le sujet",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Pas de do",
+              "texte": "<i>Who broke the window?</i> (qui = sujet)"
+            },
+            {
+              "titre": "Avec do",
+              "texte": "<i>Who did you see?</i> (qui = complément)"
+            },
+            {
+              "titre": "Réponse courte",
+              "texte": "<i>Yes, I do. / No, I don’t.</i>"
+            },
+            {
+              "titre": "Avec be",
+              "texte": "<i>Where is he?</i> — pas de do"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Where you live?</i> → <i>Where **do** you live?</i>",
+            "<i>Does she likes it?</i> → <i>Does she **like** it?</i>",
+            "<i>Who did break it?</i> → <i>Who **broke** it?</i>",
+            "Dans une question indirecte, plus de **do**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>___ you like pizza?</i>",
+            "<i>___ broke the window? (qui)</i>",
+            "<i>Do you know where he ___? (live)</i>"
+          ],
+          "reponses": "1) Do 2) Who 3) lives"
+        }
+      ]
+    }
+  ]
+}

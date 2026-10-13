@@ -1,0 +1,194 @@
+{
+  "titre": "Signal et information",
+  "titreSurligne": "information",
+  "accroche": "Transporter sans déplacer de matière.",
+  "bonus": "**Émetteur → milieu → récepteur** · 1 octet = **8 bits** · numérique = **0 et 1** · lumière&nbsp;: **300 000 km/s**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/signal-et-information.webp",
+    "prompt": "a glossy violet smartphone sending golden wave rings toward a small golden satellite dish, tiny binary sparks, sparkles"
+  },
+  "marcel": "Un signal transporte\nune information !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "La chaîne de transmission",
+          "items": [
+            {
+              "terme": "Émetteur",
+              "definition": "il envoie le signal (téléphone, télécommande)."
+            },
+            {
+              "terme": "Milieu",
+              "definition": "il porte le signal (air, fil, fibre, vide)."
+            },
+            {
+              "terme": "Récepteur",
+              "definition": "il reçoit l’information (oreille, radio, œil)."
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois familles de signaux",
+          "entetes": [
+            "Famille",
+            "Dans le vide&nbsp;?"
+          ],
+          "lignes": [
+            [
+              "**Lumineux** (fibre, télécommande)",
+              "**oui**"
+            ],
+            [
+              "**Sonores** (voix, klaxon)",
+              "**non**"
+            ],
+            [
+              "**Électriques**, radio, Wi-Fi, 5G",
+              "**oui**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Un objet connecté en trois temps",
+          "etapes": [
+            {
+              "titre": "Capteur",
+              "texte": "il transforme température, lumière, pression en **signal électrique**"
+            },
+            {
+              "titre": "Microcontrôleur",
+              "texte": "il **traite** le signal"
+            },
+            {
+              "titre": "Actionneur",
+              "texte": "il **agit** (moteur, lampe, alarme)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une photo pèse __3 Mo__. Combien d’octets&nbsp;?",
+          "calcul": "1 Mo = 10<sup>6</sup> octets\n3 × 10<sup>6</sup>",
+          "aparte": "= 3 000 000",
+          "resultat": "[[3 000 000 octets]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Analogique ou numérique&nbsp;?",
+          "oui": {
+            "titre": "Numérique",
+            "texte": "Suite de **0 et de 1** (bits)&nbsp;: il se copie **sans perte**."
+          },
+          "non": {
+            "titre": "Analogique",
+            "texte": "Variation **continue** (disque vinyle, cadran)&nbsp;: il se **dégrade** à chaque copie."
+          },
+          "essai": {
+            "texte": "C’est cette robustesse qui a fait passer photo, musique et télévision au <i>numérique</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 5,
+          "titre": "Unités de l’information",
+          "entetes": [
+            "Unité",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "1 octet",
+              "8 bits"
+            ],
+            [
+              "1 ko",
+              "1 000 octets"
+            ],
+            [
+              "1 Mo",
+              "10<sup>6</sup> octets"
+            ],
+            [
+              "1 Go",
+              "10<sup>9</sup> octets"
+            ]
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le son se propage **dans le vide**.",
+            "Confondre **bit** et **octet** (1 octet = 8 bits).",
+            "Penser qu’un signal **déplace de la matière**.",
+            "Oublier le **milieu** de propagation."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": "★",
+          "titre": "Signaux du quotidien",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Feu tricolore",
+              "texte": "signal lumineux"
+            },
+            {
+              "titre": "Klaxon",
+              "texte": "signal sonore"
+            },
+            {
+              "titre": "Wi-Fi, 4G",
+              "texte": "ondes électromagnétiques"
+            },
+            {
+              "titre": "Télécommande",
+              "texte": "infrarouge, invisible"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Les **3 éléments** de la chaîne de transmission&nbsp;?",
+            "Un son voyage-t-il **dans le vide**&nbsp;?",
+            "Combien de bits dans **1 octet**&nbsp;?"
+          ],
+          "reponses": "1) émetteur, milieu, récepteur · 2) non · 3) 8"
+        }
+      ]
+    }
+  ]
+}

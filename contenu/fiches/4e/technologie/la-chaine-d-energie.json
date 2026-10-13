@@ -1,0 +1,159 @@
+{
+  "titre": "La chaîne d’énergie",
+  "titreSurligne": "énergie",
+  "accroche": "Alimenter, distribuer, convertir, agir.",
+  "bonus": "**Alimenter → Distribuer → Convertir → Transmettre → Action** · la chaîne d’énergie **agit**, celle d’information **décide**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/technologie/la-chaine-d-energie.webp",
+    "prompt": "a glossy violet automatic gate with a golden electric motor and gears beside it, a battery and a plug feeding power through a glowing line, sparkles"
+  },
+  "marcel": "Quatre fonctions,\ntoujours dans l’ordre !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La chaîne",
+          "taille": "mini",
+          "lignes": [
+            "Alimenter → Distribuer",
+            "→ Convertir → Transmettre"
+          ],
+          "regle": "L’énergie circule dans cet ordre jusqu’à l’==action== sur le système (ouvrir un portail, faire tourner une roue).",
+          "note": "chaque fonction a son composant&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Fonction et composants",
+          "entetes": [
+            "Fonction",
+            "Composants"
+          ],
+          "lignes": [
+            [
+              "**Alimenter**",
+              "pile, batterie, secteur"
+            ],
+            [
+              "**Distribuer**",
+              "interrupteur, relais, transistor"
+            ],
+            [
+              "**Convertir**",
+              "actionneur : moteur électrique"
+            ],
+            [
+              "**Transmettre**",
+              "réducteur, pignon, crémaillère"
+            ],
+            [
+              "**Action**",
+              "ce que fait le système"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Analyser un système en trois temps",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "l’action finale du système (ouvrir, rouler, éclairer)"
+            },
+            {
+              "titre": "Remonter",
+              "texte": "de l’action vers la source en nommant chaque fonction"
+            },
+            {
+              "titre": "Associer",
+              "texte": "un composant à chaque fonction : moteur = convertir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un __portail automatique__ s’ouvre. Quel composant __convertit__&nbsp;?",
+          "calcul": "électrique → mouvement",
+          "aparte": "l’actionneur",
+          "resultat": "le [[moteur électrique]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Énergie ou information&nbsp;?",
+          "oui": {
+            "titre": "Chaîne d’énergie",
+            "texte": "Elle **agit** : alimenter, distribuer, convertir, transmettre."
+          },
+          "non": {
+            "titre": "Chaîne d’information",
+            "texte": "Elle **décide** : acquérir, traiter, communiquer."
+          },
+          "essai": {
+            "texte": "Le microcontrôleur <i>décide</i> d’ouvrir&nbsp;; le relais <i>distribue</i> l’énergie au moteur."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Alimenter : la batterie du portail",
+              "quoi": "la source"
+            },
+            {
+              "texte": "Distribuer : le relais · Convertir : le moteur",
+              "quoi": "les fonctions"
+            },
+            {
+              "texte": "Transmettre : le réducteur et la crémaillère",
+              "quoi": "jusqu’à l’action"
+            }
+          ],
+          "pied": "On cite ==la fonction== puis ==le composant==, dans l’ordre de la chaîne."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **convertir** (moteur) et **transmettre** (réducteur).",
+            "Citer les fonctions **dans le désordre**.",
+            "Prendre le **capteur** pour un actionneur.",
+            "Oublier l’**action** à la fin de la chaîne."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle fonction réalise une **pile**&nbsp;?",
+            "Un **relais** remplit quelle fonction&nbsp;?",
+            "Un **réducteur** sert à&nbsp;?"
+          ],
+          "reponses": "1) alimenter · 2) distribuer · 3) transmettre le mouvement"
+        }
+      ]
+    }
+  ]
+}

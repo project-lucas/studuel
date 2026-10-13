@@ -1,0 +1,181 @@
+{
+  "titre": "Les pronoms relatifs",
+  "titreSurligne": "relatifs",
+  "accroche": "Who, which, that, whose, where.",
+  "bonus": "who = personne · which = chose · whose = possession · where = lieu",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/anglais/les-pronoms-relatifs.webp",
+    "prompt": "a glossy violet golden link connecting two speech bubbles with sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Un relatif relie\net évite la répétition&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le choix",
+          "lignes": [
+            "**who** · **which** · **that**"
+          ],
+          "petite": true,
+          "regle": "**who** = personne, **which** = chose, **that** = personne ou chose (sans virgule).",
+          "note": "la fonction décide"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le pronom selon l’antécédent",
+          "entetes": [
+            "Le pronom",
+            "Il reprend",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "who",
+              "une personne",
+              "<i>the man **who** lives here</i>"
+            ],
+            [
+              "which",
+              "une chose",
+              "<i>the book **which** I bought</i>"
+            ],
+            [
+              "whose",
+              "la possession",
+              "<i>the girl **whose** father is a doctor</i>"
+            ],
+            [
+              "where",
+              "un lieu",
+              "<i>the town **where** I was born</i>"
+            ],
+            [
+              "when",
+              "un temps",
+              "<i>the day **when** we met</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Deux sortes de relatives",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Déterminative",
+              "texte": "Indispensable au sens, **sans virgule**, <i>that</i> possible, pronom omis si complément&nbsp;: <i>the man (who) I called</i>"
+            },
+            {
+              "titre": "Explicative",
+              "texte": "Ajoute une info, **entre virgules**, <i>that</i> impossible, pronom **jamais** omis&nbsp;: <i>My brother, **who** lives in London, is a teacher.</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Peut-on l’omettre&nbsp;?",
+          "oui": {
+            "titre": "Complément",
+            "texte": "<i>the man (who) I called</i> — on peut supprimer le relatif."
+          },
+          "non": {
+            "titre": "Sujet",
+            "texte": "<i>the man who called</i> — **obligatoire**&nbsp;: <i>the man called</i> est faux."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>The film ___ I saw was great.</i> → **that / which / rien** (complément)."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Trouver le bon relatif",
+          "etapes": [
+            {
+              "titre": "Qui est repris&nbsp;?",
+              "texte": "Personne → **who** ; chose → **which / that**."
+            },
+            {
+              "titre": "Quelle fonction&nbsp;?",
+              "texte": "Sujet → **obligatoire** ; complément → on peut l’omettre."
+            },
+            {
+              "titre": "Des virgules&nbsp;?",
+              "texte": "Entre virgules → pas de **that**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "La préposition",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Courant",
+              "texte": "à la fin&nbsp;: <i>the girl who I spoke to</i>"
+            },
+            {
+              "titre": "Soutenu",
+              "texte": "elle remonte&nbsp;: <i>the girl to whom I spoke</i>"
+            },
+            {
+              "titre": "whose",
+              "texte": "= « dont »&nbsp;: <i>the boy whose bike was stolen</i>"
+            },
+            {
+              "titre": "where",
+              "texte": "= « où »&nbsp;: <i>the town where I live</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "« Que » ne se traduit pas mot à mot&nbsp;: <i>that, which, who</i> ou **rien**.",
+            "<i>the man which lives here</i> → <i>the man **who** lives here.</i>",
+            "Avec une explicative, pas de **that**&nbsp;: <i>My brother, that lives…</i> est faux.",
+            "« Dont » → **whose**, jamais <i>of which</i> pour une personne."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>The girl ___ father is a doctor is my friend.</i>",
+            "<i>The town ___ I was born is small.</i>",
+            "<i>The man ___ lives next door is a nurse.</i>"
+          ],
+          "reponses": "1) whose 2) where 3) who (ou that)"
+        }
+      ]
+    }
+  ]
+}

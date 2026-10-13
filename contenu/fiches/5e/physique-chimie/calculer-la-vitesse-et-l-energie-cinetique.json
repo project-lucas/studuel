@@ -1,0 +1,170 @@
+{
+  "titre": "Énergie cinétique",
+  "titreSurligne": "cinétique",
+  "accroche": "Doubler la vitesse, quadrupler le danger.",
+  "bonus": "E<sub>c</sub> = ½ × m × v<sup>2</sup> · E<sub>c</sub> en **J**, m en **kg**, v en **m/s** · km/h ÷ 3,6 = m/s",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/calculer-la-vitesse-et-l-energie-cinetique.webp",
+    "prompt": "a glossy violet toy car speeding with golden speed lines and a golden lightning bolt above it, a small speedometer, sparkles"
+  },
+  "marcel": "Vitesse au carré,\ndanger au carré !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’énergie cinétique",
+          "petite": true,
+          "lignes": [
+            "E<sub>c</sub> = ½ × m × v<sup>2</sup>"
+          ],
+          "regle": "**E<sub>c</sub>** en **joules (J)**, **m** en **kilogrammes (kg)**, **v** en **mètres par seconde** — ==jamais en km/h==.",
+          "note": "v<sup>2</sup> = v × v&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "L’effet du carré",
+          "entetes": [
+            "On multiplie…",
+            "E<sub>c</sub> devient"
+          ],
+          "lignes": [
+            [
+              "la **masse** par 2",
+              "**× 2**"
+            ],
+            [
+              "la **vitesse** par 2",
+              "**× 4**"
+            ],
+            [
+              "la **vitesse** par 3",
+              "**× 9**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le calcul, étape par étape",
+          "etapes": [
+            {
+              "titre": "Convertir",
+              "texte": "la vitesse en **m/s** (÷ 3,6) et la masse en **kg**"
+            },
+            {
+              "titre": "Appliquer",
+              "texte": "E<sub>c</sub> = 0,5 × m × v<sup>2</sup>"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "le nombre, avec le **joule**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une voiture de __1 000 kg__ roule à __72 km/h__. Son E<sub>c</sub>&nbsp;?",
+          "calcul": "72 ÷ 3,6 = 20 m/s\n0,5 × 1 000 × 20<sup>2</sup>",
+          "aparte": "20 × 20 = 400",
+          "resultat": "E<sub>c</sub> = [[200 000 J]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "La distance d’arrêt",
+          "entetes": [
+            "Distance",
+            "Ce qui l’allonge"
+          ],
+          "lignes": [
+            [
+              "**Réaction** (≈ 1 s)",
+              "alcool, fatigue, téléphone"
+            ],
+            [
+              "**Freinage** (croît comme v<sup>2</sup>)",
+              "pluie, pneus usés"
+            ],
+            [
+              "**Au freinage**",
+              "E<sub>c</sub> devient de l’énergie **thermique**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "v = 72 ÷ 3,6 = 20 m/s",
+              "quoi": "la conversion"
+            },
+            {
+              "texte": "E<sub>c</sub> = ½ × m × v<sup>2</sup> = 0,5 × 1 000 × 20<sup>2</sup>",
+              "quoi": "formule puis nombres"
+            },
+            {
+              "texte": "E<sub>c</sub> = 200 000 J",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Le freinage ==transforme== l’énergie, il ne la détruit pas."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Garder la vitesse en **km/h** dans la formule.",
+            "Oublier le **carré** sur la vitesse.",
+            "Croire que 100 km/h est **deux fois** plus dangereux que 50.",
+            "Dire que l’énergie du freinage **disparaît**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 5,
+          "titre": "Pourquoi limiter la vitesse&nbsp;?",
+          "paragraphes": [
+            "Passer de **50 à 100 km/h** ne double pas la violence d’un choc&nbsp;: elle est ==multipliée par quatre==. Voilà pourquoi la vitesse est limitée en ville et près des écoles.",
+            "La distance de **freinage** grandit comme le **carré** de la vitesse&nbsp;: freiner à 100 km/h demande quatre fois plus de route qu’à 50."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Convertir **36 km/h** en m/s.",
+            "Vitesse ×2&nbsp;: **E<sub>c</sub>** est multipliée par combien&nbsp;?",
+            "Que devient E<sub>c</sub> au **freinage**&nbsp;?"
+          ],
+          "reponses": "1) 10 m/s · 2) par 4 · 3) de l’énergie thermique"
+        }
+      ]
+    }
+  ]
+}

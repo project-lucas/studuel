@@ -1,0 +1,172 @@
+{
+  "titre": "Le courant",
+  "titreSurligne": "courant",
+  "accroche": "Il ne passe que dans une boucle fermée.",
+  "bonus": "Courant&nbsp;: de **+** vers **−** · électrons&nbsp;: de **−** vers **+** · circuit **fermé** obligatoire · corps humain **conducteur**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/le-courant-electrique.webp",
+    "prompt": "a glossy violet battery connected by golden wires to a small glowing lamp in a closed loop, tiny golden sparks running along the wire, sparkles"
+  },
+  "marcel": "Pas de boucle fermée,\npas de courant !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire du circuit",
+          "items": [
+            {
+              "terme": "Générateur",
+              "definition": "il fournit l’énergie (pile, batterie)."
+            },
+            {
+              "terme": "Récepteur",
+              "definition": "il consomme l’énergie (lampe, moteur)."
+            },
+            {
+              "terme": "Court-circuit",
+              "definition": "un fil relie les deux bornes de la pile&nbsp;: les fils chauffent, **danger d’incendie**."
+            },
+            {
+              "terme": "Interrupteur",
+              "definition": "il ouvre ou ferme la boucle."
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Qui porte le courant&nbsp;?",
+          "entetes": [
+            "Milieu",
+            "Porteurs"
+          ],
+          "lignes": [
+            [
+              "Un **métal**",
+              "les **électrons libres**"
+            ],
+            [
+              "Une solution ionique",
+              "les **ions**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Allumer une lampe en trois temps",
+          "etapes": [
+            {
+              "titre": "Relier",
+              "texte": "la pile, la lampe et l’interrupteur avec des **fils**"
+            },
+            {
+              "titre": "Fermer",
+              "texte": "la boucle doit être **ininterrompue**, sans trou"
+            },
+            {
+              "titre": "Vérifier",
+              "texte": "interrupteur **fermé**&nbsp;: le courant circule et la lampe brille"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une pile, une lampe, un interrupteur __ouvert__&nbsp;: la lampe brille-t-elle&nbsp;?",
+          "calcul": "interrupteur ouvert → boucle coupée",
+          "aparte": "plus de courant",
+          "resultat": "la lampe est [[éteinte]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Conducteur ou isolant&nbsp;?",
+          "oui": {
+            "titre": "Conducteur",
+            "texte": "Métaux (cuivre, fer), graphite, solution ionique, **corps humain**."
+          },
+          "non": {
+            "titre": "Isolant",
+            "texte": "Verre, plastique, bois sec, air sec, caoutchouc."
+          },
+          "essai": {
+            "texte": "Le corps humain **conduit** le courant, encore mieux s’il est <i>humide</i>&nbsp;: d’où les règles de sécurité."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Les symboles à connaître",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Pile",
+              "texte": "deux traits inégaux"
+            },
+            {
+              "titre": "Lampe",
+              "texte": "un cercle barré d’une croix"
+            },
+            {
+              "titre": "Résistance",
+              "texte": "un rectangle"
+            },
+            {
+              "titre": "Schéma",
+              "texte": "traits droits, angles droits"
+            },
+            {
+              "titre": "Sens",
+              "texte": "on dessine une flèche de + vers −"
+            },
+            {
+              "titre": "Danger",
+              "texte": "jamais d’eau près d’une prise"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que les électrons vont de **+** vers **−**&nbsp;: le **sens du courant** est de + vers −, les électrons vont à l’**inverse**.",
+            "Oublier qu’un interrupteur **ouvert** coupe la boucle.",
+            "Relier directement les **deux bornes** de la pile.",
+            "Penser que le corps humain est **isolant**.",
+            "Toucher un appareil électrique avec les **mains mouillées**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que faut-il pour que le courant circule&nbsp;?",
+            "Dans quel sens va le **courant** hors de la pile&nbsp;?",
+            "Le plastique est-il **conducteur** ou **isolant**&nbsp;?"
+          ],
+          "reponses": "1) un circuit fermé · 2) de + vers − · 3) isolant"
+        }
+      ]
+    }
+  ]
+}

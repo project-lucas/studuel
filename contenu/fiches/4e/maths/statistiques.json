@@ -1,0 +1,171 @@
+{
+  "titre": "Statistiques",
+  "titreSurligne": "Statistiques",
+  "accroche": "Trois nombres pour résumer une série.",
+  "bonus": "La somme des fréquences vaut **1**, soit 100 % · angle d’un secteur = fréquence × **360°**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/statistiques.webp",
+    "prompt": "a glossy violet bar chart with golden bars and a small magnifying glass, tiny golden sparkles"
+  },
+  "marcel": "Range avant de\ncalculer la médiane&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les trois indicateurs",
+          "teinte": "jaune",
+          "taille": "mini",
+          "lignes": [
+            "étendue = max − min",
+            "moyenne = {somme des valeurs/effectif total}",
+            "fréquence = {effectif/effectif total}"
+          ],
+          "regle": "La **médiane** partage la série ==ordonnée== en deux groupes de même effectif."
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Population",
+              "definition": "l’ensemble étudié&nbsp;; un **individu** en est un élément"
+            },
+            {
+              "terme": "Caractère",
+              "definition": "**quantitatif** s’il se mesure, **qualitatif** sinon"
+            },
+            {
+              "terme": "Effectif",
+              "definition": "combien d’individus portent une valeur"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La médiane en trois temps",
+          "etapes": [
+            {
+              "titre": "Ordonner",
+              "texte": "toutes les valeurs, de la plus petite à la plus grande"
+            },
+            {
+              "titre": "Compter",
+              "texte": "l’effectif total, puis repérer le milieu"
+            },
+            {
+              "titre": "Lire",
+              "texte": "la valeur du milieu (ou la moyenne des deux du milieu)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Notes : 8 · 12 · 10 · 14 · 6.",
+          "calcul": "Ordonnées : 6 · 8 · 10 · 12 · 14",
+          "aparte": "5 notes,\nla 3e",
+          "resultat": "Médiane = [[10]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Quel graphique&nbsp;?",
+          "entetes": [
+            "Le graphique",
+            "Pour quoi"
+          ],
+          "lignes": [
+            [
+              "Bâtons",
+              "un caractère quantitatif"
+            ],
+            [
+              "Circulaire",
+              "des parts d’un tout"
+            ],
+            [
+              "Histogramme",
+              "des données en classes"
+            ],
+            [
+              "Courbe",
+              "une évolution dans le temps"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 4,
+          "titre": "Lire un graphique",
+          "paragraphes": [
+            "On lit d’abord l’**axe** et l’**échelle**, puis les barres. Un axe qui ne part pas de zéro déforme la perception sans changer aucun chiffre."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Moyenne = (8 + 12 + 10 + 14 + 6) / 5",
+              "quoi": "la formule"
+            },
+            {
+              "texte": "= 50 / 5 = 10",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "La moyenne est 10.",
+              "quoi": "la phrase"
+            }
+          ],
+          "pied": "On ==écrit== la somme et l’effectif total."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Calculer la médiane **sans ordonner** la série.",
+            "Confondre **moyenne** et **médiane**.",
+            "Lire les barres avant l’**axe** : s’il ne part pas de 0, il déforme.",
+            "Choisir le mauvais **graphique** : on raconte autre chose."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Étendue de 6 · 8 · 10 · 12 · 14&nbsp;?",
+            "Médiane de 3 · 9 · 5&nbsp;?",
+            "Angle d’un secteur de fréquence 0,25&nbsp;?"
+          ],
+          "reponses": "1) 8 · 2) 5 (série ordonnée : 3, 5, 9) · 3) 90°"
+        }
+      ]
+    }
+  ]
+}

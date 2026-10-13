@@ -1,0 +1,131 @@
+{
+  "titre": "Représenter l’espace",
+  "titreSurligne": "espace",
+  "accroche": "Une feuille est plate : on triche.",
+  "bonus": "Perspective linéaire : inventée à la **Renaissance**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/arts-plastiques/la-representation-de-l-espace.webp",
+    "prompt": "a glossy violet road with golden lines converging to a vanishing point on a horizon, sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Plus c’est loin,\nplus c’est petit !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les procédés simples",
+          "entetes": ["Procédé", "Sa règle"],
+          "lignes": [
+            ["**Superposition**", "ce qui cache est devant"],
+            ["**Étagement**", "plus haut sur la feuille, plus loin"],
+            ["**Taille relative**", "plus petit, plus loin"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "La perspective linéaire",
+          "entetes": ["Vue", "Points de fuite"],
+          "lignes": [
+            ["**Frontale**", "un seul"],
+            ["**D’angle**", "deux"],
+            ["**Où ?**", "sur la ligne d’horizon"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les idées à retenir",
+          "colonnes": 4,
+          "cartes": [
+            { "titre": "Point de fuite", "texte": "Les lignes **parallèles** s’y rejoignent." },
+            { "titre": "Horizon", "texte": "Une ligne à **hauteur d’œil**." },
+            { "titre": "Atmosphérique", "texte": "Au loin : plus **pâle**, **bleuté**, flou." },
+            { "titre": "Léonard de Vinci", "texte": "Il l’utilise dans ses **arrière-plans**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Rompre avec l’espace",
+          "deux": false,
+          "items": [
+            { "titre": "Cubisme", "texte": "**plusieurs** points de vue à la fois" },
+            { "titre": "Abstraction", "texte": "on abandonne la **représentation**" },
+            { "titre": "XX<sup>e</sup> siècle", "texte": "les règles sont cassées **exprès**" },
+            { "titre": "Pour en jouer", "texte": "il faut d’abord **connaître** la règle" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que l’espace est **évident** : il se construit.",
+            "Placer l’horizon n’importe où : il est à **hauteur d’œil**.",
+            "Dessiner un objet lointain **plus grand**.",
+            "Oublier qu’une vue d’angle a **deux** points de fuite."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Construire la profondeur",
+          "etapes": [
+            { "titre": "Horizon", "texte": "tracer la ligne à hauteur d’œil" },
+            { "titre": "Fuite", "texte": "placer le point de fuite dessus" },
+            { "titre": "Lignes", "texte": "faire converger les parallèles" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple",
+          "donnees": "Un bonhomme cache un arbre sur ton dessin.",
+          "calcul": "Qui cache ? Il est devant",
+          "resultat": "[[superposition]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "La superposition, l’étagement et la taille relative donnent de la profondeur.", "quoi": "citer" },
+            { "texte": "Les lignes parallèles convergent vers un point de fuite sur la ligne d’horizon.", "quoi": "expliquer" },
+            { "texte": "Léonard de Vinci rend ses lointains pâles et bleutés.", "quoi": "illustrer" }
+          ],
+          "pied": "Connaître la règle, c’est pouvoir ==en jouer==."
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que fait la **superposition**&nbsp;?",
+            "Sur quelle ligne se place le **point de fuite**&nbsp;?",
+            "Que montre le **cubisme**&nbsp;?"
+          ],
+          "reponses": "1) ce qui cache est devant · 2) l’horizon · 3) plusieurs points de vue à la fois"
+        }
+      ]
+    }
+  ]
+}

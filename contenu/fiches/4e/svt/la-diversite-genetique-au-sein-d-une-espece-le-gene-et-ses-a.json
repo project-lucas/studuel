@@ -1,0 +1,174 @@
+{
+  "titre": "Gènes et allèles",
+  "titreSurligne": "allèles",
+  "accroche": "Un gène, plusieurs versions.",
+  "bonus": "**Allèle** = version d’un gène · **homozygote** = 2 identiques · **hétérozygote** = 2 différents · **génotype** → **phénotype**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/svt/la-diversite-genetique-au-sein-d-une-espece-le-gene-et-ses-a.webp",
+    "prompt": "a glossy violet DNA double helix with two golden beads of different shapes sitting at the same spot, three colorful blood drop shapes floating around, sparkles"
+  },
+  "marcel": "Même gène,\nversions différentes !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Allèle",
+              "definition": "une **version** d’un même gène&nbsp;: un gène existe sous plusieurs formes dans l’espèce"
+            },
+            {
+              "terme": "Homozygote",
+              "definition": "les **deux** allèles du gène sont **identiques** (ex. O//O)"
+            },
+            {
+              "terme": "Hétérozygote",
+              "definition": "les deux allèles du gène sont **différents** (ex. A//O)"
+            },
+            {
+              "terme": "Génotype · phénotype",
+              "definition": "les allèles portés · les caractères **observables** qui en résultent"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les groupes sanguins",
+          "entetes": [
+            "Génotype",
+            "Phénotype"
+          ],
+          "lignes": [
+            [
+              "A//A ou A//O",
+              "groupe **A**"
+            ],
+            [
+              "B//B ou B//O",
+              "groupe **B**"
+            ],
+            [
+              "A//B",
+              "groupe **AB** (A et B **codominants**)"
+            ],
+            [
+              "O//O",
+              "groupe **O** (allèle O **récessif**)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce qu’il faut savoir",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Deux allèles",
+              "texte": "On en a **deux** par gène&nbsp;: un hérité de chaque parent, <i>père</i> et <i>mère</i>."
+            },
+            {
+              "titre": "Dominant",
+              "texte": "Il s’exprime même quand l’autre allèle est différent."
+            },
+            {
+              "titre": "Récessif",
+              "texte": "Il ne s’exprime que s’il est présent en **double**."
+            },
+            {
+              "titre": "Porteur sain",
+              "texte": "Il a un allèle récessif **sans** en avoir les signes&nbsp;: il peut le transmettre."
+            },
+            {
+              "titre": "Les mutations",
+              "texte": "Elles créent de nouveaux **allèles**, au hasard, et rendent chaque individu un peu unique."
+            },
+            {
+              "titre": "La diversité",
+              "texte": "Elle aide une espèce à survivre aux changements du milieu (maladie, climat)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Passer du génotype au phénotype",
+          "etapes": [
+            {
+              "titre": "Lire",
+              "texte": "les deux allèles du génotype"
+            },
+            {
+              "titre": "Repérer",
+              "texte": "le dominant, le récessif ou la codominance"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "sur le phénotype observable"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Le génotype est A//O&nbsp;: les deux allèles sont différents.",
+              "quoi": "lire"
+            },
+            {
+              "texte": "A est dominant sur O, donc seul A s’exprime.",
+              "quoi": "expliquer"
+            },
+            {
+              "texte": "Le phénotype est le groupe sanguin A.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Génotype = ==allèles==&nbsp;; phénotype = ==ce qu’on observe==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **génotype** (les allèles) et **phénotype** (les caractères).",
+            "Croire qu’un allèle **récessif** a disparu&nbsp;: il est là, caché.",
+            "Dire qu’on a **un** allèle par gène&nbsp;: on en a deux.",
+            "Croire qu’un porteur sain est **malade**.",
+            "Penser que les groupes **A** et **B** s’effacent&nbsp;: ils sont **codominants**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que signifie être **hétérozygote**&nbsp;?",
+            "Quel génotype donne le groupe **O**&nbsp;?",
+            "Comment apparaissent de **nouveaux allèles**&nbsp;?"
+          ],
+          "reponses": "1) avoir deux allèles différents · 2) O//O · 3) par des mutations"
+        }
+      ]
+    }
+  ]
+}

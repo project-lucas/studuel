@@ -1,0 +1,125 @@
+{
+  "titre": "Les mélanges",
+  "titreSurligne": "mélanges",
+  "accroche": "Ce qui se mélange, ce qui se sépare.",
+  "bonus": "100 g d’eau + 5 g de sel = **105 g** · l’air&nbsp;: 78 % diazote, 21 % dioxygène",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/physique-chimie/les-melanges.webp",
+    "prompt": "a glossy violet glass beaker with golden liquid, a golden funnel with a paper filter and a small pile of golden salt, tiny sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Le sel se dissout,\npas évaporé !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Deux familles de mélanges",
+          "entetes": ["Mélange", "Ce qu’on voit", "Exemples"],
+          "lignes": [
+            ["**Homogène**", "on ne distingue **rien**, même à la loupe", "eau + sel, eau + sirop, l’air"],
+            ["**Hétérogène**", "au moins **deux** constituants visibles", "eau + huile, eau + sable"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La dissolution",
+          "petite": true,
+          "lignes": ["soluté + solvant", "= solution"],
+          "regle": "Le **soluté** (le sel) se dissout dans le **solvant** (l’eau). Quand il n’y en a ==plus la place==, la solution est **saturée**.",
+          "note": "le sel ne s’évapore pas&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Séparer",
+          "entetes": ["Technique", "Ce qu’on obtient"],
+          "lignes": [
+            ["**Décantation**", "deux couches séparées"],
+            ["**Filtration**", "le **filtrat** (liquide)"],
+            ["**Évaporation**", "le **soluté** (le sel)"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "On dissout __5 g__ de sel dans __100 g__ d’eau. Masse de la solution&nbsp;?",
+          "calcul": "100 + 5 = 105",
+          "aparte": "la masse se conserve",
+          "resultat": "[[105 g]]"
+        },
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Récupérer le sel d’une eau salée",
+          "etapes": [
+            { "titre": "Observer", "texte": "mélange **homogène**&nbsp;: la filtration ne sert à rien" },
+            { "titre": "Chauffer", "texte": "l’eau s’évapore" },
+            { "titre": "Récolter", "texte": "le sel reste au fond" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Dans la vie",
+          "deux": true,
+          "items": [
+            { "titre": "L’air", "texte": "un mélange **homogène** de gaz." },
+            { "titre": "Marais salants", "texte": "l’eau s’évapore, le sel reste." },
+            { "titre": "Café", "texte": "on le **filtre** pour retenir le marc." }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Filtrer de l’eau **salée** pour retirer le sel.",
+            "Croire que le sel **disparaît**.",
+            "Dire que l’air est un corps **pur**.",
+            "Confondre **soluté** et **solvant**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 6,
+          "titre": "Quand on ne peut plus dissoudre",
+          "paragraphes": [
+            "Au-delà d’une certaine quantité, l’eau ne peut plus rien dissoudre&nbsp;: la solution est **saturée**. Le surplus de sel reste **au fond** du verre."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Eau + huile&nbsp;: mélange **homogène** ou **hétérogène**&nbsp;?",
+            "Quelle technique sépare l’eau et le **sable**&nbsp;?",
+            "Dans l’eau sucrée, qui est le **solvant**&nbsp;?"
+          ],
+          "reponses": "1) hétérogène · 2) la filtration · 3) l’eau"
+        }
+      ]
+    }
+  ]
+}

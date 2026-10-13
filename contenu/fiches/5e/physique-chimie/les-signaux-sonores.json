@@ -1,0 +1,168 @@
+{
+  "titre": "Les signaux sonores",
+  "titreSurligne": "sonores",
+  "accroche": "Lire un son sur un écran.",
+  "bonus": "**f = 1 ÷ T** · période courte = son **aigu** · grande amplitude = son **fort** · audible&nbsp;: **20 Hz à 20 000 Hz**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/les-signaux-sonores.webp",
+    "prompt": "a glossy violet microphone next to a small oscilloscope screen showing a golden sine wave, sparkles"
+  },
+  "marcel": "Un son dessine\nune belle courbe !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Période et fréquence",
+          "petite": true,
+          "lignes": [
+            "f = {1/T}",
+            "T = {1/f}"
+          ],
+          "regle": "**T** la période en secondes (s), **f** la fréquence en hertz (Hz). Plus la période est **courte**, plus la fréquence est **grande** et plus le son est **aigu**.",
+          "note": "1 ms = 0,001 s !"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Lire la courbe",
+          "entetes": [
+            "Courbe",
+            "Le son"
+          ],
+          "lignes": [
+            [
+              "Sinusoïde régulière",
+              "son **pur** (diapason)"
+            ],
+            [
+              "Motif complexe qui se répète",
+              "son **composé** (voix)"
+            ],
+            [
+              "Aucune période",
+              "**bruit**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Trouver la fréquence en trois temps",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "un motif qui se répète sur l’écran"
+            },
+            {
+              "titre": "Mesurer",
+              "texte": "sa durée **T**, en secondes"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "**f = 1 ÷ T**, puis écrire l’unité (Hz)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un motif dure __4 ms__ (0,004 s). Fréquence __f__&nbsp;?",
+          "calcul": "f = 1 ÷ T = 1 ÷ 0,004",
+          "aparte": "T en secondes",
+          "resultat": "f = [[250 Hz]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Fréquence ou amplitude&nbsp;?",
+          "oui": {
+            "titre": "Fréquence",
+            "texte": "Nombre de motifs par seconde&nbsp;: elle donne la **hauteur** (grave, aigu)."
+          },
+          "non": {
+            "titre": "Amplitude",
+            "texte": "Hauteur du motif&nbsp;: elle donne le **volume** (fort, faible)."
+          },
+          "essai": {
+            "texte": "Changer l’amplitude ne change <i>pas</i> la note&nbsp;: on joue la même note plus ou moins fort."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Infrasons et ultrasons",
+          "items": [
+            {
+              "titre": "Infrasons",
+              "texte": "moins de 20 Hz (éléphants, séismes)"
+            },
+            {
+              "titre": "Ultrasons",
+              "texte": "plus de 20 000 Hz (chauves-souris, échographie)"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Laisser la période en **ms** dans f = 1 ÷ T.",
+            "Confondre **période** (s) et **fréquence** (Hz).",
+            "Croire que plus fort veut dire plus **aigu**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "T = 4 ms = 0,004 s",
+              "quoi": "convertir"
+            },
+            {
+              "texte": "f = 1 ÷ T = 1 ÷ 0,004",
+              "quoi": "on remplace"
+            },
+            {
+              "texte": "f = 250 Hz",
+              "quoi": "avec l’unité"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Période de 0,01 s&nbsp;: **fréquence**&nbsp;?",
+            "Que donne l’**amplitude** d’un son&nbsp;?",
+            "Un son de 30 000 Hz est-il audible&nbsp;?"
+          ],
+          "reponses": "1) 100 Hz · 2) le volume (fort/faible) · 3) non, ultrason"
+        }
+      ]
+    }
+  ]
+}

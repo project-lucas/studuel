@@ -1,0 +1,152 @@
+{
+  "titre": "Droites et médiatrices",
+  "titreSurligne": "médiatrices",
+  "accroche": "Bien nommer, bien tracer.",
+  "bonus": "Crochets = **segment** · parenthèses = **droite** · [AB) = demi-droite",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/maths/geometrie-elements-de-base-proprietes-des-droites-paralleles.webp",
+    "prompt": "a glossy violet compass drawing a golden arc, with a golden ruler and a small set square, tiny sparkles, same art style as the reference icons"
+  },
+  "marcel": "Crochets ou\nparenthèses ?",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "Droite, segment, demi-droite",
+          "colonnes": 3,
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 50 220 100' aria-hidden='true'><line x1='8' y1='90' x2='212' y2='90' stroke='#7a3fe0' stroke-width='4.5' stroke-linecap='round'></line><g fill='#2b2350'><circle cx='70' cy='90' r='5'></circle><circle cx='150' cy='90' r='5'></circle></g><g font-family=\"'Baloo 2'\" font-weight='800' font-size='20' fill='#2b2350'><text x='64' y='122'>A</text><text x='144' y='122'>B</text></g></svg>",
+              "legende": "(AB)",
+              "sous": "droite&nbsp;: illimitée des deux côtés"
+            },
+            {
+              "svg": "<svg viewBox='0 50 220 100' aria-hidden='true'><line x1='40' y1='90' x2='180' y2='90' stroke='#7a3fe0' stroke-width='4.5' stroke-linecap='round'></line><g stroke='#2b2350' stroke-width='3.5'><line x1='40' y1='78' x2='40' y2='102'></line><line x1='180' y1='78' x2='180' y2='102'></line></g><g font-family=\"'Baloo 2'\" font-weight='800' font-size='20' fill='#2b2350'><text x='34' y='128'>A</text><text x='174' y='128'>B</text></g></svg>",
+              "legende": "[AB]",
+              "sous": "segment&nbsp;: deux extrémités, longueur AB"
+            },
+            {
+              "svg": "<svg viewBox='0 50 220 100' aria-hidden='true'><line x1='40' y1='90' x2='212' y2='90' stroke='#7a3fe0' stroke-width='4.5' stroke-linecap='round'></line><g stroke='#2b2350' stroke-width='3.5'><line x1='40' y1='78' x2='40' y2='102'></line></g><circle cx='120' cy='90' r='5' fill='#2b2350'></circle><g font-family=\"'Baloo 2'\" font-weight='800' font-size='20' fill='#2b2350'><text x='34' y='128'>A</text><text x='114' y='128'>B</text></g></svg>",
+              "legende": "[AB)",
+              "sous": "demi-droite&nbsp;: une origine, l’autre côté sans fin"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Les trois propriétés",
+          "items": [
+            {
+              "titre": "Même perpendiculaire",
+              "texte": "Deux droites perpendiculaires à une même droite sont **parallèles**."
+            },
+            {
+              "titre": "Parallèle puis perpendiculaire",
+              "texte": "Perpendiculaire à l’une, elle l’est aussi à l’**autre**."
+            },
+            {
+              "titre": "Un point, une seule",
+              "texte": "Une seule parallèle et une seule perpendiculaire passent par ce point."
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "La médiatrice",
+          "lignes": [
+            "MA = MB"
+          ],
+          "regle": "La médiatrice de [AB] est la droite **perpendiculaire** à [AB] passant par son ==milieu==. Chacun de ses points M est à égale distance de A et de B.",
+          "note": "elle sert à démontrer&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Tracer la médiatrice au compas",
+          "etapes": [
+            {
+              "titre": "Ouvrir le compas",
+              "texte": "plus que la moitié de [AB], et garder cet écart"
+            },
+            {
+              "titre": "Deux arcs",
+              "texte": "pointe en A, puis pointe en B, de part et d’autre de [AB]"
+            },
+            {
+              "titre": "Relier",
+              "texte": "les deux croisements avec la règle&nbsp;: c’est la médiatrice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "[AB] = 6 cm, I son milieu. On cherche __AI__.",
+          "calcul": "(d) ⊥ [AB] en I",
+          "aparte": "AI = 6 ÷ 2",
+          "resultat": "AI = IB = [[3 cm]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Bien noter",
+          "oui": {
+            "titre": "Une longueur",
+            "texte": "AB = 6 cm, ou le segment [AB]."
+          },
+          "non": {
+            "titre": "Une faute",
+            "texte": "(AB) = 6 cm&nbsp;: une droite n’a pas de longueur."
+          },
+          "essai": {
+            "texte": "La bissectrice d’un angle le partage en **deux angles égaux**&nbsp;: un angle de 80° donne deux angles de 40°."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr",
+      "blocs": [
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire **(AB)** pour une longueur.",
+            "**Constater** sur le dessin au lieu de démontrer.",
+            "Oublier le **petit carré** de l’angle droit."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "(d₁) ⊥ (d) et (d₂) ⊥ (d). Que dire de **(d₁) et (d₂)**&nbsp;?",
+            "[AB] = 10 cm, I est le milieu&nbsp;: **AI**&nbsp;?",
+            "Un angle de 90° est coupé par sa **bissectrice**&nbsp;: chaque angle&nbsp;?"
+          ],
+          "reponses": "1) parallèles · 2) 5 cm · 3) 45°"
+        }
+      ]
+    }
+  ]
+}

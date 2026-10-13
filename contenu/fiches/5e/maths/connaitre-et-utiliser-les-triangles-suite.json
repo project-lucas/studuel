@@ -1,0 +1,166 @@
+{
+  "titre": "Droites du triangle",
+  "titreSurligne": "Droites",
+  "accroche": "Quatre droites, quatre points de concours.",
+  "bonus": "Centre de gravité&nbsp;: aux **2/3** de chaque médiane, en partant du sommet",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/connaitre-et-utiliser-les-triangles-suite.webp",
+    "prompt": "a glossy violet triangle with three golden lines crossing at one shiny point inside it, a small circle drawn around it, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Quatre droites,\nquatre centres !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le tableau du chapitre",
+          "entetes": [
+            "La droite",
+            "Sa définition",
+            "Point de concours"
+          ],
+          "lignes": [
+            [
+              "**Médiatrice**",
+              "perpendiculaire au **milieu** d’un côté",
+              "centre du cercle **circonscrit**"
+            ],
+            [
+              "**Hauteur**",
+              "perpendiculaire au côté opposé, issue d’un sommet",
+              "**orthocentre**"
+            ],
+            [
+              "**Médiane**",
+              "du sommet au **milieu** du côté opposé",
+              "**centre de gravité**"
+            ],
+            [
+              "**Bissectrice**",
+              "partage un angle **en deux**",
+              "centre du cercle **inscrit**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 2,
+          "titre": "Tracer une hauteur",
+          "etapes": [
+            {
+              "titre": "Sommet",
+              "texte": "choisir le sommet de départ"
+            },
+            {
+              "titre": "Équerre",
+              "texte": "tracer la perpendiculaire au côté opposé"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Médiane de 9 cm. Centre de gravité à quelle distance du __sommet__&nbsp;?",
+          "calcul": "2/3 de 9 = 9 ÷ 3 × 2",
+          "aparte": "deux tiers",
+          "resultat": "[[6 cm]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les propriétés à savoir",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Médiatrice",
+              "texte": "Tout point est **équidistant** des deux extrémités du segment."
+            },
+            {
+              "titre": "Bissectrice",
+              "texte": "Tout point est équidistant des **deux côtés** de l’angle."
+            },
+            {
+              "titre": "Médiane",
+              "texte": "Elle coupe le triangle en deux triangles de **même aire**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Cas particuliers",
+          "oui": {
+            "titre": "Isocèle",
+            "texte": "La droite issue du **sommet principal** est médiatrice, hauteur, médiane et bissectrice."
+          },
+          "non": {
+            "titre": "Obtusangle",
+            "texte": "L’**orthocentre** est **à l’extérieur** du triangle."
+          },
+          "essai": {
+            "texte": "**Équilatéral**&nbsp;: les quatre points sont confondus."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Médiatrices concourantes en O,",
+              "quoi": "la propriété"
+            },
+            {
+              "texte": "donc OA = OB = OC.",
+              "quoi": "la conséquence"
+            },
+            {
+              "texte": "Cercle de centre O&nbsp;: circonscrit.",
+              "quoi": "le cercle"
+            }
+          ],
+          "pied": "Il passe par les ==trois sommets==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **hauteur** et **médiane**.",
+            "Tracer la hauteur **dans le triangle** quand il est obtusangle&nbsp;: il faut prolonger le côté.",
+            "Placer le centre de gravité au **milieu** de la médiane."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle droite passe par le **milieu** d’un côté et le sommet opposé&nbsp;?",
+            "Le centre du cercle **circonscrit** est l’intersection de quelles droites&nbsp;?",
+            "Une **médiane** mesure 12 cm&nbsp;: distance du centre de gravité au sommet&nbsp;?"
+          ],
+          "reponses": "1) la médiane · 2) les médiatrices · 3) 8 cm (2/3 de 12)"
+        }
+      ]
+    }
+  ]
+}

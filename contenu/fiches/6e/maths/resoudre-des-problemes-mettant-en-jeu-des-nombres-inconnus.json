@@ -1,0 +1,180 @@
+{
+  "titre": "Problèmes et inconnues",
+  "titreSurligne": "inconnues",
+  "accroche": "Trouver ce qu’on ne sait pas encore.",
+  "bonus": "Toujours **répondre par une phrase** et vérifier l’ordre de grandeur",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/maths/resoudre-des-problemes-mettant-en-jeu-des-nombres-inconnus.webp",
+    "prompt": "a glossy golden question mark made of tiles on a violet puzzle board, sparkles"
+  },
+  "marcel": "Une réponse,\nune phrase !",
+  "rangs": [
+    {
+      "colonnes": "1fr 330px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’opération inverse",
+          "taille": "mini",
+          "lignes": [
+            "x + 7 = 23",
+            "x = 23 − 7 = 16",
+            "4 × x = 52 ⟹ x = 13"
+          ],
+          "regle": "L’inverse d’une addition est une ==soustraction==, l’inverse d’une multiplication est une **division**.",
+          "note": "x est l’inconnue&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le sens des mots",
+          "entetes": [
+            "Expression",
+            "Opération"
+          ],
+          "lignes": [
+            [
+              "« de plus que »",
+              "addition"
+            ],
+            [
+              "« de moins que »",
+              "soustraction"
+            ],
+            [
+              "« fois plus »",
+              "multiplication"
+            ],
+            [
+              "« partagé également »",
+              "division"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en quatre temps",
+          "etapes": [
+            {
+              "titre": "Lire",
+              "texte": "l’énoncé en entier, sans calculer"
+            },
+            {
+              "titre": "Repérer",
+              "texte": "ce qu’on cherche et ce qu’on connaît"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "choisir l’opération (un schéma en barres aide)"
+            },
+            {
+              "titre": "Répondre",
+              "texte": "par une phrase, après avoir vérifié"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Léa a __3 fois plus__ de billes que Tom. Ensemble, 24 billes.",
+          "calcul": "1 + 3 = 4 parts ; 24 ÷ 4 = 6",
+          "aparte": "une part = Tom",
+          "resultat": "[[Tom 6, Léa 18]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les aides",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Schéma en barres",
+              "texte": "Il montre les quantités les unes par rapport aux autres."
+            },
+            {
+              "titre": "Tableau",
+              "texte": "Il range les données de l’énoncé."
+            },
+            {
+              "titre": "Question intermédiaire",
+              "texte": "« Pour trouver ceci, que me faut-il **d’abord**&nbsp;? »"
+            },
+            {
+              "titre": "Les mots aident",
+              "texte": "« 3 fois moins » est une **division**, malgré le mot « fois »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Tom : 1 part, Léa : 3 parts",
+              "quoi": "le schéma"
+            },
+            {
+              "texte": "4 parts = 24, donc 1 part = 24 ÷ 4 = 6",
+              "quoi": "on calcule"
+            },
+            {
+              "texte": "Tom a 6 billes et Léa en a 18.",
+              "quoi": "la phrase"
+            }
+          ],
+          "pied": "Vérification&nbsp;: 6 + 18 = ==24==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Répondre « 6 » **sans phrase**.",
+            "Se fier **au mot** plutôt qu’à la situation.",
+            "Oublier de **vérifier** l’ordre de grandeur.",
+            "Donner le prix d’un stylo à **400 €**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "Vérifier",
+          "paragraphes": [
+            "Si l’on cherche le prix d’un stylo et que l’on trouve 400 €, il y a une erreur, même si le calcul semble juste&nbsp;: on compare toujours à ce qui est **raisonnable**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**x + 9 = 20**&nbsp;: x vaut combien&nbsp;?",
+            "**4 × x = 36**&nbsp;: x vaut combien&nbsp;?",
+            "« 3 fois moins » : quelle opération&nbsp;?"
+          ],
+          "reponses": "1) 11 · 2) 9 · 3) une division"
+        }
+      ]
+    }
+  ]
+}

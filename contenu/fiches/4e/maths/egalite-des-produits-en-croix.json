@@ -1,0 +1,111 @@
+{
+  "titre": "Produits en croix",
+  "titreSurligne": "croix",
+  "accroche": "Résoudre un tableau de proportionnalité.",
+  "bonus": "{a/b} = {c/d} ⟺ **a × d = b × c** · seulement si la situation est **proportionnelle**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/maths/egalite-des-produits-en-croix.webp",
+    "prompt": "a glossy golden X shape crossing two violet fraction bars, sparkles"
+  },
+  "marcel": "On multiplie\nen croix !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La propriété",
+          "taille": "mini",
+          "lignes": ["{a/b} = {c/d}  ⟺  a × d = b × c"],
+          "regle": "On multiplie ==en croix==&nbsp;: le numérateur de l’une par le dénominateur de l’autre. Si les deux produits sont égaux, les fractions sont égales.",
+          "note": "b et d ne sont jamais nuls&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Vérifier une égalité",
+          "items": [
+            { "terme": "Égales", "definition": "{6/9} et {8/12}&nbsp;: 6 × 12 = 72 et 9 × 8 = 72." },
+            { "terme": "Différentes", "definition": "{5/7} et {7/9}&nbsp;: 5 × 9 = 45 mais 7 × 7 = 49." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Trouver une valeur manquante",
+          "etapes": [
+            { "titre": "Écrire", "texte": "l’égalité de deux quotients : {x/12} = {5/4}" },
+            { "titre": "Croiser", "texte": "4 × x = 12 × 5, donc 4x = 60" },
+            { "titre": "Isoler", "texte": "x = 60 ÷ 4, puis on vérifie" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "4 cahiers coûtent 5 €. __12 cahiers__ coûtent __x €__&nbsp;?",
+          "calcul": "{4/12} = {5/x} donc 4x = 12 × 5 = 60",
+          "aparte": "tableau proportionnel",
+          "resultat": "x = 60 ÷ 4 = [[15 €]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Le tableau",
+          "entetes": ["Quantité", "4", "12"],
+          "lignes": [
+            ["Prix (€)", "5", "**x**"],
+            ["Calcul", "×&nbsp;3", "×&nbsp;3"],
+            ["Contrôle", "5 × 3 = 15", "✔"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Les prix sont proportionnels aux quantités.", "quoi": "on justifie" },
+            { "texte": "4 × x = 12 × 5, donc x = 60 ÷ 4 = 15", "quoi": "le produit en croix" },
+            { "texte": "12 cahiers coûtent 15 €.", "quoi": "la phrase" }
+          ],
+          "pied": "Sans ==proportionnalité==, le produit en croix est faux."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "L’appliquer à un tarif avec **abonnement fixe**&nbsp;: rien ne signale l’erreur.",
+            "Croiser **dans le mauvais sens** (a × c au lieu de a × d).",
+            "Oublier de **diviser** à la fin pour isoler x.",
+            "Ne **pas vérifier** en remplaçant x."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "{2/3} et {10/15} sont-elles **égales**&nbsp;?",
+            "{x/6} = {10/4}&nbsp;: **x**&nbsp;?",
+            "L’aire d’un carré selon son côté est-elle **proportionnelle**&nbsp;?"
+          ],
+          "reponses": "1) oui (30 = 30) · 2) x = 15 · 3) non, pas de produit en croix"
+        }
+      ]
+    }
+  ]
+}

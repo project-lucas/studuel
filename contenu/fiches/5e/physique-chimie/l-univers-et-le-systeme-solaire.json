@@ -1,0 +1,169 @@
+{
+  "titre": "Système solaire",
+  "titreSurligne": "solaire",
+  "accroche": "Notre adresse dans l’Univers.",
+  "bonus": "d = v × t · lumière : **300 000 km/s** · 1 année-lumière ≈ **9,5 × 10<sup>12</sup> km** · Soleil à **8 min-lumière**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/physique-chimie/l-univers-et-le-systeme-solaire.webp",
+    "prompt": "a glossy golden sun with small glossy violet planets orbiting around it on thin curved lines, a tiny comet with a sparkling tail, stars, sparkles"
+  },
+  "marcel": "Le Soleil est une étoile,\nla Terre une planète !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Notre adresse cosmique",
+          "items": [
+            {
+              "titre": "Terre",
+              "texte": "une planète du Système solaire"
+            },
+            {
+              "titre": "Système solaire",
+              "texte": "le **Soleil** et tout ce qui tourne autour"
+            },
+            {
+              "titre": "Voie lactée",
+              "texte": "notre galaxie"
+            },
+            {
+              "titre": "Univers",
+              "texte": "toutes les galaxies, né il y a **13,8 milliards d’années**"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les planètes",
+          "entetes": [
+            "Type",
+            "Membres"
+          ],
+          "lignes": [
+            [
+              "**Telluriques** (rocheuses)",
+              "Mercure, Vénus, Terre, Mars"
+            ],
+            [
+              "**Gazeuses**",
+              "Jupiter, Saturne, Uranus, Neptune"
+            ],
+            [
+              "**Étoile**",
+              "le Soleil produit sa lumière"
+            ],
+            [
+              "Planètes, satellites",
+              "ils **diffusent** la lumière"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "Calculer une distance",
+          "petite": true,
+          "lignes": [
+            "d = v × t"
+          ],
+          "regle": "**d** en **km**, **v** en **km/s** (la lumière&nbsp;: 300&nbsp;000 km/s), **t** en **secondes**. Une **année-lumière** est la distance parcourue par la lumière en un an.",
+          "note": "regarder loin, c’est regarder tôt&nbsp;!"
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "La lumière du Soleil met __8 min__ pour arriver. Quelle distance&nbsp;?",
+          "calcul": "t = 8 × 60 = 480 s\nd = 300 000 × 480",
+          "aparte": "convertir d’abord",
+          "resultat": "d ≈ [[144 millions de km]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "v = 300 000 km/s ; t = 480 s",
+              "quoi": "les données"
+            },
+            {
+              "texte": "d = v × t = 300 000 × 480",
+              "quoi": "formule puis nombres"
+            },
+            {
+              "texte": "d = 144 000 000 km",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Une durée en ==secondes== et une vitesse en km/s donnent des ==km==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que l’**année-lumière** est une durée&nbsp;: c’est une **distance**.",
+            "Dire que la Lune est une **étoile**&nbsp;: elle diffuse la lumière du Soleil.",
+            "Mélanger **minutes** et **secondes** dans d = v × t.",
+            "Confondre **Système solaire** et **galaxie**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Les distances à connaître",
+          "entetes": [
+            "Repère",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Vitesse de la **lumière**",
+              "environ **300 000 km/s** dans le vide"
+            ],
+            [
+              "Une **année-lumière**",
+              "environ **9,5 × 10<sup>12</sup> km**"
+            ],
+            [
+              "Le **Soleil**",
+              "à **8 minutes-lumière** de la Terre"
+            ],
+            [
+              "**Proxima du Centaure**, l’étoile la plus proche",
+              "environ **4,2 années-lumière**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Une planète **produit-elle** sa lumière&nbsp;?",
+            "Citer deux planètes **telluriques**.",
+            "En 2 s, la lumière parcourt combien de **km**&nbsp;?"
+          ],
+          "reponses": "1) non, elle la diffuse · 2) Mars et la Terre · 3) 600 000 km"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "titre": "La voix passive",
+  "titreSurligne": "passive",
+  "accroche": "Quand l’action compte plus que l’auteur.",
+  "bonus": "be + participe passé · by + l’auteur (rarement)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/anglais/la-voix-passive.webp",
+    "prompt": "a glossy violet arrow turning around a golden target with sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Le sujet subit\nl’action&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La forme",
+          "lignes": [
+            "**be** + participe passé"
+          ],
+          "petite": true,
+          "regle": "**be** au **même temps** que l’actif + participe passé. L’objet de l’actif devient le **sujet**.",
+          "note": "be change, pas le participe"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Actif → passif",
+          "entetes": [
+            "Temps",
+            "Actif",
+            "Passif"
+          ],
+          "lignes": [
+            [
+              "Présent",
+              "<i>They build houses.</i>",
+              "<i>Houses **are built**.</i>"
+            ],
+            [
+              "Prétérit",
+              "<i>They built it.</i>",
+              "<i>It **was built**.</i>"
+            ],
+            [
+              "Present perfect",
+              "<i>They have built it.</i>",
+              "<i>It **has been built**.</i>"
+            ],
+            [
+              "Futur",
+              "<i>They will build it.</i>",
+              "<i>It **will be built**.</i>"
+            ],
+            [
+              "Modal",
+              "<i>They can build it.</i>",
+              "<i>It **can be built**.</i>"
+            ],
+            [
+              "Futur proche",
+              "<i>They are going to build it.</i>",
+              "<i>It **is going to be built**.</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Pourquoi l’employer",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Auteur inconnu",
+              "texte": "<i>My bike **was stolen**.</i> (On a volé mon vélo.)"
+            },
+            {
+              "titre": "Auteur évident",
+              "texte": "<i>The shop **is closed** at six.</i>"
+            },
+            {
+              "titre": "L’action compte",
+              "texte": "Textes scientifiques, journaux&nbsp;: **ce qui a été fait**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Be ne s’oublie pas",
+          "oui": {
+            "titre": "Avec be",
+            "texte": "<i>The window **was** broken.</i>"
+          },
+          "non": {
+            "titre": "Sans be",
+            "texte": "<i>The window broken.</i> — incomplet."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Hamlet ___ (write) by Shakespeare.</i> → **was written**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Transformer",
+          "etapes": [
+            {
+              "titre": "L’objet devient sujet",
+              "texte": "<i>Shakespeare wrote Hamlet</i> → <i>Hamlet…</i>"
+            },
+            {
+              "titre": "be + participe",
+              "texte": "Au **même temps** : <i>was written</i>"
+            },
+            {
+              "titre": "by + auteur",
+              "texte": "Seulement s’il est utile&nbsp;: <i>by Shakespeare</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Le double passif",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Deux objets",
+              "texte": "<i>They gave me a prize.</i>"
+            },
+            {
+              "titre": "Le plus courant",
+              "texte": "<i>I **was given** a prize.</i>"
+            },
+            {
+              "titre": "L’autre",
+              "texte": "<i>A prize was given to me.</i>"
+            },
+            {
+              "titre": "Verbes concernés",
+              "texte": "give, send, tell, offer"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "« On » → souvent le passif&nbsp;: <i>English is spoken here.</i> (On parle anglais ici.)",
+            "<i>It was build</i> → <i>It was **built**.</i> (participe passé)",
+            "Le **by** est omis dans la grande majorité des cas.",
+            "Même temps que l’actif&nbsp;: <i>has built</i> → <i>has been built.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Houses ___ (build) here every year.</i>",
+            "<i>My bike ___ (steal) yesterday.</i>",
+            "<i>They will build it. → It ___ ___ ___.</i>"
+          ],
+          "reponses": "1) are built 2) was stolen 3) will be built"
+        }
+      ]
+    }
+  ]
+}

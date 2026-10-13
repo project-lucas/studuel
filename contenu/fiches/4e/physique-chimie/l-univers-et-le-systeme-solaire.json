@@ -1,0 +1,179 @@
+{
+  "titre": "Le Système solaire",
+  "titreSurligne": "solaire",
+  "accroche": "Notre adresse dans l’Univers.",
+  "bonus": "Lumière&nbsp;: **300 000 km/s** · 1 année-lumière ≈ **9,5 × 10<sup>12</sup> km** · Soleil à **8 minutes-lumière**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/l-univers-et-le-systeme-solaire.webp",
+    "prompt": "a glossy golden sun in the center with small glossy violet planets on round orbits, a tiny comet with a golden tail, sparkles"
+  },
+  "marcel": "Regarder loin,\nc’est voir tôt !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Calculer une distance",
+          "petite": true,
+          "lignes": [
+            "d = v × t",
+            "v = 300 000 km/s"
+          ],
+          "regle": "**d** la distance en **km**, **v** la vitesse de la lumière en **km/s**, **t** la durée en **secondes**. Une **année-lumière** est la distance parcourue par la lumière en un an.",
+          "note": "t en secondes&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les planètes",
+          "entetes": [
+            "Le type",
+            "Ses membres"
+          ],
+          "lignes": [
+            [
+              "**Telluriques**, rocheuses",
+              "Mercure, Vénus, Terre, Mars"
+            ],
+            [
+              "**Gazeuses**",
+              "Jupiter, Saturne, Uranus, Neptune"
+            ],
+            [
+              "Le **Soleil**",
+              "une **étoile** : elle produit sa lumière"
+            ],
+            [
+              "Et aussi",
+              "satellites, astéroïdes, comètes"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Retrouver notre adresse en trois temps",
+          "etapes": [
+            {
+              "titre": "Partir",
+              "texte": "de la Terre, une planète du Système solaire (4,6 milliards d’années)"
+            },
+            {
+              "titre": "Monter",
+              "texte": "à la Voie lactée, notre galaxie, puis aux amas de galaxies"
+            },
+            {
+              "titre": "Finir",
+              "texte": "par l’Univers, né il y a 13,8 milliards d’années"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "Des repères de distance",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "8 minutes-lumière",
+              "texte": "la distance Terre–Soleil"
+            },
+            {
+              "titre": "4,2 années-lumière",
+              "texte": "Proxima du Centaure, l’étoile la plus proche"
+            },
+            {
+              "titre": "9,5 × 10<sup>12</sup> km",
+              "texte": "une année-lumière"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "La lumière du Soleil met __8 min 20 s__ pour nous atteindre. Distance&nbsp;?",
+          "calcul": "t = 500 s\nd = 300 000 × 500",
+          "aparte": "en km",
+          "resultat": "d = [[150 000 000 km]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Produit-il de la lumière&nbsp;?",
+          "oui": {
+            "titre": "Le Soleil",
+            "texte": "Une **étoile**&nbsp;: elle **produit** sa propre lumière."
+          },
+          "non": {
+            "titre": "La Lune, Mars",
+            "texte": "Planètes et satellites **diffusent** la lumière reçue du Soleil."
+          },
+          "essai": {
+            "texte": "La Lune brille la nuit, mais elle ne fait que <i>renvoyer</i> la lumière du Soleil."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "v = 300 000 km/s et t = 500 s",
+              "quoi": "les données"
+            },
+            {
+              "texte": "d = v × t = 300 000 × 500",
+              "quoi": "lettres puis nombres"
+            },
+            {
+              "texte": "d = 150 000 000 km",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Notre adresse&nbsp;: ==Terre== → ==Système solaire== → ==Voie lactée== → ==Univers==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’une **planète** produit sa lumière.",
+            "Mettre la durée en **minutes** avec des km/s.",
+            "Confondre **année-lumière** et durée&nbsp;: c’est une **distance**.",
+            "Dire que la Terre est une **étoile**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelles sont les **planètes gazeuses**&nbsp;?",
+            "Le Soleil est-il une **étoile** ou une planète&nbsp;?",
+            "Lumière en **10 s**&nbsp;: quelle distance&nbsp;?"
+          ],
+          "reponses": "1) Jupiter, Saturne, Uranus, Neptune · 2) étoile · 3) 3 000 000 km"
+        }
+      ]
+    }
+  ]
+}

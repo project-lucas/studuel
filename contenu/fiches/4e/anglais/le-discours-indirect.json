@@ -1,0 +1,183 @@
+{
+  "titre": "Le discours indirect",
+  "titreSurligne": "indirect",
+  "accroche": "Rapporter les paroles de quelqu’un.",
+  "bonus": "recul des temps · pronoms · repères (now → then)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/anglais/le-discours-indirect.webp",
+    "prompt": "a glossy violet speech bubble with a golden arrow bending backward and sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "On rapporte&nbsp;?\nOn recule d’un temps&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le recul des temps",
+          "lignes": [
+            "présent → **prétérit**"
+          ],
+          "petite": true,
+          "regle": "Verbe introducteur au passé (said, told) → chaque temps **recule d’un cran**.",
+          "note": "said / told"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Direct → indirect",
+          "entetes": [
+            "Direct",
+            "Indirect"
+          ],
+          "lignes": [
+            [
+              "présent simple",
+              "prétérit"
+            ],
+            [
+              "présent en BE + -ING",
+              "prétérit en BE + -ING"
+            ],
+            [
+              "prétérit / present perfect",
+              "**past perfect**"
+            ],
+            [
+              "will · can · must",
+              "would · could · had to"
+            ],
+            [
+              "now · today · tomorrow",
+              "then · that day · the next day"
+            ],
+            [
+              "yesterday · here · this",
+              "the day before · there · that"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Trois cas",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Affirmation",
+              "texte": "<i>« I am tired. »</i> → <i>He said he **was** tired.</i>"
+            },
+            {
+              "titre": "Question",
+              "texte": "<i>« Where do you live? »</i> → <i>He asked where I **lived**.</i>"
+            },
+            {
+              "titre": "Ordre",
+              "texte": "<i>« Close the door. »</i> → <i>She told me **to close** the door.</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Say ou tell",
+          "oui": {
+            "titre": "tell + personne",
+            "texte": "<i>He **told me** he was tired.</i>"
+          },
+          "non": {
+            "titre": "say + personne",
+            "texte": "<i>He said me he was tired.</i> — say sans complément de personne."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>« I saw her. » → He said he ___ her.</i> → **had seen**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Rapporter",
+          "etapes": [
+            {
+              "titre": "L’introducteur",
+              "texte": "**said / told / asked**."
+            },
+            {
+              "titre": "Le recul des temps",
+              "texte": "Présent → prétérit, prétérit → past perfect."
+            },
+            {
+              "titre": "Pronoms, repères",
+              "texte": "<i>I → he · my → his · tomorrow → the next day</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Questions et ordres",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Question fermée",
+              "texte": "<i>He asked me **if** I was ready.</i>"
+            },
+            {
+              "titre": "Question ouverte",
+              "texte": "ordre de l’affirmative, sans **do**"
+            },
+            {
+              "titre": "Ordre",
+              "texte": "**tell / ask** + personne + **to** + base"
+            },
+            {
+              "titre": "Ordre négatif",
+              "texte": "<i>told me **not to** be late</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Pas de recul si l’introducteur est au présent&nbsp;: <i>He says he is tired.</i>",
+            "<i>He asked where did I live</i> → <i>where I lived.</i>",
+            "<i>He said me that…</i> → <i>He told me that…</i>",
+            "Les pronoms changent&nbsp;: <i>I lost my keys</i> → <i>he had lost his keys.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>« I am tired. » → He said he ___ tired.</i>",
+            "<i>« Are you ready? » → He asked me ___ I was ready.</i>",
+            "<i>« Close the door. » → She told me ___ close the door.</i>"
+          ],
+          "reponses": "1) was 2) if 3) to"
+        }
+      ]
+    }
+  ]
+}

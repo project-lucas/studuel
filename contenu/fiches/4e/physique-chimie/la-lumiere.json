@@ -1,0 +1,118 @@
+{
+  "titre": "La lumière",
+  "titreSurligne": "lumière",
+  "accroche": "Sources, propagation, couleurs.",
+  "bonus": "Vitesse dans le vide&nbsp;: **300 000 km/s** · propagation **en ligne droite** · lumière **blanche** = toutes les couleurs (prisme) · écrans&nbsp;: **RVB**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/physique-chimie/la-lumiere.webp",
+    "prompt": "a glossy golden glass prism splitting a bright white beam into a rainbow of colors, a violet lamp as the source and a small golden eye as the receiver, sparkles"
+  },
+  "marcel": "300 000 km/s,\nle record de vitesse !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Voir un objet",
+          "items": [
+            { "terme": "Source primaire", "definition": "elle **produit** sa lumière&nbsp;: Soleil, flamme, LED, écran." },
+            { "terme": "Objet diffusant", "definition": "il **renvoie** la lumière reçue&nbsp;: Lune, mur, page." },
+            { "terme": "Rayon lumineux", "definition": "une droite **fléchée** qui modélise la lumière." },
+            { "terme": "Prisme", "definition": "il **disperse** la lumière blanche en un spectre." }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Synthèse additive (écrans)",
+          "entetes": ["Mélange", "Résultat"],
+          "lignes": [
+            ["Rouge + vert + bleu", "**blanc**"],
+            ["Rouge + vert", "jaune"],
+            ["Rouge + bleu", "magenta"],
+            ["Vert + bleu", "cyan"],
+            ["Objet rouge en lumière verte", "**noir**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Prévoir la couleur d’un objet",
+          "etapes": [
+            { "titre": "Éclairage", "texte": "quelles couleurs la lumière envoie-t-elle&nbsp;?" },
+            { "titre": "Objet", "texte": "il **diffuse** sa couleur et **absorbe** les autres" },
+            { "titre": "Conclusion", "texte": "il apparaît de sa couleur, ou **noir** s’il n’a rien à renvoyer" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un tissu __rouge__ est éclairé en lumière __verte__. Sa couleur&nbsp;?",
+          "calcul": "il ne diffuse que du rouge",
+          "aparte": "or il n’en reçoit pas",
+          "resultat": "il paraît [[noir]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Ombres et propagation",
+          "oui": { "titre": "Ombre portée", "texte": "Sur le sol ou l’écran&nbsp;: la lumière va **en ligne droite** dans un milieu homogène et transparent." },
+          "non": { "titre": "Ombre propre", "texte": "La face de l’objet **non éclairée**." },
+          "essai": { "texte": "Une <i>éclipse</i>&nbsp;: un astre passe dans l’<i>ombre</i> d’un autre." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "La vitesse de la lumière",
+          "deux": true,
+          "items": [
+            { "titre": "Dans le vide", "texte": "environ **300 000 km/s**" },
+            { "titre": "Air, eau, verre", "texte": "un **peu moins**" },
+            { "titre": "Record", "texte": "**rien** ne va plus vite" },
+            { "titre": "Synthèse soustractive", "texte": "peinture&nbsp;: cyan, magenta, jaune" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Prendre la **Lune** pour une source primaire.",
+            "Croire que la lumière a besoin de **matière** : elle traverse le vide.",
+            "Oublier que la lumière blanche est **composée**.",
+            "Penser qu’un objet rouge **émet** du rouge : il le **renvoie**.",
+            "Mélanger **km** et **m** dans c = 300 000 km/s.",
+            "Confondre synthèse **additive** (écrans) et **soustractive** (peinture)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Vitesse de la lumière dans le **vide**&nbsp;?",
+            "Rouge + vert + bleu donnent quelle lumière&nbsp;?",
+            "La **Lune** est-elle une source primaire&nbsp;?"
+          ],
+          "reponses": "1) 300 000 km/s · 2) blanche · 3) non, elle diffuse"
+        }
+      ]
+    }
+  ]
+}

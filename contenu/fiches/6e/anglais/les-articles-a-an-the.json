@@ -1,0 +1,180 @@
+{
+  "titre": "a, an, the",
+  "titreSurligne": "an",
+  "accroche": "C’est le son qui décide, pas la lettre.",
+  "bonus": "**a** + son consonne · **an** + son voyelle · **the** = précis · **rien** pour les généralités",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/anglais/les-articles-a-an-the.webp",
+    "prompt": "a glossy violet apple and a golden letter A beside it, a small golden speech bubble with sound waves, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Un son de voyelle&nbsp;?\nAlors c’est «&nbsp;an&nbsp;»&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "A ou an&nbsp;?",
+          "lignes": [
+            "**a** / **an** + nom"
+          ],
+          "petite": true,
+          "regle": "On écoute le **premier son** du mot suivant&nbsp;: son de consonne → **a**, son de voyelle → **an**.",
+          "note": "singulier seulement"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois articles",
+          "entetes": [
+            "L’article",
+            "L’exemple",
+            "En français"
+          ],
+          "lignes": [
+            [
+              "**a**",
+              "<i>a book, a car, a university</i>",
+              "un livre, une voiture, une université"
+            ],
+            [
+              "**an**",
+              "<i>an apple, an orange, an hour</i>",
+              "une pomme, une orange, une heure"
+            ],
+            [
+              "**the**",
+              "<i>the dog, the dogs</i>",
+              "le chien, les chiens"
+            ],
+            [
+              "**rien**",
+              "<i>I like music.</i>",
+              "J’aime la musique."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Quand mettre quoi&nbsp;?",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "a / an",
+              "texte": "On **présente** quelque chose pour la première fois&nbsp;: <i>I have **a** dog.</i> (J’ai un chien.)"
+            },
+            {
+              "titre": "the",
+              "texte": "On parle de quelque chose de **précis**, déjà connu&nbsp;: <i>**The** dog is black.</i> (Le chien est noir.)"
+            },
+            {
+              "titre": "pas d’article",
+              "texte": "Généralités au pluriel, pays, villes, langues, sports, repas&nbsp;: <i>Cats are cute. I play tennis.</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": "★",
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Précis&nbsp;?",
+              "texte": "Déjà connu ou unique → **the**."
+            },
+            {
+              "titre": "Un seul, nouveau&nbsp;?",
+              "texte": "Je l’écoute&nbsp;: consonne → **a**, voyelle → **an**."
+            },
+            {
+              "titre": "Pluriel ou général&nbsp;?",
+              "texte": "**Rien**, comme dans <i>I like dogs.</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le son, pas la lettre",
+          "oui": {
+            "titre": "Bien écouté",
+            "texte": "<i>**an** hour</i> (le h est muet → son «&nbsp;a&nbsp;»)."
+          },
+          "non": {
+            "titre": "Mal écouté",
+            "texte": "<i>**a** hour</i> ✗ — on a vu un h, mais on ne l’entend pas."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>She is ___ university student.</i> → **a**&nbsp;: «&nbsp;university&nbsp;» commence par le son «&nbsp;you&nbsp;»."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "go to school, at home",
+              "texte": "pas d’article pour <i>school, home, work, bed</i> dans leur usage normal"
+            },
+            {
+              "titre": "play football",
+              "texte": "pas d’article devant un sport ou une matière"
+            },
+            {
+              "titre": "at breakfast",
+              "texte": "pas d’article devant un repas"
+            },
+            {
+              "titre": "the United States",
+              "texte": "quelques pays prennent <i>the</i> : <i>the UK, the Netherlands</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Le français met un article partout&nbsp;: <i>I like **the** cats</i> ✗ → <i>I like cats.</i>",
+            "<i>I live in **the** France</i> ✗ → <i>I live in France.</i>",
+            "<i>a apple</i> ✗ → <i>**an** apple.</i>",
+            "<i>an university</i> ✗ → <i>**a** university.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>She eats ___ orange.</i> (a / an)",
+            "<i>I play ___ tennis.</i> (the / rien)",
+            "<i>I have a cat. ___ cat is white.</i> (A / The)"
+          ],
+          "reponses": "1) an 2) rien (pas d’article devant un sport) 3) The"
+        }
+      ]
+    }
+  ]
+}

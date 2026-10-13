@@ -1,0 +1,170 @@
+{
+  "titre": "Conversions d’énergie",
+  "titreSurligne": "Conversions",
+  "accroche": "Elle change de forme, jamais perdue.",
+  "bonus": "elle ne se **crée** pas et ne **disparaît** pas · une partie part toujours en **chaleur**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/physique-chimie/les-conversions-d-energie.webp",
+    "prompt": "a glossy violet light bulb glowing gold with two curved golden arrows and a few small heat waves, tiny sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Rien ne se perd,\ntout se transforme !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les convertisseurs",
+          "entetes": [
+            "Convertisseur",
+            "De…",
+            "…vers"
+          ],
+          "lignes": [
+            [
+              "Une **pile**",
+              "chimique",
+              "électrique"
+            ],
+            [
+              "Une **lampe**",
+              "électrique",
+              "lumineuse (et thermique)"
+            ],
+            [
+              "Un **moteur**",
+              "électrique",
+              "cinétique"
+            ],
+            [
+              "Un **panneau solaire**",
+              "lumineuse",
+              "électrique"
+            ],
+            [
+              "Une **éolienne**",
+              "cinétique du vent",
+              "électrique"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le principe",
+          "petite": true,
+          "lignes": [
+            "conservation",
+            "de l’énergie"
+          ],
+          "regle": "L’énergie se ==convertit== ou se **transfère**, mais elle ne se perd jamais. Aucune conversion n’est parfaite.",
+          "note": "la chaleur s’échappe&nbsp;!"
+        },
+        {
+          "type": "liste",
+          "numero": 3,
+          "titre": "Les pertes",
+          "items": [
+            {
+              "titre": "Chaleur",
+              "texte": "souvent **inutile** : l’ampoule à filament brûlait les doigts."
+            },
+            {
+              "titre": "Dispersée",
+              "texte": "l’énergie n’est pas détruite, on ne peut plus l’utiliser."
+            },
+            {
+              "titre": "Rendement",
+              "texte": "énergie **utile** comparée à l’énergie **consommée**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une ampoule à filament&nbsp;: 5 % de l’énergie en lumière. Le reste&nbsp;?",
+          "calcul": "100 − 5 = 95",
+          "aparte": "d’où la LED",
+          "resultat": "[[95 %]] en chaleur"
+        },
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Économiser l’énergie",
+          "etapes": [
+            {
+              "titre": "Isoler",
+              "texte": "le logement"
+            },
+            {
+              "titre": "Éteindre",
+              "texte": "les veilles"
+            },
+            {
+              "titre": "Choisir",
+              "texte": "transports en commun, bons rendements"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Un barrage, pas à pas",
+          "deux": true,
+          "items": [
+            {
+              "titre": "L’eau en haut",
+              "texte": "énergie de **position**."
+            },
+            {
+              "titre": "Elle tombe",
+              "texte": "énergie **cinétique**."
+            },
+            {
+              "titre": "Turbine et alternateur",
+              "texte": "énergie **électrique**."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que l’énergie « **disparaît** ».",
+            "Croire qu’un convertisseur est **parfait**.",
+            "Oublier la **chaleur** dans une conversion.",
+            "Confondre **source** et **convertisseur**.",
+            "Croire qu’une LED chauffe autant qu’un **filament**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Une **pile** convertit quelle énergie en quelle énergie&nbsp;?",
+            "Un **panneau solaire** convertit l’énergie…&nbsp;?",
+            "Où va l’énergie « perdue » d’une lampe&nbsp;?"
+          ],
+          "reponses": "1) chimique en électrique · 2) lumineuse en électrique · 3) en chaleur"
+        }
+      ]
+    }
+  ]
+}

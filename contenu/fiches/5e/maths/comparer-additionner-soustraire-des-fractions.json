@@ -1,0 +1,182 @@
+{
+  "titre": "Calculs de fractions",
+  "titreSurligne": "fractions",
+  "accroche": "Même dénominateur, puis on calcule.",
+  "bonus": "Dénominateurs : 3 et 5 → **15** · 4 et 6 → **12** · 3 et 12 → **12**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/maths/comparer-additionner-soustraire-des-fractions.webp",
+    "prompt": "two glossy chocolate bars cut into different numbers of pieces, one violet and one golden, re-cut into equal squares, sparkles"
+  },
+  "marcel": "Des parts égales,\npuis on additionne !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Additionner, soustraire",
+          "taille": "mini",
+          "lignes": [
+            "{2/3} + {1/4} = {8/12} + {3/12} = {11/12}"
+          ],
+          "regle": "On met au **même dénominateur**, on calcule sur les ==numérateurs==, on **garde** le dénominateur commun.",
+          "note": "jamais d’addition des dénominateurs&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Comparer",
+          "entetes": [
+            "Le cas",
+            "La règle"
+          ],
+          "lignes": [
+            [
+              "Même dénominateur",
+              "5/7 > 3/7 : le plus grand haut"
+            ],
+            [
+              "Même numérateur",
+              "3/10 < 3/4 : le plus grand bas est le plus petit"
+            ],
+            [
+              "Cas général",
+              "on réduit d’abord au même dénominateur"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en quatre temps",
+          "etapes": [
+            {
+              "titre": "Choisir",
+              "texte": "un multiple commun des dénominateurs, le plus petit possible"
+            },
+            {
+              "titre": "Réduire",
+              "texte": "chaque fraction : on multiplie haut et bas par le même nombre"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "sur les numérateurs, en gardant le dénominateur commun"
+            },
+            {
+              "titre": "Simplifier",
+              "texte": "le résultat avec un diviseur commun : 2/6 = 1/3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Calcule __5/6 − 1/2__.",
+          "calcul": "5/6 − 3/6 = 2/6",
+          "aparte": "1/2 = 3/6",
+          "resultat": "2/6 = [[1/3]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Additionner des fractions",
+          "oui": {
+            "titre": "Bon calcul",
+            "texte": "1/2 + 1/3 = 3/6 + 2/6 = **5/6**."
+          },
+          "non": {
+            "titre": "Faux",
+            "texte": "1/2 + 1/3 = 2/5&nbsp;: on a additionné haut et bas."
+          },
+          "essai": {
+            "texte": "2/5 est **plus petit** que 1/2 alors qu’on a ==ajouté== quelque chose&nbsp;: impossible. Une somme de positifs est toujours plus grande que chaque terme, c’est un bon contrôle."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Pour vérifier son résultat",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Plus grand",
+              "texte": "Une somme de fractions positives dépasse chacune d’elles."
+            },
+            {
+              "titre": "Valeur approchée",
+              "texte": "11/12 ≈ 0,92 et 0,67 + 0,25 = 0,92."
+            },
+            {
+              "titre": "Un entier",
+              "texte": "2 + 3/4 = 8/4 + 3/4 = 11/4."
+            },
+            {
+              "titre": "Simplifier",
+              "texte": "2/6 = 1/3 : toujours à la fin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "5/6 − 1/2 = 5/6 − 3/6",
+              "quoi": "même dénominateur"
+            },
+            {
+              "texte": "= 2/6",
+              "quoi": "on soustrait"
+            },
+            {
+              "texte": "= 1/3",
+              "quoi": "on simplifie"
+            }
+          ],
+          "pied": "Un entier s’écrit sur 1&nbsp;: 2 + 3/4 = ==8/4== + 3/4 = 11/4."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Additionner les **dénominateurs**.",
+            "Prendre 24 pour 4 et 6 : **12** suffit.",
+            "**Oublier de simplifier** à la fin.",
+            "Changer le haut **sans** changer le bas."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Compare **2/3** et **3/5**.",
+            "Calcule **2/3 + 1/4**.",
+            "Calcule **5/6 − 1/2** et **2 + 3/4**."
+          ],
+          "reponses": "1) 10/15 > 9/15 · 2) 11/12 · 3) 1/3 et 11/4"
+        }
+      ]
+    }
+  ]
+}

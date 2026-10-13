@@ -1,0 +1,181 @@
+{
+  "titre": "La relative",
+  "titreSurligne": "relative",
+  "accroche": "Une virgule change tout le sens.",
+  "bonus": "**que** · **quien** · **lo que** · prép. + article + **que** · **indicatif** ou **subjonctif**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/espagnol/la-proposition-subordonnee-relative.webp",
+    "prompt": "a glossy violet chain link joining two golden rings with a tiny golden comma between them, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Une virgule,\net tout change&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le test de la virgule",
+          "lignes": [
+            "sans virgule = **restreint**",
+            "avec virgules = **ajoute**"
+          ],
+          "petite": true,
+          "regle": "Le type de relative commande la ponctuation, et parfois le **mode** du verbe.",
+          "note": "pas un détail typographique"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les deux relatives",
+          "entetes": [
+            "",
+            "Déterminative",
+            "Explicative"
+          ],
+          "lignes": [
+            [
+              "Rôle",
+              "restreint l’antécédent",
+              "ajoute une information"
+            ],
+            [
+              "Virgules",
+              "aucune",
+              "encadrée de virgules"
+            ],
+            [
+              "Pronom",
+              "<i>que</i>",
+              "<i>que</i>, ou <i>quien</i> (personne)"
+            ],
+            [
+              "Exemple",
+              "<i>Los alumnos **que** estudian aprueban.</i> (seuls ceux-là)",
+              "<i>Los alumnos, **que** estudian, aprueban.</i> (tous)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Le mode dans la relative",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Antécédent connu",
+              "texte": "**Indicatif**&nbsp;: <i>Busco a la secretaria que **habla** inglés.</i> (je la connais)"
+            },
+            {
+              "titre": "Indéfini, à trouver",
+              "texte": "**Subjonctif**&nbsp;: <i>Busco una secretaria que **hable** inglés.</i> (n’importe laquelle)"
+            },
+            {
+              "titre": "Antécédent nié",
+              "texte": "**Subjonctif**&nbsp;: <i>No conozco a nadie que **sepa** ruso.</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Où va la préposition&nbsp;?",
+          "oui": {
+            "titre": "Avant le relatif",
+            "texte": "<i>La casa **en la que** vivo.</i> · <i>El chico **del que** hablo.</i>"
+          },
+          "non": {
+            "titre": "Rejetée à la fin",
+            "texte": "<i>La casa que vivo en.</i> · <i>El chico que hablo de.</i> — jamais en espagnol."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>El chico ___ hablo (de)</i> → **del que**&nbsp;: la préposition précède toujours."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Restreint ou ajoute&nbsp;?",
+              "texte": "Sans virgule ou entre virgules ? Cela change le sens."
+            },
+            {
+              "titre": "L’antécédent existe&nbsp;?",
+              "texte": "Connu → indicatif. Indéfini ou nié → subjonctif."
+            },
+            {
+              "titre": "Une préposition&nbsp;?",
+              "texte": "Elle passe **devant** : <i>en la que</i>, <i>del que</i>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "L’antécédent implicite",
+          "deux": true,
+          "items": [
+            {
+              "titre": "el que, la que…",
+              "texte": "<i>El que quiera, que venga.</i>"
+            },
+            {
+              "titre": "quien",
+              "texte": "une personne&nbsp;: <i>Quien mucho abarca, poco aprieta.</i>"
+            },
+            {
+              "titre": "lo que",
+              "texte": "reprend une **idée entière**&nbsp;: <i>Llegó tarde, **lo que** me molestó.</i>"
+            },
+            {
+              "titre": "Jamais el que",
+              "texte": "pour une phrase entière : toujours le neutre <i>lo que</i>."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Ignorer la virgule&nbsp;: elle fait dire **tous** ou **seulement certains**.",
+            "Indicatif après « busco una… » (inconnu) → <i>que **hable**</i>.",
+            "Rejeter la préposition comme en anglais&nbsp;: <i>La casa que vivo en.</i>",
+            "<i>Llegó tarde, el que me molestó</i> → <i>…**lo que** me molestó.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Busco una secretaria que ___ (hablar) inglés.</i>",
+            "<i>La casa ___ vivo.</i> (en la que / que… en)",
+            "Une phrase entière se reprend par&nbsp;: <i>el que</i> ou <i>lo que</i>&nbsp;?"
+          ],
+          "reponses": "1) hable 2) en la que 3) lo que"
+        }
+      ]
+    }
+  ]
+}

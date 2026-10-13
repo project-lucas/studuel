@@ -1,0 +1,172 @@
+{
+  "titre": "Blocs et code",
+  "titreSurligne": "code",
+  "accroche": "Même logique, écriture différente.",
+  "bonus": "**Blocs** : Scratch, mBlock · **Texte** : Python, C++ (Arduino) · l’algorithme **ne change pas**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/4e/technologie/programmation-graphique-et-programmation-textuelle.webp",
+    "prompt": "a glossy violet puzzle block snapping into a golden code window with curly brackets, tiny gears and sparkles, same art style as the reference icons, no text, magenta background"
+  },
+  "marcel": "Blocs ou lignes,\nmême algorithme !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les deux approches",
+          "entetes": [
+            "Le point",
+            "Blocs",
+            "Texte"
+          ],
+          "lignes": [
+            [
+              "**Manipule**",
+              "des blocs",
+              "des lignes"
+            ],
+            [
+              "**Outils**",
+              "Scratch, Blockly",
+              "Python, C++"
+            ],
+            [
+              "**Syntaxe**",
+              "sans faute",
+              "stricte"
+            ],
+            [
+              "**Lecture**",
+              "d’un coup d’œil",
+              "demande l’habitude"
+            ],
+            [
+              "**Gros programme**",
+              "peu adapté",
+              "sans limite"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Python : deux règles",
+          "items": [
+            {
+              "terme": "Le deux-points",
+              "definition": "termine la ligne qui **ouvre** un bloc (condition, boucle, fonction)"
+            },
+            {
+              "terme": "L’indentation",
+              "definition": "montre ce qui **appartient** au bloc : elle fait partie du langage"
+            },
+            {
+              "terme": "Même algorithme",
+              "definition": "séquence, condition, boucle, variable : seule l’**écriture** change"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Passer des blocs au texte",
+          "etapes": [
+            {
+              "titre": "Lire",
+              "texte": "la structure des blocs : condition, sinon, action"
+            },
+            {
+              "titre": "Traduire",
+              "texte": "chaque bloc en une ligne, avec ses deux-points"
+            },
+            {
+              "titre": "Indenter",
+              "texte": "les instructions qui dépendent de la condition"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Bloc « __si__ température &gt; 25 __alors__ ventilo ». En Python&nbsp;?",
+          "calcul": "if temperature &gt; 25 :",
+          "aparte": "puis la ligne indentée",
+          "resultat": "[[deux-points + indentation]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quelle approche choisir&nbsp;?",
+          "oui": {
+            "titre": "Blocs",
+            "texte": "Pour **apprendre la logique** : les blocs incompatibles ne s’emboîtent pas."
+          },
+          "non": {
+            "titre": "Texte",
+            "texte": "Pour un **long programme** ou une carte programmable : facile à copier et partager."
+          },
+          "essai": {
+            "texte": "Oublier un deux-points bloque un programme <i>texte</i>, jamais un programme en <i>blocs</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Les deux programmes ont le même algorithme.",
+              "quoi": "l’idée"
+            },
+            {
+              "texte": "Seule la syntaxe diffère : blocs ou lignes.",
+              "quoi": "la différence"
+            },
+            {
+              "texte": "Python exige deux-points et indentation.",
+              "quoi": "la règle"
+            }
+          ],
+          "pied": "On dit ==ce qui est identique== puis ==ce qui change==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le texte change l’**algorithme**.",
+            "Oublier le **deux-points** après if ou else.",
+            "Négliger l’**indentation** : elle fait partie du langage.",
+            "Penser que les blocs ne font **pas de vraie programmation**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Citer un langage **graphique** et un langage **textuel**.",
+            "Que fait l’**indentation** en Python&nbsp;?",
+            "Quelle approche convient aux **longs** programmes&nbsp;?"
+          ],
+          "reponses": "1) Scratch ; Python · 2) elle délimite le bloc · 3) le texte"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "titre": "Calculs décimaux",
+  "titreSurligne": "décimaux",
+  "accroche": "Aligner, compter les virgules, estimer.",
+  "bonus": "**× 10, × 100** : virgule vers la droite · **÷ 10, ÷ 100** : vers la gauche",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/maths/nombres-decimaux-addition-soustraction-et-multiplication.webp",
+    "prompt": "a glossy violet calculator with golden buttons and a golden decimal comma floating above it, sparkles"
+  },
+  "marcel": "Estime d’abord,\ncalcule ensuite !",
+  "rangs": [
+    {
+      "colonnes": "1fr 330px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Multiplier des décimaux",
+          "taille": "mini",
+          "lignes": [
+            "32 × 15 = 480",
+            "1 + 1 = 2 décimales",
+            "3,2 × 1,5 = 4,80"
+          ],
+          "regle": "On multiplie **sans les virgules**, puis on compte les décimales des ==deux facteurs== pour placer la virgule.",
+          "note": "Pour + et −, on aligne les virgules&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Addition",
+              "definition": "la **somme** de deux **termes**"
+            },
+            {
+              "terme": "Soustraction",
+              "definition": "la **différence**"
+            },
+            {
+              "terme": "Multiplication",
+              "definition": "le **produit** de deux **facteurs**"
+            },
+            {
+              "terme": "Division",
+              "definition": "le **quotient**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Estimer",
+              "texte": "avec des nombres ronds&nbsp;: 19,8 × 4,9 ≈ 20 × 5 = 100"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "virgules alignées (+ et −) ou sans virgule (×)"
+            },
+            {
+              "titre": "Vérifier",
+              "texte": "le résultat est proche de l’estimation, sinon une virgule a glissé"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Calculer __12,5 + 3,75__.",
+          "calcul": "12,50 + 3,75",
+          "aparte": "on aligne les virgules",
+          "resultat": "= [[16,25]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Priorités",
+              "texte": "Parenthèses, puis × et ÷, puis + et −. 2 + 3 × 4 = 2 + 12 = **14**."
+            },
+            {
+              "titre": "× 10, × 100",
+              "texte": "La virgule va à **droite**&nbsp;: 4,7 × 100 = **470**."
+            },
+            {
+              "titre": "÷ 10, ÷ 100",
+              "texte": "La virgule va à **gauche**&nbsp;: 4,7 ÷ 100 = **0,047**."
+            },
+            {
+              "titre": "Ordre de grandeur",
+              "texte": "Si la machine affiche 9,7 ou 970 pour 100 environ&nbsp;: **erreur**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "12,5 + 3,75 = 12,50 + 3,75",
+              "quoi": "on aligne"
+            },
+            {
+              "texte": "= 16,25",
+              "quoi": "le résultat"
+            },
+            {
+              "texte": "Estimation&nbsp;: 12 + 4 = 16",
+              "quoi": "la vérification"
+            }
+          ],
+          "pied": "Le produit a **autant de décimales** que les deux facteurs ==réunis==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Ne pas **aligner** les virgules dans une addition.",
+            "Calculer 2 + 3 × 4 dans l’ordre écrit&nbsp;: **20**, faux.",
+            "Oublier de **compter** les décimales d’une multiplication.",
+            "Se tromper de **sens** en déplaçant la virgule."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "Le bon réflexe",
+          "paragraphes": [
+            "Un résultat qu’on n’a pas **estimé d’abord** est un résultat qu’on ne peut pas **vérifier**&nbsp;: trois secondes d’estimation rattrapent la plupart des erreurs de virgule."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**4,7 × 100**&nbsp;?",
+            "**2 + 3 × 4**&nbsp;?",
+            "**6,5 + 2,75**&nbsp;?"
+          ],
+          "reponses": "1) 470 · 2) 14 · 3) 9,25"
+        }
+      ]
+    }
+  ]
+}

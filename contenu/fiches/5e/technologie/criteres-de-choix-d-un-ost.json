@@ -1,0 +1,174 @@
+{
+  "titre": "Critères de choix",
+  "titreSurligne": "choix",
+  "accroche": "Comparer, pondérer, justifier.",
+  "bonus": "**Tableau multicritère** : solutions en colonnes, critères en lignes, **coefficients**, total pondéré",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/technologie/criteres-de-choix-d-un-ost.webp",
+    "prompt": "a glossy violet comparison table with golden check marks and a small golden trophy on top, a lightbulb beside it, sparkles"
+  },
+  "marcel": "Je compare, je pondère,\nje justifie !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les critères",
+          "entetes": [
+            "Critère",
+            "Question posée"
+          ],
+          "lignes": [
+            [
+              "**Performance**",
+              "fait-il ce qu’on attend&nbsp;?"
+            ],
+            [
+              "**Coût**",
+              "achat, usage, entretien"
+            ],
+            [
+              "**Fiabilité**",
+              "combien de temps sans panne&nbsp;?"
+            ],
+            [
+              "**Environnement**",
+              "matériaux, recyclabilité"
+            ],
+            [
+              "**Réparabilité**",
+              "pièces détachées&nbsp;?"
+            ],
+            [
+              "**Sécurité**",
+              "conforme aux normes&nbsp;?"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Coefficient",
+              "definition": "fait entrer les **priorités** dans le calcul"
+            },
+            {
+              "terme": "Coût global",
+              "definition": "achat **+** usage **+** entretien sur la durée de vie"
+            },
+            {
+              "terme": "F0",
+              "definition": "critère **impératif** du cahier des charges"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le tableau multicritère en quatre temps",
+          "etapes": [
+            {
+              "titre": "Disposer",
+              "texte": "solutions en colonnes, critères en lignes"
+            },
+            {
+              "titre": "Noter",
+              "texte": "chaque case"
+            },
+            {
+              "titre": "Pondérer",
+              "texte": "un coefficient pour les critères prioritaires"
+            },
+            {
+              "titre": "Additionner",
+              "texte": "les totaux pondérés"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Ampoule à __filament__ ou __LED__&nbsp;? Prix, conso, durée de vie.",
+          "calcul": "LED&nbsp;: prix plus élevé, conso faible, durée ×20",
+          "aparte": "sur toute la durée de vie",
+          "resultat": "la [[LED]] est moins chère"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Bien justifier&nbsp;?",
+          "oui": {
+            "titre": "Justification",
+            "texte": "Elle **confronte** la solution au cahier des charges, critère par critère."
+          },
+          "non": {
+            "titre": "Opinion",
+            "texte": "« C’est mieux »&nbsp;: aucun **critère**, aucune preuve."
+          },
+          "essai": {
+            "texte": "« La solution B atteint le niveau exigé sur les critères <i>F0</i>, pas la A. »"
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "On compare sur les critères du cahier des charges.",
+              "quoi": "le cadre"
+            },
+            {
+              "texte": "La solution B atteint le niveau des critères F0.",
+              "quoi": "la preuve"
+            },
+            {
+              "texte": "Je retiens donc la solution B.",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "C’est le ==coût global==, pas le prix d’achat, qui décide."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Comparer **sans coefficient** : prix et sécurité pèsent pareil.",
+            "Décider sur le **prix d’achat** seul.",
+            "Justifier par « c’est **mieux** » sans critère.",
+            "Oublier la **réparabilité** et l’environnement."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "À quoi sert le **coefficient**&nbsp;?",
+            "Qu’est-ce que le **coût global**&nbsp;?",
+            "On justifie un choix par rapport à quoi&nbsp;?"
+          ],
+          "reponses": "1) donner plus de poids aux critères prioritaires · 2) achat + usage + entretien · 3) le cahier des charges"
+        }
+      ]
+    }
+  ]
+}

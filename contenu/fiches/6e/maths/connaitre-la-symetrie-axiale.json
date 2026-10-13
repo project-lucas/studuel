@@ -1,0 +1,118 @@
+{
+  "titre": "La symétrie axiale",
+  "titreSurligne": "symétrie",
+  "accroche": "Le pliage et le miroir.",
+  "bonus": "Elle conserve **longueurs, angles, aires** · elle change le **sens**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/6e/maths/connaitre-la-symetrie-axiale.webp",
+    "prompt": "a glossy violet butterfly with symmetrical golden wing patterns above a dashed golden mirror line, tiny sparkles, same art style as the reference icons"
+  },
+  "marcel": "Plie, et ça\nse superpose !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "Le symétrique d’un point",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 25 220 125' aria-hidden='true'><line x1='110' y1='30' x2='110' y2='146' stroke='#7a3fe0' stroke-width='3.5' stroke-dasharray='8 6'></line><line x1='50' y1='90' x2='170' y2='90' stroke='#2b2350' stroke-width='2.5' stroke-dasharray='4 4'></line><path d='M110,78 h12 v12' fill='none' stroke='#f1566c' stroke-width='2.5'></path><g stroke='#f1566c' stroke-width='3.5' stroke-linecap='round'><line x1='78' y1='84' x2='78' y2='96'></line><line x1='142' y1='84' x2='142' y2='96'></line></g><g fill='#2b2350'><circle cx='50' cy='90' r='5'></circle><circle cx='170' cy='90' r='5'></circle></g><g font-family=\"'Baloo 2'\" font-weight='800' font-size='19' fill='#2b2350'><text x='38' y='116'>A</text><text x='162' y='116'>A’</text><text x='118' y='46' fill='#7a3fe0'>(d)</text></g></svg>",
+              "legende": "(d) est la médiatrice de [AA’]",
+              "sous": "perpendiculaire, puis même distance de l’autre côté"
+            }
+          ]
+        },
+        {
+          "type": "figures",
+          "numero": 2,
+          "titre": "Le symétrique d’un triangle",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 25 220 125' aria-hidden='true'><line x1='110' y1='30' x2='110' y2='146' stroke='#7a3fe0' stroke-width='3.5' stroke-dasharray='8 6'></line><polygon points='30,50 30,128 84,128' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><polygon points='190,50 190,128 136,128' fill='#fff3cf' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><g font-family=\"'Baloo 2'\" font-weight='800' font-size='17' fill='#2b2350'><text x='14' y='48'>A</text><text x='196' y='48'>A’</text></g></svg>",
+              "legende": "même forme, même taille",
+              "sous": "seul le sens est inversé"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Combien d’axes&nbsp;?",
+          "entetes": ["La figure", "Ses axes"],
+          "lignes": [
+            ["Carré", "**4**"],
+            ["Rectangle, losange", "**2**"],
+            ["Triangle équilatéral", "**3**"],
+            ["Triangle isocèle", "**1**"],
+            ["Cercle", "une **infinité**"],
+            ["Parallélogramme", "**aucun**"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 4,
+          "titre": "Ce qui ne bouge pas",
+          "lignes": ["A sur l’axe ⟹ A’ = A"],
+          "regle": "Un point **sur** l’axe est son propre symétrique. La symétrie garde ==longueurs, angles et aires==.",
+          "note": "la figure n’est pas déformée&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Construire le symétrique d’un point",
+          "etapes": [
+            { "titre": "Perpendiculaire", "texte": "à l’axe, en passant par le point A" },
+            { "titre": "Reporter", "texte": "au compas, la même distance de l’autre côté de l’axe" },
+            { "titre": "Nommer", "texte": "le point A’ et coder les longueurs égales" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "A est à 3 cm de l’axe (d). On construit A’. __Longueur AA’__&nbsp;?",
+          "calcul": "A’ aussi à 3 cm de (d)",
+          "aparte": "3 + 3",
+          "resultat": "AA’ = [[6 cm]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Tracer une oblique au lieu d’une **perpendiculaire**.",
+            "Dire qu’un parallélogramme a **des axes** (il a un centre).",
+            "Oublier que le point **sur l’axe** ne bouge pas.",
+            "Croire que la figure est **déformée** par la symétrie."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien d’axes de symétrie pour un **carré**&nbsp;?",
+            "A est sur l’axe (d). Où est **A’**&nbsp;?",
+            "Une figure de **5 cm²**&nbsp;: l’aire de son symétrique&nbsp;?"
+          ],
+          "reponses": "1) 4 · 2) A’ = A, au même endroit · 3) 5 cm²"
+        }
+      ]
+    }
+  ]
+}

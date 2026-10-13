@@ -2,7 +2,7 @@
 
 import type { ReactNode } from 'react'
 import { usePathname } from 'next/navigation'
-import { estEspaceParents, estPleinEcran } from '@/lib/quiz-chrome'
+import { estEspaceCoach, estEspaceParents, estPleinEcran } from '@/lib/quiz-chrome'
 import { estOngletMoi } from '@/lib/top-hud-routes'
 
 /**
@@ -31,7 +31,8 @@ export default function AppMain({ children }: { children: ReactNode }) {
   const pathname = usePathname()
   // L'espace parents n'a pas de chrome (ni bandeau ni barre d'onglets) : la
   // page pose ses propres marges, comme une session plein écran.
-  const pleinEcran = estPleinEcran(pathname) || estEspaceParents(pathname)
+  const pleinEcran =
+    estPleinEcran(pathname) || estEspaceParents(pathname) || estEspaceCoach(pathname)
   // L'onglet Moi n'a pas de bandeau (lib/top-hud-routes) : sa carte de
   // joueur prend la place du haut, sous la seule marge sûre de l'écran.
   const sansBandeau = estOngletMoi(pathname)

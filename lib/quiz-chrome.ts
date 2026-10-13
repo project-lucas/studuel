@@ -129,6 +129,18 @@ export function estEspaceParents(pathname: string): boolean {
 }
 
 /**
+ * L'ESPACE COACH (`/coach`, 13/10/2026, migration 560) : même raison que les
+ * parents — un coach ne joue pas, et son tableau se lit sur un écran
+ * d'ordinateur, sans bandeau ni barre d'onglets. Il porte son propre en-tête
+ * (app/coach/layout.tsx).
+ */
+export function estEspaceCoach(pathname: string): boolean {
+  const p = typeof pathname === 'string' ? pathname : ''
+  const chemin = p.split('?')[0]
+  return chemin === '/coach' || chemin.startsWith('/coach/')
+}
+
+/**
  * Tous réunis : les routes où le CHROME de l'app (bandeau du haut + barre
  * d'onglets) ne s'affiche pas. C'est le verdict que lisent `Navigation` et
  * `TopHud`, tous deux clients — donc réévalué à chaque navigation.
@@ -138,6 +150,7 @@ export function estChromeMasque(pathname: string): boolean {
     estPleinEcran(pathname) ||
     estOnboarding(pathname) ||
     estOnboardingCompte(pathname) ||
-    estEspaceParents(pathname)
+    estEspaceParents(pathname) ||
+    estEspaceCoach(pathname)
   )
 }

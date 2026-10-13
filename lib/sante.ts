@@ -4297,6 +4297,24 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
       'La course de la semaine ne montre que les trophées, le bouton Défier répond que le défi arrive bientôt, et toucher un ami n’ouvre pas sa fiche. Rien ne casse. À exécuter APRÈS la 557.',
     sonde: { type: 'rpc', fn: 'defis_recus', args: {} },
   },
+  {
+    id: '559',
+    fichier: '559_erreurs_app.sql',
+    feature:
+      'LA REMONTÉE DES ERREURS — la table `erreurs_app` (une ligne par plantage, navigateur ou serveur : message, nom, pile, page, `digest` de Next, contexte, navigateur, élève) et la RPC `erreur_signaler`, seule porte d’écriture (SECURITY DEFINER, ouverte à anon et authenticated, bornée : 60 par élève par 10 min, 2 000 par heure, ménage à 30 jours). Lues par l’admin seul sur /admin/erreurs.',
+    siAbsente:
+      'Les rapports d’erreur sont perdus (la RPC répond « inconnue », journalisé sur la sortie du serveur) et /admin/erreurs dit que la migration manque. Rien ne casse pour l’élève : les pages d’erreur s’affichent quand même.',
+    sonde: { type: 'table', table: 'erreurs_app' },
+  },
+  {
+    id: '560',
+    fichier: '560_coaching.sql',
+    feature:
+      'LA COUCHE COACHING — le rôle `coach` (profile_type), `coach_groupes` (nom, catégorie, code à 8 caractères régénérable, archivable), `coach_membres` (le rattachement d’un élève, un seul actif, révocable par l’élève ou le coach), les RPC du coach (créer, renommer, régénérer le code, archiver, retirer, `coach_mes_groupes`, `coach_tableau` — une lecture pour cent élèves —, `coach_fiche_eleve`) et de l’élève (`coach_code_apercu`, ouverte à anon pour « J’ai un code » dans l’onboarding ; `rattachement_par_code`, `mon_rattachement`, `rattachement_quitter`) ; `child_dashboard` refactorisée sur `eleve_tableau_de_bord`, même JSON.',
+    siAbsente:
+      '« J’ai un code » répond « code inconnu », /coach dit que la migration manque, Mon compte ne montre pas de coach. Rien ne casse pour le grand public ; l’espace parents garde le `child_dashboard` de la 319.',
+    sonde: { type: 'table', table: 'coach_groupes' },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

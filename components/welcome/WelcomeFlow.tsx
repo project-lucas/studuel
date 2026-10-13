@@ -50,6 +50,7 @@ import {
   PlanStep,
 } from './EngageSteps'
 import SignUpStep from './SignUpStep'
+import CodeCoach from './CodeCoach'
 import type { PortesOAuth } from '@/lib/auth-portes'
 
 // Écrans à bouton « Continuer » standard (footer géré par le flux). Les autres
@@ -318,7 +319,18 @@ export default function WelcomeFlow({
   function renderStep() {
     switch (step) {
       case 'intro':
-        return <IntroStep onStart={next} />
+        return (
+          <IntroStep
+            onStart={next}
+            coachGroupe={answers.coachGroupe}
+            onCode={(code, libelle) =>
+              // Un code de coach, c'est un élève : on le présuppose, l'écran
+              // suivant le laisse encore changer.
+              setAnswers((a) => ({ ...a, coachCode: code, coachGroupe: libelle, profileType: 'eleve' }))
+            }
+            onRetrait={() => setAnswers((a) => ({ ...a, coachCode: null, coachGroupe: null }))}
+          />
+        )
       case 'profil':
         return (
           <ProfilStep
@@ -473,7 +485,17 @@ export default function WelcomeFlow({
 // de WelcomeFlow) pour garder une identité de composant STABLE : sinon chaque
 // rendu du parent recréait la fonction, React remontait l'écran entier et
 // l'animation du logo repartait de zéro (flicker sur l'écran le plus critique J1).
-function IntroStep({ onStart }: { onStart: () => void }) {
+function IntroStep({
+  onStart,
+  coachGroupe,
+  onCode,
+  onRetrait,
+}: {
+  onStart: () => void
+  coachGroupe: string | null
+  onCode: (code: string, libelle: string) => void
+  onRetrait: () => void
+}) {
   return (
     <div className="flex flex-1 flex-col">
       <div className="flex flex-1 flex-col items-center justify-center text-center">
@@ -489,6 +511,9 @@ function IntroStep({ onStart }: { onStart: () => void }) {
         </p>
       </div>
       <div className="mt-auto flex flex-col gap-2.5 pt-4">
+        {/* « J'ai un code » (13/10/2026) : le joueur d'un centre de formation
+            saisit le code de son coach ici, puis continue comme tout le monde. */}
+        <CodeCoach groupe={coachGroupe} onCode={onCode} onRetrait={onRetrait} />
         <OnbButton onClick={onStart}>C&apos;est parti</OnbButton>
         <OnbButton variant="ghost" asChild>
           <Link href="/login">J&apos;ai déjà un compte</Link>

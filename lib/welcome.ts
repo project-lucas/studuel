@@ -55,6 +55,12 @@ export type OnboardingAnswers = {
   // part dans le metadata d'inscription (→ profiles.avatar par le trigger,
   // migration 361) ou dans applyOnboarding au retour OAuth.
   avatar: PortraitKey | null
+  // « J'ai un code » (13/10/2026) : le code d'un groupe de coach saisi sur
+  // l'intro, et le nom du groupe que l'aperçu a rendu — pour le redire sur les
+  // écrans suivants. Le rattachement lui-même passe par un cookie réclamé à
+  // l'ouverture de la session (lib/coach-claim.ts), comme le parrainage.
+  coachCode: string | null
+  coachGroupe: string | null
 }
 
 export const EMPTY_ANSWERS: OnboardingAnswers = {
@@ -70,6 +76,8 @@ export const EMPTY_ANSWERS: OnboardingAnswers = {
   schoolName: null,
   schoolCity: null,
   avatar: null,
+  coachCode: null,
+  coachGroupe: null,
 }
 
 // Ordre des écrans (numérotation du design handoff en commentaire).
@@ -706,6 +714,12 @@ export function parseAnswers(raw: string | null): OnboardingAnswers {
       ? d.schoolCity.trim().slice(0, 80)
       : null
   const avatar = isPortraitKey(d.avatar) ? d.avatar : null
+  const coachCode =
+    typeof d.coachCode === 'string' && /^[A-Z0-9]{8}$/.test(d.coachCode) ? d.coachCode : null
+  const coachGroupe =
+    coachCode && typeof d.coachGroupe === 'string' && d.coachGroupe.trim().length > 0
+      ? d.coachGroupe.trim().slice(0, 60)
+      : null
 
   return {
     profileType,
@@ -720,6 +734,8 @@ export function parseAnswers(raw: string | null): OnboardingAnswers {
     schoolName,
     schoolCity,
     avatar,
+    coachCode,
+    coachGroupe,
   }
 }
 

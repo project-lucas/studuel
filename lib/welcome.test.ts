@@ -63,6 +63,8 @@ const FILLED: OnboardingAnswers = {
   schoolName: 'Collège Jean Moulin',
   schoolCity: 'Lyon',
   avatar: '7',
+  coachCode: 'ABCDEFGH',
+  coachGroupe: 'U15 · coach Lucas',
 }
 
 describe('subjectsForGrade', () => {

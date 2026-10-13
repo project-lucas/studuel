@@ -6,6 +6,7 @@ import { createClient } from '@/lib/supabase/server'
 import { xpActivite } from '@/lib/wallet-server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { claimPendingReferral } from '@/lib/referral-claim'
+import { claimPendingCoachCode } from '@/lib/coach-claim'
 import { GRADE_LEVELS } from '@/lib/types'
 import { schoolLevelForGrade } from '@/lib/clan'
 import { isPortraitKey } from '@/lib/portraits'
@@ -143,6 +144,9 @@ export async function signUpWelcome(input: {
   // rattache l'école-clan (le cycle découle de la classe). Les deux sont
   // best-effort — sans incidence si les migrations 183/159 ne sont pas passées.
   await claimPendingReferral()
+  // Le code de coach saisi sur l'intro (« J'ai un code », 560) : même cookie,
+  // même instant.
+  await claimPendingCoachCode()
 
   const schoolName = typeof a.schoolName === 'string' ? a.schoolName.trim() : ''
   if (grade && schoolName.length > 0) {
@@ -234,6 +238,7 @@ export async function applyOnboarding(
     // Le parrainage reste réclamé : il est porté par un cookie, pas par le
     // profil, et n'a rien à voir avec l'écrasement qu'on vient d'éviter.
     await claimPendingReferral()
+    await claimPendingCoachCode()
     return { ok: true }
   }
 
@@ -266,6 +271,7 @@ export async function applyOnboarding(
   // Chemin OAuth : la query string du lien d'invitation a été perdue dans la
   // redirection, mais le cookie a survécu — c'est ici qu'on le réclame.
   await claimPendingReferral()
+  await claimPendingCoachCode()
 
   // École = clan : si l'élève a renseigné son établissement, on le crée/retrouve
   // et on l'y rattache (le cycle découle de sa classe). Best-effort : un échec

@@ -12,6 +12,7 @@ import SoundToggle from '@/components/ui/SoundToggle'
 import EnTetePage from '@/components/reviser/EnTetePage'
 import NotificationsOptIn from '@/components/NotificationsOptIn'
 import GradeSelector from '@/components/GradeSelector'
+import MonCoach from '@/components/compte/MonCoach'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { signOut } from '@/app/login/actions'
@@ -121,6 +122,10 @@ export default async function ComptePage() {
           ) : null}
         </div>
       </section>
+
+      {/* « Mon coach » (560) : le groupe de coach auquel l'élève est rattaché,
+          ou le champ du code. Absent tant que la migration n'est pas passée. */}
+      <MonCoach />
 
       {/* Choix de la classe : déplacé ici depuis l'onglet Moi (c'est un réglage
           de compte, pas un indicateur de progrès). Pilote tout le contenu. */}

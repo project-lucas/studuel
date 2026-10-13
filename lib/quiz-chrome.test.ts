@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import {
   estChromeMasque,
+  estEspaceCoach,
   estEspaceParents,
   estOnboarding,
   estOnboardingCompte,
@@ -101,6 +102,17 @@ describe('estChromeMasque', () => {
     expect(estEspaceParents('/parents')).toBe(true)
     expect(estEspaceParents('/parents?volet=conseils')).toBe(true)
     expect(estChromeMasque('/parents')).toBe(true)
+  })
+
+  it('masque le chrome élève sur l’espace coach', () => {
+    // Même raison que les parents : un coach ne joue pas, et son tableau se
+    // lit sur un écran d'ordinateur avec son propre en-tête.
+    expect(estEspaceCoach('/coach')).toBe(true)
+    expect(estEspaceCoach('/coach/groupes')).toBe(true)
+    expect(estEspaceCoach('/coach/eleves/abc?x=1')).toBe(true)
+    expect(estEspaceCoach('/coaching')).toBe(false)
+    expect(estChromeMasque('/coach')).toBe(true)
+    expect(estChromeMasque('/coaching')).toBe(false)
   })
 
   it('le garde partout ailleurs', () => {

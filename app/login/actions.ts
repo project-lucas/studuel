@@ -5,6 +5,7 @@ import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { claimPendingReferral } from '@/lib/referral-claim'
+import { claimPendingCoachCode } from '@/lib/coach-claim'
 import { GRADE_LEVELS } from '@/lib/types'
 import { destinationApresConnexion } from '@/lib/auth-portes'
 import { siteOrigin } from '@/lib/supabase/site-origin'
@@ -51,6 +52,8 @@ export async function signIn(
   // d'invitation vit 7 jours, donc il est encore là. Sans cet appel, un
   // parcours d'inscription entier perdait le parrainage silencieusement.
   await claimPendingReferral()
+  // Même filet pour le code de coach saisi sur l'intro (560).
+  await claimPendingCoachCode()
 
   // Première connexion (ou config jamais faite) → onboarding.
   const { data: profile } = await supabase
@@ -126,6 +129,7 @@ export async function signUp(
   // Inscription depuis /login avec session immédiate : c'est aussi un chemin
   // par lequel un filleul peut arriver.
   await claimPendingReferral()
+  await claimPendingCoachCode()
 
   revalidatePath('/', 'layout')
   // Parcours d'accueil déjà fait → le bilan de capacités ; sinon l'onboarding.

@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { claimPendingReferral } from '@/lib/referral-claim'
+import { claimPendingCoachCode } from '@/lib/coach-claim'
 import { cheminInterne } from '@/lib/auth-portes'
 
 // Retour des liens email Supabase (réinitialisation de mot de passe,
@@ -21,6 +22,8 @@ export async function GET(request: Request): Promise<Response> {
       // tous les coups (signUp renvoie une session nulle et rend la main avant
       // toute réclamation). Best-effort : n'empêche jamais la redirection.
       await claimPendingReferral()
+      // Même logique pour le code de coach saisi sur l'intro (560).
+      await claimPendingCoachCode()
       return NextResponse.redirect(`${origin}${next}`)
     }
     // L'élève ne verra qu'« lien expiré » — c'est volontaire (ne rien révéler

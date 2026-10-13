@@ -71,6 +71,9 @@ export type Chapter = {
   level: string
   title: string
   position: number
+  /** Le chapitre officiel du programme (migration des thèmes) — présent quand
+   *  la lecture l'a demandé (le catalogue de la classe, pour la loupe globale). */
+  theme?: string | null
   // EXISTENCE de la carte mentale (colonne générée, migration 181). Le CONTENU
   // (`chapters.mind_map`) n'est PAS dans ce type : il est révoqué pour anon et
   // authenticated, et ne se lit que par la RPC `chapter_mind_map`, qui vérifie

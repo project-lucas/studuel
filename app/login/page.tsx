@@ -1,6 +1,9 @@
 import { redirect } from 'next/navigation'
 import PageHeader from '@/components/PageHeader'
 import LoginForm from '@/components/LoginForm'
+// Déconnecté : les pages gardées pour le hors-ligne sont celles de l'élève
+// précédent, on les vide (public/sw.js).
+import ViderCachePages from '@/components/ViderCachePages'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { getPortesOAuthCached } from '@/lib/supabase/portes-oauth'
 
@@ -32,6 +35,7 @@ export default async function LoginPage({
 
   return (
     <div>
+      <ViderCachePages />
       <PageHeader title="Connexion" />
       {message ? (
         <p

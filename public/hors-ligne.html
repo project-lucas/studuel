@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#7a3fe0">
+<meta name="robots" content="noindex">
+<title>Hors connexion — Studuel</title>
+<!--
+  LA PAGE HORS CONNEXION (12/10/2026) — servie par le service worker
+  (public/sw.js) quand une navigation échoue SANS réseau et que la page
+  demandée n'a jamais été ouverte (donc jamais mise en cache). Statique, comme
+  lancement.html : aucune fonction, aucune base, précachée à l'installation du
+  worker. Elle reprend l'écran de pépin de l'app (components/EcranPepin :
+  Marcel, titre, une phrase, un bouton violet) avec la police système — les
+  polices de l'app sont servies sous des noms hachés.
+
+  Elle se recharge d'elle-même dès que le réseau revient.
+-->
+<style>
+  :root {
+    --background: #ede7d6;
+    --foreground: #24304f;
+    --primary: #7a3fe0;
+    --secondary: #eee7fc;
+    --muted: #8f8a78;
+    --trait: rgba(122, 63, 224, 0.10);
+  }
+  html, body { margin: 0; min-height: 100%; }
+  body {
+    font-family: 'Nunito', 'Baloo 2', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    color: var(--foreground);
+    background-color: var(--background);
+    background-image:
+      linear-gradient(var(--trait) 1px, transparent 1px),
+      linear-gradient(90deg, var(--trait) 1px, transparent 1px);
+    background-size: 24px 24px;
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    max-width: 28rem;
+    margin: 0 auto;
+    padding: calc(4.5rem + env(safe-area-inset-top)) 1rem 3rem;
+    text-align: center;
+  }
+  .marcel { width: 112px; height: 112px; display: block; margin: 0 auto; }
+  h1 {
+    font-family: 'Baloo 2', 'Nunito', system-ui, sans-serif;
+    font-weight: 800;
+    font-size: 1.875rem;
+    line-height: 1.15;
+    margin: 1rem 0 0;
+    letter-spacing: -0.01em;
+  }
+  p { margin: 0.5rem 0 0; font-size: 1rem; font-weight: 500; color: var(--muted); line-height: 1.5; }
+  .actions { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 2rem; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+    width: 100%; box-sizing: border-box; border: 0; border-radius: 999px;
+    font: inherit; font-weight: 800; cursor: pointer;
+    transition: transform 120ms ease;
+  }
+  .btn:active { transform: translateY(2px); }
+  .btn-primaire {
+    height: 3.25rem; font-size: 1rem; color: #fff; background: var(--primary);
+    box-shadow: 0 4px 0 #5b2bb8;
+  }
+  .btn-primaire:active { box-shadow: 0 2px 0 #5b2bb8; }
+  .btn-secondaire {
+    height: 2.75rem; font-size: 0.9375rem; color: var(--primary); background: var(--secondary);
+    box-shadow: 0 3px 0 #d9ccf5;
+  }
+  .btn-secondaire:active { box-shadow: 0 1px 0 #d9ccf5; }
+  .etat { margin-top: 1.5rem; font-size: 0.75rem; color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <img class="marcel" src="/images/nav/marcel.webp" alt="" width="112" height="112">
+  <h1>Tu es hors connexion</h1>
+  <p>Reconnecte-toi, puis réessaie. Les cours que tu as déjà ouverts restent lisibles.</p>
+  <div class="actions">
+    <button type="button" class="btn btn-primaire" onclick="location.reload()">Réessayer</button>
+    <button type="button" class="btn btn-secondaire" onclick="if (history.length > 1) history.back(); else location.href = '/'">Retour</button>
+  </div>
+  <p class="etat" id="etat">La page se rechargera toute seule dès que le réseau reviendra.</p>
+</main>
+<script>
+  // Dès que le réseau revient, on retente la page demandée.
+  window.addEventListener('online', function () { location.reload() })
+</script>
+</body>
+</html>

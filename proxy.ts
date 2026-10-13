@@ -69,7 +69,9 @@ export const config = {
   // `api/avatar-ia/<id>` : l'image publique d'un avatar dessiné (migration
   // 378) — même règle qu'un asset ; la route qui DESSINE (`api/avatar-ia`,
   // sans segment) garde le rafraîchissement de session.
+  // `sw.js` : le service worker (hors-ligne, push) — un fichier statique que
+  // le navigateur relit à chaque chargement, sans session à rafraîchir.
   matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|api/avatar-ia/.+|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|html)$).*)',
+    '/((?!_next/static|_next/image|favicon.ico|sw\\.js|api/avatar-ia/.+|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|html)$).*)',
   ],
 }

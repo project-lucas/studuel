@@ -1,4 +1,5 @@
 import { toutLire } from '@/lib/postgrest-pages'
+import LoupeGlobale from '@/components/reviser/LoupeGlobale'
 import Link from 'next/link'
 import { contentLevelFor } from '@/lib/grades'
 import { redirect } from 'next/navigation'
@@ -625,7 +626,15 @@ export default async function OngletReviser() {
           examBySubject={examBySubject}
           emptySlugs={emptySlugs}
           gardiens={gardiens}
-          commandesSlot={<ClasseChip court current={isGradeLevel(grade) ? grade : null} />}
+          commandesSlot={
+            <>
+              {/* La loupe GLOBALE (12/10/2026) : une fiche, dans toutes les
+                  matières de la classe — avant, la loupe ne vivait que dans
+                  chaque dossier. */}
+              <LoupeGlobale />
+              <ClasseChip court current={isGradeLevel(grade) ? grade : null} />
+            </>
+          }
           topSlot={
             /* DEUX blocs avant les matières, plus cinq. L'accueil empilait
                    la mission du jour, la ligne des contrôles, la boucle

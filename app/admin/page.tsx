@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ChevronRight, CreditCard, LineChart, MonitorPlay } from 'lucide-react'
+import { Bug, ChevronRight, CreditCard, LineChart, MonitorPlay } from 'lucide-react'
 import { createClient } from '@/lib/supabase/server'
 import type { Subject } from '@/lib/types'
 
@@ -59,6 +59,24 @@ export default async function AdminHomePage() {
             <span className="font-heading block font-extrabold">Abonnements</span>
             <span className="block text-sm text-muted-foreground">
               Demandes reçues, octroi manuel, échéances
+            </span>
+          </span>
+        </span>
+        <ChevronRight className="size-5 shrink-0 text-muted-foreground" />
+      </Link>
+
+      {/* Le journal des erreurs (559) : ce qui casse chez les élèves, groupé
+          par erreur. À ouvrir chaque matin avec la rétention. */}
+      <Link
+        href="/admin/erreurs"
+        className="flex items-center justify-between gap-3 rounded-2xl border-2 border-destructive/30 bg-destructive/5 p-4 transition-colors hover:bg-destructive/10"
+      >
+        <span className="flex items-center gap-3">
+          <Bug className="size-5 shrink-0 text-destructive" aria-hidden="true" />
+          <span>
+            <span className="font-heading block font-extrabold">Erreurs remontées</span>
+            <span className="block text-sm text-muted-foreground">
+              Ce qui casse chez les élèves, navigateur et serveur, 30 jours
             </span>
           </span>
         </span>

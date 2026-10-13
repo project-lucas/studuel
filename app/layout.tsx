@@ -23,6 +23,9 @@ import ScrollEdgeSound from "@/components/ScrollEdgeSound";
 import BackGuard from "@/components/BackGuard";
 // Toasts globaux (« Enregistré ✓ ») : file lib/toast, aucun provider.
 import Toaster from "@/components/Toaster";
+// Le hors-ligne (12/10/2026) : enregistre le service worker qui garde les
+// pages ouvertes, et pose la pastille « Hors connexion » quand le réseau manque.
+import HorsLigne from "@/components/HorsLigne";
 import RecompensesProvider from "@/components/recompenses/RecompensesProvider";
 import OngletsVivants from "@/components/OngletsVivants";
 // Écran de chargement au lancement, façon jeu mobile (illustration + barre).
@@ -241,6 +244,7 @@ export default async function RootLayout({
           </RecompensesProvider>
         </div>
         <Toaster />
+        <HorsLigne />
       </body>
     </html>
   );

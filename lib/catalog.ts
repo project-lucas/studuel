@@ -67,7 +67,9 @@ export const getGradeChaptersCached = unstable_cache(
     const { data } = await toutLire((from, to) =>
       db
         .from('chapters')
-        .select('id, subject_id, level, title, position')
+        // `theme` (le chapitre officiel) : la loupe globale de l'accueil
+        // Réviser cherche aussi dedans (12/10/2026).
+        .select('id, subject_id, level, title, position, theme')
         .eq('level', contentLevelFor(grade))
         .order('position', { ascending: true })
         .order('id', { ascending: true })

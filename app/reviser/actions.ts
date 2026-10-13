@@ -2,7 +2,7 @@
 
 import { refresh, revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
-import { avancerQuetesApres } from '@/lib/quests-server'
+import { advanceQuests, avancerQuetesApres } from '@/lib/quests-server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { validateRevisionToday, validateCommuteToday } from '@/lib/habits'
 import { normaliserPrioritaires } from '@/lib/matieres-prioritaires'
@@ -52,9 +52,15 @@ export async function completeLesson(
   // du gardien de sa matière — le boss sort en révisant, jamais autrement.
   let gains: Gain[] = []
   if (!error) {
-    // La quête « Terminer N cours » (lib/quests) : après la réponse.
-    avancerQuetesApres(supabase, user.id, { lecons: 1 })
-    const [, award, [, couronnes]] = await Promise.all([
+    const [, , award, [, couronnes]] = await Promise.all([
+      // LA QUÊTE « Lire 1 cours » AVANCE DANS LA RÉPONSE (13/10/2026, Lucas :
+      // « elles doivent pouvoir être vérifiées sans erreur ») : c'est le geste
+      // que l'élève regarde s'allumer — pas d'écriture différée dont il ne
+      // verrait le résultat qu'à l'écran suivant. Une panne des quêtes ne
+      // casse pas la leçon pour autant.
+      advanceQuests(supabase, user.id, { lecons: 1 }).catch((e: unknown) => {
+        console.error('[quetes] lecture non comptée :', e instanceof Error ? e.message : e)
+      }),
       validateRevisionToday(supabase, user.id),
       // LES DEUX SEULES SOURCES D'XP DE CE GESTE. La leçon elle-même vaut 5,
       // une fois pour toutes (clé = la leçon) ; et comme une leçon terminée
@@ -230,8 +236,8 @@ export async function finishReviewSession(answers: ReviewAnswer[]): Promise<{
   let apparition: TraqueApparition | null = null
   let gains: Gain[] = []
   if (!error) {
-    // Chaque bonne réponse revue compte pour « Trouver N bonnes réponses ».
-    avancerQuetesApres(supabase, user.id, { correct: score })
+    // Chaque carte revue est une question répondue pour « Répondre à 10 questions ».
+    avancerQuetesApres(supabase, user.id, { reponses: clean.length })
     // La Traque (212) : chaque carte révisée remplit la jauge du gardien de
     // SA matière — une carte de Maths ne fait pas sortir le boss de Français.
     // Son résultat est attendu : c'est lui qui dit si un gardien vient de

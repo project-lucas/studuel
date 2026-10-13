@@ -3,7 +3,6 @@
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { avancerQuetesApres } from '@/lib/quests-server'
-import { quizReussi } from '@/lib/quests'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { weekProgress } from '@/lib/streak'
 import type { JourSerie } from '@/lib/serie-celebration'
@@ -135,12 +134,9 @@ export async function recordTestSession(
   let apparition: TraqueApparition | null = null
   let gains: Gain[] = []
   if (!error) {
-    // Les quêtes du jour : un quiz, peut-être réussi, et ses bonnes réponses.
-    avancerQuetesApres(supabase, user.id, {
-      quiz: 1,
-      quizReussis: quizReussi(cleanScore, cleanTotal) ? 1 : 0,
-      correct: cleanScore,
-    })
+    // La quête du jour « Répondre à 10 questions » : chaque question du quiz,
+    // juste ou non.
+    avancerQuetesApres(supabase, user.id, { reponses: cleanTotal })
     // La Traque (212) : un quiz de chapitre terminé remplit la jauge du
     // gardien de la matière, et son chapitre entre dans le pool du combat.
     // Nommée à part (mais lancée dans le même souffle que le reste) parce que

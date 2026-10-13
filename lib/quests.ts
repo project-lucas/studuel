@@ -19,27 +19,29 @@ import { seededRng } from '@/lib/defi-modes'
 //
 // LES TROIS GESTES DE L'APP (03/10/2026, Lucas : « les quêtes journalières sont
 // centrales, comme Genshin Impact »). Chaque jour, une quête par geste :
-// APPRENDRE (un cours), SE TESTER (un quiz, des bonnes réponses, le cahier),
-// JOUER (l'arène). Elles ne touchaient avant que le duel classé, et quatre
-// d'entre elles comptaient des choses que rien n'alimentait.
+// APPRENDRE, SE TESTER, JOUER.
+//
+// LE TRIO MINIMAL (13/10/2026, Lucas : « les missions journalières doivent être
+// faciles, inciter à travailler, et pouvoir être vérifiées sans erreur ») :
+// une seule quête par geste, toujours la même, toujours la version la plus
+// courte — lire 1 cours, répondre à 10 questions, faire 1 partie. Dix minutes,
+// jamais une condition qui dépend d'un autre (gagner), jamais un seuil (80 %).
+// Le tirage de la veille (« 2 cours », « gagner un duel », « 20 bonnes
+// réponses ») faisait des journées infaisables, et la lecture ne comptait
+// qu'au bouton du bas du cours, que personne ne pressait : zéro quête avancée
+// sur toute l'app pendant dix jours.
 //
 // RÈGLE D'OR : une quête n'entre au catalogue que si son type est alimenté par
-// un appel réel à advanceQuests (lib/quests-server), et qu'un élève gratuit de
-// n'importe quelle classe peut la finir aujourd'hui. Seule exception, le
-// cahier d'exercices : réservé à Studuel+ et écrit pour certaines classes, il
-// n'est tiré que si le contexte de l'élève le permet (`QuestContext`).
+// un appel réel à advanceQuests (lib/quests-server) — le geste compte TOUT
+// SEUL, jamais par un bouton —, et qu'un élève gratuit de n'importe quelle
+// classe peut la finir aujourd'hui.
 
 /** Ce qu'une quête compte. Chaque type est incrémenté depuis UN endroit du
  *  code : ajouter un type sans brancher son compteur = quête infinissable. */
 export type QuestKind =
-  | 'lecon' // cours terminés (completeLesson)
-  | 'quiz' // quiz terminés (recordTestSession)
-  | 'quiz_reussi' // quiz terminés à 80 % ou plus (recordTestSession)
-  | 'correct' // bonnes réponses : quiz, révisions, jeux, duels
-  | 'exercice' // exercices du cahier réussis (terminerExercice)
-  | 'duel_play' // courses classées jouées (fin de course)
-  | 'duel_win' // courses classées gagnées (fin de course)
-  | 'partie' // parties de jeux de salon et de modes de l'arène (recordChallenge)
+  | 'lecon' // cours lus jusqu'en bas (completeLesson, déclenché par la lecture)
+  | 'reponse' // questions répondues, justes ou non : quiz, révisions, jeux, duels, cahier
+  | 'partie' // parties jouées : jeux de salon, modes de l'arène, duels
 
 /** Le geste de la journée auquel une quête appartient — un par jour. */
 export type QuestPilier = 'apprendre' | 'tester' | 'jouer'
@@ -65,31 +67,28 @@ export type QuestDef = {
   href: string
   xp: number
   gems: number
-  /** Ne se tire que pour un abonné dont la classe a un cahier d'exercices. */
-  cahier?: true
 }
 
+/** Le trio minimal — MIROIR de `quest_catalog()` (migration 564). */
 export const QUEST_CATALOG: readonly QuestDef[] = [
-  // --- apprendre --------------------------------------------------------------
-  { id: 'lecon1', kind: 'lecon', pilier: 'apprendre', goal: 1, label: 'Terminer 1 cours', detail: 'Lis un cours jusqu’au bout', href: '/reviser', xp: 30, gems: 0 },
-  { id: 'lecon2', kind: 'lecon', pilier: 'apprendre', goal: 2, label: 'Terminer 2 cours', detail: 'Dans la matière de ton choix', href: '/reviser', xp: 50, gems: 0 },
-
-  // --- se tester --------------------------------------------------------------
-  { id: 'quiz1', kind: 'quiz', pilier: 'tester', goal: 1, label: 'Terminer 1 quiz', detail: 'N’importe quel chapitre', href: '/reviser', xp: 30, gems: 0 },
-  { id: 'quiz80', kind: 'quiz_reussi', pilier: 'tester', goal: 1, label: 'Réussir 1 quiz à 80 %', detail: 'Au moins 8 bonnes réponses sur 10', href: '/reviser', xp: 40, gems: 0 },
-  { id: 'correct20', kind: 'correct', pilier: 'tester', goal: 20, label: 'Trouver 20 bonnes réponses', detail: 'Quiz, révisions, jeux et duels comptent', href: '/reviser', xp: 40, gems: 0 },
-  { id: 'exercice1', kind: 'exercice', pilier: 'tester', goal: 1, label: 'Réussir 1 exercice du cahier', detail: 'Dans le cahier d’un chapitre', href: '/reviser', xp: 50, gems: 0, cahier: true },
-
-  // --- jouer ------------------------------------------------------------------
-  { id: 'duel1', kind: 'duel_play', pilier: 'jouer', goal: 1, label: 'Jouer 1 duel', detail: 'Dans l’arène', href: '/defi', xp: 30, gems: 0 },
-  { id: 'win1', kind: 'duel_win', pilier: 'jouer', goal: 1, label: 'Gagner 1 duel', detail: 'Dans l’arène', href: '/defi', xp: 40, gems: 0 },
-  { id: 'partie2', kind: 'partie', pilier: 'jouer', goal: 2, label: 'Jouer 2 parties', detail: 'Un jeu ou un mode de l’arène', href: '/defi', xp: 30, gems: 0 },
+  { id: 'lecon1', kind: 'lecon', pilier: 'apprendre', goal: 1, label: 'Lire 1 cours', detail: 'Jusqu’en bas — ça compte tout seul', href: '/reviser', xp: 30, gems: 0 },
+  { id: 'reponses10', kind: 'reponse', pilier: 'tester', goal: 10, label: 'Répondre à 10 questions', detail: 'Quiz, révisions, jeux ou duels — justes ou non', href: '/reviser', xp: 30, gems: 0 },
+  { id: 'partie1', kind: 'partie', pilier: 'jouer', goal: 1, label: 'Faire 1 partie', detail: 'Un jeu, un mode de l’arène ou un duel', href: '/defi', xp: 30, gems: 0 },
 ]
 
-/** Les quêtes retirées le 03/10/2026 : la base les connaît encore (555), pour
- *  payer une journée commencée avant le déploiement ; plus aucun code ne les
- *  tire. Le test miroir (lib/recompenses-mirror.test.ts) les y tolère. */
+/** Les quêtes retirées (le 03/10/2026, puis les variantes dures le 13/10) : la
+ *  base les connaît encore (555, 564), pour payer une journée commencée avant
+ *  le déploiement ; plus aucun code ne les tire. Le test miroir
+ *  (lib/recompenses-mirror.test.ts) les y tolère. */
 export const QUETES_RETIREES: readonly string[] = [
+  'lecon2',
+  'quiz1',
+  'quiz80',
+  'correct20',
+  'exercice1',
+  'duel1',
+  'win1',
+  'partie2',
   'correct10',
   'revision5',
   'combo3',
@@ -111,20 +110,6 @@ export const QUESTS_PER_DAY = 3
 export const ALL_DONE_XP = 100
 export const ALL_DONE_GEMS = 0
 
-/** Ce que l'on sait de l'élève pour tirer ses quêtes. */
-export type QuestContext = {
-  /** Abonné Studuel+ ET classe dotée d'un cahier d'exercices. */
-  cahier?: boolean
-}
-
-/** Les classes (niveau de contenu) dont le cahier d'exercices est en base. */
-export const NIVEAUX_CAHIER: readonly string[] = ['3e', '1re', 'Tle']
-
-/** Le contexte de tirage, depuis l'abonnement et le niveau de contenu. */
-export function contexteQuetes(premium: boolean, niveauContenu: string | null | undefined): QuestContext {
-  return { cahier: premium && !!niveauContenu && NIVEAUX_CAHIER.includes(niveauContenu) }
-}
-
 /** Tire un élément d'une liste avec un générateur pseudo-aléatoire ensemencé. */
 function pick<T>(list: readonly T[], rng: () => number): T {
   return list[Math.floor(rng() * list.length) % list.length]
@@ -132,13 +117,15 @@ function pick<T>(list: readonly T[], rng: () => number): T {
 
 /**
  * Les trois quêtes du jour : une par geste (apprendre, se tester, jouer),
- * tirées de façon déterministe depuis (jour + élève + contexte). Mêmes
- * entrées = mêmes quêtes, à chaque rendu, sur chaque appareil.
+ * tirées de façon déterministe depuis (jour + élève). Mêmes entrées = mêmes
+ * quêtes, à chaque rendu, sur chaque appareil. Avec le trio minimal, chaque
+ * geste n'a qu'une quête : le tirage ne change rien, il reste là pour le jour
+ * où une variante reviendra au catalogue.
  */
-export function dailyQuests(dayKey: string, userId: string, ctx: QuestContext = {}): QuestDef[] {
+export function dailyQuests(dayKey: string, userId: string): QuestDef[] {
   const out: QuestDef[] = []
   for (const pilier of PILIERS) {
-    const bucket = QUEST_CATALOG.filter((q) => q.pilier === pilier && (!q.cahier || ctx.cahier === true))
+    const bucket = QUEST_CATALOG.filter((q) => q.pilier === pilier)
     if (bucket.length === 0) continue
     // Une graine par geste : sinon deux gestes tirés du même flux se
     // corrèlent et l'élève retrouve toujours les mêmes couples.
@@ -176,13 +163,8 @@ export function questView(def: QuestDef, progress: QuestProgress): QuestView {
   }
 }
 
-export function questViews(
-  dayKey: string,
-  userId: string,
-  progress: QuestProgress,
-  ctx: QuestContext = {},
-): QuestView[] {
-  return dailyQuests(dayKey, userId, ctx).map((d) => questView(d, progress))
+export function questViews(dayKey: string, userId: string, progress: QuestProgress): QuestView[] {
+  return dailyQuests(dayKey, userId).map((d) => questView(d, progress))
 }
 
 export function allDone(views: readonly QuestView[]): boolean {
@@ -275,13 +257,11 @@ export function quetesAAnnoncer(etat: QuetesDuJour, annoncees: readonly string[]
 
 /** Ce qu'une partie ou une activité vient de produire. */
 export type QuestEvent = {
+  /** Cours lus jusqu'en bas. */
   lecons?: number
-  quiz?: number
-  quizReussis?: number
-  correct?: number
-  exercicesReussis?: number
-  duelsPlayed?: number
-  duelsWon?: number
+  /** Questions répondues, justes ou non. */
+  reponses?: number
+  /** Parties jouées (jeu, mode de l'arène, duel). */
   parties?: number
 }
 
@@ -293,12 +273,7 @@ export function deltaFor(event: QuestEvent): QuestDelta {
     Number.isFinite(v) ? Math.max(0, Math.floor(v as number)) : 0
   return {
     lecon: n(event.lecons),
-    quiz: n(event.quiz),
-    quiz_reussi: n(event.quizReussis),
-    correct: n(event.correct),
-    exercice: n(event.exercicesReussis),
-    duel_play: n(event.duelsPlayed),
-    duel_win: n(event.duelsWon),
+    reponse: n(event.reponses),
     partie: n(event.parties),
   }
 }
@@ -315,16 +290,10 @@ export function quizReussi(score: number, total: number): boolean {
  * progression (immutabilité : on ne modifie jamais l'objet reçu).
  * Seules les quêtes réellement tirées ce jour-là avancent.
  */
-export function applyEvent(
-  dayKey: string,
-  userId: string,
-  progress: QuestProgress,
-  event: QuestEvent,
-  ctx: QuestContext = {},
-): QuestProgress {
+export function applyEvent(dayKey: string, userId: string, progress: QuestProgress, event: QuestEvent): QuestProgress {
   const delta = deltaFor(event)
   const next: Record<string, number> = { ...progress }
-  for (const def of dailyQuests(dayKey, userId, ctx)) {
+  for (const def of dailyQuests(dayKey, userId)) {
     const current = Number.isFinite(next[def.id]) ? next[def.id] : 0
     const add = delta[def.kind] ?? 0
     if (add > 0) next[def.id] = current + add

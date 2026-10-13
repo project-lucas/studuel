@@ -1,23 +1,18 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
 import { after } from 'next/server'
-import { PREMIUM_TIERS } from '@/lib/gems'
-import { contentLevelFor } from '@/lib/grades'
 import {
   applyEvent,
-  contexteQuetes,
   dailyQuests,
   normalizeProgress,
   questViews,
-  type QuestContext,
   type QuestEvent,
   type QuestProgress,
   type QuestView,
 } from '@/lib/quests'
 import { toDayKey } from '@/lib/streak'
-import type { Tier } from '@/lib/subscription'
 
-// Accès serveur aux quêtes du jour (migrations 205, puis 555 pour le catalogue
-// des trois gestes).
+// Accès serveur aux quêtes du jour (migrations 205, 555, puis 564 pour le trio
+// minimal).
 //
 // Les règles (catalogue, tirage, avancement) vivent dans `lib/quests.ts`, pur et
 // testé ; les montants réellement versés sont fixés dans les fonctions SQL
@@ -25,18 +20,6 @@ import type { Tier } from '@/lib/subscription'
 // Actions — et TOLÈRE une base où la migration n'est pas encore passée :
 // l'avancement échoue en silence journalisé, jamais en cassant la partie qui
 // l'a déclenché. Même contrat que lib/wallet-server.
-
-/** Le contexte de tirage de l'élève : abonnement et classe (le cahier
- *  d'exercices n'est tiré que s'il peut l'ouvrir). Une lecture du profil. */
-export async function fetchQuestContext(supabase: SupabaseClient, userId: string): Promise<QuestContext> {
-  const { data } = await supabase
-    .from('profiles')
-    .select('subscription_tier, grade_level')
-    .eq('id', userId)
-    .maybeSingle<{ subscription_tier: string | null; grade_level: string | null }>()
-  const premium = PREMIUM_TIERS.includes((data?.subscription_tier ?? 'free') as Tier)
-  return contexteQuetes(premium, data?.grade_level ? contentLevelFor(data.grade_level) : null)
-}
 
 /** Lit la progression du jour. Objet vide si la migration n'est pas passée ou
  *  si l'élève n'a encore rien fait aujourd'hui. */
@@ -60,13 +43,9 @@ export async function fetchQuestViews(
   supabase: SupabaseClient,
   userId: string,
   dayKey: string = toDayKey(new Date()),
-  ctx?: QuestContext,
 ): Promise<QuestView[]> {
-  const [contexte, progress] = await Promise.all([
-    ctx ?? fetchQuestContext(supabase, userId),
-    fetchQuestProgress(supabase, userId, dayKey),
-  ])
-  return questViews(dayKey, userId, progress, contexte)
+  const progress = await fetchQuestProgress(supabase, userId, dayKey)
+  return questViews(dayKey, userId, progress)
 }
 
 /** Les quêtes DÉJÀ encaissées aujourd'hui. Une quête payée ne peut plus l'être
@@ -110,12 +89,9 @@ export async function advanceQuests(
   event: QuestEvent,
   dayKey: string = toDayKey(new Date()),
 ): Promise<QuestAdvance> {
-  const [ctx, before] = await Promise.all([
-    fetchQuestContext(supabase, userId),
-    fetchQuestProgress(supabase, userId, dayKey),
-  ])
-  const after = applyEvent(dayKey, userId, before, event, ctx)
-  const defs = dailyQuests(dayKey, userId, ctx)
+  const before = await fetchQuestProgress(supabase, userId, dayKey)
+  const after = applyEvent(dayKey, userId, before, event)
+  const defs = dailyQuests(dayKey, userId)
   const wasDone = (p: QuestProgress, id: string, goal: number) => (p[id] ?? 0) >= goal
   const justCompleted = defs
     .filter((d) => !wasDone(before, d.id, d.goal) && wasDone(after, d.id, d.goal))
@@ -150,6 +126,8 @@ export async function advanceQuests(
  * dans after() », docs/latence.md). Le bandeau relit les quêtes au changement
  * d'écran (components/quetes/QuetesVeille) et annonce « Quête accomplie ».
  * Réservé aux Server Actions et routes : `after` y garde l'accès aux cookies.
+ * La LECTURE d'un cours, elle, avance DANS la réponse (`advanceQuests` attendu
+ * par `completeLesson`) : c'est le geste que l'élève regarde s'allumer.
  */
 export function avancerQuetesApres(supabase: SupabaseClient, userId: string, event: QuestEvent): void {
   after(async () => {

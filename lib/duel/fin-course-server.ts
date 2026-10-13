@@ -146,11 +146,9 @@ export async function enregistrerFinCourse(input: DuelCourseInput): Promise<Duel
 
   // ---------------------------- ce qui se décide en TypeScript, à côté
   const [quests, , xpCourse] = await Promise.all([
-    advanceQuests(supabase, user.id, {
-      duelsPlayed: 1,
-      duelsWon: won ? 1 : 0,
-      correct: stats.correct,
-    }),
+    // Un duel est une partie (« Faire 1 partie ») et ses questions comptent
+    // pour « Répondre à 10 questions », gagné ou non.
+    advanceQuests(supabase, user.id, { parties: 1, reponses: stats.answered }),
     coeurPaye.saved ? validateRevisionToday(supabase, user.id) : Promise.resolve(),
     // L'XP DE LA COURSE (557) : 10 pour l'avoir courue, 20 gagnée, 100 par
     // jour au plus — une fois par course (clé : son identifiant).

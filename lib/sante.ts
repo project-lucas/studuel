@@ -4348,6 +4348,18 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     // vaut « présente ».
     sonde: { type: 'rpc', fn: 'fiche_pdf_acces', args: { p_nom: '' } },
   },
+  {
+    id: '564',
+    fichier: '564_quetes_trio_minimal.sql',
+    feature:
+      'LE TRIO MINIMAL DES QUÊTES DU JOUR (13/10/2026) — `quest_catalog()` réécrite : lire 1 cours (`lecon1`), répondre à 10 questions (`reponses10`), faire 1 partie (`partie1`) ; les variantes dures (2 cours, 80 %, gagner un duel…) passent aux retirées.',
+    siAbsente:
+      'Les quêtes « Répondre à 10 questions » et « Faire 1 partie » restent à zéro : `quest_save_progress` ignore un id absent du catalogue. « Lire 1 cours » avance.',
+    // Non sondable : `quest_catalog()` existe depuis la 205, seule sa table
+    // change (CREATE OR REPLACE). Contrôle à la main :
+    //   select * from quest_catalog() where id = 'reponses10';
+    sonde: null,
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

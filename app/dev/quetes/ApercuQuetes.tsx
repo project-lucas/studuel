@@ -6,12 +6,12 @@ import PastilleQuetes from '@/components/quetes/PastilleQuetes'
 import { semerQuetes } from '@/components/quetes/store'
 import { BONUS_STEP_ID, QUEST_CATALOG, queteServie, questView, type QuetesDuJour } from '@/lib/quests'
 
-const IDS = ['lecon1', 'quiz80', 'partie2'] as const
+const IDS = ['lecon1', 'reponses10', 'partie1'] as const
 
 /** Les trois états de démonstration : mixte, tout fini, tout encaissé. */
 function exemple(e: string): QuetesDuJour {
   const avancement: Record<string, number> =
-    e === 'toutes' || e === 'payees' ? { lecon1: 1, quiz80: 1, partie2: 2 } : { lecon1: 1, quiz80: 0, partie2: 1 }
+    e === 'toutes' || e === 'payees' ? { lecon1: 1, reponses10: 10, partie1: 1 } : { lecon1: 1, reponses10: 4, partie1: 0 }
   const quetes = IDS.map((id) => queteServie(questView(QUEST_CATALOG.find((d) => d.id === id)!, avancement)))
   return {
     jour: '2026-10-03',

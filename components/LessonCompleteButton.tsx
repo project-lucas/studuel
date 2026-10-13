@@ -1,67 +1,114 @@
 'use client'
 
-import { useRef, useState, useTransition } from 'react'
-import { Check } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { useEffect, useRef, useState, useTransition } from 'react'
+import { BookOpenCheck, Check } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
 import { completeLesson } from '@/app/reviser/actions'
-import {
-  origineUnique,
-  useRecompenses,
-} from '@/components/recompenses/RecompensesProvider'
+import { origineUnique, useRecompenses } from '@/components/recompenses/RecompensesProvider'
+import { relireQuetes } from '@/components/quetes/store'
+import { secondesDeLecture } from '@/lib/lecture'
 
-// « J'ai terminé cette leçon » : fait progresser le chapitre (plancher 30 %)
-// et valide la journée dans la série.
+// LA LECTURE COMPTE TOUTE SEULE (13/10/2026, Lucas : « j'en ai lu un et rien
+// ne s'est activé » ; « les missions doivent pouvoir être vérifiées sans
+// erreur »). Il y avait ici un bouton « J'ai terminé cette leçon », sous le
+// texte : personne ne le pressait — zéro cours terminé sur toute l'app en sept
+// jours — et la quête « Lire 1 cours » ne s'allumait jamais.
 //
-// LE GESTE DE CLASH ROYALE, EN VERSION COURTE. C'est l'action la plus fréquente
-// de l'app, et la seule qui paye de l'XP à coup sûr la première fois (5 pour la
-// leçon, et jusqu'à 30 de plus si elle allume la première couronne du
-// chapitre). Pas de panneau ici : les jetons jaillissent DU BOUTON qu'on vient
-// de toucher et filent vers l'écusson du bandeau. L'élève voit enfin son niveau
-// bouger quand il travaille — l'XP existait, rien ne la montrait jamais.
+// Un cours est lu quand l'élève a ATTEINT LA FIN du texte (ce bloc est posé
+// juste dessous) ET y a passé un temps minimum proportionnel à sa longueur
+// (lib/lecture : une seconde pour dix mots, de 20 s à 2 min, comptée écran
+// visible). Alors le serveur enregistre la leçon et fait avancer la quête
+// dans la même réponse ; les jetons d'XP jaillissent d'ici vers l'écusson, et
+// le bandeau relit les quêtes pour s'allumer tout de suite. Pas de bouton :
+// une intention à deviner est une quête qu'on rate.
 export default function LessonCompleteButton({
   lessonId,
   initialDone,
+  mots,
 }: {
   lessonId: string
   initialDone: boolean
+  /** Le nombre de mots du cours : il règle le temps de lecture attendu. */
+  mots: number
 }) {
   const [done, setDone] = useState(initialDone)
+  const [finAtteinte, setFinAtteinte] = useState(false)
+  const [secondes, setSecondes] = useState(0)
   const [pending, startTransition] = useTransition()
   const { celebrer } = useRecompenses()
-  const ref = useRef<HTMLButtonElement>(null)
+  const ref = useRef<HTMLDivElement>(null)
+  const declenche = useRef(initialDone)
+  const requis = secondesDeLecture(mots)
+
+  // La fin du texte : ce bloc entre dans l'écran.
+  useEffect(() => {
+    const el = ref.current
+    if (!el || done) return
+    const obs = new IntersectionObserver(
+      (entrees) => {
+        if (entrees.some((e) => e.isIntersecting)) setFinAtteinte(true)
+      },
+      { threshold: 0.2 },
+    )
+    obs.observe(el)
+    return () => obs.disconnect()
+  }, [done])
+
+  // Le temps de lecture : une seconde à la fois, écran visible seulement.
+  useEffect(() => {
+    if (done || secondes >= requis) return
+    const id = window.setInterval(() => {
+      if (document.visibilityState === 'visible') setSecondes((s) => s + 1)
+    }, 1000)
+    return () => window.clearInterval(id)
+  }, [done, secondes, requis])
+
+  // Les deux conditions réunies : on enregistre, une seule fois.
+  useEffect(() => {
+    if (done || declenche.current || !finAtteinte || secondes < requis) return
+    declenche.current = true
+    startTransition(async () => {
+      const { saved, gains } = await completeLesson(lessonId)
+      if (!saved) {
+        declenche.current = false
+        return
+      }
+      sfx.complete()
+      const origines = origineUnique(ref.current, gains)
+      setDone(true)
+      celebrer(gains, origines)
+      // La pastille du bandeau et « Quête accomplie », sans attendre l'écran suivant.
+      void relireQuetes()
+    })
+  }, [done, finAtteinte, secondes, requis, lessonId, celebrer])
 
   if (done) {
     return (
-      <span className="inline-flex items-center gap-2 rounded-full bg-success/10 px-4 py-2 text-sm font-semibold text-success dark:text-green-400">
+      <span
+        ref={ref}
+        className="inline-flex items-center gap-2 rounded-full bg-success/10 px-4 py-2 text-sm font-semibold text-success dark:text-green-400"
+      >
         <Check className="size-4" strokeWidth={3} /> Leçon terminée
       </span>
     )
   }
 
-  // Violet plein : c'est l'ACTION de la page de cours. L'état « lu », lui,
-  // reste vert (ci-dessus) — un verdict, pas un bouton.
+  const reste = Math.max(0, requis - secondes)
   return (
-    <Button
-      ref={ref}
-      className="rounded-full"
-      disabled={pending}
-      onClick={() =>
-        startTransition(async () => {
-          const { saved, gains } = await completeLesson(lessonId)
-          if (!saved) return
-          sfx.complete()
-          // LA MESURE AVANT LA BASCULE. `setDone` remplace le bouton par le
-          // badge « Leçon terminée » : mesuré après, l'élément n'existe plus et
-          // la volée partirait du centre de l'écran.
-          const origines = origineUnique(ref.current, gains)
-          setDone(true)
-          celebrer(gains, origines)
-        })
-      }
-    >
-      <Check className="size-4" />
-      {pending ? 'Un instant…' : 'J’ai terminé cette leçon'}
-    </Button>
+    <div ref={ref} className="flex items-center gap-3" aria-live="polite">
+      <span className="bg-secondary text-primary flex size-9 shrink-0 items-center justify-center rounded-full">
+        <BookOpenCheck className="size-5" strokeWidth={2.4} aria-hidden="true" />
+      </span>
+      <div className="min-w-0">
+        <p className="font-heading text-sm font-extrabold">
+          {pending ? 'Un instant…' : finAtteinte && reste > 0 ? `Encore ${reste} s de lecture` : 'La lecture compte toute seule'}
+        </p>
+        <p className="text-muted-foreground text-xs">
+          {finAtteinte && reste > 0
+            ? 'Le temps de relire ce qui compte, et la leçon est validée.'
+            : 'Lis jusqu’en bas : la leçon se valide et la quête du jour avance.'}
+        </p>
+      </div>
+    </div>
   )
 }

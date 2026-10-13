@@ -284,7 +284,9 @@ export default function TopHud({
                   encaisseXpRef.current = el
                 }}
                 data-hud-cible="xp"
-                className="relative flex min-w-0 flex-1 flex-col gap-1 pr-1"
+                // `@container` : le mot « Encore » ne s'écrit que si le bloc a
+                // la place (sa largeur dépend des cases de droite, pas de l'écran).
+                className="@container relative flex min-w-0 flex-1 flex-col gap-0.5 pr-1"
               >
                 <div
                   className={cn(
@@ -311,17 +313,6 @@ export default function TopHud({
                       className="hud-gain-xp font-heading absolute -top-1 right-1 rounded-full bg-highlight px-1.5 py-0.5 text-[11px] leading-none font-extrabold text-foreground tabular-nums"
                     >
                       +{xpGagnee}
-                    </span>
-                  ) : null}
-                  {nbAmis !== null ? (
-                    <span ref={multiplicateurRef} className="pointer-events-auto flex shrink-0">
-                      <MultiplicateurPill
-                        nbAmis={nbAmis}
-                        boostXpJusqua={boostXpJusqua}
-                        open={openPurse === 'multiplicateur'}
-                        onToggle={() => togglePurse('multiplicateur')}
-                        dark={dark}
-                      />
                     </span>
                   ) : null}
                 </div>
@@ -354,6 +345,26 @@ export default function TopHud({
                     />
                   </span>
                 </button>
+                {/* CE QU'IL RESTE, DANS L'ANGLE (Lucas, 13/10/2026 : « combien
+                    d'XP il me reste pour passer au niveau supérieur, dans
+                    l'angle ») : sous la barre, calé à droite — la ligne du
+                    niveau n'a pas la place à largeur de téléphone. Il suit la
+                    volée : chaque éclair encaissé le fait baisser. */}
+                {xp && xp.prochain !== null ? (
+                  <span
+                    aria-hidden="true"
+                    className={cn(
+                      // Toute la largeur du bloc, calé à droite : un `self-end`
+                      // plus large que le bloc débordait sur l'avatar. Le mot
+                      // « Encore » ne tient qu'à partir de 4,5 rem de bloc.
+                      'w-full truncate text-right text-[10px] leading-none font-extrabold tabular-nums',
+                      dark ? 'text-[#faf6ef]/75' : 'text-primary/80',
+                    )}
+                  >
+                    <span className="hidden @min-[4.5rem]:inline">Encore </span>
+                    {Math.max(0, xp.prochain - xp.actuel - xpGagnee).toLocaleString('fr-FR')} XP
+                  </span>
+                ) : null}
                 {openPurse === 'niveau' ? (
                   <BulleHud
                     id="bourse-niveau"
@@ -388,6 +399,30 @@ export default function TopHud({
                   ⚠️ Sur l'arène (/defi), où la pastille de niveau se replie au
                   profit de la carte joueur du décor, la série retrouve sa
                   pastille séparée — sinon elle disparaîtrait de l'écran. */}
+              {/* LE MULTIPLICATEUR D'XP DANS SA CASE, À GAUCHE DE LA FLAMME
+                  (Lucas, 13/10/2026 : « sa case à gauche de la flamme, pour le
+                  mettre plus en avant et inciter à le faire monter »). Il
+                  vivait en petit au bout de « Niveau 7 ⚡ » : une pastille
+                  entre deux filets, avec l'éclair, se voit. */}
+              {nbAmis !== null ? (
+                <span
+                  ref={multiplicateurRef}
+                  className={cn(
+                    'pointer-events-auto flex shrink-0 items-center self-stretch border-l px-1',
+                    dark ? 'border-white/15' : 'border-primary/15',
+                  )}
+                >
+                  <MultiplicateurPill
+                    nbAmis={nbAmis}
+                    boostXpJusqua={boostXpJusqua}
+                    open={openPurse === 'multiplicateur'}
+                    onToggle={() => togglePurse('multiplicateur')}
+                    dark={dark}
+                    serieVisible={streak !== null && !isHudSerieMasquee(pathname)}
+                  />
+                </span>
+              ) : null}
+
               {streak === null || isHudSerieMasquee(pathname) ? null : (
                 <span
                   className={cn(
@@ -681,7 +716,7 @@ function ResourcePill({
           aria-expanded={open}
           aria-controls={panelId}
           aria-label={label(affiche)}
-          className="flex min-h-11 items-center gap-1.5 rounded-full py-1.5 pr-3.5 pl-3 transition active:scale-95"
+          className="flex min-h-11 items-center gap-1.5 rounded-full py-1.5 pr-3 pl-2.5 transition active:scale-95"
         >
           {icon}
           {compteCourt(affiche)}
@@ -831,9 +866,10 @@ function BulleHud({
 }
 
 /**
- * LE MULTIPLICATEUR D'XP, contre la barre de niveau : « ×1,3 », tout simple
- * (Lucas, 24/09/2026). Toute l'XP versée est multipliée par ce nombre — +0,1
- * par ami (10 au plus), ×2 tant que la potion d'XP court (lib/ligue,
+ * LE MULTIPLICATEUR D'XP, dans sa case entre la barre de niveau et la flamme :
+ * « ⚡ ×1,3 », tout simple (Lucas, 24/09/2026, puis 13/10/2026 : « sa case à
+ * gauche de la flamme »). Toute l'XP versée est multipliée par ce nombre —
+ * +0,1 par ami (10 au plus), ×2 tant que la potion d'XP court (lib/ligue,
  * `multiplicateurXp` ; migration 380). Doré quand la potion court. Le tap
  * déplie la bulle : ce que c'est, et les deux façons de le faire monter.
  */
@@ -843,12 +879,15 @@ function MultiplicateurPill({
   open,
   onToggle,
   dark,
+  serieVisible,
 }: {
   nbAmis: number
   boostXpJusqua: string | null
   open: boolean
   onToggle: () => void
   dark: boolean
+  /** La flamme est à droite de la case : la pointe de la bulle se décale d'autant. */
+  serieVisible: boolean
 }) {
   const potion = useBoostEnCours(boostXpJusqua)
   const amis = Math.min(AMIS_MAX, Math.max(0, nbAmis))
@@ -864,18 +903,16 @@ function MultiplicateurPill({
         aria-expanded={open}
         aria-controls="bourse-multiplicateur"
         aria-label={`Multiplicateur d’XP ${libelle} — à quoi il sert`}
-        // Petit à l'œil, large au doigt : les marges négatives agrandissent
-        // la zone de tap sans pousser la barre.
-        className="-my-2 flex cursor-pointer items-center py-2 pl-0.5 transition active:scale-95"
+        className="flex min-h-11 cursor-pointer items-center transition active:scale-95"
       >
         <span
           className={cn(
-            'font-heading rounded-full px-1.5 py-0.5 text-[12px] leading-none font-extrabold tabular-nums',
+            'font-heading flex items-center rounded-full px-1.5 py-1 text-[12px] leading-none font-extrabold tabular-nums ring-1',
             potion
-              ? 'bg-highlight text-foreground'
+              ? 'bg-highlight text-foreground ring-highlight'
               : dark
-                ? 'bg-white/15 text-[#faf6ef]'
-                : 'px-0 text-primary',
+                ? 'bg-white/15 text-[#faf6ef] ring-white/20'
+                : 'bg-card text-primary ring-primary/25',
           )}
         >
           {libelle}
@@ -887,8 +924,10 @@ function MultiplicateurPill({
           titre={`Multiplicateur d’XP ${libelle}`}
           titreClassName={titreClassName}
           dark={dark}
-          // Sous la pastille : disque 36 + marges + barre 52 + la moitié d'elle.
-          pointeClassName="left-[7.5rem]"
+          aDroite
+          // Sous la case : depuis le bord droit de l'écusson, les gemmes
+          // (~76 px) puis la flamme (~64 px) quand elle est là, et la moitié de la case.
+          pointeClassName={serieVisible ? 'right-[10.5rem]' : 'right-[6.5rem]'}
         >
           <p>Toute l’XP que tu gagnes est multipliée par ce nombre. Deux façons de le faire monter&nbsp;:</p>
           <ul className="mt-1.5 flex flex-col gap-1">

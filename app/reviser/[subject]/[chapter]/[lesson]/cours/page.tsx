@@ -3,6 +3,7 @@ import LessonPrintButton from '@/components/LessonPrintButton'
 import LessonRichContent from '@/components/LessonRichContent'
 import EnTetePage from '@/components/reviser/EnTetePage'
 import SupportChips from '@/components/reviser/SupportChips'
+import { compterMots } from '@/lib/lecture'
 import { typographie } from '@/lib/typographie'
 import { loadLessonContext } from '../data'
 import { loadChapterSupports } from '../../supports'
@@ -75,6 +76,7 @@ export default async function CoursPage({
           <LessonCompleteButton
             lessonId={lesson.id}
             initialDone={Boolean(completion)}
+            mots={compterMots(lesson.content)}
           />
 
           {/* La suite, sur place. Le cours ne se terminait que par « Tester

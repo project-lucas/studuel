@@ -1,0 +1,179 @@
+{
+  "titre": "La subordonnée",
+  "titreSurligne": "subordonnée",
+  "accroche": "La conjonction envoie le verbe à la fin.",
+  "bonus": "**dass · weil · wenn · als · obwohl** → verbe conjugué **en dernier**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/allemand/la-phrase-subordonnee.webp",
+    "prompt": "a glossy violet link chain with a golden arrow pushing the last chain link to the far end, small golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Conjonction en tête,\nverbe à la fin&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle",
+          "lignes": [
+            "conjonction + … + **verbe**"
+          ],
+          "petite": true,
+          "regle": "Deux signes&nbsp;: une **conjonction** en tête et le **verbe conjugué** tout à la fin. Virgule devant.",
+          "note": "avec temps composé : l’auxiliaire ferme"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les conjonctions",
+          "entetes": [
+            "Conjonction",
+            "Sens"
+          ],
+          "lignes": [
+            [
+              "<i>dass</i> · <i>ob</i>",
+              "que · si (alternative)"
+            ],
+            [
+              "<i>weil, da</i> · <i>damit</i>",
+              "parce que, puisque · pour que"
+            ],
+            [
+              "<i>wenn</i> · <i>als</i>",
+              "si, quand (répété) · quand (une fois)"
+            ],
+            [
+              "<i>obwohl</i> · <i>während</i> · <i>falls</i>",
+              "bien que · pendant que · au cas où"
+            ],
+            [
+              "<i>bevor, nachdem, seitdem, bis</i>",
+              "avant que, après que, depuis que, jusqu’à ce que"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce qui ferme la phrase",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Verbe simple",
+              "texte": "<i>…, weil ich krank **bin**.</i> (parce que je suis malade)"
+            },
+            {
+              "titre": "Temps composé",
+              "texte": "L’**auxiliaire** conjugué, après le participe&nbsp;: <i>…, weil ich gearbeitet **habe**.</i>"
+            },
+            {
+              "titre": "Verbe modal",
+              "texte": "Le **modal** conjugué, après l’infinitif&nbsp;: <i>…, weil ich arbeiten **muss**.</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Subordonnée en tête",
+          "oui": {
+            "titre": "Verbe juste derrière",
+            "texte": "<i>Weil ich krank bin, **bleibe ich** zu Hause.</i> (Comme je suis malade, je reste chez moi.)"
+          },
+          "non": {
+            "titre": "Sujet resté devant",
+            "texte": "<i>Weil ich krank bin, ich bleibe zu Hause.</i> — la subordonnée occupe la **1<sup>re</sup> place** : le verbe suit."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Wenn es regnet, ___ (wir / bleiben) zu Hause.</i> → <i>**bleiben wir**</i>."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Construire la subordonnée",
+          "etapes": [
+            {
+              "titre": "Virgule + conjonction",
+              "texte": "<i>…, weil / dass / wenn…</i>"
+            },
+            {
+              "titre": "Le reste de la phrase",
+              "texte": "Sujet, compléments, participe ou infinitif."
+            },
+            {
+              "titre": "Le verbe conjugué",
+              "texte": "**Tout à la fin** — deux verbes côte à côte, c’est juste."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Trois paires à ne pas confondre",
+          "deux": true,
+          "items": [
+            {
+              "titre": "weil / denn",
+              "texte": "<i>weil</i> subordonne (verbe à la fin) ; <i>denn</i> **coordonne** (ordre inchangé)."
+            },
+            {
+              "titre": "wenn / als",
+              "texte": "<i>wenn</i> : présent, futur, passé répété ; <i>als</i> : fait **unique** au passé."
+            },
+            {
+              "titre": "wenn / wann",
+              "texte": "<i>wann</i> **seulement** dans une question."
+            },
+            {
+              "titre": "Quand j’étais petit",
+              "texte": "<i>**Als** ich klein war</i>, jamais <i>wann</i>."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>weil ich bin krank</i> → <i>weil ich krank **bin**</i> (verbe en dernier).",
+            "<i>wann ich klein war</i> → <i>**als** ich klein war</i>.",
+            "<i>…, weil ich habe gearbeitet</i> → <i>…, weil ich gearbeitet **habe**</i>.",
+            "Oublier la virgule devant <i>dass</i> : elle est **obligatoire**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Ich weiß, dass er ___ (kommen).</i>",
+            "<i>___ ich klein war, spielte ich viel.</i> (quand, une fois)",
+            "<i>Weil ich krank bin, ___ ich ___.</i> (bleiben)"
+          ],
+          "reponses": "1) kommt 2) Als 3) bleibe ich zu Hause"
+        }
+      ]
+    }
+  ]
+}

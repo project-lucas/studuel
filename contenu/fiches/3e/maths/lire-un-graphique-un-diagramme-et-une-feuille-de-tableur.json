@@ -1,0 +1,191 @@
+{
+  "titre": "Lire graphique et tableur",
+  "titreSurligne": "graphique",
+  "accroche": "Regarder les axes avant la courbe.",
+  "epreuve": "brevet",
+  "bonus": "angle = fréquence × <b>360°</b> · formule = <b>=</b> · recopie vers le bas : <b>A2 → A3</b>",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/lire-un-graphique-un-diagramme-et-une-feuille-de-tableur.webp",
+    "prompt": "a glossy violet bar chart with a golden rising line and a small golden spreadsheet grid, sparkles"
+  },
+  "marcel": "Les axes d’abord,\nla courbe après&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 1,
+          "titre": "Lire un graphique",
+          "etapes": [
+            {
+              "titre": "Identifier",
+              "texte": "axes et unités"
+            },
+            {
+              "titre": "Graduer",
+              "texte": "valeur d’un carreau"
+            },
+            {
+              "titre": "Lire",
+              "texte": "pointillés, puis phrase avec l’unité"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Ce que la courbe dit",
+          "entetes": [
+            "On voit",
+            "Ça signifie"
+          ],
+          "lignes": [
+            [
+              "courbe qui **monte**",
+              "la grandeur **augmente**"
+            ],
+            [
+              "courbe qui **descend**",
+              "elle **diminue**"
+            ],
+            [
+              "**palier** horizontal",
+              "elle ne change pas"
+            ],
+            [
+              "deux courbes qui **se croisent**",
+              "**même valeur** à ce moment"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Les diagrammes",
+          "entetes": [
+            "Diagramme",
+            "Effectif donné par"
+          ],
+          "lignes": [
+            [
+              "**En bâtons**",
+              "la **hauteur**"
+            ],
+            [
+              "**Circulaire**",
+              "l’**angle** du secteur"
+            ],
+            [
+              "**Histogramme**",
+              "l’**aire** du rectangle"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 4,
+          "titre": "Diagramme circulaire",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "angle = fréquence × 360°"
+          ],
+          "regle": "25 % → **90°** · 50 % → **180°** · 0,15 → 0,15 × 360 = ==54°==.",
+          "note": "une fréquence en décimal ou en %"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 5,
+          "titre": "Le tableur",
+          "entetes": [
+            "Formule",
+            "Résultat"
+          ],
+          "lignes": [
+            [
+              "commence toujours par **=**",
+              "=3*A2+1"
+            ],
+            [
+              "=3*A2+1 avec A2 = 4",
+              "**13**"
+            ],
+            [
+              "=SOMME(B2:B5)",
+              "additionne B2, B3, B4, B5"
+            ],
+            [
+              "=MOYENNE(C2:C11)",
+              "moyenne de **10** cellules"
+            ]
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Recopie vers le bas",
+          "donnees": "La formule =3*A2+1 écrite en B2 est recopiée en B3. Les références se __décalent__.",
+          "calcul": "B3 : =3*A3+1",
+          "aparte": "même ligne&nbsp;!",
+          "resultat": "[[=3*A3+1]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "À 10 min, la température est de 180 °C.",
+              "quoi": "lire"
+            },
+            {
+              "texte": "La formule saisie en B2 est =3*A2+1.",
+              "quoi": "tableur"
+            },
+            {
+              "texte": "Le secteur de 25 % mesure 0,25 × 360 = 90°.",
+              "quoi": "diagramme"
+            }
+          ],
+          "pied": "Une ==phrase== avec l’==unité== à chaque réponse."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Lire la courbe sans regarder les **axes**.",
+            "Oublier que la graduation ne commence pas à **0**.",
+            "Écrire une formule sans le signe **=**.",
+            "Compter **11** cellules de C2 à C11 (il y en a 10)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Angle d’un secteur de **50 %**&nbsp;?",
+            "Que fait =SOMME(B2:B5)&nbsp;?",
+            "Par quel signe commence une **formule**&nbsp;?"
+          ],
+          "reponses": "1) 180° · 2) additionne B2 à B5 · 3) le signe ="
+        }
+      ]
+    }
+  ]
+}

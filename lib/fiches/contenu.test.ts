@@ -11,8 +11,8 @@ import { registre, texteDuRegistre } from '../../scripts/fiches-registre.mjs'
 const RACINE = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', '..')
 const SOURCES = path.join(RACINE, 'contenu', 'fiches')
 
-/** Le MVP de docs/fiches-mvp.md : 260 fiches, par niveau. */
-const ATTENDU: Record<string, number> = { '3e': 97, '2de': 12, '1re': 54, Tle: 97 }
+/** Le MVP de docs/fiches-mvp.md : 260 fiches, par niveau — un plancher, le reste du catalogue s'y ajoute (palier P3). */
+const PLANCHER: Record<string, number> = { '3e': 97, '2de': 12, '1re': 54, Tle: 97 }
 
 const fiches = listerFiches()
 const noms = fiches.map((f) => `${f.niveau}/${f.matiere}/${f.index.slug}`)
@@ -31,13 +31,13 @@ function entreesDesIndex() {
 }
 
 describe('contenu/fiches', () => {
-  it('chaque fiche de l’index a son contenu, et le compte est celui du MVP', () => {
+  it('chaque fiche de l’index a son contenu, et le MVP est toujours là en entier', () => {
     const entrees = entreesDesIndex()
     const sansContenu = entrees.filter(({ niveau, matiere, entree }) => !existsSync(path.join(SOURCES, niveau, matiere, `${entree.slug}.json`)))
     expect(sansContenu.map((e) => `${e.niveau}/${e.matiere}/${e.entree.slug}`)).toEqual([])
     const parNiveau: Record<string, number> = {}
     for (const f of fiches) parNiveau[f.niveau] = (parNiveau[f.niveau] ?? 0) + 1
-    expect(parNiveau).toEqual(ATTENDU)
+    for (const [niveau, plancher] of Object.entries(PLANCHER)) expect(parNiveau[niveau], niveau).toBeGreaterThanOrEqual(plancher)
   })
 
   it('le registre lu par l’app est à jour', () => {
@@ -52,12 +52,12 @@ describe('contenu/fiches', () => {
     expect(new Set(fiches.map((f) => f.matiere).filter((m) => !(m in MATIERES)))).toEqual(new Set())
   })
 
-  it.each(noms)('%s se compose, tient son contrat et a son illustration', (nom) => {
+  it.each(noms)('%s se compose, tient son contrat et a son illustration ou Marcel', (nom) => {
     const f = fiches[noms.indexOf(nom)]
     const { index, fiche } = f
     expect(index.chapitre).toMatch(/^[0-9a-f-]{36}$/)
     expect(index.slug).toMatch(/^[a-z0-9-]+$/)
-    expect(['P1', 'P2']).toContain(index.palier)
+    expect(['P1', 'P2', 'P3']).toContain(index.palier)
     if (fiche.epreuve !== undefined) expect(Object.keys(EPREUVES)).toContain(fiche.epreuve)
     // Un surlignage qui ne retrouve pas son mot dans le titre disparaît sans bruit.
     const titre = fiche.titre ?? index.titre
@@ -68,9 +68,15 @@ describe('contenu/fiches', () => {
     expect(tests).toHaveLength(1)
     expect(tests[0].questions).toHaveLength(3)
     for (const n of ['1)', '2)', '3)']) expect(tests[0].reponses).toContain(n)
-    // L'illustration livrée : sans elle, la fiche se rendrait avec Marcel (un repli, pas la forme vendue).
+    // Le MVP (P1, P2) a son illustration livrée. Le reste du catalogue (P3) se rend
+    // avec Marcel et sa bulle tant que son illustration n'est pas générée : les
+    // crédits d'images ne couvrent pas 2 600 fiches d'un coup — le prompt est écrit,
+    // l'illustration viendra ; sans bulle, le coin de la page resterait vide.
     expect(fiche.illustration?.fichier, 'illustration.fichier').toBeTruthy()
-    expect(existsSync(path.join(RACINE, fiche.illustration.fichier)), fiche.illustration.fichier).toBe(true)
+    expect(fiche.illustration?.prompt, 'illustration.prompt').toBeTruthy()
+    const illustree = existsSync(path.join(RACINE, fiche.illustration.fichier))
+    if (index.palier !== 'P3') expect(illustree, fiche.illustration.fichier).toBe(true)
+    if (!illustree) expect(fiche.marcel, 'marcel (bulle de repli)').toBeTruthy()
     // Le rendu : aucun bloc inconnu, aucun balisage resté en clair dans le corps
     // (un « == » collé à un mot est une marque ratée ; « n == 0 » et « <b>==</b> » de NSI sont du code).
     const corps = html(f).replace(/<style>[\s\S]*?<\/style>|<script>[\s\S]*?<\/script>/g, '')

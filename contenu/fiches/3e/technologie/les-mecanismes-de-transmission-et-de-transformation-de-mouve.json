@@ -1,0 +1,175 @@
+{
+  "titre": "Mécanismes",
+  "titreSurligne": "Mécanismes",
+  "accroche": "Transmettre ou transformer le mouvement.",
+  "epreuve": "brevet",
+  "bonus": "**r = dents entrée ÷ dents sortie** · **r < 1** réducteur · **r > 1** multiplicateur",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/technologie/les-mecanismes-de-transmission-et-de-transformation-de-mouve.webp",
+    "prompt": "two glossy violet gears meshing with golden teeth, a golden rack and pinion beside them, sparkles"
+  },
+  "marcel": "Je tourne, je glisse,\nje transforme !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Transmission (rotation → rotation)",
+          "entetes": [
+            "Mécanisme",
+            "Sens"
+          ],
+          "lignes": [
+            [
+              "**Engrenages**",
+              "inverses"
+            ],
+            [
+              "**Poulies-courroie**",
+              "même sens (droite)"
+            ],
+            [
+              "**Pignons-chaîne**",
+              "même sens"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Transformation",
+          "entetes": [
+            "Mécanisme",
+            "Effet"
+          ],
+          "lignes": [
+            [
+              "**Pignon-crémaillère**",
+              "rotation → translation"
+            ],
+            [
+              "**Vis-écrou**",
+              "lente et puissante"
+            ],
+            [
+              "**Bielle-manivelle**",
+              "rotation ↔ translation"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "Rapport de transmission",
+          "taille": "mini",
+          "lignes": [
+            "r = {dents entrée/dents sortie}"
+          ],
+          "regle": "r = vitesse de sortie ÷ vitesse d’entrée. **r &lt; 1** : ==réducteur==, **r &gt; 1** : multiplicateur.",
+          "note": "grand pignon = plus de force&nbsp;!"
+        },
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Identifier un mécanisme",
+          "etapes": [
+            {
+              "titre": "Regarder",
+              "texte": "le mouvement d’entrée et celui de sortie"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "même nature&nbsp;? transmission, sinon transformation"
+            },
+            {
+              "titre": "Nommer",
+              "texte": "le mécanisme et son application"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un __portail coulissant__ : un pignon tourne, le portail glisse. Quel mécanisme&nbsp;?",
+          "calcul": "rotation → translation",
+          "aparte": "la nature change",
+          "resultat": "[[pignon-crémaillère]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Transmettre ou transformer&nbsp;?",
+          "oui": {
+            "titre": "Transmettre",
+            "texte": "La **vitesse** et l’effort changent, pas la **nature** du mouvement."
+          },
+          "non": {
+            "titre": "Transformer",
+            "texte": "C’est la **nature** du mouvement qui change."
+          },
+          "essai": {
+            "texte": "Le vélo : pignons-chaîne, <i>rotation</i> vers <i>rotation</i> : on transmet."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Entrée en rotation, sortie en translation.",
+              "quoi": "les deux mouvements"
+            },
+            {
+              "texte": "La nature du mouvement change : on transforme.",
+              "quoi": "la famille"
+            },
+            {
+              "texte": "C’est un système pignon-crémaillère.",
+              "quoi": "le mécanisme"
+            }
+          ],
+          "pied": "On compte les ==dents== pour calculer r, jamais les diamètres au hasard."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **transmission** et transformation.",
+            "Inverser **entrée** et sortie dans r.",
+            "Croire que deux engrenages tournent **dans le même sens**.",
+            "Confondre **rotation** et translation."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Pignon de **20** dents entraînant un de **40**&nbsp;: r&nbsp;?",
+            "Une **vis-écrou** transforme quoi en quoi&nbsp;?",
+            "**r &lt; 1** : réducteur ou multiplicateur&nbsp;?"
+          ],
+          "reponses": "1) 20 ÷ 40 = 0,5 · 2) rotation en translation · 3) un réducteur"
+        }
+      ]
+    }
+  ]
+}

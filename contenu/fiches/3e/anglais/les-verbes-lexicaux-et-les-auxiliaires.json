@@ -1,0 +1,137 @@
+{
+  "titre": "Verbes et auxiliaires",
+  "titreSurligne": "auxiliaires",
+  "accroche": "Repère l’auxiliaire, le reste suit.",
+  "bonus": "**question** : auxiliaire devant le sujet · **négation** : not après lui · **réponse courte** : on le reprend",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/anglais/les-verbes-lexicaux-et-les-auxiliaires.webp",
+    "prompt": "a glossy violet gear and a smaller golden gear meshing together, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "L’auxiliaire\nfait tout tourner&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Deux familles",
+          "lignes": ["**auxiliaire** + verbe lexical"],
+          "petite": true,
+          "regle": "Le verbe **lexical** porte le sens (<i>work, eat, think</i>). L’**auxiliaire** construit la phrase&nbsp;: <i>be, have, do</i> et les modaux (<i>can, must, should, may, will</i>).",
+          "note": "l’auxiliaire est suivi d’un verbe"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Qui forme quoi&nbsp;?",
+          "entetes": ["L’auxiliaire", "Il forme", "L’exemple"],
+          "lignes": [
+            ["**be**", "l’-ING et le passif", "<i>She **is** working.</i>"],
+            ["**have**", "les temps composés", "<i>I **have** finished.</i>"],
+            ["**do**", "question, négation", "<i>**Do** you know?</i>"],
+            ["modaux", "capacité, devoir…", "<i>You **can** go.</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les trois pouvoirs de l’auxiliaire",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "La question",
+              "texte": "Il passe **devant** le sujet&nbsp;: <i>**Are** you ready? **Have** you finished?</i>"
+            },
+            {
+              "titre": "La négation",
+              "texte": "**not** se place **après** lui&nbsp;: <i>isn’t, hasn’t, doesn’t, can’t</i>"
+            },
+            {
+              "titre": "La reprise courte",
+              "texte": "<i>Can you swim? — Yes, I **can**.</i> / <i>So **do** I. Neither **did** I.</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Question et réponse courte",
+          "oui": {
+            "titre": "Avec l’auxiliaire",
+            "texte": "<i>**Do** you like pizza? — Yes, I **do**.</i>"
+          },
+          "non": {
+            "titre": "Sans auxiliaire",
+            "texte": "<i>Like you pizza? — Yes, I like.</i> — on ne reprend pas le verbe, on reprend l’auxiliaire."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>She works here. → ___ she work here?</i> → **Does**&nbsp;: l’auxiliaire caché apparaît."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            { "titre": "Cherche-le", "texte": "Pas d’auxiliaire&nbsp;? Fais apparaître **do / does / did**." },
+            { "titre": "Question, négation", "texte": "Devant le sujet pour la question&nbsp;; **not** après lui pour la négation." },
+            { "titre": "Réponds", "texte": "Reprends le **même** auxiliaire&nbsp;: <i>Yes, I do. No, she isn’t.</i>" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Cas à connaître",
+          "deux": true,
+          "items": [
+            { "titre": "be lexical", "texte": "garde ses pouvoirs&nbsp;: <i>Am I French?</i>" },
+            { "titre": "have lexical", "texte": "demande do&nbsp;: <i>Do you have a car?</i>" },
+            { "titre": "Présent simple", "texte": "auxiliaire caché dans <i>work**s**</i>" },
+            { "titre": "Prétérit simple", "texte": "caché dans <i>work**ed**</i> — réapparaît dans <i>Did she work?</i>" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Like you pizza?</i> → <i>**Do** you like pizza?</i>",
+            "<i>I not like it</i> → <i>I **don’t** like it.</i>",
+            "<i>Yes, I like</i> → <i>Yes, I **do**.</i>",
+            "<i>Have you a car?</i> (vieilli) → <i>**Do** you have a car?</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Ils ne savent pas&nbsp;: They ___ know.</i>",
+            "<i>Can you swim? — Yes, I ___.</i>",
+            "<i>She is reading&nbsp;: quel est l’auxiliaire&nbsp;?</i>"
+          ],
+          "reponses": "1) don’t 2) can 3) is"
+        }
+      ]
+    }
+  ]
+}

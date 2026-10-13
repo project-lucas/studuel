@@ -1,0 +1,114 @@
+{
+  "titre": "Mélanges et corps purs",
+  "titreSurligne": "corps purs",
+  "accroche": "Un seul constituant, ou plusieurs ?",
+  "epreuve": "brevet",
+  "bonus": "corps pur&nbsp;: **palier** de température · mélange&nbsp;: **intervalle** · sulfate de cuivre blanc → **bleu** = présence d’eau",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/melanges-et-corps-purs.webp",
+    "prompt": "a glossy violet beaker with two layers of golden liquid and a small funnel with a filter paper beside it, tiny golden bubbles, sparkles"
+  },
+  "marcel": "Transparent ne veut\npas dire pur !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les mots à connaître",
+          "items": [
+            { "terme": "Corps pur", "definition": "une seule **espèce chimique** (fer, dioxygène)." },
+            { "terme": "Mélange", "definition": "plusieurs espèces (lait, air)." },
+            { "terme": "Homogène", "definition": "constituants **invisibles** (eau salée)." },
+            { "terme": "Hétérogène", "definition": "on distingue au moins deux constituants." }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Séparer les constituants",
+          "entetes": ["Technique", "Sépare", "On obtient"],
+          "lignes": [
+            ["**Décantation**", "hétérogène", "le plus dense au fond"],
+            ["**Filtration**", "hétérogène", "résidu + **filtrat**"],
+            ["**Distillation**", "homogène", "le **distillat**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Eau pure à partir d’une eau boueuse et salée",
+          "etapes": [
+            { "titre": "Décanter", "texte": "la terre tombe au fond" },
+            { "titre": "Filtrer", "texte": "filtrat limpide, mais encore salé" },
+            { "titre": "Distiller", "texte": "la vapeur est refroidie, le sel reste dans le ballon" },
+            { "titre": "Vérifier", "texte": "le distillat bleuit le sulfate de cuivre" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un liquide refroidi garde __0 °C__ pendant 5 min, puis baisse. Pur ou mélange&nbsp;?",
+          "calcul": "palier de température = changement d’état à T constante",
+          "aparte": "signature du pur",
+          "resultat": "c’est un [[corps pur]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Corps pur ou mélange&nbsp;?",
+          "oui": { "titre": "Palier net", "texte": "La température **reste constante** pendant le changement d’état&nbsp;: corps pur (eau pure à 100 °C)." },
+          "non": { "titre": "Pente continue", "texte": "Pas de palier&nbsp;: le changement d’état se fait sur un **intervalle**, c’est un mélange." },
+          "essai": { "texte": "Eau salée filtrée&nbsp;: le sel est **dissous**, il traverse le filtre. Seule la <i>distillation</i> le retient." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Le mélange est hétérogène", "quoi": "on nomme le type" },
+            { "texte": "On sépare par décantation puis filtration", "quoi": "techniques dans l’ordre" },
+            { "texte": "Le distillat est de l’eau : il bleuit le sulfate de cuivre", "quoi": "la preuve" }
+          ],
+          "pied": "Le sulfate de cuivre montre la ==présence d’eau==, pas que l’eau est pure."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’un liquide **transparent** est un corps pur.",
+            "Confondre **filtrat** (après le filtre) et **distillat** (après distillation).",
+            "Penser que le sulfate de cuivre prouve que l’eau est **pure**.",
+            "Filtrer de l’eau salée pour en retirer le sel."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "L’eau salée est-elle un mélange **homogène** ou **hétérogène**&nbsp;?",
+            "Quelle technique sépare l’eau du sel dissous&nbsp;?",
+            "Que devient le sulfate de cuivre anhydre au contact de l’eau&nbsp;?"
+          ],
+          "reponses": "1) homogène · 2) la distillation · 3) il devient bleu"
+        }
+      ]
+    }
+  ]
+}

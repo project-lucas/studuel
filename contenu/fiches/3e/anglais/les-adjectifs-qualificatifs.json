@@ -1,0 +1,142 @@
+{
+  "titre": "Les adjectifs",
+  "titreSurligne": "adjectifs",
+  "accroche": "Devant le nom, toujours invariables.",
+  "bonus": "**opinion · taille · âge · forme · couleur · origine · matière** · **-ed** = je ressens · **-ing** = ça provoque",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/anglais/les-adjectifs-qualificatifs.webp",
+    "prompt": "a glossy violet paintbrush dipping into a golden paint pot, a few golden paint drops and sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Avant le nom,\nsans accord&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle",
+          "lignes": ["adjectif + **nom**"],
+          "petite": true,
+          "regle": "L’adjectif est **invariable** (ni genre, ni nombre) et se place **avant** le nom&nbsp;: <i>a red car, two red cars</i>.",
+          "note": "l’inverse du français"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "L’ordre des adjectifs",
+          "entetes": ["Dans l’ordre", "Un exemple"],
+          "lignes": [
+            ["Opinion", "<i>lovely, nice, horrible</i>"],
+            ["Taille", "<i>little, big</i>"],
+            ["Âge · forme", "<i>old, round</i>"],
+            ["Couleur · origine", "<i>black, French</i>"],
+            ["Matière", "<i>wooden</i>&nbsp;: <i>a lovely little old round black French wooden table</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Quatre cas à connaître",
+          "colonnes": 4,
+          "cartes": [
+            {
+              "titre": "Après un verbe d’état",
+              "texte": "be, look, feel, sound, smell, taste, seem&nbsp;: <i>You look **happy**.</i>"
+            },
+            {
+              "titre": "Composés",
+              "texte": "Trait d’union, nom au singulier&nbsp;: <i>a five-**year**-old boy</i>"
+            },
+            {
+              "titre": "Nationalité",
+              "texte": "Toujours une majuscule&nbsp;: <i>a **F**rench film</i>"
+            },
+            {
+              "titre": "The + adjectif",
+              "texte": "Un groupe entier, verbe au pluriel&nbsp;: <i>the rich, the poor</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "-ed ou -ing&nbsp;?",
+          "oui": {
+            "titre": "-ed : je ressens",
+            "texte": "<i>I am **bored**.</i> (je m’ennuie)"
+          },
+          "non": {
+            "titre": "-ing : ça provoque",
+            "texte": "<i>The film is **boring**.</i> — <i>I am boring</i> = « je suis ennuyeux »&nbsp;!"
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>It was an ___ match.</i> (excited / exciting) → **exciting**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Décrire en trois temps",
+          "etapes": [
+            { "titre": "Avant le nom", "texte": "Tous les adjectifs devant, **sans accord**." },
+            { "titre": "Range-les", "texte": "Opinion, taille, âge, couleur, origine, matière — trois au plus." },
+            { "titre": "Sentiment&nbsp;?", "texte": "**-ed** si la personne ressent, **-ing** si la chose provoque." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les couples en -ed / -ing",
+          "deux": true,
+          "items": [
+            { "titre": "interested / interesting", "texte": "intéressé / intéressant" },
+            { "titre": "tired / tiring", "texte": "fatigué / fatigant" },
+            { "titre": "surprised / surprising", "texte": "surpris / surprenant" },
+            { "titre": "frightened / frightening", "texte": "effrayé / effrayant" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>a car red</i> → <i>a **red car**.</i>",
+            "<i>two reds cars</i> → <i>two **red** cars.</i>",
+            "<i>a five-years-old boy</i> → <i>a five-**year**-old boy.</i>",
+            "<i>She looks happily</i> → <i>She looks **happy**.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Une voiture rouge&nbsp;?</i> ",
+            "<i>Un garçon de cinq ans&nbsp;?</i>",
+            "<i>This book is ___.</i> (bored / boring)"
+          ],
+          "reponses": "1) a red car 2) five-year-old 3) boring"
+        }
+      ]
+    }
+  ]
+}

@@ -41,6 +41,15 @@ export const MATIERES = {
   maths: 'Maths', francais: 'Français', 'histoire-geo': 'Histoire-géo', emc: 'EMC', 'physique-chimie': 'Physique-chimie',
   svt: 'SVT', technologie: 'Technologie', philosophie: 'Philosophie', hggsp: 'HGGSP', hlp: 'HLP', ses: 'SES', nsi: 'NSI',
   'maths-complementaires': 'Maths compl.', 'maths-expertes': 'Maths expertes',
+  // Le reste du catalogue (chantier « toutes les fiches », 13/10/2026) : le nom court qui tient dans le coin de la page.
+  anglais: 'Anglais', espagnol: 'Espagnol', allemand: 'Allemand', latin: 'Latin', grec: 'Grec', 'llcer-anglais': 'LLCER anglais',
+  snt: 'SNT', 'enseignement-scientifique': 'Ens. scientifique', 'arts-plastiques': 'Arts plastiques', musique: 'Musique', sport: 'EPS',
+  'histoire-geo-techno': 'Histoire-géo', 'philosophie-techno': 'Philosophie', 'maths-techno': 'Maths',
+  si: 'Sciences de l’ingénieur', i2d: 'I2D', 'ingenierie-dd': 'I2D', 'innovation-technologique': 'Innovation techno.',
+  'physique-chimie-maths': 'Physique-chimie', 'physique-chimie-sante': 'Physique-chimie', spcl: 'SPCL',
+  'biochimie-biologie': 'Biochimie-biologie', 'biochimie-biologie-biotechnologie': 'Biochimie-biologie', biotechnologies: 'Biotechnologies',
+  'biologie-physiopathologie': 'Biologie-physiopathologie', 'chimie-biologie-physiopathologie': 'Chimie-biologie', 'sciences-sanitaires-sociales': 'ST2S',
+  'droit-economie': 'Droit-économie', management: 'Management', 'management-sgn': 'Management', 'sciences-gestion-numerique': 'Sciences de gestion',
 }
 export const EPREUVES = { brevet: '★ Tombe au brevet', bac: '★ Tombe au bac', 'bac-1re': '★ Bac de 1re', oral: '★ Tombe à l’oral', socle: '★ Socle de 2de' }
 

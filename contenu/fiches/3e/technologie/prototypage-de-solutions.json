@@ -1,0 +1,175 @@
+{
+  "titre": "Le prototype",
+  "titreSurligne": "prototype",
+  "accroche": "Fabriquer pour apprendre, pas pour vendre.",
+  "epreuve": "brevet",
+  "bonus": "**Prototype → test → analyse → modification → nouveau prototype** · une erreur coûte **cent fois** plus en série",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/technologie/prototypage-de-solutions.webp",
+    "prompt": "a glossy violet 3D printer producing a small golden prototype robot part, sparkles, same art style as the reference icons, no text, magenta background"
+  },
+  "marcel": "Rater un prototype,\nc’est apprendre !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les degrés de prototype",
+          "entetes": [
+            "Degré",
+            "Valide"
+          ],
+          "lignes": [
+            [
+              "**Maquette**",
+              "forme, encombrement"
+            ],
+            [
+              "**Prototype fonctionnel**",
+              "le fonctionnement"
+            ],
+            [
+              "**Présérie**",
+              "procédé, matériaux finaux"
+            ],
+            [
+              "**Coût d’une erreur**",
+              "faible en prototype, ×100 en série"
+            ]
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "À quoi il sert",
+          "items": [
+            {
+              "titre": "Vérifier",
+              "texte": "que la solution marche"
+            },
+            {
+              "titre": "Mesurer",
+              "texte": "des performances"
+            },
+            {
+              "titre": "Détecter",
+              "texte": "assemblage, ergonomie"
+            },
+            {
+              "titre": "Montrer",
+              "texte": "à l’utilisateur"
+            },
+            {
+              "titre": "Itérer",
+              "texte": "corriger, refaire"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Itérer",
+          "etapes": [
+            {
+              "titre": "Fabriquer",
+              "texte": "un prototype rapide : impression 3D, découpe laser, carton"
+            },
+            {
+              "titre": "Tester",
+              "texte": "analyser les résultats et les retours de l’utilisateur"
+            },
+            {
+              "titre": "Modifier",
+              "texte": "puis fabriquer le nouveau prototype"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "On veut juste vérifier la __forme__ et l’encombrement. Quel degré&nbsp;?",
+          "calcul": "forme seule, sans fonction",
+          "aparte": "carton plume",
+          "resultat": "la [[maquette]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Un prototype raté&nbsp;?",
+          "oui": {
+            "titre": "Test réussi",
+            "texte": "Un prototype raté est **un test** qui a donné son résultat."
+          },
+          "non": {
+            "titre": "Vrai échec",
+            "texte": "Lancer la production **sans jamais** avoir fabriqué de prototype."
+          },
+          "essai": {
+            "texte": "Une erreur sur <i>dix mille exemplaires</i> coûte cent fois plus qu’une erreur sur un prototype."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Le prototype vérifie la solution avant la série.",
+              "quoi": "son rôle"
+            },
+            {
+              "texte": "Je détecte les défauts tôt, à moindre coût.",
+              "quoi": "l’intérêt"
+            },
+            {
+              "texte": "Je note photos, mesures et modifications.",
+              "quoi": "la trace"
+            },
+            {
+              "texte": "Je garde photos et mesures du prototype.",
+              "quoi": "la mémoire"
+            }
+          ],
+          "pied": "On cite ==le degré== adapté puis ==ce qu’on y apprend==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’un prototype **raté** est un échec.",
+            "Confondre **maquette** et prototype **fonctionnel**.",
+            "Oublier de **documenter** les modifications et leurs raisons.",
+            "Passer en **production** sans tester."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel degré valide la **forme** seule&nbsp;?",
+            "Citer un moyen de **prototypage rapide**.",
+            "Que **documente**-t-on après un prototype&nbsp;?"
+          ],
+          "reponses": "1) la maquette · 2) l’impression 3D · 3) mesures et modifications"
+        }
+      ]
+    }
+  ]
+}

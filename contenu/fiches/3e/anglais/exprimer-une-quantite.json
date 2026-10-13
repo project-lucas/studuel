@@ -1,0 +1,138 @@
+{
+  "titre": "Some, any, much, many",
+  "titreSurligne": "much, many",
+  "accroche": "Combien&nbsp;? Ça dépend du nom.",
+  "bonus": "**many / a few** + dénombrable · **much / a little** + indénombrable",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/anglais/exprimer-une-quantite.webp",
+    "prompt": "a glossy violet measuring scale balancing a pile of golden coins on one side and a stack of golden blocks on the other, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Beaucoup&nbsp;? Un peu&nbsp;?\nÇa dépend&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les deux questions",
+          "lignes": ["le **nom** + la **phrase**"],
+          "petite": true,
+          "regle": "Le nom est-il **dénombrable** (many, a few) ou **indénombrable** (much, a little)&nbsp;? La phrase est-elle **affirmative** (some) ou **négative / question** (any)&nbsp;?",
+          "note": "a lot of va partout"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le tableau de décision",
+          "entetes": ["Le nom", "Beaucoup", "Un peu", "Trop peu"],
+          "lignes": [
+            ["Dénombrable", "**many**", "**a few**", "**few**"],
+            ["Indénombrable", "**much**", "**a little**", "**little**"],
+            ["Les deux", "**a lot of**, **lots of**", "—", "—"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Some, any et leurs composés",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "some",
+              "texte": "Affirmative et offre polie&nbsp;: <i>I have **some** money. Would you like **some** tea?</i>"
+            },
+            {
+              "titre": "any",
+              "texte": "Négative et question&nbsp;: <i>I don’t have **any** money.</i> En affirmative&nbsp;: « n’importe quel »."
+            },
+            {
+              "titre": "-body, -thing, -where",
+              "texte": "<i>somebody / anybody / **nobody**</i>, <i>something / anything / **nothing**</i>, <i>somewhere / anywhere / **nowhere**</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "A few ou few&nbsp;?",
+          "oui": {
+            "titre": "a few, a little = positif",
+            "texte": "<i>Only **a few** came, but we had fun.</i> — quelques-uns, et c’est suffisant."
+          },
+          "non": {
+            "titre": "few, little = négatif",
+            "texte": "<i>**Few** people came.</i> — très peu, c’est dommage&nbsp;: sans <i>a</i>, ça inquiète."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>I have ___ money.</i> (a few / a little) → **a little**&nbsp;: money est indénombrable."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            { "titre": "Le nom", "texte": "Dénombrable (<i>friends</i>) ou indénombrable (<i>water</i>)&nbsp;?" },
+            { "titre": "La phrase", "texte": "Affirmative → **some**. Négative ou question → **any**." },
+            { "titre": "L’intention", "texte": "Rassurer → **a few / a little**. Déplorer → **few / little**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les autres quantifieurs",
+          "deux": true,
+          "items": [
+            { "titre": "no = not any", "texte": "<i>There is **no** milk.</i>" },
+            { "titre": "enough", "texte": "<i>enough money, fast **enough**</i> (après l’adjectif)" },
+            { "titre": "too much / too many", "texte": "trop, selon le nom" },
+            { "titre": "every, each", "texte": "chaque + singulier" },
+            { "titre": "both, all", "texte": "les deux, tous" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>much friends</i> → <i>**many** friends.</i>",
+            "<i>a few money</i> → <i>**a little** money.</i>",
+            "<i>I have much work</i> → <i>a **lot of** work</i> à l’affirmative.",
+            "<i>I didn’t see nothing</i> → <i>I didn’t see **anything**.</i>",
+            "<i>I don’t have no time</i> → <i>**any** time</i> : une seule négation."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>How ___ water&nbsp;?</i> (much / many)",
+            "<i>I didn’t see ___.</i> (anything / nothing)",
+            "<i>She has ___ friends.</i> (très peu → a few / few)"
+          ],
+          "reponses": "1) much 2) anything 3) few"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "titre": "Le parfait",
+  "titreSurligne": "parfait",
+  "accroche": "Le passé qu’on parle.",
+  "bonus": "**haben / sein** (2<sup>e</sup> place) + **participe II** (à la fin)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/allemand/le-parfait.webp",
+    "prompt": "a glossy violet speech bubble with a golden check mark and a small golden clock behind it, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Deux morceaux,\nun passé&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La formation",
+          "lignes": [
+            "**haben / sein** + participe II"
+          ],
+          "petite": true,
+          "regle": "L’auxiliaire au présent en **2<sup>e</sup> position**, le participe II **rejeté à la fin**&nbsp;: <i>Ich habe einen Film gesehen.</i>",
+          "note": "le participe part au bout"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le participe II",
+          "entetes": [
+            "Verbe",
+            "Formation",
+            "L’exemple"
+          ],
+          "lignes": [
+            [
+              "faible",
+              "**ge-** + radical + **-t**",
+              "<i>gespielt, gelernt</i>"
+            ],
+            [
+              "fort",
+              "**ge-** + radical modifié + **-en**",
+              "<i>gesehen, gefahren</i>"
+            ],
+            [
+              "en <i>-ieren</i>",
+              "**pas** de ge-",
+              "<i>studiert, telefoniert</i>"
+            ],
+            [
+              "préverbe inséparable",
+              "**pas** de ge-",
+              "<i>besucht, verstanden</i>"
+            ],
+            [
+              "préverbe séparable",
+              "**ge-** s’intercale",
+              "<i>aufgestanden, eingekauft</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les verbes qui prennent sein",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Un déplacement",
+              "texte": "D’un point à un autre&nbsp;: <i>gehen, kommen, fahren, fliegen, laufen, reisen, steigen</i>"
+            },
+            {
+              "titre": "Un changement d’état",
+              "texte": "<i>aufstehen, einschlafen, aufwachen, wachsen, sterben</i>"
+            },
+            {
+              "titre": "Les six à part",
+              "texte": "<i>sein, bleiben, werden, passieren, geschehen, begegnen</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Sein ou haben&nbsp;?",
+          "oui": {
+            "titre": "sein",
+            "texte": "<i>Ich **bin** nach Berlin **gefahren**.</i> — je me suis déplacé."
+          },
+          "non": {
+            "titre": "haben",
+            "texte": "<i>Ich **habe** das Auto **gefahren**.</i> — avec un COD, haben."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Er ___ gestern lange geschlafen.</i> → **hat**&nbsp;: haben, hors mouvement."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "L’auxiliaire",
+              "texte": "Déplacement, changement d’état ou les six à part → **sein**. Sinon **haben**."
+            },
+            {
+              "titre": "Le participe II",
+              "texte": "Faible <i>ge-…-t</i>, fort <i>ge-…-en</i>&nbsp;; pas de ge- pour <i>-ieren</i> et préverbes inséparables."
+            },
+            {
+              "titre": "L’ordre",
+              "texte": "Principale&nbsp;: auxiliaire 2<sup>e</sup>, participe à la fin. Subordonnée&nbsp;: <i>…, weil ich einen Film gesehen habe.</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Parfait ou prétérit&nbsp;?",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Un dialogue, un message",
+              "texte": "le **parfait**"
+            },
+            {
+              "titre": "Un récit écrit",
+              "texte": "le **prétérit**"
+            },
+            {
+              "titre": "Passé composé français",
+              "texte": "souvent le **parfait**"
+            },
+            {
+              "titre": "Imparfait français",
+              "texte": "prétérit à l’écrit, parfait à l’oral"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Ich habe gefahren nach Berlin</i> → <i>Ich **bin** nach Berlin **gefahren**.</i>",
+            "<i>studieren → gestudiert</i> → <i>**studiert**</i> (pas de ge-).",
+            "<i>aufstehen → gestanden auf</i> → <i>**aufgestanden**.</i>",
+            "L’allemand oppose parfait et prétérit par le **registre**, pas par l’aspect."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Ich ___ nach Wien ___.</i> (fahren)",
+            "Participe II de <i>besuchen</i>&nbsp;?",
+            "Participe II de <i>aufstehen</i>&nbsp;?"
+          ],
+          "reponses": "1) bin … gefahren 2) besucht 3) aufgestanden"
+        }
+      ]
+    }
+  ]
+}

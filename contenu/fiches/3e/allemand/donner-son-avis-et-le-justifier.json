@@ -1,0 +1,128 @@
+{
+  "titre": "Donner son avis",
+  "titreSurligne": "avis",
+  "accroche": "Ich finde, dass… parce que…",
+  "bonus": "**weil** : verbe à la fin · **denn** : ordre normal · **Meiner Meinung nach** : inversion",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/allemand/donner-son-avis-et-le-justifier.webp",
+    "prompt": "a glossy violet speech bubble with a golden thumbs-up and a small golden balance scale, tiny sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Was denkst du&nbsp;?\nIch finde, dass…",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Où va le verbe&nbsp;?",
+          "lignes": ["<i>dass / weil</i> → verbe **à la fin**"],
+          "petite": true,
+          "regle": "<i>dass</i> et <i>weil</i> ouvrent une subordonnée&nbsp;: verbe **à la fin**. <i>denn</i> : ordre normal. <i>Ich finde,</i> seul : principale.",
+          "note": "avis → verbe 2<sup>e</sup>"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Exprimer son opinion",
+          "entetes": ["Formule", "Exemple"],
+          "lignes": [
+            ["<i>Ich finde, …</i>", "<i>Ich finde, das Buch **ist** spannend.</i>"],
+            ["<i>Ich finde, dass …</i>", "<i>Ich finde, dass das Buch spannend **ist**.</i>"],
+            ["<i>Ich glaube, dass …</i>", "<i>Ich glaube, dass er recht **hat**.</i>"],
+            ["<i>Meiner Meinung nach …</i>", "<i>Meiner Meinung nach **ist** das gefährlich.</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Justifier&nbsp;: weil ou denn&nbsp;?",
+          "oui": {
+            "titre": "weil → verbe à la fin",
+            "texte": "<i>Ich mag das Handy, **weil** ich mit Freunden chatten **kann**.</i>"
+          },
+          "non": {
+            "titre": "denn → ordre normal",
+            "texte": "<i>Ich mag das Handy, **denn** ich **kann** mit Freunden chatten.</i>"
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Ich bleibe zu Hause, weil ich müde ___.</i> → **bin** (verbe à la fin)."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Être d’accord ou non",
+          "colonnes": 3,
+          "cartes": [
+            {"titre": "D’accord", "texte": "<i>Ich bin einverstanden.</i> · <i>Das stimmt.</i> · <i>Da hast du recht.</i>"},
+            {"titre": "Pas d’accord", "texte": "<i>Ich bin nicht einverstanden.</i> · <i>Das stimmt nicht.</i>"},
+            {"titre": "Autrement", "texte": "<i>Ich sehe das anders.</i> (Je vois ça autrement.)"}
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Peser le pour et le contre",
+          "etapes": [
+            {"titre": "Ton avis", "texte": "<i>Meiner Meinung nach ist …</i> ou <i>Ich finde, dass …</i>"},
+            {"titre": "Le pour, le contre", "texte": "<i>Einerseits … andererseits …</i> · <i>Der Vorteil / Nachteil ist, dass …</i>"},
+            {"titre": "Conclus", "texte": "<i>Deshalb finde ich, dass …</i> (<i>deshalb</i> : inversion)."}
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Adjectifs pour juger",
+          "deux": true,
+          "items": [
+            {"titre": "Positif", "texte": "<i>interessant, spannend, lustig, nützlich, toll</i>"},
+            {"titre": "Négatif", "texte": "<i>langweilig, gefährlich, blöd, nutzlos, schrecklich</i>"},
+            {"titre": "<i>der Vorteil</i>", "texte": "l’avantage"},
+            {"titre": "<i>der Nachteil</i>", "texte": "l’inconvénient"}
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Ich finde, dass das Buch ist spannend</i> → <i>…spannend **ist**</i>.",
+            "<i>Meiner Meinung nach das ist gefährlich</i> → <i>…nach **ist** das gefährlich</i>.",
+            "<i>weil ich kann</i> → <i>weil ich … **kann**</i>&nbsp;; avec <i>denn</i>, on garde <i>ich kann</i>.",
+            "<i>Einerseits ich kann</i> → <i>Einerseits **kann** man</i> : inversion."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Ich finde, dass das Buch spannend ___.</i> (sein)",
+            "Traduis&nbsp;: « C’est vrai. »",
+            "<i>Ich mag Sport, denn ich ___ gern laufen.</i> (können)"
+          ],
+          "reponses": "1) ist 2) Das stimmt. 3) kann"
+        }
+      ]
+    }
+  ]
+}

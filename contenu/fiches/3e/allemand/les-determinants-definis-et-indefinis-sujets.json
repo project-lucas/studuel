@@ -1,0 +1,181 @@
+{
+  "titre": "Der, die, das, ein",
+  "titreSurligne": "Der, die, das",
+  "accroche": "On apprend chaque nom avec son article.",
+  "bonus": "**3 genres** · pluriel = **die** · pas d’indéfini au pluriel · le sujet est au **nominatif**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/allemand/les-determinants-definis-et-indefinis-sujets.webp",
+    "prompt": "three glossy small cards in violet, gold and cream standing side by side like three genders, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Un nom, un article&nbsp;:\nje les apprends ensemble&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les articles au nominatif",
+          "lignes": [
+            "**der** · **die** · **das**"
+          ],
+          "petite": true,
+          "regle": "Masculin <i>der</i>, féminin <i>die</i>, neutre <i>das</i> — indéfini <i>ein, eine, ein</i>. Le sujet est **toujours** au nominatif.",
+          "note": "pluriel : die pour les trois"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les repères de genre",
+          "entetes": [
+            "Genre",
+            "Ce qui le signale"
+          ],
+          "lignes": [
+            [
+              "**der**",
+              "jours, mois, saisons, points cardinaux ; <i>-er, -ling, -ismus</i>"
+            ],
+            [
+              "**die**",
+              "<i>-ung, -heit, -keit, -schaft, -ion, -ei, -ie</i>"
+            ],
+            [
+              "**das**",
+              "<i>-chen, -lein, -um, -ment</i> ; infinitif substantivé : <i>das Essen</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Le genre ne suit pas le français",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "der Mond",
+              "texte": "La lune est **masculine**."
+            },
+            {
+              "titre": "die Sonne",
+              "texte": "Le soleil est **féminin**."
+            },
+            {
+              "titre": "das Mädchen",
+              "texte": "La jeune fille est **neutre** : tous les diminutifs en <i>-chen, -lein</i> le sont."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Article ou pas&nbsp;?",
+          "oui": {
+            "titre": "Pas d’article",
+            "texte": "<i>Er ist Lehrer.</i> · <i>Ich trinke Wasser.</i> · <i>Ich fahre nach Deutschland.</i>"
+          },
+          "non": {
+            "titre": "Article calqué",
+            "texte": "<i>Er ist ein Lehrer</i> (métier), <i>Ich trinke das Wasser</i> pour « de l’eau »."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« Elle est médecin » → <i>Sie ist ___ Ärztin.</i> → pas d’article."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Choisir le bon article",
+          "etapes": [
+            {
+              "titre": "Cherche le genre",
+              "texte": "Dictionnaire, ou la terminaison (<i>-ung</i> → <i>die</i>)."
+            },
+            {
+              "titre": "Défini ou indéfini",
+              "texte": "<i>der / die / das</i> ou <i>ein / eine / ein</i> ; pluriel : <i>die</i> ou rien."
+            },
+            {
+              "titre": "Sujet ?",
+              "texte": "Nominatif : la forme du dictionnaire."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Pluriel et das",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Défini pluriel",
+              "texte": "<i>die</i> pour les trois genres."
+            },
+            {
+              "titre": "Indéfini pluriel",
+              "texte": "**aucun** : <i>Ich sehe Kinder.</i> Mais <i>keine Kinder</i>."
+            },
+            {
+              "titre": "das article",
+              "texte": "<i>das Buch</i> (neutre)."
+            },
+            {
+              "titre": "das démonstratif",
+              "texte": "<i>Das ist mein Buch.</i> — invariable."
+            },
+            {
+              "titre": "Absence d’article",
+              "texte": "métier après <i>sein / werden</i>, matière (<i>Wasser</i>), la plupart des pays."
+            },
+            {
+              "titre": "Kein au pluriel",
+              "texte": "<i>kein</i> en a un, lui : <i>keine Kinder</i>."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Traduire le genre du français&nbsp;: <i>die Mond</i> → <i>**der** Mond</i>.",
+            "<i>Er ist ein Lehrer</i> → <i>Er ist Lehrer</i> (métier sans article).",
+            "<i>ein Kinder</i> → <i>Kinder</i> ou <i>keine Kinder</i>.",
+            "Confondre <i>das</i> et <i>dass</i> (« que »).",
+            "<i>nach Deutschland</i> : pas d’article devant la plupart des pays (<i>in der Deutschland</i> est faux).",
+            "<i>die Mädchen</i> parce que c’est une fille → <i>**das** Mädchen</i> (diminutif en -chen = neutre)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Genre de <i>Mädchen</i>&nbsp;?",
+            "<i>Ich sehe ___ Kinder.</i> (indéfini)",
+            "<i>Er ist ___ Lehrer.</i> (article ?)"
+          ],
+          "reponses": "1) neutre (-chen) 2) pas d’article 3) pas d’article"
+        }
+      ]
+    }
+  ]
+}

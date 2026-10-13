@@ -1,0 +1,175 @@
+{
+  "titre": "L’adjectif possessif",
+  "titreSurligne": "possessif",
+  "accroche": "Le possesseur choisit le radical.",
+  "bonus": "radical = **le possesseur** · terminaison = **l’objet possédé**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/allemand/l-adjectif-possessif.webp",
+    "prompt": "a glossy violet backpack with a golden name tag on it, small golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Qui possède&nbsp;?\nSein ou ihr&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les deux regards",
+          "lignes": [
+            "**radical** + terminaison"
+          ],
+          "petite": true,
+          "regle": "Le **radical** (<i>sein</i> ou <i>ihr</i>) dépend du **possesseur**&nbsp;; la **terminaison** dépend de l’**objet possédé**, comme pour <i>ein</i>.",
+          "note": "deux regards à la fois"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "La liste",
+          "entetes": [
+            "Allemand",
+            "Français"
+          ],
+          "lignes": [
+            [
+              "<i>mein, dein</i>",
+              "mon, ton"
+            ],
+            [
+              "<i>sein</i> / <i>ihr</i>",
+              "son (à lui) / son (à elle)"
+            ],
+            [
+              "<i>unser, euer</i>",
+              "notre, votre"
+            ],
+            [
+              "<i>ihr</i> / <i>Ihr</i>",
+              "leur / votre (politesse, **majuscule**)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Deux exemples décodés",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Peter et sa sœur",
+              "texte": "<i>Peter und **seine** Schwester</i> — <i>sein-</i> car Peter est un homme, <i>-e</i> car <i>Schwester</i> est féminin."
+            },
+            {
+              "titre": "Anna et son frère",
+              "texte": "<i>Anna und **ihr** Bruder</i> — <i>ihr-</i> car Anna est une femme, rien car <i>Bruder</i> est masculin nominatif."
+            },
+            {
+              "titre": "Déclinaison",
+              "texte": "Celle de <i>ein</i> / <i>kein</i>, plus un pluriel&nbsp;: <i>meine, meine, meinen, meiner</i>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Sein ou ihr&nbsp;?",
+          "oui": {
+            "titre": "Le possesseur décide",
+            "texte": "<i>Anna und **ihr** Bruder.</i> — Anna est une femme."
+          },
+          "non": {
+            "titre": "Le nom décide (calque)",
+            "texte": "<i>Anna und **sein** Bruder.</i> — on a suivi « son frère » du français."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Peter liebt ___ Mutter.</i> → **seine**&nbsp;: Peter (<i>sein-</i>) + <i>Mutter</i> féminin (<i>-e</i>)."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Qui possède&nbsp;?",
+              "texte": "Un homme → <i>sein</i>. Une femme → <i>ihr</i>. Choisis le **radical**."
+            },
+            {
+              "titre": "Qu’est-ce qui est possédé&nbsp;?",
+              "texte": "Repère **genre, nombre et cas** du nom."
+            },
+            {
+              "titre": "Ajoute la terminaison",
+              "texte": "Comme <i>ein</i>&nbsp;: rien au masculin nominatif, <i>-e</i> au féminin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À retenir en plus",
+          "deux": true,
+          "items": [
+            {
+              "titre": "euer perd son e",
+              "texte": "<i>eure Mutter, euren Vater</i>"
+            },
+            {
+              "titre": "unser garde son e",
+              "texte": "<i>unsere Mutter</i>"
+            },
+            {
+              "titre": "Employé seul",
+              "texte": "<i>Das ist meins.</i> (terminaisons de l’article défini)"
+            },
+            {
+              "titre": "Parties du corps",
+              "texte": "<i>Ich wasche mir die Hände.</i> — article + datif, pas de possessif"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Choisir <i>sein</i> / <i>ihr</i> d’après le **nom** possédé, comme le français&nbsp;: c’est le **possesseur** qui compte.",
+            "Écrire <i>mein Hände</i> pour « mes mains »&nbsp;: <i>meine</i> au pluriel.",
+            "Oublier la **majuscule** de politesse&nbsp;: <i>Ihr</i> (votre).",
+            "Traduire « je me lave **les** mains » avec un possessif."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Complète&nbsp;: <i>Anna und ___ Bruder.</i>",
+            "Complète&nbsp;: <i>Peter und ___ Schwester.</i>",
+            "Traduis&nbsp;: je me lave les mains."
+          ],
+          "reponses": "1) ihr 2) seine 3) Ich wasche mir die Hände"
+        }
+      ]
+    }
+  ]
+}

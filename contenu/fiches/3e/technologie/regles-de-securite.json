@@ -1,0 +1,176 @@
+{
+  "titre": "Règles de sécurité",
+  "titreSurligne": "sécurité",
+  "accroche": "En atelier, la règle précède le geste.",
+  "epreuve": "brevet",
+  "bonus": "**Triangle jaune** danger · **rond bleu** obligation · **rond rouge barré** interdiction · **carré vert** secours",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/technologie/regles-de-securite.webp",
+    "prompt": "glossy violet safety goggles and a golden warning triangle sign with a red emergency stop button, sparkles"
+  },
+  "marcel": "Machine à l’arrêt,\npuis on règle !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les EPI",
+          "entetes": [
+            "EPI",
+            "Attention"
+          ],
+          "lignes": [
+            [
+              "**Lunettes**",
+              "perçage, sciage"
+            ],
+            [
+              "**Gants**",
+              "jamais près d’une pièce qui tourne"
+            ],
+            [
+              "**Blouse**",
+              "cheveux attachés, pas de bijou"
+            ],
+            [
+              "**Chaussures fermées**",
+              "chute d’objet"
+            ],
+            [
+              "**Protection auditive**",
+              "bruit prolongé"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les pictogrammes",
+          "entetes": [
+            "Forme",
+            "Sens"
+          ],
+          "lignes": [
+            [
+              "**Triangle jaune**",
+              "danger"
+            ],
+            [
+              "**Rond bleu**",
+              "obligation"
+            ],
+            [
+              "**Rond rouge barré**",
+              "interdiction"
+            ],
+            [
+              "**Carré vert**",
+              "secours"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Avant de démarrer une machine",
+          "etapes": [
+            {
+              "titre": "Autorisation",
+              "texte": "obtenir l’accord, s’équiper de ses EPI"
+            },
+            {
+              "titre": "Vérifier",
+              "texte": "les carters et repérer l’arrêt d’urgence"
+            },
+            {
+              "titre": "Travailler",
+              "texte": "seul sur la machine, poste dégagé, anomalie signalée"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un panneau __rond bleu__ avec des lunettes. Que signifie-t-il&nbsp;?",
+          "calcul": "rond bleu = obligation",
+          "aparte": "forme + couleur",
+          "resultat": "[[port des lunettes obligatoire]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Réglage&nbsp;: quand&nbsp;?",
+          "oui": {
+            "titre": "À l’arrêt",
+            "texte": "Machine **à l’arrêt complet** avant tout réglage."
+          },
+          "non": {
+            "titre": "En marche",
+            "texte": "Régler une machine qui tourne encore&nbsp;: **cause** d’accidents."
+          },
+          "essai": {
+            "texte": "Le bouton d’arrêt d’urgence, <i>rouge sur fond jaune</i>, coupe l’alimentation immédiatement."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Je porte lunettes, blouse et chaussures fermées.",
+              "quoi": "les EPI"
+            },
+            {
+              "texte": "Je vérifie les carters et l’arrêt d’urgence.",
+              "quoi": "avant de démarrer"
+            },
+            {
+              "texte": "J’arrête la machine avant tout réglage.",
+              "quoi": "la règle clé"
+            }
+          ],
+          "pied": "Savoir où est ==l’arrêt d’urgence== avant l’incident, pas pendant."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Porter des **gants** près d’une pièce en rotation.",
+            "Régler une machine **avant** l’arrêt complet.",
+            "Démarrer **sans autorisation**.",
+            "Confondre **obligation** (bleu) et danger (jaune).",
+            "Oublier de **signaler** un câble abîmé."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que signale un **triangle jaune**&nbsp;?",
+            "Quand régler une **machine**&nbsp;?",
+            "Pourquoi pas de **gants** sur une perceuse&nbsp;?"
+          ],
+          "reponses": "1) un danger · 2) à l’arrêt complet · 3) ils peuvent être happés"
+        }
+      ]
+    }
+  ]
+}

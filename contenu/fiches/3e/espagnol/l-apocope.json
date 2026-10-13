@@ -1,0 +1,180 @@
+{
+  "titre": "L’apocope",
+  "titreSurligne": "apocope",
+  "accroche": "Les mots qui perdent leur fin.",
+  "bonus": "**uno → un** · **bueno → buen** · **grande → gran** · **ciento → cien** · **santo → san**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/espagnol/l-apocope.webp",
+    "prompt": "a glossy violet word block with its last golden letter breaking off and floating away, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Un buen amigo…\nbuen, pas bueno&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle",
+          "lignes": [
+            "**bueno** → **buen** + nom"
+          ],
+          "petite": true,
+          "regle": "Devant un nom **masculin singulier**, le mot perd sa finale. Au **féminin**, rien ne change.",
+          "note": "un buen amigo / una buena idea"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Devant un masculin singulier",
+          "entetes": [
+            "Forme pleine",
+            "Apocopée",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "<i>uno</i>",
+              "<i>**un**</i>",
+              "<i>un libro</i>"
+            ],
+            [
+              "<i>alguno / ninguno</i>",
+              "<i>**algún / ningún**</i>",
+              "<i>algún día</i>"
+            ],
+            [
+              "<i>bueno / malo</i>",
+              "<i>**buen / mal**</i>",
+              "<i>mal tiempo</i>"
+            ],
+            [
+              "<i>primero / tercero</i>",
+              "<i>**primer / tercer**</i>",
+              "<i>primer piso</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les apocopes particulières",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "grande → gran",
+              "texte": "Devant un nom singulier, masculin **ou féminin**&nbsp;: <i>un gran hombre</i>, <i>una gran mujer</i>."
+            },
+            {
+              "titre": "ciento → cien",
+              "texte": "Devant un nom, <i>mil</i>, <i>millones</i>&nbsp;: <i>cien euros</i>. Mais <i>ciento veinte</i>."
+            },
+            {
+              "titre": "santo → san",
+              "texte": "Devant un prénom masculin&nbsp;: <i>san Juan</i>. Sauf <i>Santo Tomás</i>, <i>Santo Domingo</i>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Devant ou derrière le nom&nbsp;?",
+          "oui": {
+            "titre": "Juste devant",
+            "texte": "<i>un **buen** amigo</i> — l’apocope joue, l’adjectif touche le nom."
+          },
+          "non": {
+            "titre": "Derrière",
+            "texte": "<i>un amigo **bueno**</i> — forme pleine. Aussi&nbsp;: <i>el primero de la clase</i>."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Es un ___ (grande) hombre.</i> → **gran**&nbsp;: devant un nom, sens « important »."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Un nom suit&nbsp;?",
+              "texte": "Le mot est-il **immédiatement** devant lui&nbsp;?"
+            },
+            {
+              "titre": "Masculin singulier&nbsp;?",
+              "texte": "Oui → forme courte. Féminin ou pluriel → forme pleine."
+            },
+            {
+              "titre": "Cas particulier&nbsp;?",
+              "texte": "<i>gran, cien, san</i> : leurs propres règles ci-dessus."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les autres chutes",
+          "deux": true,
+          "items": [
+            {
+              "titre": "cualquiera → cualquier",
+              "texte": "<i>cualquier día</i>, <i>cualquier mujer</i> (tout nom)."
+            },
+            {
+              "titre": "tanto → tan",
+              "texte": "devant adjectif ou adverbe&nbsp;: <i>tan rápido</i>."
+            },
+            {
+              "titre": "recientemente → recién",
+              "texte": "devant un participe&nbsp;: <i>recién nacido</i>."
+            },
+            {
+              "titre": "Le sens change",
+              "texte": "<i>un gran hombre</i> (important) / <i>un hombre grande</i> (de grande taille)."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>un bueno amigo</i> → <i>un **buen** amigo</i>.",
+            "<i>una buen idea</i> → <i>una **buena** idea</i>&nbsp;: pas d’apocope au féminin.",
+            "<i>grandes hombres</i>&nbsp;: au **pluriel**, la forme entière revient.",
+            "<i>cien veinte</i> → <i>**ciento** veinte</i>&nbsp;: devant un autre nombre."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>un ___ (bueno) amigo</i>",
+            "<i>___ (santo) Pedro</i>",
+            "<i>___ (ciento) euros</i>"
+          ],
+          "reponses": "1) buen 2) san 3) cien"
+        }
+      ]
+    }
+  ]
+}

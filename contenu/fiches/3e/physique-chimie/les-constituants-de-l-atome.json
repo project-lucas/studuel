@@ -1,0 +1,181 @@
+{
+  "titre": "Au cœur de l’atome",
+  "titreSurligne": "atome",
+  "accroche": "Un noyau minuscule, un immense vide.",
+  "epreuve": "brevet",
+  "bonus": "atome neutre&nbsp;: **p⁺ = e⁻** · nucléons = protons + neutrons · noyau **10⁻¹⁵ m** · atome **10⁻¹⁰ m**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/les-constituants-de-l-atome.webp",
+    "prompt": "a glossy golden atom with a violet nucleus in the center and three small orbiting electrons on shiny rings, tiny sparkles"
+  },
+  "marcel": "Le noyau est minuscule,\nl’atome est vide !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois particules",
+          "entetes": [
+            "Particule",
+            "Charge",
+            "Où"
+          ],
+          "lignes": [
+            [
+              "**Proton**",
+              "positive",
+              "noyau"
+            ],
+            [
+              "**Neutron**",
+              "nulle",
+              "noyau"
+            ],
+            [
+              "**Électron**",
+              "négative",
+              "autour du noyau"
+            ],
+            [
+              "Nucléons",
+              "protons + neutrons",
+              "noyau"
+            ]
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "À retenir",
+          "items": [
+            {
+              "titre": "Neutre",
+              "texte": "autant de protons que d’électrons."
+            },
+            {
+              "titre": "Masse",
+              "texte": "presque toute dans le noyau (électron ≈ 2 000 fois plus léger)."
+            },
+            {
+              "titre": "Élément",
+              "texte": "défini par son **nombre de protons**, et lui seul."
+            },
+            {
+              "titre": "Lacunaire",
+              "texte": "noyau 100 000 fois plus petit que l’atome."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Décrire un atome",
+          "etapes": [
+            {
+              "titre": "Électrons",
+              "texte": "atome neutre : autant que de protons"
+            },
+            {
+              "titre": "Nucléons",
+              "texte": "protons + neutrons"
+            },
+            {
+              "titre": "Ion ?",
+              "texte": "on change les électrons, jamais les protons"
+            },
+            {
+              "titre": "Symbole",
+              "texte": "majuscule + minuscule éventuelle : H, C, Fe, Cl"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Oxygène&nbsp;: __8 protons__, __8 neutrons__. Électrons et nucléons&nbsp;?",
+          "calcul": "e⁻ = 8 · nucléons = 8 + 8",
+          "aparte": "atome neutre",
+          "resultat": "8 électrons, [[16 nucléons]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Atome ou ion&nbsp;?",
+          "oui": {
+            "titre": "O (atome)",
+            "texte": "8 protons, 8 électrons&nbsp;: **neutre**."
+          },
+          "non": {
+            "titre": "O²⁻ (ion)",
+            "texte": "8 protons, **10** électrons&nbsp;: c’est toujours de l’oxygène."
+          },
+          "essai": {
+            "texte": "Symboles&nbsp;: <i>Co</i> (cobalt) n’est pas <i>CO</i>. CO<sub>2</sub> = 3 atomes ; C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> = 24 atomes."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "L’atome est neutre : 8 protons donc 8 électrons",
+              "quoi": "la justification"
+            },
+            {
+              "texte": "Nucléons : 8 + 8 = 16",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "O²⁻ a gagné 2 électrons, pas de proton",
+              "quoi": "pour un ion"
+            },
+            {
+              "texte": "Carbone : 6 protons ; oxygène : 8 protons",
+              "quoi": "identifier l’élément"
+            }
+          ],
+          "pied": "10⁻¹⁰ ÷ 10⁻¹⁵ = 10⁵&nbsp;: la matière est ==surtout du vide==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Placer les **électrons** dans le noyau.",
+            "Croire que les neutrons **annulent** la charge des protons.",
+            "Confondre **indice** (atomes dans la molécule) et nombre **devant** (molécules).",
+            "Croire qu’un ion a gagné ou perdu des **protons**.",
+            "Oublier que **Co** n’est pas **CO** : la casse compte."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Atome de carbone (6 protons)&nbsp;: nombre d’**électrons**&nbsp;?",
+            "Un ion se forme en gagnant ou perdant des quoi&nbsp;?",
+            "Combien d’atomes dans H<sub>2</sub>O&nbsp;?"
+          ],
+          "reponses": "1) 6 · 2) des électrons · 3) 3"
+        }
+      ]
+    }
+  ]
+}

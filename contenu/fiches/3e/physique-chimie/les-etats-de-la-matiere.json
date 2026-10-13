@@ -1,0 +1,113 @@
+{
+  "titre": "Les états de la matière",
+  "titreSurligne": "états",
+  "accroche": "La même matière, trois organisations.",
+  "epreuve": "brevet",
+  "bonus": "la **masse** se conserve · le **volume** varie · l’eau **gonfle** en gelant · zéro absolu&nbsp;: −273 °C",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/les-etats-de-la-matiere.webp",
+    "prompt": "a glossy violet ice cube, a golden water drop and a puffy golden cloud lined up side by side, tiny sparkles"
+  },
+  "marcel": "Même matière,\nautre rangement !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois états",
+          "entetes": ["État", "Forme", "Volume", "Molécules"],
+          "lignes": [
+            ["**Solide**", "propre", "propre", "serrées, **ordonnées**, elles vibrent sur place"],
+            ["**Liquide**", "celle du récipient", "propre", "serrées, **désordonnées**, elles glissent"],
+            ["**Gaz**", "aucune", "occupe tout l’espace", "**éloignées**, très **agitées**"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Le modèle explique",
+          "items": [
+            { "titre": "Gaz compressible", "texte": "beaucoup de **vide** entre ses molécules." },
+            { "titre": "Liquide, solide", "texte": "molécules déjà au contact : quasi incompressibles." },
+            { "titre": "Surface plane", "texte": "le liquide n’a pas de forme propre." },
+            { "titre": "Cristallin / amorphe", "texte": "solide rangé (sel, glace) / en désordre (verre)." }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "Ce qui se conserve",
+          "petite": true,
+          "lignes": ["m avant = m après"],
+          "regle": "Lors d’un changement d’état, la ==masse se conserve== : les molécules sont les mêmes. Seul le **volume** varie.",
+          "note": "chauffer = agiter, pas grossir&nbsp;!"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "__200 g__ de glaçons fondent dans un bécher fermé. Masse lue&nbsp;?",
+          "calcul": "récipient fermé : rien n’entre, rien ne sort",
+          "aparte": "molécules conservées",
+          "resultat": "toujours [[200 g]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Gaz ou liquide&nbsp;?",
+          "oui": { "titre": "Gaz", "texte": "**Expansible**&nbsp;: il remplit tout le volume offert et se comprime (seringue d’air)." },
+          "non": { "titre": "Liquide", "texte": "Il garde son **volume propre**&nbsp;: il ne remplit pas tout le récipient." },
+          "essai": { "texte": "Une bouteille d’eau pleine au congélateur peut <i>éclater</i>&nbsp;: l’eau augmente de volume en gelant." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Dans un gaz, les molécules sont éloignées", "quoi": "le modèle" },
+            { "texte": "Il y a beaucoup de vide entre elles", "quoi": "la cause" },
+            { "texte": "Donc le gaz est compressible", "quoi": "la conclusion" },
+            { "texte": "La masse reste la même : 200 g avant, 200 g après", "quoi": "si on te parle de masse" }
+          ],
+          "pied": "Emploie les mots ==ordonné, désordonné, éloigné, agité==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire qu’un **liquide** remplit tout le récipient.",
+            "Croire que les molécules **grossissent** quand on chauffe.",
+            "Penser que la **masse** change lors d’un changement d’état.",
+            "Oublier que l’eau est l’**exception** : elle gonfle en gelant."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel état a une forme **propre**&nbsp;?",
+            "Pourquoi un gaz est-il **compressible**&nbsp;?",
+            "100 g de glace fondent : masse de l’eau liquide&nbsp;?"
+          ],
+          "reponses": "1) le solide · 2) il y a du vide entre ses molécules · 3) 100 g"
+        }
+      ]
+    }
+  ]
+}

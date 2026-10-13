@@ -1,0 +1,116 @@
+{
+  "titre": "Concevoir un OST",
+  "titreSurligne": "Concevoir",
+  "accroche": "De l’idée à l’objet réel.",
+  "epreuve": "brevet",
+  "bonus": "**Analyser → Rechercher → Choisir → Concevoir → Préparer → Fabriquer → Tester** · une démarche **en boucle**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/technologie/concevoir-et-fabriquer-un-ost.webp",
+    "prompt": "a glossy violet lightbulb turning into a golden 3D printed gear object on a workbench, sparkles, same art style as the reference icons, no text, magenta background"
+  },
+  "marcel": "Plusieurs idées,\npuis un choix !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Les sept étapes",
+          "items": [
+            { "titre": "Analyser", "texte": "cahier des charges chiffré" },
+            { "titre": "Rechercher", "texte": "plusieurs solutions" },
+            { "titre": "Choisir", "texte": "tableau multicritère pondéré" },
+            { "titre": "Concevoir", "texte": "plans, 3D, nomenclature" },
+            { "titre": "Préparer", "texte": "gamme de fabrication" },
+            { "titre": "Fabriquer", "texte": "pièces contrôlées" },
+            { "titre": "Tester", "texte": "valider, améliorer" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Un blocage, un retour",
+          "entetes": ["Blocage", "Retour à"],
+          "lignes": [
+            ["**Test raté**", "la conception"],
+            ["**Matériau** indisponible", "le choix des solutions"],
+            ["Problème d’**assemblage**", "le dessin de détail"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Choisir une solution",
+          "etapes": [
+            { "titre": "Comparer", "texte": "au moins deux ou trois idées aux critères du cahier" },
+            { "titre": "Pondérer", "texte": "noter chaque critère, selon son importance" },
+            { "titre": "Justifier", "texte": "retenir la meilleure note et dire pourquoi" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un matériau est __introuvable__ à l’étape 6. Où revenir&nbsp;?",
+          "calcul": "le matériau se choisit tôt",
+          "aparte": "boucle",
+          "resultat": "retour au [[choix des solutions]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Un vrai choix&nbsp;?",
+          "oui": { "titre": "Choix", "texte": "**Plusieurs** idées comparées dans un tableau, avec une justification." },
+          "non": { "titre": "Pas un choix", "texte": "**Une seule** idée : on n’a rien comparé." },
+          "essai": { "texte": "Une pièce hors cote détectée <i>tôt</i> coûte bien moins qu’à l’assemblage." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Je compare trois solutions dans un tableau pondéré.", "quoi": "le choix" },
+            { "texte": "Je rédige les plans et la nomenclature.", "quoi": "la conception" },
+            { "texte": "Un test raté me renvoie à la conception.", "quoi": "la boucle" }
+          ],
+          "pied": "On présente ==la démarche== comme ==une boucle==, pas une ligne droite."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Ne retenir **qu’une** idée.",
+            "Voir la démarche comme une **ligne droite**.",
+            "Détecter un défaut **trop tard**, à l’assemblage.",
+            "Oublier la **notice** et le **bilan environnemental**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel outil sert à **choisir** une solution&nbsp;?",
+            "Qu’est-ce que la **nomenclature**&nbsp;?",
+            "Un **test raté** renvoie à quelle étape&nbsp;?"
+          ],
+          "reponses": "1) tableau multicritère · 2) liste des pièces · 3) la conception"
+        }
+      ]
+    }
+  ]
+}

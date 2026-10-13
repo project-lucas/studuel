@@ -1,0 +1,140 @@
+{
+  "titre": "L’auxiliaire DO",
+  "titreSurligne": "DO",
+  "accroche": "Une seule marque de temps par phrase.",
+  "bonus": "**don’t / doesn’t / didn’t** + base verbale · **Do / Does / Did** + sujet + base verbale",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/anglais/l-auxiliaire-do.webp",
+    "prompt": "a glossy violet toggle switch with a golden knob and a small golden lightning bolt, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Une seule marque\nde temps&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle d’or",
+          "lignes": ["**do** + base verbale"],
+          "petite": true,
+          "regle": "Dès que **do / does / did** apparaît, il porte le temps et la personne. Le verbe lexical revient à la **base verbale**&nbsp;: plus de -s, plus de -ed.",
+          "note": "présent et prétérit simples"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois emplois",
+          "entetes": ["L’emploi", "La forme", "L’exemple"],
+          "lignes": [
+            ["Négation", "don’t / doesn’t / didn’t", "<i>I **don’t** like coffee.</i>"],
+            ["Question", "Do / Does / Did", "<i>**Does** she work here?</i>"],
+            ["Insistance", "do / does / did", "<i>I **do** like it&nbsp;!</i>"],
+            ["Réponse courte", "do / does / did", "<i>Yes, I **do**.</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Choisir la bonne forme",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Présent, I / you / we / they",
+              "texte": "<i>**do / don’t** : They don’t know.</i>"
+            },
+            {
+              "titre": "Présent, he / she / it",
+              "texte": "<i>**does / doesn’t** : She doesn’t work.</i>"
+            },
+            {
+              "titre": "Prétérit, tous",
+              "texte": "<i>**did / didn’t** : He didn’t go. Did you go?</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Une seule marque de temps",
+          "oui": {
+            "titre": "Une marque",
+            "texte": "<i>She **doesn’t work**. He **didn’t go**. **Did** you **go**?</i>"
+          },
+          "non": {
+            "titre": "Deux marques",
+            "texte": "<i>She doesn’t **works**. He didn’t **went**. Did you **went**?</i> — l’erreur n°1&nbsp;: le temps est déjà dans do."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>I didn’t ___ (know) the answer.</i> → **know**, base verbale."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            { "titre": "Déjà un auxiliaire&nbsp;?", "texte": "be, have auxiliaire ou modal → **pas de do**." },
+            { "titre": "Choisis do", "texte": "**do / does** au présent (does avec he, she, it), **did** au passé." },
+            { "titre": "Base verbale", "texte": "Remets le verbe sans -s ni -ed. Une seule marque de temps." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Quand do n’apparaît pas",
+          "deux": true,
+          "items": [
+            { "titre": "Avec be", "texte": "<i>Is she a teacher? She isn’t tired.</i>" },
+            { "titre": "Avec un modal", "texte": "<i>Can you swim? You mustn’t shout.</i>" },
+            { "titre": "Who / what sujet", "texte": "<i>Who broke the window?</i>" },
+            { "titre": "So do I / Neither did I", "texte": "moi aussi / moi non plus" },
+            { "titre": "Question tag", "texte": "<i>You live here, **don’t** you?</i>" },
+            { "titre": "Impératif négatif", "texte": "toujours <i>**Don’t** be late&nbsp;!</i>" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>She don’t like it</i> → <i>She **doesn’t** like it.</i>",
+            "<i>Do she work?</i> → <i>**Does** she work?</i>",
+            "<i>I didn’t knew</i> → <i>I didn’t **know**.</i>",
+            "<i>I do my homework</i> : do peut être lexical, et <i>What do you do?</i> en prend deux.",
+            "<i>Where you live?</i> → <i>Where **do** you live?</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>She ___ (not / work) here.</i>",
+            "<i>___ you go to school yesterday&nbsp;?</i>",
+            "<i>He didn’t ___ (go) out.</i>"
+          ],
+          "reponses": "1) doesn’t work 2) Did 3) go"
+        }
+      ]
+    }
+  ]
+}

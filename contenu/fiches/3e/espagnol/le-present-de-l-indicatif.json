@@ -1,0 +1,205 @@
+{
+  "titre": "Le présent",
+  "titreSurligne": "présent",
+  "accroche": "Le temps où tout se joue.",
+  "bonus": "**-o, -as, -a, -amos, -áis, -an** · **-o, -es, -e, -emos, -éis, -en** · **estar** : accents",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/espagnol/le-present-de-l-indicatif.webp",
+    "prompt": "a glossy violet calendar page with a golden sun above it, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Régulier ou irrégulier,\nje les connais&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les terminaisons",
+          "lignes": [
+            "radical + **-o -as -a -amos -áis -an**"
+          ],
+          "petite": true,
+          "regle": "Pour **-er** et **-ir**, les terminaisons ne diffèrent qu’à <i>nosotros</i> (-emos / -imos) et <i>vosotros</i> (-éis / -ís).",
+          "note": "hablar, comer, vivir"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois conjugaisons",
+          "entetes": [
+            "",
+            "-ar",
+            "-er",
+            "-ir"
+          ],
+          "lignes": [
+            [
+              "yo",
+              "<i>hablo</i>",
+              "<i>como</i>",
+              "<i>vivo</i>"
+            ],
+            [
+              "tú",
+              "<i>hablas</i>",
+              "<i>comes</i>",
+              "<i>vives</i>"
+            ],
+            [
+              "él / ella",
+              "<i>habla</i>",
+              "<i>come</i>",
+              "<i>vive</i>"
+            ],
+            [
+              "nosotros",
+              "<i>hablamos</i>",
+              "<i>comemos</i>",
+              "<i>vivimos</i>"
+            ],
+            [
+              "vosotros",
+              "<i>habláis</i>",
+              "<i>coméis</i>",
+              "<i>vivís</i>"
+            ],
+            [
+              "ellos",
+              "<i>hablan</i>",
+              "<i>comen</i>",
+              "<i>viven</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les trois familles d’irréguliers",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Irréguliers en yo",
+              "texte": "<i>hago, pongo, salgo, traigo, veo, sé, doy</i>, et les verbes en -cer / -cir&nbsp;: <i>conozco, conduzco</i>."
+            },
+            {
+              "titre": "Diphtongues",
+              "texte": "e → ie (<i>pienso</i>), o → ue (<i>puedo</i>), u → ue (<i>juego</i>)&nbsp;: sauf <i>nosotros</i> et <i>vosotros</i>."
+            },
+            {
+              "titre": "Affaiblissement",
+              "texte": "e → i dans les verbes en -ir&nbsp;: <i>pedir</i> → <i>pido</i>, <i>pides</i>, <i>pide</i>, <i>piden</i>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "La conjugaison en botte",
+          "oui": {
+            "titre": "Nosotros et vosotros réguliers",
+            "texte": "<i>pensamos, podemos, pedimos</i> — le radical ne change pas."
+          },
+          "non": {
+            "titre": "Diphtonguer partout",
+            "texte": "<i>piensamos, puedemos</i> — le radical change à <i>yo, tú, él, ellos</i> seulement."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Nosotros ___ (poder) venir.</i> → **podemos**&nbsp;: pas de diphtongue."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 5,
+          "titre": "Les verbes qui cumulent",
+          "entetes": [
+            "Verbe",
+            "yo · tú · él",
+            "nosotros · vosotros · ellos"
+          ],
+          "lignes": [
+            [
+              "<i>tener</i> · <i>venir</i>",
+              "<i>tengo, tienes, tiene</i> · <i>vengo, vienes, viene</i>",
+              "<i>tenemos, tenéis, tienen</i> · <i>venimos, venís, vienen</i>"
+            ],
+            [
+              "<i>ser</i> · <i>ir</i>",
+              "<i>soy, eres, es</i> · <i>voy, vas, va</i>",
+              "<i>somos, sois, son</i> · <i>vamos, vais, van</i>"
+            ],
+            [
+              "<i>estar</i> · <i>haber</i>",
+              "<i>estoy, estás, está</i> · <i>he, has, ha</i>",
+              "<i>estamos, estáis, están</i> · <i>hemos, habéis, han</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Autres emplois du présent",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Le futur proche",
+              "texte": "<i>Mañana **salgo** a las ocho.</i>"
+            },
+            {
+              "titre": "Le présent historique",
+              "texte": "<i>En 1492, Colón **llega** a América.</i>"
+            },
+            {
+              "titre": "Depuis un moment",
+              "texte": "<i>**Estudio** español desde hace dos años.</i>"
+            },
+            {
+              "titre": "Decir",
+              "texte": "<i>digo, dices, dice, decimos, decís, dicen.</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Estar</i> porte l’accent à quatre formes&nbsp;: <i>**estás, está, estáis, están**</i>.",
+            "<i>Yo hago</i>, pas « yo hazo ».",
+            "<i>Pienso</i> mais <i>pensamos</i> : pas de diphtongue à <i>nosotros</i> et <i>vosotros</i>.",
+            "« Depuis deux ans » : le présent, pas le passé composé."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Yo ___ (hacer) la tarea.</i>",
+            "<i>Ellos ___ (poder) venir.</i>",
+            "<i>Tú ___ (estar)</i> cansado&nbsp;: quelle forme, avec accent&nbsp;?"
+          ],
+          "reponses": "1) hago 2) pueden 3) estás"
+        }
+      ]
+    }
+  ]
+}

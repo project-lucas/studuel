@@ -1,0 +1,190 @@
+{
+  "titre": "La relative",
+  "titreSurligne": "relative",
+  "accroche": "Le genre vient d’avant, le cas d’après.",
+  "bonus": "genre + nombre = **l’antécédent** · cas = **fonction dans la relative**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/allemand/la-phrase-subordonnee-relative.webp",
+    "prompt": "a glossy violet curved arrow linking a golden word tag on the left to a violet clause bubble on the right, small golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Genre d’avant,\ncas d’après&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le raisonnement",
+          "lignes": [
+            "genre d’**avant** + cas d’**après**"
+          ],
+          "petite": true,
+          "regle": "Le pronom relatif prend le **genre et le nombre** de l’antécédent, mais le **cas de sa fonction** dans la relative. Dans cet ordre.",
+          "note": "virgules, verbe à la fin"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les formes",
+          "entetes": [
+            "Cas",
+            "Masc.",
+            "Fém.",
+            "Neutre",
+            "Plur."
+          ],
+          "lignes": [
+            [
+              "Nominatif",
+              "<i>der</i>",
+              "<i>die</i>",
+              "<i>das</i>",
+              "<i>die</i>"
+            ],
+            [
+              "Accusatif",
+              "<i>den</i>",
+              "<i>die</i>",
+              "<i>das</i>",
+              "<i>die</i>"
+            ],
+            [
+              "Datif",
+              "<i>dem</i>",
+              "<i>der</i>",
+              "<i>dem</i>",
+              "**denen**"
+            ],
+            [
+              "Génitif",
+              "**dessen**",
+              "**deren**",
+              "**dessen**",
+              "**deren**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Même antécédent, trois cas",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Sujet : nominatif",
+              "texte": "<i>Der Mann, **der** dort steht…</i> (l’homme qui se tient là)"
+            },
+            {
+              "titre": "COD : accusatif",
+              "texte": "<i>Der Mann, **den** ich sehe…</i> (l’homme que je vois)"
+            },
+            {
+              "titre": "COI : datif",
+              "texte": "<i>Der Mann, **dem** ich helfe…</i> — <i>helfen</i> régit le datif."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Après dessen / deren",
+          "oui": {
+            "titre": "Nom sans article",
+            "texte": "<i>Der Mann, **dessen** Auto kaputt ist…</i> (dont la voiture est en panne)"
+          },
+          "non": {
+            "titre": "Article en trop",
+            "texte": "<i>Der Mann, dessen das Auto kaputt ist</i> — le génitif relatif remplace déjà l’article."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Die Frau, ___ Sohn Arzt ist…</i> → **deren** (féminin, génitif)."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Choisir le pronom relatif",
+          "etapes": [
+            {
+              "titre": "Genre d’avant",
+              "texte": "Cherche genre et nombre de l’**antécédent**."
+            },
+            {
+              "titre": "Cas d’après",
+              "texte": "Sujet, COD, COI ou après préposition **dans la relative**."
+            },
+            {
+              "titre": "Lis le tableau",
+              "texte": "Croise genre et cas. Verbe **à la fin**, virgules."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Règles de construction",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Préposition",
+              "texte": "devant le relatif, elle commande le cas&nbsp;: <i>Der Freund, mit **dem** ich fahre</i>."
+            },
+            {
+              "titre": "was",
+              "texte": "après <i>alles, nichts, etwas, viel</i>, un superlatif neutre ou une phrase entière."
+            },
+            {
+              "titre": "Exemple",
+              "texte": "<i>Alles, **was** du sagst, ist richtig.</i>"
+            },
+            {
+              "titre": "Phrase entière",
+              "texte": "<i>Er kam zu spät, **was** mich geärgert hat.</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Prendre le cas de l’antécédent&nbsp;: <i>Der Mann, **der** ich sehe</i> → <i>**den** ich sehe</i> (COD).",
+            "<i>Alles, das du sagst</i> → <i>Alles, **was** du sagst</i>.",
+            "<i>Der Freund, dem ich mit fahre</i> → <i>mit **dem** ich fahre</i>.",
+            "Oublier une virgule&nbsp;: la relative est toujours entre virgules."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Das Buch, ___ ich lese, ist spannend.</i> (COD, neutre)",
+            "<i>Der Freund, mit ___ ich fahre.</i> (masculin)",
+            "<i>Alles, ___ du sagst, ist richtig.</i>"
+          ],
+          "reponses": "1) das 2) dem 3) was"
+        }
+      ]
+    }
+  ]
+}

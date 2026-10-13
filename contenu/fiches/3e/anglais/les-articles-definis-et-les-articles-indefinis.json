@@ -1,0 +1,138 @@
+{
+  "titre": "A, an, the ou rien",
+  "titreSurligne": "rien",
+  "accroche": "Trois choix devant un nom.",
+  "bonus": "**a / an** = le son · **the** = connu ou unique · **rien** = en général",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/anglais/les-articles-definis-et-les-articles-indefinis.webp",
+    "prompt": "a glossy violet signpost with three golden arrows pointing in different directions, a small golden star on top, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "A, an, the…\nou rien&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le choix",
+          "lignes": ["**a / an** · **the** · **rien**"],
+          "petite": true,
+          "regle": "**a / an**&nbsp;: un singulier dénombrable quelconque. **the**&nbsp;: connu ou unique. **Rien**&nbsp;: pluriel ou indénombrable en général.",
+          "note": "le son décide, pas la lettre"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "A ou an&nbsp;?",
+          "entetes": ["Le son", "L’article", "L’exemple"],
+          "lignes": [
+            ["Consonne", "**a**", "<i>a book, a **u**niversity</i>"],
+            ["Voyelle", "**an**", "<i>an apple, an **h**our</i>"],
+            ["Son « you »", "**a**", "<i>a **u**seful tool, a **E**uropean</i>"],
+            ["Métier", "**a**", "<i>She is a dentist.</i>"],
+            ["Fréquence", "**a**", "<i>twice a week</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Quand mettre the",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Déjà mentionné",
+              "texte": "<i>I bought **a** car. **The** car is red.</i>"
+            },
+            {
+              "titre": "Unique ou superlatif",
+              "texte": "<i>**the** sun, **the** moon, **the** best</i>. Pour un instrument&nbsp;: <i>**the** guitar</i>."
+            },
+            {
+              "titre": "Lieux au pluriel",
+              "texte": "<i>**the** Thames, **the** Atlantic, **the** Alps, **the** Netherlands</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le général, sans article",
+          "oui": {
+            "titre": "Article zéro",
+            "texte": "<i>**Children** like playing. **Music** relaxes me.</i> (les enfants, la musique)"
+          },
+          "non": {
+            "titre": "Calque du français",
+            "texte": "<i>**The** children like playing. **The** music relaxes me.</i> — en général, pas d’article."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>___ breakfast is ready.</i> → **rien**&nbsp;: un repas se passe d’article."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode en trois questions",
+          "etapes": [
+            { "titre": "Connu ou unique&nbsp;?", "texte": "On sait de quoi on parle → **the**." },
+            { "titre": "Quelconque&nbsp;?", "texte": "Singulier dénombrable ou métier → **a / an**, selon le son." },
+            { "titre": "Général&nbsp;?", "texte": "Pluriel, indénombrable, nom propre, repas, sport → **rien**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            { "titre": "the piano / – football", "texte": "<i>I play **the** piano, I play football.</i>" },
+            { "titre": "school ou the school", "texte": "<i>goes to school</i> (étudier) / <i>to **the** school</i> (le bâtiment)" },
+            { "titre": "What a…!", "texte": "<i>What **a** nice day!</i> — Quelle belle journée&nbsp;!" },
+            { "titre": "a / an = par", "texte": "<i>once **a** month, 50 km **an** hour</i>" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>a hour</i> → <i>**an** hour</i> (h muet).",
+            "<i>I play football</i> sans <i>the</i> — mais <i>the piano</i>.",
+            "<i>The children in my class</i> : dès qu’on précise lesquels, <i>the</i> revient.",
+            "<i>the France</i> → <i>France</i> : les pays ne prennent pas <i>the</i> (sauf <i>the Netherlands</i>)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>She is ___ engineer.</i> (a / an)",
+            "<i>I saw a film. ___ film was long.</i>",
+            "<i>I love ___ music.</i> (the / rien)"
+          ],
+          "reponses": "1) an 2) The 3) rien (I love music)"
+        }
+      ]
+    }
+  ]
+}

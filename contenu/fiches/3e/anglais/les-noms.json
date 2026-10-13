@@ -1,0 +1,138 @@
+{
+  "titre": "Les noms",
+  "titreSurligne": "noms",
+  "accroche": "Compter, ou ne pas compter&nbsp;?",
+  "bonus": "**-s / -es / -ies** · irréguliers · **a piece of** pour les indénombrables",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/anglais/les-noms.webp",
+    "prompt": "a glossy violet cardboard box overflowing with golden building blocks of different shapes, a small golden plus sign floating above, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Je les compte&nbsp;?\nOu pas&nbsp;?",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le tri de départ",
+          "lignes": ["on le **compte** → a / -s"],
+          "petite": true,
+          "regle": "Indénombrables&nbsp;: **water, money, information, advice, news, furniture, homework, music**. Ni <i>a</i>, ni <i>-s</i>, verbe au **singulier**.",
+          "note": "the news is…"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le pluriel régulier",
+          "entetes": ["La fin du nom", "Le pluriel", "L’exemple"],
+          "lignes": [
+            ["Cas général", "**-s**", "<i>cars, tables</i>"],
+            ["-s, -sh, -ch, -x", "**-es**", "<i>boxes, watches</i>"],
+            ["Consonne + y", "**-ies**", "<i>city → cit**ies**</i>"],
+            ["Souvent -o", "**-es** (sauf photos, pianos)", "<i>potatoes</i>"],
+            ["-f / -fe", "souvent **-ves**", "<i>leaf → lea**ves**</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les pluriels à connaître",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Irréguliers",
+              "texte": "<i>man → **men**, woman → **women**, child → **children**, person → **people**</i>"
+            },
+            {
+              "titre": "Dans le corps",
+              "texte": "<i>foot → **feet**, tooth → **teeth**, mouse → **mice**</i>"
+            },
+            {
+              "titre": "Inchangés",
+              "texte": "<i>one **sheep**, two **sheep** ; fish ; deer</i>. Et toujours pluriels&nbsp;: <i>jeans, glasses, clothes</i> (→ <i>a **pair of** jeans</i>)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Information, news, advice",
+          "oui": {
+            "titre": "Singulier, sans a",
+            "texte": "<i>The news **is** good. I need **some** advice.</i>"
+          },
+          "non": {
+            "titre": "Calque du français",
+            "texte": "<i>The news **are** good. I need **an** advice.</i> — « des conseils » ne donne pas un pluriel."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>I have two ___ of news.</i> → **pieces**&nbsp;: on compte avec un partitif."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            { "titre": "Je peux compter&nbsp;?", "texte": "<i>one chair, two chairs</i> → dénombrable. Sinon → **indénombrable**." },
+            { "titre": "Indénombrable", "texte": "Pas de **a / an**, pas de **-s**, verbe au **singulier**." },
+            { "titre": "Dénombrable", "texte": "Regarde la **fin du nom** (-s, -es, -ies) et pense aux **irréguliers**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Compter l’incomptable",
+          "deux": true,
+          "items": [
+            { "titre": "a glass of water", "texte": "un verre d’eau" },
+            { "titre": "a piece of advice", "texte": "un conseil&nbsp;; <i>two pieces of furniture</i>" },
+            { "titre": "a slice of bread", "texte": "une tranche de pain" },
+            { "titre": "the students’ books", "texte": "génitif pluriel en -s&nbsp;: apostrophe seule" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>an information</i> → <i>a **piece of** information.</i>",
+            "<i>my homeworks</i> → <i>my **homework**.</i>",
+            "<i>three persons</i> → <i>three **people**.</i>",
+            "<i>the news are</i> → <i>the news **is**</i> : le -s est trompeur."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Pluriel de <i>city</i>&nbsp;?",
+            "<i>I need ___ advice.</i> (a / an / some)",
+            "<i>The news ___ good.</i> (is / are)"
+          ],
+          "reponses": "1) cities 2) some 3) is"
+        }
+      ]
+    }
+  ]
+}

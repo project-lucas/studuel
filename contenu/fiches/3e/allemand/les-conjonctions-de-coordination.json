@@ -1,0 +1,197 @@
+{
+  "titre": "Les coordinations",
+  "titreSurligne": "coordinations",
+  "accroche": "Und, oder, aber, denn, sondern.",
+  "bonus": "**und · oder · aber · denn · sondern** → position zéro, l’ordre ne bouge pas",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/allemand/les-conjonctions-de-coordination.webp",
+    "prompt": "a glossy violet chain with five golden links connecting two small violet blocks, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Ils relient,\nils ne dérangent pas&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Position zéro",
+          "lignes": [
+            "conjonction + **S – V**"
+          ],
+          "petite": true,
+          "regle": "Ces cinq mots relient deux éléments de même rang et ne comptent **pas** dans l’ordre des mots&nbsp;: sujet, puis verbe en 2<sup>e</sup> position.",
+          "note": "virgule : aber, denn, sondern"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les cinq de base",
+          "entetes": [
+            "Conjonction",
+            "Sens",
+            "Virgule&nbsp;?"
+          ],
+          "lignes": [
+            [
+              "**und**",
+              "et",
+              "non"
+            ],
+            [
+              "**oder**",
+              "ou",
+              "non"
+            ],
+            [
+              "**aber**",
+              "mais",
+              "**oui**"
+            ],
+            [
+              "**denn**",
+              "car",
+              "**oui**"
+            ],
+            [
+              "**sondern**",
+              "mais au contraire",
+              "**oui**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Trois syntaxes, un lien logique",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Coordination",
+              "texte": "<i>Ich bleibe zu Hause, **denn** ich bin krank.</i> — verbe en **2<sup>e</sup>** position."
+            },
+            {
+              "titre": "Subordination",
+              "texte": "<i>Ich bleibe zu Hause, **weil** ich krank **bin**.</i> — verbe à la **fin**."
+            },
+            {
+              "titre": "Adverbe de liaison",
+              "texte": "<i>Es regnet, **deshalb bleibe** ich zu Hause.</i> — **inversion**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Aber ou sondern&nbsp;?",
+          "oui": {
+            "titre": "Sondern après négation",
+            "texte": "<i>Das ist nicht mein Buch, **sondern** deins.</i>"
+          },
+          "non": {
+            "titre": "Aber sans négation",
+            "texte": "<i>Er ist arm, **aber** glücklich.</i> — opposition simple."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Er kommt nicht heute, ___ morgen.</i> → **sondern**&nbsp;: il y a un <i>nicht</i> devant."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Quel type de mot&nbsp;?",
+              "texte": "Coordination, subordination ou adverbe de liaison&nbsp;?"
+            },
+            {
+              "titre": "Place le verbe",
+              "texte": "Coordination : 2<sup>e</sup>. Subordination : fin. Adverbe : inversion."
+            },
+            {
+              "titre": "Ponctue",
+              "texte": "Virgule devant <i>aber, denn, sondern</i>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "Les adverbes de liaison",
+          "paragraphes": [
+            "<i>deshalb, deswegen, trotzdem, dann, außerdem, sonst</i> occupent la **première** position, donc le verbe vient juste après&nbsp;: **inversion**."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les couples corrélatifs",
+          "deux": true,
+          "items": [
+            {
+              "titre": "entweder… oder",
+              "texte": "ou bien… ou bien"
+            },
+            {
+              "titre": "weder… noch",
+              "texte": "ni… ni, **sans** <i>nicht</i>"
+            },
+            {
+              "titre": "sowohl… als auch",
+              "texte": "aussi bien… que"
+            },
+            {
+              "titre": "nicht nur… sondern auch",
+              "texte": "non seulement… mais aussi"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Verbe à la fin après <i>denn</i>&nbsp;: <i>denn ich krank bin</i> → <i>denn ich **bin** krank</i>.",
+            "Inversion après <i>und</i> ou <i>aber</i>&nbsp;: ils ne comptent pas dans l’ordre.",
+            "<i>weder… noch</i> avec <i>nicht</i>&nbsp;: la phrase est **déjà** négative.",
+            "Oublier la virgule devant <i>denn</i> et <i>aber</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Remets en ordre&nbsp;: <i>Ich bleibe, denn ___ (ich / krank / bin).</i>",
+            "<i>Es regnet, deshalb ___ ich (bleibe) zu Hause.</i>",
+            "Quelle conjonction après une négation&nbsp;?"
+          ],
+          "reponses": "1) ich bin krank 2) bleibe (inversion) 3) sondern"
+        }
+      ]
+    }
+  ]
+}

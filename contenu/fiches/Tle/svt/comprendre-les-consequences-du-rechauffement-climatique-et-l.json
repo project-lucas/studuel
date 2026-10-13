@@ -18,21 +18,45 @@
           "numero": 1,
           "titre": "Le vocabulaire",
           "items": [
-            { "terme": "GIEC", "definition": "groupe d’experts qui **évalue** les connaissances sur le climat et publie des rapports" },
-            { "terme": "Scénario", "definition": "projection de l’avenir selon des **décisions prises maintenant**" },
-            { "terme": "Dilatation thermique", "definition": "l’eau chaude occupe plus de volume&nbsp;: le niveau de l’océan monte" },
-            { "terme": "Puits de carbone", "definition": "réservoir qui **stocke** plus de carbone qu’il n’en libère (océan, forêts, sols)" }
+            {
+              "terme": "GIEC",
+              "definition": "groupe d’experts qui **évalue** les connaissances sur le climat et publie des rapports"
+            },
+            {
+              "terme": "Scénario",
+              "definition": "projection de l’avenir selon des **décisions prises maintenant**"
+            },
+            {
+              "terme": "Dilatation thermique",
+              "definition": "l’eau chaude occupe plus de volume&nbsp;: le niveau de l’océan monte"
+            },
+            {
+              "terme": "Puits de carbone",
+              "definition": "réservoir qui **stocke** plus de carbone qu’il n’en libère (océan, forêts, sols)"
+            }
           ]
         },
         {
           "type": "tableau",
           "numero": 2,
           "titre": "La montée des eaux",
-          "entetes": ["Cause", "Effet"],
+          "entetes": [
+            "Cause",
+            "Effet"
+          ],
           "lignes": [
-            ["**Dilatation thermique**", "l’océan se réchauffe et **gonfle**"],
-            ["**Glaces continentales**", "leur fonte ajoute de l’eau à l’océan"],
-            ["**Banquise**", "sa fonte ne change **pas** le niveau (glace déjà dans l’eau)"]
+            [
+              "**Dilatation thermique**",
+              "l’océan se réchauffe et **gonfle**"
+            ],
+            [
+              "**Glaces continentales**",
+              "leur fonte ajoute de l’eau à l’océan"
+            ],
+            [
+              "**Banquise**",
+              "sa fonte ne change **pas** le niveau (glace déjà dans l’eau)"
+            ]
           ]
         }
       ]
@@ -45,12 +69,30 @@
           "titre": "Repères à connaître",
           "colonnes": 3,
           "cartes": [
-            { "titre": "Le CO₂", "texte": "De **280 ppm** avant l’ère industrielle à plus de **420 ppm** aujourd’hui." },
-            { "titre": "Température", "texte": "Environ **+1,1 à 1,2 °C** depuis la période préindustrielle." },
-            { "titre": "Archives", "texte": "Ce taux de CO₂ est inédit depuis **800 000 ans**." },
-            { "titre": "Vitesse", "texte": "Le plus inquiétant est la **vitesse** du changement." },
-            { "titre": "Scénarios", "texte": "Entre environ **+1,5 °C** et **+4 °C** à la fin du siècle, selon les choix." },
-            { "titre": "Écosystèmes", "texte": "Risque de **désynchronisation** entre espèces et saisons." }
+            {
+              "titre": "Le CO₂",
+              "texte": "De **280 ppm** avant l’ère industrielle à plus de **420 ppm** aujourd’hui."
+            },
+            {
+              "titre": "Température",
+              "texte": "Environ **+1,1 à 1,2 °C** depuis la période préindustrielle."
+            },
+            {
+              "titre": "Archives",
+              "texte": "Ce taux de CO₂ est inédit depuis **800 000 ans**."
+            },
+            {
+              "titre": "Vitesse",
+              "texte": "Le plus inquiétant est la **vitesse** du changement."
+            },
+            {
+              "titre": "Scénarios",
+              "texte": "Entre environ **+1,5 °C** et **+4 °C** à la fin du siècle, selon les choix."
+            },
+            {
+              "titre": "Écosystèmes",
+              "texte": "Risque de **désynchronisation** entre espèces et saisons."
+            }
           ]
         }
       ]
@@ -62,9 +104,18 @@
           "numero": 4,
           "titre": "Rédiger une synthèse",
           "etapes": [
-            { "titre": "Poser", "texte": "la cause : les émissions de gaz à effet de serre" },
-            { "titre": "Décrire", "texte": "les conséquences, avec une donnée chiffrée" },
-            { "titre": "Proposer", "texte": "des leviers : atténuer et s’adapter" }
+            {
+              "titre": "Poser",
+              "texte": "la cause : les émissions de gaz à effet de serre"
+            },
+            {
+              "titre": "Décrire",
+              "texte": "les conséquences, avec une donnée chiffrée"
+            },
+            {
+              "titre": "Proposer",
+              "texte": "des leviers : atténuer et s’adapter"
+            }
           ]
         }
       ]
@@ -76,9 +127,18 @@
           "type": "copie",
           "titre": "Sur ta copie du bac",
           "lignes": [
-            { "texte": "La teneur en CO₂ augmente depuis l’ère industrielle.", "quoi": "cause" },
-            { "texte": "Elle renforce l’effet de serre et la température.", "quoi": "effet" },
-            { "texte": "Réduire les émissions limite l’ampleur du réchauffement.", "quoi": "action" }
+            {
+              "texte": "La teneur en CO₂ augmente depuis l’ère industrielle.",
+              "quoi": "cause"
+            },
+            {
+              "texte": "Elle renforce l’effet de serre et la température.",
+              "quoi": "effet"
+            },
+            {
+              "texte": "Réduire les émissions limite l’ampleur du réchauffement.",
+              "quoi": "action"
+            }
           ],
           "pied": "Cite un ==chiffre== du document : une donnée vaut mieux qu’un adjectif."
         },
@@ -102,7 +162,7 @@
             "Qu’est-ce qu’un **puits de carbone**&nbsp;?",
             "Que fait le **GIEC**&nbsp;?"
           ],
-          "reponses": "1) dilatation thermique et fonte des glaces continentales · 2) un réservoir qui stocke du carbone · 3) il évalue les connaissances sur le climat"
+          "reponses": "1) dilatation thermique, fonte des glaces continentales · 2) un réservoir qui stocke du carbone · 3) il évalue les savoirs sur le climat"
         }
       ]
     }

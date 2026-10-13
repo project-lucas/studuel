@@ -1,0 +1,133 @@
+{
+  "titre": "L’école allemande",
+  "titreSurligne": "allemande",
+  "accroche": "Un autre rythme, d’autres notes.",
+  "bonus": "Notes de **1 (très bien)** à **6** · orientation vers **10 ans** · **Abitur** = le bac",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/allemand/l-ecole-en-allemagne-un-autre-rythme.webp",
+    "prompt": "a glossy violet school cone cornet filled with golden candies and pencils, small golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Eine Eins in Deutsch&nbsp;?\nSuper&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le parcours",
+          "entetes": ["Âge", "École", "En France"],
+          "lignes": [
+            ["3–6", "<i>der Kindergarten</i>", "maternelle"],
+            ["6–10", "<i>die Grundschule</i>", "primaire"],
+            ["dès 10", "<i>das Gymnasium</i>", "collège + lycée général"],
+            ["dès 10", "<i>die Realschule</i>…", "autres filières"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les notes",
+          "entetes": ["Note", "Sens"],
+          "lignes": [
+            ["1 <i>sehr gut</i>", "très bien"],
+            ["2 <i>gut</i>", "bien"],
+            ["3 <i>befriedigend</i>", "assez bien"],
+            ["4 <i>ausreichend</i>", "passable"],
+            ["5 <i>mangelhaft</i>", "insuffisant"],
+            ["6 <i>ungenügend</i>", "très insuffisant"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce qui change",
+          "colonnes": 3,
+          "cartes": [
+            {"titre": "La journée", "texte": "Cours dès **7 h 45**, fin en début d’après-midi&nbsp;; les <i>Ganztagsschulen</i> ont cantine et activités. Heures de 45 min, souvent doubles (<i>Doppelstunde</i>)."},
+            {"titre": "Les Länder", "texte": "L’éducation dépend des **16 Länder**&nbsp;: chacun son système et ses vacances. Orientation **très tôt**, vers 10 ans."},
+            {"titre": "Après l’école", "texte": "L’<i>**Abitur**</i> (le <i>Abi</i>) ou l’<i>**Ausbildung**</i>&nbsp;: le **système dual**, entreprise + école, très respecté."}
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Lire une note allemande",
+          "oui": {
+            "titre": "1 = la meilleure",
+            "texte": "<i>Ich habe eine **Eins** in Deutsch!</i> (J’ai eu un 1&nbsp;: excellent.)"
+          },
+          "non": {
+            "titre": "1 ≠ très faible",
+            "texte": "Ne pas lire comme sur 20&nbsp;: un **6** est la pire note, pas la meilleure."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« J’ai eu un 5 en maths » → <i>Ich habe eine Fünf</i> = **insuffisant**."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Le vocabulaire",
+          "deux": true,
+          "items": [
+            {"titre": "<i>der Stundenplan</i>", "texte": "l’emploi du temps"},
+            {"titre": "<i>die Klassenarbeit</i>", "texte": "le contrôle"},
+            {"titre": "<i>das Zeugnis</i>", "texte": "le bulletin"},
+            {"titre": "<i>sitzen bleiben</i>", "texte": "redoubler"}
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Pour dire",
+          "deux": true,
+          "items": [
+            {"titre": "<i>Mein Lieblingsfach ist Mathe.</i>", "texte": "Ma matière préférée, ce sont les maths."},
+            {"titre": "<i>Wir haben heute sechs Stunden.</i>", "texte": "Nous avons six heures de cours aujourd’hui."}
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "pieges",
+          "items": [
+            "<i>die Schule</i> ≠ « l’école » pour tout&nbsp;: le <i>Gymnasium</i> n’est **pas** un gymnase, c’est le lycée.",
+            "<i>das Fach</i> = la **matière**, pas « la fac ».",
+            "Le bac allemand s’appelle l’**Abitur**, pas « Bac ».",
+            "<i>das Zeugnis</i> = le **bulletin**, pas un « témoignage »."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle est la meilleure note en Allemagne&nbsp;?",
+            "Comment s’appelle le bac allemand&nbsp;?",
+            "Que veut dire <i>das Zeugnis</i>&nbsp;?"
+          ],
+          "reponses": "1) la note 1 (Eins) 2) l’Abitur 3) le bulletin"
+        }
+      ]
+    }
+  ]
+}

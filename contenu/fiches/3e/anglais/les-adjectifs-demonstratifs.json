@@ -1,0 +1,138 @@
+{
+  "titre": "This, that, these",
+  "titreSurligne": "This, that",
+  "accroche": "Montrer du doigt, de près ou de loin.",
+  "bonus": "**this / these** = près · **that / those** = loin · pas de -s en plus",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/anglais/les-adjectifs-demonstratifs.webp",
+    "prompt": "a glossy violet pointing hand with a golden cuff reaching toward a small golden star, a second smaller star far away, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Ici, c’est this&nbsp;!\nLà-bas, that&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Nombre et distance",
+          "lignes": ["**this** · **that**", "**these** · **those**"],
+          "petite": true,
+          "regle": "Singulier&nbsp;: **this** (près), **that** (loin). Pluriel&nbsp;: **these** (près), **those** (loin). À l’oreille&nbsp;: **this** [ɪ] court, **these** [iː] long.",
+          "note": "s’accorde avec le nom"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les quatre en phrase",
+          "entetes": ["Le mot", "L’exemple", "En français"],
+          "lignes": [
+            ["this", "<i>**This** book is interesting.</i>", "ce livre (que je tiens)"],
+            ["that", "<i>**That** house over there is old.</i>", "cette maison, là-bas"],
+            ["these", "<i>**These** shoes are new.</i>", "ces chaussures-ci"],
+            ["that (temps)", "<i>**That** summer was hot.</i>", "cet été-là"],
+            ["those", "<i>**Those** were the days.</i>", "c’était le bon temps"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Trois emplois à connaître",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Dans le temps",
+              "texte": "<i>**this** morning, **this** week</i> (présent) / <i>**that** summer</i> (passé)."
+            },
+            {
+              "titre": "Au téléphone",
+              "texte": "<i>Hello, **this** is Paul.</i> / <i>**This** is my sister, Kate.</i> (présenter)"
+            },
+            {
+              "titre": "Réagir",
+              "texte": "<i>Listen to **this**&nbsp;!</i> (ce que je vais dire) / <i>**That**’s a good idea&nbsp;!</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "L’accord avec le nom",
+          "oui": {
+            "titre": "Accord",
+            "texte": "<i>**These** books are mine. **Those** people are friendly.</i>"
+          },
+          "non": {
+            "titre": "Pas d’accord",
+            "texte": "<i>**This** books are mine. **That** people are friendly.</i> — le nom est au pluriel, le démonstratif aussi."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>___ children are noisy.</i> (this / these) → **these**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            { "titre": "Compte", "texte": "Un seul → **this / that**. Plusieurs → **these / those**." },
+            { "titre": "Mesure la distance", "texte": "Ici, maintenant → **this / these**. Là-bas, autrefois → **that / those**." },
+            { "titre": "Vérifie le verbe", "texte": "<i>These **are** my friends. That **was** long ago.</i>" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Adjectif, pronom, one",
+          "deux": true,
+          "items": [
+            { "titre": "Adjectif", "texte": "suivi d’un nom&nbsp;: <i>this car</i>" },
+            { "titre": "Pronom", "texte": "seul&nbsp;: <i>I prefer these.</i>" },
+            { "titre": "this one / that one", "texte": "<i>Which bag? — **This one**.</i> (celui-ci)" },
+            { "titre": "these / those ones", "texte": "<i>I prefer **those ones**.</i> (celles-là)" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>thoses</i> n’existe pas&nbsp;: <i>those</i> est déjà un pluriel.",
+            "<i>this books</i> → <i>**these** books.</i>",
+            "<i>that people</i> → <i>**those** people.</i>",
+            "Au téléphone, <i>It’s Tom</i> → <i>**This** is Tom.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>___ shoes (près de moi) are new.</i>",
+            "<i>___ people (là-bas) are my cousins.</i>",
+            "Au téléphone&nbsp;: <i>Hello, ___ is Paul.</i>"
+          ],
+          "reponses": "1) These 2) Those 3) this"
+        }
+      ]
+    }
+  ]
+}

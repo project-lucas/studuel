@@ -1,0 +1,112 @@
+{
+  "titre": "Le courant électrique",
+  "titreSurligne": "courant",
+  "accroche": "Des charges qui circulent dans une boucle.",
+  "epreuve": "brevet",
+  "bonus": "Circuit **fermé** obligatoire · sens conventionnel **+ → −** · électrons en sens **inverse** · corps humain = **conducteur**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/le-courant-electrique.webp",
+    "prompt": "a glossy violet battery connected by golden wires to a glowing golden light bulb in a closed loop, tiny golden sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Pas de boucle,\npas de courant !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Courant", "definition": "déplacement ordonné de **porteurs de charge**&nbsp;: électrons libres (métal), ions (solution)" },
+            { "terme": "Générateur", "definition": "pile, batterie&nbsp;: il **fournit** l’énergie" },
+            { "terme": "Récepteur", "definition": "lampe, moteur, résistance&nbsp;: il la **consomme**" },
+            { "terme": "Court-circuit", "definition": "un fil relie les deux bornes du générateur&nbsp;: **danger d’incendie**" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Conducteurs et isolants",
+          "entetes": ["Catégorie", "Exemples"],
+          "lignes": [
+            ["**Conducteurs**", "métaux, graphite, solutions ioniques, **corps humain**"],
+            ["**Isolants**", "verre, plastique, bois sec, air sec, caoutchouc"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Tester si un matériau conduit",
+          "etapes": [
+            { "titre": "Monter", "texte": "pile, lampe, fils en série, deux pinces libres" },
+            { "titre": "Insérer", "texte": "l’objet entre les deux pinces" },
+            { "titre": "Observer", "texte": "lampe allumée = conducteur, sinon isolant" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une règle en métal est placée entre les pinces. La lampe s’allume. __Conclusion__&nbsp;?",
+          "calcul": "circuit fermé\npar la règle",
+          "aparte": "le courant passe",
+          "resultat": "règle [[conductrice]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Deux sens à distinguer",
+          "oui": { "titre": "Courant conventionnel", "texte": "Sort par la borne **+** du générateur et rejoint la borne **−** : c’est le sens des schémas." },
+          "non": { "titre": "Les électrons", "texte": "Ils vont en sens **inverse**, de − vers +." },
+          "essai": { "texte": "Une **DEL** ne laisse passer le courant que dans un sens&nbsp;: elle sert à le vérifier." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "La lampe est dans une boucle ininterrompue.", "quoi": "le circuit fermé" },
+            { "texte": "Le courant circule de la borne + vers la borne −.", "quoi": "le sens" },
+            { "texte": "L’interrupteur ouvert coupe la boucle.", "quoi": "la cause" }
+          ],
+          "pied": "Sécurité&nbsp;: jamais de ==mains mouillées==, jamais d’objet métallique dans une prise, jamais les bornes d’une pile reliées."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le courant **s’use** dans les récepteurs.",
+            "Confondre le sens du **courant** et celui des **électrons**.",
+            "Oublier que le **corps humain** conduit.",
+            "Tracer un schéma avec des **courbes** au lieu d’angles droits."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que transportent le courant dans un **métal**&nbsp;?",
+            "Un interrupteur **ouvert**&nbsp;: la lampe&nbsp;?",
+            "Le caoutchouc est-il **conducteur**&nbsp;?"
+          ],
+          "reponses": "1) des électrons libres · 2) éteinte, boucle coupée · 3) non, isolant"
+        }
+      ]
+    }
+  ]
+}

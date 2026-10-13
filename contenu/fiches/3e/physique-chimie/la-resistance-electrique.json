@@ -1,0 +1,167 @@
+{
+  "titre": "Résistance et Ohm",
+  "titreSurligne": "Ohm",
+  "accroche": "Plus R est grande, moins I passe.",
+  "epreuve": "brevet",
+  "bonus": "**U = R × I** · V, Ω, A · **mA ÷ 1 000 = A** · graphique U(I) = droite par l’origine, pente = **R** · effet Joule = chaleur",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/la-resistance-electrique.webp",
+    "prompt": "a glossy violet striped resistor component with golden wire legs and a small warm orange glow, tiny golden sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Je freine,\nmais je chauffe !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La loi d’Ohm",
+          "petite": true,
+          "lignes": [
+            "U = R × I",
+            "R = U ÷ I · I = U ÷ R"
+          ],
+          "regle": "**U** en **volts**, **R** en **ohms (Ω)**, **I** en **ampères**. U et I sont ==proportionnelles==&nbsp;: R est constante.",
+          "note": "I en ampères !",
+          "teinte": "jaune"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Ce que la loi dit",
+          "entetes": [
+            "Le fait",
+            "Conséquence"
+          ],
+          "lignes": [
+            [
+              "R augmente à U constante",
+              "I **diminue**"
+            ],
+            [
+              "Graphique U en fonction de I",
+              "droite par l’**origine**"
+            ],
+            [
+              "Sa **pente**",
+              "vaut **R**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Appliquer la loi d’Ohm",
+          "etapes": [
+            {
+              "titre": "Convertir",
+              "texte": "mA en A (20 mA = 0,020 A)"
+            },
+            {
+              "titre": "Choisir",
+              "texte": "la forme utile de la loi"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "puis donner l’unité"
+            },
+            {
+              "titre": "Vérifier",
+              "texte": "l’ordre de grandeur et l’unité du résultat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une résistance de __220 Ω__ est soumise à __4,4 V__. L’intensité&nbsp;?",
+          "calcul": "I = U ÷ R\nI = 4,4 ÷ 220",
+          "aparte": "soit 20 mA",
+          "resultat": "I = [[0,02 A]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À retenir",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Effet Joule",
+              "texte": "Un courant **échauffe** toute résistance&nbsp;: radiateur (voulu), fils (subi)."
+            },
+            {
+              "titre": "Court-circuit",
+              "texte": "I énorme, fils qui chauffent&nbsp;: **risque d’incendie**."
+            },
+            {
+              "titre": "Mesurer R",
+              "texte": "À l’**ohmmètre**, **hors circuit**, ou U et I puis R = U ÷ I."
+            },
+            {
+              "titre": "Protection",
+              "texte": "En **série** avec une LED, elle limite I et évite qu’elle grille."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Point lu : U = 5 V pour I = 0,05 A.",
+              "quoi": "la lecture"
+            },
+            {
+              "texte": "R = U ÷ I = 5 ÷ 0,05",
+              "quoi": "lettres puis nombres"
+            },
+            {
+              "texte": "R = 100 Ω",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "La caractéristique est une ==droite passant par l’origine==&nbsp;: le dipôle est un conducteur ohmique."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Garder l’intensité en **mA** dans la loi d’Ohm.",
+            "Écrire **R = U × I**.",
+            "Mesurer à l’ohmmètre une résistance **branchée**.",
+            "Prendre un point **mal lisible** du graphique.",
+            "Oublier que R est **constante** pour un conducteur ohmique.",
+            "Confondre **pente** et **ordonnée** sur le graphique U(I)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "R = 47 Ω, I = 0,1 A&nbsp;: **U**&nbsp;?",
+            "U = 6 V, I = 0,03 A&nbsp;: **R**&nbsp;?",
+            "Convertis 250 mA en ampères."
+          ],
+          "reponses": "1) 4,7 V · 2) 200 Ω · 3) 0,25 A"
+        }
+      ]
+    }
+  ]
+}

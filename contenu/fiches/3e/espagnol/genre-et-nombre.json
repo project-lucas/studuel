@@ -1,0 +1,180 @@
+{
+  "titre": "Genre et nombre",
+  "titreSurligne": "nombre",
+  "accroche": "Le genre ne recopie pas le français.",
+  "bonus": "**-o** masc. · **-a** fém. · **-ción, -dad** fém. · pluriel **-s / -es / -ces**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/espagnol/genre-et-nombre.webp",
+    "prompt": "a glossy violet pair of letter tiles O and A side by side with a small golden plus sign and an S tile, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "¡El color,\nla sangre&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les repères de genre",
+          "lignes": [
+            "**-o** → el · **-a** → la"
+          ],
+          "petite": true,
+          "regle": "**Masculin**&nbsp;: -o, -or, -aje, -ma grec (<i>el problema, el tema, el idioma</i>). **Féminin**&nbsp;: -a, -ción, -sión, -dad, -tad, -tud, -umbre, -ez.",
+          "note": "<i>la ciudad, la canción</i>"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le pluriel",
+          "entetes": [
+            "Le mot finit par",
+            "On ajoute",
+            "L’exemple"
+          ],
+          "lignes": [
+            [
+              "Voyelle non accentuée",
+              "**-s**",
+              "<i>casa → casas</i>"
+            ],
+            [
+              "Consonne ou voyelle accentuée",
+              "**-es**",
+              "<i>papel → papeles</i> · <i>rubí → rubíes</i>"
+            ],
+            [
+              "-z",
+              "**-ces**",
+              "<i>lápiz → lápices</i> · <i>vez → veces</i>"
+            ],
+            [
+              "-s non accentué, dernière syllabe",
+              "rien",
+              "<i>el lunes / los lunes</i> · <i>la crisis / las crisis</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Le féminin des personnes",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "-o → -a",
+              "texte": "<i>el niño / la niña</i>"
+            },
+            {
+              "titre": "On ajoute -a",
+              "texte": "Après -or, -ón, -és&nbsp;: <i>profesor / profesora</i>, <i>francés / francesa</i>."
+            },
+            {
+              "titre": "Invariables",
+              "texte": "Seul l’article change&nbsp;: <i>el / la estudiante</i>, <i>el / la artista</i>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le genre du français ?",
+          "oui": {
+            "titre": "Genre appris avec l’article",
+            "texte": "<i>**la** sangre</i> · <i>**la** leche</i> · <i>**el** color</i> · <i>**el** árbol</i>"
+          },
+          "non": {
+            "titre": "Genre recopié du français",
+            "texte": "<i>el sangre</i> · <i>la color</i> · <i>la árbol</i> — aucune règle ne les couvre."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>___ problema es difícil.</i> → **El**&nbsp;: -ma d’origine grecque = masculin."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Regarde la finale",
+              "texte": "-o, -or → masc. · -a, -ción, -dad → fém."
+            },
+            {
+              "titre": "Un piège connu&nbsp;?",
+              "texte": "**La** sangre, **el** color&nbsp;: on l’apprend avec l’article."
+            },
+            {
+              "titre": "Forme le pluriel",
+              "texte": "-s, -es ou -ces&nbsp;; vérifie l’accent écrit."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Féminin en espagnol, masculin en français",
+          "deux": true,
+          "items": [
+            {
+              "titre": "la sangre · la leche",
+              "texte": "le sang · le lait"
+            },
+            {
+              "titre": "la sal · la nariz",
+              "texte": "le sel · le nez"
+            },
+            {
+              "titre": "el color · el árbol",
+              "texte": "la couleur · l’arbre"
+            },
+            {
+              "titre": "el viaje · el análisis",
+              "texte": "le voyage · l’analyse"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Copier le genre français&nbsp;: <i>el sangre</i> → <i>**la** sangre</i>.",
+            "<i>el lápiz → los lápizes</i> → <i>los lá**pices**</i> (z devient c).",
+            "L’accent suit la prononciation&nbsp;: <i>el examen → los **exá**menes</i>.",
+            "<i>la canción → las canciones</i>&nbsp;: l’accent **disparaît**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Pluriel de <i>el lápiz</i>.",
+            "Féminin de <i>el profesor</i>.",
+            "<i>___ sangre es roja.</i> (el / la)"
+          ],
+          "reponses": "1) los lápices 2) la profesora 3) La"
+        }
+      ]
+    }
+  ]
+}

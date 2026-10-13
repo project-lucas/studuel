@@ -1,0 +1,183 @@
+{
+  "titre": "Le Système solaire",
+  "titreSurligne": "solaire",
+  "accroche": "Des échelles qui dépassent l’imagination.",
+  "epreuve": "brevet",
+  "bonus": "**d = v × t** · c ≈ **300 000 km/s** · 1 a.l. ≈ **9,5 × 10¹² km** · Soleil à **8 min-lumière** · Univers ≈ 13,8 Ga",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/l-univers-et-le-systeme-solaire.webp",
+    "prompt": "a glossy golden sun with a violet ringed planet and a small moon orbiting it, tiny golden stars, sparkles"
+  },
+  "marcel": "Regarder loin,\nc’est regarder tôt !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Notre adresse cosmique",
+          "items": [
+            {
+              "titre": "Terre",
+              "texte": "une planète du **Système solaire** (≈ 4,6 milliards d’années)."
+            },
+            {
+              "titre": "Soleil",
+              "texte": "une **étoile** : elle produit sa lumière."
+            },
+            {
+              "titre": "Voie lactée",
+              "texte": "notre **galaxie**, centaines de milliards d’étoiles."
+            },
+            {
+              "titre": "Univers",
+              "texte": "des centaines de milliards de galaxies."
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les huit planètes",
+          "entetes": [
+            "Type",
+            "Planètes"
+          ],
+          "lignes": [
+            [
+              "**Telluriques**",
+              "Mercure, Vénus, Terre, Mars"
+            ],
+            [
+              "**Gazeuses**",
+              "Jupiter, Saturne, Uranus, Neptune"
+            ],
+            [
+              "Naine",
+              "Pluton (depuis 2006)"
+            ],
+            [
+              "Satellites, astéroïdes, comètes",
+              "aussi autour du Soleil"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "Distance et lumière",
+          "petite": true,
+          "lignes": [
+            "d = v × t"
+          ],
+          "regle": "**v** ≈ 300 000 km/s, **t** en ==secondes==, **d** en km. L’année-lumière est une **distance**, pas une durée.",
+          "note": "minutes → secondes&nbsp;!"
+        },
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Convertir",
+              "texte": "la durée en secondes"
+            },
+            {
+              "titre": "Écrire",
+              "texte": "d = v × t (ou t = d ÷ v)"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "en écriture scientifique, avec l’unité"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "La lumière du Soleil met __8 min 20 s__ (500 s). Distance Terre-Soleil&nbsp;?",
+          "calcul": "d = 300 000 × 500",
+          "aparte": "en km",
+          "resultat": "[[1,5 × 10⁸ km]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Source ou pas&nbsp;?",
+          "oui": {
+            "titre": "Étoile",
+            "texte": "Le Soleil **produit** sa propre lumière."
+          },
+          "non": {
+            "titre": "Planète, Lune",
+            "texte": "Elles ne produisent rien&nbsp;: elles **diffusent** la lumière du Soleil."
+          },
+          "essai": {
+            "texte": "Lune à 384 000 km&nbsp;: <i>t = 384 000 ÷ 300 000 ≈ 1,3 s</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "t = 8 min 20 s = 500 s",
+              "quoi": "la conversion"
+            },
+            {
+              "texte": "d = v × t = 300 000 × 500",
+              "quoi": "formule puis nombres"
+            },
+            {
+              "texte": "d = 1,5 × 10⁸ km",
+              "quoi": "écriture scientifique + unité"
+            },
+            {
+              "texte": "1 a.l. ≈ 3 × 10⁵ × 3,15 × 10⁷ ≈ 9,5 × 10¹² km",
+              "quoi": "retrouver l’année-lumière"
+            }
+          ],
+          "pied": "Proxima du Centaure, l’étoile la plus proche&nbsp;: ==4,2 années-lumière==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Prendre l’année-lumière pour une **durée**.",
+            "Oublier de convertir les **minutes** en secondes.",
+            "Dire que la Lune ou une planète est une **source** de lumière.",
+            "Penser que **Pluton** est une des huit planètes."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de planètes dans le Système solaire&nbsp;?",
+            "La lumière met 2 s : distance parcourue (c = 300 000 km/s)&nbsp;?",
+            "Une année-lumière mesure-t-elle un temps&nbsp;?"
+          ],
+          "reponses": "1) huit · 2) 600 000 km · 3) non, une distance"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "titre": "Les possessifs",
+  "titreSurligne": "possessifs",
+  "accroche": "Deux séries, et l’article pour le corps.",
+  "bonus": "**mi, tu, su** devant le nom · **mío, tuyo, suyo** après · **Me lavo las manos**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/espagnol/les-possessifs.webp",
+    "prompt": "a glossy violet hand holding a golden key with a small golden heart tag, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "¡Madre mía&nbsp;!\nDeux séries.",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’accord",
+          "lignes": [
+            "**mi(s)** libro(s) · libro **mío**"
+          ],
+          "petite": true,
+          "regle": "Le possessif s’accorde avec **ce qui est possédé**, pas avec le possesseur&nbsp;: <i>mis libros</i>, <i>nuestra casa</i>. Seuls <i>nuestro</i> et <i>vuestro</i> varient en genre.",
+          "note": "<i>mis libros</i>"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les deux séries",
+          "entetes": [
+            "Personne",
+            "Devant le nom",
+            "Après le nom / seul"
+          ],
+          "lignes": [
+            [
+              "1<sup>re</sup> sing.",
+              "<i>mi(s)</i>",
+              "<i>mío / a(s)</i>"
+            ],
+            [
+              "2<sup>e</sup> sing.",
+              "<i>tu(s)</i>",
+              "<i>tuyo / a(s)</i>"
+            ],
+            [
+              "3<sup>e</sup> sing. · plur.",
+              "<i>su(s)</i>",
+              "<i>suyo / a(s)</i>"
+            ],
+            [
+              "1<sup>re</sup> · 2<sup>e</sup> plur.",
+              "<i>nuestro · vuestro</i>",
+              "<i>nuestro · vuestro</i>"
+            ],
+            [
+              "Exemple",
+              "<i>mi casa</i> · <i>mis casas</i>",
+              "<i>una casa mía</i> · <i>casas mías</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Trois emplois de la forme tonique",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Après le nom",
+              "texte": "Pour insister&nbsp;: <i>un amigo **mío**</i> (un ami à moi)."
+            },
+            {
+              "titre": "Attribut",
+              "texte": "<i>Este libro es **mío**.</i>"
+            },
+            {
+              "titre": "Pronom",
+              "texte": "Avec l’article&nbsp;: <i>**El mío** es más grande.</i> · vocatif&nbsp;: <i>¡Hijo mío!</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Corps et vêtements",
+          "oui": {
+            "titre": "L’article défini",
+            "texte": "<i>Me lavo **las** manos.</i> · <i>Le duele **la** cabeza.</i> · <i>Se quitó **el** abrigo.</i>"
+          },
+          "non": {
+            "titre": "Le possessif",
+            "texte": "<i>Lavo mis manos.</i> — pas faux, mais étrange&nbsp;: le réfléchi dit déjà la possession."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« Il a mal à la tête » → <i>Le duele ___ cabeza.</i> → **la**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Corps, vêtement&nbsp;?",
+              "texte": "Possession évidente → **article défini**."
+            },
+            {
+              "titre": "Devant ou après&nbsp;?",
+              "texte": "Devant le nom : <i>mi, tu, su</i>. Après ou seul : <i>mío, tuyo, suyo</i>."
+            },
+            {
+              "titre": "Accorde",
+              "texte": "Avec la chose possédée, pas le possesseur."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Le problème de su",
+          "deux": true,
+          "items": [
+            {
+              "titre": "su = quatre possesseurs",
+              "texte": "son, sa, leur, votre (de <i>usted</i>)"
+            },
+            {
+              "titre": "Pour lever le doute",
+              "texte": "<i>la casa **de él** · de ella · de usted</i>"
+            },
+            {
+              "titre": "Accord de su",
+              "texte": "<i>su casa → sus casas</i>"
+            },
+            {
+              "titre": "nuestro / vuestro",
+              "texte": "<i>nuestra casa</i> : varient en genre"
+            },
+            {
+              "titre": "Le vocatif",
+              "texte": "<i>¡Hijo mío!</i> · <i>¡Madre mía!</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Me lavo mis manos</i> → <i>Me lavo **las** manos.</i>",
+            "<i>mi libros</i> → <i>**mis** libros</i> (accord avec le possédé).",
+            "<i>Es un mío libro</i> → <i>Es un libro **mío**.</i>",
+            "<i>Mío es más grande</i> → <i>**El** mío es más grande.</i>",
+            "<i>su casa</i> peut être ambigu → ajoute <i>de él / de ella</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Este libro es ___.</i> (à moi)",
+            "<i>Me lavo ___ manos.</i> (las / mis)",
+            "<i>___ casa</i> (notre)"
+          ],
+          "reponses": "1) mío 2) las 3) Nuestra"
+        }
+      ]
+    }
+  ]
+}

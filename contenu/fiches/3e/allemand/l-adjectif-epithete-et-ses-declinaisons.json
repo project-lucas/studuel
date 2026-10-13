@@ -1,0 +1,190 @@
+{
+  "titre": "L’adjectif épithète",
+  "titreSurligne": "épithète",
+  "accroche": "Qui porte la marque du cas&nbsp;?",
+  "bonus": "faible **-e / -en** · mixte **-er / -es** · forte = l’article défini",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/allemand/l-adjectif-epithete-et-ses-declinaisons.webp",
+    "prompt": "a glossy violet key with a golden tag, three small golden rings hanging from it, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Une marque du cas,\npas deux&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le principe",
+          "lignes": [
+            "la marque du cas **une seule fois**"
+          ],
+          "petite": true,
+          "regle": "Si le déterminant porte déjà la marque du cas, l’adjectif prend une terminaison **faible**. Sinon, il la porte **à sa place**.",
+          "note": "le déterminant d’abord"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois déclinaisons",
+          "entetes": [
+            "Déclinaison",
+            "Après",
+            "Terminaison"
+          ],
+          "lignes": [
+            [
+              "**Faible**",
+              "<i>der, die, das, dieser, jeder, alle</i>",
+              "**-e** ou **-en**"
+            ],
+            [
+              "**Mixte**",
+              "<i>ein, kein</i>, les possessifs",
+              "**-er, -es** aux « trous », sinon -e / -en"
+            ],
+            [
+              "**Forte**",
+              "**rien**",
+              "celles de l’article défini"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "La faible, en détail",
+          "entetes": [
+            "Cas",
+            "Masculin",
+            "Féminin",
+            "Neutre",
+            "Pluriel"
+          ],
+          "lignes": [
+            [
+              "Nominatif",
+              "<i>der alt**e**</i>",
+              "<i>die alt**e**</i>",
+              "<i>das alt**e**</i>",
+              "<i>die alt**en**</i>"
+            ],
+            [
+              "Accusatif",
+              "<i>den alt**en**</i>",
+              "<i>die alt**e**</i>",
+              "<i>das alt**e**</i>",
+              "<i>die alt**en**</i>"
+            ],
+            [
+              "Datif, génitif",
+              "**-en**",
+              "**-en**",
+              "**-en**",
+              "**-en**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Mixte ou faible&nbsp;?",
+          "oui": {
+            "titre": "Le trou est comblé",
+            "texte": "<i>ein alt**er** Mann</i>, <i>ein alt**es** Haus</i> — <i>ein</i> ne marque rien, l’adjectif le fait."
+          },
+          "non": {
+            "titre": "Rien n’est marqué",
+            "texte": "<i>ein alte Mann</i> — ni <i>ein</i> ni l’adjectif ne portent le cas."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>eine alt___ Frau</i> → **-e**&nbsp;: <i>eine</i> marque déjà, terminaison faible."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Cas et genre",
+              "texte": "Repère le **cas** et le **genre** du groupe nominal."
+            },
+            {
+              "titre": "Le déterminant",
+              "texte": "Marque-t-il déjà le cas&nbsp;? <i>der, die, das</i>… oui. <i>ein</i> : pas toujours."
+            },
+            {
+              "titre": "La terminaison",
+              "texte": "Marqué → **-e / -en**. Non marqué → l’adjectif prend la marque."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Forte et irréguliers",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Forte (sans déterminant)",
+              "texte": "<i>kalter Kaffee, frische Milch, mit guten Freunden</i>"
+            },
+            {
+              "titre": "hoch perd son c",
+              "texte": "<i>ein hoher Berg</i>"
+            },
+            {
+              "titre": "teuer, dunkel perdent leur e",
+              "texte": "<i>ein teures Auto, ein dunkles Zimmer</i>"
+            },
+            {
+              "titre": "Invariables",
+              "texte": "<i>ein rosa Kleid, eine lila Bluse</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Décliner l’adjectif attribut&nbsp;: la déclinaison ne vaut que **devant** le nom.",
+            "Oublier le **-er / -es** après <i>ein</i> au masculin et au neutre.",
+            "<i>mit gut Freunden</i> → <i>mit **guten** Freunden</i> (datif pluriel).",
+            "Mettre <i>hohe</i> avec un c&nbsp;: <i>ein **hoher** Berg</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Complète&nbsp;: <i>der klein___ Hund</i> (nominatif).",
+            "Complète&nbsp;: <i>ein groß___ Haus</i> (nominatif).",
+            "Complète&nbsp;: <i>mit gut___ Freunden</i>."
+          ],
+          "reponses": "1) -e 2) -es (großes) 3) -en (guten)"
+        }
+      ]
+    }
+  ]
+}

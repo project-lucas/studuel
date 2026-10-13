@@ -1,0 +1,118 @@
+{
+  "titre": "Interactions et forces",
+  "titreSurligne": "forces",
+  "accroche": "Une force, c’est une flèche à tracer.",
+  "epreuve": "brevet",
+  "bonus": "Force en **newtons (N)** · mesurée au **dynamomètre** · actions **réciproques**&nbsp;: même valeur, sens opposé · forces qui se compensent = immobile ou **rectiligne uniforme**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/interactions-et-forces.webp",
+    "prompt": "a glossy golden spring dynamometer pulling a violet crate, a bold arrow showing the force, tiny golden sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Une force,\nune flèche !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Deux familles d’interactions",
+          "entetes": ["Famille", "Exemples"],
+          "lignes": [
+            ["**De contact**", "main qui pousse, sol qui soutient, frottements"],
+            ["**À distance**", "gravitation, magnétisme, électrostatique"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les 4 caractéristiques",
+          "entetes": ["La flèche", "Elle dit"],
+          "lignes": [
+            ["**Point d’application**", "où elle s’exerce"],
+            ["**Direction**", "la droite qui la porte"],
+            ["**Sens**", "vers où elle pousse"],
+            ["**Valeur** (N)", "la longueur de la flèche"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Représenter une force à l’échelle",
+          "etapes": [
+            { "titre": "Échelle", "texte": "choisir par exemple 1 cm pour 10 N" },
+            { "titre": "Longueur", "texte": "35 N ÷ 10 = 3,5 cm" },
+            { "titre": "Tracer", "texte": "depuis le point d’application, bonne direction, bon sens" },
+            { "titre": "Nommer", "texte": "F main/caisse" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un livre est posé sur une table. __Quelles forces__&nbsp;?",
+          "calcul": "poids ↓ (à distance)\ntable ↑ (contact)",
+          "aparte": "il est immobile",
+          "resultat": "elles se [[compensent]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Actions réciproques", "texte": "Si A agit sur B, **B agit sur A** : même direction, même valeur, sens opposé. Deux forces sur deux objets différents." },
+            { "titre": "Forces qui se compensent", "texte": "Objet immobile ou en mouvement **rectiligne uniforme**." },
+            { "titre": "Forces qui ne se compensent pas", "texte": "La vitesse ou la trajectoire **change**." },
+            { "titre": "Les effets", "texte": "Mettre en mouvement, modifier la vitesse ou la trajectoire, **déformer**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Le livre subit son poids et l’action de la table.", "quoi": "le bilan" },
+            { "texte": "Il est immobile : les forces se compensent.", "quoi": "le lien" },
+            { "texte": "Même valeur, même direction, sens opposés.", "quoi": "la conclusion" }
+          ],
+          "pied": "Un objet n’a pas besoin d’une force pour ==continuer== d’avancer, mais pour ==changer== son mouvement."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire qu’un objet s’arrête « faute de force »&nbsp;: ce sont les **frottements**.",
+            "Confondre **force** (N) et **énergie** (J).",
+            "Mettre les deux forces réciproques sur le **même** objet.",
+            "Tracer une flèche sans **échelle** ni sens."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Longueur de la flèche d’une force de 45 N à 1 cm pour 15 N&nbsp;?",
+            "Que dire de deux forces **réciproques**&nbsp;?",
+            "Un objet à vitesse constante en ligne droite&nbsp;: les forces ?"
+          ],
+          "reponses": "1) 3 cm · 2) même valeur, sens opposé · 3) elles se compensent"
+        }
+      ]
+    }
+  ]
+}

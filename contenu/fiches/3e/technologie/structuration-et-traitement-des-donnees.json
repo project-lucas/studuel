@@ -1,0 +1,114 @@
+{
+  "titre": "Traiter les données",
+  "titreSurligne": "données",
+  "accroche": "Organiser pour pouvoir chercher.",
+  "epreuve": "brevet",
+  "bonus": "**Ligne** = enregistrement · **colonne** = champ · **clé** = identifiant unique · **CSV** et **JSON** = formats d’échange",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/technologie/structuration-et-traitement-des-donnees.webp",
+    "prompt": "a glossy violet spreadsheet grid with a golden bar chart and a small pie chart floating beside it, sparkles, same art style as the reference icons, no text, magenta background"
+  },
+  "marcel": "Bien rangées,\nbien exploitées !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Structurer",
+          "items": [
+            { "terme": "Donnée", "definition": "valeur **brute** : 18, « Dupont »" },
+            { "terme": "Information", "definition": "donnée **interprétée** : « il fait 18 °C »" },
+            { "terme": "Enregistrement", "definition": "une **ligne** du tableau" },
+            { "terme": "Champ", "definition": "une **colonne** : nom, date, valeur" },
+            { "terme": "Clé", "definition": "champ qui identifie chaque ligne **sans ambiguïté**" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Quel graphique&nbsp;?",
+          "entetes": ["Graphique", "Il raconte"],
+          "lignes": [
+            ["**Courbe**", "une évolution dans le temps"],
+            ["**Histogramme**", "une comparaison"],
+            ["**Camembert**", "une répartition d’un tout"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Traiter un tableau de données",
+          "etapes": [
+            { "titre": "Filtrer", "texte": "ne garder que les lignes qui vérifient la condition" },
+            { "titre": "Trier", "texte": "ranger selon un champ, croissant ou décroissant" },
+            { "titre": "Calculer", "texte": "somme, moyenne, minimum, maximum, puis représenter" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Relevés de __température__ sur 24 h. Quel graphique&nbsp;?",
+          "calcul": "valeur qui évolue dans le temps",
+          "aparte": "heure en abscisse",
+          "resultat": "une [[courbe]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Format CSV ou JSON&nbsp;?",
+          "oui": { "titre": "CSV", "texte": "Un **tableau en texte**, champs séparés par des virgules ou points-virgules." },
+          "non": { "titre": "JSON", "texte": "Des **couples nom-valeur** : objets connectés, sites web." },
+          "essai": { "texte": "Un fichier de mesures en colonnes séparées par « ; » est du <i>CSV</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Je filtre les lignes dont la valeur dépasse le seuil.", "quoi": "l’opération" },
+            { "texte": "Je représente l’évolution par une courbe.", "quoi": "le graphique" },
+            { "texte": "Je vérifie les valeurs extrêmes et les unités.", "quoi": "la qualité" }
+          ],
+          "pied": "On justifie ==le graphique== par ce que raconte ==la donnée==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **donnée** et **information**.",
+            "Prendre un **camembert** pour une évolution.",
+            "Oublier l’**unité** ou une valeur aberrante.",
+            "Confondre **ligne** (enregistrement) et **colonne** (champ)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que représente une **ligne** d’un tableau&nbsp;?",
+            "Quel graphique montre une **répartition**&nbsp;?",
+            "À quoi sert la **clé**&nbsp;?"
+          ],
+          "reponses": "1) un enregistrement · 2) le camembert · 3) identifier chaque ligne"
+        }
+      ]
+    }
+  ]
+}

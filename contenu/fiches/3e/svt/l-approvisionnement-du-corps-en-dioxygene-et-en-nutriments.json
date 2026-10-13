@@ -1,0 +1,113 @@
+{
+  "titre": "Respirer et absorber",
+  "titreSurligne": "absorber",
+  "accroche": "Deux portes d’entrée pour le corps.",
+  "epreuve": "brevet",
+  "bonus": "Alvéoles = **100 m²** · intestin grêle = **200 m²** · **paroi fine** + **grande surface** + **circulation**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/svt/l-approvisionnement-du-corps-en-dioxygene-et-en-nutriments.webp",
+    "prompt": "glossy violet lungs with golden tiny air bubbles and a small golden spiral intestine beside them, sparkles"
+  },
+  "marcel": "Respirer, digérer,\nabsorber !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "Le trajet de l’air",
+          "etapes": [
+            { "date": "Entrée", "texte": "**Fosses nasales**, pharynx." },
+            { "date": "Conduction", "texte": "**Larynx**, **trachée**, deux **bronches**, bronchioles." },
+            { "date": "Échange", "texte": "**Alvéoles**&nbsp;: ~300 millions, **100 m²**, paroi très fine." }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les gaz dans l’alvéole",
+          "entetes": ["Gaz", "Passage"],
+          "lignes": [
+            ["**Dioxygène**", "air → sang"],
+            ["**Dioxyde de carbone**", "sang → air"],
+            ["Mécanisme", "**diffusion** (du + concentré au − concentré)"],
+            ["Inspiration", "**diaphragme** s’abaisse, côtes se soulèvent"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Digérer, absorber, transporter",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Digestion mécanique", "texte": "Mastication, brassage, **péristaltisme**." },
+            { "titre": "Digestion chimique", "texte": "Les **enzymes** (salive, estomac, pancréas, intestin)." },
+            { "titre": "Absorption", "texte": "Dans l’**intestin grêle**&nbsp;: villosités, ≈ 200&nbsp;m²." },
+            { "titre": "Dioxygène", "texte": "Fixé par l’**hémoglobine** des globules rouges." },
+            { "titre": "Nutriments", "texte": "Dissous dans le **plasma**." },
+            { "titre": "Le foie", "texte": "Trie, stocke le glucose en **glycogène**." },
+            { "titre": "Tabac", "texte": "Détruit **cils** et **alvéoles**." },
+            { "titre": "Monoxyde de carbone", "texte": "Prend la place du dioxygène." },
+            { "titre": "Carences", "texte": "Intestin malade&nbsp;: **moins** de surface d’absorption." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Expliquer une surface d’échange",
+          "etapes": [
+            { "titre": "Surface", "texte": "très grande (replis, alvéoles)" },
+            { "titre": "Paroi", "texte": "très fine, échanges rapides" },
+            { "titre": "Sang", "texte": "circulation abondante de l’autre côté" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Le dioxygène passe des alvéoles vers le sang par diffusion.", "quoi": "respirer" },
+            { "texte": "Les nutriments sont absorbés par les villosités de l’intestin grêle.", "quoi": "absorber" },
+            { "texte": "Le sang les transporte jusqu’aux cellules.", "quoi": "transporter" }
+          ],
+          "pied": "Deux appareils, ==une même stratégie==&nbsp;: paroi fine, grande surface, circulation."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Situer l’absorption dans l’**estomac**&nbsp;: c’est l’intestin grêle.",
+            "Confondre le sens des gaz&nbsp;: O₂ vers le sang, CO₂ vers l’air.",
+            "Oublier le rôle de l’**hémoglobine**.",
+            "Croire que le foie **digère**&nbsp;: il trie et stocke."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Où se font les **échanges gazeux**&nbsp;?",
+            "Où a lieu l’**absorption** des nutriments&nbsp;?",
+            "Quelle molécule fixe le **dioxygène**&nbsp;?"
+          ],
+          "reponses": "1) dans les alvéoles pulmonaires · 2) dans l’intestin grêle · 3) l’hémoglobine"
+        }
+      ]
+    }
+  ]
+}

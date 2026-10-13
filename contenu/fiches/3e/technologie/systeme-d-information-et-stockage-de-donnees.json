@@ -1,0 +1,185 @@
+{
+  "titre": "Stocker les données",
+  "titreSurligne": "données",
+  "accroche": "Où vivent les données, qui y a droit.",
+  "epreuve": "brevet",
+  "bonus": "**3-2-1** : 3 copies, 2 supports, 1 hors site · **Mo** = 10⁶ o · **Go** = 10⁹ o · **To** = 10¹² o",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/technologie/systeme-d-information-et-stockage-de-donnees.webp",
+    "prompt": "a glossy violet cloud above a golden padlock and a small server stack, sparkles, same art style as the reference icons, no text, magenta background"
+  },
+  "marcel": "Sauvegarde, protège,\nrespecte !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Où stocker",
+          "entetes": [
+            "Lieu",
+            "Atout",
+            "Limite"
+          ],
+          "lignes": [
+            [
+              "**Local** (disque, clé)",
+              "sans réseau",
+              "panne, vol"
+            ],
+            [
+              "**Serveur** local",
+              "partagé",
+              "réseau local"
+            ],
+            [
+              "**Nuage**",
+              "partout",
+              "réseau, prestataire"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les unités",
+          "entetes": [
+            "Unité",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "**Octet**",
+              "8 bits : un caractère"
+            ],
+            [
+              "**Ko**",
+              "10³ octets : un texte court"
+            ],
+            [
+              "**Mo**",
+              "10⁶ octets : une photo"
+            ],
+            [
+              "**Go**",
+              "10⁹ octets : un film"
+            ],
+            [
+              "**To**",
+              "10¹² octets : un disque"
+            ],
+            [
+              "**Bit**",
+              "0 ou 1 : 8 bits = 1 octet"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Protéger ses données",
+          "etapes": [
+            {
+              "titre": "Sauvegarder",
+              "texte": "règle 3-2-1, et tester la restauration"
+            },
+            {
+              "titre": "Sécuriser",
+              "texte": "mot de passe long et unique, deux facteurs, chiffrement"
+            },
+            {
+              "titre": "Respecter",
+              "texte": "RGPD : consentement, finalité, durée limitée"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un fichier de __2 Go__ : combien de Mo&nbsp;?",
+          "calcul": "1 Go = 1&nbsp;000 Mo",
+          "aparte": "× 1&nbsp;000",
+          "resultat": "[[2&nbsp;000 Mo]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le nuage est-il immatériel&nbsp;?",
+          "oui": {
+            "titre": "Réalité",
+            "texte": "Des **centres de données** bien réels : électricité et eau de refroidissement."
+          },
+          "non": {
+            "titre": "Idée reçue",
+            "texte": "« Le nuage, c’est de l’air » : faux, ce sont des **machines**."
+          },
+          "essai": {
+            "texte": "Stocker sur le nuage dépend du réseau <i>et</i> du prestataire."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Je garde trois copies sur deux supports.",
+              "quoi": "la sauvegarde"
+            },
+            {
+              "texte": "J’active l’authentification à deux facteurs.",
+              "quoi": "la sécurité"
+            },
+            {
+              "texte": "Le RGPD impose consentement et suppression.",
+              "quoi": "les droits"
+            },
+            {
+              "texte": "Je chiffre les données sensibles.",
+              "quoi": "la protection"
+            }
+          ],
+          "pied": "On cite ==la mesure== puis ==ce qu’elle protège==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’une sauvegarde **jamais testée** suffit.",
+            "Garder **toutes** les copies au même endroit.",
+            "Confondre **Mo**, **Go** et **To**.",
+            "Oublier qu’un objet **connecté** relève aussi du RGPD.",
+            "Utiliser le **même mot de passe** partout.",
+            "Négliger les **mises à jour** : elles corrigent les failles."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que signifie la règle **3-2-1**&nbsp;?",
+            "1 **To** vaut combien de Go&nbsp;?",
+            "Citer un **droit** donné par le RGPD."
+          ],
+          "reponses": "1) 3 copies, 2 supports, 1 ailleurs · 2) 1 000 Go · 3) suppression"
+        }
+      ]
+    }
+  ]
+}

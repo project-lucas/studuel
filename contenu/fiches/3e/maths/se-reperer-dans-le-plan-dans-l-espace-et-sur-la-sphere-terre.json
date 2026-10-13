@@ -1,0 +1,188 @@
+{
+  "titre": "Se repérer",
+  "titreSurligne": "repérer",
+  "accroche": "Une adresse, avec des nombres.",
+  "epreuve": "brevet",
+  "bonus": "Plan <b>(x ; y)</b> · espace <b>(x ; y ; z)</b> · latitude <b>0°–90°</b> · longitude <b>0°–180°</b>",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/se-reperer-dans-le-plan-dans-l-espace-et-sur-la-sphere-terre.webp",
+    "prompt": "a glossy violet globe with golden latitude and longitude lines and a golden pin, sparkles"
+  },
+  "marcel": "Abscisse d’abord,\nordonnée ensuite&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Dans le plan",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "M ( abscisse ; ordonnée )"
+          ],
+          "regle": "L’**abscisse** se lit sur l’axe ==horizontal==, l’**ordonnée** sur l’axe ==vertical==. On lit toujours l’abscisse **en premier**.",
+          "note": "(2 ; −4) ≠ (−4 ; 2)&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Symétriques et axes",
+          "entetes": [
+            "Symétrie",
+            "Image"
+          ],
+          "lignes": [
+            [
+              "par rapport à l’**origine**",
+              "(−3 ; 2)"
+            ],
+            [
+              "par rapport à l’axe des **ordonnées**",
+              "(−3 ; −2)"
+            ],
+            [
+              "par rapport à l’axe des **abscisses**",
+              "(3 ; 2)"
+            ],
+            [
+              "sur l’axe des **abscisses**",
+              "ordonnée **nulle** : (x ; 0)"
+            ],
+            [
+              "sur l’axe des **ordonnées**",
+              "abscisse **nulle** : (0 ; y)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Dans un pavé droit&nbsp;: (abscisse ; ordonnée ; altitude)",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "sur quelles arêtes le point est « avancé »"
+            },
+            {
+              "titre": "Reporter",
+              "texte": "la longueur de chaque arête parcourue"
+            },
+            {
+              "titre": "Compléter",
+              "texte": "0 pour les directions non parcourues"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Pavé ABCDEFGH, A à l’origine, B(4 ; 0 ; 0), D(0 ; 3 ; 0), E(0 ; 0 ; 2). Le sommet __G__ cumule les trois longueurs.",
+          "calcul": "4 ; 3 ; 2",
+          "aparte": "G, opposé à A",
+          "resultat": "G( [[4 ; 3 ; 2]] )"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 4,
+          "titre": "Sur la sphère terrestre",
+          "items": [
+            {
+              "terme": "Parallèles",
+              "definition": "cercles parallèles à l’**équateur**"
+            },
+            {
+              "terme": "Méridiens",
+              "definition": "demi-cercles reliant les **deux pôles**"
+            },
+            {
+              "terme": "Latitude",
+              "definition": "angle depuis l’équateur, de 0° à **90°** N ou S"
+            },
+            {
+              "terme": "Longitude",
+              "definition": "angle depuis **Greenwich**, de 0° à **180°** E ou O"
+            }
+          ]
+        },
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "Repères",
+          "colonnes": 1,
+          "cartes": [
+            {
+              "titre": "Paris",
+              "texte": "environ **49° N, 2° E**."
+            },
+            {
+              "titre": "Équateur et pôle",
+              "texte": "équateur&nbsp;: latitude **0°** · pôle Nord&nbsp;: **90° N**."
+            },
+            {
+              "titre": "Même ligne",
+              "texte": "même **méridien** = même longitude."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Je nomme l’axe avant de lire la graduation.",
+              "quoi": "le réflexe"
+            },
+            {
+              "texte": "G a pour coordonnées (4 ; 3 ; 2).",
+              "quoi": "répondre"
+            },
+            {
+              "texte": "Paris est situé à 49° N et 2° E.",
+              "quoi": "situer"
+            }
+          ],
+          "pied": "Toujours ==abscisse== d’abord, puis ordonnée, puis altitude."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Inverser **abscisse** et ordonnée.",
+            "Oublier la **3<sup>e</sup> coordonnée** dans l’espace.",
+            "Confondre **latitude** et longitude.",
+            "Se tromper de **signe** pour un symétrique."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Symétrique de (3 ; −2) par rapport à l’**origine**&nbsp;?",
+            "Dans le pavé de l’exemple, coordonnées de **C**&nbsp;?",
+            "Quel angle part de l’**équateur**&nbsp;?"
+          ],
+          "reponses": "1) (−3 ; 2) · 2) (4 ; 3 ; 0) · 3) la latitude"
+        }
+      ]
+    }
+  ]
+}

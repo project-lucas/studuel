@@ -1,0 +1,186 @@
+{
+  "titre": "Série et dérivation",
+  "titreSurligne": "dérivation",
+  "accroche": "Deux façons de brancher des dipôles.",
+  "epreuve": "brevet",
+  "bonus": "Série&nbsp;: **I** partout pareil, **U** s’additionnent · dérivation&nbsp;: **U** pareil, **I** s’additionnent · ampèremètre en **série**, voltmètre en **dérivation**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/les-montages-electriques.webp",
+    "prompt": "two glossy golden light bulbs wired to a violet battery, one loop in series and one branching in parallel, tiny golden sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Une boucle ou\ndes branches ?",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les deux montages face à face",
+          "entetes": [
+            "Le point",
+            "En série",
+            "En dérivation"
+          ],
+          "lignes": [
+            [
+              "Structure",
+              "**une seule** boucle",
+              "plusieurs **branches**, entre deux **nœuds**"
+            ],
+            [
+              "Intensité",
+              "la **même** partout",
+              "elles **s’additionnent**"
+            ],
+            [
+              "Tension",
+              "elles **s’additionnent**",
+              "la **même** par branche"
+            ],
+            [
+              "Un dipôle grille",
+              "**tout** s’éteint",
+              "les **autres** continuent"
+            ],
+            [
+              "Ajouter un dipôle",
+              "lampes **moins** brillantes",
+              "I totale **augmente**"
+            ],
+            [
+              "Exemple",
+              "guirlande",
+              "prises de la maison"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Les lois",
+          "items": [
+            {
+              "titre": "Nœuds",
+              "texte": "I arrivant = somme des I repartant"
+            },
+            {
+              "titre": "Additivité",
+              "texte": "en série, U<sub>pile</sub> = U₁ + U₂"
+            },
+            {
+              "titre": "Unicité",
+              "texte": "série&nbsp;: même I&nbsp;; dérivation&nbsp;: même U"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Appareils de mesure",
+          "entetes": [
+            "Appareil",
+            "Branchement"
+          ],
+          "lignes": [
+            [
+              "**Ampèremètre**",
+              "en **série** (le courant le traverse)"
+            ],
+            [
+              "**Voltmètre**",
+              "en **dérivation** (entre deux points)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Deux lampes en dérivation, pile 4,5 V. I = __0,50 A__, I₁ = __0,30 A__. I₂&nbsp;?",
+          "calcul": "I = I₁ + I₂\nI₂ = 0,50 − 0,30",
+          "aparte": "et U₁ = U₂ = 4,5 V",
+          "resultat": "I₂ = [[0,20 A]]"
+        },
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Reconnaître le montage",
+          "etapes": [
+            {
+              "titre": "Suivre",
+              "texte": "le trajet depuis la borne +"
+            },
+            {
+              "titre": "Un seul chemin",
+              "texte": "tous les dipôles traversés = série"
+            },
+            {
+              "titre": "Un nœud",
+              "texte": "le courant se partage = dérivation"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "nommer le montage et ses conséquences"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Les lampes sont dans deux branches : dérivation.",
+              "quoi": "le montage"
+            },
+            {
+              "texte": "Loi des nœuds : I = I₁ + I₂ donc I₂ = 0,20 A.",
+              "quoi": "la loi puis le calcul"
+            },
+            {
+              "texte": "Si L₁ grille, L₂ reste allumée.",
+              "quoi": "la conséquence"
+            }
+          ],
+          "pied": "La maison est en ==dérivation==&nbsp;: 230 V pour chaque appareil, chacun indépendant."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que l’intensité **s’use** après chaque lampe en série.",
+            "Brancher un **ampèremètre en dérivation**&nbsp;: court-circuit.",
+            "Penser que les prises d’une maison sont en **série**.",
+            "Oublier l’**unité** (A ou V) du résultat.",
+            "Croire que chaque lampe en dérivation reçoit **une part** de la tension."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Deux lampes identiques en **série** sur 4,5 V&nbsp;: tension de chacune&nbsp;?",
+            "Dans une guirlande en série, une ampoule grille&nbsp;?",
+            "Comment brancher un **voltmètre**&nbsp;?"
+          ],
+          "reponses": "1) 2,25 V · 2) tout s’éteint · 3) en dérivation"
+        }
+      ]
+    }
+  ]
+}

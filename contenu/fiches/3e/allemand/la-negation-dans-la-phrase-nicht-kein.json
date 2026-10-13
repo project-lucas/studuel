@@ -1,0 +1,185 @@
+{
+  "titre": "Nicht ou kein",
+  "titreSurligne": "kein",
+  "accroche": "Deux mots, deux règles de place.",
+  "bonus": "**kein** = nom avec <i>ein</i> ou sans article · **nicht** = tout le reste · une seule négation suffit",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/allemand/la-negation-dans-la-phrase-nicht-kein.webp",
+    "prompt": "a glossy violet round prohibition sign with a golden diagonal bar, two small golden crossed marks beside it, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Nicht ou kein&nbsp;?\nJe choisis bien&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le choix du mot",
+          "lignes": [
+            "**kein** + nom indéfini"
+          ],
+          "petite": true,
+          "regle": "Nom précédé de <i>ein</i> ou **sans article** → <i>kein</i>. Tout le reste (article défini, possessif, verbe, adjectif) → <i>nicht</i>.",
+          "note": "kein se décline comme ein"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Kein ou nicht",
+          "entetes": [
+            "Mot",
+            "L’exemple",
+            "En français"
+          ],
+          "lignes": [
+            [
+              "**kein**",
+              "<i>Ich habe **kein** Auto.</i>",
+              "Je n’ai pas de voiture."
+            ],
+            [
+              "**kein**",
+              "<i>Ich trinke **keinen** Kaffee.</i>",
+              "Je ne bois pas de café."
+            ],
+            [
+              "**nicht**",
+              "<i>Ich kenne den Mann **nicht**.</i>",
+              "Je ne connais pas l’homme."
+            ],
+            [
+              "**nicht**",
+              "<i>Das ist **nicht** mein Buch.</i>",
+              "Ce n’est pas mon livre."
+            ],
+            [
+              "**nicht**",
+              "<i>Sie arbeitet **nicht**.</i>",
+              "Elle ne travaille pas."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Où poser nicht&nbsp;?",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Toute la phrase",
+              "texte": "**Le plus à droite** possible, devant le 2<sup>e</sup> morceau du verbe&nbsp;: <i>Ich habe ihn gestern **nicht** gesehen.</i>"
+            },
+            {
+              "titre": "Un seul mot",
+              "texte": "**Devant** lui&nbsp;: <i>Ich fahre **nicht** morgen, sondern heute.</i> Aussi devant un attribut ou un lieu directionnel."
+            },
+            {
+              "titre": "Un COD défini",
+              "texte": "**Après** lui&nbsp;: <i>Ich lese das Buch **nicht**.</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Sondern ou aber&nbsp;?",
+          "oui": {
+            "titre": "Sondern rectifie",
+            "texte": "<i>Er ist nicht Deutscher, **sondern** Österreicher.</i> (Il n’est pas allemand mais autrichien.)"
+          },
+          "non": {
+            "titre": "Aber oppose",
+            "texte": "<i>Er ist nicht reich, **aber** glücklich.</i> — pas de rectification, une opposition."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Ich trinke nicht Tee, ___ Kaffee.</i> → **sondern**&nbsp;: on rectifie."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Nier une phrase",
+          "etapes": [
+            {
+              "titre": "Regarde le nom",
+              "texte": "<i>ein</i> ou rien devant → **kein**. Défini ou possessif → **nicht**."
+            },
+            {
+              "titre": "Place-le",
+              "texte": "Phrase entière → **à droite** ; un seul mot → **devant** lui."
+            },
+            {
+              "titre": "Une seule négation",
+              "texte": "<i>Ich sehe **nichts**.</i> — jamais deux négations."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les autres négatifs",
+          "deux": true,
+          "items": [
+            {
+              "titre": "nichts · niemand",
+              "texte": "rien · personne"
+            },
+            {
+              "titre": "nie, niemals · nirgends",
+              "texte": "jamais · nulle part"
+            },
+            {
+              "titre": "noch nicht · nicht mehr",
+              "texte": "pas encore · ne… plus"
+            },
+            {
+              "titre": "weder… noch",
+              "texte": "ni… ni&nbsp;: <i>weder Tee noch Kaffee</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Ich habe nicht Auto</i> → <i>Ich habe **kein** Auto.</i> (Nom sans article = kein.)",
+            "<i>Ich sehe nicht nichts</i> → <i>Ich sehe **nichts**.</i> (Une seule négation suffit, contrairement à l’espagnol.)",
+            "<i>Ich kenne nicht den Mann</i> → <i>Ich kenne den Mann **nicht**.</i>",
+            "<i>Er ist nicht reich, sondern glücklich</i> → <i>**aber**</i> (pas de rectification)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Nie&nbsp;: <i>Ich habe ein Auto.</i>",
+            "Nie&nbsp;: <i>Ich kenne den Mann.</i>",
+            "<i>Er ist nicht Lehrer, ___ Arzt.</i>"
+          ],
+          "reponses": "1) kein Auto 2) den Mann nicht 3) sondern"
+        }
+      ]
+    }
+  ]
+}

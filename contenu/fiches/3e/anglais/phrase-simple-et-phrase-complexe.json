@@ -1,0 +1,180 @@
+{
+  "titre": "Ordre des mots",
+  "titreSurligne": "Ordre",
+  "accroche": "En anglais, l’ordre ne se négocie pas.",
+  "bonus": "**S – V – O** · **manière → lieu → temps** · **because** = cause, **so** = conséquence",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/anglais/phrase-simple-et-phrase-complexe.webp",
+    "prompt": "a glossy violet chain of three linked puzzle blocks with golden connectors and small golden letters-free tiles, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Sujet, verbe,\ncomplément&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’ordre de base",
+          "lignes": [
+            "**S** – **V** – **O**"
+          ],
+          "petite": true,
+          "regle": "Sujet – verbe – complément. Le **sujet est obligatoire**&nbsp;: <i>It is raining</i>, <i>There is a problem</i>.",
+          "note": "manière → lieu → temps"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "L’ordre selon la phrase",
+          "entetes": [
+            "La phrase",
+            "L’ordre",
+            "L’exemple"
+          ],
+          "lignes": [
+            [
+              "Affirmative",
+              "sujet – verbe – complément",
+              "<i>Tom likes music.</i>"
+            ],
+            [
+              "Négative",
+              "sujet – aux. + not – verbe",
+              "<i>Tom **doesn’t** like music.</i>"
+            ],
+            [
+              "Question",
+              "auxiliaire – sujet – verbe",
+              "<i>**Does** Tom like music?</i>"
+            ],
+            [
+              "Compléments",
+              "manière, lieu, temps",
+              "<i>She played **well** **at the concert** **last night**.</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Relier deux idées",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Coordonner",
+              "texte": "Deux propositions de **même rang**&nbsp;: <i>and, but, or, so, because, yet</i>."
+            },
+            {
+              "titre": "Subordonner",
+              "texte": "L’une **dépend** de l’autre&nbsp;: relative (<i>who, which, that</i>), temps (<i>when, while</i>), cause, but, condition (<i>if, unless</i>)."
+            },
+            {
+              "titre": "Après when ou if",
+              "texte": "On emploie le **présent** pour l’avenir&nbsp;: <i>I’ll call you when I arrive.</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Où placer l’adverbe&nbsp;?",
+          "oui": {
+            "titre": "Bien placé",
+            "texte": "<i>I speak English **well**.</i> <i>I **often** go there.</i> — fréquence avant le verbe."
+          },
+          "non": {
+            "titre": "Mal placé",
+            "texte": "<i>I speak **well** English.</i> <i>I like **very much** football.</i>"
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>I (always) ___ (go) there.</i> → <i>I **always go** there</i>&nbsp;: avant le verbe lexical."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Écrire une phrase longue",
+          "etapes": [
+            {
+              "titre": "La phrase simple",
+              "texte": "Sujet, verbe, complément."
+            },
+            {
+              "titre": "Les compléments",
+              "texte": "Dans l’ordre **manière, lieu, temps**."
+            },
+            {
+              "titre": "Relier",
+              "texte": "**and, but, so** ou **because, when, if**&nbsp;; chaque proposition garde son verbe."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les connecteurs",
+          "deux": true,
+          "items": [
+            {
+              "titre": "because",
+              "texte": "parce que&nbsp;: <i>I stayed home because I was ill.</i>"
+            },
+            {
+              "titre": "so",
+              "texte": "donc&nbsp;: <i>I was ill, so I stayed home.</i>"
+            },
+            {
+              "titre": "but, although",
+              "texte": "mais, bien que&nbsp;: <i>Although it was late, he worked.</i>"
+            },
+            {
+              "titre": "unless",
+              "texte": "à moins que&nbsp;: <i>I’ll go unless it rains.</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Is raining</i> → <i>**It** is raining.</i>",
+            "<i>Yesterday went I to the cinema</i> → <i>Yesterday **I went**.</i>",
+            "<i>I didn’t see nobody</i> → <i>I didn’t see **anybody**</i>&nbsp;: une seule négation.",
+            "<i>I like very much football</i> → <i>I like football **very much**.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Remets en ordre&nbsp;: <i>went / I / yesterday / to school</i>",
+            "Corrige&nbsp;: <i>I didn’t see nobody.</i>",
+            "<i>I’ll call you when I ___ (arrive).</i>"
+          ],
+          "reponses": "1) Yesterday I went to school 2) anybody 3) arrive"
+        }
+      ]
+    }
+  ]
+}

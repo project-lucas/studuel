@@ -1,0 +1,175 @@
+{
+  "titre": "Matériaux et procédés",
+  "titreSurligne": "Matériaux",
+  "accroche": "Le bon matériau pour la bonne tâche.",
+  "epreuve": "brevet",
+  "bonus": "**Métalliques · Organiques · Céramiques · Composites** · on choisit un **profil de propriétés**, pas « le meilleur »",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/technologie/materiaux-et-procedes.webp",
+    "prompt": "glossy violet and golden blocks of metal, wood and glass stacked together with a small golden gear, sparkles"
+  },
+  "marcel": "Chaque matière\na son talent !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Quatre familles",
+          "entetes": [
+            "Famille",
+            "Atout / limite"
+          ],
+          "lignes": [
+            [
+              "**Métalliques** (acier)",
+              "résistants / corrosion"
+            ],
+            [
+              "**Organiques** (bois)",
+              "légers / plastiques mal recyclés"
+            ],
+            [
+              "**Céramiques** (verre)",
+              "durs / **fragiles**"
+            ],
+            [
+              "**Composites** (béton armé)",
+              "cumulent / recyclage difficile"
+            ],
+            [
+              "**Recyclabilité**",
+              "fin de vie de la matière"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les propriétés",
+          "items": [
+            {
+              "terme": "Dureté",
+              "definition": "résistance à la **rayure**"
+            },
+            {
+              "terme": "Élasticité",
+              "definition": "reprendre sa **forme**"
+            },
+            {
+              "terme": "Masse volumique",
+              "definition": "décide de la **légèreté**"
+            },
+            {
+              "terme": "Conductivité",
+              "definition": "électrique et thermique"
+            },
+            {
+              "terme": "Corrosion",
+              "definition": "dégradation par l’**humidité**, l’air"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Choisir un matériau",
+          "etapes": [
+            {
+              "titre": "Lister",
+              "texte": "les contraintes du cahier des charges"
+            },
+            {
+              "titre": "Repérer",
+              "texte": "les propriétés qui comptent (masse, dureté, coût)"
+            },
+            {
+              "titre": "Retenir",
+              "texte": "le matériau au meilleur profil, au meilleur coût"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un cadre de vélo __léger__, __résistant__ et recyclable. Quelle famille&nbsp;?",
+          "calcul": "léger + résistant + recyclable",
+          "aparte": "l’aluminium",
+          "resultat": "un [[métal]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Bon procédé&nbsp;?",
+          "oui": {
+            "titre": "Adapté",
+            "texte": "Les **thermoplastiques** : injection, extrusion, impression 3D."
+          },
+          "non": {
+            "titre": "Inadapté",
+            "texte": "Souder du **bois** ou scier un plastique fondu."
+          },
+          "essai": {
+            "texte": "Les <i>métaux</i> se travaillent par usinage, pliage, moulage ou soudage."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Le cahier des charges exige légèreté et résistance.",
+              "quoi": "les contraintes"
+            },
+            {
+              "texte": "L’aluminium est léger, résistant et recyclable.",
+              "quoi": "les propriétés"
+            },
+            {
+              "texte": "Je retiens donc l’aluminium.",
+              "quoi": "le choix"
+            }
+          ],
+          "pied": "On justifie par ==les propriétés== liées aux contraintes, jamais par « il est meilleur »."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Chercher « le **meilleur** » matériau.",
+            "Oublier que les céramiques sont **fragiles**.",
+            "Confondre **dureté** et résistance mécanique.",
+            "Ignorer le **coût** et la recyclabilité."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Le **béton armé** est de quelle famille&nbsp;?",
+            "Quelle propriété décide de la **légèreté**&nbsp;?",
+            "Un **thermoplastique** se met en forme comment&nbsp;?"
+          ],
+          "reponses": "1) composite · 2) la masse volumique · 3) injection, extrusion ou impression 3D"
+        }
+      ]
+    }
+  ]
+}

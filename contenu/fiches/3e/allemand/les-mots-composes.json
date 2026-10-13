@@ -1,0 +1,193 @@
+{
+  "titre": "Les mots composés",
+  "titreSurligne": "composés",
+  "accroche": "Lis de droite à gauche.",
+  "bonus": "Le **dernier mot** donne le **sens** et le **genre** · lettres de liaison : **-s-, -n-, -en-, -er-**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/allemand/les-mots-composes.webp",
+    "prompt": "two glossy violet puzzle pieces with golden edges snapping together, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Le dernier mot\ncommande&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle d’or",
+          "lignes": [
+            "précision + **mot de base**"
+          ],
+          "petite": true,
+          "regle": "Le **dernier mot** donne le sens principal **et le genre**. Ce qui est devant le précise.",
+          "note": "on lit de droite à gauche"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Découper un composé",
+          "entetes": [
+            "Composé",
+            "Découpage",
+            "Sens"
+          ],
+          "lignes": [
+            [
+              "<i>das Klassenzimmer</i>",
+              "<i>Klasse</i> + <i>Zimmer</i>",
+              "la salle de classe"
+            ],
+            [
+              "<i>der Kühlschrank</i>",
+              "<i>kühl</i> + <i>Schrank</i>",
+              "le réfrigérateur"
+            ],
+            [
+              "<i>die Haustür</i>",
+              "<i>Haus</i> + <i>Tür</i>",
+              "la porte d’entrée"
+            ],
+            [
+              "<i>der Handschuh</i>",
+              "<i>Hand</i> + <i>Schuh</i>",
+              "le gant"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce qu’on peut coller",
+          "colonnes": 4,
+          "cartes": [
+            {
+              "titre": "nom + nom",
+              "texte": "<i>die Hausaufgabe</i> (le devoir)"
+            },
+            {
+              "titre": "adjectif + nom",
+              "texte": "<i>die Großstadt</i> (la grande ville)"
+            },
+            {
+              "titre": "verbe + nom",
+              "texte": "<i>das Schwimmbad</i> (la piscine)"
+            },
+            {
+              "titre": "préposition + nom",
+              "texte": "<i>der Vorname</i> (le prénom)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Deviner le genre",
+          "oui": {
+            "titre": "Dernier mot",
+            "texte": "<i>das Haus</i> + <i>die Tür</i> = **die** Haustür. <i>die Schule</i> + <i>der Hof</i> = **der** Schulhof."
+          },
+          "non": {
+            "titre": "Premier mot",
+            "texte": "<i>das</i> Haustür — le genre de <i>Haus</i> ne compte pas."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>___ Wörterbuch</i> (<i>Wort</i> + <i>das Buch</i>) → **das**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Exemple&nbsp;: die Fußballweltmeisterschaft",
+          "etapes": [
+            {
+              "titre": "Coupe",
+              "texte": "<i>Fußball</i> / <i>Welt</i> / <i>Meisterschaft</i>."
+            },
+            {
+              "titre": "Mot de base",
+              "texte": "<i>die Meisterschaft</i> (le championnat) → **féminin**."
+            },
+            {
+              "titre": "Précisions",
+              "texte": "du monde, puis de football&nbsp;: le championnat du monde de football."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Lettres de liaison",
+          "deux": true,
+          "items": [
+            {
+              "titre": "-s-",
+              "texte": "<i>der Geburt**s**tag</i> (l’anniversaire)"
+            },
+            {
+              "titre": "-n-",
+              "texte": "<i>die Straße**n**bahn</i> (le tramway)"
+            },
+            {
+              "titre": "-er-",
+              "texte": "<i>der Kind**er**garten</i>"
+            },
+            {
+              "titre": "Pas de règle",
+              "texte": "on les retient avec le mot."
+            },
+            {
+              "titre": "<i>das Lieblingsfach</i>",
+              "texte": "la matière préférée"
+            },
+            {
+              "titre": "<i>die Jugendherberge</i>",
+              "texte": "l’auberge de jeunesse"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>der Apfelbaum</i> (arbre) ≠ <i>der Baumapfel</i> : le dernier mot est la base.",
+            "Prendre le genre du **premier** mot&nbsp;: toujours le **dernier**.",
+            "Oublier la lettre de liaison&nbsp;: <i>Geburtstag</i>, pas <i>Geburttag</i>.",
+            "Séparer un composé en deux mots&nbsp;: <i>Klassenzimmer</i> s’écrit en **un** mot.",
+            "<i>die Schule Hof</i> → <i>der Schulhof</i> : on colle, et le genre vient de <i>Hof</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel article pour <i>Schulhof</i> (<i>Schule</i> + <i>Hof</i>)&nbsp;?",
+            "Que veut dire <i>der Handschuh</i>&nbsp;?",
+            "<i>Straße</i> + <i>Bahn</i> avec la lettre de liaison&nbsp;?"
+          ],
+          "reponses": "1) der 2) le gant 3) Straßenbahn"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "titre": "Les signaux sonores",
+  "titreSurligne": "sonores",
+  "accroche": "Lire un son sur un écran.",
+  "epreuve": "brevet",
+  "bonus": "**f = 1 ÷ T** · T en **s** (1 ms = 0,001 s) · fréquence = **hauteur** · amplitude = **volume** · audible 20 Hz à 20 000 Hz",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/les-signaux-sonores.webp",
+    "prompt": "a glossy violet oscilloscope screen showing a golden sine wave, a small microphone beside it, tiny golden sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Période courte,\nson aigu !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Période et fréquence",
+          "petite": true,
+          "lignes": [
+            "f = 1 ÷ T",
+            "T = 1 ÷ f"
+          ],
+          "regle": "**T** la période en **secondes**, **f** la fréquence en **hertz**. Période ==courte==, fréquence ==grande==, son **aigu**.",
+          "note": "ms → s d’abord !",
+          "teinte": "jaune"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux grandeurs indépendantes",
+          "entetes": [
+            "Grandeur",
+            "Elle donne"
+          ],
+          "lignes": [
+            [
+              "**Fréquence** (Hz)",
+              "la **hauteur**, grave ou aigu"
+            ],
+            [
+              "**Amplitude**",
+              "la **force**, fort ou faible"
+            ],
+            [
+              "Son **pur**",
+              "courbe sinusoïdale"
+            ],
+            [
+              "**Bruit**",
+              "aucune période"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire une période sur un oscillogramme",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "plusieurs motifs complets (par exemple 5)"
+            },
+            {
+              "titre": "Mesurer",
+              "texte": "leur durée, diviser par leur nombre"
+            },
+            {
+              "titre": "Convertir",
+              "texte": "en secondes, puis f = 1 ÷ T"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "f à 20 Hz et 20 000 Hz pour dire si c’est audible"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "__5 motifs__ occupent __10 ms__. Fréquence&nbsp;?",
+          "calcul": "T = 10 ÷ 5 = 2 ms = 0,002 s\nf = 1 ÷ 0,002",
+          "aparte": "audible",
+          "resultat": "f = [[500 Hz]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "De l’air à l’écran",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Le microphone",
+              "texte": "Il convertit la vibration de l’air en **signal électrique**."
+            },
+            {
+              "titre": "L’oscilloscope",
+              "texte": "Il trace ce signal en fonction du **temps**."
+            },
+            {
+              "titre": "Le haut-parleur",
+              "texte": "Chemin **inverse**&nbsp;: électrique vers vibration."
+            },
+            {
+              "titre": "Ultrasons",
+              "texte": "Plus de 20 000 Hz&nbsp;: sonars, échographies. Infrasons&nbsp;: moins de 20 Hz."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "T = 10 ÷ 5 = 2 ms = 0,002 s",
+              "quoi": "la période"
+            },
+            {
+              "texte": "f = 1 ÷ T = 1 ÷ 0,002 = 500 Hz",
+              "quoi": "la fréquence"
+            },
+            {
+              "texte": "500 Hz est entre 20 et 20 000 Hz : audible.",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Augmenter l’==amplitude== rend le son plus fort, pas plus aigu."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **amplitude** (volume) et **fréquence** (hauteur).",
+            "Mesurer la période sur un **demi-motif**.",
+            "Oublier de convertir les **ms en s** avant f = 1 ÷ T.",
+            "Mesurer un seul motif au lieu de **plusieurs**.",
+            "Penser qu’un son aigu a une **grande période**.",
+            "Lire la **hauteur** du motif pour trouver f."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "T = 4 ms&nbsp;: **fréquence**&nbsp;?",
+            "Quelle grandeur donne la **hauteur** d’un son&nbsp;?",
+            "Un son de 10 Hz&nbsp;: infrason ou ultrason&nbsp;?"
+          ],
+          "reponses": "1) 250 Hz · 2) la fréquence · 3) infrason"
+        }
+      ]
+    }
+  ]
+}

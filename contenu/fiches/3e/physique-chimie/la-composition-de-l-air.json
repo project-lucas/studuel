@@ -1,0 +1,176 @@
+{
+  "titre": "La composition de l’air",
+  "titreSurligne": "air",
+  "accroche": "Un mélange de gaz, et il pèse !",
+  "epreuve": "brevet",
+  "bonus": "air&nbsp;: **78 %** N<sub>2</sub> · **21 %** O<sub>2</sub> · **1 %** autres · 1 L d’air ≈ **1,2 g** · 1 m³ = 1 000 L · 1 013 hPa",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/la-composition-de-l-air.webp",
+    "prompt": "a glossy violet balloon floating with golden swirling air currents around it and a small round barometer, tiny sparkles"
+  },
+  "marcel": "L’air n’est pas\n« rien » : il pèse !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "L’air, en volume",
+          "entetes": [
+            "Gaz",
+            "Part"
+          ],
+          "lignes": [
+            [
+              "**Diazote** N<sub>2</sub>",
+              "environ **78 %** (4/5)"
+            ],
+            [
+              "**Dioxygène** O<sub>2</sub>",
+              "environ **21 %** (1/5)"
+            ],
+            [
+              "Argon, CO<sub>2</sub>, vapeur d’eau",
+              "environ 1 %"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux tests",
+          "entetes": [
+            "Gaz",
+            "Test",
+            "Résultat"
+          ],
+          "lignes": [
+            [
+              "**Dioxygène**",
+              "bûchette incandescente",
+              "elle se **rallume**"
+            ],
+            [
+              "**CO<sub>2</sub>**",
+              "eau de chaux",
+              "elle se **trouble**"
+            ],
+            [
+              "Pollution",
+              "particules fines, oxydes d’azote",
+              "air dégradé"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer une masse d’air",
+          "etapes": [
+            {
+              "titre": "Volume",
+              "texte": "L × l × h en m³"
+            },
+            {
+              "titre": "Convertir",
+              "texte": "1 m³ = 1 000 L"
+            },
+            {
+              "titre": "Multiplier",
+              "texte": "par 1,2 g par litre"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "écris l’unité, convertis en kg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une salle de __8 × 7 × 3 m__. Masse de l’air&nbsp;?",
+          "calcul": "V = 168 m³ = 168 000 L → 168 000 × 1,2 = 201 600 g",
+          "aparte": "en grammes",
+          "resultat": "environ [[200 kg]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Pression et altitude",
+          "oui": {
+            "titre": "Niveau de la mer",
+            "texte": "Environ **1 013 hPa**, mesurée au **baromètre**, dans toutes les directions."
+          },
+          "non": {
+            "titre": "En altitude",
+            "texte": "La pression **diminue**&nbsp;: la colonne d’air au-dessus est plus courte."
+          },
+          "essai": {
+            "texte": "Dioxygène de la salle&nbsp;: <i>0,21 × 168 ≈ 35 m³</i>. Le CO<sub>2</sub> (énergies fossiles) augmente&nbsp;: la composition n’est pas fixe."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "V = 8 × 7 × 3 = 168 m³ = 168 000 L",
+              "quoi": "le volume en litres"
+            },
+            {
+              "texte": "m = 168 000 × 1,2 = 201 600 g",
+              "quoi": "formule puis nombres"
+            },
+            {
+              "texte": "m ≈ 200 kg",
+              "quoi": "avec l’unité"
+            },
+            {
+              "texte": "Le dioxygène : 21 % de 168 m³ ≈ 35 m³",
+              "quoi": "si on demande O₂"
+            }
+          ],
+          "pied": "L’air est un ==mélange homogène==, pas un corps pur."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que l’air est surtout du **dioxygène**&nbsp;: c’est le diazote.",
+            "Dire que l’air n’a **pas de masse**.",
+            "Confondre les deux tests&nbsp;: **bûchette** pour O<sub>2</sub>, **eau de chaux** pour CO<sub>2</sub>.",
+            "Oublier de convertir les m³ en **litres**.",
+            "Penser que la composition de l’air est **fixe** à l’échelle du siècle."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel gaz domine dans l’air&nbsp;?",
+            "Masse de 10 L d’air (1,2 g par litre)&nbsp;?",
+            "Quel test identifie le **dioxyde de carbone**&nbsp;?"
+          ],
+          "reponses": "1) le diazote · 2) 12 g · 3) l’eau de chaux qui se trouble"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "titre": "Les articles",
+  "titreSurligne": "articles",
+  "accroche": "Le français n’a pas de lo neutre.",
+  "bonus": "**el / la / los / las** · **un / una / unos / unas** · **al, del** · **lo** + adjectif",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/espagnol/les-articles.webp",
+    "prompt": "a glossy violet badge with golden letters-less tiles arranged in a row, one tile shining brighter in gold, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "El, la, lo…\n¡tres series&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les contractions",
+          "lignes": [
+            "**a + el = al**",
+            "**de + el = del**"
+          ],
+          "petite": true,
+          "regle": "Deux seulement. Pas devant un nom propre&nbsp;: <i>Voy a El Escorial.</i>",
+          "note": "<i>Voy al cine</i>"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les formes",
+          "entetes": [
+            "Article",
+            "Masculin",
+            "Féminin"
+          ],
+          "lignes": [
+            [
+              "Défini singulier",
+              "<i>el</i>",
+              "<i>la</i>"
+            ],
+            [
+              "Défini pluriel",
+              "<i>los</i>",
+              "<i>las</i>"
+            ],
+            [
+              "Indéfini singulier",
+              "<i>un</i>",
+              "<i>una</i>"
+            ],
+            [
+              "Indéfini pluriel (« quelques »)",
+              "<i>unos</i>",
+              "<i>unas</i>"
+            ],
+            [
+              "Neutre (invariable)",
+              "<i>lo</i>",
+              "— (devant adjectif, jamais un nom)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Le neutre lo",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "lo + adjectif",
+              "texte": "Une qualité abstraite&nbsp;: <i>lo importante</i>, <i>lo mejor</i>, <i>lo difícil</i>."
+            },
+            {
+              "titre": "lo que",
+              "texte": "« Ce que »&nbsp;: <i>No entiendo **lo que** dices.</i>"
+            },
+            {
+              "titre": "lo … que",
+              "texte": "L’intensité&nbsp;: <i>No sabes **lo** cansado **que** estoy.</i> Jamais devant un nom."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "El devant un féminin",
+          "oui": {
+            "titre": "A- tonique : el / un",
+            "texte": "<i>**el** agua fría</i> · <i>**un** águila blanca</i> — le nom reste féminin. Pluriel&nbsp;: <i>**las** aguas</i>."
+          },
+          "non": {
+            "titre": "A- non tonique : la / una",
+            "texte": "<i>**la** avenida</i> · <i>**la** harina</i> — l’accent n’est pas sur le a."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>___ aula está vacía.</i> → **El**&nbsp;: a- tonique. Mais <i>las aulas</i> au pluriel."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Défini ou indéfini&nbsp;?",
+              "texte": "On connaît (**el, la**) ou on présente (**un, una**)."
+            },
+            {
+              "titre": "Féminin en a- tonique&nbsp;?",
+              "texte": "Singulier → **el / un**. Pluriel → **las / unas**."
+            },
+            {
+              "titre": "Contraction&nbsp;?",
+              "texte": "**a el → al**, **de el → del** (sauf nom propre)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Quand l’article disparaît",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Profession, nationalité",
+              "texte": "en attribut&nbsp;: <i>Es profesor.</i>"
+            },
+            {
+              "titre": "Avec un adjectif",
+              "texte": "l’article revient&nbsp;: <i>Es un profesor excelente.</i>"
+            },
+            {
+              "titre": "Devant otro",
+              "texte": "<i>otro día</i>"
+            },
+            {
+              "titre": "Pluriel d’el agua",
+              "texte": "<i>las aguas</i>, <i>las aulas</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>la agua</i> → <i>**el** agua</i> (mais <i>el agua fría</i>).",
+            "<i>un otro día</i> → <i>**otro** día</i>.",
+            "<i>Es un profesor</i> sans adjectif → <i>Es profesor.</i>",
+            "<i>de el profesor</i> → <i>**del** profesor</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Voy ___ cine.</i> (a + el)",
+            "<i>___ agua está fría.</i> (el / la)",
+            "<i>No entiendo ___ que dices.</i>"
+          ],
+          "reponses": "1) al 2) El 3) lo"
+        }
+      ]
+    }
+  ]
+}

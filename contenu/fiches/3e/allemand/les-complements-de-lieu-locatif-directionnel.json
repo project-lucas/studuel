@@ -1,0 +1,184 @@
+{
+  "titre": "Compléments de lieu",
+  "titreSurligne": "lieu",
+  "accroche": "Où je suis, où je vais, d’où je viens.",
+  "bonus": "**wo?** datif · **wohin?** accusatif, <i>nach</i>, <i>zu</i> · **woher?** <i>aus</i> / <i>von</i> + datif",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/allemand/les-complements-de-lieu-locatif-directionnel.webp",
+    "prompt": "a glossy violet signpost with three golden arrows pointing in different directions, a tiny golden map pin on top, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Je vais où&nbsp;?\nAccusatif&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Trois questions",
+          "lignes": [
+            "**wo?** · **wohin?** · **woher?**"
+          ],
+          "petite": true,
+          "regle": "**wo?** = la localisation (**datif**) · **wohin?** = la destination (**accusatif**, <i>nach</i>, <i>zu</i>) · **woher?** = l’origine (<i>aus</i>, <i>von</i> + **datif**).",
+          "note": "mouvement = wohin"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Wohin&nbsp;? La préposition qui tranche",
+          "entetes": [
+            "Préposition",
+            "Devant quoi",
+            "L’exemple"
+          ],
+          "lignes": [
+            [
+              "**nach**",
+              "pays ou ville **sans article**",
+              "<i>nach Deutschland, nach Hause</i>"
+            ],
+            [
+              "**in** + acc.",
+              "nom **avec** article",
+              "<i>in die Stadt, ins Kino</i>"
+            ],
+            [
+              "**zu** + datif",
+              "une **personne**, un but",
+              "<i>zum Arzt, zu meiner Tante</i>"
+            ],
+            [
+              "**an** + acc.",
+              "un **bord**",
+              "<i>ans Meer, an die Grenze</i>"
+            ],
+            [
+              "**auf** + acc.",
+              "une surface, une institution",
+              "<i>auf die Post, aufs Land</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les trois questions en phrases",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "wo&nbsp;? Où je suis",
+              "texte": "Pas de mouvement → **datif**&nbsp;: <i>Ich bin **in der** Stadt.</i> / <i>Er ist **beim** Arzt.</i>"
+            },
+            {
+              "titre": "wohin&nbsp;? Où je vais",
+              "texte": "Un mouvement vers un but&nbsp;: <i>Ich gehe **in die** Stadt.</i> / <i>Wir fahren **nach** Wien.</i>"
+            },
+            {
+              "titre": "woher&nbsp;? D’où je viens",
+              "texte": "**aus** (un pays, sortir d’un lieu) ou **von** (une personne, un point de départ)&nbsp;: <i>Ich komme **aus** Frankreich.</i> / <i>**von** der Arbeit</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Chez le médecin&nbsp;: aller ou être&nbsp;?",
+          "oui": {
+            "titre": "Je vais (wohin)",
+            "texte": "<i>Ich gehe **zum** Arzt.</i> — il y a un mouvement vers une personne."
+          },
+          "non": {
+            "titre": "Je suis (wo)",
+            "texte": "<i>Ich bin **beim** Arzt.</i> — pas de mouvement&nbsp;: <i>beim</i>, jamais <i>zum</i>."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Ich gehe ___ Post.</i> (je vais à la poste) → **auf die**&nbsp;: <i>auf die Post</i>."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Un mouvement&nbsp;?",
+              "texte": "Aucun → **wo?**, datif. Un but → **wohin?**. Un départ → **woher?**."
+            },
+            {
+              "titre": "Quoi comme lieu&nbsp;?",
+              "texte": "Un pays sans article → **nach**. Une personne → **zu**. Un lieu avec article → **in / an / auf**."
+            },
+            {
+              "titre": "Choisis le cas",
+              "texte": "**wohin** après <i>in, an, auf</i> → accusatif. **woher** et **zu** → datif."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les paires figées",
+          "deux": true,
+          "items": [
+            {
+              "titre": "nach Hause / zu Hause",
+              "texte": "je rentre / je suis à la maison"
+            },
+            {
+              "titre": "aufs Land / auf dem Land",
+              "texte": "je vais / je suis à la campagne"
+            },
+            {
+              "titre": "ins Ausland / im Ausland",
+              "texte": "je pars / je suis à l’étranger"
+            },
+            {
+              "titre": "in die Schule gehen / in der Schule sein",
+              "texte": "aller à l’école / y être"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "« Chez le médecin » se dit pareil en français, **pas en allemand**&nbsp;: <i>zum Arzt</i> (j’y vais), <i>beim Arzt</i> (j’y suis).",
+            "<i>Ich fahre in Frankreich</i> → <i>Ich fahre **nach** Frankreich.</i> (pays sans article)",
+            "<i>hin</i> s’éloigne de moi (<i>Geh hin!</i>), <i>her</i> se rapproche (<i>Komm her!</i>)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Ich fahre ___ Deutschland.</i> (nach / in)",
+            "<i>Wir gehen ___ Arzt.</i> (j’y vais)",
+            "<i>Sie kommt ___ Frankreich.</i> (aus / von)"
+          ],
+          "reponses": "1) nach 2) zum 3) aus"
+        }
+      ]
+    }
+  ]
+}

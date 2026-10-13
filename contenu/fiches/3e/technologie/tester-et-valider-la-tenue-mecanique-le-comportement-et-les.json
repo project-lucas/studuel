@@ -1,0 +1,176 @@
+{
+  "titre": "Tester et valider",
+  "titreSurligne": "valider",
+  "accroche": "Prouver que l’objet tient sa promesse.",
+  "epreuve": "brevet",
+  "bonus": "**Mesuré** vs **exigé** → **conforme** ou **non conforme** · une non-conformité renvoie à la **conception**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/technologie/tester-et-valider-la-tenue-mecanique-le-comportement-et-les.webp",
+    "prompt": "a glossy violet metal beam bending under a golden weight with a gauge and a green check mark, sparkles, same art style as the reference icons, no text, magenta background"
+  },
+  "marcel": "Mesure, compare,\nconclus !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les essais mécaniques",
+          "entetes": [
+            "Essai",
+            "On fait subir"
+          ],
+          "lignes": [
+            [
+              "**Traction**",
+              "on tire jusqu’à rompre"
+            ],
+            [
+              "**Compression**",
+              "on écrase"
+            ],
+            [
+              "**Flexion**",
+              "charge au milieu"
+            ],
+            [
+              "**Torsion**",
+              "on vrille"
+            ],
+            [
+              "**Chocs**, **fatigue**",
+              "impact, efforts répétés"
+            ],
+            [
+              "**Performance**",
+              "vitesse, autonomie, précision, étanchéité"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le protocole d’essai",
+          "items": [
+            {
+              "terme": "Grandeur",
+              "definition": "mesurée avec son **instrument**"
+            },
+            {
+              "terme": "Conditions",
+              "definition": "température, charge, durée"
+            },
+            {
+              "terme": "Mode opératoire",
+              "definition": "pour refaire à l’**identique**"
+            },
+            {
+              "terme": "Incertitude",
+              "definition": "sans elle, une mesure n’en est pas une"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Valider une exigence",
+          "etapes": [
+            {
+              "titre": "Mesurer",
+              "texte": "faire l’essai selon le protocole et noter le résultat"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "au niveau exigé par le cahier des charges"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "conforme ou non conforme, exigence par exigence"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Exigé : tenir __50 kg__. Mesuré : rupture à __40 kg__.",
+          "calcul": "40 &lt; 50",
+          "aparte": "retour conception",
+          "resultat": "[[non conforme]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Essai réel ou simulation&nbsp;?",
+          "oui": {
+            "titre": "Simulation",
+            "texte": "Calcule contraintes et déformations : **vingt formes** essayées sans rien fabriquer."
+          },
+          "non": {
+            "titre": "Essai réel",
+            "texte": "Seul à valider vraiment : la simulation repose sur des **hypothèses**."
+          },
+          "essai": {
+            "texte": "La simulation ne remplace <i>jamais entièrement</i> l’essai réel."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Valeur mesurée : 40 kg ; exigée : 50 kg.",
+              "quoi": "les valeurs"
+            },
+            {
+              "texte": "Le résultat est inférieur à l’exigence.",
+              "quoi": "la comparaison"
+            },
+            {
+              "texte": "Le prototype est non conforme.",
+              "quoi": "le verdict"
+            }
+          ],
+          "pied": "On donne ==mesuré==, ==exigé== puis ==le verdict==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Donner un résultat **sans conditions** d'essai.",
+            "Oublier que la **fatigue** casse par répétition.",
+            "Conclure **sans comparer** à l’exigence.",
+            "Croire que la **simulation** remplace l’essai.",
+            "Oublier l’**incertitude** de la mesure."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel essai **vrille** la pièce&nbsp;?",
+            "Que note-t-on pour **refaire** l’essai&nbsp;?",
+            "Un résultat **non conforme** renvoie où&nbsp;?"
+          ],
+          "reponses": "1) la torsion · 2) le mode opératoire · 3) à la conception"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "titre": "Les pronoms personnels",
+  "titreSurligne": "pronoms",
+  "accroche": "Ich, mich, mir : trois séries.",
+  "bonus": "genre de l’objet : **er / sie / es** · deux pronoms : **accusatif** puis datif",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/allemand/les-pronoms-personnels.webp",
+    "prompt": "three glossy violet speech bubbles of different sizes with a golden pointing arrow between them, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Une table, c’est «&nbsp;il&nbsp;»&nbsp;:\ner, pas es&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "340px 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois séries",
+          "entetes": [
+            "Personne",
+            "Nom.",
+            "Acc.",
+            "Dat."
+          ],
+          "lignes": [
+            [
+              "1<sup>re</sup> sing.",
+              "<i>ich</i>",
+              "<i>mich</i>",
+              "<i>mir</i>"
+            ],
+            [
+              "2<sup>e</sup> sing.",
+              "<i>du</i>",
+              "<i>dich</i>",
+              "<i>dir</i>"
+            ],
+            [
+              "3<sup>e</sup> masc.",
+              "<i>er</i>",
+              "<i>ihn</i>",
+              "<i>ihm</i>"
+            ],
+            [
+              "3<sup>e</sup> fém.",
+              "<i>sie</i>",
+              "<i>sie</i>",
+              "<i>ihr</i>"
+            ],
+            [
+              "3<sup>e</sup> neutre",
+              "<i>es</i>",
+              "<i>es</i>",
+              "<i>ihm</i>"
+            ],
+            [
+              "1<sup>re</sup> plur.",
+              "<i>wir</i>",
+              "<i>uns</i>",
+              "<i>uns</i>"
+            ],
+            [
+              "2<sup>e</sup> plur.",
+              "<i>ihr</i>",
+              "<i>euch</i>",
+              "<i>euch</i>"
+            ],
+            [
+              "3<sup>e</sup> plur.",
+              "<i>sie</i>",
+              "<i>sie</i>",
+              "<i>ihnen</i>"
+            ],
+            [
+              "Politesse",
+              "<i>Sie</i>",
+              "<i>Sie</i>",
+              "<i>Ihnen</i>"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La règle",
+          "lignes": [
+            "genre de l’**objet**, cas de la **fonction**"
+          ],
+          "petite": true,
+          "regle": "Le pronom garde le **genre grammatical** du nom remplacé et prend le **cas** de sa nouvelle fonction.",
+          "note": "une table, c’est «&nbsp;il&nbsp;»"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Le genre commande",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "der Tisch → er",
+              "texte": "<i>**Er** ist alt.</i> (Elle est vieille, la table.)"
+            },
+            {
+              "titre": "die Lampe → sie",
+              "texte": "<i>**Sie** ist neu.</i> (Elle est neuve.)"
+            },
+            {
+              "titre": "das Buch → es",
+              "texte": "<i>**Es** ist neu.</i> (Il est neuf.)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "L’ordre de deux compléments",
+          "oui": {
+            "titre": "Deux pronoms",
+            "texte": "<i>Ich gebe **es dir**.</i> — **accusatif** puis datif."
+          },
+          "non": {
+            "titre": "Deux noms",
+            "texte": "<i>Ich gebe **dem Kind das Buch**.</i> — **datif** puis accusatif."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« Je le lui donne » (le livre / l’enfant) → <i>Ich gebe **es ihm**.</i>"
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Remplacer un groupe nominal",
+          "etapes": [
+            {
+              "titre": "Genre du nom",
+              "texte": "<i>der</i> → <i>er</i>, <i>die</i> → <i>sie</i>, <i>das</i> → <i>es</i>."
+            },
+            {
+              "titre": "Cas de la fonction",
+              "texte": "Sujet, COD ou COI : choisis la colonne."
+            },
+            {
+              "titre": "Place",
+              "texte": "Juste **après le verbe conjugué**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Sie, man, es",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Sie",
+              "texte": "politesse : majuscule, verbe comme pour <i>sie</i> pluriel."
+            },
+            {
+              "titre": "man",
+              "texte": "indéfini : <i>einen, einem</i>."
+            },
+            {
+              "titre": "es sujet apparent",
+              "texte": "<i>Es regnet.</i> · <i>Es gibt…</i>"
+            },
+            {
+              "titre": "es d’ouverture",
+              "texte": "<i>Es kommen viele Leute.</i> — il disparaît si autre chose ouvre."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Der Tisch? Es ist alt.</i> → <i>**Er** ist alt.</i>",
+            "<i>Ich gebe dir es</i> → <i>Ich gebe **es dir**</i>.",
+            "<i>Wie geht es ihnen?</i> (poli) → <i>**Ihnen**</i>.",
+            "<i>mich</i> pour « à moi » → <i>**mir**</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Die Lampe ist neu. ___ ist schön.</i>",
+            "« Je le lui donne » : <i>Ich gebe ___ ___.</i> (livre, enfant)",
+            "<i>Ich helfe ___ .</i> (à lui)"
+          ],
+          "reponses": "1) Sie 2) es ihm 3) ihm"
+        }
+      ]
+    }
+  ]
+}

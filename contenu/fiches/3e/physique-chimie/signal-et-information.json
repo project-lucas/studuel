@@ -1,0 +1,168 @@
+{
+  "titre": "Signal et information",
+  "titreSurligne": "information",
+  "accroche": "On transporte l’info, pas la matière.",
+  "epreuve": "brevet",
+  "bonus": "**t = d ÷ v** · lumière **300 000 km/s** · son **340 m/s** · 1 octet = **8 bits** · le son ne se propage **pas** dans le vide",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/signal-et-information.webp",
+    "prompt": "a glossy golden satellite dish sending glowing violet signal waves toward a small phone, tiny golden sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Le signal voyage,\npas la matière !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Trois familles de signaux",
+          "entetes": [
+            "Famille",
+            "Dans le vide ?"
+          ],
+          "lignes": [
+            [
+              "**Lumineux** (fibre, télécommande)",
+              "**oui**"
+            ],
+            [
+              "**Sonores** (voix, alarme)",
+              "**non**"
+            ],
+            [
+              "**Électriques et électromagnétiques** (radio, Wi-Fi)",
+              "**oui**"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Analogique ou numérique",
+          "entetes": [
+            "Signal",
+            "Caractère"
+          ],
+          "lignes": [
+            [
+              "**Analogique**",
+              "variation **continue**, se dégrade à chaque copie"
+            ],
+            [
+              "**Numérique**",
+              "suite de **0 et de 1** (bits), se copie **sans perte**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer la durée d’un trajet",
+          "etapes": [
+            {
+              "titre": "Écrire",
+              "texte": "t = d ÷ v"
+            },
+            {
+              "titre": "Repérer",
+              "texte": "d et v dans des unités cohérentes (km et km/s)"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "puis donner l’unité"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un satellite est à __36 000 km__. Un signal radio va à __300 000 km/s__. Durée&nbsp;?",
+          "calcul": "t = d ÷ v\nt = 36 000 ÷ 300 000",
+          "aparte": "aller-retour : 0,24 s",
+          "resultat": "t = [[0,12 s]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "La chaîne",
+              "texte": "**Émetteur → milieu de propagation → récepteur**."
+            },
+            {
+              "titre": "Rien de matériel",
+              "texte": "Un signal transporte **information** et **énergie**, jamais de matière."
+            },
+            {
+              "titre": "Les unités",
+              "texte": "1 octet = 8 bits&nbsp;; 1 ko = 1 000 o&nbsp;; 1 Mo = 10⁶ o&nbsp;; 1 Go = 10⁹ o."
+            },
+            {
+              "titre": "Objet connecté",
+              "texte": "**Capteur** → **microcontrôleur** → **actionneur**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "t = d ÷ v = 36 000 ÷ 300 000",
+              "quoi": "lettres puis nombres"
+            },
+            {
+              "texte": "t = 0,12 s",
+              "quoi": "avec l’unité"
+            },
+            {
+              "texte": "Le capteur mesure, le microcontrôleur compare, l’actionneur agit.",
+              "quoi": "la chaîne d’un objet connecté"
+            }
+          ],
+          "pied": "3 Mo = 3 × 10⁶ octets = ==2,4 × 10⁷ bits== (× 8)."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire qu’un signal transporte de la **matière**.",
+            "Croire que le son se propage dans le **vide**.",
+            "Confondre **bit** et **octet** (1 octet = 8 bits).",
+            "Mélanger **km** et **m** dans t = d ÷ v.",
+            "Confondre **vitesse du son** (340 m/s) et de la **lumière**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de bits dans **2 octets**&nbsp;?",
+            "Signal lumineux ou sonore&nbsp;: lequel traverse le **vide**&nbsp;?",
+            "Rôle d’un **actionneur**&nbsp;?"
+          ],
+          "reponses": "1) 16 bits · 2) le lumineux · 3) il agit (allume, déplace…)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "titre": "La probabilité",
+  "titreSurligne": "probabilité",
+  "accroche": "Le futur qui parle du présent.",
+  "bonus": "**futur** → présent · **conditionnel** → passé · **a lo mejor** + indicatif · **puede que** + subjonctif",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/espagnol/la-probabilite.webp",
+    "prompt": "a glossy violet question mark in front of a golden crystal ball, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Il doit être trois heures…\nserán las tres&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La supposition",
+          "lignes": [
+            "futur → **présent**",
+            "conditionnel → **passé**"
+          ],
+          "petite": true,
+          "regle": "L’espagnol met le verbe au **futur** ou au **conditionnel** pour deviner un fait **présent** ou **passé**. <i>Estará enfermo</i> = « il **doit être** malade ».",
+          "note": "pas de vrai futur !"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Quel temps pour quoi&nbsp;?",
+          "entetes": [
+            "Le temps",
+            "Il suppose",
+            "L’exemple"
+          ],
+          "lignes": [
+            [
+              "**Futur**",
+              "le présent",
+              "<i>Serán las tres.</i> (il doit être trois heures)"
+            ],
+            [
+              "**Conditionnel**",
+              "le passé",
+              "<i>Serían las tres cuando llegó.</i> (il devait être trois heures)"
+            ],
+            [
+              "Futur antérieur",
+              "un fait accompli",
+              "<i>Habrá salido.</i> (il a dû sortir)"
+            ],
+            [
+              "Conditionnel passé",
+              "accompli, vu du passé",
+              "<i>Habría salido.</i> (il avait dû sortir)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les adverbes de doute",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Doute faible",
+              "texte": "<i>quizá(s), tal vez, acaso</i> + **subjonctif**&nbsp;: <i>Quizás **venga** mañana.</i> (je n’en sais rien)"
+            },
+            {
+              "titre": "Doute léger",
+              "texte": "Les mêmes + **indicatif**&nbsp;: <i>Quizás **viene** mañana.</i> (je le crois assez)"
+            },
+            {
+              "titre": "Deux exceptions",
+              "texte": "<i>**A lo mejor** viene</i> → toujours indicatif. <i>**Puede que** llueva</i> → toujours subjonctif."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Futur de supposition ou vrai futur&nbsp;?",
+          "oui": {
+            "titre": "Une supposition",
+            "texte": "<i>¿Dónde está Ana? — **Estará** en casa.</i> — elle doit être chez elle, en ce moment."
+          },
+          "non": {
+            "titre": "Un vrai futur",
+            "texte": "<i>Mañana **estará** en casa.</i> — le marqueur de temps (mañana) annonce l’avenir."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Il doit être malade&nbsp;: ___ enfermo.</i> → **Estará** (ou <i>Debe de estar</i>)."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Présent ou passé&nbsp;?",
+              "texte": "Sur quel moment porte la supposition&nbsp;?"
+            },
+            {
+              "titre": "Choisis le temps",
+              "texte": "Présent → **futur**. Passé → **conditionnel**."
+            },
+            {
+              "titre": "Ou une tournure",
+              "texte": "<i>**Debe de** estar</i> · <i>**a lo mejor**</i> · <i>**puede que**</i> · <i>**parece que**</i>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Deber ou deber de&nbsp;?",
+          "deux": true,
+          "items": [
+            {
+              "titre": "deber + infinitif",
+              "texte": "l’**obligation**&nbsp;: <i>Debe estudiar.</i> (il doit étudier)"
+            },
+            {
+              "titre": "deber de + infinitif",
+              "texte": "la **probabilité**&nbsp;: <i>Debe de estar enfermo.</i>"
+            },
+            {
+              "titre": "Les autres marques",
+              "texte": "<i>seguramente, sin duda, es probable que</i> + subjonctif."
+            },
+            {
+              "titre": "parecer que",
+              "texte": "+ indicatif&nbsp;: <i>Parece que va a llover.</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Estará enfermo</i> n’est pas « il sera malade » mais « il **doit être** malade ».",
+            "<i>A lo mejor venga</i> → <i>A lo mejor **viene**.</i> Toujours l’indicatif.",
+            "<i>Puede que llueve</i> → <i>Puede que **llueva**.</i> Toujours le subjonctif.",
+            "La langue courante mêle <i>deber</i> et <i>deber de</i>, pas l’examen."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>¿Qué hora es? — ___ (ser) las tres.</i> (supposition)",
+            "<i>Puede que ___ (llover) mañana.</i>",
+            "<i>A lo mejor ___ (venir)</i>&nbsp;: indicatif ou subjonctif&nbsp;?"
+          ],
+          "reponses": "1) Serán 2) llueva 3) indicatif (viene)"
+        }
+      ]
+    }
+  ]
+}

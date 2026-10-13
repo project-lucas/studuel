@@ -1,0 +1,140 @@
+{
+  "titre": "La possession",
+  "titreSurligne": "possession",
+  "accroche": "À qui est-ce&nbsp;? Trois façons de le dire.",
+  "bonus": "**’s** = personnes · **of** = choses · **mine, yours…** = pronoms",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/anglais/exprimer-la-possession.webp",
+    "prompt": "a glossy violet key with a golden heart-shaped handle and a small golden tag, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "C’est à qui&nbsp;?\nC’est à moi&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le génitif",
+          "lignes": ["possesseur + **’s** + objet"],
+          "petite": true,
+          "regle": "L’ordre est **inverse du français**&nbsp;: <i>my father’s car</i> = la voiture de mon père. Pluriel en -s&nbsp;: <i>the girls’ room</i>.",
+          "note": "personnes et animaux"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Adjectifs et pronoms",
+          "entetes": ["Sujet", "Adjectif + nom", "Pronom seul"],
+          "lignes": [
+            ["I", "**my** book", "**mine**"],
+            ["you", "**your**", "**yours**"],
+            ["he / she", "**his** / **her**", "**his** / **hers**"],
+            ["it", "**its**", "—"],
+            ["we / they", "**our** / **their**", "**ours** / **theirs**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les trois moyens",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Le génitif ’s",
+              "texte": "<i>my brother**’s** bike, the children**’s** toys, today**’s** newspaper</i> — êtres animés et temps."
+            },
+            {
+              "titre": "La structure avec of",
+              "texte": "Les choses et les notions abstraites&nbsp;: <i>the roof **of** the house, the end **of** the film</i>."
+            },
+            {
+              "titre": "Whose",
+              "texte": "La question&nbsp;: <i>**Whose** bag is this? — It’s Kate’s.</i> La réponse reprend le génitif, sans nom."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Qui décide du possessif&nbsp;?",
+          "oui": {
+            "titre": "Le possesseur",
+            "texte": "<i>Paul and **his** sister. Kate and **her** brother.</i>"
+          },
+          "non": {
+            "titre": "L’objet possédé",
+            "texte": "<i>Paul and **her** sister.</i> — ce n’est pas la sœur qui décide, c’est Paul."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "Un garçon parle de son père&nbsp;: <i>___ father</i> → **his**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            { "titre": "Qui possède&nbsp;?", "texte": "Personne ou animal → **’s**. Une chose → **of**." },
+            { "titre": "Possesseur d’abord", "texte": "<i>my friend’s dog</i> : le possesseur, puis l’objet." },
+            { "titre": "Accorde", "texte": "Le possessif suit le **possesseur** : <i>his</i> ou <i>her</i>." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Emplois particuliers",
+          "deux": true,
+          "items": [
+            { "titre": "at my grandmother’s", "texte": "chez ma grand-mère&nbsp;; <i>at the baker’s</i>" },
+            { "titre": "Tom and Kate’s house", "texte": "une seule maison à deux" },
+            { "titre": "a friend of mine", "texte": "un ami à moi, parmi d’autres" },
+            { "titre": "Raise your hand", "texte": "« lève la main » : le possessif aussi" },
+            { "titre": "He broke his leg", "texte": "le corps prend le possessif, pas « the »" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>the book of Paul</i> → <i>**Paul’s** book.</i>",
+            "<i>it’s tail</i> → <i>**its** tail</i> : <i>its</i> sans apostrophe.",
+            "<i>her father</i>, dit par un garçon → <i>**his** father.</i>",
+            "<i>This is my.</i> → <i>This is **mine**.</i>",
+            "<i>mine book</i> n’existe pas&nbsp;: le pronom ne précède jamais un nom."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>La chambre des filles</i>&nbsp;?",
+            "<i>This pen is ___.</i> (à moi)",
+            "<i>Kate and ___ brother.</i> (her / his)"
+          ],
+          "reponses": "1) the girls’ room 2) mine 3) her"
+        }
+      ]
+    }
+  ]
+}

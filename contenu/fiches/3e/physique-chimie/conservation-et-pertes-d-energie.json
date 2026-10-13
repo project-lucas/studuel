@@ -1,0 +1,178 @@
+{
+  "titre": "Pertes d’énergie",
+  "titreSurligne": "énergie",
+  "accroche": "Rien ne se perd, tout se dégrade.",
+  "epreuve": "brevet",
+  "bonus": "**Em = Epp + Ec** · énergie reçue = **utile + dissipée** · rendement = **utile ÷ reçue** · l’énergie dissipée est **thermique**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/conservation-et-pertes-d-energie.webp",
+    "prompt": "a glossy golden ball rolling down a violet ramp with a small orange flame glow of heat behind it, tiny golden sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Elle ne disparaît\njamais, elle chauffe !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La conservation",
+          "petite": true,
+          "lignes": [
+            "Em = Epp + Ec",
+            "reçue = utile + dissipée"
+          ],
+          "regle": "Dans un système isolé, la somme des énergies reste **constante**. Une « perte » est de l’énergie ==thermique dissipée==&nbsp;: dégradée, pas disparue.",
+          "note": "frottements = chaleur !",
+          "teinte": "jaune"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Rendements",
+          "entetes": [
+            "Appareil",
+            "Rendement"
+          ],
+          "lignes": [
+            [
+              "Moteur thermique",
+              "environ **30 %**"
+            ],
+            [
+              "Moteur électrique",
+              "jusqu’à **90 %**"
+            ],
+            [
+              "Lampe à incandescence",
+              "environ **5 %**"
+            ],
+            [
+              "LED",
+              "plus de **30 %**"
+            ],
+            [
+              "Lampe à économie",
+              "environ **15 %**"
+            ],
+            [
+              "Panneau solaire",
+              "environ **20 %**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Faire un bilan d’énergie",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "l’énergie reçue et l’énergie utile"
+            },
+            {
+              "titre": "Soustraire",
+              "texte": "dissipée = reçue − utile"
+            },
+            {
+              "titre": "Rendement",
+              "texte": "utile ÷ reçue, en pourcentage"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "dire où va l’énergie dissipée"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un moteur reçoit __100 kJ__ et rend __30 kJ__ utiles. Dissipée&nbsp;? Rendement&nbsp;?",
+          "calcul": "100 − 30 = 70 kJ\n30 ÷ 100 = 0,30",
+          "aparte": "sous forme thermique",
+          "resultat": "[[70 kJ]] et [[30 %]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "La bille qui tombe",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "En haut",
+              "texte": "Énergie de **position** maximale, Ec = 0 (ex. 0,1 kg à 5 m, g = 10 N/kg&nbsp;: **5 J**)."
+            },
+            {
+              "titre": "En descendant",
+              "texte": "Epp se convertit en **cinétique**&nbsp;: à mi-hauteur, Ec = 5 − 2,5 = **2,5 J**."
+            },
+            {
+              "titre": "Avant le sol",
+              "texte": "Epp = 0 et Ec = Em = **5 J**, sans frottements."
+            },
+            {
+              "titre": "Une balle réelle",
+              "texte": "Elle rebondit moins haut&nbsp;: une part devient **thermique**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "E dissipée = 100 − 30 = 70 kJ",
+              "quoi": "le bilan"
+            },
+            {
+              "texte": "rendement = 30 ÷ 100 = 30 %",
+              "quoi": "la formule puis le calcul"
+            },
+            {
+              "texte": "L’énergie dissipée est thermique.",
+              "quoi": "la nature"
+            }
+          ],
+          "pied": "Pour économiser : ==isoler==, choisir un bon ==rendement==, éteindre les ==veilles==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire que l’énergie **disparaît** avec les frottements.",
+            "Croire qu’un appareil réel atteint **100 %** de rendement.",
+            "Oublier une **forme d’énergie** dans le bilan.",
+            "Mélanger **J** et **kJ** dans le rendement.",
+            "Penser que **plus de frottements** = plus d’énergie utile."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Epp = 4 J et Ec = 1 J&nbsp;: **Em**&nbsp;?",
+            "Un appareil reçoit 200 J et rend 50 J utiles&nbsp;: **dissipée**&nbsp;?",
+            "Rendement de l’appareil précédent&nbsp;?"
+          ],
+          "reponses": "1) 5 J · 2) 150 J · 3) 25 %"
+        }
+      ]
+    }
+  ]
+}

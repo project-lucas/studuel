@@ -1,0 +1,180 @@
+{
+  "titre": "Faibles et forts",
+  "titreSurligne": "forts",
+  "accroche": "Trois formes à dire à voix haute.",
+  "bonus": "**infinitif · prétérit · participe II** — faibles : <i>-te, ge-…-t</i> · forts : <i>Ablaut, ge-…-en</i>",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/allemand/les-verbes-faibles-et-les-verbes-forts.webp",
+    "prompt": "a glossy violet dumbbell next to a thin golden feather, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Trois formes\npar verbe&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les trois formes",
+          "lignes": [
+            "infinitif · prétérit · participe II"
+          ],
+          "petite": true,
+          "regle": "Avec les **trois temps primitifs**, toute la conjugaison se déduit&nbsp;: <i>sprechen → sprach → gesprochen</i>.",
+          "note": "à voix haute"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les deux grandes familles",
+          "entetes": [
+            "",
+            "Faibles",
+            "Forts"
+          ],
+          "lignes": [
+            [
+              "Le radical",
+              "ne change **jamais**",
+              "la voyelle change (l’<i>Ablaut</i>)"
+            ],
+            [
+              "Prétérit",
+              "en **-te**",
+              "**sans terminaison** aux 1<sup>re</sup> et 3<sup>e</sup> personnes"
+            ],
+            [
+              "Participe II",
+              "**ge-** … **-t**",
+              "**ge-** … **-en**"
+            ],
+            [
+              "Exemple",
+              "<i>machen → machte → gemacht</i>",
+              "<i>sprechen → sprach → gesprochen</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les cas particuliers",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Les mixtes",
+              "texte": "Radical **modifié** + terminaisons **faibles**&nbsp;: <i>bringen → brachte → gebracht</i> · <i>denken → dachte → gedacht</i>"
+            },
+            {
+              "titre": "Les verbes en -ieren",
+              "texte": "Faibles, **sans ge-** au participe&nbsp;: <i>studieren → studiert</i> · <i>telefonieren → telefoniert</i>"
+            },
+            {
+              "titre": "Les verbes nouveaux",
+              "texte": "Toujours **faibles**&nbsp;: <i>googeln → googelte → gegoogelt</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Faible ou fort&nbsp;?",
+          "oui": {
+            "titre": "Faible",
+            "texte": "<i>machen → **machte** → **gemacht**</i> — -te et -t, le radical ne bouge pas."
+          },
+          "non": {
+            "titre": "Fort",
+            "texte": "<i>sprechen → **sprach** → **gesprochen**</i> — la voyelle change, le participe finit en -en."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>fahren → fuhr → ___</i> → **gefahren**&nbsp;: un fort."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "La voyelle change&nbsp;?",
+              "texte": "Oui → **fort** (<i>ging, gegangen</i>). Non → **faible** (<i>-te, -t</i>)."
+            },
+            {
+              "titre": "Le participe",
+              "texte": "**ge-** + radical + **-t** (faible) ou **-en** (fort). Aucun **ge-** pour les verbes en <i>-ieren</i>."
+            },
+            {
+              "titre": "Au présent",
+              "texte": "Un fort peut changer de voyelle à **du** et **er / sie / es** seulement."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Le fort au présent",
+          "deux": true,
+          "items": [
+            {
+              "titre": "e → i",
+              "texte": "<i>geben → du gibst, er gibt</i> · <i>sprechen → du sprichst</i>"
+            },
+            {
+              "titre": "e → ie",
+              "texte": "<i>sehen → du siehst</i> · <i>lesen → du liest</i>"
+            },
+            {
+              "titre": "a → ä",
+              "texte": "<i>fahren → du fährst</i> · <i>schlafen → du schläfst</i>"
+            },
+            {
+              "titre": "Au pluriel",
+              "texte": "le changement **disparaît**&nbsp;: <i>wir geben, ihr gebt</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>ich gehte</i> → <i>ich **ging**.</i> Un fort n’a jamais de <i>-te</i>.",
+            "<i>studieren → gestudiert</i> → <i>studiert</i> (pas de ge-).",
+            "<i>wir gibt</i> → <i>wir **geben**</i>&nbsp;: la voyelle ne change qu’à <i>du / er</i>.",
+            "<i>fahren → fahrt</i> → <i>du **fährst**</i>, <i>er **fährt**.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>schreiben → schrieb → ___</i>",
+            "Participe II de <i>studieren</i>&nbsp;?",
+            "<i>Du ___ (fahren) nach Berlin.</i>"
+          ],
+          "reponses": "1) geschrieben 2) studiert 3) fährst"
+        }
+      ]
+    }
+  ]
+}

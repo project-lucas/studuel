@@ -1,0 +1,156 @@
+{
+  "titre": "Miscible et soluble",
+  "titreSurligne": "soluble",
+  "accroche": "Ce qui se mélange, ce qui se dissout.",
+  "epreuve": "brevet",
+  "bonus": "m<sub>solution</sub> = m<sub>solvant</sub> + m<sub>soluté</sub> · solubilité en **g/L** · solide&nbsp;: ↑ avec T · gaz&nbsp;: ↓ avec T",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/la-miscibilite-et-la-solubilite.webp",
+    "prompt": "a glossy violet glass of water with golden sugar cubes dissolving and a small separating funnel with two layers beside it, tiny golden bubbles, sparkles"
+  },
+  "marcel": "Le sucre ne disparaît\npas : il se disperse !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les mots à connaître",
+          "items": [
+            {
+              "terme": "Miscibles",
+              "definition": "deux liquides qui forment un mélange **homogène** (eau et alcool)."
+            },
+            {
+              "terme": "Non miscibles",
+              "definition": "deux phases superposées (eau et huile)."
+            },
+            {
+              "terme": "Solvant, soluté",
+              "definition": "le liquide qui dissout / l’espèce dissoute."
+            },
+            {
+              "terme": "Solution",
+              "definition": "le mélange homogène obtenu."
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La conservation de la masse",
+          "petite": true,
+          "lignes": [
+            "m<sub>sol</sub> = m<sub>solvant</sub> + m<sub>soluté</sub>"
+          ],
+          "regle": "La **solubilité** est la masse ==maximale== de soluté dissoute dans **1 L** de solvant, à une température donnée (en g/L).",
+          "note": "volume en litres&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Une solution est-elle saturée&nbsp;?",
+          "etapes": [
+            {
+              "titre": "Convertir",
+              "texte": "le volume de solvant en litres"
+            },
+            {
+              "titre": "Multiplier",
+              "texte": "par la solubilité : masse maximale"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "à la masse versée : le surplus reste au fond"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Sel&nbsp;: __360 g/L__. On verse __200 g__ dans __0,5 L__ d’eau.",
+          "calcul": "m max = 360 × 0,5 = 180 g",
+          "aparte": "200 > 180",
+          "resultat": "saturée, [[20 g]] au fond"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Miscible ou non&nbsp;?",
+          "oui": {
+            "titre": "Miscibles",
+            "texte": "Un seul liquide visible&nbsp;: eau et vinaigre."
+          },
+          "non": {
+            "titre": "Non miscibles",
+            "texte": "Deux couches&nbsp;: le **moins dense** au-dessus, séparées à l’**ampoule à décanter**."
+          },
+          "essai": {
+            "texte": "20 g de sucre dans 250 g d’eau&nbsp;: <i>250 + 20 = 270 g</i> de solution. La masse se conserve."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "m max = solubilité × V = 360 × 0,5",
+              "quoi": "formule puis nombres"
+            },
+            {
+              "texte": "m max = 180 g < 200 g versés",
+              "quoi": "la comparaison"
+            },
+            {
+              "texte": "La solution est saturée",
+              "quoi": "la conclusion"
+            },
+            {
+              "texte": "20 g restent au fond : 200 − 180 = 20 g",
+              "quoi": "le surplus"
+            }
+          ],
+          "pied": "Un soda tiède pétille moins&nbsp;: un ==gaz== se dissout moins quand T monte."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **miscible** (liquides) et **soluble** (espèce).",
+            "Dire que le **plus lourd** est en dessous&nbsp;: c’est le plus **dense**.",
+            "Croire que le soluté a **disparu**.",
+            "Garder le volume en **mL** avec une solubilité en g/L.",
+            "Oublier qu’une solution **saturée** a simplement atteint sa limite."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Eau et huile sont-elles **miscibles**&nbsp;?",
+            "40 g de sel dans 160 g d’eau&nbsp;: masse de la **solution**&nbsp;?",
+            "Solubilité 100 g/L, 0,2 L d’eau : masse **maximale**&nbsp;?"
+          ],
+          "reponses": "1) non · 2) 200 g · 3) 20 g"
+        }
+      ]
+    }
+  ]
+}

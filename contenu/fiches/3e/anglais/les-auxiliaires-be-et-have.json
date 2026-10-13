@@ -1,0 +1,139 @@
+{
+  "titre": "Be et have",
+  "titreSurligne": "Be et have",
+  "accroche": "Les deux piliers de la conjugaison.",
+  "bonus": "**I am 15** (jamais <i>I have 15</i>) · **he’s** = is ou has · **there is / are** = il y a",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/anglais/les-auxiliaires-be-et-have.webp",
+    "prompt": "two glossy violet pillars with golden capitals supporting a small golden arch, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "J’ai 15 ans&nbsp;?\nI am 15&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle d’or",
+          "lignes": ["**I am 15**"],
+          "petite": true,
+          "regle": "Là où le français dit « avoir » (âge, faim, froid, peur, raison), l’anglais dit **be**&nbsp;: <i>I am cold / hungry / afraid / right</i>.",
+          "note": "jamais I have 15"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les formes",
+          "entetes": ["", "BE", "HAVE"],
+          "lignes": [
+            ["Présent", "<i>I **am**, he **is**, we **are**</i>", "<i>I **have**, he **has**</i>"],
+            ["Prétérit", "<i>I / he **was**, we **were**</i>", "<i>**had**</i> partout"],
+            ["Participe", "<i>**been**</i>", "<i>**had**</i>"],
+            ["Question", "<i>**Are** you ready?</i>", "<i>**Do** you have a car?</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les emplois",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "BE",
+              "texte": "État (<i>She is a teacher</i>), -ING (<i>He is reading</i>), passif (<i>It was broken</i>)."
+            },
+            {
+              "titre": "HAVE",
+              "texte": "Posséder (<i>I have a bike</i> → <i>Do you have…?</i>), temps composés (<i>I have seen</i>)."
+            },
+            {
+              "titre": "HAVE got et actions",
+              "texte": "<i>Have you **got** a bike?</i> (sans do). <i>have breakfast, have a shower</i> (avec do)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "L’âge et les sensations",
+          "oui": {
+            "titre": "Avec be",
+            "texte": "<i>I **am** 15. She **is** hungry. They **were** late.</i>"
+          },
+          "non": {
+            "titre": "Calque du français",
+            "texte": "<i>I **have** 15 years. She **have** a dog. They **was** late.</i> — le verbe doit s’accorder."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« Il a faim » → <i>He ___ hungry.</i> → **is**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Conjuguer sans se tromper",
+          "etapes": [
+            { "titre": "Le sujet", "texte": "he, she, it → **is / has / was**. Les autres → **are / have / were**." },
+            { "titre": "Le rôle", "texte": "**Auxiliaire** (suivi d’un verbe) ou **lexical** (seul)&nbsp;?" },
+            { "titre": "La question", "texte": "**be** inverse toujours&nbsp;; **have** lexical demande **do**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Contractions et there is",
+          "deux": true,
+          "items": [
+            { "titre": "I’m, he’s, we’re", "texte": "contractions de **be**" },
+            { "titre": "I’ve, we’ve", "texte": "contractions de **have**" },
+            { "titre": "he’s tired / he’s finished", "texte": "is, puis has&nbsp;: ce qui **suit** tranche" },
+            { "titre": "I am cold / lucky", "texte": "froid, chaud, faim, soif, peur, chance, raison, tort" },
+            { "titre": "There is / are / was", "texte": "<i>There **is** a cat. There **are** two cats.</i>" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>I have 15 years</i> → <i>I **am** 15.</i>",
+            "<i>He have a dog</i> → <i>He **has** a dog.</i>",
+            "<i>They was late</i> → <i>They **were** late.</i>",
+            "<i>He’s</i> n’est pas toujours <i>is</i> : <i>he’s finished</i> = <i>he **has** finished</i>.",
+            "<i>Have you a car?</i> → <i>**Do** you have a car?</i> ou <i>Have you **got**…?</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "« J’ai froid »&nbsp;: <i>I ___ cold.</i>",
+            "<i>She ___ a bike.</i> (have / has)",
+            "<i>They ___ late yesterday.</i> (was / were)"
+          ],
+          "reponses": "1) am 2) has 3) were"
+        }
+      ]
+    }
+  ]
+}

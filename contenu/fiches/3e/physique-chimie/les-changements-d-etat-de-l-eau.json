@@ -1,0 +1,118 @@
+{
+  "titre": "Changements d’état",
+  "titreSurligne": "état",
+  "accroche": "Six passages, six noms à connaître.",
+  "epreuve": "brevet",
+  "bonus": "eau pure sous 1 013 hPa&nbsp;: fusion **0 °C** · ébullition **100 °C** · palier = **corps pur**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/les-changements-d-etat-de-l-eau.webp",
+    "prompt": "a glossy violet kettle with golden steam curls beside a small melting golden ice cube and a thermometer, tiny sparkles"
+  },
+  "marcel": "Le palier, c’est\nla signature !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les six changements",
+          "entetes": ["De → à", "Nom"],
+          "lignes": [
+            ["solide → liquide", "**fusion**"],
+            ["liquide → solide", "**solidification**"],
+            ["liquide → gaz", "**vaporisation**"],
+            ["gaz → liquide", "**liquéfaction**"],
+            ["solide → gaz", "**sublimation**"],
+            ["gaz → solide", "**condensation solide**"]
+          ]
+        },
+        {
+          "type": "cartes",
+          "numero": 2,
+          "titre": "À savoir",
+          "colonnes": 1,
+          "cartes": [
+            { "titre": "Évaporation", "texte": "en **surface**, à toute température." },
+            { "titre": "Ébullition", "texte": "dans **toute la masse**, à température fixe." },
+            { "titre": "Altitude", "texte": "pression plus basse : l’eau bout **sous** 100 °C." },
+            { "titre": "Sel", "texte": "abaisse la température de fusion (salage des routes)." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire une courbe de changement d’état",
+          "etapes": [
+            { "titre": "Axes", "texte": "temps en abscisse, température en ordonnée" },
+            { "titre": "Palier", "texte": "cherche la portion **horizontale**" },
+            { "titre": "Comparer", "texte": "la température lue à une valeur connue" },
+            { "titre": "Conclure", "texte": "palier net : corps pur ; sans palier : mélange" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un liquide refroidi montre un palier à __0 °C__ de la 4e à la 9e minute.",
+          "calcul": "palier à 0 °C : liquide → solide",
+          "aparte": "avant liquide, après solide",
+          "resultat": "[[eau pure]] qui se solidifie"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Dans la nature",
+          "oui": { "titre": "Rosée, buée", "texte": "Une **liquéfaction**&nbsp;: la vapeur d’eau devient gouttelettes sur une surface froide." },
+          "non": { "titre": "Givre", "texte": "Une **condensation solide**&nbsp;: la vapeur passe directement à la glace." },
+          "essai": { "texte": "Au-dessus d’une casserole, on voit des <i>gouttelettes</i>&nbsp;: la vapeur d’eau est invisible." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "La courbe présente un palier à 0 °C", "quoi": "ce que tu lis" },
+            { "texte": "Pendant un changement d’état, T reste constante", "quoi": "le cours" },
+            { "texte": "C’est de l’eau pure qui se solidifie", "quoi": "la conclusion" }
+          ],
+          "pied": "Le passage gaz → liquide s’appelle ==liquéfaction== au collège."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **condensation** et **liquéfaction**.",
+            "Dire que l’eau salée gèle à **0 °C**.",
+            "Croire qu’on dépasse **100 °C** en chauffant plus fort de l’eau qui bout.",
+            "Prendre la buée pour de la vapeur **visible**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Nom du passage liquide → gaz&nbsp;?",
+            "Température d’ébullition de l’eau pure sous 1 013 hPa&nbsp;?",
+            "Que traduit un **palier** sur une courbe&nbsp;?"
+          ],
+          "reponses": "1) la vaporisation · 2) 100 °C · 3) un changement d’état d’un corps pur"
+        }
+      ]
+    }
+  ]
+}

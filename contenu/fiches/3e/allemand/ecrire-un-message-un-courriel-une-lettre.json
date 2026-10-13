@@ -1,0 +1,129 @@
+{
+  "titre": "Écrire un message",
+  "titreSurligne": "message",
+  "accroche": "Liebe Lena, … Viele Grüße.",
+  "bonus": "**Liebe / Lieber** + virgule · **Sie, Ihnen** avec majuscule · fin sans virgule",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/allemand/ecrire-un-message-un-courriel-une-lettre.webp",
+    "prompt": "a glossy violet envelope with a golden heart seal and a small golden pen, tiny sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Liebe Lena,\nviele Grüße&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La structure",
+          "lignes": ["lieu · appel, · corps · fin · nom"],
+          "petite": true,
+          "regle": "<i>Paris, den 5. März 2026</i> → <i>Liebe Lena,</i> → texte (**minuscule** au début) → <i>Viele Grüße</i> (sans virgule) → signature.",
+          "note": "virgule après l’appel"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Du ou Sie&nbsp;?",
+          "entetes": ["", "À un ami", "À un adulte"],
+          "lignes": [
+            ["Appel", "<i>Liebe Anna,</i> <i>Lieber Paul,</i>", "<i>Sehr geehrte Frau Weber,</i>"],
+            ["Pronoms", "<i>du, dich, dir, dein</i>", "<i>**S**ie, **I**hnen, **I**hr</i>"],
+            ["Fin", "<i>Viele Grüße</i>, <i>Bis bald!</i>", "<i>Mit freundlichen Grüßen</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Les phrases qui servent toujours",
+          "entetes": ["Allemand", "Français"],
+          "lignes": [
+            ["<i>Vielen Dank für deine Nachricht!</i>", "Merci beaucoup pour ton message&nbsp;!"],
+            ["<i>Wie geht es dir?</i> · <i>Mir geht es gut.</i>", "Comment vas-tu&nbsp;? · Je vais bien."],
+            ["<i>Ich freue mich auf deinen Besuch.</i>", "Je me réjouis de ta visite."],
+            ["<i>Leider kann ich nicht kommen.</i>", "Malheureusement, je ne peux pas venir."],
+            ["<i>Schreib mir bald!</i>", "Écris-moi vite&nbsp;!"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "L’appel et la fin",
+          "oui": {
+            "titre": "Accord",
+            "texte": "<i>**Liebe** Lena,</i> (fille) · <i>**Lieber** Tom,</i> (garçon) · poli&nbsp;: <i>Mit freundlichen Grüßen</i>."
+          },
+          "non": {
+            "titre": "Faux",
+            "texte": "<i>Lieber Lena</i> · <i>Tschüss</i> à la fin d’un courriel poli."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "À Max, un ami&nbsp;: <i>___ Max,</i> → **Lieber** (ou <i>Hallo</i>)."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Un message réussi",
+          "etapes": [
+            {"titre": "Merci, nouvelles", "texte": "<i>Vielen Dank für deine Nachricht! Mir geht es gut.</i>"},
+            {"titre": "Ton sujet", "texte": "Un connecteur (<i>weil</i>, verbe à la fin) et un projet."},
+            {"titre": "Une question", "texte": "<i>Hast du Zeit am 12. Juli?</i> puis <i>Schreib mir bald!</i>"}
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les points à gagner",
+          "deux": true,
+          "items": [
+            {"titre": "Virgule", "texte": "après l’appel, pas après la formule finale."},
+            {"titre": "Minuscule", "texte": "première ligne : <i>vielen Dank</i> (sauf nom ou <i>Sie</i>)."},
+            {"titre": "Accord", "texte": "<i>Liebe</i> / <i>Lieber</i>, <i>Sehr geehrte</i> / <i>geehrter</i>."},
+            {"titre": "Majuscule", "texte": "<i>Sie, Ihnen, Ihr</i> dans un message poli."}
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>sie, ihnen</i> à un adulte → <i>**S**ie, **I**hnen</i> avec majuscule.",
+            "<i>Lieber Lena</i> → <i>**Liebe** Lena</i>.",
+            "<i>Liebe Lena. Vielen Dank</i> → virgule, puis <i>vielen</i> en minuscule.",
+            "<i>Tschüss</i> à un adulte → <i>**Mit freundlichen Grüßen**</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>___ Lena,</i> (Lena est une fille)",
+            "Formule finale d’un courriel poli&nbsp;?",
+            "Que veut dire <i>Schreib mir bald!</i>&nbsp;?"
+          ],
+          "reponses": "1) Liebe 2) Mit freundlichen Grüßen 3) Écris-moi vite !"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "titre": "Représenter un OST",
+  "titreSurligne": "OST",
+  "accroche": "Dessiner pour se faire comprendre.",
+  "epreuve": "brevet",
+  "bonus": "**1:2** = deux fois plus petit · **2:1** = deux fois plus grand · **1:1** = grandeur nature",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/technologie/modes-de-representation-d-un-ost.webp",
+    "prompt": "a glossy violet technical drawing sheet with a golden pencil, a ruler and a small 3D cube, sparkles, same art style as the reference icons, no text, magenta background"
+  },
+  "marcel": "Une question,\nune représentation !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Quatre représentations",
+          "entetes": [
+            "Mode",
+            "Pour"
+          ],
+          "lignes": [
+            [
+              "**Croquis**",
+              "chercher une idée"
+            ],
+            [
+              "**Schéma**",
+              "expliquer le fonctionnement"
+            ],
+            [
+              "**Dessin technique**",
+              "faire fabriquer"
+            ],
+            [
+              "**Modèle 3D**",
+              "simuler et produire"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les traits",
+          "entetes": [
+            "Trait",
+            "Désigne"
+          ],
+          "lignes": [
+            [
+              "Continu **fort**",
+              "arête vue"
+            ],
+            [
+              "**Interrompu**",
+              "arête cachée"
+            ],
+            [
+              "Mixte **fin**",
+              "axe"
+            ],
+            [
+              "**Cotation**",
+              "dimensions réelles en mm"
+            ],
+            [
+              "**Échelle 1:1**",
+              "grandeur nature"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Choisir la bonne représentation",
+          "etapes": [
+            {
+              "titre": "Question",
+              "texte": "chercher, expliquer, fabriquer ou simuler&nbsp;?"
+            },
+            {
+              "titre": "Mode",
+              "texte": "croquis, schéma, dessin technique ou 3D"
+            },
+            {
+              "titre": "Vérifier",
+              "texte": "échelle, cotes et traits corrects"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Pièce de __40 mm__ dessinée à l’échelle __1:2__. Longueur&nbsp;?",
+          "calcul": "40 ÷ 2",
+          "aparte": "deux fois plus petit",
+          "resultat": "[[20 mm]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Schéma ou dessin technique&nbsp;?",
+          "oui": {
+            "titre": "Schéma",
+            "texte": "Montre le **fonctionnement**, pas la forme : principe, électrique, cinématique."
+          },
+          "non": {
+            "titre": "Dessin technique",
+            "texte": "Donne les **dimensions réelles** normalisées : document contractuel."
+          },
+          "essai": {
+            "texte": "Un circuit avec ses symboles normalisés est un schéma <i>électrique</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            {
+              "texte": "Le dessin technique sert à faire fabriquer.",
+              "quoi": "l’usage"
+            },
+            {
+              "texte": "Les cotes sont les dimensions réelles, en mm.",
+              "quoi": "la cotation"
+            },
+            {
+              "texte": "La 3D permet de simuler avant de produire.",
+              "quoi": "l’intérêt"
+            },
+            {
+              "texte": "Le schéma de principe relie les fonctions.",
+              "quoi": "le schéma"
+            }
+          ],
+          "pied": "On associe ==chaque représentation== à ==son usage==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **1:2** et **2:1**.",
+            "Coter les dimensions **du dessin** et non les dimensions **réelles**.",
+            "Prendre le **schéma** pour un dessin à l’échelle.",
+            "Confondre trait **interrompu** (caché) et mixte (axe).",
+            "Oublier que le dessin technique est un document **contractuel**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel trait désigne une arête **cachée**&nbsp;?",
+            "Que signifie l’échelle **2:1**&nbsp;?",
+            "Quelle représentation sert à **chercher**&nbsp;?"
+          ],
+          "reponses": "1) interrompu · 2) deux fois plus grand · 3) le croquis"
+        }
+      ]
+    }
+  ]
+}

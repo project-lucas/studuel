@@ -1,0 +1,137 @@
+{
+  "titre": "L’impératif",
+  "titreSurligne": "impératif",
+  "accroche": "Un ordre pour chaque personne.",
+  "bonus": "**du** : radical seul · **ihr** : comme le présent · **Sie / wir** : verbe + pronom",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/allemand/l-imperatif.webp",
+    "prompt": "a glossy violet megaphone with a golden exclamation-shaped sound wave, small golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Komm doch mal her&nbsp;!\nOrdre poli&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle",
+          "lignes": ["**Verbe** en 1<sup>re</sup> place"],
+          "petite": true,
+          "regle": "Le verbe **ouvre** la phrase. Pour **du** et **ihr**, pas de pronom&nbsp;; pour **Sie** et **wir**, le pronom suit le verbe.",
+          "note": "le préverbe part à la fin"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les quatre formes",
+          "entetes": ["Personne", "Formation", "Exemple"],
+          "lignes": [
+            ["**du**", "radical, sans pronom", "<i>**Komm**!</i> <i>**Mach**!</i>"],
+            ["**ihr**", "forme du présent, sans pronom", "<i>**Kommt**!</i>"],
+            ["**Sie**", "infinitif + <i>Sie</i>", "<i>**Kommen Sie**!</i>"],
+            ["**wir**", "infinitif + <i>wir</i>", "<i>**Gehen wir**!</i> (allons-y)"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les verbes qui changent",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "e → i / ie : on garde",
+              "texte": "<i>Gib!</i> <i>Nimm!</i> <i>Lies!</i> <i>Sieh!</i> — la voyelle du présent reste."
+            },
+            {
+              "titre": "a → ä : on perd",
+              "texte": "<i>Fahr!</i> <i>Schlaf!</i> <i>Lauf!</i> — retour à la voyelle de l’infinitif."
+            },
+            {
+              "titre": "sein est à part",
+              "texte": "<i>**Sei** ruhig!</i> (du) · <i>**Seid** ruhig!</i> (ihr) · <i>**Seien Sie** ruhig!</i> (Sie)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Un ordre sec ou poli&nbsp;?",
+          "oui": {
+            "titre": "Avec une particule",
+            "texte": "<i>Komm **doch mal** her!</i> · <i>Machen Sie **bitte** die Tür zu!</i> — **bitte** (politesse), **mal** (légèreté), **doch** (insistance amicale)."
+          },
+          "non": {
+            "titre": "Sans rien",
+            "texte": "<i>Mach die Tür zu!</i> — correct, mais **sec**, parfois hostile à l’oreille d’un Allemand."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« Lève-toi, s’il te plaît ! » → <i>Steh **bitte** ___!</i> → **auf** : le préverbe part à la fin."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {"titre": "À qui&nbsp;?", "texte": "Un ami → **du**. Un groupe → **ihr**. Un adulte → **Sie**."},
+            {"titre": "Forme le verbe", "texte": "**du** : radical (garde e → i, perd a → ä). **-e** après -d, -t, -ig."},
+            {"titre": "Place-le", "texte": "Verbe **en tête**, puis <i>bitte / doch / mal</i>, préverbe **à la fin**."}
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Commander sans impératif",
+          "deux": true,
+          "items": [
+            {"titre": "L’infinitif seul", "texte": "<i>Nicht rauchen!</i> — panneaux, consignes."},
+            {"titre": "Le futur", "texte": "<i>Du wirst jetzt lernen!</i> — menaçant."},
+            {"titre": "Subjonctif II", "texte": "<i>Könnten Sie mir helfen?</i> — très poli."},
+            {"titre": "-e obligatoire", "texte": "<i>Arbeite!</i> <i>Entschuldige!</i> (après -t, -d, -ig)"}
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Du komm!</i> → <i>**Komm**!</i> : pas de pronom à l’impératif du <i>du</i>.",
+            "<i>Gehen!</i> pour un adulte → <i>**Gehen Sie**!</i> : le <i>Sie</i> est obligatoire.",
+            "<i>Fahre!</i> ou <i>Fähr!</i> → <i>**Fahr**!</i> : a → ä disparaît.",
+            "<i>Ruf an mich!</i> → <i>**Ruf mich an**!</i> : le préverbe se place en fin de phrase."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Impératif de <i>lesen</i> (du)&nbsp;?",
+            "« Soyez calmes ! » (ihr) en allemand&nbsp;?",
+            "Complète&nbsp;: <i>Ruf mich bitte ___!</i> (anrufen)"
+          ],
+          "reponses": "1) Lies! 2) Seid ruhig! 3) an"
+        }
+      ]
+    }
+  ]
+}

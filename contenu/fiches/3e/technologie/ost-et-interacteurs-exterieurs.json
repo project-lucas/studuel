@@ -1,0 +1,113 @@
+{
+  "titre": "Interacteurs",
+  "titreSurligne": "Interacteurs",
+  "accroche": "Tout ce qui entoure l’objet.",
+  "epreuve": "brevet",
+  "bonus": "**Fonction principale** relie **deux** interacteurs · **fonction contrainte** n’en relie **qu’un**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/technologie/ost-et-interacteurs-exterieurs.webp",
+    "prompt": "a glossy violet street lamp at the center with golden glowing links connecting to small icons of a person, a house, a cloud and a plug, sparkles"
+  },
+  "marcel": "L’objet n’est jamais\nseul au monde !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les interacteurs",
+          "entetes": ["Interacteur", "Ce qu’il impose"],
+          "lignes": [
+            ["**Utilisateur**", "celui qui s’en sert"],
+            ["**Matière d’œuvre**", "ce sur quoi il agit"],
+            ["**Énergie**", "ce dont il a besoin"],
+            ["**Milieu**", "air, eau, vibrations"],
+            ["**Normes**", "ce qu’il doit respecter"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Deux sortes de fonctions",
+          "items": [
+            { "terme": "Fonction principale", "definition": "relie **deux** interacteurs à travers l’objet&nbsp;: sa raison d’être" },
+            { "terme": "Fonction contrainte", "definition": "ne touche **qu’un** interacteur&nbsp;: une exigence à respecter" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Construire le diagramme",
+          "etapes": [
+            { "titre": "Placer", "texte": "l’objet au centre, les interacteurs autour" },
+            { "titre": "Relier", "texte": "deux interacteurs par la fonction principale" },
+            { "titre": "Ajouter", "texte": "une fonction contrainte par interacteur restant" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un __lampadaire__ de rue. Quelle est sa fonction principale&nbsp;?",
+          "calcul": "piéton ↔ chaussée, la nuit",
+          "aparte": "deux interacteurs",
+          "resultat": "[[permettre au piéton de voir la chaussée]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Principale ou contrainte&nbsp;?",
+          "oui": { "titre": "Principale", "texte": "Elle relie le **piéton** et la **chaussée**&nbsp;: voir la nuit." },
+          "non": { "titre": "Contrainte", "texte": "Elle ne touche qu’**un** interacteur&nbsp;: résister aux intempéries." },
+          "essai": { "texte": "« S’alimenter sur le réseau » ne relie que le lampadaire et l’énergie&nbsp;: <i>contrainte</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "FP : permettre à l’utilisateur d’agir sur…", "quoi": "la principale" },
+            { "texte": "FC : résister au milieu, respecter les normes.", "quoi": "les contraintes" },
+            { "texte": "Chaque fonction devient une exigence mesurable.", "quoi": "le cahier des charges" }
+          ],
+          "pied": "Un objet réussi remplit ==sa fonction principale== sans manquer aucune contrainte."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Relier **trois** interacteurs ou plus par une fonction.",
+            "Confondre fonction **principale** et contrainte.",
+            "Oublier le **milieu** ou les normes.",
+            "Placer un interacteur **dans** l’objet."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Une fonction principale relie combien d’**interacteurs**&nbsp;?",
+            "Les **normes** sont-elles un interacteur&nbsp;?",
+            "Le diagramme prépare quel **document**&nbsp;?"
+          ],
+          "reponses": "1) deux · 2) oui, elles imposent des exigences · 3) le cahier des charges"
+        }
+      ]
+    }
+  ]
+}

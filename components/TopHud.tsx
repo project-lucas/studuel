@@ -316,6 +316,26 @@ export default function TopHud({
                     </span>
                   ) : null}
                 </div>
+                {/* CE QU'IL RESTE, AU-DESSUS DE LA BARRE (Lucas, 13/10/2026 :
+                    « combien d'XP il me reste pour passer au niveau supérieur,
+                    dans l'angle » — « au-dessus de la barre de niveau, pas en
+                    dessous ») : sa ligne, calée à droite, entre « Niveau 7 » et
+                    la barre. Il suit la volée : chaque éclair encaissé le fait
+                    baisser. Sur toute la largeur du bloc (un `self-end` plus
+                    large débordait sur l'avatar) ; le mot « Encore » ne tient
+                    qu'à partir de 4,5 rem de bloc. */}
+                {xp && xp.prochain !== null ? (
+                  <span
+                    aria-hidden="true"
+                    className={cn(
+                      'w-full truncate text-right text-[10px] leading-none font-extrabold tabular-nums',
+                      dark ? 'text-[#faf6ef]/75' : 'text-primary/80',
+                    )}
+                  >
+                    <span className="hidden @min-[4.5rem]:inline">Encore </span>
+                    {Math.max(0, xp.prochain - xp.actuel - xpGagnee).toLocaleString('fr-FR')} XP
+                  </span>
+                ) : null}
                 <button
                   type="button"
                   onClick={() => togglePurse('niveau')}
@@ -345,26 +365,6 @@ export default function TopHud({
                     />
                   </span>
                 </button>
-                {/* CE QU'IL RESTE, DANS L'ANGLE (Lucas, 13/10/2026 : « combien
-                    d'XP il me reste pour passer au niveau supérieur, dans
-                    l'angle ») : sous la barre, calé à droite — la ligne du
-                    niveau n'a pas la place à largeur de téléphone. Il suit la
-                    volée : chaque éclair encaissé le fait baisser. */}
-                {xp && xp.prochain !== null ? (
-                  <span
-                    aria-hidden="true"
-                    className={cn(
-                      // Toute la largeur du bloc, calé à droite : un `self-end`
-                      // plus large que le bloc débordait sur l'avatar. Le mot
-                      // « Encore » ne tient qu'à partir de 4,5 rem de bloc.
-                      'w-full truncate text-right text-[10px] leading-none font-extrabold tabular-nums',
-                      dark ? 'text-[#faf6ef]/75' : 'text-primary/80',
-                    )}
-                  >
-                    <span className="hidden @min-[4.5rem]:inline">Encore </span>
-                    {Math.max(0, xp.prochain - xp.actuel - xpGagnee).toLocaleString('fr-FR')} XP
-                  </span>
-                ) : null}
                 {openPurse === 'niveau' ? (
                   <BulleHud
                     id="bourse-niveau"
@@ -907,7 +907,7 @@ function MultiplicateurPill({
       >
         <span
           className={cn(
-            'font-heading flex items-center rounded-full px-1.5 py-1 text-[12px] leading-none font-extrabold tabular-nums ring-1',
+            'font-heading flex items-center gap-0.5 rounded-full px-1.5 py-1 text-[12px] leading-none font-extrabold tabular-nums ring-1',
             potion
               ? 'bg-highlight text-foreground ring-highlight'
               : dark
@@ -915,6 +915,7 @@ function MultiplicateurPill({
                 : 'bg-card text-primary ring-primary/25',
           )}
         >
+          <XpIcon className="size-2.5" />
           {libelle}
         </span>
       </button>

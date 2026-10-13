@@ -1,6 +1,6 @@
 import 'server-only'
 import type { SupabaseClient } from '@supabase/supabase-js'
-import { BUCKET_APERCUS, BUCKET_FICHES, DUREE_URL_SIGNEE_S, fichePdfDe, nomApercu, nomPdf } from './pdf'
+import { BUCKET_APERCUS, BUCKET_FICHES, DUREE_URL_SIGNEE_S, fichePdfDe, nomApercu, nomFlou, nomPdf } from './pdf'
 
 // LES FICHES PDF — la lecture qui a besoin de la session.
 //
@@ -21,4 +21,9 @@ export async function urlSigneeFiche(supabase: SupabaseClient, chapitreId: strin
 /** L'adresse publique de l'illustration d'une fiche (bucket public : pas de signature). */
 export function urlApercuFiche(supabase: SupabaseClient, chapitreId: string): string {
   return supabase.storage.from(BUCKET_APERCUS).getPublicUrl(nomApercu(chapitreId)).data.publicUrl
+}
+
+/** L'adresse publique de la page floutée d'une fiche — ce qu'on montre sous le paywall. */
+export function urlFlouFiche(supabase: SupabaseClient, chapitreId: string): string {
+  return supabase.storage.from(BUCKET_APERCUS).getPublicUrl(nomFlou(chapitreId)).data.publicUrl
 }

@@ -34,6 +34,18 @@ export function nomApercu(chapitreId: string): string {
   return `${chapitreId}.webp`
 }
 
+/**
+ * Le nom de la PAGE FLOUTÉE dans le bucket des aperçus : la fiche entière,
+ * rendue petite et floue AU DÉPÔT (scripts/fiches-deposer.mjs), illisible —
+ * c'est ce que voit l'élève tant qu'il n'a pas dépensé ses 30 gemmes (Lucas,
+ * 13/10/2026 : « toutes doivent être floutées tant que le user n'a pas
+ * utilisé 30 gemmes »). Jamais le vrai PDF flouté en CSS : le texte partirait
+ * quand même dans le navigateur.
+ */
+export function nomFlou(chapitreId: string): string {
+  return `${chapitreId}-flou.webp`
+}
+
 /** L'adresse de l'app qui sert le PDF (elle redirige vers l'URL signée). */
 export function hrefFichePdf(chapitreId: string, { telecharger = false } = {}): string {
   return `/api/fiches/${chapitreId}${telecharger ? '?dl=1' : ''}`

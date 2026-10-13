@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { fichePdfDe, hrefFichePdf, nomApercu, nomDeTelechargement, nomPdf } from './pdf'
+import { fichePdfDe, hrefFichePdf, nomApercu, nomDeTelechargement, nomFlou, nomPdf } from './pdf'
 import { FICHES_PDF } from './registre'
 
 const [unChapitre, uneFiche] = Object.entries(FICHES_PDF)[0]
@@ -13,6 +13,9 @@ describe('lib/fiches/pdf', () => {
   it('nomme les objets comme la policy fiche_pdf_acces (563) les attend', () => {
     expect(nomPdf(unChapitre)).toBe(`${unChapitre}.pdf`)
     expect(nomApercu(unChapitre)).toBe(`${unChapitre}.webp`)
+    // La page floutée n'est PAS un « .pdf » : la policy du bucket privé ne la concerne pas, elle est publique.
+    expect(nomFlou(unChapitre)).toBe(`${unChapitre}-flou.webp`)
+    expect(nomFlou(unChapitre)).not.toMatch(/\.pdf$/)
   })
 
   it('adresse la route de l’app, avec ?dl=1 pour enregistrer', () => {

@@ -12,12 +12,12 @@ import { mindMapFromLessons, type LessonForMap } from '@/lib/mind-map-auto'
 import { chapterHasMindMap, fetchMindMap } from '@/lib/mind-map-access'
 import SubjectIcon from '@/components/SubjectIcon'
 import GemIcon from '@/components/ui/GemIcon'
+import Image from 'next/image'
 import { Download } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import FichePdfCarte from '@/components/fiches/FichePdfCarte'
 import LecteurPdf from '@/components/annales/LecteurPdf'
 import { fichePdfDe, hrefFichePdf } from '@/lib/fiches/pdf'
-import { urlApercuFiche } from '@/lib/fiches/pdf-server'
+import { urlFlouFiche } from '@/lib/fiches/pdf-server'
 
 /** Les phrases du lecteur PDF, au féminin de la fiche. */
 const TEXTES_FICHE = { ouverture: 'Ouverture de la fiche…', erreur: 'La fiche ne s’affiche pas ici', fin: 'fin de la fiche' }
@@ -148,9 +148,20 @@ export default async function MindMapPage({
             />
           ) : (
             <UnlockChapterCard chapterId={chapterId} gems={gems}>
-              {/* L'aperçu dit ce qu'on achète (titre, accroche, illustration) ;
-                  le PDF, lui, n'est ni chargé ni signé. */}
-              <FichePdfCarte fiche={fichePdf} apercu={urlApercuFiche(supabase, chapterId)} />
+              {/* LA FICHE FLOUTÉE (Lucas, 13/10/2026 : « toutes doivent être
+                  floutées tant que le user n'a pas utilisé 30 gemmes ») : une
+                  image fabriquée au dépôt, illisible, publique — le PDF, lui,
+                  n'est ni chargé ni signé. Le flou n'est PAS du CSS sur le
+                  vrai contenu, qui partirait quand même dans le navigateur. */}
+              <Image
+                src={urlFlouFiche(supabase, chapterId)}
+                alt=""
+                width={640}
+                height={905}
+                unoptimized
+                priority
+                className="shadow-carte pointer-events-none w-full rounded-2xl select-none"
+              />
             </UnlockChapterCard>
           )
         ) : !carteExiste ? (

@@ -6,9 +6,13 @@
 //
 // Pour chaque fiche du registre : le PDF rendu par scripts/fiches-rendre.mjs
 // (`fiches-out/<niveau>/<matière>/<slug>.pdf`, hors git) part dans le bucket
-// PRIVÉ `fiches` sous `<chapter_id>.pdf`, et son illustration
+// PRIVÉ `fiches` sous `<chapter_id>.pdf` ; son illustration
 // (`assets-sources/fiches/illustrations/…/<slug>.webp`, hors git) part en
-// 360 px dans le bucket PUBLIC `fiches-apercus` sous `<chapter_id>.webp`.
+// 360 px dans le bucket PUBLIC `fiches-apercus` sous `<chapter_id>.webp` ; et
+// LA PAGE FLOUTÉE — le PNG rendu, réduit à 640 px et flouté jusqu'à
+// l'illisible — sous `<chapter_id>-flou.webp`, dans le même bucket public :
+// c'est ce que l'élève voit tant qu'il n'a pas dépensé ses 30 gemmes. Le flou
+// se fait ICI, pas en CSS : une image floutée ne contient plus le texte.
 //
 // LA CLÉ SERVICE ne vit nulle part dans le dépôt ni sur Vercel : elle se passe
 // en variable d'environnement le temps du dépôt, depuis le dashboard Supabase
@@ -27,6 +31,9 @@ const ILLUSTRATIONS = path.join(RACINE, 'assets-sources', 'fiches', 'illustratio
 const BUCKET_FICHES = 'fiches'
 const BUCKET_APERCUS = 'fiches-apercus'
 const LARGEUR_APERCU = 360
+/** La page floutée : 640 px de large (le corps de texte fait ~4 px) et un flou de rayon 10 — rien ne se lit, tout se devine. */
+const LARGEUR_FLOU = 640
+const RAYON_FLOU = 10
 const PARALLELE = 4
 
 /** Une variable de `.env.local`, sans charger tout l'environnement de Next. */
@@ -66,6 +73,7 @@ async function deposerFiche({ niveau, matiere, index }) {
   const fait = []
   const manque = []
   const pdf = path.join(SORTIE, niveau, matiere, `${index.slug}.pdf`)
+  const page = path.join(SORTIE, niveau, matiere, `${index.slug}.png`)
   const illustration = path.join(ILLUSTRATIONS, niveau, matiere, `${index.slug}.webp`)
 
   if (avecPdf) {
@@ -80,6 +88,11 @@ async function deposerFiche({ niveau, matiere, index }) {
       await deposer(BUCKET_APERCUS, `${index.chapitre}.webp`, apercu, 'image/webp')
       fait.push('aperçu')
     } else manque.push(path.relative(RACINE, illustration))
+    if (fs.existsSync(page)) {
+      const flou = await sharp(page).resize({ width: LARGEUR_FLOU }).blur(RAYON_FLOU).webp({ quality: 60 }).toBuffer()
+      await deposer(BUCKET_APERCUS, `${index.chapitre}-flou.webp`, flou, 'image/webp')
+      fait.push('flou')
+    } else manque.push(path.relative(RACINE, page))
   }
   return { nom: `${niveau}/${matiere}/${index.slug}`, fait, manque }
 }

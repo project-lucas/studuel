@@ -201,13 +201,15 @@ describe('stepProgress', () => {
   it('suit le chemin réellement parcouru', () => {
     // Recalé sur le nouvel ordre : le jeu arrive tôt, le compte au milieu,
     // le confort ensuite. Une barre calée sur l'ancien ordre mentirait.
-    expect(stepProgress('grade')).toBeCloseTo(0.2)
-    expect(stepProgress('signup')).toBeCloseTo(0.55)
-    expect(stepProgress('dailyGoal')).toBeCloseTo(0.8)
+    expect(stepProgress('grade')).toBeCloseTo(0.25)
+    expect(stepProgress('avatar')).toBeCloseTo(0.5)
+    expect(stepProgress('dailyGoal')).toBeCloseTo(0.75)
+    expect(stepProgress('signup')).toBeCloseTo(0.92)
   })
 
-  it('masque la barre sur accueil, profil, motivation et plan', () => {
+  it('masque la barre sur accueil, tuto, profil, motivation et plan', () => {
     expect(stepProgress('intro')).toBeNull()
+    expect(stepProgress('tuto')).toBeNull()
     expect(stepProgress('profil')).toBeNull()
     expect(stepProgress('motivation')).toBeNull()
     expect(stepProgress('plan')).toBeNull()
@@ -324,30 +326,27 @@ function answers(over: Partial<OnboardingAnswers> = {}): OnboardingAnswers {
 }
 
 describe('chemin par défaut', () => {
-  it('ne met que trois écrans avant le premier jeu', () => {
+  it('ne met que trois écrans avant le premier choix de l’élève', () => {
     // GARDE-FOU produit : chaque écran ajouté ici se paie en abandons. Ce test
     // doit échouer si quelqu'un en rajoute un sans décision explicite.
     expect(screensBeforePlay()).toBe(3)
-    expect(STEPS_BEFORE_PLAY).toEqual(['intro', 'profil', 'grade'])
+    expect(STEPS_BEFORE_PLAY).toEqual(['intro', 'tuto', 'grade'])
   })
 
-  it('place le quiz de placement juste après la classe', () => {
-    const i = FAST_PATH.indexOf('placementQuiz')
-    const g = FAST_PATH.indexOf('grade')
-    expect(i - g).toBe(2) // grade → placementIntro → placementQuiz
-  })
-
-  it('demande le compte APRÈS le jeu, pas avant', () => {
-    expect(FAST_PATH.indexOf('signup')).toBeGreaterThan(
-      FAST_PATH.indexOf('placementQuiz'),
-    )
-  })
-
-  it('renvoie tout le confort après la création du compte', () => {
-    const signup = FAST_PATH.indexOf('signup')
-    for (const s of ['goal', 'dailyGoal', 'school', 'notifications'] as WelcomeStep[]) {
-      expect(FAST_PATH.indexOf(s)).toBeGreaterThan(signup)
+  it('ne pose AUCUNE question (13/10/2026) : la classe, l’avatar, le rythme, le compte, la bienvenue', () => {
+    // Lucas : « pas de question pendant l'onboarding, ça représente une
+    // friction ». Le quiz de placement, l'objectif, l'école, les notifications
+    // et le profil parent/élève ne sont plus sur le chemin.
+    expect(FAST_PATH).toEqual(['intro', 'tuto', 'grade', 'avatar', 'dailyGoal', 'signup', 'plan'])
+    for (const s of ['profil', 'placementIntro', 'placementQuiz', 'goal', 'school', 'notifications', 'source', 'subjects'] as WelcomeStep[]) {
+      expect(FAST_PATH).not.toContain(s)
     }
+  })
+
+  it('garde le choix de l’avatar et le rythme, et demande le compte après eux', () => {
+    const signup = FAST_PATH.indexOf('signup')
+    expect(FAST_PATH.indexOf('avatar')).toBeLessThan(signup)
+    expect(FAST_PATH.indexOf('dailyGoal')).toBeLessThan(signup)
   })
 
   it('n’a ni doublon ni écran inconnu', () => {
@@ -367,36 +366,26 @@ describe('chemin par défaut', () => {
     expect(FAST_PATH[FAST_PATH.length - 1]).toBe('plan')
   })
 
-  it('fait choisir le blason juste après le jeu et juste avant le compte', () => {
+  it('fait choisir le blason juste avant le rythme et le compte', () => {
     // Avant le compte, pas après : le choix doit partir dans le metadata
     // d'inscription — le chemin « confirme ton e-mail » n'a aucune session
-    // pour l'écrire plus tard. Et après le jeu : pas un péage de plus avant
-    // la démonstration.
-    const quiz = FAST_PATH.indexOf('placementQuiz')
-    expect(FAST_PATH[quiz + 1]).toBe('placementResult')
-    expect(FAST_PATH[quiz + 2]).toBe('avatar')
-    expect(FAST_PATH[quiz + 3]).toBe('signup')
+    // pour l'écrire plus tard.
+    const avatar = FAST_PATH.indexOf('avatar')
+    expect(FAST_PATH[avatar + 1]).toBe('dailyGoal')
+    expect(FAST_PATH[avatar + 2]).toBe('signup')
     expect(STEPS_BEFORE_PLAY).not.toContain('avatar')
-  })
-
-  it('montre le résultat du quiz avant toute autre chose', () => {
-    // Le quiz est le sommet émotionnel du parcours : on ne l'enchaîne pas
-    // muettement sur le choix d'un blason.
-    const quiz = FAST_PATH.indexOf('placementQuiz')
-    expect(FAST_PATH[quiz + 1]).toBe('placementResult')
-    expect(STEPS_BEFORE_PLAY).not.toContain('placementResult')
   })
 })
 
 describe('écran « Ton avatar »', () => {
-  it('bloque « Continuer » tant qu’aucun blason n’est choisi', () => {
+  it('bloque « C’est moi » tant qu’aucun blason n’est choisi', () => {
     expect(canAdvance('avatar', answers({ avatar: null }))).toBe(false)
     expect(canAdvance('avatar', answers({ avatar: '3' }))).toBe(true)
   })
 
   it('un parent ne le voit jamais', () => {
     const a = answers({ profileType: 'parent' })
-    expect(nextStep('profil', a)).toBe('parentIntro')
+    expect(nextStep('intro', a)).toBe('parentIntro')
     expect(PARENT_PATH).not.toContain('avatar')
   })
 })
@@ -404,19 +393,20 @@ describe('écran « Ton avatar »', () => {
 describe('nextStep', () => {
   it('suit le chemin pour un élève', () => {
     const a = answers({ profileType: 'eleve' })
-    expect(nextStep('intro', a)).toBe('profil')
-    expect(nextStep('profil', a)).toBe('grade')
-    expect(nextStep('grade', a)).toBe('placementIntro')
-    expect(nextStep('placementQuiz', a)).toBe('placementResult')
-    expect(nextStep('placementResult', a)).toBe('avatar')
-    expect(nextStep('avatar', a)).toBe('signup')
+    expect(nextStep('intro', a)).toBe('tuto')
+    expect(nextStep('tuto', a)).toBe('grade')
+    expect(nextStep('grade', a)).toBe('avatar')
+    expect(nextStep('avatar', a)).toBe('dailyGoal')
+    expect(nextStep('dailyGoal', a)).toBe('signup')
+    expect(nextStep('signup', a)).toBe('plan')
   })
 
   it('court-circuite tout l’élève pour un parent', () => {
     const a = answers({ profileType: 'parent' })
     // Le parent passe par SA présentation (ce qu'il va trouver, comment lier
-    // son enfant), puis va droit au compte.
-    expect(nextStep('profil', a)).toBe('parentIntro')
+    // son enfant), puis va droit au compte — par le lien de l'accueil, sans
+    // écran profil.
+    expect(nextStep('intro', a)).toBe('parentIntro')
     expect(nextStep('parentIntro', a)).toBe('signup')
     // Un parent n'a pas de plan élève : son parcours s'arrête au compte.
     expect(nextStep('signup', a)).toBeNull()
@@ -451,10 +441,8 @@ describe('stepProgress sur le nouvel ordre', () => {
     }
   })
 
-  it('a déjà bien avancé au moment du jeu', () => {
-    // La barre doit dire « on y est presque » quand le quiz arrive, sinon les
-    // trois premiers écrans paraissent être le début d'un long tunnel.
-    expect(stepProgress('placementQuiz')).toBeGreaterThanOrEqual(0.3)
+  it('est presque pleine au compte : il ne reste que la bienvenue', () => {
+    expect(stepProgress('signup')).toBeGreaterThanOrEqual(0.9)
   })
 })
 
@@ -523,22 +511,23 @@ describe('resumeStep — reprendre là où on s’était arrêté', () => {
     expect(resumeStep('signup', eleve)).toBe('signup')
   })
 
+  it('reprend aussi sur le rythme, qui précède le compte depuis le 13/10/2026', () => {
+    expect(resumeStep('dailyGoal', eleve)).toBe('dailyGoal')
+  })
+
   it('ne reprend JAMAIS après le compte', () => {
     // Après le compte l'élève est connecté : la page le renvoie dans l'app.
-    for (const s of ['goal', 'dailyGoal', 'school', 'notifications', 'plan'] as const) {
+    for (const s of ['goal', 'school', 'notifications', 'plan'] as const) {
       expect(resumeStep(s, eleve)).toBeNull()
     }
   })
 
-  it('repart de l’intro du quiz, jamais d’un quiz sans questions', () => {
-    expect(resumeStep('placementQuiz', eleve)).toBe('placementIntro')
-  })
-
-  it('ne montre pas un résultat qui n’existe pas', () => {
-    expect(resumeStep('placementResult', eleve)).toBe('placementIntro')
-    expect(
-      resumeStep('placementResult', { ...eleve, placement: makePlacement(3, 5) }),
-    ).toBe('placementResult')
+  it('ramène un vieux brouillon arrêté sur le quiz de placement à la classe', () => {
+    // Le quiz a quitté le chemin le 13/10/2026 : on ne reprend pas sur un écran
+    // qui n'y est plus.
+    expect(resumeStep('placementIntro', eleve)).toBe('grade')
+    expect(resumeStep('placementQuiz', eleve)).toBe('grade')
+    expect(resumeStep('placementResult', { ...eleve, placement: makePlacement(3, 5) })).toBe('grade')
   })
 
   it('recule jusqu’à la classe si elle manque', () => {
@@ -553,20 +542,9 @@ describe('resumeStep — reprendre là où on s’était arrêté', () => {
   })
 
   it('reconstruit l’historique du bouton retour', () => {
-    expect(pathTo('avatar', eleve)).toEqual([
-      'intro',
-      'profil',
-      'grade',
-      'placementIntro',
-      'placementQuiz',
-      'placementResult',
-    ])
+    expect(pathTo('avatar', eleve)).toEqual(['intro', 'tuto', 'grade'])
     expect(pathTo('intro', eleve)).toEqual([])
-    expect(pathTo('signup', answers({ profileType: 'parent' }))).toEqual([
-      'intro',
-      'profil',
-      'parentIntro',
-    ])
+    expect(pathTo('signup', answers({ profileType: 'parent' }))).toEqual(['intro', 'parentIntro'])
   })
 })
 

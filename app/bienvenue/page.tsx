@@ -3,6 +3,7 @@ import WelcomeFlow from '@/components/welcome/WelcomeFlow'
 import { getSubjectsCached } from '@/lib/catalog'
 import { getPortesOAuthCached } from '@/lib/supabase/portes-oauth'
 import { getCurrentUser } from '@/lib/supabase/user'
+import { isWelcomeStep } from '@/lib/welcome'
 
 export const metadata = { title: 'Bienvenue — Studuel' }
 export const dynamic = 'force-dynamic'
@@ -14,10 +15,13 @@ export const dynamic = 'force-dynamic'
 export default async function BienvenuePage({
   searchParams,
 }: {
-  searchParams: Promise<{ apercu?: string; finish?: string; erreur?: string }>
+  searchParams: Promise<{ apercu?: string; finish?: string; erreur?: string; etape?: string }>
 }) {
-  const { apercu, finish, erreur } = await searchParams
+  const { apercu, finish, erreur, etape } = await searchParams
   const preview = apercu === '1'
+  // ?etape=<écran> : ouvrir le parcours sur un écran donné — développement
+  // seulement (captures, maquettes). En production le paramètre est ignoré.
+  const etapeInitiale = process.env.NODE_ENV !== 'production' && isWelcomeStep(etape) ? etape : undefined
   const isFinish = finish === '1'
   // `startOAuth` redirige ici avec ?erreur=oauth quand le fournisseur ne
   // démarre pas. Ce paramètre n'était lu nulle part : l'élève retombait sur
@@ -59,6 +63,7 @@ export default async function BienvenuePage({
       portes={portes}
       finish={isFinish}
       oauthFailed={oauthFailed}
+      etapeInitiale={etapeInitiale}
     />
   )
 }

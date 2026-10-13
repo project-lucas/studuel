@@ -82,8 +82,9 @@ export const EMPTY_ANSWERS: OnboardingAnswers = {
 
 // Ordre des écrans (numérotation du design handoff en commentaire).
 export const WELCOME_STEPS = [
-  'intro', //           1. Bienvenue (splash + logo)
-  'profil', //          2. Parent ou élève
+  'intro', //           1. Bienvenue (l'académie plein écran)
+  'tuto', //            1bis. Le tuto : trois diapos illustrées (ajouté le 13/10/2026)
+  'profil', //          2. Parent ou élève (hors chemin depuis le 13/10/2026 : « Je suis parent » est un lien de l'accueil)
   'parentIntro', //     2bis. Ce que le parent va trouver (parcours parent — ajouté le 22/09/2026)
   'motivation', //      3. Motivation (le crayon te parle)
   'source', //          4. Comment tu nous as connu ?
@@ -117,21 +118,22 @@ export function isWelcomeStep(value: unknown): value is WelcomeStep {
 // le chemin réellement parcouru, sinon elle ment. Elle avance vite jusqu'au jeu
 // — c'est la promesse « on y est presque » qui fait franchir les trois écrans.
 const STEP_PROGRESS: Partial<Record<WelcomeStep, number>> = {
-  grade: 0.2,
+  // LE CHEMIN SANS QUESTION (13/10/2026) : classe, avatar, rythme, compte.
+  grade: 0.25,
+  avatar: 0.5,
+  dailyGoal: 0.75,
+  signup: 0.92,
+  // Le parcours PARENT n'a qu'un écran avant le compte : la barre y fait la
+  // moitié du chemin à l'intro, et rejoint le compte.
+  parentIntro: 0.5,
+  // Écrans hors chemin par défaut : gardés pour qu'un brouillon repris affiche
+  // toujours une barre cohérente.
   placementIntro: 0.3,
   placementQuiz: 0.4,
   placementResult: 0.44,
-  avatar: 0.48,
-  signup: 0.55,
   goal: 0.7,
-  dailyGoal: 0.8,
   school: 0.88,
   notifications: 0.94,
-  // Le parcours PARENT n'a que deux écrans après le profil : la barre y fait
-  // la moitié du chemin à l'intro, et rejoint le compte.
-  parentIntro: 0.3,
-  // Écrans hors chemin par défaut : gardés pour qu'un brouillon repris affiche
-  // toujours une barre cohérente.
   source: 0.6,
   subjects: 0.75,
   friends: 0.9,
@@ -161,49 +163,47 @@ export function stepProgress(step: WelcomeStep): number | null {
 // découlent déjà de la classe (defaultSelectedForGrade), l'objectif quotidien a
 // son défaut.
 
-/** Les écrans posés AVANT le premier jeu. Toute addition ici se paie en
- *  abandons : n'y mettre que ce sans quoi le jeu ne peut pas démarrer. */
+// LE CHEMIN SANS QUESTION (13/10/2026, Lucas : « pas de question pendant
+// l'onboarding, ça représente une friction ; on fait au plus simple, mais on
+// améliore le design, l'app doit montrer qu'elle promet de belles choses ; il
+// doit y avoir le choix de l'avatar et le rythme par jour ; un tuto de bien
+// meilleure qualité »). L'accueil est l'académie plein écran, le tuto trois
+// diapos illustrées ; puis UN choix administratif (la classe, sans lequel il
+// n'y a pas de programme), l'avatar, le rythme, le compte, et la bienvenue.
+// Le quiz de placement, l'objectif, l'école, les notifications et le profil
+// parent/élève ont quitté le chemin (les composants existent toujours ; le
+// parent entre par un lien de l'accueil).
+
+/** Les écrans posés AVANT le premier choix de l'élève (son avatar) : rien
+ *  d'autre que ce qui montre l'app et ce sans quoi il n'y a pas de programme. */
 export const STEPS_BEFORE_PLAY: readonly WelcomeStep[] = [
-  'intro', // le splash, un tap
-  'profil', // parent ou élève : la seule vraie bifurcation du produit
+  'intro', // l'académie, un tap
+  'tuto', // ce que l'app promet, en trois diapos (« Passer » possible)
   'grade', // sans la classe, impossible de servir le bon programme
 ]
 
 /** Le chemin par défaut, dans l'ordre. */
 export const FAST_PATH: readonly WelcomeStep[] = [
   ...STEPS_BEFORE_PLAY,
-  'placementIntro', // → le jeu
-  'placementQuiz', // ← LA démonstration
-  // LE RÉSULTAT, tout de suite après le jeu. Le quiz est le sommet émotionnel
-  // du parcours ; l'enchaîner sans un mot sur l'écran de l'avatar, c'est
-  // gâcher le moment où l'élève vient de prouver quelque chose. Un score, un
-  // niveau, une phrase — et la promesse que le plan en tient compte. Sauté
-  // avec le quiz : « Je débute, passer » ne montre pas un résultat vide.
-  'placementResult',
-  // Le blason de joueur, JUSTE AVANT le compte : l'élève vient de jouer, il se
-  // choisit un visage — et c'est ce visage qu'on lui demande d'enregistrer à
-  // l'écran suivant. Avant le compte et non après, pour que le choix parte
-  // dans le metadata d'inscription : le chemin « confirme ton e-mail » n'a
-  // aucune session pour l'écrire plus tard.
+  // Le blason de joueur, AVANT le compte : c'est ce visage qu'on lui demande
+  // d'enregistrer à l'écran suivant, et il part dans le metadata d'inscription
+  // (le chemin « confirme ton e-mail » n'a aucune session pour l'écrire après).
   'avatar',
+  'dailyGoal', // le rythme : un tap, et on avance
   'signup', // on demande le compte une fois la valeur montrée
-  'goal', // à partir d'ici : du confort, plus de l'acquisition
-  'dailyGoal',
-  'school', // ton établissement = ton clan (cf. lib/clan-week)
-  'notifications',
-  'plan',
+  'plan', // « Bienvenue à l'académie », la première mission
 ]
 
 /**
- * Le chemin du PARENT. Il n'a ni classe, ni quiz, ni plan : il va au compte —
+ * Le chemin du PARENT. Il n'a ni classe, ni avatar, ni plan : il va au compte —
  * mais pas sans savoir ce qu'il va y trouver. L'écran `parentIntro` dit les
  * trois choses que l'espace parents lui donnera et COMMENT on lie l'enfant
  * (le code de l'onglet Amis) : sans lui, le parent créait un compte pour
  * tomber sur « Aucun enfant lié » et un champ de code dont il ignorait tout.
+ * Il y entre par le lien « Je suis parent » de l'accueil (plus d'écran profil).
  */
 export const PARENT_PATH: readonly WelcomeStep[] = [
   'intro',
-  'profil',
   'parentIntro',
   'signup',
 ]
@@ -216,6 +216,14 @@ export const OFF_PATH: readonly WelcomeStep[] = [
   'source',
   'subjects',
   'friends',
+  // Sortis du chemin le 13/10/2026 (« pas de question pendant l'onboarding »).
+  'profil',
+  'placementIntro',
+  'placementQuiz',
+  'placementResult',
+  'goal',
+  'school',
+  'notifications',
 ]
 
 /**
@@ -266,14 +274,15 @@ export const STORAGE_STEP_KEY = 'studuel:onboarding:etape'
 /** Les écrans où un parcours peut REPRENDRE, et vers quel écran. */
 const RESUME_TARGET: Partial<Record<WelcomeStep, WelcomeStep>> = {
   grade: 'grade',
-  placementIntro: 'placementIntro',
-  // Les questions du quiz ne sont pas mémorisées : on repart de son intro,
-  // un tap plus tôt, plutôt que sur un quiz sans questions.
-  placementQuiz: 'placementIntro',
-  placementResult: 'placementResult',
   avatar: 'avatar',
+  dailyGoal: 'dailyGoal',
   signup: 'signup',
   parentIntro: 'parentIntro',
+  // Un brouillon d'avant le 13/10/2026 arrêté sur le quiz de placement
+  // reprend à la classe : le quiz n'est plus sur le chemin.
+  placementIntro: 'grade',
+  placementQuiz: 'grade',
+  placementResult: 'grade',
 }
 
 /**

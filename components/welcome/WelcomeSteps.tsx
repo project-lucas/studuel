@@ -19,6 +19,7 @@ import {
 import { schoolLevelForGrade, SCHOOL_LEVEL_LABEL } from '@/lib/clan'
 import { PORTRAIT_KEYS, portraitSrc, type PortraitKey } from '@/lib/portraits'
 import PencilLogo from './PencilLogo'
+import MarcelParle from './MarcelParle'
 import ChoixMatieres from './ChoixMatieres'
 import { titreAChoisir } from '@/lib/programme-classes'
 import ObjectifQuotidien from './ObjectifQuotidien'
@@ -408,10 +409,7 @@ export function GradeStep({
   const reassurance = gradeReassurance(subjects, answers.grade)
   return (
     <div className="flex flex-1 flex-col">
-      <StepHead
-        title="Tu es en quelle classe ?"
-        subtitle="Pour te proposer le bon programme."
-      />
+      <MarcelParle pose="classe" titre="Tu es en quelle classe ?" sous="Pour te donner ton programme. Un tap, et on avance." />
       {/* La réassurance, dès qu'une classe est cochée : « 8 matières · tout
           le programme de 4e ». Un choix administratif devient une promesse
           tenue — et elle se lit avant même d'appuyer sur Continuer. */}
@@ -430,7 +428,10 @@ export function GradeStep({
             blocs : il retrouve ses radios en profondeur, la navigation au
             clavier continue donc de traverser les cycles d'une traite. */}
         <OptionGroup label="Tu es en quelle classe" className="flex flex-col gap-5">
-          {GRADE_CYCLES.map((cycle) => (
+          {/* L'app va de la 6e à la Terminale (13/10/2026, Lucas) : le primaire
+              n'est plus proposé à l'inscription — treize cases dont cinq sans
+              programme faisaient chercher un 3e dans une grille de CE1. */}
+          {GRADE_CYCLES.filter((cycle) => cycle.id !== 'primaire').map((cycle) => (
             <div key={cycle.id} className="flex flex-col gap-[11px]">
               <h3 className="titre-section">
                 {cycle.label}
@@ -545,9 +546,10 @@ export function DailyGoalStep({
 }) {
   return (
     <div className="flex flex-1 flex-col">
-      <StepHead
-        title="Combien de temps par jour ?"
-        subtitle="10 minutes chaque jour valent mieux que 2 heures la veille du contrôle."
+      <MarcelParle
+        pose="flamme"
+        titre="Combien de temps par jour ?"
+        sous="Dix minutes chaque jour valent mieux que deux heures la veille du contrôle."
       />
       <ObjectifQuotidien choisi={answers.dailyGoalMinutes} onPick={onPick} />
     </div>
@@ -629,9 +631,10 @@ export function AvatarStep({
   const chosen = answers.avatar
   return (
     <div className="flex flex-1 flex-col">
-      <StepHead
-        title="Choisis ton avatar"
-        subtitle="C’est lui qui te représentera face à tes rivaux. Tu pourras le changer au vestiaire."
+      <MarcelParle
+        pose="cadre"
+        titre="Et toi, tu ressembles à quoi ?"
+        sous="C’est lui qui te représentera face à tes rivaux. Tu pourras le changer au vestiaire."
       />
 
       {/* Le blason retenu, en grand — la place qu'il aura sur la carte Moi. */}

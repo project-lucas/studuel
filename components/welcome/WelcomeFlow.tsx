@@ -26,8 +26,11 @@ import {
   fetchPlacementQuestions,
 } from '@/app/bienvenue/actions'
 import type { PlacementQuestion } from '@/lib/placement'
-import PencilLogo from './PencilLogo'
+import Image from 'next/image'
+import accueilImage from '@/public/images/onboarding/accueil.webp'
 import OnbButton from './OnbButton'
+import TutoStep from './TutoStep'
+import MarcelParle, { POSES } from './MarcelParle'
 import { ProgressHeader } from './OnbBits'
 import {
   AvatarStep,
@@ -53,19 +56,26 @@ import SignUpStep from './SignUpStep'
 import CodeCoach from './CodeCoach'
 import type { PortesOAuth } from '@/lib/auth-portes'
 
-// Écrans à bouton « Continuer » standard (footer géré par le flux). Les autres
-// portent leurs propres boutons.
+// Écrans à bouton standard en pied (footer géré par le flux). Les autres
+// portent leurs propres boutons — et depuis le 13/10/2026, la classe avance
+// AU TAP, sans bouton (rien n'y est préchoisi). Le rythme, lui, garde son
+// « Continuer » (Lucas : « il faudrait un bouton continuer en bas ») : un
+// rythme est déjà coché par défaut, un tap n'y est pas une réponse.
 const STANDARD_FOOTER: WelcomeStep[] = [
   'profil',
   'motivation',
   'source',
   'goal',
-  'grade',
   'school',
   'subjects',
   'dailyGoal',
   'avatar',
 ]
+
+/** Le libellé du bouton de pied quand ce n'est pas « Continuer ». */
+const FOOTER_LABEL: Partial<Record<WelcomeStep, string>> = {
+  avatar: 'C’est moi',
+}
 
 function lireLocal(cle: string): string | null {
   try {
@@ -90,6 +100,7 @@ export default function WelcomeFlow({
   portes,
   finish = false,
   oauthFailed = false,
+  etapeInitiale,
 }: {
   subjects: Subject[]
   /** Les fournisseurs OAuth réellement activés côté Supabase (écran 13). */
@@ -100,10 +111,12 @@ export default function WelcomeFlow({
    *  l'élève au début lui faisait retraverser douze écrans sans jamais lui dire
    *  ce qui s'était passé — et il retentait le même bouton. */
   oauthFailed?: boolean
+  /** L'écran d'ouverture forcé (développement seulement : captures, maquettes). */
+  etapeInitiale?: WelcomeStep
 }) {
   const router = useRouter()
   const [step, setStep] = useState<WelcomeStep>(
-    finish ? 'plan' : oauthFailed ? 'signup' : 'intro',
+    finish ? 'plan' : oauthFailed ? 'signup' : (etapeInitiale ?? 'intro'),
   )
   const [history, setHistory] = useState<WelcomeStep[]>([])
   // On démarre vide pour que le rendu serveur et le premier rendu client soient
@@ -264,7 +277,7 @@ export default function WelcomeFlow({
   if (finish && !draftLoaded) {
     return (
       <div className="onb fixed inset-0 z-50 flex flex-col items-center justify-center pb-[env(safe-area-inset-bottom)]">
-        <PencilLogo size={120} className="float-slow" />
+        <Image src={POSES.salut} alt="" aria-hidden="true" priority sizes="200px" className="float-slow h-[220px] w-auto" />
       </div>
     )
   }
@@ -306,7 +319,7 @@ export default function WelcomeFlow({
             <footer className="px-[22px] pt-3 pb-[22px]">
               <div className="mx-auto w-full max-w-md">
                 <OnbButton disabled={!canAdvance(step, answers)} onClick={next}>
-                  Continuer
+                  {FOOTER_LABEL[step] ?? 'Continuer'}
                 </OnbButton>
               </div>
             </footer>
@@ -321,7 +334,15 @@ export default function WelcomeFlow({
       case 'intro':
         return (
           <IntroStep
-            onStart={next}
+            onStart={() => {
+              // Sans écran profil (13/10/2026), l'élève est le défaut.
+              setAnswers((a) => ({ ...a, profileType: a.profileType ?? 'eleve' }))
+              go(nextStep('intro', { ...answers, profileType: answers.profileType ?? 'eleve' }) ?? 'tuto')
+            }}
+            onParent={() => {
+              setAnswers((a) => ({ ...a, profileType: 'parent' }))
+              go('parentIntro')
+            }}
             coachGroupe={answers.coachGroupe}
             onCode={(code, libelle) =>
               // Un code de coach, c'est un élève : on le présuppose, l'écran
@@ -356,18 +377,23 @@ export default function WelcomeFlow({
             onPick={(v) => setAnswers((a) => ({ ...a, goal: v }))}
           />
         )
+      case 'tuto':
+        return <TutoStep onDone={next} />
       case 'grade':
         return (
           <GradeStep
             answers={answers}
             subjects={subjects}
-            onPick={(grade) =>
+            onPick={(grade) => {
               setAnswers((a) => ({
                 ...a,
                 grade,
                 subjects: defaultSelectedForGrade(subjects, grade),
               }))
-            }
+              // Un tap, et on avance (13/10/2026) : la suite ne dépend pas de
+              // la classe choisie, seulement du profil — déjà connu.
+              go(nextStep('grade', answers) ?? 'avatar')
+            }}
           />
         )
       case 'school':
@@ -398,9 +424,7 @@ export default function WelcomeFlow({
         return (
           <DailyGoalStep
             answers={answers}
-            onPick={(minutes) =>
-              setAnswers((a) => ({ ...a, dailyGoalMinutes: minutes }))
-            }
+            onPick={(minutes) => setAnswers((a) => ({ ...a, dailyGoalMinutes: minutes }))}
           />
         )
       case 'placementIntro':
@@ -485,39 +509,80 @@ export default function WelcomeFlow({
 // de WelcomeFlow) pour garder une identité de composant STABLE : sinon chaque
 // rendu du parent recréait la fonction, React remontait l'écran entier et
 // l'animation du logo repartait de zéro (flicker sur l'écran le plus critique J1).
+// L'ACCUEIL (13/10/2026, Lucas : « la première page avant le logo numérisé ne
+// va pas » ; « l'app doit montrer qu'elle promet de belles choses »). Plus de
+// logo plat sur le mur crème : l'ACADÉMIE plein écran — la cour d'honneur au
+// soir, les crayons croisés dorés au-dessus du portail, peinte dans le monde de
+// l'arène (scripts/onboarding-illustrations.mjs) —, le nom en Baloo cerné, la
+// promesse en Caveat, et les trois portes en bas sur un voile d'encre : jouer,
+// se connecter, et (en petit) le parent et le code de coach.
 function IntroStep({
   onStart,
+  onParent,
   coachGroupe,
   onCode,
   onRetrait,
 }: {
   onStart: () => void
+  /** « Je suis parent » : son chemin à lui (présentation, puis le compte). */
+  onParent: () => void
   coachGroupe: string | null
   onCode: (code: string, libelle: string) => void
   onRetrait: () => void
 }) {
   return (
     <div className="flex flex-1 flex-col">
-      <div className="flex flex-1 flex-col items-center justify-center text-center">
-        <PencilLogo size={150} className="float-slow" />
-        <div className="onb-word mt-1.5 text-[34px]" style={{ color: 'var(--onb-ink)' }}>
-          studuel
-        </div>
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
+        <Image
+          src={accueilImage}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[50%_40%]"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(180deg, rgba(43,35,80,0) 38%, rgba(43,35,80,0.55) 62%, rgba(43,35,80,0.9) 100%)',
+          }}
+        />
+      </div>
+      <div className="flex flex-col items-center pt-8 text-center">
         <p
-          className="mt-2.5 max-w-[210px] text-[16px] font-bold"
-          style={{ color: 'var(--onb-mut)' }}
+          className="onb-word text-[34px] leading-none text-white"
+          style={{ textShadow: '0 3px 0 rgba(43,35,80,0.55), 0 8px 22px rgba(43,35,80,0.35)' }}
         >
-          Révise, défie tes potes, et cartonne ton année.
+          Studuel
         </p>
       </div>
-      <div className="mt-auto flex flex-col gap-2.5 pt-4">
-        {/* « J'ai un code » (13/10/2026) : le joueur d'un centre de formation
-            saisit le code de son coach ici, puis continue comme tout le monde. */}
-        <CodeCoach groupe={coachGroupe} onCode={onCode} onRetrait={onRetrait} />
+      {/* MARCEL ACCUEILLE, comme Duo (13/10/2026) : c'est lui qui parle, devant l'académie. */}
+      <div className="flex flex-1 flex-col justify-end pb-3">
+        <MarcelParle
+          grand
+          clair
+          pose="salut"
+          titre="Salut, moi c’est Marcel !"
+          sous="Ton coach. Je vais faire de toi la terreur des contrôles."
+        />
+      </div>
+      <div className="mt-auto flex flex-col gap-2.5 pt-2">
         <OnbButton onClick={onStart}>C&apos;est parti</OnbButton>
-        <OnbButton variant="ghost" asChild>
+        <OnbButton variant="ghost" asChild className="border-white/80 bg-white/95">
           <Link href="/login">J&apos;ai déjà un compte</Link>
         </OnbButton>
+        <div className="flex items-center justify-center gap-4 text-[13px] font-extrabold text-white/85">
+          <button type="button" onClick={onParent} className="min-h-11 underline underline-offset-4">
+            Je suis parent
+          </button>
+          <span aria-hidden="true">·</span>
+          {/* « J'ai un code » (13/10/2026) : le joueur d'un centre de formation
+              saisit le code de son coach ici, puis continue comme tout le monde. */}
+          <div className="[&_button]:text-white/85 [&_button]:underline-offset-4">
+            <CodeCoach groupe={coachGroupe} onCode={onCode} onRetrait={onRetrait} />
+          </div>
+        </div>
       </div>
     </div>
   )

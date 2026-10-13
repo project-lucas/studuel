@@ -7,7 +7,8 @@ import type { OnboardingAnswers } from '@/lib/welcome'
 import { auMoinsUnePorteOAuth, type PortesOAuth } from '@/lib/auth-portes'
 import { signUpWelcome } from '@/app/bienvenue/actions'
 import BoutonsOAuth from '@/components/auth/BoutonsOAuth'
-import PencilLogo from './PencilLogo'
+import Image from 'next/image'
+import { POSES } from './MarcelParle'
 import OnbButton from './OnbButton'
 
 // Écran 13 — Créer un compte. Jusqu'à trois portes : Apple, Google (OAuth
@@ -59,7 +60,9 @@ export default function SignUpStep({
 
   return (
     <div className="flex flex-1 flex-col pt-2 text-center">
-      <PencilLogo size={78} className="mx-auto" />
+      {/* Marcel garde la progression au chaud (13/10/2026) : le logo crayons,
+          « pas propre » (Lucas), est parti. */}
+      <Image src={POSES.cle} alt="" aria-hidden="true" priority sizes="120px" className="mx-auto h-[120px] w-auto" />
       <h1 className="onb-title mt-1 text-[23px] leading-[1.18]">
         {parent ? 'Créez votre espace parent' : 'Sauvegarde ta progression'}
       </h1>

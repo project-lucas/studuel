@@ -1,11 +1,11 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
+import bienvenueImage from '@/public/images/onboarding/bienvenue.webp'
 import { cn } from '@/lib/utils'
 import {
-  GOAL_HEADLINE,
   GRADE_LABELS,
-  PLACEMENT_LEVEL_LABEL,
   placementFeedback,
   premiereMission,
   type OnboardingAnswers,
@@ -14,6 +14,7 @@ import type { PlacementQuestion } from '@/lib/placement'
 import { portraitSrc } from '@/lib/portraits'
 import { souscrirePush } from '@/lib/push-client'
 import ConfettiRain from '@/components/ConfettiRain'
+import MarcelParle from './MarcelParle'
 import OnbButton from './OnbButton'
 import {
   IllustrationCircle,
@@ -448,39 +449,13 @@ export function NotificationsStep({
 }
 
 // ---------------------------------------------------------------------------
-// Écran 14 — Plan personnalisé (récap final)
+// Écran 14 — « Bienvenue à l'académie » (la fin du parcours)
 //
-// UNE CARTE DE JOUEUR, PAS UN RÉCAPITULATIF. L'écran alignait trois lignes
-// (classe, objectif quotidien, « duels 1v1 activés ») sous un titre : le
-// même écran pour tout le monde, à trois mots près. Il montre désormais ce
-// que l'élève vient de construire — son blason, sa classe, son niveau de
-// placement, son clan — et lui donne UNE première mission, celle qui
-// découle de son objectif, là où le bouton l'emmène (cf. premiereMission).
+// Il a été une carte de joueur à trois lignes (classe, objectif, duels), puis
+// un récapitulatif du plan ; depuis le 13/10/2026 c'est le pendant de
+// l'accueil : l'académie plein écran, le joueur qu'on vient de créer, et UNE
+// première mission, celle qui découle de l'objectif (cf. premiereMission).
 // ---------------------------------------------------------------------------
-function PlanLine({
-  label,
-  value,
-  accent,
-}: {
-  label: string
-  value: string
-  accent?: boolean
-}) {
-  return (
-    <li className="flex items-baseline justify-between gap-3 py-[9px]">
-      <span className="text-[13px] font-bold" style={{ color: 'var(--onb-mut)' }}>
-        {label}
-      </span>
-      <span
-        className="text-right text-[14.5px] font-extrabold"
-        style={{ color: accent ? 'var(--onb-pp)' : 'var(--onb-ink)' }}
-      >
-        {value}
-      </span>
-    </li>
-  )
-}
-
 export function PlanStep({
   answers,
   subjectCount,
@@ -492,91 +467,59 @@ export function PlanStep({
   onFinish: () => void
   finishing: boolean
 }) {
-  const headline = answers.goal
-    ? GOAL_HEADLINE[answers.goal]
-    : 'Ton plan est prêt 🚀'
+  // « BIENVENUE À L'ACADÉMIE » (13/10/2026) : le dernier écran est le pendant
+  // de l'accueil — la crête dorée au-dessus des toits, plein écran — avec le
+  // joueur qu'on vient de créer et sa première mission. Les lignes du plan
+  // (objectif, rappels, clan, duels) sont parties avec les questions qui les
+  // nourrissaient : il reste ce que l'élève a choisi, et ce qu'il va faire.
   const gradeLabel = answers.grade
     ? (GRADE_LABELS[answers.grade] ?? answers.grade)
     : '—'
   const mission = premiereMission(answers)
-  const placement = answers.placement?.total
-    ? PLACEMENT_LEVEL_LABEL[answers.placement.level]
-    : null
-  const clan = answers.schoolName
-    ? answers.schoolCity
-      ? `${answers.schoolName} · ${answers.schoolCity}`
-      : answers.schoolName
-    : null
 
   return (
-    <div className="relative flex flex-1 flex-col pt-3">
-      <ConfettiRain />
-      <div className="relative flex-1">
-        <span
-          className="inline-block rounded-[20px] px-[9px] py-[3px] text-[11px] font-extrabold tracking-[0.1em] uppercase"
-          style={{ color: 'var(--onb-pp)', background: 'var(--onb-pps)' }}
-        >
-          Ton plan est prêt
-        </span>
-        <div className="mt-2">
-          <StepHead title={headline} />
-        </div>
-
-        {/* La carte : le blason en médaillon, la classe, et les lignes du plan. */}
+    // Pas de `relative` ici : le fond `absolute inset-0` se cale sur l'écran
+    // entier (le conteneur fixe du flux), pas sur la colonne à marges.
+    <div className="flex flex-1 flex-col">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
+        <Image src={bienvenueImage} alt="" fill priority sizes="100vw" className="object-cover object-[50%_30%]" />
         <div
-          className="mt-4 overflow-hidden rounded-[22px] border-2 bg-white"
-          style={{ borderColor: 'var(--onb-line)', boxShadow: '0 4px 0 var(--onb-line-d)' }}
-        >
-          <div
-            className="flex items-center gap-4 px-4 py-3.5"
-            style={{ background: 'var(--onb-pps)' }}
-          >
-            {answers.avatar ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={portraitSrc(answers.avatar)}
-                alt=""
-                width={384}
-                height={384}
-                className="size-[68px] shrink-0 object-contain drop-shadow-[0_6px_10px_rgba(60,30,120,0.25)]"
-              />
-            ) : (
-              <span
-                aria-hidden="true"
-                className="flex size-[68px] shrink-0 items-center justify-center rounded-2xl bg-white text-[28px] font-extrabold"
-                style={{ color: 'var(--onb-pp)' }}
-              >
-                {gradeLabel.slice(0, 2)}
-              </span>
-            )}
-            <div className="min-w-0">
-              <p className="surtitre" style={{ color: 'var(--onb-pp)' }}>
-                Joueur · {gradeLabel}
-              </p>
-              <p className="mt-0.5 text-[15px] leading-tight font-extrabold">
-                {subjectCount} matière{subjectCount > 1 ? 's' : ''} au programme
-              </p>
-              {placement ? (
-                <p className="mt-0.5 text-[13px] font-bold" style={{ color: 'var(--onb-mut)' }}>
-                  Niveau de départ : {placement}
-                </p>
-              ) : null}
-            </div>
-          </div>
-          <ul className="divide-y px-4" style={{ borderColor: 'var(--onb-line)' }}>
-            <PlanLine label="Objectif quotidien" value={`${answers.dailyGoalMinutes} min / jour`} accent />
-            {clan ? <PlanLine label="Ton clan" value={clan} /> : null}
-            <PlanLine
-              label="Rappels"
-              value={answers.notificationsEnabled ? 'Activés' : 'Désactivés'}
-            />
-            <PlanLine label="Duels" value="1 v 1, sur ton programme" />
-          </ul>
-        </div>
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(180deg, rgba(43,35,80,0) 30%, rgba(43,35,80,0.6) 55%, rgba(43,35,80,0.92) 100%)',
+          }}
+        />
+      </div>
+      <ConfettiRain />
+      {/* Marcel fête l'arrivée, devant l'académie (13/10/2026). */}
+      <div className="relative flex flex-1 flex-col justify-center pt-8">
+        <MarcelParle grand clair pose="fete" titre="Bienvenue à l’académie !" sous="Ta première mission t’attend." />
+      </div>
 
+      <div className="relative mt-auto pt-5">
+        {/* Le joueur : son blason, sa classe, son rythme — ce qu'il vient de choisir. */}
+        <div className="mb-3 flex items-center gap-3 rounded-[18px] bg-white/95 px-3.5 py-2.5">
+          {answers.avatar ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={portraitSrc(answers.avatar)}
+              alt=""
+              width={384}
+              height={384}
+              className="size-12 shrink-0 rounded-full object-cover ring-2 ring-[var(--onb-yl)]"
+            />
+          ) : null}
+          <div className="min-w-0">
+            <p className="text-[15px] leading-tight font-extrabold">Ton joueur est prêt</p>
+            <p className="text-[12.5px] font-bold" style={{ color: 'var(--onb-mut)' }}>
+              {gradeLabel} · {subjectCount} matière{subjectCount > 1 ? 's' : ''} · {answers.dailyGoalMinutes} min par jour
+            </p>
+          </div>
+        </div>
         {/* La première mission : un geste, pas une promesse. */}
         <div
-          className="mt-4 rounded-[18px] border-2 p-4"
+          className="rounded-[18px] border-2 p-4"
           style={{ borderColor: 'var(--onb-yl)', background: '#FFF7E0' }}
         >
           <p className="surtitre" style={{ color: '#a06d00' }}>
@@ -587,11 +530,11 @@ export function PlanStep({
             {mission.detail}
           </p>
         </div>
-      </div>
-      <div className="relative mt-auto pt-4">
-        <OnbButton disabled={finishing} onClick={onFinish}>
-          {finishing ? 'Un instant…' : 'C’est parti'}
-        </OnbButton>
+        <div className="pt-3">
+          <OnbButton disabled={finishing} onClick={onFinish}>
+            {finishing ? 'Un instant…' : 'C’est parti'}
+          </OnbButton>
+        </div>
       </div>
     </div>
   )

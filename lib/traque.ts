@@ -532,16 +532,33 @@ export function traqueCard(
 }
 
 /**
- * L'ordre de la feuille : ce qui se joue MAINTENANT d'abord (boss sortis), puis
- * les jauges les plus avancées, puis les boss en chasse du jour. Un élève doit
- * voir en haut de l'écran ce qu'il peut faire tout de suite.
+ * L'ordre de la feuille : ce qui se joue MAINTENANT d'abord (boss sortis, le
+ * plus pressé en tête), puis les jauges les plus avancées, puis les boss en
+ * chasse du jour. Un élève doit voir en haut de l'écran ce qu'il peut faire
+ * tout de suite — Lucas, 13/10/2026 : « le premier bloc affichera le boss dont
+ * l'élève est le plus proche de défier, en pourcentage, pour éviter le
+ * scrolling ».
+ *
+ * `nowMs` : la feuille vit après son rendu serveur ; un gardien dont la fenêtre
+ * s'est refermée sous les yeux de l'élève n'est plus « ce qui se joue
+ * maintenant » et redescend à sa jauge.
  */
-export function sortCards(cards: readonly TraqueCard[]): TraqueCard[] {
-  const weight = (c: TraqueCard) => (c.status === 'debusque' ? 0 : 1)
+export function sortCards(cards: readonly TraqueCard[], nowMs?: number): TraqueCard[] {
+  const libre = (c: TraqueCard) =>
+    c.status === 'debusque' && (nowMs === undefined || c.endsAt === null || c.endsAt > nowMs)
+  const weight = (c: TraqueCard) => (libre(c) ? 0 : 1)
+  // Un gardien RECOUCHÉ (fenêtre passée) affiche encore 100 %, mais sa jauge
+  // « repart de la moitié » : c'est à cette moitié qu'il se range, pas devant
+  // une jauge à 52 % qui, elle, est vraiment proche de sortir.
+  const ratio = (c: TraqueCard) =>
+    c.status === 'expire' || (c.status === 'debusque' && !libre(c))
+      ? Math.min(c.ratio, TRAQUE_APRES_DEFAITE / TRAQUE_SEUIL)
+      : c.ratio
   return [...cards].sort(
     (a, b) =>
       weight(a) - weight(b) ||
-      b.ratio - a.ratio ||
+      (libre(a) && libre(b) ? a.remainingMs - b.remainingMs : 0) ||
+      ratio(b) - ratio(a) ||
       Number(b.enChasse) - Number(a.enChasse) ||
       a.boss.name.localeCompare(b.boss.name, 'fr'),
   )

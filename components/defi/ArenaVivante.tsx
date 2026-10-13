@@ -27,9 +27,10 @@ import styles from './ArenaVivante.module.css'
  * est animée, l'`animation` qui joue ses images-clés — injectées une fois par
  * scène dans une balise `<style>`.
  *
- * Aucun état, aucun effet. Le composant sert aussi bien dans `ArenaBackdrop`
- * (le fond de l'arène) que dans le rideau de recherche d'adversaire, où
- * `anime={false}` ne garde que l'illustration, sans feuille.
+ * Aucun état, aucun effet. Le composant sert dans `ArenaBackdrop` (le fond de
+ * l'arène, et le rideau de recherche d'adversaire qui le remonte — vivant lui
+ * aussi depuis le 13/10/2026) ; `anime={false}` ne garde que l'illustration,
+ * sans feuille, pour qui n'aurait besoin que du décor posé.
  */
 export default function ArenaVivante({
   scene,

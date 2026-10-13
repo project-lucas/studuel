@@ -142,10 +142,15 @@ export default function MatchmakingOverlay({
         aria-hidden="true"
         className="defi-arena-bg absolute inset-0 overflow-hidden"
       >
-        {/* `anime={false}` : l'illustration seule. Le ciel et les
-            particules tournent déjà sous la page, les redoubler pendant le
-            chargement du duel coûterait des images par seconde pour rien. */}
-        <ArenaBackdrop anime={false} />
+        {/* La scène VIVANTE, nuages et fontaine compris (13/10/2026, Lucas :
+            « lorsque l'on cherche un adversaire, l'animation de fond
+            continue »). Jusque-là le rideau ne gardait que l'illustration
+            figée, pour épargner des images par seconde pendant le chargement
+            de la route du duel — mais la cour qui se fige d'un coup se lisait
+            comme un écran qui plante. La scène de la page continue de tourner
+            dessous, cachée : ~3-4 points de fil principal de plus, le temps
+            de la recherche. */}
+        <ArenaBackdrop />
       </div>
 
       {/* Voile de LECTURE, pas de masquage : sombre en haut et en bas, où se

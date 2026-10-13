@@ -117,12 +117,12 @@ export default function ArenaBackdrop({ anime = true }: { anime?: boolean } = {}
           horaire est déjà peint par les couches .arena-img ci-dessus. Les
           feuilles qui tombaient et les deux braises dorées ont été retirées le
           23/09/2026 (Lucas). */}
-      {/* Les couches VIVANTES sont facultatives. Le rideau de recherche
-          d'adversaire remonte ce décor par-dessus le HUD pour le masquer
-          (cf. MatchmakingOverlay) : il n'a besoin que de l'illustration. Faire
-          tourner un SECOND ciel et une SECONDE poussière coûterait des
-          images par seconde exactement au moment où l'app charge la route du
-          duel — c'est-à-dire au pire moment possible. */}
+      {/* Les couches VIVANTES sont facultatives (`anime`). Le rideau de
+          recherche d'adversaire remonte ce décor par-dessus le HUD pour le
+          masquer (cf. MatchmakingOverlay) ; depuis le 13/10/2026 il le garde
+          VIVANT lui aussi (Lucas : la cour figée pendant la recherche se
+          lisait comme un plantage), au prix d'un second ciel le temps que la
+          route du duel charge. */}
       {anime ? (
         <>
           <ArenaSky period={period} vivant={sceneVivanteDe(period) !== undefined} />

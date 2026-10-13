@@ -307,6 +307,32 @@ describe('tri et mise en avant', () => {
     expect(sorted[1].points).toBe(90)
   })
 
+  it('la jauge la plus pleine passe avant le boss en chasse du jour', () => {
+    // Lucas, 13/10/2026 : « le plus proche de défier, en pourcentage » — le
+    // ×2 du jour ne fait que départager deux jauges égales.
+    const sorted = sortCards([
+      { ...make(DELTA, 20), enChasse: true },
+      make(GRAMMATORK, 52),
+    ])
+    expect(sorted.map((c) => c.points)).toEqual([52, 20])
+  })
+
+  it('entre deux boss sortis, le plus pressé d’abord ; recouché depuis, il redescend', () => {
+    const presse = make(DELTA, TRAQUE_SEUIL, '2026-07-27T17:10:00.000Z') // 10 min
+    const tranquille = make(GRAMMATORK, TRAQUE_SEUIL, '2026-07-27T17:50:00.000Z') // 50 min
+    expect(sortCards([tranquille, presse]).map((c) => c.boss.id)).toEqual([
+      'delta',
+      'grammatork',
+    ])
+    // Vingt minutes plus tard, la fenêtre de Delta est passée : la carte
+    // rendue par le serveur dit encore « sorti », l'heure du client dit non.
+    const plusTard = T0 + 20 * 60_000
+    expect(
+      sortCards([presse, make(DELTA, 40), tranquille], plusTard).map((c) => c.boss.id),
+    ).toEqual(['grammatork', 'delta', 'delta'])
+    expect(sortCards([presse, make(DELTA, 40)], plusTard)[0].points).toBe(TRAQUE_SEUIL)
+  })
+
   it('compte les boss sortis pour la pastille de la tuile', () => {
     expect(
       readyCount([

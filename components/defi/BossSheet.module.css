@@ -1,0 +1,149 @@
+/* LA TRAQUE EN TANIÈRES (13/10/2026, maquette « B · Les tanières » choisie par
+   Lucas parmi quatre, assets-sources/maquettes/traque.html : « le fond violet
+   c'est froid… il faut que ça donne envie de les affronter » ; puis « je veux
+   le titre du boss et rien d'autre, la bannière doit être épurée »).
+
+   Chaque gardien est SA SCÈNE — la bannière 16:9 qui sert déjà le mode Boss de
+   l'arène et le billet de la porte Jeux — et n'y porte que SON NOM, cerné. Tout
+   le reste vit dans la bande blanche dessous : l'état en légende, la jauge
+   d'or, le bouton et le gain. Le gardien qui RÔDE n'est qu'une ombre : sa
+   scène s'assombrit (un filtre POSÉ, jamais animé) ; celui du jour (XP ×2)
+   reste en pleine lumière, c'est lui qu'on vient chercher ; le débusqué se
+   cercle d'or. */
+
+.taniere {
+  --contour: color-mix(in oklch, var(--foreground), black 50%);
+  --prune: color-mix(in oklch, var(--primary), black 70%);
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--carte-rayon);
+  background: var(--card);
+  box-shadow: var(--carte-ombre);
+}
+.taniere[data-libre] {
+  box-shadow:
+    var(--carte-ombre),
+    0 0 0 3px var(--highlight);
+}
+
+/* ─────────────────────────────── la scène : le nom, rien d'autre */
+
+.scene {
+  position: relative;
+  height: 8rem;
+  background: var(--prune);
+}
+/* Un voile de LECTURE léger, à gauche seulement, là où s'écrit le nom. */
+.scene::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    color-mix(in oklch, var(--prune), transparent 25%) 0%,
+    color-mix(in oklch, var(--prune), transparent 70%) 40%,
+    transparent 60%
+  );
+}
+.taniere[data-ombre] .scene img {
+  filter: brightness(0.75) saturate(0.6);
+}
+
+.nom {
+  position: absolute;
+  top: 0.875rem;
+  left: 0.875rem;
+  z-index: 1;
+  max-width: 60%;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: white;
+  -webkit-text-stroke: 0.15em var(--contour);
+  paint-order: stroke fill;
+  text-shadow: 0 0.08em 0 var(--contour);
+}
+
+/* ─────────────────────────────── la bande blanche */
+
+.bas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.625rem 0.75rem 0.75rem;
+}
+
+/* La légende de la jauge : l'état à gauche (« 12 cartes de plus », « Il
+   disparaît dans 42 min »), le pourcentage à droite. */
+.legende {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  color: var(--muted-foreground);
+}
+.etat {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.3rem;
+}
+.etat[data-or] {
+  color: color-mix(in oklch, var(--highlight), black 28%);
+}
+.pct {
+  flex: none;
+  color: var(--foreground);
+}
+
+/* La jauge : une piste lavande, l'or qui la remplit. */
+.piste {
+  height: 0.625rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--secondary);
+  box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--primary), transparent 80%);
+}
+.remplissage {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    var(--highlight),
+    color-mix(in oklch, var(--highlight), var(--destructive) 35%)
+  );
+  transition: width 0.7s ease-out;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.125rem;
+}
+/* Le gain : l'XP en jeu, DORÉ le jour de chasse (XP ×2). */
+.xp {
+  display: inline-flex;
+  height: 2.75rem;
+  flex: none;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0 0.75rem;
+  border-radius: 999px;
+  background: var(--secondary);
+  color: var(--foreground);
+  font-size: 0.9rem;
+}
+.xp[data-or] {
+  background: var(--highlight);
+  box-shadow: 0 2px 0 color-mix(in oklch, var(--highlight), black 30%);
+}
+.note {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--muted-foreground);
+}

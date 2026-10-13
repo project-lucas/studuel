@@ -617,6 +617,9 @@ export default async function OngletDefi() {
             timer: traqueTimer,
             sheetTitle: 'La Traque',
             sheetContent: <BossSheet cards={traqueBoard} />,
+            // Un grand pop-up crème, pas la feuille violette (13/10/2026,
+            // Lucas : « le fond violet c'est froid… plus un pop-up mais grand »).
+            sheetFormat: 'popup' as const,
           } satisfies RailTile,
         ]
       : []),

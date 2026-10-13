@@ -10,7 +10,7 @@ import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
 import { menuAlertCount } from '@/lib/arene-hud'
 import { useDialogFocus } from '@/lib/use-dialog'
-import SheetShell from './SheetShell'
+import SheetShell, { type SheetFormat } from './SheetShell'
 import { NotificationBadge } from './SculptedPlate'
 import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 
@@ -48,6 +48,8 @@ export interface OrbItem {
   sheetTitle?: string
   /** Contenu de la feuille ouverte au tap. */
   sheetContent?: ReactNode
+  /** Feuille ancrée en bas (défaut) ou grand pop-up centré, clair (la Traque). */
+  sheetFormat?: SheetFormat
 }
 
 /**
@@ -82,6 +84,8 @@ export interface RailTile {
   href?: string
   sheetTitle?: string
   sheetContent?: ReactNode
+  /** Feuille ancrée en bas (défaut) ou grand pop-up centré, clair (la Traque). */
+  sheetFormat?: SheetFormat
 }
 
 interface ArenaHudProps {
@@ -364,6 +368,7 @@ export default function ArenaHud({
                   label={open.sheetTitle ?? open.label}
                   reduce={reduce}
                   onClose={() => setOpenId(null)}
+                  format={open.sheetFormat}
                   header={
                     <>
                       {open.image ? (
@@ -377,13 +382,25 @@ export default function ArenaHud({
                         />
                       ) : (
                         <span
-                          className="grid size-9 shrink-0 place-items-center rounded-xl border border-white/12 bg-white/8 leading-none"
+                          className={cn(
+                            'grid size-9 shrink-0 place-items-center rounded-xl border leading-none',
+                            open.sheetFormat === 'popup'
+                              ? 'border-primary/15 bg-secondary'
+                              : 'border-white/12 bg-white/8',
+                          )}
                           aria-hidden
                         >
                           {open.icon}
                         </span>
                       )}
-                      <h2 className="font-heading min-w-0 flex-1 truncate text-lg font-extrabold text-white">
+                      {/* L'encre suit la robe : blanche sur la feuille violette,
+                          marine sur le pop-up crème. */}
+                      <h2
+                        className={cn(
+                          'font-heading min-w-0 flex-1 truncate text-lg font-extrabold',
+                          open.sheetFormat === 'popup' ? 'text-foreground' : 'text-white',
+                        )}
+                      >
                         {open.sheetTitle ?? open.label}
                       </h2>
                     </>

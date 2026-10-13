@@ -1,0 +1,117 @@
+{
+  "titre": "L’épreuve anticipée",
+  "titreSurligne": "anticipée",
+  "accroche": "2 heures, 20 points, deux parties.",
+  "epreuve": "bac-1re",
+  "bonus": "2 h · 20 points · automatismes **6 pts** sans calculatrice · exercices **14 pts** · toujours vérifier la vraisemblance",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/l-epreuve-anticipee-de-mathematiques-la-methode.webp",
+    "prompt": "a glossy violet exam sheet with a golden clock and a golden pencil, a tiny cartoon checkmark seal, sparkles"
+  },
+  "marcel": "Lis tout,\npuis lance-toi !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "L’épreuve en un tableau",
+          "entetes": ["Partie", "Durée", "Points", "Calculatrice"],
+          "lignes": [
+            ["1. Automatismes", "≈ 20 min", "**6**", "interdite"],
+            ["2. Exercices", "≈ 1 h 40", "**14**", "autorisée"],
+            ["Total", "**2 h**", "**20**", ""]
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Ce qu’on attend de toi",
+          "items": [
+            { "titre": "Automatismes", "texte": "vite et juste&nbsp;: la réponse seule suffit, sans rédaction" },
+            { "titre": "Exercices", "texte": "justifier et rédiger chaque étape du raisonnement" },
+            { "titre": "Sans machine", "texte": "fractions, puissances, pourcentages de tête" },
+            { "titre": "Au final", "texte": "une phrase de réponse qui reprend la question, avec l’unité" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le jour J en trois temps",
+          "etapes": [
+            { "titre": "Tout lire", "texte": "l’énoncé en entier : les questions se suivent et s’appuient souvent les unes sur les autres" },
+            { "titre": "Commencer par le facile", "texte": "ne jamais rester bloqué sur une question : on passe, on revient" },
+            { "titre": "Rédiger, vérifier", "texte": "conclure par une phrase, contrôler que c’est vraisemblable" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Partie 1, sans calculatrice&nbsp;: __{3/4} + {5/6}__.",
+          "calcul": "{3/4} + {5/6} = {9/12} + {10/12}",
+          "aparte": "dénominateur commun 12",
+          "resultat": "= [[{19/12}]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Vraisemblance", "texte": "Un taux de baisse de 130 %, une probabilité de 1,4&nbsp;: **faux**, on recommence le calcul." },
+            { "titre": "Question bloquée", "texte": "On passe à la suivante&nbsp;: les parties sont souvent **indépendantes**." },
+            { "titre": "Automatismes", "texte": "**Dix minutes par jour** toute l’année, sans calculatrice." },
+            { "titre": "Conclusion", "texte": "Une phrase avec l’**unité** et la réponse à la question posée." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Dénominateur commun&nbsp;: 12", "quoi": "le choix" },
+            { "texte": "3/4 = 9/12 et 5/6 = 10/12", "quoi": "la mise au même dénominateur" },
+            { "texte": "9/12 + 10/12 = 19/12", "quoi": "le résultat" }
+          ],
+          "pied": "Contrôle&nbsp;: 0,75 + 0,83 ≈ ==1,58== et 19/12 ≈ 1,58. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Sortir la **calculatrice** pendant la partie automatismes.",
+            "Ne pas lire **tout** l’énoncé avant de commencer.",
+            "**Rester bloqué** sur une seule question et perdre le fil du temps.",
+            "Donner un résultat **sans justification** en partie 2."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de **points** pour la partie exercices&nbsp;?",
+            "Sans calculatrice&nbsp;: {1/2} + {1/3}&nbsp;?",
+            "Calculatrice en **partie 1**&nbsp;?"
+          ],
+          "reponses": "1) 14 points · 2) 5/6 · 3) non, interdite"
+        }
+      ]
+    }
+  ]
+}

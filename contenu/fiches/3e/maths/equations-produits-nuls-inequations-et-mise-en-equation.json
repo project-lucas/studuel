@@ -1,0 +1,116 @@
+{
+  "titre": "Produit nul, inéquations",
+  "titreSurligne": "Produit nul",
+  "accroche": "Un produit nul, un signe à retourner.",
+  "epreuve": "brevet",
+  "bonus": "A × B = 0 ⟺ **A = 0 ou B = 0** · multiplier par un négatif **retourne** l’inégalité",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/equations-produits-nuls-inequations-et-mise-en-equation.webp",
+    "prompt": "two glossy violet parenthesis tiles multiplied together equal a big golden zero, a see-saw tilting beside them with a flipped greater-than sign, sparkles"
+  },
+  "marcel": "« ou », pas « et » !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le produit nul",
+          "taille": "mini",
+          "lignes": ["A × B = 0 ⟺ A = 0 ou B = 0", "x² = 4x ⟺ x(x − 4) = 0"],
+          "regle": "Un produit est nul si et seulement si **l’un de ses facteurs** est nul&nbsp;: on résout ==deux== petites équations. (x − 3)(2x + 1) = 0 ⟺ x = 3 **ou** x = −0,5.",
+          "note": "une équation, souvent deux solutions&nbsp;!"
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "L’inéquation",
+          "teinte": "lavande",
+          "taille": "mini",
+          "lignes": ["3x − 1 > 5 ⟺ x > 2", "−2x < 8 ⟺ x > −4"],
+          "regle": "Les mêmes règles qu’une équation, **une seule nouveauté**&nbsp;: multiplier ou diviser par un nombre ==négatif== **retourne** le sens de l’inégalité.",
+          "note": "par un positif, rien ne change&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Se ramener à un produit nul",
+          "etapes": [
+            { "titre": "Tout d’un côté", "texte": "x² = 4x devient x² − 4x = 0" },
+            { "titre": "Factoriser", "texte": "x(x − 4) = 0 : facteur commun ou identité remarquable" },
+            { "titre": "Résoudre", "texte": "x = 0 ou x − 4 = 0 : les solutions sont 0 et 4" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Résoudre __3 − 2x ≤ 11__.",
+          "calcul": "−2x ≤ 8",
+          "aparte": "÷ (−2)&nbsp;: on retourne",
+          "resultat": "x ≥ [[−4]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Mettre en équation",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Choisir", "texte": "l’inconnue&nbsp;: « soit x le nombre de places »." },
+            { "titre": "Traduire", "texte": "la phrase en égalité&nbsp;: « le double, plus 3, vaut 15 » → 2x + 3 = 15." },
+            { "titre": "Résoudre", "texte": "2x = 12, donc x = 6." },
+            { "titre": "Répondre", "texte": "par une **phrase**, après avoir **vérifié**&nbsp;: 2 × 6 + 3 = 15. ✔" },
+            { "titre": "Tester une valeur", "texte": "x = 2 solution de 3x − 1 > 5&nbsp;? 3 × 2 − 1 = 5, et 5 > 5 est **faux**&nbsp;: non." },
+            { "titre": "Représenter", "texte": "Sur une droite graduée, on colorie les solutions, crochet **tourné vers elles**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "(x − 3)(2x + 1) = 0", "quoi": "le produit nul" },
+            { "texte": "Un produit est nul si l’un de ses facteurs est nul&nbsp;:", "quoi": "la propriété" },
+            { "texte": "x − 3 = 0 ou 2x + 1 = 0, soit x = 3 ou x = −0,5", "quoi": "les solutions" }
+          ],
+          "pied": "Le ==ou== est obligatoire&nbsp;: chaque valeur est solution, séparément."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire « et » à la place de « **ou** ».",
+            "Diviser par x dans x² = 4x&nbsp;: on **perd** la solution 0.",
+            "Oublier de **retourner** le signe en divisant par un négatif.",
+            "Répondre sans **vérifier** dans l’équation de départ."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Résoudre **(x + 2)(x − 5) = 0**.",
+            "Résoudre **−3x > 9**.",
+            "x = 1 est-il solution de **2x − 5 ≥ −3**&nbsp;?"
+          ],
+          "reponses": "1) x = −2 ou x = 5 · 2) x < −3 · 3) oui, −3 ≥ −3"
+        }
+      ]
+    }
+  ]
+}

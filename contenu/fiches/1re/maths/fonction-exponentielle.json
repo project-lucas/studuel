@@ -1,0 +1,118 @@
+{
+  "titre": "L’exponentielle",
+  "titreSurligne": "exponentielle",
+  "accroche": "Sa dérivée, c’est elle-même.",
+  "epreuve": "bac",
+  "bonus": "exp(a + b) = exp(a) × exp(b) · exp′ = exp · (e<sup>u</sup>)′ = u′e<sup>u</sup> · e<sup>x</sup> **> 0** pour tout x",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/fonction-exponentielle.webp",
+    "prompt": "a glossy violet curve shooting upward ever faster on a golden grid, a tiny golden rocket riding it, a small golden letter-free sparkle trail, sparkles"
+  },
+  "marcel": "Toujours positive,\ntoujours croissante !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les trois règles d’or",
+          "petite": true,
+          "lignes": ["e<sup>a + b</sup> = e<sup>a</sup> × e<sup>b</sup>", "(e<sup>x</sup>)′ = e<sup>x</sup>", "(e<sup>u</sup>)′ = u′ × e<sup>u</sup>"],
+          "regle": "L’exponentielle transforme les **sommes en produits**. Elle est **strictement positive** et **strictement croissante** sur ℝ&nbsp;: elle ne s’annule jamais. Elle croît plus vite que n’importe quelle puissance de x.",
+          "note": "e⁰ = 1 et e > 2,7&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les propriétés",
+          "entetes": ["Règle", "Exemple"],
+          "lignes": [
+            ["e<sup>−x</sup> = {1/e<sup>x</sup>}", "e<sup>−2</sup> = {1/e²}"],
+            ["e<sup>a − b</sup> = {e<sup>a</sup>/e<sup>b</sup>}", "e<sup>5 − 3</sup> = e²"],
+            ["(e<sup>a</sup>)<sup>n</sup> = e<sup>na</sup>", "(e<sup>2</sup>)³ = e⁶"],
+            ["e<sup>a</sup> < e<sup>b</sup> ⇔ a < b", "e<sup>1</sup> < e<sup>4</sup>"],
+            ["e<sup>0</sup> = 1 et e<sup>x</sup> > 0", "e<sup>−7</sup> > 0"],
+            ["e<sup>x</sup> = e<sup>y</sup> ⇔ x = y", "e<sup>x</sup> = 1 ⇔ x = 0"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "produit, quotient ou composée e<sup>u</sup> : on choisit u (et v) avant de dériver" },
+            { "titre": "Dériver", "texte": "(e<sup>u</sup>)′ = u′e<sup>u</sup>, puis on factorise par e<sup>u</sup> pour lire le signe" },
+            { "titre": "Signe", "texte": "e<sup>u</sup> est toujours > 0 : le signe vient du facteur qui reste" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = x·eˣ. __Signe de f′__&nbsp;?",
+          "calcul": "f′(x) = 1 × eˣ + x × eˣ\n= (1 + x)eˣ",
+          "aparte": "eˣ est toujours > 0",
+          "resultat": "f′ a le signe de [[1 + x]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Équation", "texte": "e<sup>2x</sup> = e<sup>x + 3</sup> ⇔ 2x = x + 3, donc **x = 3**." },
+            { "titre": "Inéquation", "texte": "e<sup>x</sup> > e² ⇔ x > 2&nbsp;: l’exponentielle **conserve l’ordre**." },
+            { "titre": "Pas de solution", "texte": "e<sup>x</sup> = −2&nbsp;: **aucune** solution, car e<sup>x</sup> > 0." },
+            { "titre": "Composée", "texte": "(e<sup>3x − 1</sup>)′ = **3**e<sup>3x − 1</sup>&nbsp;: on n’oublie pas u′." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "f = uv avec u(x) = x et v(x) = eˣ", "quoi": "le produit" },
+            { "texte": "f′(x) = 1 × eˣ + x × eˣ = (1 + x)eˣ", "quoi": "la dérivée" },
+            { "texte": "eˣ > 0&nbsp;: f′ a le signe de 1 + x", "quoi": "le signe" }
+          ],
+          "pied": "Contrôle&nbsp;: f′(0) = (1 + 0) × e⁰ = ==1==, comme 1 × e⁰ + 0 × e⁰. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire e<sup>a + b</sup> = **e<sup>a</sup> + e<sup>b</sup>**.",
+            "Dériver e<sup>2x</sup> en e<sup>2x</sup> (**u′ oublié**).",
+            "Croire que e<sup>x</sup> peut être **négatif ou nul**.",
+            "Écrire e<sup>−x</sup> = **−e<sup>x</sup>**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Simplifier **e³ × e⁻¹**&nbsp;?",
+            "Dériver **f(x) = e<sup>5x</sup>**&nbsp;?",
+            "Résoudre **e<sup>x</sup> = −3**&nbsp;?"
+          ],
+          "reponses": "1) e² · 2) f′(x) = 5e<sup>5x</sup> · 3) aucune solution"
+        }
+      ]
+    }
+  ]
+}

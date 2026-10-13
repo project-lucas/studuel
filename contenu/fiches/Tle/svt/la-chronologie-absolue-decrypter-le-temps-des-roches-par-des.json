@@ -1,0 +1,111 @@
+{
+  "titre": "Chronologie absolue",
+  "titreSurligne": "absolue",
+  "accroche": "Des horloges dans les cristaux.",
+  "epreuve": "bac",
+  "bonus": "**Père** radioactif → **fils** stable · **demi-vie** = temps pour que la moitié des pères se désintègre",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/svt/la-chronologie-absolue-decrypter-le-temps-des-roches-par-des.webp",
+    "prompt": "a glossy golden hourglass filled with violet crystals, a granite rock with sparkling mineral crystals beside it, tiny golden atoms turning into violet ones, sparkles"
+  },
+  "marcel": "Chaque cristal\ngarde sa propre horloge !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Désintégration radioactive", "definition": "un noyau **père** instable se transforme en noyau **fils**, au rythme d’une loi de décroissance" },
+            { "terme": "Demi-vie", "definition": "durée au bout de laquelle la **moitié** des pères s’est désintégrée" },
+            { "terme": "Système fermé", "definition": "ni père ni fils n’entrent ni ne sortent depuis la **fermeture**" },
+            { "terme": "Isochrone", "definition": "droite construite avec plusieurs minéraux, dont la **pente** donne l’âge" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Choisir le bon couple",
+          "entetes": ["Demi-vie", "Pour dater"],
+          "lignes": [
+            ["**5 730 ans** (¹⁴C)", "des restes **récents** et organiques"],
+            ["**1,3 milliard d’années** (⁴⁰K)", "des roches **anciennes**"],
+            ["**48,8 milliards d’années** (⁸⁷Rb)", "les roches **très anciennes**"],
+            ["**4,5 milliards d’années** (²³⁸U)", "les **plus vieilles** roches"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Repères à connaître",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Indépendance", "texte": "La vitesse de désintégration ne dépend **ni de la température, ni de la pression, ni de la chimie**." },
+            { "titre": "Ce qu’on mesure", "texte": "Le **rapport** fils/père dans le minéral." },
+            { "titre": "Quantité de fils initiale", "texte": "Inconnue au départ&nbsp;: l’**isochrone** permet de la corriger." },
+            { "titre": "Le bon couple", "texte": "Une demi-vie du **même ordre** que l’âge cherché." },
+            { "titre": "Ce qu’on date", "texte": "La **fermeture du système** du minéral, pas forcément la roche entière." },
+            { "titre": "Croisement", "texte": "Les âges absolus **calent** l’échelle de la chronologie relative." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Dater une roche",
+          "etapes": [
+            { "titre": "Choisir", "texte": "le couple père/fils à demi-vie adaptée" },
+            { "titre": "Mesurer", "texte": "le rapport fils/père dans le minéral" },
+            { "titre": "Calculer", "texte": "l’âge avec la loi de décroissance" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Il reste la moitié des atomes pères : une demi-vie s’est écoulée.", "quoi": "lire" },
+            { "texte": "L’âge est donc égal à une demi-vie du couple utilisé.", "quoi": "calculer" },
+            { "texte": "Cet âge date la fermeture du système du minéral.", "quoi": "préciser" }
+          ],
+          "pied": "Vérifie que le système est ==fermé== avant de dater."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que la désintégration dépend de la **température**.",
+            "Prendre un couple dont la demi-vie est **très différente** de l’âge.",
+            "Confondre âge **absolu** (années) et âge **relatif** (ordre).",
+            "Oublier que le système doit être **fermé**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que devient le **père** radioactif&nbsp;?",
+            "Après **deux** demi-vies, quelle fraction de pères reste-t-il&nbsp;?",
+            "Que **date** la chronologie absolue d’une roche magmatique&nbsp;?"
+          ],
+          "reponses": "1) il devient le fils stable · 2) un quart · 3) la fermeture du système (cristallisation)"
+        }
+      ]
+    }
+  ]
+}

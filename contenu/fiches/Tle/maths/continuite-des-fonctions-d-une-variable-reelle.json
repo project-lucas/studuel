@@ -1,0 +1,114 @@
+{
+  "titre": "Continuité et TVI",
+  "titreSurligne": "TVI",
+  "accroche": "Une valeur atteinte, et atteinte une seule fois.",
+  "epreuve": "bac",
+  "bonus": "dérivable ⇒ continue (réciproque fausse) · TVI : continue · k entre f(a) et f(b) · + strictement monotone ⇒ **unique**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths/continuite-des-fonctions-d-une-variable-reelle.webp",
+    "prompt": "a glossy violet unbroken curve crossing a golden horizontal line exactly once, a tiny golden star at the crossing, sparkles"
+  },
+  "marcel": "Sans lever le crayon,\non croise la ligne !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le TVI",
+          "taille": "mini",
+          "lignes": ["f continue sur [a ; b]", "k entre f(a) et f(b)", "⇒ f(x) = k a une solution"],
+          "regle": "Si en plus f est **strictement monotone** sur [a ; b], cette solution est **unique** (corollaire, théorème de la bijection).",
+          "note": "sans continuité, pas de TVI&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les hypothèses",
+          "items": [
+            { "terme": "Continue", "definition": "la limite en a est f(a)&nbsp;: pas de saut." },
+            { "terme": "Dérivable", "definition": "⇒ continue, mais |x| est continue **non dérivable** en 0." },
+            { "terme": "Strictement monotone", "definition": "f′ de signe constant, ne s’annulant qu’en des points isolés." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Vérifier", "texte": "continuité et stricte monotonie sur [a ; b], par dérivée" },
+            { "titre": "Encadrer", "texte": "calculer f(a) et f(b), vérifier que k est entre les deux" },
+            { "titre": "Conclure", "texte": "citer le corollaire : une unique solution α dans [a ; b]" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = x³ + x − 1 sur [0 ; 1]. __f(x) = 0 a-t-elle une solution unique__&nbsp;?",
+          "calcul": "f′ = 3x² + 1 &gt; 0 ; f(0) = −1 ; f(1) = 1",
+          "aparte": "0 est entre −1 et 1",
+          "resultat": "unique [[α]] dans ]0 ; 1["
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Encadrer α",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Balayage", "texte": "f(0,6) ≈ −0,184 &lt; 0 et f(0,7) ≈ 0,043 &gt; 0&nbsp;: **0,6 &lt; α &lt; 0,7**." },
+            { "titre": "Dichotomie", "texte": "on coupe l’intervalle en deux et on garde la moitié où f **change de signe**." },
+            { "titre": "Signe de f", "texte": "f croissante et f(α) = 0&nbsp;: f &lt; 0 avant α, f &gt; 0 après." },
+            { "titre": "Intervalle ouvert", "texte": "sur un intervalle ouvert, on utilise les **limites** aux bornes." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "f est continue et strictement croissante sur [0 ; 1]", "quoi": "les hypothèses" },
+            { "texte": "f(0) = −1 &lt; 0 &lt; 1 = f(1)", "quoi": "k entre les images" },
+            { "texte": "D’après le corollaire du TVI, f(x) = 0 a une unique solution α", "quoi": "le théorème nommé" }
+          ],
+          "pied": "Conclusion&nbsp;: ==α ∈ ]0 ; 1[== est l’unique solution de f(x) = 0."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier la **stricte monotonie** pour l’unicité.",
+            "Citer le TVI sans dire que f est **continue**.",
+            "Croire que continue ⇒ **dérivable**.",
+            "Écrire f(a) &lt; k &lt; f(b) quand f(a) &gt; f(b)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle **hypothèse** rend la solution unique&nbsp;?",
+            "|x| est-elle **continue** et **dérivable** en 0&nbsp;?",
+            "f continue, f(1) = −2, f(4) = 3&nbsp;: f(x) = 0 a-t-elle une **solution**&nbsp;?"
+          ],
+          "reponses": "1) stricte monotonie · 2) continue, non dérivable · 3) oui, dans [1 ; 4]"
+        }
+      ]
+    }
+  ]
+}

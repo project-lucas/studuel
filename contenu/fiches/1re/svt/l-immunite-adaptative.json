@@ -1,0 +1,180 @@
+{
+  "titre": "Immunité adaptative",
+  "titreSurligne": "adaptative",
+  "accroche": "Une réponse spécifique, et une mémoire.",
+  "epreuve": "bac",
+  "bonus": "**LB** → plasmocytes → **anticorps** · **LT8** détruit les cellules infectées · **LT4** coordonne · **mémoire** = réponse plus rapide",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/svt/l-immunite-adaptative.webp",
+    "prompt": "a glossy violet white blood cell releasing golden Y-shaped antibodies that lock onto small spiky microbes, a golden shield behind, sparkles"
+  },
+  "marcel": "Il reconnaît,\nil se souvient !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "La sélection clonale",
+          "etapes": [
+            {
+              "date": "Avant",
+              "texte": "Des lymphocytes variés existent **avant toute rencontre** avec l’antigène."
+            },
+            {
+              "date": "Rencontre",
+              "texte": "L’**antigène** sélectionne le lymphocyte qui le reconnaît."
+            },
+            {
+              "date": "Après",
+              "texte": "Ce lymphocyte se multiplie et se différencie en cellules **effectrices** et **mémoire**."
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les deux voies",
+          "entetes": [
+            "Voie",
+            "Cellule",
+            "Action"
+          ],
+          "lignes": [
+            [
+              "**Humorale**",
+              "lymphocyte **B** → plasmocyte",
+              "**anticorps** dans les liquides"
+            ],
+            [
+              "**Cellulaire**",
+              "lymphocyte **T8** (cytotoxique)",
+              "détruit les cellules infectées"
+            ],
+            [
+              "**Coordination**",
+              "lymphocyte **T4**",
+              "**interleukines**"
+            ],
+            [
+              "**Mémoire**",
+              "lymphocytes **mémoire**",
+              "réponse plus **rapide**"
+            ],
+            [
+              "**Rôle du T8**",
+              "contact avec la cellule",
+              "elle meurt, l’infection s’arrête"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce qu’il faut savoir expliquer",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Anticorps",
+              "texte": "Ils se fixent à l’antigène et forment des **complexes immuns**."
+            },
+            {
+              "titre": "Plasmocyte",
+              "texte": "Un lymphocyte B différencié qui sécrète les anticorps."
+            },
+            {
+              "titre": "LT8",
+              "texte": "Il agit **à l’intérieur** des cellules infectées, par contact."
+            },
+            {
+              "titre": "LT4",
+              "texte": "Chef d’orchestre&nbsp;: il active B et T8 grâce aux **interleukines**."
+            },
+            {
+              "titre": "VIH",
+              "texte": "Il détruit les **LT4** : l’immunité s’effondre."
+            },
+            {
+              "titre": "Mémoire",
+              "texte": "Deuxième rencontre&nbsp;: réponse **plus rapide, plus intense, plus efficace**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Analyser une réponse immunitaire",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "premier contact ou second contact avec l’antigène"
+            },
+            {
+              "titre": "Identifier",
+              "texte": "la voie : anticorps (liquides) ou cellules T (cellules infectées)"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "rôle de la mémoire et de la spécificité"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "Au second contact, les anticorps apparaissent plus vite et en plus grande quantité.",
+              "quoi": "constater"
+            },
+            {
+              "texte": "Des lymphocytes mémoire ont été formés lors du premier contact.",
+              "quoi": "expliquer"
+            },
+            {
+              "texte": "La réponse est spécifique et mémorisée.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Un vaccin présente l’==antigène== sans la maladie pour créer cette mémoire."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que l’anticorps **détruit** seul l’antigène.",
+            "Confondre **LB** (anticorps) et **LT8** (cellules infectées).",
+            "Croire que l’antigène **fabrique** le lymphocyte.",
+            "Oublier le rôle des **LT4**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle cellule sécrète les **anticorps**&nbsp;?",
+            "Quelle cellule détruit les cellules **infectées**&nbsp;?",
+            "Quelles cellules le **VIH** détruit-il&nbsp;?"
+          ],
+          "reponses": "1) le plasmocyte (issu d’un LB) · 2) le LT8 · 3) les LT4"
+        }
+      ]
+    }
+  ]
+}

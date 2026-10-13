@@ -1,0 +1,109 @@
+{
+  "titre": "Copier l’ADN",
+  "titreSurligne": "ADN",
+  "accroche": "Copier sans se tromper, ou presque.",
+  "epreuve": "bac",
+  "bonus": "Réplication **semi-conservative** : chaque molécule fille a **un brin ancien et un brin neuf** (Meselson et Stahl)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/svt/la-conservation-des-genomes-stabilite-genetique-et-evolution.webp",
+    "prompt": "a glossy violet DNA double helix unzipping into two strands, each rebuilt with golden beads, a tiny golden repair wrench, sparkles"
+  },
+  "marcel": "Un brin ancien,\nun brin neuf !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Mitose", "definition": "division qui donne deux cellules **génétiquement identiques** (un clone)" },
+            { "terme": "Réplication", "definition": "copie de l’ADN en phase **S**&nbsp;: chaque brin sert de **matrice**" },
+            { "terme": "Mutation somatique", "definition": "modification de l’ADN d’une cellule non germinale&nbsp;: transmise à **toutes les cellules filles**" },
+            { "terme": "Évolution clonale", "definition": "sélection de cellules mutées qui se multiplient plus vite (**cancérisation**)" }
+          ]
+        },
+        {
+          "type": "frise",
+          "numero": 2,
+          "titre": "Le cycle cellulaire",
+          "etapes": [
+            { "date": "Interphase", "texte": "L’ADN est **répliqué** (phase S) : chaque chromosome a deux chromatides." },
+            { "date": "Mitose", "texte": "Les chromatides se séparent&nbsp;: **deux cellules identiques**." },
+            { "date": "Retour", "texte": "Chaque cellule fille reprend un cycle, ou sort du cycle." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Repères à connaître",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Semi-conservative", "texte": "Montrée par **Meselson et Stahl** avec de l’azote lourd puis léger." },
+            { "titre": "Fidélité", "texte": "Très haute : environ **1 erreur sur 10⁹** nucléotides copiés, jamais nulle." },
+            { "titre": "Relecture", "texte": "L’ADN polymérase corrige des erreurs pendant la copie." },
+            { "titre": "Réparation", "texte": "D’autres systèmes réparent l’ADN abîmé après la réplication." },
+            { "titre": "Mutation", "texte": "Quand l’erreur échappe à la réparation : elle est **copiée** à la division suivante." },
+            { "titre": "Asexuée", "texte": "Sans méiose ni fécondation, les descendants sont des **clones**." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Exploiter une expérience de réplication",
+          "etapes": [
+            { "titre": "Lire", "texte": "la position des bandes après chaque génération" },
+            { "titre": "Comparer", "texte": "aux résultats attendus pour chaque hypothèse" },
+            { "titre": "Conclure", "texte": "semi-conservative : un brin ancien, un brin neuf" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Après une génération, toutes les molécules ont une densité intermédiaire.", "quoi": "constater" },
+            { "texte": "Chaque molécule contient donc un brin ancien et un brin neuf.", "quoi": "interpréter" },
+            { "texte": "La réplication est semi-conservative.", "quoi": "conclure" }
+          ],
+          "pied": "Cite le ==résultat== de chaque génération pour justifier."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que la réplication est **conservative** : un brin sur deux est ancien.",
+            "Croire que la copie de l’ADN est **parfaite**.",
+            "Penser qu’une mutation **somatique** est transmise à la descendance.",
+            "Confondre **mitose** et **méiose**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que contient une molécule d’ADN **fille** après réplication&nbsp;?",
+            "Que donne une **mitose**&nbsp;?",
+            "Une mutation **somatique** est-elle héréditaire&nbsp;?"
+          ],
+          "reponses": "1) un brin ancien et un brin neuf · 2) deux cellules identiques · 3) non, elle ne passe pas à la descendance"
+        }
+      ]
+    }
+  ]
+}

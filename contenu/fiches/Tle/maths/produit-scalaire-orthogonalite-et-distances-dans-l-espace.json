@@ -1,0 +1,114 @@
+{
+  "titre": "Produit scalaire 3D",
+  "titreSurligne": "scalaire",
+  "accroche": "Orthogonalité et distances : tout se calcule.",
+  "epreuve": "bac",
+  "bonus": "u⃗·v⃗ = xx′ + yy′ + zz′ · u⃗·v⃗ = 0 ⇔ orthogonaux · ‖u⃗‖ = √(x²+y²+z²) · AB = ‖AB⃗‖",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths/produit-scalaire-orthogonalite-et-distances-dans-l-espace.webp",
+    "prompt": "a glossy violet cube with two golden perpendicular arrows meeting at a right angle corner, sparkles"
+  },
+  "marcel": "Produit nul,\nvecteurs perpendiculaires !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les expressions",
+          "taille": "mini",
+          "lignes": ["u⃗·v⃗ = xx′ + yy′ + zz′", "u⃗·v⃗ = ‖u⃗‖ × ‖v⃗‖ × cos θ", "‖u⃗‖ = √(x² + y² + z²)"],
+          "regle": "Dans un repère **orthonormé** et pour u⃗ (x ; y ; z), v⃗ (x′ ; y′ ; z′). Deux vecteurs non nuls sont **orthogonaux** si et seulement si u⃗·v⃗ = 0.",
+          "note": "le résultat est un nombre, pas un vecteur&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Orthogonalité",
+          "items": [
+            { "terme": "Normal", "definition": "n⃗ est normal à un plan s’il est orthogonal à **tout** vecteur du plan." },
+            { "terme": "Critère", "definition": "orthogonal à **deux** vecteurs non colinéaires du plan suffit." },
+            { "terme": "Projeté", "definition": "H, projeté orthogonal de A, est le point du plan le plus proche de A." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Coordonnées", "texte": "calculer les vecteurs, par exemple AB⃗ = (xB − xA ; yB − yA ; zB − zA)" },
+            { "titre": "Produit", "texte": "multiplier composante par composante puis additionner" },
+            { "titre": "Conclure", "texte": "produit nul : orthogonaux · racine de la somme des carrés : longueur" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "u⃗ (1 ; 2 ; −1) et v⃗ (3 ; 0 ; 3). __Orthogonaux__&nbsp;?",
+          "calcul": "u⃗·v⃗ = 1×3 + 2×0 + (−1)×3",
+          "aparte": "3 + 0 − 3",
+          "resultat": "= [[0]] : orthogonaux"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les usages",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Longueur", "texte": "A(1 ; 2 ; 0), B(4 ; 6 ; 0)&nbsp;: AB = √(9 + 16 + 0) = **5**." },
+            { "titre": "Angle", "texte": "cos θ = u⃗·v⃗ ÷ (‖u⃗‖‖v⃗‖), puis θ à la calculatrice." },
+            { "titre": "Plan", "texte": "u⃗ normal à P et A ∈ P&nbsp;: P a pour équation u⃗·AM⃗ = 0." },
+            { "titre": "Droite ⟂ plan", "texte": "un vecteur directeur de la droite colinéaire à un vecteur **normal**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Dans le repère orthonormé, u⃗·v⃗ = 1×3 + 2×0 + (−1)×3", "quoi": "la formule en coordonnées" },
+            { "texte": "u⃗·v⃗ = 0", "quoi": "le calcul" },
+            { "texte": "Donc u⃗ et v⃗ sont orthogonaux", "quoi": "l’équivalence citée" }
+          ],
+          "pied": "Précise toujours ==« repère orthonormé »== avant d’appliquer les formules."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier que le repère doit être **orthonormé**.",
+            "Oublier les **vecteurs non nuls**.",
+            "Écrire AB⃗ = A − B au lieu de **B − A**.",
+            "Oublier la **racine** pour la norme."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**u⃗·v⃗** avec u⃗ (1 ; 2 ; 3), v⃗ (2 ; 0 ; −1)&nbsp;?",
+            "**Norme** de u⃗ (2 ; 3 ; 6)&nbsp;?",
+            "u⃗·v⃗ = 0&nbsp;: les vecteurs sont **…**&nbsp;?"
+          ],
+          "reponses": "1) 2 + 0 − 3 = −1 · 2) √(4+9+36) = 7 · 3) orthogonaux"
+        }
+      ]
+    }
+  ]
+}

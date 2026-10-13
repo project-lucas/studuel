@@ -1,0 +1,116 @@
+{
+  "titre": "La fonction inverse",
+  "titreSurligne": "inverse",
+  "accroche": "1/x : l’hyperbole, et le trou en zéro.",
+  "bonus": "f(x) = **1/x** · définie sur ℝ privé de 0 · décroissante sur ]−∞ ; 0[ **et** sur ]0 ; +∞[ · impaire",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/maths/la-fonction-inverse.webp",
+    "prompt": "two glossy violet curved slides facing each other across a golden cross-shaped grid, a tiny cartoon penguin sliding down one of them, sparkles"
+  },
+  "marcel": "Zéro n’a pas\nd’inverse !",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La fonction",
+          "petite": true,
+          "lignes": ["f(x) = {1/x}"],
+          "regle": "**0 est interdit** : f est définie sur ℝ*. ==Décroissante== sur chaque intervalle ]−∞&nbsp;; 0[ et ]0&nbsp;; +∞[, **pas** sur leur réunion. **Impaire**.",
+          "note": "f(−2) = −f(2) = −{1/2}"
+        },
+        {
+          "type": "figures",
+          "numero": 2,
+          "titre": "L’hyperbole",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><g stroke='#2b2350' stroke-width='2' stroke-linecap='round'><line x1='10' y1='100' x2='214' y2='100'></line><line x1='100' y1='166' x2='100' y2='6'></line></g><polygon points='214,100 206,95 206,105' fill='#2b2350'></polygon><polygon points='100,6 95,14 105,14' fill='#2b2350'></polygon><path d='M111,30 C116,80 140,92 190,96' fill='none' stroke='#7a3fe0' stroke-width='4' stroke-linecap='round'></path><path d='M89,170 C84,120 60,108 10,104' fill='none' stroke='#7a3fe0' stroke-width='4' stroke-linecap='round'></path><circle cx='100' cy='100' r='5' fill='#f5b722' stroke='#2b2350' stroke-width='2'></circle><g font-family=\"'Baloo 2'\" font-weight='800' font-size='14' fill='#2b2350'><text x='106' y='116' fill='#f1566c'>0 interdit</text></g></svg>",
+              "legende": "y = 1/x",
+              "sous": "deux branches, symétriques"
+            }
+          ],
+          "legende": { "jeton": "signe", "texte": "1/x a le signe de x" }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre 1/x ≤ k",
+          "etapes": [
+            { "titre": "Exclure", "texte": "écrire la valeur interdite : x ≠ 0" },
+            { "titre": "Séparer", "texte": "traiter x < 0 (1/x < 0) puis x > 0 (inverse : on renverse)" },
+            { "titre": "Réunir", "texte": "garder les x qui conviennent et écrire la réunion" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Résoudre __{1/x} ≤ 2__ sur ℝ*.",
+          "calcul": "x < 0&nbsp;: 1/x < 0 ≤ 2, vrai",
+          "aparte": "à gauche",
+          "resultat": "x > 0&nbsp;: x ≥ {1/2}. Donc [[x < 0 ou x ≥ 1/2]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "1/x = k", "texte": "k ≠ 0&nbsp;: une solution x = **1/k**&nbsp;; k = 0&nbsp;: **aucune**." },
+            { "titre": "Comparer", "texte": "3 < 5 donc 1/3 > 1/5&nbsp;: l’ordre est **renversé**." },
+            { "titre": "Symétrie", "texte": "f(−x) = −f(x)&nbsp;: symétrique par rapport à l’**origine**." },
+            { "titre": "Asymptotes", "texte": "La courbe se rapproche des **axes** sans jamais les toucher." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "1/x existe si x ≠ 0&nbsp;; on résout sur ℝ*", "quoi": "valeur interdite" },
+            { "texte": "si x < 0 : 1/x < 0 ≤ 2, tout x < 0 convient", "quoi": "premier cas" },
+            { "texte": "si x > 0 : 1/x ≤ 2 ⟺ 1 ≤ 2x ⟺ x ≥ 1/2", "quoi": "second cas" }
+          ],
+          "pied": "S = ]−∞&nbsp;; 0[ ∪ [1/2&nbsp;; +∞[ : ==0 n’y est jamais==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire **1/0** : cela n’existe pas.",
+            "Dire que f est décroissante sur **ℝ*** tout entier.",
+            "Multiplier par x sans connaître son **signe** (l’inégalité peut se renverser).",
+            "Inclure **0** dans l’ensemble des solutions."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Résoudre **1/x = 4**.",
+            "Pour quels x a-t-on **1/x < 0**&nbsp;?",
+            "Comparer **1/(−2)** et **1/(−5)**."
+          ],
+          "reponses": "1) x = 1/4 · 2) x < 0 · 3) −0,5 < −0,2 : 1/(−2) < 1/(−5)"
+        }
+      ]
+    }
+  ]
+}

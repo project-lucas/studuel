@@ -1,0 +1,113 @@
+{
+  "titre": "Schéma de Lewis",
+  "titreSurligne": "Lewis",
+  "accroche": "Chaque électron de valence à sa place.",
+  "epreuve": "bac",
+  "bonus": "**Octet** = 8 e⁻ (4 doublets) · **duet** pour H = 2 e⁻ · doublet **liant** entre deux atomes, **non liant** sur un seul",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/representation-de-lewis-d-un-atome-et-d-une-molecule.webp",
+    "prompt": "a glossy violet oxygen atom ball with golden electron pairs drawn as small bead pairs around it, two small golden hydrogen balls linked to it by bright bonds, sparkles"
+  },
+  "marcel": "Huit électrons\nautour de chaque atome !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle",
+          "petite": true,
+          "lignes": ["1 doublet = 2 e⁻", "octet = 4 doublets"],
+          "regle": "Un atome est stable avec **8 électrons** sur sa couche externe (**règle de l’octet**), **2** pour l’hydrogène. On compte les électrons de ==valence==, ceux de la dernière couche.",
+          "note": "total de e⁻ ÷ 2 = nombre de doublets&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les atomes à connaître",
+          "entetes": ["Atome", "e⁻ de valence", "Liaisons · non liants"],
+          "lignes": [
+            ["Hydrogène H", "1", "1 · 0"],
+            ["Carbone C", "4", "4 · 0"],
+            ["Azote N", "5", "3 · 1"],
+            ["Oxygène O", "6", "2 · 2"],
+            ["Halogène (Cl)", "7", "1 · 3"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le schéma en trois temps",
+          "etapes": [
+            { "titre": "Compter", "texte": "les électrons de valence de tous les atomes, puis les doublets" },
+            { "titre": "Placer", "texte": "les liaisons entre atomes, puis les doublets non liants" },
+            { "titre": "Vérifier", "texte": "l’octet autour de chaque atome, le duet pour H" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Le schéma de Lewis de l’__eau__ H₂O&nbsp;?",
+          "calcul": "2 × 1 + 6 = 8 e⁻ → 4 doublets",
+          "aparte": "2 liants, 2 non liants",
+          "resultat": "[[H–O–H]] + 2 doublets sur O"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "De Lewis à la géométrie",
+          "oui": { "titre": "CH₄ : tétraédrique", "texte": "4 doublets liants autour de C&nbsp;: les doublets se **repoussent** au maximum." },
+          "non": { "titre": "H₂O : coudée", "texte": "4 doublets autour de O dont 2 **non liants**&nbsp;: la molécule n’est pas alignée." },
+          "essai": { "texte": "CO₂ a deux doubles liaisons autour de C&nbsp;: <i>molécule linéaire</i>. Une molécule à trois directions est <i>triangulaire plane</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "O a 6 e⁻ de valence, chaque H en a 1&nbsp;: 8 e⁻, soit 4 doublets.", "quoi": "compter" },
+            { "texte": "O forme 2 liaisons et porte 2 doublets non liants&nbsp;: octet respecté.", "quoi": "justifier" },
+            { "texte": "Les 4 doublets se repoussent&nbsp;: la molécule est coudée.", "quoi": "conclure" }
+          ],
+          "pied": "Une ==liaison double== ou ==triple== met 2 ou 3 doublets entre les deux mêmes atomes."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier les **doublets non liants**.",
+            "Compter les électrons de **toutes** les couches, pas de la valence.",
+            "Donner **8 électrons** à l’hydrogène (c’est 2).",
+            "Dire que H₂O est **linéaire**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien d’e⁻ de valence a l’**azote**&nbsp;?",
+            "Combien de doublets non liants porte **O** dans H₂O&nbsp;?",
+            "Quelle géométrie pour **CH₄**&nbsp;?"
+          ],
+          "reponses": "1) 5 · 2) 2 · 3) tétraédrique"
+        }
+      ]
+    }
+  ]
+}

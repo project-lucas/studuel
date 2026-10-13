@@ -1,0 +1,125 @@
+{
+  "titre": "Aires et volumes",
+  "titreSurligne": "volumes",
+  "accroche": "La bonne formule, convertie au bon moment.",
+  "epreuve": "brevet",
+  "bonus": "1 cm² = **100** mm² · 1 dm³ = **1 000** cm³ = **1 L** · 1 m³ = **1 000 L**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/aires-volumes-et-conversions-le-formulaire-du-brevet.webp",
+    "prompt": "a glossy violet cube, a golden cylinder and a cone lined up on a desk with a measuring tape and a tiny bucket of water, sparkles"
+  },
+  "marcel": "Aire : au carré,\nvolume : au cube !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les aires",
+          "entetes": ["Figure", "Aire"],
+          "lignes": [
+            ["Rectangle", "L × l"],
+            ["Carré", "c × c = c²"],
+            ["Triangle", "base × hauteur **÷ 2**"],
+            ["Parallélogramme", "base × hauteur"],
+            ["Losange", "D × d **÷ 2**"],
+            ["Disque", "π × r²"],
+            ["Cercle (périmètre)", "2 × π × r"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les volumes",
+          "entetes": ["Solide", "Volume"],
+          "lignes": [
+            ["Pavé droit", "L × l × h"],
+            ["Cube", "c³"],
+            ["Prisme · cylindre", "**aire de la base** × h"],
+            ["Cylindre", "π × r² × h"],
+            ["Pyramide · cône", "**aire de la base** × h **÷ 3**"],
+            ["Cône", "π × r² × h **÷ 3**"],
+            ["Boule", "4/3 × π × r³"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Nommer", "texte": "la figure ou le solide, et sa base" },
+            { "titre": "Convertir", "texte": "toutes les longueurs dans la même unité" },
+            { "titre": "Calculer", "texte": "la formule en lettres, puis les nombres et l’unité" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Cylindre de rayon 2 cm et de hauteur 5 cm. Son __volume__&nbsp;?",
+          "calcul": "V = π × 2² × 5 = 20π",
+          "aparte": "base × hauteur",
+          "resultat": "V ≈ [[62,8 cm³]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les conversions",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Longueurs", "texte": "× 10 par rang&nbsp;: 1 m = 100 cm, 2,5 km = 2 500 m." },
+            { "titre": "Aires", "texte": "× **100** par rang&nbsp;: 1 m² = 100 dm² = 10 000 cm²." },
+            { "titre": "Volumes", "texte": "× **1 000** par rang&nbsp;: 1 m³ = 1 000 dm³ = 1 000 000 cm³." },
+            { "titre": "Litres", "texte": "1 L = 1 dm³, 1 mL = 1 cm³, 1 m³ = 1 000 L&nbsp;: 72 000 cm³ = 72 L." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "La base est un disque de rayon 2 cm&nbsp;: A = π × 2² = 4π cm²", "quoi": "l’aire de la base" },
+            { "texte": "V = A × h = 4π × 5 = 20π cm³", "quoi": "la formule" },
+            { "texte": "V ≈ 62,8 cm³", "quoi": "l’arrondi" }
+          ],
+          "pied": "Le formulaire est ==donné== au brevet&nbsp;: il faut savoir s’en servir, pas le réciter."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **aire** et **périmètre** du disque (πr² et 2πr).",
+            "Oublier le **÷ 2** du triangle ou le **÷ 3** de la pyramide.",
+            "1 m² = 100 cm²&nbsp;: c’est **10 000**.",
+            "Donner un volume en **cm²**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Aire d’un disque de rayon **3 cm**&nbsp;?",
+            "Pyramide de base 12 cm² et de hauteur 5 cm&nbsp;: **volume**&nbsp;?",
+            "**3,5 L** en cm³&nbsp;?"
+          ],
+          "reponses": "1) 9π ≈ 28,3 cm² · 2) 20 cm³ · 3) 3 500 cm³"
+        }
+      ]
+    }
+  ]
+}

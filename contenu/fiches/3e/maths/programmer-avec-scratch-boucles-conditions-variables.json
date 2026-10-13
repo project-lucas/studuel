@@ -1,0 +1,113 @@
+{
+  "titre": "Programmer avec Scratch",
+  "titreSurligne": "Scratch",
+  "accroche": "Lire, compléter et écrire un script.",
+  "epreuve": "brevet",
+  "bonus": "**quand le drapeau vert est cliqué** · répéter N fois · si… alors… sinon · mettre x à…",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/programmer-avec-scratch-boucles-conditions-variables.webp",
+    "prompt": "colorful glossy puzzle-piece code blocks snapping together, a cartoon orange cat sprite drawing a golden square with a pen on a violet stage, sparkles"
+  },
+  "marcel": "Suis la variable\nligne par ligne !",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les briques",
+          "items": [
+            { "terme": "Événement", "definition": "ce qui lance le script&nbsp;: **quand le drapeau vert est cliqué**" },
+            { "terme": "Variable", "definition": "une boîte qui garde un nombre&nbsp;: **mettre score à 0**, **ajouter 1 à score**" },
+            { "terme": "Boucle", "definition": "**répéter 4 fois**&nbsp;: les blocs à l’intérieur sont rejoués" },
+            { "terme": "Condition", "definition": "**si** x > 10 **alors** … **sinon** …&nbsp;: un test vrai ou faux" }
+          ]
+        },
+        {
+          "type": "cartes",
+          "numero": 2,
+          "titre": "Dessiner avec le stylo",
+          "colonnes": 1,
+          "cartes": [
+            { "titre": "Un carré", "texte": "répéter 4 fois&nbsp;: avancer de 50, tourner de **90°**." },
+            { "titre": "Un triangle", "texte": "répéter 3 fois&nbsp;: avancer de 50, tourner de **120°**. On tourne de l’angle **extérieur**, 360 ÷ 3." },
+            { "titre": "Un polygone à n côtés", "texte": "répéter n fois, tourner de **360 ÷ n**&nbsp;: 72° pour un pentagone." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire un script en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "l’événement de départ, les variables et leur valeur initiale" },
+            { "titre": "Dérouler", "texte": "ligne par ligne, dans un tableau : tour · valeur de la variable" },
+            { "titre": "Conclure", "texte": "la valeur finale, ou ce que dessine le lutin" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "mettre n à 3, puis répéter 2 fois&nbsp;: ajouter 4 à n, mettre n à n × 2. __Valeur finale__&nbsp;?",
+          "calcul": "3 → 7 → 14",
+          "aparte": "1er tour",
+          "resultat": "14 → 18 → [[36]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Si… alors… sinon",
+          "oui": { "titre": "Condition vraie", "texte": "« si x > 10 alors dire Bravo »&nbsp;: avec x = 12, le lutin dit **Bravo**." },
+          "non": { "titre": "Condition fausse", "texte": "Avec x = 10, « 10 > 10 » est **faux**&nbsp;: rien, ou le bloc **sinon**." },
+          "essai": { "texte": "« nombre aléatoire entre 1 et 6 », « si résultat = 6 alors ajouter 1 à gagnés »&nbsp;: un simulateur de dé. La probabilité d’un 6 est <i>1/6</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Au départ, n = 3.", "quoi": "l’état initial" },
+            { "texte": "Tour 1&nbsp;: n = 3 + 4 = 7, puis 7 × 2 = 14. Tour 2&nbsp;: 18, puis 36.", "quoi": "le tableau de suivi" },
+            { "texte": "À la fin, n vaut 36.", "quoi": "la conclusion" }
+          ],
+          "pied": "Au brevet, on complète un script à trous&nbsp;: ==recopie== le nom exact des blocs."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier qu’un bloc **dans** la boucle est rejoué à chaque tour.",
+            "Tourner de 90° pour un **triangle** (c’est 120°).",
+            "Confondre « mettre n à 5 » (remplacer) et « ajouter 5 à n ».",
+            "Exécuter le **sinon** quand la condition est vraie."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Répéter 5 fois « tourner de **72°** »&nbsp;: quel polygone&nbsp;?",
+            "x = 2, puis 3 fois « ajouter 5 à x »&nbsp;: **x**&nbsp;?",
+            "« si 7 > 9 alors A sinon B »&nbsp;: quel bloc s’exécute&nbsp;?"
+          ],
+          "reponses": "1) un pentagone · 2) 17 · 3) B"
+        }
+      ]
+    }
+  ]
+}

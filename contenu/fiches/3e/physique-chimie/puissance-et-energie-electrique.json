@@ -1,0 +1,116 @@
+{
+  "titre": "Puissance et énergie",
+  "titreSurligne": "Puissance",
+  "accroche": "Ce qui consomme, et ce que ça coûte.",
+  "epreuve": "brevet",
+  "bonus": "**P = U × I** (W = V × A) · **E = P × t** (Wh = W × h · J = W × s) · 1 kWh = 3,6 × 10⁶ J",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/puissance-et-energie-electrique.webp",
+    "prompt": "a glossy violet electric plug with a golden lightning bolt, a round energy meter dial with a needle, a small golden coin stack beside it, sparkles"
+  },
+  "marcel": "Puissance en W,\nénergie en Wh !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les deux formules",
+          "taille": "mini",
+          "lignes": ["P = U × I", "E = P × t"],
+          "regle": "**P** la puissance en **watts (W)**, **U** la tension en **volts (V)**, **I** l’intensité en **ampères (A)**. **E** l’énergie en **wattheures (Wh)** si t est en heures, en **joules (J)** si t est en secondes.",
+          "note": "la puissance nominale est sur la plaque&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Ordres de grandeur",
+          "entetes": ["Appareil", "Puissance"],
+          "lignes": [
+            ["LED", "quelques watts"],
+            ["Chargeur de téléphone", "5 à 20 W"],
+            ["Ordinateur", "50 à 100 W"],
+            ["Sèche-cheveux", "1 000 à 2 000 W"],
+            ["Radiateur", "1 500 W = 1,5 kW"],
+            ["Four", "2 000 à 3 000 W"],
+            ["Plaque de cuisson", "plusieurs kW"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer un coût en trois temps",
+          "etapes": [
+            { "titre": "Convertir", "texte": "la puissance en kW et la durée en heures" },
+            { "titre": "Calculer", "texte": "E = P × t en kWh" },
+            { "titre": "Multiplier", "texte": "par le prix du kWh pour obtenir des euros" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un radiateur de __1 500 W__ chauffe __2 h__. Son énergie&nbsp;?",
+          "calcul": "1,5 kW × 2 h = 3 kWh",
+          "aparte": "à 0,20 €/kWh",
+          "resultat": "3 × 0,20 = [[0,60 €]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Puissance ou énergie&nbsp;?",
+          "oui": { "titre": "Puissance (W)", "texte": "Ce que l’appareil **demande à chaque instant**&nbsp;: P = U × I." },
+          "non": { "titre": "Énergie (Wh)", "texte": "Ce qu’il **a consommé** pendant la durée t&nbsp;: E = P × t." },
+          "essai": { "texte": "Une plaque de 2 000 W sous 230 V&nbsp;: I = P ÷ U = 2 000 ÷ 230 ≈ <i>8,7 A</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "P = 1,5 kW et t = 2 h", "quoi": "les données" },
+            { "texte": "E = P × t = 1,5 × 2", "quoi": "lettres puis nombres" },
+            { "texte": "E = 3 kWh", "quoi": "avec l’unité" }
+          ],
+          "pied": "Pour réduire sa facture&nbsp;: ==étiquettes énergie==, fin des veilles, appareils moins puissants."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mélanger **W** et **kW**, ou **h** et **s**.",
+            "Confondre la **puissance** et l’**énergie**.",
+            "Oublier que les **veilles** consomment aussi.",
+            "Donner un coût **sans l’unité** (euros).",
+            "Oublier de **convertir** les kWh en joules (× 3,6 × 10⁶)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "U = 230 V, I = 5 A&nbsp;: **P**&nbsp;?",
+            "Un appareil de 100 W pendant 3 h&nbsp;: **E** en Wh&nbsp;?",
+            "Que donne la plaque **signalétique**&nbsp;?"
+          ],
+          "reponses": "1) 1 150 W · 2) 300 Wh · 3) la puissance nominale"
+        }
+      ]
+    }
+  ]
+}

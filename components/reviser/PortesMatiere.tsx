@@ -5,34 +5,33 @@ import { Crown } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
 import type { ClePorte, Porte } from '@/lib/subject-template'
 import programmeImage from '@/public/images/supports/programme.webp'
-import exerciceImage from '@/public/images/supports/exercice.webp'
+import cahierImage from '@/public/images/supports/cahier.webp'
 import jeuxImage from '@/public/images/defi/icones/modes-v4.webp'
 import annalesImage from '@/public/images/defi/icones/historique-v3.webp'
 import s from './BanniereMatiere.module.css'
 
 /**
  * L'OBJET DE CHAQUE PORTE — de la famille de la barre d'onglets (cerne prune,
- * volumes brillants, violet · or · crème). Deux sont les dessins que l'élève
- * connaît déjà : le bloc-notes du support « Exercice », le dé des modes de
- * jeu. Le PROGRAMME a le sien depuis le 12/10/2026 — une carte dépliée et son
- * chemin pointillé jusqu'au drapeau, le parcours de l'année : le livre ouvert
- * du support « Cours » y faisait doublon avec la tuile Cours de chaque fiche
- * (Lucas). Les ANNALES empruntent l'horloge de l'historique de l'arène (les
- * sujets déjà tombés) en attendant leur dessin.
+ * volumes brillants, violet · or · crème). Le dé des modes de jeu, que l'élève
+ * connaît déjà ; le PROGRAMME et le CAHIER D'EXERCICES ont les leurs depuis
+ * le 13/10/2026 (Lucas : « une meilleure illustration pour Programme », « une
+ * illustration de cahier d'exercices ») — fabriqués par
+ * scripts/supports-icones.mjs, clés `programme` et `cahier`. Le bloc-notes du
+ * support « Exercice » reste à la tuile de chaque fiche, pas à la porte. Les
+ * ANNALES empruntent l'horloge de l'historique de l'arène (les sujets déjà
+ * tombés) en attendant leur dessin.
  *
  * Importés, pas désignés par leur chemin : l'import donne une adresse à
  * empreinte de contenu (cf. SupportChips).
  */
 const IMAGES: Record<ClePorte, StaticImageData> = {
   programme: programmeImage,
-  exercices: exerciceImage,
+  exercices: cahierImage,
   jeu: jeuxImage,
   annales: annalesImage,
 }
 
 export type PorteVue = Porte & {
-  /** Ce qu'il y a derrière, en trois mots (« 19 fiches »). */
-  compte?: string | null
   /** L'offre Studuel+ : la porte porte la couronne. */
   couronne?: boolean
   /** Une annonce posée sur la porte (« Boss disponible »), le temps de l'événement. */
@@ -40,13 +39,15 @@ export type PorteVue = Porte & {
 }
 
 /**
- * LE RAIL DE PORTES du dossier de matière (05/10/2026) : Cours · Exercices ·
- * Jeux · Annales, à la place de six pilules à plat.
+ * LE RAIL DE PORTES du dossier de matière (05/10/2026) : Programme · Cahier
+ * d'exercices · Jeux · Annales, à la place de six pilules à plat.
  *
  * Ce sont des onglets (la page reste la même, le contenu change dessous), mais
  * dessinés comme les objets qu'ils ouvrent : c'est ce qui donne au dossier sa
  * couleur sans peindre de fond. La porte ouverte est une plaque lavande cerclée
- * de violet, son objet en sort ; les autres sont des cartes blanches.
+ * de violet, son objet en sort ; les autres sont des cartes blanches. Rien sous
+ * le nom (13/10/2026) : les comptes (« 30 fiches ») sont partis, l'objet et son
+ * nom suffisent.
  *
  * LA PORTE RÉPOND AU DOIGT : `onIntention` part dès que le doigt se pose
  * (`pointerdown`), une centaine de millisecondes avant le clic — de quoi
@@ -72,7 +73,6 @@ export default function PortesMatiere({
             key={porte.key}
             type="button"
             aria-current={ouverte ? 'page' : undefined}
-            data-sobre={porte.compte ? undefined : ''}
             onPointerDown={() => {
               if (!ouverte) onIntention?.(porte.key)
             }}
@@ -104,8 +104,10 @@ export default function PortesMatiere({
               loading="eager"
               className={s.porteImage}
             />
-            {porte.label}
-            {porte.compte ? <span className={s.porteCompte}>{porte.compte}</span> : null}
+            {/* Un nom peut tenir sur deux lignes (« Cahier d'exercices ») : la
+                boîte du nom fait toujours deux lignes, pour que les objets
+                restent à la même hauteur d'une porte à l'autre. */}
+            <span className={s.porteNom}>{porte.label}</span>
             {porte.couronne ? <span className="sr-only"> (Studuel+)</span> : null}
           </button>
         )

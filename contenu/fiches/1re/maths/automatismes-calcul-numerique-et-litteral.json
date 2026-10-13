@@ -1,0 +1,117 @@
+{
+  "titre": "Calcul et équations",
+  "titreSurligne": "Calcul",
+  "accroche": "Fractions, puissances, identités, équations.",
+  "epreuve": "bac-1re",
+  "bonus": "{a/b} + {c/d} = {ad + bc/bd} · aⁿ × aᵐ = a<sup>n + m</sup> · (a + b)² = a² + 2ab + b² · isoler = **une opération inverse à la fois**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/automatismes-calcul-numerique-et-litteral.webp",
+    "prompt": "glossy violet number tiles and a golden x tile balanced on a beam, a fraction bar and a tiny exponent bubble floating above, sparkles"
+  },
+  "marcel": "Une étape,\nune ligne !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Fractions et puissances",
+          "taille": "mini",
+          "lignes": ["{a/b} + {c/d} = {ad + bc/bd}", "{a/b} × {c/d} = {ac/bd}", "aⁿ × a<sup>m</sup> = a<sup>n + m</sup>"],
+          "regle": "Même dénominateur pour additionner&nbsp;: {1/2} + {1/3} = {3/6} + {2/6} = **{5/6}**. Diviser par une fraction = multiplier par son **inverse**&nbsp;: 3 ÷ {1/2} = 6.",
+          "note": "10⁻³ = 0,001 · 2⁵ = 32"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Calcul littéral",
+          "entetes": ["Je veux", "Je fais", "Exemple"],
+          "lignes": [
+            ["Développer", "distribuer **chaque** terme", "3(x − 2) = 3x − 6"],
+            ["Factoriser", "sortir le **facteur commun**", "4x + 6 = 2(2x + 3)"],
+            ["Identité", "(a + b)² = a² + 2ab + b²", "(x + 3)² = x² + 6x + 9"],
+            ["Résoudre", "isoler x, une opération par ligne", "2x + 5 = 11 → x = 3"],
+            ["Produit nul", "A × B = 0 ⇔ A = 0 **ou** B = 0", "(x − 4)(2x + 1) = 0 → 4 ou −0,5"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Isoler une variable",
+          "etapes": [
+            { "titre": "Repérer", "texte": "ce qui entoure la variable : + 5, × 2, ÷ 3" },
+            { "titre": "Défaire", "texte": "dans l’ordre inverse, une opération par ligne, des deux côtés" },
+            { "titre": "Vérifier", "texte": "en remplaçant dans la formule de départ" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Isoler __h__ dans V = {1/3} × B × h.",
+          "calcul": "3V = B × h",
+          "aparte": "× 3",
+          "resultat": "h = [[{3V/B}]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les automatismes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Ordre de grandeur", "texte": "3,9 × 10⁴ × 2,1 × 10² ≈ 8 × 10⁶&nbsp;: on arrondit les **mantisses**, on additionne les **exposants**." },
+            { "titre": "Comparer", "texte": "Deux nombres&nbsp;: leur **différence** (son signe) ou leur **quotient** (par rapport à 1)." },
+            { "titre": "Signe d’un produit", "texte": "(x − 1)(x + 2) > 0&nbsp;: un **tableau de signes**, une ligne par facteur." },
+            { "titre": "Conversions", "texte": "1 km² = 10⁶ m²&nbsp;; 1 L = 1 dm³&nbsp;; 1 h = 3 600 s&nbsp;: des puissances de 10." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "V = {1/3} B h, donc 3V = B h", "quoi": "on multiplie par 3" },
+            { "texte": "h = 3V ÷ B", "quoi": "on divise par B" },
+            { "texte": "Contrôle&nbsp;: {1/3} × B × {3V/B} = V ✔", "quoi": "la vérification" }
+          ],
+          "pied": "==Une seule opération== par ligne, des deux côtés du signe égal."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Additionner les **dénominateurs**&nbsp;: 1/2 + 1/3 ≠ 2/5.",
+            "(a + b)² = a² + b²&nbsp;: le **double produit** manque.",
+            "2³ × 2² = 4⁵&nbsp;: c’est **2⁵**.",
+            "Diviser par x quand x peut être **nul**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "{2/3} + {1/4}&nbsp;?",
+            "Isoler **t** dans d = v × t.",
+            "Factoriser **x² − 9**."
+          ],
+          "reponses": "1) 11/12 · 2) t = d ÷ v · 3) (x − 3)(x + 3)"
+        }
+      ]
+    }
+  ]
+}

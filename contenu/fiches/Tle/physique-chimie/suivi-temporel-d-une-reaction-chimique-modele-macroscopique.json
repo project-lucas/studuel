@@ -1,0 +1,112 @@
+{
+  "titre": "Vitesse de réaction",
+  "titreSurligne": "Vitesse",
+  "accroche": "La vitesse d’une réaction est une pente.",
+  "epreuve": "bac",
+  "bonus": "v = (1 ÷ V) dx/dt · t<sub>½</sub>&nbsp;: x = x<sub>max</sub> ÷ 2 · ordre 1&nbsp;: [A] = [A]₀ e<sup>−kt</sup> · t<sub>½</sub> = ln 2 ÷ k",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/suivi-temporel-d-une-reaction-chimique-modele-macroscopique.webp",
+    "prompt": "a glossy violet chemistry flask with golden bubbles rising, a descending curve and a tangent line drawn as a golden ribbon beside it, a cartoon stopwatch, sparkles"
+  },
+  "marcel": "La tangente donne\nla vitesse !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les lois à retenir",
+          "petite": true,
+          "lignes": ["<span>t<sub>½</sub></span> = {ln 2/k}", "[A] = [A]₀ e<sup>−kt</sup>"],
+          "regle": "**k** constante de vitesse en **s⁻¹** (ordre 1), **t<sub>½</sub>** en **secondes**. La vitesse volumique v s’exprime en **mol·L⁻¹·s⁻¹** et se lit sur la ==tangente== à la courbe.",
+          "note": "t½ ne dépend pas de [A]₀&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Facteurs cinétiques",
+          "entetes": ["Facteur", "Effet", "Sur la vitesse"],
+          "lignes": [
+            ["Température", "agitation ↑", "augmente"],
+            ["Concentration", "chocs ↑", "augmente"],
+            ["Catalyseur", "autre chemin", "augmente"],
+            ["État final", "inchangé", "même x<sub>max</sub>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "x<sub>max</sub> sur la courbe, puis la valeur x<sub>max</sub> ÷ 2" },
+            { "titre": "Lire", "texte": "l’abscisse correspondante&nbsp;: c’est le temps de demi-réaction" },
+            { "titre": "Conclure", "texte": "vitesse = pente de la tangente, qui diminue au cours du temps" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une réaction d’ordre 1 a pour constante k = 0,023 s⁻¹. Son __temps de demi-réaction__&nbsp;?",
+          "calcul": "t<sub>½</sub> = ln 2 ÷ k = 0,693 ÷ 0,023",
+          "aparte": "en secondes&nbsp;!",
+          "resultat": "t<sub>½</sub> ≈ [[30 s]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Vitesse au cours du temps",
+          "oui": { "titre": "Réactif consommé", "texte": "La vitesse **diminue**&nbsp;: il reste moins de réactif, la tangente s’==aplatit==." },
+          "non": { "titre": "Vitesse constante&nbsp;?", "texte": "**Faux** en général&nbsp;: elle est maximale au début et s’annule en fin de réaction." },
+          "essai": { "texte": "Après 2 t<sub>½</sub> d’une réaction d’ordre 1, il reste <i>{1/4}</i> du réactif&nbsp;; après 3 t<sub>½</sub>, <i>{1/8}</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "À t<sub>½</sub>, x = x<sub>max</sub> ÷ 2 : lecture graphique.", "quoi": "définir" },
+            { "texte": "t<sub>½</sub> = ln 2 ÷ k = 0,693 ÷ 0,023", "quoi": "formule puis nombres" },
+            { "texte": "t<sub>½</sub> ≈ 30 s", "quoi": "avec l’unité" }
+          ],
+          "pied": "La température et le catalyseur changent la ==vitesse==, pas l’**état final**."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Lire t<sub>½</sub> sur **x<sub>max</sub>** au lieu de x<sub>max</sub> ÷ 2.",
+            "Croire qu’un catalyseur change l’**état final**.",
+            "Confondre la **pente** de la courbe et sa valeur.",
+            "Oublier le **signe** de d[A]/dt pour un réactif."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "k = 0,10 min⁻¹&nbsp;: **t<sub>½</sub>** (ln 2 ≈ 0,69)&nbsp;?",
+            "Après 3 t<sub>½</sub>&nbsp;: **fraction** de réactif restante&nbsp;?",
+            "Un catalyseur modifie-t-il **x<sub>max</sub>**&nbsp;?"
+          ],
+          "reponses": "1) 6,9 min · 2) 1/8 · 3) non"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "titre": "Congruences dans Z",
+  "titreSurligne": "Congruences",
+  "accroche": "Raisonner sur les restes.",
+  "epreuve": "bac",
+  "bonus": "a ≡ b [n] ⇔ n divise a − b ⇔ **même reste** dans la division par n · on peut **additionner, multiplier, élever à une puissance**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-expertes/divisibilite-et-congruences-dans-z.webp",
+    "prompt": "a glossy violet clock face with golden hands and a few golden gears turning around it, sparkles"
+  },
+  "marcel": "Seul le reste\ncompte !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les définitions",
+          "taille": "mini",
+          "lignes": [
+            "a = bq + r  avec 0 ≤ r &lt; b",
+            "a ≡ b [n] ⇔ n | (a − b)",
+            "a ≡ r [b]"
+          ],
+          "regle": "b | a veut dire a = bk avec k entier. La division euclidienne a un **unique** couple (q, r), et r est ==strictement== plus petit que b.",
+          "note": "r ≥ 0 même si a est négatif&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les règles de calcul",
+          "entetes": [
+            "Si a ≡ b et c ≡ d [n]",
+            "Alors"
+          ],
+          "lignes": [
+            [
+              "somme",
+              "a + c ≡ b + d [n]"
+            ],
+            [
+              "produit",
+              "**ac ≡ bd [n]**"
+            ],
+            [
+              "puissance",
+              "**a<sup>k</sup> ≡ b<sup>k</sup> [n]**"
+            ],
+            [
+              "division",
+              "**NON** valable en général"
+            ],
+            [
+              "a ≡ 0 [n]",
+              "⇔ n divise a"
+            ],
+            [
+              "exemple",
+              "17 ≡ 2 [5] et 22 ≡ 2 [5]"
+            ],
+            [
+              "différence",
+              "17 − 2 = 15 = 5 × 3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Un reste de puissance en trois temps",
+          "etapes": [
+            {
+              "titre": "Réduire",
+              "texte": "remplacer la base par son reste"
+            },
+            {
+              "titre": "Période",
+              "texte": "chercher k tel que a<sup>k</sup> ≡ 1 [n]"
+            },
+            {
+              "titre": "Diviser",
+              "texte": "écrire l’exposant = k × q + r, garder a<sup>r</sup>"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "écrire le reste, compris entre 0 et n − 1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Reste de __7<sup>2026</sup>__ dans la division par 5&nbsp;?",
+          "calcul": "7 ≡ 2 [5] et 2<sup>4</sup> = 16 ≡ 1 [5] ; 2026 = 4 × 506 + 2",
+          "aparte": "période 4",
+          "resultat": "7<sup>2026</sup> ≡ 2² = [[4]] [5]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Division négative",
+              "texte": "−17 = 5 × (−4) + **3**&nbsp;: q = −4, r = 3."
+            },
+            {
+              "titre": "Critère de 3",
+              "texte": "divisible par 3 si la **somme des chiffres** l’est."
+            },
+            {
+              "titre": "Critère de 4",
+              "texte": "les **deux derniers chiffres** forment un multiple de 4."
+            },
+            {
+              "titre": "Critère de 9",
+              "texte": "somme des chiffres multiple de 9&nbsp;: 729 → 18, oui."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "7 ≡ 2 [5] donc 7<sup>4</sup> ≡ 2<sup>4</sup> ≡ 1 [5].",
+              "quoi": "la période"
+            },
+            {
+              "texte": "2026 = 4 × 506 + 2",
+              "quoi": "la division"
+            },
+            {
+              "texte": "7<sup>2026</sup> ≡ (7<sup>4</sup>)<sup>506</sup> × 7² ≡ 4 [5]",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Le reste est ==4==, compris entre 0 et 4."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Un reste **négatif** ou égal au diviseur.",
+            "**Diviser** une congruence par un entier.",
+            "Oublier de réduire la **base** avant la puissance.",
+            "Croire que a ≡ b [n] veut dire **a = b**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**23** est congru à quoi modulo 7&nbsp;?",
+            "Reste de **3<sup>4</sup>** dans la division par 5&nbsp;?",
+            "Reste de **2<sup>10</sup>** dans la division par 7&nbsp;?"
+          ],
+          "reponses": "1) 2 · 2) 81 = 16 × 5 + 1, donc 1 · 3) 2³ ≡ 1, 10 = 3 × 3 + 1, donc 2"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "titre": "La diffraction",
+  "titreSurligne": "diffraction",
+  "accroche": "Une fente étroite étale l’onde.",
+  "epreuve": "bac",
+  "bonus": "θ = λ ÷ a · L = 2 λ D ÷ a · a **petit** ⇒ θ **grand** · λ, a, D en **mètres** · θ en **radians** (petit angle)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/diffraction-d-une-onde.webp",
+    "prompt": "a glossy violet barrier with a narrow slit letting golden circular waves spread out into a fan, a screen with a bright golden central spot behind, sparkles"
+  },
+  "marcel": "Plus l’ouverture est petite,\nplus l’onde s’étale !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’écart angulaire",
+          "petite": true,
+          "lignes": ["θ = {λ/a}", "L = {2 λ D/a}"],
+          "regle": "**θ** demi-écart angulaire (**rad**), **λ** longueur d’onde, **a** largeur de la fente, **D** distance fente-écran, **L** largeur de la tache centrale, tous en ==mètres==.",
+          "note": "a petit, θ grand&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Ce qui change, ce qui reste",
+          "entetes": ["Grandeur", "Après la fente", "Raison"],
+          "lignes": [
+            ["Fréquence", "inchangée", "fixée par la source"],
+            ["Longueur d’onde", "inchangée", "même milieu"],
+            ["Direction", "étalée", "diffraction"],
+            ["a ≫ λ", "pas d’étalement", "propagation droite"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Convertir", "texte": "λ, a et D en mètres avant de calculer" },
+            { "titre": "Appliquer", "texte": "θ = λ ÷ a, puis L = 2 θ D = 2 λ D ÷ a" },
+            { "titre": "Conclure", "texte": "plus a diminue, plus la tache centrale s’élargit" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un laser rouge de λ = __633 nm__ éclaire une fente de a = 0,10 mm. L’écran est à D = 2,0 m. Largeur de la tache centrale&nbsp;?",
+          "calcul": "θ = 633×10⁻⁹ ÷ 1,0×10⁻⁴ = 6,3×10⁻³ rad",
+          "aparte": "L = 2 θ D",
+          "resultat": "L = 2 × 6,3×10⁻³ × 2,0 ≈ [[25 mm]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Largeur de fente",
+          "oui": { "titre": "Fente plus fine", "texte": "θ ==augmente==&nbsp;: la tache centrale s’**élargit** sur l’écran." },
+          "non": { "titre": "Fente plus fine, tache plus fine&nbsp;?", "texte": "**Faux**&nbsp;: c’est l’inverse. a est au **dénominateur** de θ = λ ÷ a." },
+          "essai": { "texte": "Même fente avec un laser vert (λ = 532 nm)&nbsp;: λ plus petit, donc L plus petit, <i>L ≈ 21 mm</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "θ = λ ÷ a = 633×10⁻⁹ ÷ 1,0×10⁻⁴", "quoi": "formule puis nombres" },
+            { "texte": "L = 2 λ D ÷ a = 2 × 6,3×10⁻³ × 2,0", "quoi": "la tache" },
+            { "texte": "L ≈ 2,5×10⁻² m, soit 25 mm", "quoi": "avec l’unité" }
+          ],
+          "pied": "La diffraction est la preuve du caractère ==ondulatoire== de la lumière."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire θ = **a ÷ λ** à l’envers.",
+            "Oublier le **facteur 2** pour la largeur L.",
+            "Laisser **λ en nm** et a en mm.",
+            "Croire que la diffraction change la **fréquence**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "On rétrécit la fente&nbsp;: la tache centrale **s’élargit** ou s’affine&nbsp;?",
+            "λ = 500 nm, a = 0,10 mm&nbsp;: **θ**&nbsp;?",
+            "La diffraction exige-t-elle a **comparable** à λ&nbsp;?"
+          ],
+          "reponses": "1) elle s’élargit · 2) 5,0×10⁻³ rad · 3) oui"
+        }
+      ]
+    }
+  ]
+}

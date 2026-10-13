@@ -1,0 +1,109 @@
+{
+  "titre": "Le brassage",
+  "titreSurligne": "brassage",
+  "accroche": "Méiose et fécondation rebattent les cartes.",
+  "epreuve": "bac",
+  "bonus": "**Méiose I** = séparation des **homologues** · **méiose II** = séparation des **chromatides sœurs** · **fécondation** = retour à 2n",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/svt/le-brassage-des-genomes-a-chaque-generation-la-reproduction-.webp",
+    "prompt": "a glossy violet deck of playing cards being shuffled with golden chromosome-shaped cards flying out, two tiny golden cells merging into one, sparkles"
+  },
+  "marcel": "Deux divisions,\ndes millions de gamètes !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Méiose", "definition": "deux divisions qui font passer de cellules **2n** à des **gamètes n**" },
+            { "terme": "Interchromosomique", "definition": "répartition **aléatoire** des chromosomes homologues&nbsp;: 2²³ gamètes chez l’humain" },
+            { "terme": "Intrachromosomique", "definition": "**crossing-over** entre chromatides d’homologues&nbsp;: des allèles échangés" },
+            { "terme": "Fécondation", "definition": "fusion de deux gamètes au hasard&nbsp;: retour à **2n**" }
+          ]
+        },
+        {
+          "type": "frise",
+          "numero": 2,
+          "titre": "La méiose en trois temps",
+          "etapes": [
+            { "date": "Avant", "texte": "L’ADN est **répliqué**&nbsp;: chaque chromosome a deux chromatides." },
+            { "date": "Méiose I", "texte": "Division **réductionnelle**&nbsp;: les **homologues** se séparent (crossing-over avant)." },
+            { "date": "Méiose II", "texte": "Division **équationnelle**&nbsp;: les **chromatides sœurs** se séparent." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Repères à connaître",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Résultat", "texte": "Une cellule **2n** donne **quatre** cellules **n**, génétiquement différentes." },
+            { "titre": "Gènes indépendants", "texte": "Sur des chromosomes différents&nbsp;: **quatre** types de gamètes, à parts **égales**." },
+            { "titre": "Gènes liés", "texte": "Sur le même chromosome&nbsp;: **parentaux** majoritaires, **recombinés** minoritaires." },
+            { "titre": "Fécondation", "texte": "Combine les gamètes au hasard&nbsp;: 2⁴⁶ zygotes possibles chez l’humain." },
+            { "titre": "Non-disjonction", "texte": "Une paire ne se sépare pas&nbsp;: gamète à un chromosome en trop ou en moins." },
+            { "titre": "Trisomie 21", "texte": "Trois chromosomes 21&nbsp;: une anomalie de répartition en méiose." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Lire un croisement-test",
+          "etapes": [
+            { "titre": "Repérer", "texte": "les phénotypes parentaux et recombinés" },
+            { "titre": "Comparer", "texte": "les proportions : égales (indépendants) ou non (liés)" },
+            { "titre": "Conclure", "texte": "sur la position des gènes, avec les chiffres" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Les phénotypes parentaux sont très majoritaires.", "quoi": "constater" },
+            { "texte": "Donc les deux gènes sont liés, sur le même chromosome.", "quoi": "interpréter" },
+            { "texte": "Les recombinés viennent d’un crossing-over en méiose.", "quoi": "expliquer" }
+          ],
+          "pied": "Cite toujours les ==proportions== du document pour justifier."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre méiose I (**homologues**) et méiose II (**chromatides sœurs**).",
+            "Oublier que le crossing-over se produit **avant** la séparation.",
+            "Dire que la méiose produit des cellules **identiques**.",
+            "Croire que la fécondation **réduit** le nombre de chromosomes."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle division est **réductionnelle**&nbsp;?",
+            "Que produit le **crossing-over**&nbsp;?",
+            "Que rétablit la **fécondation**&nbsp;?"
+          ],
+          "reponses": "1) la méiose I · 2) un brassage intrachromosomique · 3) l’état diploïde 2n"
+        }
+      ]
+    }
+  ]
+}

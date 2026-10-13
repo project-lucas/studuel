@@ -1,0 +1,113 @@
+{
+  "titre": "L’intensité",
+  "titreSurligne": "intensité",
+  "accroche": "Le débit du courant électrique.",
+  "epreuve": "brevet",
+  "bonus": "Série&nbsp;: **I partout la même** · dérivation&nbsp;: **I = I₁ + I₂** · ampèremètre **en série** · 1 A = 1 000 mA",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/l-intensite-electrique.webp",
+    "prompt": "a glossy violet ampere meter with a round dial, golden glowing electric current flowing like a river through a wire loop with a small lamp, sparkles"
+  },
+  "marcel": "Le courant se partage,\nil ne se perd pas !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les lois de l’intensité",
+          "taille": "mini",
+          "lignes": ["Série&nbsp;: I = I₁ = I₂", "Dérivation&nbsp;: I = I₁ + I₂"],
+          "regle": "**I** l’intensité en **ampères (A)**. En **série**, c’est la **même** en tout point. En **dérivation**, l’intensité de la branche principale est la **somme** des branches.",
+          "note": "le courant se partage, il ne se perd pas&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Ordres de grandeur",
+          "entetes": ["Cas", "Intensité"],
+          "lignes": [
+            ["**LED**", "environ 20 mA"],
+            ["Lampe de poche", "quelques centaines de mA"],
+            ["Chargeur", "1 A environ"],
+            ["Radiateur", "plusieurs ampères"],
+            ["mA → A", "**÷ 1 000** : 250 mA = 0,25 A"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Mesurer une intensité en trois temps",
+          "etapes": [
+            { "titre": "Ouvrir", "texte": "le circuit et brancher l’ampèremètre **en série**, pour le faire traverser par le courant" },
+            { "titre": "Régler", "texte": "le plus grand calibre d’abord, borne COM côté −" },
+            { "titre": "Lire", "texte": "puis diminuer le calibre et écrire l’unité (A)" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une multiprise&nbsp;: lampe __0,5 A__ et ordinateur __1,2 A__ en dérivation. Courant total&nbsp;?",
+          "calcul": "I = 0,5 + 1,2",
+          "aparte": "additivité",
+          "resultat": "I = [[1,7 A]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Fusible et court-circuit",
+          "oui": { "titre": "Le fusible", "texte": "S’il y a trop d’intensité, il **ouvre le circuit** et protège l’installation." },
+          "non": { "titre": "Le court-circuit", "texte": "Un fil relie les bornes de la source : intensité **très grande**, danger d’échauffement." },
+          "essai": { "texte": "Eau : la <i>tension</i> est la pression, l’<i>intensité</i> est le débit de l’eau dans le tuyau." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Les dipôles sont en dérivation&nbsp;: I = I₁ + I₂", "quoi": "la loi" },
+            { "texte": "I = 0,5 + 1,2", "quoi": "lettres puis nombres" },
+            { "texte": "I = 1,7 A", "quoi": "avec l’unité" }
+          ],
+          "pied": "Si le courant est trop fort, le ==fusible== ou le ==disjoncteur== coupe le circuit."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Brancher l’ampèremètre **en dérivation**.",
+            "Oublier de convertir les **mA** en A.",
+            "Croire que le courant « **s’use** » dans une lampe.",
+            "Partir du **petit calibre** : on risque de griller l’appareil."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Série, I₁ = 0,3 A&nbsp;: **I₂**&nbsp;?",
+            "Dérivation&nbsp;: 0,2 A et 0,4 A, **I total**&nbsp;?",
+            "Que fait un **fusible** en cas de surintensité&nbsp;?"
+          ],
+          "reponses": "1) 0,3 A · 2) 0,6 A · 3) il ouvre le circuit"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "titre": "Limites de fonctions",
+  "titreSurligne": "fonctions",
+  "accroche": "Aux bords : à l’infini ou près d’une valeur interdite.",
+  "epreuve": "bac",
+  "bonus": "lim<sub>+∞</sub> f = ℓ ⇒ y = ℓ asymptote · lim<sub>a</sub> f = ±∞ ⇒ x = a asymptote · e<sup>x</sup>/x → +∞",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths/limites-de-fonctions.webp",
+    "prompt": "a glossy violet curve flattening toward a golden dashed horizontal line and a golden vertical line, sparkles"
+  },
+  "marcel": "Tu factorises\npar le terme dominant !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les asymptotes",
+          "taille": "mini",
+          "lignes": ["<span>lim<sub>x→+∞</sub> f(x) = ℓ</span>", "⇒ y = ℓ asymptote horizontale", "<span>lim<sub>x→a</sub> f(x) = ±∞</span>", "⇒ x = a asymptote verticale"],
+          "regle": "La première est une droite que la courbe **approche à l’infini**&nbsp;; la seconde se produit en une **valeur interdite**.",
+          "note": "une asymptote n’est pas un point&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Limites de référence",
+          "entetes": ["En +∞", "Limite"],
+          "lignes": [
+            ["x², x³, √x", "+∞"],
+            ["{1/x}", "0"],
+            ["e<sup>x</sup>", "+∞"],
+            ["e<sup>x</sup> / x<sup>n</sup>", "**+∞** (croissances comparées)"],
+            ["x<sup>n</sup>e<sup>−x</sup>", "**0**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Substituer", "texte": "remplacer x et regarder si c’est une forme indéterminée" },
+            { "titre": "Lever", "texte": "factoriser par le terme de plus haut degré, ou multiplier par le conjugué" },
+            { "titre": "Conclure", "texte": "citer somme, produit, quotient ou composée, puis l’asymptote" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = (2x² − x) ÷ (x² + 3). __Limite en +∞__&nbsp;?",
+          "calcul": "f(x) = (2 − 1/x) ÷ (1 + 3/x²)",
+          "aparte": "on factorise x²",
+          "resultat": "→ [[2]] : y = 2 asymptote"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "À gauche, à droite", "texte": "lim<sub>x→0⁺</sub> 1/x = +∞ et lim<sub>x→0⁻</sub> 1/x = **−∞**." },
+            { "titre": "Gendarmes", "texte": "g ≤ f ≤ h avec g et h de même limite ℓ&nbsp;: f → **ℓ**." },
+            { "titre": "Composée", "texte": "lim u = b et lim f en b = c&nbsp;: lim f∘u = **c**." },
+            { "titre": "Conjugué", "texte": "pour √a − √b, on multiplie par √a + √b." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Pour x ≠ 0, f(x) = (2 − 1/x) ÷ (1 + 3/x²)", "quoi": "je factorise" },
+            { "texte": "lim 1/x = 0 et lim 3/x² = 0 en +∞", "quoi": "limites usuelles" },
+            { "texte": "Par quotient, lim f(x) = 2 ÷ 1 = 2", "quoi": "j’énonce l’opération" }
+          ],
+          "pied": "Donc la droite ==y = 2== est asymptote horizontale à la courbe en +∞."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire « ∞ − ∞ = 0 ».",
+            "Oublier de **justifier** par un théorème.",
+            "Confondre **asymptote** et limite.",
+            "Mélanger limite à **gauche** et à droite."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**lim** en +∞ de 3 + 1/x&nbsp;?",
+            "lim<sub>x→0⁺</sub> 1/x&nbsp;: **asymptote**&nbsp;?",
+            "**lim** en +∞ de x·e<sup>−x</sup>&nbsp;?"
+          ],
+          "reponses": "1) 3 · 2) +∞ : x = 0 asymptote verticale · 3) 0, croissances comparées"
+        }
+      ]
+    }
+  ]
+}

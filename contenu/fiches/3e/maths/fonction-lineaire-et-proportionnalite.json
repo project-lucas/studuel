@@ -1,0 +1,117 @@
+{
+  "titre": "La fonction linéaire",
+  "titreSurligne": "linéaire",
+  "accroche": "La proportionnalité, écrite comme une fonction.",
+  "epreuve": "brevet",
+  "bonus": "f(x) = **ax** · une droite qui passe par l’**origine** · a = **coefficient de proportionnalité**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/fonction-lineaire-et-proportionnalite.webp",
+    "prompt": "a glossy violet straight line shooting from the corner of a golden grid through the origin, a tiny cartoon rocket riding along it, price tags doubling along the way, sparkles"
+  },
+  "marcel": "Par l’origine,\nsinon pas linéaire !",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La forme",
+          "petite": true,
+          "lignes": ["f(x) = ax"],
+          "regle": "**a** est le coefficient de proportionnalité&nbsp;: f(2) = 2a, f(10) = 10a. La courbe est une **droite** qui passe par ==l’origine==, et a est sa pente. Un tableau de proportionnalité, c’est une fonction linéaire.",
+          "note": "f(0) = 0, toujours&nbsp;!"
+        },
+        {
+          "type": "figures",
+          "numero": 2,
+          "titre": "La droite",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><g stroke='#2b2350' stroke-width='2' stroke-linecap='round'><line x1='20' y1='140' x2='214' y2='140'></line><line x1='40' y1='160' x2='40' y2='6'></line></g><polygon points='214,140 206,135 206,145' fill='#2b2350'></polygon><polygon points='40,6 35,14 45,14' fill='#2b2350'></polygon><line x1='22' y1='147' x2='196' y2='18' stroke='#7a3fe0' stroke-width='4' stroke-linecap='round'></line><g stroke='#f1566c' stroke-width='2' stroke-dasharray='4 3'><line x1='70' y1='116' x2='70' y2='140'></line><line x1='40' y1='116' x2='70' y2='116'></line><line x1='130' y1='68' x2='130' y2='140'></line><line x1='40' y1='68' x2='130' y2='68'></line></g><g fill='#f5b722' stroke='#2b2350' stroke-width='2'><circle cx='70' cy='116' r='5'></circle><circle cx='130' cy='68' r='5'></circle><circle cx='40' cy='140' r='5'></circle></g><g font-family=\"'Baloo 2'\" font-weight='800' font-size='14' fill='#2b2350'><text x='66' y='157'>1</text><text x='126' y='157'>3</text><text x='24' y='121'>2</text><text x='24' y='73'>6</text><text x='44' y='157'>O</text></g></svg>",
+              "legende": "f(x) = 2x",
+              "sous": "les images sont proportionnelles&nbsp;: 1 → 2, 3 → 6"
+            }
+          ],
+          "legende": { "jeton": "origine", "texte": "la droite passe par O (0 ; 0)" }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Reconnaître en trois temps",
+          "etapes": [
+            { "titre": "La formule", "texte": "f(x) = 3x oui ; f(x) = 3x + 1 non ; f(x) = x² non" },
+            { "titre": "Le tableau", "texte": "les quotients image ÷ nombre sont tous égaux à a" },
+            { "titre": "La courbe", "texte": "une droite qui passe par l’origine" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f est linéaire et f(4) = 10. __a__, puis __f(7)__&nbsp;?",
+          "calcul": "a = {10/4} = 2,5",
+          "aparte": "image ÷ nombre",
+          "resultat": "f(7) = 2,5 × 7 = [[17,5]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les pourcentages, cas particulier",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Prendre t %", "texte": "f(x) = (t/100) × x&nbsp;: 20 % de 45 = 0,2 × 45 = 9." },
+            { "titre": "Augmenter de t %", "texte": "multiplier par **1 + t/100**&nbsp;: +15 % → × 1,15." },
+            { "titre": "Diminuer de t %", "texte": "multiplier par **1 − t/100**&nbsp;: −15 % → × 0,85." },
+            { "titre": "Deux fois de suite", "texte": "les coefficients se **multiplient**&nbsp;: +10 % puis +10 % → × 1,21, soit **+21 %**, pas 20." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "f est linéaire&nbsp;: f(x) = ax", "quoi": "la forme" },
+            { "texte": "f(4) = 10 donne 4a = 10, donc a = 2,5", "quoi": "le coefficient" },
+            { "texte": "f(x) = 2,5x et f(7) = 17,5", "quoi": "formule et image" }
+          ],
+          "pied": "Si f(0) ≠ 0, ou si la courbe ==ne passe pas== par l’origine, ce n’est pas linéaire."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Prendre 3x + 1 pour une fonction **linéaire** (elle est affine).",
+            "Additionner les pourcentages&nbsp;: +10 % puis +10 % ≠ **+20 %**.",
+            "Calculer a = nombre ÷ image au lieu de **image ÷ nombre**.",
+            "Tracer une droite qui ne passe pas par l’**origine**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "f(x) = 3x&nbsp;: **f(5)**&nbsp;?",
+            "g linéaire et g(2) = 7&nbsp;: **a**&nbsp;?",
+            "Augmenter de **30 %**&nbsp;: on multiplie par&nbsp;?"
+          ],
+          "reponses": "1) 15 · 2) 3,5 · 3) 1,3"
+        }
+      ]
+    }
+  ]
+}

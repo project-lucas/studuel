@@ -1,0 +1,116 @@
+{
+  "titre": "La fonction carré",
+  "titreSurligne": "carré",
+  "accroche": "Une parabole, un minimum en 0.",
+  "bonus": "f(x) = **x²** · décroissante sur ]−∞ ; 0], croissante sur [0 ; +∞[ · minimum **0** en x = 0",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/maths/la-fonction-carre.webp",
+    "prompt": "a glossy violet bowl-shaped parabola curve on a golden grid with a tiny cartoon marble rolling at its lowest point, sparkles"
+  },
+  "marcel": "Un carré est\ntoujours ≥ 0 !",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La fonction",
+          "petite": true,
+          "lignes": ["f(x) = x²"],
+          "regle": "**Décroissante** sur ]−∞&nbsp;; 0], **croissante** sur [0&nbsp;; +∞[. Le **minimum** est 0, atteint en x = 0&nbsp;: le sommet de la parabole. f est **paire** : f(−x) = f(x), la courbe est symétrique par rapport à l’axe des ordonnées.",
+          "note": "(−3)² = 9, pas −9&nbsp;!"
+        },
+        {
+          "type": "figures",
+          "numero": 2,
+          "titre": "La parabole",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><g stroke='#2b2350' stroke-width='2' stroke-linecap='round'><line x1='10' y1='140' x2='214' y2='140'></line><line x1='110' y1='164' x2='110' y2='6'></line></g><polygon points='214,140 206,135 206,145' fill='#2b2350'></polygon><polygon points='110,6 105,14 115,14' fill='#2b2350'></polygon><path d='M50,20 Q110,260 170,20' fill='none' stroke='#7a3fe0' stroke-width='4' stroke-linecap='round'></path><circle cx='110' cy='140' r='5' fill='#f5b722' stroke='#2b2350' stroke-width='2'></circle><g stroke='#f1566c' stroke-width='2.5' stroke-dasharray='4 3'><line x1='80' y1='80' x2='140' y2='80'></line></g><g font-family=\"'Baloo 2'\" font-weight='800' font-size='14' fill='#2b2350'><text x='116' y='158' fill='#b8860b'>sommet</text><text x='144' y='84' fill='#f1566c'>k</text></g></svg>",
+              "legende": "y = x²",
+              "sous": "deux antécédents opposés pour tout k > 0"
+            }
+          ],
+          "legende": { "jeton": "x² = k", "texte": "k > 0&nbsp;: ±√k · k = 0&nbsp;: 0 · k < 0&nbsp;: aucune" }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Comparer des carrés",
+          "etapes": [
+            { "titre": "Placer", "texte": "les nombres sur [0&nbsp;; +∞[ ou sur ]−∞&nbsp;; 0]" },
+            { "titre": "Choisir", "texte": "croissante à droite de 0 : l’ordre est conservé ; à gauche : inversé" },
+            { "titre": "Conclure", "texte": "écrire l’inégalité sur les carrés" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Résoudre __x² ≤ 9__ et comparer (−4)² et (−2)².",
+          "calcul": "x² ≤ 9 ⟺ −3 ≤ x ≤ 3",
+          "aparte": "entre les racines",
+          "resultat": "−4 < −2 ≤ 0 donc (−4)² [[> (−2)²]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Résoudre avec x²",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "x² = k", "texte": "k > 0&nbsp;: **deux** solutions −√k et √k&nbsp;; k < 0&nbsp;: **aucune**." },
+            { "titre": "x² ≥ k", "texte": "x² ≥ 4 ⟺ x ≤ −2 ou x ≥ **2**&nbsp;: à l’extérieur." },
+            { "titre": "x² < k", "texte": "x² < 4 ⟺ **−2 < x < 2**&nbsp;: entre les racines." },
+            { "titre": "Signe", "texte": "x² est **positif ou nul**, et nul seulement pour x = 0." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "−4 < −2 ≤ 0 et f est décroissante sur ]−∞&nbsp;; 0]", "quoi": "on place et on choisit" },
+            { "texte": "donc f(−4) > f(−2)", "quoi": "l’ordre est inversé" },
+            { "texte": "soit (−4)² = 16 > 4 = (−2)²", "quoi": "on vérifie" }
+          ],
+          "pied": "Toujours ==justifier== par le sens de variation sur l’intervalle."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire x² = 9 ⟹ x = 3&nbsp;: oublier **−3**.",
+            "Croire que f est croissante sur **tout ℝ**.",
+            "Calculer −3² = 9&nbsp;: c’est **(−3)²**, et −3² = −9.",
+            "Résoudre x² = −4&nbsp;: il n’y a **aucune** solution."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Résoudre **x² = 25**.",
+            "Résoudre **x² < 16**.",
+            "Comparer **(−3)²** et **(−1)²**."
+          ],
+          "reponses": "1) x = −5 ou x = 5 · 2) −4 < x < 4 · 3) 9 > 1"
+        }
+      ]
+    }
+  ]
+}

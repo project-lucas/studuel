@@ -1,0 +1,119 @@
+{
+  "titre": "Dériver une composée",
+  "titreSurligne": "composée",
+  "accroche": "Dériver de l’extérieur vers l’intérieur.",
+  "epreuve": "bac",
+  "bonus": "(u∘v)′ = v′ × u′∘v · (e<sup>u</sup>)′ = u′e<sup>u</sup> · (ln u)′ = u′/u · (u<sup>n</sup>)′ = nu′u<sup>n−1</sup>",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths/derivee-de-2-fonctions-composees.webp",
+    "prompt": "a glossy violet nesting doll opening to reveal a smaller golden one inside, sparkles"
+  },
+  "marcel": "L’extérieur d’abord,\npuis l’intérieur !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le théorème",
+          "taille": "mini",
+          "lignes": ["(u∘v)′ = v′ × u′∘v", "<span>(e<sup>u</sup>)′ = u′e<sup>u</sup></span>", "(ln u)′ = {u′/u}", "<span>(u<sup>n</sup>)′ = nu′u<sup>n−1</sup></span>"],
+          "regle": "Si **v** est dérivable en x et **u** dérivable en v(x), alors u∘v est dérivable en x. On dérive l’**extérieure** puis on multiplie par la dérivée de l’**intérieure**.",
+          "note": "ln u demande u &gt; 0&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les cas usuels",
+          "entetes": ["Fonction", "Dérivée"],
+          "lignes": [
+            ["u<sup>n</sup>", "n·u′·u<sup>n−1</sup>"],
+            ["e<sup>u</sup>", "u′·e<sup>u</sup>"],
+            ["ln u", "u′ / u"],
+            ["√u", "u′ / (2√u)"],
+            ["f(ax + b)", "a·f′(ax + b)"],
+            ["1 / u", "−u′ / u²"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "l’extérieur u et l’intérieur v dans f = u∘v" },
+            { "titre": "Dériver", "texte": "calculer v′, puis u′ évaluée en v(x)" },
+            { "titre": "Multiplier", "texte": "f′(x) = v′(x) × u′(v(x)), puis simplifier" },
+            { "titre": "Étudier le signe", "texte": "factoriser f′ puis dresser le tableau de variations" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = e<sup>3x²+1</sup>. __Calculer f′(x)__.",
+          "calcul": "u = 3x² + 1, u′ = 6x",
+          "aparte": "forme e<sup>u</sup>",
+          "resultat": "f′(x) = [[6x e<sup>3x²+1</sup>]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À reconnaître",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "(2x − 5)⁴", "texte": "4 × 2 × (2x − 5)³ = **8(2x − 5)³**." },
+            { "titre": "e<sup>3x</sup>", "texte": "u = 3x, u′ = 3&nbsp;: **3e<sup>3x</sup>**." },
+            { "titre": "ln(x² + 1)", "texte": "2x ÷ (x² + 1), définie sur ℝ car x² + 1 &gt; 0." },
+            { "titre": "Signe", "texte": "e<sup>u</sup> &gt; 0&nbsp;: le signe de f′ est celui de **u′**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "f = e<sup>u</sup> avec u(x) = 3x² + 1 dérivable sur ℝ", "quoi": "je nomme u" },
+            { "texte": "u′(x) = 6x", "quoi": "la dérivée intérieure" },
+            { "texte": "f′(x) = u′(x)e<sup>u(x)</sup> = 6x e<sup>3x²+1</sup>", "quoi": "la formule appliquée" }
+          ],
+          "pied": "Comme e<sup>u</sup> &gt; 0, ==f′ a le signe de 6x==&nbsp;: f décroît sur ℝ⁻, croît sur ℝ⁺."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier de multiplier par **u′**.",
+            "Dériver **e<sup>3x²+1</sup>** en gardant l’exposant seul.",
+            "Écrire (u<sup>n</sup>)′ = n·u<sup>n−1</sup> sans **u′**.",
+            "Utiliser ln u sans vérifier **u &gt; 0**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**Dérivée** de e<sup>2x</sup>&nbsp;?",
+            "**Dérivée** de ln(x² + 1)&nbsp;?",
+            "**Dérivée** de (3x + 1)²&nbsp;?"
+          ],
+          "reponses": "1) 2e<sup>2x</sup> · 2) 2x ÷ (x² + 1) · 3) 6(3x + 1)"
+        }
+      ]
+    }
+  ]
+}

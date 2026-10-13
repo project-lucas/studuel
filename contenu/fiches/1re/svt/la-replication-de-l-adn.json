@@ -1,0 +1,109 @@
+{
+  "titre": "La réplication",
+  "titreSurligne": "réplication",
+  "accroche": "Une molécule d’ADN en donne deux.",
+  "epreuve": "bac",
+  "bonus": "**Semi-conservative** = chaque molécule fille a **1 brin parental** + **1 brin néoformé** · erreur rare, **réparée** ou devenue **mutation**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/svt/la-replication-de-l-adn.webp",
+    "prompt": "a glossy violet DNA double helix unzipping in the middle into two golden strands, each strand rebuilding a new partner from small glowing beads, sparkles"
+  },
+  "marcel": "Un brin ancien,\nun brin neuf !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "Trois hypothèses, une preuve",
+          "etapes": [
+            { "date": "Hypothèses", "texte": "**Conservative**&nbsp;: l’ADN d’origine reste intact. **Dispersive**&nbsp;: des fragments mêlés." },
+            { "date": "1958", "texte": "**Meselson et Stahl** suivent l’ADN marqué à l’azote lourd&nbsp;: la réplication est **semi-conservative**. **Confirmée**." }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les acteurs",
+          "entetes": ["Acteur", "Rôle"],
+          "lignes": [
+            ["**ADN hélicase**", "ouvre la double hélice, forme les **fourches**"],
+            ["**ADN polymérase**", "ajoute les nucléotides complémentaires, dans un seul sens"],
+            ["**Origines**", "nombreuses, simultanées&nbsp;: des **œils de réplication**"],
+            ["**Réparation**", "corrige les erreurs d’appariement"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce qu’il faut savoir expliquer",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Brin parental", "texte": "Chaque brin de la molécule mère sert de **modèle** à un brin neuf." },
+            { "titre": "Brin néoformé", "texte": "Construit par complémentarité&nbsp;: A avec T, C avec G." },
+            { "titre": "Œil de réplication", "texte": "Deux **fourches** s’écartent à partir d’une origine, la bulle s’agrandit." },
+            { "titre": "Fidélité", "texte": "Environ **une erreur par milliard** de nucléotides après réparation." },
+            { "titre": "Mutation", "texte": "Une erreur non réparée change la séquence d’ADN&nbsp;: elle est ensuite copiée." },
+            { "titre": "Mutagènes", "texte": "**Rayons UV**, **radiations ionisantes**, **agents chimiques**." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Raisonner sur un résultat de réplication",
+          "etapes": [
+            { "titre": "Repérer", "texte": "d’où vient chaque brin&nbsp;: parental ou néoformé" },
+            { "titre": "Comparer", "texte": "au résultat attendu pour chaque hypothèse" },
+            { "titre": "Conclure", "texte": "quelle hypothèse est confirmée ou écartée" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Après une réplication, chaque molécule fille a un brin parental et un brin néoformé.", "quoi": "le résultat" },
+            { "texte": "L’hypothèse conservative est écartée&nbsp;: aucune molécule n’est restée intacte.", "quoi": "écarter" },
+            { "texte": "La réplication est donc semi-conservative.", "quoi": "conclure" }
+          ],
+          "pied": "Un seul ADN de départ donne ==deux molécules identiques== à la mère, à l’erreur près."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que l’ADN d’origine **disparaît** ou reste intact.",
+            "Confondre **hélicase** (ouvre) et **polymérase** (copie).",
+            "Croire qu’il n’y a qu’**une** origine de réplication.",
+            "Dire que toute erreur est une **mutation**&nbsp;: la plupart sont réparées."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que contient chaque molécule fille&nbsp;?",
+            "Quelle enzyme **ouvre** la double hélice&nbsp;?",
+            "Citez un **agent mutagène**."
+          ],
+          "reponses": "1) un brin parental + un brin néoformé · 2) l’ADN hélicase · 3) rayons UV, par exemple"
+        }
+      ]
+    }
+  ]
+}

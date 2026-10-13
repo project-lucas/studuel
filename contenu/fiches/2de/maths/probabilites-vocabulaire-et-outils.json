@@ -1,0 +1,115 @@
+{
+  "titre": "Les probabilités",
+  "titreSurligne": "probabilités",
+  "accroche": "Univers, événements, et les trois formules.",
+  "bonus": "P(A) = **cas favorables ÷ cas possibles** · P(Ā) = **1 − P(A)** · P(A ∪ B) = **P(A) + P(B) − P(A ∩ B)**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/maths/probabilites-vocabulaire-et-outils.webp",
+    "prompt": "a glossy violet six-sided die tumbling in the air next to a golden bag of marbles, a tiny cartoon fortune teller peeking at them, sparkles"
+  },
+  "marcel": "Compte bien\nles cas possibles !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les formules",
+          "taille": "mini",
+          "lignes": ["P(A) = nombre de cas favorables ÷ nombre de cas possibles", "P(Ā) = 1 − P(A)", "P(A ∪ B) = P(A) + P(B) − P(A ∩ B)"],
+          "regle": "Une probabilité est comprise entre ==0 et 1==. La somme des probabilités de toutes les issues vaut 1. La première formule exige l’**équiprobabilité**.",
+          "note": "incompatibles : P(A ∩ B) = 0&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Univers Ω", "definition": "l’ensemble de **toutes les issues**" },
+            { "terme": "Événement", "definition": "une partie de l’univers : P(A) mesure sa **chance**" },
+            { "terme": "Certain, impossible", "definition": "probabilité **1**, probabilité **0**" },
+            { "terme": "Contraire Ā", "definition": "**tout sauf** A" },
+            { "terme": "Incompatibles", "definition": "A et B n’ont **aucune** issue commune" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer une probabilité",
+          "etapes": [
+            { "titre": "Modéliser", "texte": "lister l’univers, vérifier l’équiprobabilité" },
+            { "titre": "Traduire", "texte": "écrire l’événement avec ses issues, ou ∪, ∩, contraire" },
+            { "titre": "Calculer", "texte": "appliquer la bonne formule, simplifier la fraction" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Dé équilibré. A : « pair », B : « multiple de 3 ». __P(A ∪ B)__&nbsp;?",
+          "calcul": "P(A) = 1/2, P(B) = 1/3, A ∩ B = {6}",
+          "aparte": "6 compté deux fois",
+          "resultat": "P(A ∪ B) = 1/2 + 1/3 − 1/6 = [[2/3]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les outils",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Arbre", "texte": "On **multiplie** le long d’un chemin, on **additionne** les chemins." },
+            { "titre": "Double entrée", "texte": "Deux dés, somme 7&nbsp;: 6 cas sur 36, soit **1/6**." },
+            { "titre": "Contraire", "texte": "« au moins un » = **1 − P(aucun)**&nbsp;: plus rapide." },
+            { "titre": "Fréquence", "texte": "Sur beaucoup d’essais, la **fréquence** se rapproche de P." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Ω = {1&nbsp;; 2&nbsp;; 3&nbsp;; 4&nbsp;; 5&nbsp;; 6}, équiprobabilité", "quoi": "le modèle" },
+            { "texte": "A ∩ B = {6} donc P(A ∩ B) = 1/6", "quoi": "l’intersection" },
+            { "texte": "P(A ∪ B) = 1/2 + 1/3 − 1/6 = 4/6 = 2/3", "quoi": "la formule" }
+          ],
+          "pied": "On ==retranche== A ∩ B pour ne pas compter le 6 deux fois."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Appliquer « favorables ÷ possibles » **sans équiprobabilité**.",
+            "Additionner P(A) + P(B) quand A et B ne sont **pas incompatibles**.",
+            "Trouver une probabilité **> 1** ou négative.",
+            "Confondre « **au moins un** » et « exactement un »."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dé équilibré&nbsp;: P(**résultat > 4**)&nbsp;?",
+            "P(A) = 0,3&nbsp;: que vaut **P(Ā)**&nbsp;?",
+            "A, B incompatibles, P(A) = 0,2 et P(B) = 0,5&nbsp;: **P(A ∪ B)**&nbsp;?"
+          ],
+          "reponses": "1) {5 ; 6}, soit 2/6 = 1/3 · 2) 0,7 · 3) 0,2 + 0,5 = 0,7"
+        }
+      ]
+    }
+  ]
+}

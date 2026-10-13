@@ -1,0 +1,111 @@
+{
+  "titre": "Le titrage",
+  "titreSurligne": "titrage",
+  "accroche": "Trouver une concentration par une réaction.",
+  "epreuve": "bac",
+  "bonus": "Réaction **totale, rapide, unique** · à l’équivalence&nbsp;: réactifs en **proportions stœchiométriques**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/dosage-par-titrage.webp",
+    "prompt": "a glossy violet burette dripping a golden drop into a flask on a magnetic stirrer, the liquid turning pink, sparkles"
+  },
+  "marcel": "Goutte après goutte,\nl’équivalence !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les deux acteurs",
+          "items": [
+            { "terme": "Espèce titrée", "definition": "dans le bécher, sa concentration est **inconnue**" },
+            { "terme": "Titrant", "definition": "dans la burette, sa concentration est **connue**" },
+            { "terme": "Équivalence", "definition": "les réactifs sont introduits dans les **proportions stœchiométriques**" },
+            { "terme": "Volume équivalent", "definition": "V<sub>E</sub>, versé du titrant à l’équivalence" }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "À l’équivalence",
+          "petite": true,
+          "lignes": ["<span>C<sub>A</sub></span><span>V<sub>A</sub></span> = <span>C<sub>B</sub></span><span>V<sub>E</sub></span>"],
+          "regle": "Pour une réaction **1 : 1**, les quantités de matière sont égales à l’équivalence. Réaction **totale, rapide et unique**, équivalence **repérable**.",
+          "note": "A = titré, B = titrant, V<sub>E</sub> lu&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Repérer l’équivalence",
+          "etapes": [
+            { "titre": "Colorimétrique", "texte": "le **premier changement de couleur persistant**" },
+            { "titre": "Conductimétrique", "texte": "l’**intersection des deux droites** de conductivité" },
+            { "titre": "pH-métrique", "texte": "le **saut de pH** sur la courbe" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "10,0 mL d’acide titrés par de la soude à 0,10 mol/L. V<sub>E</sub> = 12,5 mL. __C<sub>A</sub>__&nbsp;?",
+          "calcul": "C<sub>A</sub>V<sub>A</sub> = C<sub>B</sub>V<sub>E</sub>",
+          "aparte": "réaction 1 : 1",
+          "resultat": "C<sub>A</sub> = 0,10 × 12,5 ÷ 10,0 = [[0,125 mol/L]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Avant, à, après",
+          "oui": { "titre": "Avant l’équivalence", "texte": "Le **titrant** versé est entièrement consommé&nbsp;: c’est le réactif **limitant**." },
+          "non": { "titre": "Après l’équivalence", "texte": "Le **titrant** n’est plus consommé&nbsp;: il est en **excès**." },
+          "essai": { "texte": "L’équivalence est le <i>changement de réactif limitant</i>&nbsp;: c’est là que le virage, le saut ou la rupture de pente apparaît." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "À l’équivalence, n<sub>A</sub> = n<sub>B,versé</sub> (réaction 1 : 1).", "quoi": "l’égalité" },
+            { "texte": "C<sub>A</sub> = C<sub>B</sub> × V<sub>E</sub> ÷ V<sub>A</sub> = 0,10 × 12,5 ÷ 10,0", "quoi": "formule puis nombres" },
+            { "texte": "C<sub>A</sub> = 0,125 mol/L", "quoi": "avec l’unité" }
+          ],
+          "pied": "Indique toujours ==comment== l’équivalence est repérée (couleur, pente, saut)."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **titrant** (burette) et espèce **titrée** (bécher).",
+            "Utiliser C<sub>A</sub>V<sub>A</sub> = C<sub>B</sub>V<sub>E</sub> si les coefficients ne sont **pas** 1 : 1.",
+            "Prendre le **premier** changement non persistant pour l’équivalence.",
+            "Oublier l’**unité** de la concentration."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Où est le **titrant**&nbsp;?",
+            "Qu’est-ce qui change **à l’équivalence**&nbsp;?",
+            "C<sub>B</sub> = 0,20 mol/L, V<sub>E</sub> = 10 mL, V<sub>A</sub> = 20 mL&nbsp;: **C<sub>A</sub>**&nbsp;?"
+          ],
+          "reponses": "1) dans la burette · 2) le réactif limitant · 3) 0,10 mol/L"
+        }
+      ]
+    }
+  ]
+}

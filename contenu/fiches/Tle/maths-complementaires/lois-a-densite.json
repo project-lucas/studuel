@@ -1,0 +1,181 @@
+{
+  "titre": "Lois à densité",
+  "titreSurligne": "densité",
+  "accroche": "Une probabilité est une aire.",
+  "epreuve": "bac",
+  "bonus": "f continue, positive, d’intégrale **1** · P(X = c) = **0** · uniforme&nbsp;: E = (a + b) ÷ 2 · exponentielle&nbsp;: E = 1 ÷ λ",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-complementaires/lois-a-densite.webp",
+    "prompt": "a glossy violet bell-shaped curve with a golden shaded area under it and a small golden die, sparkles"
+  },
+  "marcel": "Aire sous la courbe,\nc’est la proba !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La densité",
+          "taille": "mini",
+          "lignes": [
+            "P(a ≤ X ≤ b) = ∫ₐᵇ f(t) dt",
+            "∫ f(t) dt = 1 (aire totale)",
+            "P(X = c) = 0"
+          ],
+          "regle": "L’aire totale sous la courbe vaut ==1==. Bornes strictes ou larges&nbsp;: **même** probabilité.",
+          "note": "nulle ne veut pas dire impossible&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les deux lois du programme",
+          "entetes": [
+            "Loi",
+            "Ce qu’il faut"
+          ],
+          "lignes": [
+            [
+              "**Uniforme** [a&nbsp;; b]",
+              "f constante = 1 ÷ (b − a)"
+            ],
+            [
+              "uniforme [0&nbsp;; 4]",
+              "f(t) = 1 ÷ 4 = **0,25**"
+            ],
+            [
+              "uniforme, proba",
+              "P(c ≤ X ≤ d) = (d − c) ÷ (b − a)"
+            ],
+            [
+              "uniforme, espérance",
+              "E(X) = (a + b) ÷ 2"
+            ],
+            [
+              "**Exponentielle** λ",
+              "P(X ≤ t) = 1 − e<sup>−λt</sup>"
+            ],
+            [
+              "exponentielle, espérance",
+              "E(X) = 1 ÷ λ"
+            ],
+            [
+              "exponentielle, complément",
+              "P(X &gt; t) = e<sup>−λt</sup>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer une probabilité en trois temps",
+          "etapes": [
+            {
+              "titre": "Reconnaître",
+              "texte": "la loi, ses paramètres a, b ou λ"
+            },
+            {
+              "titre": "Traduire",
+              "texte": "l’événement en intervalle [c ; d]"
+            },
+            {
+              "titre": "Appliquer",
+              "texte": "la formule de la loi, ou l’intégrale"
+            },
+            {
+              "titre": "Vérifier",
+              "texte": "un résultat entre 0 et 1, et E(X) dans l’intervalle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "X suit la loi uniforme sur [2&nbsp;; 10]. __P(3 ≤ X ≤ 7)__ et E(X)&nbsp;?",
+          "calcul": "(7 − 3) ÷ (10 − 2) = 4 ÷ 8",
+          "aparte": "longueur ÷ longueur",
+          "resultat": "= [[0,5]] · E(X) = 6"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Exemple exponentielle",
+              "texte": "λ = 0,5&nbsp;: E(X) = **2** et P(X ≤ 2) = 1 − e<sup>−1</sup> ≈ **0,632**."
+            },
+            {
+              "titre": "Complémentaire",
+              "texte": "P(X &gt; t) = **e<sup>−λt</sup>**."
+            },
+            {
+              "titre": "Absence de mémoire",
+              "texte": "sachant X &gt; s, la durée restante suit **la même loi**."
+            },
+            {
+              "titre": "Durée de vie",
+              "texte": "l’exponentielle modélise un composant qui **ne vieillit pas**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "X suit la loi uniforme sur [2&nbsp;; 10].",
+              "quoi": "la loi"
+            },
+            {
+              "texte": "P(3 ≤ X ≤ 7) = (7 − 3) ÷ (10 − 2)",
+              "quoi": "la formule"
+            },
+            {
+              "texte": "P(3 ≤ X ≤ 7) = 0,5",
+              "quoi": "le résultat"
+            }
+          ],
+          "pied": "Cite toujours la ==loi== et ses paramètres avant de calculer."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que **P(X = c)** est non nulle.",
+            "Diviser par b au lieu de **b − a**.",
+            "Oublier le **moins** dans e<sup>−λt</sup>.",
+            "Confondre P(X ≤ t) et **P(X &gt; t)**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Uniforme sur [0&nbsp;; 8]&nbsp;: **E(X)**&nbsp;?",
+            "Uniforme sur [0&nbsp;; 8]&nbsp;: **P(X ≤ 2)**&nbsp;?",
+            "Exponentielle de paramètre 4&nbsp;: **E(X)**&nbsp;?"
+          ],
+          "reponses": "1) 4 · 2) 0,25 · 3) 0,25"
+        }
+      ]
+    }
+  ]
+}

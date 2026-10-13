@@ -1,0 +1,113 @@
+{
+  "titre": "Acides et bases",
+  "titreSurligne": "bases",
+  "accroche": "Un proton qui change de main.",
+  "epreuve": "bac",
+  "bonus": "AH / A⁻ · pH = −log [H₃O⁺] · pK<sub>a</sub> = −log K<sub>a</sub> · pH &lt; pK<sub>a</sub>&nbsp;: **AH** prédomine · pH &gt; pK<sub>a</sub>&nbsp;: **A⁻** prédomine",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/acides-et-bases-selon-bronsted.webp",
+    "prompt": "two glossy violet and golden cartoon hands passing a small glowing golden particle between them over a beaker, a color scale bar beside it, sparkles"
+  },
+  "marcel": "L’acide cède H⁺,\nla base le capte !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Constante d’acidité",
+          "petite": true,
+          "lignes": ["K<sub>a</sub> = [A⁻][H₃O⁺] ÷ ([AH] c°)", "pH = pK<sub>a</sub> + log ([A⁻] ÷ [AH])", "pH = −log [H₃O⁺]"],
+          "regle": "Couple **AH / A⁻** : AH est l’==acide== (il cède H⁺), A⁻ la ==base== (elle capte H⁺). **c°** = 1 mol·L⁻¹, K<sub>a</sub> **sans unité**, [H₃O⁺] en **mol·L⁻¹**.",
+          "note": "un couple, jamais une espèce seule&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Diagramme de prédominance",
+          "entetes": ["Condition", "Espèce qui domine", "Rapport"],
+          "lignes": [
+            ["pH &lt; pK<sub>a</sub>", "acide AH", "[AH] &gt; [A⁻]"],
+            ["pH = pK<sub>a</sub>", "les deux", "[AH] = [A⁻]"],
+            ["pH &gt; pK<sub>a</sub>", "base A⁻", "[A⁻] &gt; [AH]"],
+            ["Tampon", "pH = pK<sub>a</sub> ± 1", "pH quasi stable"],
+            ["Eau", "H₃O⁺/H₂O et H₂O/HO⁻", "amphotère"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Écrire", "texte": "le couple et la demi-équation AH = A⁻ + H⁺" },
+            { "titre": "Comparer", "texte": "le pH au pK<sub>a</sub> pour savoir qui prédomine" },
+            { "titre": "Quantifier", "texte": "le rapport [A⁻] ÷ [AH] = 10<sup>(pH − pK<sub>a</sub>)</sup>" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Le couple CH₃COOH / CH₃COO⁻ a un __pK<sub>a</sub> de 4,8__. À pH = 5,8, quelle espèce domine et dans quel rapport&nbsp;?",
+          "calcul": "pH − pK<sub>a</sub> = 5,8 − 4,8 = 1",
+          "aparte": "pH &gt; pK<sub>a</sub> : la base domine",
+          "resultat": "[A⁻] ÷ [AH] = 10¹ = [[10]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Acide, base, réaction",
+          "oui": { "titre": "Réaction acido-basique", "texte": "Elle a lieu **entre deux couples**&nbsp;: l’acide de l’un ==cède== un proton à la base de l’autre&nbsp;: AH₁ + A₂⁻ = A₁⁻ + AH₂." },
+          "non": { "titre": "H⁺ libre en solution&nbsp;?", "texte": "**Faux**&nbsp;: le proton est lié à l’eau, sous forme d’ion **H₃O⁺**." },
+          "essai": { "texte": "À pH = pK<sub>a</sub>, [AH] = [A⁻]&nbsp;: c’est le point de <i>demi-équivalence</i> d’un titrage, et le pH d’une solution tampon, qui résiste aux petits ajouts d’acide ou de base." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "pH − pK<sub>a</sub> = 5,8 − 4,8 = 1 &gt; 0", "quoi": "comparer" },
+            { "texte": "La base CH₃COO⁻ prédomine.", "quoi": "conclure" },
+            { "texte": "[A⁻] ÷ [AH] = 10¹ = 10", "quoi": "quantifier" }
+          ],
+          "pied": "Un pH se **justifie** par [H₃O⁺] : pH = −log [H₃O⁺], et par la comparaison au ==pK<sub>a</sub>==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire la demi-équation avec **H₃O⁺** à la place de H⁺ sans l’eau.",
+            "Inverser **pH &lt; pK<sub>a</sub>** et pH &gt; pK<sub>a</sub>.",
+            "Donner un **K<sub>a</sub>** avec une unité.",
+            "Dire que l’acide est l’espèce **la plus basique**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "pH = 3 et pK<sub>a</sub> = 4,8&nbsp;: quelle espèce **domine**&nbsp;?",
+            "pK<sub>a</sub> = 3,0&nbsp;: **K<sub>a</sub>** vaut&nbsp;?",
+            "[H₃O⁺] = 10⁻³ mol·L⁻¹&nbsp;: **pH**&nbsp;?"
+          ],
+          "reponses": "1) l’acide AH · 2) 10⁻³ · 3) 3,0"
+        }
+      ]
+    }
+  ]
+}

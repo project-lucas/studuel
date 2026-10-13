@@ -1,0 +1,113 @@
+{
+  "titre": "L’énergie cinétique",
+  "titreSurligne": "cinétique",
+  "accroche": "Doubler la vitesse, c’est quadrupler le danger.",
+  "epreuve": "brevet",
+  "bonus": "E<sub>c</sub> = ½ × m × v² · m en **kg**, v en **m/s**, E<sub>c</sub> en **J** · km/h → m/s&nbsp;: **÷ 3,6**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/calculer-la-vitesse-et-l-energie-cinetique.webp",
+    "prompt": "a glossy violet scooter speeding along a golden road with motion lines, a big round speedometer behind it, a cartoon energy bolt trailing from the wheels, sparkles"
+  },
+  "marcel": "La vitesse\nest au carré !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La formule",
+          "petite": true,
+          "lignes": ["<span>E<sub>c</sub></span> = {1/2} × m × v²"],
+          "regle": "**m** la masse en **kilogrammes (kg)**, **v** la vitesse en **mètres par seconde (m/s)**, E<sub>c</sub> en **joules (J)**. Si la vitesse **double**, l’énergie cinétique est ==multipliée par 4==.",
+          "note": "convertir en m/s AVANT de calculer&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Vitesse et conversions",
+          "entetes": ["Grandeur", "Formule", "Unité"],
+          "lignes": [
+            ["Vitesse", "v = d ÷ t", "m/s (ou km/h)"],
+            ["km/h → m/s", "**÷ 3,6**", "72 km/h = 20 m/s"],
+            ["m/s → km/h", "**× 3,6**", "25 m/s = 90 km/h"],
+            ["Distance d’arrêt", "réaction + freinage", "m"],
+            ["Au freinage", "E<sub>c</sub> → énergie **thermique**", "J"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Convertir", "texte": "la vitesse en m/s, la masse en kg" },
+            { "titre": "Remplacer", "texte": "dans E = ½ × m × v², le carré sur la vitesse seule" },
+            { "titre": "Calculer", "texte": "puis écrire l’unité : des joules" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un scooter de 150 kg roule à 45 km/h. Son __énergie cinétique__&nbsp;?",
+          "calcul": "v = 45 ÷ 3,6 = 12,5 m/s",
+          "aparte": "en m/s&nbsp;!",
+          "resultat": "E = ½ × 150 × 12,5² ≈ [[11 700 J]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le carré, tout est là",
+          "oui": { "titre": "Vitesse × 2", "texte": "E<sub>c</sub> × **4**&nbsp;: à 90 km/h, le scooter a quatre fois plus d’énergie qu’à 45 km/h." },
+          "non": { "titre": "Masse × 2", "texte": "E<sub>c</sub> × **2** seulement&nbsp;: la masse n’est pas au carré." },
+          "essai": { "texte": "Voiture de 1 000 kg à 20 m/s&nbsp;: E = ½ × 1 000 × 20² = <i>200 000 J</i>. À 40 m/s&nbsp;: <i>800 000 J</i>, quatre fois plus." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "v = 45 km/h = 45 ÷ 3,6 = 12,5 m/s", "quoi": "la conversion" },
+            { "texte": "E = ½ × m × v² = ½ × 150 × 12,5²", "quoi": "formule puis nombres" },
+            { "texte": "E ≈ 11 700 J", "quoi": "avec l’unité" }
+          ],
+          "pied": "La ==distance d’arrêt== (réaction + freinage) grandit comme le carré de la vitesse."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Garder la vitesse en **km/h** dans la formule.",
+            "Mettre la **masse** au carré.",
+            "Oublier le **½**.",
+            "Donner le résultat **sans unité** (joules)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "m = 2 kg, v = 10 m/s&nbsp;: **E<sub>c</sub>**&nbsp;?",
+            "108 km/h en **m/s**&nbsp;?",
+            "Vitesse × 3&nbsp;: E<sub>c</sub> multipliée par&nbsp;?"
+          ],
+          "reponses": "1) 100 J · 2) 30 m/s · 3) 9"
+        }
+      ]
+    }
+  ]
+}

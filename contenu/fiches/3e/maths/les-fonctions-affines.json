@@ -1,0 +1,117 @@
+{
+  "titre": "Les fonctions affines",
+  "titreSurligne": "affines",
+  "accroche": "ax + b : une droite qui ne passe plus par l’origine.",
+  "epreuve": "brevet",
+  "bonus": "f(x) = **ax + b** · a = **coefficient directeur** (la pente) · b = **ordonnée à l’origine**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/les-fonctions-affines.webp",
+    "prompt": "a glossy violet straight ramp rising across a golden grid, a tiny cartoon skateboarder riding up the slope, a small flag planted where the ramp meets the vertical axis, sparkles"
+  },
+  "marcel": "a fait monter,\nb décale !",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La forme",
+          "petite": true,
+          "lignes": ["f(x) = ax + b"],
+          "regle": "**a** dit la pente&nbsp;: positif, la droite ==monte==&nbsp;; négatif, elle ==descend==&nbsp;; plus |a| est grand, plus elle est raide. **b** est l’ordonnée du point où la droite coupe l’axe vertical. b = 0&nbsp;: fonction **linéaire**&nbsp;; a = 0&nbsp;: fonction **constante**.",
+          "note": "f(0) = b, toujours&nbsp;!"
+        },
+        {
+          "type": "figures",
+          "numero": 2,
+          "titre": "La droite",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><g stroke='#2b2350' stroke-width='2' stroke-linecap='round'><line x1='10' y1='130' x2='214' y2='130'></line><line x1='60' y1='160' x2='60' y2='6'></line></g><polygon points='214,130 206,125 206,135' fill='#2b2350'></polygon><polygon points='60,6 55,14 65,14' fill='#2b2350'></polygon><line x1='10' y1='105' x2='206' y2='7' stroke='#7a3fe0' stroke-width='4' stroke-linecap='round'></line><g stroke='#f1566c' stroke-width='3' stroke-linecap='round'><line x1='60' y1='80' x2='110' y2='80'></line><line x1='110' y1='80' x2='110' y2='55'></line></g><circle cx='60' cy='80' r='5' fill='#f5b722' stroke='#2b2350' stroke-width='2'></circle><g font-family=\"'Baloo 2'\" font-weight='800' font-size='14' fill='#2b2350'><text x='40' y='84' fill='#b8860b'>b</text><text x='78' y='96' fill='#f1566c'>+2</text><text x='116' y='72' fill='#f1566c'>+1</text><text x='66' y='146'>0</text></g></svg>",
+              "legende": "f(x) = 0,5x + 2",
+              "sous": "b = 2&nbsp;: la droite coupe l’axe vertical en 2"
+            }
+          ],
+          "legende": { "jeton": "a = 0,5", "texte": "on avance de 2, on monte de 1" }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Trouver a et b avec deux points",
+          "etapes": [
+            { "titre": "Calculer a", "texte": "a = (yB − yA) ÷ (xB − xA) : la variation de y sur celle de x" },
+            { "titre": "Trouver b", "texte": "b = yA − a × xA, avec l’un des deux points" },
+            { "titre": "Écrire", "texte": "f(x) = ax + b, puis vérifier avec l’autre point" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f est affine, f(1) = 5 et f(3) = 11. __f(x)__&nbsp;?",
+          "calcul": "a = {11 − 5/3 − 1} = 3",
+          "aparte": "la pente",
+          "resultat": "b = 5 − 3 × 1 = 2&nbsp;: f(x) = [[3x + 2]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Au brevet",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Comparer deux offres", "texte": "Tarif A&nbsp;: 2x + 20, tarif B&nbsp;: 4x. Égaux quand 2x + 20 = 4x, soit x = **10**&nbsp;: le point d’intersection." },
+            { "titre": "Lire a et b", "texte": "b là où la droite coupe l’axe vertical&nbsp;; a = de combien on monte quand x augmente de 1." },
+            { "titre": "Tracer", "texte": "Deux points suffisent&nbsp;: (0 ; b) et un autre. Un troisième pour vérifier." },
+            { "titre": "Image, antécédent", "texte": "f(x) = 3x + 2&nbsp;: f(4) = 14&nbsp;; f(x) = 20 ⟺ 3x = 18 ⟺ x = 6." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "f est affine&nbsp;: f(x) = ax + b", "quoi": "la forme" },
+            { "texte": "a = (11 − 5) ÷ (3 − 1) = 6 ÷ 2 = 3", "quoi": "le coefficient directeur" },
+            { "texte": "f(1) = 5 donne 3 × 1 + b = 5, donc b = 2", "quoi": "l’ordonnée à l’origine" }
+          ],
+          "pied": "Vérification avec l’autre point&nbsp;: f(3) = 3 × 3 + 2 = ==11==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Inverser **a** et **b**.",
+            "Calculer a avec Δx ÷ Δy au lieu de **Δy ÷ Δx**.",
+            "Confondre **f(2)** (l’image de 2) et **f(x) = 2** (l’antécédent de 2).",
+            "Lire b ailleurs qu’en **x = 0**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "f(x) = −2x + 5&nbsp;: la droite **monte** ou **descend**&nbsp;?",
+            "g(x) = 4x − 1&nbsp;: **g(0)**&nbsp;?",
+            "h(2) = 7 et h(0) = 3&nbsp;: que vaut **a**&nbsp;?"
+          ],
+          "reponses": "1) elle descend, a < 0 · 2) −1 · 3) a = 2"
+        }
+      ]
+    }
+  ]
+}

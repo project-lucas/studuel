@@ -27,7 +27,6 @@ import {
   type SubjectTemplateData,
 } from '@/lib/subject-template'
 import { examYearFor } from '@/lib/annales'
-import { salonSubjectFor, subjectGameTickets } from '@/lib/defi/modes-catalog'
 import { hrefEncyclopedie } from '@/lib/encyclopedie/matieres'
 import { afficheEcusson, gardienVue } from '@/lib/reviser/gardien'
 import { jaugeDesFiches, repriseDuProgramme } from '@/lib/reviser/programme'
@@ -39,8 +38,6 @@ function ecrireParametre(nom: string, valeur: string | null) {
   else url.searchParams.set(nom, valeur)
   window.history.replaceState(window.history.state, '', `${url.pathname}${url.search}`)
 }
-
-const pluriel = (n: number, mot: string) => `${n} ${mot}${n > 1 ? 's' : ''}`
 
 // Template GÉNÉRIQUE de page matière : valable pour toutes les matières et
 // toutes les classes, tout vient de Supabase (via le vue-modèle sérialisable
@@ -145,22 +142,11 @@ export default function SubjectTemplate({
   // Toucher l'écusson mène là où le gardien se combat.
   const versLeGardien = () => changerOnglet('jeu')
 
-  const jeux = (() => {
-    const salon = salonSubjectFor(data.subject)
-    return salon ? subjectGameTickets(salon, { premium: data.premium ?? false }).length : 0
-  })()
-  const comptes: Record<ClePorte, string | null> = {
-    programme: pluriel(progress.total, unit),
-    exercices: data.cahier ? pluriel(data.cahier.total, 'exercice') : null,
-    jeu:
-      [jeux > 0 ? `${jeux} jeu${jeux > 1 ? 'x' : ''}` : null, gardien.boss ? '1 boss' : null]
-        .filter(Boolean)
-        .join(' · ') || 'Défis',
-    annales: exam ? exam.short : null,
-  }
+  // Plus de compte sous le nom des portes (13/10/2026, Lucas : « retire les
+  // sous-textes ») : « 30 fiches · 111 exercices · 2 jeux » redisait ce que la
+  // bannière et chaque panneau comptent déjà.
   const portesVues: PorteVue[] = portes.map((p) => ({
     ...p,
-    compte: comptes[p.key],
     // L'exercice est de l'offre Studuel+ : la couronne nomme l'offre.
     couronne: p.key === 'exercices' && !data.premium,
     bulle: p.key === 'jeu' ? gardien.bulle : null,

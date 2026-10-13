@@ -1,0 +1,112 @@
+{
+  "titre": "Champ uniforme",
+  "titreSurligne": "uniforme",
+  "accroche": "Un tir, une parabole.",
+  "epreuve": "bac",
+  "bonus": "a⃗ = g⃗ (pesanteur) · a⃗ = q E⃗ ÷ m (champ électrique) · x = v₀ cos α · t · y = −½ g t² + v₀ sin α · t",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/mouvement-dans-un-champ-uniforme.webp",
+    "prompt": "a glossy violet cannon launching a golden ball along a golden parabola arc over a grassy hill, small arrows pointing down, sparkles"
+  },
+  "marcel": "Horizontal : uniforme.\nVertical : accéléré !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les équations du tir",
+          "petite": true,
+          "lignes": ["x(t) = v₀ cos α · t", "y(t) = −{1/2} g t² + v₀ sin α · t"],
+          "regle": "Axe y vers le **haut**, départ en O, **v₀** (m/s) faisant l’angle **α** avec l’horizontale. Les deux mouvements sont ==indépendants== : uniforme sur x, uniformément accéléré sur y.",
+          "note": "a = g vers le bas, sans frottement&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Portée et flèche",
+          "entetes": ["Grandeur", "Expression", "Unité"],
+          "lignes": [
+            ["Durée du vol", "2 v₀ sin α ÷ g", "s"],
+            ["Portée", "v₀² sin 2α ÷ g", "m"],
+            ["Flèche", "v₀² sin² α ÷ (2g)", "m"],
+            ["Portée maximale", "α = 45°", "pour v₀ fixée"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Appliquer", "texte": "ΣF⃗ = m a⃗ ⇒ a⃗ = g⃗, puis projeter sur x et y" },
+            { "titre": "Intégrer", "texte": "deux fois, avec la vitesse et la position initiales" },
+            { "titre": "Exploiter", "texte": "y = 0 pour la portée, v<sub>y</sub> = 0 pour le sommet" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un ballon part à __v₀ = 20 m/s__ sous α = 30°. Portée et flèche (g = 9,8 m·s⁻²)&nbsp;?",
+          "calcul": "x = 400 × sin 60° ÷ 9,8 · y = 400 × sin² 30° ÷ 19,6",
+          "aparte": "sin 60° ≈ 0,87",
+          "resultat": "portée ≈ [[35 m]] · flèche ≈ 5,1 m"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Gravité ou champ électrique",
+          "oui": { "titre": "Charge dans un champ électrique", "texte": "a⃗ = q E⃗ ÷ m&nbsp;: pour une charge entre deux plaques, la trajectoire est aussi une ==parabole==." },
+          "non": { "titre": "Rôle de la masse&nbsp;?", "texte": "**Faux** pour la pesanteur&nbsp;: a = g ne dépend pas de m. Pour q E, si&nbsp;: m intervient." },
+          "essai": { "texte": "Électron entre deux plaques&nbsp;: on néglige son poids devant la force électrique, et a = q E ÷ m dirigée <i>à l’inverse de E⃗</i> (q &lt; 0)." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "ΣF⃗ = P⃗ = m g⃗ ⇒ a<sub>x</sub> = 0, a<sub>y</sub> = −g", "quoi": "loi puis projection" },
+            { "texte": "v<sub>x</sub> = v₀ cos α, x = v₀ cos α · t", "quoi": "intégrer" },
+            { "texte": "y(t) = 0 ⇒ t = 2 v₀ sin α ÷ g ≈ 2,0 s", "quoi": "exploiter" }
+          ],
+          "pied": "Sans frottement, la trajectoire est une ==parabole== quelle que soit la masse."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mettre un **signe +** devant g avec un axe y vers le haut.",
+            "Oublier que v<sub>x</sub> est **constante**.",
+            "Utiliser des **degrés** dans une calculatrice en radians.",
+            "Oublier les **conditions initiales** en intégrant."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Sur l’axe x, le mouvement est-il **uniforme**&nbsp;?",
+            "Pour quel angle la portée est-elle **maximale**&nbsp;?",
+            "La masse change-t-elle **a** en chute libre&nbsp;?"
+          ],
+          "reponses": "1) oui · 2) 45° · 3) non"
+        }
+      ]
+    }
+  ]
+}

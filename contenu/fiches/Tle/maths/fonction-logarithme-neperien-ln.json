@@ -1,0 +1,114 @@
+{
+  "titre": "Le logarithme ln",
+  "titreSurligne": "logarithme",
+  "accroche": "Il transforme les produits en sommes.",
+  "epreuve": "bac",
+  "bonus": "ln 1 = 0 · ln e = 1 · ln croissante sur ]0 ; +∞[ · ln x = y ⇔ x = e<sup>y</sup> · (ln u)′ = u′/u",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths/fonction-logarithme-neperien-ln.webp",
+    "prompt": "a glossy violet slowly rising curve with a golden vertical asymptote line and a tiny golden key, sparkles"
+  },
+  "marcel": "ln transforme\nle produit en somme !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les règles de calcul",
+          "taille": "mini",
+          "lignes": ["ln(ab) = ln a + ln b", "ln({a/b}) = ln a − ln b", "<span>ln(a<sup>n</sup>) = n ln a</span>"],
+          "regle": "Pour a et b **strictement positifs**. Valeurs clés&nbsp;: ln 1 = 0 et ln e = 1.",
+          "note": "ln(a + b) ≠ ln a + ln b&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Équations et inéquations",
+          "entetes": ["On veut", "On écrit"],
+          "lignes": [
+            ["ln x = a", "x = e<sup>a</sup>"],
+            ["ln x = ln y", "x = y (x, y &gt; 0)"],
+            ["ln x &lt; ln y", "x &lt; y"],
+            ["ln x &gt; 0", "x &gt; 1"],
+            ["lim<sub>+∞</sub> ln x", "+∞"],
+            ["lim<sub>0⁺</sub> ln x", "−∞"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Domaine", "texte": "écrire les conditions : chaque argument de ln doit être &gt; 0" },
+            { "titre": "Regrouper", "texte": "réécrire sous la forme ln A = ln B ou ln A = k" },
+            { "titre": "Résoudre, filtrer", "texte": "résoudre A = B, puis ne garder que les solutions du domaine" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Résoudre ln x + ln(x − 2) = ln 3. __Domaine__&nbsp;: x &gt; 2.",
+          "calcul": "ln(x(x − 2)) = ln 3 ⇒ x² − 2x − 3 = 0",
+          "aparte": "(x − 3)(x + 1) = 0",
+          "resultat": "x = 3 ou x = −1 ; or x &gt; 2 : [[x = 3]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Peut-on écrire ça&nbsp;?",
+          "oui": { "titre": "Permis", "texte": "ln 8 = ln(2³) = **3 ln 2**." },
+          "non": { "titre": "Interdit", "texte": "ln(5 + 3) n’est **pas** ln 5 + ln 3 (= ln 15)." },
+          "essai": { "texte": "Une somme dans ln ne se sépare jamais&nbsp;: ln(a + b) reste ln(a + b)." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "L’équation est définie pour x &gt; 2", "quoi": "le domaine" },
+            { "texte": "ln(x(x − 2)) = ln 3, donc x² − 2x − 3 = 0", "quoi": "j’utilise la propriété" },
+            { "texte": "Δ = 16, x = 3 ou x = −1&nbsp;; −1 &lt; 2 rejeté", "quoi": "je filtre" }
+          ],
+          "pied": "Conclusion&nbsp;: ==x = 3== seul. Contrôle&nbsp;: ln 3 + ln 1 = ln 3. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **domaine** de définition.",
+            "Écrire ln(a + b) = ln a + ln b.",
+            "Garder une solution **hors domaine**.",
+            "Changer le sens d’une inégalité (ln est **croissante**)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "ln 1 et **ln e** valent&nbsp;?",
+            "**Simplifier** ln 6 − ln 3&nbsp;?",
+            "ln x = 2&nbsp;: **x** vaut&nbsp;?"
+          ],
+          "reponses": "1) 0 et 1 · 2) ln 2 · 3) x = e²"
+        }
+      ]
+    }
+  ]
+}

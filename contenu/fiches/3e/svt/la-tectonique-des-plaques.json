@@ -1,0 +1,109 @@
+{
+  "titre": "La tectonique",
+  "titreSurligne": "tectonique",
+  "accroche": "Une surface découpée, et mobile.",
+  "epreuve": "brevet",
+  "bonus": "Dorsale = **divergence** · fosse = **subduction** · montagnes = **collision** · faille = **coulissage**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/svt/la-tectonique-des-plaques.webp",
+    "prompt": "a glossy violet globe cracked into puzzle-piece plates, a golden volcano and a mountain chain rising along the seams, small red arrows showing the plates moving apart, sparkles"
+  },
+  "marcel": "Les plaques bougent,\nla Terre se recycle !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "L’histoire d’une idée",
+          "etapes": [
+            { "date": "1912", "texte": "**Wegener** propose la **dérive des continents**&nbsp;: côtes qui s’emboîtent, mêmes fossiles, mêmes roches. Refusée&nbsp;: pas de **moteur**." },
+            { "date": "Années 1960", "texte": "Les **anomalies magnétiques** du plancher océanique, symétriques autour des dorsales, prouvent l’**expansion océanique**." },
+            { "date": "Aujourd’hui", "texte": "La **tectonique des plaques**&nbsp;: une douzaine de plaques rigides, mues par la **chaleur interne**, à quelques cm par an." }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois types de frontières",
+          "entetes": ["Frontière", "Ce qui se passe", "Relief"],
+          "lignes": [
+            ["**Divergente**", "les plaques s’**écartent**, du magma remonte", "**dorsale** océanique"],
+            ["**Convergente**", "une plaque **plonge** sous l’autre (**subduction**) ou deux continents se heurtent (**collision**)", "fosse et volcans&nbsp;; chaîne de montagnes"],
+            ["**Coulissante**", "les plaques **glissent** l’une contre l’autre", "**faille transformante** (San Andreas)"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce que la théorie explique",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Les séismes", "texte": "Concentrés aux **frontières** des plaques, là où les roches cassent." },
+            { "titre": "Les volcans", "texte": "Effusifs aux dorsales et points chauds, explosifs en zone de **subduction**." },
+            { "titre": "Les montagnes", "texte": "La **collision** de deux plaques continentales&nbsp;: Alpes, Himalaya." },
+            { "titre": "Les océans", "texte": "Ils naissent aux dorsales, disparaissent dans les fosses&nbsp;: la Terre **recycle** sa surface." },
+            { "titre": "Le moteur", "texte": "La **chaleur interne** de la Terre met le manteau en mouvement." },
+            { "titre": "La vitesse", "texte": "Quelques **centimètres par an**, comme des ongles qui poussent." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Lire une carte des plaques",
+          "etapes": [
+            { "titre": "Repérer", "texte": "les limites : dorsales, fosses, failles" },
+            { "titre": "Associer", "texte": "le type de frontière au relief et aux risques" },
+            { "titre": "Expliquer", "texte": "le mouvement par le moteur interne" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Le Japon est sur une frontière convergente&nbsp;: la plaque pacifique plonge sous celle qui le porte.", "quoi": "situer" },
+            { "texte": "Cette subduction provoque des séismes fréquents et un volcanisme explosif.", "quoi": "expliquer" },
+            { "texte": "Le risque est élevé car la population est dense et exposée.", "quoi": "conclure" }
+          ],
+          "pied": "Au brevet, on ==relie== toujours la frontière de plaque au risque (séisme, volcan)."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que les **continents** flottent sur l’eau&nbsp;: ce sont les plaques, sur le manteau.",
+            "Confondre **subduction** (une plaque plonge) et **collision** (deux continents).",
+            "Croire que les plaques bougent de **plusieurs mètres** par an.",
+            "Placer les séismes **n’importe où**&nbsp;: ils suivent les frontières."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel relief marque une frontière **divergente**&nbsp;?",
+            "Qui a proposé la **dérive des continents**&nbsp;?",
+            "Quel est le **moteur** des plaques&nbsp;?"
+          ],
+          "reponses": "1) une dorsale · 2) Wegener, 1912 · 3) la chaleur interne de la Terre"
+        }
+      ]
+    }
+  ]
+}

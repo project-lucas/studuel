@@ -1,0 +1,117 @@
+{
+  "titre": "La dérivation",
+  "titreSurligne": "dérivation",
+  "accroche": "Une formule, un signe, des variations.",
+  "epreuve": "bac",
+  "bonus": "(xⁿ)′ = nxⁿ⁻¹ · (uv)′ = u′v + uv′ · tangente&nbsp;: y = f′(a)(x − a) + f(a) · f′ ≥ 0 ⇔ f **croissante**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/derivation.webp",
+    "prompt": "a glossy violet curve with a golden straight tangent line touching it at one sparkling point, a tiny golden slope arrow, sparkles"
+  },
+  "marcel": "f′ positive,\nf monte !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les opérations",
+          "petite": true,
+          "lignes": ["(uv)′ = u′v + uv′", "({u/v})′ = {u′v − uv′/v²}", "y = f′(a)(x − a) + f(a)"],
+          "regle": "La dernière ligne est l’équation de la **tangente** au point d’abscisse a. Au quotient, le **carré** v² est au dénominateur.",
+          "note": "(uv)′ ≠ u′ × v′&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les dérivées à connaître",
+          "entetes": ["f(x)", "f′(x)"],
+          "lignes": [
+            ["constante k", "**0**"],
+            ["x", "**1**"],
+            ["xⁿ", "**n**xⁿ⁻¹"],
+            ["{1/x}", "−{1/x²}"],
+            ["√x", "{1/2√x}"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Étudier les variations en trois temps",
+          "etapes": [
+            { "titre": "Dériver", "texte": "calculer f′(x) et la factoriser si possible" },
+            { "titre": "Signe de f′", "texte": "étudier où f′(x) est positive, nulle, négative" },
+            { "titre": "Conclure", "texte": "f′ ≥ 0 : croissante · f′ ≤ 0 : décroissante" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = x³ − 2x. __Tangente en a = 1__&nbsp;?",
+          "calcul": "f′(x) = 3x² − 2, f′(1) = 1\nf(1) = 1 − 2 = −1",
+          "aparte": "les deux valeurs",
+          "resultat": "y = 1(x − 1) − 1 = [[x − 2]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Un produit", "texte": "(x²(3x + 1))′ = 2x(3x + 1) + 3x² = **9x² + 2x**." },
+            { "titre": "Un quotient", "texte": "({x/x + 1})′ = {(x + 1) − x/(x + 1)²} = **{1/(x + 1)²}**." },
+            { "titre": "Extremum", "texte": "f′ s’annule **en changeant de signe**&nbsp;: maximum ou minimum local." },
+            { "titre": "Tangente horizontale", "texte": "f′(a) = 0&nbsp;: la tangente a pour équation **y = f(a)**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "f est dérivable sur ℝ, f′(x) = 3x² − 2", "quoi": "la dérivée" },
+            { "texte": "f′(1) = 1 et f(1) = −1", "quoi": "les deux valeurs" },
+            { "texte": "T&nbsp;: y = 1(x − 1) + (−1) = x − 2", "quoi": "la tangente" }
+          ],
+          "pied": "Contrôle&nbsp;: la tangente passe par (1 ; −1) car 1 − 2 = ==−1==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire (uv)′ = **u′v′**.",
+            "Oublier le **carré** v² d’un quotient.",
+            "Oublier **f(a)** dans la tangente.",
+            "Croire qu’une dérivée nulle donne **toujours** un extremum."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dérivée de f(x) = x⁴&nbsp;?",
+            "Tangente à f(x) = x² en **a = 1**&nbsp;?",
+            "f′(x) = −2x + 4&nbsp;: **variations** de f&nbsp;?"
+          ],
+          "reponses": "1) 4x³ · 2) y = 2x − 1 · 3) croît puis décroît, maximum en x = 2"
+        }
+      ]
+    }
+  ]
+}

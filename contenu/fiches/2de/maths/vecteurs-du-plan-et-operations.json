@@ -1,0 +1,116 @@
+{
+  "titre": "Les vecteurs",
+  "titreSurligne": "vecteurs",
+  "accroche": "Chasles, parallélogramme, colinéarité.",
+  "bonus": "AB⃗ + BC⃗ = **AC⃗** · AB⃗ = DC⃗ ⟺ **ABCD parallélogramme** · u⃗ = k v⃗ ⟺ **colinéaires**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/maths/vecteurs-du-plan-et-operations.webp",
+    "prompt": "two glossy violet arrows and one golden arrow forming a parallelogram on a floating grid, a tiny cartoon paper plane following the golden arrow, sparkles"
+  },
+  "marcel": "Bout à bout,\nça se simplifie !",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les règles",
+          "taille": "mini",
+          "lignes": ["AB⃗ + BC⃗ = AC⃗", "AB⃗ = DC⃗ ⟺ ABCD parallélogramme", "BA⃗ = −AB⃗"],
+          "regle": "Un vecteur a une **direction**, un **sens**, une **norme**. ==Chasles== : le point d’arrivée du premier est le départ du second. u⃗ et v⃗ sont **colinéaires** si u⃗ = k v⃗.",
+          "note": "ABCD : les côtés dans l’ordre&nbsp;!"
+        },
+        {
+          "type": "figures",
+          "numero": 2,
+          "titre": "Le parallélogramme",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><polygon points='40,130 130,100 160,30 70,60' fill='#eee7fc' stroke='none'></polygon><g stroke='#2b2350' stroke-width='2' stroke-dasharray='4 3'><line x1='130' y1='100' x2='160' y2='30'></line><line x1='70' y1='60' x2='160' y2='30'></line></g><g stroke-width='4' stroke-linecap='round'><line x1='40' y1='130' x2='122' y2='102.7' stroke='#7a3fe0'></line><line x1='40' y1='130' x2='67' y2='67' stroke='#f1566c'></line><line x1='40' y1='130' x2='153' y2='35' stroke='#f5b722'></line></g><polygon points='130,100 121.8,107 119.2,99.4' fill='#7a3fe0'></polygon><polygon points='70,60 69.8,70.8 62.4,67.6' fill='#f1566c'></polygon><polygon points='160,30 154.9,39.5 149.7,33.3' fill='#f5b722'></polygon><g font-family=\"'Baloo 2'\" font-weight='800' font-size='14' fill='#2b2350'><text x='26' y='142'>A</text><text x='134' y='112'>B</text><text x='166' y='30'>C</text><text x='56' y='58'>D</text><text x='84' y='124' fill='#7a3fe0'>u⃗</text><text x='38' y='92' fill='#f1566c'>v⃗</text><text x='112' y='62' fill='#b8860b'>u⃗ + v⃗</text></g></svg>",
+              "legende": "AB⃗ = DC⃗ = u⃗",
+              "sous": "AD⃗ = BC⃗ = v⃗ et AC⃗ = u⃗ + v⃗"
+            }
+          ],
+          "legende": { "jeton": "ABCD", "texte": "dans l’ordre des sommets" }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Simplifier avec Chasles",
+          "etapes": [
+            { "titre": "Réordonner", "texte": "mettre les vecteurs bout à bout : arrivée = départ suivant" },
+            { "titre": "Raccourcir", "texte": "remplacer deux vecteurs consécutifs par un seul" },
+            { "titre": "Conclure", "texte": "un vecteur qui revient au départ vaut 0⃗" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Simplifier __AB⃗ + CD⃗ + BC⃗ + DA⃗__.",
+          "calcul": "AB⃗ + BC⃗ + CD⃗ + DA⃗ = AD⃗ + DA⃗",
+          "aparte": "bout à bout",
+          "resultat": "AD⃗ + DA⃗ = [[0⃗]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Opposé", "texte": "BA⃗ = −AB⃗&nbsp;: même direction et norme, sens **contraire**." },
+            { "titre": "Produit par k", "texte": "k u⃗ : norme × |k|, sens **conservé** si k > 0, inversé si k < 0." },
+            { "titre": "Colinéaires", "texte": "AB⃗ = k AC⃗ ⟹ A, B, C **alignés**&nbsp;; (AB) ∥ (CD)." },
+            { "titre": "Translation", "texte": "M ↦ M′ avec MM′⃗ = u⃗&nbsp;: tout le plan **glisse**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "AB⃗ + CD⃗ + BC⃗ + DA⃗ = AB⃗ + BC⃗ + CD⃗ + DA⃗", "quoi": "on réordonne" },
+            { "texte": "= AC⃗ + CD⃗ + DA⃗ = AD⃗ + DA⃗", "quoi": "Chasles, deux fois" },
+            { "texte": "= 0⃗", "quoi": "on revient au départ" }
+          ],
+          "pied": "Citer ==Chasles== à chaque étape de la simplification."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire AB = CD au lieu de **AB⃗ = CD⃗** (longueurs ≠ vecteurs).",
+            "Chasles mal raccordé&nbsp;: AB⃗ + **CB**⃗ n’est pas AC⃗.",
+            "Confondre ABCD et **ABDC** pour le parallélogramme.",
+            "Écrire 0 pour le vecteur nul, sans flèche."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "ABCD est un parallélogramme&nbsp;: **AB⃗ = ?**",
+            "Simplifier **BA⃗ + AC⃗**.",
+            "u⃗ = −2 v⃗&nbsp;: sont-ils **colinéaires**, de quel sens&nbsp;?"
+          ],
+          "reponses": "1) DC⃗ · 2) BC⃗ (Chasles) · 3) oui, de sens contraire"
+        }
+      ]
+    }
+  ]
+}

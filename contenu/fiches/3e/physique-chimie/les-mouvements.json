@@ -1,0 +1,113 @@
+{
+  "titre": "Les mouvements",
+  "titreSurligne": "mouvements",
+  "accroche": "Décrire un mouvement, par rapport à quoi.",
+  "epreuve": "brevet",
+  "bonus": "**v = d ÷ t** · m/s ↔ km/h&nbsp;: **× 3,6** / **÷ 3,6** · un mouvement se décrit toujours **par rapport à un référentiel**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/les-mouvements.webp",
+    "prompt": "a glossy violet train crossing a golden platform, a small ball tracing a dotted curved path in the air, a round stopwatch floating above, sparkles"
+  },
+  "marcel": "Immobile ou en mouvement ?\nÇa dépend du référentiel !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La vitesse",
+          "petite": true,
+          "lignes": ["v = d ÷ t", "m/s × 3,6 = km/h"],
+          "regle": "**v** la vitesse en **m/s** ou **km/h**, **d** la distance en **m** ou **km**, **t** la durée en **s** ou **h**. Pour passer de km/h à m/s, on **divise par 3,6**.",
+          "note": "mêmes unités : m et s, ou km et h&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Décrire un mouvement",
+          "entetes": ["On précise", "Les cas"],
+          "lignes": [
+            ["Le **référentiel**", "par exemple le référentiel **terrestre**"],
+            ["La **trajectoire**", "rectiligne · circulaire · curviligne"],
+            ["La **vitesse**", "constante, qui augmente ou qui diminue"],
+            ["Vitesse **moyenne**", "sur tout le trajet : d ÷ t"],
+            ["Vitesse **instantanée**", "à un instant précis (compteur)"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer une vitesse en trois temps",
+          "etapes": [
+            { "titre": "Convertir", "texte": "la distance en m et la durée en s (5 min = 300 s)" },
+            { "titre": "Remplacer", "texte": "dans v = d ÷ t" },
+            { "titre": "Calculer", "texte": "puis écrire l’unité, et convertir en km/h si on le demande" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un cycliste parcourt __1 800 m__ en __5 min__. Sa vitesse&nbsp;?",
+          "calcul": "v = 1 800 ÷ 300 = 6 m/s",
+          "aparte": "× 3,6",
+          "resultat": "v = [[21,6 km/h]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Par rapport à quoi&nbsp;?",
+          "oui": { "titre": "Dans le train", "texte": "Le voyageur est **immobile** par rapport au train." },
+          "non": { "titre": "Sur le quai", "texte": "Le même voyageur est **en mouvement** par rapport au quai." },
+          "essai": { "texte": "Un mouvement n’est <i>jamais dans l’absolu</i>&nbsp;: il faut toujours dire <i>par rapport à quoi</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "d = 1 800 m et t = 5 min = 300 s", "quoi": "les données" },
+            { "texte": "v = d ÷ t = 1 800 ÷ 300", "quoi": "lettres puis nombres" },
+            { "texte": "v = 6 m/s soit 21,6 km/h", "quoi": "avec l’unité" }
+          ],
+          "pied": "Un mouvement se décrit avec ==le référentiel==, ==la trajectoire== et ==la vitesse==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **référentiel**.",
+            "Calculer avec des **minutes** et des mètres.",
+            "Confondre vitesse **moyenne** et **instantanée**.",
+            "Diviser par 3,6 pour passer de **m/s à km/h**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "100 m en 10 s&nbsp;: **v** en m/s&nbsp;?",
+            "36 km/h en **m/s**&nbsp;?",
+            "Trajectoire d’un point d’une roue de vélo vue du cadre&nbsp;?"
+          ],
+          "reponses": "1) 10 m/s · 2) 10 m/s · 3) circulaire"
+        }
+      ]
+    }
+  ]
+}

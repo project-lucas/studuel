@@ -1,0 +1,117 @@
+{
+  "titre": "Lire un graphique",
+  "titreSurligne": "graphique",
+  "accroche": "Image, antécédent, droite : tout se lit.",
+  "epreuve": "bac-1re",
+  "bonus": "y = ax + b · a = Δy ÷ Δx · b = f(0) · point sur la courbe ⇔ f(x) = y · f(x) ≥ 0 ⇔ courbe **au-dessus** de l’axe",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/automatismes-fonctions-et-representations-graphiques.webp",
+    "prompt": "a glossy violet curve on a golden grid with a tiny cartoon magnifying glass reading one point, a straight golden line crossing the curve, sparkles"
+  },
+  "marcel": "Abscisse en bas,\nordonnée sur le côté !",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La droite",
+          "petite": true,
+          "lignes": ["y = ax + b", "a = {yB − yA/xB − xA}"],
+          "regle": "**a** le coefficient directeur (on avance de 1, on monte de a)&nbsp;; **b** l’ordonnée à l’origine, là où la droite coupe l’axe vertical. **Affine** = une droite&nbsp;; **linéaire** = une droite par l’**origine** (b = 0).",
+          "note": "y = 3x − 1&nbsp;: part de −1, monte de 3 par pas&nbsp;!"
+        },
+        {
+          "type": "figures",
+          "numero": 2,
+          "titre": "Lire un signe",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><path d='M60,120 Q105,-20 150,120 Z' fill='#eee7fc'></path><g stroke='#2b2350' stroke-width='2' stroke-linecap='round'><line x1='20' y1='120' x2='212' y2='120'></line><line x1='30' y1='160' x2='30' y2='8'></line></g><polygon points='212,120 204,115 204,125' fill='#2b2350'></polygon><polygon points='30,8 25,16 35,16' fill='#2b2350'></polygon><path d='M44,152 L60,120 Q105,-20 150,120 L166,152' fill='none' stroke='#7a3fe0' stroke-width='4' stroke-linecap='round'></path><g fill='#f5b722' stroke='#2b2350' stroke-width='2'><circle cx='60' cy='120' r='5'></circle><circle cx='150' cy='120' r='5'></circle><circle cx='105' cy='50' r='5'></circle></g><g font-family=\"'Baloo 2'\" font-weight='800' font-size='14' fill='#2b2350'><text x='56' y='138'>1</text><text x='146' y='138'>4</text><text x='18' y='138'>0</text><text x='84' y='100' fill='#4b2a9a'>f(x) ≥ 0</text><text x='112' y='46' fill='#b8860b'>maximum</text></g></svg>",
+              "legende": "f(x) ≥ 0 sur [1 ; 4]",
+              "sous": "la courbe est au-dessus de l’axe des abscisses"
+            }
+          ],
+          "legende": { "jeton": "maximum", "texte": "en x = 2,5, le point le plus haut" }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre graphiquement",
+          "etapes": [
+            { "titre": "f(x) = k", "texte": "tracer la droite horizontale y = k, lire les abscisses des intersections" },
+            { "titre": "f(x) = g(x)", "texte": "les abscisses des points communs aux deux courbes" },
+            { "titre": "f(x) ≥ 0", "texte": "les x où la courbe est au-dessus de l’axe des abscisses" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "A(2 ; 5) et B(4 ; 11). __Équation de (AB)__&nbsp;?",
+          "calcul": "a = {11 − 5/4 − 2} = 3",
+          "aparte": "la pente",
+          "resultat": "b = 5 − 3 × 2 = −1&nbsp;: y = [[3x − 1]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Image", "texte": "f(2)&nbsp;: on part de x = 2 en bas, on monte à la courbe, on lit sur le côté. **Une seule** image." },
+            { "titre": "Antécédent", "texte": "f(x) = 3&nbsp;: on part de y = 3 sur le côté&nbsp;; il peut y avoir **plusieurs** antécédents." },
+            { "titre": "Point sur la courbe&nbsp;?", "texte": "A(1 ; 2) est sur la courbe de f(x) = 3x − 1 car f(1) = 2. **Oui.**" },
+            { "titre": "Variations", "texte": "Croissante quand la courbe **monte** de gauche à droite&nbsp;; maximum au point le plus haut." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "a = (11 − 5) ÷ (4 − 2) = 3", "quoi": "le coefficient directeur" },
+            { "texte": "y = 3x + b et A ∈ (AB)&nbsp;: 5 = 6 + b, donc b = −1", "quoi": "l’ordonnée à l’origine" },
+            { "texte": "(AB)&nbsp;: y = 3x − 1", "quoi": "l’équation réduite" }
+          ],
+          "pied": "Contrôle avec B&nbsp;: 3 × 4 − 1 = ==11==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Lire l’image sur l’axe des **abscisses**.",
+            "Inverser Δx et **Δy** dans le coefficient directeur.",
+            "Confondre f(2) et **f(x) = 2**.",
+            "Dire « positive » pour **croissante**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "y = −2x + 3&nbsp;: la droite **monte** ou **descend**&nbsp;?",
+            "f(x) = 3x − 1&nbsp;: A(2 ; 5) est-il **sur la courbe**&nbsp;?",
+            "Points (0 ; 4) et (2 ; 0)&nbsp;: **a**&nbsp;?"
+          ],
+          "reponses": "1) elle descend · 2) oui, f(2) = 5 · 3) a = −2"
+        }
+      ]
+    }
+  ]
+}

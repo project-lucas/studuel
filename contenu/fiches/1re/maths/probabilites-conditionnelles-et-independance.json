@@ -1,0 +1,116 @@
+{
+  "titre": "Proba conditionnelle",
+  "titreSurligne": "conditionnelle",
+  "accroche": "Un arbre, des produits, des sommes.",
+  "epreuve": "bac",
+  "bonus": "P(A ∩ B) = P(A) × <span>P<sub>A</sub></span>(B) · indépendants ⇔ P(A ∩ B) = P(A)P(B) · somme des branches d’un nœud = **1**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/probabilites-conditionnelles-et-independance.webp",
+    "prompt": "a glossy violet tree diagram with golden branches splitting into two and then two again, tiny colored marbles at the tips, sparkles"
+  },
+  "marcel": "Chemin : ×,\nchemins : + !",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les trois formules",
+          "petite": true,
+          "lignes": ["P(A ∩ B) = P(A) × <span>P<sub>A</sub></span>(B)", "P(B) = P(A ∩ B) + P(non A ∩ B)", "P(A ∩ B) = P(A) × P(B)"],
+          "regle": "Ligne 1&nbsp;: **un chemin** de l’arbre. Ligne 2&nbsp;: les **probabilités totales**. Ligne 3&nbsp;: A et B sont **indépendants** si et seulement si elle est vraie.",
+          "note": "<span>P<sub>A</sub></span>(B) = {P(A ∩ B)/P(A)}&nbsp;!"
+        },
+        {
+          "type": "figures",
+          "numero": 2,
+          "titre": "L’arbre pondéré",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><g stroke='#2b2350' stroke-width='2.5' stroke-linecap='round' fill='none'><line x1='16' y1='85' x2='78' y2='45'></line><line x1='16' y1='85' x2='78' y2='125'></line><line x1='92' y1='45' x2='158' y2='22'></line><line x1='92' y1='45' x2='158' y2='68'></line><line x1='92' y1='125' x2='158' y2='102'></line><line x1='92' y1='125' x2='158' y2='148'></line></g><g fill='#f5b722' stroke='#2b2350' stroke-width='2'><circle cx='14' cy='85' r='5'></circle></g><g font-family=\"'Baloo 2'\" font-weight='800' font-size='15' fill='#2b2350'><text x='80' y='50'>A</text><text x='80' y='130'>Ā</text><text x='164' y='28'>B</text><text x='164' y='74'>B̄</text><text x='164' y='108'>B</text><text x='164' y='154'>B̄</text></g><g font-family=\"'Baloo 2'\" font-weight='800' font-size='12' fill='#4b2a9a'><text x='24' y='56'>0,4</text><text x='24' y='122'>0,6</text><text x='108' y='26'>0,7</text><text x='108' y='72'>0,3</text><text x='108' y='106'>0,1</text><text x='108' y='152'>0,9</text></g></svg>",
+              "legende": "P(A) = 0,4",
+              "sous": "<span>P<sub>A</sub></span>(B) = 0,7 et <span>P<sub>Ā</sub></span>(B) = 0,1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Dessiner", "texte": "l’arbre : chaque branche porte sa probabilité" },
+            { "titre": "Multiplier", "texte": "le long d’un chemin : P(A) × P<sub>A</sub>(B)" },
+            { "titre": "Additionner", "texte": "tous les chemins qui mènent à l’événement" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Avec l’arbre ci-dessus, __P(B)__&nbsp;?",
+          "calcul": "P(B) = 0,4 × 0,7 + 0,6 × 0,1\n= 0,28 + 0,06",
+          "aparte": "deux chemins",
+          "resultat": "P(B) = [[0,34]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Inverser", "texte": "<span>P<sub>B</sub></span>(A) = {0,28/0,34} = **{14/17}** ≈ 0,82." },
+            { "titre": "Indépendants&nbsp;?", "texte": "P(A) = 0,5, P(B) = 0,4, P(A ∩ B) = 0,2&nbsp;: 0,5 × 0,4 = 0,2, **oui**." },
+            { "titre": "Incompatibles", "texte": "A ∩ B = ∅ donne P(A ∩ B) = 0&nbsp;: **pas** indépendants (sauf probabilité nulle)." },
+            { "titre": "Un nœud", "texte": "<span>P<sub>A</sub></span>(B) + <span>P<sub>A</sub></span>(B̄) = **1**&nbsp;: on déduit la branche manquante." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "A et non A partitionnent l’univers", "quoi": "la condition" },
+            { "texte": "P(B) = P(A ∩ B) + P(non A ∩ B)", "quoi": "probabilités totales" },
+            { "texte": "= 0,4 × 0,7 + 0,6 × 0,1 = 0,34", "quoi": "les deux chemins" }
+          ],
+          "pied": "Contrôle&nbsp;: 0,28 + 0,06 = ==0,34==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "**Additionner** les branches d’un même chemin.",
+            "Confondre <span>P<sub>A</sub></span>(B) et **<span>P<sub>B</sub></span>(A)**.",
+            "Dire « incompatibles donc **indépendants** ».",
+            "Oublier un chemin dans les **probabilités totales**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "P(A) = 0,3 et <span>P<sub>A</sub></span>(B) = 0,5&nbsp;: **P(A ∩ B)**&nbsp;?",
+            "P(A) = 0,4, P(B) = 0,3, P(A ∩ B) = 0,12&nbsp;: **indépendants**&nbsp;?",
+            "P(A ∩ B) = 0,2 et P(B) = 0,5&nbsp;: **<span>P<sub>B</sub></span>(A)**&nbsp;?"
+          ],
+          "reponses": "1) 0,15 · 2) oui, 0,4 × 0,3 = 0,12 · 3) 0,4"
+        }
+      ]
+    }
+  ]
+}

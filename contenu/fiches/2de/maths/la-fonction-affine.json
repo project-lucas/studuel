@@ -1,0 +1,116 @@
+{
+  "titre": "La fonction affine",
+  "titreSurligne": "affine",
+  "accroche": "ax + b : une droite, un taux constant.",
+  "bonus": "f(x) = **ax + b** · a = **(f(x₂) − f(x₁)) ÷ (x₂ − x₁)** · a > 0 croissante · a < 0 décroissante",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/maths/la-fonction-affine.webp",
+    "prompt": "a glossy violet straight ramp rising across a golden grid, a tiny cartoon skateboarder riding up the slope, a small flag planted where the ramp meets the vertical axis, sparkles"
+  },
+  "marcel": "a = la pente,\nb = le départ !",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La forme",
+          "petite": true,
+          "lignes": ["f(x) = ax + b"],
+          "regle": "Le **taux d’accroissement** est constant et vaut ==a==. **a > 0** : croissante&nbsp;; **a < 0** : décroissante&nbsp;; a = 0 : constante. b = 0 : fonction **linéaire**. La courbe est une droite.",
+          "note": "f(0) = b, toujours&nbsp;!"
+        },
+        {
+          "type": "figures",
+          "numero": 2,
+          "titre": "La droite",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><g stroke='#2b2350' stroke-width='2' stroke-linecap='round'><line x1='10' y1='130' x2='214' y2='130'></line><line x1='60' y1='164' x2='60' y2='6'></line></g><polygon points='214,130 206,125 206,135' fill='#2b2350'></polygon><polygon points='60,6 55,14 65,14' fill='#2b2350'></polygon><line x1='60' y1='155' x2='135' y2='5' stroke='#7a3fe0' stroke-width='4' stroke-linecap='round'></line><g stroke='#f1566c' stroke-width='3' stroke-linecap='round'><line x1='60' y1='155' x2='85' y2='155'></line><line x1='85' y1='155' x2='85' y2='105'></line></g><circle cx='60' cy='155' r='5' fill='#f5b722' stroke='#2b2350' stroke-width='2'></circle><g font-family=\"'Baloo 2'\" font-weight='800' font-size='14' fill='#2b2350'><text x='40' y='152' fill='#b8860b'>b</text><text x='66' y='168' fill='#f1566c'>+1</text><text x='90' y='134' fill='#f1566c'>+2</text></g></svg>",
+              "legende": "f(x) = 2x − 1",
+              "sous": "b = −1&nbsp;: la droite coupe l’axe vertical en −1"
+            }
+          ],
+          "legende": { "jeton": "a = 2", "texte": "x augmente de 1, f(x) augmente de 2" }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Déterminer f avec deux valeurs",
+          "etapes": [
+            { "titre": "Calculer a", "texte": "a = (f(x₂) − f(x₁)) ÷ (x₂ − x₁)" },
+            { "titre": "Trouver b", "texte": "b = f(x₁) − a × x₁, avec l’une des deux valeurs" },
+            { "titre": "Écrire et vérifier", "texte": "f(x) = ax + b, puis tester l’autre valeur" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f est affine, f(2) = 3 et f(5) = 9. __f(x)__&nbsp;?",
+          "calcul": "a = {9 − 3/5 − 2} = 2",
+          "aparte": "le taux",
+          "resultat": "b = 3 − 2 × 2 = −1&nbsp;: f(x) = [[2x − 1]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Ce qu’on en fait",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Signe de f(x)", "texte": "2x − 1 > 0 ⟺ x > {1/2}&nbsp;: **positive** après la racine si a > 0." },
+            { "titre": "Parallèles", "texte": "Deux droites de **même a** sont parallèles." },
+            { "titre": "Tracer", "texte": "Deux points suffisent&nbsp;: (0 ; b) et un autre. Un troisième vérifie." },
+            { "titre": "Antécédent", "texte": "f(x) = 7 ⟺ 2x − 1 = 7 ⟺ x = **4**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "f est affine&nbsp;: f(x) = ax + b", "quoi": "la forme" },
+            { "texte": "a = (9 − 3) ÷ (5 − 2) = 6 ÷ 3 = 2", "quoi": "le taux d’accroissement" },
+            { "texte": "f(2) = 3 donne 2 × 2 + b = 3, donc b = −1", "quoi": "l’ordonnée à l’origine" }
+          ],
+          "pied": "Vérification&nbsp;: f(5) = 2 × 5 − 1 = ==9==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Calculer a avec **Δx ÷ Δy** au lieu de Δy ÷ Δx.",
+            "Oublier le signe de **b** (f(x) = 2x − 1, pas 2x + 1).",
+            "Dire « croissante » alors que **a < 0**.",
+            "Croire que toute droite est la courbe d’une fonction&nbsp;: une droite **verticale** n’en est pas une."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "f(x) = −3x + 6&nbsp;: **croissante** ou **décroissante**&nbsp;?",
+            "Pour quelle valeur de x a-t-on **f(x) = 0**&nbsp;?",
+            "g est affine, g(1) = 4 et g(3) = 10&nbsp;: que vaut **a**&nbsp;?"
+          ],
+          "reponses": "1) décroissante, a < 0 · 2) −3x + 6 = 0, x = 2 · 3) (10 − 4) ÷ 2 = 3"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "titre": "Nombres premiers",
+  "titreSurligne": "premiers",
+  "accroche": "Décomposer pour simplifier.",
+  "epreuve": "brevet",
+  "bonus": "Premiers < 30&nbsp;: **2 · 3 · 5 · 7 · 11 · 13 · 17 · 19 · 23 · 29** — et 1 n’est pas premier",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/nombres-premiers-et-fractions-irreductibles.webp",
+    "prompt": "a big glossy violet number block being split by a golden hammer into small prime-number bricks that stack into a neat tower, sparkles"
+  },
+  "marcel": "2 est le seul\npremier pair !",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Nombre premier", "definition": "exactement **deux** diviseurs, 1 et lui-même&nbsp;: 7, 13, 97" },
+            { "terme": "1", "definition": "**n’est pas** premier&nbsp;: un seul diviseur" },
+            { "terme": "Décomposition", "definition": "un entier écrit en **produit de facteurs premiers**&nbsp;: 180 = 2² × 3² × 5" },
+            { "terme": "Fraction irréductible", "definition": "haut et bas sans **diviseur commun** autre que 1&nbsp;: 7/10" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Divisible par…",
+          "entetes": ["Par", "Si…"],
+          "lignes": [
+            ["2", "le dernier chiffre est **pair**"],
+            ["3", "la somme des chiffres est dans la **table de 3**"],
+            ["5", "il finit par **0 ou 5**"],
+            ["9", "la somme des chiffres est dans la **table de 9**"],
+            ["10", "il finit par **0**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Décomposer en trois temps",
+          "etapes": [
+            { "titre": "Diviser", "texte": "par 2 tant que possible, puis par 3, puis par 5, 7…" },
+            { "titre": "Écrire", "texte": "le produit des facteurs premiers, avec des puissances" },
+            { "titre": "Simplifier", "texte": "barrer les facteurs communs en haut et en bas" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Rendre __84/126__ irréductible. 84 = 2² × 3 × 7 et 126 = 2 × 3² × 7.",
+          "calcul": "{84/126} = {2 × 2 × 3 × 7/2 × 3 × 3 × 7}",
+          "aparte": "on barre",
+          "resultat": "= [[{2/3}]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Premier ou pas&nbsp;?",
+          "oui": { "titre": "97 est premier", "texte": "Ni 2, ni 3, ni 5, ni 7 ne le divise, et 11² = 121 > 97&nbsp;: on **s’arrête**." },
+          "non": { "titre": "91 n’est pas premier", "texte": "91 = 7 × 13&nbsp;: il a d’autres diviseurs que 1 et lui-même." },
+          "essai": { "texte": "Pour tester n, on essaie les premiers tant que leur carré ne dépasse pas n&nbsp;: pour 97, jusqu’à <i>7</i> seulement." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "84 = 2² × 3 × 7 et 126 = 2 × 3² × 7", "quoi": "les décompositions" },
+            { "texte": "84/126 = (2 × 3 × 7 × 2) ÷ (2 × 3 × 7 × 3)", "quoi": "le facteur commun" },
+            { "texte": "84/126 = 2/3", "quoi": "irréductible" }
+          ],
+          "pied": "Diviser ==en haut et en bas== par le même nombre ne change pas la fraction."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que **1** est premier.",
+            "Oublier **2** dans la liste des premiers.",
+            "S’arrêter à 2 × 42&nbsp;: 42 n’est **pas** premier, on continue.",
+            "Simplifier par un nombre qui ne divise qu’**un seul** des deux."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**51** est-il premier&nbsp;?",
+            "Décomposer **60** en facteurs premiers.",
+            "Rendre **45/75** irréductible."
+          ],
+          "reponses": "1) non, 51 = 3 × 17 · 2) 2² × 3 × 5 · 3) 3/5"
+        }
+      ]
+    }
+  ]
+}

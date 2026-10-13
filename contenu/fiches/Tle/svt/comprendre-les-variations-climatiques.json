@@ -1,0 +1,110 @@
+{
+  "titre": "Le climat varie",
+  "titreSurligne": "varie",
+  "accroche": "Ce qui fait bouger le thermostat.",
+  "epreuve": "bac",
+  "bonus": "**Excentricité** · **obliquité** · **précession** = cycles de Milankovitch · **rétroactions** : l’albédo et la vapeur d’eau **amplifient**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/svt/comprendre-les-variations-climatiques.webp",
+    "prompt": "a glossy violet Earth tilted on an orbit ring around a golden sun, a golden thermostat dial and an ice core cylinder beside it, sparkles"
+  },
+  "marcel": "Orbite, CO₂, glace :\nle climat bouge !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Albédo", "definition": "fraction de l’énergie solaire **réfléchie** par une surface" },
+            { "terme": "Effet de serre", "definition": "des gaz (CO₂, vapeur d’eau) renvoient de l’énergie **vers le bas**" },
+            { "terme": "Rétroaction", "definition": "effet qui **renforce** ou freine la variation initiale" },
+            { "terme": "Cycles de Milankovitch", "definition": "variations régulières de l’orbite et de l’inclinaison de la Terre" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois paramètres orbitaux",
+          "entetes": ["Paramètre", "Ce qui varie"],
+          "lignes": [
+            ["**Excentricité**", "la forme de l’orbite, plus ou moins allongée"],
+            ["**Obliquité**", "l’inclinaison de l’axe de rotation"],
+            ["**Précession**", "l’orientation de l’axe, donc la saison au plus près du Soleil"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Repères à connaître",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Bilan radiatif", "texte": "Énergie reçue **moins** énergie renvoyée&nbsp;: à l’équilibre, la température est stable." },
+            { "titre": "Sans effet de serre", "texte": "Environ **−18 °C** au sol, contre **+15 °C** avec." },
+            { "titre": "Orbite", "texte": "Les paramètres changent la **répartition** de l’énergie, pas la quantité totale." },
+            { "titre": "Albédo", "texte": "Plus de glace, plus de lumière réfléchie&nbsp;: la Terre se refroidit, la boucle **amplifie**." },
+            { "titre": "CO₂ océanique", "texte": "L’océan froid dissout plus de CO₂&nbsp;: autre boucle de **rétroaction**." },
+            { "titre": "Archives", "texte": "Carottes de glace : bulles d’air (CO₂) et δ¹⁸O (température)." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Exploiter une courbe climatique",
+          "etapes": [
+            { "titre": "Repérer", "texte": "les cycles, leur durée et les maxima" },
+            { "titre": "Relier", "texte": "aux paramètres orbitaux de même période" },
+            { "titre": "Expliquer", "texte": "l’amplification par les rétroactions" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "La température varie avec une période proche de 41 000 ans.", "quoi": "constater" },
+            { "texte": "Cette période est celle de l’obliquité.", "quoi": "relier" },
+            { "texte": "Les rétroactions amplifient ensuite cette variation.", "quoi": "expliquer" }
+          ],
+          "pied": "Une variation orbitale seule est ==faible== : les rétroactions l’amplifient."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que l’effet de serre est **toujours** néfaste&nbsp;: sans lui, −18 °C.",
+            "Croire que les paramètres orbitaux changent l’énergie **totale**.",
+            "Confondre **effet de serre** et trou dans la couche d’ozone.",
+            "Oublier que l’albédo est une rétroaction **positive**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que mesure l’**albédo**&nbsp;?",
+            "Quels sont les **trois** paramètres de Milankovitch&nbsp;?",
+            "Que révèle le **δ¹⁸O** d’une carotte de glace&nbsp;?"
+          ],
+          "reponses": "1) la part d’énergie solaire réfléchie · 2) excentricité, obliquité, précession · 3) la température du passé"
+        }
+      ]
+    }
+  ]
+}

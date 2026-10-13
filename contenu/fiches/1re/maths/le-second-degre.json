@@ -1,0 +1,115 @@
+{
+  "titre": "Le second degré",
+  "titreSurligne": "second",
+  "accroche": "Δ décide du nombre de racines.",
+  "epreuve": "bac",
+  "bonus": "Δ = b² − 4ac · α = −{b/2a} · β = f(α) · le trinôme est du signe de **a** partout, sauf entre les racines",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/le-second-degre.webp",
+    "prompt": "a glossy violet parabola like a smiling bowl with a golden ball resting at its lowest point and two sparkling golden dots on the ground line, sparkles"
+  },
+  "marcel": "Δ d’abord,\nracines ensuite !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Δ et les racines",
+          "petite": true,
+          "lignes": ["Δ = b² − 4ac", "x = {−b ± √Δ/2a}", "ax² + bx + c = a(x − α)² + β"],
+          "regle": "La forme canonique a pour sommet **S(α ; β)** avec α = −b ÷ 2a et β = f(α).",
+          "note": "(−b)² : le carré rend positif&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Δ, racines et signe",
+          "entetes": ["Δ", "Racines", "Signe de ax² + bx + c"],
+          "lignes": [
+            ["**> 0**", "deux", "signe de a **hors** des racines"],
+            ["**= 0**", "une, double", "signe de a, sauf en x₀"],
+            ["**< 0**", "aucune", "signe de a **partout**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Calculer Δ", "texte": "avec a, b, c et leurs signes : Δ = b² − 4ac" },
+            { "titre": "Les racines", "texte": "deux, une ou aucune selon le signe de Δ" },
+            { "titre": "Le signe", "texte": "celui de a, sauf entre les racines" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Résoudre __2x² − 3x − 2 = 0__.",
+          "calcul": "Δ = 9 + 16 = 25\nx = {3 ± 5/4}",
+          "aparte": "√25 = 5",
+          "resultat": "x = [[2]] ou x = [[−{1/2}]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Δ = 0", "texte": "x² − 6x + 9 = (x − 3)²&nbsp;: racine double **3**, la parabole touche l’axe." },
+            { "titre": "Δ < 0", "texte": "x² + x + 1&nbsp;: Δ = −3, **aucune** racine, toujours positif." },
+            { "titre": "Forme canonique", "texte": "x² + 4x + 1 = (x + 2)² − 3&nbsp;: sommet **(−2 ; −3)**." },
+            { "titre": "Sommet", "texte": "2x² − 3x − 2&nbsp;: α = {3/4}, minimum β = **−{25/8}** (a > 0)." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Δ = (−3)² − 4 × 2 × (−2) = 25 > 0", "quoi": "le discriminant" },
+            { "texte": "x₁ = {3 − 5/4} = −{1/2} et x₂ = {3 + 5/4} = 2", "quoi": "les deux racines" },
+            { "texte": "a = 2 > 0&nbsp;: f(x) ≥ 0 hors des racines", "quoi": "le signe" }
+          ],
+          "pied": "Contrôle&nbsp;: f(2) = 8 − 6 − 2 = ==0==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier que **b² = (−b)²** est positif.",
+            "Diviser seulement √Δ par 2a, pas **−b ± √Δ**.",
+            "Inverser le signe **entre** les racines.",
+            "Écrire « pas de signe » quand **Δ < 0**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "x² + 2x + 5&nbsp;: **Δ** et racines&nbsp;?",
+            "Résoudre **x² − 5x + 6 = 0**&nbsp;?",
+            "Signe de **−x² + 1**&nbsp;?"
+          ],
+          "reponses": "1) Δ = −16, aucune racine · 2) x = 2 ou x = 3 · 3) positif sur [−1 ; 1], négatif ailleurs"
+        }
+      ]
+    }
+  ]
+}

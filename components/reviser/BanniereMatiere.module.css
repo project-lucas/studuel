@@ -296,26 +296,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+  gap: 1px;
   min-width: 0;
   height: 5.125rem;
-  padding: 0 0.125rem 0.5rem;
+  padding: 0.25rem 0.125rem;
   border-radius: 1.25rem;
   background: var(--card);
   color: var(--card-foreground);
   box-shadow: var(--carte-ombre);
   font-size: 0.8125rem;
   font-weight: 800;
-  line-height: 1.15;
+  line-height: 1.1;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
   transition: transform 90ms ease-out;
 }
-/* Sans compte sous le nom (l'encyclopédie, qui ne lit pas la progression), la
-   porte est plus basse. */
-.porte[data-sobre] {
-  height: 4.5rem;
+/* Le nom tient sur une ou deux lignes (« Cahier d'exercices ») dans une boîte
+   qui fait TOUJOURS deux lignes : l'objet garde la même hauteur d'une porte à
+   l'autre. */
+.porteNom {
+  display: flex;
+  align-items: center;
+  min-height: 2.2em;
+  text-align: center;
+  text-wrap: balance;
 }
 .porte:active {
   transform: translateY(2px);
@@ -331,15 +337,6 @@
   object-fit: contain;
   transition: transform 160ms cubic-bezier(0.3, 1.4, 0.5, 1);
 }
-.porteCompte {
-  max-width: 100%;
-  overflow: hidden;
-  font-size: 0.65625rem;
-  font-weight: 700;
-  color: var(--muted-foreground);
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
 /* La porte ouverte : une plaque lavande cerclée de violet sur son socle, et
    son objet qui en sort. */
 .porte[aria-current='page'] {
@@ -353,9 +350,6 @@
 .porte[aria-current='page'] .porteImage {
   transform: translateY(-9px) scale(1.2);
   filter: drop-shadow(0 3px 0 color-mix(in oklch, var(--primary), transparent 70%));
-}
-.porte[aria-current='page'] .porteCompte {
-  color: color-mix(in oklch, var(--secondary-foreground), transparent 35%);
 }
 
 /* La couronne de Studuel+ : l'or est l'identité de l'abonnement. */

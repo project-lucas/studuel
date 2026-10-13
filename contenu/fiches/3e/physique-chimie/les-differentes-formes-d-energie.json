@@ -1,0 +1,113 @@
+{
+  "titre": "Les formes d’énergie",
+  "titreSurligne": "énergie",
+  "accroche": "Ce qui permet à un système d’agir.",
+  "epreuve": "brevet",
+  "bonus": "Énergie en **joules (J)** · 1 kWh = **3,6 × 10⁶ J** · une **source** n’est pas une **forme** d’énergie",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/les-differentes-formes-d-energie.webp",
+    "prompt": "a glossy violet energy bolt in the middle surrounded by small golden icons of a wind turbine, a flame, a battery, a sun and a rolling ball, sparkles"
+  },
+  "marcel": "Une source n’est\npas une forme !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les unités",
+          "petite": true,
+          "lignes": ["1 kWh = 3,6 × 10⁶ J", "1 Wh = 3 600 J"],
+          "regle": "L’énergie se mesure en **joules (J)**. Pour l’électricité, on utilise le **wattheure (Wh)** et le **kilowattheure (kWh)**. La **calorie** sert surtout pour l’alimentation.",
+          "note": "1 kWh = 1 000 Wh&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les principales formes",
+          "entetes": ["Forme", "Liée à", "Exemple"],
+          "lignes": [
+            ["**Cinétique**", "le mouvement", "une voiture lancée"],
+            ["**De position**", "la hauteur", "l’eau d’un barrage"],
+            ["**Thermique**", "la température", "un radiateur"],
+            ["**Chimique**", "les molécules", "essence, aliments, pile"],
+            ["**Électrique · lumineuse · nucléaire**", "courant · lumière · noyaux", "prise · soleil · centrale"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Reconnaître la forme en trois temps",
+          "etapes": [
+            { "titre": "Observer", "texte": "ce que fait l’objet : bouge, chauffe, éclaire, est en hauteur" },
+            { "titre": "Nommer", "texte": "la forme : cinétique, thermique, lumineuse, de position…" },
+            { "titre": "Convertir", "texte": "l’unité si besoin : kWh → J en multipliant par 3,6 × 10⁶" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un four consomme __2 kWh__. Cette énergie en joules&nbsp;?",
+          "calcul": "2 × 3,6 × 10⁶",
+          "aparte": "× 3,6 × 10⁶",
+          "resultat": "E = [[7,2 × 10⁶ J]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Source ou forme&nbsp;?",
+          "oui": { "titre": "Renouvelables", "texte": "Soleil, vent, eau, biomasse&nbsp;: elles se **reconstituent** vite à l’échelle humaine." },
+          "non": { "titre": "Non renouvelables", "texte": "Pétrole, charbon, gaz, uranium&nbsp;: stocks **limités**." },
+          "essai": { "texte": "Le Soleil est une <i>source</i> d’énergie&nbsp;; l’énergie <i>lumineuse</i> qu’il envoie est une <i>forme</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "E = 2 kWh", "quoi": "la donnée" },
+            { "texte": "1 kWh = 3,6 × 10⁶ J donc E = 2 × 3,6 × 10⁶", "quoi": "lettres puis nombres" },
+            { "texte": "E = 7,2 × 10⁶ J", "quoi": "avec l’unité" }
+          ],
+          "pied": "On nomme toujours la ==forme== d’énergie, puis la ==source== qui l’apporte."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **source** et **forme** d’énergie.",
+            "Écrire une énergie en **watts**&nbsp;: le watt est une puissance.",
+            "Oublier de convertir les **kWh** en joules.",
+            "Croire qu’une énergie est « **produite** »&nbsp;: elle est convertie."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle forme d’énergie dépend de la **hauteur**&nbsp;?",
+            "Le **vent** est-il renouvelable&nbsp;?",
+            "1 kWh vaut combien de **joules**&nbsp;?"
+          ],
+          "reponses": "1) de position · 2) oui · 3) 3,6 × 10⁶ J"
+        }
+      ]
+    }
+  ]
+}

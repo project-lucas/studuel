@@ -1,0 +1,113 @@
+{
+  "titre": "Le premier principe",
+  "titreSurligne": "principe",
+  "accroche": "Rien ne se perd : tout se compte.",
+  "epreuve": "bac",
+  "bonus": "ΔU = W + Q · isolé&nbsp;: ΔU = 0 · adiabatique&nbsp;: Q = 0 · isotherme (gaz parfait)&nbsp;: ΔU = 0 · W, Q &gt; 0 si **reçus**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/le-premier-principe-de-la-thermodynamique.webp",
+    "prompt": "a glossy violet piston cylinder with a golden glowing gas inside, a cartoon golden flame below it and a hand pushing the piston, balanced energy scales floating beside it, sparkles"
+  },
+  "marcel": "Ce que le système reçoit,\nil le garde en énergie !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le premier principe",
+          "petite": true,
+          "lignes": ["ΔU = W + Q"],
+          "regle": "**ΔU** variation d’énergie interne, **W** travail et **Q** transfert thermique, tous en **joules (J)**. W et Q sont ==positifs s’ils sont reçus== par le système, négatifs s’il les cède.",
+          "note": "le point de vue du système&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les cas à connaître",
+          "entetes": ["Système", "Conséquence", "Bilan"],
+          "lignes": [
+            ["Isolé", "ni W ni Q", "ΔU = 0"],
+            ["Adiabatique", "Q = 0", "ΔU = W"],
+            ["Sans travail", "W = 0", "ΔU = Q"],
+            ["Gaz parfait isotherme", "T constante", "ΔU = 0"],
+            ["Cycle complet", "retour à l’état initial", "ΔU = 0"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Définir", "texte": "le système et ce qu’il échange avec l’extérieur" },
+            { "titre": "Signer", "texte": "W et Q&nbsp;: positif si reçu, négatif si cédé" },
+            { "titre": "Appliquer", "texte": "ΔU = W + Q, puis écrire l’unité&nbsp;: des joules (J), jamais des degrés" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un gaz est comprimé&nbsp;: il __reçoit__ un travail de 300 J et __cède__ 120 J à l’extérieur sous forme de chaleur. Sa variation d’énergie interne&nbsp;?",
+          "calcul": "W = +300 J · Q = −120 J",
+          "aparte": "Q cédé&nbsp;: négatif&nbsp;!",
+          "resultat": "ΔU = 300 + (−120) = [[+180 J]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Lire un bilan",
+          "oui": { "titre": "ΔU &gt; 0", "texte": "Le système a ==gagné== de l’énergie interne&nbsp;: souvent sa température monte." },
+          "non": { "titre": "Q &gt; 0 ⇒ ΔU &gt; 0&nbsp;?", "texte": "**Faux** si le système cède aussi du travail&nbsp;: il faut faire la **somme** W + Q." },
+          "essai": { "texte": "Gaz parfait qui se détend sans échanger de chaleur&nbsp;: Q = 0, il cède du travail (W &lt; 0), donc <i>ΔU &lt; 0</i> et il se refroidit." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Système&nbsp;: le gaz. Il reçoit W = +300 J.", "quoi": "le système" },
+            { "texte": "Il cède Q = −120 J. ΔU = W + Q", "quoi": "le principe" },
+            { "texte": "ΔU = 300 − 120 = +180 J", "quoi": "avec l’unité" }
+          ],
+          "pied": "Le premier principe dit **combien**, pas dans quel ==sens== : c’est le second principe."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **signe** d’un transfert cédé.",
+            "Écrire ΔU = **W − Q** par habitude d’un autre manuel.",
+            "Confondre **chaleur** Q et **température** T.",
+            "Écrire ΔU = 0 pour un système **non isolé**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "W = +50 J, Q = +30 J&nbsp;: **ΔU**&nbsp;?",
+            "Système adiabatique, W = −40 J&nbsp;: **ΔU**&nbsp;?",
+            "Système isolé&nbsp;: la valeur de ΔU&nbsp;?"
+          ],
+          "reponses": "1) +80 J · 2) −40 J · 3) 0"
+        }
+      ]
+    }
+  ]
+}

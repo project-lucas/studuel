@@ -1,0 +1,113 @@
+{
+  "titre": "La lumière",
+  "titreSurligne": "lumière",
+  "accroche": "Sources, propagation, couleurs.",
+  "epreuve": "brevet",
+  "bonus": "Vitesse dans le vide&nbsp;: **300 000 km/s** · **d = c × t** · lumière **blanche** = toutes les couleurs (prisme) · propagation **en ligne droite**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/la-lumiere.webp",
+    "prompt": "a glossy golden glass prism splitting a bright white beam into a rainbow of colors, a violet lamp as the source and a small golden eye as the receiver, sparkles"
+  },
+  "marcel": "300 000 km/s,\nle record de vitesse !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La vitesse de la lumière",
+          "petite": true,
+          "lignes": ["d = c × t", "c = 300 000 km/s"],
+          "regle": "**c** la vitesse de la lumière dans le **vide** (300 000 km/s), **t** la durée en secondes, **d** la distance en km. Elle se propage ==en ligne droite== dans un milieu **homogène et transparent**.",
+          "note": "le vide laisse passer la lumière&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Synthèses des couleurs",
+          "entetes": ["Mélange", "Résultat"],
+          "lignes": [
+            ["Rouge + vert + bleu", "**blanc**"],
+            ["Rouge + vert", "jaune"],
+            ["Rouge + bleu", "magenta"],
+            ["Vert + bleu", "cyan"],
+            ["Objet rouge en lumière verte", "**noir** (il absorbe)"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Prévoir la couleur d’un objet",
+          "etapes": [
+            { "titre": "Éclairage", "texte": "quelles couleurs la lumière envoie-t-elle&nbsp;?" },
+            { "titre": "Objet", "texte": "il renvoie sa couleur et absorbe les autres" },
+            { "titre": "Conclusion", "texte": "il apparaît de sa couleur, ou noir s’il n’a rien à renvoyer" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Le Soleil est à __150 millions de km__. Durée du trajet de sa lumière&nbsp;?",
+          "calcul": "t = 150 000 000 ÷ 300 000",
+          "aparte": "= 500 s",
+          "resultat": "t ≈ [[8 min 20 s]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Source ou objet&nbsp;?",
+          "oui": { "titre": "Source primaire", "texte": "Elle **produit** sa lumière&nbsp;: Soleil, lampe, écran allumé." },
+          "non": { "titre": "Objet diffusant", "texte": "Il **renvoie** la lumière reçue&nbsp;: mur, page de cahier, Lune." },
+          "essai": { "texte": "Pour voir un objet, sa lumière doit <i>parvenir jusqu’à notre œil</i>, le <i>récepteur</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "d = 150 000 000 km et c = 300 000 km/s", "quoi": "les données" },
+            { "texte": "t = d ÷ c = 150 000 000 ÷ 300 000", "quoi": "lettres puis nombres" },
+            { "texte": "t = 500 s, soit 8 min 20 s", "quoi": "avec l’unité" }
+          ],
+          "pied": "Un ==prisme== disperse la lumière blanche en un spectre continu de couleurs."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que la lumière a besoin de **matière** : elle traverse le vide.",
+            "Prendre la **Lune** pour une source primaire.",
+            "Mélanger **km** et **m** dans c = 300 000 km/s.",
+            "Oublier que la lumière blanche est **composée**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Vitesse de la lumière dans le **vide**&nbsp;?",
+            "Rouge + vert + bleu donnent quelle lumière&nbsp;?",
+            "Un objet **rouge** sous une lumière verte&nbsp;?"
+          ],
+          "reponses": "1) 300 000 km/s · 2) blanche · 3) noir"
+        }
+      ]
+    }
+  ]
+}

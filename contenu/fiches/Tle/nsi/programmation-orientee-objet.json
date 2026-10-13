@@ -1,0 +1,191 @@
+{
+  "titre": "Programmation objet",
+  "titreSurligne": "objet",
+  "accroche": "Données et méthodes, rangées ensemble.",
+  "epreuve": "bac",
+  "bonus": "classe = **modèle** · objet = **instance** · <i>__init__</i> construit · <i>self</i> = l’objet lui-même",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/nsi/programmation-orientee-objet.webp",
+    "prompt": "a glossy violet blueprint cube producing several small golden cubes from a mold, sparkles"
+  },
+  "marcel": "La classe est le moule,\nl’objet le gâteau !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Classe",
+              "definition": "le **modèle**&nbsp;: attributs et méthodes"
+            },
+            {
+              "terme": "Objet",
+              "definition": "une **instance** de la classe, créée par <i>Compte(100)</i>"
+            },
+            {
+              "terme": "Attribut",
+              "definition": "une **donnée** de l’objet&nbsp;: <i>self.solde</i>"
+            },
+            {
+              "terme": "Méthode",
+              "definition": "une **fonction** de la classe, avec <i>self</i> en 1er paramètre"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Une classe en Python",
+          "entetes": [
+            "Python",
+            "Rôle"
+          ],
+          "lignes": [
+            [
+              "<i>class Compte:</i>",
+              "**déclare** la classe"
+            ],
+            [
+              "<i>&nbsp;&nbsp;def __init__(self, s):</i>",
+              "le **constructeur**"
+            ],
+            [
+              "<i>&nbsp;&nbsp;&nbsp;&nbsp;self.solde = s</i>",
+              "crée l’**attribut**"
+            ],
+            [
+              "<i>&nbsp;&nbsp;def deposer(self, m):</i>",
+              "une **méthode**"
+            ],
+            [
+              "<i>&nbsp;&nbsp;&nbsp;&nbsp;self.solde += m</i>",
+              "modifie l’objet"
+            ],
+            [
+              "<i>c = Compte(100)</i>",
+              "**instancie** un objet"
+            ],
+            [
+              "<i>c.deposer(50)</i>",
+              "c.solde vaut **150**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Utiliser une classe en trois temps",
+          "etapes": [
+            {
+              "titre": "Instancier",
+              "texte": "<i>c = Compte(100)</i> appelle __init__"
+            },
+            {
+              "titre": "Appeler",
+              "texte": "<i>c.deposer(50)</i>&nbsp;: self désigne c"
+            },
+            {
+              "titre": "Lire",
+              "texte": "<i>c.solde</i> donne la valeur de l’attribut"
+            },
+            {
+              "titre": "Protéger",
+              "texte": "passer par des méthodes plutôt que modifier l’attribut"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "<i>c = Compte(100)</i> puis <i>c.deposer(50)</i> et <i>c.deposer(25)</i>. __Valeur de c.solde__&nbsp;?",
+          "calcul": "100 → 100 + 50 → 150 + 25",
+          "aparte": "deux appels",
+          "resultat": "= [[175]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Encapsulation",
+              "texte": "on protège l’attribut (<i>_solde</i>) et on passe par des **méthodes**."
+            },
+            {
+              "titre": "Accesseur",
+              "texte": "<i>get_solde(self)</i> lit la donnée sans l’exposer."
+            },
+            {
+              "titre": "Deux objets",
+              "texte": "<i>a</i> et <i>b</i> ont chacun **leurs** attributs."
+            },
+            {
+              "titre": "Appel",
+              "texte": "<i>c.deposer(50)</i> équivaut à <i>Compte.deposer(c, 50)</i>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "<i>class Compte:</i> puis <i>def __init__(self, s):</i>",
+              "quoi": "la structure"
+            },
+            {
+              "texte": "<i>self.solde = s</i>",
+              "quoi": "l’attribut"
+            },
+            {
+              "texte": "<i>def deposer(self, m):</i>",
+              "quoi": "la méthode"
+            }
+          ],
+          "pied": "==self== est toujours le premier paramètre d’une méthode."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier **self** dans la définition d’une méthode.",
+            "Écrire <i>solde = s</i> au lieu de <i>self.solde = s</i>&nbsp;: variable locale perdue.",
+            "Confondre la **classe** et l’**objet**.",
+            "Passer **self** à l’appel&nbsp;: Python le fait seul."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle méthode **construit** l’objet&nbsp;?",
+            "Que désigne **self**&nbsp;?",
+            "<i>Compte(10)</i> crée-t-il une classe ou un objet&nbsp;?"
+          ],
+          "reponses": "1) __init__ · 2) l’objet courant, celui qui appelle la méthode · 3) un objet (une instance)"
+        }
+      ]
+    }
+  ]
+}

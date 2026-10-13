@@ -1,0 +1,115 @@
+{
+  "titre": "Les identités",
+  "titreSurligne": "identités",
+  "accroche": "Trois formules, dans les deux sens.",
+  "bonus": "(a + b)² = **a² + 2ab + b²** · (a − b)² = **a² − 2ab + b²** · (a + b)(a − b) = **a² − b²**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/maths/les-identites-remarquables.webp",
+    "prompt": "a glossy violet big square split into four golden and violet blocks like a puzzle, a tiny cartoon mathematician arranging the pieces, sparkles"
+  },
+  "marcel": "Le double produit,\nne l’oublie pas !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les trois formules",
+          "taille": "mini",
+          "lignes": ["(a + b)² = a² + 2ab + b²", "(a − b)² = a² − 2ab + b²", "(a + b)(a − b) = a² − b²"],
+          "regle": "Dans le **carré** d’une somme ou d’une différence, il y a toujours un ==double produit== 2ab. La différence de deux carrés est un **produit** de deux facteurs.",
+          "note": "(a + b)² ≠ a² + b²&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Deux sens, deux usages",
+          "items": [
+            { "terme": "Développer", "definition": "produit → **somme** : (x + 3)² = x² + 6x + 9" },
+            { "terme": "Factoriser", "definition": "somme → **produit** : x² − 25 = (x − 5)(x + 5)" },
+            { "terme": "Reconnaître", "definition": "a², b² et **2ab** dans l’expression" },
+            { "terme": "Calcul mental", "definition": "99² = (100 − 1)² = **9 801**" },
+            { "terme": "Équation", "definition": "factoriser, puis **produit nul**" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Factoriser avec une identité",
+          "etapes": [
+            { "titre": "Repérer", "texte": "deux carrés a² et b² (avec ou sans le double produit 2ab)" },
+            { "titre": "Identifier", "texte": "a et b : a² − b² = (a − b)(a + b) ; a² + 2ab + b² = (a + b)²" },
+            { "titre": "Vérifier", "texte": "redévelopper pour retrouver l’expression de départ" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Résoudre __x² + 2x − 15 = 0__.",
+          "calcul": "(x + 1)² − 16 = (x − 3)(x + 5)",
+          "aparte": "a² − b²",
+          "resultat": "produit nul&nbsp;: x = [[3 ou −5]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Reconnaître", "texte": "x² + 6x + 9 = x² + 2 × x × 3 + 3² = **(x + 3)²**." },
+            { "titre": "Calcul mental", "texte": "101 × 99 = (100 + 1)(100 − 1) = 100² − 1 = **9 999**." },
+            { "titre": "Carré de 2x", "texte": "(2x + 3)² = **4x²** + 12x + 9&nbsp;: (2x)² = 4x²." },
+            { "titre": "Vérifier", "texte": "(x − 3)(x + 5) = x² + 5x − 3x − 15 = **x² + 2x − 15**. ✔" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "x² + 2x − 15 = (x + 1)² − 16", "quoi": "on fait apparaître (a + b)²" },
+            { "texte": "= (x + 1 − 4)(x + 1 + 4) = (x − 3)(x + 5)", "quoi": "a² − b² = (a − b)(a + b)" },
+            { "texte": "x − 3 = 0 ou x + 5 = 0, S = {−5 ; 3}", "quoi": "produit nul" }
+          ],
+          "pied": "Un produit est nul ==si et seulement si== l’un de ses facteurs l’est."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "(a + b)² = a² + b²&nbsp;: on **oublie 2ab**.",
+            "(a − b)² = a² − b²&nbsp;: le dernier terme est **+ b²**.",
+            "(2x)² = 2x²&nbsp;: c’est **4x²**.",
+            "a² + b² n’est **pas** factorisable avec ces formules."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Développer **(x + 4)²**.",
+            "Factoriser **x² − 25**.",
+            "Calculer mentalement **51²**."
+          ],
+          "reponses": "1) x² + 8x + 16 · 2) (x − 5)(x + 5) · 3) (50 + 1)² = 2 601"
+        }
+      ]
+    }
+  ]
+}

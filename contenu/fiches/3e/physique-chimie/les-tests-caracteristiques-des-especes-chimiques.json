@@ -1,0 +1,121 @@
+{
+  "titre": "Les tests chimiques",
+  "titreSurligne": "tests",
+  "accroche": "Reconnaître un gaz, un ion, l’eau.",
+  "epreuve": "brevet",
+  "bonus": "CO₂&nbsp;: eau de chaux **trouble** · H₂&nbsp;: **détonation** · O₂&nbsp;: **rallume** · eau&nbsp;: sulfate de cuivre **blanc → bleu**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/les-tests-caracteristiques-des-especes-chimiques.webp",
+    "prompt": "three glossy test tubes in a golden rack holding violet, blue and green liquids, a glowing wooden splint beside a flask, a magnifying glass, sparkles"
+  },
+  "marcel": "Un test, une couleur,\nune conclusion !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Gaz et eau",
+          "entetes": ["Espèce", "Test", "Résultat"],
+          "lignes": [
+            ["**Dioxyde de carbone**", "eau de chaux", "elle se **trouble**"],
+            ["**Dihydrogène**", "flamme", "**détonation**"],
+            ["**Dioxygène**", "bûchette incandescente", "elle se **rallume**"],
+            ["**Eau**", "sulfate de cuivre anhydre", "**blanc → bleu**"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les ions (précipités)",
+          "entetes": ["Ion", "Précipité"],
+          "lignes": [
+            ["**Cuivre II** Cu²⁺", "**bleu**"],
+            ["**Fer II** Fe²⁺", "**vert**"],
+            ["**Fer III** Fe³⁺", "**rouille**"],
+            ["**Zinc** Zn²⁺", "**blanc**"],
+            ["**Chlorure** Cl⁻", "blanc, **noircit à la lumière**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Rédiger une identification",
+          "etapes": [
+            { "titre": "Test", "texte": "dire quel réactif on ajoute (soude, nitrate d’argent…)" },
+            { "titre": "Observation", "texte": "décrire ce qu’on voit&nbsp;: couleur du précipité" },
+            { "titre": "Conclusion", "texte": "nommer l’espèce présente" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "On ajoute de la __soude__ à une solution&nbsp;: un précipité __vert__ se forme.",
+          "calcul": "précipité vert",
+          "aparte": "= Fe²⁺",
+          "resultat": "ion [[fer II]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Un précipité", "texte": "Un **solide** qui se forme dans la solution en versant le réactif." },
+            { "titre": "Un test", "texte": "Il prouve la présence de **l’espèce visée** si le résultat attendu apparaît." },
+            { "titre": "Chlorure", "texte": "Réactif&nbsp;: le **nitrate d’argent**. Le précipité noircit à la lumière." },
+            { "titre": "Sécurité", "texte": "**Lunettes et gants**&nbsp;; ne jamais sentir directement un produit." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Je verse de la soude dans la solution.", "quoi": "le test" },
+            { "texte": "Il se forme un précipité vert.", "quoi": "l’observation" },
+            { "texte": "La solution contient des ions fer II.", "quoi": "la conclusion" }
+          ],
+          "pied": "On écrit ==ce qu’on voit==, puis ==ce qu’on en déduit==, jamais l’inverse."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire la **conclusion** sans l’observation.",
+            "Confondre le **dihydrogène** (détonation) et le **dioxygène** (rallume).",
+            "Oublier le **réactif** à ajouter.",
+            "Dire « **l’eau de chaux** se colore » au lieu de « se trouble ».",
+            "Dire « précipité **blanc** » sans préciser le **réactif** : Zn²⁺ et Cl⁻ sont tous deux blancs."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel gaz **trouble** l’eau de chaux&nbsp;?",
+            "Précipité **rouille**&nbsp;: quel ion&nbsp;?",
+            "Le sulfate de cuivre anhydre devient **bleu**&nbsp;: qu’y a-t-il&nbsp;?"
+          ],
+          "reponses": "1) le dioxyde de carbone · 2) Fe³⁺ · 3) de l’eau"
+        }
+      ]
+    }
+  ]
+}

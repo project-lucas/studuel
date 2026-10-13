@@ -1,0 +1,119 @@
+{
+  "titre": "Arbres binaires",
+  "titreSurligne": "Arbres",
+  "accroche": "Diviser l’ensemble à chaque nœud.",
+  "epreuve": "bac",
+  "bonus": "taille = nombre de **nœuds** · hauteur = nombre d’**arêtes** du plus long chemin · ABR&nbsp;: gauche &lt; nœud &lt; droite",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/nsi/arbres-et-structure-de-donnees.webp",
+    "prompt": "a glossy violet tree whose branches fork in two, with golden round nodes at each fork, sparkles"
+  },
+  "marcel": "Un arbre,\ndeux fils au plus !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Racine", "definition": "le nœud **du haut**, sans parent" },
+            { "terme": "Feuille", "definition": "un nœud **sans fils**" },
+            { "terme": "Taille", "definition": "le nombre de **nœuds**" },
+            { "terme": "Hauteur", "definition": "le nombre d’**arêtes** du plus long chemin racine → feuille" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois parcours en profondeur",
+          "entetes": ["Parcours", "Ordre"],
+          "lignes": [
+            ["**Préfixe**", "nœud, gauche, droite"],
+            ["**Infixe**", "gauche, nœud, droite"],
+            ["**Suffixe**", "gauche, droite, nœud"],
+            ["en largeur", "niveau par niveau"],
+            ["infixe d’un **ABR**", "valeurs **triées**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Chercher dans un arbre binaire de recherche",
+          "etapes": [
+            { "titre": "Comparer", "texte": "la valeur cherchée au nœud courant" },
+            { "titre": "Descendre", "texte": "à gauche si elle est plus petite, à droite sinon" },
+            { "titre": "S’arrêter", "texte": "sur la valeur, ou sur un arbre vide" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Racine 8&nbsp;; fils de 8&nbsp;: 3 et 10&nbsp;; fils de 3&nbsp;: 1 et 6. __Parcours infixe__&nbsp;?",
+          "calcul": "gauche de 8 : 1, 3, 6 · puis 8 · puis 10",
+          "aparte": "ABR trié",
+          "resultat": "= [[1, 3, 6, 8, 10]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Bornes", "texte": "arbre binaire de hauteur h&nbsp;: au plus **2<sup>h+1</sup> − 1** nœuds." },
+            { "titre": "Exemple", "texte": "h = 3 → au plus 2<sup>4</sup> − 1 = **15** nœuds." },
+            { "titre": "Équilibré", "texte": "recherche en environ **log₂(n)** étapes." },
+            { "titre": "Peigne", "texte": "un arbre filiforme : recherche en **n** étapes." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le parcours infixe visite&nbsp;: gauche, nœud, droite.", "quoi": "la règle" },
+            { "texte": "Sous-arbre gauche de 8&nbsp;: 1, 3, 6. Puis 8. Puis 10.", "quoi": "le déroulé" },
+            { "texte": "Le résultat est 1, 3, 6, 8, 10.", "quoi": "la liste triée" }
+          ],
+          "pied": "Hauteur de l’exemple&nbsp;: ==2== arêtes, taille&nbsp;: ==5== nœuds."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Compter les **nœuds** au lieu des arêtes pour la hauteur.",
+            "Confondre préfixe et **infixe**.",
+            "Oublier le cas de l’**arbre vide** en récursif.",
+            "Croire un arbre binaire toujours **trié**&nbsp;: seul l’ABR l’est."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Hauteur d’un arbre réduit à sa **racine**&nbsp;?",
+            "Parcours **préfixe** de l’exemple&nbsp;?",
+            "Nombre maximal de nœuds pour **h = 2**&nbsp;?"
+          ],
+          "reponses": "1) 0 · 2) 8, 3, 1, 6, 10 · 3) 7"
+        }
+      ]
+    }
+  ]
+}

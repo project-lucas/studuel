@@ -1,0 +1,185 @@
+{
+  "titre": "Gène et protéine",
+  "titreSurligne": "protéine",
+  "accroche": "Un gène, un ARNm, une protéine.",
+  "epreuve": "bac",
+  "bonus": "**ADN** → transcription (**noyau**) → **ARNm** → traduction (**cytoplasme**, ribosome) → **protéine**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/svt/l-expression-du-patrimoine-genetique.webp",
+    "prompt": "a glossy violet DNA strand on the left, a golden ribbon copy leaving it and passing through a ribosome machine that outputs a chain of colorful beads, sparkles"
+  },
+  "marcel": "L’ADN reste au noyau,\nl’ARNm voyage !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "Les étapes",
+          "etapes": [
+            {
+              "date": "Transcription",
+              "texte": "Dans le **noyau**, l’**ARN polymérase** copie un gène en **ARN pré-messager**."
+            },
+            {
+              "date": "Maturation",
+              "texte": "**Épissage**&nbsp;: on élimine les **introns**, on garde les **exons**."
+            },
+            {
+              "date": "Traduction",
+              "texte": "Dans le **cytoplasme**, le **ribosome** lit l’ARNm par **codons**."
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "ADN et ARN",
+          "entetes": [
+            "",
+            "ADN",
+            "ARN"
+          ],
+          "lignes": [
+            [
+              "Brins",
+              "double",
+              "**simple**"
+            ],
+            [
+              "Sucre",
+              "désoxyribose",
+              "**ribose**"
+            ],
+            [
+              "Base",
+              "T (thymine)",
+              "**U (uracile)**"
+            ],
+            [
+              "Lieu",
+              "noyau",
+              "noyau puis cytoplasme"
+            ],
+            [
+              "Rôle",
+              "support du gène",
+              "**messager** vers le ribosome"
+            ],
+            [
+              "Produit",
+              "copié par réplication",
+              "lu par la traduction"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Le code génétique",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Codon",
+              "texte": "**3 nucléotides** de l’ARNm codent **un acide aminé**."
+            },
+            {
+              "titre": "ARN de transfert",
+              "texte": "Apporte l’acide aminé et reconnaît le codon par son **anticodon**."
+            },
+            {
+              "titre": "Codon stop",
+              "texte": "Il **arrête** la traduction&nbsp;: la chaîne est terminée."
+            },
+            {
+              "titre": "Code redondant",
+              "texte": "Plusieurs codons peuvent coder **le même** acide aminé."
+            },
+            {
+              "titre": "Code universel",
+              "texte": "Le même code, ou presque, pour tous les êtres vivants."
+            },
+            {
+              "titre": "Épissage alternatif",
+              "texte": "Un même gène peut donner **plusieurs** ARNm, donc plusieurs protéines."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Passer de l’ADN à la protéine",
+          "etapes": [
+            {
+              "titre": "Transcrire",
+              "texte": "brin d’ADN → ARNm&nbsp;: A→U, T→A, C→G, G→C"
+            },
+            {
+              "titre": "Découper",
+              "texte": "l’ARNm en codons de trois nucléotides"
+            },
+            {
+              "titre": "Traduire",
+              "texte": "chaque codon avec le tableau du code génétique"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "Le brin transcrit TAC donne l’ARNm AUG, par complémentarité.",
+              "quoi": "transcrire"
+            },
+            {
+              "texte": "AUG est un codon&nbsp;: il code un acide aminé.",
+              "quoi": "traduire"
+            },
+            {
+              "texte": "Le gène détermine la protéine, donc le caractère.",
+              "quoi": "relier"
+            }
+          ],
+          "pied": "Une ==mutation== peut changer un codon, donc un acide aminé, donc la protéine."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire **T** dans l’ARN&nbsp;: c’est **U**.",
+            "Dire que la traduction se fait dans le **noyau**.",
+            "Confondre **codon** (ARNm) et **anticodon** (ARNt).",
+            "Croire qu’**un** gène donne toujours **une seule** protéine."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Où a lieu la **transcription**&nbsp;?",
+            "Combien de nucléotides dans un **codon**&nbsp;?",
+            "ADN : **TAC**. ARNm correspondant&nbsp;?"
+          ],
+          "reponses": "1) dans le noyau · 2) 3 · 3) AUG"
+        }
+      ]
+    }
+  ]
+}

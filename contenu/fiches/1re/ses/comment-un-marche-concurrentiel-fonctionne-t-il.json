@@ -1,0 +1,111 @@
+{
+  "titre": "Le marché",
+  "titreSurligne": "marché",
+  "accroche": "Offre, demande, prix d’équilibre.",
+  "epreuve": "bac",
+  "bonus": "**Demande** décroissante · **offre** croissante · **prix d’équilibre** = intersection des deux courbes",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/ses/comment-un-marche-concurrentiel-fonctionne-t-il.webp",
+    "prompt": "a glossy violet market stall with a golden balance scale, two crossing glowing curves in the background, small golden coins, sparkles"
+  },
+  "marcel": "Quand les courbes se croisent,\nle prix se fixe !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Cinq conditions",
+          "items": [
+            { "terme": "Atomicité", "definition": "une **multitude** de vendeurs et d’acheteurs, aucun ne pèse sur le prix" },
+            { "terme": "Homogénéité", "definition": "le produit est **identique** chez tous" },
+            { "terme": "Libre entrée et sortie", "definition": "on peut entrer sur le marché ou le quitter" },
+            { "terme": "Information parfaite", "definition": "tous connaissent prix et qualité" },
+            { "terme": "Libre circulation", "definition": "des produits et des facteurs" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Quand le prix s’écarte",
+          "entetes": ["Situation", "Effet", "Prix"],
+          "lignes": [
+            ["Prix **trop haut**", "offre > demande (**excédent d’offre**)", "baisse"],
+            ["Prix **trop bas**", "demande > offre (**excédent de demande**)", "monte"],
+            ["**Équilibre**", "offre = demande", "stable"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les courbes et le surplus",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Courbe de demande", "texte": "**Décroissante**&nbsp;: plus le prix monte, moins on achète." },
+            { "titre": "Courbe d’offre", "texte": "**Croissante**&nbsp;: plus le prix monte, plus il est rentable de vendre." },
+            { "titre": "Prix d’équilibre", "texte": "À l’**intersection**, la quantité offerte égale la quantité demandée." },
+            { "titre": "Surplus du consommateur", "texte": "Ce qu’il était prêt à payer moins ce qu’il paie." },
+            { "titre": "Surplus du producteur", "texte": "Le prix reçu moins son coût de production." },
+            { "titre": "Un modèle", "texte": "La concurrence parfaite est un **modèle**, pas la réalité exacte." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Raisonner sur un marché",
+          "etapes": [
+            { "titre": "Placer", "texte": "la demande décroissante et l’offre croissante" },
+            { "titre": "Chercher", "texte": "le prix où l’offre égale la demande" },
+            { "titre": "Conclure", "texte": "excédent d’offre ou de demande, et le sens du prix" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "À ce prix, l’offre dépasse la demande&nbsp;: il y a un excédent d’offre.", "quoi": "constater" },
+            { "texte": "Les vendeurs baissent leur prix pour écouler le stock.", "quoi": "expliquer" },
+            { "texte": "Le prix converge vers le prix d’équilibre.", "quoi": "conclure" }
+          ],
+          "pied": "Le prix d’équilibre est une ==intersection==, pas un prix décidé par un acteur."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dessiner une **demande croissante**.",
+            "Confondre **excédent d’offre** et excédent de demande.",
+            "Croire que les **conditions** de la concurrence parfaite sont réelles.",
+            "Dire qu’un vendeur **fixe** seul le prix d’équilibre."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que fait le prix si l’**offre** dépasse la demande&nbsp;?",
+            "La courbe de **demande** est-elle croissante ou décroissante&nbsp;?",
+            "Que mesure le **surplus du consommateur**&nbsp;?"
+          ],
+          "reponses": "1) il baisse · 2) décroissante · 3) prêt à payer moins prix payé"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "titre": "Produit scalaire",
+  "titreSurligne": "scalaire",
+  "accroche": "Un nombre qui parle d’angles.",
+  "epreuve": "bac",
+  "bonus": "u⃗·v⃗ = xx′ + yy′ · u⃗·v⃗ = ‖u⃗‖‖v⃗‖cos θ · u⃗·v⃗ = 0 ⇔ **orthogonaux** · a² = b² + c² − 2bc cos Â",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/calcul-vectoriel-et-produit-scalaire.webp",
+    "prompt": "two glossy violet arrows leaving the same point with a golden arc between them marking the angle, a tiny golden set square, sparkles"
+  },
+  "marcel": "Un nombre,\npas un vecteur !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les expressions",
+          "petite": true,
+          "lignes": ["u⃗·v⃗ = xx′ + yy′", "u⃗·v⃗ = ‖u⃗‖ × ‖v⃗‖ × cos θ", "a² = b² + c² − 2bc cos Â"],
+          "regle": "Avec les **coordonnées**, ou avec les **normes et l’angle** θ entre u⃗ et v⃗. La dernière ligne est **Al-Kashi** (a = BC, b = AC, c = AB).",
+          "note": "u⃗·u⃗ = ‖u⃗‖²&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les propriétés",
+          "entetes": ["Propriété", "Écriture"],
+          "lignes": [
+            ["Symétrie", "u⃗·v⃗ = v⃗·u⃗"],
+            ["Bilinéarité", "(u⃗ + v⃗)·w⃗ = u⃗·w⃗ + v⃗·w⃗"],
+            ["Carré scalaire", "u⃗·u⃗ = ‖u⃗‖²"],
+            ["Orthogonalité", "u⃗·v⃗ = **0** ⇔ u⃗ ⊥ v⃗"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Choisir", "texte": "coordonnées si on les a, normes et angle sinon" },
+            { "titre": "Calculer", "texte": "le nombre u⃗·v⃗, puis les normes si besoin" },
+            { "titre": "Interpréter", "texte": "0 : orthogonaux · cos θ = u⃗·v⃗ ÷ (‖u⃗‖‖v⃗‖)" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "u⃗(1 ; 2) et v⃗(3 ; 1). __Angle θ__&nbsp;?",
+          "calcul": "u⃗·v⃗ = 1 × 3 + 2 × 1 = 5\ncos θ = 5 ÷ √50 = √2/2",
+          "aparte": "√5 × √10 = √50",
+          "resultat": "θ = [[45°]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Angle droit&nbsp;?", "texte": "A(1 ; 1), B(3 ; 2), C(0 ; 3)&nbsp;: AB⃗(2 ; 1)·AC⃗(−1 ; 2) = **0**, droit en A." },
+            { "titre": "Al-Kashi", "texte": "AB = 3, AC = 5, Â = 60°&nbsp;: BC² = 9 + 25 − 15 = 19, **BC = √19**." },
+            { "titre": "Norme", "texte": "u⃗(3 ; 4)&nbsp;: ‖u⃗‖² = 9 + 16 = 25, donc **‖u⃗‖ = 5**." },
+            { "titre": "Signe", "texte": "u⃗·v⃗ > 0&nbsp;: angle **aigu**&nbsp;; u⃗·v⃗ < 0&nbsp;: angle **obtus**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "u⃗·v⃗ = 1 × 3 + 2 × 1 = 5", "quoi": "les coordonnées" },
+            { "texte": "‖u⃗‖ = √5 et ‖v⃗‖ = √10", "quoi": "les normes" },
+            { "texte": "cos θ = 5 ÷ √50 = √2/2, donc θ = 45°", "quoi": "l’angle" }
+          ],
+          "pied": "Contrôle&nbsp;: cos 45° = ==√2/2==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire un **vecteur** : le résultat est un nombre.",
+            "Conclure **u⃗ = 0⃗ ou v⃗ = 0⃗** quand u⃗·v⃗ = 0.",
+            "Oublier ‖v⃗‖ en divisant pour cos θ.",
+            "Oublier le **signe −** dans Al-Kashi."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "u⃗(2 ; −1) et v⃗(1 ; 2)&nbsp;: **u⃗·v⃗**&nbsp;?",
+            "w⃗(6 ; 8)&nbsp;: **‖w⃗‖**&nbsp;?",
+            "AB = 3, AC = 4, Â = 90°&nbsp;: **BC**&nbsp;?"
+          ],
+          "reponses": "1) 0, orthogonaux · 2) 10 · 3) BC = 5"
+        }
+      ]
+    }
+  ]
+}

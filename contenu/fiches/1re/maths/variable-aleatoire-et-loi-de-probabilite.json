@@ -1,0 +1,115 @@
+{
+  "titre": "Variable aléatoire",
+  "titreSurligne": "aléatoire",
+  "accroche": "Espérance, variance, écart type.",
+  "epreuve": "bac",
+  "bonus": "E(X) = Σ xᵢpᵢ · V(X) = E(X²) − E(X)² · σ = √V(X) · E(aX + b) = aE(X) + b · V(aX + b) = **a²V(X)**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/variable-aleatoire-et-loi-de-probabilite.webp",
+    "prompt": "a glossy violet die with a golden balance scale resting level beside it, tiny golden coins stacked on one plate, sparkles"
+  },
+  "marcel": "Somme des p :\ntoujours 1 !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les trois indicateurs",
+          "petite": true,
+          "lignes": ["E(X) = Σ xᵢ × pᵢ", "V(X) = E(X²) − (E(X))²", "σ(X) = √V(X)"],
+          "regle": "**E(X)** est la valeur moyenne attendue&nbsp;; **V(X)** et **σ** mesurent la dispersion autour d’elle.",
+          "note": "E(X²) ≠ (E(X))²&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Une loi de probabilité",
+          "entetes": ["x", "0", "1", "3"],
+          "lignes": [
+            ["P(X = x)", "0,5", "0,3", "0,2"],
+            ["x × P(X = x)", "0", "0,3", "0,6"],
+            ["x² × P(X = x)", "0", "0,3", "1,8"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "La loi", "texte": "le tableau des valeurs, puis on vérifie que la somme des P vaut 1" },
+            { "titre": "E(X) et E(X²)", "texte": "on additionne les x × p, puis les x² × p, ligne par ligne" },
+            { "titre": "V puis σ", "texte": "V = E(X²) − E(X)², puis σ en prenant la racine carrée" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "La loi ci-dessus. __V(X)__&nbsp;?",
+          "calcul": "E(X) = 0,3 + 0,6 = 0,9\nE(X²) = 0,3 + 1,8 = 2,1",
+          "aparte": "d’abord E(X)",
+          "resultat": "V(X) = 2,1 − 0,81 = [[1,29]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Jeu équitable", "texte": "E(X) = 0&nbsp;: équitable&nbsp;; E(X) > 0, favorable au **joueur**&nbsp;; < 0, à l’organisateur." },
+            { "titre": "Transformer", "texte": "E(2X + 1) = 2 × 0,9 + 1 = **2,8**&nbsp;; V(2X + 1) = 4V(X)." },
+            { "titre": "Écart type", "texte": "σ = √1,29 ≈ **1,14**&nbsp;: même unité que X, donc interprétable." },
+            { "titre": "Grands nombres", "texte": "Sur beaucoup d’essais, la moyenne observée se rapproche de **E(X)**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "E(X) = 0 × 0,5 + 1 × 0,3 + 3 × 0,2 = 0,9", "quoi": "l’espérance" },
+            { "texte": "E(X²) = 0 + 1 × 0,3 + 9 × 0,2 = 2,1", "quoi": "le carré" },
+            { "texte": "V(X) = 2,1 − 0,9² = 1,29&nbsp;; σ ≈ 1,14", "quoi": "dispersion" }
+          ],
+          "pied": "Contrôle&nbsp;: 0,5 + 0,3 + 0,2 = ==1== et V(X) ≥ 0. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier de vérifier que la somme des p vaut **1**.",
+            "Écrire V = E(X²) − **E(X)** sans le carré.",
+            "Confondre **E(X²)** et (E(X))².",
+            "Écrire V(aX + b) = **aV(X) + b**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "X vaut 1 (p = 0,4) ou 2 (p = 0,6)&nbsp;: **E(X)**&nbsp;?",
+            "E(X) = 4&nbsp;: **E(3X − 2)**&nbsp;?",
+            "V(X) = 9&nbsp;: **σ(X)**&nbsp;?"
+          ],
+          "reponses": "1) 0,4 + 1,2 = 1,6 · 2) 10 · 3) 3"
+        }
+      ]
+    }
+  ]
+}

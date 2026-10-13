@@ -1,0 +1,113 @@
+{
+  "titre": "La racine carrée",
+  "titreSurligne": "racine",
+  "accroche": "Le nombre positif dont le carré vaut a.",
+  "epreuve": "brevet",
+  "bonus": "√1 = 1 · √4 = 2 · √9 = 3 · √16 = 4 · √25 = 5 · √36 = 6 · √49 = 7 · √64 = 8 · √81 = 9 · √100 = 10",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/la-racine-carree-et-l-equation-x-a.webp",
+    "prompt": "a glossy violet square tile with a golden root sign curling around it like a plant root, a tiny cartoon number 5 sprouting out of a square labeled 25, sparkles"
+  },
+  "marcel": "√(−4) ?\nÇa n’existe pas !",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La définition",
+          "petite": true,
+          "lignes": ["√a × √a = a", "√49 = 7 car 7² = 49"],
+          "regle": "Pour **a positif ou nul**, √a est le nombre **positif** dont le carré est a. √(−4) ==n’existe pas==. √2 est une valeur **exacte**&nbsp;; 1,414 est une valeur **approchée** de √2.",
+          "note": "on garde √2 dans un résultat exact&nbsp;!"
+        },
+        {
+          "type": "figures",
+          "numero": 2,
+          "titre": "Encadrer √50",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><rect x='50' y='20' width='120' height='120' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5'></rect><g font-family=\"'Baloo 2'\" font-weight='800' fill='#2b2350' text-anchor='middle'><text x='110' y='74' font-size='17'>Aire</text><text x='110' y='98' font-size='20'>50 cm²</text></g><line x1='50' y1='156' x2='170' y2='156' stroke='#f1566c' stroke-width='3' stroke-linecap='round'></line><g font-family='Nunito' font-weight='800' font-size='12.5' fill='#4b2a9a' text-anchor='middle'><text x='110' y='169'>côté = √50 ≈ 7,1 cm</text></g></svg>",
+              "legende": "Un carré d’aire 50 cm²",
+              "sous": "son côté mesure √50, car (√50)² = 50"
+            }
+          ],
+          "legende": { "jeton": "7 < √50 < 8", "texte": "car 49 < 50 < 64" }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre x² = a",
+          "etapes": [
+            { "titre": "Regarder a", "texte": "a > 0 : deux solutions ; a = 0 : une seule, 0 ; a < 0 : aucune" },
+            { "titre": "Écrire", "texte": "x² = 16 ⟺ x = 4 ou x = −4" },
+            { "titre": "Garder l’exact", "texte": "x² = 7 ⟺ x = √7 ou x = −√7, sans arrondir" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un carré a pour aire 36 cm². Son __côté__&nbsp;?",
+          "calcul": "c² = 36",
+          "aparte": "c > 0",
+          "resultat": "c = √36 = [[6 cm]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Les solutions de x² = a",
+          "oui": { "titre": "a > 0 : deux", "texte": "x² = 25 ⟺ x = 5 **ou** x = −5. Les deux, sauf si x est une longueur." },
+          "non": { "titre": "a < 0 : aucune", "texte": "x² = −9&nbsp;: un carré n’est **jamais** négatif, pas de solution." },
+          "essai": { "texte": "x² = 0 a **une seule** solution, x = 0. Pour x² = 2&nbsp;: x = <i>√2</i> ou x = <i>−√2</i>, en valeurs exactes." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Le carré a pour aire c² = 36.", "quoi": "la mise en équation" },
+            { "texte": "c² = 36 ⟺ c = 6 ou c = −6", "quoi": "les deux solutions" },
+            { "texte": "c est une longueur, donc c = 6 cm.", "quoi": "le choix" }
+          ],
+          "pied": "Pythagore finit toujours par une ==racine carrée==&nbsp;: BC² = 100, donc BC = √100 = 10."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire √(9 + 16) = √9 + √16&nbsp;: c’est 5, pas 7.",
+            "Oublier la solution **négative** de x² = a.",
+            "Arrondir √2 en 1,4 quand on demande la valeur **exacte**.",
+            "Inventer la racine d’un nombre **négatif**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**√81**&nbsp;?",
+            "Encadrer **√30** entre deux entiers.",
+            "Résoudre **x² = 49**."
+          ],
+          "reponses": "1) 9 · 2) 5 < √30 < 6 · 3) x = 7 ou x = −7"
+        }
+      ]
+    }
+  ]
+}

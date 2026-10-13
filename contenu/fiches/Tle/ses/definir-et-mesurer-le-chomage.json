@@ -1,0 +1,111 @@
+{
+  "titre": "Mesurer le chômage",
+  "titreSurligne": "chômage",
+  "accroche": "Deux chiffres, deux définitions.",
+  "epreuve": "bac",
+  "bonus": "**BIT**&nbsp;: sans emploi · disponible · recherche active · **INSEE** enquête Emploi",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/ses/definir-et-mesurer-le-chomage.webp",
+    "prompt": "a glossy violet magnifying glass over a golden bar chart and a small golden clipboard with checkmarks, sparkles"
+  },
+  "marcel": "Deux chiffres,\ndeux réalités&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Chômeur BIT", "definition": "sans emploi, **disponible** et en **recherche active**" },
+            { "terme": "Population active", "definition": "actifs occupés + chômeurs" },
+            { "terme": "Taux de chômage", "definition": "chômeurs rapportés à la **population active**" },
+            { "terme": "Taux d’emploi", "definition": "actifs occupés rapportés à la population **en âge de travailler**" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les deux chiffres",
+          "entetes": ["", "Chômeurs BIT", "Inscrits France Travail"],
+          "lignes": [
+            ["**Source**", "**enquête** Emploi de l’INSEE", "fichier administratif"],
+            ["**Critère**", "les trois conditions **à la fois**", "démarche administrative"],
+            ["**Usage**", "seule mesure **comparable**", "gestion du service public"],
+            ["**Limite**", "dépend de l’échantillon", "varie avec les règles d’inscription"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les points à retenir",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Trois conditions", "texte": "Il faut les remplir **les trois simultanément**." },
+            { "titre": "Une heure", "texte": "Avoir travaillé **une heure** dans la semaine, c’est être en emploi." },
+            { "titre": "Deux sources", "texte": "Le BIT vient d’une **enquête**, France Travail d’**inscriptions**." },
+            { "titre": "Taux de chômage", "texte": "Chômeurs ÷ population active, **pas** ÷ population totale." },
+            { "titre": "Taux d’emploi", "texte": "Souvent **plus révélateur**&nbsp;: il dit combien travaillent." },
+            { "titre": "Le halo", "texte": "Des personnes sans emploi ne sont **jamais** comptées chômeurs." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Étudier un document en trois temps",
+          "etapes": [
+            { "titre": "Présenter", "texte": "source, indicateur, unité, période" },
+            { "titre": "Lire", "texte": "une donnée avec sa phrase de lecture" },
+            { "titre": "Interpréter", "texte": "ce que la mesure montre, et ce qu’elle cache" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Un chômeur au sens du BIT est sans emploi, disponible et cherche.", "quoi": "définir" },
+            { "texte": "Lecture&nbsp;: en 2019, x&nbsp;% de la population active était au chômage.", "quoi": "lire" },
+            { "texte": "Le taux officiel ignore ceux qui ont renoncé à chercher.", "quoi": "nuancer" }
+          ],
+          "pied": "Préciser ==la source== (INSEE ou France Travail) est attendu."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **chômeurs BIT** et **inscrits à France Travail**.",
+            "Diviser par la population **totale** au lieu de la population active.",
+            "Dire qu’un chômeur est quelqu’un qui **n’a pas de travail**&nbsp;: il faut chercher.",
+            "Oublier qu’un taux n’est **jamais** un nombre de personnes."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de **conditions** faut-il remplir pour être chômeur au sens du BIT&nbsp;?",
+            "Quel organisme réalise l’**enquête Emploi**&nbsp;?",
+            "Par quoi divise-t-on les chômeurs pour obtenir le **taux de chômage**&nbsp;?"
+          ],
+          "reponses": "1) trois, simultanément · 2) l’INSEE · 3) la population active"
+        }
+      ]
+    }
+  ]
+}

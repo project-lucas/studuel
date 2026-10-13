@@ -1,0 +1,113 @@
+{
+  "titre": "Évolutions et taux",
+  "titreSurligne": "Évolutions",
+  "accroche": "Tout passe par le coefficient.",
+  "epreuve": "bac-1re",
+  "bonus": "CM = 1 + t/100 · finale = initiale × CM · taux = (finale − initiale) ÷ initiale · successives&nbsp;: les CM se **multiplient**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/automatismes-evolutions-et-taux.webp",
+    "prompt": "a glossy violet price tag with a golden arrow curving up then down, a small golden multiplication sign and a stack of coins, sparkles"
+  },
+  "marcel": "Pour revenir,\non divise !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le coefficient multiplicateur",
+          "taille": "mini",
+          "lignes": ["CM = 1 + {t/100}", "finale = initiale × CM", "t = {finale − initiale/initiale} × 100"],
+          "regle": "+15 % → CM = **1,15**&nbsp;; −20 % → CM = **0,8**. Pour retrouver la valeur **initiale**, on **divise** par CM. Deux évolutions successives&nbsp;: les CM se ==multiplient==.",
+          "note": "+21 % = 1,1 × 1,1, pas 10 % + 10 %&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les cas à connaître",
+          "entetes": ["Évolution", "Coefficient", "Bilan"],
+          "lignes": [
+            ["+10 % puis +10 %", "1,1 × 1,1 = **1,21**", "+21 %"],
+            ["+25 % puis −20 %", "1,25 × 0,8 = **1**", "retour au départ"],
+            ["−10 % puis −10 %", "0,9 × 0,9 = 0,81", "**−19 %**"],
+            ["+100 %", "× **2**", "réciproque&nbsp;: −50 %"],
+            ["−50 %", "× 0,5", "réciproque&nbsp;: +100 %"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Traduire", "texte": "le taux en coefficient : −20 % → 0,8" },
+            { "titre": "× ou ÷", "texte": "× CM pour aller, ÷ CM pour revenir" },
+            { "titre": "Lire le taux", "texte": "CM − 1, puis × 100 : 0,92 → −8 %" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un article coûte 92 € après une baisse de 20 %. __Prix initial__&nbsp;?",
+          "calcul": "92 ÷ 0,8",
+          "aparte": "on divise",
+          "resultat": "= [[115 €]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Pourcentage ou point&nbsp;?",
+          "oui": { "titre": "Points de pourcentage", "texte": "Un taux passe de 20 % à 22 %&nbsp;: **+2 points**." },
+          "non": { "titre": "Pas +2 %", "texte": "En pourcentage, c’est (22 − 20) ÷ 20 = **+10 %**." },
+          "essai": { "texte": "Le taux réciproque de +25 % n’est **pas** −25 %&nbsp;: 1 ÷ 1,25 = 0,8, soit <i>−20 %</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "CM d’une baisse de 20 %&nbsp;: 1 − 20/100 = 0,8", "quoi": "le coefficient" },
+            { "texte": "initiale = finale ÷ CM = 92 ÷ 0,8", "quoi": "on remonte" },
+            { "texte": "initiale = 115 €", "quoi": "le résultat" }
+          ],
+          "pied": "Vérification&nbsp;: 115 × 0,8 = ==92==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Additionner deux pourcentages successifs.",
+            "Remonter en **ajoutant** le pourcentage.",
+            "Confondre points et **pourcentage**.",
+            "Lire 0,92 comme **+92 %**&nbsp;: c’est −8 %."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "+30 % puis −30 %&nbsp;: **bilan**&nbsp;?",
+            "CM = 1,045&nbsp;: quel **taux**&nbsp;?",
+            "De 50 à 80&nbsp;: le **taux d’évolution**&nbsp;?"
+          ],
+          "reponses": "1) × 0,91, soit −9 % · 2) +4,5 % · 3) +60 %"
+        }
+      ]
+    }
+  ]
+}

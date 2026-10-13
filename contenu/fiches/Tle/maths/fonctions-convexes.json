@@ -1,0 +1,114 @@
+{
+  "titre": "Fonctions convexes",
+  "titreSurligne": "convexes",
+  "accroche": "La courbure se lit sur la dérivée seconde.",
+  "epreuve": "bac",
+  "bonus": "convexe ⇔ f′ croissante ⇔ f″ ≥ 0 · concave ⇔ f″ ≤ 0 · inflexion : f″ s’annule **en changeant de signe**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths/fonctions-convexes.webp",
+    "prompt": "a glossy violet smooth U-shaped bowl curve above a golden tangent line, sparkles"
+  },
+  "marcel": "Convexe : la courbe\nreste au-dessus !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le critère",
+          "taille": "mini",
+          "lignes": ["f convexe ⇔ f′ croissante", "f convexe ⇔ f″ ≥ 0", "f concave ⇔ f″ ≤ 0"],
+          "regle": "Pour f deux fois dérivable sur un intervalle I. **Convexe** : la courbe est au-dessus de ses **tangentes**&nbsp;; **concave** : en dessous.",
+          "note": "f″ ≥ 0&nbsp;: la courbe « tient l’eau »&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Point d’inflexion",
+          "items": [
+            { "terme": "Définition", "definition": "le point où la courbe **traverse** sa tangente et change de convexité." },
+            { "terme": "Critère", "definition": "f″ s’annule **et change de signe** en a." },
+            { "terme": "Attention", "definition": "f″(a) = 0 ne suffit **pas**." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Dériver deux fois", "texte": "calculer f′ puis f″ sur l’intervalle" },
+            { "titre": "Signe de f″", "texte": "résoudre f″(x) = 0 puis dresser le tableau de signes" },
+            { "titre": "Conclure", "texte": "f″ ≥ 0 : convexe · f″ ≤ 0 : concave · changement de signe : inflexion" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = x³ − 3x². __Convexité et inflexion__&nbsp;?",
+          "calcul": "f′(x) = 3x² − 6x, f″(x) = 6x − 6",
+          "aparte": "f″ change de signe en 1",
+          "resultat": "[[inflexion en 1]] : A(1 ; −2)"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À connaître",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "exp", "texte": "e<sup>x</sup> a pour dérivée seconde e<sup>x</sup> &gt; 0&nbsp;: **convexe** sur ℝ." },
+            { "titre": "ln", "texte": "ln″(x) = −1/x² &lt; 0&nbsp;: **concave** sur ]0 ; +∞[." },
+            { "titre": "Tangente", "texte": "convexe ⇒ f(x) ≥ f(a) + f′(a)(x − a)." },
+            { "titre": "Corde", "texte": "convexe&nbsp;: la corde est **au-dessus** de la courbe." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "f est deux fois dérivable sur ℝ, f″(x) = 6x − 6", "quoi": "la dérivée seconde" },
+            { "texte": "f″(x) ≥ 0 ⇔ x ≥ 1&nbsp;: f convexe sur [1 ; +∞[", "quoi": "le signe" },
+            { "texte": "f″ change de signe en 1&nbsp;: A(1 ; −2) est un point d’inflexion", "quoi": "l’inflexion" }
+          ],
+          "pied": "f(1) = 1 − 3 = ==−2==. ✔ f concave sur ]−∞ ; 1]."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que f″(a) = 0 donne **toujours** une inflexion.",
+            "Confondre le signe de **f′** et celui de f″.",
+            "Dire « convexe » alors que f″ ≤ 0.",
+            "Oublier de donner l’**ordonnée** du point."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "f″ ≥ 0 sur I&nbsp;: f est **convexe** ou concave&nbsp;?",
+            "f″(x) = 6x − 6&nbsp;: **où** y a-t-il un point d’inflexion&nbsp;?",
+            "ln est-elle **convexe** ou concave&nbsp;?"
+          ],
+          "reponses": "1) convexe · 2) en x = 1, f″ y change de signe · 3) concave"
+        }
+      ]
+    }
+  ]
+}

@@ -143,35 +143,35 @@ describe('SubjectTemplate — la bannière', () => {
 })
 
 describe('SubjectTemplate — les portes', () => {
-  it('Programme · Exercices · Jeux · Annales, Programme ouverte', () => {
+  it('Programme · Cahier d’exercices · Jeux · Annales, Programme ouverte, rien sous les noms', () => {
     render(<SubjectTemplate data={dossier(simple)} />)
     const portes = within(
       screen.getByRole('navigation', { name: 'Les portes du dossier' }),
     ).getAllByRole('button')
     expect(portes.map((p) => p.textContent)).toEqual([
-      'Programme2 fiches',
-      'Exercices6 exercices (Studuel+)',
+      'Programme',
+      'Cahier d’exercices (Studuel+)',
       expect.stringMatching(/^Jeux/),
       expect.stringMatching(/^Annales/),
     ])
     expect(porte(/^Programme/)).toHaveAttribute('aria-current', 'page')
   })
 
-  it('une matière sans cahier n’a pas de porte Exercices', () => {
+  it('une matière sans cahier n’a pas de porte Cahier d’exercices', () => {
     render(<SubjectTemplate data={dossier(simple, { cahier: null })} />)
     expect(
       within(screen.getByRole('navigation', { name: 'Les portes du dossier' })).queryByRole('button', {
-        name: /Exercices/,
+        name: /Cahier d’exercices/,
       }),
     ).not.toBeInTheDocument()
   })
 
   it('un abonné ne voit pas la couronne', () => {
     render(<SubjectTemplate data={dossier(simple, { premium: true })} />)
-    expect(porte(/^Exercices/)).not.toHaveTextContent('Studuel+')
+    expect(porte(/^Cahier d’exercices/)).not.toHaveTextContent('Studuel+')
   })
 
-  it('la porte Exercices ouvre le cahier de la matière, avec son marque-page', () => {
+  it('la porte Cahier d’exercices ouvre le cahier de la matière, avec son marque-page', () => {
     amorcerCahier(
       'francais',
       construireCahierMatiere({
@@ -190,9 +190,9 @@ describe('SubjectTemplate — les portes', () => {
       }),
     )
     render(<SubjectTemplate data={dossier(simple)} />)
-    fireEvent.click(porte(/^Exercices/))
+    fireEvent.click(porte(/^Cahier d’exercices/))
 
-    expect(porte(/^Exercices/)).toHaveAttribute('aria-current', 'page')
+    expect(porte(/^Cahier d’exercices/)).toHaveAttribute('aria-current', 'page')
     expect(screen.getByRole('heading', { name: 'Cahier d’exercices' })).toBeInTheDocument()
     expect(screen.getByText('Ton marque-page · page 2 sur 6')).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Ouvrir' })).toHaveAttribute(
@@ -205,12 +205,12 @@ describe('SubjectTemplate — les portes', () => {
     expect(window.location.search).toBe('?onglet=exercices')
   })
 
-  it('le doigt posé sur Exercices lance déjà la lecture du cahier', () => {
+  it('le doigt posé sur Cahier d’exercices lance déjà la lecture du cahier', () => {
     render(<SubjectTemplate data={dossier(simple)} />)
     // (La fiche à reprendre prépare SES supports dès l'affichage : ce n'est
     // pas le cahier.)
     expect(fetch).not.toHaveBeenCalledWith(expect.stringContaining('/api/reviser/cahier'), expect.anything())
-    fireEvent.pointerDown(porte(/^Exercices/))
+    fireEvent.pointerDown(porte(/^Cahier d’exercices/))
     expect(fetch).toHaveBeenCalledWith(
       '/api/reviser/cahier?matiere=francais',
       expect.anything(),

@@ -1,0 +1,116 @@
+{
+  "titre": "Les statistiques",
+  "titreSurligne": "statistiques",
+  "accroche": "Résumer une série sans la trahir.",
+  "bonus": "moyenne = **somme ÷ effectif** · médiane = **moitié** des valeurs en dessous · étendue = **max − min** · IQR = **Q3 − Q1**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/maths/statistique-descriptive.webp",
+    "prompt": "a glossy violet bar chart with golden bars of different heights and a tiny cartoon owl wearing glasses perched on the tallest bar, sparkles"
+  },
+  "marcel": "Moyenne ou médiane ?\nRegarde les extrêmes !",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Position et dispersion",
+          "taille": "mini",
+          "lignes": ["x̄ = somme des valeurs ÷ effectif", "étendue = max − min", "écart interquartile = Q3 − Q1"],
+          "regle": "La **médiane** coupe la série en deux moitiés égales. **Q1** : au moins 25 % des valeurs sont ≤ Q1&nbsp;; **Q3** : au moins 75 %. La moyenne est ==sensible== aux valeurs extrêmes, la médiane non.",
+          "note": "range d’abord la série&nbsp;!"
+        },
+        {
+          "type": "figures",
+          "numero": 2,
+          "titre": "La boîte à moustaches",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><g stroke='#2b2350' stroke-width='2' stroke-linecap='round'><line x1='20' y1='130' x2='200' y2='130'></line><line x1='20' y1='80' x2='75' y2='80'></line><line x1='145' y1='80' x2='200' y2='80'></line><line x1='20' y1='66' x2='20' y2='94'></line><line x1='200' y1='66' x2='200' y2='94'></line></g><rect x='75' y='55' width='70' height='50' fill='#eee7fc' stroke='#7a3fe0' stroke-width='3'></rect><line x1='103' y1='55' x2='103' y2='105' stroke='#f1566c' stroke-width='4' stroke-linecap='round'></line><g stroke='#2b2350' stroke-width='2'><line x1='20' y1='124' x2='20' y2='136'></line><line x1='75' y1='124' x2='75' y2='136'></line><line x1='103' y1='124' x2='103' y2='136'></line><line x1='145' y1='124' x2='145' y2='136'></line><line x1='200' y1='124' x2='200' y2='136'></line></g><g font-family=\"'Baloo 2'\" font-weight='800' font-size='13' fill='#2b2350' text-anchor='middle'><text x='20' y='152'>4</text><text x='75' y='152'>8</text><text x='103' y='152' fill='#f1566c'>10</text><text x='145' y='152'>13</text><text x='200' y='152'>17</text><text x='20' y='48' fill='#b8860b'>min</text><text x='75' y='40' fill='#7a3fe0'>Q1</text><text x='103' y='22' fill='#f1566c'>méd.</text><text x='145' y='40' fill='#7a3fe0'>Q3</text><text x='200' y='48' fill='#b8860b'>max</text></g></svg>",
+              "legende": "série de 10 valeurs",
+              "sous": "50 % des valeurs sont dans la boîte"
+            }
+          ],
+          "legende": { "jeton": "IQR = 5", "texte": "Q3 − Q1 = 13 − 8" }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Médiane et quartiles",
+          "etapes": [
+            { "titre": "Ordonner", "texte": "ranger les N valeurs de la plus petite à la plus grande" },
+            { "titre": "Repérer", "texte": "Q1 au rang ⌈N ÷ 4⌉, Q3 au rang ⌈3N ÷ 4⌉, médiane au milieu" },
+            { "titre": "Lire", "texte": "relever les valeurs, calculer étendue et écart interquartile" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "4, 6, 8, 8, 9, 11, 13, 13, 15, 17. __Moyenne et médiane__&nbsp;?",
+          "calcul": "somme = 104, moyenne = 104 ÷ 10 = 10,4",
+          "aparte": "10 valeurs",
+          "resultat": "médiane = (9 + 11) ÷ 2 = [[10]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Lire une série",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Moyenne ou médiane", "texte": "Un salaire géant tire la **moyenne**&nbsp;; la **médiane** résiste." },
+            { "titre": "Écart type", "texte": "Plus il est **grand**, plus la série est dispersée autour de la moyenne." },
+            { "titre": "Représentations", "texte": "**Bâtons** pour des valeurs, **histogramme** pour des classes." },
+            { "titre": "Axe tronqué", "texte": "Un axe qui ne part pas de 0 **exagère** les écarts." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "N = 10, la série est rangée par ordre croissant", "quoi": "on ordonne" },
+            { "texte": "0,25 × 10 = 2,5 : Q1 est la 3e valeur, Q1 = 8", "quoi": "premier quartile" },
+            { "texte": "0,75 × 10 = 7,5 : Q3 est la 8e valeur, Q3 = 13", "quoi": "troisième quartile" }
+          ],
+          "pied": "Étendue 17 − 4 = ==13==&nbsp;; écart interquartile 13 − 8 = 5."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Chercher la médiane **sans ranger** la série.",
+            "Prendre le **rang** (3e) pour la valeur du quartile.",
+            "Croire que moyenne et médiane sont **toujours égales**.",
+            "Lire un graphique sans regarder son **axe**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle est la **moyenne** de 2, 4 et 9&nbsp;?",
+            "Quelle est la **médiane** de 3, 5, 7, 9&nbsp;?",
+            "Que mesure **Q3 − Q1**&nbsp;?"
+          ],
+          "reponses": "1) 15 ÷ 3 = 5 · 2) (5 + 7) ÷ 2 = 6 · 3) la dispersion des 50 % centraux"
+        }
+      ]
+    }
+  ]
+}

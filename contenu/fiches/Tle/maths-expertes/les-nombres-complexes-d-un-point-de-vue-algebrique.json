@@ -1,0 +1,181 @@
+{
+  "titre": "Nombres complexes",
+  "titreSurligne": "complexes",
+  "accroche": "Un nombre dont le carré vaut −1.",
+  "epreuve": "bac",
+  "bonus": "i² = **−1** · z z̄ = **a² + b²** · pour diviser, on multiplie par le **conjugué** du dénominateur",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-expertes/les-nombres-complexes-d-un-point-de-vue-algebrique.webp",
+    "prompt": "a glossy violet coordinate plane with a golden point and a mirrored golden point across the horizontal axis, sparkles"
+  },
+  "marcel": "i au carré,\nc’est moins un !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Forme algébrique",
+          "taille": "mini",
+          "lignes": [
+            "z = a + ib  (i² = −1)",
+            "z̄ = a − ib",
+            "|z| = √(a² + b²)"
+          ],
+          "regle": "a = Re(z) est la partie **réelle**, b = Im(z) la partie **imaginaire**. Produit&nbsp;: z z̄ = ==a² + b²== = |z|², un réel positif.",
+          "note": "Im(z) = b, sans le i&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les opérations",
+          "entetes": [
+            "Opération",
+            "Résultat"
+          ],
+          "lignes": [
+            [
+              "(a + ib) + (c + id)",
+              "**(a + c) + i(b + d)**"
+            ],
+            [
+              "(a + ib)(c + id)",
+              "**(ac − bd) + i(ad + bc)**"
+            ],
+            [
+              "1 ÷ (a + ib)",
+              "**(a − ib) ÷ (a² + b²)**"
+            ],
+            [
+              "z = z′",
+              "mêmes parties réelle et imaginaire"
+            ],
+            [
+              "z réel",
+              "⇔ Im(z) = 0"
+            ],
+            [
+              "z + z̄",
+              "**2a**, un réel"
+            ],
+            [
+              "z − z̄",
+              "**2ib**, imaginaire pur"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre z² + bz + c = 0 si Δ &lt; 0",
+          "etapes": [
+            {
+              "titre": "Discriminant",
+              "texte": "Δ = b² − 4c, négatif"
+            },
+            {
+              "titre": "Racine",
+              "texte": "√Δ = i√(−Δ), car i² = −1"
+            },
+            {
+              "titre": "Deux solutions",
+              "texte": "conjuguées : (−b ± i√(−Δ)) ÷ 2"
+            },
+            {
+              "titre": "Vérifier",
+              "texte": "somme −b, produit c : (−1+2i)(−1−2i) = 5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Résoudre __z² + 2z + 5 = 0__ dans ℂ.",
+          "calcul": "Δ = 4 − 20 = −16 = (4i)²",
+          "aparte": "deux conjuguées",
+          "resultat": "z = [[−1 + 2i]] ou [[−1 − 2i]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Calculs types",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Produit",
+              "texte": "(2 + 3i)(1 − i) = 2 − 2i + 3i + 3 = **5 + i**."
+            },
+            {
+              "titre": "Inverse",
+              "texte": "1 ÷ (1 + 2i) = (1 − 2i) ÷ 5 = **{1/5} − {2/5}i**."
+            },
+            {
+              "titre": "Module",
+              "texte": "|3 + 4i| = √(9 + 16) = **5**."
+            },
+            {
+              "titre": "Puissances de i",
+              "texte": "i, −1, −i, 1 se répètent&nbsp;: i<sup>4</sup> = **1**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Δ = 2² − 4 × 5 = −16 &lt; 0",
+              "quoi": "le discriminant"
+            },
+            {
+              "texte": "z₁ = (−2 + 4i) ÷ 2 et z₂ = (−2 − 4i) ÷ 2",
+              "quoi": "les racines"
+            },
+            {
+              "texte": "Solutions : −1 + 2i et −1 − 2i",
+              "quoi": "l’ensemble"
+            }
+          ],
+          "pied": "Les deux solutions sont ==conjuguées== : z₂ = z̄₁."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier que **i² = −1** dans un produit.",
+            "Écrire |z|² = a² − b²&nbsp;: c’est **a² + b²**.",
+            "Diviser sans **conjugué** du dénominateur.",
+            "Donner **ib** comme partie imaginaire."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**(1 + i)²**&nbsp;?",
+            "Module de **3 − 4i**&nbsp;?",
+            "Conjugué de **2 − 5i**&nbsp;?"
+          ],
+          "reponses": "1) 1 + 2i − 1 = 2i · 2) 5 · 3) 2 + 5i"
+        }
+      ]
+    }
+  ]
+}

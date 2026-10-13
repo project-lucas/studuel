@@ -1,0 +1,113 @@
+{
+  "titre": "Les sections planes",
+  "titreSurligne": "sections",
+  "accroche": "Ce qu’on voit quand on tranche un solide.",
+  "epreuve": "brevet",
+  "bonus": "Pavé → rectangle · cylindre → disque ou rectangle · sphère → **cercle** · pyramide → **réduction**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/sections-planes-de-solides.webp",
+    "prompt": "a glossy violet cone sliced by a transparent golden plane with its small circular cross-section glowing, a cube and a cylinder sliced the same way behind it, sparkles"
+  },
+  "marcel": "Parallèle à la base :\nmême forme !",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les sections à connaître",
+          "entetes": ["Solide", "Plan parallèle à…", "La section"],
+          "lignes": [
+            ["Pavé droit", "une face", "un **rectangle**, identique à la face"],
+            ["Cylindre", "la base · l’axe", "un **disque** identique · un **rectangle**"],
+            ["Pyramide", "la base", "une **réduction** de la base"],
+            ["Cône", "la base", "un **disque** plus petit"],
+            ["Sphère", "n’importe quel plan", "toujours un **cercle**"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le rapport",
+          "petite": true,
+          "lignes": ["k = {h’/h}"],
+          "regle": "Pyramide ou cône coupé **parallèlement à la base**&nbsp;: la section est une réduction de rapport ==k==, h’ la hauteur de la petite pyramide, h celle de la grande. Longueurs × k, aires × k², volumes × k³.",
+          "note": "k < 1&nbsp;: on réduit&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "le plan : parallèle à la base, à une face, à l’axe ?" },
+            { "titre": "Nommer", "texte": "la section : rectangle, disque, cercle, réduction" },
+            { "titre": "Calculer", "texte": "k = petite hauteur ÷ grande hauteur, puis les longueurs × k" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Pyramide de hauteur 12 cm, base carrée de côté 6 cm, coupée à 4 cm du sommet. On cherche le __côté de la section__.",
+          "calcul": "k = {4/12} = {1/3}",
+          "aparte": "petit ÷ grand",
+          "resultat": "6 × {1/3} = [[2 cm]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le volume de la petite pyramide",
+          "oui": { "titre": "Trois puissances", "texte": "Volume × **k³**&nbsp;: 144 × (1/3)³ = 144 ÷ 27 ≈ 5,3 cm³." },
+          "non": { "titre": "L’erreur classique", "texte": "Volume × k&nbsp;: 144 ÷ 3 = 48 cm³. **Faux**, le volume prend le cube." },
+          "essai": { "texte": "Grande pyramide&nbsp;: V = 6² × 12 ÷ 3 = <i>144 cm³</i>. Le tronc (ce qui reste sous la coupe) vaut 144 − 5,3 ≈ <i>138,7 cm³</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "La section est parallèle à la base&nbsp;: c’est une réduction de la base.", "quoi": "la propriété" },
+            { "texte": "k = SO’ / SO = 4 / 12 = 1/3", "quoi": "le rapport" },
+            { "texte": "A’B’ = k × AB = 6 × 1/3 = 2 cm", "quoi": "le calcul" }
+          ],
+          "pied": "Le rapport se lit sur les hauteurs ==depuis le sommet==, pas depuis la base."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mesurer la petite hauteur **depuis la base** au lieu du sommet.",
+            "Multiplier l’aire par k au lieu de **k²**.",
+            "Une sphère coupée loin du centre donne un **petit** cercle, pas un grand.",
+            "Un cylindre coupé parallèlement à l’axe donne un **rectangle**, pas un disque."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Cylindre coupé parallèlement à l’**axe**&nbsp;: quelle section&nbsp;?",
+            "Cône de rayon 8 cm coupé à **mi-hauteur**&nbsp;: rayon de la section&nbsp;?",
+            "k = 1/2&nbsp;: le **volume** est multiplié par&nbsp;?"
+          ],
+          "reponses": "1) un rectangle · 2) 4 cm · 3) 1/8"
+        }
+      ]
+    }
+  ]
+}

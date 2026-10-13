@@ -1,0 +1,112 @@
+{
+  "titre": "La réaction chimique",
+  "titreSurligne": "réaction",
+  "accroche": "Des atomes qui se réorganisent.",
+  "epreuve": "brevet",
+  "bonus": "Réactifs → produits · les **atomes** se conservent, la **masse** aussi (Lavoisier) · on ajuste avec les **nombres stœchiométriques**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/les-atomes-et-la-transformation-chimique.webp",
+    "prompt": "glossy violet and golden atom balls rearranging from two small molecules into new ones across a golden arrow, a bubbling flask beside them, sparkles"
+  },
+  "marcel": "Les atomes se\nconservent, toujours !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Physique ou chimique&nbsp;?",
+          "entetes": ["", "Physique", "Chimique"],
+          "lignes": [
+            ["Ce qui change", "l’**arrangement** des molécules (état, forme)", "les **atomes se réorganisent**&nbsp;: de nouvelles **molécules**"],
+            ["Exemple", "la glace fond, l’eau bout", "le fer rouille, le bois brûle"],
+            ["Signes", "aucune espèce nouvelle", "gaz, **précipité**, couleur, chaleur, lumière"],
+            ["Réversible", "souvent", "rarement"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "L’équation de réaction",
+          "taille": "mini",
+          "lignes": ["CH₄ + 2 O₂ → CO₂ + 2 H₂O"],
+          "regle": "À gauche les **réactifs**, à droite les **produits**, la **flèche** se lit « donne ». Les **nombres stœchiométriques**, devant les formules, **ajustent** l’équation&nbsp;: même nombre d’**atomes** de chaque sorte des deux côtés.",
+          "note": "on ne touche jamais aux petits chiffres des formules&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Ajuster une équation en trois temps",
+          "etapes": [
+            { "titre": "Compter", "texte": "les atomes de chaque élément, à gauche et à droite" },
+            { "titre": "Ajuster", "texte": "un nombre devant une formule, jamais un indice dedans" },
+            { "titre": "Vérifier", "texte": "recompter : C, H, O égaux des deux côtés" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Ajuster __H₂ + O₂ → H₂O__.",
+          "calcul": "2 O à gauche, 1 à droite",
+          "aparte": "on double l’eau",
+          "resultat": "2 H₂ + O₂ → [[2 H₂O]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Ce qui se conserve",
+          "oui": { "titre": "Les atomes, la masse", "texte": "Rien ne se perd&nbsp;: 12 g de carbone + 32 g de dioxygène → **44 g** de dioxyde de carbone (**Lavoisier**)." },
+          "non": { "titre": "Pas les molécules", "texte": "CH₄ et O₂ disparaissent, CO₂ et H₂O apparaissent." },
+          "essai": { "texte": "**Réactif limitant**&nbsp;: la réaction **s’arrête** quand l’un des réactifs est entièrement consommé&nbsp;; l’autre reste en excès." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Réactifs&nbsp;: méthane et dioxygène. Produits&nbsp;: dioxyde de carbone et eau.", "quoi": "nommer" },
+            { "texte": "CH₄ + 2 O₂ → CO₂ + 2 H₂O", "quoi": "l’équation ajustée" },
+            { "texte": "1 C, 4 H, 4 O de chaque côté&nbsp;: les atomes se conservent.", "quoi": "la vérification" }
+          ],
+          "pied": "L’équation se dit avec les ==noms==, puis s’écrit avec les ==formules==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Changer un **indice** (H₂O → H₂O₂) pour ajuster.",
+            "Écrire = au lieu de la **flèche**.",
+            "Croire que les **molécules** se conservent.",
+            "Prendre la fonte de la glace pour une **réaction** chimique."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Ajuster&nbsp;: **Fe + O₂ → Fe₂O₃**.",
+            "12 g de C et 32 g de O₂ donnent quelle **masse** de CO₂&nbsp;?",
+            "Un **précipité** est-il un signe de transformation chimique&nbsp;?"
+          ],
+          "reponses": "1) 4 Fe + 3 O₂ → 2 Fe₂O₃ · 2) 44 g · 3) oui"
+        }
+      ]
+    }
+  ]
+}

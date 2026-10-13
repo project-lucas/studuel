@@ -1,0 +1,113 @@
+{
+  "titre": "Interrogation",
+  "titreSurligne": "Interrogation",
+  "accroche": "Sur quoi porte la question ?",
+  "epreuve": "bac-1re",
+  "bonus": "**Totale** : oui / non / si · **partielle** : un mot interrogatif",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/francais/l-interrogation-totale-et-partielle.webp",
+    "prompt": "a giant glossy violet question mark with a golden dot, split into two halves, sparkles"
+  },
+  "marcel": "Oui, non, si ?\nOu une info précise !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Totale ou partielle",
+          "entetes": ["", "Totale", "Partielle"],
+          "lignes": [
+            ["**Porte sur**", "toute la phrase", "un élément"],
+            ["**Réponse**", "oui / non / si", "une information précise"],
+            ["**Outil**", "pas de mot interrogatif", "un mot interrogatif (quand, où…)"],
+            ["**Exemple**", "« Viens-tu ? »", "« Quand viens-tu ? »"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois niveaux de langue",
+          "entetes": ["Procédé", "Niveau"],
+          "lignes": [
+            ["**Intonation seule**", "familier : « tu viens ? »"],
+            ["**Est-ce que**", "courant : « est-ce que tu viens ? »"],
+            ["**Inversion**", "soutenu : « viens-tu ? »"],
+            ["**Inversion complexe**", "soutenu : « Paul vient-il ? »"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce que dit une question dans un texte",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Elle met en scène", "texte": "Une question **met en scène celui qui parle** : elle dit sa position." },
+            { "titre": "Solliciter", "texte": "Le personnage attend vraiment une **réponse**." },
+            { "titre": "Feindre", "texte": "Une fausse question : la réponse est **déjà connue**." },
+            { "titre": "Accuser", "texte": "La question est un **reproche** déguisé." },
+            { "titre": "Faire réfléchir", "texte": "Elle invite le lecteur à **se questionner** (le philosophe)." },
+            { "titre": "La distance", "texte": "L’inversion crée de la **distance** et un ton soutenu." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Analyser une interrogation",
+          "etapes": [
+            { "titre": "Identifier", "texte": "totale ou partielle : y a-t-il un mot interrogatif ?" },
+            { "titre": "Nommer", "texte": "le procédé : intonation, « est-ce que », inversion" },
+            { "titre": "Interpréter", "texte": "solliciter, feindre, accuser ou faire réfléchir ?" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "À l’oral, tu diras",
+          "lignes": [
+            { "texte": "« Où vas-tu ? » est une interrogation partielle,", "quoi": "identifier" },
+            { "texte": "avec le mot interrogatif « où » et une inversion,", "quoi": "nommer" },
+            { "texte": "qui sonne comme un reproche déguisé.", "quoi": "interpréter" }
+          ],
+          "pied": "Une question n’est jamais ==neutre== dans un texte littéraire."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **totale** et **partielle** : cherche le mot interrogatif.",
+            "Oublier **si**, la réponse affirmative à une question négative.",
+            "Croire que toute phrase en « ? » est une vraie question.",
+            "Ne pas dire l’**effet** : solliciter, feindre, accuser.",
+            "Confondre l’**intonation** (familier) et l’**inversion** (soutenu)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "« Viens-tu ce soir ? » : **totale** ou partielle ?",
+            "« Quand pars-tu ? » : **totale** ou partielle ?",
+            "Quelle réponse à une question **négative** ?"
+          ],
+          "reponses": "1) totale · 2) partielle · 3) « si »"
+        }
+      ]
+    }
+  ]
+}

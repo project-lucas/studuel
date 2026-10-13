@@ -243,7 +243,7 @@ describe('les portes et les rayons', () => {
   const histoireGeo = modesFor('3e', ['histoire', 'geographie'], 'histoire-geo', true)
 
   test('quatre portes au plus, une par clé, « Programme » en tête (ex-« Cours », 12/10/2026)', () => {
-    expect(portesDe(francais).map((p) => p.label)).toEqual(['Programme', 'Exercices', 'Jeux', 'Annales'])
+    expect(portesDe(francais).map((p) => p.label)).toEqual(['Programme', 'Cahier d’exercices', 'Jeux', 'Annales'])
     expect(portesDe(modesFor('5e', [], 'maths')).map((p) => p.label)).toEqual(['Programme', 'Jeux'])
   })
 

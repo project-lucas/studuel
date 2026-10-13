@@ -1,0 +1,114 @@
+{
+  "titre": "Grands nombres",
+  "titreSurligne": "nombres",
+  "accroche": "La moyenne finit par dire la vérité.",
+  "epreuve": "bac",
+  "bonus": "P(|X − E(X)| ≥ δ) ≤ V(X)/δ² · V(M<sub>n</sub>) = V(X)/n · M<sub>n</sub> se concentre autour de E(X)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths/loi-des-grands-nombres-et-concentration.webp",
+    "prompt": "a glossy violet scatter of golden coins settling into a narrow tall stack, a small golden target, sparkles"
+  },
+  "marcel": "Plus n grandit,\nplus ça se concentre !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Bienaymé-Tchebychev",
+          "taille": "mini",
+          "lignes": ["P(|X − E(X)| ≥ δ) ≤ {V(X)/δ²}", "<span>P(|M<sub>n</sub> − E(X)| ≥ δ) ≤ {V(X)/nδ²}</span>"],
+          "regle": "Pour toute variable X d’espérance E(X) et de variance V(X), et δ &gt; 0. M<sub>n</sub> est la **moyenne** de n variables indépendantes de même loi que X.",
+          "note": "grossière, mais valable pour toute loi&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Loi des grands nombres",
+          "items": [
+            { "terme": "Énoncé", "definition": "pour tout δ &gt; 0, P(|M<sub>n</sub> − E(X)| ≥ δ) **tend vers 0** quand n → +∞." },
+            { "terme": "Fréquence", "definition": "la fréquence d’un succès se rapproche de p." },
+            { "terme": "Limite", "definition": "elle ne dit rien d’une répétition **particulière**." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Identifier", "texte": "E(X), V(X), puis M<sub>n</sub> et le seuil δ" },
+            { "titre": "Appliquer", "texte": "écrire la borne V(X)/(nδ²) et la rendre ≤ au risque voulu" },
+            { "titre": "Résoudre n", "texte": "isoler n pour trouver la taille minimale de l’échantillon" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Pièce équilibrée, n lancers. __n minimal__ pour que la fréquence de pile soit à ±0,1 de 0,5 avec probabilité ≥ 0,95&nbsp;?",
+          "calcul": "V(X) = 1/4 : 1/(4n × 0,01) ≤ 0,05",
+          "aparte": "n ≥ 1/0,002",
+          "resultat": "n ≥ [[500]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Binomiale", "texte": "B(100 ; 0,5)&nbsp;: P(|X − 50| ≥ 10) ≤ 25/100 = **0,25**." },
+            { "titre": "δ × 2", "texte": "la borne est **divisée par 4** si on prend δ deux fois plus grand." },
+            { "titre": "Passage au contraire", "texte": "P(|X − E| &lt; δ) ≥ 1 − V/δ²." },
+            { "titre": "Sondage", "texte": "plus n grandit, plus la fréquence s’**approche** de p." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "E(X) = 0,5 et V(X) = 0,25 pour une variable de Bernoulli", "quoi": "les paramètres" },
+            { "texte": "D’après Bienaymé-Tchebychev, P(|M<sub>n</sub> − 0,5| ≥ 0,1) ≤ 25/n", "quoi": "l’inégalité nommée" },
+            { "texte": "25/n ≤ 0,05 ⇔ n ≥ 500", "quoi": "on résout" }
+          ],
+          "pied": "Conclusion&nbsp;: ==500 lancers== suffisent pour garantir ce niveau de précision."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Citer l’inégalité sans **E(X)** ni V(X).",
+            "Oublier le **n** au dénominateur pour M<sub>n</sub>.",
+            "Dire que la loi « garantit » le prochain tirage.",
+            "Confondre **δ** et δ²."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "X, E = 10, V = 4, δ = 2&nbsp;: **borne** de P(|X − 10| ≥ 2)&nbsp;?",
+            "La loi des grands nombres parle de la **moyenne** ou d’un tirage&nbsp;?",
+            "n double&nbsp;: la borne V/(nδ²) est **…**&nbsp;?"
+          ],
+          "reponses": "1) 4/4 = 1, borne inutile · 2) de la moyenne · 3) divisée par 2"
+        }
+      ]
+    }
+  ]
+}

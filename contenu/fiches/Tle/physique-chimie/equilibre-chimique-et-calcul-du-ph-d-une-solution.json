@@ -1,0 +1,112 @@
+{
+  "titre": "Équilibre et pH",
+  "titreSurligne": "Équilibre",
+  "accroche": "Q<sub>r</sub> contre K décide du sens.",
+  "epreuve": "bac",
+  "bonus": "τ = x<sub>f</sub> ÷ x<sub>max</sub> · Q<sub>r</sub> &lt; K&nbsp;: sens direct · Q<sub>r</sub> &gt; K&nbsp;: sens inverse · **acide fort** : pH = −log c · tampon&nbsp;: pH ≈ pK<sub>a</sub>",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/equilibre-chimique-et-calcul-du-ph-d-une-solution.webp",
+    "prompt": "a glossy violet and golden balanced seesaw with two glowing flasks on each end, a small pH meter beside it, sparkles"
+  },
+  "marcel": "τ = 1 : acide fort.\nτ &lt; 1 : acide faible !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Taux d’avancement",
+          "petite": true,
+          "lignes": ["τ = x<sub>f</sub> ÷ x<sub>max</sub>", "Q<sub>r,éq</sub> = K"],
+          "regle": "**τ** sans unité, entre 0 et 1. ==τ = 1==&nbsp;: réaction **totale**, acide fort. ==τ &lt; 1==&nbsp;: réaction **limitée**, acide faible. **K** constante d’équilibre, sans unité.",
+          "note": "x<sub>f</sub> se déduit du pH&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Fort ou faible",
+          "entetes": ["Acide", "Réaction avec l’eau", "pH"],
+          "lignes": [
+            ["Fort", "totale, τ = 1", "−log c"],
+            ["Faible", "limitée, τ &lt; 1", "&gt; −log c"],
+            ["Tampon", "AH et A⁻ présents", "≈ pK<sub>a</sub>"],
+            ["Dilution", "τ augmente", "pH monte"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Mesurer", "texte": "le pH, puis [H₃O⁺] = 10<sup>−pH</sup> en mol·L⁻¹" },
+            { "titre": "Calculer", "texte": "x<sub>f</sub> = [H₃O⁺] × V, x<sub>max</sub> = c × V, donc τ = [H₃O⁺] ÷ c" },
+            { "titre": "Conclure", "texte": "τ = 1 acide fort, τ &lt; 1 acide faible" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un acide éthanoïque de concentration __c = 1,0×10⁻² mol·L⁻¹__ a un pH de 3,4. Son taux d’avancement&nbsp;?",
+          "calcul": "[H₃O⁺] = 10<sup>−3,4</sup> ≈ 4,0×10⁻⁴ mol·L⁻¹",
+          "aparte": "τ = [H₃O⁺] ÷ c",
+          "resultat": "τ ≈ [[4 %]], acide faible"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Lire un équilibre",
+          "oui": { "titre": "Q<sub>r</sub> &lt; K", "texte": "Le système évolue dans le sens ==direct== jusqu’à ce que Q<sub>r</sub> atteigne K." },
+          "non": { "titre": "Q<sub>r</sub> = K&nbsp;: plus de réaction&nbsp;?", "texte": "**Faux**&nbsp;: les deux sens continuent, à des vitesses **égales**." },
+          "essai": { "texte": "Acide fort à c = 1,0×10⁻² mol·L⁻¹&nbsp;: pH = −log c = <i>2,0</i>. Comparé à 3,4, l’acide éthanoïque est bien plus faiblement dissocié." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "[H₃O⁺] = 10<sup>−pH</sup> = 10<sup>−3,4</sup> = 4,0×10⁻⁴ mol·L⁻¹", "quoi": "convertir" },
+            { "texte": "τ = [H₃O⁺] ÷ c = 4,0×10⁻⁴ ÷ 1,0×10⁻²", "quoi": "formule puis nombres" },
+            { "texte": "τ ≈ 0,04 &lt; 1&nbsp;: acide faible", "quoi": "conclure" }
+          ],
+          "pied": "Une solution ==tampon== contient l’acide **et** sa base conjuguée, et son pH varie peu."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire pH = −log c pour un **acide faible**.",
+            "Oublier que **τ** n’a pas d’unité.",
+            "Inverser le sens du critère **Q<sub>r</sub> &lt; K**.",
+            "Croire qu’un tampon garde un pH **exactement** constant."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Acide fort, c = 1,0×10⁻³ mol·L⁻¹&nbsp;: **pH**&nbsp;?",
+            "τ = 1&nbsp;: acide **fort** ou faible&nbsp;?",
+            "Q<sub>r</sub> &gt; K&nbsp;: sens **direct** ou inverse&nbsp;?"
+          ],
+          "reponses": "1) 3,0 · 2) fort · 3) inverse"
+        }
+      ]
+    }
+  ]
+}

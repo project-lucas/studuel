@@ -1,0 +1,115 @@
+{
+  "titre": "Variations, courbes",
+  "titreSurligne": "Variations",
+  "accroche": "Le signe de f′ dessine la courbe.",
+  "epreuve": "bac",
+  "bonus": "f′ > 0 ⇒ f **croît** · f′ < 0 ⇒ f **décroît** · TVI&nbsp;: continue + strictement monotone ⇒ solution **unique**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/variations-et-courbes-representatives-de-fonctions.webp",
+    "prompt": "a glossy violet roller-coaster curve with a hill and a valley on a golden grid, a tiny cartoon cart on top, small golden arrows up and down, sparkles"
+  },
+  "marcel": "f′ donne\nle sens !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Signe de f′ et variations",
+          "petite": true,
+          "lignes": ["f′ > 0 sur I ⇒ f croissante", "f′ < 0 sur I ⇒ f décroissante", "f′ = 0 et change de signe ⇒ extremum"],
+          "regle": "Le signe de **f′** donne le **sens** de variation de f, pas le signe de f. Un extremum local est un maximum ou un minimum **autour** d’un point.",
+          "note": "x³ en 0&nbsp;: f′ = 0 sans extremum&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "f(x) = x³ − 3x",
+          "entetes": ["x", "−∞ → −1", "−1 → 1", "1 → +∞"],
+          "lignes": [
+            ["f′(x)", "**+**", "**−**", "**+**"],
+            ["f", "croît", "décroît", "croît"],
+            ["valeur", "f(−1) = 2", "f(1) = −2", "maximum local 2"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Dériver", "texte": "calculer f′(x) et la factoriser pour lire son signe" },
+            { "titre": "Tableau", "texte": "signe de f′, flèches, puis valeurs aux bornes" },
+            { "titre": "Conclure", "texte": "extremums, ou TVI pour une équation f(x) = k" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = x³ + x − 1. __Solutions de f(x) = 0__&nbsp;?",
+          "calcul": "f′(x) = 3x² + 1 > 0\nf(0) = −1 et f(1) = 1",
+          "aparte": "TVI",
+          "resultat": "[[une seule]] solution, entre 0 et 1"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Local ou global", "texte": "Le maximum 2 de x³ − 3x est **local**&nbsp;: f tend vers +∞ ensuite." },
+            { "titre": "Lecture graphique", "texte": "f(x) = g(x)&nbsp;: abscisses des **intersections**&nbsp;; f(x) > g(x)&nbsp;: f **au-dessus** de g." },
+            { "titre": "Parité", "texte": "Paire&nbsp;: f(−x) = f(x), axe des ordonnées. Impaire&nbsp;: f(−x) = −f(x), **origine** (x³ − 3x)." },
+            { "titre": "TVI", "texte": "f continue et **strictement monotone** sur [a ; b], k entre f(a) et f(b)&nbsp;: une unique solution." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "f′(x) = 3x² + 1 > 0 sur ℝ", "quoi": "le signe de f′" },
+            { "texte": "f continue et strictement croissante sur [0 ; 1]", "quoi": "les hypothèses" },
+            { "texte": "f(0) = −1 < 0 < 1 = f(1)&nbsp;: α est unique", "quoi": "le TVI" }
+          ],
+          "pied": "Encadrement&nbsp;: f(0,6) = −0,184 et f(0,7) = ==0,043==, donc α ∈ [0,6 ; 0,7]."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Lire le signe de **f** au lieu de celui de f′.",
+            "Citer le TVI sans **continuité** ni monotonie.",
+            "Prendre un extremum **local** pour global.",
+            "Croire que f′ = 0 donne **toujours** un extremum."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "f′(x) = x − 3&nbsp;: **variations** de f&nbsp;?",
+            "f(x) = x² + 1&nbsp;: **paire** ou impaire&nbsp;?",
+            "f croissante, f(1) = −2, f(2) = 3&nbsp;: solutions de **f(x) = 0**&nbsp;?"
+          ],
+          "reponses": "1) décroît jusqu’à 3, croît ensuite · 2) paire · 3) exactement une dans [1 ; 2]"
+        }
+      ]
+    }
+  ]
+}

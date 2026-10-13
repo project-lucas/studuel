@@ -1,0 +1,113 @@
+{
+  "titre": "Les triangles semblables",
+  "titreSurligne": "semblables",
+  "accroche": "Même forme, taille différente : angles égaux, côtés proportionnels.",
+  "epreuve": "brevet",
+  "bonus": "Semblables de rapport **k**&nbsp;: longueurs et périmètre × **k** · aires × **k²**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/triangles-semblables.webp",
+    "prompt": "a small glossy violet triangle and a large identical-shaped golden triangle standing side by side like a parent and child, each with a tiny cartoon face, a measuring tape curling between them, sparkles"
+  },
+  "marcel": "Deux angles égaux,\nça suffit !",
+  "rangs": [
+    {
+      "colonnes": "320px 1fr",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "La figure",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><polygon points='12,150 76,150 54,98' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><polygon points='96,150 208,150 170,59' fill='#fdecc7' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><path d='M26,150 A14,14 0 0 0 23,141' fill='none' stroke='#f1566c' stroke-width='3'></path><path d='M110,150 A14,14 0 0 0 107,141' fill='none' stroke='#f1566c' stroke-width='3'></path><path d='M64,150 A12,12 0 0 1 67,140' fill='none' stroke='#7a3fe0' stroke-width='3'></path><path d='M196,150 A12,12 0 0 1 199,140' fill='none' stroke='#7a3fe0' stroke-width='3'></path><g font-family=\"'Baloo 2'\" font-weight='800' font-size='17' fill='#2b2350'><text x='2' y='167'>B</text><text x='70' y='167'>C</text><text x='46' y='92'>A</text><text x='86' y='167'>E</text><text x='204' y='167'>F</text><text x='162' y='52'>D</text></g><g font-family='Nunito' font-weight='800' font-size='12' fill='#4b2a9a'><text x='34' y='144'>4</text><text x='140' y='144'>10</text></g></svg>",
+              "legende": "ABC et DEF semblables",
+              "sous": "Â = D̂, B̂ = Ê, Ĉ = F̂"
+            }
+          ],
+          "legende": { "jeton": "k = 10 ÷ 4 = 2,5", "texte": "le grand est le petit agrandi 2,5 fois" }
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La proportionnalité",
+          "petite": true,
+          "lignes": ["{DE/AB} = {EF/BC} = {DF/AC} = k"],
+          "regle": "**k**, le rapport de similitude&nbsp;: un côté du grand divisé par le côté ==homologue== du petit (A ↔ D, B ↔ E, C ↔ F).",
+          "note": "deux angles égaux suffisent&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Prouver", "texte": "deux angles égaux deux à deux — ou les trois côtés proportionnels" },
+            { "titre": "Associer", "texte": "les sommets homologues, dans le bon ordre, angle par angle" },
+            { "titre": "Calculer", "texte": "le rapport k avec deux côtés homologues, puis les longueurs qui manquent" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "ABC et DEF semblables, AB = 4 cm, DE = 10 cm, BC = 6 cm. On cherche __EF__.",
+          "calcul": "k = {10/4} = 2,5",
+          "aparte": "DE ↔ AB",
+          "resultat": "EF = 6 × 2,5 = [[15 cm]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Semblables ou égaux&nbsp;?",
+          "oui": { "titre": "Semblables", "texte": "Mêmes **angles**, côtés **proportionnels**&nbsp;: un agrandissement ou une réduction." },
+          "non": { "titre": "Égaux", "texte": "Semblables avec **k = 1**&nbsp;: mêmes longueurs. Des angles égaux n’y suffisent **pas**." },
+          "essai": { "texte": "50° et 60° dans l’un, 50° et 70° dans l’autre&nbsp;: le 3e angle vaut <i>70°</i> et <i>60°</i>. Mêmes trois angles, donc **semblables**." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Â = D̂ et B̂ = Ê (deux angles égaux).", "quoi": "les conditions" },
+            { "texte": "Donc ABC et DEF sont semblables.", "quoi": "la conclusion" },
+            { "texte": "DE / AB = EF / BC = DF / AC.", "quoi": "l’égalité" }
+          ],
+          "pied": "Sert à trouver une **hauteur inaccessible** (arbre, immeuble)."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Associer les sommets dans le **désordre**.",
+            "Multiplier l’**aire** par k&nbsp;: c’est par **k²**.",
+            "Un **seul** angle égal&nbsp;: ça ne suffit pas.",
+            "Confondre **semblables** (même forme) et **égaux** (mêmes longueurs)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "k = 3. Par combien l’**aire** est-elle multipliée&nbsp;?",
+            "Angles 40° et 60°, puis 40° et 80°&nbsp;: les triangles sont-ils **semblables**&nbsp;?",
+            "AB = 3 cm et son homologue DE = 7,5 cm&nbsp;: que vaut **k**&nbsp;?"
+          ],
+          "reponses": "1) par 9 · 2) oui (le 3e angle vaut 80° et 60°) · 3) k = 2,5"
+        }
+      ]
+    }
+  ]
+}

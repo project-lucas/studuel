@@ -1,0 +1,112 @@
+{
+  "titre": "Les piles",
+  "titreSurligne": "piles",
+  "accroche": "Des électrons récoltés dans un fil.",
+  "epreuve": "bac",
+  "bonus": "**Anode** = oxydation = pôle − · **cathode** = réduction = pôle + · Q = I Δt = n(e⁻) F · F ≈ 9,65×10⁴ C·mol⁻¹",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/les-piles-generateurs-electrochimiques.webp",
+    "prompt": "a glossy violet and golden cartoon battery cell cutaway with two electrodes in glowing liquid, a small golden bridge between them, golden electrons running along a wire, sparkles"
+  },
+  "marcel": "Les électrons vont\nde l’anode à la cathode !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Capacité d’une pile",
+          "petite": true,
+          "lignes": ["Q = n(e⁻) × F", "Q = I × Δt"],
+          "regle": "**Q** charge en **coulombs (C)**, **n(e⁻)** quantité d’électrons échangés (mol), **F** ≈ 9,65×10⁴ C·mol⁻¹, **I** en **A**, **Δt** en **s**. Un ==oxydant capte== des électrons, un ==réducteur cède== des électrons.",
+          "note": "durée en secondes&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Pile Zn / Cu (Daniell)",
+          "entetes": ["Électrode", "Demi-équation", "Rôle"],
+          "lignes": [
+            ["Anode (−)", "Zn = Zn²⁺ + 2 e⁻", "oxydation"],
+            ["Cathode (+)", "Cu²⁺ + 2 e⁻ = Cu", "réduction"],
+            ["Pont salin", "ions qui circulent", "neutralité"],
+            ["Fil", "e⁻ de − vers +", "circuit extérieur"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Identifier", "texte": "l’oxydant et le réducteur de chaque couple, les demi-équations" },
+            { "titre": "Placer", "texte": "l’anode (oxydation, pôle −) et la cathode (réduction, pôle +)" },
+            { "titre": "Quantifier", "texte": "n(e⁻) avec les coefficients, puis Q = n(e⁻) F" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Dans une pile Daniell, __0,10 mol__ de zinc s’oxydent. Capacité, puis durée à 0,10 A&nbsp;?",
+          "calcul": "n(e⁻) = 2 × 0,10 = 0,20 mol · Q = 0,20 × 9,65×10⁴",
+          "aparte": "1 Zn cède 2 e⁻",
+          "resultat": "Q ≈ 1,9×10⁴ C · Δt = Q ÷ I ≈ [[54 h]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le sens des charges",
+          "oui": { "titre": "Dans le fil", "texte": "Les ==électrons== vont de l’anode (−) vers la cathode (+)&nbsp;; le courant, lui, va du + vers le −." },
+          "non": { "titre": "Dans la solution&nbsp;?", "texte": "**Faux**&nbsp;: les électrons n’y circulent pas, ce sont les **ions** qui assurent le passage du courant." },
+          "essai": { "texte": "La pile est usée quand un réactif disparaît ou que <i>Q<sub>r</sub> = K</i>&nbsp;: elle a atteint l’état d’équilibre et ne débite plus." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Zn = Zn²⁺ + 2 e⁻ à l’anode (oxydation).", "quoi": "demi-équation" },
+            { "texte": "n(e⁻) = 2 n(Zn) = 0,20 mol", "quoi": "quantité d’électrons" },
+            { "texte": "Q = n(e⁻) F ≈ 1,9×10⁴ C", "quoi": "avec l’unité" }
+          ],
+          "pied": "Les électrons circulent dans le ==circuit extérieur==, jamais dans la solution."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Inverser **anode** et **cathode**.",
+            "Oublier le **coefficient 2** des électrons.",
+            "Confondre le sens des **électrons** et du **courant**.",
+            "Exprimer Δt en **heures** dans Q = I Δt."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "À l’anode a lieu une **oxydation** ou une réduction&nbsp;?",
+            "I = 0,50 A pendant 100 s&nbsp;: **Q**&nbsp;?",
+            "1 mol de Cu²⁺ réduit en Cu&nbsp;: **n(e⁻)**&nbsp;?"
+          ],
+          "reponses": "1) oxydation · 2) 50 C · 3) 2 mol"
+        }
+      ]
+    }
+  ]
+}

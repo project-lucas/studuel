@@ -1,0 +1,113 @@
+{
+  "titre": "La mole",
+  "titreSurligne": "mole",
+  "accroche": "Compter les entités par paquets.",
+  "epreuve": "bac",
+  "bonus": "**N**<sub>A</sub> = 6,02 × 10²³ mol⁻¹ · n en **mol**, m en **g**, M en **g/mol**, V en **L**, C en **mol/L**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/la-mole-et-ses-formules.webp",
+    "prompt": "a glossy violet laboratory balance holding a golden heap of tiny beads, a volumetric flask and a beaker beside it, sparkles"
+  },
+  "marcel": "Une mole,\nun énorme paquet !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les relations",
+          "petite": true,
+          "lignes": ["n = {m/M}", "n = C × V"],
+          "regle": "**n** quantité de matière (mol), **M** masse molaire (g/mol), **C** concentration (mol/L). Pour un gaz&nbsp;: n = {V/V<sub>m</sub>}.",
+          "note": "V en litres pour C × V&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Quelle relation&nbsp;?",
+          "entetes": ["Je connais", "Relation", "Unités"],
+          "lignes": [
+            ["Masse d’un solide", "n = m ÷ M", "g · g/mol"],
+            ["Volume d’un gaz", "n = V ÷ V<sub>m</sub>", "L · L/mol"],
+            ["Solution", "n = C × V", "mol/L · L"],
+            ["Nombre d’entités", "N = n × N<sub>A</sub>", "mol⁻¹"],
+            ["Dilution", "C<sub>m</sub>V<sub>m</sub> = C<sub>f</sub>V<sub>f</sub>", "même quantité"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Identifier", "texte": "ce qu’on connaît&nbsp;: masse, volume de gaz ou de solution" },
+            { "titre": "Choisir", "texte": "la relation qui relie n à cette grandeur" },
+            { "titre": "Calculer", "texte": "avec les bonnes unités, puis conclure avec l’unité" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "On dissout 5,85 g de NaCl (M = 58,5 g/mol) dans 0,500 L. Sa __concentration__&nbsp;?",
+          "calcul": "n = 5,85 ÷ 58,5 = 0,100 mol",
+          "aparte": "puis C = n ÷ V",
+          "resultat": "C = 0,100 ÷ 0,500 = [[0,200 mol/L]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Préparer une dilution",
+          "oui": { "titre": "Pipette et fiole jaugées", "texte": "On prélève avec la **pipette jaugée**, on complète la **fiole jaugée** jusqu’au **trait de jauge**, puis on **homogénéise**." },
+          "non": { "titre": "Verrerie imprécise", "texte": "Éprouvette ou bécher&nbsp;: volumes approximatifs, concentration fausse." },
+          "essai": { "texte": "Facteur de dilution F = C<sub>m</sub> ÷ C<sub>f</sub>. Pour diluer <i>10 fois</i>&nbsp;: prélever 10 mL, compléter à 100 mL. La quantité de soluté ne change pas." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "n = m ÷ M = 5,85 ÷ 58,5 = 0,100 mol", "quoi": "formule puis nombres" },
+            { "texte": "C = n ÷ V = 0,100 ÷ 0,500", "quoi": "la concentration" },
+            { "texte": "C = 0,200 mol/L", "quoi": "avec l’unité" }
+          ],
+          "pied": "Une dilution ne change pas ==la quantité de soluté==&nbsp;: C<sub>m</sub>V<sub>m</sub> = C<sub>f</sub>V<sub>f</sub>."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Laisser le volume en **mL** dans n = C × V.",
+            "Confondre **masse** m et **masse molaire** M.",
+            "Oublier que la **dilution** garde la quantité de soluté.",
+            "Écrire la concentration **sans unité**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**n** pour m = 9,0 g d’une espèce de M = 18 g/mol&nbsp;?",
+            "**n** dans 0,50 L à C = 0,20 mol/L&nbsp;?",
+            "Que garde-t-on lors d’une **dilution**&nbsp;?"
+          ],
+          "reponses": "1) 0,50 mol · 2) 0,10 mol · 3) la quantité de soluté"
+        }
+      ]
+    }
+  ]
+}

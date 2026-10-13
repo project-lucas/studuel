@@ -1,0 +1,116 @@
+{
+  "titre": "Équations de droites",
+  "titreSurligne": "droites",
+  "accroche": "y = mx + p : lire, calculer, comparer.",
+  "bonus": "y = **mx + p** · m = **(yB − yA) ÷ (xB − xA)** · parallèles ⟺ **même m** · verticale : **x = c**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/maths/equations-de-droites.webp",
+    "prompt": "a glossy violet laser line crossing a golden coordinate grid through two shiny pins, a tiny cartoon ruler standing beside it, sparkles"
+  },
+  "marcel": "m = la pente,\np = le départ !",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les équations",
+          "taille": "mini",
+          "lignes": ["y = mx + p", "ax + by + c = 0", "m = (yB − yA) ÷ (xB − xA)"],
+          "regle": "**m** : coefficient directeur&nbsp;; **p** : ordonnée à l’origine. Un vecteur directeur est u⃗(1&nbsp;; m), ou (−b&nbsp;; a) pour la forme cartésienne. Une droite **verticale** x = c n’a ==pas== de coefficient directeur.",
+          "note": "m positif : elle monte&nbsp;!"
+        },
+        {
+          "type": "figures",
+          "numero": 2,
+          "titre": "La droite d",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><g stroke='#2b2350' stroke-width='2' stroke-linecap='round'><line x1='10' y1='100' x2='214' y2='100'></line><line x1='60' y1='164' x2='60' y2='6'></line></g><polygon points='214,100 206,95 206,105' fill='#2b2350'></polygon><polygon points='60,6 55,14 65,14' fill='#2b2350'></polygon><line x1='45' y1='10' x2='185' y2='150' stroke='#7a3fe0' stroke-width='4' stroke-linecap='round'></line><line x1='85' y1='50' x2='104' y2='69' stroke='#f1566c' stroke-width='4' stroke-linecap='round'></line><polygon points='110,75 105.7,65.1 100.1,70.7' fill='#f1566c'></polygon><circle cx='60' cy='25' r='5' fill='#f5b722' stroke='#2b2350' stroke-width='2'></circle><circle cx='85' cy='50' r='4' fill='#2b2350'></circle><circle cx='160' cy='125' r='4' fill='#2b2350'></circle><g font-family=\"'Baloo 2'\" font-weight='800' font-size='14' fill='#2b2350'><text x='42' y='29' fill='#b8860b'>p</text><text x='88' y='44'>A</text><text x='164' y='122'>B</text><text x='116' y='80' fill='#f1566c'>u⃗</text></g></svg>",
+              "legende": "d : y = −x + 3",
+              "sous": "p = 3&nbsp;; vecteur directeur u⃗(1&nbsp;; −1)"
+            }
+          ],
+          "legende": { "jeton": "m = −1", "texte": "on avance de 1, on descend de 1" }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Équation par deux points",
+          "etapes": [
+            { "titre": "Calculer m", "texte": "m = (yB − yA) ÷ (xB − xA), si xA ≠ xB" },
+            { "titre": "Trouver p", "texte": "remplacer x et y par les coordonnées de A : p = yA − m × xA" },
+            { "titre": "Vérifier", "texte": "tester le point B dans y = mx + p" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "A(1&nbsp;; 2) et B(4&nbsp;; −1). Équation de __(AB)__&nbsp;?",
+          "calcul": "m = {−1 − 2/4 − 1} = −1",
+          "aparte": "la pente",
+          "resultat": "p = 2 + 1 = 3&nbsp;: y = [[−x + 3]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Positions relatives",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Parallèles", "texte": "Même **m**, p différents&nbsp;: aucun point commun." },
+            { "titre": "Sécantes", "texte": "m différents&nbsp;: on résout le **système**." },
+            { "titre": "Intersection", "texte": "−x + 3 = 2x ⟹ x = 1, y = 2&nbsp;: le point **(1&nbsp;; 2)**." },
+            { "titre": "Appartenance", "texte": "M(x&nbsp;; y) ∈ d si ses coordonnées **vérifient** l’équation." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "xA ≠ xB : (AB) a une équation y = mx + p", "quoi": "la forme" },
+            { "texte": "m = (−1 − 2) ÷ (4 − 1) = −1", "quoi": "le coefficient directeur" },
+            { "texte": "A ∈ (AB) : 2 = −1 × 1 + p, donc p = 3", "quoi": "l’ordonnée à l’origine" }
+          ],
+          "pied": "Vérification&nbsp;: −4 + 3 = ==−1==, B appartient bien à la droite. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Calculer m avec **Δx ÷ Δy** au lieu de Δy ÷ Δx.",
+            "Oublier que x = c est une droite **sans** coefficient directeur.",
+            "Dire « parallèles » parce que les p sont égaux&nbsp;: ce sont les **m**.",
+            "Mélanger les ordres&nbsp;: (yB − yA) avec (xA − xB)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "y = 3x − 2&nbsp;: quels sont **m** et **p**&nbsp;?",
+            "A(0&nbsp;; 1) et B(2&nbsp;; 5)&nbsp;: **équation** de (AB)&nbsp;?",
+            "y = 2x + 1 et y = 2x − 4&nbsp;: **parallèles** ou sécantes&nbsp;?"
+          ],
+          "reponses": "1) m = 3, p = −2 · 2) m = 2, y = 2x + 1 · 3) parallèles : même m"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "titre": "Identités remarquables",
+  "titreSurligne": "remarquables",
+  "accroche": "Trois égalités qui font gagner du temps.",
+  "epreuve": "brevet",
+  "bonus": "(a + b)² = **a² + 2ab + b²** · (a − b)² = **a² − 2ab + b²** · (a + b)(a − b) = **a² − b²**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/identites-remarquables-developper-factoriser-demontrer.webp",
+    "prompt": "a large glossy violet square tile splitting into one big square, one small square and two matching golden rectangles, like a puzzle of a plus b squared, sparkles"
+  },
+  "marcel": "N’oublie pas\nle double produit !",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les trois identités",
+          "taille": "mini",
+          "lignes": ["(a + b)² = a² + 2ab + b²", "(a − b)² = a² − 2ab + b²", "(a + b)(a − b) = a² − b²"],
+          "regle": "De gauche à droite, on **développe**&nbsp;; de droite à gauche, on **factorise**. Le terme ==2ab== est le **double produit**.",
+          "note": "(a + b)² n’est pas a² + b²&nbsp;!"
+        },
+        {
+          "type": "figures",
+          "numero": 2,
+          "titre": "Pourquoi (a + b)²",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><rect x='45' y='12' width='100' height='100' fill='#eee7fc' stroke='#2b2350' stroke-width='3'></rect><rect x='145' y='12' width='50' height='100' fill='#fdecc7' stroke='#2b2350' stroke-width='3'></rect><rect x='45' y='112' width='100' height='50' fill='#fdecc7' stroke='#2b2350' stroke-width='3'></rect><rect x='145' y='112' width='50' height='50' fill='#fde2e5' stroke='#2b2350' stroke-width='3'></rect><g font-family=\"'Baloo 2'\" font-weight='800' font-size='20' fill='#2b2350' text-anchor='middle'><text x='95' y='70'>a²</text><text x='170' y='70'>ab</text><text x='95' y='145'>ab</text><text x='170' y='145'>b²</text></g><g font-family='Nunito' font-weight='800' font-size='13' fill='#4b2a9a' text-anchor='middle'><text x='95' y='8' dy='-1'>a</text><text x='170' y='8' dy='-1'>b</text><text x='32' y='66'>a</text><text x='32' y='142'>b</text></g></svg>",
+              "legende": "Un carré de côté a + b",
+              "sous": "a² + ab + ab + b² = a² + 2ab + b²"
+            }
+          ],
+          "legende": { "jeton": "2ab", "texte": "les deux rectangles" }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Reconnaître en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "deux carrés ? un moins entre eux ? un double produit ?" },
+            { "titre": "Identifier", "texte": "a et b : 4x² = (2x)², 9 = 3², 2ab = 2 × 2x × 3 = 12x" },
+            { "titre": "Écrire", "texte": "la forme factorisée ou développée, puis vérifier" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Factoriser __4x² − 9__.",
+          "calcul": "4x² − 9 = (2x)² − 3²",
+          "aparte": "a² − b²",
+          "resultat": "= [[(2x + 3)(2x − 3)]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À quoi ça sert",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Calculer de tête", "texte": "51² = (50 + 1)² = 2 500 + 100 + 1 = **2 601**&nbsp;; 49 × 51 = 50² − 1 = **2 499**." },
+            { "titre": "Développer vite", "texte": "(x + 5)² = x² + 10x + 25, sans distribuer quatre fois." },
+            { "titre": "Résoudre", "texte": "x² − 16 = 0 ⟺ (x + 4)(x − 4) = 0 ⟺ x = 4 ou x = −4." },
+            { "titre": "Démontrer", "texte": "« (n + 1)² − n² est impair »&nbsp;: (n + 1)² − n² = **2n + 1**, toujours impair." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "(2x + 3)² = (2x)² + 2 × 2x × 3 + 3²", "quoi": "a = 2x, b = 3" },
+            { "texte": "= 4x² + 12x + 9", "quoi": "le développement" },
+            { "texte": "Avec x = 1&nbsp;: 25 = 4 + 12 + 9. ✔", "quoi": "le contrôle" }
+          ],
+          "pied": "Vraie pour ==toutes== les valeurs&nbsp;: on la démontre par le calcul. Un seul contre-exemple suffit à réfuter."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **double produit**&nbsp;: (x + 3)² ≠ x² + 9.",
+            "(2x)² = 2x²&nbsp;: c’est **4x²**.",
+            "Se tromper de **signe**&nbsp;: (a − b)² = a² − 2ab + b².",
+            "Croire qu’un exemple **démontre**&nbsp;: il faut le calcul littéral."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Développer **(x − 4)²**.",
+            "Factoriser **x² − 25**.",
+            "Calculer **102²** de tête."
+          ],
+          "reponses": "1) x² − 8x + 16 · 2) (x + 5)(x − 5) · 3) 10 404"
+        }
+      ]
+    }
+  ]
+}

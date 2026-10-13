@@ -1,0 +1,117 @@
+{
+  "titre": "Optimisation",
+  "titreSurligne": "Optimisation",
+  "accroche": "Le signe de f′ donne le maximum.",
+  "epreuve": "bac",
+  "bonus": "f′ &gt; 0 ⇒ f croît · f′ &lt; 0 ⇒ f décroît · extremum&nbsp;: f′ **s’annule en changeant de signe**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-complementaires/fonctions-derivees-et-optimisation.webp",
+    "prompt": "a glossy violet hill-shaped curve with a golden star at its peak and a small golden tangent line, sparkles"
+  },
+  "marcel": "Dérive, annule,\nlis le signe !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les dérivées à connaître",
+          "taille": "mini",
+          "lignes": [
+            "<span>(x<sup>n</sup>)′ = n x<sup>n−1</sup></span>",
+            "<span>(e<sup>x</sup>)′ = e<sup>x</sup></span>",
+            "(ln x)′ = {1/x}"
+          ],
+          "regle": "Somme&nbsp;: (u + v)′ = u′ + v′. Produit&nbsp;: (uv)′ = ==u′v + uv′==.",
+          "note": "(5x)′ = 5, une constante donne 0&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Du signe de f′ aux variations",
+          "entetes": ["Signe de f′", "Variations de f"],
+          "lignes": [
+            ["f′(x) &gt; 0", "f **croissante**"],
+            ["f′(x) &lt; 0", "f **décroissante**"],
+            ["+ puis 0 puis −", "**maximum** en ce point"],
+            ["− puis 0 puis +", "**minimum** en ce point"],
+            ["0 sans changer de signe", "**pas** d’extremum"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Optimiser en trois temps",
+          "etapes": [
+            { "titre": "Dériver", "texte": "calculer f′(x) et la factoriser si possible" },
+            { "titre": "Signe", "texte": "résoudre f′(x) = 0, dresser le tableau" },
+            { "titre": "Conclure", "texte": "lire l’extremum, calculer sa valeur" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "B(x) = −x² + 8x − 7 sur [0&nbsp;; 10]. __Bénéfice maximal__&nbsp;?",
+          "calcul": "B′(x) = −2x + 8 = 0 ⇔ x = 4",
+          "aparte": "B′ &gt; 0 avant 4",
+          "resultat": "B(4) = −16 + 32 − 7 = [[9]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Un extremum&nbsp;?",
+          "oui": { "titre": "Changement de signe", "texte": "f(x) = −x² + 8x − 7&nbsp;: f′ passe de + à −, **maximum** en 4." },
+          "non": { "titre": "Pas de changement", "texte": "f(x) = x³&nbsp;: f′(0) = 0 mais f′ reste ≥ 0, **pas d’extremum**." },
+          "essai": { "texte": "Tangente en a&nbsp;: <i>y = f′(a)(x − a) + f(a)</i>. Pour f(x) = x² en 1&nbsp;: y = 2x − 1." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "B est dérivable et B′(x) = −2x + 8.", "quoi": "la dérivée" },
+            { "texte": "B′(x) &gt; 0 ⇔ x &lt; 4&nbsp;: B croît puis décroît.", "quoi": "le signe" },
+            { "texte": "B admet un maximum en x = 4&nbsp;: B(4) = 9.", "quoi": "la conclusion" }
+          ],
+          "pied": "On écrit le ==tableau de variations== avec ses flèches."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Conclure à un extremum dès que **f′ = 0**.",
+            "Se tromper de signe en résolvant **−2x + 8 &gt; 0**.",
+            "Oublier de calculer la **valeur** du maximum.",
+            "Dériver <i>x</i><sup>2</sup> en **x** au lieu de 2x."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dérivée de **3x² + 5x**&nbsp;?",
+            "Dérivée de **ln x**&nbsp;?",
+            "f′(x) = 6 − 2x&nbsp;: en quel **x** le maximum&nbsp;?"
+          ],
+          "reponses": "1) 6x + 5 · 2) 1/x · 3) x = 3"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "titre": "Les inéquations",
+  "titreSurligne": "inéquations",
+  "accroche": "Résoudre sans perdre ni inventer de solutions.",
+  "bonus": "A × B = 0 ⟺ **A = 0 ou B = 0** · × ou ÷ par un **négatif** : on **inverse** l’inégalité",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/maths/les-equations-et-inequations.webp",
+    "prompt": "a glossy golden balance scale slightly tipped with violet blocks on one pan and a glowing key on the other, a tiny cartoon detective with a magnifier, sparkles"
+  },
+  "marcel": "Négatif ? On\nretourne le signe !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les règles",
+          "taille": "mini",
+          "lignes": ["A × B = 0 ⟺ A = 0 ou B = 0", "{A/B} = 0 ⟺ A = 0 et B ≠ 0", "−2x > 6 ⟺ x < −3"],
+          "regle": "On peut ==ajouter== ou soustraire la même chose des deux côtés, **multiplier** ou diviser par un positif. Par un **négatif**, le sens de l’inégalité est inversé.",
+          "note": "une inéquation : un intervalle&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Tableau de signes de (x − 2)(x + 5)",
+          "entetes": ["", "x < −5", "−5 < x < 2", "x > 2"],
+          "lignes": [
+            ["**x − 2**", "−", "−", "+"],
+            ["**x + 5**", "−", "+", "+"],
+            ["**Produit**", "+", "**−**", "+"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Une inéquation produit en trois temps",
+          "etapes": [
+            { "titre": "Ramener à 0", "texte": "tout dans un membre, puis factoriser le produit" },
+            { "titre": "Signes", "texte": "chercher les valeurs qui annulent chaque facteur, remplir le tableau" },
+            { "titre": "Conclure", "texte": "garder les cases du bon signe, écrire l’intervalle" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Résoudre __(x − 2)(x + 5) ≤ 0__.",
+          "calcul": "x − 2 = 0 en 2&nbsp;; x + 5 = 0 en −5",
+          "aparte": "les racines",
+          "resultat": "produit ≤ 0 entre elles&nbsp;: [[−5 ≤ x ≤ 2]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les cas types",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Premier degré", "texte": "3x + 1 = 7 ⟺ 3x = 6 ⟺ x = **2**." },
+            { "titre": "Inéquation", "texte": "−2x + 1 > 7 ⟺ −2x > 6 ⟺ x < **−3** (sens inversé)." },
+            { "titre": "Quotient", "texte": "(x − 1) ÷ (x + 2) = 0&nbsp;: x = **1**, et **−2** est interdit." },
+            { "titre": "Intervalle", "texte": "≤ et ≥ : crochets **fermés**&nbsp;; < et > : **ouverts**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "(x − 2)(x + 5) ≤ 0&nbsp;; 0 à droite, produit factorisé", "quoi": "la forme" },
+            { "texte": "x − 2 = 0 ⟺ x = 2 et x + 5 = 0 ⟺ x = −5", "quoi": "les valeurs qui annulent" },
+            { "texte": "le produit est négatif entre −5 et 2", "quoi": "tableau de signes" }
+          ],
+          "pied": "S = [−5&nbsp;; 2]&nbsp;: crochets ==fermés== car l’inégalité est large."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier d’**inverser** le sens en divisant par un négatif.",
+            "Diviser par x dans x² = 3x&nbsp;: on **perd** la solution 0.",
+            "Oublier les **valeurs interdites** d’un quotient.",
+            "Crochet **ouvert** quand l’inégalité est large (≤)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Résoudre **3x − 5 = 10**.",
+            "Résoudre **−3x ≥ 9**.",
+            "Résoudre **(x − 1)(x + 4) = 0**."
+          ],
+          "reponses": "1) x = 5 · 2) x ≤ −3 · 3) x = 1 ou x = −4"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "titre": "Les pourcentages",
+  "titreSurligne": "pourcentages",
+  "accroche": "Appliquer, calculer, remonter au départ.",
+  "epreuve": "brevet",
+  "bonus": "+t % → × (1 + t/100) · −t % → × (1 − t/100) · taux = **variation ÷ départ** × 100",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/pourcentages-et-evolutions.webp",
+    "prompt": "a golden price tag with a big percent sign, a glossy violet arrow curving up then down, coins stacking beside it, sparkles"
+  },
+  "marcel": "Remonter = diviser\npar le coefficient !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le coefficient multiplicateur",
+          "taille": "mini",
+          "lignes": ["+25 % ⟺ × 1,25", "−20 % ⟺ × 0,8", "taux = {arrivée − départ/départ} × 100"],
+          "regle": "Une évolution de **t %** multiplie par ==1 + t/100== (hausse) ou ==1 − t/100== (baisse). Pour **remonter** à la valeur de départ, on **divise** par ce coefficient.",
+          "note": "+25 % puis −25 %&nbsp;: on ne revient pas au départ&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les calculs de base",
+          "items": [
+            { "terme": "Prendre un pourcentage", "definition": "30 % de 80 = 30/100 × 80 = **24**" },
+            { "terme": "Calculer un pourcentage", "definition": "18 sur 24 = 18/24 = 0,75 = **75 %**" },
+            { "terme": "Taux d’évolution", "definition": "de 40 à 50&nbsp;: (50 − 40) ÷ 40 = 0,25 = **+25 %**" },
+            { "terme": "Remonter au départ", "definition": "60 € après +20 %&nbsp;: 60 ÷ 1,2 = **50 €**" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Traduire", "texte": "le pourcentage en coefficient : −8 % → × 0,92" },
+            { "titre": "Appliquer", "texte": "arrivée = départ × coefficient" },
+            { "titre": "Remonter", "texte": "départ = arrivée ÷ coefficient, jamais une soustraction" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un jean coûte 54 € après une baisse de 10 %. __Prix de départ__&nbsp;?",
+          "calcul": "54 = départ × 0,9",
+          "aparte": "−10 % → × 0,9",
+          "resultat": "départ = 54 ÷ 0,9 = [[60 €]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Évolutions successives", "texte": "+20 % puis −20 %&nbsp;: 1,2 × 0,8 = 0,96, soit **−4 %**. On multiplie les coefficients." },
+            { "titre": "Pourcentage de pourcentage", "texte": "30 % des 50 % de filles font du sport&nbsp;: 0,3 × 0,5 = 0,15 = **15 %** de la classe." },
+            { "titre": "Augmenter de 100 %", "texte": "c’est **doubler** (× 2)&nbsp;; +200 %, c’est tripler." },
+            { "titre": "HT et TTC", "texte": "TVA 20 %&nbsp;: TTC = HT × 1,2 et HT = TTC ÷ 1,2. 120 € TTC → 100 € HT." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Baisse de 10 %&nbsp;: coefficient 1 − 10/100 = 0,9", "quoi": "le coefficient" },
+            { "texte": "prix de départ × 0,9 = 54", "quoi": "l’équation" },
+            { "texte": "prix de départ = 54 ÷ 0,9 = 60 €", "quoi": "on remonte" }
+          ],
+          "pied": "Vérification&nbsp;: 60 × 0,9 = ==54==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Remonter en ajoutant 10 %&nbsp;: 54 × 1,1 = 59,4, **faux**.",
+            "Additionner deux pourcentages successifs.",
+            "Diviser par l’arrivée dans un taux&nbsp;: toujours par le **départ**.",
+            "−20 %, c’est × **0,8**, pas × 0,2."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**15 %** de 240&nbsp;?",
+            "De 80 à 100&nbsp;: le **taux d’évolution**&nbsp;?",
+            "75 € après **+25 %**&nbsp;: prix de départ&nbsp;?"
+          ],
+          "reponses": "1) 36 · 2) +25 % · 3) 60 €"
+        }
+      ]
+    }
+  ]
+}

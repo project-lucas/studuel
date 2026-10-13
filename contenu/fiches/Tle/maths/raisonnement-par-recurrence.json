@@ -1,0 +1,114 @@
+{
+  "titre": "La récurrence",
+  "titreSurligne": "récurrence",
+  "accroche": "Une échelle : la 1re marche, puis de marche en marche.",
+  "epreuve": "bac",
+  "bonus": "P(n₀) vraie · P(n) ⇒ P(n+1) · donc P(n) pour tout n ≥ n₀ · l’hérédité **utilise** l’hypothèse",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths/raisonnement-par-recurrence.webp",
+    "prompt": "a glossy violet staircase of dominoes falling one after another toward a golden star, sparkles"
+  },
+  "marcel": "Première marche,\npuis de proche en proche !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le principe",
+          "taille": "mini",
+          "lignes": ["P(n₀) vraie", "P(n) ⇒ P(n+1)", "P(n) vraie ∀ n ≥ n₀"],
+          "regle": "Si la propriété est vraie au **rang de départ** et qu’elle se transmet d’un rang au suivant, elle est vraie pour **tout** n ≥ n₀.",
+          "note": "sans initialisation, rien ne démarre&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les trois mots",
+          "items": [
+            { "terme": "Initialisation", "definition": "on vérifie P(n₀) à la main." },
+            { "terme": "Hérédité", "definition": "on suppose P(n) pour un n ≥ n₀ **fixé**, on montre P(n+1)." },
+            { "terme": "Conclusion", "definition": "on nomme le principe de récurrence." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Énoncer P(n)", "texte": "écrire la propriété avec n, sans rien oublier" },
+            { "titre": "Initialiser, hériter", "texte": "calculer le premier rang, puis partir de P(n) pour obtenir P(n+1)" },
+            { "titre": "Conclure", "texte": "« d’après le principe de récurrence… » pour tout n ≥ n₀" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "u₀ = 0 et u<sub>n+1</sub> = 2u<sub>n</sub> + 1. __Montrer__ u<sub>n</sub> = 2<sup>n</sup> − 1.",
+          "calcul": "u<sub>n+1</sub> = 2(2<sup>n</sup> − 1) + 1",
+          "aparte": "l’hypothèse sert ici",
+          "resultat": "= 2<sup>n+1</sup> − 1 = [[P(n+1)]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Quand l’utiliser",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Formule explicite", "texte": "u<sub>n</sub> = 2<sup>n</sup> − 1 donnée par l’énoncé&nbsp;: on la **démontre**." },
+            { "titre": "Inégalité", "texte": "2<sup>n</sup> ≥ n + 1&nbsp;: on part de P(n) et on multiplie ou on ajoute." },
+            { "titre": "Encadrement", "texte": "0 ≤ u<sub>n</sub> ≤ 3 pour tout n&nbsp;: on encadre **u<sub>n+1</sub>**." },
+            { "titre": "Divisibilité", "texte": "4<sup>n</sup> − 1 est divisible par 3&nbsp;: on réécrit 4<sup>n+1</sup> − 1." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Initialisation&nbsp;: u₀ = 0 = 2⁰ − 1, P(0) est vraie", "quoi": "le premier rang" },
+            { "texte": "Hérédité&nbsp;: on suppose u<sub>n</sub> = 2<sup>n</sup> − 1 pour un n fixé", "quoi": "l’hypothèse" },
+            { "texte": "Alors u<sub>n+1</sub> = 2<sup>n+1</sup> − 1&nbsp;: P(n+1) est vraie", "quoi": "le passage" }
+          ],
+          "pied": "Conclusion&nbsp;: d’après le principe de récurrence, ==P(n) pour tout n ∈ ℕ==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier l’**initialisation**.",
+            "Supposer P(n) vraie **pour tout n**.",
+            "Ne pas **utiliser** l’hypothèse dans l’hérédité.",
+            "Oublier la **conclusion** nommée."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelles sont les **deux étapes** avant la conclusion&nbsp;?",
+            "Que **suppose-t-on** dans l’hérédité&nbsp;?",
+            "P(n)&nbsp;: 2<sup>n</sup> ≥ n + 1&nbsp;: **initialisation** pour n₀ = 0&nbsp;?"
+          ],
+          "reponses": "1) initialisation, hérédité · 2) P(n) vraie pour un n fixé · 3) 2⁰ = 1 ≥ 1, vraie"
+        }
+      ]
+    }
+  ]
+}

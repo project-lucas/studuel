@@ -205,10 +205,12 @@ export type ClePorte = Exclude<ModeKey, 'encyclopedie'>
  * Le nom d'une porte. La première s'appelait « Cours » : renommée
  * « Programme » le 12/10/2026 (Lucas : « redondant avec les icônes Cours
  * placées dans chaque chapitre ») — elle coiffe les rayons d'une matière.
+ * La deuxième est « Cahier d'exercices » depuis le 13/10/2026 (Lucas) : c'est
+ * l'objet qu'elle ouvre, et son dessin est un cahier.
  */
 export const PORTE_LABELS: Record<ClePorte, string> = {
   programme: 'Programme',
-  exercices: 'Exercices',
+  exercices: 'Cahier d’exercices',
   jeu: 'Jeux',
   annales: 'Annales',
 }

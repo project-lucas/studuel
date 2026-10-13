@@ -1,0 +1,112 @@
+{
+  "titre": "La 2e loi de Newton",
+  "titreSurligne": "Newton",
+  "accroche": "Les forces fixent l’accélération.",
+  "epreuve": "bac",
+  "bonus": "ΣF⃗ = m a⃗ · m en **kg**, a en **m·s⁻²**, F en **N** · chute libre&nbsp;: a⃗ = g⃗ · force **intérieure**&nbsp;: jamais dans le bilan",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/appliquer-la-deuxieme-loi-de-newton.webp",
+    "prompt": "a glossy violet crate being pulled across a golden floor by a golden arrow, smaller arrows pushing back, a cartoon golden apple floating above, sparkles"
+  },
+  "marcel": "Bilan des forces,\npuis ΣF⃗ = m a⃗ !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La deuxième loi",
+          "petite": true,
+          "lignes": ["ΣF⃗ = m a⃗", "a⃗ = {ΣF⃗/m}"],
+          "regle": "**ΣF⃗** somme des forces extérieures (**N**), **m** masse (**kg**), **a⃗** accélération (**m·s⁻²**). Le vecteur ==a⃗ a le sens== de ΣF⃗. En chute libre, seul le poids agit&nbsp;: **a⃗ = g⃗**.",
+          "note": "projeter sur des axes&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Forces usuelles",
+          "entetes": ["Force", "Expression", "Direction"],
+          "lignes": [
+            ["Poids", "P⃗ = m g⃗", "vers le bas"],
+            ["Réaction du support", "R⃗", "perpendiculaire"],
+            ["Frottement", "f⃗", "opposée au mouvement"],
+            ["Tension du fil", "T⃗", "le long du fil"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Définir", "texte": "le système, le référentiel et le bilan des forces extérieures" },
+            { "titre": "Appliquer", "texte": "ΣF⃗ = m a⃗, puis projeter sur les axes choisis" },
+            { "titre": "Intégrer", "texte": "a → v → position, avec les conditions initiales" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une caisse de __2,0 kg__ est tirée par 10 N sur un sol qui frotte avec 4 N. Départ du repos&nbsp;: a, puis v après 5,0 s&nbsp;?",
+          "calcul": "ΣF = 10 − 4 = 6 N · a = 6 ÷ 2,0",
+          "aparte": "sur l’axe du mouvement",
+          "resultat": "a = [[3,0 m·s⁻²]] · v = 15 m/s"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Forces et mouvement",
+          "oui": { "titre": "ΣF⃗ = 0⃗", "texte": "Pas d’accélération&nbsp;: la vitesse est ==constante== (repos ou mouvement rectiligne uniforme)." },
+          "non": { "titre": "Force nulle ⇒ arrêt&nbsp;?", "texte": "**Faux**&nbsp;: un système peut se déplacer à vitesse constante sans accélérer." },
+          "essai": { "texte": "Chute libre de 2 kg ou de 20 kg&nbsp;: a = g ≈ <i>9,8 m·s⁻²</i> dans les deux cas, car m se simplifie." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Système&nbsp;: la caisse. Référentiel terrestre.", "quoi": "le cadre" },
+            { "texte": "ΣF⃗ = m a⃗ ⇒ F − f = m a", "quoi": "loi puis projection" },
+            { "texte": "a = (10 − 4) ÷ 2,0 = 3,0 m·s⁻²", "quoi": "avec l’unité" }
+          ],
+          "pied": "Le bilan ne compte que les forces ==extérieures== au système."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier une force dans le **bilan**.",
+            "Projeter avec les mauvais **signes**.",
+            "Mettre la masse en **grammes**.",
+            "Croire que **a** a le sens de la vitesse (c’est celui de ΣF⃗)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "ΣF = 12 N, m = 3,0 kg&nbsp;: **a**&nbsp;?",
+            "Chute libre&nbsp;: **a** vaut&nbsp;?",
+            "ΣF⃗ = 0⃗&nbsp;: la vitesse est-elle **constante**&nbsp;?"
+          ],
+          "reponses": "1) 4,0 m·s⁻² · 2) g ≈ 9,8 m·s⁻² · 3) oui"
+        }
+      ]
+    }
+  ]
+}

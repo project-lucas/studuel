@@ -1,0 +1,115 @@
+{
+  "titre": "Le pH",
+  "titreSurligne": "pH",
+  "accroche": "Mesurer l’acidité d’une solution.",
+  "epreuve": "brevet",
+  "bonus": "pH < 7 **acide** · pH = 7 **neutre** · pH > 7 **basique** · diluer **rapproche** de 7 sans jamais le dépasser",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/le-ph-ou-potentiel-hydrogene.webp",
+    "prompt": "a glossy violet test strip dipping into a golden beaker, a rainbow color scale bar from red to blue floating beside it, a lemon and a bar of soap, sparkles"
+  },
+  "marcel": "Diluer rapproche\nde 7, c’est tout !",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "L’échelle",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><defs><linearGradient id='ph' x1='0' x2='1' y1='0' y2='0'><stop offset='0' stop-color='#f1566c'></stop><stop offset='0.5' stop-color='#7fcf8a'></stop><stop offset='1' stop-color='#4a7bd0'></stop></linearGradient></defs><rect x='15' y='66' width='190' height='26' rx='8' fill='url(#ph)' stroke='#2b2350' stroke-width='3'></rect><g stroke='#2b2350' stroke-width='2.5'><line x1='15' y1='92' x2='15' y2='104'></line><line x1='110' y1='92' x2='110' y2='104'></line><line x1='205' y1='92' x2='205' y2='104'></line></g><g font-family=\"'Baloo 2'\" font-weight='800' font-size='15' fill='#2b2350' text-anchor='middle'><text x='15' y='120'>0</text><text x='110' y='120'>7</text><text x='205' y='120'>14</text></g><g font-family='Nunito' font-weight='800' font-size='11.5' text-anchor='middle'><text x='56' y='142' fill='#f1566c'>acide</text><text x='110' y='142' fill='#2b2350'>neutre</text><text x='170' y='142' fill='#4a7bd0'>basique</text><text x='42' y='40' fill='#2b2350'>citron</text><text x='110' y='40' fill='#2b2350'>eau pure</text><text x='164' y='40' fill='#2b2350'>savon</text></g><g fill='#2b2350'><polygon points='42,48 36,60 48,60'></polygon><polygon points='110,48 104,60 116,60'></polygon><polygon points='164,48 158,60 170,60'></polygon></g></svg>",
+              "legende": "Une échelle de 0 à 14",
+              "sous": "citron ≈ 2 · eau pure 7 · savon ≈ 10"
+            }
+          ],
+          "legende": { "jeton": "sans unité", "texte": "un pH est un nombre, pas une mesure en g ou en L" }
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le lien avec les ions",
+          "items": [
+            { "terme": "Acide", "definition": "beaucoup d’ions **hydrogène H⁺**&nbsp;: plus le pH est **petit**, plus c’est acide (jus de citron ≈ 2)" },
+            { "terme": "Basique", "definition": "beaucoup d’ions **hydroxyde OH⁻**&nbsp;: pH grand (eau de Javel ≈ 12)" },
+            { "terme": "Neutre", "definition": "autant de H⁺ que de OH⁻&nbsp;: l’eau pure, pH 7" },
+            { "terme": "Mesurer", "definition": "**papier pH** (à 1 unité près), **pH-mètre** (au dixième), **indicateurs colorés**" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Mesurer un pH en trois temps",
+          "etapes": [
+            { "titre": "Prélever", "texte": "un peu de solution, avec lunettes et gants" },
+            { "titre": "Tremper", "texte": "le papier pH, ou la sonde du pH-mètre rincée" },
+            { "titre": "Comparer", "texte": "la couleur à l’échelle, puis conclure : acide, neutre, basique" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un soda a un pH de 3. On le __dilue__ dans beaucoup d’eau. Son pH&nbsp;?",
+          "calcul": "il monte vers 7",
+          "aparte": "sans le dépasser",
+          "resultat": "pH ≈ [[4 ou 5]], toujours acide"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Diluer",
+          "oui": { "titre": "Un acide dilué", "texte": "Son pH **monte** vers 7&nbsp;: moins d’ions H⁺ par litre, donc moins acide." },
+          "non": { "titre": "Jamais basique", "texte": "Diluer ne fait **pas** dépasser 7&nbsp;: un acide dilué reste un acide." },
+          "essai": { "texte": "Une base diluée&nbsp;: le pH **descend** vers 7. Pour diluer un acide, on verse l’acide **dans** l’eau, jamais l’inverse." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Le papier pH devient rouge&nbsp;: pH ≈ 2, la solution est acide.", "quoi": "lire" },
+            { "texte": "Elle contient beaucoup d’ions hydrogène H⁺.", "quoi": "expliquer" },
+            { "texte": "Diluée, son pH se rapprocherait de 7.", "quoi": "prévoir" }
+          ],
+          "pied": "Un pH se donne ==sans unité==, entre 0 et 14."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire qu’un pH de 1 est **moins** acide qu’un pH de 5.",
+            "Faire dépasser 7 à un acide **dilué**.",
+            "Oublier les **lunettes** avec un acide ou une base.",
+            "Confondre H⁺ (acide) et **OH⁻** (basique)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "pH = 9&nbsp;: acide, neutre ou **basique**&nbsp;?",
+            "Quel ion domine dans une solution **acide**&nbsp;?",
+            "Un acide de pH 2 dilué dix fois&nbsp;: son pH **monte** ou **descend**&nbsp;?"
+          ],
+          "reponses": "1) basique · 2) H⁺ · 3) il monte, vers 3"
+        }
+      ]
+    }
+  ]
+}

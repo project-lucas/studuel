@@ -1,0 +1,110 @@
+{
+  "titre": "Loi binomiale",
+  "titreSurligne": "binomiale",
+  "accroche": "Répéter n fois, de façon indépendante.",
+  "epreuve": "bac",
+  "bonus": "P(X = k) = C(n,k) p<sup>k</sup>(1−p)<sup>n−k</sup> · E(X) = np · V(X) = np(1−p) · σ = √V",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths/succession-d-epreuves-independantes-lois-de-bernoulli-et-bin.webp",
+    "prompt": "a glossy violet bell-shaped bar chart made of golden coins stacked in bars, a tiny coin being tossed, sparkles"
+  },
+  "marcel": "Compte les succès,\npas l’ordre !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La loi binomiale",
+          "taille": "mini",
+          "lignes": ["<span>P(X = k) = C(n,k) p<sup>k</sup> (1−p)<sup>n−k</sup></span>", "E(X) = np", "V(X) = np(1−p)"],
+          "regle": "X compte les **succès** de n épreuves de Bernoulli identiques et **indépendantes**, de probabilité de succès p. On note X ∼ B(n ; p).",
+          "note": "C(n,k) = nombre de chemins à k succès"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les 3 conditions",
+          "items": [
+            { "terme": "Deux issues", "definition": "succès ou échec à chaque épreuve." },
+            { "terme": "Identiques", "definition": "p est le même à chaque fois (tirage **avec remise**)." },
+            { "terme": "Indépendantes", "definition": "le résultat d’une épreuve n’influence pas les autres." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Justifier", "texte": "citer épreuve de Bernoulli, répétée n fois, indépendante : X ∼ B(n ; p)" },
+            { "titre": "Calculer", "texte": "P(X = k) à la formule ; P(X ≥ k) = 1 − P(X ≤ k−1) à la calculatrice" },
+            { "titre": "Interpréter", "texte": "E(X) = np est le nombre moyen de succès attendu" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "X ∼ B(10 ; 0,3). __P(X = 2)__&nbsp;? E(X)&nbsp;?",
+          "calcul": "C(10,2) × 0,3² × 0,7⁸ = 45 × 0,09 × 0,0576",
+          "aparte": "45 chemins à 2 succès",
+          "resultat": "P(X = 2) ≈ [[0,2335]] ; E(X) = 3"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Binomiale ou non&nbsp;?",
+          "oui": { "titre": "Binomiale", "texte": "20 lancers de dé, X = nombre de 6&nbsp;: B(20 ; {1/6})." },
+          "non": { "titre": "Pas binomiale", "texte": "3 boules **sans remise** dans une urne&nbsp;: p change, pas d’indépendance." },
+          "essai": { "texte": "Dans le doute, demande-toi&nbsp;: est-ce que p reste le **même** à chaque épreuve&nbsp;?" }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "10 épreuves identiques, indépendantes, succès de proba 0,3", "quoi": "les hypothèses" },
+            { "texte": "Donc X suit la loi binomiale B(10 ; 0,3)", "quoi": "la loi nommée" },
+            { "texte": "P(X = 2) = C(10,2) 0,3² 0,7⁸ ≈ 0,2335", "quoi": "la formule" }
+          ],
+          "pied": "Espérance&nbsp;: ==E(X) = 10 × 0,3 = 3==. Variance&nbsp;: 10 × 0,3 × 0,7 = 2,1."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Appliquer la loi à un tirage **sans remise**.",
+            "Oublier le coefficient **C(n,k)**.",
+            "Confondre P(X = k) et **P(X ≥ k)**.",
+            "Écrire V(X) = np au lieu de **np(1−p)**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "X ∼ B(5 ; 0,5)&nbsp;: **E(X)**&nbsp;?",
+            "X ∼ B(4 ; 0,5)&nbsp;: **P(X = 4)**&nbsp;?",
+            "X ∼ B(10 ; 0,2)&nbsp;: **V(X)**&nbsp;?"
+          ],
+          "reponses": "1) 2,5 · 2) 0,5⁴ = 0,0625 · 3) 10 × 0,2 × 0,8 = 1,6"
+        }
+      ]
+    }
+  ]
+}

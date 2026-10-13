@@ -1,0 +1,115 @@
+{
+  "titre": "La masse volumique",
+  "titreSurligne": "volumique",
+  "accroche": "Ce qui identifie un matériau.",
+  "epreuve": "brevet",
+  "bonus": "**ρ = m ÷ V** · g/cm³ = kg/L · eau&nbsp;: **1 g/cm³** · 1 mL = 1 cm³ · ρ < 1&nbsp;: l’objet **flotte** sur l’eau",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/la-masse-volumique.webp",
+    "prompt": "a glossy golden graduated cylinder half filled with water with a violet metal cube sinking inside and a small wooden ball floating on top, a balance scale beside it, sparkles"
+  },
+  "marcel": "À volume égal,\nle plus lourd gagne !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La formule",
+          "petite": true,
+          "lignes": ["ρ = m ÷ V", "m = ρ × V"],
+          "regle": "**ρ** la masse volumique en **g/cm³**, **m** la masse en **g**, **V** le volume en **cm³**. Elle ne dépend pas de la quantité de matière&nbsp;: elle ==identifie== le matériau.",
+          "note": "g avec cm³, kg avec m³&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Valeurs de référence",
+          "entetes": ["Matériau", "ρ (g/cm³)"],
+          "lignes": [
+            ["**Eau**", "1"],
+            ["Huile", "environ 0,9"],
+            ["Aluminium", "2,7"],
+            ["**Fer**", "7,9"],
+            ["Cuivre", "environ 9"],
+            ["Or", "19,3"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Identifier un matériau en trois temps",
+          "etapes": [
+            { "titre": "Mesurer", "texte": "la masse (balance) et le volume (éprouvette, eau déplacée)" },
+            { "titre": "Calculer", "texte": "ρ = m ÷ V avec g et cm³" },
+            { "titre": "Comparer", "texte": "à la table de référence pour conclure" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un objet de __237 g__ occupe __30 cm³__. Le matériau&nbsp;?",
+          "calcul": "ρ = 237 ÷ 30 = 7,9 g/cm³",
+          "aparte": "dans la table",
+          "resultat": "c’est du [[fer]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Flotte ou coule&nbsp;?",
+          "oui": { "titre": "ρ < 1 g/cm³", "texte": "Moins dense que l’eau&nbsp;: l’objet **flotte** (huile, bois)." },
+          "non": { "titre": "ρ > 1 g/cm³", "texte": "Plus dense que l’eau&nbsp;: l’objet **coule** (fer, or)." },
+          "essai": { "texte": "Volume irrégulier&nbsp;: on plonge l’objet dans l’eau. <i>V = V<sub>final</sub> − V<sub>initial</sub></i> (50 mL → 80 mL&nbsp;: 30 cm³)." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "m = 237 g et V = 30 cm³", "quoi": "les données" },
+            { "texte": "ρ = m ÷ V = 237 ÷ 30", "quoi": "lettres puis nombres" },
+            { "texte": "ρ = 7,9 g/cm³ : c’est du fer", "quoi": "avec l’unité" }
+          ],
+          "pied": "À volume égal, le matériau de plus grande masse volumique a la ==plus grande masse==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **masse** et **masse volumique**.",
+            "Mélanger **g avec m³** ou **kg avec cm³**.",
+            "Croire qu’un gros objet a une **plus grande** masse volumique.",
+            "Oublier l’**unité** (g/cm³) dans la réponse.",
+            "Lire le volume d’**eau déplacée** sans soustraire le volume de départ."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "m = 54 g, V = 20 cm³&nbsp;: **ρ**&nbsp;?",
+            "Un objet de ρ = 0,8 g/cm³ **flotte**-t-il sur l’eau&nbsp;?",
+            "Masse de 10 cm³ de fer (ρ = 7,9)&nbsp;?"
+          ],
+          "reponses": "1) 2,7 g/cm³ (aluminium) · 2) oui · 3) 79 g"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "titre": "L’énergie mécanique",
+  "titreSurligne": "mécanique",
+  "accroche": "Ec + Epp&nbsp;: conservée ou perdue.",
+  "epreuve": "bac",
+  "bonus": "E<sub>m</sub> = E<sub>c</sub> + E<sub>pp</sub> · E<sub>c</sub> = ½mv² · E<sub>pp</sub> = mgz · **J**, **kg**, **m/s**, **m**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/l-energie-mecanique-energies-cinetique-et-potentielle.webp",
+    "prompt": "a glossy violet roller coaster car at the top of a golden track about to drop, a glowing energy bolt, sparkles"
+  },
+  "marcel": "En haut, du potentiel.\nEn bas, du mouvement !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les trois énergies",
+          "petite": true,
+          "lignes": ["<span>E<sub>c</sub></span> = {1/2} × m × v²", "<span>E<sub>pp</sub></span> = m × g × z"],
+          "regle": "**Énergie mécanique** E<sub>m</sub> = E<sub>c</sub> + E<sub>pp</sub>. **g** ≈ 9,8 N/kg, **z** l’altitude par rapport à l’==origine des altitudes== choisie.",
+          "note": "z se mesure depuis l’origine choisie&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Conservée ou non&nbsp;?",
+          "entetes": ["Situation", "Énergie mécanique", "Devenir"],
+          "lignes": [
+            ["Chute libre", "se **conserve**", "E<sub>pp</sub> ⇄ E<sub>c</sub>"],
+            ["Avec frottements", "**diminue**", "transférée en thermique"],
+            ["Théorème", "ΔE<sub>c</sub> = ΣW", "somme des travaux"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Choisir", "texte": "l’origine des altitudes et les deux positions à comparer" },
+            { "titre": "Conclure", "texte": "E<sub>m</sub> se conserve-t-elle&nbsp;? Seulement si les forces sont conservatives (poids)" },
+            { "titre": "Égaler", "texte": "E<sub>m</sub> au départ = E<sub>m</sub> à l’arrivée, puis résoudre" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une balle de 0,50 kg lâchée sans vitesse de 20 m de haut, sans frottement. Sa __vitesse__ au sol&nbsp;?",
+          "calcul": "E<sub>m</sub> = mgz = 0,50 × 9,8 × 20 = 98 J",
+          "aparte": "au sol, tout en E<sub>c</sub>",
+          "resultat": "v = √(2 × 98 ÷ 0,50) ≈ [[20 m/s]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Se conserve ou pas&nbsp;?",
+          "oui": { "titre": "Seul le poids agit", "texte": "Le poids est **conservatif**&nbsp;: E<sub>m</sub> reste constante, E<sub>pp</sub> se convertit en E<sub>c</sub>." },
+          "non": { "titre": "Frottements", "texte": "E<sub>m</sub> **diminue**&nbsp;: l’énergie est **transférée** au milieu, sous forme thermique." },
+          "essai": { "texte": "Balle à 20 m&nbsp;: E<sub>pp</sub> = <i>98 J</i>, E<sub>c</sub> = 0. Au sol&nbsp;: E<sub>pp</sub> = 0, E<sub>c</sub> = <i>98 J</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Seul le poids travaille&nbsp;: E<sub>m</sub> se conserve.", "quoi": "justifier" },
+            { "texte": "E<sub>m,A</sub> = E<sub>m,B</sub> ⇒ mgz = {1/2}mv²", "quoi": "l’égalité" },
+            { "texte": "v = √(2gz) ≈ 20 m/s", "quoi": "avec l’unité" }
+          ],
+          "pied": "La masse se ==simplifie== : en chute libre, la vitesse ne dépend pas de m."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier que E<sub>c</sub> dépend du **carré** de la vitesse.",
+            "Conserver E<sub>m</sub> malgré des **frottements**.",
+            "Mesurer **z** sans fixer l’origine des altitudes.",
+            "Laisser la vitesse en **km/h**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**E<sub>pp</sub>** de 2 kg à 5 m (g = 10 N/kg)&nbsp;?",
+            "Vitesse × 2&nbsp;: E<sub>c</sub> multipliée par&nbsp;?",
+            "Que devient E<sub>m</sub> avec **frottements**&nbsp;?"
+          ],
+          "reponses": "1) 100 J · 2) 4 · 3) elle diminue (transfert thermique)"
+        }
+      ]
+    }
+  ]
+}

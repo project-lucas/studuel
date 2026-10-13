@@ -1,0 +1,181 @@
+{
+  "titre": "Intégration",
+  "titreSurligne": "Intégration",
+  "accroche": "Une aire qui a un sens.",
+  "epreuve": "bac",
+  "bonus": "∫ₐᵇ f = **F(b) − F(a)** · aire = intégrale si f ≥ 0 · valeur moyenne = **1 ÷ (b − a)** × intégrale",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-complementaires/integration.webp",
+    "prompt": "a glossy violet curve with a golden filled area beneath it split into thin vertical golden bars, sparkles"
+  },
+  "marcel": "Primitive en haut,\nprimitive en bas !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le calcul d’une intégrale",
+          "taille": "mini",
+          "lignes": [
+            "∫ₐᵇ f(x) dx = F(b) − F(a)",
+            "F′ = f",
+            "aire = ∫ₐᵇ f(x) dx"
+          ],
+          "regle": "F est une ==primitive== de f. L’aire n’est égale à l’intégrale que si **f ≥ 0** sur [a&nbsp;; b], en unités d’aire.",
+          "note": "F(b) − F(a), jamais l’inverse&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les primitives usuelles",
+          "entetes": [
+            "f(x)",
+            "Une primitive F(x)"
+          ],
+          "lignes": [
+            [
+              "k (constante)",
+              "**kx**"
+            ],
+            [
+              "x<sup>n</sup> (n ≠ −1)",
+              "**x<sup>n+1</sup> ÷ (n + 1)**"
+            ],
+            [
+              "x",
+              "**x² ÷ 2**"
+            ],
+            [
+              "x²",
+              "**x³ ÷ 3**"
+            ],
+            [
+              "1 ÷ x",
+              "**ln x**"
+            ],
+            [
+              "e<sup>x</sup>",
+              "**e<sup>x</sup>**"
+            ],
+            [
+              "u′ e<sup>u</sup>",
+              "**e<sup>u</sup>**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer une intégrale en trois temps",
+          "etapes": [
+            {
+              "titre": "Primitive",
+              "texte": "trouver F, terme par terme"
+            },
+            {
+              "titre": "Bornes",
+              "texte": "calculer F(b) puis F(a)"
+            },
+            {
+              "titre": "Soustraire",
+              "texte": "F(b) − F(a), avec l’unité d’aire"
+            },
+            {
+              "titre": "Contrôler",
+              "texte": "dériver F pour retrouver f"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = 3x² + 2 sur [0&nbsp;; 2]. __Calcule ∫ f__ et la valeur moyenne.",
+          "calcul": "F(x) = x³ + 2x : F(2) = 12, F(0) = 0",
+          "aparte": "12 − 0",
+          "resultat": "∫ = [[12]] · moyenne = 6"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Propriétés",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Linéarité",
+              "texte": "∫(f + g) = ∫f + ∫g et ∫(kf) = **k** ∫f."
+            },
+            {
+              "titre": "Chasles",
+              "texte": "∫ₐᶜ f = ∫ₐᵇ f + ∫ᵇᶜ f&nbsp;: on **découpe**."
+            },
+            {
+              "titre": "Valeur moyenne",
+              "texte": "m = {1/b − a} ∫ₐᵇ f(x) dx&nbsp;: ici 12 ÷ 2 = **6**."
+            },
+            {
+              "titre": "Entre deux courbes",
+              "texte": "si f ≥ g&nbsp;: aire = ∫(f − g)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "F(x) = x³ + 2x est une primitive de f.",
+              "quoi": "la primitive"
+            },
+            {
+              "texte": "∫₀² f(x) dx = F(2) − F(0) = 12 − 0",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "f ≥ 0 donc l’aire vaut 12 unités d’aire.",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Vérifie ta ==primitive== en la dérivant."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier de diviser par **n + 1** en primitivant.",
+            "Calculer **F(a) − F(b)** à l’envers.",
+            "Parler d’aire alors que f est **négative**.",
+            "Oublier le **1 ÷ (b − a)** de la valeur moyenne."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Une primitive de **6x**&nbsp;?",
+            "**∫₀³ 2x dx**&nbsp;?",
+            "Valeur moyenne de **2x** sur [0&nbsp;; 3]&nbsp;?"
+          ],
+          "reponses": "1) 3x² · 2) [x²] de 0 à 3 = 9 · 3) 9 ÷ 3 = 3"
+        }
+      ]
+    }
+  ]
+}

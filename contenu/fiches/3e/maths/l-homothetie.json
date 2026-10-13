@@ -1,0 +1,117 @@
+{
+  "titre": "L’homothétie",
+  "titreSurligne": "homothétie",
+  "accroche": "Agrandir ou réduire depuis un point, d’un coup.",
+  "epreuve": "brevet",
+  "bonus": "Rapport **k**&nbsp;: longueurs × **|k|** · aires × **k²** · angles et forme **conservés**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/l-homothetie.webp",
+    "prompt": "a glossy violet center point shooting golden rays that project a small cartoon house into a large identical house, like a magnifying beam, sparkles"
+  },
+  "marcel": "k négatif :\nde l’autre côté !",
+  "rangs": [
+    {
+      "colonnes": "320px 1fr",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "La construction",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><g stroke='#2b2350' stroke-width='1.6' stroke-dasharray='4 4' opacity='0.55'><line x1='18' y1='152' x2='98' y2='92'></line><line x1='18' y1='152' x2='138' y2='148'></line><line x1='18' y1='152' x2='82' y2='44'></line></g><polygon points='98,92 138,148 82,44' fill='#fdecc7' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><polygon points='58,122 78,150 50,98' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><g fill='#2b2350'><circle cx='18' cy='152' r='4.5'></circle></g><g font-family=\"'Baloo 2'\" font-weight='800' font-size='16' fill='#2b2350'><text x='4' y='168'>O</text><text x='60' y='118'>A</text><text x='82' y='162'>B</text><text x='36' y='96'>C</text><text x='104' y='96' fill='#4b2a9a'>A’</text><text x='144' y='162' fill='#4b2a9a'>B’</text><text x='88' y='40' fill='#4b2a9a'>C’</text></g></svg>",
+              "legende": "Homothétie de centre O et de rapport 2",
+              "sous": "chaque point s’éloigne deux fois plus de O"
+            }
+          ],
+          "legende": { "jeton": "sur la droite (OA)", "texte": "A’ est aligné avec O et A." }
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La définition",
+          "petite": true,
+          "lignes": ["OA’ = k × OA"],
+          "regle": "L’homothétie de **centre O** et de **rapport k** envoie A sur A’, aligné avec O et A. k > 0&nbsp;: A’ du ==même côté== de O que A. k < 0&nbsp;: de l’autre côté, la figure est retournée.",
+          "note": "k = −1, c’est la symétrie centrale&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Tracer", "texte": "les droites (OA), (OB), (OC) depuis le centre" },
+            { "titre": "Reporter", "texte": "OA’ = |k| × OA, du bon côté de O selon le signe de k" },
+            { "titre": "Relier", "texte": "A’, B’, C’ : même forme que ABC, côtés parallèles" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Homothétie de centre O, k = 3. OA = 2 cm, AB = 1,5 cm. On cherche __OA’__ et __A’B’__.",
+          "calcul": "OA’ = 3 × 2 = 6 cm",
+          "aparte": "même côté",
+          "resultat": "A’B’ = 3 × 1,5 = [[4,5 cm]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Ce qu’elle fait",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Elle conserve", "texte": "L’alignement, le parallélisme, les **angles**, la forme." },
+            { "titre": "Elle multiplie", "texte": "Les longueurs par **|k|**, les aires par **k²**." },
+            { "titre": "Trois cas", "texte": "k = 1&nbsp;: rien ne bouge. k = −1&nbsp;: symétrie centrale. 0 < k < 1&nbsp;: réduction." },
+            { "titre": "Avec Thalès", "texte": "Une figure et son image sont en **configuration de Thalès**&nbsp;: k est le rapport des longueurs." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "A’B’C’ est l’image de ABC par l’homothétie de centre O et de rapport 2.", "quoi": "les données" },
+            { "texte": "Donc A’B’ = 2 × AB.", "quoi": "la propriété" },
+            { "texte": "L’aire est multipliée par 2² = 4.", "quoi": "le calcul" }
+          ],
+          "pied": "Un rapport ==négatif== retourne la figure de l’autre côté de O."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Placer l’image du **même côté** quand k < 0.",
+            "Multiplier l’**aire** par k au lieu de k².",
+            "Mesurer OA’ depuis A au lieu de **depuis O**.",
+            "Confondre réduction (0 < k < 1) et **k négatif**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "k = 2 et OA = 3 cm&nbsp;: que vaut **OA’**&nbsp;?",
+            "k = −1&nbsp;: quelle **transformation** est-ce&nbsp;?",
+            "k = 0,5&nbsp;: l’**aire** est multipliée par&nbsp;?"
+          ],
+          "reponses": "1) 6 cm · 2) la symétrie de centre O · 3) 0,25 (divisée par 4)"
+        }
+      ]
+    }
+  ]
+}

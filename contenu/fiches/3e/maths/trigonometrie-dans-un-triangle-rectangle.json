@@ -1,0 +1,117 @@
+{
+  "titre": "La trigonométrie",
+  "titreSurligne": "trigonométrie",
+  "accroche": "CAH – SOH – TOA : un angle, deux côtés, une formule.",
+  "epreuve": "brevet",
+  "bonus": "À connaître : cos 60° = **0,5** · sin 30° = **0,5** · tan 45° = **1** · cos 45° ≈ **0,71**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/trigonometrie-dans-un-triangle-rectangle.webp",
+    "prompt": "a cartoon student with a protractor measuring the angle at the base of a glossy violet right triangle, a tall golden lighthouse standing on the far side of the triangle, a gold ruler lying along the base, sparkles"
+  },
+  "marcel": "Calculatrice\nen degrés !",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "Les trois côtés, vus de l’angle",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><polygon points='40,150 40,40 200,150' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><path d='M40,134 h16 v16' fill='none' stroke='#2b2350' stroke-width='3'></path><path d='M172,150 A28,28 0 0 0 178,134' fill='none' stroke='#f5b722' stroke-width='4' stroke-linecap='round'></path><g fill='#2b2350'><circle cx='40' cy='150' r='4.5'></circle><circle cx='40' cy='40' r='4.5'></circle><circle cx='200' cy='150' r='4.5'></circle></g><g font-family=\"'Baloo 2'\" font-weight='800' font-size='20' fill='#2b2350'><text x='22' y='164'>A</text><text x='22' y='36'>C</text><text x='204' y='164'>B</text></g><g font-family='Nunito' font-weight='800' font-size='12' fill='#4b2a9a'><text x='102' y='164'>adjacent à B</text><text x='26' y='100' transform='rotate(-90 26 100)'>opposé à B</text><text x='108' y='84' fill='#7a3fe0' transform='rotate(-34.5 108 84)'>hypoténuse</text></g></svg>",
+              "legende": "ABC rectangle en A, depuis l’angle B̂",
+              "sous": "adjacent = il touche l’angle · opposé = en face"
+            }
+          ],
+          "legende": { "jeton": "depuis l’angle", "texte": "change d’angle, et ils s’échangent" }
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Les trois formules",
+          "taille": "mini",
+          "lignes": ["cos B̂ = {adjacent/hypoténuse}", "sin B̂ = {opposé/hypoténuse}", "tan B̂ = {opposé/adjacent}"],
+          "regle": "**CAH – SOH – TOA**&nbsp;: la première lettre dit la formule, les deux autres le quotient.",
+          "note": "cos et sin valent toujours moins que 1&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "l’angle qu’on utilise, puis nommer ses trois côtés" },
+            { "titre": "Choisir", "texte": "la formule qui contient les deux côtés concernés" },
+            { "titre": "Calculer", "texte": "une longueur par produit en croix, ou l’angle avec cos⁻¹, sin⁻¹, tan⁻¹" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "ABC rectangle en A, BC = 8 cm, B̂ = 35°. On cherche __AC__, opposé à B̂.",
+          "calcul": "sin 35° = {__AC__/8}",
+          "aparte": "SOH&nbsp;!",
+          "resultat": "AC = 8 × sin 35° ≈ [[4,6 cm]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les deux calculs",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Une longueur", "texte": "Un angle et un côté&nbsp;: la formule, puis le **produit en croix**. Calculatrice en **degrés**." },
+            { "titre": "Un angle", "texte": "Deux côtés&nbsp;: le quotient, puis la touche **cos⁻¹**, **sin⁻¹** ou **tan⁻¹**." },
+            { "titre": "Avec Pythagore", "texte": "Deux côtés&nbsp;: le troisième par Pythagore, l’angle par la trigo." },
+            { "titre": "Le ≈", "texte": "Un résultat arrondi s’écrit avec **≈**&nbsp;: AC ≈ 4,6 cm, B̂ ≈ 37°." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Dans le triangle ABC rectangle en A&nbsp;:", "quoi": "les conditions" },
+            { "texte": "sin B̂ = AC / BC", "quoi": "la formule" },
+            { "texte": "AC = 8 × sin 35° ≈ 4,6 cm", "quoi": "le calcul" }
+          ],
+          "pied": "La formule ==en lettres== d’abord&nbsp;: c’est elle qui rapporte les points."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Calculatrice en **radians**&nbsp;: sin 35° donne 0,43 au lieu de 0,57.",
+            "Prendre l’adjacent de l’**autre** angle aigu.",
+            "L’hypoténuse au **numérateur**&nbsp;: cos vaut toujours moins que 1.",
+            "Oublier **cos⁻¹** pour remonter à l’angle."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Rectangle en A, AB = 5 cm et BC = 13 cm. Que vaut **cos B̂**&nbsp;?",
+            "tan B̂ = 0,75. Que vaut **B̂**, arrondi au degré&nbsp;?",
+            "Un angle de **60°**&nbsp;: son cosinus vaut&nbsp;?"
+          ],
+          "reponses": "1) 5/13 ≈ 0,38 · 2) B̂ ≈ 37° · 3) 0,5"
+        }
+      ]
+    }
+  ]
+}

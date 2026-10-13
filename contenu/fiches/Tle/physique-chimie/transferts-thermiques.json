@@ -1,0 +1,112 @@
+{
+  "titre": "Le flux thermique",
+  "titreSurligne": "thermique",
+  "accroche": "Le flux, c’est l’écart sur la résistance.",
+  "epreuve": "bac",
+  "bonus": "Φ = Q ÷ Δt · Φ = ΔT ÷ R<sub>th</sub> · R<sub>th</sub> en série&nbsp;: **on additionne** · Newton&nbsp;: flux **proportionnel** à l’écart de température",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/transferts-thermiques.webp",
+    "prompt": "a glossy violet house wall cutaway with golden warm waves flowing through it from a glowing sun side to a cool side, a cartoon thermometer, sparkles"
+  },
+  "marcel": "Plus l’écart est grand,\nplus ça fuit vite !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Flux et résistance",
+          "petite": true,
+          "lignes": ["Φ = {Q/Δt}", "Φ = ΔT ÷ <span>R<sub>th</sub></span>"],
+          "regle": "**Φ** flux thermique en **watts (W)**, **Q** en joules, **Δt** en secondes, **ΔT** en kelvins, **R<sub>th</sub>** en **K·W⁻¹**. Le transfert va ==du chaud vers le froid==, spontanément.",
+          "note": "R grande&nbsp;: bon isolant&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois modes de transfert",
+          "entetes": ["Mode", "Où", "Support"],
+          "lignes": [
+            ["Conduction", "solides", "de proche en proche"],
+            ["Convection", "fluides", "déplacement de matière"],
+            ["Rayonnement", "même le vide", "ondes électromagnétiques"],
+            ["Newton", "refroidissement", "flux ∝ T − T<sub>ext</sub>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "le mode dominant et l’écart ΔT entre les deux faces" },
+            { "titre": "Combiner", "texte": "les résistances&nbsp;: en série, R<sub>th</sub> = R₁ + R₂" },
+            { "titre": "Calculer", "texte": "Φ = ΔT ÷ R<sub>th</sub> puis Q = Φ × Δt, en joules" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un mur a une résistance thermique de 0,25 K·W⁻¹. Il sépare 20 °C et 0 °C. Flux, puis énergie perdue en __1 h__&nbsp;?",
+          "calcul": "ΔT = 20 K · Φ = 20 ÷ 0,25 = 80 W",
+          "aparte": "Δt = 3 600 s",
+          "resultat": "Q = 80 × 3 600 ≈ [[2,9 × 10⁵ J]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Newton et le refroidissement",
+          "oui": { "titre": "Écart grand", "texte": "Le corps se refroidit **vite**&nbsp;: le flux est ==proportionnel== à T − T<sub>ext</sub>." },
+          "non": { "titre": "Linéaire dans le temps&nbsp;?", "texte": "**Faux**&nbsp;: la température suit une exponentielle qui tend vers T<sub>ext</sub>, sans la dépasser." },
+          "essai": { "texte": "Café à 80 °C dans une pièce à 20 °C&nbsp;: il perd plus vite à 80 °C qu’à 30 °C, car l’écart est <i>60 K</i> puis <i>10 K</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Φ = ΔT ÷ R<sub>th</sub> = 20 ÷ 0,25 = 80 W", "quoi": "le flux" },
+            { "texte": "Q = Φ × Δt = 80 × 3 600", "quoi": "l’énergie" },
+            { "texte": "Q ≈ 2,9 × 10⁵ J, perdus par le mur", "quoi": "avec l’unité" }
+          ],
+          "pied": "Le transfert se fait **toujours** du corps ==chaud== vers le corps ==froid==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Laisser **Δt** en heures pour Q en joules.",
+            "Additionner des R<sub>th</sub> **en parallèle** comme en série.",
+            "Utiliser des **°C** pour un écart&nbsp;: ΔT en °C ou K est identique, pas T.",
+            "Confondre **flux** Φ (W) et **énergie** Q (J)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "ΔT = 30 K, R<sub>th</sub> = 0,5 K·W⁻¹&nbsp;: **Φ**&nbsp;?",
+            "Φ = 20 W pendant 10 s&nbsp;: **Q**&nbsp;?",
+            "Deux murs de 0,2 et 0,3 K·W⁻¹ en série&nbsp;: **R<sub>th</sub>**&nbsp;?"
+          ],
+          "reponses": "1) 60 W · 2) 200 J · 3) 0,5 K·W⁻¹"
+        }
+      ]
+    }
+  ]
+}

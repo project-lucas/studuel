@@ -4326,6 +4326,28 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     // que PGRST202 vaut « présente ».
     sonde: { type: 'rpc', fn: 'basculer_studuel_plus_test', args: {} },
   },
+  {
+    id: '562',
+    fichier: '562_ligue_echelon_de.sql',
+    feature:
+      'LA DIVISION DE LIGUE PARTOUT (13/10/2026) — `ligue_echelon_du_rival(p_replay)` (la division du rival rejoué, pour sa bannière sur l’écran de fin de duel), `ligue_ma_place()` (mon échelon et ma place en une lecture : « Mon rang » du Classement de l’arène, la fiche de profil, la page de garde de Moi) et `fiche_joueur` qui rend l’échelon.',
+    siAbsente:
+      'Le rang se lit « Bronze 4 » sans place partout ; sur l’écran de fin de duel, un rival rejoué n’a pas d’étiquette de rang (un robot prend la mienne). Rien ne casse.',
+    // Appelée sans session elle rend NULL ; une trace inconnue aussi : tout
+    // retour autre que PGRST202 vaut « présente ».
+    sonde: { type: 'rpc', fn: 'ligue_echelon_du_rival', args: { p_replay: '00000000-0000-0000-0000-000000000000' } },
+  },
+  {
+    id: '563',
+    fichier: '563_fiches_pdf_storage.sql',
+    feature:
+      'LES FICHES DE RÉVISION EN PDF (13/10/2026) — le bucket privé `fiches` (un PDF par chapitre, `<chapter_id>.pdf`), le bucket public `fiches-apercus` (l’illustration en 360 px) et `fiche_pdf_acces(p_nom)` : les trois portes de la 184 (administrateur, abonnement, chapitre déverrouillé en gemmes) qui gardent la lecture du PDF. Les fichiers sont déposés par `node scripts/fiches-deposer.mjs`.',
+    siAbsente:
+      'La page Fiche d’un chapitre vend et débloque comme avant, mais « Ouvrir la fiche » répond que la fiche n’a pas pu être chargée, et l’aperçu de la fiche est vide.',
+    // Appelée sans session elle rend FALSE : tout retour autre que PGRST202
+    // vaut « présente ».
+    sonde: { type: 'rpc', fn: 'fiche_pdf_acces', args: { p_nom: '' } },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

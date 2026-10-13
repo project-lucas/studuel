@@ -12,14 +12,22 @@ import { mindMapFromLessons, type LessonForMap } from '@/lib/mind-map-auto'
 import { chapterHasMindMap, fetchMindMap } from '@/lib/mind-map-access'
 import SubjectIcon from '@/components/SubjectIcon'
 import GemIcon from '@/components/ui/GemIcon'
+import FichePdfCarte from '@/components/fiches/FichePdfCarte'
+import { fichePdfDe } from '@/lib/fiches/pdf'
+import { urlApercuFiche } from '@/lib/fiches/pdf-server'
 import { CHAPTER_COLUMNS, type Subject, type Chapter, type MindMapData } from '@/lib/types'
 
 export const dynamic = 'force-dynamic'
 
-// Carte mentale du chapitre — ouverte par l'ABONNEMENT ou par une GEMME
-// (migration 183 : une gemme = un chapitre, à vie). Les élèves qui arrivent ici
-// sans l'un ni l'autre voient un aperçu leurre et les deux portes de sortie,
-// la gratuite d'abord. Cohérent avec la tuile verrouillée de la page chapitre.
+// La Fiche du chapitre — ouverte par l'ABONNEMENT ou par une GEMME (migration
+// 183 : une gemme = un chapitre, à vie). Les élèves qui arrivent ici sans l'un
+// ni l'autre voient un aperçu leurre et les deux portes de sortie, la gratuite
+// d'abord. Cohérent avec la tuile verrouillée de la page chapitre.
+//
+// DEUX FICHES, SELON LE CHAPITRE (13/10/2026) : les 260 chapitres du MVP
+// (docs/fiches-mvp.md) ont une FICHE PDF composée et illustrée — une page A4,
+// servie depuis le bucket privé de la migration 563 par /api/fiches ; les
+// autres gardent la carte mentale dérivée du cours. Même prix, même porte.
 export default async function MindMapPage({
   params,
 }: {
@@ -54,6 +62,7 @@ export default async function MindMapPage({
   const { subject, ...chapter } = row
   const access = chapterAccess(tier, chapterId, unlockedChapters)
   const unlocked = access !== 'locked'
+  const fichePdf = fichePdfDe(chapterId)
 
   // Carte rédigée à la main d'abord. À défaut — c'est le cas de la quasi-
   // totalité des chapitres — on la DÉRIVE du cours : le chapitre au centre, une
@@ -65,7 +74,7 @@ export default async function MindMapPage({
   // droit d'ouvrir la carte. Les autres gardent le leurre.
   let mindMap: MindMapData | null = null
   let derivee = false
-  if (unlocked) {
+  if (unlocked && !fichePdf) {
     if (hasMindMap) mindMap = await fetchMindMap(supabase, chapterId)
     if (!mindMap) {
       const { data: lessons } = await supabase
@@ -108,7 +117,17 @@ export default async function MindMapPage({
       </EnTetePage>
 
       <div className="mt-6">
-        {!carteExiste ? (
+        {fichePdf ? (
+          unlocked ? (
+            <FichePdfCarte fiche={fichePdf} chapitreId={chapterId} apercu={urlApercuFiche(supabase, chapterId)} ouverte />
+          ) : (
+            <UnlockChapterCard chapterId={chapterId} gems={gems}>
+              {/* L'aperçu dit ce qu'on achète (titre, accroche, illustration) ;
+                  le PDF, lui, n'est ni chargé ni signé. */}
+              <FichePdfCarte fiche={fichePdf} chapitreId={chapterId} apercu={urlApercuFiche(supabase, chapterId)} ouverte={false} />
+            </UnlockChapterCard>
+          )
+        ) : !carteExiste ? (
           <p className="text-sm text-muted-foreground">
             Ce chapitre n&apos;a pas encore de cours écrit : il n&apos;y a rien à
             cartographier pour l&apos;instant.

@@ -1,0 +1,113 @@
+{
+  "titre": "Transferts d’énergie",
+  "titreSurligne": "Transferts",
+  "accroche": "L’énergie change de forme et de lieu.",
+  "epreuve": "brevet",
+  "bonus": "**source → convertisseur → utilisation** · E<sub>reçue</sub> = E<sub>utile</sub> + **pertes** · rendement = E<sub>utile</sub> ÷ E<sub>reçue</sub>",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/transferts-et-conversions-d-energie.webp",
+    "prompt": "a glossy violet light bulb glowing next to a golden electric motor and a small battery, curved arrows passing energy from one to the next, little heat waves rising, sparkles"
+  },
+  "marcel": "L’énergie se conserve,\nelle se convertit !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La conservation",
+          "petite": true,
+          "lignes": ["E<sub>reçue</sub> = E<sub>utile</sub> + E<sub>pertes</sub>", "rendement = <span>E<sub>utile</sub></span> ÷ <span>E<sub>reçue</sub></span>"],
+          "regle": "L’énergie **ne se perd pas**&nbsp;: la part non utile part en **pertes**, le plus souvent sous forme **thermique**. Le rendement est toujours ==inférieur à 1== (100&nbsp;%).",
+          "note": "pas de rendement de 120&nbsp;%&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les convertisseurs",
+          "entetes": ["Convertisseur", "Entrée → sortie"],
+          "lignes": [
+            ["**Lampe**", "électrique → lumineuse"],
+            ["**Moteur électrique**", "électrique → cinétique"],
+            ["**Panneau photovoltaïque**", "lumineuse → électrique"],
+            ["**Alternateur**", "cinétique → électrique"],
+            ["**Pile · chaudière**", "chimique → électrique · thermique"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Construire une chaîne énergétique",
+          "etapes": [
+            { "titre": "Source", "texte": "d’où vient l’énergie&nbsp;: pile, secteur, soleil…" },
+            { "titre": "Convertisseur", "texte": "ce qui change la forme&nbsp;: moteur, lampe…" },
+            { "titre": "Utilisation", "texte": "ce qu’on obtient, et les pertes à côté" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une lampe reçoit __10 J__ électriques et en rend __2 J__ en lumière. Rendement&nbsp;?",
+          "calcul": "2 ÷ 10 = 0,2",
+          "aparte": "8 J en chaleur",
+          "resultat": "rendement = [[20 %]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Les trois transferts thermiques",
+          "oui": { "titre": "Conduction", "texte": "Dans un **solide**, de proche en proche&nbsp;: la cuillère chauffe." },
+          "non": { "titre": "Convection", "texte": "Dans un **fluide**, avec **déplacement de matière**&nbsp;: l’air chaud monte." },
+          "essai": { "texte": "<i>Rayonnement</i>&nbsp;: **sans support matériel**, même dans le vide. Le transfert va **toujours du plus chaud vers le plus froid**." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "E<sub>reçue</sub> = 10 J et E<sub>utile</sub> = 2 J", "quoi": "les données" },
+            { "texte": "rendement = E<sub>utile</sub> ÷ E<sub>reçue</sub> = 2 ÷ 10", "quoi": "lettres puis nombres" },
+            { "texte": "rendement = 0,2 soit 20&nbsp;%", "quoi": "la conclusion" }
+          ],
+          "pied": "Les ==isolants thermiques== (laine, polystyrène) ralentissent le transfert de chaleur."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que l’énergie est « **consommée** » ou « perdue »&nbsp;: elle est convertie.",
+            "Un transfert thermique **du froid vers le chaud**.",
+            "Oublier les **pertes** dans la chaîne.",
+            "Confondre **conduction** (solide) et **convection** (fluide)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que convertit un **panneau photovoltaïque**&nbsp;?",
+            "Quel transfert se fait **dans le vide**&nbsp;?",
+            "Un moteur reçoit 50 J et rend 40 J&nbsp;: **rendement**&nbsp;?"
+          ],
+          "reponses": "1) lumineuse → électrique · 2) rayonnement · 3) 0,8 soit 80 %"
+        }
+      ]
+    }
+  ]
+}

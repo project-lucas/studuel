@@ -1,0 +1,117 @@
+{
+  "titre": "Primitives, éq. diff",
+  "titreSurligne": "Primitives",
+  "accroche": "Remonter de la dérivée à la fonction.",
+  "epreuve": "bac",
+  "bonus": "F′ = f · y′ = ay ⇒ y = Ce<sup>ax</sup> · y′ = ay + b ⇒ y = Ce<sup>ax</sup> − {b/a} · condition initiale ⇒ C",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths/primitives-et-equations-differentielles.webp",
+    "prompt": "a glossy violet curve descending in a smooth exponential decay toward a golden floor, a golden arrow going backwards, sparkles"
+  },
+  "marcel": "Une constante près,\ntoujours !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les équations différentielles",
+          "taille": "mini",
+          "lignes": ["y′ = ay ⇒ y = Ce<sup>ax</sup>", "y′ = ay + b ⇒ y = Ce<sup>ax</sup> − {b/a}"],
+          "regle": "Pour a ≠ 0. La constante **C** se trouve avec la **condition initiale** y(x₀) = y₀. Une primitive F de f vérifie **F′ = f**.",
+          "note": "primitive = unique à une constante près"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Primitives usuelles",
+          "entetes": ["f(x)", "F(x)"],
+          "lignes": [
+            ["x<sup>n</sup>", "x<sup>n+1</sup> / (n+1)"],
+            ["1 / x", "ln x (x &gt; 0)"],
+            ["e<sup>x</sup>", "e<sup>x</sup>"],
+            ["u′e<sup>u</sup>", "e<sup>u</sup>"],
+            ["u′ / u", "ln u (u &gt; 0)"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Forme", "texte": "reconnaître y′ = ay ou y′ = ay + b, repérer a et b" },
+            { "titre": "Solutions", "texte": "écrire y = Ce<sup>ax</sup> − b/a (ou Ce<sup>ax</sup> si b = 0)" },
+            { "titre": "Condition initiale", "texte": "remplacer x par x₀, trouver C, écrire la solution unique" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "y′ = 2y + 6 avec y(0) = 1. __Solution__&nbsp;?",
+          "calcul": "y = Ce<sup>2x</sup> − 6/2 = Ce<sup>2x</sup> − 3",
+          "aparte": "y(0) = C − 3 = 1",
+          "resultat": "C = 4 : y = [[4e<sup>2x</sup> − 3]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À reconnaître",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "y′ = −0,5y", "texte": "décroissance&nbsp;: y = Ce<sup>−0,5x</sup>, tend vers **0**." },
+            { "titre": "y′ = y − 3", "texte": "a = 1, b = −3&nbsp;: y = Ce<sup>x</sup> **+ 3**." },
+            { "titre": "2x e<sup>x²</sup>", "texte": "forme u′e<sup>u</sup> avec u = x²&nbsp;: primitive **e<sup>x²</sup>**." },
+            { "titre": "2x / (x² + 1)", "texte": "forme u′/u&nbsp;: primitive **ln(x² + 1)**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "y′ = 2y + 6 s’écrit y′ = ay + b avec a = 2, b = 6", "quoi": "je reconnais" },
+            { "texte": "Les solutions sont y = Ce<sup>2x</sup> − 3, C ∈ ℝ", "quoi": "la forme générale" },
+            { "texte": "y(0) = 1 ⇒ C − 3 = 1, donc C = 4", "quoi": "la condition initiale" }
+          ],
+          "pied": "Contrôle&nbsp;: y′ = 8e<sup>2x</sup> = 2(4e<sup>2x</sup> − 3) + 6 ✔ ==y = 4e<sup>2x</sup> − 3=="
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier la **constante** C.",
+            "Écrire Ce<sup>ax</sup> + b/a (le signe est **−**).",
+            "Oublier la condition initiale.",
+            "Ne pas vérifier que u′ est bien **présent**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**Primitive** de e<sup>x</sup> + 2x&nbsp;?",
+            "Solutions de y′ = 3y&nbsp;?",
+            "y′ = y − 3, y(0) = 5&nbsp;: **y(0) = C + 3**, donc C&nbsp;?"
+          ],
+          "reponses": "1) e<sup>x</sup> + x² + c · 2) Ce<sup>3x</sup> · 3) C = 2"
+        }
+      ]
+    }
+  ]
+}

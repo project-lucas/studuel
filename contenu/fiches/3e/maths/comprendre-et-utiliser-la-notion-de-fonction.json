@@ -1,0 +1,115 @@
+{
+  "titre": "La notion de fonction",
+  "titreSurligne": "fonction",
+  "accroche": "Une machine qui transforme un nombre en un autre.",
+  "epreuve": "brevet",
+  "bonus": "f(x) se lit « f de x » · **image** = le résultat · **antécédent** = le nombre de départ",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/comprendre-et-utiliser-la-notion-de-fonction.webp",
+    "prompt": "a glossy violet machine with a funnel on top where a golden number 3 drops in and a number 7 rolls out on a conveyor belt, visible gears, sparkles"
+  },
+  "marcel": "Une image se calcule,\nun antécédent se cherche !",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Fonction f", "definition": "un procédé qui, à un nombre x, associe **un seul** nombre, noté f(x)" },
+            { "terme": "Image", "definition": "f(3) = 7&nbsp;: **7** est l’image de 3" },
+            { "terme": "Antécédent", "definition": "**3** est un antécédent de 7. Un nombre peut avoir plusieurs antécédents" },
+            { "terme": "Trois écritures", "definition": "une **formule** f(x) = 2x + 1, un **tableau** de valeurs, une **courbe**" }
+          ]
+        },
+        {
+          "type": "figures",
+          "numero": 2,
+          "titre": "Lire une courbe",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><g stroke='#2b2350' stroke-width='2' stroke-linecap='round'><line x1='30' y1='150' x2='212' y2='150'></line><line x1='30' y1='150' x2='30' y2='8'></line></g><polygon points='212,150 204,145 204,155' fill='#2b2350'></polygon><polygon points='30,8 25,16 35,16' fill='#2b2350'></polygon><path d='M30,120 C70,35 110,55 150,90 S190,140 210,100' fill='none' stroke='#7a3fe0' stroke-width='4' stroke-linecap='round'></path><g stroke='#f1566c' stroke-width='2' stroke-dasharray='4 3'><line x1='90' y1='60' x2='90' y2='150'></line><line x1='30' y1='60' x2='90' y2='60'></line></g><circle cx='90' cy='60' r='5' fill='#f1566c' stroke='#2b2350' stroke-width='2'></circle><g font-family=\"'Baloo 2'\" font-weight='800' font-size='15' fill='#2b2350'><text x='85' y='166'>2</text><text x='16' y='65'>3</text><text x='20' y='166'>0</text><text x='98' y='52' fill='#4b2a9a'>f(2) = 3</text></g></svg>",
+              "legende": "Le point (2 ; 3) est sur la courbe",
+              "sous": "donc f(2) = 3&nbsp;: l’image de 2 est 3"
+            }
+          ],
+          "legende": { "jeton": "lire", "texte": "abscisse → antécédent, ordonnée → image" }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Les deux calculs",
+          "etapes": [
+            { "titre": "Une image", "texte": "on remplace x : f(x) = 2x + 1, f(3) = 2 × 3 + 1 = 7" },
+            { "titre": "Un antécédent", "texte": "on résout f(x) = 9 : 2x + 1 = 9, donc x = 4" },
+            { "titre": "Un point", "texte": "A(x ; y) est sur la courbe si f(x) = y" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = x² − 1. __Image de −3__, puis __antécédents de 8__&nbsp;?",
+          "calcul": "f(−3) = (−3)² − 1 = 8",
+          "aparte": "on remplace",
+          "resultat": "x² − 1 = 8 ⟺ x² = 9&nbsp;: [[3 et −3]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Sur la courbe ou pas&nbsp;?",
+          "oui": { "titre": "A(2 ; 3) y est", "texte": "On **calcule** f(2) et on compare à 3&nbsp;: si c’est égal, A est sur la courbe." },
+          "non": { "titre": "B(2 ; 5) n’y est pas", "texte": "f(2) = 3 ≠ 5&nbsp;: le point B **n’est pas** sur la courbe de f." },
+          "essai": { "texte": "Avec f(x) = x² − 1&nbsp;: f(2) = 4 − 1 = <i>3</i>, donc A(2 ; 3) est sur la courbe et B(2 ; 5) n’y est pas." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "f(−3) = (−3)² − 1 = 9 − 1 = 8", "quoi": "l’image, avec parenthèses" },
+            { "texte": "On cherche x tel que f(x) = 8&nbsp;: x² − 1 = 8", "quoi": "l’antécédent" },
+            { "texte": "x² = 9, donc x = 3 ou x = −3", "quoi": "deux antécédents" }
+          ],
+          "pied": "Un antécédent se ==cherche== (équation), une image se ==calcule== (remplacement)."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier les **parenthèses**&nbsp;: (−3)² = 9, pas −9.",
+            "Confondre **image** et **antécédent**.",
+            "Lire l’image sur l’axe des **abscisses**.",
+            "Oublier le **second** antécédent dans x² = 9."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "g(x) = 3x − 2&nbsp;: l’**image** de 4&nbsp;?",
+            "g(x) = 10&nbsp;: l’**antécédent**&nbsp;?",
+            "Le point **(1 ; 1)** est-il sur la courbe de g&nbsp;?"
+          ],
+          "reponses": "1) 10 · 2) 4 · 3) oui, g(1) = 1"
+        }
+      ]
+    }
+  ]
+}

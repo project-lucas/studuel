@@ -1,0 +1,115 @@
+{
+  "titre": "Division euclidienne",
+  "titreSurligne": "euclidienne",
+  "accroche": "Partager équitablement, sans reste.",
+  "epreuve": "brevet",
+  "bonus": "a = b × q + r avec **0 ≤ r < b** · diviseurs communs → **partage** · multiples communs → **rendez-vous**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/division-euclidienne-diviseurs-et-problemes-de-partage.webp",
+    "prompt": "a golden pile of cookies being shared into equal glossy violet boxes with three cookies left over on the table, sparkles"
+  },
+  "marcel": "Le reste, plus petit\nque le diviseur !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La division euclidienne",
+          "petite": true,
+          "lignes": ["a = b × q + r", "23 = 5 × 4 + 3"],
+          "regle": "**a** le dividende, **b** le diviseur, **q** le quotient, **r** le reste, avec ==0 ≤ r < b==. Si r = 0, b est un **diviseur** de a, et a un **multiple** de b.",
+          "note": "r < b, sinon on peut encore enlever un b&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Diviseur de a", "definition": "divise a sans reste&nbsp;: ceux de 12 sont 1, 2, 3, 4, 6, 12" },
+            { "terme": "Multiple de a", "definition": "a × un entier&nbsp;: 36 est un multiple de 12" },
+            { "terme": "Diviseur commun", "definition": "divise **les deux**&nbsp;: 6 divise 12 et 18" },
+            { "terme": "Premiers entre eux", "definition": "seul diviseur commun&nbsp;: **1**. 8 et 15&nbsp;; la fraction 8/15 est irréductible" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Un problème de partage",
+          "etapes": [
+            { "titre": "Comprendre", "texte": "« lots identiques, le plus possible » → le plus grand diviseur commun" },
+            { "titre": "Décomposer", "texte": "84 = 2² × 3 × 7 et 60 = 2² × 3 × 5 : commun 2² × 3 = 12" },
+            { "titre": "Répondre", "texte": "12 lots, chacun de 84 ÷ 12 = 7 roses et 60 ÷ 12 = 5 tulipes" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "84 roses et 60 tulipes, en bouquets identiques, le plus possible. __Combien__&nbsp;?",
+          "calcul": "84 = 2² × 3 × 7",
+          "aparte": "60 = 2² × 3 × 5",
+          "resultat": "2² × 3 = [[12 bouquets]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les problèmes types",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Le partage", "texte": "Diviseur commun **le plus grand**&nbsp;: des lots identiques, le plus grand nombre de lots." },
+            { "titre": "Le rendez-vous", "texte": "Multiple commun **le plus petit**&nbsp;: bus toutes les 6 min et 8 min partis ensemble → de nouveau ensemble dans 24 min." },
+            { "titre": "Le reste utile", "texte": "125 élèves en bus de 30&nbsp;: 125 = 30 × 4 + 5. Il faut **5** bus, le reste prend un bus." },
+            { "titre": "Tester un diviseur", "texte": "91 est-il multiple de 7&nbsp;? 91 = 7 × 13, reste 0&nbsp;: **oui**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "On cherche le plus grand diviseur commun de 84 et 60.", "quoi": "ce qu’on cherche" },
+            { "texte": "84 = 2² × 3 × 7, 60 = 2² × 3 × 5&nbsp;: commun 2² × 3 = 12", "quoi": "le calcul" },
+            { "texte": "12 bouquets de 7 roses et 5 tulipes.", "quoi": "la phrase réponse" }
+          ],
+          "pied": "Dire ==ce qu’on cherche== avant de calculer&nbsp;: c’est le point de méthode."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Un reste **plus grand** que le diviseur.",
+            "Confondre diviseur et **multiple**.",
+            "Oublier le reste dans un problème de **bus** ou de **boîtes**.",
+            "Répondre « 12 » sans dire **12 quoi**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Reste de **47 ÷ 6**&nbsp;?",
+            "Plus grand diviseur commun de **18 et 24**&nbsp;?",
+            "**7 et 20** sont-ils premiers entre eux&nbsp;?"
+          ],
+          "reponses": "1) 5, car 47 = 6 × 7 + 5 · 2) 6 · 3) oui"
+        }
+      ]
+    }
+  ]
+}

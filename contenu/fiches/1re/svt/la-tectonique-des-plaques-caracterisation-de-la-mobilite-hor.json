@@ -1,0 +1,110 @@
+{
+  "titre": "Plaques en mouvement",
+  "titreSurligne": "mouvement",
+  "accroche": "De Wegener aux GPS.",
+  "epreuve": "bac",
+  "bonus": "Preuves&nbsp;: **anomalies magnétiques** symétriques · âge des roches · **points chauds** · mesure directe par **GPS**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/svt/la-tectonique-des-plaques-caracterisation-de-la-mobilite-hor.webp",
+    "prompt": "a glossy violet globe with golden plates drifting apart along a mid-ocean ridge, a small satellite sending golden signal rings to a station, sparkles"
+  },
+  "marcel": "Des centimètres par an,\nmesurés depuis l’espace !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "L’histoire d’une preuve",
+          "etapes": [
+            { "date": "1912", "texte": "**Wegener** propose la **dérive des continents**, sur des arguments de terrain." },
+            { "date": "Années 1960", "texte": "L’**expansion des fonds océaniques** est démontrée, avec les **anomalies magnétiques**." },
+            { "date": "Aujourd’hui", "texte": "Les **GPS** mesurent le mouvement des plaques, de l’ordre de **quelques cm/an**." }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les arguments",
+          "entetes": ["Preuve", "Ce qu’on observe"],
+          "lignes": [
+            ["**Tracé des côtes**", "les bords des continents s’emboîtent"],
+            ["**Fossiles, structures**", "mêmes fossiles et chaînes de part et d’autre"],
+            ["**Glaciation**", "traces glaciaires sur des continents séparés"],
+            ["**Anomalies magnétiques**", "bandes **symétriques** de part et d’autre de la dorsale"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce que les mesures montrent",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Expansion", "texte": "Du magma remonte à la **dorsale** et crée du plancher océanique neuf." },
+            { "titre": "Forages", "texte": "Plus on s’éloigne de la dorsale, plus les roches sont **anciennes**." },
+            { "titre": "Points chauds", "texte": "Des chaînes de volcans alignées révèlent le **déplacement** d’une plaque." },
+            { "titre": "GPS", "texte": "Des stations fixes mesurent leur déplacement, **directement**." },
+            { "titre": "Plaque lithosphérique", "texte": "Elle est rigide et se déplace d’un bloc, sans se déformer." },
+            { "titre": "Frontières", "texte": "**Sismicité** et **volcanisme** se concentrent aux limites des plaques." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Exploiter une mesure de mouvement",
+          "etapes": [
+            { "titre": "Lire", "texte": "la vitesse ou le déplacement et son unité" },
+            { "titre": "Convertir", "texte": "cm/an en km par million d’années si besoin" },
+            { "titre": "Interpréter", "texte": "le sens du déplacement et le type de frontière" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Un déplacement de 2 cm par an fait 2 cm × 10⁶ = 20 km en 1 million d’années.", "quoi": "calculer" },
+            { "texte": "Les roches sont plus âgées loin de la dorsale&nbsp;: le fond s’élargit.", "quoi": "interpréter" },
+            { "texte": "Les plaques sont donc en mouvement horizontal.", "quoi": "conclure" }
+          ],
+          "pied": "On ==croise== plusieurs preuves : magnétisme, âge des roches, GPS."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que les **continents** se déplacent seuls, sans les plaques.",
+            "Croire que Wegener a donné le **moteur**.",
+            "Confondre **cm/an** et **cm/s**.",
+            "Oublier que le GPS donne une mesure **actuelle**, directe."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Qui propose la **dérive des continents**&nbsp;?",
+            "Quelle mesure donne le mouvement **direct** des plaques&nbsp;?",
+            "Les roches sont plus **jeunes** près de quoi&nbsp;?"
+          ],
+          "reponses": "1) Wegener, 1912 · 2) le GPS · 3) de la dorsale"
+        }
+      ]
+    }
+  ]
+}

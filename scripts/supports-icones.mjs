@@ -82,15 +82,24 @@ const ORIGINAUX = {
   // `ia` (« Moi vs IA ») : le bouclier mi-crayon, mi-circuit.
   ia: 'moi vs ia 2',
   erreurs: 'à revoir 2',
-  // LA PORTE « PROGRAMME » du dossier de matière (12/10/2026) : une carte
-  // dépliée et son chemin pointillé jusqu'au drapeau — le parcours de l'année.
-  // Elle remplace, sur cette porte, le livre ouvert du support Cours, qui
-  // faisait doublon avec la tuile Cours de chaque fiche (Lucas). Elle passe
-  // par la trame des supports parce qu'elle est posée à côté du bloc-notes
-  // « Exercice ». La boussole essayée le même jour (`programme - boussole
-  // (ecartee).png`) aurait fait un second cadran rond à côté de l'horloge des
-  // Annales, dans le même rail.
+  // LA PORTE « PROGRAMME » du dossier de matière : un panneau indicateur à
+  // trois flèches d'or — le parcours de l'année, où aller (13/10/2026, Lucas :
+  // « il faut trouver une meilleure illustration pour Programme » ; la carte
+  // dépliée du 12/10 est `programme - carte (ecartee).png`, la boussole du
+  // même jour `programme - boussole (ecartee).png` — un second cadran rond à
+  // côté de l'horloge des Annales). Elle remplace, sur cette porte, le livre
+  // ouvert du support Cours, qui faisait doublon avec la tuile Cours de chaque
+  // fiche. Elle passe par la trame des supports parce qu'elle est posée à côté
+  // du cahier. Les autres candidats du 13/10 (livre fermé à l'étoile,
+  // calendrier, porte-bloc à coches — ce dernier aurait doublé le bloc-notes
+  // « Exercice ») sont dans `_candidats-2026-10-13/`, hors trame.
   programme: 'programme',
+  // LA PORTE « CAHIER D'EXERCICES » (13/10/2026, Lucas : « à la place
+  // "cahier d'exercices" et une illustration de cahier d'exercices ») : un
+  // cahier à spirale ouvert, un crayon posé dessus. Le bloc-notes `exercice`
+  // reste à la tuile Exercice de chaque fiche : la porte montre le CAHIER, la
+  // tuile montre UN exercice.
+  cahier: 'cahier',
   // LES ONGLETS DE « MA BIBLIOTHÈQUE » (24/09/2026). Ce ne sont pas des supports
   // de chapitre, mais ils s'affichent à côté de la Fiche (Dossiers · Capsules ·
   // Fiches) : ils passent par la MÊME trame, sinon l'un des trois onglets

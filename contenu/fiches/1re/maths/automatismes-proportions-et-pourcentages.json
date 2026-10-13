@@ -1,0 +1,117 @@
+{
+  "titre": "Les proportions",
+  "titreSurligne": "proportions",
+  "accroche": "Une partie, un tout, une proportion.",
+  "epreuve": "bac-1re",
+  "bonus": "proportion = **partie ÷ tout** · 10 % = ÷ 10 · 25 % = ÷ 4 · 50 % = ÷ 2 · 1 % = ÷ 100 · sans calculatrice",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/automatismes-proportions-et-pourcentages.webp",
+    "prompt": "a glossy violet pie chart with one golden slice lifted out, a small golden percent sign floating above, a tiny cartoon calculator crossed out, sparkles"
+  },
+  "marcel": "Partie sur tout,\ntoujours !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La proportion",
+          "petite": true,
+          "lignes": ["p = {partie/tout}", "partie = p × tout"],
+          "regle": "Une proportion s’écrit en **fraction**, en **décimal** ou en **pourcentage**&nbsp;: {3/4} = 0,75 = 75 %. Pour passer au pourcentage, on **multiplie** par 100.",
+          "note": "150 élèves sur 200&nbsp;: 150/200 = 0,75 = 75 %&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Calculer de tête",
+          "entetes": ["Prendre", "C’est", "Exemple"],
+          "lignes": [
+            ["10 %", "diviser par **10**", "10 % de 540 = 54"],
+            ["1 %", "diviser par **100**", "1 % de 540 = 5,4"],
+            ["25 %", "diviser par **4**", "25 % de 80 = 20"],
+            ["50 %", "diviser par **2**", "50 % de 86 = 43"],
+            ["5 % · 12 %", "combiner", "5 % = moitié de 10 %&nbsp;; 12 % = 10 % + 2 × 1 %"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "la partie et le tout : « 150 des 200 élèves »" },
+            { "titre": "Diviser", "texte": "partie ÷ tout, puis × 100 pour un pourcentage" },
+            { "titre": "Contrôler", "texte": "une proportion est entre 0 et 1, un pourcentage entre 0 et 100" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Dans un lycée de 540 élèves, 15 % sont internes. __Combien__&nbsp;?",
+          "calcul": "10 % = 54, 5 % = 27",
+          "aparte": "de tête",
+          "resultat": "54 + 27 = [[81 élèves]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Proportion d’une proportion", "texte": "Les proportions se **multiplient**&nbsp;: 30 % des 50 % de filles → 0,3 × 0,5 = 0,15 = 15 % de la classe." },
+            { "titre": "Comparer", "texte": "On compare des **proportions**, pas des effectifs&nbsp;: 12/40 = 30 % contre 15/60 = 25 %." },
+            { "titre": "Les trois écritures", "texte": "1/5 = 0,2 = 20 %&nbsp;; 1/8 = 0,125 = 12,5 %&nbsp;; 2/3 ≈ 66,7 %." },
+            { "titre": "Le tout", "texte": "« 3 élèves sur 4 »&nbsp;: le tout est 4, pas 3 + 4." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Proportion d’internes&nbsp;: p = 15/100 = 0,15", "quoi": "la proportion" },
+            { "texte": "Nombre d’internes&nbsp;: 0,15 × 540 = 81", "quoi": "partie = p × tout" },
+            { "texte": "81 élèves sont internes.", "quoi": "la phrase" }
+          ],
+          "pied": "Sans calculatrice&nbsp;: ==décomposer== (10 % + 5 %) plutôt que poser la multiplication."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Diviser le tout par la partie.",
+            "Additionner des **pourcentages** de touts différents.",
+            "Confondre 0,15 et **15**.",
+            "Oublier de **multiplier par 100** pour le pourcentage."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**25 %** de 360&nbsp;?",
+            "18 sur 24, en **pourcentage**&nbsp;?",
+            "40 % des 25 % d’un total&nbsp;: quelle **proportion**&nbsp;?"
+          ],
+          "reponses": "1) 90 · 2) 75 % · 3) 10 %"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "titre": "Stats et probas",
+  "titreSurligne": "probas",
+  "accroche": "Résumer une série, lire un tableau.",
+  "epreuve": "bac-1re",
+  "bonus": "moyenne = Σ nᵢxᵢ ÷ N · étendue = max − min · écart interquartile = **Q3 − Q1** · P(A) = favorables ÷ possibles",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/automatismes-statistiques-et-probabilites.webp",
+    "prompt": "a glossy violet bar chart with a golden pie chart beside it and a small violet die, a tiny golden median line across the bars, sparkles"
+  },
+  "marcel": "Quel total ?\nRegarde bien !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les indicateurs",
+          "petite": true,
+          "lignes": ["x̄ = {n₁x₁ + n₂x₂ + …/N}", "étendue = max − min", "écart interquartile = Q3 − Q1"],
+          "regle": "La **médiane** coupe la série en deux moitiés. **Q1** et **Q3** encadrent la moitié centrale des valeurs.",
+          "note": "range d’abord la série&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Un tableau croisé",
+          "entetes": ["", "Filles", "Garçons", "Total"],
+          "lignes": [
+            ["Latiniste", "12", "8", "**20**"],
+            ["Non latiniste", "28", "32", "**60**"],
+            ["Total", "**40**", "**40**", "**80**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Le total", "texte": "« parmi » dit quel total mettre au dénominateur" },
+            { "titre": "Partie ÷ tout", "texte": "effectif de la partie divisé par ce total" },
+            { "titre": "Conclure", "texte": "en fraction simplifiée ou en pourcentage" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Notes&nbsp;: 8 ; 12 ; 12 ; 14 ; 18. __Moyenne et médiane__&nbsp;?",
+          "calcul": "x̄ = {8 + 12 + 12 + 14 + 18/5} = {64/5}",
+          "aparte": "5 notes, la 3e au milieu",
+          "resultat": "[[12,8]] et médiane [[12]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Tableau croisé", "texte": "Parmi les filles, latinistes&nbsp;: {12/40} = **{3/10}**. Parmi les latinistes, des filles&nbsp;: {12/20} = **60 %**." },
+            { "titre": "Moyenne pondérée", "texte": "12 (coef. 2) et 15 (coef. 1)&nbsp;: {24 + 15/3} = **13**." },
+            { "titre": "Diagramme circulaire", "texte": "Un secteur de 25 % a un angle de 0,25 × 360 = **90°**." },
+            { "titre": "Comparer", "texte": "Médiane et écart interquartile **résistent** aux valeurs extrêmes, pas la moyenne." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "x̄ = 64 ÷ 5 = 12,8", "quoi": "la moyenne" },
+            { "texte": "N = 5 est impair&nbsp;: médiane = 3e valeur = 12", "quoi": "la médiane" },
+            { "texte": "étendue = 18 − 8 = 10", "quoi": "la dispersion" }
+          ],
+          "pied": "Contrôle&nbsp;: 12,8 est bien compris entre 8 et ==18==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Chercher la médiane **sans ranger** la série.",
+            "Moyenne de moyennes **sans pondérer**.",
+            "Prendre le **mauvais total** (« parmi » ignoré).",
+            "Confondre **étendue** et écart interquartile."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Tableau ci-dessus&nbsp;: **P(garçon)**&nbsp;?",
+            "Quel **angle** pour un secteur de 25 %&nbsp;?",
+            "Q1 = 10 et Q3 = 16&nbsp;: **écart interquartile**&nbsp;?"
+          ],
+          "reponses": "1) 40/80 = 1/2 · 2) 90° · 3) 6"
+        }
+      ]
+    }
+  ]
+}

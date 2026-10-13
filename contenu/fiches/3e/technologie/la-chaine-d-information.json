@@ -1,0 +1,113 @@
+{
+  "titre": "Chaîne d’information",
+  "titreSurligne": "information",
+  "accroche": "Acquérir, traiter, communiquer.",
+  "epreuve": "brevet",
+  "bonus": "**Acquérir** (capteur) → **Traiter** (microcontrôleur + programme) → **Communiquer** (écran, LED, buzzer, Wi-Fi, Bluetooth)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/technologie/la-chaine-d-information.webp",
+    "prompt": "a glossy violet sensor eye on the left, a golden microcontroller chip in the middle with a glowing circuit, a small screen and a bell on the right, arrows linking them, sparkles"
+  },
+  "marcel": "Le capteur voit,\nla puce décide !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les trois fonctions",
+          "taille": "mini",
+          "lignes": ["Acquérir → Traiter", "→ Communiquer"],
+          "regle": "La chaîne d’information **recueille**, **décide**, puis **transmet** des informations. Elle donne ses ordres à la ==partie commande== du système.",
+          "note": "elle décide, elle ne fait rien bouger&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Fonctions et composants",
+          "entetes": ["Fonction", "Composants"],
+          "lignes": [
+            ["**Acquérir**", "capteur de température, de lumière, de distance"],
+            ["", "fin de course, détecteur de présence"],
+            ["**Traiter**", "microcontrôleur + **programme**"],
+            ["**Communiquer**", "écran, LED, buzzer"],
+            ["", "Wi-Fi, Bluetooth"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Analyser une chaîne en trois temps",
+          "etapes": [
+            { "titre": "Acquérir", "texte": "quel capteur mesure ou détecte quoi&nbsp;?" },
+            { "titre": "Traiter", "texte": "que fait le programme avec cette information&nbsp;?" },
+            { "titre": "Communiquer", "texte": "que produit la sortie : image, son, lumière ou message&nbsp;?" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un système de __recul__ : il bipe quand un obstacle est proche. Les trois fonctions&nbsp;?",
+          "calcul": "distance → puce → son",
+          "aparte": "capteur · buzzer",
+          "resultat": "[[capteur]] → puce → buzzer"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Capteur ou actionneur&nbsp;?",
+          "oui": { "titre": "Capteur", "texte": "Il **mesure ou détecte** une grandeur (température, lumière, position…)." },
+          "non": { "titre": "Actionneur", "texte": "Il **agit** sur le système (moteur, vérin)&nbsp;: c’est la chaîne d’énergie." },
+          "essai": { "texte": "Un bouton-poussoir est un capteur&nbsp;; un moteur est un <i>actionneur</i>. Ne pas les confondre&nbsp;!" }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Acquérir&nbsp;: le capteur de distance", "quoi": "la fonction" },
+            { "texte": "Traiter&nbsp;: le microcontrôleur et son programme", "quoi": "la fonction" },
+            { "texte": "Communiquer&nbsp;: le buzzer émet un son", "quoi": "la fonction" }
+          ],
+          "pied": "Un ==objet connecté== communique par Wi-Fi ou Bluetooth avec un autre appareil."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **capteur** et **actionneur**.",
+            "Oublier le **programme** dans la fonction traiter.",
+            "Placer l’**écran** dans la fonction acquérir.",
+            "Croire que le microcontrôleur **fait bouger** le moteur."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Un **capteur de lumière** remplit quelle fonction&nbsp;?",
+            "Quel composant **traite** l’information&nbsp;?",
+            "Citer deux modes de **communication** sans fil&nbsp;?"
+          ],
+          "reponses": "1) acquérir · 2) le microcontrôleur · 3) Wi-Fi et Bluetooth"
+        }
+      ]
+    }
+  ]
+}

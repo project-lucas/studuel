@@ -1,0 +1,116 @@
+{
+  "titre": "Dénombrement",
+  "titreSurligne": "Dénombrement",
+  "accroche": "L’ordre compte-t-il ? Peut-on répéter ?",
+  "epreuve": "bac",
+  "bonus": "n<sup>k</sup> · n! · C(n,k) = n!/(k!(n−k)!) · C(n,k) = C(n,n−k) · C(n,0) = 1 · 0! = 1",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths/factorielle-k-uplet-permutation-et-combinaison.webp",
+    "prompt": "a glossy violet set of colorful cards fanned out beside a golden tray, a few cards lifted out, sparkles"
+  },
+  "marcel": "L’ordre compte ?\nRépétition permise ?",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les formules",
+          "taille": "mini",
+          "lignes": ["<span>k-uplets : n<sup>k</sup></span>", "permutations : n!", "C(n,k) = {n!/k!(n−k)!}"],
+          "regle": "Un **k-uplet** : ordre et répétition. Une **permutation** de n éléments : n!. Une **combinaison** de k parmi n : ordre sans importance, sans répétition.",
+          "note": "0! = 1 et C(n,0) = C(n,n) = 1"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le tableau de décision",
+          "entetes": ["Ordre", "Répétition", "Nombre"],
+          "lignes": [
+            ["oui", "oui", "n<sup>k</sup>"],
+            ["oui", "non", "n(n−1)…(n−k+1)"],
+            ["oui", "tous les n", "n!"],
+            ["non", "non", "C(n,k)"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Modéliser", "texte": "décrire un tirage ou une liste : ordre ? répétition ?" },
+            { "titre": "Choisir", "texte": "k-uplet, arrangement, permutation ou combinaison" },
+            { "titre": "Calculer", "texte": "appliquer la formule ou le principe multiplicatif" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un comité de 3 personnes parmi 10. __Combien__&nbsp;?",
+          "calcul": "C(10,3) = {10 × 9 × 8/3 × 2 × 1}",
+          "aparte": "l’ordre est sans importance",
+          "resultat": "= 720 ÷ 6 = [[120]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Exemples à connaître",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Code à 4 chiffres", "texte": "10⁴ = **10 000** : ordre, répétition permise." },
+            { "titre": "Podium de 3", "texte": "8 coureurs&nbsp;: 8 × 7 × 6 = **336**, l’ordre compte." },
+            { "titre": "Anagrammes", "texte": "5 lettres toutes différentes&nbsp;: 5! = **120**." },
+            { "titre": "Symétrie", "texte": "C(10,3) = C(10,7)&nbsp;: choisir 3 ou écarter 7." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Choisir 3 personnes parmi 10, sans ordre ni répétition", "quoi": "la modélisation" },
+            { "texte": "Chaque choix est une combinaison de 3 éléments parmi 10", "quoi": "le modèle" },
+            { "texte": "Il y en a C(10,3) = 120", "quoi": "le résultat" }
+          ],
+          "pied": "Contrôle&nbsp;: C(10,3) = C(10,7) = ==120==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Compter dans l’**ordre** alors que l’ordre est sans importance.",
+            "Utiliser n<sup>k</sup> pour un tirage **sans remise**.",
+            "Oublier de **diviser par k!**.",
+            "Écrire 0! = **0**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**5!** vaut&nbsp;?",
+            "Un code à 3 chiffres (0–9)&nbsp;: **combien**&nbsp;?",
+            "**C(5,2)** vaut&nbsp;?"
+          ],
+          "reponses": "1) 120 · 2) 10³ = 1 000 · 3) 10"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "titre": "Réussir l’épreuve",
+  "titreSurligne": "Réussir",
+  "accroche": "Automatismes, problèmes, rédaction : la stratégie.",
+  "epreuve": "brevet",
+  "bonus": "**2 h** · partie 1&nbsp;: automatismes, **6 pts**, sans calculatrice · partie 2&nbsp;: problèmes, **14 pts**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/methode-reussir-l-epreuve-de-maths-du-brevet.webp",
+    "prompt": "a cartoon student at a desk with a golden stopwatch, a neat checklist and a glossy violet trophy, a calculator pushed aside, sparkles"
+  },
+  "marcel": "Lis tout le sujet\navant de commencer !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le déroulé de l’épreuve",
+          "entetes": ["Partie", "Points", "Ce qu’on attend"],
+          "lignes": [
+            ["1 · Automatismes", "**6 / 20**", "des questions courtes, calculatrice **interdite**"],
+            ["2 · Problèmes", "**14 / 20**", "du raisonnement rédigé, calculatrice autorisée, dont 2 points de **rédaction**"]
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Les automatismes à maîtriser",
+          "deux": true,
+          "items": [
+            { "titre": "Fractions", "texte": "additionner, multiplier, simplifier" },
+            { "titre": "Calcul mental", "texte": "tables, puissances de 10, carrés" },
+            { "titre": "Pourcentages", "texte": "prendre 20 %, +10 %" },
+            { "titre": "Proportionnalité", "texte": "le produit en croix" },
+            { "titre": "Équations", "texte": "les simples, en deux lignes" },
+            { "titre": "Graphiques", "texte": "lire une courbe, un diagramme" },
+            { "titre": "Géométrie", "texte": "Pythagore, Thalès, angles" },
+            { "titre": "Probabilités", "texte": "favorables ÷ possibles" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Un problème en quatre temps",
+          "etapes": [
+            { "titre": "Lire", "texte": "tout le sujet, souligner les données et la question" },
+            { "titre": "Chercher", "texte": "quel chapitre ? quelle formule ? faire une figure" },
+            { "titre": "Rédiger", "texte": "conditions, propriété, calcul, phrase réponse" },
+            { "titre": "Vérifier", "texte": "l’ordre de grandeur, l’unité" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Le chrono",
+          "donnees": "2 h pour 20 points&nbsp;: environ __6 minutes par point__.",
+          "calcul": "Partie 1&nbsp;: 30 min",
+          "aparte": "sans calculatrice",
+          "resultat": "Partie 2&nbsp;: 1 h 20, puis [[10 min de relecture]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Gagner les points de rédaction",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Justifier", "texte": "Une propriété, un calcul ou une lecture à chaque réponse&nbsp;: « d’après le théorème de… »." },
+            { "titre": "Phrase réponse", "texte": "Avec l’**unité**&nbsp;: « La hauteur de l’arbre est 10,5 m. »" },
+            { "titre": "Un exercice sûr d’abord", "texte": "Les points faciles d’abord, l’exercice long ensuite&nbsp;: on ne reste pas bloqué." },
+            { "titre": "Ne rien laisser blanc", "texte": "Une piste, un début de calcul, une figure&nbsp;: ça rapporte souvent un point." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Les exercices qui reviennent",
+          "lignes": [
+            { "texte": "Thalès ou Pythagore dans une situation concrète (ombre, échelle, toit)", "quoi": "géométrie" },
+            { "texte": "Deux tarifs à comparer (graphique, tableau, formule)", "quoi": "fonctions" },
+            { "texte": "Un script Scratch à compléter, des statistiques, des probabilités", "quoi": "données" }
+          ],
+          "pied": "La veille&nbsp;: calculatrice chargée, règle, équerre, compas, et ==dormir==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Démarrer sans avoir **lu** tout le sujet.",
+            "Rester **bloqué** 20 minutes sur une question.",
+            "Un résultat **sans unité** ni phrase.",
+            "Oublier de **vérifier** l’ordre de grandeur (un arbre de 300 m…)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de points pour les **automatismes**&nbsp;?",
+            "Triangle rectangle, deux côtés connus, le troisième demandé&nbsp;: quel **théorème**&nbsp;?",
+            "Que mettre à la fin de **chaque** réponse&nbsp;?"
+          ],
+          "reponses": "1) 6 sur 20 · 2) Pythagore · 3) une phrase, avec l’unité"
+        }
+      ]
+    }
+  ]
+}

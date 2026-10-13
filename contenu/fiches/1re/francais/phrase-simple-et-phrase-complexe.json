@@ -1,0 +1,111 @@
+{
+  "titre": "Phrase complexe",
+  "titreSurligne": "complexe",
+  "accroche": "Compte les verbes conjugués.",
+  "epreuve": "bac-1re",
+  "bonus": "Une **proposition** = **un verbe conjugué** · phrase complexe = **deux ou plus**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/francais/phrase-simple-et-phrase-complexe.webp",
+    "prompt": "a glossy violet chain of three linked golden rings, each ring holding a small glowing orb, sparkles"
+  },
+  "marcel": "Un verbe conjugué,\nune proposition !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Simple ou complexe",
+          "entetes": ["Phrase", "Verbes conjugués", "Exemple"],
+          "lignes": [
+            ["**Simple**", "un seul", "Elle ouvre la fenêtre."],
+            ["**Complexe**", "deux ou plus", "Elle ouvre la fenêtre, il pleut."],
+            ["**Averbale**", "aucun", "Quel silence !"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les quatre pièges du compte",
+          "entetes": ["Piège", "Ce qu’il faut compter"],
+          "lignes": [
+            ["**Temps composés**", "« a mangé » = **un seul** verbe conjugué"],
+            ["**Infinitif**", "« je veux partir » : pas conjugué"],
+            ["**Participe**", "« le chat dormant » : pas conjugué"],
+            ["**Inversé / sous-entendu**", "le verbe peut être caché ou déplacé"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les trois relations entre propositions",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Juxtaposition", "texte": "Propositions **côte à côte**, séparées par une virgule ou deux-points." },
+            { "titre": "Coordination", "texte": "Propositions reliées par **mais, ou, et, donc, or, ni, car**." },
+            { "titre": "Subordination", "texte": "Une proposition **dépend** d’une autre : relative, complétive, circonstancielle." },
+            { "titre": "La proposition", "texte": "Un groupe construit autour d’**un verbe conjugué**, avec ses compléments." },
+            { "titre": "Phrase averbale", "texte": "Elle n’a pas de verbe conjugué : « Silence total. » reste une phrase." },
+            { "titre": "Découper", "texte": "On souligne chaque verbe conjugué, puis on **sépare** les propositions." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Découper une phrase en trois temps",
+          "etapes": [
+            { "titre": "Compter", "texte": "souligne les verbes conjugués : temps composés = un seul" },
+            { "titre": "Découper", "texte": "une proposition par verbe conjugué, avec tout ce qui s’y rattache" },
+            { "titre": "Relier", "texte": "juxtaposition, coordination ou subordination, en citant le mot de liaison" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "À l’oral, tu diras",
+          "lignes": [
+            { "texte": "La phrase compte trois verbes conjugués : c’est une phrase complexe,", "quoi": "compter" },
+            { "texte": "composée de trois propositions : une principale et deux subordonnées,", "quoi": "découper" },
+            { "texte": "ce qui donne un rythme ample, presque oratoire.", "quoi": "interpréter" }
+          ],
+          "pied": "Le découpage ==complet== est exigé : pas de proposition oubliée."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Compter « a mangé » pour **deux** verbes.",
+            "Compter un **infinitif** ou un participe comme proposition.",
+            "Oublier une proposition **sous-entendue** ou averbale.",
+            "Croire que « phrase longue » veut dire « complexe »."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "« Il a fini son travail » : combien de **propositions** ?",
+            "« Elle rit, il pleure » : quelle **relation** ?",
+            "Combien de verbes conjugués dans une phrase **complexe** ?"
+          ],
+          "reponses": "1) une seule · 2) la juxtaposition · 3) deux ou plus"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "titre": "Le théorème de Thalès",
+  "titreSurligne": "Thalès",
+  "accroche": "Des droites parallèles, des quotients égaux.",
+  "epreuve": "brevet",
+  "bonus": "Agrandissement de rapport **k** : longueurs × **k** · aires × **k²** · volumes × **k³**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/utiliser-le-theoreme-de-thales.webp",
+    "prompt": "a small cartoon ancient Greek scholar (Thales, white tunic, short beard) beside a golden Egyptian pyramid at sunset, measuring the pyramid's shadow with a wooden stick; the two shadows form nested similar triangles drawn as clean violet lines on the sand"
+  },
+  "marcel": "Pas de parallèles,\npas de Thalès !",
+  "rangs": [
+    {
+      "colonnes": "348px 1fr",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "Les deux figures",
+          "figures": [
+            {
+              "svg": "<svg viewBox=\"0 0 220 170\" aria-hidden=\"true\"><polygon points=\"108,16 59,98 157,98\" fill=\"#eee7fc\"></polygon><polygon points=\"108,16 24,156 192,156\" fill=\"none\" stroke=\"#2b2350\" stroke-width=\"3.5\" stroke-linejoin=\"round\"></polygon><g stroke=\"#7a3fe0\" stroke-width=\"4\" stroke-linecap=\"round\"><line x1=\"59\" y1=\"98\" x2=\"157\" y2=\"98\"></line><line x1=\"108\" y1=\"16\" x2=\"59\" y2=\"98\"></line><line x1=\"108\" y1=\"16\" x2=\"157\" y2=\"98\"></line></g><g fill=\"none\" stroke=\"#f1566c\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M101,91 l7,7 l-7,7 M110,91 l7,7 l-7,7\"></path><path d=\"M101,149 l7,7 l-7,7 M110,149 l7,7 l-7,7\"></path></g><g fill=\"#2b2350\"><circle cx=\"108\" cy=\"16\" r=\"4.5\"></circle><circle cx=\"24\" cy=\"156\" r=\"4.5\"></circle><circle cx=\"192\" cy=\"156\" r=\"4.5\"></circle></g><g fill=\"#7a3fe0\"><circle cx=\"59\" cy=\"98\" r=\"4.5\"></circle><circle cx=\"157\" cy=\"98\" r=\"4.5\"></circle></g><g font-family=\"'Baloo 2'\" font-weight=\"800\" font-size=\"22\" fill=\"#2b2350\"><text x=\"119\" y=\"22\">A</text><text x=\"3\" y=\"168\">B</text><text x=\"199\" y=\"168\">C</text><text x=\"33\" y=\"100\" fill=\"#7a3fe0\">M</text><text x=\"165\" y=\"100\" fill=\"#7a3fe0\">N</text></g></svg>",
+              "legende": "Les triangles emboîtés",
+              "sous": "M et N du même côté de A"
+            },
+            {
+              "svg": "<svg viewBox=\"0 0 220 170\" aria-hidden=\"true\"><polygon points=\"110,70 150,16 70,16\" fill=\"#eee7fc\"></polygon><g stroke=\"#2b2350\" stroke-width=\"3.5\" stroke-linecap=\"round\"><line x1=\"110\" y1=\"70\" x2=\"46\" y2=\"156\"></line><line x1=\"110\" y1=\"70\" x2=\"174\" y2=\"156\"></line><line x1=\"46\" y1=\"156\" x2=\"174\" y2=\"156\"></line></g><g stroke=\"#7a3fe0\" stroke-width=\"4\" stroke-linecap=\"round\"><line x1=\"110\" y1=\"70\" x2=\"150\" y2=\"16\"></line><line x1=\"110\" y1=\"70\" x2=\"70\" y2=\"16\"></line><line x1=\"70\" y1=\"16\" x2=\"150\" y2=\"16\"></line></g><g fill=\"none\" stroke=\"#f1566c\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M103,9 l7,7 l-7,7 M112,9 l7,7 l-7,7\"></path><path d=\"M103,149 l7,7 l-7,7 M112,149 l7,7 l-7,7\"></path></g><g fill=\"#2b2350\"><circle cx=\"110\" cy=\"70\" r=\"4.5\"></circle><circle cx=\"46\" cy=\"156\" r=\"4.5\"></circle><circle cx=\"174\" cy=\"156\" r=\"4.5\"></circle></g><g fill=\"#7a3fe0\"><circle cx=\"150\" cy=\"16\" r=\"4.5\"></circle><circle cx=\"70\" cy=\"16\" r=\"4.5\"></circle></g><g font-family=\"'Baloo 2'\" font-weight=\"800\" font-size=\"22\" fill=\"#2b2350\"><text x=\"124\" y=\"78\">A</text><text x=\"24\" y=\"168\">B</text><text x=\"181\" y=\"168\">C</text><text x=\"157\" y=\"26\" fill=\"#7a3fe0\">M</text><text x=\"44\" y=\"26\" fill=\"#7a3fe0\">N</text></g></svg>",
+              "legende": "Le papillon",
+              "sous": "M et N de l’autre côté de A"
+            }
+          ],
+          "legende": { "jeton": "(MN) // (BC)", "texte": "Même théorème dans les deux cas." }
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La formule",
+          "lignes": ["{AM/AB} = {AN/AC} = {MN/BC}"],
+          "regle": "En haut, les côtés du triangle __AMN__.\nEn bas, ceux de **ABC**, ==dans le même ordre==.",
+          "note": "jamais de mélange entre les deux&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Vérifier", "texte": "les points alignés et les droites parallèles" },
+            { "titre": "Écrire", "texte": "les trois quotients, dans le bon ordre" },
+            { "titre": "Résoudre", "texte": "par le produit en croix, avec trois longueurs connues" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "AM = 3 cm · AB = 5 cm · BC = 7 cm\nOn cherche __MN__.",
+          "calcul": "{3/5} = {__MN__/7}",
+          "aparte": "produit\nen croix&nbsp;!",
+          "resultat": "MN = 3 × 7 ÷ 5 = [[4,2 cm]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Parallèles ou pas&nbsp;?",
+          "oui": { "titre": "La réciproque", "texte": "Quotients **égaux**, points dans le même ordre&nbsp;: droites **parallèles**." },
+          "non": { "titre": "La contraposée", "texte": "Quotients **différents**&nbsp;: droites **non parallèles**." },
+          "essai": { "texte": "AM = 4, AB = 10, AN = 6, AC = 15.\n<i>4 ÷ 10 = 0,4</i> et <i>6 ÷ 15 = 0,4</i>&nbsp;: quotients égaux, donc **(MN) // (BC)**. Avec 0,4 et 0,42, elles ne le seraient pas." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 268px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Les droites (MB) et (NC) sont sécantes en A et (MN) // (BC).", "quoi": "les conditions" },
+            { "texte": "D’après le théorème de Thalès&nbsp;:", "quoi": "le nom du théorème" },
+            { "texte": "AM / AB = AN / AC = MN / BC.", "quoi": "l’égalité" }
+          ],
+          "pied": "Ces trois lignes, ==avant tout calcul==&nbsp;: ce sont les points de rédaction."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier de citer le **parallélisme**&nbsp;: sans lui, pas de théorème.",
+            "Comparer des quotients **arrondis**&nbsp;: on compare les valeurs exactes.",
+            "Chercher un **angle**&nbsp;: Thalès ne donne que des longueurs.",
+            "**Mélanger** les côtés de AMN et de ABC dans un même quotient."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "(MN) // (BC), AM = 2, AB = 6 et AC = 9. Que vaut **AN**&nbsp;?",
+            "AM / AB = 0,5 et AN / AC = 0,52&nbsp;: les droites sont-elles **parallèles**&nbsp;?",
+            "Longueurs × 3&nbsp;: par combien l’**aire** est-elle multipliée&nbsp;?"
+          ],
+          "reponses": "1) AN = 3 · 2) non, d’après la contraposée · 3) par 9 (3²)"
+        }
+      ]
+    }
+  ]
+}

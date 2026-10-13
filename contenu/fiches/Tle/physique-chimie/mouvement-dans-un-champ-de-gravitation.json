@@ -1,0 +1,112 @@
+{
+  "titre": "Champ de gravitation",
+  "titreSurligne": "gravitation",
+  "accroche": "Tomber sans jamais toucher le sol.",
+  "epreuve": "bac",
+  "bonus": "F = G m<sub>A</sub> m<sub>B</sub> ÷ r² · v = √(G M ÷ r) · T = 2πr ÷ v · T² ÷ a³ = 4π² ÷ (G M) · G = 6,67×10⁻¹¹ SI",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/mouvement-dans-un-champ-de-gravitation.webp",
+    "prompt": "a glossy violet planet with a small golden satellite orbiting it along a glowing golden elliptical path, a tiny moon and stars in the background, sparkles"
+  },
+  "marcel": "Plus haut, plus lent,\nplus de temps pour un tour !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Orbite circulaire",
+          "petite": true,
+          "lignes": ["v = √{G M/r}", "{T²/a³} = {4π²/G M}"],
+          "regle": "**v** vitesse du satellite (**m/s**), **G** = 6,67×10⁻¹¹ m³·kg⁻¹·s⁻², **M** masse de l’astre attracteur (**kg**), **r** rayon de l’orbite depuis le ==centre== (**m**). **T** période (**s**).",
+          "note": "r = R + altitude&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les lois de Kepler",
+          "entetes": ["Loi", "Énoncé", "Trajectoire"],
+          "lignes": [
+            ["1re", "ellipse dont l’astre est un foyer", "forme"],
+            ["2e", "aires égales en durées égales", "vitesse"],
+            ["3e", "T² ÷ a³ = constante", "période"],
+            ["Cercle", "mouvement uniforme", "v constante"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Appliquer", "texte": "ΣF⃗ = m a⃗ avec la seule force de gravitation, centripète" },
+            { "titre": "Égaler", "texte": "G M m ÷ r² = m v² ÷ r, donc v = √(G M ÷ r)" },
+            { "titre": "Déduire", "texte": "T = 2πr ÷ v, puis la 3e loi de Kepler" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un satellite orbite à __400 km__ d’altitude (R<sub>T</sub> = 6 371 km). Vitesse et période&nbsp;?",
+          "calcul": "r = 6,771×10⁶ m · v = √(G M<sub>T</sub> ÷ r)",
+          "aparte": "M<sub>T</sub> = 5,97×10²⁴ kg",
+          "resultat": "v ≈ [[7,7 km/s]] · T ≈ 92 min"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Plus haut, que se passe-t-il&nbsp;?",
+          "oui": { "titre": "Orbite plus haute", "texte": "r augmente : la vitesse ==diminue== et la période **augmente**." },
+          "non": { "titre": "v dépend de la masse m&nbsp;?", "texte": "**Faux**&nbsp;: m se simplifie. Deux satellites à la même altitude vont à la **même** vitesse." },
+          "essai": { "texte": "Géostationnaire&nbsp;: T = 24 h, plan équatorial, environ <i>36 000 km</i> d’altitude." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "ΣF⃗ = F⃗ gravitation = m a⃗, a = v² ÷ r", "quoi": "la loi" },
+            { "texte": "v = √(G M<sub>T</sub> ÷ r) = 7,7×10³ m/s", "quoi": "formule puis nombres" },
+            { "texte": "T = 2πr ÷ v ≈ 5,5×10³ s ≈ 92 min", "quoi": "avec l’unité" }
+          ],
+          "pied": "Le mouvement circulaire d’un satellite est ==uniforme== : v ne varie pas."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **rayon de l’astre** dans r.",
+            "Laisser r en **kilomètres** dans la racine.",
+            "Faire dépendre v de la **masse du satellite**.",
+            "Croire qu’il ne tombe pas : il **tombe en permanence**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "r double&nbsp;: la vitesse est multipliée par&nbsp;? (√2 ≈ 1,41)",
+            "La trajectoire d’un satellite est, en général, une&nbsp;?",
+            "Un satellite géostationnaire a pour période&nbsp;?"
+          ],
+          "reponses": "1) 1/√2 ≈ 0,71 · 2) ellipse · 3) 24 h"
+        }
+      ]
+    }
+  ]
+}

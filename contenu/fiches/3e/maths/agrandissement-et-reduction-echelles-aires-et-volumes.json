@@ -1,0 +1,117 @@
+{
+  "titre": "Agrandir, réduire",
+  "titreSurligne": "réduire",
+  "accroche": "Longueurs × k, aires × k², volumes × k³.",
+  "epreuve": "brevet",
+  "bonus": "Échelle 1/250 000&nbsp;: 1 cm sur la carte = 250 000 cm = **2,5 km** sur le terrain",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/agrandissement-et-reduction-echelles-aires-et-volumes.webp",
+    "prompt": "a small glossy violet toy car next to a giant golden identical car, a ruler, a flat square and a cube growing in size between them, sparkles"
+  },
+  "marcel": "Une puissance\npar dimension !",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle des trois puissances",
+          "taille": "mini",
+          "lignes": ["longueur’ = k × longueur", "aire’ = k² × aire", "volume’ = k³ × volume"],
+          "regle": "**k** est le coefficient d’agrandissement (k > 1) ou de réduction (k < 1)&nbsp;: une longueur de l’image divisée par la longueur ==correspondante== de l’original. Les angles sont **inchangés**.",
+          "note": "k = 2&nbsp;: le volume est multiplié par 8&nbsp;!"
+        },
+        {
+          "type": "figures",
+          "numero": 2,
+          "titre": "Un carré agrandi",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><rect x='18' y='100' width='50' height='50' fill='#eee7fc' stroke='#2b2350' stroke-width='3'></rect><rect x='100' y='50' width='100' height='100' fill='#fdecc7' stroke='#2b2350' stroke-width='3'></rect><g stroke='#2b2350' stroke-width='1.5' stroke-dasharray='4 3'><line x1='150' y1='50' x2='150' y2='150'></line><line x1='100' y1='100' x2='200' y2='100'></line></g><path d='M74,124 L94,124' stroke='#7a3fe0' stroke-width='3' stroke-linecap='round'></path><polygon points='94,118 104,124 94,130' fill='#7a3fe0'></polygon><g font-family=\"'Baloo 2'\" font-weight='800' font-size='15' fill='#2b2350' text-anchor='middle'><text x='43' y='94'>1</text><text x='150' y='44'>2</text><text x='43' y='130'>1 carré</text><text x='150' y='130'>4 carrés</text></g><text x='84' y='112' font-family='Nunito' font-weight='800' font-size='12' fill='#4b2a9a' text-anchor='middle'>k = 2</text></svg>",
+              "legende": "Côté × 2, aire × 4",
+              "sous": "quatre petits carrés dans le grand&nbsp;: 2² = 4"
+            }
+          ],
+          "legende": { "jeton": "k²", "texte": "deux dimensions pour une aire" }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Trouver k", "texte": "une longueur de l’image ÷ la longueur correspondante" },
+            { "titre": "Choisir", "texte": "la puissance : longueur → k, aire → k², volume → k³" },
+            { "titre": "Calculer", "texte": "ou remonter à k : aire × 9 ⟹ k = 3" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un cône de volume 240 cm³ est réduit avec k = 0,5. Le __nouveau volume__&nbsp;?",
+          "calcul": "V’ = 0,5³ × 240",
+          "aparte": "0,125 × 240",
+          "resultat": "V’ = [[30 cm³]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les échelles",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Lire une échelle", "texte": "1/250 000&nbsp;: 1 cm sur le plan = 250 000 cm = **2,5 km** en vrai." },
+            { "titre": "Plan → réel", "texte": "4 cm sur une carte au 1/250 000&nbsp;: 4 × 2,5 = **10 km**." },
+            { "titre": "Réel → plan", "texte": "10 m = 1 000 cm, au 1/100&nbsp;: 1 000 ÷ 100 = **10 cm**." },
+            { "titre": "Remonter à k", "texte": "Aire × 9 ⟹ k = 3&nbsp;; volume × 1/8 ⟹ k = 1/2." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "k = 3 ÷ 6 = 0,5", "quoi": "le coefficient" },
+            { "texte": "V’ = k³ × V = 0,5³ × 240", "quoi": "la règle" },
+            { "texte": "V’ = 30 cm³", "quoi": "le calcul" }
+          ],
+          "pied": "La ==pyramide coupée== est l’exercice type&nbsp;: k = petite hauteur ÷ grande hauteur."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Multiplier l’**aire** par k au lieu de k².",
+            "Inverser le rapport&nbsp;: k = image ÷ original, **toujours**.",
+            "Oublier de convertir les **cm** de la carte en km.",
+            "Croire que les **angles** changent."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "k = 3&nbsp;: un volume de **2 cm³** devient&nbsp;?",
+            "L’aire est multipliée par **25**&nbsp;: que vaut k&nbsp;?",
+            "Au 1/50 000, **3 cm** représentent&nbsp;?"
+          ],
+          "reponses": "1) 54 cm³ · 2) 5 · 3) 1,5 km"
+        }
+      ]
+    }
+  ]
+}

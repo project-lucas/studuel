@@ -1,0 +1,191 @@
+{
+  "titre": "Algorithme récursif",
+  "titreSurligne": "récursif",
+  "accroche": "Une fonction qui s’appelle elle-même.",
+  "epreuve": "bac",
+  "bonus": "cas de base **obligatoire** · appel sur un argument **plus petit** · chaque appel s’empile dans la **pile**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/nsi/algorithme-recursif.webp",
+    "prompt": "glossy violet nesting dolls getting smaller inside each other with a golden spiral arrow, sparkles"
+  },
+  "marcel": "Un cas de base,\nsinon ça boucle !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les deux composants",
+          "items": [
+            {
+              "terme": "Cas de base",
+              "definition": "un cas résolu **sans appel**&nbsp;: il arrête la récursion"
+            },
+            {
+              "terme": "Appel récursif",
+              "definition": "la fonction se rappelle sur un cas **strictement plus petit**"
+            },
+            {
+              "terme": "Pile d’appels",
+              "definition": "les appels **s’empilent** puis se résolvent en remontant"
+            },
+            {
+              "terme": "Terminaison",
+              "definition": "l’argument **décroît** à chaque appel jusqu’au cas de base"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Factorielle",
+          "entetes": [
+            "Python",
+            "Rôle"
+          ],
+          "lignes": [
+            [
+              "<i>def fact(n):</i>",
+              "n entier ≥ 0"
+            ],
+            [
+              "<i>&nbsp;&nbsp;if n == 0:</i>",
+              "**cas de base**"
+            ],
+            [
+              "<i>&nbsp;&nbsp;&nbsp;&nbsp;return 1</i>",
+              "0! = 1"
+            ],
+            [
+              "<i>&nbsp;&nbsp;return n * fact(n - 1)</i>",
+              "**appel** récursif"
+            ],
+            [
+              "<i>fact(3)</i>",
+              "3 × 2 × 1 = **6**"
+            ],
+            [
+              "<i>fact(4)</i>",
+              "4 × 6 = **24**"
+            ],
+            [
+              "<i>fact(5)</i>",
+              "5 × 24 = **120**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Écrire une fonction récursive",
+          "etapes": [
+            {
+              "titre": "Cas de base",
+              "texte": "quand répond-on directement ?"
+            },
+            {
+              "titre": "Hypothèse",
+              "texte": "supposer que la fonction marche pour n − 1"
+            },
+            {
+              "titre": "Combiner",
+              "texte": "en déduire le résultat pour n"
+            },
+            {
+              "titre": "Tester",
+              "texte": "vérifier sur n = 0, puis n = 1, puis n = 3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "<i>fact(3)</i>&nbsp;: __que renvoie la pile__&nbsp;?",
+          "calcul": "3 × fact(2) = 3 × 2 × fact(1)",
+          "aparte": "on descend",
+          "resultat": "= 3 × 2 × 1 × 1 = [[6]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Autres exemples",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Somme 1 à n",
+              "texte": "s(0) = 0 et s(n) = n + s(n − 1)&nbsp;: s(4) = **10**."
+            },
+            {
+              "titre": "Fibonacci",
+              "texte": "F(0) = 0, F(1) = 1, F(n) = F(n − 1) + F(n − 2)&nbsp;: F(6) = **8**."
+            },
+            {
+              "titre": "Double appel",
+              "texte": "Fibonacci rappelle **deux** fois&nbsp;: coût exponentiel."
+            },
+            {
+              "titre": "Limite",
+              "texte": "Python plafonne à environ **1 000** appels empilés."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Cas de base&nbsp;: n = 0, on renvoie 1.",
+              "quoi": "l’arrêt"
+            },
+            {
+              "texte": "Appel&nbsp;: n − 1 est plus petit que n.",
+              "quoi": "la terminaison"
+            },
+            {
+              "texte": "Résultat&nbsp;: n × fact(n − 1).",
+              "quoi": "la combinaison"
+            }
+          ],
+          "pied": "Pour ==terminer==, l’argument décroît vers le cas de base."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **cas de base**&nbsp;: récursion infinie.",
+            "Appeler <i>fact(n)</i> au lieu de <i>fact(n - 1)</i>.",
+            "Oublier le **return** devant l’appel.",
+            "Fibonacci récursif pour un grand n&nbsp;: **trop lent**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**fact(4)** vaut combien&nbsp;?",
+            "Que provoque un **cas de base** oublié&nbsp;?",
+            "**F(5)**, avec F(0) = 0 et F(1) = 1&nbsp;?"
+          ],
+          "reponses": "1) 24 · 2) une récursion infinie (dépassement de pile) · 3) 5"
+        }
+      ]
+    }
+  ]
+}

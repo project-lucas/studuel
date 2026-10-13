@@ -1,0 +1,112 @@
+{
+  "titre": "Lunette astronomique",
+  "titreSurligne": "astronomique",
+  "accroche": "Deux lentilles, un foyer commun.",
+  "epreuve": "bac",
+  "bonus": "G = f₁ ÷ f₂ · afocal&nbsp;: F′₁ = F₂ · longueur ≈ f₁ + f₂ · image finale **à l’infini** · G = θ′ ÷ θ",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/systeme-optique-et-formation-d-images-la-lunette-astronomiqu.webp",
+    "prompt": "a glossy violet and golden telescope pointing at a starry sky with a crescent moon and a ringed planet, golden light rays crossing two lenses, sparkles"
+  },
+  "marcel": "Objectif long,\noculaire court !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le grossissement",
+          "petite": true,
+          "lignes": ["G = {f₁/f₂}", "G = {θ′/θ}"],
+          "regle": "**f₁** distance focale de l’==objectif== et **f₂** de l’==oculaire==, en mètres, G **sans unité**. **θ** angle d’observation à l’œil nu, **θ′** angle à travers la lunette, en radians (petits angles).",
+          "note": "afocal&nbsp;: F′₁ = F₂&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les deux lentilles",
+          "entetes": ["Lentille", "Rôle", "Distance focale"],
+          "lignes": [
+            ["Objectif", "image dans son plan focal", "longue (f₁)"],
+            ["Oculaire", "loupe sur cette image", "courte (f₂)"],
+            ["Objet", "à l’infini", "rayons parallèles"],
+            ["Image finale", "à l’infini", "œil au repos"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Placer", "texte": "l’image de l’objectif dans son plan focal image, qui est le foyer objet de l’oculaire" },
+            { "titre": "Relier", "texte": "G = θ′ ÷ θ = f₁ ÷ f₂, avec les distances focales de l’énoncé" },
+            { "titre": "Calculer", "texte": "G sans unité&nbsp;; la longueur de la lunette vaut f₁ + f₂" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une lunette afocale a un objectif de __f₁ = 1 000 mm__ et un oculaire de f₂ = 25 mm. Grossissement et longueur&nbsp;?",
+          "calcul": "G = f₁ ÷ f₂ = 1 000 ÷ 25",
+          "aparte": "même unité des deux côtés",
+          "resultat": "G = [[40]] · longueur = 1 025 mm"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Grossir sans rapprocher",
+          "oui": { "titre": "Lunette afocale", "texte": "L’image est **à l’infini** : l’œil regarde ==sans accommoder==, donc sans fatigue." },
+          "non": { "titre": "G rapproche l’astre&nbsp;?", "texte": "**Faux**&nbsp;: la lunette n’approche rien, elle **augmente l’angle** sous lequel on voit l’astre." },
+          "essai": { "texte": "Avec f₂ = 10 mm au lieu de 25 mm, le même objectif donne <i>G = 100</i>&nbsp;: oculaire plus court, grossissement plus grand." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Afocale&nbsp;: F′₁ = F₂, image finale à l’infini.", "quoi": "le montage" },
+            { "texte": "G = f₁ ÷ f₂ = 1 000 ÷ 25", "quoi": "formule puis nombres" },
+            { "texte": "G = 40 (sans unité)", "quoi": "le résultat" }
+          ],
+          "pied": "Un grossissement n’a ==pas d’unité== : c’est un rapport d’angles."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire G = **f₂ ÷ f₁**.",
+            "Mélanger **mm** et **m** dans f₁ et f₂.",
+            "Donner G avec une **unité**.",
+            "Confondre le **plan focal** de l’objectif avec celui de l’œil."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "f₁ = 800 mm, f₂ = 20 mm&nbsp;: **G**&nbsp;?",
+            "Dans une lunette afocale, F′₁ est confondu avec&nbsp;?",
+            "Un oculaire de focale plus courte **augmente** ou diminue G&nbsp;?"
+          ],
+          "reponses": "1) 40 · 2) F₂ · 3) il augmente G"
+        }
+      ]
+    }
+  ]
+}

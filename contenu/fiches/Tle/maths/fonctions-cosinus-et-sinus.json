@@ -1,0 +1,118 @@
+{
+  "titre": "Cosinus et sinus",
+  "titreSurligne": "sinus",
+  "accroche": "Périodiques, bornées, dérivées qui se suivent.",
+  "epreuve": "bac",
+  "bonus": "cos′ = −sin · sin′ = cos · 2π-périodiques · cos paire, sin impaire · −1 ≤ cos, sin ≤ 1",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths/fonctions-cosinus-et-sinus.webp",
+    "prompt": "a glossy violet smooth wave oscillating across a golden horizontal axis with a small golden circle, sparkles"
+  },
+  "marcel": "Cos dérive en −sin,\nsin dérive en cos !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Dérivées et parité",
+          "taille": "mini",
+          "lignes": ["cos′(x) = −sin(x)", "sin′(x) = cos(x)", "(cos(ωx + φ))′ = −ω sin(ωx + φ)"],
+          "regle": "cos et sin sont **2π-périodiques**&nbsp;: cos(x + 2π) = cos x. cos est **paire** (cos(−x) = cos x), sin est **impaire** (sin(−x) = −sin x).",
+          "note": "le signe − de cos′ se perd souvent&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Valeurs remarquables",
+          "entetes": ["x", "cos x", "sin x"],
+          "lignes": [
+            ["0", "1", "0"],
+            ["π/6", "√3/2", "1/2"],
+            ["π/4", "√2/2", "√2/2"],
+            ["π/3", "1/2", "√3/2"],
+            ["π/2", "0", "1"],
+            ["π", "−1", "0"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Se ramener", "texte": "à [0 ; 2π] ou [−π ; π] grâce à la périodicité" },
+            { "titre": "Résoudre", "texte": "valeur remarquable puis symétrie : cos x = cos a ⇒ x = ±a + 2kπ" },
+            { "titre": "Dériver", "texte": "formule composée, puis signe de f′ et variations" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Résoudre cos x = {1/2} sur [0 ; 2π]. __Solutions__&nbsp;?",
+          "calcul": "cos x = cos(π/3)",
+          "aparte": "x = ±π/3 + 2kπ",
+          "resultat": "[[π/3 et 5π/3]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Dériver", "texte": "(sin(3x))′ = **3cos(3x)** : on multiplie par la dérivée intérieure." },
+            { "titre": "Limite en +∞", "texte": "cos et sin **n’ont pas de limite** en +∞." },
+            { "titre": "Gendarmes", "texte": "|sin x / x| ≤ 1/x, donc sin x / x → **0** en +∞." },
+            { "titre": "Nombre dérivé", "texte": "lim<sub>x→0</sub> sin x / x = sin′(0) = **1**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "cos x = 1/2 = cos(π/3)", "quoi": "valeur remarquable" },
+            { "texte": "x = π/3 + 2kπ ou x = −π/3 + 2kπ, k ∈ ℤ", "quoi": "la symétrie" },
+            { "texte": "Dans [0 ; 2π]&nbsp;: x = π/3 ou x = 5π/3", "quoi": "on garde l’intervalle" }
+          ],
+          "pied": "Contrôle&nbsp;: cos(5π/3) = ==1/2==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire cos′ = **sin** (sans le signe −).",
+            "Oublier la **période** : une seule solution.",
+            "Oublier la dérivée **intérieure** (ωx).",
+            "Travailler en **degrés** au lieu des radians."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**Dérivée** de cos(2x)&nbsp;?",
+            "**sin(π/6)** vaut&nbsp;?",
+            "cos est-elle **paire** ou impaire&nbsp;?"
+          ],
+          "reponses": "1) −2 sin(2x) · 2) 1/2 · 3) paire"
+        }
+      ]
+    }
+  ]
+}

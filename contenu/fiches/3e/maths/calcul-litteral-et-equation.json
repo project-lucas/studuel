@@ -1,0 +1,117 @@
+{
+  "titre": "Le calcul littéral",
+  "titreSurligne": "littéral",
+  "accroche": "Développer, factoriser, résoudre.",
+  "epreuve": "brevet",
+  "bonus": "k(a + b) = **ka + kb** · (a + b)(c + d) = **ac + ad + bc + bd** · 3x + 2x = **5x**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/calcul-litteral-et-equation.webp",
+    "prompt": "a glossy violet letter x sitting on one pan of a golden balance scale with number blocks on the other pan, the two pans perfectly level, sparkles"
+  },
+  "marcel": "Développer ⟷\nfactoriser !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Développer",
+          "taille": "mini",
+          "lignes": ["k(a + b) = ka + kb", "k(a − b) = ka − kb", "(a + b)(c + d) = ac + ad + bc + bd"],
+          "regle": "Transformer un **produit** en **somme**&nbsp;: chaque terme de la première parenthèse multiplie ==chaque== terme de la seconde.",
+          "note": "quatre produits, pas deux&nbsp;!"
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Factoriser",
+          "teinte": "lavande",
+          "taille": "mini",
+          "lignes": ["ka + kb = k(a + b)", "5x + 15 = 5(x + 3)"],
+          "regle": "L’inverse&nbsp;: repérer le ==facteur commun== et le mettre devant. Il peut être une parenthèse&nbsp;: (x + 2)(x − 1) + (x + 2)(3x) = (x + 2)(4x − 1).",
+          "note": "on vérifie en redéveloppant&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre une équation en trois temps",
+          "etapes": [
+            { "titre": "Regrouper", "texte": "les x d’un côté, les nombres de l’autre, en changeant de signe" },
+            { "titre": "Réduire", "texte": "3x − x = 2x ; 15 − 7 = 8" },
+            { "titre": "Isoler", "texte": "diviser par le coefficient de x, puis vérifier" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Résoudre __3x + 7 = x + 15__.",
+          "calcul": "3x − x = 15 − 7",
+          "aparte": "on bascule",
+          "resultat": "2x = 8, donc x = [[4]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Réduire", "texte": "3x + 2x = **5x**, mais 3x + 2 reste 3x + 2&nbsp;: on n’additionne que les **mêmes** termes." },
+            { "titre": "Le signe moins", "texte": "−(x − 3) = **−x + 3**&nbsp;: le moins change tous les signes de la parenthèse." },
+            { "titre": "x fois x", "texte": "x × x = **x²**, 2x × 3x = **6x²**, mais 2x + 3x = 5x." },
+            { "titre": "Vérifier", "texte": "On remplace x par la solution&nbsp;: 3 × 4 + 7 = 19 et 4 + 15 = 19. ✔" },
+            { "titre": "Substituer", "texte": "3x² pour x = −2&nbsp;: 3 × (−2)² = 3 × 4 = **12**, pas −12." },
+            { "titre": "Les priorités", "texte": "Les × avant les +&nbsp;: 2 + 3x n’est pas 5x, et 2 × 3x = 6x." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "3x + 7 = x + 15", "quoi": "l’équation" },
+            { "texte": "3x − x = 15 − 7, soit 2x = 8", "quoi": "on regroupe" },
+            { "texte": "x = 8 ÷ 2 = 4", "quoi": "on isole" }
+          ],
+          "pied": "Une ligne par ==transformation==, le signe = aligné."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Développer 3(x + 2) en 3x + 2&nbsp;: le 3 multiplie **les deux**.",
+            "Oublier de **changer le signe** en changeant de côté.",
+            "Écrire 2x + 3 = 5x.",
+            "Factoriser sans **vérifier** en redéveloppant.",
+            "Confondre **équation** (une valeur à trouver) et **expression** (à développer)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Développer **4(2x − 5)**.",
+            "Factoriser **6x + 9**.",
+            "Résoudre **5x − 2 = 13**."
+          ],
+          "reponses": "1) 8x − 20 · 2) 3(2x + 3) · 3) x = 3"
+        }
+      ]
+    }
+  ]
+}

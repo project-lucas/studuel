@@ -1,0 +1,115 @@
+{
+  "titre": "Les fonctions",
+  "titreSurligne": "fonctions",
+  "accroche": "Image, antécédent, variations : le vocabulaire.",
+  "bonus": "y = **f(x)** · image = on **lit y** · antécédent = on **cherche x** · croissante = la courbe **monte**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/maths/generalites-sur-les-fonctions.webp",
+    "prompt": "a glossy violet machine with a golden funnel on top and a conveyor belt, glowing golden orbs going in and bigger orbs coming out, sparkles"
+  },
+  "marcel": "Image : on lit y.\nAntécédent : on cherche x !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Image et antécédent",
+          "taille": "mini",
+          "lignes": ["x ↦ f(x)", "f(a) = b", "image de a : b", "antécédent de b : a"],
+          "regle": "Un nombre x a **au plus une** image. Un nombre y peut avoir ==plusieurs== antécédents, ou aucun. La courbe est l’ensemble des points (x ; f(x)).",
+          "note": "x en abscisse, f(x) en ordonnée&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Ensemble de définition", "definition": "les x pour lesquels **f(x) existe**" },
+            { "terme": "Croissante", "definition": "x augmente, f(x) **augmente**" },
+            { "terme": "Décroissante", "definition": "x augmente, f(x) **diminue**" },
+            { "terme": "Maximum", "definition": "la **plus grande** valeur de f(x)" },
+            { "terme": "Tableau de variations", "definition": "flèches ↗ ↘ et **extremums**" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre graphiquement f(x) = k",
+          "etapes": [
+            { "titre": "Tracer", "texte": "la droite horizontale d’ordonnée y = k" },
+            { "titre": "Repérer", "texte": "les points où elle coupe la courbe" },
+            { "titre": "Lire", "texte": "les abscisses de ces points : ce sont les solutions" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = x² − 3x. Image de 4 et antécédents de 0&nbsp;?",
+          "calcul": "f(4) = 16 − 12 = 4",
+          "aparte": "l’image",
+          "resultat": "x² − 3x = x(x − 3) = 0&nbsp;: x = [[0 ou 3]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les trois représentations",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Formule", "texte": "f(x) = 2x + 1&nbsp;: on **calcule** une image exacte." },
+            { "titre": "Tableau de valeurs", "texte": "Quelques couples (x ; f(x))&nbsp;: **rapide**, mais incomplet." },
+            { "titre": "Courbe", "texte": "On **lit** images et antécédents, mais avec précision limitée." },
+            { "titre": "Tableau de variations", "texte": "Le **sens** de f sur chaque intervalle, et ses extremums." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "f(4) = 4² − 3 × 4 = 16 − 12 = 4", "quoi": "l’image : on remplace x" },
+            { "texte": "f(x) = 0 ⟺ x(x − 3) = 0", "quoi": "l’antécédent : on résout" },
+            { "texte": "x = 0 ou x = 3", "quoi": "les solutions" }
+          ],
+          "pied": "L’image de 4 est ==4==&nbsp;; 0 et 3 sont les antécédents de 0."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **image** (on calcule f(a)) et **antécédent** (on résout f(x) = b).",
+            "Lire l’abscisse quand on cherche l’**ordonnée** (et l’inverse).",
+            "Dire qu’un nombre a **toujours** un antécédent.",
+            "Croire que « croissante » veut dire f(x) positif."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "f(x) = 2x² − 1&nbsp;: quelle est l’**image de 3**&nbsp;?",
+            "g(x) = 3x − 2&nbsp;: quel est l’**antécédent de 7**&nbsp;?",
+            "f est **croissante** sur [0&nbsp;; 5]&nbsp;: comparer f(1) et f(4)."
+          ],
+          "reponses": "1) 2 × 9 − 1 = 17 · 2) 3x − 2 = 7, x = 3 · 3) f(1) < f(4)"
+        }
+      ]
+    }
+  ]
+}

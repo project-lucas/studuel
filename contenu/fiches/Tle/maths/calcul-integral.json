@@ -1,0 +1,116 @@
+{
+  "titre": "Calcul intégral",
+  "titreSurligne": "intégral",
+  "accroche": "Une aire, une primitive, une moyenne.",
+  "epreuve": "bac",
+  "bonus": "∫<sub>a</sub><sup>b</sup> f = F(b) − F(a) · valeur moyenne = {1/b − a} ∫<sub>a</sub><sup>b</sup> f · aire entre courbes : ∫ (haut − bas)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths/calcul-integral.webp",
+    "prompt": "a glossy violet curve with the area under it filled in shimmering gold, sparkles"
+  },
+  "marcel": "L’aire, c’est\nF(b) − F(a) !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le calcul fondamental",
+          "taille": "mini",
+          "lignes": ["<span>∫<sub>a</sub><sup>b</sup> f(x) dx = F(b) − F(a)</span>", "<span>µ = {1/b − a} ∫<sub>a</sub><sup>b</sup> f(x) dx</span>"],
+          "regle": "Pour f **continue** sur [a ; b], F une primitive. Si f ≥ 0, l’intégrale est l’**aire** sous la courbe en unités d’aire. µ est la **valeur moyenne**.",
+          "note": "inverser les bornes change le signe"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Propriétés",
+          "items": [
+            { "terme": "Linéarité", "definition": "∫ (αf + βg) = α∫ f + β∫ g." },
+            { "terme": "Chasles", "definition": "∫<sub>a</sub><sup>c</sup> = ∫<sub>a</sub><sup>b</sup> + ∫<sub>b</sub><sup>c</sup>." },
+            { "terme": "Positivité", "definition": "f ≥ 0 et a ≤ b ⇒ ∫ f ≥ 0." },
+            { "terme": "Aire entre courbes", "definition": "∫ (f − g) si f est **au-dessus** de g." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Primitive", "texte": "reconnaître une primitive F de f, sans oublier la forme u′e<sup>u</sup> ou u′/u" },
+            { "titre": "Bornes", "texte": "calculer F(b) − F(a) avec la bonne orientation" },
+            { "titre": "Interpréter", "texte": "aire (si f ≥ 0), valeur moyenne, ou encadrement" },
+            { "titre": "Contrôler", "texte": "le signe et l’ordre de grandeur, par un rectangle ou un trapèze" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "∫<sub>0</sub><sup>1</sup> (2x + 3) dx. __Calculer__.",
+          "calcul": "F(x) = x² + 3x",
+          "aparte": "F(1) − F(0)",
+          "resultat": "= (1 + 3) − 0 = [[4]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Aire", "texte": "f ≥ 0 sur [a ; b]&nbsp;: aire = ∫ f. Sinon prendre **|f|** ou couper en morceaux." },
+            { "titre": "Moyenne", "texte": "µ = 4 sur [0 ; 1] ici&nbsp;: la hauteur du rectangle de même aire." },
+            { "titre": "Entre deux courbes", "texte": "repérer laquelle est au-dessus **avant** de soustraire." },
+            { "titre": "Encadrer", "texte": "m ≤ f ≤ M ⇒ m(b − a) ≤ ∫ f ≤ M(b − a)." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "f est continue sur [0 ; 1], F(x) = x² + 3x en est une primitive", "quoi": "la primitive" },
+            { "texte": "∫ f = F(1) − F(0)", "quoi": "le théorème" },
+            { "texte": "= 4 − 0 = 4 u.a. (f ≥ 0)", "quoi": "le résultat et l’unité" }
+          ],
+          "pied": "Vérification géométrique&nbsp;: trapèze de bases 3 et 5, hauteur 1, aire ==(3+5)/2 = 4==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre une intégrale négative avec une **aire**.",
+            "Inverser **F(a) − F(b)**.",
+            "Oublier l’**unité d’aire**.",
+            "Soustraire dans le désordre : **haut − bas**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "∫<sub>0</sub><sup>2</sup> 3x² dx&nbsp;: **valeur**&nbsp;?",
+            "**Valeur moyenne** de f(x) = x sur [0 ; 2]&nbsp;?",
+            "f ≥ 0&nbsp;: **signe** de l’intégrale&nbsp;?"
+          ],
+          "reponses": "1) F = x³, donc 8 · 2) {1/2} × 2 = 1 · 3) oui, si a ≤ b"
+        }
+      ]
+    }
+  ]
+}

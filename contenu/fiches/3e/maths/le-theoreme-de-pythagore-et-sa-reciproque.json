@@ -1,0 +1,112 @@
+{
+  "titre": "Pythagore",
+  "titreSurligne": "Pythagore",
+  "accroche": "Calculer une longueur, prouver un angle droit.",
+  "epreuve": "brevet",
+  "bonus": "Triplets à reconnaître : **3-4-5** · **5-12-13** · **6-8-10** · **8-15-17**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/le-theoreme-de-pythagore-et-sa-reciproque.webp",
+    "prompt": "a cartoon right triangle made of glossy violet rods, with three golden tiled squares built on its three sides, small square tiles flying from the two small squares into the big square on the hypotenuse, sparkles"
+  },
+  "marcel": "L’hypoténuse,\ntoute seule !",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "La figure",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><polygon points='40,150 40,34 196,150' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round'></polygon><line x1='40' y1='34' x2='196' y2='150' stroke='#7a3fe0' stroke-width='4.5' stroke-linecap='round'></line><path d='M40,134 h16 v16' fill='none' stroke='#f1566c' stroke-width='3'></path><g fill='#2b2350'><circle cx='40' cy='150' r='4.5'></circle><circle cx='40' cy='34' r='4.5'></circle><circle cx='196' cy='150' r='4.5'></circle></g><g font-family=\"'Baloo 2'\" font-weight='800' font-size='20' fill='#2b2350'><text x='22' y='164'>A</text><text x='22' y='30'>B</text><text x='202' y='164'>C</text></g><g font-family='Nunito' font-weight='800' font-size='12.5' fill='#4b2a9a'><text x='128' y='80' fill='#7a3fe0' transform='rotate(37 128 80)'>hypoténuse</text><text x='92' y='166'>AC</text><text x='18' y='96' transform='rotate(-90 18 96)'>AB</text></g></svg>",
+              "legende": "ABC rectangle en A",
+              "sous": "l’hypoténuse [BC] fait face à l’angle droit"
+            }
+          ],
+          "legende": { "jeton": "le plus long", "texte": "L’hypoténuse est toujours le plus grand côté." }
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le théorème",
+          "lignes": ["BC² = AB² + AC²"],
+          "regle": "Dans un triangle **rectangle**, le carré de l’__hypoténuse__ est la somme des carrés des deux autres côtés. L’hypoténuse est ==seule== d’un côté.",
+          "note": "rectangle ⟹ égalité, et égalité ⟹ rectangle&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Vérifier", "texte": "que le triangle est rectangle, et nommer l’angle droit" },
+            { "titre": "Écrire", "texte": "l’égalité de Pythagore, l’hypoténuse seule au carré" },
+            { "titre": "Calculer", "texte": "les carrés, puis la racine carrée pour revenir à la longueur" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "ABC rectangle en A, AB = 6 cm, AC = 8 cm. On cherche __BC__.",
+          "calcul": "BC² = 6² + 8² = 100",
+          "aparte": "36 + 64",
+          "resultat": "BC = √100 = [[10 cm]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Rectangle ou pas&nbsp;?",
+          "oui": { "titre": "La réciproque", "texte": "Si BC² = AB² + AC², alors le triangle est **rectangle en A**." },
+          "non": { "titre": "La contraposée", "texte": "Si BC² ≠ AB² + AC², le triangle **n’est pas rectangle**." },
+          "essai": { "texte": "AB = 5, AC = 12, BC = 13. <i>13² = 169</i> et <i>5² + 12² = 169</i>&nbsp;: égalité, donc **rectangle en A**. Avec BC = 14, il ne le serait pas." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Dans le triangle ABC rectangle en A&nbsp;:", "quoi": "les conditions" },
+            { "texte": "D’après le théorème de Pythagore&nbsp;:", "quoi": "le nom du théorème" },
+            { "texte": "BC² = AB² + AC²", "quoi": "l’égalité" }
+          ],
+          "pied": "Pour la réciproque&nbsp;: BC² et AB² + AC² calculés ==séparément==, puis comparés."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Isoler un **autre côté** que l’hypoténuse.",
+            "Oublier la **racine carrée**&nbsp;: BC² = 100, donc BC = 10.",
+            "**Arrondir** avant de comparer (réciproque).",
+            "Pour prouver un angle droit, citer la **réciproque**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Rectangle en B, BA = 3 cm et BC = 4 cm. Que vaut **AC**&nbsp;?",
+            "AB = 8, AC = 15, BC = 17. Le triangle est-il **rectangle**&nbsp;?",
+            "Hypoténuse 10 cm, un côté 6 cm&nbsp;: le **troisième côté**&nbsp;?"
+          ],
+          "reponses": "1) AC = 5 cm · 2) oui, en A (289 = 64 + 225) · 3) 8 cm (100 − 36 = 64)"
+        }
+      ]
+    }
+  ]
+}

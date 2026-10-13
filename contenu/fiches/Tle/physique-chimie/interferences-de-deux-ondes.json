@@ -1,0 +1,111 @@
+{
+  "titre": "Interférences",
+  "titreSurligne": "Interférences",
+  "accroche": "Deux lumières qui donnent de l’ombre.",
+  "epreuve": "bac",
+  "bonus": "Constructives&nbsp;: δ = kλ · destructives&nbsp;: δ = (k + ½)λ · i = λD ÷ b · ondes **cohérentes** (même fréquence, déphasage constant)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/interferences-de-deux-ondes.webp",
+    "prompt": "a glossy violet double slit plate with two golden circular wave patterns overlapping and forming bright and dark golden bands on a screen behind, sparkles"
+  },
+  "marcel": "Deux ondes, des franges\nclaires et sombres !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Différence de marche",
+          "petite": true,
+          "lignes": ["δ = kλ  ou  δ = (k + ½)λ", "i = {λ D/b}"],
+          "regle": "==Constructive== puis ==destructive== (k entier). **i** interfrange, **D** fentes-écran, **b** écart des fentes, en **m**.",
+          "note": "les deux ondes doivent être cohérentes&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Constructif ou destructif",
+          "entetes": ["Condition", "Résultat", "On observe"],
+          "lignes": [
+            ["δ = kλ", "ondes en phase", "frange brillante"],
+            ["δ = (k + ½)λ", "ondes en opposition", "frange sombre"],
+            ["Deux lampes distinctes", "non cohérentes", "pas de franges"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Calculer", "texte": "la différence de marche δ, ou l’interfrange i = λD ÷ b" },
+            { "titre": "Comparer", "texte": "δ à kλ ou à (k + ½)λ, avec k entier" },
+            { "titre": "Conclure", "texte": "frange brillante ou frange sombre, en citant la condition" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Fentes d’Young&nbsp;: λ = 600 nm, D = 2,0 m, b = 0,40 mm. Quel est l’__interfrange__&nbsp;?",
+          "calcul": "i = 600×10⁻⁹ × 2,0 ÷ (0,40×10⁻³)",
+          "aparte": "tout en mètres&nbsp;!",
+          "resultat": "i = 3,0×10⁻³ m = [[3,0 mm]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Lire une figure",
+          "oui": { "titre": "δ = 1,5 λ", "texte": "C’est (1 + ½)λ&nbsp;: interférence ==destructive==, donc une frange **sombre**." },
+          "non": { "titre": "δ = 1,5 λ constructive&nbsp;?", "texte": "**Faux**&nbsp;: il faut un nombre **entier** de longueurs d’onde." },
+          "essai": { "texte": "δ = 3 λ est entier&nbsp;: <i>frange brillante</i>. Si λ augmente, i augmente aussi." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "i = λD ÷ b = 600×10⁻⁹ × 2,0 ÷ 0,40×10⁻³", "quoi": "formule puis nombres" },
+            { "texte": "i = 3,0×10⁻³ m", "quoi": "avec l’unité" },
+            { "texte": "δ = kλ&nbsp;: frange brillante", "quoi": "la condition" }
+          ],
+          "pied": "Deux sources **indépendantes** ne donnent ==pas d’interférences== visibles."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire δ = k λ pour une frange **sombre**.",
+            "Oublier de convertir **nm** et **mm** en mètres.",
+            "Prendre **k** non entier.",
+            "Confondre **interfrange** i et largeur totale de la figure."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "δ = 2 λ&nbsp;: **constructive** ou destructive&nbsp;?",
+            "δ = 2,5 λ&nbsp;: **constructive** ou destructive&nbsp;?",
+            "On double D&nbsp;: l’interfrange i est multiplié par&nbsp;?"
+          ],
+          "reponses": "1) constructive · 2) destructive · 3) 2"
+        }
+      ]
+    }
+  ]
+}

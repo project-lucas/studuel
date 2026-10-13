@@ -1,0 +1,118 @@
+{
+  "titre": "Le langage SQL",
+  "titreSurligne": "SQL",
+  "accroche": "Dire ce qu’on veut, pas comment.",
+  "epreuve": "bac",
+  "bonus": "<i>SELECT … FROM … WHERE … ORDER BY</i> · clé primaire = identifiant unique · clé étrangère = renvoi vers une autre table",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/nsi/le-langage-sql.webp",
+    "prompt": "a glossy violet database cylinder with golden table rows floating around it and a golden magnifying glass, sparkles"
+  },
+  "marcel": "Une requête,\nun tableau !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Table", "definition": "des **lignes** (enregistrements) et des **colonnes** (attributs)" },
+            { "terme": "Clé primaire", "definition": "identifie chaque ligne&nbsp;: **unique** et jamais vide" },
+            { "terme": "Clé étrangère", "definition": "colonne qui **renvoie** à la clé primaire d’une autre table" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les requêtes de base",
+          "entetes": ["Clause", "Rôle"],
+          "lignes": [
+            ["<i>SELECT</i> nom", "les **colonnes** voulues"],
+            ["<i>FROM</i> eleves", "la **table** lue"],
+            ["<i>WHERE</i> note &gt;= 12", "**filtre** les lignes"],
+            ["<i>ORDER BY</i> note <i>DESC</i>", "**trie** (décroissant)"],
+            ["<i>JOIN</i> t2 <i>ON</i> t1.a = t2.b", "**relie** deux tables"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Écrire une requête en trois temps",
+          "etapes": [
+            { "titre": "FROM", "texte": "quelle table (ou quelles tables jointes) ?" },
+            { "titre": "WHERE", "texte": "quelles lignes garde-t-on ?" },
+            { "titre": "SELECT", "texte": "quelles colonnes affiche-t-on ?" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "eleves(id, nom, note)&nbsp;: (1, Léa, 15) · (2, Tom, 9) · (3, Inès, 12). __Qui a au moins 12__&nbsp;?",
+          "calcul": "<i>SELECT nom FROM eleves WHERE note &gt;= 12;</i>",
+          "aparte": "Tom écarté",
+          "resultat": "= [[Léa, Inès]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Modifier la base",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Ajouter", "texte": "<i>INSERT INTO eleves VALUES (4, 'Zoé', 14);</i>" },
+            { "titre": "Modifier", "texte": "<i>UPDATE eleves SET note = 10 WHERE id = 2;</i>" },
+            { "titre": "Supprimer", "texte": "<i>DELETE FROM eleves WHERE id = 2;</i>" },
+            { "titre": "Compter", "texte": "<i>SELECT COUNT(*) FROM eleves;</i> → **3**" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "<i>SELECT nom FROM eleves</i>", "quoi": "colonne et table" },
+            { "texte": "<i>WHERE note &gt;= 12</i>", "quoi": "la condition" },
+            { "texte": "<i>ORDER BY note DESC;</i>", "quoi": "le tri, et le ;" }
+          ],
+          "pied": "Une chaîne de caractères s’écrit entre ==apostrophes==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **WHERE** dans un UPDATE ou un DELETE&nbsp;: toute la table est touchée.",
+            "Écrire **==** en SQL&nbsp;: on compare avec un seul =.",
+            "Joindre sans **ON**&nbsp;: toutes les combinaisons.",
+            "Croire qu’une clé primaire peut se **répéter**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle clause **filtre** les lignes&nbsp;?",
+            "Qu’est-ce qu’une **clé étrangère**&nbsp;?",
+            "Que fait <i>DELETE FROM t;</i> sans WHERE&nbsp;?"
+          ],
+          "reponses": "1) WHERE · 2) une colonne qui renvoie à la clé primaire d’une autre table · 3) vide toute la table"
+        }
+      ]
+    }
+  ]
+}

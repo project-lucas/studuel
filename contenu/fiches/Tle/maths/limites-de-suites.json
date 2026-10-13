@@ -1,0 +1,113 @@
+{
+  "titre": "Limites de suites",
+  "titreSurligne": "suites",
+  "accroche": "Où va la suite quand n devient immense ?",
+  "epreuve": "bac",
+  "bonus": "q<sup>n</sup> → 0 si |q| &lt; 1 · croissante et majorée ⇒ converge · gendarmes · 4 formes indéterminées",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths/limites-de-suites.webp",
+    "prompt": "a glossy violet row of dots climbing toward a golden horizontal line without touching it, sparkles"
+  },
+  "marcel": "Elle s’approche\nsans toucher !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les limites à connaître",
+          "taille": "mini",
+          "lignes": ["<span>lim n<sup>2</sup> = +∞</span>", "lim {1/n} = 0", "<span>q<sup>n</sup> → 0 si |q| &lt; 1</span>"],
+          "regle": "Pour q &gt; 1, q<sup>n</sup> → **+∞**. Pour q ≤ −1, la suite n’a **pas de limite**. Croissante et **majorée** ⇒ elle converge.",
+          "note": "gendarmes&nbsp;: u ≤ v ≤ w, même limite&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les 4 formes indéterminées",
+          "entetes": ["Forme", "Que faire"],
+          "lignes": [
+            ["+∞ − ∞", "factoriser le terme dominant"],
+            ["0 × ∞", "réécrire l’expression"],
+            ["∞ ÷ ∞", "diviser par la plus haute puissance"],
+            ["0 ÷ 0", "expression conjuguée"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "limite de chaque terme : est-ce une forme indéterminée&nbsp;?" },
+            { "titre": "Lever", "texte": "factoriser par n ou diviser par la plus haute puissance" },
+            { "titre": "Conclure", "texte": "citer les opérations sur les limites, ou les gendarmes" },
+            { "titre": "Comparer", "texte": "u<sub>n</sub> ≥ v<sub>n</sub> et v<sub>n</sub> → +∞ ⇒ u<sub>n</sub> → +∞" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "u<sub>n</sub> = (3n² + 1) ÷ (n² − 2n). __Limite__&nbsp;?",
+          "calcul": "u<sub>n</sub> = (3 + 1/n²) ÷ (1 − 2/n)",
+          "aparte": "on divise par n²",
+          "resultat": "→ [[3]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Converge ou diverge&nbsp;?",
+          "oui": { "titre": "Converge", "texte": "(−1)<sup>n</sup>/n → 0 car |…| ≤ 1/n&nbsp;: **gendarmes**." },
+          "non": { "titre": "Diverge", "texte": "(−1)<sup>n</sup> est bornée mais **sans limite**." },
+          "essai": { "texte": "Diverger ne veut **pas** dire tendre vers +∞&nbsp;: n² → +∞, mais (−2)<sup>n</sup> n’a aucune limite." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Pour n ≠ 0, u<sub>n</sub> = (3 + 1/n²) ÷ (1 − 2/n)", "quoi": "je factorise" },
+            { "texte": "lim 1/n² = 0 et lim 2/n = 0", "quoi": "limites de référence" },
+            { "texte": "Par quotient, lim u<sub>n</sub> = 3 ÷ 1 = 3", "quoi": "j’énonce l’opération" }
+          ],
+          "pied": "Conclusion&nbsp;: la suite (u<sub>n</sub>) ==converge vers 3==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire « +∞ − ∞ = 0 » au lieu de **lever**.",
+            "Oublier la condition |q| &lt; 1 pour q<sup>n</sup>.",
+            "Croire que « bornée » ⇒ **converge**.",
+            "Citer les gendarmes sans la **même** limite."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**lim** de (0,5)<sup>n</sup>&nbsp;?",
+            "**lim** de n² − 3n + 1&nbsp;?",
+            "(u<sub>n</sub>) croissante et majorée&nbsp;: que **peut-on dire**&nbsp;?"
+          ],
+          "reponses": "1) 0 · 2) +∞ (on factorise n²) · 3) elle converge"
+        }
+      ]
+    }
+  ]
+}

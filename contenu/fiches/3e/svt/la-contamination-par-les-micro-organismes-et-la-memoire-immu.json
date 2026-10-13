@@ -1,0 +1,110 @@
+{
+  "titre": "L’immunité",
+  "titreSurligne": "immunité",
+  "accroche": "Le corps se défend, puis il se souvient.",
+  "epreuve": "brevet",
+  "bonus": "**Innée** = immédiate, non spécifique · **adaptative** = lente, **spécifique** · 2e contact = **plus rapide et plus intense**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/svt/la-contamination-par-les-micro-organismes-et-la-memoire-immu.webp",
+    "prompt": "a glossy violet shield guarding a tiny golden human figure, small round golden defender cells surrounding spiky villain germs, sparkles"
+  },
+  "marcel": "Le premier contact apprend,\nle second écrase !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les deux réponses",
+          "entetes": ["", "Innée", "Adaptative"],
+          "lignes": [
+            ["**Délai**", "immédiate", "plusieurs **jours**"],
+            ["**Cible**", "**non spécifique**", "**spécifique** d’un antigène"],
+            ["**Acteurs**", "**phagocytes**", "**lymphocytes B** (anticorps)"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Antigène", "definition": "la molécule étrangère que reconnaît le système immunitaire" },
+            { "terme": "Anticorps", "definition": "protéine en Y qui se fixe sur **un seul** antigène" },
+            { "terme": "Phagocytose", "definition": "un phagocyte absorbe et détruit le microbe" },
+            { "terme": "Cellules mémoire", "definition": "elles gardent le souvenir du microbe" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "À retenir",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "1er contact", "texte": "La réponse adaptative est lente&nbsp;: elle met des **jours**." },
+            { "titre": "2e contact", "texte": "Les **cellules mémoire** répondent **beaucoup plus vite et plus fort**." },
+            { "titre": "Les anticorps", "texte": "Les lymphocytes B fabriquent des anticorps adaptés à **un** antigène." },
+            { "titre": "Le vaccin", "texte": "Il contient un **antigène rendu inoffensif**&nbsp;: sans maladie, on est **immunisé**." },
+            { "titre": "Immunité collective", "texte": "Plus on est vacciné, moins le microbe circule&nbsp;: les fragiles sont protégés." },
+            { "titre": "La phagocytose", "texte": "Première défense&nbsp;: les phagocytes engloutissent tout intrus." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Analyser un graphique d’anticorps",
+          "etapes": [
+            { "titre": "Lire", "texte": "la quantité d’anticorps après chaque contact" },
+            { "titre": "Comparer", "texte": "délai et hauteur du 1er et du 2e pic" },
+            { "titre": "Expliquer", "texte": "par les cellules mémoire" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Au 2e contact, la production d’anticorps est plus rapide et plus intense.", "quoi": "comparer" },
+            { "texte": "Les cellules mémoire gardent le souvenir du premier contact.", "quoi": "expliquer" },
+            { "texte": "C’est le principe de la vaccination.", "quoi": "conclure" }
+          ],
+          "pied": "1er contact = ==lent==&nbsp;; 2e contact = ==rapide et fort==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire qu’un **anticorps** reconnaît tous les microbes&nbsp;: un seul antigène.",
+            "Confondre réponse **innée** (immédiate) et **adaptative** (lente).",
+            "Croire que le vaccin donne la **maladie**&nbsp;: l’antigène est inoffensif.",
+            "Oublier le rôle des **cellules mémoire** au second contact."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle réponse est **non spécifique**&nbsp;?",
+            "Que contient un **vaccin**&nbsp;?",
+            "Qui assure la **mémoire** immunitaire&nbsp;?"
+          ],
+          "reponses": "1) la réponse innée · 2) un antigène rendu inoffensif · 3) les cellules mémoire"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "titre": "Les transformations",
+  "titreSurligne": "transformations",
+  "accroche": "Déplacer une figure sans la déformer.",
+  "epreuve": "brevet",
+  "bonus": "Symétrie axiale · symétrie centrale · translation · rotation&nbsp;: **longueurs, angles, aires conservés**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/transformations-du-plan-symetries-translation-rotation.webp",
+    "prompt": "four glossy violet arrow-shaped tiles: one flipped over a golden mirror line, one turned half-way around a point, one sliding along a golden arrow, one rotating around a pivot, sparkles"
+  },
+  "marcel": "Symétrie centrale =\nrotation de 180° !",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 1,
+          "titre": "Les quatre transformations",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Symétrie axiale", "texte": "Un **axe**, comme un miroir&nbsp;: la figure est **retournée**." },
+            { "titre": "Symétrie centrale", "texte": "Un **centre** O, milieu de chaque [MM’]&nbsp;: un demi-tour." },
+            { "titre": "Translation", "texte": "Une **flèche**&nbsp;: tout glisse de la même longueur, dans le même sens." },
+            { "titre": "Rotation", "texte": "Un **centre**, un **angle**, un **sens**&nbsp;: on tourne autour d’un point." }
+          ]
+        },
+        {
+          "type": "figures",
+          "numero": 2,
+          "titre": "Une rotation",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><g stroke='#2b2350' stroke-width='1.6' stroke-dasharray='4 4' opacity='0.55'><line x1='110' y1='122' x2='150' y2='122'></line><line x1='110' y1='122' x2='110' y2='82'></line></g><path d='M136,122 A26,26 0 0 0 110,96' fill='none' stroke='#f5b722' stroke-width='4' stroke-linecap='round'></path><polygon points='106,92 114,96 110,104' fill='#f5b722'></polygon><g stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round' stroke-linecap='round'><line x1='150' y1='122' x2='150' y2='66'></line><polygon points='150,66 188,78 150,90' fill='#eee7fc'></polygon></g><g stroke='#2b2350' stroke-width='3.5' stroke-linejoin='round' stroke-linecap='round'><line x1='110' y1='82' x2='54' y2='82'></line><polygon points='54,82 66,44 78,82' fill='#fdecc7'></polygon></g><circle cx='110' cy='122' r='4.5' fill='#2b2350'></circle><g font-family=\"'Baloo 2'\" font-weight='800' font-size='16' fill='#2b2350'><text x='104' y='144'>O</text><text x='156' y='136'>A</text><text x='86' y='74' fill='#4b2a9a'>A’</text><text x='122' y='110' fill='#b8860b'>90°</text></g></svg>",
+              "legende": "Rotation de centre O, d’angle 90°",
+              "sous": "chaque point tourne du même angle autour de O"
+            }
+          ],
+          "legende": { "jeton": "le sens", "texte": "horaire ou antihoraire, à préciser" }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "l’élément : axe, centre, flèche ou angle" },
+            { "titre": "Construire", "texte": "l’image d’un sommet à la fois, puis relier" },
+            { "titre": "Vérifier", "texte": "même forme, même taille ; retournée pour l’axiale" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "ABC est un triangle, O le milieu de [BC]. On cherche l’__image D de A__ par la symétrie de centre O.",
+          "calcul": "O = milieu de [AD]",
+          "aparte": "demi-tour",
+          "resultat": "ABDC est un [[parallélogramme]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Ce qui est conservé",
+          "oui": { "titre": "Toujours", "texte": "Longueurs, angles, aires, alignement, parallélisme&nbsp;: la figure garde sa **taille**." },
+          "non": { "titre": "Pas pour l’axiale", "texte": "Le **sens** de la figure&nbsp;: la symétrie axiale la retourne, comme un miroir." },
+          "essai": { "texte": "Un triangle de 6 cm² a pour image un triangle de <i>6 cm²</i>, quelle que soit la transformation. Seule l’homothétie change la taille." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "O est le milieu de [BC] et de [AD].", "quoi": "les données" },
+            { "texte": "Les diagonales de ABDC ont le même milieu,", "quoi": "la propriété" },
+            { "texte": "donc ABDC est un parallélogramme.", "quoi": "la conclusion" }
+          ],
+          "pied": "Au brevet, on demande souvent de ==nommer== la transformation (frises, pavages)."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre symétrie **centrale** (demi-tour) et **axiale** (miroir).",
+            "Oublier le **sens** d’une rotation.",
+            "Une translation se définit par une **flèche**, pas par un point.",
+            "Croire qu’une symétrie change les **longueurs**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle transformation donne une figure **retournée**&nbsp;?",
+            "Une rotation de **180°**&nbsp;: quel autre nom&nbsp;?",
+            "Par une translation, l’aire d’un carré de côté 3 devient&nbsp;?"
+          ],
+          "reponses": "1) la symétrie axiale · 2) la symétrie centrale · 3) 9, inchangée"
+        }
+      ]
+    }
+  ]
+}

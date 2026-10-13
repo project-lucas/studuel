@@ -1,0 +1,112 @@
+{
+  "titre": "Noyaux radioactifs",
+  "titreSurligne": "radioactifs",
+  "accroche": "Imprévisible un par un, régulier en masse.",
+  "epreuve": "bac",
+  "bonus": "N(t) = N₀ e<sup>−λt</sup> · <span>t<sub>½</sub></span> = ln 2 ÷ λ · A = λ N en **Bq** · A(t) = A₀ e<sup>−λt</sup>",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/evolution-d-une-population-de-noyaux-radioactifs.webp",
+    "prompt": "a glossy violet atom with a golden nucleus shedding small glowing particles, a decreasing staircase of golden halves beside it, a cartoon clock, sparkles"
+  },
+  "marcel": "Toutes les t½,\non perd la moitié !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La loi de décroissance",
+          "petite": true,
+          "lignes": ["N(t) = N₀ e<sup>−λt</sup>", "<span>t<sub>½</sub></span> = {ln 2/λ}"],
+          "regle": "**N** nombre de noyaux non désintégrés, **λ** constante radioactive en **s⁻¹**, **t<sub>½</sub>** en **secondes**. La désintégration d’un noyau est ==aléatoire==, la loi sur une population est exacte.",
+          "note": "λ grand&nbsp;: t½ court&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Demi-vies et activité",
+          "entetes": ["Après", "Il reste", "Activité"],
+          "lignes": [
+            ["1 t<sub>½</sub>", "{1/2} de N₀", "A₀ ÷ 2"],
+            ["2 t<sub>½</sub>", "{1/4} de N₀", "A₀ ÷ 4"],
+            ["3 t<sub>½</sub>", "{1/8} de N₀", "A₀ ÷ 8"],
+            ["Définition", "A = λ N", "en becquerels (Bq)"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "la durée écoulée et la demi-vie, dans la même unité" },
+            { "titre": "Compter", "texte": "le nombre de demi-vies n = durée ÷ t<sub>½</sub>" },
+            { "titre": "Conclure", "texte": "il reste N₀ ÷ 2ⁿ noyaux, soit la même fraction de l’activité" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "L’iode 131 a une demi-vie de __8 jours__. Fraction restante après 24 jours, et λ&nbsp;?",
+          "calcul": "n = 24 ÷ 8 = 3 · λ = 0,693 ÷ 8 ≈ 0,087 j⁻¹",
+          "aparte": "(1/2)³",
+          "resultat": "reste {1/8} soit [[12,5 %]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Lire une décroissance",
+          "oui": { "titre": "Après 1 t½", "texte": "Il reste ==la moitié== des noyaux, quelle que soit la quantité de départ." },
+          "non": { "titre": "Deux t½, plus rien&nbsp;?", "texte": "**Faux**&nbsp;: il reste encore le **quart**. La courbe tend vers 0 sans l’atteindre." },
+          "essai": { "texte": "Le carbone 14 a une demi-vie de 5 730 ans&nbsp;: un os à <i>{1/4}</i> du carbone 14 initial a environ <i>11 460 ans</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "n = 24 ÷ 8 = 3 demi-vies", "quoi": "compter" },
+            { "texte": "N = N₀ ÷ 2³ = N₀ ÷ 8", "quoi": "appliquer la loi" },
+            { "texte": "Il reste 12,5 % de l’iode 131", "quoi": "conclure" }
+          ],
+          "pied": "L’==activité== A = λ N se mesure en **becquerels** : désintégrations par seconde."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire e<sup>λt</sup> au lieu de e<sup>−λt</sup>.",
+            "Croire qu’après 2 t<sub>½</sub>, il ne reste **rien**.",
+            "Mélanger **jours** et **ans** pour t<sub>½</sub> et la durée.",
+            "Confondre **activité** (Bq) et **nombre** de noyaux N."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "t<sub>½</sub> = 10 h&nbsp;: **fraction** restante après 30 h&nbsp;?",
+            "A₀ = 800 Bq, après 2 t<sub>½</sub>&nbsp;: **A**&nbsp;?",
+            "La demi-vie dépend-elle de **N₀**&nbsp;?"
+          ],
+          "reponses": "1) 1/8 · 2) 200 Bq · 3) non"
+        }
+      ]
+    }
+  ]
+}

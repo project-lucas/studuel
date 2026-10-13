@@ -1,0 +1,111 @@
+{
+  "titre": "L’effet Doppler",
+  "titreSurligne": "Doppler",
+  "accroche": "La fréquence dépend de qui bouge.",
+  "epreuve": "bac",
+  "bonus": "Source qui **approche**&nbsp;: f′ &gt; f · qui **s’éloigne**&nbsp;: f′ &lt; f · Δf ÷ f ≈ v ÷ c · par réflexion&nbsp;: Δf ÷ f ≈ 2v ÷ c",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/l-effet-doppler.webp",
+    "prompt": "a glossy violet ambulance-like van speeding along a golden road with compressed golden sound waves in front of it and stretched waves behind, a small cartoon ear, sparkles"
+  },
+  "marcel": "Il approche, c’est aigu.\nIl s’éloigne, c’est grave !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Source mobile, récepteur fixe",
+          "petite": true,
+          "lignes": ["f′ = f × {c/c − v}", "f′ = f × {c/c + v}"],
+          "regle": "**f** émise, **f′** reçue (Hz), **c** célérité, **v** vitesse de la source (m/s). Ligne 1&nbsp;: elle ==s’approche==, ligne 2&nbsp;: elle ==s’éloigne==.",
+          "note": "v toujours plus petit que c&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Ce qui se passe",
+          "entetes": ["Situation", "Fréquence reçue", "Son perçu"],
+          "lignes": [
+            ["Rapprochement", "f′ &gt; f", "plus aigu"],
+            ["Éloignement", "f′ &lt; f", "plus grave"],
+            ["Lumière d’une galaxie", "décalage vers le rouge", "elle s’éloigne"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "qui bouge, et s’il se rapproche ou s’éloigne du récepteur" },
+            { "titre": "Choisir", "texte": "le signe&nbsp;: c − v si on se rapproche, c + v si on s’éloigne" },
+            { "titre": "Calculer", "texte": "f′ en hertz, puis comparer à f pour conclure" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une sirène émet 700 Hz et roule à 20 m/s vers toi. Célérité du son&nbsp;: __340 m/s__. Fréquence reçue&nbsp;?",
+          "calcul": "f′ = 700 × 340 ÷ (340 − 20)",
+          "aparte": "elle s’approche&nbsp;: c − v",
+          "resultat": "f′ ≈ [[744 Hz]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quand la sirène s’éloigne",
+          "oui": { "titre": "Son plus grave", "texte": "Les fronts d’onde s’==écartent==&nbsp;: la fréquence reçue **diminue**." },
+          "non": { "titre": "La source change de ton&nbsp;?", "texte": "**Faux**&nbsp;: la fréquence **émise** ne change pas, seule la fréquence **reçue** varie." },
+          "essai": { "texte": "Même sirène qui s’éloigne à 20 m/s&nbsp;: f′ = 700 × 340 ÷ 360 ≈ <i>661 Hz</i>, plus grave que 700 Hz." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "La source s’approche : f′ &gt; f.", "quoi": "le sens" },
+            { "texte": "f′ = f × c ÷ (c − v) = 700 × 340 ÷ 320", "quoi": "formule puis nombres" },
+            { "texte": "f′ ≈ 744 Hz, son plus aigu", "quoi": "avec l’unité" }
+          ],
+          "pied": "Seul le ==mouvement relatif== compte, et la fréquence **émise** reste la même."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Inverser **c − v** et **c + v**.",
+            "Croire que la source **émet** une autre fréquence.",
+            "Mélanger **km/h** et **m/s** pour v et c.",
+            "Oublier le facteur **2** pour une onde qui se **réfléchit** (radar)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Une source s’approche&nbsp;: f′ est-elle **&gt; f** ou **&lt; f**&nbsp;?",
+            "Avec le décalage vers le rouge, la galaxie **s’approche** ou **s’éloigne**&nbsp;?",
+            "Source immobile, récepteur immobile&nbsp;: **f′** vaut&nbsp;?"
+          ],
+          "reponses": "1) f′ &gt; f · 2) elle s’éloigne · 3) f′ = f"
+        }
+      ]
+    }
+  ]
+}

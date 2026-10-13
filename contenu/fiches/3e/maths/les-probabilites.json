@@ -1,0 +1,115 @@
+{
+  "titre": "Les probabilités",
+  "titreSurligne": "probabilités",
+  "accroche": "Mesurer la chance qu’un événement se produise.",
+  "epreuve": "brevet",
+  "bonus": "p = **favorables ÷ possibles** · 0 ≤ p ≤ 1 · p(contraire) = **1 − p**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/les-probabilites.webp",
+    "prompt": "a glossy violet six-sided die frozen mid-air next to a golden spinning wheel with colored sectors and a little bag of marbles, sparkles"
+  },
+  "marcel": "Entre 0 et 1,\ntoujours !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Expérience aléatoire", "definition": "on ne connaît pas le résultat d’avance&nbsp;: lancer un dé" },
+            { "terme": "Issue", "definition": "un résultat possible&nbsp;: obtenir 4" },
+            { "terme": "Événement", "definition": "un ensemble d’issues&nbsp;: « obtenir un nombre pair » = {2, 4, 6}" },
+            { "terme": "Équiprobable", "definition": "toutes les issues ont la **même** chance&nbsp;: dé non truqué, pièce équilibrée" }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le calcul",
+          "taille": "mini",
+          "lignes": ["p(A) = {issues favorables/issues possibles}"],
+          "regle": "Dans le cas **équiprobable**. Un dé&nbsp;: p(pair) = 3/6 = ==1/2==. Une probabilité va de **0** (impossible) à **1** (certain).",
+          "note": "p(A) + p(non A) = 1&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Deux épreuves en trois temps",
+          "etapes": [
+            { "titre": "Dessiner", "texte": "un arbre : une branche par issue, sa probabilité dessus" },
+            { "titre": "Multiplier", "texte": "le long d’un chemin : p(rouge puis rouge) = 2/5 × 2/5" },
+            { "titre": "Additionner", "texte": "les chemins qui réalisent l’événement" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Sac&nbsp;: 2 boules rouges, 3 bleues. Deux tirages __avec remise__. p(deux rouges)&nbsp;?",
+          "calcul": "p = {2/5} × {2/5}",
+          "aparte": "on multiplie",
+          "resultat": "p = [[{4/25}]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "L’événement contraire", "texte": "p(au moins une rouge) = 1 − p(aucune rouge) = 1 − 9/25 = **16/25**." },
+            { "titre": "Sans remise", "texte": "La 2e boule se tire parmi **4**&nbsp;: p(rouge puis rouge) = 2/5 × 1/4 = 1/10." },
+            { "titre": "Tableau à double entrée", "texte": "Pour deux dés&nbsp;: 36 cases, on **compte** les cases favorables." },
+            { "titre": "Fréquence et probabilité", "texte": "Sur un **grand nombre** d’essais, la fréquence se rapproche de la probabilité." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Les 5 boules ont la même chance d’être tirées.", "quoi": "l’équiprobabilité" },
+            { "texte": "p(rouge) = 2/5", "quoi": "un tirage" },
+            { "texte": "p(rouge puis rouge) = 2/5 × 2/5 = 4/25", "quoi": "le chemin" }
+          ],
+          "pied": "Une probabilité s’écrit en ==fraction irréductible==, en décimal ou en %&nbsp;: 4/25 = 0,16 = 16 %."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Additionner au lieu de **multiplier** le long d’un chemin.",
+            "Oublier que **sans remise**, le total change.",
+            "Donner une probabilité **plus grande que 1**.",
+            "Confondre « au moins un » et « exactement un »."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Un dé&nbsp;: p(obtenir **5 ou 6**)&nbsp;?",
+            "p(A) = 0,3&nbsp;: **p(non A)**&nbsp;?",
+            "Deux pièces&nbsp;: p(**deux « pile »**)&nbsp;?"
+          ],
+          "reponses": "1) 1/3 · 2) 0,7 · 3) 1/4"
+        }
+      ]
+    }
+  ]
+}

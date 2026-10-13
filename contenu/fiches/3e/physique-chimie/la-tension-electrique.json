@@ -1,0 +1,115 @@
+{
+  "titre": "La tension",
+  "titreSurligne": "tension",
+  "accroche": "Ce que mesure un voltmètre.",
+  "epreuve": "brevet",
+  "bonus": "Série&nbsp;: **U = U₁ + U₂** · dérivation&nbsp;: **U = U₁ = U₂** · voltmètre **en dérivation** · secteur&nbsp;: **230 V**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/physique-chimie/la-tension-electrique.webp",
+    "prompt": "a glossy violet voltmeter with a round dial and a golden needle, two crocodile clips on red and black wires attached to a battery, small electric sparks, sparkles"
+  },
+  "marcel": "Série, on additionne.\nDérivation, c’est pareil !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les lois de la tension",
+          "taille": "mini",
+          "lignes": ["Série&nbsp;: U = U₁ + U₂", "Dérivation&nbsp;: U₁ = U₂ = U"],
+          "regle": "**U** la tension en **volts (V)**. En **série**, les tensions **s’additionnent**&nbsp;; en **dérivation**, elles sont **égales**. La tension se mesure **aux bornes** d’un dipôle, jamais « dans » le fil.",
+          "note": "le voltmètre se branche en dérivation&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Valeurs usuelles",
+          "entetes": ["Source", "Tension"],
+          "lignes": [
+            ["Pile ronde", "1,5 V"],
+            ["Pile bouton", "3 V"],
+            ["Pile plate", "4,5 V"],
+            ["Port USB", "5 V"],
+            ["Batterie de voiture", "12 V"],
+            ["**Secteur domestique**", "**230 V**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Mesurer une tension en trois temps",
+          "etapes": [
+            { "titre": "Brancher", "texte": "le voltmètre **en dérivation** aux bornes du dipôle" },
+            { "titre": "Orienter", "texte": "la borne V vers la borne + de la source, COM vers la borne −" },
+            { "titre": "Lire", "texte": "la valeur, avec le bon calibre, et écrire l’unité (V)" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Deux lampes en __série__ sur une pile de 4,5 V. U₁ = 2,2 V. __U₂__&nbsp;?",
+          "calcul": "U₂ = 4,5 − 2,2",
+          "aparte": "loi d’additivité",
+          "resultat": "U₂ = [[2,3 V]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Aux bornes d’un interrupteur",
+          "oui": { "titre": "Fermé", "texte": "Il se comporte comme un fil&nbsp;: la tension à ses bornes est de **0 V**." },
+          "non": { "titre": "Ouvert", "texte": "La tension à ses bornes est celle de la **source** : plus rien ne circule." },
+          "essai": { "texte": "<i>Continu</i>&nbsp;: le signe ne change pas (pile). <i>Alternatif</i>&nbsp;: il change tout le temps (secteur)." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Les lampes sont en série&nbsp;: U = U₁ + U₂", "quoi": "la loi" },
+            { "texte": "U₂ = U − U₁ = 4,5 − 2,2", "quoi": "lettres puis nombres" },
+            { "texte": "U₂ = 2,3 V", "quoi": "avec l’unité" }
+          ],
+          "pied": "Il faut ==nommer la loi== utilisée (série ou dérivation) avant de calculer."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Brancher le voltmètre **en série**.",
+            "Additionner les tensions **en dérivation**.",
+            "Oublier l’**unité** : le volt (V).",
+            "Inverser les bornes **COM** et **V**.",
+            "Dire que la tension « **circule** » : c’est le courant qui circule, la tension existe **aux bornes**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Tension du **secteur** domestique&nbsp;?",
+            "Deux dipôles en dérivation, U₁ = 6 V&nbsp;: **U₂**&nbsp;?",
+            "Série&nbsp;: U₁ = 3 V et U₂ = 2 V, **U**&nbsp;?"
+          ],
+          "reponses": "1) 230 V · 2) 6 V · 3) 5 V"
+        }
+      ]
+    }
+  ]
+}

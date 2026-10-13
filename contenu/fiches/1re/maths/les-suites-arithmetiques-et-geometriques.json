@@ -1,0 +1,115 @@
+{
+  "titre": "Les suites",
+  "titreSurligne": "suites",
+  "accroche": "On ajoute, ou on multiplie.",
+  "epreuve": "bac",
+  "bonus": "arithmétique&nbsp;: uₙ₊₁ = uₙ + r · géométrique&nbsp;: uₙ₊₁ = q × uₙ · +t % ⇒ **q = 1 + t/100**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/les-suites-arithmetiques-et-geometriques.webp",
+    "prompt": "a glossy violet staircase of equal steps next to a golden staircase whose steps grow taller and taller, a tiny cartoon ball climbing, sparkles"
+  },
+  "marcel": "+ r ou × q :\nreconnais-la !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le terme général",
+          "petite": true,
+          "lignes": ["<span>u<sub>n+1</sub></span> = <span>u<sub>n</sub></span> + r&nbsp;⇒&nbsp;<span>u<sub>n</sub></span> = <span>u<sub>0</sub></span> + nr", "<span>u<sub>n+1</sub></span> = q × <span>u<sub>n</sub></span>&nbsp;⇒&nbsp;<span>u<sub>n</sub></span> = <span>u<sub>0</sub></span> × q<sup>n</sup>"],
+          "regle": "**Arithmétique**&nbsp;: on ajoute toujours la raison **r**. **Géométrique**&nbsp;: on multiplie toujours par la raison **q**. De u₀ à uₙ, il y a ==n + 1== termes.",
+          "note": "n est un exposant, pas un facteur&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les deux modèles",
+          "entetes": ["", "Arithmétique", "Géométrique"],
+          "lignes": [
+            ["Reconnaître", "uₙ₊₁ − uₙ = r", "uₙ₊₁ ÷ uₙ = q"],
+            ["Croissance", "linéaire", "exponentielle"],
+            ["Somme", "1 + … + n = {n(n + 1)/2}", "1 + … + qⁿ = {1 − qⁿ⁺¹/1 − q}"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Reconnaître", "texte": "la différence est constante (r) ou le quotient est constant (q)" },
+            { "titre": "Écrire uₙ", "texte": "uₙ = u₀ + nr ou uₙ = u₀ × qⁿ" },
+            { "titre": "Calculer", "texte": "remplacer n, sans oublier l’exposant" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "(uₙ) géométrique, u₀ = 2 et q = 3. __Calculer u₅__&nbsp;?",
+          "calcul": "u₅ = 2 × 3⁵ = 2 × 243",
+          "aparte": "3⁵ = 243",
+          "resultat": "u₅ = [[486]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Arithmétique", "texte": "u₀ = 5 et r = 3&nbsp;: u₁₀ = 5 + 10 × 3 = **35**." },
+            { "titre": "Somme", "texte": "1 + 2 + … + 100 = {100 × 101/2} = **5 050**." },
+            { "titre": "Évolution en %", "texte": "+19 % par an&nbsp;: suite **géométrique** de raison q = 1,19." },
+            { "titre": "Sens de variation", "texte": "q > 1 et u₀ > 0&nbsp;: **croissante**&nbsp;; 0 < q < 1&nbsp;: **décroissante**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "uₙ₊₁ = 3uₙ pour tout n", "quoi": "la relation" },
+            { "texte": "(uₙ) géométrique de raison q = 3", "quoi": "la nature" },
+            { "texte": "u₅ = 2 × 3⁵ = 486", "quoi": "le calcul" }
+          ],
+          "pied": "Contrôle&nbsp;: 2 → 6 → 18 → 54 → 162 → ==486==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre la raison **r** et la raison **q**.",
+            "Appliquer u₀ + nr à une suite **géométrique**.",
+            "Compter **n** termes de u₀ à uₙ&nbsp;: il y en a n + 1.",
+            "Écrire q = **t/100** au lieu de q = 1 + t/100."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "u₀ = 4 et r = −2&nbsp;: **u₃**&nbsp;?",
+            "u₀ = 3 et q = 2&nbsp;: **u₄**&nbsp;?",
+            "Une hausse de 5 % par an&nbsp;: **nature** et raison&nbsp;?"
+          ],
+          "reponses": "1) −2 · 2) 48 · 3) géométrique, q = 1,05"
+        }
+      ]
+    }
+  ]
+}

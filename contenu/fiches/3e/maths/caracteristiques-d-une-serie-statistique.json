@@ -1,0 +1,111 @@
+{
+  "titre": "Les statistiques",
+  "titreSurligne": "statistiques",
+  "accroche": "Moyenne, médiane, étendue : résumer une série.",
+  "epreuve": "brevet",
+  "bonus": "Moyenne = **somme ÷ effectif** · médiane = valeur du **milieu** · étendue = **max − min**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/caracteristiques-d-une-serie-statistique.webp",
+    "prompt": "a glossy violet bar chart with golden bars of different heights, a tiny cartoon character balancing a plank on a fulcrum at the average point, sparkles"
+  },
+  "marcel": "Ranger avant\nla médiane !",
+  "rangs": [
+    {
+      "colonnes": "1fr 320px",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les trois indicateurs",
+          "items": [
+            { "terme": "Moyenne", "definition": "la **somme** des valeurs ÷ l’**effectif total**. Sensible aux valeurs extrêmes." },
+            { "terme": "Médiane", "definition": "la valeur qui partage la série **rangée** en deux groupes de même effectif." },
+            { "terme": "Étendue", "definition": "max − min&nbsp;: elle mesure la **dispersion**." },
+            { "terme": "Effectif", "definition": "le nombre de fois où une valeur apparaît&nbsp;; la **fréquence** = effectif ÷ total." }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La moyenne pondérée",
+          "taille": "mini",
+          "lignes": ["m = {12 × 2 + 15 × 3 + 20 × 5/2 + 3 + 5}"],
+          "regle": "Avec un **tableau d’effectifs**, chaque valeur compte autant de fois que son effectif&nbsp;: (24 + 45 + 100) ÷ 10 = ==16,9==.",
+          "note": "on divise par le total des effectifs, pas par 3&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La médiane en trois temps",
+          "etapes": [
+            { "titre": "Ranger", "texte": "les valeurs dans l’ordre croissant, avec les répétitions" },
+            { "titre": "Compter", "texte": "l’effectif N : impair ou pair ?" },
+            { "titre": "Lire", "texte": "N impair : la valeur du milieu ; N pair : la moyenne des deux du milieu" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Notes&nbsp;: 8 · 12 · 15 · 9 · 12 · 18. __Médiane__ et __étendue__&nbsp;?",
+          "calcul": "8 · 9 · 12 · 12 · 15 · 18",
+          "aparte": "rangées",
+          "resultat": "médiane [[12]], étendue 18 − 8 = [[10]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Moyenne ou médiane&nbsp;?",
+          "oui": { "titre": "La moyenne", "texte": "Salaires 1 500, 1 600, 1 700, 10 000&nbsp;: moyenne 3 700 €. Un seul **gros** salaire la tire vers le haut." },
+          "non": { "titre": "La médiane", "texte": "Même série&nbsp;: médiane 1 650 €. Elle **ignore** les valeurs extrêmes." },
+          "essai": { "texte": "Au brevet, on **compare** souvent deux séries&nbsp;: même moyenne mais étendue plus grande = résultats plus <i>dispersés</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Série rangée&nbsp;: 8 · 9 · 12 · 12 · 15 · 18 (N = 6, pair)", "quoi": "on range" },
+            { "texte": "Médiane = (12 + 12) ÷ 2 = 12", "quoi": "le milieu" },
+            { "texte": "Moyenne = 74 ÷ 6 ≈ 12,3&nbsp;; étendue = 18 − 8 = 10", "quoi": "les autres" }
+          ],
+          "pied": "Au moins ==la moitié== des notes sont ≤ 12&nbsp;: c’est ce que dit la médiane."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Chercher la médiane **sans ranger** la série.",
+            "Diviser par le nombre de **valeurs différentes** au lieu de l’effectif total.",
+            "Oublier une valeur **répétée**.",
+            "Confondre étendue et **effectif**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Médiane de **3 · 7 · 2 · 9 · 5**&nbsp;?",
+            "Moyenne de 10 (effectif 3) et 20 (effectif 1)&nbsp;?",
+            "Étendue de **4 · 11 · 7**&nbsp;?"
+          ],
+          "reponses": "1) 5 · 2) 12,5 · 3) 7"
+        }
+      ]
+    }
+  ]
+}

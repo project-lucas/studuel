@@ -1,0 +1,117 @@
+{
+  "titre": "Sphère et boule",
+  "titreSurligne": "boule",
+  "accroche": "La surface du ballon, le volume de la bille.",
+  "epreuve": "brevet",
+  "bonus": "Rayon **r** · diamètre = **2r** · π ≈ **3,14** · 1 L = **1 dm³** = 1 000 cm³",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/3e/maths/sphere-et-boule.webp",
+    "prompt": "a glossy violet sphere cut in half showing its flat circular face, next to a golden basketball with a tape measure around its equator, sparkles"
+  },
+  "marcel": "Aire : au carré,\nvolume : au cube !",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "figures",
+          "numero": 1,
+          "titre": "La figure",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><circle cx='110' cy='86' r='70' fill='#eee7fc' stroke='#2b2350' stroke-width='3.5'></circle><ellipse cx='110' cy='86' rx='70' ry='22' fill='none' stroke='#7a3fe0' stroke-width='2.5' stroke-dasharray='5 4'></ellipse><path d='M40,86 A70,22 0 0 0 180,86' fill='none' stroke='#7a3fe0' stroke-width='2.5'></path><line x1='110' y1='86' x2='180' y2='86' stroke='#f1566c' stroke-width='4' stroke-linecap='round'></line><circle cx='110' cy='86' r='4.5' fill='#2b2350'></circle><g font-family=\"'Baloo 2'\" font-weight='800' font-size='18' fill='#2b2350'><text x='98' y='76'>O</text><text x='140' y='80' fill='#f1566c'>r</text></g><text x='60' y='130' font-family='Nunito' font-weight='800' font-size='11.5' fill='#4b2a9a'>grand cercle</text></svg>",
+              "legende": "Une sphère de centre O et de rayon r",
+              "sous": "la sphère est la surface, la boule le solide plein"
+            }
+          ],
+          "legende": { "jeton": "diamètre", "texte": "d = 2r&nbsp;: on divise par 2 pour avoir r." }
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Les deux formules",
+          "petite": true,
+          "lignes": ["A = 4 × π × r²", "V = {4/3} × π × r³"],
+          "regle": "L’**aire** de la sphère (la peau du ballon) prend r au ==carré==, le **volume** de la boule (la bille pleine) prend r au ==cube==.",
+          "note": "la formule est donnée au brevet, pas le choix&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "rayon ou diamètre ? Un diamètre se divise par 2" },
+            { "titre": "Choisir", "texte": "aire → 4πr², volume → 4/3 πr³ (cm² ou cm³)" },
+            { "titre": "Calculer", "texte": "la valeur exacte avec π, puis l’arrondi demandé" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Balle de tennis de diamètre 6,6 cm. On cherche son __volume__. Rayon&nbsp;: 6,6 ÷ 2 = 3,3 cm.",
+          "calcul": "V = {4/3} × π × 3,3³",
+          "aparte": "au cube&nbsp;!",
+          "resultat": "V ≈ [[151 cm³]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir aussi",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Les sections", "texte": "Un plan coupe une sphère selon un **cercle**. Par le centre&nbsp;: un **grand cercle**, de rayon r." },
+            { "titre": "Agrandir", "texte": "Rayon × k&nbsp;: aire × **k²**, volume × **k³**. Rayon doublé, volume × 8." },
+            { "titre": "Les unités", "texte": "Aire en cm², volume en cm³. 1 L = 1 dm³ = **1 000 cm³**." },
+            { "titre": "Valeur exacte", "texte": "On garde **π**&nbsp;: V = 36π cm³, puis V ≈ 113,1 cm³." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du brevet",
+          "lignes": [
+            { "texte": "Le rayon de la boule est r = 3 cm.", "quoi": "les données" },
+            { "texte": "V = 4/3 × π × 3³ = 36π cm³", "quoi": "formule et calcul" },
+            { "texte": "V ≈ 113,1 cm³", "quoi": "l’arrondi" }
+          ],
+          "pied": "La valeur ==exacte== avec π d’abord, l’arrondi ensuite."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Prendre le **diamètre** pour le rayon.",
+            "Oublier le **cube** dans le volume (r³, pas r²).",
+            "Arrondir π à 3&nbsp;: le résultat est **faux**.",
+            "Donner une aire en **cm³**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "r = 3 cm&nbsp;: l’**aire** de la sphère&nbsp;?",
+            "Diamètre 10 cm&nbsp;: le **rayon**&nbsp;?",
+            "Rayon doublé&nbsp;: le **volume** est multiplié par&nbsp;?"
+          ],
+          "reponses": "1) 36π ≈ 113,1 cm² · 2) 5 cm · 3) 8"
+        }
+      ]
+    }
+  ]
+}

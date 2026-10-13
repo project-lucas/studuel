@@ -82,6 +82,15 @@ const ORIGINAUX = {
   // `ia` (« Moi vs IA ») : le bouclier mi-crayon, mi-circuit.
   ia: 'moi vs ia 2',
   erreurs: 'à revoir 2',
+  // LA PORTE « PROGRAMME » du dossier de matière (12/10/2026) : une carte
+  // dépliée et son chemin pointillé jusqu'au drapeau — le parcours de l'année.
+  // Elle remplace, sur cette porte, le livre ouvert du support Cours, qui
+  // faisait doublon avec la tuile Cours de chaque fiche (Lucas). Elle passe
+  // par la trame des supports parce qu'elle est posée à côté du bloc-notes
+  // « Exercice ». La boussole essayée le même jour (`programme - boussole
+  // (ecartee).png`) aurait fait un second cadran rond à côté de l'horloge des
+  // Annales, dans le même rail.
+  programme: 'programme',
   // LES ONGLETS DE « MA BIBLIOTHÈQUE » (24/09/2026). Ce ne sont pas des supports
   // de chapitre, mais ils s'affichent à côté de la Fiche (Dossiers · Capsules ·
   // Fiches) : ils passent par la MÊME trame, sinon l'un des trois onglets

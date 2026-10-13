@@ -153,6 +153,41 @@ export function gameScene(id: string): string | undefined {
     : undefined
 }
 
+// LES OBJETS DES TALONS des billets de jeux (12-13/10/2026, Lucas : « fais le
+// nécessaire aussi pour les icônes d'ici », puis « les icônes de droite,
+// j'aimerais qu'on les change ») : l'objet dessiné à droite de la perforation,
+// dans la famille de la barre d'onglets, à la place de l'emoji que la police du
+// téléphone dessinait à sa façon. Fabriqués par `node scripts/talons-jeux.mjs`
+// (assets-sources/talons-jeux/<id>.png → public/images/defi/jeux/<id>-talon.webp) ;
+// la loupe de Chasse à la faute a servi de modèle, la série a suivi. Un jeu
+// absent d'ici garderait son emoji (lib/assets.test.ts le dirait).
+const GAME_TALON_IDS = [
+  'capitales',
+  'frise-folle',
+  'chasse-faute',
+  'conjugaison-eclair',
+  'calcul-mental',
+  'traduction-flash',
+  'phrase-en-vrac',
+  'traduccion-flash',
+  'falsos-amigos',
+  'anatomie-express',
+  'classe-moi-ca',
+  'chasse-elements',
+  'bonne-unite',
+]
+
+/** L'objet du talon d'un jeu de salon, quand il est dessiné. */
+export function gameTalon(id: string): string | undefined {
+  return GAME_TALON_IDS.includes(id) ? `/images/defi/jeux/${id}-talon.webp` : undefined
+}
+
+/** Le talon de la dictée du français (lib/reviser/billets-matiere) : un casque. */
+export const TALON_DICTEE = '/images/defi/jeux/dictee-talon.webp'
+
+/** Le cadenas des billets réservés à Studuel+ (ModeTicket) — le même partout. */
+export const TALON_CADENAS = '/images/defi/jeux/cadenas-talon.webp'
+
 /** La vignette du dossier d'une matière des salons (la même que dans Réviser). */
 export function vignetteMatiere(subject: string): string | null {
   return subjectVignette(programmeSlug(subject)) ?? null
@@ -188,6 +223,7 @@ export function subjectGameTickets(
       tagline: g.tagline,
       emoji: g.emoji,
       scene: gameScene(g.id),
+      image: gameTalon(g.id),
       vignette,
       href: !g.implemented ? null : verrou ? LIEN_STUDUEL_PLUS : `/defi/jeux/${g.id}`,
       chip: format ? formatTeaser(format) : g.implemented ? 'Jouer' : undefined,

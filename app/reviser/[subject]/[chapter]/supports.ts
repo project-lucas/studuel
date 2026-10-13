@@ -29,12 +29,15 @@ export async function loadChapterSupports(
   /** La leçon lue (pied de cours). Absente = écran de chapitre : rien n'est lu. */
   lessonId?: string,
 ): Promise<SupportChip[]> {
+  // Le CONTENU des leçons ne sert qu'à deviner une carte mentale quand le
+  // chapitre n'en a pas (`mindMapFromLessons`) : quand il en a une, on ne
+  // transporte pas des kilo-octets de cours pour une pastille (12/10/2026).
   const { data: lessons } = await supabase
     .from('lessons')
-    .select('id, title, content, position')
+    .select(chapter.has_mind_map ? 'id, title, position' : 'id, title, content, position')
     .eq('chapter_id', chapter.id)
     .order('position', { ascending: true })
-    .returns<{ id: string; title: string; content: string | null; position: number }[]>()
+    .returns<{ id: string; title: string; content?: string | null; position: number }[]>()
 
   const rows = lessons ?? []
   if (rows.length === 0) return []
@@ -183,7 +186,10 @@ export async function loadChapterSupports(
       carte: {
         available:
           Boolean(chapter.has_mind_map) ||
-          mindMapFromLessons(chapter.title, rows) !== null,
+          mindMapFromLessons(
+            chapter.title,
+            rows.map((l) => ({ ...l, content: l.content ?? null })),
+          ) !== null,
         locked: !canOpenChapter(tier, chapter.id, unlocked),
       },
       exercice: {

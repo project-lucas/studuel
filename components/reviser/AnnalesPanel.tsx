@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { ChevronRight, Clock, FileText, GraduationCap, Scale } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
 import type { ExamYear } from '@/lib/annales'
-import { cheminAnnale, resumeParties, type AnneeAnnales } from '@/lib/annales-corrigees/apercu'
+import { cheminAnnale, type AnneeAnnales } from '@/lib/annales-corrigees/apercu'
 import { sigleEpreuve } from '@/lib/annales-corrigees/epreuve'
 import {
   formatCoefficient,
@@ -53,14 +53,11 @@ export default function AnnalesPanel({
   return (
     <div className="mx-auto flex w-full max-w-xl flex-col gap-6">
       <section aria-labelledby="epreuve-blanche">
-        <h2 id="epreuve-blanche" className="titre-section">
+        {/* ÉPURÉ le 12/10/2026 (Lucas : « trop de sous-texte en gris ») : les
+            titres et les blocs, sans paragraphe d'explication. */}
+        <h2 id="epreuve-blanche" className="titre-section mb-3">
           T’entraîner dans les conditions
         </h2>
-        <p className="mt-0.5 mb-3 text-sm text-muted-foreground">
-          Cette année se termine par {exam.label}. L’épreuve blanche de{' '}
-          {subject.name} te met dans le temps et le format réels, et te rend un
-          bilan chapitre par chapitre.
-        </p>
         <Link
           href={`/reviser/examen-blanc?subject=${subject.slug}`}
           onClick={() => sfx.tap()}
@@ -110,11 +107,7 @@ export default function AnnalesPanel({
           </div>
         ) : (
           <>
-            <p className="mt-0.5 mb-3 text-sm text-muted-foreground">
-              La durée, le barème et ce qu’on attend de toi à chaque partie —
-              d’après les textes officiels de la session.
-            </p>
-            <div className="flex flex-col gap-5">
+            <div className="mt-3 flex flex-col gap-5">
               {sessions.map((group) => (
                 <div key={group.session} className="flex flex-col gap-3">
                   {sessions.length > 1 && (
@@ -225,16 +218,13 @@ function AnnalesCorrigees({
   subject: { slug: string; name: string }
   annales: AnneeAnnales[]
 }) {
-  const total = annales.reduce((n, a) => n + a.annales.length, 0)
   return (
     <section aria-labelledby="annales-corrigees">
-      <h2 id="annales-corrigees" className="titre-section">
+      {/* Des BLOCS, simplement (Lucas, 12/10/2026) : l'année, le centre, et
+          c'est tout — plus de phrase grise ni de pilule « Sujet + corrigé ». */}
+      <h2 id="annales-corrigees" className="titre-section mb-3">
         Les sujets tombés, corrigés
       </h2>
-      <p className="mt-0.5 mb-3 text-sm text-muted-foreground">
-        {total} sujet{total > 1 ? 's' : ''} officiel{total > 1 ? 's' : ''}, chacun avec son
-        corrigé Studuel : compose, puis corrige-toi partie par partie.
-      </p>
       <ul className="flex flex-col gap-2.5">
         {annales.flatMap((groupe) =>
           groupe.annales.map((a) => (
@@ -255,10 +245,7 @@ function AnnalesCorrigees({
                     {a.lieu}
                   </span>
                   <span className="mt-0.5 block truncate text-xs font-semibold text-muted-foreground">
-                    {resumeParties(a.parties)}
-                  </span>
-                  <span className="mt-1 inline-flex items-center gap-1 rounded-full bg-accent px-2 py-0.5 text-[10.5px] font-extrabold text-[color-mix(in_oklch,var(--highlight),black_45%)]">
-                    Sujet + corrigé
+                    Sujet et corrigé
                   </span>
                 </span>
                 <ChevronRight

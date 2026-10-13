@@ -1,10 +1,8 @@
 'use client'
 
-import { useCallback, useMemo, useState, type ReactNode } from 'react'
+import { useMemo, useState, type ReactNode } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
-import { Check, ChevronDown, Crown, ListChecks, Lock, Search, Star, Timer, X } from 'lucide-react'
-import Attente from '@/components/reviser/Attente'
+import { Check, ChevronDown, Crown, ListChecks, Lock, Plus, Search, Star, Timer, X } from 'lucide-react'
 import IconeTheme from '@/components/reviser/IconeTheme'
 import SupportChips from '@/components/reviser/SupportChips'
 import { useFavorisProgramme } from '@/components/reviser/useFavorisProgramme'
@@ -107,12 +105,16 @@ export default function Sommaire({
   /** Ce qui se pose entre les outils et la liste (« Tes cours » du carnet). */
   avant?: ReactNode
 }) {
-  const router = useRouter()
   const mondes = useMemo(() => mondesDuProgramme(chapters), [chapters])
   const reprise = useMemo(() => repriseDuProgramme(chapters, resume), [chapters, resume])
   const [choix, basculerFavori] = useFavorisProgramme(cleDossier(subjectSlug, grade))
   const ordonnes = useMemo(() => ordonnerMondes(mondes, choix), [mondes, choix])
-  const { fiche, supports, chargement, basculer, fermer } = useSupportsDeFiche(subjectSlug)
+  // La fiche à reprendre se prépare dès l'affichage ; les autres à l'intention
+  // (le doigt se pose) — voir useSupportsDeFiche.
+  const { fiche, supports, chargement, basculer, fermer, preparer } = useSupportsDeFiche(
+    subjectSlug,
+    reprise?.fiche.id ?? null,
+  )
 
   const parDefaut = useMemo(
     () => themeOuvertParDefaut(mondes, reprise?.cle ?? null, themeOuvert),
@@ -141,11 +143,6 @@ export default function Sommaire({
     () => (cherche ? matchChapters(chapters, query) : []),
     [chapters, cherche, query],
   )
-
-  // Le doigt se pose sur un bouton de fiche : la page d'arrivée part se
-  // charger une centaine de millisecondes avant le clic. UN préchargement, à
-  // l'intention — jamais la rafale de tous les liens visibles (lib/precharge-onglets).
-  const viser = useCallback((href: string) => router.prefetch(href), [router])
 
   if (chapters.length === 0) {
     return (
@@ -204,7 +201,7 @@ export default function Sommaire({
                 sfx.tap()
                 basculer(chapter.id)
               }}
-              onIntention={viser}
+              onPreparer={() => preparer(chapter.id)}
             />
           </li>
         )
@@ -423,7 +420,7 @@ function FicheLigne({
   supports,
   chargement,
   onBasculer,
-  onIntention,
+  onPreparer,
 }: {
   chapter: ChapterRow
   /** Le numéro de la pastille ; `null` en philosophie, dont les notions n'ont pas d'ordre. */
@@ -435,10 +432,10 @@ function FicheLigne({
   supports: SupportChip[] | null
   chargement: boolean
   onBasculer: () => void
-  onIntention: (href: string) => void
+  /** Le doigt se pose : les supports partent se charger avant le tap. */
+  onPreparer: () => void
 }) {
   const panneau = `fiche-${chapter.id}`
-  const suite = chapter.suite ?? null
   const commencee = chapter.status !== 'non_commence'
 
   return (
@@ -446,6 +443,7 @@ function FicheLigne({
       <div className={s.fiche} id={`ligne-${chapter.id}`} data-depliee={ouverte ? '' : undefined}>
         <button
           type="button"
+          onPointerDown={onPreparer}
           onClick={onBasculer}
           aria-expanded={ouverte}
           aria-controls={panneau}
@@ -506,22 +504,26 @@ function FicheLigne({
             </span>
           </span>
         </button>
-        {suite ? (
-          <Link
-            href={suite.href}
-            // Pas de préchargement à l'affichage : une liste de liens visibles
-            // partirait en rafale. Il part à l'intention, quand le doigt se pose.
-            prefetch={false}
-            onPointerDown={() => onIntention(suite.href)}
-            onClick={() => sfx.tap()}
-            aria-label={`${suite.label} — ${chapter.title}`}
-            data-genre={suite.genre}
-            data-suite={estSuite ? '' : undefined}
-            className={s.aller}
-          >
-            <Attente className={s.allerPlaque}>{suite.label}</Attente>
-          </Link>
-        ) : null}
+        {/* LE « + » (Lucas, 12/10/2026 : « un bouton qui invite et fait
+            comprendre que ces blocs sont dépliables, mais supprime ce texte
+            Cours ») : le rond déplie les quatre supports de la fiche et tourne
+            en croix quand elle est ouverte. Il remplace la pilule « Cours ·
+            Quiz · Revoir » (le mot Cours, répété à chaque ligne, faisait doublon
+            avec la porte). La fiche à reprendre garde le seul rond violet plein. */}
+        <button
+          type="button"
+          onPointerDown={onPreparer}
+          onClick={onBasculer}
+          aria-expanded={ouverte}
+          aria-controls={panneau}
+          aria-label={`${ouverte ? 'Replier' : 'Déplier'} — ${chapter.title}`}
+          data-suite={estSuite ? '' : undefined}
+          className={s.plus}
+        >
+          <span className={s.plusRond} data-ouvert={ouverte ? '' : undefined}>
+            <Plus className="size-5" strokeWidth={3} aria-hidden="true" />
+          </span>
+        </button>
       </div>
 
       {ouverte ? (

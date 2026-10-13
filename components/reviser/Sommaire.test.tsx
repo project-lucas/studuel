@@ -4,9 +4,12 @@ import Sommaire from '@/components/reviser/Sommaire'
 import type { ChapterRow } from '@/lib/subject-template'
 
 // Déplier une fiche demande ses supports au serveur : ici, personne ne répond.
-vi.mock('@/app/reviser/[subject]/supports-actions', () => ({
-  chapterSupports: vi.fn(async () => []),
-}))
+// Les supports d'une fiche se lisent par la route /api/reviser/supports
+// (12/10/2026) : une réponse vide suffit au sommaire.
+const fetchMock = vi.fn<(url: string) => Promise<{ ok: boolean; json: () => Promise<never[]> }>>(
+  async () => ({ ok: true, json: async () => [] }),
+)
+vi.stubGlobal('fetch', fetchMock)
 
 const prefetch = vi.fn()
 vi.mock('next/navigation', () => ({
@@ -97,40 +100,48 @@ describe('Sommaire — les fiches se lisent tout de suite', () => {
     expect(screen.queryByText('Les puissances')).not.toBeInTheDocument()
   })
 
-  it('chaque fiche porte un lien DIRECT vers sa suite : son cours, ou son quiz', () => {
+  it('chaque fiche porte un « + » qui la déplie, et le dit (12/10/2026)', () => {
     rendre()
-    expect(screen.getByRole('link', { name: 'Quiz — Les fonctions affines' })).toHaveAttribute(
-      'href',
-      '/test/quiz-b',
+    const plus = screen.getByRole('button', { name: 'Déplier — Les probabilités' })
+    expect(plus).toHaveAttribute('aria-expanded', 'false')
+    fireEvent.click(plus)
+    expect(screen.getByRole('button', { name: 'Replier — Les probabilités' })).toHaveAttribute(
+      'aria-expanded',
+      'true',
     )
-    expect(screen.getByRole('link', { name: 'Cours — Les probabilités' })).toHaveAttribute(
-      'href',
-      '/reviser/maths/c/lecon/cours',
-    )
+    // Plus de pilule « Cours » ni de lien direct sur la ligne.
+    expect(screen.queryByRole('link', { name: /^Cours — / })).not.toBeInTheDocument()
   })
 
-  it('la fiche à reprendre porte la plaque pleine, et dit ce qu’elle rapporte', () => {
+  it('la fiche à reprendre porte le seul rond plein, et dit ce qu’elle rapporte', () => {
     rendre()
-    expect(screen.getByRole('link', { name: 'Quiz — Les fonctions affines' })).toHaveAttribute(
+    expect(screen.getByRole('button', { name: 'Déplier — Les fonctions affines' })).toHaveAttribute(
       'data-suite',
     )
-    expect(screen.getByRole('link', { name: 'Cours — Les probabilités' })).not.toHaveAttribute(
+    expect(screen.getByRole('button', { name: 'Déplier — Les probabilités' })).not.toHaveAttribute(
       'data-suite',
     )
     expect(screen.getByText('+100 XP')).toBeInTheDocument()
   })
 
-  it('une fiche sans leçon n’a pas de bouton', () => {
+  it('une fiche sans leçon garde son « + » : elle se déplie et dit qu’elle est vide', () => {
     rendre([fiche('a', 'Vide', 'T1', { suite: null }), fiche('b', 'Pleine', 'T2')])
-    expect(screen.queryByRole('link', { name: /Vide/ })).not.toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Déplier — Vide' })).toBeInTheDocument()
   })
 
-  it('le doigt posé sur un bouton précharge SA page, et aucune autre', () => {
+  it('les supports se préparent à l’intention : la fiche à reprendre d’abord, puis celle qu’on touche, une seule fois', () => {
+    fetchMock.mockClear()
     rendre()
-    expect(prefetch).not.toHaveBeenCalled()
-    fireEvent.pointerDown(screen.getByRole('link', { name: 'Cours — Les probabilités' }))
-    expect(prefetch).toHaveBeenCalledTimes(1)
-    expect(prefetch).toHaveBeenCalledWith('/reviser/maths/c/lecon/cours')
+    // La fiche à reprendre (b) part dès l'affichage.
+    expect(fetchMock).toHaveBeenCalledTimes(1)
+    expect(String(fetchMock.mock.calls[0][0])).toContain('fiche=b')
+    fireEvent.pointerDown(screen.getByRole('button', { name: 'Déplier — Les probabilités' }))
+    expect(fetchMock).toHaveBeenCalledTimes(2)
+    expect(String(fetchMock.mock.calls[1][0])).toContain('matiere=maths&fiche=c')
+    // Le tap qui suit ne redemande rien.
+    fireEvent.pointerDown(screen.getByRole('button', { name: 'Déplier — Les probabilités' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Déplier — Les probabilités' }))
+    expect(fetchMock).toHaveBeenCalledTimes(2)
   })
 })
 
@@ -206,7 +217,8 @@ describe('Sommaire — les thèmes', () => {
 describe('Sommaire — une fiche se déplie', () => {
   it('toucher la ligne montre ses supports, sans quitter la liste', async () => {
     rendre()
-    const ligne = screen.getByRole('button', { name: /Les probabilités/ })
+    // La ligne d'abord, puis son « + » : les deux déplient la même fiche.
+    const ligne = screen.getAllByRole('button', { name: /Les probabilités/ })[0]
     expect(ligne).toHaveAttribute('aria-expanded', 'false')
     fireEvent.click(ligne)
     expect(ligne).toHaveAttribute('aria-expanded', 'true')
@@ -247,8 +259,8 @@ describe('Sommaire — la recherche amarrée', () => {
     expect(within(resultats).getByText('Le théorème de Pythagore')).toBeInTheDocument()
     expect(within(resultats).getByText('Thème deux')).toBeInTheDocument()
     expect(
-      within(resultats).getByRole('link', { name: 'Cours — Le théorème de Pythagore' }),
-    ).toHaveAttribute('href', '/reviser/maths/f7/lecon/cours')
+      within(resultats).getByRole('button', { name: 'Déplier — Le théorème de Pythagore' }),
+    ).toBeInTheDocument()
   })
 
   it('rien trouvé : elle le dit ; fermée : le sommaire revient', () => {
@@ -269,16 +281,16 @@ describe('Sommaire — un programme qui n’est pas rangé', () => {
   it('une liste à plat : la même ligne, le même bouton, pas de thème à ouvrir', () => {
     rendre(notions)
     expect(screen.getByText('Le bonheur')).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: 'Cours — Le bonheur' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Déplier — Le bonheur' })).toBeInTheDocument()
     expect(screen.queryByRole('button', { name: /favori/ })).not.toBeInTheDocument()
   })
 
   it('les fiches sont numérotées… sauf en philosophie, dont les notions n’ont pas d’ordre', () => {
     const { unmount } = rendre(notions)
-    expect(screen.getByRole('button', { name: /La liberté/ })).toHaveTextContent('3')
+    expect(screen.getAllByRole('button', { name: /La liberté/ })[0]).toHaveTextContent('3')
     unmount()
     rendre(notions, { subjectSlug: 'philosophie' })
-    expect(screen.getByRole('button', { name: /La liberté/ })).not.toHaveTextContent('3')
+    expect(screen.getAllByRole('button', { name: /La liberté/ })[0]).not.toHaveTextContent('3')
   })
 
   it('un programme vide le dit', () => {

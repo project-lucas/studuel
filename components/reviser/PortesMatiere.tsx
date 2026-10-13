@@ -4,7 +4,7 @@ import Image, { type StaticImageData } from 'next/image'
 import { Crown } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
 import type { ClePorte, Porte } from '@/lib/subject-template'
-import coursImage from '@/public/images/supports/cours.webp'
+import programmeImage from '@/public/images/supports/programme.webp'
 import exerciceImage from '@/public/images/supports/exercice.webp'
 import jeuxImage from '@/public/images/defi/icones/modes-v4.webp'
 import annalesImage from '@/public/images/defi/icones/historique-v3.webp'
@@ -12,16 +12,19 @@ import s from './BanniereMatiere.module.css'
 
 /**
  * L'OBJET DE CHAQUE PORTE — de la famille de la barre d'onglets (cerne prune,
- * volumes brillants, violet · or · crème). Trois sont les dessins que l'élève
- * connaît déjà : le livre du support « Cours », le bloc-notes du support
- * « Exercice », le dé des modes de jeu. Les ANNALES empruntent l'horloge de
- * l'historique de l'arène (les sujets déjà tombés) en attendant leur dessin.
+ * volumes brillants, violet · or · crème). Deux sont les dessins que l'élève
+ * connaît déjà : le bloc-notes du support « Exercice », le dé des modes de
+ * jeu. Le PROGRAMME a le sien depuis le 12/10/2026 — une carte dépliée et son
+ * chemin pointillé jusqu'au drapeau, le parcours de l'année : le livre ouvert
+ * du support « Cours » y faisait doublon avec la tuile Cours de chaque fiche
+ * (Lucas). Les ANNALES empruntent l'horloge de l'historique de l'arène (les
+ * sujets déjà tombés) en attendant leur dessin.
  *
  * Importés, pas désignés par leur chemin : l'import donne une adresse à
  * empreinte de contenu (cf. SupportChips).
  */
 const IMAGES: Record<ClePorte, StaticImageData> = {
-  programme: coursImage,
+  programme: programmeImage,
   exercices: exerciceImage,
   jeu: jeuxImage,
   annales: annalesImage,

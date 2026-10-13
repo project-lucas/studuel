@@ -418,7 +418,10 @@
 
 /* LE BOUTON DE LA FICHE : un lien, droit vers son cours ou son quiz. 34 px
    dessinés, 48 touchés (la marge fait partie du lien). */
-.aller {
+/* LE « + » DE LA FICHE (12/10/2026) : un rond lavande qui déplie les supports
+   et tourne en croix une fois la fiche ouverte (transform seulement). Il a
+   remplacé la pilule « Cours · Quiz · Revoir ». La cible fait 44 px. */
+.plus {
   display: grid;
   flex: none;
   place-items: center;
@@ -426,33 +429,30 @@
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
-.allerPlaque {
+.plusRond {
   display: grid;
   place-items: center;
-  min-width: 4.25rem;
-  height: 2.125rem;
-  padding: 0 0.75rem;
+  width: 2.25rem;
+  height: 2.25rem;
   border-radius: 999px;
   background: var(--secondary);
   color: var(--primary);
-  font-family: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
-  font-weight: 800;
-  font-size: 0.90625rem;
-  transition: transform 90ms ease-out;
+  transition: transform 160ms ease-out;
 }
-.aller:active .allerPlaque {
-  transform: translateY(2px) scale(0.97);
+.plusRond[data-ouvert] {
+  transform: rotate(45deg);
 }
-/* La fiche à reprendre : la seule plaque violette pleine de la liste. */
-.aller[data-suite] .allerPlaque {
+.plus:active .plusRond {
+  transform: scale(0.92);
+}
+.plus:active .plusRond[data-ouvert] {
+  transform: rotate(45deg) scale(0.92);
+}
+/* La fiche à reprendre : le seul rond violet plein de la liste. */
+.plus[data-suite] .plusRond {
   background: var(--primary);
   color: var(--primary-foreground);
   box-shadow: 0 3px 0 color-mix(in oklch, var(--primary), black 28%);
-}
-.aller[data-genre='revoir'] .allerPlaque {
-  background: none;
-  color: var(--muted-foreground);
-  box-shadow: inset 0 0 0 1.5px color-mix(in oklch, var(--foreground), transparent 84%);
 }
 
 /* Les quatre supports d'une fiche dépliée, et le squelette qui tient leur

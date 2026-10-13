@@ -30,14 +30,14 @@ planches de maquettes (`assets-sources/maquettes/matiere.html` et
 │ ║ │ Titre de la fiche   ⚡ +110 XP       │ ║ │   DROIT vers le cours ou le quiz
 │ ║ └──────────────────────────────────────┘ ║ │
 │ ╚══════════════════════════════════════════╝ │
-│ [ Cours ] [Exercices👑] [ Jeux ] [ Annales ] │   LE RAIL DE PORTES (PortesMatiere)
-│ ( Programme | Fiches | Grammaire | Anciens )(🔍)│  les RAYONS de Cours, et la loupe
+│ [Programme] [Exercices👑] [ Jeux ] [ Annales ] │   LE RAIL DE PORTES (PortesMatiere)
+│ ( Programme | Fiches | Grammaire | Anciens )(🔍)│  les RAYONS de Programme, et la loupe
 │ ┌──────────────────────────────────────────┐ │
 │ │ (◔) La poésie du XIXe au XXIe siècle ⌃ ☆ │ │   LE SOMMAIRE (Sommaire) : un thème
 │ │     4 fiches · ~30 min                   │ │   par carte, pleine largeur ; celui
 │ │ ──────────────────────────────────────── │ │   qu'on travaille est DÉJÀ ouvert
-│ │ [1] Rimbaud, Cahier de Douai    ( Cours )│ │   chaque fiche : SON bouton
-│ │ [2] Ponge, La rage de l'expr.   ( Cours )│ │   (Cours → Quiz → Revoir)
+│ │ [1] Rimbaud, Cahier de Douai          (+)│ │   chaque fiche : un rond « + »
+│ │ [2] Ponge, La rage de l'expr.         (+)│ │   qui la déplie (× une fois ouverte)
 │ │ 🔒 Quiz du chapitre · encore 4 fiches…   │ │
 │ └──────────────────────────────────────────┘ │
 │ ┌──────────────────────────────────────────┐ │
@@ -54,16 +54,21 @@ planches de maquettes (`assets-sources/maquettes/matiere.html` et
   (le test le réclame).
 - **L'objet de la bannière** : la vignette de la matière (`subjectVignette`).
   Sans vignette, son pictogramme sur un disque blanc.
-- **Les portes** (`portesDe`, lib/subject-template) : Cours toujours ;
+- **Les portes** (`portesDe`, lib/subject-template) : Programme (« Cours »
+  jusqu'au 12/10/2026 — le mot et le livre doublonnaient la tuile Cours de
+  chaque fiche ; son dessin est la carte dépliée, `supports/programme.webp`) toujours ;
   Exercices si la matière a un cahier à ce niveau (la page compte ses exercices,
   une lecture `head` dans sa vague) ; Jeux toujours ; Annales les années à examen.
 - **Les rayons** (`rayonsDe`) : les disciplines de la matière (`chapters.discipline`)
-  et, en histoire-géo, l'Encyclopédie — qui est un rayon de Cours, pas une porte.
+  et, en histoire-géo, l'Encyclopédie — qui est un rayon de Programme, pas une porte.
   Un seul rayon : pas de segment, la rangée devient le champ de recherche.
-- **Le bouton d'une fiche** (`ChapterRow.suite`, lib/reviser/suite) : calculé par
-  la page avec ce qu'elle lit déjà — zéro requête de plus.
+- **La suite d'une fiche** (`ChapterRow.suite`, lib/reviser/suite) : calculée par
+  la page avec ce qu'elle lit déjà — zéro requête de plus. Depuis le 12/10/2026
+  elle n'est plus écrite sur la ligne : la pilule « Cours · Quiz · Revoir » a
+  laissé place au rond « + » qui déplie la fiche (et tourne en croix) ; seule la
+  fiche à reprendre garde le rond violet plein.
 - **Un programme sans thème** (philosophie) ou d'un seul bloc (les 260 fiches de
-  lecture) : une seule carte de lignes, la même ligne et le même bouton.
+  lecture) : une seule carte de lignes, la même ligne et le même « + ».
 
 ### Les règles à tenir si l'on y touche
 
@@ -71,11 +76,16 @@ planches de maquettes (`assets-sources/maquettes/matiere.html` et
    Marcel est dans la bannière, puis dans la barre collante (`MarcelTete`).
 2. **Toute cible fait au moins 44 px**, et répond dans l'image qui suit par
    `transform` ou `opacity` seulement.
-3. **Un seul lien préchargé** : le bouton de la bannière. Les boutons de fiche
-   préchargent À L'INTENTION (`pointerdown`), jamais à l'affichage.
+3. **Un seul lien préchargé** : le bouton de la bannière. Une ligne de fiche
+   prépare ses supports À L'INTENTION (`pointerdown` sur la ligne ou le « + »
+   → `preparer` de `useSupportsDeFiche`), la fiche à reprendre dès l'affichage,
+   jamais deux fois la même, jamais en rafale.
 4. **Un titre n'est jamais coupé** : pas de `line-clamp` sur un thème ou une fiche.
-5. **Le cahier ne se lit pas avec la page** : il arrive par
-   `/api/reviser/cahier` quand la porte s'ouvre (`useCahierMatiere`).
+5. **Ni le cahier ni les supports d'une fiche ne se lisent avec la page** : le
+   cahier arrive par `/api/reviser/cahier` quand la porte s'ouvre
+   (`useCahierMatiere`), les supports par `/api/reviser/supports` quand la fiche
+   se déplie (`useSupportsDeFiche`) — des routes GET, pas des Server Actions,
+   qui s'exécutent une par une (l'ouverture « était un peu lente »).
 6. **L'état vit dans l'adresse** (`?onglet=`, `?theme=`, écrits par
    `replaceState`) : revenir d'un cours rouvre la porte, le rayon et le thème.
 

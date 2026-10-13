@@ -7,7 +7,7 @@ import { Star } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
 import { formatRecord } from '@/lib/jeux/records'
 import { TOTAL_STARS } from '@/lib/jeux/paliers'
-import type { ModeTicket as Ticket } from '@/lib/defi/modes-catalog'
+import { TALON_CADENAS, type ModeTicket as Ticket } from '@/lib/defi/modes-catalog'
 import { cn } from '@/lib/utils'
 import styles from './ModeTicket.module.css'
 
@@ -40,8 +40,15 @@ export default function ModeTicket({
   place = null,
   etoiles = null,
   format,
+  onClick,
 }: {
   ticket: Ticket
+  /**
+   * Un billet qui OUVRE quelque chose sur place (le combat du gardien, dans la
+   * porte Jeux d'une matière) au lieu de mener à une adresse : un bouton, pas
+   * un lien. Ignoré quand le billet a un `href`.
+   */
+  onClick?: () => void
   /** Ma place de la semaine (« 7e sur 41 »), null quand il n'y en a pas. */
   place?: string | null
   /**
@@ -56,13 +63,15 @@ export default function ModeTicket({
 }) {
   const grand = (format ?? (ticket.vedette ? 'grand' : 'compact')) === 'grand'
   const verrou = ticket.verrou === true
-  const bientot = !ticket.href
+  const bientot = !ticket.href && !onClick
   const teinte = ticket.teinte
   const style = { '--taille': tailleTitre(ticket.name, grand) } as CSSProperties
 
+  // Le cadenas est dessiné comme les autres objets de talon (13/10/2026) : un
+  // emoji 🔒 au milieu de la série aurait été le seul dessin du téléphone.
   const talon = verrou ? (
-    <span className={styles.emoji} aria-hidden="true">
-      🔒
+    <span className={styles.art} aria-hidden="true">
+      <Image src={TALON_CADENAS} alt="" fill sizes="96px" className="object-contain" />
     </span>
   ) : ticket.image ? (
     <span className={styles.art} aria-hidden="true">
@@ -154,6 +163,18 @@ export default function ModeTicket({
         <Link href={ticket.href} onClick={() => sfx.tap()} aria-label={libelle} className={styles.lien}>
           {billet}
         </Link>
+      ) : onClick ? (
+        <button
+          type="button"
+          onClick={() => {
+            sfx.tap()
+            onClick()
+          }}
+          aria-label={libelle}
+          className={cn(styles.lien, 'block w-full text-left')}
+        >
+          {billet}
+        </button>
       ) : (
         <div aria-label={`${ticket.name} — bientôt`} role="img">
           {billet}

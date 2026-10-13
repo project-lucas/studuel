@@ -201,9 +201,13 @@ export function modesFor(
 /** Une porte : toute clé d'onglet, sauf l'encyclopédie, qui est un rayon. */
 export type ClePorte = Exclude<ModeKey, 'encyclopedie'>
 
-/** Le nom d'une porte. « Cours » coiffe les rayons, dont l'un s'appelle « Programme ». */
+/**
+ * Le nom d'une porte. La première s'appelait « Cours » : renommée
+ * « Programme » le 12/10/2026 (Lucas : « redondant avec les icônes Cours
+ * placées dans chaque chapitre ») — elle coiffe les rayons d'une matière.
+ */
 export const PORTE_LABELS: Record<ClePorte, string> = {
-  programme: 'Cours',
+  programme: 'Programme',
   exercices: 'Exercices',
   jeu: 'Jeux',
   annales: 'Annales',

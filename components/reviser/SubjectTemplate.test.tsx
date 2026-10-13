@@ -10,9 +10,9 @@ import {
   type SubjectTemplateData,
 } from '@/lib/subject-template'
 
-vi.mock('@/app/reviser/[subject]/supports-actions', () => ({
-  chapterSupports: vi.fn(async () => []),
-}))
+// Les supports d'une fiche se lisent par la route /api/reviser/supports
+// (12/10/2026) : une réponse vide suffit au dossier.
+vi.stubGlobal('fetch', vi.fn(async () => ({ ok: true, json: async () => [] })))
 
 const router = { push: vi.fn(), prefetch: vi.fn(), back: vi.fn() }
 vi.mock('next/navigation', () => ({
@@ -143,18 +143,18 @@ describe('SubjectTemplate — la bannière', () => {
 })
 
 describe('SubjectTemplate — les portes', () => {
-  it('Cours · Exercices · Jeux · Annales, Cours ouverte', () => {
+  it('Programme · Exercices · Jeux · Annales, Programme ouverte', () => {
     render(<SubjectTemplate data={dossier(simple)} />)
     const portes = within(
       screen.getByRole('navigation', { name: 'Les portes du dossier' }),
     ).getAllByRole('button')
     expect(portes.map((p) => p.textContent)).toEqual([
-      'Cours2 fiches',
+      'Programme2 fiches',
       'Exercices6 exercices (Studuel+)',
       expect.stringMatching(/^Jeux/),
       expect.stringMatching(/^Annales/),
     ])
-    expect(porte(/^Cours/)).toHaveAttribute('aria-current', 'page')
+    expect(porte(/^Programme/)).toHaveAttribute('aria-current', 'page')
   })
 
   it('une matière sans cahier n’a pas de porte Exercices', () => {
@@ -207,7 +207,9 @@ describe('SubjectTemplate — les portes', () => {
 
   it('le doigt posé sur Exercices lance déjà la lecture du cahier', () => {
     render(<SubjectTemplate data={dossier(simple)} />)
-    expect(fetch).not.toHaveBeenCalled()
+    // (La fiche à reprendre prépare SES supports dès l'affichage : ce n'est
+    // pas le cahier.)
+    expect(fetch).not.toHaveBeenCalledWith(expect.stringContaining('/api/reviser/cahier'), expect.anything())
     fireEvent.pointerDown(porte(/^Exercices/))
     expect(fetch).toHaveBeenCalledWith(
       '/api/reviser/cahier?matiere=francais',
@@ -221,7 +223,7 @@ describe('SubjectTemplate — les portes', () => {
   })
 })
 
-describe('SubjectTemplate — les rayons de la porte Cours', () => {
+describe('SubjectTemplate — les rayons de la porte Programme', () => {
   it('le segment range les rayons ; la bannière compte ceux du rayon ouvert', () => {
     render(<SubjectTemplate data={dossier(rayons)} />)
     const segment = screen.getByRole('navigation', { name: 'Les rayons du cours' })
@@ -233,15 +235,15 @@ describe('SubjectTemplate — les rayons de la porte Cours', () => {
 
     fireEvent.click(within(segment).getByRole('button', { name: 'Fiches' }))
     expect(screen.getByRole('progressbar', { name: /Fiches/ })).toHaveTextContent('0/1 fiches')
-    expect(screen.getByRole('link', { name: 'Cours — Candide, Voltaire' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Déplier — Candide, Voltaire' })).toBeInTheDocument()
     expect(window.location.search).toBe('?onglet=programme%3Afiches')
   })
 
-  it('revenir à Cours rouvre le rayon quitté', () => {
+  it('revenir à Programme rouvre le rayon quitté', () => {
     render(<SubjectTemplate data={dossier(rayons)} initialMode="programme:fiches" />)
     fireEvent.click(porte(/^Jeux/))
-    fireEvent.click(porte(/^Cours/))
-    expect(screen.getByRole('link', { name: 'Cours — Candide, Voltaire' })).toBeInTheDocument()
+    fireEvent.click(porte(/^Programme/))
+    expect(screen.getByRole('button', { name: 'Déplier — Candide, Voltaire' })).toBeInTheDocument()
   })
 
   it('l’encyclopédie est un rayon qui mène à sa page', () => {

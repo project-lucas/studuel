@@ -5,7 +5,7 @@ import path from 'node:path'
 import { ALL_BOSSES, portraitBoss } from '@/lib/bosses'
 import { RANK_TIERS } from '@/lib/rank'
 import { subjectVignette } from '@/lib/subject-style'
-import { gameScene } from '@/lib/defi/modes-catalog'
+import { gameScene, gameTalon, TALON_CADENAS, TALON_DICTEE } from '@/lib/defi/modes-catalog'
 import { GAME_FORMATS } from '@/lib/jeux/formats'
 import { modeImage, modeScene, GAME_MODES } from '@/lib/defi-modes'
 import { SALONS } from '@/lib/jeux/catalog'
@@ -139,6 +139,24 @@ describe('scènes des jeux de salon', () => {
     // un oubli — il ne lève jamais (cf. le jeu fantôme ci-dessus).
     for (const id of ids) {
       expect(gameScene(id), ).toBeDefined()
+    }
+  })
+
+  it('chaque jeu a son objet de talon, et le fichier existe', () => {
+    // La série du 13/10/2026 (scripts/talons-jeux.mjs) a fermé la liste : plus
+    // un emoji sur les billets des jeux. Un jeu qui arriverait sans talon
+    // garderait son emoji (le repli du composant), mais ce test le dirait.
+    for (const id of ids) {
+      const talon = gameTalon(id)
+      expect(talon, `${id} : talon non déclaré`).toBeDefined()
+      expect(assetExists(talon!), `${id} : ${talon} absent du disque`).toBe(true)
+    }
+    expect(gameTalon('jeu-fantome')).toBeUndefined()
+  })
+
+  it('la dictée et le cadenas Studuel+ ont leur talon', () => {
+    for (const talon of [TALON_DICTEE, TALON_CADENAS]) {
+      expect(assetExists(talon), `${talon} absent du disque`).toBe(true)
     }
   })
 })

@@ -242,9 +242,9 @@ describe('les portes et les rayons', () => {
   const francais = modesFor('1re', ['programme', 'fiches', 'grammaire', 'anciens'], 'francais', true)
   const histoireGeo = modesFor('3e', ['histoire', 'geographie'], 'histoire-geo', true)
 
-  test('quatre portes au plus, une par clé, « Cours » en tête', () => {
-    expect(portesDe(francais).map((p) => p.label)).toEqual(['Cours', 'Exercices', 'Jeux', 'Annales'])
-    expect(portesDe(modesFor('5e', [], 'maths')).map((p) => p.label)).toEqual(['Cours', 'Jeux'])
+  test('quatre portes au plus, une par clé, « Programme » en tête (ex-« Cours », 12/10/2026)', () => {
+    expect(portesDe(francais).map((p) => p.label)).toEqual(['Programme', 'Exercices', 'Jeux', 'Annales'])
+    expect(portesDe(modesFor('5e', [], 'maths')).map((p) => p.label)).toEqual(['Programme', 'Jeux'])
   })
 
   test('l’encyclopédie n’est pas une porte : c’est un rayon de Cours', () => {

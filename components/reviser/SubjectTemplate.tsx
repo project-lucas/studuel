@@ -12,7 +12,6 @@ import Sommaire from '@/components/reviser/Sommaire'
 import CahierMatiere from '@/components/reviser/CahierMatiere'
 import { prechargerCahier } from '@/components/reviser/useCahierMatiere'
 import TrainingPanel from '@/components/reviser/TrainingPanel'
-import CarteDictee from '@/components/francais/dictee/CarteDictee'
 import ExamBanner from '@/components/reviser/ExamBanner'
 import AnnalesPanel from '@/components/reviser/AnnalesPanel'
 import {
@@ -143,9 +142,6 @@ export default function SubjectTemplate({
   // quatre lectures indépendantes de la même jauge finiraient par se contredire.
   const gardien = gardienVue(data.gardien)
   const aEcusson = afficheEcusson(gardien)
-  // Le dossier de français — le seul à porter les dictées. On teste le SLUG et
-  // non le nom affiché : celui-ci change avec la classe, le slug non.
-  const estFrancais = slug === 'francais'
   // Toucher l'écusson mène là où le gardien se combat.
   const versLeGardien = () => changerOnglet('jeu')
 
@@ -274,9 +270,8 @@ export default function SubjectTemplate({
           // de la matière (le rendez-vous), puis les jeux de l'arène (on joue
           // tout de suite).
           <div className="mt-4 flex flex-col gap-3">
-            {/* LES DICTÉES — français seulement. Une carte grisée « bientôt »
-                dans les autres dossiers serait une porte qui ne s'ouvre pas. */}
-            {estFrancais ? <CarteDictee /> : null}
+            {/* La dictée est un BILLET dans TrainingPanel depuis le 12/10/2026
+                (elle était une carte à part, ici). */}
             <TrainingPanel
               subject={data.subject}
               bossPool={data.bossPool}

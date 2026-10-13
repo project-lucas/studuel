@@ -1,17 +1,16 @@
 'use client'
 
 import { useState } from 'react'
-import { ArrowLeft, ChevronRight, Swords } from 'lucide-react'
-import { BossFace } from '@/components/reviser/BossArena'
-import GardienBadge from '@/components/reviser/GardienBadge'
+import { ArrowLeft, Gamepad2 } from 'lucide-react'
+import ModeTicket from '@/components/defi/ModeTicket'
 import SubjectBossPanel from '@/components/reviser/SubjectBossPanel'
 import SubjectGames from '@/components/reviser/SubjectGames'
 import NiveauOrthographe from '@/components/francais/NiveauOrthographe'
 import NiveauOrthographeCarte from '@/components/francais/NiveauOrthographeCarte'
 import { sfx } from '@/lib/sounds'
 import { bossForSubject } from '@/lib/bosses'
-import XpIcon from '@/components/ui/XpIcon'
-import { peutAffronter, type GardienVue } from '@/lib/reviser/gardien'
+import { billetDictee, billetGardien } from '@/lib/reviser/billets-matiere'
+import type { GardienVue } from '@/lib/reviser/gardien'
 import type { ModeQuestion } from '@/lib/defi-modes'
 
 /**
@@ -71,7 +70,10 @@ export default function TrainingPanel({
   // lorsque la traque est illisible (migration 212 absente), cas où le billet
   // garde sa forme d'avant.
   const boss = gardien.boss ?? bossForSubject(subject.slug)
-  const ouvert = gardien.etat === 'absent' || peutAffronter(gardien)
+  // LE GARDIEN EST UN BILLET (12/10/2026), comme la dictée et les jeux : plus
+  // de bouton violet ni de carte blanche à part. Il dit toujours la vérité sur
+  // l'état du monde — « rôde » et sa jauge, ou « Affronter ».
+  const { billet: billetBoss, ouvert } = billetGardien(subject, boss, gardien)
 
   if (testNiveau) {
     return <NiveauOrthographe onClose={() => setTestNiveau(false)} />
@@ -96,72 +98,47 @@ export default function TrainingPanel({
     )
   }
 
+  const estFrancais = subject.slug === MATIERE_TEST_NIVEAU
+
   return (
     <>
-      {ouvert ? (
-        <button
-          type="button"
-          onClick={() => {
-            sfx.tap()
-            setFighting(true)
-          }}
-          className="group flex w-full items-center gap-3 rounded-carte border-b-4 border-b-black/25 bg-gradient-to-r from-primary to-[color-mix(in_oklch,var(--primary),black_18%)] p-3.5 text-left text-white shadow-md transition-all duration-150 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-[2px] active:border-b-2"
-        >
-          <span className="flex size-11 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white/15">
-            <BossFace boss={boss} px={44} className="size-11" />
-          </span>
-          <span className="min-w-0 flex-1">
-            <span className="font-heading flex items-center gap-1.5 text-sm leading-tight font-extrabold">
-              <Swords className="size-4 shrink-0" aria-hidden="true" />
-              Affronter {boss.name}
-            </span>
-            <span className="mt-0.5 block text-[11px] font-semibold text-white/75">
-              {gardien.etat === 'debusque'
-                ? `Il disparaît dans ${gardien.detail}`
-                : `${boss.epithet} · le gardien de ${subject.name}`}
-            </span>
-          </span>
-          {gardien.etat === 'debusque' && gardien.xp > 0 ? (
-            <span className="flex shrink-0 items-center gap-1 rounded-full bg-black/25 px-2 py-1 text-xs font-bold tabular-nums">
-              <XpIcon className="size-3.5" />
-              {gardien.xp}
-            </span>
-          ) : null}
-          <ChevronRight
-            className="size-5 shrink-0 text-white/70 transition-transform group-hover:translate-x-0.5"
-            aria-hidden="true"
+      {/* LE TEST DE NIVEAU, AU-DESSUS DES MODES DE JEU (Lucas, 12/10/2026 :
+          « évaluer son niveau devra être placé au-dessus des modes de jeu —
+          l'idée est valable pour les autres matières ») : ce n'est pas un jeu,
+          c'est la mesure qui dit lesquels valent la peine. Seul le français a
+          le sien pour l'instant ; les autres matières prendront la même place. */}
+      {estFrancais ? <NiveauOrthographeCarte onOpen={() => setTestNiveau(true)} /> : null}
+
+      <section aria-labelledby="jeux-matiere" className="mt-4">
+        <p className="text-sm font-semibold text-muted-foreground">Jeux de l’Arène</p>
+        <h2 id="jeux-matiere" className="titre-section mt-0.5 flex items-center gap-2">
+          <Gamepad2 className="size-5 shrink-0 text-primary" aria-hidden="true" />
+          Modes de jeu · {subject.name}
+        </h2>
+
+        <div className="mt-3 flex flex-col gap-3">
+          {/* LA DICTÉE EN BILLET, français seulement (Lucas, 12/10/2026 :
+              « c'est un mode important ») — une carte grisée « bientôt » dans
+              les autres dossiers serait une porte qui ne s'ouvre pas. */}
+          {estFrancais ? <ModeTicket ticket={billetDictee()} /> : null}
+
+          {/* LE GARDIEN EN BILLET : il ouvre le combat sur place quand il est
+              sorti ; tant qu'il rôde, le billet montre sa jauge et le geste
+              suivant, et ne mène nulle part (toucher ne fait rien de faux). */}
+          <ModeTicket
+            ticket={billetBoss}
+            onClick={
+              ouvert
+                ? () => setFighting(true)
+                : () => {
+                    // Il rôde : rien à ouvrir. Le billet dit déjà quoi faire.
+                  }
+            }
           />
-        </button>
-      ) : (
-        /* LE GARDIEN RÔDE. Pas un bouton désactivé — un bouton grisé se tape
-           quand même, et ne répond pas. Une CARTE, qui montre l'anneau et dit le
-           geste suivant : « 5 cartes de plus ». C'est la même information que
-           l'écusson du header, à la taille où on peut la lire. */
-        <div className="carte flex w-full items-center gap-3 p-3.5 text-left">
-          <GardienBadge vue={gardien} size="md" tone="light" decoratif />
-          <span className="min-w-0 flex-1">
-            <span className="font-heading block text-sm leading-tight font-extrabold">
-              {gardien.titre}
-            </span>
-            <span className="mt-0.5 block text-[11px] font-semibold text-muted-foreground">
-              {gardien.phrase}
-            </span>
-          </span>
-          <span className="font-heading shrink-0 rounded-full bg-highlight/20 px-2.5 py-1 text-xs font-extrabold tabular-nums">
-            {gardien.percent} %
-          </span>
+
+          <SubjectGames subject={subject} premium={premium} enTete={false} />
         </div>
-      )}
-
-      {/* LE TEST DE NIVEAU, en tête des jeux et non dedans : ce n'est pas un
-          jeu, c'est la mesure qui dit lesquels valent la peine. Il se passe une
-          fois puis se refait de loin en loin — d'où la carte sobre, qui ne
-          réclame pas l'attention chaque jour comme un billet de mode de jeu. */}
-      {subject.slug === MATIERE_TEST_NIVEAU ? (
-        <NiveauOrthographeCarte onOpen={() => setTestNiveau(true)} />
-      ) : null}
-
-      <SubjectGames subject={subject} premium={premium} />
+      </section>
     </>
   )
 }

@@ -23,10 +23,16 @@ import { salonSubjectFor, subjectGameTickets } from '@/lib/defi/modes-catalog'
 export default function SubjectGames({
   subject,
   premium = false,
+  enTete = true,
 }: {
   subject: { slug: string; name: string }
   /** Abonné Studuel+ : tous les jeux de la matière s'ouvrent (lib/jeux/acces). */
   premium?: boolean
+  /**
+   * Sans son titre de section : les billets seuls, quand le parent les range
+   * déjà sous le sien avec la dictée et le gardien (TrainingPanel, 12/10/2026).
+   */
+  enTete?: boolean
 }) {
   const salon = salonSubjectFor(subject)
   const tickets = salon ? subjectGameTickets(salon, { premium }) : []
@@ -36,6 +42,18 @@ export default function SubjectGames({
   const etoiles = useEtoilesJeux(tickets.flatMap((t) => (t.gameId ? [t.gameId] : [])))
 
   if (tickets.length === 0) return null
+
+  const billets = tickets.map((t) => (
+    <ModeTicket
+      key={t.id}
+      ticket={t}
+      // Un jeu à paliers montre ses étoiles, comme dans « Modes de jeu ».
+      etoiles={t.gameId && etoiles && !t.verrou ? (etoiles[t.gameId] ?? 0) : null}
+      record={!t.gameId && records && t.recordKey ? (records[t.recordKey] ?? 0) : null}
+    />
+  ))
+
+  if (!enTete) return <>{billets}</>
 
   return (
     <section aria-labelledby="jeux-matiere" className="mt-4">
@@ -50,17 +68,7 @@ export default function SubjectGames({
         Modes de jeu · {subject.name}
       </h2>
 
-      <div className="mt-3 flex flex-col gap-3">
-        {tickets.map((t) => (
-          <ModeTicket
-            key={t.id}
-            ticket={t}
-            // Un jeu à paliers montre ses étoiles, comme dans « Modes de jeu ».
-            etoiles={t.gameId && etoiles && !t.verrou ? (etoiles[t.gameId] ?? 0) : null}
-            record={!t.gameId && records && t.recordKey ? (records[t.recordKey] ?? 0) : null}
-          />
-        ))}
-      </div>
+      <div className="mt-3 flex flex-col gap-3">{billets}</div>
     </section>
   )
 }

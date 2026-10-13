@@ -726,6 +726,65 @@ elles aussi du vocabulaire produit — et elles aussi en Lucide.
 > sur le style — écrire la phrase que la tuile doit faire dire avant de
 > commander le dessin.
 
+### L5-c · Les objets des TALONS des billets de jeux — 12-13/10/2026 (modèle, puis série : quinze objets livrés)
+
+`components/defi/ModeTicket.tsx`, à droite de la perforation. Douze billets sur
+quatorze y montraient encore un **emoji** (🔎, ⚡, 🧮…) : le seul dessin de l'app
+que la police du téléphone décidait à notre place. Lucas : « fais le nécessaire
+aussi pour les icônes d'ici ». Même famille et **même prompt maître** que les
+supports (ci-dessous), deux différences :
+
+- **Les références jointes sont les ORIGINAUX, pas les webp servis** :
+  `assets-sources/defi-icones-lot2/mode de jeu 2.png` (le dé, 2000 px) et
+  `assets-sources/supports/cours (2).png` (le livre), aplatis sur blanc en
+  1024 px. À 256 px, le modèle ne voit pas le trait (leçon des boss) ; avec ces
+  deux-là, les trois premières images sont sorties dans le style du premier coup
+  (Nano Banana 2.1 par le connecteur, 1k, 1:1, ~40 s, 1,5 crédit).
+- **Le talon est TEINTÉ** (rose, ambre, bleu…) : l'objet doit tenir sur une
+  couleur vive à ~70 px, d'où le cerne prune épais et la lentille crème.
+
+Chaîne : `assets-sources/talons-jeux/<id>.png` → `node scripts/talons-jeux.mjs`
+(détourage du blanc, trame du lot) → `public/images/defi/jeux/<id>-talon.webp`
+→ `GAME_TALON_IDS` dans `lib/defi/modes-catalog.ts` (`gameTalon`), vérifié par
+`lib/assets.test.ts`. **Un modèle avant la série** : la loupe de « Chasse à la
+faute » a été montrée seule le 12/10 ; Lucas a demandé la suite le 13/10 (« les
+icônes de droite, j'aimerais qu'on les change ») et les quatorze autres sont
+sortis en deux lots de sept, tous dans le style, aucun refait (21 crédits). La
+dictée est `TALON_DICTEE`, le cadenas `TALON_CADENAS` (le 🔒 de `ModeTicket`
+est parti avec). ⚠️ Le dossier des originaux ne doit contenir QUE des
+`<id>.png` : une planche de contrôle qui y traîne entre dans la trame et fausse
+la cible d'encre de toute la série (le script n'accepte plus que `[a-z0-9-]`,
+le reste va dans `_controle/`).
+
+| id | Billet | L'objet à dessiner (après le prompt maître) |
+|---|---|---|
+| `chasse-faute` | Chasse à la faute | **fait** — a chunky magnifying glass tilted diagonally, its thick round frame in royal violet with a golden rim ring, a short stout golden handle pointing to the bottom-left, and a big round cream lens with one glossy highlight sweep; seen through the lens, one single short bold plum-purple zigzag underline (the mark under a spelling mistake), nothing else inside the lens. |
+| `conjugaison-eclair` | Conjugaison éclair | A chunky violet pencil tilted diagonally, golden ferrule and cream eraser, its tip tracing one short bold plum stroke. (Pas d'éclair : l'éclair est l'icône de l'XP, partout.) |
+| `calcul-mental` | Calcul mental éclair | A chunky violet pocket calculator tilted slightly, a cream screen and only four big golden keys. |
+| `capitales` | Capitales du monde | A chunky round globe on a short golden stand, violet oceans, ONE big cream landmass, and a golden map pin planted on it. |
+| `frise-folle` | La Frise folle | A cream scroll unrolled sideways, thick plum outline, with one bold violet horizontal line and three big golden dots along it (a timeline). |
+| `traduction-flash` | Traduction flash | Two chunky overlapping speech bubbles — cream in front, royal violet behind — with one short bold golden arrow between them. |
+| `phrase-en-vrac` | Phrase en vrac | Three chunky jigsaw pieces loosely scattered, one violet, one golden, one cream, not yet fitted together. |
+| `traduccion-flash` | Traducción flash | The same two speech bubbles as Traduction flash, colours swapped (golden in front, violet behind). |
+| `falsos-amigos` | Falsos amigos | Two chunky theatre masks side by side, one royal violet smiling, one cream frowning, with golden ribbons. |
+| `anatomie-express` | Anatomie express | A chunky cream bone tilted diagonally, thick plum outline, one glossy highlight. |
+| `classe-moi-ca` | Classe-moi ça | A round royal-violet tag with a big golden paw print on it, hanging from a short golden ring. |
+| `chasse-elements` | Chasse aux éléments | A chunky round-bottom flask with a golden neck, royal-violet liquid inside and three big cream bubbles rising. |
+| `bonne-unite` | La bonne unité | A chunky golden ruler tilted diagonally with four thick plum notches, nothing else. |
+| dictée (`billets-matiere.ts`) | La dictée | A chunky pair of headphones, royal-violet band and big golden ear cups with cream cushions, seen from the front. |
+| cadenas (billet verrouillé) | Débloqué avec Studuel+ | A chunky golden padlock, closed, with a royal-violet keyhole and a plum outline — le même objet sur tous les billets verrouillés. |
+
+**La porte « Programme » du dossier de matière** (même jour, même prompt
+maître, mêmes références) : *a folded paper map opened flat, seen from the front
+and slightly tilted, three chunky cream panels with soft violet fold shadows and
+a thick plum outline, and across the panels ONE bold royal-violet dotted path
+winding from the bottom-left corner up to a small chunky golden flag planted at
+the top-right; no other marks on the map.* Elle remplace le livre ouvert du
+support Cours sur cette porte (doublon avec la tuile Cours de chaque fiche) ;
+une boussole, essayée en parallèle, aurait fait un second cadran rond à côté de
+l'horloge des Annales. Original dans `assets-sources/supports/programme.png`,
+servi par `scripts/supports-icones.mjs` (clé `programme`).
+
 ### Le prompt maître de ce lot — l'icône, pas la vignette
 
 Ce sont des **icônes** : vues à 40 px dans un disque, pas à 100 px sur une

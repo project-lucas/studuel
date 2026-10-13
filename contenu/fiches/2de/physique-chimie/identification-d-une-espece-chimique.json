@@ -1,0 +1,128 @@
+{
+  "titre": "Identifier une espèce",
+  "titreSurligne": "espèce",
+  "accroche": "Reconnaître ce qu’il y a dans le tube.",
+  "bonus": "**Rf = h ÷ H** (entre 0 et 1) · eau de chaux&nbsp;: **trouble** avec CO₂ · sulfate de cuivre anhydre&nbsp;: **blanc → bleu**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/identification-d-une-espece-chimique.webp",
+    "prompt": "a glossy violet test tube rack with golden liquids and a thin chromatography strip with three colored dots, a small magnifier, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Un test,\nune réponse&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les gaz et l’eau",
+          "entetes": ["Espèce", "Test", "Résultat"],
+          "lignes": [
+            ["**Dioxygène**", "bûchette incandescente", "se rallume"],
+            ["**CO₂**", "eau de chaux", "se trouble"],
+            ["**Dihydrogène**", "flamme", "détonation"],
+            ["**Eau**", "sulfate de cuivre anhydre", "blanc → bleu"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les ions (avec la soude)",
+          "entetes": ["Ion", "Précipité"],
+          "lignes": [
+            ["Cuivre II", "**bleu**"],
+            ["Fer III", "**rouille**"],
+            ["Fer II", "**vert**"],
+            ["Zinc, aluminium", "**blanc**"],
+            ["Chlorure (nitrate d’argent)", "**blanc**, noircit"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La chromatographie en trois temps",
+          "etapes": [
+            { "titre": "Déposer", "texte": "l’échantillon et des références sur la plaque" },
+            { "titre": "Éluer", "texte": "l’éluant monte par capillarité, puis on révèle" },
+            { "titre": "Comparer", "texte": "taches alignées et Rf identiques&nbsp;: même espèce" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "La tache a parcouru __3,0 cm__, le front d’éluant __6,0 cm__. Son Rf&nbsp;?",
+          "calcul": "Rf = 3,0 ÷ 6,0",
+          "aparte": "sans unité",
+          "resultat": "Rf = [[0,50]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Grandeurs caractéristiques",
+          "items": [
+            { "titre": "Fusion", "texte": "banc Kofler" },
+            { "titre": "Ébullition", "texte": "montage de distillation" },
+            { "titre": "Masse volumique", "texte": "balance et éprouvette" },
+            { "titre": "Indice de réfraction", "texte": "réfractomètre" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Les taches sont à la même hauteur", "quoi": "l’observation" },
+            { "texte": "Rf(échantillon) = Rf(référence)", "quoi": "la comparaison" },
+            { "texte": "L’échantillon contient cette espèce", "quoi": "la conclusion" }
+          ],
+          "pied": "On ==croise== plusieurs indices&nbsp;: une mesure porte toujours une incertitude."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Conclure avec **un seul** indice.",
+            "Plonger la **ligne de dépôt** dans l’éluant.",
+            "Donner un **Rf supérieur à 1**.",
+            "Oublier que Rf dépend du **support et de l’éluant**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 5,
+          "titre": "Le spectre d’absorption",
+          "paragraphes": ["Le **spectre UV-visible** d’une solution colorée présente un **maximum** caractéristique de l’espèce dissoute&nbsp;: un outil d’identification, en plus du dosage."]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel test caractérise le **dioxyde de carbone**&nbsp;?",
+            "Précipité vert avec la soude&nbsp;: quel ion&nbsp;?",
+            "Rf d’une tache à 2,0 cm pour un front à 8,0 cm&nbsp;?"
+          ],
+          "reponses": "1) eau de chaux qui se trouble · 2) fer II · 3) 0,25"
+        }
+      ]
+    }
+  ]
+}

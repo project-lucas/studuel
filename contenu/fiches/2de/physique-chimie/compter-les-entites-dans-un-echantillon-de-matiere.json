@@ -1,0 +1,111 @@
+{
+  "titre": "La mole",
+  "titreSurligne": "mole",
+  "accroche": "Compter les entités par paquets.",
+  "bonus": "**N**<sub>A</sub> = 6,02 × 10²³ mol⁻¹ · M(H) = 1,0 · M(C) = 12,0 · M(N) = 14,0 · M(O) = 16,0 g·mol⁻¹",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/compter-les-entites-dans-un-echantillon-de-matiere.webp",
+    "prompt": "a glossy violet laboratory balance holding a golden heap of tiny beads, a small flask beside it, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Une mole,\nun énorme paquet&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les relations",
+          "petite": true,
+          "lignes": ["n = {m/M}", "n = {N/N<sub>A</sub>}"],
+          "regle": "**n** en mol, **m** en g, **M** en g·mol⁻¹. Gaz&nbsp;: n = {V/V<sub>m</sub>}, V<sub>m</sub> = 24,0 L·mol⁻¹. Solution&nbsp;: ==c = n ÷ V==.",
+          "note": "V en litres&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Quelle relation&nbsp;?",
+          "entetes": ["Je connais", "Relation"],
+          "lignes": [
+            ["Une masse", "n = m ÷ M"],
+            ["Un liquide (V, ρ)", "m = ρ × V puis n = m ÷ M"],
+            ["Un gaz", "n = V ÷ V<sub>m</sub>"],
+            ["Une solution", "c = n ÷ V"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "M", "texte": "additionner les masses molaires des atomes" },
+            { "titre": "n", "texte": "choisir la relation qui part de la donnée" },
+            { "titre": "N ou c", "texte": "N = n × N<sub>A</sub> ; t = c × M" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "__9,0 g__ d’eau. Quantité et nombre de molécules&nbsp;?",
+          "calcul": "M(H₂O) = 18,0 ; n = 9,0 ÷ 18,0",
+          "aparte": "N = n × N<sub>A</sub>",
+          "resultat": "[[0,50 mol]] soit 3,0 × 10²³"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Qu’est-ce que la mole&nbsp;?",
+          "oui": { "titre": "Un compte", "texte": "Un paquet de **6,02 × 10²³** entités, comme la douzaine en plus grand." },
+          "non": { "titre": "Pas une masse", "texte": "Ce n’est ni une masse ni un volume." },
+          "essai": { "texte": "Chiffres significatifs&nbsp;: autant que la ==donnée la moins précise==, unités soignées à chaque étape." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "M(H₂O) = 2 × 1,0 + 16,0 = 18,0 g·mol⁻¹", "quoi": "la masse molaire" },
+            { "texte": "n = m ÷ M = 9,0 ÷ 18,0", "quoi": "formule puis nombres" },
+            { "texte": "n = 0,50 mol", "quoi": "avec l’unité" }
+          ],
+          "pied": "Pour une molécule, on ==additionne== les masses molaires de ses atomes."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **m** (g) et **M** (g·mol⁻¹).",
+            "Oublier le **coefficient** (2 H dans H₂O).",
+            "Laisser V en **mL** dans c = n ÷ V.",
+            "Donner trop de **chiffres significatifs**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**M**(CO₂) en g·mol⁻¹&nbsp;?",
+            "**n** pour 22 g de CO₂&nbsp;?",
+            "**n** de 6,0 L de gaz à V<sub>m</sub> = 24,0 L·mol⁻¹&nbsp;?"
+          ],
+          "reponses": "1) 44,0 · 2) 0,50 mol · 3) 0,25 mol"
+        }
+      ]
+    }
+  ]
+}

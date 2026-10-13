@@ -1,0 +1,158 @@
+{
+  "titre": "La lumière en rayons",
+  "titreSurligne": "rayons",
+  "accroche": "Des rayons droits, un blanc composite.",
+  "bonus": "c = **3,00 × 10⁸ m·s⁻¹** · visible : **400 à 800 nm** · 1 a.l. ≈ 9,5 × 10¹⁵ m",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/propagation-et-decomposition-de-la-lumiere.webp",
+    "prompt": "a glossy violet glass prism splitting a white golden light beam into a rainbow spectrum, sparkles"
+  },
+  "marcel": "Le blanc est\nun mélange !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les domaines de longueur d’onde",
+          "entetes": [
+            "Domaine",
+            "Longueur d’onde"
+          ],
+          "lignes": [
+            [
+              "**Ultraviolets**",
+              "moins de 400 nm"
+            ],
+            [
+              "**Visible**",
+              "400 nm (violet) à 800 nm (rouge)"
+            ],
+            [
+              "**Infrarouges**",
+              "plus de 800 nm"
+            ],
+            [
+              "**Monochromatique**",
+              "une seule radiation (laser)"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La vitesse de la lumière",
+          "petite": true,
+          "lignes": [
+            "c = 3,00 × 10⁸ m·s⁻¹"
+          ],
+          "regle": "Dans le ==vide==. Dans un milieu matériel elle est plus faible. Voir loin, c’est voir ==tôt== : le Soleil date de huit minutes.",
+          "note": "en ligne droite, milieu homogène&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Interpréter un spectre en trois temps",
+          "etapes": [
+            {
+              "titre": "Regarder",
+              "texte": "continu, ou composé de raies sur fond noir&nbsp;?"
+            },
+            {
+              "titre": "Identifier",
+              "texte": "continu : solide chaud&nbsp;; raies d’émission : gaz chaud à basse pression"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "les raies sont propres à chaque élément chimique"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Lumière du Soleil : 1,5 × 10¹¹ m parcourus à c. Combien de __temps__&nbsp;?",
+          "calcul": "t = d ÷ c = 1,5 × 10¹¹ ÷ 3,00 × 10⁸",
+          "aparte": "≈ 8 min 20 s",
+          "resultat": "t = [[500 s]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Source ou objet&nbsp;?",
+          "oui": {
+            "titre": "Source primaire",
+            "texte": "Elle **produit** sa lumière&nbsp;: Soleil, lampe, écran, flamme."
+          },
+          "non": {
+            "titre": "Objet diffusant",
+            "texte": "Il **renvoie** la lumière reçue dans toutes les directions&nbsp;: la Lune, une page, un mur."
+          },
+          "essai": {
+            "texte": "Sans éclairage, un objet diffusant est <i>invisible</i>. Un prisme disperse le blanc&nbsp;; Newton le <i>recompose</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "La lumière se propage en ligne droite dans le vide.",
+              "quoi": "le modèle"
+            },
+            {
+              "texte": "t = d ÷ c = 1,5 × 10¹¹ ÷ 3,00 × 10⁸",
+              "quoi": "formule puis nombres"
+            },
+            {
+              "texte": "t = 5,0 × 10² s",
+              "quoi": "avec l’unité"
+            },
+            {
+              "texte": "1 année-lumière ≈ 9,5 × 10¹⁵ m",
+              "quoi": "un repère"
+            }
+          ],
+          "pied": "Le spectre de la lumière blanche est ==continu==, du rouge au violet : le blanc n’est pas une couleur simple."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le blanc est une couleur **simple**.",
+            "Prendre la Lune pour une **source** primaire.",
+            "Oublier de convertir les **nm** ou les années-lumière.",
+            "Confondre **monochromatique** et polychromatique."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Valeur de **c** dans le vide&nbsp;?",
+            "Un laser est-il monochromatique ou polychromatique&nbsp;?",
+            "700 nm : quelle couleur approximative&nbsp;?"
+          ],
+          "reponses": "1) 3,00 × 10⁸ m·s⁻¹ · 2) monochromatique · 3) rouge (dans le visible)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "titre": "Le métabolisme",
+  "titreSurligne": "métabolisme",
+  "accroche": "Fabriquer de la matière et de l’énergie.",
+  "bonus": "**Respiration** : mitochondries, O<sub>2</sub>, beaucoup d’énergie · **fermentation** : cytoplasme, sans O<sub>2</sub>, peu",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/svt/le-metabolisme-des-cellules.webp",
+    "prompt": "a glossy violet leaf cell with golden chloroplasts and a small golden lightning bolt, tiny glossy bubbles of oxygen, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Je mange,\nj’ai de l’énergie !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Deux modes",
+          "entetes": ["Mode", "Matière", "Énergie"],
+          "lignes": [
+            ["**Autotrophe**", "minérale", "la lumière, le plus souvent"],
+            ["**Hétérotrophe**", "organique déjà formée", "cette même matière"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La photosynthèse",
+          "teinte": "jaune",
+          "lignes": ["6 CO<sub>2</sub> + 6 H<sub>2</sub>O + ==lumière== → C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6 O<sub>2</sub>"],
+          "regle": "Elle a lieu dans les **chloroplastes**.",
+          "note": "entrée de l’énergie"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Respiration ou fermentation",
+          "entetes": ["Point", "Respiration", "Fermentation"],
+          "lignes": [
+            ["Lieu", "**mitochondries**", "cytoplasme"],
+            ["Dioxygène", "**nécessaire**", "absent"],
+            ["Glucose", "dégradation **complète**", "partielle"],
+            ["Produits", "CO<sub>2</sub> et eau", "éthanol ou acide lactique"],
+            ["Énergie", "**beaucoup**", "peu"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Expliquer le métabolisme d’une cellule",
+          "etapes": [
+            { "titre": "Génome", "texte": "quels gènes d’enzymes possède-t-elle&nbsp;?" },
+            { "titre": "Milieu", "texte": "lumière, O<sub>2</sub>, nutriments disponibles" },
+            { "titre": "Conclure", "texte": "la réaction possible dans ces conditions" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple : la levure",
+          "donnees": "Avec O<sub>2</sub> → respiration. Sans O<sub>2</sub> → fermentation.",
+          "calcul": "Même génome, mais l’environnement change la voie utilisée.",
+          "resultat": "[[1 génome, 2 métabolismes]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire que la fermentation a besoin de **dioxygène**.",
+            "Croire qu’une **enzyme** est un sucre&nbsp;: c’est une **protéine**.",
+            "Oublier que la respiration libère **beaucoup plus** d’énergie.",
+            "Dire que seules les plantes sont autotrophes&nbsp;: certaines bactéries le sont aussi.",
+            "Oublier que la photosynthèse **rejette** du dioxygène."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dans quel organite a lieu la photosynthèse&nbsp;?",
+            "Quelle voie fonctionne sans dioxygène&nbsp;?",
+            "Que catalyse une enzyme&nbsp;?"
+          ],
+          "reponses": "1) le chloroplaste · 2) la fermentation · 3) une réaction chimique précise"
+        }
+      ]
+    }
+  ]
+}

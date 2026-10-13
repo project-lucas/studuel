@@ -1,0 +1,116 @@
+{
+  "titre": "Information chiffrée",
+  "titreSurligne": "chiffrée",
+  "accroche": "Multiplier les coefficients, jamais ajouter.",
+  "epreuve": "socle",
+  "bonus": "hausse de t % : × **(1 + t/100)** · baisse : × **(1 − t/100)** · taux = coefficient − 1",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/maths/information-chiffree.webp",
+    "prompt": "a glossy golden percent sign next to a violet rising bar chart, a tiny cartoon arrow going up, sparkles"
+  },
+  "marcel": "Hausse puis baisse\nne s’annulent pas&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Coefficient multiplicateur",
+          "taille": "mini",
+          "lignes": ["hausse : 1 + {t/100}", "baisse : 1 − {t/100}", "taux = {V₁ − V₀/V₀}"],
+          "regle": "Prendre t&nbsp;% d’une quantité, c’est la multiplier par {t/100}. Le **coefficient** vaut {V₁/V₀} et **taux = coefficient − 1**.",
+          "note": "+20 % → 1,20 · −20 % → 0,80"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Quelques coefficients",
+          "entetes": ["Évolution", "Coefficient"],
+          "lignes": [
+            ["hausse de 15 %", "**1,15**"],
+            ["baisse de 30 %", "**0,70**"],
+            ["hausse de 100 %", "**2**"],
+            ["baisse de 50 %", "**0,50**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Enchaîner des évolutions",
+          "etapes": [
+            { "titre": "Traduire", "texte": "chaque évolution en coefficient multiplicateur" },
+            { "titre": "Multiplier", "texte": "les coefficients entre eux, pas les pourcentages" },
+            { "titre": "Retraduire", "texte": "taux global = coefficient − 1" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un loyer de 600 € augmente de 5 % puis de 3 %.",
+          "calcul": "1,05 × 1,03 = 1,0815\n600 × 1,0815 = 648,90 €",
+          "aparte": "pas 8 %",
+          "resultat": "hausse globale de [[8,15 %]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Successives", "texte": "Produit des coefficients&nbsp;: +20 % puis −20 % → 1,20 × 0,80 = 0,96, soit **−4 %**." },
+            { "titre": "Réciproque", "texte": "**Inverse** du coefficient&nbsp;: après +25 %, −**20 %** (1/1,25)." },
+            { "titre": "Points ≠ %", "texte": "De 10 % à 12 % : **+2 points**, soit **+20 %**." },
+            { "titre": "Proportion", "texte": "Proportions successives : on **multiplie** (0,40 × 0,25 = 10 %)." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Coefficients : 1,05 et 1,03", "quoi": "on traduit" },
+            { "texte": "1,05 × 1,03 = 1,0815", "quoi": "on multiplie" },
+            { "texte": "1,0815 − 1 = 0,0815 : hausse de 8,15 %", "quoi": "on retraduit" }
+          ],
+          "pied": "Jamais ==additionner== des pourcentages d’évolutions successives."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Multiplier par 0,15 pour une hausse de 15 %&nbsp;: c’est **1,15**.",
+            "Diviser par la valeur d’**arrivée** pour le taux.",
+            "Retrouver la valeur initiale en **retirant** le même pourcentage.",
+            "Confondre **points** et **pourcentages**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Coefficient d’une **hausse de 30 %** ?",
+            "**+10 %** puis **−10 %** : évolution globale ?",
+            "Baisse **réciproque** d’une hausse de 25 % ?"
+          ],
+          "reponses": "1) 1,3 · 2) 1,1 × 0,9 = 0,99 : −1 % · 3) −20 % (1/1,25 = 0,8)"
+        }
+      ]
+    }
+  ]
+}

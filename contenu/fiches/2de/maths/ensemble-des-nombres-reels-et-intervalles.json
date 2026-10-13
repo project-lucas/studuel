@@ -1,0 +1,117 @@
+{
+  "titre": "Réels et intervalles",
+  "titreSurligne": "intervalles",
+  "accroche": "Ranger les nombres, décrire la droite.",
+  "epreuve": "socle",
+  "bonus": "ℕ ⊂ ℤ ⊂ ⅅ ⊂ ℚ ⊂ ℝ · crochet **ouvert** vers l’infini · |x − a| ≤ r ⟺ x ∈ **[a − r ; a + r]**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/maths/ensemble-des-nombres-reels-et-intervalles.webp",
+    "prompt": "a glossy violet number line with a golden segment between two brackets, a tiny cartoon bead sliding on it, sparkles"
+  },
+  "marcel": "Un crochet ouvert\nvers l’infini&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les ensembles emboîtés",
+          "petite": true,
+          "lignes": ["ℕ ⊂ ℤ ⊂ ⅅ ⊂ ℚ ⊂ ℝ"],
+          "regle": "**ℕ** entiers · **ℤ** avec les négatifs · **ⅅ** décimaux (écriture finie) · **ℚ** quotients d’entiers · **ℝ** avec les irrationnels (√2, π). On écrit −5 ∈ ℤ et √2 ∉ ℚ.",
+          "note": "∈ relie un nombre à un ensemble"
+        },
+        {
+          "type": "figures",
+          "numero": 2,
+          "titre": "Sur la droite",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><g stroke='#2b2350' stroke-width='2' stroke-linecap='round'><line x1='10' y1='100' x2='208' y2='100'></line><line x1='50' y1='94' x2='50' y2='106'></line><line x1='110' y1='94' x2='110' y2='106'></line><line x1='170' y1='94' x2='170' y2='106'></line></g><polygon points='214,100 205,95 205,105' fill='#2b2350'></polygon><line x1='50' y1='100' x2='170' y2='100' stroke='#7a3fe0' stroke-width='7' stroke-linecap='round'></line><g font-family=\"Baloo 2\" font-weight='800' fill='#2b2350'><text x='38' y='96' font-size='34' fill='#7a3fe0'>[</text><text x='164' y='96' font-size='34' fill='#7a3fe0'>]</text><text x='46' y='128' font-size='14'>2</text><text x='106' y='128' font-size='14' fill='#b8860b'>4</text><text x='166' y='128' font-size='14'>6</text><text x='62' y='62' font-size='14' fill='#f1566c'>centre 4, rayon 2</text></g></svg>",
+              "legende": "|x − 4| ≤ 2",
+              "sous": "la distance à 4 est au plus 2"
+            }
+          ],
+          "legende": { "jeton": "[2&nbsp;; 6]", "texte": "bornes comprises" }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "De l’inégalité à l’intervalle",
+          "etapes": [
+            { "titre": "Repérer", "texte": "les deux bornes : 2 &lt; x ≤ 5 a pour bornes 2 et 5" },
+            { "titre": "Fermer ou ouvrir", "texte": "inégalité large : crochet fermé ; stricte : ouvert" },
+            { "titre": "Ordonner", "texte": "la plus petite borne à gauche : x ∈ ]2&nbsp;; 5]" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Résoudre __|x − 4| ≤ 2__.",
+          "calcul": "centre 4, rayon 2 : 4 − 2 = 2 et 4 + 2 = 6",
+          "aparte": "distance à 4",
+          "resultat": "[[2 ≤ x ≤ 6]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Infini", "texte": "Toujours **ouvert** : ]−∞&nbsp;; 3], jamais [−∞&nbsp;; 3]." },
+            { "titre": "Intersection ∩", "texte": "« **et** » : [0&nbsp;; 5] ∩ [3&nbsp;; 8] = **[3&nbsp;; 5]**." },
+            { "titre": "Réunion ∪", "texte": "« **ou** » : [0&nbsp;; 5] ∪ [3&nbsp;; 8] = **[0&nbsp;; 8]**." },
+            { "titre": "Valeur absolue", "texte": "|x − a| est la **distance** de x à a : |3 − 8| = 5." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "|x − 4| ≤ 2 ⟺ 4 − 2 ≤ x ≤ 4 + 2", "quoi": "on traduit la distance" },
+            { "texte": "⟺ 2 ≤ x ≤ 6", "quoi": "on calcule les bornes" },
+            { "texte": "S = [2&nbsp;; 6]", "quoi": "on conclut" }
+          ],
+          "pied": "Représenter les ensembles sur la ==même droite== avant de croiser ou réunir."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire [−∞&nbsp;; 3]&nbsp;: l’infini n’est **jamais compris**.",
+            "Croire que 1/3 est décimal&nbsp;: il est seulement **rationnel**.",
+            "Confondre ∩ (« et ») et ∪ (« ou »).",
+            "Mettre la grande borne à gauche&nbsp;: ]5&nbsp;; 2[ n’a pas de sens."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Écrire **−1 ≤ x &lt; 4** en intervalle.",
+            "Calculer **[0&nbsp;; 5] ∩ [3&nbsp;; 8]**.",
+            "Résoudre **|x − 1| ≤ 3**."
+          ],
+          "reponses": "1) [−1&nbsp;; 4[ · 2) [3&nbsp;; 5] · 3) [−2&nbsp;; 4]"
+        }
+      ]
+    }
+  ]
+}

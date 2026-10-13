@@ -1,0 +1,156 @@
+{
+  "titre": "Dire la durée",
+  "titreSurligne": "durée",
+  "accroche": "Il y a, depuis, cela fait… que.",
+  "bonus": "**hace** + durée · **desde hace** · **llevar** + gérondif · **hay ≠ hace**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/espagnol/dire-la-duree-hace-desde-hace-llevar.webp",
+    "prompt": "a glossy violet hourglass with golden sand and a small golden clock, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Ça fait combien\nde temps&nbsp;? Hace…",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Passé fini, durée en cours",
+          "lignes": [
+            "**hace** + durée"
+          ],
+          "petite": true,
+          "regle": "Pour une action **finie**, <i>hace</i> + durée = « il y a », et le verbe est au passé simple. Pour une action **qui continue**, on reste au **présent**.",
+          "note": "fini → passé · en cours → présent"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les cinq tournures de la durée",
+          "entetes": [
+            "La tournure",
+            "L’exemple"
+          ],
+          "lignes": [
+            [
+              "**desde hace** + durée",
+              "<i>Vivo aquí **desde hace** tres años.</i>"
+            ],
+            [
+              "**hace** + durée + **que** + présent",
+              "<i>**Hace** tres años **que** vivo aquí.</i>"
+            ],
+            [
+              "**llevar** + durée + gérondif",
+              "<i>**Llevo** tres años **viviendo** aquí.</i>"
+            ],
+            [
+              "**desde** + date",
+              "<i>Vivo aquí **desde** 2022.</i>"
+            ],
+            [
+              "**desde que** + verbe",
+              "<i>Vivo aquí **desde que** nací.</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Hay ou hace&nbsp;?",
+          "oui": {
+            "titre": "Hace = il y a (temps)",
+            "texte": "<i>**Hace** dos años que vivo aquí.</i> · <i>Llegué **hace** dos años.</i>"
+          },
+          "non": {
+            "titre": "Hay = il y a (existence)",
+            "texte": "<i>**Hay** alumnos.</i> — mais jamais <i>Hay dos años que vivo aquí.</i>"
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« Il y a un chat. » → **Hay** un gato. « Il y a deux ans. » → **Hace** dos años."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "L’action continue&nbsp;?",
+              "texte": "Oui → **présent** : <i>desde hace, llevar</i>."
+            },
+            {
+              "titre": "L’action est finie&nbsp;?",
+              "texte": "**hace** + durée + **passé simple** : <i>Llegué hace dos años.</i>"
+            },
+            {
+              "titre": "Au passé",
+              "texte": "Tout passe à l’**imparfait** : <i>Hacía tres años que vivía allí.</i>"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "« Cela fait six mois que j’apprends l’espagnol. »",
+          "calcul": "Aprendo español desde hace seis meses.",
+          "aparte": "présent : ça continue",
+          "resultat": "[[Llevo seis meses aprendiendo]]"
+        }
+      ],
+      "colonnes": "1fr 262px"
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "Les autres repères",
+          "colonnes": 1,
+          "cartes": [
+            {
+              "titre": "dentro de · al cabo de · durante",
+              "texte": "<i>dentro de dos días</i> (dans) · <i>al cabo de dos días</i> (au bout de) · <i>durante dos días</i> (pendant)."
+            },
+            {
+              "titre": "Poser la question",
+              "texte": "<i>¿Desde cuándo…?</i> · <i>¿Cuánto tiempo hace que…?</i> · <i>¿Cuánto tiempo llevas…?</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Hay dos años que vivo aquí</i> → <i>**Hace** dos años que vivo aquí.</i>",
+            "<i>Viví aquí desde hace tres años</i> (j’y vis encore) → <i>**Vivo** aquí desde hace tres años.</i>",
+            "<i>Llevo tres años vivir</i> → <i>Llevo tres años **viviendo**.</i>",
+            "Le français dit « cela fait… que j’apprends »&nbsp;: l’espagnol garde le **présent**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "« Cela fait six mois que j’apprends » avec <i>llevar</i>.",
+            "<i>___ dos años que llegué a Madrid.</i>",
+            "<i>Vivo aquí ___ hace tres años.</i>"
+          ],
+          "reponses": "1) Llevo seis meses aprendiendo 2) Hace 3) desde"
+        }
+      ]
+    }
+  ]
+}

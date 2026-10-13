@@ -1,0 +1,121 @@
+{
+  "titre": "Synthèse d’une espèce",
+  "titreSurligne": "Synthèse",
+  "accroche": "Fabriquer ce que la nature produit.",
+  "bonus": "Rendement **η = {obtenu/maximal}** · toujours **< 1** · reflux&nbsp;: le réfrigérant renvoie les vapeurs",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/synthese-d-une-espece-chimique-presente-dans-la-nature.webp",
+    "prompt": "a glossy violet round-bottom flask on a heating mantle with a golden reflux condenser above it and a small vanilla pod, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Au labo comme\nen forêt&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Pourquoi synthétiser",
+          "deux": true,
+          "items": [
+            { "titre": "Quantité", "texte": "l’extraction ne suffit pas" },
+            { "titre": "Coût", "texte": "l’extraction coûte bien plus" },
+            { "titre": "Saison", "texte": "ressource pas toujours disponible" },
+            { "titre": "Impact", "texte": "extraire détruirait un milieu" }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le rendement",
+          "petite": true,
+          "lignes": ["η = {n<sub>obtenue</sub>/n<sub>max</sub>}"],
+          "regle": "Quantité obtenue sur quantité ==maximale attendue==. Pertes&nbsp;: transferts, réaction incomplète, réactions secondaires.",
+          "note": "toujours inférieur à 1"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Un protocole en trois temps",
+          "etapes": [
+            { "titre": "Transformer", "texte": "mélanger les réactifs, souvent à reflux" },
+            { "titre": "Séparer", "texte": "filtration, décantation, extraction, recristallisation" },
+            { "titre": "Identifier", "texte": "chromatographie, T de fusion, spectres" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "On attendait au plus __0,10 mol__ de produit, on en obtient __0,07 mol__.",
+          "calcul": "η = 0,07 ÷ 0,10",
+          "aparte": "en pourcentage",
+          "resultat": "η = [[0,7]] soit 70 %"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Naturel ou de synthèse&nbsp;?",
+          "oui": { "titre": "Même structure", "texte": "La molécule synthétisée est **identique** à la molécule naturelle&nbsp;: le corps ne fait pas de différence (vanilline)." },
+          "non": { "titre": "Idée reçue", "texte": "« Naturel » n’est pas « inoffensif », « de synthèse » n’est pas « dangereux »." },
+          "essai": { "texte": "Extraction par solvant&nbsp;: deux liquides ==non miscibles==, on agite, on laisse décanter, on récupère la bonne phase." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Chauffage à reflux", "quoi": "la transformation" },
+            { "texte": "Filtration puis recristallisation", "quoi": "la séparation" },
+            { "texte": "Chromatographie : même tache que la référence", "quoi": "l’identification" }
+          ],
+          "pied": "Un protocole comprend toujours son volet ==sécurité==&nbsp;: pictogrammes, protection, hotte, déchets."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que le rendement peut **dépasser 1**.",
+            "Oublier le **volet sécurité**.",
+            "Croire une molécule naturelle **meilleure** par nature.",
+            "Confondre **reflux** et distillation."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 5,
+          "titre": "Le chauffage à reflux",
+          "paragraphes": ["On chauffe pour aller plus vite sans rien perdre : le **réfrigérant** condense les vapeurs et les renvoie dans le ballon, ==rien ne s’échappe==."]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Rôle du réfrigérant à reflux&nbsp;?",
+            "Rendement de 0,08 mol obtenue pour 0,10 mol attendue&nbsp;?",
+            "Citer une cause de perte de produit."
+          ],
+          "reponses": "1) condenser les vapeurs · 2) 0,8 (80 %) · 3) transferts, réaction incomplète"
+        }
+      ]
+    }
+  ]
+}

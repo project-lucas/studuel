@@ -1,0 +1,137 @@
+{
+  "titre": "Données structurées",
+  "titreSurligne": "structurées",
+  "accroche": "C’est la structure qui rend utile.",
+  "bonus": "**CSV** = texte simple · **JSON** = imbriqué · big data = **3 V** : volume, vitesse, variété · format **ouvert** = durable",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/les-donnees-structurees.webp",
+    "prompt": "a glossy violet table grid with golden rows and columns and a golden funnel filtering small data cells, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Des lignes, des\ncolonnes, du sens !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Donnée, information, connaissance",
+          "entetes": ["Niveau", "Exemple"],
+          "lignes": [
+            ["**Donnée**", "37,2 (brut)"],
+            ["**Information**", "37,2 °C : température corporelle"],
+            ["**Connaissance**", "une température normale"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Une table",
+          "items": [
+            { "terme": "Ligne", "definition": "un **enregistrement**, une entité décrite" },
+            { "terme": "Colonne", "definition": "un **attribut**" },
+            { "terme": "Type", "definition": "entier, flottant, chaîne, booléen, date : il autorise ou interdit un traitement" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Les formats",
+          "entetes": ["Format", "Limite"],
+          "lignes": [
+            ["**CSV** : texte simple", "aucun type, aucune imbrication"],
+            ["**JSON** : standard du Web", "plus verbeux"]
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Les traitements",
+          "items": [
+            { "titre": "Rechercher", "texte": "retrouver un enregistrement" },
+            { "titre": "Trier · Filtrer", "texte": "ordonner · garder un critère" },
+            { "titre": "Fusionner", "texte": "joindre deux tables" },
+            { "titre": "Agréger", "texte": "compter, sommer, moyenner" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Garder seulement les élèves de plus de 12 de moyenne. Quel __traitement__&nbsp;?",
+          "calcul": "critère sur un attribut",
+          "aparte": "lignes écartées",
+          "resultat": "[[filtrer]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Format ouvert ou propriétaire&nbsp;?",
+          "oui": { "titre": "Ouvert", "texte": "Interopérable, **pérenne** : il se relit dans vingt ans." },
+          "non": { "titre": "Propriétaire", "texte": "Dépend d’un **logiciel** qui peut disparaître." },
+          "essai": { "texte": "On ne fait pas la moyenne d’une chaîne : le type décide du traitement." }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 6,
+          "titre": "Passer de la donnée à la connaissance",
+          "etapes": [
+            { "titre": "Contextualiser", "texte": "ajouter l’unité et le sens : c’est l’information" },
+            { "titre": "Traiter", "texte": "filtrer, trier, fusionner ou agréger" },
+            { "titre": "Interpréter", "texte": "conclure : c’est la connaissance" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Chaque ligne est un enregistrement.", "quoi": "la table" },
+            { "texte": "Chaque colonne a un type.", "quoi": "l’attribut" },
+            { "texte": "Un format ouvert garantit l’interopérabilité.", "quoi": "le choix" }
+          ],
+          "pied": "Big data&nbsp;: ==volume==, ==vitesse==, ==variété== (les 3&nbsp;V)."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **donnée** et **information**.",
+            "Croire que le **CSV** garde les types.",
+            "Mélanger **filtrer** (lignes) et **trier** (ordre).",
+            "Oublier la **propriété** des données."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que représente une **ligne** d’une table ?",
+            "Quel traitement **joint** deux tables ?",
+            "Que signifient les **3 V** du big data ?"
+          ],
+          "reponses": "1) un enregistrement · 2) fusionner · 3) volume, vitesse, variété"
+        }
+      ]
+    }
+  ]
+}

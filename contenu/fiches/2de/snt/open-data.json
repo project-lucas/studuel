@@ -1,0 +1,179 @@
+{
+  "titre": "Open data",
+  "titreSurligne": "Open",
+  "accroche": "Des données publiques, ouvertes à tous.",
+  "bonus": "**data.gouv.fr** · loi **2016** (République numérique) · formats ouverts **CSV, JSON** · licence explicite · anonymiser",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/open-data.webp",
+    "prompt": "a glossy violet open padlock with golden data tables and small charts floating around, sparkles"
+  },
+  "marcel": "Des données\npour tout le monde !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Open data",
+              "definition": "donnée que chacun peut **consulter, réutiliser, redistribuer**"
+            },
+            {
+              "terme": "Format ouvert",
+              "definition": "CSV, JSON, XML, pas un PDF scanné"
+            },
+            {
+              "terme": "Métadonnées",
+              "definition": "décrivent le contenu du fichier"
+            },
+            {
+              "terme": "Réidentification",
+              "definition": "retrouver une personne par **croisement** de données"
+            },
+            {
+              "terme": "Licence",
+              "definition": "dit ce que la réutilisation **autorise**"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les critères d’une donnée ouverte",
+          "entetes": [
+            "Critère",
+            "Exigence"
+          ],
+          "lignes": [
+            [
+              "**Accessible**",
+              "en ligne, sans démarche"
+            ],
+            [
+              "**Gratuite**",
+              "ou à coût marginal"
+            ],
+            [
+              "**Lisible par machine**",
+              "sans ressaisie"
+            ],
+            [
+              "**Licence** explicite",
+              "réutilisation autorisée"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Vérifier qu’un jeu est vraiment ouvert",
+          "etapes": [
+            {
+              "titre": "Accès",
+              "texte": "en ligne, gratuit, sans formalité"
+            },
+            {
+              "titre": "Format",
+              "texte": "ouvert et lisible par une machine"
+            },
+            {
+              "titre": "Droits",
+              "texte": "licence claire et métadonnées présentes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une application affiche les horaires de bus en __temps réel__. D’où viennent-ils&nbsp;?",
+          "calcul": "données de transport publiées",
+          "aparte": "sur data.gouv.fr",
+          "resultat": "[[open data]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Ce que ça permet",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Applications",
+              "texte": "horaires, prix des carburants, air"
+            },
+            {
+              "titre": "Journalisme",
+              "texte": "enquêtes fondées sur des chiffres publics"
+            },
+            {
+              "titre": "Recherche",
+              "texte": "jeux de données réutilisables"
+            },
+            {
+              "titre": "Contrôle citoyen",
+              "texte": "vérifier l’action publique"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Les données sont libres d’accès et de réutilisation.",
+              "quoi": "la définition"
+            },
+            {
+              "texte": "La loi de 2016 impose leur publication.",
+              "quoi": "le cadre"
+            },
+            {
+              "texte": "Les données personnelles sont anonymisées.",
+              "quoi": "la limite"
+            }
+          ],
+          "pied": "Une donnée ==périmée== ou mal ==documentée== vaut peu."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **gratuit** et **ouvert** (il faut aussi le format et la licence).",
+            "Croire que **tout** peut être publié.",
+            "Oublier la **réidentification** par croisement.",
+            "Penser qu’un **PDF scanné** est exploitable.",
+            "Négliger les **métadonnées** : sans elles, on ne sait pas ce que contient le fichier."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel portail rassemble les données publiques **françaises**&nbsp;?",
+            "Donne un **format ouvert**.",
+            "Quel risque pèse sur les données **personnelles**&nbsp;?"
+          ],
+          "reponses": "1) data.gouv.fr · 2) CSV, JSON ou XML · 3) la réidentification par croisement"
+        }
+      ]
+    }
+  ]
+}

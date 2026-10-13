@@ -1,0 +1,147 @@
+{
+  "titre": "Projeté orthogonal",
+  "titreSurligne": "orthogonal",
+  "accroche": "Le pied, c’est la plus courte distance.",
+  "epreuve": "socle",
+  "bonus": "(MH) ⊥ d · MN² = MH² + HN² · médianes aux **deux tiers** depuis le sommet",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/maths/geometrie-plane-triangles-et-projete-orthogonal-d-un-point-s.webp",
+    "prompt": "a glossy golden plumb line dropping from a violet point onto a violet line, a small right angle mark, a tiny cartoon shadow, sparkles"
+  },
+  "marcel": "Le plus court,\nc’est tout droit&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le projeté",
+          "petite": true,
+          "lignes": [
+            "H ∈ d et (MH) ⊥ d"
+          ],
+          "regle": "H est le **projeté orthogonal** de M sur d&nbsp;: **unique**, et MH est la **plus courte** distance de M à d (MN² = MH² + HN²).",
+          "note": "MH = distance de M à d"
+        },
+        {
+          "type": "figures",
+          "numero": 2,
+          "titre": "Le pied",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><line x1='10' y1='135' x2='210' y2='135' stroke='#2b2350' stroke-width='3' stroke-linecap='round'></line><line x1='80' y1='35' x2='80' y2='135' stroke='#7a3fe0' stroke-width='4' stroke-linecap='round'></line><line x1='80' y1='35' x2='160' y2='135' stroke='#f1566c' stroke-width='3' stroke-dasharray='5 4' stroke-linecap='round'></line><polyline points='80,121 94,121 94,135' fill='none' stroke='#2b2350' stroke-width='2'></polyline><circle cx='80' cy='35' r='5' fill='#7a3fe0' stroke='#2b2350' stroke-width='2'></circle><circle cx='80' cy='135' r='5' fill='#f5b722' stroke='#2b2350' stroke-width='2'></circle><circle cx='160' cy='135' r='5' fill='#f1566c' stroke='#2b2350' stroke-width='2'></circle><g font-family=\"Baloo 2\" font-weight='800' font-size='14' fill='#2b2350'><text x='64' y='34'>M</text><text x='66' y='154' fill='#b8860b'>H</text><text x='158' y='154' fill='#f1566c'>N</text><text x='182' y='128'>d</text><text x='38' y='88' fill='#7a3fe0'>MH</text><text x='132' y='76' fill='#f1566c'>MN</text></g></svg>",
+              "legende": "MH &lt; MN",
+              "sous": "la perpendiculaire est la plus courte"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Distance d’un point à une droite",
+          "etapes": [
+            {
+              "titre": "Justifier",
+              "texte": "l’angle droit (réciproque de Pythagore)"
+            },
+            {
+              "titre": "Aire",
+              "texte": "l’écrire de deux façons : base × hauteur ÷ 2"
+            },
+            {
+              "titre": "Isoler",
+              "texte": "résoudre pour la hauteur, qui est MH"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "AB = 6, AC = 8, BC = 10. Distance de A à __(BC)__ ?",
+          "calcul": "10² = 6² + 8² : rectangle en A\naire = 6 × 8 ÷ 2 = 24 = 10 × AH ÷ 2",
+          "aparte": "deux aires",
+          "resultat": "AH = [[4,8 cm]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Droites remarquables",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Médiatrices",
+              "texte": "Cercle **circonscrit**."
+            },
+            {
+              "titre": "Hauteurs",
+              "texte": "**Orthocentre**&nbsp;; le pied est un projeté."
+            },
+            {
+              "titre": "Médianes",
+              "texte": "Centre de **gravité**, aux **2/3** du sommet."
+            },
+            {
+              "titre": "Bissectrices",
+              "texte": "Cercle **inscrit**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "10² = 100 = 6² + 8²",
+              "quoi": "réciproque de Pythagore"
+            },
+            {
+              "texte": "Aire(ABC) = {6 × 8/2} = {10 × AH/2}",
+              "quoi": "deux expressions"
+            },
+            {
+              "texte": "Donc AH = 4,8 cm",
+              "quoi": "c’est la distance"
+            }
+          ],
+          "pied": "Pythagore : ==justifier l’angle droit== d’abord."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **orthocentre** (hauteurs) et **centre de gravité** (médianes).",
+            "Placer le centre de gravité au **milieu** d’une médiane.",
+            "Appliquer Pythagore sans prouver l’angle droit."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que représente **MH** si H est le projeté de M sur d&nbsp;?",
+            "Les **médianes** se coupent en quel point&nbsp;?",
+            "Triangle 3-4-5&nbsp;: **hauteur** sur l’hypoténuse&nbsp;?"
+          ],
+          "reponses": "1) la distance de M à d · 2) centre de gravité · 3) 3×4÷5 = 2,4"
+        }
+      ]
+    }
+  ]
+}

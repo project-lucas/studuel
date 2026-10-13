@@ -1,0 +1,129 @@
+{
+  "titre": "Les masculins faibles",
+  "titreSurligne": "faibles",
+  "accroche": "Un -n partout, sauf au nominatif.",
+  "bonus": "**der Mensch → den Menschen** · **der Herr → den Herrn** · **der Name → des Namens**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/allemand/les-masculins-faibles-der-mensch-den-menschen.webp",
+    "prompt": "a glossy violet person silhouette badge with a golden letter n attached like a tail, tiny sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Den Studenten\n— avec -en&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle",
+          "lignes": ["nom + **-(e)n** partout"],
+          "petite": true,
+          "regle": "Sauf au **nominatif singulier**, le nom prend **-(e)n**, au singulier comme au pluriel.",
+          "note": "une seule forme sans -en"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "La déclinaison",
+          "entetes": ["Cas", "Singulier", "Pluriel"],
+          "lignes": [
+            ["Nominatif", "<i>der Mensch</i>", "<i>die Mensch**en**</i>"],
+            ["Accusatif", "<i>den Mensch**en**</i>", "<i>die Mensch**en**</i>"],
+            ["Datif", "<i>dem Mensch**en**</i>", "<i>den Mensch**en**</i>"],
+            ["Génitif", "<i>des Mensch**en**</i>", "<i>der Mensch**en**</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les reconnaître",
+          "colonnes": 2,
+          "cartes": [
+            {"titre": "Masculins en -e (êtres vivants)", "texte": "<i>der Junge, der Kollege, der Löwe, der Affe</i> · nationalités : <i>der Franzose, der Pole, der Türke</i>"},
+            {"titre": "Mots étrangers", "texte": "<i>-ent, -ant, -ist, -at, -oge, -graf</i> : <i>Student, Präsident, Journalist, Polizist, Soldat, Biologe, Fotograf</i>"},
+            {"titre": "Mots courts", "texte": "<i>der Mensch, der Held, der Nachbar, der Bauer, der Bär</i> · <i>der Herr → den **Herrn**</i>, <i>die Herren</i>"},
+            {"titre": "Masculins mixtes", "texte": "<i>der Name → den Namen, dem Namen, des Namen**s**</i> · de même <i>Glaube, Gedanke, Wille</i>"}
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Devant un nom de personne",
+          "oui": {
+            "titre": "Avec -en",
+            "texte": "<i>Ich sehe den **Studenten**.</i> — accusatif : le nom prend -en."
+          },
+          "non": {
+            "titre": "Sans -en",
+            "texte": "<i>Ich sehe den Student.</i> — l’une des fautes les plus fréquentes."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« Je parle avec le président. » → <i>Ich spreche mit dem ___.</i> → **Präsidenten**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {"titre": "Quel cas&nbsp;?", "texte": "Regarde l’article : <i>den, dem, des</i> devant un nom masculin."},
+            {"titre": "Est-il faible&nbsp;?", "texte": "Être vivant en **-e**, mot étranger en **-ent / -ist…**, ou la liste courte."},
+            {"titre": "Ajoute -(e)n", "texte": "<i>…frage ich **den Journalisten**.</i>"}
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Exemple résolu",
+          "deux": true,
+          "items": [
+            {"titre": "Datif", "texte": "<i>mit</i> + dat. → <i>mit dem Präsident**en**</i>"},
+            {"titre": "Accusatif", "texte": "<i>fragen</i> → <i>den Journalist**en**</i>"},
+            {"titre": "Phrase", "texte": "<i>Ich spreche mit dem Präsidenten, dann frage ich den Journalisten.</i>"},
+            {"titre": "Relis", "texte": "chaque <i>den / dem</i> devant une personne"}
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>der Käse</i> n’est **pas** vivant : <i>den Käse</i>, sans -n.",
+            "<i>der Deutsche</i> se décline comme un adjectif (<i>ein Deutscher</i>).",
+            "<i>der Herr</i> : <i>den Herr**n**</i> au singulier, <i>die Herr**en**</i> au pluriel.",
+            "Le nominatif singulier reste nu : <i>der Student</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Accusatif de <i>der Kollege</i>&nbsp;?",
+            "Datif de <i>der Nachbar</i> (singulier)&nbsp;?",
+            "Génitif de <i>der Mensch</i> (singulier)&nbsp;?"
+          ],
+          "reponses": "1) den Kollegen 2) dem Nachbarn 3) des Menschen"
+        }
+      ]
+    }
+  ]
+}

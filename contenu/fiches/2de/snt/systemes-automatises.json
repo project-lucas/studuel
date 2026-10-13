@@ -1,0 +1,112 @@
+{
+  "titre": "Systèmes automatisés",
+  "titreSurligne": "automatisés",
+  "accroche": "Capter, décider, agir.",
+  "bonus": "**Capteurs** → **commande** → **actionneurs** · boucle **ouverte** = sans vérifier · boucle **fermée** = corrige (consigne)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/systemes-automatises.webp",
+    "prompt": "a glossy violet robotic arm with golden gears and a small golden sensor eye, curved arrow loop around it, sparkles"
+  },
+  "marcel": "Je capte, je décide,\nj’agis !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les trois organes",
+          "items": [
+            { "terme": "Capteur", "definition": "transforme une **grandeur physique** en signal (température, lumière…)" },
+            { "terme": "Partie commande", "definition": "applique un **programme** (microcontrôleur)" },
+            { "terme": "Actionneur", "definition": "**agit** sur le monde (moteur, vanne, voyant)" },
+            { "terme": "Consigne", "definition": "la valeur **visée** par le système" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux types de boucles",
+          "entetes": ["Boucle", "Exemple"],
+          "lignes": [
+            ["**ouverte**, sans vérifier", "grille-pain à minuterie"],
+            ["**fermée**, avec correction", "thermostat"],
+            ["compare à la **consigne**", "chauffage réglé à 19 °C"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Analyser un système en trois temps",
+          "etapes": [
+            { "titre": "Capter", "texte": "quelle grandeur le capteur mesure-t-il&nbsp;?" },
+            { "titre": "Décider", "texte": "que fait le programme de la commande&nbsp;?" },
+            { "titre": "Agir", "texte": "quel actionneur change le monde&nbsp;?" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un thermostat règle le chauffage. __Capteur, actionneur__&nbsp;?",
+          "calcul": "mesure de la température → chauffage",
+          "aparte": "boucle fermée",
+          "resultat": "= [[capteur de température · résistance]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quelle boucle&nbsp;?",
+          "oui": { "titre": "Fermée", "texte": "Elle **mesure l’effet** de son action et **corrige**." },
+          "non": { "titre": "Ouverte", "texte": "Elle applique une **recette**, sans vérifier le résultat." },
+          "essai": { "texte": "Avec rétroaction, la machine poursuit un **objectif**." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le capteur mesure la grandeur physique.", "quoi": "la mesure" },
+            { "texte": "La commande exécute le programme.", "quoi": "la décision" },
+            { "texte": "L’actionneur agit sur l’environnement.", "quoi": "l’action" }
+          ],
+          "pied": "Un capteur en ==panne== fait prendre une ==mauvaise décision==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **capteur** et **actionneur**.",
+            "Croire qu’une boucle ouverte **corrige** ses erreurs.",
+            "Oublier la **cybersécurité** d’un système connecté.",
+            "Oublier la question de la **responsabilité** en cas d’accident."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel organe **applique le programme**&nbsp;?",
+            "Un thermostat est-il en boucle **ouverte** ou **fermée**&nbsp;?",
+            "Donne un **actionneur**."
+          ],
+          "reponses": "1) la partie commande · 2) fermée · 3) moteur, vérin, vanne, résistance chauffante…"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "titre": "Le présent",
+  "titreSurligne": "présent",
+  "accroche": "Trois conjugaisons, des irréguliers.",
+  "bonus": "**-o · -as · -a · -amos · -áis · -an** · **-o · -es · -e · -emos · -éis · -en**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/espagnol/le-present-de-l-indicatif.webp",
+    "prompt": "a glossy violet clock face with golden hands and a golden sun at the center, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Le présent ouvre\ntoutes les portes&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle",
+          "lignes": ["radical + **terminaison**"],
+          "petite": true,
+          "regle": "Retire <i>-ar, -er, -ir</i> et ajoute la terminaison. Les colonnes <i>-er</i> et <i>-ir</i> ne diffèrent qu’à **nosotros** et **vosotros**.",
+          "note": "le temps le plus employé"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois conjugaisons",
+          "entetes": ["", "-ar", "-er", "-ir"],
+          "lignes": [
+            ["yo", "<i>hablo</i>", "<i>como</i>", "<i>vivo</i>"],
+            ["tú", "<i>hablas</i>", "<i>comes</i>", "<i>vives</i>"],
+            ["él / ella", "<i>habla</i>", "<i>come</i>", "<i>vive</i>"],
+            ["nosotros", "<i>hablamos</i>", "<i>comemos</i>", "<i>vivimos</i>"],
+            ["vosotros", "<i>habláis</i>", "<i>coméis</i>", "<i>vivís</i>"],
+            ["ellos", "<i>hablan</i>", "<i>comen</i>", "<i>viven</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les trois familles d’irréguliers",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Seul le <i>yo</i> change",
+              "texte": "<i>hacer → **hago**, poner → **pongo**, salir → **salgo**, conocer → **conozco**, ver → **veo**, saber → **sé**, dar → **doy**</i>."
+            },
+            {
+              "titre": "Le radical « en botte »",
+              "texte": "<i>pensar → **pie**nso</i>, <i>poder → **pue**do</i>, <i>jugar → **jue**go</i>, <i>pedir → **pi**do</i>. **Nosotros** et **vosotros** restent réguliers."
+            },
+            {
+              "titre": "Les tout irréguliers",
+              "texte": "<i>**ser** : soy, eres, es…</i> · <i>**ir** : voy, vas, va…</i> · <i>**tener** : tengo, tienes…</i> · <i>**venir**</i> · <i>**decir** : digo, dices…</i> · <i>**estar** : estoy, estás…</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "La botte : qui change&nbsp;?",
+          "oui": {
+            "titre": "Dans la botte",
+            "texte": "<i>yo, tú, él, ellos</i> : <i>**pue**do, **pue**des, **pue**de, **pue**den</i>."
+          },
+          "non": {
+            "titre": "Hors de la botte",
+            "texte": "<i>nosotros, vosotros</i> : <i>podemos, podéis</i> — jamais <i>puedemos</i>."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Nosotros ___ (querer) ir.</i> → **queremos**&nbsp;: hors de la botte !"
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Conjuguer sans se tromper",
+          "etapes": [
+            {
+              "titre": "Repère la famille",
+              "texte": "<i>-ar, -er</i> ou <i>-ir</i>&nbsp;? Régulier, <i>yo</i> irrégulier ou radical qui change&nbsp;?"
+            },
+            {
+              "titre": "Prends le radical",
+              "texte": "Diphtongue (<i>e → ie, o → ue</i>) ou affaiblissement (<i>e → i</i>), sauf à <i>nosotros / vosotros</i>."
+            },
+            {
+              "titre": "Ajoute la terminaison",
+              "texte": "Vérifie l’**accent** : <i>estás, está, estáis, están</i>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les autres emplois",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Futur proche",
+              "texte": "<i>Mañana **salgo** a las ocho.</i>"
+            },
+            {
+              "titre": "Présent historique",
+              "texte": "<i>En 1492, Colón **llega** a América.</i>"
+            },
+            {
+              "titre": "Depuis",
+              "texte": "<i>**Estudio** español desde hace dos años.</i> (J’étudie… depuis)"
+            },
+            {
+              "titre": "Accent de <i>estar</i>",
+              "texte": "4 formes sur 6 : un oubli est une faute d’orthographe."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Yo **hacho**</i> → <i>Yo **hago**</i> : le <i>yo</i> irrégulier se retient par cœur.",
+            "<i>Nosotros **puedemos**</i> → <i>Nosotros **podemos**.</i>",
+            "<i>Tú **estas**</i> → <i>Tú **estás**</i> (accent écrit).",
+            "<i>Yo **piensso**</i> → <i>Yo **pienso**</i> : un seul <i>s</i>, et la diphtongue <i>ie</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Yo ___ (hacer) los deberes.</i>",
+            "<i>Ellos ___ (poder) venir.</i>",
+            "<i>Tú ___ (estar) en casa.</i>"
+          ],
+          "reponses": "1) hago 2) pueden 3) estás"
+        }
+      ]
+    }
+  ]
+}

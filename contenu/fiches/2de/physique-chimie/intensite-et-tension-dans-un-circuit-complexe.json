@@ -1,0 +1,109 @@
+{
+  "titre": "Intensité et tension",
+  "titreSurligne": "tension",
+  "accroche": "Deux lois pour lire tout circuit.",
+  "bonus": "ampèremètre en **série** · voltmètre en **dérivation** · I en **A** · U en **V**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/intensite-et-tension-dans-un-circuit-complexe.webp",
+    "prompt": "a glossy violet electric circuit loop with two golden light bulbs in parallel and a small golden battery, glowing sparks, sparkles"
+  },
+  "marcel": "Série ou\ndérivation ?",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Deux grandeurs, deux appareils",
+          "entetes": ["Grandeur", "Unité", "Appareil"],
+          "lignes": [
+            ["**Intensité** I", "ampère (A)", "ampèremètre, en **série**"],
+            ["**Tension** U", "volt (V)", "voltmètre, en **dérivation**"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Les deux lois",
+          "petite": true,
+          "lignes": ["Σ I<sub>arrivent</sub> = Σ I<sub>repartent</sub>", "Σ U<sub>maille</sub> = 0"],
+          "regle": "**Nœuds** : la charge ne s’accumule pas. **Mailles** : en série les tensions ==s’ajoutent==, en dérivation elles sont ==égales==.",
+          "note": "série : I identique partout&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre un circuit en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "les nœuds, les branches et la maille à étudier" },
+            { "titre": "Écrire", "texte": "la loi des nœuds pour I, la loi des mailles pour U" },
+            { "titre": "Calculer", "texte": "puis écrire l’unité : des ampères ou des volts" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Deux lampes en dérivation sous 6,0 V : 0,20 A dans la première, 0,30 A dans la seconde. __Intensité__ du générateur&nbsp;?",
+          "calcul": "loi des nœuds : I = 0,20 + 0,30",
+          "aparte": "et U = 6,0 V partout",
+          "resultat": "I = [[0,50 A]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Branchement des appareils",
+          "oui": { "titre": "Ampèremètre en série", "texte": "Le courant le **traverse**&nbsp;: il mesure le débit de charges." },
+          "non": { "titre": "Ampèremètre en dérivation", "texte": "Il **court-circuite** le dipôle et peut être détruit." },
+          "essai": { "texte": "Lampe retirée en dérivation&nbsp;: la tension de l’autre reste <i>6,0 V</i>. C’est pourquoi la maison est câblée en dérivation." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Les lampes sont en dérivation : U<sub>1</sub> = U<sub>2</sub> = 6,0 V.", "quoi": "la maille" },
+            { "texte": "Loi des nœuds : I = I<sub>1</sub> + I<sub>2</sub> = 0,20 + 0,30", "quoi": "formule puis nombres" },
+            { "texte": "I = 0,50 A", "quoi": "avec l’unité" }
+          ],
+          "pied": "Dans un circuit ==série==, une seule boucle : l’intensité est la même partout."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Brancher l’ampèremètre en **dérivation**.",
+            "Croire que la tension se **partage** entre branches en dérivation.",
+            "Oublier une branche dans la loi des **nœuds**.",
+            "Écrire 0,5 **sans unité**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Où se branche un **voltmètre**&nbsp;?",
+            "Branches de 0,10 A et 0,25 A&nbsp;: **I** totale&nbsp;?",
+            "Deux récepteurs en série : U<sub>générateur</sub> =&nbsp;?"
+          ],
+          "reponses": "1) en dérivation · 2) 0,35 A · 3) la somme des deux tensions"
+        }
+      ]
+    }
+  ]
+}

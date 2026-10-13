@@ -1,0 +1,112 @@
+{
+  "titre": "Cloud et datacenters",
+  "titreSurligne": "Cloud",
+  "accroche": "Le nuage est un bâtiment.",
+  "bonus": "**IaaS** machines · **PaaS** plateforme · **SaaS** logiciel · réplication · numérique ≈ **4 %** des émissions · **PUE**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/cloud-et-datacenters.webp",
+    "prompt": "a glossy violet cloud over a golden server rack with small cables and sparkles"
+  },
+  "marcel": "Le nuage ?\nUn vrai bâtiment !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Cloud", "definition": "ressources informatiques **hébergées ailleurs**, facturées à l’usage" },
+            { "terme": "Datacenter", "definition": "bâtiment de **serveurs en baies**, alimentés et refroidis" },
+            { "terme": "Réplication", "definition": "copie sur plusieurs machines et **plusieurs sites**" },
+            { "terme": "PUE", "definition": "énergie totale rapportée à celle des **calculs**" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les niveaux de service",
+          "entetes": ["Niveau", "Fourni"],
+          "lignes": [
+            ["**Infrastructure**", "machines et stockage"],
+            ["**Plateforme**", "environnement d’exécution"],
+            ["**Logiciel**", "application prête à l’emploi"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Ce qu’un datacenter doit assurer",
+          "etapes": [
+            { "titre": "Alimenter", "texte": "électricité redondante et groupes électrogènes" },
+            { "titre": "Refroidir", "texte": "la climatisation évacue la chaleur des serveurs" },
+            { "titre": "Répliquer", "texte": "liaisons multiples et copies sur plusieurs sites" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Ton __fichier__ envoyé « dans le nuage » : où est-il vraiment&nbsp;?",
+          "calcul": "sur un disque, dans un datacenter",
+          "aparte": "bâtiment réel",
+          "resultat": "[[serveur d’un tiers]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Cloud : bilan",
+          "oui": { "titre": "Avantages", "texte": "Accès **partout**, partage, sauvegarde auto, capacité **élastique**." },
+          "non": { "titre": "Contreparties", "texte": "Dépendance à la **connexion** et au **fournisseur**, coût, souveraineté." },
+          "essai": { "texte": "La loi applicable dépend du pays de stockage et de la nationalité de l’hébergeur." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le cloud est hébergé dans des datacenters.", "quoi": "la réalité" },
+            { "texte": "Il consomme électricité et refroidissement.", "quoi": "l’impact" },
+            { "texte": "Le numérique pèse environ 4&nbsp;% des émissions.", "quoi": "le repère" }
+          ],
+          "pied": "Le principal poste est la ==fabrication== des terminaux."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le cloud est **immatériel**.",
+            "Oublier la **dépendance** au fournisseur.",
+            "Penser que les datacenters sont le **premier** poste d’émissions.",
+            "Ignorer la question de la **souveraineté**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Où est stocké un fichier **dans le cloud**&nbsp;?",
+            "À quoi sert la **réplication**&nbsp;?",
+            "Quel est le principal poste d’émissions du **numérique**&nbsp;?"
+          ],
+          "reponses": "1) sur un serveur d’un datacenter · 2) survivre à une panne ou un incendie · 3) la fabrication des terminaux"
+        }
+      ]
+    }
+  ]
+}

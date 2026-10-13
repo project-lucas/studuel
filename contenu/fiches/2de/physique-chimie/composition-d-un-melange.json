@@ -1,0 +1,120 @@
+{
+  "titre": "Composer un mélange",
+  "titreSurligne": "mélange",
+  "accroche": "Dire combien il y en a.",
+  "bonus": "**t = m ÷ V** (g·L⁻¹) · dilution&nbsp;: **t₁V₁ = t₂V₂** · air&nbsp;: **78 %** N₂, **21 %** O₂",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/composition-d-un-melange.webp",
+    "prompt": "a glossy violet volumetric flask with a golden line mark and a pipette dripping a golden drop into it, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Combien dans\ncombien&nbsp;?",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Concentration en masse",
+          "petite": true,
+          "lignes": ["t = {m/V}", "t₁ × V₁ = t₂ × V₂"],
+          "regle": "**t** en g·L⁻¹, **m** masse de soluté, **V** volume de la ==solution obtenue==. La dilution conserve la quantité de soluté.",
+          "note": "V = la solution&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Solution", "definition": "mélange homogène liquide" },
+            { "terme": "Solvant", "definition": "espèce majoritaire (eau&nbsp;: solution aqueuse)" },
+            { "terme": "Soluté", "definition": "espèce dissoute" },
+            { "terme": "Saturée", "definition": "ne dissout plus de soluté" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Préparer par dilution",
+          "etapes": [
+            { "titre": "Prélever", "texte": "V₁ à la pipette jaugée dans la solution mère" },
+            { "titre": "Compléter", "texte": "dans une fiole jaugée, jusqu’au trait de jauge" },
+            { "titre": "Homogénéiser", "texte": "on bouche et on retourne la fiole" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "On dissout __2,0 g__ de sel pour obtenir __250 mL__ de solution. Sa concentration&nbsp;?",
+          "calcul": "t = 2,0 ÷ 0,250 (V en L)",
+          "aparte": "250 mL = 0,250 L",
+          "resultat": "t = [[8,0 g·L⁻¹]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Doser par étalonnage",
+          "oui": { "titre": "Gamme d’étalons", "texte": "Solutions de concentrations **connues**, on mesure l’**absorbance** de chacune, on trace la **courbe d’étalonnage**." },
+          "non": { "titre": "Une seule mesure", "texte": "Un seul étalon ne permet pas de tracer la courbe." },
+          "essai": { "texte": "Facteur de dilution F = {V₂/V₁} = {t₁/t₂}. Diluer 10 fois&nbsp;: prélever 10,0 mL, compléter à 100,0 mL." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "m = 2,0 g ; V = 0,250 L", "quoi": "les données, V en L" },
+            { "texte": "t = m ÷ V = 2,0 ÷ 0,250", "quoi": "formule puis nombres" },
+            { "texte": "t = 8,0 g·L⁻¹", "quoi": "avec l’unité" }
+          ],
+          "pied": "La dilution ne change pas ==la quantité de soluté==&nbsp;: seul le volume augmente."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Prendre pour V le volume du **solvant** ajouté.",
+            "Oublier de convertir **mL en L**.",
+            "Utiliser une **éprouvette** pour une dilution précise.",
+            "Croire que la dilution **change** la quantité de soluté."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 5,
+          "titre": "L’air, un mélange gazeux",
+          "paragraphes": ["Proportions en volume&nbsp;: **diazote** environ 78 %, **dioxygène** environ 21 %, autres gaz (argon, dioxyde de carbone) environ 1 %."]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**t** si 5,0 g sont dissous pour 0,50 L de solution&nbsp;?",
+            "Quel volume d’air est du diazote pour 100 L d’air&nbsp;?",
+            "On dilue 10 fois&nbsp;: **F**&nbsp;?"
+          ],
+          "reponses": "1) 10 g·L⁻¹ · 2) environ 78 L · 3) F = 10"
+        }
+      ]
+    }
+  ]
+}

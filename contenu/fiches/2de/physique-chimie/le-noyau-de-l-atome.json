@@ -1,0 +1,122 @@
+{
+  "titre": "Le noyau de l’atome",
+  "titreSurligne": "noyau",
+  "accroche": "Presque toute la masse est au centre.",
+  "bonus": "**e** = 1,6 × 10⁻¹⁹ C · noyau ≈ **10⁻¹⁵ m** · atome ≈ **10⁻¹⁰ m** · rapport **100 000**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/le-noyau-de-l-atome.webp",
+    "prompt": "a glossy golden nucleus made of tiny violet and golden spheres with small glowing electrons orbiting far away, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Petit noyau,\ngrand vide&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les particules",
+          "entetes": ["Particule", "Charge", "Où"],
+          "lignes": [
+            ["**Proton**", "+e", "noyau"],
+            ["**Neutron**", "neutre", "noyau"],
+            ["**Électron**", "−e", "autour"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Z, A et neutrons",
+          "petite": true,
+          "lignes": ["<sup>A</sup><sub>Z</sub>X", "N = A − Z"],
+          "regle": "**Z** compte les protons (et les électrons de l’atome), **A** les nucléons, **A − Z** les ==neutrons==. L’atome est neutre.",
+          "note": "A = Z + neutrons"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire un symbole",
+          "etapes": [
+            { "titre": "Z", "texte": "le nombre de protons identifie l’élément" },
+            { "titre": "A − Z", "texte": "on soustrait pour les neutrons" },
+            { "titre": "Charge", "texte": "électrons en moins&nbsp;: cation&nbsp;; en plus&nbsp;: anion" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Le carbone 14&nbsp;: <sup>14</sup><sub>6</sub>C. Combien de neutrons&nbsp;?",
+          "calcul": "N = A − Z = 14 − 6",
+          "aparte": "Z = 6 protons",
+          "resultat": "[[8 neutrons]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Isotopes ou pas&nbsp;?",
+          "oui": { "titre": "Même Z, A différents", "texte": "Carbone 12 et carbone 14&nbsp;: **isotopes**, mêmes propriétés chimiques (mêmes électrons)." },
+          "non": { "titre": "Z différents", "texte": "Deux éléments différents, même si leurs A sont proches." },
+          "essai": { "texte": "Un ion garde son noyau&nbsp;: <i>Na → Na⁺</i> perd un électron, c’est toujours du sodium. La masse d’un atome ≈ **A** × masse d’un nucléon." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Un atome lacunaire",
+          "deux": true,
+          "items": [
+            { "titre": "Vide", "texte": "l’atome est essentiellement du vide" },
+            { "titre": "Masse", "texte": "presque toute dans le noyau" },
+            { "titre": "Nucléon", "texte": "environ 1 800 fois un électron" },
+            { "titre": "Neutre", "texte": "autant d’électrons que de protons" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que **Z** compte les neutrons.",
+            "Dire que le noyau **change** quand l’atome devient un ion.",
+            "Oublier que le **neutron** est neutre.",
+            "Confondre **A** et **A − Z**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 6,
+          "titre": "Pour se représenter l’échelle",
+          "paragraphes": ["Si le noyau était une **bille** au centre d’un stade, les électrons occuperaient les **gradins**&nbsp;: le rapport des tailles est de ==100 000==."]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Nombre de neutrons de <sup>35</sup><sub>17</sub>Cl&nbsp;?",
+            "Un atome perd 1 électron&nbsp;: cation ou anion&nbsp;?",
+            "Que partagent deux isotopes&nbsp;?"
+          ],
+          "reponses": "1) 18 · 2) un cation · 3) le même Z (mêmes protons)"
+        }
+      ]
+    }
+  ]
+}

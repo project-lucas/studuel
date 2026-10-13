@@ -1,0 +1,180 @@
+{
+  "titre": "Le participe passé",
+  "titreSurligne": "participe passé",
+  "accroche": "Accord ou pas : tout dépend du verbe.",
+  "bonus": "**-ado / -ido** · avec **haber**&nbsp;: jamais d’accord · avec **ser / estar** ou adjectif&nbsp;: accord",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/espagnol/le-participe-passe.webp",
+    "prompt": "a glossy violet open envelope with a golden letter sticking out and a small golden check mark, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Han llegado…\nPas d’accord&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle d’accord",
+          "lignes": [
+            "**haber** + participe : **figé**"
+          ],
+          "petite": true,
+          "regle": "Après **haber**, le participe ne s’accorde **jamais**. Avec **ser / estar** ou comme adjectif, il s’accorde.",
+          "note": "Ellas han llegado"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Accord ou pas&nbsp;?",
+          "entetes": [
+            "Employé avec…",
+            "Accord",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "<i>haber</i>",
+              "**jamais**",
+              "<i>Las cartas que he escrito.</i>"
+            ],
+            [
+              "<i>ser</i> ou <i>estar</i>",
+              "avec le **sujet**",
+              "<i>La puerta está cerrada.</i>"
+            ],
+            [
+              "adjectif",
+              "avec le **nom**",
+              "<i>una carta escrita a mano</i>"
+            ],
+            [
+              "rare",
+              "la passive en <i>ser</i>",
+              "on préfère <i>Se construyó la casa</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les participes irréguliers",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Réguliers",
+              "texte": "<i>-ar → **-ado**</i> (hablado) · <i>-er, -ir → **-ido**</i> (comido)."
+            },
+            {
+              "titre": "En -to",
+              "texte": "<i>abrir → abierto · cubrir → cubierto · escribir → escrito · morir → muerto · ver → visto · volver → vuelto · resolver → resuelto</i>"
+            },
+            {
+              "titre": "En -cho et autres",
+              "texte": "<i>hacer → hecho · decir → dicho · satisfacer → satisfecho · poner → puesto · romper → roto</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Ser ou estar + participe",
+          "oui": {
+            "titre": "Estar → l’état",
+            "texte": "<i>La casa **está construida**.</i> — le fait est accompli."
+          },
+          "non": {
+            "titre": "Ser → l’action",
+            "texte": "<i>La casa **fue construida** en 1920.</i> — on assiste au fait."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Las ventanas están ___ (cerrar).</i> → **cerradas**&nbsp;: état, accord avec le sujet."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Quel auxiliaire&nbsp;?",
+              "texte": "<i>haber</i> → participe **invariable**."
+            },
+            {
+              "titre": "Ser, estar, adjectif",
+              "texte": "Accorde en genre et en nombre avec le **sujet** ou le **nom**."
+            },
+            {
+              "titre": "Forme-le",
+              "texte": "<i>-ado / -ido</i>, ou la forme irrégulière à connaître."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les participes doubles",
+          "deux": true,
+          "items": [
+            {
+              "titre": "freír",
+              "texte": "<i>he **freído**</i> · <i>patatas **fritas**</i>"
+            },
+            {
+              "titre": "imprimir",
+              "texte": "<i>he **imprimido**</i> · <i>un texto **impreso**</i>"
+            },
+            {
+              "titre": "soltar",
+              "texte": "<i>he **soltado**</i> · <i>un perro **suelto**</i>"
+            },
+            {
+              "titre": "despertar",
+              "texte": "<i>he **despertado**</i> · <i>está **despierto**</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Ellas han llegadas</i> → <i>Ellas han **llegado**</i>&nbsp;: aucun accord après <i>haber</i>.",
+            "<i>He escribido</i> → <i>He **escrito**</i>&nbsp;: irrégulier.",
+            "<i>La puerta está cerrado</i> → <i>cerrad**a**</i>&nbsp;: accord avec <i>puerta</i>.",
+            "La passive en <i>ser</i> est rare&nbsp;: préfère <i>**Se** construyó la casa</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Participe de <i>escribir</i>&nbsp;?",
+            "<i>Las cartas que he ___ (escribir).</i>",
+            "<i>La puerta está ___ (cerrar).</i>"
+          ],
+          "reponses": "1) escrito 2) escrito 3) cerrada"
+        }
+      ]
+    }
+  ]
+}

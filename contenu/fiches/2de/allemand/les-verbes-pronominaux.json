@@ -1,0 +1,165 @@
+{
+  "titre": "Verbes pronominaux",
+  "titreSurligne": "pronominaux",
+  "accroche": "Sich&nbsp;: accusatif ou datif.",
+  "bonus": "pas de COD → **mich, dich** · un COD → **mir, dir** · er/sie/es/wir/ihr/sie : pas de différence",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/allemand/les-verbes-pronominaux.webp",
+    "prompt": "a glossy violet mirror with a golden frame reflecting a small golden star, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Mich ou mir&nbsp;?\nUn COD décide&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle",
+          "lignes": [
+            "COD&nbsp;? non → mich · oui → mir"
+          ],
+          "petite": true,
+          "regle": "Un COD dans la phrase, et le réfléchi passe au **datif**. Sinon, il reste à l’**accusatif**.",
+          "note": "seulement ich et du changent"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les deux séries",
+          "entetes": [
+            "Personne",
+            "Accusatif",
+            "Datif"
+          ],
+          "lignes": [
+            ["ich", "<i>mich</i>", "<i>mir</i>"],
+            ["du", "<i>dich</i>", "<i>dir</i>"],
+            ["er / sie / es", "<i>sich</i>", "<i>sich</i>"],
+            ["wir · ihr", "<i>uns · euch</i>", "<i>uns · euch</i>"],
+            ["sie / Sie", "<i>sich</i>", "<i>sich</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Où va le pronom&nbsp;?",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Principale",
+              "texte": "Juste après le verbe&nbsp;: <i>Ich freue **mich** auf die Ferien.</i>"
+            },
+            {
+              "titre": "Inversion",
+              "texte": "Avant un sujet nom&nbsp;: <i>Gestern hat **sich** mein Bruder verletzt.</i>"
+            },
+            {
+              "titre": "Subordonnée",
+              "texte": "Après le sujet&nbsp;: <i>…, weil ich **mich** freue.</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Mich ou mir&nbsp;?",
+          "oui": {
+            "titre": "Sans COD : accusatif",
+            "texte": "<i>Ich wasche **mich**.</i> (Je me lave.)"
+          },
+          "non": {
+            "titre": "Avec COD : datif",
+            "texte": "<i>Ich wasche **mir** die Hände.</i> (Je me lave les mains.)"
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Ich kaufe ___ ein Buch.</i> → **mir**&nbsp;: il y a un COD."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Cherche un COD",
+              "texte": "Y en a-t-il un autre dans la phrase&nbsp;?"
+            },
+            {
+              "titre": "Choisis le cas",
+              "texte": "Non → **accusatif**. Oui → **datif**."
+            },
+            {
+              "titre": "Place-le",
+              "texte": "Juste après le verbe conjugué, ou après le sujet en subordonnée."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Verbes et prépositions",
+          "deux": true,
+          "items": [
+            {
+              "titre": "sich freuen auf / über",
+              "texte": "se réjouir de ce qui vient / de ce qui est arrivé"
+            },
+            {
+              "titre": "sich interessieren für",
+              "texte": "s’intéresser à"
+            },
+            {
+              "titre": "sich erinnern an",
+              "texte": "se souvenir de"
+            },
+            {
+              "titre": "sich ärgern über",
+              "texte": "s’agacer de"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>aufstehen, heißen, spazieren gehen, passieren</i> : pronominaux en français, **pas** en allemand.",
+            "<i>Ich wasche mich die Hände</i> → <i>Ich wasche **mir** die Hände.</i>",
+            "<i>Setzen Sie Sich</i> → <i>Setzen Sie **sich**.</i> (<i>sich</i> : jamais de majuscule)",
+            "<i>Ich verspäte</i> → <i>Ich verspäte **mich**.</i> (pronominal en allemand)"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Ich sehe ___ den Film an.</i> (mich / mir)",
+            "<i>Er freut ___ auf die Ferien.</i>",
+            "« Je me lave les mains »&nbsp;?"
+          ],
+          "reponses": "1) mir 2) sich 3) Ich wasche mir die Hände"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "titre": "Cause et conséquence",
+  "titreSurligne": "conséquence",
+  "accroche": "Weil, denn, deshalb : chacun sa place.",
+  "bonus": "**weil** verbe à la fin · **denn** ordre normal · **deshalb** inversion",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/allemand/exprimer-la-cause-et-la-consequence.webp",
+    "prompt": "two glossy violet dominoes falling in a row with a golden arrow between them, tiny sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Weil… deshalb…\nje relie&nbsp;!",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "La cause",
+          "entetes": ["Outil", "Verbe", "Exemple"],
+          "lignes": [
+            ["<i>weil</i> (subordonnant)", "à la **fin**", "<i>…, weil ich krank **bin**.</i>"],
+            ["<i>da</i> (cause connue)", "à la fin", "<i>Da es regnet, **bleiben** wir hier.</i>"],
+            ["<i>denn</i> (coordonnant)", "ordre **normal**", "<i>…, denn ich **bin** krank.</i>"],
+            ["<i>nämlich</i> (adverbe)", "après le verbe", "<i>Ich **bin** nämlich krank.</i>"],
+            ["<i>wegen</i> + gén.", "pas de verbe", "<i>wegen des Regens</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "La conséquence",
+          "entetes": ["Outil", "Verbe", "Exemple"],
+          "lignes": [
+            ["<i>deshalb, deswegen, darum, daher</i>", "**inversion**", "<i>…, deshalb **bleibe** ich zu Hause.</i>"],
+            ["<i>also</i> (= donc)", "inversion", "<i>…, also **nehme** ich einen Schirm.</i>"],
+            ["<i>so … dass</i>", "à la **fin**", "<i>so müde, dass er sofort **einschlief**.</i>"],
+            ["<i>sodass</i>", "à la fin", "<i>…, sodass das Spiel **ausfiel**.</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Après deshalb",
+          "oui": {
+            "titre": "Inversion",
+            "texte": "<i>Ich bin krank, deshalb **bleibe ich** zu Hause.</i> — le verbe en 2<sup>e</sup>, le sujet après."
+          },
+          "non": {
+            "titre": "Ordre direct",
+            "texte": "<i>Ich bin krank, deshalb ich bleibe…</i> — faux, comme <i>dann ich gehe</i>."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« …donc je prends un parapluie » → <i>Es regnet, also ___ ich einen Schirm.</i> → **nehme**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Choisir le bon outil",
+          "etapes": [
+            {"titre": "Une cause", "texte": "Nouvelle (réponse à <i>warum?</i>) : **weil**. Déjà connue, en tête : **da**."},
+            {"titre": "Un ajout", "texte": "Explication après coup : **denn** ou **nämlich**."},
+            {"titre": "Une conclusion", "texte": "**deshalb / deswegen** + **inversion**."}
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Un lien, trois constructions",
+          "deux": true,
+          "items": [
+            {"titre": "Adverbe", "texte": "<i>Der Zug hatte Verspätung, **deshalb bin ich** zu spät gekommen.</i>"},
+            {"titre": "Subordonnée", "texte": "<i>Ich bin zu spät, **weil** der Zug Verspätung **hatte**.</i>"},
+            {"titre": "Coordination", "texte": "<i>Ich bin zu spät, **denn** der Zug **hatte** Verspätung.</i>"},
+            {"titre": "<i>denn</i>", "texte": "ne commence jamais une réponse seule"}
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>also</i> ≠ « aussi » : « aussi » se dit <i>auch</i>, <i>also</i> = **donc**.",
+            "<i>weil ich bin krank</i> → <i>weil ich krank **bin**</i>.",
+            "<i>nämlich</i> n’est **jamais en tête** de phrase.",
+            "<i>deshalb ich bleibe</i> → <i>deshalb **bleibe ich**</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Complète&nbsp;: <i>Ich bleibe hier, weil ich müde ___.</i>",
+            "Complète&nbsp;: <i>Er ist krank, deshalb ___ er zu Hause.</i> (bleiben)",
+            "Que veut dire <i>also</i>&nbsp;?"
+          ],
+          "reponses": "1) bin 2) bleibt 3) donc"
+        }
+      ]
+    }
+  ]
+}

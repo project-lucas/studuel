@@ -1,0 +1,119 @@
+{
+  "titre": "Les questions",
+  "titreSurligne": "questions",
+  "accroche": "Deux signes, et des accents obligatoires.",
+  "bonus": "**¿ … ?** toujours par deux · **qué, cuál, cómo, dónde, cuándo…** portent un accent",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/espagnol/les-questions.webp",
+    "prompt": "a glossy violet inverted question mark next to a golden question mark, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "¿Qué? ¿Cómo?\nSans oublier ¿&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle",
+          "lignes": ["**¿** … **?**"],
+          "petite": true,
+          "regle": "Le signe ouvrant se place au début de la **partie interrogée**, pas forcément de la phrase&nbsp;: <i>Si no vienes, ¿qué hago?</i> Pas d’« est-ce que » : seule l’intonation change.",
+          "note": "l’oublier = faute comptée"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les mots interrogatifs",
+          "entetes": ["Le mot", "L’exemple", "En français"],
+          "lignes": [
+            ["qué · cuál(es)", "<i>¿**Qué** quieres? / ¿**Cuál** prefieres?</i>", "Quoi · lequel"],
+            ["quién(es) · cómo", "<i>¿**Quién** viene? / ¿**Cómo** te llamas?</i>", "Qui · comment"],
+            ["dónde · adónde · cuándo", "<i>¿**Dónde** vives? / ¿**Cuándo** llegas?</i>", "Où · vers où · quand"],
+            ["cuánto/a/os/as · por qué", "<i>¿**Cuántos** años tienes? / ¿**Por qué** lloras?</i>", "Combien · pourquoi"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Qué, cuál et les quatre « porque »",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "qué : la nature", "texte": "Définition, ou devant un **nom**&nbsp;: <i>¿Qué es esto?</i> · <i>¿Qué día es hoy?</i> (jamais <i>¿Cuál día?</i>)" },
+            { "titre": "cuál : le choix", "texte": "Un choix **dans un ensemble**&nbsp;: <i>¿Cuál es tu color favorito?</i>" },
+            { "titre": "por qué / porque", "texte": "**por qué** = la question, **porque** = la réponse, **el porqué** = la raison (nom). <i>¿Por qué lloras? — Porque estoy triste.</i>" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "L’accent fait la différence",
+          "oui": { "titre": "Interrogatif : accent", "texte": "<i>¿**Dónde** vives?</i> · <i>No sé **dónde** está.</i> — même sans « ? », l’accent reste." },
+          "non": { "titre": "Relatif : pas d’accent", "texte": "<i>La casa **donde** vivo</i> · <i>El libro **que** leo.</i> — ici, aucun accent." },
+          "essai": { "titre": "Essai", "texte": "<i>Pregunta ___ cuesta.</i> (il demande combien ça coûte) → **cuánto**, avec accent." }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            { "titre": "Oui ou non&nbsp;?", "texte": "Question totale&nbsp;: déclarative entre **¿ ?**, ou sujet après le verbe." },
+            { "titre": "Quel mot&nbsp;?", "texte": "Nature → **qué**, choix → **cuál**, raison → **por qué**." },
+            { "titre": "Accent et signes", "texte": "Accent sur le mot, **¿ … ?** autour&nbsp;; indirecte&nbsp;: accent seul." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            { "titre": "Question totale", "texte": "<i>¿Hablas español?</i> · <i>¿Viene Juan mañana?</i>" },
+            { "titre": "Sans pronom sujet", "texte": "<i>¿Hablas…?</i> plutôt que <i>¿Tú hablas…?</i>" },
+            { "titre": "Interrogation indirecte", "texte": "<i>Pregunta cuánto cuesta.</i> (accent, pas de ¿ ?)" },
+            { "titre": "adónde", "texte": "« vers où » : <i>¿Adónde vas?</i>" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **¿** ouvrant&nbsp;: <i>Cómo te llamas?</i> → <i>**¿**Cómo te llamas?</i>",
+            "Écrire <i>¿Donde vives?</i> sans accent → <i>¿**Dónde** vives?</i>",
+            "Calquer le français&nbsp;: <i>¿Cuál día?</i> → <i>¿**Qué** día?</i>",
+            "Confondre <i>porque</i> et <i>por qué</i> : l’un répond, l’autre demande."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Corrige&nbsp;: <i>Donde vives?</i>",
+            "<i>¿___ día es hoy?</i> (qué / cuál)",
+            "<i>¿___ lloras?</i> — <i>___ estoy triste.</i>"
+          ],
+          "reponses": "1) ¿Dónde vives? 2) Qué 3) Por qué / Porque"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "titre": "Les adjectifs",
+  "titreSurligne": "adjectifs",
+  "accroche": "La place change parfois le sens.",
+  "bonus": "Après le nom par défaut · avant = regard du locuteur · **bueno → buen**, **malo → mal**, **grande → gran**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/espagnol/les-adjectifs.webp",
+    "prompt": "a glossy violet paintbrush painting a golden stripe on a violet cube, a small golden palette with sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "¡Un gran hombre\no un hombre grande&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’accord et la place",
+          "lignes": ["nom + **adjectif**"],
+          "petite": true,
+          "regle": "Par défaut **après** le nom, il classe. **Avant**, il exprime le regard de celui qui parle. Couleur, forme, nationalité, religion&nbsp;: **toujours après**.",
+          "note": "<i>un coche rojo</i>"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "L’accord",
+          "entetes": ["Type d’adjectif", "Formes", "L’exemple"],
+          "lignes": [
+            ["En **-o**", "Quatre formes", "<i>alto, alta, altos, altas</i>"],
+            ["En **-e** ou consonne", "Invariable en genre", "<i>un chico / una chica inteligente</i>"],
+            ["Nationalité, -or, -ón, -ín", "Forme un féminin", "<i>española</i> · <i>trabajadora</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Avant ou après : le sens change",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "gran · grande",
+              "texte": "<i>un **gran** hombre</i> (un grand homme) · <i>un hombre **grande**</i> (de grande taille)."
+            },
+            {
+              "titre": "pobre · viejo",
+              "texte": "<i>un **pobre** hombre</i> (à plaindre) · <i>un hombre **pobre**</i> (sans argent) · <i>un **viejo** amigo</i> (de longue date)."
+            },
+            {
+              "titre": "diferentes · cierto",
+              "texte": "<i>**diferentes** libros</i> (plusieurs) · <i>libros **diferentes**</i> (dissemblables) · <i>un **cierto** encanto</i> (un certain) · <i>un hecho **cierto**</i> (avéré)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "L’apocope",
+          "oui": {
+            "titre": "Devant le nom : forme courte",
+            "texte": "<i>**buen** día</i> · <i>**mal** tiempo</i> · <i>**gran** casa</i>"
+          },
+          "non": {
+            "titre": "Après le nom : forme entière",
+            "texte": "<i>un día **bueno**</i> · <i>un tiempo **malo**</i> — jamais <i>un bueno día</i>."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>un ___ amigo</i> (bueno) → **buen**&nbsp;: devant un nom masculin singulier."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            { "titre": "Où le placer&nbsp;?", "texte": "Après le nom par défaut&nbsp;; avant si tu l’apprécies." },
+            { "titre": "Le sens change&nbsp;?", "texte": "<i>gran, pobre, viejo, cierto</i>&nbsp;: vérifie ce que tu veux dire." },
+            { "titre": "Accorde", "texte": "Genre et nombre du nom&nbsp;; apocope devant le nom." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            { "titre": "Plusieurs noms", "texte": "un seul masculin → masculin pluriel&nbsp;: <i>un chico y una chica simpáticos</i>" },
+            { "titre": "Avant le nom", "texte": "<i>la blanca nieve</i> · <i>mi querida madre</i>" },
+            { "titre": "Toujours après", "texte": "<i>un coche rojo</i> · <i>la lengua española</i>" },
+            { "titre": "Après le nom", "texte": "<i>un problema difícil</i>" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>un rojo coche</i> → <i>un coche **rojo**</i> (la couleur va après).",
+            "<i>un hombre pobre</i> ≠ <i>un pobre hombre</i>&nbsp;: sans argent ou à plaindre.",
+            "<i>un bueno día</i> → <i>un **buen** día</i>.",
+            "<i>una chica inteligenta</i> → <i>inteligente</i> (invariable)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>un ___ día</i> (bueno)",
+            "<i>un hombre ___</i> (sans argent)",
+            "<i>un chico y una chica ___</i> (simpático)"
+          ],
+          "reponses": "1) buen 2) pobre 3) simpáticos"
+        }
+      ]
+    }
+  ]
+}

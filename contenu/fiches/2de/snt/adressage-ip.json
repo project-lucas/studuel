@@ -1,0 +1,125 @@
+{
+  "titre": "Adressage IP",
+  "titreSurligne": "IP",
+  "accroche": "Chaque machine a son adresse.",
+  "bonus": "IPv4 = 4 nombres de 0 à 255 · privée = 192.168… ou 10… · **DHCP** attribue · **NAT** traduit · **DNS** = nom → IP",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/adressage-ip.webp",
+    "prompt": "a glossy violet laptop with a golden house-number plate floating above it and golden network lines to a router, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Une adresse,\nune machine !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "IPv4 et IPv6",
+          "entetes": ["Version", "Taille", "Écriture"],
+          "lignes": [
+            ["**IPv4**", "32 bits", "4 nombres de 0 à 255 : 192.168.1.10"],
+            ["**IPv6**", "128 bits", "hexadécimal, séparé par « : »"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Une adresse en deux parties",
+          "items": [
+            { "terme": "Réseau", "definition": "commune à toutes les machines du **même réseau local**" },
+            { "terme": "Hôte", "definition": "propre à **chaque machine**" },
+            { "terme": "Masque", "definition": "indique où passe la **frontière** entre les deux" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Privée ou publique&nbsp;?",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Privée", "texte": "circule dans le **réseau local** : 192.168… ou 10…" },
+            { "titre": "Publique", "texte": "circule sur **Internet** : une seule par foyer, portée par la box" },
+            { "titre": "NAT", "texte": "traduit les adresses privées vers l’adresse publique" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Ton téléphone a l’adresse 192.168.1.23. __Privée ou publique__&nbsp;?",
+          "calcul": "commence par 192.168",
+          "aparte": "réseau local",
+          "resultat": "[[privée]]"
+        },
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Joindre un site en trois temps",
+          "etapes": [
+            { "titre": "Nom", "texte": "tu tapes un nom de domaine lisible" },
+            { "titre": "DNS", "texte": "l’annuaire le traduit en adresse IP" },
+            { "titre": "Paquets", "texte": "ils sont envoyés vers cette adresse" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Que dit une adresse IP&nbsp;?",
+          "oui": { "titre": "Elle dit", "texte": "**où joindre** la machine utilisée, à cet instant." },
+          "non": { "titre": "Elle ne dit pas", "texte": "**qui** tu es : elle n’est pas une identité." },
+          "essai": { "texte": "Sans DNS, le Web resterait praticable mais illisible : il faudrait retenir des suites de chiffres." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "La box attribue les adresses privées (DHCP).", "quoi": "l’attribution" },
+            { "texte": "Le NAT les traduit en une adresse publique.", "quoi": "la traduction" },
+            { "texte": "Le DNS donne l’IP d’un nom.", "quoi": "l’annuaire" }
+          ],
+          "pied": "L’adresse dit ==où joindre== la machine, pas qui tu es."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que chaque appareil a une adresse **publique**.",
+            "Penser qu’une IP dit **qui** on est.",
+            "Écrire un nombre **supérieur à 255** en IPv4.",
+            "Confondre **DHCP** et **NAT**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de bits fait une adresse **IPv4** ?",
+            "Qui **attribue** les adresses privées ?",
+            "Que fait le **DNS** ?"
+          ],
+          "reponses": "1) 32 bits · 2) le DHCP, sur la box · 3) il traduit un nom en adresse IP"
+        }
+      ]
+    }
+  ]
+}

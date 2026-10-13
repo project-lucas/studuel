@@ -1,0 +1,126 @@
+{
+  "titre": "Le Web",
+  "titreSurligne": "Web",
+  "accroche": "Une application d’Internet, pas Internet.",
+  "bonus": "**HTML** = structure · **CSS** = présentation · **URL** = adresse · **HTTP(S)** = transfert · **PageRank** = liens reçus",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/le-web.webp",
+    "prompt": "a glossy violet browser window with a golden magnifying glass and a golden spider web link pattern, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Le Web n’est pas\nInternet !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois briques de 1989",
+          "entetes": ["Brique", "Apport"],
+          "lignes": [
+            ["**HTML**", "décrire une page"],
+            ["**URL**", "une adresse unique par ressource"],
+            ["**HTTP**", "transférer la ressource"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "HTML et CSS",
+          "entetes": ["Langage", "Il décrit"],
+          "lignes": [
+            ["**HTML**", "la **structure** : titres, liens, images"],
+            ["**CSS**", "la **présentation** : couleurs, polices"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Un moteur de recherche en trois temps",
+          "etapes": [
+            { "titre": "Crawling", "texte": "des robots parcourent le Web de lien en lien" },
+            { "titre": "Indexation", "texte": "le contenu est découpé en mots-clés" },
+            { "titre": "Classement", "texte": "un algorithme ordonne les résultats" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Ton navigateur demande une page. Qui joue quel rôle&nbsp;?",
+          "calcul": "navigateur = client",
+          "aparte": "il renvoie la page",
+          "resultat": "[[serveur]] = fournisseur"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "HTTP ou HTTPS&nbsp;?",
+          "oui": { "titre": "HTTPS", "texte": "Ajoute le **chiffrement** : le contenu n’est pas lisible en route." },
+          "non": { "titre": "HTTP", "texte": "Le contenu circule **en clair** : un intermédiaire peut le lire." },
+          "essai": { "texte": "Le PageRank juge une page selon les liens qui pointent vers elle." }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "Trois idées à retenir",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Client", "texte": "le navigateur **demande** la page" },
+            { "titre": "Serveur", "texte": "il **renvoie** la ressource demandée" },
+            { "titre": "PageRank", "texte": "importante si des pages importantes la citent" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le Web est une application d’Internet.", "quoi": "la distinction" },
+            { "texte": "Le navigateur (client) interroge le serveur.", "quoi": "le modèle" },
+            { "texte": "Le classement n’est jamais neutre.", "quoi": "l’esprit critique" }
+          ],
+          "pied": "La première page de résultats est un ==choix==, pas un fait."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **Internet** (la route) et le **Web** (les voitures).",
+            "Mélanger **HTML** (structure) et **CSS** (apparence).",
+            "Croire que **HTTP** chiffre les échanges.",
+            "Voir le classement comme **neutre**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Qui a inventé le **Web**, et où ?",
+            "Quel langage décrit la **structure** d’une page ?",
+            "Que fait le **crawling** ?"
+          ],
+          "reponses": "1) Tim Berners-Lee, au CERN · 2) HTML · 3) des robots parcourent le Web de lien en lien"
+        }
+      ]
+    }
+  ]
+}

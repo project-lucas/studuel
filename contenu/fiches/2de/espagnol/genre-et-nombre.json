@@ -1,0 +1,120 @@
+{
+  "titre": "Genre et nombre",
+  "titreSurligne": "Genre",
+  "accroche": "Le genre ne recopie pas le français.",
+  "bonus": "**-o / -a** · **-ción, -dad** féminins · **-ma** masculin · pluriel **-s, -es, -ces**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/espagnol/genre-et-nombre.webp",
+    "prompt": "a glossy violet single cube beside a stack of several golden cubes, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "La sangre, el color…\nPas comme chez nous&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle",
+          "lignes": ["**-o** masc. · **-a** fém."],
+          "petite": true,
+          "regle": "Le genre se lit à la **terminaison**&nbsp;: <i>-o, -or, -aje, -ma</i> (grec) masculins&nbsp;; <i>-a, -ción, -sión, -dad, -tad, -tud, -umbre, -ez</i> féminins.",
+          "note": "apprendre avec l’article"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les repères de genre",
+          "entetes": ["Genre", "Terminaisons", "Exemples"],
+          "lignes": [
+            ["Masculin", "-o · -or · -aje", "<i>el libro, el amor, el viaje</i>"],
+            ["Masculin", "-ma d’origine grecque", "<i>el problema, el tema, el idioma, el clima</i>"],
+            ["Féminin", "-a · -ción, -sión", "<i>la casa, la canción</i>"],
+            ["Féminin", "-dad, -tad, -tud · -umbre, -ez", "<i>la ciudad, la libertad, la costumbre, la vejez</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Le pluriel",
+          "entetes": ["Le mot se termine par…", "On ajoute", "Exemple"],
+          "lignes": [
+            ["Voyelle non accentuée", "**-s**", "<i>casa → casas</i>"],
+            ["Consonne ou voyelle accentuée", "**-es**", "<i>papel → papeles, rubí → rubíes</i>"],
+            ["-z", "**-ces**", "<i>lápiz → lápices, vez → veces</i>"],
+            ["-s non accentué en dernière syllabe", "rien", "<i>el lunes / los lunes, la crisis / las crisis</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le genre du français ne vaut pas",
+          "oui": { "titre": "Genre espagnol", "texte": "<i>**la** sangre, **la** leche, **la** sal, **la** nariz</i> · <i>**el** color, **el** árbol, **el** viaje, **el** análisis</i>" },
+          "non": { "titre": "Genre calqué", "texte": "<i>el sangre, el leche</i> · <i>la color, la árbol</i> — aucun lien avec le français." },
+          "essai": { "titre": "Essai", "texte": "<i>___ nariz / ___ puente</i> → **la** nariz · **el** puente." }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Le féminin des personnes",
+          "etapes": [
+            { "titre": "Nom en -o", "texte": "-o devient -a&nbsp;: <i>el niño / la niña</i>." },
+            { "titre": "Nom en -or, -ón, -és", "texte": "On ajoute -a&nbsp;: <i>profesor / profesora</i>, <i>francés / francesa</i>." },
+            { "titre": "Invariables", "texte": "Seul l’article change&nbsp;: <i>el / la estudiante, artista</i>." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            { "titre": "L’accent suit le son", "texte": "<i>el examen → los exámenes</i> (il apparaît)." },
+            { "titre": "Il disparaît", "texte": "<i>la canción → las canciones</i>." },
+            { "titre": "Invariables", "texte": "<i>los lunes, las crisis</i>." },
+            { "titre": "-z → -ces", "texte": "<i>lápiz → lápices</i>." }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Se fier au français&nbsp;: <i>el sangre</i> → <i>**la** sangre.</i>",
+            "<i>la problema</i> → <i>**el** problema</i> (-ma grec).",
+            "<i>lápizes</i> → <i>lápi**ces**.</i>",
+            "Garder l’accent au pluriel&nbsp;: <i>canciónes</i> → <i>canci**o**nes.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>___ problema / ___ ciudad</i> (el / la)",
+            "Pluriel de <i>lápiz</i> et de <i>papel</i>.",
+            "Pluriel de <i>canción</i> et de <i>examen</i>."
+          ],
+          "reponses": "1) el, la 2) lápices, papeles 3) canciones, exámenes"
+        }
+      ]
+    }
+  ]
+}

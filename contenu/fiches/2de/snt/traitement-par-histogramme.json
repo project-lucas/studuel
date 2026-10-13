@@ -1,0 +1,186 @@
+{
+  "titre": "Histogramme d’image",
+  "titreSurligne": "Histogramme",
+  "accroche": "La photo d’identité d’une image.",
+  "bonus": "Abscisse = valeurs **0 à 255** · ordonnée = **nombre de pixels** · étirement et égalisation **ne créent pas** d’information",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/traitement-par-histogramme.webp",
+    "prompt": "a glossy violet bar chart with golden bars of different heights forming a bell shape, sparkles"
+  },
+  "marcel": "Qui est tassé\nà gauche ?",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Lire l’histogramme",
+          "items": [
+            {
+              "terme": "Histogramme",
+              "definition": "pour chaque valeur, le **nombre de pixels** qui la portent"
+            },
+            {
+              "terme": "Abscisse",
+              "definition": "valeurs de **0 à 255**, des tons sombres aux clairs"
+            },
+            {
+              "terme": "Étirement",
+              "definition": "on étale les valeurs sur **toute la plage**"
+            },
+            {
+              "terme": "Égalisation",
+              "definition": "on rend l’histogramme **le plus plat** possible"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le diagnostic",
+          "entetes": [
+            "Allure",
+            "Image"
+          ],
+          "lignes": [
+            [
+              "tassé à **gauche**",
+              "**sous-exposée**"
+            ],
+            [
+              "tassé à **droite**",
+              "**surexposée**"
+            ],
+            [
+              "resserré au **centre**",
+              "**peu contrastée**"
+            ],
+            [
+              "bien **étalé**",
+              "information bien répartie"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Corriger une image en trois temps",
+          "etapes": [
+            {
+              "titre": "Diagnostiquer",
+              "texte": "lire l’allure de l’histogramme"
+            },
+            {
+              "titre": "Étirer",
+              "texte": "le plus petit devient 0, le plus grand 255"
+            },
+            {
+              "titre": "Égaliser",
+              "texte": "si besoin, aplatir pour révéler les détails"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Les pixels vont de 80 à 170. __Après étirement__&nbsp;?",
+          "calcul": "80 → 0 et 170 → 255",
+          "aparte": "toute la plage 0–255",
+          "resultat": "= [[contraste plus fort]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Que peut-on récupérer&nbsp;?",
+          "oui": {
+            "titre": "Récupérable",
+            "texte": "Une image **sombre** ou **terne**&nbsp;: l’information est là, mal répartie."
+          },
+          "non": {
+            "titre": "Perdu",
+            "texte": "Une zone **brûlée** à 255&nbsp;: aucune information à retrouver."
+          },
+          "essai": {
+            "texte": "Aucun traitement ne **crée** d’information&nbsp;: il utilise mieux la place existante."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "À quoi ça sert",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Photographie",
+              "texte": "surveiller l’**histogramme** plutôt que l’écran, dont la luminosité trompe"
+            },
+            {
+              "titre": "Science",
+              "texte": "l’égalisation est très utile en imagerie **médicale**, **satellitaire**, **astronomique**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "L’histogramme est tassé à gauche.",
+              "quoi": "l’observation"
+            },
+            {
+              "texte": "L’image est donc sous-exposée.",
+              "quoi": "le diagnostic"
+            },
+            {
+              "texte": "On étire les valeurs sur 0–255.",
+              "quoi": "la correction"
+            }
+          ],
+          "pied": "L’égalisation renforce le contraste mais accentue le ==bruit==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que l’histogramme dit si l’image est **belle**.",
+            "Confondre **sous-exposée** (gauche) et **surexposée** (droite).",
+            "Espérer sauver une zone **brûlée** à 255.",
+            "Oublier le **coût** de l’égalisation&nbsp;: le bruit."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que porte l’**ordonnée** d’un histogramme&nbsp;?",
+            "Histogramme tassé à **droite**&nbsp;: quel diagnostic&nbsp;?",
+            "Quel est l’inconvénient de l’**égalisation**&nbsp;?"
+          ],
+          "reponses": "1) le nombre de pixels · 2) image surexposée · 3) elle accentue le bruit"
+        }
+      ]
+    }
+  ]
+}

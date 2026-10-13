@@ -1,0 +1,159 @@
+{
+  "titre": "Échantillonnage",
+  "titreSurligne": "Échantillonnage",
+  "accroche": "Un échantillon fluctue, on l’encadre.",
+  "epreuve": "socle",
+  "bonus": "intervalle à 95 % : **[p − 1/√n ; p + 1/√n]** · n × 4 ⟹ incertitude ÷ 2",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/maths/echantillonnage.webp",
+    "prompt": "a glossy violet jar full of golden marbles with a small handful taken out, a tiny cartoon magnifying glass, sparkles"
+  },
+  "marcel": "Dans l’intervalle,\non ne rejette pas&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Intervalle de fluctuation",
+          "taille": "mini",
+          "lignes": [
+            "[p − {1/√n}&nbsp;; p + {1/√n}]"
+          ],
+          "regle": "Pour n assez grand et p ni proche de 0 ni de 1, environ **95 %** des échantillons ont une fréquence f dans cet intervalle. **p** : proportion de la population ; **f** : fréquence observée.",
+          "note": "p = 0,5 et n = 100 : [0,4&nbsp;; 0,6]"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Taille et précision",
+          "entetes": [
+            "n",
+            "{1/√n}"
+          ],
+          "lignes": [
+            [
+              "100",
+              "**0,10**"
+            ],
+            [
+              "400",
+              "**0,05**"
+            ],
+            [
+              "1 600",
+              "**0,025**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Tester une affirmation",
+          "etapes": [
+            {
+              "titre": "Identifier",
+              "texte": "p annoncée et la taille n de l’échantillon"
+            },
+            {
+              "titre": "Encadrer",
+              "texte": "calculer l’intervalle et la fréquence f"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "hors de l’intervalle : on rejette ; dedans : on ne rejette pas"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un dé donne 6 avec p = {1/6} ≈ 0,167. Sur __400 lancers__, 90 fois 6.",
+          "calcul": "f = 90 ÷ 400 = 0,225\n[0,167 − 0,05&nbsp;; 0,167 + 0,05] = [0,117&nbsp;; 0,217]",
+          "aparte": "{1/√400} = 0,05",
+          "resultat": "0,225 hors de l’intervalle : [[on rejette]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Fluctuation",
+              "texte": "Deux échantillons, deux fréquences&nbsp;: pas une erreur."
+            },
+            {
+              "titre": "Plus grand n",
+              "texte": "La fluctuation **diminue** : quadrupler n divise l’incertitude par 2."
+            },
+            {
+              "titre": "Dedans",
+              "texte": "On ne rejette pas&nbsp;: ce n’est **pas** démontrer."
+            },
+            {
+              "titre": "Biais",
+              "texte": "Un mauvais recrutement ne se corrige pas par la taille."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "n = 400, p ≈ 0,167 : {1/√400} = 0,05",
+              "quoi": "on identifie"
+            },
+            {
+              "texte": "I = [0,117&nbsp;; 0,217] et f = 0,225",
+              "quoi": "on encadre"
+            },
+            {
+              "texte": "f ∉ I : on rejette au seuil de 95 %",
+              "quoi": "on conclut"
+            }
+          ],
+          "pied": "Conclure ==prudemment== : 5 % de risque."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que f **dans** l’intervalle prouve l’hypothèse.",
+            "Croire qu’un énorme échantillon corrige un **biais**.",
+            "Confondre **f** (observée) et **p** (population).",
+            "Oublier que 95 % laisse **5 %** de risque."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "p = 0,5 et n = 100 : **intervalle** ?",
+            "Demi-largeur pour **n = 1 600** ?",
+            "f est **dans** l’intervalle : on conclut ?"
+          ],
+          "reponses": "1) [0,4&nbsp;; 0,6] · 2) 0,025 · 3) on ne rejette pas l’hypothèse"
+        }
+      ]
+    }
+  ]
+}

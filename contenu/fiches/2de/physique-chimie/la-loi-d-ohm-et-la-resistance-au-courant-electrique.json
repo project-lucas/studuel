@@ -1,0 +1,164 @@
+{
+  "titre": "La loi d’Ohm",
+  "titreSurligne": "Ohm",
+  "accroche": "U, R, I : une droite et sa pente.",
+  "bonus": "U = R × I · P = U × I · E = P × Δt · 1 kWh = **3,6 × 10⁶ J**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/la-loi-d-ohm-et-la-resistance-au-courant-electrique.webp",
+    "prompt": "a glossy violet resistor with golden colored rings on a small circuit, a straight golden graph line rising behind it, sparkles"
+  },
+  "marcel": "U égale\nR fois I !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La loi d’Ohm",
+          "petite": true,
+          "lignes": [
+            "U = R × I"
+          ],
+          "regle": "**U** en volts (V), **I** en ampères (A), **R** en ohms (Ω). La caractéristique d’un conducteur ohmique est une ==droite passant par l’origine==, de pente R.",
+          "note": "I en ampères, pas en mA&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Puissance et énergie",
+          "entetes": [
+            "Grandeur",
+            "Formule",
+            "Unité"
+          ],
+          "lignes": [
+            [
+              "**Puissance**",
+              "P = U × I",
+              "watt (W)"
+            ],
+            [
+              "Conducteur ohmique",
+              "P = R × I²",
+              "watt (W)"
+            ],
+            [
+              "**Énergie**",
+              "E = P × Δt",
+              "joule (J) ou kWh"
+            ],
+            [
+              "**Effet Joule**",
+              "échauffement du conducteur",
+              "recherché ou subi"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Convertir",
+              "texte": "I en ampères (mA ÷ 1 000), t en secondes"
+            },
+            {
+              "titre": "Choisir",
+              "texte": "la forme de U = R × I selon l’inconnue"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "puis écrire l’unité : V, A ou Ω"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un résistor de 100 Ω est traversé par 30 mA. Quelle __tension__ à ses bornes&nbsp;?",
+          "calcul": "I = 30 mA = 0,030 A",
+          "aparte": "en ampères&nbsp;!",
+          "resultat": "U = 100 × 0,030 = [[3,0 V]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Ohmique ou pas&nbsp;?",
+          "oui": {
+            "titre": "Conducteur ohmique",
+            "texte": "U et I **proportionnelles** : droite par l’origine, R constante."
+          },
+          "non": {
+            "titre": "Lampe",
+            "texte": "La courbe n’est pas une droite&nbsp;: R **augmente** avec la température."
+          },
+          "essai": {
+            "texte": "Un radiateur de 2 000 W allumé 3 h consomme <i>2 kW × 3 h = 6 kWh</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "I = 30 mA = 0,030 A",
+              "quoi": "la conversion"
+            },
+            {
+              "texte": "D’après la loi d’Ohm, U = R × I = 100 × 0,030",
+              "quoi": "loi, nombres"
+            },
+            {
+              "texte": "U = 3,0 V",
+              "quoi": "avec l’unité"
+            },
+            {
+              "texte": "P = U × I = 3,0 × 0,030 = 0,090 W",
+              "quoi": "si on demande P"
+            }
+          ],
+          "pied": "R ==augmente== avec la longueur du fil et ==diminue== quand sa section grandit. L’ohmmètre se branche hors circuit."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Garder I en **mA** dans U = R × I.",
+            "Appliquer la loi d’Ohm à une **lampe**.",
+            "Confondre **kWh** (énergie) et kW (puissance).",
+            "Manipuler un appareil les **mains mouillées**.",
+            "Oublier que l’**effet Joule** échauffe tout conducteur."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "R = 50 Ω, I = 0,20 A&nbsp;: **U**&nbsp;?",
+            "U = 12 V, I = 0,50 A&nbsp;: **P**&nbsp;?",
+            "1 kWh en **joules**&nbsp;?"
+          ],
+          "reponses": "1) 10 V · 2) 6,0 W · 3) 3,6 × 10⁶ J"
+        }
+      ]
+    }
+  ]
+}

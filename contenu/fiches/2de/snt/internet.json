@@ -1,0 +1,128 @@
+{
+  "titre": "Internet",
+  "titreSurligne": "Internet",
+  "accroche": "Un réseau de réseaux, sans chef.",
+  "bonus": "**IP** = adresser · **TCP** = vérifier · **DNS** = nom → adresse IP · IPv4 = 32 bits · IPv6 = 128 bits",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/internet.webp",
+    "prompt": "a glossy violet globe wrapped in golden network lines with small glowing data packets traveling along them, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Des paquets\npartout !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Internet", "definition": "**réseau de réseaux** : aucune machine ne le dirige" },
+            { "terme": "Paquet", "definition": "morceau de message, qui voyage **indépendamment** des autres" },
+            { "terme": "Routeur", "definition": "choisit seulement le **prochain saut** vers la destination" },
+            { "terme": "DNS", "definition": "l’annuaire : **nom de domaine** → adresse IP" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux protocoles, deux rôles",
+          "entetes": ["Protocole", "Il fait", "Il ne fait pas"],
+          "lignes": [
+            ["**IP**", "achemine grâce aux adresses", "garantir l’arrivée"],
+            ["**TCP**", "vérifie, remet dans l’ordre, redemande", "choisir la route"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La commutation de paquets",
+          "etapes": [
+            { "titre": "Découper", "texte": "le message est coupé en paquets" },
+            { "titre": "Voyager", "texte": "chaque paquet prend le chemin disponible" },
+            { "titre": "Réassembler", "texte": "les paquets sont remis en ordre à l’arrivée" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un lien du réseau tombe en plein envoi. Le message est-il perdu&nbsp;?",
+          "calcul": "paquets indépendants",
+          "aparte": "autre route",
+          "resultat": "[[non]], il passe ailleurs"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Les adresses IP",
+          "entetes": ["Version", "Taille", "Adresses"],
+          "lignes": [
+            ["**IPv4**", "32 bits", "≈ 4,3 milliards (épuisées)"],
+            ["**IPv6**", "128 bits", "pratiquement illimité"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "Pourquoi ça tient",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Pas de centre", "texte": "personne ne peut le couper d’un geste" },
+            { "titre": "Chemins multiples", "texte": "un lien tombe, les paquets passent ailleurs" },
+            { "titre": "Rôles séparés", "texte": "IP adresse, TCP vérifie : chacun évolue seul" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le message est découpé en paquets.", "quoi": "le principe" },
+            { "texte": "Ils suivent des chemins différents.", "quoi": "l’indépendance" },
+            { "texte": "TCP les remet dans l’ordre.", "quoi": "la fiabilité" }
+          ],
+          "pied": "Internet n’a pas de centre&nbsp;: c’est ce qui le rend ==robuste==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’**IP garantit** l’arrivée des paquets (c’est TCP).",
+            "Croire qu’un **routeur** connaît le chemin complet.",
+            "Penser qu’Internet **appartient** à une entreprise.",
+            "Oublier que le **DNS** est un point fragile."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que devient un message dans **Internet** ?",
+            "Quel protocole **redemande** les paquets manquants ?",
+            "Combien de bits fait une adresse **IPv6** ?"
+          ],
+          "reponses": "1) il est découpé en paquets · 2) TCP · 3) 128 bits"
+        }
+      ]
+    }
+  ]
+}

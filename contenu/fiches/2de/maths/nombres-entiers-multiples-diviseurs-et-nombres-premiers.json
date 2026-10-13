@@ -1,0 +1,171 @@
+{
+  "titre": "Multiples et premiers",
+  "titreSurligne": "premiers",
+  "accroche": "Chaque entier a sa décomposition.",
+  "epreuve": "socle",
+  "bonus": "b divise a ⟺ a = b × k · tester jusqu’à **√n** · 360 = **2³ × 3² × 5**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/maths/nombres-entiers-multiples-diviseurs-et-nombres-premiers.webp",
+    "prompt": "glossy golden prime number gems of different sizes in a violet treasure chest, a tiny cartoon magnifying glass, sparkles"
+  },
+  "marcel": "Un seul chemin\nde facteurs&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Diviseur, multiple",
+          "petite": true,
+          "lignes": [
+            "a = b × k"
+          ],
+          "regle": "Avec k entier, **b divise a** et **a est un multiple de b**&nbsp;: 91 = 7 × 13. Un entier ≥ 2 est **premier** s’il n’a que deux diviseurs positifs, 1 et lui-même. **1 n’est pas premier.**",
+          "note": "2 est le seul premier pair"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Critères",
+          "entetes": [
+            "Par",
+            "Si…"
+          ],
+          "lignes": [
+            [
+              "**2**",
+              "unités paires"
+            ],
+            [
+              "**3** ou **9**",
+              "somme des chiffres divisible"
+            ],
+            [
+              "**4**",
+              "deux derniers chiffres divisibles"
+            ],
+            [
+              "**6**",
+              "divisible par 2 et par 3"
+            ],
+            [
+              "**5**",
+              "finit par 0 ou 5"
+            ],
+            [
+              "**10**",
+              "finit par 0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Un nombre est-il premier&nbsp;?",
+          "etapes": [
+            {
+              "titre": "Borner",
+              "texte": "calculer √n&nbsp;: inutile de chercher plus loin"
+            },
+            {
+              "titre": "Tester",
+              "texte": "les seuls nombres premiers jusqu’à √n (critères d’abord)"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "un diviseur trouvé : composé ; aucun : premier"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "221 est-il __premier__&nbsp;?",
+          "calcul": "√221 ≈ 14,9 : tester 2, 3, 5, 7, 11, 13\n221 = 13 × 17",
+          "aparte": "13 divise 221",
+          "resultat": "221 [[n’est pas premier]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Décomposition",
+              "texte": "Tout entier ≥ 2 est **un produit unique** de premiers&nbsp;: 360 = 2³ × 3² × 5."
+            },
+            {
+              "titre": "PGCD",
+              "texte": "Facteurs communs, **plus petit exposant**&nbsp;: PGCD(360&nbsp;; 84) = 2² × 3 = 12."
+            },
+            {
+              "titre": "Impair²",
+              "texte": "Si n = 2k + 1, n² = 2(2k² + 2k) + 1&nbsp;: **impair**."
+            },
+            {
+              "titre": "Infinité",
+              "texte": "Il y a une **infinité** de premiers (Euclide)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "√221 &lt; 15&nbsp;: on teste les premiers ≤ 13",
+              "quoi": "on borne"
+            },
+            {
+              "texte": "221 = 13 × 17",
+              "quoi": "un diviseur suffit"
+            },
+            {
+              "texte": "Donc 221 n’est pas premier.",
+              "quoi": "on conclut"
+            }
+          ],
+          "pied": "Un seul diviseur trouvé ==suffit== pour prouver qu’un nombre est composé."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire qu’un impair est **toujours premier**&nbsp;: 91 = 7 × 13.",
+            "Tester jusqu’à n/2&nbsp;: **√n** suffit.",
+            "Compter **1** parmi les nombres premiers.",
+            "Confondre « a divise b » et « a est un multiple de b »."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "91 est-il **premier**&nbsp;?",
+            "Décomposer **84** en facteurs premiers.",
+            "Calculer **PGCD(360&nbsp;; 84)**."
+          ],
+          "reponses": "1) non, 7 × 13 · 2) 2² × 3 × 7 · 3) 2² × 3 = 12"
+        }
+      ]
+    }
+  ]
+}

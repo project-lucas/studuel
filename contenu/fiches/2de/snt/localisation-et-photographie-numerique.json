@@ -1,0 +1,136 @@
+{
+  "titre": "GPS et photo numérique",
+  "titreSurligne": "GPS",
+  "accroche": "Deux usages, deux traces.",
+  "bonus": "**4 satellites** · RVB : 3 octets par pixel (16,7 millions de couleurs) · **EXIF** = métadonnées · **NMEA** = trame GPS",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/localisation-et-photographie-numerique.webp",
+    "prompt": "a glossy violet satellite with golden signal arcs pointing down to a map pin and a small golden camera, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Où es-tu ?\nSouris, on te voit !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le GPS",
+          "items": [
+            { "terme": "Constellation", "definition": "des satellites qui émettent l’**heure** et leur **position**" },
+            { "terme": "Trilatération", "definition": "distance calculée par le **temps de trajet** du signal" },
+            { "terme": "NMEA", "definition": "la trame qui transporte les données de position" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Combien de satellites&nbsp;?",
+          "entetes": ["Nombre", "Utilité"],
+          "lignes": [
+            ["**3**", "déterminer la position"],
+            ["**4** au total", "corriger l’**horloge** du récepteur"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "L’image numérique",
+          "entetes": ["Grandeur", "Sens"],
+          "lignes": [
+            ["**Pixel RVB**", "3 composantes de 0 à 255"],
+            ["**Définition**", "nombre total de pixels"],
+            ["**Résolution**", "densité, en points par pouce"]
+          ]
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les cartes numériques",
+          "colonnes": 1,
+          "cartes": [
+            { "titre": "Des couches", "texte": "relief, routes, bâtiments, activés à part" },
+            { "titre": "OpenStreetMap", "texte": "carte libre, nourrie par ses contributeurs" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Combien de couleurs possibles en RVB, à __3 octets__ par pixel&nbsp;?",
+          "calcul": "256 × 256 × 256",
+          "aparte": "24 bits",
+          "resultat": "[[16,7 millions]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Que révèle une photo&nbsp;?",
+          "oui": { "titre": "EXIF", "texte": "Date, appareil, réglages, et souvent la **position GPS**." },
+          "non": { "titre": "Publier", "texte": "C’est parfois publier **l’endroit où l’on habite**." },
+          "essai": { "texte": "Aucun réseau social ne le rappelle au moment de l’envoi." }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 6,
+          "titre": "Se localiser en trois temps",
+          "etapes": [
+            { "titre": "Recevoir", "texte": "le récepteur capte l’heure et la position des satellites" },
+            { "titre": "Mesurer", "texte": "il déduit sa distance de chacun par le temps de trajet" },
+            { "titre": "Calculer", "texte": "trois distances donnent la position, le quatrième l’horloge" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le récepteur mesure le temps de trajet du signal.", "quoi": "le principe" },
+            { "texte": "Un quatrième satellite corrige l’horloge.", "quoi": "la précision" },
+            { "texte": "Les métadonnées EXIF contiennent la position.", "quoi": "la trace" }
+          ],
+          "pied": "1 millionième de seconde d’erreur = ==300 m== de décalage."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le **4e satellite** n’affine que la précision.",
+            "Confondre **définition** et **résolution**.",
+            "Penser qu’une photo ne contient que des **pixels**.",
+            "Oublier que la photo **laisse une trace** de son lieu."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Comment s’appelle le calcul de position par **distances** ?",
+            "Combien d’**octets** par pixel en RVB ?",
+            "Que contiennent les **métadonnées EXIF** ?"
+          ],
+          "reponses": "1) la trilatération · 2) 3 octets · 3) date, appareil, réglages, souvent la position GPS"
+        }
+      ]
+    }
+  ]
+}

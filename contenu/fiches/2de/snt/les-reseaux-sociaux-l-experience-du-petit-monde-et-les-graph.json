@@ -1,0 +1,183 @@
+{
+  "titre": "Petit monde et graphes",
+  "titreSurligne": "Petit monde",
+  "accroche": "Six poignées de main entre inconnus.",
+  "bonus": "Milgram **1967** · environ **6** intermédiaires · degré · distance · **diamètre** · liens faibles",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/les-reseaux-sociaux-l-experience-du-petit-monde-et-les-graph.webp",
+    "prompt": "a glossy violet network graph of connected nodes with golden edges and a tiny golden envelope, sparkles"
+  },
+  "marcel": "Six étapes\net on se rejoint !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire des graphes",
+          "items": [
+            {
+              "terme": "Sommet · arête",
+              "definition": "une personne · une **relation**"
+            },
+            {
+              "terme": "Degré",
+              "definition": "nombre de **voisins** d’un sommet"
+            },
+            {
+              "terme": "Distance",
+              "definition": "longueur de la **plus courte** chaîne"
+            },
+            {
+              "terme": "Diamètre",
+              "definition": "la **plus grande** distance du graphe"
+            },
+            {
+              "terme": "Graphe orienté",
+              "definition": "je te suis sans que tu me suives"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "L’expérience de Milgram",
+          "entetes": [
+            "Élément",
+            "Détail"
+          ],
+          "lignes": [
+            [
+              "**Auteur**",
+              "Stanley Milgram, psychologue"
+            ],
+            [
+              "**Année**",
+              "**1967**"
+            ],
+            [
+              "**Protocole**",
+              "lettre vers un inconnu de Boston"
+            ],
+            [
+              "**Résultat**",
+              "environ **six** intermédiaires"
+            ],
+            [
+              "**Liens faibles**",
+              "relient des mondes séparés"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire un réseau social comme un graphe",
+          "etapes": [
+            {
+              "titre": "Modéliser",
+              "texte": "personnes = sommets, relations = arêtes"
+            },
+            {
+              "titre": "Mesurer",
+              "texte": "degré, distance entre deux sommets, diamètre"
+            },
+            {
+              "titre": "Interpréter",
+              "texte": "distance courte = petit monde"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Léa connaît Tom, Tom connaît Inès, Léa ne connaît pas Inès. __Distance Léa–Inès__&nbsp;?",
+          "calcul": "Léa – Tom – Inès : 2 arêtes",
+          "aparte": "la plus courte chaîne",
+          "resultat": "distance = [[2]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À quoi ça sert",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Recommander",
+              "texte": "contacts et contenus proches"
+            },
+            {
+              "titre": "Communautés",
+              "texte": "zones fortement connectées"
+            },
+            {
+              "titre": "Influenceurs",
+              "texte": "degré et position"
+            },
+            {
+              "titre": "Diffusion",
+              "texte": "rumeur ou épidémie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Un réseau social est un graphe.",
+              "quoi": "le modèle"
+            },
+            {
+              "texte": "La distance moyenne est faible.",
+              "quoi": "petit monde"
+            },
+            {
+              "texte": "Les liens faibles relient des mondes séparés.",
+              "quoi": "l’explication"
+            }
+          ],
+          "pied": "Sur de grands réseaux, la distance moyenne est de ==quatre à cinq==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **distance** (la plus courte) et **diamètre** (la plus grande).",
+            "Croire que les **amis proches** raccourcissent les chemins.",
+            "Oublier qu’un graphe **orienté** n’est pas symétrique.",
+            "Écrire « six amis » au lieu de **six intermédiaires** en moyenne.",
+            "Oublier qu’une **chaîne** est une suite d’arêtes."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Qui a mené l’expérience du **petit monde**, et en quelle année&nbsp;?",
+            "Que mesure le **degré** d’un sommet&nbsp;?",
+            "Qu’est-ce que le **diamètre**&nbsp;?"
+          ],
+          "reponses": "1) Milgram, 1967 · 2) son nombre de voisins · 3) la plus grande distance entre deux sommets"
+        }
+      ]
+    }
+  ]
+}

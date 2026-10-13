@@ -1,0 +1,112 @@
+{
+  "titre": "Calcul d’itinéraire",
+  "titreSurligne": "itinéraire",
+  "accroche": "Un GPS parcourt un graphe, pas une carte.",
+  "bonus": "Sommet = intersection · arête = tronçon · **poids** = ce qu’on minimise · **Dijkstra (1959)** : poids **positifs**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/calcul-d-itineraire.webp",
+    "prompt": "a glossy violet graph of round nodes linked by golden edges with one highlighted golden path and a small flag, sparkles"
+  },
+  "marcel": "Le plus court n’est\npas le plus rapide !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le graphe routier",
+          "items": [
+            { "terme": "Sommet", "definition": "une **intersection**" },
+            { "terme": "Arête", "definition": "un **tronçon** de route" },
+            { "terme": "Poids", "definition": "la quantité qu’on cherche à **minimiser**" },
+            { "terme": "Dijkstra", "definition": "plus court chemin d’un sommet vers **tous** les autres (1959)" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le poids choisi",
+          "entetes": ["Poids", "Itinéraire"],
+          "lignes": [
+            ["**distance**", "le plus **court**"],
+            ["**durée**", "le plus **rapide**"],
+            ["coût composite", "péages, pente, interdictions"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Dijkstra en trois temps",
+          "etapes": [
+            { "titre": "Partir", "texte": "distance 0 à l’origine, infinie ailleurs" },
+            { "titre": "Explorer", "texte": "prendre le sommet le plus proche non traité" },
+            { "titre": "Mettre à jour", "texte": "corriger les distances de ses voisins, répéter" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "A→B = 4 km, A→C = 1 km, C→B = 2 km. __Plus court de A à B__&nbsp;?",
+          "calcul": "A→C→B = 1 + 2 = 3, contre 4",
+          "aparte": "on compare les chemins",
+          "resultat": "= [[A→C→B, 3 km]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Plus court ou plus rapide&nbsp;?",
+          "oui": { "titre": "Plus rapide", "texte": "Le poids est la **durée**&nbsp;: vitesse, voies, feux, trafic." },
+          "non": { "titre": "Plus court", "texte": "Le poids est la **distance**&nbsp;: pas forcément le plus vite." },
+          "essai": { "texte": "Changer le **poids** change l’itinéraire." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "La carte est modélisée par un graphe.", "quoi": "le modèle" },
+            { "texte": "Les arêtes portent un poids positif.", "quoi": "la condition" },
+            { "texte": "Dijkstra minimise la somme des poids.", "quoi": "l’algorithme" }
+          ],
+          "pied": "L’algorithme ==A étoile== ajoute une estimation du vol d’oiseau pour aller plus vite."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre le **plus court** et le **plus rapide**.",
+            "Oublier que Dijkstra exige des poids **positifs**.",
+            "Croire que le GPS cherche la **belle** route.",
+            "Ignorer l’effet sur le terrain&nbsp;: rues **saturées**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que représente un **sommet** du graphe&nbsp;?",
+            "Quelle condition sur les **poids** pour Dijkstra&nbsp;?",
+            "D’où vient le **trafic** en temps réel&nbsp;?"
+          ],
+          "reponses": "1) une intersection · 2) ils doivent être positifs · 3) des téléphones des utilisateurs"
+        }
+      ]
+    }
+  ]
+}

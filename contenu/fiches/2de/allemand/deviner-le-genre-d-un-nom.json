@@ -1,0 +1,120 @@
+{
+  "titre": "Deviner le genre",
+  "titreSurligne": "genre",
+  "accroche": "Les repères qui marchent.",
+  "bonus": "**-ung, -heit, -keit** → die · **-ling, -ismus** → der · **-chen, -um** → das",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/allemand/deviner-le-genre-d-un-nom.webp",
+    "prompt": "three glossy violet tags with golden labels der die das hanging from a golden ring, tiny sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Der, die\nou das&nbsp;?",
+  "rangs": [
+    {
+      "colonnes": "1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les suffixes, repères les plus sûrs",
+          "entetes": ["der (masculin)", "die (féminin)", "das (neutre)"],
+          "lignes": [
+            ["<i>-ling</i> : Frühling", "<i>-ung</i> : Zeitung", "<i>-chen</i> : Mädchen"],
+            ["<i>-ismus</i> : Optimismus", "<i>-heit, -keit</i> : Freiheit", "<i>-lein</i> : Fräulein"],
+            ["<i>-ist</i> : Journalist", "<i>-schaft</i> : Freundschaft", "<i>-um</i> : Museum"],
+            ["<i>-or</i> : Motor", "<i>-ion, -tät</i> : Nation", "<i>-ment</i> : Argument"],
+            ["<i>-ant, -ent</i> : Student · <i>-ig</i> : König", "<i>-ie, -ik, -ei</i> : Musik", "<i>-ma</i> : Klima, Thema"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 2,
+          "titre": "Les familles de sens",
+          "colonnes": 3,
+          "cartes": [
+            {"titre": "Masculin", "texte": "Jours, mois, saisons (<i>der Montag, der Mai</i>), météo (<i>der Regen</i>), points cardinaux (<i>der Norden</i>)."},
+            {"titre": "Féminin", "texte": "La plupart des noms en **-e** (<i>die Lampe</i>) — mais <i>der Junge, der Name</i>."},
+            {"titre": "Neutre", "texte": "Infinitifs et couleurs devenus noms (<i>das Leben, das Blau</i>), noms en **Ge-** (<i>das Gebirge</i>)."}
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Le genre suit le suffixe",
+          "oui": {
+            "titre": "Suffixe d’abord",
+            "texte": "<i>**das** Mädchen</i> : <i>-chen</i> rend neutre, même une personne."
+          },
+          "non": {
+            "titre": "Le sexe d’abord",
+            "texte": "<i>die Mädchen</i> pour « la fille » : faux, le sexe ne donne pas <i>die</i>."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Wirtschaftlichkeit</i> : suffixe <i>-keit</i> → **die**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "La méthode",
+          "etapes": [
+            {"titre": "Repère le suffixe", "texte": "<i>-ung, -heit, -keit, -ismus, -chen, -um…</i>"},
+            {"titre": "Sinon, la famille", "texte": "Jour, saison, couleur, infinitif devenu nom, début en **Ge-**."},
+            {"titre": "Sinon, apprends", "texte": "Mot court (<i>Tisch, Tür, Buch</i>) : **article + nom** dans ton cahier."}
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Deux formations",
+          "deux": true,
+          "items": [
+            {"titre": "Conversion → das", "texte": "<i>leben → das Leben</i> · <i>essen → das Essen</i>"},
+            {"titre": "Radical verbal → der", "texte": "<i>bauen → der Bau</i> · <i>springen → der Sprung</i>"},
+            {"titre": "Mots étrangers", "texte": "Ils suivent leur suffixe : <i>die Nation, das Klima</i>"},
+            {"titre": "Pluriel étranger", "texte": "<i>-en</i> (<i>die Nationen</i>) ou <i>-s</i> (<i>die Hotels</i>)"}
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>-chen</i> et <i>-lein</i> : toujours **das**, quel que soit le sexe.",
+            "Un nom en <i>-e</i> n’est pas toujours féminin : <i>der Name</i>, <i>der Junge</i>.",
+            "<i>-ung</i> → die (<i>die Zeitung</i>) ; <i>-ling</i> → der (<i>der Frühling</i>) : lis la fin.",
+            "Le genre allemand ≠ le genre français : <i>der Mond</i> (la lune), <i>die Sonne</i> (le soleil)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Article de <i>Freundschaft</i>&nbsp;?",
+            "Article de <i>Journalist</i> et de <i>Museum</i>&nbsp;?",
+            "Article de <i>Gebäude</i>&nbsp;?"
+          ],
+          "reponses": "1) die 2) der, das 3) das"
+        }
+      ]
+    }
+  ]
+}

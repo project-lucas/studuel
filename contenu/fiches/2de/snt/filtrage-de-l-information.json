@@ -1,0 +1,168 @@
+{
+  "titre": "Filtrage de l’info",
+  "titreSurligne": "Filtrage",
+  "accroche": "Ce que l’algorithme choisit de montrer.",
+  "bonus": "Objectif = **engagement** · bulle de filtre (algorithme) · chambre d’écho (social) · **recouper** les sources",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/filtrage-de-l-information.webp",
+    "prompt": "a glossy violet funnel filtering golden news cards and a small golden bubble, sparkles"
+  },
+  "marcel": "Qui choisit ce\nque tu vois ?",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Recommandation",
+              "definition": "classe le fil selon tes **clics** et ton temps passé"
+            },
+            {
+              "terme": "Filtrage collaboratif",
+              "definition": "utilise les comportements d’utilisateurs **semblables**"
+            },
+            {
+              "terme": "Bulle de filtre",
+              "definition": "enfermement **algorithmique** dans des contenus conformes"
+            },
+            {
+              "terme": "Chambre d’écho",
+              "definition": "effet **social** : on ne parle qu’à ceux qui pensent pareil"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Pourquoi l’infox circule",
+          "entetes": [
+            "Facteur",
+            "Effet"
+          ],
+          "lignes": [
+            [
+              "**Surprise**, indignation",
+              "circule plus vite"
+            ],
+            [
+              "**Biais de confirmation**",
+              "on retient ce qui nous donne raison"
+            ],
+            [
+              "**Répétition**",
+              "paraît vrai"
+            ],
+            [
+              "**Familiarité**",
+              "paraît fiable"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Vérifier une information en trois temps",
+          "etapes": [
+            {
+              "titre": "Source",
+              "texte": "qui parle, et quand ? remonter au document d’origine"
+            },
+            {
+              "titre": "Recouper",
+              "texte": "la même information ailleurs, ou chez les vérificateurs"
+            },
+            {
+              "titre": "Image",
+              "texte": "recherche inversée : photo ancienne ou détournée ?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une photo choc circule avec un titre indigné. Comment __vérifier__&nbsp;?",
+          "calcul": "recherche d’image inversée",
+          "aparte": "date de première mise en ligne",
+          "resultat": "photo [[détournée]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Bulle ou chambre&nbsp;?",
+          "oui": {
+            "titre": "Bulle de filtre",
+            "texte": "Causée par l’**algorithme** qui trie pour toi."
+          },
+          "non": {
+            "titre": "Chambre d’écho",
+            "texte": "Causée par le **groupe** : on ne lit que des avis semblables."
+          },
+          "essai": {
+            "texte": "Dans les deux cas, les convictions se renforcent et les avis contraires paraissent rares."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "L’algorithme optimise l’engagement.",
+              "quoi": "l’objectif"
+            },
+            {
+              "texte": "Il privilégie la réaction, pas la vérité.",
+              "quoi": "la conséquence"
+            },
+            {
+              "texte": "Je recoupe avec d’autres sources.",
+              "quoi": "la parade"
+            }
+          ],
+          "pied": "Un titre qui provoque une ==émotion forte== utilise ton indignation comme levier."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le fil est **chronologique**.",
+            "Confondre **bulle de filtre** et **chambre d’écho**.",
+            "Penser qu’un algorithme optimise la **vérité**.",
+            "Se fier à ce qui paraît **familier**.",
+            "Partager avant de **vérifier** la source.",
+            "Croire qu’un avis **très partagé** est un avis **majoritaire**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que cherche à maximiser un **fil recommandé**&nbsp;?",
+            "Qui a popularisé la **bulle de filtre**&nbsp;?",
+            "Que fait une **recherche d’image inversée**&nbsp;?"
+          ],
+          "reponses": "1) l’engagement (temps et attention) · 2) Eli Pariser · 3) retrouve l’origine et la date d’une photo"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "titre": "L’image numérique",
+  "titreSurligne": "numérique",
+  "accroche": "Une photo, c’est une grille de nombres.",
+  "bonus": "RVB = 3 × 8 bits = **24 bits** par pixel · poids = pixels × octets par pixel · PNG sans perte, JPEG avec perte",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/l-image-numerique.webp",
+    "prompt": "a glossy violet picture frame made of golden square pixels with a small golden mountain inside, sparkles"
+  },
+  "marcel": "Des nombres,\npartout des nombres !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Pixel",
+              "definition": "un point de l’image, rangé en **ligne** et **colonne**"
+            },
+            {
+              "terme": "RVB",
+              "definition": "rouge, vert, bleu&nbsp;: **8 bits** chacun, soit **256** niveaux"
+            },
+            {
+              "terme": "Pixel couleur",
+              "definition": "**24 bits**, soit environ **16,7 millions** de couleurs"
+            },
+            {
+              "terme": "EXIF",
+              "definition": "métadonnées&nbsp;: appareil, date, parfois **position GPS**"
+            },
+            {
+              "terme": "Compression",
+              "definition": "réduit le **poids** du fichier&nbsp;: **avec** ou **sans** perte"
+            },
+            {
+              "terme": "Octet",
+              "definition": "**8 bits**&nbsp;: l’unité du poids d’un fichier"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les formats",
+          "entetes": [
+            "Format",
+            "À retenir"
+          ],
+          "lignes": [
+            [
+              "**PNG**",
+              "**sans perte** · logos, captures"
+            ],
+            [
+              "**JPEG**",
+              "**avec perte** · photos"
+            ],
+            [
+              "**GIF**",
+              "256 couleurs · animations"
+            ],
+            [
+              "**SVG**",
+              "**vectoriel** · formes, sans perte"
+            ],
+            [
+              "**EXIF**",
+              "données cachées : appareil, date, GPS"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer le poids d’une image",
+          "etapes": [
+            {
+              "titre": "Pixels",
+              "texte": "largeur × hauteur&nbsp;: le nombre de pixels"
+            },
+            {
+              "titre": "Octets",
+              "texte": "1 octet en gris, 3 octets en couleur RVB"
+            },
+            {
+              "titre": "Produit",
+              "texte": "pixels × octets par pixel = poids brut"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Image en niveaux de gris de 1&nbsp;000 × 1&nbsp;000 pixels. __Quel poids brut__&nbsp;?",
+          "calcul": "1&nbsp;000 × 1&nbsp;000 × 1 octet",
+          "aparte": "1 octet par pixel",
+          "resultat": "= [[1&nbsp;000&nbsp;000 octets]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Matriciel ou vectoriel&nbsp;?",
+          "oui": {
+            "titre": "Vectoriel",
+            "texte": "Des **formes** décrites par des équations&nbsp;: aucune perte à l’agrandissement."
+          },
+          "non": {
+            "titre": "Matriciel",
+            "texte": "Une **grille de pixels**&nbsp;: l’image **pixellise** si on l’agrandit."
+          },
+          "essai": {
+            "texte": "Le vectoriel convient mal à la **photographie**&nbsp;: on garde le matriciel."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Chaque pixel est codé sur 24 bits.",
+              "quoi": "le codage"
+            },
+            {
+              "texte": "Poids = nombre de pixels × octets par pixel.",
+              "quoi": "la formule"
+            },
+            {
+              "texte": "JPEG compresse avec perte, PNG sans perte.",
+              "quoi": "le format"
+            }
+          ],
+          "pied": "Noir = ==(0, 0, 0)==, blanc = ==(255, 255, 255)==, rouge vif = ==(255, 0, 0)==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **bit** (b) et **octet** (8 bits).",
+            "Croire que le **JPEG** garde tout&nbsp;: il perd de l’information.",
+            "Agrandir une image **matricielle** en espérant plus de détails.",
+            "Oublier que la photo cache des **métadonnées**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de **bits** pour un pixel RVB&nbsp;?",
+            "Quel format est **sans perte**&nbsp;: PNG ou JPEG&nbsp;?",
+            "Que révèlent les **métadonnées EXIF**&nbsp;?"
+          ],
+          "reponses": "1) 24 bits (3 × 8) · 2) PNG · 3) appareil, date, parfois la position GPS"
+        }
+      ]
+    }
+  ]
+}

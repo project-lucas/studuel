@@ -1,0 +1,158 @@
+{
+  "titre": "Réflexion, réfraction",
+  "titreSurligne": "réfraction",
+  "accroche": "Un rayon change de milieu, il dévie.",
+  "bonus": "i₁ = i₁′ (réflexion) · n₁ sin i₁ = n₂ sin i₂ · air **1,00** · eau **1,33** · verre **≈ 1,5**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/reflexion-et-refraction-de-la-lumiere-le-prisme.webp",
+    "prompt": "a glossy violet water glass with a golden straw that looks bent, a golden light ray refracting at the surface, sparkles"
+  },
+  "marcel": "Les angles se\nmesurent\nà la normale !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Snell-Descartes",
+          "petite": true,
+          "lignes": [
+            "n<sub>1</sub> × sin i<sub>1</sub> = n<sub>2</sub> × sin i<sub>2</sub>"
+          ],
+          "regle": "Angles mesurés **par rapport à la ==normale==**. L’indice n est sans unité et ≥ 1. Réflexion&nbsp;: ==angle réfléchi = angle d’incidence==.",
+          "note": "jamais par rapport à la surface&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Réflexion et indices",
+          "entetes": [
+            "Notion",
+            "À retenir"
+          ],
+          "lignes": [
+            [
+              "Surface **polie**",
+              "réflexion spéculaire : un miroir"
+            ],
+            [
+              "Surface **rugueuse**",
+              "réflexion diffuse"
+            ],
+            [
+              "Milieu **plus réfringent**",
+              "le rayon se rapproche de la normale"
+            ],
+            [
+              "**Prisme**",
+              "violet plus dévié que le rouge"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Tracer un rayon réfracté en trois temps",
+          "etapes": [
+            {
+              "titre": "Tracer",
+              "texte": "la normale au point d’incidence"
+            },
+            {
+              "titre": "Appliquer",
+              "texte": "n₁ sin i₁ = n₂ sin i₂ pour trouver i₂"
+            },
+            {
+              "titre": "Dessiner",
+              "texte": "le rayon réfracté : plus près de la normale si n₂ > n₁"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Air (n = 1,00) vers verre (n = 1,5), i₁ = 30°. L’__angle__ i₂ ?",
+          "calcul": "sin i₂ = 1,00 × sin 30° ÷ 1,5 = 0,33",
+          "aparte": "i₂ < i₁ : se rapproche",
+          "resultat": "i₂ ≈ [[19°]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Réflexion totale&nbsp;?",
+          "oui": {
+            "titre": "Verre vers air",
+            "texte": "Plus → moins réfringent&nbsp;: au-delà de l’**angle limite**, plus de rayon réfracté, tout est réfléchi."
+          },
+          "non": {
+            "titre": "Air vers verre",
+            "texte": "Moins → plus réfringent&nbsp;: **jamais** de réflexion totale."
+          },
+          "essai": {
+            "texte": "C’est le principe de la <i>fibre optique</i>, qui guide la lumière sur des kilomètres."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Loi de Snell-Descartes : n₁ sin i₁ = n₂ sin i₂",
+              "quoi": "la loi citée"
+            },
+            {
+              "texte": "sin i₂ = 1,00 × sin 30° ÷ 1,5 ≈ 0,33",
+              "quoi": "formule puis nombres"
+            },
+            {
+              "texte": "i₂ ≈ 19°",
+              "quoi": "avec l’unité"
+            },
+            {
+              "texte": "Le rayon se rapproche de la normale (n₂ > n₁)",
+              "quoi": "le sens"
+            }
+          ],
+          "pied": "Le bâton ==brisé== dans l’eau, la piscine moins profonde : deux effets de la réfraction."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mesurer les angles par rapport à la **surface**.",
+            "Mettre l’**indice** dans la mauvaise colonne.",
+            "Oublier de passer la calculatrice en **degrés**.",
+            "Croire que le violet est **moins** dévié que le rouge."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "i₁ = 40° en réflexion&nbsp;: l’angle **réfléchi**&nbsp;?",
+            "Quel est l’indice de l’**air**&nbsp;?",
+            "Quelle radiation est la plus déviée par un prisme&nbsp;?"
+          ],
+          "reponses": "1) 40° · 2) 1,00 · 3) le violet"
+        }
+      ]
+    }
+  ]
+}

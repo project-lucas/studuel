@@ -1,0 +1,130 @@
+{
+  "titre": "Pronoms compléments",
+  "titreSurligne": "compléments",
+  "accroche": "Le placement, l’ordre, et le « se ».",
+  "bonus": "COI avant COD · **le lo → se lo** · enclise = accent écrit · **dármelo**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/espagnol/les-pronoms-personnels-complements.webp",
+    "prompt": "a glossy violet gift box passed between two golden hands with a small golden arrow, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Te lo digo&nbsp;:\nSe lo doy&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’ordre",
+          "lignes": ["**COI** + **COD** + verbe"],
+          "petite": true,
+          "regle": "Le COI passe **toujours** avant le COD&nbsp;: <i>Me lo da</i> (il me le donne). Devant <i>lo, la, los, las</i>, <i>le / les</i> devient **se**.",
+          "note": "<i>Se lo doy</i>"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les deux séries",
+          "entetes": ["Personne", "COD", "COI"],
+          "lignes": [
+            ["1<sup>re</sup> et 2<sup>e</sup> sing.", "<i>me, te</i>", "<i>me, te</i>"],
+            ["**3<sup>e</sup> sing.**", "<i>lo / la</i>", "<i>le</i>"],
+            ["1<sup>re</sup> et 2<sup>e</sup> plur.", "<i>nos, os</i>", "<i>nos, os</i>"],
+            ["**3<sup>e</sup> plur.**", "<i>los / las</i>", "<i>les</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Devant ou soudé derrière",
+          "entetes": ["Le verbe est…", "Le pronom…", "L’exemple"],
+          "lignes": [
+            ["Conjugué", "Devant, séparé", "<i>Te lo digo</i> · <i>No me lo dijo</i>"],
+            ["Infinitif ou gérondif", "Soudé derrière", "<i>dármelo</i> · <i>diciéndotelo</i>"],
+            ["Impératif affirmatif", "Soudé derrière", "<i>dámelo</i>"],
+            ["Impératif négatif", "Devant", "<i>No me lo des</i>"],
+            ["Conjugué + infinitif", "Les deux sont admis", "<i>Te lo voy a decir</i> = <i>Voy a decírtelo</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le « se »",
+          "oui": {
+            "titre": "Se lo doy",
+            "texte": "<i>**Se lo** doy</i> (je le lui donne) · <i>**Se las** digo</i>."
+          },
+          "non": {
+            "titre": "Jamais le lo",
+            "texte": "<i>le lo doy</i> · <i>les las digo</i> — faute lourde, c’est une question d’euphonie."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "Je le lui dis&nbsp;: <i>___ lo digo.</i> → **Se**&nbsp;: <i>le</i> + <i>lo</i> devient <i>se lo</i>."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            { "titre": "COD, COI&nbsp;?", "texte": "Repère-les&nbsp;: à la 3<sup>e</sup> personne, <i>lo/la</i> ≠ <i>le</i>." },
+            { "titre": "Ordre", "texte": "COI puis COD&nbsp;; <i>le + lo</i> → **se lo**." },
+            { "titre": "Place", "texte": "Devant le verbe conjugué&nbsp;; soudé à l’infinitif, au gérondif, à l’impératif affirmatif." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            { "titre": "L’accent d’enclise", "texte": "<i>da → dámelo</i> · <i>decir → decírtelo</i>" },
+            { "titre": "Redoublement", "texte": "<i>Le doy el libro a Juan</i> · <i>A mí me gusta</i> — c’est la norme." },
+            { "titre": "Leísmo", "texte": "<i>Le vi</i> pour <i>Lo vi</i>&nbsp;: toléré pour une personne masculine." },
+            { "titre": "COD / COI", "texte": "<i>La veo</i> (je la vois) / <i>Le hablo</i> (je lui parle)" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>le lo doy</i> → <i>**se** lo doy</i>.",
+            "<i>Lo me da</i> → <i>**Me lo** da</i> (COI d’abord).",
+            "<i>dame lo</i> → <i>**dámelo**</i> (soudé, accent).",
+            "<i>No dámelo</i> → <i>No **me lo** des</i> (négatif : devant)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Je le lui donne&nbsp;: <i>___ lo doy.</i>",
+            "Donne-le-moi&nbsp;: <i>___ (da + me + lo).</i>",
+            "Il me le donne&nbsp;: <i>___ ___ da.</i>"
+          ],
+          "reponses": "1) Se 2) dámelo 3) Me lo"
+        }
+      ]
+    }
+  ]
+}

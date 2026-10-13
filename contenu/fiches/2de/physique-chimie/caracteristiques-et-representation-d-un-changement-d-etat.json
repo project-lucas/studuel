@@ -1,0 +1,127 @@
+{
+  "titre": "Changements d’état",
+  "titreSurligne": "état",
+  "accroche": "Ce qui change, ce qui reste.",
+  "bonus": "Eau&nbsp;: **100 °C** à 1 013 hPa, environ **70 °C** au sommet de l’Everest · corps pur&nbsp;: **palier** de température",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/caracteristiques-et-representation-d-un-changement-d-etat.webp",
+    "prompt": "a glossy violet ice cube melting into a golden droplet with a small steam cloud rising, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Glace, eau, vapeur&nbsp;:\nmême molécule&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les six changements",
+          "entetes": ["De…", "À…", "Nom"],
+          "lignes": [
+            ["Solide", "Liquide", "**Fusion**"],
+            ["Liquide", "Solide", "**Solidification**"],
+            ["Liquide", "Gaz", "**Vaporisation**"],
+            ["Gaz", "Liquide", "**Liquéfaction**"],
+            ["Solide", "Gaz", "**Sublimation**"],
+            ["Gaz", "Solide", "**Condensation**"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois organisations",
+          "entetes": ["État", "Entités", "Forme"],
+          "lignes": [
+            ["**Solide**", "ordonnées, fixes", "propre"],
+            ["**Liquide**", "désordonnées, liées", "du récipient"],
+            ["**Gaz**", "éloignées, rapides", "tout le volume"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire une courbe de chauffage",
+          "etapes": [
+            { "titre": "Pente", "texte": "la température monte&nbsp;: un seul état" },
+            { "titre": "Palier", "texte": "température constante&nbsp;: changement d’état d’un corps pur" },
+            { "titre": "Pente", "texte": "l’état suivant se réchauffe" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une courbe de chauffage montre un palier à __0 °C__. Que dire&nbsp;?",
+          "calcul": "palier = T constante",
+          "aparte": "fusion de l’eau",
+          "resultat": "[[corps pur]], c’est la fusion"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Bilan énergétique",
+          "oui": { "titre": "Endothermique", "texte": "Fusion, vaporisation, sublimation&nbsp;: le système **absorbe** de l’énergie." },
+          "non": { "titre": "Exothermique", "texte": "Solidification, liquéfaction, condensation&nbsp;: le système **libère** de l’énergie." },
+          "essai": { "texte": "Pendant un palier, l’énergie sert à ==défaire les interactions==, pas à agiter les entités. La transpiration rafraîchit (vaporisation)." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            { "titre": "Physique", "texte": "les molécules restent les mêmes" },
+            { "titre": "Mélange", "texte": "pas de palier net" },
+            { "titre": "Pression", "texte": "elle change T d’ébullition" },
+            { "titre": "Corps pur", "texte": "T constante" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que la T **monte** pendant le palier.",
+            "Confondre **fusion** et **solidification**.",
+            "Croire que la molécule **change** (c’est physique).",
+            "Mélanger **endo-** et **exothermique**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 6,
+          "titre": "Effet de la pression",
+          "paragraphes": ["À 1 013 hPa l’eau bout à **100 °C**&nbsp;; au sommet de l’Everest, la pression est bien plus faible et l’eau bout vers **70 °C**."]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Nom du passage gaz → liquide&nbsp;?",
+            "La fusion est-elle endo- ou exothermique&nbsp;?",
+            "Que fait T pendant l’ébullition de l’eau pure&nbsp;?"
+          ],
+          "reponses": "1) liquéfaction · 2) endothermique · 3) elle reste constante"
+        }
+      ]
+    }
+  ]
+}

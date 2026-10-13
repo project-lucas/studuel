@@ -1,0 +1,129 @@
+{
+  "titre": "Verbes à particule",
+  "titreSurligne": "particule",
+  "accroche": "Give up, look after : la particule décide.",
+  "bonus": "**turn it on** (pronom au milieu) · **look after him** (pronom après)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/anglais/les-verbes-a-particule-et-les-verbes-prepositionnels.webp",
+    "prompt": "a glossy violet puzzle piece clicking into a golden puzzle piece, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Le verbe change\navec la particule&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le test du pronom",
+          "lignes": ["turn **it** on · look after **him**"],
+          "petite": true,
+          "regle": "Verbe à particule&nbsp;: le pronom se glisse **au milieu**. Verbe prépositionnel : il vient **après**, jamais séparé.",
+          "note": "turn on it est impossible"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux familles",
+          "entetes": ["", "À particule", "Prépositionnel"],
+          "lignes": [
+            ["Ce qui suit", "Une particule (adverbe)", "Une préposition"],
+            ["Séparable&nbsp;?", "Souvent oui", "**Jamais**"],
+            ["Exemples", "<i>give up, turn on, put off</i>", "<i>look after, depend on, listen to</i>"],
+            ["Pronom", "<i>turn **it** on</i>", "<i>look after **him**</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Où placer le pronom&nbsp;?",
+          "oui": {
+            "titre": "Pronom au milieu",
+            "texte": "<i>Turn **it** on. Give **it** up.</i> — verbe à particule."
+          },
+          "non": {
+            "titre": "Pronom à la fin",
+            "texte": "<i>Turn on it.</i> — impossible&nbsp;; mais <i>look after **him**</i> est obligatoire."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« Éteins-la » (la lampe) → <i>Turn ___ off.</i> → **it**&nbsp;: au milieu."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": "★",
+          "titre": "Reconnaître la famille",
+          "etapes": [
+            {"titre": "Mets un pronom", "texte": "Remplace le complément par <i>it</i> ou <i>him</i>."},
+            {"titre": "Observe sa place", "texte": "Au milieu → particule&nbsp;; après → prépositionnel."},
+            {"titre": "Apprends le sens", "texte": "Sens idiomatique&nbsp;: jamais mot à mot."}
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Look : la particule change le sens",
+          "colonnes": 3,
+          "cartes": [
+            {"titre": "look at / look for", "texte": "regarder · chercher"},
+            {"titre": "look after / look up", "texte": "s’occuper de · chercher dans un dictionnaire"},
+            {"titre": "look forward to / look into", "texte": "attendre avec impatience · enquêter sur"}
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À savoir",
+          "deux": true,
+          "items": [
+            {"titre": "Sens idiomatique", "texte": "<i>give up</i> = abandonner, pas « donner en haut »."},
+            {"titre": "Préposition en fin", "texte": "<i>Who are you waiting **for**?</i>"},
+            {"titre": "Courant", "texte": "<i>What are you looking **at**?</i>"},
+            {"titre": "Formel", "texte": "<i>For whom…?</i> est correct mais rare."}
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Traduire mot à mot&nbsp;: **apprends** chaque verbe comme un mot à part.",
+            "<i>look after to him</i> → <i>look after **him**</i>.",
+            "<i>turn on it</i> → <i>turn **it** on</i>.",
+            "<i>look</i> seul ne dit pas tout&nbsp;: **at, for, after, up**.",
+            "<i>listen the music</i> → <i>listen **to** the music.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Don’t give ___ up!</i> (it / up it)",
+            "<i>She looks ___ her sister.</i> (s’occupe de)",
+            "<i>What are you looking ___?</i> (regarder)"
+          ],
+          "reponses": "1) it (give it up) 2) after 3) at"
+        }
+      ]
+    }
+  ]
+}

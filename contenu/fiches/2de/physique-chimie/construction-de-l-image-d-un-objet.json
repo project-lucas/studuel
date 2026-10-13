@@ -1,0 +1,109 @@
+{
+  "titre": "L’image d’un objet",
+  "titreSurligne": "image",
+  "accroche": "Deux rayons, un point de rencontre.",
+  "bonus": "1/OA′ − 1/OA = 1/OF′ · γ = OA′ ÷ OA · γ < 0 : image **renversée**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/construction-de-l-image-d-un-objet.webp",
+    "prompt": "a glossy violet convex lens forming an upside-down golden arrow image on a small screen, golden light rays crossing, sparkles"
+  },
+  "marcel": "Réelle, on la\nprojette !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Conjugaison et grandissement",
+          "petite": true,
+          "lignes": ["{1/OA′} − {1/OA} = {1/OF′}", "γ = {OA′/OA}"],
+          "regle": "Mesures ==algébriques== depuis O. γ ==négatif== : image renversée&nbsp;; |γ| > 1 : image agrandie.",
+          "note": "OA est négatif (objet à gauche)&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Réelle ou virtuelle",
+          "entetes": ["Objet", "Image", "Où la voir"],
+          "lignes": [
+            ["**Au-delà de F**", "réelle, renversée", "sur un écran"],
+            ["**Entre F et la lentille**", "virtuelle, droite, agrandie", "à travers la lentille (loupe)"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Construire l’image en trois temps",
+          "etapes": [
+            { "titre": "Placer", "texte": "AB perpendiculaire à l’axe, A sur l’axe" },
+            { "titre": "Tracer", "texte": "depuis B le rayon par O (non dévié) et le rayon parallèle à l’axe (par F′)" },
+            { "titre": "Conclure", "texte": "leur intersection est B′, et A′ est sur l’axe à la verticale de B′" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Objet à 30 cm d’une lentille de focale 10 cm. __Position__ et grandissement&nbsp;?",
+          "calcul": "1/OA′ = 1/10 − 1/30 = 1/15",
+          "aparte": "OA = −30 cm",
+          "resultat": "OA′ = [[15 cm]], γ = −0,5"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Que dit γ&nbsp;?",
+          "oui": { "titre": "γ = −0,5", "texte": "Négatif&nbsp;: image **renversée**. |γ| < 1 : deux fois plus **petite**." },
+          "non": { "titre": "γ > 0", "texte": "Image **droite** : c’est une image virtuelle, comme avec une loupe." },
+          "essai": { "texte": "L’appareil photo et l’œil forment une image réelle et renversée&nbsp;: le cerveau la <i>redresse</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Relation de conjugaison : 1/OA′ = 1/OF′ + 1/OA", "quoi": "la relation" },
+            { "texte": "OA′ = 15 cm ; γ = OA′ ÷ OA = −0,5", "quoi": "nombres" },
+            { "texte": "Image réelle, renversée, deux fois plus petite.", "quoi": "la conclusion" }
+          ],
+          "pied": "Image réelle : on la ==projette==. Image virtuelle : on la ==regarde==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **signe** de OA (négatif).",
+            "Tracer AB **penché** sur l’axe.",
+            "Confondre image **réelle** et virtuelle.",
+            "Prendre un γ négatif pour une image **plus petite**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Objet entre F et la lentille&nbsp;: l’image est&nbsp;?",
+            "γ = −2&nbsp;: l’image est renversée et&nbsp;?",
+            "Quel instrument donne une image **virtuelle** agrandie&nbsp;?"
+          ],
+          "reponses": "1) virtuelle, droite, agrandie · 2) agrandie · 3) la loupe"
+        }
+      ]
+    }
+  ]
+}

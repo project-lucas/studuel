@@ -1,0 +1,129 @@
+{
+  "titre": "Le superlatif",
+  "titreSurligne": "superlatif",
+  "accroche": "am schnellsten ou der schnellste.",
+  "bonus": "**am -sten** attribut / adverbe · **der -ste** épithète · **-e-** après d, t, s, ß, z, sch",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/allemand/le-superlatif.webp",
+    "prompt": "a glossy violet podium with a golden crown on the first step and a golden star, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Le plus haut&nbsp;?\nAm höchsten&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Deux formes",
+          "lignes": ["**am** …**sten**"],
+          "petite": true,
+          "regle": "Attribut ou adverbe → <b>am -sten</b>, **figé**. Épithète → <b>der -ste</b>, **décliné**.",
+          "note": "la place décide"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Quand l’utiliser",
+          "entetes": ["Forme", "Se décline ?", "Exemple"],
+          "lignes": [
+            ["<b>am</b> + <i>-sten</i>", "non", "<i>Der Zug ist am schnellsten.</i>"],
+            ["adverbe", "non", "<i>Er läuft am schnellsten.</i>"],
+            ["<b>der / die / das</b> + <i>-ste</i>", "oui", "<i>der schnellste Zug, mit dem besten Freund</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Le -e- de liaison",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "d, t, s, ß, z, sch", "texte": "on intercale un <b>e</b>&nbsp;: <i>alt → am ält**e**sten</i>, <i>heiß → am heiß**e**sten</i>." },
+            { "titre": "kurz", "texte": "<i>am kürz**e**sten</i> (z) — avec l’Umlaut." },
+            { "titre": "Exception : groß", "texte": "<i>am größten</i>, sans e." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Les irréguliers",
+          "entetes": ["Adjectif", "Comparatif", "Superlatif"],
+          "lignes": [
+            ["<i>gut</i>", "<i>besser</i>", "<i>am besten, der beste</i>"],
+            ["<i>viel</i>", "<i>mehr</i>", "<i>am meisten</i>"],
+            ["<i>gern</i>", "<i>lieber</i>", "<i>am liebsten</i>"],
+            ["<i>hoch · nah</i>", "<i>höher · näher</i>", "<i>am höchsten · am nächsten</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Am ou der&nbsp;?",
+          "oui": {
+            "titre": "Attribut : am",
+            "texte": "<i>Der Zug ist **am schnellsten**.</i> — figé, rien ne bouge."
+          },
+          "non": {
+            "titre": "Épithète : am",
+            "texte": "<i>der am schnellsten Zug</i> — devant un nom, on décline."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Das ist ___ Stadt.</i> (grand) → <i>die **größte** Stadt</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Le complément",
+          "deux": true,
+          "items": [
+            { "titre": "von + datif", "texte": "<i>der Größte von allen</i>" },
+            { "titre": "unter + datif", "texte": "<i>unter seinen Freunden</i>" },
+            { "titre": "in + datif", "texte": "un lieu&nbsp;: <i>die größte Stadt in Deutschland</i>" },
+            { "titre": "Génitif", "texte": "<i>Deutschlands größte Stadt</i>" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>am ältsten</i> → <i>am ält**e**sten</i> (le e de liaison).",
+            "<i>am liebsten</i> ≠ « le plus aimé »&nbsp;: **ce que je préfère** — <i>Am liebsten lese ich Krimis.</i>",
+            "Décliner <i>am</i>&nbsp;: la forme est **figée**.",
+            "Oublier l’Umlaut&nbsp;: <i>am altesten</i> → <i>am **ä**ltesten</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Superlatif attribut de <i>alt</i> et de <i>gut</i>&nbsp;?",
+            "<i>Am ___ lese ich Krimis</i> (gern)&nbsp;?",
+            "<i>die ___ Stadt</i> (groß, épithète)&nbsp;?"
+          ],
+          "reponses": "1) am ältesten, am besten 2) liebsten 3) größte"
+        }
+      ]
+    }
+  ]
+}

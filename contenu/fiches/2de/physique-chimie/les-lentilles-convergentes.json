@@ -1,0 +1,163 @@
+{
+  "titre": "Lentilles convergentes",
+  "titreSurligne": "convergentes",
+  "accroche": "Du verre qui rassemble la lumière.",
+  "bonus": "C = 1 ÷ f′ · C en **dioptries (δ)** · f′ en **mètres**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/les-lentilles-convergentes.webp",
+    "prompt": "a glossy violet convex lens focusing parallel golden light rays to a bright golden focal point, sparkles"
+  },
+  "marcel": "Trois rayons\nsuffisent !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La vergence",
+          "petite": true,
+          "lignes": [
+            "C = {1/f′}"
+          ],
+          "regle": "**f′** = OF′ en ==mètres==, **C** en dioptries (δ). Une lentille de focale 0,20 m a une vergence de 5 δ. Divergente&nbsp;: vergence ==négative==.",
+          "note": "f′ en mètres, pas en cm&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois rayons particuliers",
+          "entetes": [
+            "Rayon incident",
+            "Il devient"
+          ],
+          "lignes": [
+            [
+              "passe par **O**",
+              "non dévié"
+            ],
+            [
+              "**parallèle à l’axe**",
+              "repart par **F′**"
+            ],
+            [
+              "passe par **F**",
+              "repart parallèle à l’axe"
+            ],
+            [
+              "**Divergente**",
+              "vergence négative, écarte les rayons"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Trouver la vergence en trois temps",
+          "etapes": [
+            {
+              "titre": "Lire",
+              "texte": "la distance focale f′ = OF′"
+            },
+            {
+              "titre": "Convertir",
+              "texte": "f′ en mètres (cm ÷ 100)"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "C = 1 ÷ f′, puis écrire l’unité : des dioptries"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une lentille de distance focale f′ = 25 cm. Sa __vergence__&nbsp;?",
+          "calcul": "f′ = 25 cm = 0,25 m",
+          "aparte": "en mètres&nbsp;!",
+          "resultat": "C = 1 ÷ 0,25 = [[4 δ]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Un œil qui voit mal",
+          "oui": {
+            "titre": "Hypermétropie",
+            "texte": "L’image se forme **en arrière** de la rétine&nbsp;: lentille **convergente**."
+          },
+          "non": {
+            "titre": "Myopie",
+            "texte": "L’image se forme **en avant** de la rétine&nbsp;: lentille **divergente**."
+          },
+          "essai": {
+            "texte": "Le cristallin est une lentille convergente&nbsp;; la rétine, un écran. L’<i>accommodation</i> garde l’image nette de près."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "f′ = 25 cm = 0,25 m",
+              "quoi": "la conversion"
+            },
+            {
+              "texte": "C = 1 ÷ f′ = 1 ÷ 0,25",
+              "quoi": "formule puis nombres"
+            },
+            {
+              "texte": "C = 4 δ",
+              "quoi": "avec l’unité"
+            },
+            {
+              "texte": "Image nette : cristallin = lentille, rétine = écran",
+              "quoi": "le modèle de l’œil"
+            },
+            {
+              "texte": "Lunettes de lecture « +2 » : C = 2 δ, f′ = 0,50 m",
+              "quoi": "un repère"
+            }
+          ],
+          "pied": "Deux rayons suffisent à construire une image : celui par ==O== et celui parallèle à l’axe."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Laisser f′ en **cm** dans C = 1 ÷ f′.",
+            "Confondre le foyer **objet** F et le foyer **image** F′.",
+            "Dire qu’un rayon passant par O est **dévié**.",
+            "Associer la myopie à une lentille **convergente**.",
+            "Oublier que le **cristallin** s’accommode."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "f′ = 0,50 m&nbsp;: **C**&nbsp;?",
+            "Que devient un rayon **parallèle à l’axe**&nbsp;?",
+            "Quelle lentille corrige la **myopie**&nbsp;?"
+          ],
+          "reponses": "1) 2 δ · 2) il repart par F′ · 3) divergente"
+        }
+      ]
+    }
+  ]
+}

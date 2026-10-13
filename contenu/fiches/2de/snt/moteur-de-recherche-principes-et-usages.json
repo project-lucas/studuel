@@ -1,0 +1,166 @@
+{
+  "titre": "Moteur de recherche",
+  "titreSurligne": "recherche",
+  "accroche": "Il a déjà tout lu avant ta requête.",
+  "bonus": "**Explorer** → **indexer** → **classer** · pertinence + popularité · PageRank · **recouper** avant de citer",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/moteur-de-recherche-principes-et-usages.webp",
+    "prompt": "a glossy violet magnifying glass over a golden index card box with small web links, sparkles"
+  },
+  "marcel": "Le 1er résultat,\npas la vérité !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Crawler",
+              "definition": "robot qui suit les liens et **télécharge** les pages"
+            },
+            {
+              "terme": "Index inversé",
+              "definition": "à chaque **mot**, la liste des pages où il figure"
+            },
+            {
+              "terme": "PageRank",
+              "definition": "une page compte si des pages **importantes** pointent vers elle"
+            },
+            {
+              "terme": "Référencement",
+              "definition": "optimisation faite par les sites eux-mêmes"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le classement",
+          "entetes": [
+            "Critère",
+            "Mesure"
+          ],
+          "lignes": [
+            [
+              "**Pertinence**",
+              "les mots sont dans la page, le titre, les liens"
+            ],
+            [
+              "**Popularité**",
+              "nombre et qualité des liens entrants"
+            ],
+            [
+              "**Personnalisation**",
+              "historique et localisation"
+            ],
+            [
+              "**Sponsorisés**",
+              "publicité signalée"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "De la requête au résultat",
+          "etapes": [
+            {
+              "titre": "Explorer",
+              "texte": "les crawlers parcourent le Web de lien en lien"
+            },
+            {
+              "titre": "Indexer",
+              "texte": "chaque page est rangée dans l’index inversé"
+            },
+            {
+              "titre": "Classer",
+              "texte": "à la requête, le moteur interroge l’index et trie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Tu cherches une expression exacte d’un discours célèbre.",
+          "calcul": "mots précis entre guillemets",
+          "aparte": "moins de bruit",
+          "resultat": "[[«&nbsp;guillemets&nbsp;»]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Bien classé, donc vrai&nbsp;?",
+          "oui": {
+            "titre": "Bien classé",
+            "texte": "L’algorithme le juge **pertinent et populaire**&nbsp;: beaucoup de liens pointent vers lui."
+          },
+          "non": {
+            "titre": "Donc vrai",
+            "texte": "Non&nbsp;: un bon classement n’est **pas une preuve** d’exactitude."
+          },
+          "essai": {
+            "texte": "Vérifie l’auteur, la date, la source, puis croise avec une autre origine."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Le moteur interroge son index.",
+              "quoi": "il n’explore pas en direct"
+            },
+            {
+              "texte": "Le classement croise pertinence et popularité.",
+              "quoi": "les critères"
+            },
+            {
+              "texte": "Deux personnes, deux résultats possibles.",
+              "quoi": "personnalisation"
+            }
+          ],
+          "pied": "Pour chercher mieux&nbsp;: mots ==précis==, ==guillemets==, filtre par ==date==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le moteur **parcourt le Web** à chaque requête.",
+            "Prendre le **premier résultat** pour la vérité.",
+            "Oublier les **liens sponsorisés**.",
+            "Penser que tout le monde voit les **mêmes résultats**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que fait un **crawler**&nbsp;?",
+            "Que contient un **index inversé**&nbsp;?",
+            "Que permettent les **guillemets** dans une requête&nbsp;?"
+          ],
+          "reponses": "1) suit les liens et télécharge les pages · 2) pour chaque mot, les pages où il figure · 3) chercher une expression exacte"
+        }
+      ]
+    }
+  ]
+}

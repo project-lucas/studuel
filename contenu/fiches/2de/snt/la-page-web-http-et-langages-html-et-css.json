@@ -1,0 +1,114 @@
+{
+  "titre": "Page web : HTML, CSS",
+  "titreSurligne": "HTML",
+  "accroche": "Demander, décrire, habiller.",
+  "bonus": "**HTTP** demande · **HTML** décrit · **CSS** habille · **JavaScript** anime · 200 = succès · 404 = introuvable",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/la-page-web-http-et-langages-html-et-css.webp",
+    "prompt": "a glossy violet browser window with golden angle brackets and a small golden paintbrush, sparkles"
+  },
+  "marcel": "HTML dit quoi,\nCSS dit comment !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Trois outils, trois rôles",
+          "items": [
+            { "terme": "HTTP", "definition": "protocole de **requête** et de **réponse** pour demander une page" },
+            { "terme": "HTML", "definition": "décrit le **contenu** et sa structure" },
+            { "terme": "CSS", "definition": "règle la **présentation** : couleur, taille, marges" },
+            { "terme": "HTTPS", "definition": "HTTP + chiffrement **TLS** et **certificat**" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Codes et balises",
+          "entetes": ["Repère", "Sens"],
+          "lignes": [
+            ["**200**", "succès"],
+            ["**301**", "redirection"],
+            ["**404**", "page introuvable"],
+            ["**500**", "erreur du serveur"],
+            ["<i>h1</i> à <i>h6</i> · <i>p</i> · <i>a</i> · <i>img</i>", "titres · paragraphe · lien · image"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Afficher une page en trois temps",
+          "etapes": [
+            { "titre": "Télécharger", "texte": "le navigateur reçoit le HTML, puis styles, images et scripts" },
+            { "titre": "Construire", "texte": "il bâtit une représentation de la page" },
+            { "titre": "Dessiner", "texte": "il affiche ; JavaScript peut ensuite la modifier" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Tu veux changer la __couleur__ de tous les titres d’un site de 500 pages.",
+          "calcul": "une règle dans la feuille CSS",
+          "aparte": "pas 500 pages à retoucher",
+          "resultat": "[[CSS]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Qui s’en charge&nbsp;?",
+          "oui": { "titre": "HTML", "texte": "Dit **ce que sont** les éléments : titre, liste, lien." },
+          "non": { "titre": "CSS", "texte": "Dit **à quoi ils ressemblent** : couleur, police, disposition." },
+          "essai": { "texte": "Le <i>responsive</i> adapte l’affichage à la taille de l’écran grâce aux requêtes de média du CSS." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le navigateur envoie une requête HTTP.", "quoi": "la demande" },
+            { "texte": "Le serveur répond avec le code HTML.", "quoi": "la réponse" },
+            { "texte": "Le CSS règle la présentation.", "quoi": "l’apparence" }
+          ],
+          "pied": "Le cadenas de ==HTTPS== indique un échange ==chiffré==, pas un site fiable."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mélanger **contenu** (HTML) et **apparence** (CSS).",
+            "Croire que le **404** est une panne du navigateur.",
+            "Penser que HTTPS garantit un site **honnête**.",
+            "Oublier que **JavaScript** rend la page interactive."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel code HTTP signifie **page introuvable**&nbsp;?",
+            "Quel langage règle la **couleur** d’un titre&nbsp;?",
+            "Que chiffre le protocole **HTTPS**&nbsp;?"
+          ],
+          "reponses": "1) 404 · 2) le CSS · 3) l’échange entre navigateur et serveur"
+        }
+      ]
+    }
+  ]
+}

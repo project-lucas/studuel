@@ -1,0 +1,129 @@
+{
+  "titre": "L’hypertexte",
+  "titreSurligne": "hypertexte",
+  "accroche": "Le lien qui a fait le Web.",
+  "bonus": "**1945** Bush · **1965** Nelson · **1989** Berners-Lee · URL = protocole + domaine + chemin + paramètres",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/l-hypertexte.webp",
+    "prompt": "a glossy violet document page with a golden chain link connecting it to other floating pages, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Un clic, et hop,\nailleurs !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "Une idée plus ancienne que le Web",
+          "horizontale": true,
+          "etapes": [
+            { "date": "1945", "texte": "**Vannevar Bush** : le Memex, documents reliés par associations" },
+            { "date": "1965", "texte": "**Ted Nelson** invente le mot <i>hypertexte</i>" },
+            { "date": "1989", "texte": "**Tim Berners-Lee**, au CERN : le Web" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois inventions",
+          "entetes": ["Brique", "Rôle"],
+          "lignes": [
+            ["**URL**", "adresse unique d’une ressource"],
+            ["**HTTP**", "protocole pour la **demander**"],
+            ["**HTML**", "langage qui **décrit** page et liens"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Lire une URL",
+          "entetes": ["Morceau", "Exemple"],
+          "lignes": [
+            ["**Protocole**", "https"],
+            ["**Nom de domaine**", "exemple.fr"],
+            ["**Chemin**", "la page visée"],
+            ["**Paramètres**", "après le « ? »"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Dans https://cours.exemple.fr/maths, quel est le __nom de domaine__&nbsp;?",
+          "calcul": "après https://, avant /",
+          "aparte": "lecture de droite à gauche",
+          "resultat": "[[cours.exemple.fr]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Lien ou renvoi&nbsp;?",
+          "oui": { "titre": "Lien hypertexte", "texte": "Une **adresse exécutable** : un clic et la page arrive." },
+          "non": { "titre": "Note de bas de page", "texte": "Un simple renvoi, qu’il faut aller chercher à la main." },
+          "essai": { "texte": "Le Web forme un immense graphe de pages reliées entre elles." }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "Ce que le lien a produit",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Un graphe", "texte": "les pages sont des sommets, les liens des arêtes" },
+            { "titre": "Une mesure", "texte": "nombre et qualité des liens reçus = popularité" },
+            { "titre": "Un moteur", "texte": "sans hypertexte, pas de recherche efficace" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "L’hypertexte relie des documents par des liens.", "quoi": "la définition" },
+            { "texte": "Le Web est un graphe de pages.", "quoi": "la structure" },
+            { "texte": "Les liens mesurent la popularité d’une page.", "quoi": "la conséquence" }
+          ],
+          "pied": "Sans hypertexte, pas de ==PageRank==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Attribuer le **mot** hypertexte à Berners-Lee (c’est **Nelson**).",
+            "Croire que le lien est un simple **renvoi**.",
+            "Lire un nom de domaine **de gauche à droite**.",
+            "Confondre **chemin** et **paramètres**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Qui a inventé le mot **hypertexte** ?",
+            "Que décrit le langage **HTML** ?",
+            "Dans quel **sens** lit-on un nom de domaine ?"
+          ],
+          "reponses": "1) Ted Nelson (1965) · 2) la page et ses liens · 3) de droite à gauche"
+        }
+      ]
+    }
+  ]
+}

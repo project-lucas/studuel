@@ -1,0 +1,113 @@
+{
+  "titre": "Géolocalisation",
+  "titreSurligne": "Géo",
+  "accroche": "Le téléphone écoute, et calcule.",
+  "bonus": "GPS · Galileo · GLONASS · Beidou · **4 satellites** = position + altitude · calcul de **distances** (temps de vol)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/geolocalisation.webp",
+    "prompt": "a glossy violet map pin above a golden globe with a small golden satellite sending signal arcs, sparkles"
+  },
+  "marcel": "Quatre satellites,\net je sais où je suis !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le principe",
+          "items": [
+            { "terme": "Satellite", "definition": "émet l’**heure** (horloge atomique) et sa **position**" },
+            { "terme": "Récepteur", "definition": "compare à l’heure de réception&nbsp;: il en déduit la **distance**" },
+            { "terme": "Trilatération", "definition": "calcul de **distances** à partir de temps de vol (pas d’angles)" },
+            { "terme": "GNSS", "definition": "GPS (États-Unis), Galileo (UE), GLONASS (Russie), Beidou (Chine)" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Combien de satellites&nbsp;?",
+          "entetes": ["Nombre", "Position connue"],
+          "lignes": [
+            ["**1**", "une **sphère**"],
+            ["**2**", "un **cercle**"],
+            ["**3**", "**deux points**, un seul plausible"],
+            ["**4**", "position **et altitude**, horloge corrigée"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Se localiser en trois temps",
+          "etapes": [
+            { "titre": "Écouter", "texte": "le récepteur capte l’heure d’émission de chaque satellite" },
+            { "titre": "Mesurer", "texte": "il en déduit sa distance à chacun" },
+            { "titre": "Recouper", "texte": "l’intersection des sphères donne la position" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Pourquoi faut-il __4 satellites__ et non 3&nbsp;?",
+          "calcul": "3 inconnues d’espace + l’erreur d’horloge",
+          "aparte": "horloge non atomique",
+          "resultat": "= [[4 satellites]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Où le signal passe-t-il&nbsp;?",
+          "oui": { "titre": "Terrain dégagé", "texte": "Précision de quelques **mètres**." },
+          "non": { "titre": "Ville, tunnel", "texte": "Signaux **réfléchis** ou bloqués&nbsp;: précision dégradée, voire nulle." },
+          "essai": { "texte": "Le téléphone s’aide des **antennes mobiles**, du **wifi** et de ses capteurs internes." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le satellite émet l’heure et sa position.", "quoi": "l’émetteur" },
+            { "texte": "Le récepteur calcule sa distance au satellite.", "quoi": "le calcul" },
+            { "texte": "Il faut 4 satellites pour corriger l’horloge.", "quoi": "la condition" }
+          ],
+          "pied": "La position est une donnée ==sensible== : le ==RGPD== la protège."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le téléphone **émet** vers les satellites.",
+            "Parler de **triangulation**&nbsp;: ce sont des distances.",
+            "Oublier que la précision **chute** en intérieur.",
+            "Accepter la **localisation** pour toutes les applications."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que **émet** un satellite&nbsp;?",
+            "Combien de satellites pour la position **et** l’altitude&nbsp;?",
+            "Pourquoi la position est-elle une donnée **sensible**&nbsp;?"
+          ],
+          "reponses": "1) l’heure et sa position · 2) quatre · 3) elle révèle domicile, travail, habitudes"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "titre": "La préposition a",
+  "titreSurligne": "a",
+  "accroche": "Le petit mot qui désigne les personnes.",
+  "bonus": "**a** + COD de personne · **a** = mouvement · **en** = sans mouvement · **a las ocho**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/espagnol/la-preposition-a-et-ses-voisines.webp",
+    "prompt": "a glossy violet compass with a golden arrow and a small golden person icon, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Une personne&nbsp;?\nOn met le «&nbsp;a&nbsp;&nbsp;»&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le «&nbsp;a&nbsp;» personnel",
+          "lignes": ["verbe + **a** + personne"],
+          "petite": true,
+          "regle": "Un COD qui désigne une **personne précise** (ou un animal familier) est introduit par **a**. Une chose n’en a jamais besoin.",
+          "note": "chose → rien · personne → a"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Avec ou sans a",
+          "entetes": ["Sans a", "Avec a"],
+          "lignes": [
+            ["<i>Veo la casa.</i> (chose)", "<i>Veo **a** María.</i> (personne)"],
+            ["<i>Busco un médico.</i> (n’importe lequel)", "<i>Busco **al** médico de mi abuela.</i> (précis)"],
+            ["<i>Tengo dos hermanos.</i> (tener : jamais de a)", "<i>Quiero **a** mis padres.</i> (j’aime)"],
+            ["<i>Quiero un helado.</i> (je veux)", "<i>¿**A** quién buscas?</i> · <i>No veo **a** nadie.</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Trois prépositions, trois rôles",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "A : le mouvement",
+              "texte": "<i>Voy **a** Madrid.</i> · <i>Vengo **a** verte.</i> · <i>Empieza **a** llover.</i> · <i>**Ir a** + inf.</i> = futur proche."
+            },
+            {
+              "titre": "En : le lieu où l’on est",
+              "texte": "<i>Estoy **en** la playa.</i> · <i>Vivo **en** Sevilla.</i> · <i>**en** tren, **en** coche</i> mais <i>**a** pie</i>."
+            },
+            {
+              "titre": "De : l’origine",
+              "texte": "<i>Soy **de** Lyon.</i> · <i>Una mesa **de** madera.</i> · <i>**a + el = al** · **de + el = del**</i>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Mouvement ou lieu&nbsp;?",
+          "oui": {
+            "titre": "A, quand on va",
+            "texte": "<i>Voy **a** la playa.</i> · <i>Llego **a** Sevilla.</i>"
+          },
+          "non": {
+            "titre": "En, quand on est",
+            "texte": "<i>Estoy **en** la playa.</i> · <i>Vivo **en** Sevilla.</i>"
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Vivo ___ Madrid y voy ___ Toledo.</i> → **en**, **a**&nbsp;: lieu, puis mouvement."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 5,
+          "titre": "Le temps",
+          "entetes": ["Pour dire…", "On emploie", "L’exemple"],
+          "lignes": [
+            ["L’heure", "**a**", "<i>a las ocho</i>"],
+            ["Le mois, la saison, l’année", "**en**", "<i>en julio, en verano, en 2025</i>"],
+            ["Le jour", "aucune préposition", "<i>el lunes, los sábados</i>"],
+            ["« Dans » (délai futur)", "**dentro de**", "<i>dentro de dos días</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Quand le a change le sens",
+          "deux": true,
+          "items": [
+            {"titre": "querer algo", "texte": "vouloir quelque chose"},
+            {"titre": "querer a alguien", "texte": "aimer quelqu’un"},
+            {"titre": "Animal familier", "texte": "<i>Paseo **a** mi perro.</i>"},
+            {"titre": "Jamais après tener", "texte": "<i>Tengo dos hermanos.</i>"}
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Veo María</i> → <i>Veo **a** María.</i>",
+            "<i>Voy en Madrid</i> → <i>Voy **a** Madrid.</i>",
+            "<i>el lunes</i>, pas <i>en el lunes</i>&nbsp;: le jour n’a pas de préposition.",
+            "<i>Tengo a dos hermanos</i> → <i>Tengo dos hermanos.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Veo ___ mi profesora.</i>",
+            "<i>Estoy ___ casa, pero voy ___ la playa.</i>",
+            "« À huit heures » → <i>___ las ocho.</i>"
+          ],
+          "reponses": "1) a 2) en, a 3) a"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "titre": "Conjonctions de coord.",
+  "titreSurligne": "coord.",
+  "accroche": "Cinq mots qui ne bougent rien.",
+  "bonus": "**und · oder · aber · denn · sondern** · le verbe reste en 2<sup>e</sup> position",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/allemand/les-conjonctions-de-coordination.webp",
+    "prompt": "a glossy violet chain link joining two golden rings, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Und, oder, aber…\nL’ordre ne change pas&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Position zéro",
+          "lignes": [
+            "und · oder · aber · denn · sondern"
+          ],
+          "petite": true,
+          "regle": "Elles relient deux éléments de même rang et **ne comptent pas** dans l’ordre des mots : sujet, puis verbe en 2<sup>e</sup> position.",
+          "note": "virgule devant aber, denn, sondern"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les cinq de base",
+          "entetes": [
+            "Mot",
+            "L’exemple",
+            "En français"
+          ],
+          "lignes": [
+            ["**und**", "<i>Ich lese und er schreibt.</i>", "Je lis et il écrit."],
+            ["**oder**", "<i>Tee oder Kaffee?</i>", "Thé ou café&nbsp;?"],
+            ["**aber**", "<i>Er ist arm, aber glücklich.</i>", "Il est pauvre mais heureux."],
+            ["**denn**", "<i>Ich bleibe da, denn ich bin krank.</i>", "Je reste, car je suis malade."],
+            ["**sondern**", "<i>Nicht Tee, sondern Kaffee.</i>", "Pas du thé, mais du café."]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Trois syntaxes, un même lien",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Coordination",
+              "texte": "<i>Ich bleibe da, **denn** ich bin krank.</i> Le verbe reste en **2<sup>e</sup> position**."
+            },
+            {
+              "titre": "Subordination",
+              "texte": "<i>Ich bleibe da, **weil** ich krank bin.</i> Le verbe part **à la fin**."
+            },
+            {
+              "titre": "Adverbe",
+              "texte": "<i>Es regnet, **deshalb** bleibe ich da.</i> **Inversion** : le verbe passe avant le sujet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Sondern ou aber&nbsp;?",
+          "oui": {
+            "titre": "Après une négation",
+            "texte": "<i>Das ist nicht mein Buch, **sondern** deins.</i> — on rectifie."
+          },
+          "non": {
+            "titre": "Sans négation",
+            "texte": "<i>Er ist arm, **aber** glücklich.</i> — opposition simple."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Ich fahre nicht nach Wien, ___ nach Graz.</i> → **sondern**&nbsp;: une négation devant."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Quel lien&nbsp;?",
+              "texte": "Ajout, choix, opposition, cause ou rectification."
+            },
+            {
+              "titre": "Quel mot&nbsp;?",
+              "texte": "<i>und, oder, aber, denn</i> ou <i>sondern</i> (si négation)."
+            },
+            {
+              "titre": "Ordre normal",
+              "texte": "Sujet, verbe en 2<sup>e</sup> position, rien ne bouge."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les couples",
+          "deux": true,
+          "items": [
+            {
+              "titre": "entweder… oder",
+              "texte": "ou bien… ou bien"
+            },
+            {
+              "titre": "weder… noch",
+              "texte": "ni… ni — déjà négatif, pas de <i>nicht</i>"
+            },
+            {
+              "titre": "sowohl… als auch",
+              "texte": "aussi bien… que"
+            },
+            {
+              "titre": "nicht nur… sondern auch",
+              "texte": "non seulement… mais aussi"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>…, denn ich krank bin</i> → <i>…, denn ich **bin** krank.</i> (<i>denn</i> ne rejette pas le verbe.)",
+            "<i>…, weil ich bin krank</i> → <i>…, weil ich krank **bin**.</i> (<i>weil</i> le rejette.)",
+            "<i>Es regnet, deshalb ich bleibe</i> → <i>…, deshalb **bleibe ich**.</i> (inversion)",
+            "<i>nicht Tee, aber Kaffee</i> → <i>nicht Tee, **sondern** Kaffee.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Ich bleibe zu Hause, ___ ich bin krank.</i>",
+            "<i>Er ist nicht dumm, ___ faul.</i>",
+            "<i>Es regnet, deshalb ___ ich zu Hause.</i> (bleiben)"
+          ],
+          "reponses": "1) denn 2) sondern 3) bleibe"
+        }
+      ]
+    }
+  ]
+}

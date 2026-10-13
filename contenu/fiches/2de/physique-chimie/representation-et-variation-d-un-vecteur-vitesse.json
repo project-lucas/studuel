@@ -1,0 +1,111 @@
+{
+  "titre": "Le vecteur vitesse",
+  "titreSurligne": "vitesse",
+  "accroche": "Une flèche qui dit tout du mouvement.",
+  "bonus": "v(i) ≈ M<sub>i−1</sub>M<sub>i+1</sub> ÷ 2τ · direction **tangente** · valeur en **m·s⁻¹**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/representation-et-variation-d-un-vecteur-vitesse.webp",
+    "prompt": "a glossy violet toy car on a curved golden track with a big golden arrow tangent to the curve, tiny dots marking its positions, sparkles"
+  },
+  "marcel": "Une flèche\ntangente !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les 4 caractéristiques",
+          "entetes": ["Caractéristique", "Ce qu’elle est"],
+          "lignes": [
+            ["**Point d’application**", "la position du mobile"],
+            ["**Direction**", "la **tangente** à la trajectoire"],
+            ["**Sens**", "celui du mouvement"],
+            ["**Valeur**", "en m·s⁻¹, longueur de la flèche à une **échelle**"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La vitesse en un point",
+          "petite": true,
+          "lignes": ["v(i) ≈ {M<sub>i−1</sub>M<sub>i+1</sub>/2τ}"],
+          "regle": "**τ** est l’intervalle de temps entre deux positions. La variation vaut ==Δv = v<sub>final</sub> − v<sub>initial</sub>==.",
+          "note": "même sens que la somme des forces&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Tracer la variation en trois temps",
+          "etapes": [
+            { "titre": "Calculer", "texte": "v(i−1) et v(i+1) avec la formule, puis choisir une échelle" },
+            { "titre": "Reporter", "texte": "les deux vecteurs à partir d’un même point" },
+            { "titre": "Joindre", "texte": "l’extrémité du premier à celle du second : c’est Δv" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Positions toutes les τ = 0,10 s. Entre M<sub>3</sub> et M<sub>5</sub> : 0,60 m. Quelle est la __vitesse__ en M<sub>4</sub>&nbsp;?",
+          "calcul": "v = 0,60 ÷ (2 × 0,10)",
+          "aparte": "2τ, pas τ&nbsp;!",
+          "resultat": "v(4) = [[3,0 m·s⁻¹]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Δv nulle ou non&nbsp;?",
+          "oui": { "titre": "Rectiligne uniforme", "texte": "Rien ne change&nbsp;: Δv est **nulle**, les forces se compensent." },
+          "non": { "titre": "Circulaire uniforme", "texte": "La valeur est constante mais la **direction** change&nbsp;: Δv est **non nulle**, dirigée vers le **centre**." },
+          "essai": { "texte": "Voiture qui accélère en ligne droite&nbsp;: la valeur change, Δv est <i>dans le sens du mouvement</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le vecteur vitesse est tangent à la trajectoire.", "quoi": "direction" },
+            { "texte": "v(4) = M<sub>3</sub>M<sub>5</sub> ÷ 2τ = 3,0 m·s⁻¹", "quoi": "calcul et unité" },
+            { "texte": "Échelle : 1 cm pour 1 m·s⁻¹ → flèche de 3 cm", "quoi": "le tracé" }
+          ],
+          "pied": "Δv a le ==même sens== que la somme des forces appliquées au système."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Tracer la flèche **perpendiculaire** à la trajectoire.",
+            "Diviser par **τ** au lieu de 2τ.",
+            "Croire qu’un mouvement circulaire uniforme n’a **aucune** variation de vitesse.",
+            "Oublier l’**échelle** du tracé."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle est la **direction** du vecteur vitesse&nbsp;?",
+            "M<sub>i−1</sub>M<sub>i+1</sub> = 1,0 m, τ = 0,25 s&nbsp;: **v**&nbsp;?",
+            "Δv d’un mouvement rectiligne uniforme&nbsp;?"
+          ],
+          "reponses": "1) tangente à la trajectoire · 2) 2,0 m·s⁻¹ · 3) nulle"
+        }
+      ]
+    }
+  ]
+}

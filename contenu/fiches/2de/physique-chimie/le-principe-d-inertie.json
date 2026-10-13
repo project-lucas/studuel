@@ -1,0 +1,110 @@
+{
+  "titre": "Le principe d’inertie",
+  "titreSurligne": "inertie",
+  "accroche": "Pas de variation, pas de force résultante.",
+  "bonus": "forces qui se compensent ⇔ vitesse **constante** · chute libre = **poids seul**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/le-principe-d-inertie.webp",
+    "prompt": "a glossy violet puck gliding on an air-cushion golden table with motion lines and two balanced golden arrows, sparkles"
+  },
+  "marcel": "Il faut une force\npour changer !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’énoncé",
+          "petite": true,
+          "lignes": ["ΣF = 0 ⇔ vecteur v constant"],
+          "regle": "Dans un ==référentiel galiléen==, si les forces se compensent, le système est **immobile** ou en **mouvement rectiligne uniforme** — et réciproquement.",
+          "note": "le terrestre, c’est bon&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois situations",
+          "entetes": ["Situation", "Bilan", "Mouvement"],
+          "lignes": [
+            ["Voiture à vitesse constante", "moteur = frottements : somme **nulle**", "rectiligne uniforme"],
+            ["Pierre lâchée", "le **poids** seul", "vitesse qui augmente"],
+            ["Palet sur coussin d’air", "quasi aucune force", "garde sa vitesse"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Raisonner en trois temps",
+          "etapes": [
+            { "titre": "Observer", "texte": "le vecteur vitesse : constant, ou varie-t-il en valeur ou en direction&nbsp;?" },
+            { "titre": "Conclure", "texte": "constant : forces qui se compensent&nbsp;; variable : elles ne se compensent pas" },
+            { "titre": "Orienter", "texte": "la variation de vitesse a le sens de la somme des forces" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un palet lancé sur une table à coussin d’air garde un vecteur vitesse constant. Que dire des __forces__&nbsp;?",
+          "calcul": "v constant ⇒ pas de variation",
+          "aparte": "contraposée",
+          "resultat": "forces qui [[se compensent]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Entretenir ou changer&nbsp;?",
+          "oui": { "titre": "Il faut une force pour changer", "texte": "Pour **accélérer**, freiner ou dévier, les forces ne se compensent pas." },
+          "non": { "titre": "Pas pour entretenir", "texte": "Un mouvement rectiligne uniforme ne demande **aucune** force résultante." },
+          "essai": { "texte": "Chute libre dans le vide&nbsp;: une plume et une bille tombent <i>ensemble</i>. Dans l’air, c’est la résistance qui les sépare, pas la masse." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le vecteur vitesse est constant dans le référentiel terrestre.", "quoi": "l’observation" },
+            { "texte": "D’après le principe d’inertie, les forces se compensent.", "quoi": "la loi citée" },
+            { "texte": "Donc la somme des forces est nulle.", "quoi": "la conclusion" }
+          ],
+          "pied": "Chute libre = ==poids seul== : même variation de vitesse, quelle que soit la masse."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’il faut une force pour **entretenir** le mouvement.",
+            "Oublier de nommer le **référentiel**.",
+            "Confondre « vitesse nulle » et « forces **absentes** ».",
+            "Penser que la masse change la chute **libre**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Vitesse **constante** en ligne droite&nbsp;: que dire des forces&nbsp;?",
+            "Un corps en **chute libre** subit quelle force&nbsp;?",
+            "Vitesse qui varie&nbsp;: les forces se compensent-elles&nbsp;?"
+          ],
+          "reponses": "1) elles se compensent · 2) son poids seul · 3) non"
+        }
+      ]
+    }
+  ]
+}

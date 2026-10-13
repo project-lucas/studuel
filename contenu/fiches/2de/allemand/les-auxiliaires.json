@@ -1,0 +1,164 @@
+{
+  "titre": "Les auxiliaires",
+  "titreSurligne": "auxiliaires",
+  "accroche": "Sein, haben, werden&nbsp;: trois piliers.",
+  "bonus": "**sein** mouvement et changement d’état · **haben** le reste · **werden** futur et passif",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/allemand/les-auxiliaires.webp",
+    "prompt": "a glossy violet three-pillar temple with golden tops, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Sein, haben, werden…\nTout repose dessus&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le parfait",
+          "lignes": [
+            "haben / sein + participe II"
+          ],
+          "petite": true,
+          "regle": "**sein** pour un déplacement ou un changement d’état, **haben** pour tous les autres verbes.",
+          "note": "sein, bleiben, werden, passieren : sein"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les formes à savoir",
+          "entetes": [
+            "Verbe",
+            "Présent",
+            "Prétérit",
+            "Participe"
+          ],
+          "lignes": [
+            ["**sein**", "<i>bin, bist, ist, sind, seid, sind</i>", "<i>war</i>", "<i>gewesen</i>"],
+            ["**haben**", "<i>habe, hast, hat, haben, habt, haben</i>", "<i>hatte</i>", "<i>gehabt</i>"],
+            ["**werden**", "<i>werde, wirst, wird, werden, werdet, werden</i>", "<i>wurde</i>", "<i>geworden</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Une double vie",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "sein",
+              "texte": "Verbe plein&nbsp;: <i>Ich bin müde.</i> Auxiliaire&nbsp;: <i>Ich bin gefahren.</i>"
+            },
+            {
+              "titre": "haben",
+              "texte": "Verbe plein&nbsp;: <i>Ich habe ein Auto.</i> Auxiliaire&nbsp;: <i>Ich habe gegessen.</i>"
+            },
+            {
+              "titre": "werden",
+              "texte": "Devenir&nbsp;: <i>Er wird Arzt.</i> Futur&nbsp;: <i>Ich werde kommen.</i> Passif&nbsp;: <i>Es wird gebaut.</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Sein ou haben&nbsp;?",
+          "oui": {
+            "titre": "Je me déplace",
+            "texte": "<i>Ich **bin** nach Berlin gefahren.</i> (Je suis allé à Berlin.)"
+          },
+          "non": {
+            "titre": "Un COD",
+            "texte": "<i>Ich **habe** das Auto gefahren.</i> (J’ai conduit la voiture.)"
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Er ___ gestern früh aufgestanden.</i> → **ist**&nbsp;: changement d’état."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Le sens&nbsp;?",
+              "texte": "Déplacement d’un point à un autre, ou changement d’état&nbsp;?"
+            },
+            {
+              "titre": "Choisis",
+              "texte": "Oui → **sein**. Non, ou un COD → **haben**."
+            },
+            {
+              "titre": "Ajoute le participe",
+              "texte": "À la fin de la phrase&nbsp;: <i>Ich bin … gefahren.</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les verbes avec sein",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Mouvement",
+              "texte": "<i>gehen, fahren, kommen, fliegen, laufen, reisen</i>"
+            },
+            {
+              "titre": "Changement d’état",
+              "texte": "<i>aufstehen, einschlafen, aufwachen, sterben, wachsen</i>"
+            },
+            {
+              "titre": "Les quatre à part",
+              "texte": "<i>sein, bleiben, werden, passieren</i>"
+            },
+            {
+              "titre": "Tout le reste",
+              "texte": "**haben**, même un verbe de mouvement avec COD"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Ich habe gefahren nach Berlin</i> → <i>Ich **bin** nach Berlin gefahren.</i>",
+            "<i>bekommen</i> = **recevoir**, jamais « devenir » : « je deviens » = <i>ich **werde**</i>.",
+            "<i>Ich bin das Auto gefahren</i> → <i>Ich **habe** das Auto gefahren.</i>",
+            "<i>Ich habe müde</i> → <i>Ich **bin** müde.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Wir ___ nach Wien geflogen.</i>",
+            "<i>Sie ___ ein Buch gelesen.</i>",
+            "« Il devient médecin » en allemand&nbsp;?"
+          ],
+          "reponses": "1) sind 2) hat 3) Er wird Arzt"
+        }
+      ]
+    }
+  ]
+}

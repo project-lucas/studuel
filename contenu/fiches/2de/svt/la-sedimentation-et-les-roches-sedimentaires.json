@@ -1,0 +1,188 @@
+{
+  "titre": "Roches sédimentaires",
+  "titreSurligne": "sédimentaires",
+  "accroche": "Du dépôt à la roche.",
+  "bonus": "**Compaction** + **cimentation** = diagenèse · **détritique · biogène · chimique** · strates : les plus **anciennes en bas**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/svt/la-sedimentation-et-les-roches-sedimentaires.webp",
+    "prompt": "glossy violet and golden stacked rock layers with a tiny glossy ammonite fossil in one layer, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Les couches racontent\nune histoire !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le tri au dépôt",
+          "entetes": [
+            "Énergie du courant",
+            "Dépôt"
+          ],
+          "lignes": [
+            [
+              "Forte (torrent)",
+              "**blocs**"
+            ],
+            [
+              "Moyenne",
+              "**sables**"
+            ],
+            [
+              "Faible (eau calme)",
+              "**argiles**"
+            ]
+          ]
+        },
+        {
+          "type": "etapes",
+          "numero": 2,
+          "titre": "Diagenèse",
+          "etapes": [
+            {
+              "titre": "Compaction",
+              "texte": "le poids chasse l’eau"
+            },
+            {
+              "titre": "Cimentation",
+              "texte": "des minéraux collent les grains"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Les trois familles",
+          "entetes": [
+            "Famille",
+            "Origine",
+            "Exemples"
+          ],
+          "lignes": [
+            [
+              "**Détritique**",
+              "débris",
+              "conglomérat, grès, argilite"
+            ],
+            [
+              "**Biogène**",
+              "restes de vivants",
+              "calcaire coquillier, craie, charbon"
+            ],
+            [
+              "**Chimique**",
+              "précipitation",
+              "sel gemme, gypse"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Les archives de la Terre",
+          "items": [
+            {
+              "titre": "Superposition",
+              "texte": "strates horizontales, **les plus anciennes en bas**"
+            },
+            {
+              "titre": "Fossiles",
+              "texte": "âge et milieu de vie"
+            },
+            {
+              "titre": "Grains, rides, traces",
+              "texte": "milieu de **dépôt**"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Sable → grès",
+          "donnees": "Sable : grains libres. Grès : grains cimentés.",
+          "calcul": "Argile → argilite · coquilles → calcaire.",
+          "resultat": "[[sédiment + diagenèse = roche]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 5,
+          "titre": "Le cycle des roches",
+          "horizontale": true,
+          "etapes": [
+            {
+              "date": "Érosion",
+              "texte": "la roche est usée"
+            },
+            {
+              "date": "Transport · dépôt",
+              "texte": "les débris se déposent et sont triés"
+            },
+            {
+              "date": "Diagenèse",
+              "texte": "le sédiment devient roche"
+            },
+            {
+              "date": "Soulèvement",
+              "texte": "le relief renaît, l’érosion recommence"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Érosion, transport, dépôt, diagenèse, soulèvement&nbsp;: c’est un cycle.",
+              "quoi": "cycle"
+            },
+            {
+              "texte": "La craie est construite par des algues marines.",
+              "quoi": "exemple"
+            }
+          ],
+          "pied": "Une sédimentaire enfouie peut devenir ==métamorphique== ou fondre."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Placer les couches **jeunes** en bas.",
+            "Confondre sédiment et **roche** sédimentaire.",
+            "Oublier la **compaction** ou la **cimentation**.",
+            "Croire toutes les roches sédimentaires **détritiques**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel dépôt se forme en eau calme&nbsp;?",
+            "Comment appelle-t-on la transformation d’un sédiment en roche&nbsp;?",
+            "À quelle famille appartient la craie&nbsp;?"
+          ],
+          "reponses": "1) les argiles · 2) la diagenèse · 3) biogène"
+        }
+      ]
+    }
+  ]
+}

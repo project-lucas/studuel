@@ -1,0 +1,136 @@
+{
+  "titre": "Stabilité et charge",
+  "titreSurligne": "charge",
+  "accroche": "Pourquoi les atomes s’associent.",
+  "bonus": "**Duet**&nbsp;: 2 e⁻ externes (hélium) · **octet**&nbsp;: 8 e⁻ (néon, argon) · liaisons&nbsp;: **C 4 · N 3 · O 2 · H 1**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/stabilite-et-charge-electrique-d-une-entite-chimique.webp",
+    "prompt": "a glossy golden water molecule model with one violet oxygen sphere and two small golden hydrogen spheres linked by thick bonds, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Viser l’octet,\nc’est stable&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les ions monoatomiques",
+          "entetes": ["Atome", "Il fait", "Ion"],
+          "lignes": [
+            ["Sodium", "perd 1 e⁻", "Na⁺"],
+            ["Magnésium", "perd 2 e⁻", "Mg²⁺"],
+            ["Oxygène", "gagne 2 e⁻", "O²⁻"],
+            ["Chlore", "gagne 1 e⁻", "Cl⁻"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Liaisons covalentes",
+          "entetes": ["Atome", "Liaisons"],
+          "lignes": [
+            ["**Carbone**", "4"],
+            ["**Azote**", "3"],
+            ["**Oxygène**", "2"],
+            ["**H et halogènes**", "1"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Prévoir et dessiner",
+          "etapes": [
+            { "titre": "Viser le gaz noble", "texte": "le plus proche&nbsp;: gagner, perdre ou partager des électrons" },
+            { "titre": "Compter", "texte": "liaisons = électrons qui manquent pour l’octet" },
+            { "titre": "Dessiner Lewis", "texte": "tiret entre atomes (liant), tiret sur l’atome (non liant)" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "L’atome de magnésium (__Z = 12__) forme quel ion&nbsp;?",
+          "calcul": "1s² 2s² 2p⁶ 3s² : 2 e⁻ de valence",
+          "aparte": "il perd 2 e⁻ → néon",
+          "resultat": "ion [[Mg²⁺]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Liant ou non liant&nbsp;?",
+          "oui": { "titre": "Doublet liant", "texte": "Partagé entre deux atomes&nbsp;: une **liaison**, un tiret entre les atomes." },
+          "non": { "titre": "Doublet non liant", "texte": "Paire non partagée, portée par un seul atome&nbsp;: un tiret sur l’atome." },
+          "essai": { "texte": "L’eau H₂O&nbsp;: **deux** liaisons O–H et **deux** doublets non liants sur l’oxygène. Une molécule est ==neutre==." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Deux formules",
+          "deux": true,
+          "items": [
+            { "titre": "Brute", "texte": "nature et nombre d’atomes" },
+            { "titre": "Développée", "texte": "enchaînement des liaisons" },
+            { "titre": "Colonne", "texte": "elle donne la charge de l’ion" },
+            { "titre": "Chemin court", "texte": "gagner ou perdre le moins d’e⁻" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire **Na⁻** au lieu de Na⁺.",
+            "Oublier les **doublets non liants** dans Lewis.",
+            "Compter **3 liaisons** pour l’oxygène.",
+            "Dire qu’un ion a un **noyau modifié**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 6,
+          "titre": "Liaison covalente",
+          "paragraphes": ["Deux atomes **partagent** un doublet&nbsp;: chacun apporte un électron et le compte comme sien. Le nombre de liaisons est fixé par les électrons qui **manquent** pour l’octet. Tout atome tend vers la configuration du ==gaz noble le plus proche=="]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 7,
+          "titre": "Perdre ou gagner&nbsp;?",
+          "paragraphes": ["L’atome choisit toujours le chemin le plus court vers l’octet&nbsp;: la charge de l’ion se lit dans la **colonne** du tableau périodique."]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Ion formé par le chlore (Z = 17)&nbsp;?",
+            "Combien de liaisons pour l’azote&nbsp;?",
+            "Combien d’électrons externes vise la règle du duet&nbsp;?"
+          ],
+          "reponses": "1) Cl⁻ · 2) 3 · 3) 2 (comme l’hélium)"
+        }
+      ]
+    }
+  ]
+}

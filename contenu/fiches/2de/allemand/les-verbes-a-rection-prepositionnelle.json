@@ -1,0 +1,132 @@
+{
+  "titre": "Verbes + préposition",
+  "titreSurligne": "préposition",
+  "accroche": "Le verbe et sa préposition, d’un bloc.",
+  "bonus": "**warten auf** + acc. · **Angst haben vor** + dat. · **sich freuen auf / über**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/allemand/les-verbes-a-rection-prepositionnelle.webp",
+    "prompt": "two glossy violet puzzle pieces locking together with a golden arrow, tiny sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Warten auf…\nje t’attends&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle",
+          "lignes": ["verbe + **préposition** + cas"],
+          "petite": true,
+          "regle": "Le verbe impose **sa** préposition et **son** cas, fixés une fois pour toutes&nbsp;: on les apprend ensemble.",
+          "note": "pas de lieu, pas de mouvement"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Avec l’accusatif",
+          "entetes": ["Verbe", "Prép.", "En français"],
+          "lignes": [
+            ["<i>warten</i>", "<i>auf</i>", "attendre"],
+            ["<i>denken · sich erinnern</i>", "<i>an</i>", "penser à · se souvenir de"],
+            ["<i>sich interessieren</i>", "<i>für</i>", "s’intéresser à"],
+            ["<i>sprechen · diskutieren</i>", "<i>über</i>", "parler de · discuter de"],
+            ["<i>bitten · sich kümmern</i>", "<i>um</i>", "demander · s’occuper de"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Avec le datif",
+          "colonnes": 3,
+          "cartes": [
+            {"titre": "<i>an</i> + dat.", "texte": "<i>teilnehmen an</i> (participer à)"},
+            {"titre": "<i>vor</i> + dat.", "texte": "<i>Angst haben vor</i> (avoir peur de)"},
+            {"titre": "<i>von</i> + dat.", "texte": "<i>träumen von</i> (rêver de) · <i>abhängen von</i> (dépendre de)"},
+            {"titre": "<i>zu</i> + dat.", "texte": "<i>beitragen zu</i> (contribuer à) · <i>gehören zu</i> (faire partie de)"},
+            {"titre": "Adjectifs", "texte": "<i>stolz **auf**</i> + acc. · <i>bereit **zu**</i> + dat. · <i>verantwortlich **für**</i> + acc."},
+            {"titre": "Questions", "texte": "Personne&nbsp;: <i>**Auf wen** wartest du?</i> · chose&nbsp;: <i>**Worauf** wartest du?</i>"}
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Sich freuen",
+          "oui": {
+            "titre": "auf = à venir",
+            "texte": "<i>Ich freue mich **auf** die Ferien.</i> — je m’en réjouis d’avance."
+          },
+          "non": {
+            "titre": "über = présent ou passé",
+            "texte": "<i>Ich freue mich **über** dein Geschenk.</i> — il est déjà là."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« Je me réjouis du voyage de demain. » → <i>Ich freue mich ___ die Reise.</i> → **auf**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {"titre": "Cherche le verbe", "texte": "Quelle préposition **exige-t-il**&nbsp;? Pas celle du français."},
+            {"titre": "Retiens le cas", "texte": "<i>an, auf, über, vor</i> ici : cas **fixe**, accusatif ou datif."},
+            {"titre": "Construis", "texte": "<i>Ich interessiere mich **für** Politik und nehme **an** einer Debatte **teil**.</i>"}
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À mémoriser par paires",
+          "deux": true,
+          "items": [
+            {"titre": "<i>warten auf</i> + acc.", "texte": "attendre — sans préposition en français"},
+            {"titre": "<i>Angst haben vor</i> + dat.", "texte": "avoir peur **de**"},
+            {"titre": "<i>sich kümmern um</i> + acc.", "texte": "s’occuper de"},
+            {"titre": "<i>sprechen über</i> + acc.", "texte": "parler **de**"}
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Ich warte dich</i> → <i>Ich warte **auf** dich.</i>",
+            "<i>Ich habe Angst von</i> → <i>Angst **vor** dem Test.</i>",
+            "« de » ne donne pas toujours <i>von</i> : <i>sprechen **über**</i>, <i>sich kümmern **um**</i>.",
+            "<i>teilnehmen</i> est séparable : <i>Ich nehme an der Debatte **teil**.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Complète&nbsp;: <i>Ich warte ___ den Bus.</i>",
+            "Complète&nbsp;: <i>Sie hat Angst ___ dem Test.</i>",
+            "« S’intéresser à » en allemand&nbsp;?"
+          ],
+          "reponses": "1) auf 2) vor 3) sich interessieren für"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "titre": "Le causatif",
+  "titreSurligne": "causatif",
+  "accroche": "Make, have, get, let&nbsp;: quatre degrés.",
+  "bonus": "**make / have / let** + base · **get** + to + base · **have / get** + objet + participe",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/anglais/faire-faire-quelque-chose-a-quelqu-un.webp",
+    "prompt": "a glossy violet puppet-style hand with golden strings pulling a small golden gear, a golden lever beside it, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Je le fais faire,\nmoi je révise&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le seul avec to",
+          "lignes": [
+            "make / have / let + **base**",
+            "get + **to** + base"
+          ],
+          "petite": true,
+          "regle": "Le français dit « faire faire »&nbsp;; l’anglais choisit un verbe selon le **degré de contrainte**. **Get** est le seul des quatre à prendre <i>to</i>.",
+          "note": "le détail qui rapporte"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les quatre verbes",
+          "entetes": [
+            "Verbe",
+            "Sens",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "make",
+              "La contrainte",
+              "<i>She **made** me **wait**.</i>"
+            ],
+            [
+              "have",
+              "On le demande à qui c’est le rôle",
+              "<i>I **had** the mechanic **check** the brakes.</i>"
+            ],
+            [
+              "get",
+              "On obtient, on persuade",
+              "<i>I **got** him **to help** me.</i>"
+            ],
+            [
+              "let",
+              "La permission",
+              "<i>**Let** me **explain**.</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Quand c’est un tiers qui agit",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "have + objet + participe",
+              "texte": "On fait faire par un tiers&nbsp;: <i>I **had my hair cut**.</i> (le coiffeur le fait)"
+            },
+            {
+              "titre": "get + objet + participe",
+              "texte": "Même sens, plus familier&nbsp;: <i>She **got her car repaired**.</i>"
+            },
+            {
+              "titre": "En français",
+              "texte": "C’est « se faire »&nbsp;: « je me suis fait couper les cheveux ». Le résultat compte, pas l’exécutant."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Qui fait l’action&nbsp;?",
+          "oui": {
+            "titre": "Un tiers",
+            "texte": "<i>I **had my hair cut** yesterday.</i> — je suis allé chez le coiffeur."
+          },
+          "non": {
+            "titre": "Moi-même",
+            "texte": "<i>I **cut** my hair yesterday.</i> — c’est moi qui ai tenu les ciseaux."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« Elle a fait réparer sa voiture. » → <i>She **got her car repaired**.</i>"
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Quel degré&nbsp;?",
+              "texte": "Contrainte → **make**. Rôle → **have**. Persuasion → **get**. Permission → **let**."
+            },
+            {
+              "titre": "Qui agit&nbsp;?",
+              "texte": "Une personne nommée → base (ou <i>to</i> après get). Un tiers qui compte peu → objet + **participe**."
+            },
+            {
+              "titre": "Le to&nbsp;?",
+              "texte": "Seulement après **get**. Au passif de <i>make</i>, il revient."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Le passif de ces verbes",
+          "deux": true,
+          "items": [
+            {
+              "titre": "make → passif",
+              "texte": "<i>She made me wait</i> → <i>I was made **to** wait.</i>"
+            },
+            {
+              "titre": "let → allowed",
+              "texte": "<i>They let him go</i> → <i>He was **allowed** to go.</i>"
+            },
+            {
+              "titre": "let me + base",
+              "texte": "<i>Let me think.</i> — « laisse-moi réfléchir »"
+            },
+            {
+              "titre": "make sb + adjectif",
+              "texte": "<i>This music **makes** me **happy**.</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>She made me to wait</i> → <i>She made me **wait**.</i>",
+            "<i>I got him help me</i> → <i>I got him **to help** me.</i>",
+            "<i>I cut my hair at the hairdresser’s</i> → <i>I **had** my hair **cut**.</i>",
+            "<i>He was let go</i> → <i>He was **allowed** to go.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>The teacher made us ___ (rewrite) the essay.</i>",
+            "<i>I got my sister ___ (lend) me her bike.</i>",
+            "Traduis&nbsp;: « Il s’est fait couper les cheveux. »"
+          ],
+          "reponses": "1) rewrite 2) to lend 3) He had his hair cut."
+        }
+      ]
+    }
+  ]
+}

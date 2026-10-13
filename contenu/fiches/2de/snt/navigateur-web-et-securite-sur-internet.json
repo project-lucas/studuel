@@ -1,0 +1,171 @@
+{
+  "titre": "Navigateur et sécurité",
+  "titreSurligne": "sécurité",
+  "accroche": "La fenêtre par laquelle tout passe.",
+  "bonus": "**Hameçonnage** · **rançongiciel** · cookie **tiers** = pistage · **RGPD** 2018 · mot de passe long + **double authentification**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/navigateur-web-et-securite-sur-internet.webp",
+    "prompt": "a glossy violet browser window with a golden padlock shield and a small golden cookie, sparkles"
+  },
+  "marcel": "Un cadenas,\nça se vérifie !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Navigateur",
+              "definition": "demande, interprète et **affiche** les pages"
+            },
+            {
+              "terme": "Cookie propre",
+              "definition": "retient panier, connexion, préférences"
+            },
+            {
+              "terme": "Cookie tiers",
+              "definition": "déposé par une régie : **suit** d’un site à l’autre"
+            },
+            {
+              "terme": "RGPD",
+              "definition": "depuis **2018**, consentement libre et éclairé"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les menaces",
+          "entetes": [
+            "Menace",
+            "Mécanisme"
+          ],
+          "lignes": [
+            [
+              "**Hameçonnage**",
+              "imite un site de confiance"
+            ],
+            [
+              "**Logiciel malveillant**",
+              "pièce jointe, téléchargement"
+            ],
+            [
+              "**Rançongiciel**",
+              "chiffre les fichiers, exige une rançon"
+            ],
+            [
+              "**Wifi public**",
+              "échanges exposés"
+            ],
+            [
+              "**Extensions**",
+              "chacune voit tout ce que tu fais"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Avant de saisir un mot de passe",
+          "etapes": [
+            {
+              "titre": "Vérifier",
+              "texte": "l’adresse exacte et le cadenas HTTPS"
+            },
+            {
+              "titre": "Protéger",
+              "texte": "mot de passe long, différent, et double authentification"
+            },
+            {
+              "titre": "Mettre à jour",
+              "texte": "navigateur et système : les failles connues sont corrigées"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un courriel de ta « banque » demande de __confirmer__ ton mot de passe via un lien.",
+          "calcul": "faux site qui imite le vrai",
+          "aparte": "adresse suspecte",
+          "resultat": "[[hameçonnage]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Cookie : lequel&nbsp;?",
+          "oui": {
+            "titre": "Propre au site",
+            "texte": "Se souvenir de **toi** : panier, connexion, langue."
+          },
+          "non": {
+            "titre": "Tiers",
+            "texte": "Un annonceur te **suit** de site en site pour te profiler."
+          },
+          "essai": {
+            "texte": "Le consentement aux cookies non nécessaires est exigé par le RGPD."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Un cookie tiers permet le pistage.",
+              "quoi": "le risque"
+            },
+            {
+              "texte": "Le RGPD impose le consentement.",
+              "quoi": "le droit"
+            },
+            {
+              "texte": "La double authentification protège.",
+              "quoi": "la parade"
+            }
+          ],
+          "pied": "Un service gratuit vit de ==l’attention== et des ==données== de l’utilisateur."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que la **navigation privée** rend anonyme (le fournisseur et le site voient tout).",
+            "Réutiliser le **même mot de passe** partout.",
+            "Se fier au seul **cadenas** pour juger un site.",
+            "Multiplier les **extensions** : chacune voit tout.",
+            "Cliquer sur un lien de **courriel** sans vérifier l’expéditeur."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel cookie **suit** l’internaute d’un site à l’autre&nbsp;?",
+            "Que fait un **rançongiciel**&nbsp;?",
+            "Que protège la **double authentification**&nbsp;?"
+          ],
+          "reponses": "1) le cookie tiers · 2) chiffre les fichiers et exige une rançon · 3) le compte, même si le mot de passe fuite"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "titre": "L’érosion",
+  "titreSurligne": "érosion",
+  "accroche": "Altérer, arracher, transporter.",
+  "bonus": "**Altération** → **ablation** → **transport** · calcaire : dissolution · granite : hydrolyse → argile + quartz",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/svt/l-erosion-phenomene-naturel-et-inexorable.webp",
+    "prompt": "a glossy violet mountain peak with golden cracks and small rocks tumbling down into a golden stream, sparkles, same art style as the reference icons"
+  },
+  "marcel": "La montagne finit\nen sable !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "Trois étapes",
+          "etapes": [
+            {
+              "date": "Altération",
+              "texte": "fragilise la roche **sur place**"
+            },
+            {
+              "date": "Ablation",
+              "texte": "arrache les débris"
+            },
+            {
+              "date": "Transport",
+              "texte": "emporte vers un lieu de dépôt"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Altération physique",
+          "entetes": [
+            "Processus",
+            "Mécanisme"
+          ],
+          "lignes": [
+            [
+              "**Gélifraction**",
+              "l’eau gèle, gonfle, fait éclater"
+            ],
+            [
+              "Température",
+              "dilatations, contractions"
+            ],
+            [
+              "**Racines**",
+              "écartent les fissures"
+            ],
+            [
+              "**Abrasion**",
+              "vent et grains transportés"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Altération chimique",
+          "entetes": [
+            "Roche",
+            "Réaction",
+            "Résultat"
+          ],
+          "lignes": [
+            [
+              "**Calcaire**",
+              "**dissolution** (eau + CO<sub>2</sub>)",
+              "paysage **karstique**"
+            ],
+            [
+              "**Granite**",
+              "**hydrolyse** des silicates",
+              "feldspath → **argile**, quartz en grains"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Ce qui commande l’érosion",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Roche",
+              "texte": "calcaire se dissout, granite s’hydrolyse, grès résiste."
+            },
+            {
+              "titre": "Climat",
+              "texte": "chaleur et humidité&nbsp;: chimique&nbsp;; gel&nbsp;: physique."
+            },
+            {
+              "titre": "Pente",
+              "texte": "règle la vitesse d’évacuation."
+            },
+            {
+              "titre": "Végétation",
+              "texte": "**freine** l’érosion."
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Lire un grain",
+          "donnees": "Grains arrondis et triés.",
+          "calcul": "Transport long par l’eau ou le vent.",
+          "resultat": "[[la forme raconte l’histoire]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Le transport",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Eau",
+              "texte": "rivières, torrents, glaciers"
+            },
+            {
+              "titre": "Vent",
+              "texte": "régions sèches"
+            },
+            {
+              "titre": "Gravité",
+              "texte": "sur les pentes"
+            },
+            {
+              "titre": "Bilan",
+              "texte": "plus long = grains **arrondis** et **triés**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "L’eau gèle dans les fissures et augmente de volume.",
+              "quoi": "cause"
+            },
+            {
+              "texte": "La roche éclate en fragments.",
+              "quoi": "effet"
+            }
+          ],
+          "pied": "Paysages = course entre ==surrection== et usure."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre altération **physique** et **chimique**.",
+            "Dire que le quartz se **dissout**&nbsp;: il subsiste.",
+            "Oublier que le granite donne une **arène granitique**.",
+            "Croire que la végétation **accélère** l’érosion."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel processus fait éclater une roche gelée&nbsp;?",
+            "Quelle réaction transforme le feldspath du granite&nbsp;?",
+            "Que forme la dissolution du calcaire&nbsp;?"
+          ],
+          "reponses": "1) la gélifraction · 2) l’hydrolyse · 3) un paysage karstique"
+        }
+      ]
+    }
+  ]
+}

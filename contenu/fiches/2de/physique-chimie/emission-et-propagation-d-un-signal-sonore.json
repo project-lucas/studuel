@@ -1,0 +1,111 @@
+{
+  "titre": "Le signal sonore",
+  "titreSurligne": "sonore",
+  "accroche": "Le son vibre, voyage, puis se reçoit.",
+  "bonus": "v = d ÷ Δt · écho : d = v × Δt ÷ 2 · air : **340 m·s⁻¹** · pas de son dans le **vide**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/emission-et-propagation-d-un-signal-sonore.webp",
+    "prompt": "a glossy violet loudspeaker with golden curved sound waves spreading out and a tiny golden ear, sparkles"
+  },
+  "marcel": "Sans matière,\npas de son !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La célérité",
+          "petite": true,
+          "lignes": ["v = {d/Δt}"],
+          "regle": "**d** en mètres, **Δt** en secondes, **v** en m·s⁻¹. Écho : l’aller-retour double la distance, donc ==d = v × Δt ÷ 2==.",
+          "note": "diviser par 2 pour un écho&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "La célérité du son",
+          "entetes": ["Milieu", "Célérité"],
+          "lignes": [
+            ["**Air** à 20 °C", "≈ 340 m·s⁻¹"],
+            ["**Eau**", "≈ 1 500 m·s⁻¹"],
+            ["**Acier**", "> 5 000 m·s⁻¹"],
+            ["**Vide**", "aucun son"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La chaîne du son",
+          "etapes": [
+            { "titre": "Émission", "texte": "une source vibre : corde, membrane, cordes vocales" },
+            { "titre": "Propagation", "texte": "de proche en proche dans un milieu matériel, sans transport de matière" },
+            { "titre": "Réception", "texte": "un détecteur convertit la vibration : oreille, microphone" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un sonar reçoit son écho au bout de 0,40 s dans l’eau (v = 1 500 m·s⁻¹). Quelle __profondeur__&nbsp;?",
+          "calcul": "d = 1 500 × 0,40 ÷ 2",
+          "aparte": "÷ 2 : aller-retour",
+          "resultat": "d = [[300 m]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Que transporte une onde sonore&nbsp;?",
+          "oui": { "titre": "De l’énergie", "texte": "La perturbation avance de molécule en molécule : compressions et dilatations." },
+          "non": { "titre": "De la matière", "texte": "Chaque molécule **oscille** autour de sa position d’équilibre, elle ne voyage pas." },
+          "essai": { "texte": "Orage&nbsp;: 6 s entre l’éclair et le tonnerre, soit <i>340 × 6 ≈ 2 km</i> (la lumière arrive presque instantanément)." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le son est une onde mécanique : il lui faut un milieu matériel.", "quoi": "le cours" },
+            { "texte": "d = v × Δt ÷ 2 = 1 500 × 0,40 ÷ 2", "quoi": "formule puis nombres" },
+            { "texte": "d = 300 m", "quoi": "avec l’unité" }
+          ],
+          "pied": "Pour localiser une source, on mesure le ==retard== Δt = (d₂ − d₁) ÷ v entre deux détecteurs."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier de diviser par **2** pour un écho.",
+            "Croire que le son passe dans le **vide**.",
+            "Laisser Δt en **ms** avec v en m·s⁻¹.",
+            "Dire que la **matière** voyage avec l’onde."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Le son se propage-t-il dans le **vide**&nbsp;?",
+            "Écho en 2,0 s dans l’air (340 m·s⁻¹)&nbsp;: **d**&nbsp;?",
+            "Dans quel milieu va-t-il le plus vite&nbsp;: air, eau ou acier&nbsp;?"
+          ],
+          "reponses": "1) non · 2) 340 m · 3) l’acier"
+        }
+      ]
+    }
+  ]
+}

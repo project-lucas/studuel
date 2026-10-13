@@ -1,0 +1,158 @@
+{
+  "titre": "La ponctuation",
+  "titreSurligne": "ponctuation",
+  "accroche": "En allemand, la virgule est une règle.",
+  "bonus": "subordonnée = **virgule** · und / oder = **pas de virgule** · **tous** les noms prennent la majuscule",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/allemand/la-ponctuation.webp",
+    "prompt": "a glossy violet comma with a golden dot and two golden German quotation marks beside it, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Une virgule&nbsp;?\nC’est la règle&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La virgule",
+          "lignes": ["**frontière** grammaticale"],
+          "petite": true,
+          "regle": "En français, la virgule suit la voix. En allemand, elle marque une **frontière** : la mettre ou l’omettre est une **règle**, pas un style.",
+          "note": "devant chaque subordonnée"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Virgule ou pas",
+          "entetes": ["Devant…", "Virgule", "L’exemple"],
+          "lignes": [
+            ["Une subordonnée", "**Oui**", "<i>Ich weiß**,** dass er kommt.</i>"],
+            ["<i>aber, sondern, denn</i>", "**Oui**", "<i>Er ist arm**,** aber glücklich.</i>"],
+            ["<i>um… zu, ohne… zu</i>", "**Oui**", "<i>Ich lerne**,** um zu studieren.</i>"],
+            ["<i>und, oder</i>", "**Non**", "<i>Ich lese und ich lerne.</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les trois signes à connaître",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Guillemets et deux-points",
+              "texte": "On ouvre **en bas**, on ferme **en haut** : <i>Er sagt: „Ich komme.“</i> — deux-points avant le discours direct."
+            },
+            {
+              "titre": "La majuscule",
+              "texte": "**Tous** les noms : <i>das Haus, die Freiheit</i> ; aussi <i>das Lesen, das Wichtigste</i> et le <i>Sie</i> de politesse."
+            },
+            {
+              "titre": "ß ou ss",
+              "texte": "**ß** après voyelle longue ou diphtongue : <i>Straße, heißen</i> ; **ss** après voyelle brève : <i>Fluss, dass</i>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Virgule devant dass&nbsp;?",
+          "oui": {
+            "titre": "Virgule obligatoire",
+            "texte": "<i>Ich glaube**,** dass er recht hat.</i> (Je crois qu’il a raison.)"
+          },
+          "non": {
+            "titre": "Virgule oubliée",
+            "texte": "<i>Ich glaube dass er recht hat.</i> — en français « que » ne demande rien, en allemand si."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Ich weiß dass du kommst.</i> → <i>Ich weiß**,** dass du kommst.</i>"
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Faut-il une virgule&nbsp;?",
+          "etapes": [
+            {
+              "titre": "Un verbe à la fin&nbsp;?",
+              "texte": "Subordonnée (<i>dass, weil, ob…</i>) → virgule **devant**, et **derrière** si elle est enchâssée."
+            },
+            {
+              "titre": "Quel connecteur&nbsp;?",
+              "texte": "<i>aber, sondern, denn</i> → virgule. <i>und, oder</i> → pas de virgule."
+            },
+            {
+              "titre": "Un groupe en zu&nbsp;?",
+              "texte": "<i>um… zu, ohne… zu, statt… zu</i> → virgule ; <i>zu</i> seul → facultative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Sie ou sie&nbsp;?",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Sie, Ihnen, Ihr",
+              "texte": "politesse → **majuscule** : <i>Wie geht es **Ihnen**?</i>"
+            },
+            {
+              "titre": "sie, ihnen, ihr",
+              "texte": "« elle », « ils » → minuscule : <i>Sie sagt, **sie** kommt.</i>"
+            },
+            {
+              "titre": "Suisse",
+              "texte": "pas de ß : on écrit toujours <i>ss</i> (<i>Strasse</i>)."
+            },
+            {
+              "titre": "Enchâssée",
+              "texte": "<i>Das Buch**,** das ich lese**,** ist gut.</i> — virgule des deux côtés."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier la virgule devant <i>dass</i> : <i>Ich weiß**,** dass…</i>",
+            "<i>das Haus</i> en minuscule : <i>das haus</i> → <i>das **H**aus</i>. Tous les noms !",
+            "<i>Er sagt, „Ich komme“</i> → <i>Er sagt**:** „Ich komme.“</i>",
+            "<i>dass</i> / <i>das</i> : <i>dass</i> (que) a deux <i>s</i> après voyelle brève."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Ponctue&nbsp;: <i>Er ist arm aber glücklich.</i>",
+            "Complète&nbsp;: <i>die Stra_e</i> (ß ou ss&nbsp;?)",
+            "À un inconnu&nbsp;: <i>Wie geht es ihnen?</i> — corrige."
+          ],
+          "reponses": "1) arm, aber 2) Straße (ß) 3) Ihnen (majuscule)"
+        }
+      ]
+    }
+  ]
+}

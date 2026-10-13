@@ -1,0 +1,175 @@
+{
+  "titre": "L’adjectif possessif",
+  "titreSurligne": "possessif",
+  "accroche": "Le radical suit le possesseur.",
+  "bonus": "radical = **possesseur** (sein / ihr) · terminaison = **objet possédé** (genre, nombre, cas)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/allemand/l-adjectif-possessif.webp",
+    "prompt": "a glossy violet hand holding a small golden key with a tiny golden heart tag, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Sein ou ihr&nbsp;?\nRegarde qui possède&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Deux regards",
+          "lignes": [
+            "**radical** + terminaison"
+          ],
+          "petite": true,
+          "regle": "Le **radical** dépend du **possesseur** ; la **terminaison** de l’objet possédé, comme celle de <i>ein</i> et <i>kein</i> (avec un pluriel en plus).",
+          "note": "meine, meinen, meiner"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "La liste",
+          "entetes": [
+            "Allemand",
+            "Français"
+          ],
+          "lignes": [
+            [
+              "<i>mein · dein</i>",
+              "mon · ton"
+            ],
+            [
+              "<i>**sein**</i> / <i>**ihr**</i>",
+              "son (à lui) / son (à elle)"
+            ],
+            [
+              "<i>unser · euer</i>",
+              "notre · votre"
+            ],
+            [
+              "<i>ihr</i> / <i>**Ihr**</i>",
+              "leur / votre (politesse, majuscule)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Qui possède&nbsp;?",
+          "oui": {
+            "titre": "Le possesseur décide",
+            "texte": "<i>Peter und **seine** Schwester</i> — Peter est un homme, la sœur est féminine (-e)."
+          },
+          "non": {
+            "titre": "Le calque du français",
+            "texte": "<i>Peter und ihre Schwester</i> — « sa sœur » ne dit pas **qui** possède."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Anna und ___ Bruder</i> → <b>ihr</b> Bruder&nbsp;: Anna est une femme, Bruder masc. nominatif, aucune terminaison."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Trois cas particuliers",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "euer → eur-",
+              "texte": "devant une terminaison, le e saute&nbsp;: <i>eure Mutter, euren Vater</i>, jamais <i>euere</i>."
+            },
+            {
+              "titre": "unser",
+              "texte": "garde son e&nbsp;: <i>unsere Mutter</i>. <i>unsere Mutter, unseren Vater</i>."
+            },
+            {
+              "titre": "Employé seul",
+              "texte": "<i>Das ist **meins**.</i> — terminaisons de l’article défini."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Le possesseur",
+              "texte": "Un homme → <b>sein</b> ; une femme → <b>ihr</b> ; plusieurs → <b>ihr</b>."
+            },
+            {
+              "titre": "L’objet possédé",
+              "texte": "Repère son **genre**, son **nombre**, son **cas**."
+            },
+            {
+              "titre": "La terminaison",
+              "texte": "Comme <i>ein / kein</i> ; pluriel : <i>meine, meinen</i>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Corps et vêtements",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Article + datif",
+              "texte": "pas de possessif&nbsp;: <i>Ich wasche **mir die** Hände.</i>"
+            },
+            {
+              "titre": "Vêtement",
+              "texte": "<i>Er zieht **sich den** Mantel an.</i>"
+            },
+            {
+              "titre": "En français",
+              "texte": "« je me lave **les** mains », « il met **son** manteau »."
+            },
+            {
+              "titre": "Politesse",
+              "texte": "<i>Ihr Name</i> : **majuscule** toujours."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Choisir le radical sur l’objet&nbsp;: <i>Anna und seine Bruder</i> → <i>Anna und **ihr** Bruder.</i>",
+            "<i>euere Mutter</i> → <i>**eure** Mutter.</i>",
+            "<i>Ich wasche meine Hände</i> → <i>Ich wasche **mir die** Hände.</i>",
+            "Oublier la majuscule de <i>Ihr</i> poli."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Paul und ___ Schwester</i> (sa sœur à lui)&nbsp;?",
+            "<i>Wir lieben ___ Mutter</i> (euer, accusatif fém.)&nbsp;?",
+            "Traduis&nbsp;: Je me lave les mains."
+          ],
+          "reponses": "1) seine 2) eure 3) Ich wasche mir die Hände."
+        }
+      ]
+    }
+  ]
+}

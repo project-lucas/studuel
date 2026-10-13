@@ -1,0 +1,114 @@
+{
+  "titre": "Client-serveur / P2P",
+  "titreSurligne": "P2P",
+  "accroche": "Qui demande, qui fournit ?",
+  "bonus": "Client-serveur = **centralisé** · pair-à-pair = **réparti** · modèles **mixtes** : annuaire central + transfert P2P",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/deux-modeles-de-service-les-reseaux-client-serveur-et-pair-a.webp",
+    "prompt": "a glossy violet server rack on one side and a ring of small golden linked computers on the other, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Une bibliothèque,\nou des voisins ?",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les deux modèles",
+          "entetes": ["Critère", "Client-serveur", "Pair-à-pair"],
+          "lignes": [
+            ["Principe", "un serveur répond, un client demande", "chaque machine est client **et** serveur"],
+            ["Contenu", "centralisé", "**réparti** entre les participants"],
+            ["Si la demande augmente", "le serveur **ralentit**", "le réseau **accélère**"],
+            ["Point faible", "point unique de **défaillance**", "contrôle des contenus difficile"],
+            ["Usages", "Web, courrier, applications", "partage de fichiers, crypto-monnaies"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Protéger un serveur",
+          "entetes": ["Risque", "Parade"],
+          "lignes": [
+            ["Panne", "**réplication** sur plusieurs machines"],
+            ["Saturation (déni de service)", "fermes de serveurs"],
+            ["Éloignement", "réseaux de distribution de contenu"]
+          ]
+        },
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les forces du pair-à-pair",
+          "colonnes": 1,
+          "cartes": [
+            { "titre": "Résiste à la censure", "texte": "mais retirer un contenu illicite est difficile" },
+            { "titre": "Résiste à la panne", "texte": "mais aucune autorité ne garantit la qualité" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un site est __saturé__ le jour des résultats. Quel modèle est en cause&nbsp;?",
+          "calcul": "un seul serveur répond",
+          "aparte": "il ralentit",
+          "resultat": "[[client-serveur]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quel modèle&nbsp;?",
+          "oui": { "titre": "Client-serveur", "texte": "Un serveur central, comme **une bibliothèque**." },
+          "non": { "titre": "Pair-à-pair", "texte": "Chacun prête ses livres à ses voisins." },
+          "essai": { "texte": "Beaucoup de services sont mixtes : serveur central pour l’annuaire, P2P pour le transfert lourd." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Dans le P2P, chaque machine est client et serveur.", "quoi": "la définition" },
+            { "texte": "Plus d’utilisateurs, plus de capacité.", "quoi": "la montée en charge" },
+            { "texte": "Le serveur est un point unique de défaillance.", "quoi": "la limite" }
+          ],
+          "pied": "Parade&nbsp;: la ==réplication== sur plusieurs machines."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le P2P est **toujours illégal**.",
+            "Penser que plus d’utilisateurs **ralentit** un P2P.",
+            "Oublier le **point unique** de défaillance.",
+            "Croire qu’un service est **soit l’un, soit l’autre**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dans quel modèle le contenu est-il **réparti** ?",
+            "Quelle **parade** contre la panne d’un serveur ?",
+            "Que fait un **déni de service** ?"
+          ],
+          "reponses": "1) le pair-à-pair · 2) la réplication sur plusieurs machines · 3) il sature le serveur"
+        }
+      ]
+    }
+  ]
+}

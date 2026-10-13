@@ -1,0 +1,179 @@
+{
+  "titre": "La voix passive",
+  "titreSurligne": "passive",
+  "accroche": "Be conjugué + participe passé.",
+  "bonus": "**be** porte le temps · le participe ne bouge jamais · agent avec **by**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/anglais/la-voix-passive.webp",
+    "prompt": "a glossy violet arrow looping back on itself and turning around a golden ball, two curved golden arrows swapping places, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Le sujet subit,\nmoi je gère&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La forme",
+          "lignes": [
+            "**be** + participe passé"
+          ],
+          "petite": true,
+          "regle": "C’est **be** qui porte le temps&nbsp;; le participe passé (3<sup>e</sup> colonne ou -ed) ne change jamais.",
+          "note": "be s’accorde, pas le participe"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Be porte le temps",
+          "entetes": [
+            "Temps",
+            "Forme passive"
+          ],
+          "lignes": [
+            [
+              "Présent simple",
+              "<i>It **is made** in France.</i>"
+            ],
+            [
+              "Prétérit",
+              "<i>It **was made** in 1990.</i>"
+            ],
+            [
+              "Present perfect",
+              "<i>It **has been made**.</i>"
+            ],
+            [
+              "Futur",
+              "<i>It **will be made**.</i>"
+            ],
+            [
+              "Présent en -ING",
+              "<i>It **is being made**.</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Pourquoi passiver&nbsp;?",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "L’agent est inconnu",
+              "texte": "<i>My bike **was stolen**.</i> — on ne sait pas qui."
+            },
+            {
+              "titre": "L’agent est évident",
+              "texte": "<i>He **was arrested**.</i> — par la police, inutile de le dire."
+            },
+            {
+              "titre": "Le résultat compte",
+              "texte": "<i>The results **were published**.</i> — l’agent <b>by</b> n’est ajouté que s’il apporte quelque chose."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Actif ou passif&nbsp;?",
+          "oui": {
+            "titre": "Un agent qui compte",
+            "texte": "<i>The novel **was written by** Orwell.</i> — **by** + l’agent."
+          },
+          "non": {
+            "titre": "Un agent inutile",
+            "texte": "<i>The novel was written **by someone**.</i> — on le supprime&nbsp;: <i>The novel was written.</i>"
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>They gave John a prize.</i> → <i>John **was given** a prize.</i> (la personne d’abord)"
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Repère le temps",
+              "texte": "Le temps de la phrase active passe sur **be**."
+            },
+            {
+              "titre": "Le complément devient sujet",
+              "texte": "<i>They stole my bike</i> → <i>My bike…</i>"
+            },
+            {
+              "titre": "Ajoute le participe",
+              "texte": "<i>My bike **was stolen**.</i> Agent avec <b>by</b> seulement si utile."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les tournures à connaître",
+          "deux": true,
+          "items": [
+            {
+              "titre": "It is said that…",
+              "texte": "« On dit que… »&nbsp;: <i>It is believed that…</i> (on croit)"
+            },
+            {
+              "titre": "He is said to be…",
+              "texte": "« Il serait… »&nbsp;: <i>He is said to be rich.</i>"
+            },
+            {
+              "titre": "He is said to have left",
+              "texte": "« Il aurait quitté… »&nbsp;: le passé via <i>to have</i> + participe"
+            },
+            {
+              "titre": "Le double passif",
+              "texte": "<i>John was given a prize</i> (préféré) ou <i>A prize was given to John.</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>The book was wrote</i> → <i>was **written**</i> (le participe, pas le prétérit).",
+            "Passif anglais ≠ passif français&nbsp;: souvent on traduit par **« on »**.",
+            "<i>It is being made</i> (en cours) ≠ <i>It is made</i> (habituel).",
+            "<i>is said to leave</i> ≠ <i>is said to **have left**</i>&nbsp;: le passé exige to have + participe."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Passif&nbsp;: <i>They built this bridge in 1900.</i>",
+            "<i>The report ___ (publish) tomorrow.</i> (futur passif)",
+            "Traduis&nbsp;: <i>He is said to have left.</i>"
+          ],
+          "reponses": "1) This bridge was built in 1900 2) will be published 3) Il aurait quitté les lieux."
+        }
+      ]
+    }
+  ]
+}

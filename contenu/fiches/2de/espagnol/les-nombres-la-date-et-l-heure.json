@@ -1,0 +1,180 @@
+{
+  "titre": "Nombres, date, heure",
+  "titreSurligne": "heure",
+  "accroche": "Cien ou ciento&nbsp;? Es la una, son las dos.",
+  "bonus": "**cien** / **ciento** · **quinientos, setecientos, novecientos** · **es la una / son las…**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/espagnol/les-nombres-la-date-et-l-heure.webp",
+    "prompt": "a glossy violet calendar page next to a golden clock showing a quarter past three, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Compter, dater,\nlire l’heure&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Cien ou ciento&nbsp;?",
+          "lignes": [
+            "**cien** (100)\n**ciento** (101-199)"
+          ],
+          "petite": true,
+          "regle": "<i>Cien</i> seul ou devant un nom (<i>cien euros</i>, <i>cien mil</i>)&nbsp;; <i>ciento</i> dès 101 (<i>ciento veinte</i>). Le **y** ne se met qu’entre dizaines et unités.",
+          "note": "ciento cinco, pas «&nbsp;ciento y cinco&nbsp;»"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les nombres à retenir",
+          "entetes": [
+            "Le nombre",
+            "La règle",
+            "L’exemple"
+          ],
+          "lignes": [
+            [
+              "16 à 29",
+              "un seul mot",
+              "<i>dieciséis, veintiuno, veintitrés</i>"
+            ],
+            [
+              "À partir de 31",
+              "dizaine + **y** + unité",
+              "<i>treinta y uno, noventa y nueve</i>"
+            ],
+            [
+              "Centaines",
+              "elles s’accordent",
+              "<i>doscientos chicos, doscientas chicas</i>"
+            ],
+            [
+              "500 · 700 · 900",
+              "irréguliers",
+              "<i>**quinientos, setecientos, novecientos**</i>"
+            ],
+            [
+              "Mil / millón",
+              "mil invariable ; millón + **de**",
+              "<i>dos mil · un millón **de** personas</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "L’heure",
+          "entetes": [
+            "En français",
+            "En espagnol"
+          ],
+          "lignes": [
+            [
+              "Il est une heure",
+              "<i>Es **la** una.</i> (singulier)"
+            ],
+            [
+              "Il est deux heures",
+              "<i>**Son las** dos.</i>"
+            ],
+            [
+              "3 h 15 · 3 h 30",
+              "<i>Son las tres **y cuarto** · **y media**.</i>"
+            ],
+            [
+              "3 h 45",
+              "<i>Son las cuatro **menos cuarto**.</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Dire une date",
+          "etapes": [
+            {
+              "titre": "Le jour",
+              "texte": "Le nombre cardinal&nbsp;: <i>veintitrés de abril</i> (sauf <i>el primero</i>)."
+            },
+            {
+              "titre": "De + mois + de",
+              "texte": "<i>de abril **de** mil seiscientos dieciséis</i>."
+            },
+            {
+              "titre": "L’année",
+              "texte": "Se lit comme un nombre&nbsp;: <i>dos mil veintiséis</i>."
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Lire « 23 avril 1616, 500 personnes ».",
+          "calcul": "el veintitrés de abril de mil seiscientos dieciséis",
+          "aparte": "personnas = féminin",
+          "resultat": "[[quinientas]] personas"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Les ordinaux",
+          "deux": true,
+          "items": [
+            {
+              "titre": "primero, segundo, tercero",
+              "texte": "cuarto, quinto, sexto, séptimo…"
+            },
+            {
+              "titre": "Apocope",
+              "texte": "<i>el **primer** día, el **tercer** piso</i>"
+            },
+            {
+              "titre": "Après dix",
+              "texte": "on emploie le cardinal&nbsp;: <i>el siglo XXI (veintiuno)</i>"
+            },
+            {
+              "titre": "Les décennies",
+              "texte": "<i>los años ochenta</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>ciento euros</i> (100) → <i>**cien** euros.</i>",
+            "<i>ciento y cinco</i> → <i>ciento cinco.</i>",
+            "<i>cincocientos</i> → <i>**quinientos**.</i>",
+            "<i>Es las dos</i> → <i>**Son** las dos</i>&nbsp;; mais <i>**Es** la una.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "100 euros → <i>___ euros.</i>",
+            "3 h 45 → <i>Son las cuatro ___ cuarto.</i>",
+            "500 filles → <i>___ chicas.</i>"
+          ],
+          "reponses": "1) cien 2) menos 3) quinientas"
+        }
+      ]
+    }
+  ]
+}

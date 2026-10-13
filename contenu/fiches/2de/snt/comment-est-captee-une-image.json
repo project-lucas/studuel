@@ -1,0 +1,113 @@
+{
+  "titre": "Capter une image",
+  "titreSurligne": "Capter",
+  "accroche": "De la lumière aux nombres.",
+  "bonus": "Capteur = **photosites** · matrice de **Bayer** = 2 verts pour 1 rouge et 1 bleu · CAN = charge → **nombre** · **RAW** = données brutes",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/comment-est-captee-une-image.webp",
+    "prompt": "a glossy violet camera with a golden lens and a small golden checkerboard sensor floating beside it, sparkles"
+  },
+  "marcel": "Le capteur compte\ndes photons !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Capteur", "definition": "CCD ou plus souvent **CMOS**&nbsp;: des millions de **photosites**" },
+            { "terme": "Photosite", "definition": "accumule des charges **proportionnelles** à la lumière" },
+            { "terme": "Matrice de Bayer", "definition": "filtres colorés&nbsp;: **deux verts** pour un rouge et un bleu" },
+            { "terme": "Dématriçage", "definition": "calcul qui reconstitue les **trois composantes** d’un pixel" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Ce qui fait la qualité",
+          "entetes": ["Facteur", "Effet"],
+          "lignes": [
+            ["**taille** des photosites", "plus que les mégapixels"],
+            ["**ouverture**, exposition", "quantité de lumière"],
+            ["**sensibilité** haute", "plus de **bruit**"],
+            ["**optique**", "netteté, aberrations"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "De la lumière au fichier",
+          "etapes": [
+            { "titre": "Collecter", "texte": "les photosites reçoivent la lumière derrière un filtre coloré" },
+            { "titre": "Mesurer", "texte": "chaque charge électrique est proportionnelle à la lumière" },
+            { "titre": "Coder", "texte": "le convertisseur analogique-numérique donne un entier" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Sur 4 photosites d’un motif de Bayer, combien de __verts__&nbsp;?",
+          "calcul": "1 rouge + 2 verts + 1 bleu",
+          "aparte": "l’œil aime le vert",
+          "resultat": "= [[2 verts]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Un photosite voit-il la couleur&nbsp;?",
+          "oui": { "titre": "Il compte", "texte": "Il **compte des photons** derrière un filtre coloré." },
+          "non": { "titre": "Il ne voit pas", "texte": "Il ne perçoit **pas** la couleur&nbsp;: elle est **calculée** ensuite." },
+          "essai": { "texte": "Le format **RAW** garde les données du capteur avant tout traitement." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Les photosites accumulent des charges.", "quoi": "la collecte" },
+            { "texte": "Un CAN transforme chaque charge en nombre.", "quoi": "la conversion" },
+            { "texte": "Le dématriçage reconstitue les couleurs.", "quoi": "le calcul" }
+          ],
+          "pied": "En ==8 bits==, 256 niveaux par composante ; en ==12 ou 14 bits==, bien davantage."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que plus de **mégapixels** donne une meilleure photo.",
+            "Penser qu’un photosite **voit** la couleur.",
+            "Oublier le **traitement logiciel**, décisif sur téléphone.",
+            "Ignorer que la **sensibilité** élevée fait du bruit."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de **verts** dans la matrice de Bayer&nbsp;?",
+            "Quel composant transforme une charge en **nombre**&nbsp;?",
+            "Que garde le format **RAW**&nbsp;?"
+          ],
+          "reponses": "1) deux pour un rouge et un bleu · 2) le convertisseur analogique-numérique · 3) les données du capteur"
+        }
+      ]
+    }
+  ]
+}

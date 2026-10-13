@@ -1,0 +1,117 @@
+{
+  "titre": "Fonction racine carrée",
+  "titreSurligne": "racine carrée",
+  "accroche": "Définie seulement sur les positifs.",
+  "epreuve": "socle",
+  "bonus": "f(x) = **√x** sur [0 ; +∞[ · croissante · √x = k : x = k² si k ≥ 0, sinon **aucune**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/maths/la-fonction-racine-carree.webp",
+    "prompt": "a glossy violet curve rising steeply then flattening on a golden grid, a golden square root sign, a tiny cartoon sprout, sparkles"
+  },
+  "marcel": "Pas de racine\nd’un négatif&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La fonction",
+          "petite": true,
+          "lignes": ["f(x) = √x"],
+          "regle": "Définie sur **[0&nbsp;; +∞[**, **croissante**, minimum 0 en 0. (√x)² = x pour x ≥ 0&nbsp;; √(x²) = **|x|** pour tout réel. Sur [0&nbsp;; 1] : x ≤ √x&nbsp;; sur [1&nbsp;; +∞[ : √x ≤ x.",
+          "note": "√(−5)² = 5, pas −5"
+        },
+        {
+          "type": "figures",
+          "numero": 2,
+          "titre": "La courbe",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><g stroke='#2b2350' stroke-width='2' stroke-linecap='round'><line x1='10' y1='140' x2='214' y2='140'></line><line x1='30' y1='164' x2='30' y2='6'></line></g><polygon points='214,140 206,135 206,145' fill='#2b2350'></polygon><polygon points='30,6 25,14 35,14' fill='#2b2350'></polygon><path d='M30,140 C32,115 60,92 90,80 S140,58 195,45' fill='none' stroke='#7a3fe0' stroke-width='4' stroke-linecap='round'></path><g fill='#f5b722' stroke='#2b2350' stroke-width='2'><circle cx='30' cy='140' r='5'></circle><circle cx='45' cy='110' r='4'></circle><circle cx='90' cy='80' r='4'></circle><circle cx='165' cy='50' r='4'></circle></g><g font-family=\"Baloo 2\" font-weight='800' font-size='13' fill='#2b2350'><text x='42' y='130'>(1, 1)</text><text x='84' y='100'>(4, 2)</text><text x='150' y='72'>(9, 3)</text></g></svg>",
+              "legende": "y = √x",
+              "sous": "part de l’origine, monte en s’aplatissant"
+            }
+          ],
+          "legende": { "jeton": "√x = k", "texte": "k ≥ 0&nbsp;: x = k² · k &lt; 0&nbsp;: aucune" }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre avec une racine",
+          "etapes": [
+            { "titre": "Condition", "texte": "ce qui est sous la racine est ≥ 0 ; l’autre membre ≥ 0" },
+            { "titre": "Carré", "texte": "élever au carré et résoudre" },
+            { "titre": "Vérifier", "texte": "chaque valeur dans l’équation de départ" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Résoudre __√x ≤ 3__.",
+          "calcul": "3 = √9 et la racine est croissante\n√x ≤ √9",
+          "aparte": "x ≥ 0 aussi",
+          "resultat": "S = [[0 ≤ x ≤ 9]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "√x = 5", "texte": "k = 5 ≥ 0 donc x = **25**." },
+            { "titre": "√x = −3", "texte": "Une racine est **≥ 0** : aucune solution." },
+            { "titre": "Symétrie", "texte": "Carré et racine : courbes symétriques par rapport à **y = x**." },
+            { "titre": "Parasites", "texte": "Élever au carré peut créer des solutions **fausses**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "√x existe si x ≥ 0", "quoi": "ensemble de définition" },
+            { "texte": "3 = √9 et √ est croissante sur [0&nbsp;; +∞[", "quoi": "on justifie" },
+            { "texte": "Donc 0 ≤ x ≤ 9, S = [0&nbsp;; 9]", "quoi": "on conclut" }
+          ],
+          "pied": "Toujours ==vérifier== les solutions dans l’équation de départ."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier que l’ensemble de définition commence à **0**.",
+            "Écrire √(x²) = x sans condition&nbsp;: c’est **|x|**.",
+            "Croire que √x ≤ x toujours&nbsp;: faux entre 0 et 1.",
+            "Garder une solution **parasite** sans la vérifier."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Résoudre **√x = 7**.",
+            "Résoudre **√x = −2**.",
+            "Comparer **√0,25** et **0,25**."
+          ],
+          "reponses": "1) x = 49 · 2) aucune solution · 3) 0,5 &gt; 0,25"
+        }
+      ]
+    }
+  ]
+}

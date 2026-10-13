@@ -1,0 +1,113 @@
+{
+  "titre": "Routage et TCP",
+  "titreSurligne": "TCP",
+  "accroche": "Choisir le chemin, vérifier l’arrivée.",
+  "bonus": "**Routeur** = relie deux réseaux · **TCP** = fiable · **UDP** = rapide · **traceroute** = voir les routeurs traversés",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/routage-tcp.webp",
+    "prompt": "a glossy violet router with several golden arrows leading to different paths and a golden checkmark on a small packet, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Le bon chemin,\nle message entier !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le routage",
+          "items": [
+            { "terme": "Routeur", "definition": "relie deux réseaux et choisit **vers quel voisin** envoyer chaque paquet" },
+            { "terme": "Table de routage", "definition": "associe des **destinations** à des **directions**" },
+            { "terme": "Coût", "definition": "sauts, **débit** disponible ou **latence**" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Ce que fait TCP",
+          "entetes": ["TCP…", "Garantie"],
+          "lignes": [
+            ["**numérote** les paquets", "remise dans l’ordre"],
+            ["attend des **accusés**", "certitude d’arrivée"],
+            ["**redemande** les manquants", "message intégral"],
+            ["ajuste le **débit**", "pas de congestion"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "TCP ou UDP&nbsp;?",
+          "oui": { "titre": "TCP", "texte": "**Ordre, intégralité**, retransmission : Web, courrier, fichiers." },
+          "non": { "titre": "UDP", "texte": "**Aucune garantie** : visioconférence, jeu en ligne, streaming." },
+          "essai": { "texte": "En visioconférence, une image perdue vaut mieux qu’une image en retard." }
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un paquet de Lille à Lyon passe par Francfort. __Anormal__&nbsp;?",
+          "calcul": "le réseau optimise ses coûts",
+          "aparte": "pas la carte",
+          "resultat": "[[non]], c’est possible"
+        },
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Un paquet de bout en bout",
+          "etapes": [
+            { "titre": "Router", "texte": "chaque routeur choisit le prochain saut" },
+            { "titre": "Accuser", "texte": "le destinataire confirme la réception" },
+            { "titre": "Redemander", "texte": "TCP renvoie ce qui manque" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le routage choisit le chemin.", "quoi": "le rôle d’IP" },
+            { "texte": "TCP garantit que le message arrive entier.", "quoi": "le rôle de TCP" },
+            { "texte": "Un réseau peu fiable devient fiable.", "quoi": "la conclusion" },
+            { "texte": "UDP envoie sans accusé de réception.", "quoi": "l’autre choix" }
+          ],
+          "pied": "Protocoles de routage&nbsp;: ==RIP==, ==OSPF== en interne, ==BGP== entre opérateurs."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que TCP **choisit la route**.",
+            "Penser que le plus court passe toujours par la **ligne droite**.",
+            "Utiliser **TCP** pour tout, sans penser au **UDP**.",
+            "Oublier les **accusés** de réception."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que contient une **table de routage** ?",
+            "Quel protocole **redemande** un paquet manquant ?",
+            "Quelle commande montre les **routeurs traversés** ?"
+          ],
+          "reponses": "1) des destinations et des directions · 2) TCP · 3) traceroute"
+        }
+      ]
+    }
+  ]
+}

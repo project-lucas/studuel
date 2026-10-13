@@ -1,0 +1,191 @@
+{
+  "titre": "Le discours indirect",
+  "titreSurligne": "indirect",
+  "accroche": "Rapporter, c’est tout reculer d’un cran.",
+  "bonus": "**said** sans personne · **told me** avec · question → ordre direct, sans do",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/anglais/le-discours-indirect.webp",
+    "prompt": "a glossy violet speech bubble handing a smaller golden speech bubble to a second one, a golden arrow stepping back, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Il a dit que\nje révisais&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le recul des temps",
+          "lignes": [
+            "verbe introducteur au **passé**",
+            "→ tout **recule** d’un cran"
+          ],
+          "petite": true,
+          "regle": "« <i>I am tired</i> » → <i>He said he **was** tired.</i> · « <i>I have finished</i> » → <i>She said she **had finished**.</i>",
+          "note": "pronoms aussi !"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les temps qui reculent",
+          "entetes": [
+            "Direct",
+            "Indirect"
+          ],
+          "lignes": [
+            [
+              "Présent",
+              "Prétérit"
+            ],
+            [
+              "Prétérit · present perfect",
+              "**Past perfect**"
+            ],
+            [
+              "will",
+              "would"
+            ],
+            [
+              "can",
+              "could"
+            ],
+            [
+              "must",
+              "had to"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Les repères qui se déplacent",
+          "entetes": [
+            "Direct",
+            "Indirect",
+            "Direct",
+            "Indirect"
+          ],
+          "lignes": [
+            [
+              "now",
+              "then",
+              "tomorrow",
+              "the next day"
+            ],
+            [
+              "today",
+              "that day",
+              "here",
+              "there"
+            ],
+            [
+              "yesterday",
+              "the day before",
+              "this",
+              "that"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Say ou tell&nbsp;?",
+          "oui": {
+            "titre": "Say sans personne, tell avec",
+            "texte": "<i>He **said** that…</i> · <i>He **told me** that…</i>"
+          },
+          "non": {
+            "titre": "Faute lourde",
+            "texte": "<i>He said me that…</i> — <i>say</i> n’a jamais de complément de personne."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« <i>I saw my brother.</i> » → <i>He said he **had seen** his brother.</i>"
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Choisis l’introducteur",
+              "texte": "<i>said, told me, asked</i>. Au passé → le recul s’applique."
+            },
+            {
+              "titre": "Recule les temps",
+              "texte": "Présent → prétérit, prétérit → past perfect, <i>will</i> → <i>would</i>."
+            },
+            {
+              "titre": "Change les repères",
+              "texte": "Pronoms, possessifs, <i>now → then</i>, <i>here → there</i>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Questions et ordres",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Mot interrogatif",
+              "texte": "ni inversion ni <i>do</i>&nbsp;: <i>He asked **where she lived**.</i>"
+            },
+            {
+              "titre": "Question fermée",
+              "texte": "<i>if / whether</i>&nbsp;: <i>He asked **if** I was ready.</i>"
+            },
+            {
+              "titre": "Un ordre",
+              "texte": "infinitif&nbsp;: <i>He told me **to sit** down.</i>"
+            },
+            {
+              "titre": "Un ordre négatif",
+              "texte": "<i>not to</i> + base&nbsp;: <i>He told me **not to move**.</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>He said me that…</i> → <i>He **told me** that…</i>",
+            "<i>He asked where did she live</i> → <i>where she **lived**</i> (pas d’inversion).",
+            "<i>He told me sit down</i> → <i>to sit down.</i>",
+            "Oublier <i>my → his</i>&nbsp;: les pronoms suivent le nouveau locuteur."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Rapporte&nbsp;: « <i>I will call tomorrow</i> », she said.",
+            "Rapporte&nbsp;: « <i>Where do you live?</i> » he asked me.",
+            "<i>He ___ me to be quiet.</i> (said / told)"
+          ],
+          "reponses": "1) she would call the next day 2) where I lived 3) told"
+        }
+      ]
+    }
+  ]
+}

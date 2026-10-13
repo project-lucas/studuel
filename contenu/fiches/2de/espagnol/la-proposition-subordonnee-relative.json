@@ -1,0 +1,119 @@
+{
+  "titre": "Les relatives",
+  "titreSurligne": "relatives",
+  "accroche": "Les virgules changent le sens.",
+  "bonus": "**que** · **quien** · **el que / la que** · **lo que** pour une idée entière",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/espagnol/la-proposition-subordonnee-relative.webp",
+    "prompt": "a glossy violet chain link joining two golden speech bubbles, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Une virgule&nbsp;?\nUn autre sens&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle",
+          "lignes": ["**que** · **quien** · **lo que**"],
+          "petite": true,
+          "regle": "Une relative complète un nom. Elle est <b>déterminative</b> (sans virgule, elle restreint) ou <b>explicative</b> (entre virgules, elle ajoute).",
+          "note": "la virgule est une information"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les deux relatives",
+          "entetes": ["", "Déterminative", "Explicative"],
+          "lignes": [
+            ["Ce qu’elle fait", "restreint l’antécédent", "ajoute une information"],
+            ["Virgules", "aucune", "encadrée de virgules"],
+            ["Pronom", "<i>que</i>", "<i>que</i>, ou <i>quien</i> (personne)"],
+            ["Exemple", "<i>Los alumnos **que estudian** aprueban.</i> (seulement ceux-là)", "<i>Los alumnos, **que estudian**, aprueban.</i> (tous)"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Le mode du verbe dans la relative",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Antécédent connu", "texte": "**Indicatif**&nbsp;: <i>Busco a la secretaria que **habla** inglés.</i> (je la connais)" },
+            { "titre": "Antécédent à trouver", "texte": "**Subjonctif**&nbsp;: <i>Busco una secretaria que **hable** inglés.</i> (n’importe laquelle)" },
+            { "titre": "Antécédent nié", "texte": "**Subjonctif**&nbsp;: <i>No conozco a nadie que **sepa** ruso.</i>" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Où va la préposition&nbsp;?",
+          "oui": { "titre": "Devant le relatif", "texte": "<i>La casa **en la que** vivo.</i> · <i>El chico **del que** hablo.</i>" },
+          "non": { "titre": "Rejetée à la fin", "texte": "<i>La casa que vivo en.</i> · <i>El chico que hablo de.</i> — jamais en espagnol." },
+          "essai": { "titre": "Essai", "texte": "<i>La ciudad ___ vivo.</i> (où je vis) → **en la que**." }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            { "titre": "Restreint ou ajoute&nbsp;?", "texte": "Restreint → pas de virgule&nbsp;; ajoute → entre virgules." },
+            { "titre": "Antécédent connu&nbsp;?", "texte": "Réel → indicatif&nbsp;; indéfini ou nié → **subjonctif**." },
+            { "titre": "Une préposition&nbsp;?", "texte": "Elle précède le relatif&nbsp;: <i>en la que</i>." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "L’antécédent implicite",
+          "deux": true,
+          "items": [
+            { "titre": "el que, la que…", "texte": "<i>El que quiera, que venga.</i>" },
+            { "titre": "quien", "texte": "une personne&nbsp;: <i>Quien mucho abarca, poco aprieta.</i>" },
+            { "titre": "lo que", "texte": "une **idée entière**&nbsp;: <i>Llegó tarde, **lo que** me molestó.</i>" },
+            { "titre": "Jamais el que", "texte": "pour reprendre une phrase entière." }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Ajouter ou retirer une virgule à la légère : le sens change.",
+            "Indicatif avec un antécédent indéfini&nbsp;: <i>Busco una secretaria que habla</i> → <i>que **hable**.</i>",
+            "Rejeter la préposition à la française&nbsp;: <i>La casa que vivo en</i> → <i>**en la que** vivo.</i>",
+            "<i>Llegó tarde, el que me molestó</i> → <i>**lo que**.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Busco un profesor que ___ (hablar) ruso.</i> (n’importe lequel)",
+            "<i>El chico ___ hablo.</i> (de qui je parle)",
+            "<i>Llegó tarde, ___ me molestó.</i>"
+          ],
+          "reponses": "1) hable 2) del que 3) lo que"
+        }
+      ]
+    }
+  ]
+}

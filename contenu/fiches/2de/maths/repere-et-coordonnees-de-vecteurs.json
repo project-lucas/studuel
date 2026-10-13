@@ -1,0 +1,113 @@
+{
+  "titre": "Repère et vecteurs",
+  "titreSurligne": "vecteurs",
+  "accroche": "Démontrer, c’est calculer.",
+  "epreuve": "socle",
+  "bonus": "AB⃗ (xB − xA ; yB − yA) · distance : repère **orthonormé** · colinéaires ⟺ xy′ − yx′ = **0**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/maths/repere-et-coordonnees-de-vecteurs.webp",
+    "prompt": "a glossy violet coordinate grid with a golden arrow between two points, a tiny cartoon compass, sparkles"
+  },
+  "marcel": "Extrémité moins\norigine&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Coordonnées",
+          "taille": "mini",
+          "lignes": ["AB⃗ (xB − xA&nbsp;; yB − yA)", "AB = √((xB − xA)² + (yB − yA)²)", "milieu : ({xA + xB/2}&nbsp;; {yA + yB/2})"],
+          "regle": "On soustrait toujours l’**origine** à l’**extrémité**. La formule de **distance** n’est valable que dans un repère **orthonormé** (axes perpendiculaires, même unité).",
+          "note": "A(1&nbsp;; 2), B(4&nbsp;; 7) : AB⃗ (3&nbsp;; 5)"
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Colinéarité",
+          "petite": true,
+          "lignes": ["xy′ − yx′ = 0"],
+          "regle": "u⃗ (x&nbsp;; y) et v⃗ (x′&nbsp;; y′) sont **colinéaires** ⟺ leur déterminant est nul. Exemple&nbsp;: (2&nbsp;; 6) et (1&nbsp;; 3) → 2×3 − 6×1 = 0.",
+          "note": "sans chercher k"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Démontrer par le calcul",
+          "etapes": [
+            { "titre": "Traduire", "texte": "la propriété en vecteurs (égaux, colinéaires)" },
+            { "titre": "Calculer", "texte": "les coordonnées utiles, extrémité − origine" },
+            { "titre": "Conclure", "texte": "appliquer le critère, puis écrire une phrase" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "A(1&nbsp;; 1), B(4&nbsp;; 2), C(5&nbsp;; 5), D(2&nbsp;; 4). __ABCD__ parallélogramme&nbsp;?",
+          "calcul": "AB⃗ (3&nbsp;; 1)\nDC⃗ (5 − 2&nbsp;; 5 − 4) = (3&nbsp;; 1)",
+          "aparte": "vecteurs égaux",
+          "resultat": "AB⃗ = DC⃗ : [[parallélogramme]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Ce qu’on démontre",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Parallèles", "texte": "Deux vecteurs directeurs **colinéaires**." },
+            { "titre": "Alignés", "texte": "Deux vecteurs colinéaires **avec un point commun**." },
+            { "titre": "Parallélogramme", "texte": "Deux vecteurs **égaux**, ou diagonales de même **milieu**." },
+            { "titre": "Somme, produit", "texte": "On additionne les coordonnées ; on **multiplie** chacune par k." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "AB⃗ (3&nbsp;; 1) et DC⃗ (3&nbsp;; 1)", "quoi": "on calcule" },
+            { "texte": "Donc AB⃗ = DC⃗", "quoi": "vecteurs égaux" },
+            { "texte": "Donc ABCD est un parallélogramme.", "quoi": "on conclut" }
+          ],
+          "pied": "Toujours ==une phrase== de conclusion après le calcul."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Soustraire à l’envers&nbsp;: xA − xB au lieu de **xB − xA**.",
+            "Utiliser la distance dans un repère **non orthonormé**.",
+            "Écrire « AB = CD » pour un parallélogramme&nbsp;: c’est **ABDC**.",
+            "Oublier le point commun pour prouver un alignement."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "A(1&nbsp;; 2), B(4&nbsp;; 7)&nbsp;: **coordonnées de AB⃗** ?",
+            "(2&nbsp;; 6) et (1&nbsp;; 3) sont-ils **colinéaires** ?",
+            "A(0&nbsp;; 0), B(3&nbsp;; 4) orthonormé&nbsp;: **AB** ?"
+          ],
+          "reponses": "1) (3&nbsp;; 5) · 2) oui, 2×3 − 6×1 = 0 · 3) √25 = 5"
+        }
+      ]
+    }
+  ]
+}

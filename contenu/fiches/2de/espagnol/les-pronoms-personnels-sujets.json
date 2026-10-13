@@ -1,0 +1,184 @@
+{
+  "titre": "Pronoms sujets",
+  "titreSurligne": "sujets",
+  "accroche": "Yo, tú, usted… et pourquoi on les omet.",
+  "bonus": "**usted / ustedes** = 3<sup>e</sup> personne · **conmigo, contigo** · **entre tú y yo**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/espagnol/les-pronoms-personnels-sujets.webp",
+    "prompt": "a glossy violet speech bubble with a golden person silhouette inside and a small golden crown on top, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "¿Tú o usted&nbsp;?\n¡Cuidado&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "On l’omet",
+          "lignes": [
+            "**Hablo** = je parle"
+          ],
+          "petite": true,
+          "regle": "La terminaison du verbe dit déjà la personne. Le pronom sujet n’apparaît que pour **insister**, **opposer** ou **lever une ambiguïté**.",
+          "note": "<i>hablaba</i> = yo, él, ella ou usted&nbsp;?"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les formes",
+          "entetes": [
+            "Personne",
+            "Singulier",
+            "Pluriel"
+          ],
+          "lignes": [
+            [
+              "1<sup>re</sup>",
+              "<i>yo</i>",
+              "<i>nosotros / nosotras</i>"
+            ],
+            [
+              "2<sup>e</sup>",
+              "<i>tú</i>",
+              "<i>vosotros / vosotras</i>"
+            ],
+            [
+              "3<sup>e</sup>",
+              "<i>él / ella / **usted**</i>",
+              "<i>ellos / ellas / **ustedes**</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les trois cas où on l’exprime",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Insister",
+              "texte": "<i>**Yo** no lo he dicho.</i> (moi, je ne l’ai pas dit)"
+            },
+            {
+              "titre": "Opposer",
+              "texte": "<i>**Tú** trabajas y **él** duerme.</i> (toi tu travailles, lui dort)"
+            },
+            {
+              "titre": "Lever le doute",
+              "texte": "<i>hablaba</i> peut être <i>yo, él, ella, usted</i>&nbsp;: on précise le sujet."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le vouvoiement",
+          "oui": {
+            "titre": "Usted + 3<sup>e</sup> personne",
+            "texte": "<i>¿**Usted habla** español?</i> · <i>¿**Ustedes quieren** café?</i> — <i>usted</i> vient de <i>vuestra merced</i>."
+          },
+          "non": {
+            "titre": "Pas de 2<sup>e</sup> personne",
+            "texte": "<i>¿Usted hablas español?</i> est faux&nbsp;: <i>usted</i> n’est **pas** un « vous » de 2<sup>e</sup> personne."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>¿Ustedes ___ (querer) café?</i> → **quieren**&nbsp;: 3<sup>e</sup> personne du pluriel."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Après une préposition",
+          "etapes": [
+            {
+              "titre": "Cas général",
+              "texte": "**mí, ti**, puis <i>él, ella…</i>&nbsp;: <i>para mí, sin ti</i>."
+            },
+            {
+              "titre": "Avec con",
+              "texte": "Soudure irrégulière&nbsp;: **conmigo**, **contigo**."
+            },
+            {
+              "titre": "entre, según…",
+              "texte": "On garde **yo** et **tú**&nbsp;: <i>entre tú y yo, según tú</i>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Le monde hispanophone",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Amérique latine",
+              "texte": "pas de <i>vosotros</i>&nbsp;: on dit <i>ustedes</i>, même entre amis."
+            },
+            {
+              "titre": "Voseo",
+              "texte": "Argentine, Uruguay, Paraguay, Amérique centrale&nbsp;: <i>vos</i> remplace <i>tú</i>."
+            },
+            {
+              "titre": "Formes du voseo",
+              "texte": "<i>vos tenés, vos sos, vos hablás</i>"
+            },
+            {
+              "titre": "Pas des fautes",
+              "texte": "Ce sont des **normes régionales**."
+            },
+            {
+              "titre": "Nosotras, vosotras",
+              "texte": "le féminin existe au pluriel&nbsp;: un groupe de filles seulement."
+            },
+            {
+              "titre": "Él, ella",
+              "texte": "<i>él</i> (avec accent) = il, lui&nbsp;; <i>el</i> = le."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Yo hablo, yo como, yo vivo…</i> → <i>Hablo, como, vivo</i> (lourd, insistant).",
+            "<i>usted hablas</i> → <i>usted **habla**</i>.",
+            "<i>con mí</i> → <i>con**migo**</i> ; <i>con ti</i> → <i>con**tigo**</i>.",
+            "<i>entre ti y mí</i> → <i>entre **tú y yo**</i>.",
+            "<i>Vosotros</i> n’existe pas en Amérique latine&nbsp;: <i>ustedes</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>¿Usted ___ (hablar) español&nbsp;?</i>",
+            "Avec moi&nbsp;: <i>Ven ___.</i>",
+            "<i>Entre ___ y yo.</i> (toi)"
+          ],
+          "reponses": "1) habla 2) conmigo 3) tú"
+        }
+      ]
+    }
+  ]
+}

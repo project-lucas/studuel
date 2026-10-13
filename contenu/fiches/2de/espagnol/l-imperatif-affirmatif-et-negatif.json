@@ -1,0 +1,194 @@
+{
+  "titre": "L’impératif",
+  "titreSurligne": "impératif",
+  "accroche": "Dire «&nbsp;fais&nbsp;», interdire «&nbsp;ne fais pas&nbsp;».",
+  "bonus": "**tú** : 3<sup>e</sup> pers. du présent · **no** + subjonctif · pronoms **soudés** à l’affirmatif",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/espagnol/l-imperatif-affirmatif-et-negatif.webp",
+    "prompt": "a glossy violet megaphone with a golden exclamation-shaped sound wave, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Un ordre&nbsp;? Oui.\nUn « non »&nbsp;? Subjonctif&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les deux règles",
+          "lignes": [
+            "**oui** : impératif\n**no** + subjonctif"
+          ],
+          "petite": true,
+          "regle": "Seuls **tú** et **vosotros** ont un vrai impératif&nbsp;; toutes les autres formes viennent du **subjonctif présent**. Au négatif, tout passe au subjonctif.",
+          "note": "le négatif = subjonctif"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les formes",
+          "entetes": [
+            "Personne",
+            "Affirmatif",
+            "Négatif"
+          ],
+          "lignes": [
+            [
+              "tú",
+              "<i>habla · come</i>",
+              "<i>no hables · no comas</i>"
+            ],
+            [
+              "usted",
+              "<i>hable · coma</i>",
+              "<i>no hable · no coma</i>"
+            ],
+            [
+              "nosotros",
+              "<i>hablemos · comamos</i>",
+              "<i>no hablemos</i>"
+            ],
+            [
+              "vosotros",
+              "<i>habl**ad** · com**ed**</i> (-r → -d)",
+              "<i>no habl**éis**</i>"
+            ],
+            [
+              "ustedes",
+              "<i>hablen · coman</i>",
+              "<i>no hablen</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les irréguliers à tú",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "di · haz · ve · pon",
+              "texte": "<i>decir, hacer, ir, poner</i>&nbsp;: <i>**Haz** eso.</i> (fais cela)"
+            },
+            {
+              "titre": "sal · sé · ten · ven",
+              "texte": "<i>salir, ser, tener, venir</i>&nbsp;: <i>**Ven** aquí.</i> (viens ici)"
+            },
+            {
+              "titre": "Diphtongue gardée",
+              "texte": "<i>cierra, vuelve, pide</i> — les verbes à diphtongue la conservent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Ordre ou interdiction&nbsp;?",
+          "oui": {
+            "titre": "No + subjonctif",
+            "texte": "<i>¡**No hables** tan fuerte!</i> · <i>**No hagas** eso.</i>"
+          },
+          "non": {
+            "titre": "No + impératif",
+            "texte": "<i>¡No habla!</i> · <i>No haz eso.</i> — le négatif ne reprend jamais l’impératif."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« Ne mange pas ça&nbsp;! » (tú) → <i>No ___ eso.</i> → **comas**."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Les pronoms : où les mettre&nbsp;?",
+          "etapes": [
+            {
+              "titre": "Affirmatif",
+              "texte": "Soudés **après** le verbe, avec un accent&nbsp;: <i>cómpralo, levántate</i>."
+            },
+            {
+              "titre": "Négatif",
+              "texte": "**Devant** le verbe&nbsp;: <i>no te levantes</i>."
+            },
+            {
+              "titre": "Cas spéciaux",
+              "texte": "<i>nosotros + nos</i> : le -s tombe. <i>vosotros + os</i> : le -d tombe."
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "« Dis-le-moi » : __decir__ à tú.",
+          "calcul": "di + me + lo",
+          "resultat": "[[dímelo]] · no me lo digas",
+          "aparte": "accent : dí**me**lo"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Le -s et le -d qui tombent",
+          "deux": true,
+          "items": [
+            {
+              "titre": "nosotros + nos",
+              "texte": "<i>sentemos + nos → **sentémonos**</i>"
+            },
+            {
+              "titre": "vosotros + os",
+              "texte": "<i>levantad + os → **levantaos**</i>"
+            },
+            {
+              "titre": "Exception",
+              "texte": "<i>idos</i> (le -d reste)"
+            },
+            {
+              "titre": "Accent écrit",
+              "texte": "il garde l’accent tonique&nbsp;: <i>dímelo</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>no habla</i> (ordre) → <i>no **hables**</i>.",
+            "<i>sentémosnos</i> → <i>sentémo**nos**</i> : le -s tombe.",
+            "<i>levantados</i> → <i>levanta**os**</i> : le -d tombe.",
+            "<i>hace eso</i> → <i>**haz** eso</i> : impératif irrégulier."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Impératif tú de <i>hacer</i> : « ___ eso ».",
+            "« Ne parle pas » (tú) : <i>No ___.</i>",
+            "<i>levantad</i> + <i>os</i> → ?"
+          ],
+          "reponses": "1) haz 2) hables 3) levantaos"
+        }
+      ]
+    }
+  ]
+}

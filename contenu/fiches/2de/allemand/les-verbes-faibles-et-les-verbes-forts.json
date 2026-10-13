@@ -1,0 +1,164 @@
+{
+  "titre": "Faibles et forts",
+  "titreSurligne": "forts",
+  "accroche": "Trois formes à dire à voix haute.",
+  "bonus": "**infinitif · prétérit · participe II** · faibles : -te / ge-…-t · forts : Ablaut / ge-…-en",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/allemand/les-verbes-faibles-et-les-verbes-forts.webp",
+    "prompt": "a glossy violet feather next to a golden dumbbell on a balance, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Trois formes\npar verbe&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les trois temps",
+          "lignes": [
+            "infinitif · prétérit · participe II"
+          ],
+          "petite": true,
+          "regle": "Avec ces **trois formes**, toute la conjugaison se déduit. On les apprend ensemble, à voix haute.",
+          "note": "faibles = la majorité des verbes"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Faibles et forts",
+          "entetes": [
+            "",
+            "Faibles",
+            "Forts"
+          ],
+          "lignes": [
+            ["Le radical", "ne change **jamais**", "la voyelle change (<i>Ablaut</i>)"],
+            ["Prétérit", "en **-te**", "sans terminaison (ich, er)"],
+            ["Participe", "ge-…**-t**", "ge-…**-en**"],
+            ["Exemple", "<i>machen → machte → gemacht</i>", "<i>sprechen → sprach → gesprochen</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Cinq forts à connaître",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "fahren · gehen",
+              "texte": "<i>fuhr, gefahren</i> · <i>ging, gegangen</i>"
+            },
+            {
+              "titre": "schreiben · nehmen",
+              "texte": "<i>schrieb, geschrieben</i> · <i>nahm, genommen</i>"
+            },
+            {
+              "titre": "Mixtes",
+              "texte": "Radical modifié, terminaisons faibles&nbsp;: <i>bringen → brachte → gebracht</i>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le participe de lesen",
+          "oui": {
+            "titre": "Fort : -en",
+            "texte": "<i>lesen → las → **gelesen**.</i> (lire)"
+          },
+          "non": {
+            "titre": "Pas de -t",
+            "texte": "<i>~~gelest~~</i> — un fort ne prend pas la terminaison faible."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>studieren → ___</i> → **studiert**&nbsp;: les verbes en -ieren n’ont pas de <i>ge-</i>."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Faible ou fort&nbsp;?",
+              "texte": "Un verbe nouveau ou inconnu est **faible**. Les forts s’apprennent."
+            },
+            {
+              "titre": "Forme le prétérit",
+              "texte": "Faible → radical + **-te**. Fort → radical modifié."
+            },
+            {
+              "titre": "Forme le participe",
+              "texte": "<i>ge-</i> + radical + **-t** ou **-en**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Au présent aussi",
+          "deux": true,
+          "items": [
+            {
+              "titre": "e → i",
+              "texte": "<i>geben → du gibst, er gibt</i>"
+            },
+            {
+              "titre": "e → ie",
+              "texte": "<i>sehen → du siehst</i> · <i>lesen → du liest</i>"
+            },
+            {
+              "titre": "a → ä",
+              "texte": "<i>fahren → du fährst</i> · <i>schlafen → du schläfst</i>"
+            },
+            {
+              "titre": "Au pluriel",
+              "texte": "Pas de changement&nbsp;: <i>wir geben, ihr gebt</i>."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Ich sprechte</i> → <i>Ich **sprach**.</i> (fort, pas de -te)",
+            "<i>Er ist gegeht</i> → <i>Er ist **gegangen**.</i>",
+            "<i>Ich habe gestudiert</i> → <i>Ich habe **studiert**.</i> (-ieren : pas de <i>ge-</i>)",
+            "<i>Du fahrst</i> → <i>Du **fährst**.</i> (a → ä, 2<sup>e</sup> et 3<sup>e</sup> pers. seulement)"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Participe de <i>schreiben</i>&nbsp;?",
+            "Prétérit de <i>machen</i> (ich)&nbsp;?",
+            "<i>sehen</i> à la 2<sup>e</sup> personne du singulier&nbsp;?"
+          ],
+          "reponses": "1) geschrieben 2) machte 3) du siehst"
+        }
+      ]
+    }
+  ]
+}

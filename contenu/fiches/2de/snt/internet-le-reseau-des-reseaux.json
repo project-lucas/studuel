@@ -1,0 +1,128 @@
+{
+  "titre": "Réseau des réseaux",
+  "titreSurligne": "réseaux",
+  "accroche": "Personne ne possède Internet.",
+  "bonus": "**1969** ARPANET · **1983** TCP/IP · **1989** le Web (Tim Berners-Lee) · 4 couches : accès, Internet, transport, application",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/internet-le-reseau-des-reseaux.webp",
+    "prompt": "a glossy violet globe made of many small linked golden network nodes, a few glowing packets between them, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Un réseau de\nmillions de réseaux !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "De l’ARPANET à Internet",
+          "horizontale": true,
+          "etapes": [
+            { "date": "1969", "texte": "**ARPANET** relie quatre sites américains" },
+            { "date": "1983", "texte": "**TCP/IP** devient la règle commune" },
+            { "date": "1989", "texte": "**Tim Berners-Lee** invente le Web, au CERN" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les mots à connaître",
+          "items": [
+            { "terme": "Internet", "definition": "l’**infrastructure** : des millions de réseaux locaux" },
+            { "terme": "Web", "definition": "une **application** parmi d’autres, posée sur Internet" },
+            { "terme": "Paquet", "definition": "morceau de message qui voyage seul" },
+            { "terme": "Résilient", "definition": "qui continue de marcher si un lien tombe" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Les 4 couches TCP/IP",
+          "entetes": ["Couche", "Protocoles"],
+          "lignes": [
+            ["**Accès réseau**", "câble, wifi, fibre"],
+            ["**Internet**", "IP"],
+            ["**Transport**", "TCP, UDP"],
+            ["**Application**", "HTTP, SMTP, DNS"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Le courrier électronique est-il une partie du __Web__&nbsp;?",
+          "calcul": "SMTP, pas HTTP",
+          "aparte": "autre application",
+          "resultat": "[[non]], mais il utilise Internet"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Internet ou Web&nbsp;?",
+          "oui": { "titre": "Internet", "texte": "L’**infrastructure** : routes et câbles, depuis 1983." },
+          "non": { "titre": "Web", "texte": "Une **application** d’Internet, inventée en 1989." },
+          "essai": { "texte": "Le courriel et la messagerie instantanée sont d’autres applications, indépendantes du Web." }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Le principe de commutation de paquets",
+          "etapes": [
+            { "titre": "Découper", "texte": "le message devient des paquets" },
+            { "titre": "Acheminer", "texte": "chaque paquet suit le chemin disponible" },
+            { "titre": "Réassembler", "texte": "le destinataire les remet dans l’ordre" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Internet est un réseau de réseaux.", "quoi": "la définition" },
+            { "texte": "Il n’a pas de centre.", "quoi": "la structure" },
+            { "texte": "Un lien tombe : les paquets passent ailleurs.", "quoi": "la résilience" }
+          ],
+          "pied": "Chaque couche ==ignore== les détails des autres."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **Internet** et le **Web**.",
+            "Croire qu’Internet est **une entreprise**.",
+            "Croire que le Web date de **1969**.",
+            "Penser qu’un message voyage **d’un bloc**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "En quelle année **TCP/IP** devient-il la règle&nbsp;?",
+            "Dans quelle couche trouve-t-on **IP**&nbsp;?",
+            "Qui a inventé le **Web**&nbsp;?"
+          ],
+          "reponses": "1) 1983 · 2) la couche Internet · 3) Tim Berners-Lee, au CERN (1989)"
+        }
+      ]
+    }
+  ]
+}

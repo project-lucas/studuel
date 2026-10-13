@@ -1,0 +1,120 @@
+{
+  "titre": "Réaction chimique",
+  "titreSurligne": "chimique",
+  "accroche": "Équilibrer, puis suivre l’avancement.",
+  "bonus": "Réactif&nbsp;: **n₀ − coeff × x** · produit&nbsp;: **n₀ + coeff × x** · limitant&nbsp;: celui qui s’annule le premier",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/ecriture-et-analyse-d-une-reaction-chimique.webp",
+    "prompt": "a glossy violet erlenmeyer flask with golden bubbling liquid and a small flame beneath it, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Rien ne se perd,\nrien ne se crée&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’équation",
+          "petite": true,
+          "lignes": ["CH₄ + 2 O₂ → CO₂ + 2 H₂O"],
+          "regle": "Réactifs à gauche, produits à droite. On conserve les ==éléments== (autant d’atomes de chaque côté) et la **charge électrique**.",
+          "note": "les coefficients, pas les indices&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Tableau d’avancement",
+          "entetes": ["Étape", "Réactif", "Produit"],
+          "lignes": [
+            ["Initial", "n₀", "0"],
+            ["En cours", "n₀ − coeff × x", "coeff × x"],
+            ["Final", "n₀ − coeff × x<sub>max</sub>", "coeff × x<sub>max</sub>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Trouver le réactif limitant",
+          "etapes": [
+            { "titre": "Équilibrer", "texte": "puis écrire le tableau d’avancement" },
+            { "titre": "Annuler", "texte": "pour chaque réactif, la valeur de x qui l’annule" },
+            { "titre": "Choisir", "texte": "la plus petite valeur&nbsp;: c’est x<sub>max</sub> et le limitant" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "CH₄ + 2 O₂ avec __1,0 mol__ de CH₄ et __1,0 mol__ de O₂.",
+          "calcul": "O₂ : 1,0 − 2x = 0 → x = 0,50",
+          "aparte": "CH₄ : 1,0 − x = 0 → x = 1,0",
+          "resultat": "limitant O₂, x<sub>max</sub> = [[0,50 mol]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Ce que l’équation dit",
+          "oui": { "titre": "Elle donne", "texte": "Les **proportions** dans lesquelles les espèces réagissent." },
+          "non": { "titre": "Elle ne donne pas", "texte": "Les quantités réellement engagées, ni la **vitesse** de la réaction." },
+          "essai": { "texte": "Stœchiométrique&nbsp;: tous les réactifs disparaissent en même temps. **Exothermique**&nbsp;: libère de l’énergie (combustion)&nbsp;; **endothermique**&nbsp;: en absorbe." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "n(O₂) − 2x = 0 → x = 0,50 mol", "quoi": "pour chaque réactif" },
+            { "texte": "0,50 < 1,0 donc x<sub>max</sub> = 0,50 mol", "quoi": "la plus petite" },
+            { "texte": "Le réactif limitant est O₂", "quoi": "la conclusion" }
+          ],
+          "pied": "Équilibrer, c’est traduire que ==rien ne se perd, rien ne se crée==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Modifier un **indice** au lieu d’un coefficient.",
+            "Oublier le **coefficient** dans n₀ − coeff × x.",
+            "Prendre la **plus grande** valeur de x.",
+            "Dire que le limitant est celui qui a **le moins de moles**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 5,
+          "titre": "Mélange stœchiométrique",
+          "paragraphes": ["Tous les réactifs disparaissent **en même temps** : aucun n’est en excès. Sinon, le réactif limitant est celui dont ==x<sub>max</sub>== est le plus petit."]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Équilibrer H₂ + O₂ → H₂O.",
+            "Réactif limitant si x = 0,2 (A) et x = 0,5 (B)&nbsp;?",
+            "Une combustion est-elle exo- ou endothermique&nbsp;?"
+          ],
+          "reponses": "1) 2 H₂ + O₂ → 2 H₂O · 2) A · 3) exothermique"
+        }
+      ]
+    }
+  ]
+}

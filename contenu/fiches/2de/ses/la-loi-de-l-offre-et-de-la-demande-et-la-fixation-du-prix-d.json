@@ -1,0 +1,178 @@
+{
+  "titre": "Offre et demande",
+  "titreSurligne": "demande",
+  "accroche": "Le prix qui met tout le monde d’accord.",
+  "bonus": "**Demande** décroissante · **offre** croissante · prix d’**équilibre** : offre = demande",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/ses/la-loi-de-l-offre-et-de-la-demande-et-la-fixation-du-prix-d.webp",
+    "prompt": "a glossy violet balance with a golden coin crossing two glowing violet curves, tiny golden sparkles"
+  },
+  "marcel": "Le prix s’ajuste\ntout seul !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Prix et équilibre",
+          "entetes": [
+            "Situation",
+            "Effet sur le prix"
+          ],
+          "lignes": [
+            [
+              "Prix **au-dessus**",
+              "offre > demande (invendus)&nbsp;: **baisse**"
+            ],
+            [
+              "Prix **au-dessous**",
+              "demande > offre (pénurie)&nbsp;: **hausse**"
+            ],
+            [
+              "Prix d’**équilibre**",
+              "offre = demande&nbsp;: stable"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les deux courbes",
+          "items": [
+            {
+              "terme": "Demande",
+              "definition": "**décroissante**&nbsp;: elle baisse quand le prix monte"
+            },
+            {
+              "terme": "Offre",
+              "definition": "**croissante**&nbsp;: produire devient rentable"
+            },
+            {
+              "terme": "Élasticité-prix",
+              "definition": "sensibilité des quantités demandées au prix"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce qui déplace les courbes",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Le prix",
+              "texte": "On se déplace **le long** de la courbe."
+            },
+            {
+              "titre": "Demande",
+              "texte": "Hausse du revenu, mode, substitut moins cher&nbsp;: la courbe **se déplace**."
+            },
+            {
+              "titre": "Offre",
+              "texte": "Progrès technique, coûts en baisse, taxe&nbsp;: la courbe **se déplace**."
+            },
+            {
+              "titre": "Élasticité faible",
+              "texte": "Bien de première nécessité (pain)&nbsp;: on achète presque autant."
+            },
+            {
+              "titre": "Élasticité forte",
+              "texte": "Bien remplaçable&nbsp;: on **se reporte** ailleurs."
+            },
+            {
+              "titre": "Information",
+              "texte": "Le prix dit aux producteurs où produire."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Trouver le nouvel équilibre",
+          "etapes": [
+            {
+              "titre": "Tracer",
+              "texte": "une demande décroissante, une offre croissante"
+            },
+            {
+              "titre": "Lire",
+              "texte": "le prix où offre et demande sont égales"
+            },
+            {
+              "titre": "Déplacer",
+              "texte": "la courbe concernée, puis lire le nouvel équilibre"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "À retenir",
+          "paragraphes": [
+            "Le prix résulte de la **rencontre** de l’offre et de la demande&nbsp;; il est aussi une **information**. Un changement de prix déplace **sur** la courbe, un autre facteur **déplace** la courbe."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Au-dessus de l’équilibre, l’offre excède la demande&nbsp;: les invendus font baisser le prix.",
+              "quoi": "constater"
+            },
+            {
+              "texte": "Le prix s’ajuste jusqu’à l’égalité de l’offre et de la demande.",
+              "quoi": "expliquer"
+            },
+            {
+              "texte": "Le marché est dit autorégulateur&nbsp;; le prix est aussi une information.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Une taxe sur le tabac rapporte beaucoup si la demande est ==inélastique==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Tracer une **demande croissante**.",
+            "Confondre **déplacement le long** de la courbe et déplacement de la courbe.",
+            "Inverser **invendus** (prix trop haut) et pénurie.",
+            "Croire qu’un vendeur **fixe** le prix d’équilibre."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que fait le prix s’il y a des **invendus**&nbsp;?",
+            "La courbe d’**offre** est-elle croissante&nbsp;?",
+            "Quelle demande a une **élasticité faible**&nbsp;?"
+          ],
+          "reponses": "1) il baisse · 2) oui · 3) celle d’un bien de première nécessité"
+        }
+      ]
+    }
+  ]
+}

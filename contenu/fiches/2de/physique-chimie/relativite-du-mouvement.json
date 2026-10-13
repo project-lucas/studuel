@@ -1,0 +1,120 @@
+{
+  "titre": "Mouvement relatif",
+  "titreSurligne": "relatif",
+  "accroche": "Il faut dire par rapport à quoi.",
+  "bonus": "**v = d ÷ Δt** · 1 m·s⁻¹ = **3,6** km·h⁻¹ · référentiels&nbsp;: terrestre, géocentrique, héliocentrique",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/relativite-du-mouvement.webp",
+    "prompt": "a glossy violet train with a golden passenger window and a small golden bicycle wheel with a valve tracing a curve on the ground, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Immobile ou pas&nbsp;?\nÇa dépend&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La vitesse moyenne",
+          "petite": true,
+          "lignes": ["v = {d/Δt}"],
+          "regle": "**v** en m·s⁻¹, **d** en m, **Δt** en s. Conversion&nbsp;: ==1 m·s⁻¹ = 3,6 km·h⁻¹==. La vitesse instantanée se mesure sur un intervalle très court.",
+          "note": "× 3,6 pour km/h"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Référentiels usuels",
+          "entetes": ["Référentiel", "Usage"],
+          "lignes": [
+            ["**Terrestre**", "mouvements du quotidien"],
+            ["**Géocentrique**", "satellites"],
+            ["**Héliocentrique**", "planètes"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Décrire un mouvement",
+          "etapes": [
+            { "titre": "Référentiel", "texte": "dire par rapport à quoi on décrit" },
+            { "titre": "Trajectoire", "texte": "rectiligne, circulaire ou curviligne" },
+            { "titre": "Vitesse", "texte": "uniforme, accéléré ou ralenti" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un cycliste parcourt __900 m__ en __60 s__. Sa vitesse en km/h&nbsp;?",
+          "calcul": "v = 900 ÷ 60 = 15 m·s⁻¹",
+          "aparte": "15 × 3,6",
+          "resultat": "v = [[54 km/h]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le passager du train",
+          "oui": { "titre": "Référentiel du train", "texte": "Le passager est **immobile**." },
+          "non": { "titre": "Référentiel du sol", "texte": "Le même passager est **en mouvement**." },
+          "essai": { "texte": "La valve d’une roue de vélo&nbsp;: un **cercle** pour le cycliste, une **cycloïde** pour un piéton. Les deux descriptions sont ==également justes==." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Dans le référentiel terrestre,", "quoi": "toujours le dire d’abord" },
+            { "texte": "la trajectoire est rectiligne", "quoi": "la trajectoire" },
+            { "texte": "et la vitesse constante : mouvement rectiligne uniforme", "quoi": "la conclusion" }
+          ],
+          "pied": "Le premier réflexe en mécanique&nbsp;: dire ==quel référentiel== on prend."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Parler d’un mouvement **sans référentiel**.",
+            "Oublier de **convertir** m·s⁻¹ et km·h⁻¹.",
+            "Croire qu’une seule description du mouvement est **vraie**.",
+            "Confondre **trajectoire** et vitesse."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 5,
+          "titre": "Trajectoire et vitesse",
+          "paragraphes": ["La **trajectoire** est l’ensemble des positions successives d’un point dans un référentiel. On combine les deux mots&nbsp;: rectiligne uniforme, circulaire uniforme, rectiligne accéléré."]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "20 m·s⁻¹ en km·h⁻¹&nbsp;?",
+            "Référentiel pour étudier un satellite&nbsp;?",
+            "Trajectoire de la valve vue par un piéton&nbsp;?"
+          ],
+          "reponses": "1) 72 km·h⁻¹ · 2) géocentrique · 3) une cycloïde"
+        }
+      ]
+    }
+  ]
+}

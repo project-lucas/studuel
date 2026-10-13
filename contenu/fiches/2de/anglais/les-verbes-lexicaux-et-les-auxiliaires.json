@@ -1,0 +1,132 @@
+{
+  "titre": "Verbes et auxiliaires",
+  "titreSurligne": "auxiliaires",
+  "accroche": "Be, have, do : aider ou porter le sens.",
+  "bonus": "Seul l’**auxiliaire** porte la négation, la question et la reprise",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/anglais/les-verbes-lexicaux-et-les-auxiliaires.webp",
+    "prompt": "three glossy violet gears with golden teeth interlocking, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Be, have, do&nbsp;:\nauxiliaires ou verbes&nbsp;?",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle de l’auxiliaire",
+          "lignes": ["pas d’auxiliaire ? → **do**"],
+          "petite": true,
+          "regle": "Négation, question, reprise (<i>So do I</i>) et question tags passent par l’auxiliaire. S’il n’y en a pas, l’anglais en **fabrique un** avec <i>do</i>.",
+          "note": "<i>Like you tea?</i> est impossible"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux rôles",
+          "entetes": ["Verbe", "Auxiliaire", "Verbe lexical"],
+          "lignes": [
+            ["**BE**", "<i>She is working.</i> · <i>The house was built.</i>", "<i>She is a doctor.</i>"],
+            ["**HAVE**", "<i>I have finished.</i>", "<i>I have a car.</i>"],
+            ["**DO**", "<i>Do you like it?</i>", "<i>I do my homework.</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Be ou avoir&nbsp;?",
+          "oui": {
+            "titre": "Be en anglais",
+            "texte": "<i>I **am** cold. He **is** 17. You **are** right.</i>"
+          },
+          "non": {
+            "titre": "Calque du français",
+            "texte": "<i>I have cold. He has 17 years. You have right.</i> — jamais « have »."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« J’ai faim » → <i>I ___ hungry.</i> → **am**&nbsp;: be, pas have."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": "★",
+          "titre": "Là où le français dit « avoir »",
+          "entetes": ["En français", "En anglais", "Avec"],
+          "lignes": [
+            ["J’ai froid", "<i>I **am** cold</i>", "be"],
+            ["J’ai faim", "<i>I **am** hungry</i>", "be"],
+            ["Il a 17 ans", "<i>He **is** 17</i>", "be"],
+            ["Tu as raison", "<i>You **are** right</i>", "be"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Nier ou questionner",
+          "etapes": [
+            {"titre": "Cherche l’auxiliaire", "texte": "<i>is, have, can, will…</i> déjà dans la phrase&nbsp;?"},
+            {"titre": "Sinon, fabrique-le", "texte": "Aux temps simples&nbsp;: **do / does / did**."},
+            {"titre": "Verbe à la base", "texte": "<i>Does she **like** tea?</i> — pas de -s."}
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "Have et do, en détail",
+          "colonnes": 1,
+          "cartes": [
+            {
+              "titre": "Have qui ne possède rien",
+              "texte": "<i>have breakfast, a shower, a look, a good time</i> = prendre, faire. Négation avec do&nbsp;: <i>I **didn’t** have breakfast.</i>"
+            },
+            {
+              "titre": "Do d’insistance",
+              "texte": "<i>I **DO** like it.</i> (si, j’aime bien) — pour contredire ou insister."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>I have 17 years</i> → <i>I **am** 17.</i>",
+            "<i>Like you tea?</i> → <i>**Do** you like tea?</i>",
+            "<i>I haven’t breakfast</i> → <i>I **didn’t** have breakfast.</i>",
+            "<i>He do his homework</i> → <i>He **does** his homework.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "« Tu as raison. » → <i>You ___ right.</i>",
+            "Négation&nbsp;: <i>She had lunch.</i> → <i>She ___ lunch.</i>",
+            "<i>___ you like it?</i> (question avec auxiliaire)"
+          ],
+          "reponses": "1) are 2) didn’t have 3) Do"
+        }
+      ]
+    }
+  ]
+}

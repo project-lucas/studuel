@@ -1,0 +1,112 @@
+{
+  "titre": "Rendements et santé",
+  "titreSurligne": "Rendements",
+  "accroche": "Produire plus, à quel prix&nbsp;?",
+  "bonus": "**Nourrir** · **préserver les milieux** · **faire vivre** ceux qui produisent&nbsp;: le triple arbitrage",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/svt/amelioration-des-rendements-agricoles-sante-et-environnement.webp",
+    "prompt": "a glossy golden balance scale with a wheat bundle on one side and a violet leaf and bee on the other, sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Produire plus,\nsans tout abîmer !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Ce qui a fait monter les rendements",
+          "items": [
+            { "titre": "Sélection variétale", "texte": "variétés productives et résistantes" },
+            { "titre": "Engrais de synthèse", "texte": "azote fixé industriellement" },
+            { "titre": "Mécanisation", "texte": "plus de surface par actif" },
+            { "titre": "Irrigation et phytosanitaires", "texte": "saison sécurisée, moins de pertes" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le prix à payer",
+          "entetes": ["Effet", "Manifestation"],
+          "lignes": [
+            ["**Nitrates**, phosphates", "marées vertes, zones mortes"],
+            ["**Pesticides**", "résidus dans sols et cours d’eau"],
+            ["Insectes **pollinisateurs**", "effondrement, oiseaux des champs touchés"],
+            ["**Sols**", "tassement, érosion"],
+            ["**Eau**", "nappes surexploitées"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les risques pour la santé",
+          "colonnes": 4,
+          "cartes": [
+            { "titre": "Agriculteurs", "texte": "Exposition **professionnelle**." },
+            { "titre": "Consommateurs", "texte": "**Résidus** dans l’alimentation." },
+            { "titre": "Ravageurs", "texte": "**Résistances**&nbsp;: traitements moins efficaces." },
+            { "titre": "Élevage", "texte": "**Antibiorésistance**, risque pour la médecine." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Les pistes de la durabilité",
+          "entetes": ["Pratique", "Principe"],
+          "lignes": [
+            ["**Rotations** longues", "casser les cycles des ravageurs"],
+            ["**Lutte biologique**", "un ennemi naturel du ravageur"],
+            ["**Lutte intégrée**", "chimie en **dernier** recours"],
+            ["Agriculture de **précision**", "un intrant seulement là où il est utile"],
+            ["**Agroforesterie**, haies", "protéger et enrichir, auxiliaires gratuits"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Engrais et pesticides ont fait monter les rendements.", "quoi": "constater" },
+            { "texte": "Mais ils polluent l’eau, les sols et fragilisent les pollinisateurs.", "quoi": "nuancer" },
+            { "texte": "Une agriculture durable arbitre entre nourrir, préserver et faire vivre.", "quoi": "conclure" }
+          ],
+          "pied": "On ne peut pas augmenter durablement un rendement en ==détruisant== ce qui le permet."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’une **solution technique** suffit seule.",
+            "Oublier l’effet sur les **pollinisateurs**.",
+            "Confondre **lutte biologique** et pesticide chimique.",
+            "Parler de rendement sans parler de **santé**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel engrais a levé la limite en **azote**&nbsp;?",
+            "Que cause un excès de **nitrates** sur le littoral&nbsp;?",
+            "Que veut dire **lutte intégrée**&nbsp;?"
+          ],
+          "reponses": "1) l’engrais de synthèse · 2) marées vertes · 3) chimie en dernier recours"
+        }
+      ]
+    }
+  ]
+}

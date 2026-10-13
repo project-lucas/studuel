@@ -1,0 +1,116 @@
+{
+  "titre": "Réseaux sociaux",
+  "titreSurligne": "sociaux",
+  "accroche": "Gratuit, parce que tu es le produit.",
+  "bonus": "**Milgram** 1967 · **RGPD** 2018 · **DSA** 2023 · sommet = personne · arête = relation",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/les-reseaux-sociaux.webp",
+    "prompt": "a glossy violet smartphone with golden linked circles and heart icons floating around it, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Ton attention\nvaut de l’or !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le graphe social",
+          "items": [
+            { "terme": "Sommet", "definition": "un **utilisateur**" },
+            { "terme": "Arête", "definition": "une **relation** entre deux utilisateurs" },
+            { "terme": "Degré", "definition": "le **nombre de relations** d’un sommet" },
+            { "terme": "Diamètre", "definition": "la plus longue distance **minimale** entre deux sommets" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Risques et textes",
+          "entetes": ["Risque", "Texte"],
+          "lignes": [
+            ["Données personnelles", "**RGPD** (2018)"],
+            ["Modération, transparence", "**DSA** européen (2023)"],
+            ["Cyberharcèlement", "délit aggravé (code pénal)"],
+            ["Mineurs", "âge minimal, contrôle parental"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le modèle économique",
+          "etapes": [
+            { "titre": "Gratuit", "texte": "le service ne coûte rien à l’utilisateur" },
+            { "titre": "Publicité ciblée", "texte": "mieux on te connaît, plus l’espace se vend cher" },
+            { "titre": "Temps passé", "texte": "il devient l’objectif de conception" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Pourquoi le fil montre-t-il surtout des contenus qui font __réagir__&nbsp;?",
+          "calcul": "algorithme optimisé sur l’engagement",
+          "aparte": "bulles de filtre",
+          "resultat": "[[l’engagement]] prime"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les algorithmes de recommandation",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Ils choisissent", "texte": "ce qui apparaît dans ton **fil**" },
+            { "titre": "Ils favorisent", "texte": "ce qui **fait réagir**, donc le clivant" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le service est gratuit, financé par la publicité.", "quoi": "le modèle" },
+            { "texte": "L’algorithme maximise l’engagement.", "quoi": "le mécanisme" },
+            { "texte": "Le RGPD protège les données personnelles.", "quoi": "la régulation" },
+            { "texte": "Les bulles de filtre enferment dans ses goûts.", "quoi": "l’effet" }
+          ],
+          "pied": "Milgram (1967)&nbsp;: les «&nbsp;==six degrés== de séparation&nbsp;»."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que « gratuit » veut dire **sans contrepartie**.",
+            "Penser que le fil est **neutre**.",
+            "Confondre **RGPD** (données) et **DSA** (modération).",
+            "Prendre le **degré** pour le diamètre."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Qui **finance** un réseau social gratuit ?",
+            "Que représente un **sommet** du graphe ?",
+            "Quel texte européen de 2023 encadre la **modération** ?"
+          ],
+          "reponses": "1) la publicité ciblée · 2) un utilisateur · 3) le DSA"
+        }
+      ]
+    }
+  ]
+}

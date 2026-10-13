@@ -1,0 +1,113 @@
+{
+  "titre": "Internet des objets",
+  "titreSurligne": "objets",
+  "accroche": "Quand les objets parlent au réseau.",
+  "bonus": "IoT = objets qui **mesurent**, **communiquent**, parfois **agissent** · risques : mot de passe par défaut, pas de chiffrement, pas de mise à jour",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/l-internet-des-objets-ou-iot.webp",
+    "prompt": "a glossy violet smart lightbulb, thermostat and watch linked by golden wifi arcs to a golden cloud, sparkles"
+  },
+  "marcel": "Même ton frigo\nest en ligne !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "IoT", "definition": "objets du quotidien reliés au réseau&nbsp;: ils **mesurent** et **communiquent**" },
+            { "terme": "IPv6", "definition": "adressage sans limite pratique" },
+            { "terme": "Cloud", "definition": "stocke et traite les **flux** collectés" },
+            { "terme": "Botnet", "definition": "réseau de machines **compromises** (Mirai, 2016)" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Des usages",
+          "entetes": ["Domaine", "Application"],
+          "lignes": [
+            ["énergie", "**compteurs communicants**"],
+            ["agriculture", "sondes d’humidité"],
+            ["industrie", "maintenance **prédictive**"],
+            ["ville", "éclairage adaptatif, air"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le trajet d’une mesure",
+          "etapes": [
+            { "titre": "Mesurer", "texte": "un capteur à quelques euros relève une grandeur" },
+            { "titre": "Transmettre", "texte": "wifi, Bluetooth, 4G/5G ou réseau basse consommation" },
+            { "titre": "Traiter", "texte": "le cloud stocke et analyse les données" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une caméra connectée garde son mot de passe __par défaut__. Risque&nbsp;?",
+          "calcul": "accessible à tous → recrutée",
+          "aparte": "cas de Mirai",
+          "resultat": "= [[botnet]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Un objet bien sécurisé&nbsp;?",
+          "oui": { "titre": "Sûr", "texte": "Mot de passe **changé**, données **chiffrées**, **mises à jour** reçues." },
+          "non": { "titre": "Risqué", "texte": "Mot de passe **par défaut**, données **en clair**, failles ouvertes." },
+          "essai": { "texte": "Un objet vulnérable est une **porte d’entrée** sur le réseau domestique." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Des capteurs bon marché mesurent et envoient.", "quoi": "le principe" },
+            { "texte": "Le cloud traite les données collectées.", "quoi": "le stockage" },
+            { "texte": "Ces objets mesurent présence et déplacements.", "quoi": "la vie privée" }
+          ],
+          "pied": "Enjeux : ==vie privée==, ==environnement== (terres rares, déchets), ==souveraineté==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Garder le mot de passe **par défaut**.",
+            "Oublier les **mises à jour** de l’objet.",
+            "Ignorer l’impact **environnemental** de la fabrication.",
+            "Penser que l’objet marche toujours si le **fabricant** ferme ses serveurs."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que désigne l’**IoT**&nbsp;?",
+            "Cite une **faiblesse** de sécurité courante.",
+            "Quel domaine utilise des **compteurs communicants**&nbsp;?"
+          ],
+          "reponses": "1) des objets connectés au réseau · 2) mot de passe par défaut · 3) l’énergie"
+        }
+      ]
+    }
+  ]
+}

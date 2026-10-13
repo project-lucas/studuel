@@ -1,0 +1,182 @@
+{
+  "titre": "Résolution et filtres",
+  "titreSurligne": "filtres",
+  "accroche": "Combien de pixels, et que faire des voisins.",
+  "bonus": "Définition = **pixels** · résolution = **points par pouce** · agrandir = **interpoler** · filtre = **noyau** appliqué aux voisins",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/resolution-et-filtrage-d-une-image.webp",
+    "prompt": "a glossy violet magnifying glass over a golden grid of square pixels, a small blurred-to-sharp golden gradient, sparkles"
+  },
+  "marcel": "Zoomer ne crée\npas de détails !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Trois grandeurs",
+          "items": [
+            {
+              "terme": "Définition",
+              "definition": "nombre de pixels en **largeur × hauteur** (4000 × 3000 = 12 millions)"
+            },
+            {
+              "terme": "Résolution",
+              "definition": "**densité** à l’affichage ou à l’impression, en points par pouce"
+            },
+            {
+              "terme": "Poids",
+              "definition": "définition × octets par pixel"
+            },
+            {
+              "terme": "Noyau",
+              "definition": "petite **matrice** qui combine un pixel et ses voisins"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le noyau, son effet",
+          "entetes": [
+            "Noyau",
+            "Effet"
+          ],
+          "lignes": [
+            [
+              "**moyenne** des voisins",
+              "un **flou**"
+            ],
+            [
+              "accentuation des écarts",
+              "**netteté** renforcée"
+            ],
+            [
+              "variations brutales",
+              "les **contours**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Appliquer un filtre en trois temps",
+          "etapes": [
+            {
+              "titre": "Centrer",
+              "texte": "placer le noyau sur un pixel et ses voisins"
+            },
+            {
+              "titre": "Combiner",
+              "texte": "remplacer la valeur par la combinaison des voisins"
+            },
+            {
+              "titre": "Balayer",
+              "texte": "recommencer pour tous les pixels de l’image"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Photo de 4000 × 3000 pixels en couleur. __Combien de pixels__&nbsp;?",
+          "calcul": "4000 × 3000",
+          "aparte": "définition de l’image",
+          "resultat": "= [[12 millions]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Réduire ou agrandir&nbsp;?",
+          "oui": {
+            "titre": "Réduire",
+            "texte": "On **supprime** de l’information, **définitivement**."
+          },
+          "non": {
+            "titre": "Agrandir",
+            "texte": "On **interpole** à partir des voisins&nbsp;: l’image paraît plus grande, pas plus détaillée."
+          },
+          "essai": {
+            "texte": "Rendre lisible une plaque d’immatriculation en zoomant n’existe qu’au **cinéma**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "À quoi servent les filtres",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Nettoyer",
+              "texte": "réduire le **bruit** d’une photo prise dans l’obscurité"
+            },
+            {
+              "titre": "Analyser",
+              "texte": "détecter formes et contours (caractères, médecine)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "La définition compte les pixels.",
+              "quoi": "la grandeur"
+            },
+            {
+              "texte": "Un filtre combine un pixel et ses voisins.",
+              "quoi": "le principe"
+            },
+            {
+              "texte": "Agrandir interpole, sans ajouter de détails.",
+              "quoi": "la limite"
+            }
+          ],
+          "pied": "Réduire le ==bruit== d’une photo sombre : un filtre de ==lissage==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **définition** (pixels) et **résolution** (densité).",
+            "Croire qu’agrandir **ajoute** des détails.",
+            "Penser que réduire est **réversible**.",
+            "Oublier que le **flou** est une moyenne des voisins."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que mesure la **résolution**&nbsp;?",
+            "Que fait-on en **agrandissant** une image&nbsp;?",
+            "Quel noyau donne un **flou**&nbsp;?"
+          ],
+          "reponses": "1) la densité de pixels (points par pouce) · 2) on interpole · 3) la moyenne des voisins"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "titre": "Corps purs et mélanges",
+  "titreSurligne": "mélanges",
+  "accroche": "Une espèce ou plusieurs&nbsp;?",
+  "bonus": "Corps pur&nbsp;: **T constante** pendant le changement d’état · eau&nbsp;: fusion **0 °C**, ébullition **100 °C** · densité **< 1** : flotte",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/corps-purs-et-melanges.webp",
+    "prompt": "a glossy glass beaker with two layers, golden oil on top of violet liquid, a small funnel and a stirring rod beside it, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Une espèce,\nun corps pur !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Corps pur ou mélange",
+          "entetes": ["Cas", "Définition", "Exemple"],
+          "lignes": [
+            ["**Corps pur**", "une seule espèce", "fer, eau distillée"],
+            ["**Homogène**", "plusieurs espèces, une phase", "eau salée, air"],
+            ["**Hétérogène**", "plusieurs phases visibles", "eau et huile"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Masse volumique",
+          "petite": true,
+          "lignes": ["ρ = {m/V}", "d = {ρ/ρ<sub>eau</sub>}"],
+          "regle": "**ρ** en g·cm⁻³ ou kg·m⁻³. La **densité** d n’a ==pas d’unité== : si d < 1, le corps flotte sur l’eau (ρ<sub>eau</sub> = 1,00 g·cm⁻³).",
+          "note": "d n’a pas d’unité&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Séparer un mélange",
+          "etapes": [
+            { "titre": "Décanter / filtrer", "texte": "densités différentes, ou solide retenu par le filtre" },
+            { "titre": "Distiller", "texte": "températures d’ébullition différentes" },
+            { "titre": "Évaporer", "texte": "on récupère le solide dissous" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un liquide de __50 mL__ a une masse de __45 g__. Flotte-t-il sur l’eau&nbsp;?",
+          "calcul": "ρ = 45 ÷ 50 = 0,90 g·cm⁻³",
+          "aparte": "d = 0,90 < 1",
+          "resultat": "il [[flotte]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Pur ou pas&nbsp;?",
+          "oui": { "titre": "Corps pur", "texte": "Pendant le changement d’état, la température reste **constante** (palier). Ses grandeurs sont une **carte d’identité**." },
+          "non": { "titre": "Mélange", "texte": "Pas de palier net&nbsp;: la température évolue pendant le changement d’état." },
+          "essai": { "texte": "Fusion, ébullition, masse volumique, indice de réfraction ne dépendent pas de la ==quantité prélevée==." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            { "titre": "Une phase", "texte": "mélange homogène" },
+            { "titre": "Plusieurs phases", "texte": "mélange hétérogène" },
+            { "titre": "Centrifuger", "texte": "décantation accélérée" },
+            { "titre": "Eau pure", "texte": "0 °C et 100 °C" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que **l’eau minérale** est un corps pur.",
+            "Dire qu’un mélange homogène a **plusieurs phases**.",
+            "Écrire une **unité** à la densité.",
+            "Confondre **filtration** et **distillation**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "L’eau salée est-elle un corps pur&nbsp;?",
+            "Technique pour séparer deux liquides de T d’ébullition différentes&nbsp;?",
+            "Un corps de densité 1,3 flotte-t-il sur l’eau&nbsp;?"
+          ],
+          "reponses": "1) non, mélange homogène · 2) la distillation · 3) non, il coule"
+        }
+      ]
+    }
+  ]
+}

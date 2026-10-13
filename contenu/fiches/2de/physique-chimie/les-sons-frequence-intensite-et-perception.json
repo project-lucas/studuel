@@ -1,0 +1,158 @@
+{
+  "titre": "Fréquence et intensité",
+  "titreSurligne": "intensité",
+  "accroche": "Grave, aigu, fort : trois sensations.",
+  "bonus": "f = 1 ÷ T · audible : **20 Hz à 20 000 Hz** · +10 dB = intensité × 10 · douleur : **120 dB**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/les-sons-frequence-intensite-et-perception.webp",
+    "prompt": "a glossy violet ear with golden sound waves of different sizes entering it and a small golden level meter, sparkles"
+  },
+  "marcel": "Protège tes\noreilles !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Période et fréquence",
+          "petite": true,
+          "lignes": [
+            "f = {1/T}"
+          ],
+          "regle": "**T** en secondes, **f** en hertz (Hz). Un signal de période 2,0 ms a une fréquence de ==500 Hz==.",
+          "note": "T en secondes avant de calculer&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Grandeur et sensation",
+          "entetes": [
+            "Physique",
+            "Sensation"
+          ],
+          "lignes": [
+            [
+              "**Fréquence**",
+              "la hauteur : grave ou aigu"
+            ],
+            [
+              "**Intensité**",
+              "la force du son"
+            ],
+            [
+              "**Forme du signal**",
+              "le timbre"
+            ],
+            [
+              "20 Hz à 20 kHz",
+              "domaine audible"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Trouver la fréquence en trois temps",
+          "etapes": [
+            {
+              "titre": "Lire",
+              "texte": "la période T sur l’oscillogramme : la durée d’un motif"
+            },
+            {
+              "titre": "Convertir",
+              "texte": "T en secondes (1 ms = 10⁻³ s)"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "f = 1 ÷ T, puis écrire l’unité : des hertz"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un motif dure T = 4,0 ms. Quelle est la __fréquence__, et le son est-il audible&nbsp;?",
+          "calcul": "T = 4,0 × 10⁻³ s ; f = 1 ÷ 0,0040",
+          "aparte": "entre 20 et 20 000",
+          "resultat": "f = [[250 Hz]], audible"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Les décibels",
+          "oui": {
+            "titre": "+10 dB",
+            "texte": "L’intensité est multipliée par **10**&nbsp;: le son paraît deux fois plus fort."
+          },
+          "non": {
+            "titre": "Deux sources",
+            "texte": "Deux sources identiques côte à côte donnent seulement **+3 dB**&nbsp;: l’échelle est logarithmique."
+          },
+          "essai": {
+            "texte": "Un concert à <i>100 dB</i> a une intensité 10 fois plus grande qu’une rue à <i>90 dB</i>. Seuil de douleur&nbsp;: vers 120 dB."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "T = 4,0 ms = 4,0 × 10⁻³ s",
+              "quoi": "la conversion"
+            },
+            {
+              "texte": "f = 1 ÷ T = 1 ÷ 4,0 × 10⁻³ = 250 Hz",
+              "quoi": "formule puis nombres"
+            },
+            {
+              "texte": "20 Hz < 250 Hz < 20 000 Hz : audible",
+              "quoi": "la conclusion"
+            },
+            {
+              "texte": "Infrasons < 20 Hz · ultrasons > 20 000 Hz",
+              "quoi": "hors du domaine"
+            }
+          ],
+          "pied": "Les cellules ciliées détruites ne se régénèrent ==jamais== : la perte d’audition est irréversible."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Laisser T en **ms** dans f = 1 ÷ T.",
+            "**Additionner** les décibels comme des nombres.",
+            "Confondre **hauteur** (fréquence) et force (intensité).",
+            "Croire qu’une perte d’audition se **soigne**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "T = 0,010 s&nbsp;: **f**&nbsp;?",
+            "Un son de 30 kHz est-il audible&nbsp;?",
+            "+10 dB : l’intensité est multipliée par&nbsp;?"
+          ],
+          "reponses": "1) 100 Hz · 2) non, c’est un ultrason · 3) 10"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "titre": "Création, machines",
+  "titreSurligne": "machines",
+  "accroche": "Du disque à l’IA générative.",
+  "bonus": "**1948** Schaeffer · **1983** norme MIDI · **MIDI ne transporte pas de son**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/musique/creation-et-technologies.webp",
+    "prompt": "a glossy violet synthesizer keyboard with golden knobs and a tiny golden sound wave, sparkles, same art style as the reference icons, on a magenta background, no text, no numbers"
+  },
+  "marcel": "Le studio devient\nun instrument&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "320px 1fr",
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "Un siècle d’outils",
+          "etapes": [
+            {
+              "date": "Années 1900",
+              "texte": "**Microphone** et **disque**."
+            },
+            {
+              "date": "1948",
+              "texte": "Schaeffer, **musique concrète**."
+            },
+            {
+              "date": "Années 1950",
+              "texte": "Le **multipiste**."
+            },
+            {
+              "date": "1983",
+              "texte": "La norme **MIDI**."
+            }
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Musique concrète",
+              "definition": "composer avec des sons enregistrés du réel"
+            },
+            {
+              "terme": "Électroacoustique",
+              "definition": "tout son possible, même synthétique"
+            },
+            {
+              "terme": "Synthétiseur",
+              "definition": "il fabrique le son"
+            },
+            {
+              "terme": "Échantillonnage",
+              "definition": "réutiliser un extrait enregistré"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Trois voies de synthèse",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Additive",
+              "texte": "on **empile** des harmoniques."
+            },
+            {
+              "titre": "Soustractive",
+              "texte": "on **filtre** un son riche."
+            },
+            {
+              "titre": "FM",
+              "texte": "on **module** une fréquence par une autre."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Que transporte le MIDI ?",
+          "oui": {
+            "titre": "Instructions",
+            "texte": "quelle note, quelle intensité, quelle durée"
+          },
+          "non": {
+            "titre": "Du son",
+            "texte": "un fichier MIDI ne contient aucun son enregistré"
+          },
+          "essai": {
+            "titre": "À toi",
+            "texte": "Pourquoi un même fichier MIDI sonne-t-il autrement d’une machine à l’autre&nbsp;?"
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Ce que les outils changent",
+          "deux": false,
+          "items": [
+            {
+              "titre": "Disque",
+              "texte": "l’œuvre devient un objet possédé"
+            },
+            {
+              "titre": "Studio",
+              "texte": "la version enregistrée fait référence"
+            },
+            {
+              "titre": "IA",
+              "texte": "la question de l’auteur se rouvre"
+            },
+            {
+              "titre": "Synthétiseur",
+              "texte": "il fabrique le son plus qu’il ne l’imite"
+            },
+            {
+              "titre": "Échantillonnage",
+              "texte": "réemployer un extrait enregistré"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le **MIDI** transporte du son.",
+            "Confondre **additive** et **soustractive**.",
+            "Penser que l’enregistrement est **l’œuvre unique**.",
+            "Oublier que l’**IA** rouvre la question de l’**auteur**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "En 1948, Schaeffer compose avec des sons enregistrés du réel&nbsp;: la musique concrète.",
+              "quoi": "dater"
+            },
+            {
+              "texte": "Le MIDI transmet des instructions&nbsp;: note, intensité, durée.",
+              "quoi": "définir"
+            },
+            {
+              "texte": "Chaque outil déplace la frontière entre interpréter et fabriquer.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Une machine pose la question de l’==auteur==."
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Qui invente la **musique concrète**&nbsp;?",
+            "Que transporte le **MIDI**&nbsp;?",
+            "Quelle synthèse **filtre** un son riche&nbsp;?"
+          ],
+          "reponses": "1) Schaeffer, 1948 · 2) des instructions · 3) la soustractive"
+        }
+      ]
+    }
+  ]
+}

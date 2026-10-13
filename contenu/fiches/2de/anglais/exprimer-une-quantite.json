@@ -1,0 +1,143 @@
+{
+  "titre": "Exprimer une quantité",
+  "titreSurligne": "quantité",
+  "accroche": "Many, much, few, little : tout part du nom.",
+  "bonus": "**many** + pluriel · **much** + indénombrable · **a lot of** partout",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/anglais/exprimer-une-quantite.webp",
+    "prompt": "a glossy violet balance scale with golden coins on one side and golden cubes on the other, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Compte ou ne compte pas&nbsp;?\nTout part de là&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La première question",
+          "lignes": ["dénombrable **ou** indénombrable&nbsp;?"],
+          "petite": true,
+          "regle": "<i>a book, two books</i> se comptent&nbsp;; <i>information, advice, money, furniture</i> ne se comptent pas et n’ont **jamais de -s**.",
+          "note": "le quantifieur découle du nom"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le tableau de tri",
+          "entetes": ["Sens", "Pluriel", "Indénombrable"],
+          "lignes": [
+            ["Beaucoup", "<i>**many** books</i>", "<i>**much** money</i>"],
+            ["Beaucoup (courant)", "<i>**a lot of** books</i>", "<i>**a lot of** money</i>"],
+            ["Un peu (positif)", "<i>**a few** books</i>", "<i>**a little** money</i>"],
+            ["Peu (négatif)", "<i>**few** books</i>", "<i>**little** money</i>"],
+            ["Trop", "<i>**too many** books</i>", "<i>**too much** money</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "A few ou few&nbsp;?",
+          "oui": {
+            "titre": "A few / a little",
+            "texte": "<i>I have **a few** friends here.</i> — quelques amis&nbsp;: c’est bien."
+          },
+          "non": {
+            "titre": "Few / little",
+            "texte": "<i>I have **few** friends here.</i> — presque aucun ami&nbsp;: c’est triste."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>She has ___ money, she can’t buy it.</i> → **little**&nbsp;: peu, et c’est un problème."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Some ou any&nbsp;?",
+          "entetes": ["Mot", "Emploi", "Exemple"],
+          "lignes": [
+            ["**some**", "Affirmative", "<i>I have some money.</i>"],
+            ["**some**", "Offre, demande", "<i>Would you like some tea?</i>"],
+            ["**any**", "Négative, question", "<i>Have you got any money?</i>"],
+            ["**any**", "N’importe lequel", "<i>Any student can apply.</i>"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 5,
+          "titre": "Assez, trop",
+          "entetes": ["Mot", "Place", "Exemple"],
+          "lignes": [
+            ["**enough**", "Après l’adjectif", "<i>old enough</i>"],
+            ["**enough**", "Avant le nom", "<i>enough time</i>"],
+            ["**too**", "Avant l’adjectif", "<i>too expensive</i>"],
+            ["**too much / many**", "Avant le nom", "<i>too many people</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 6,
+          "titre": "La méthode",
+          "etapes": [
+            {"titre": "Le nom se compte&nbsp;?", "texte": "Oui → **many / few**&nbsp;; non → **much / little**."},
+            {"titre": "Positif ou négatif&nbsp;?", "texte": "**a** few / a little (assez) ou few / little (trop peu)."},
+            {"titre": "Type de phrase", "texte": "Affirmative → **some**&nbsp;; négative, question → **any**."}
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 7,
+          "titre": "Indénombrables piégeux",
+          "deux": true,
+          "items": [
+            {"titre": "information, advice", "texte": "<i>a **piece of** advice, two pieces of information</i>"},
+            {"titre": "furniture, luggage", "texte": "<i>a **piece of** furniture</i>"},
+            {"titre": "homework, progress", "texte": "<i>some homework</i> — jamais de -s."},
+            {"titre": "news", "texte": "singulier malgré le -s&nbsp;: <i>The news **is** good.</i>"}
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>informations, advices, furnitures</i> n’existent pas&nbsp;: **information, advice, furniture**.",
+            "<i>How many money?</i> → <i>How **much** money?</i>",
+            "<i>I haven’t some money</i> → <i>I haven’t **any** money.</i>",
+            "<i>enough old</i> → <i>old **enough**</i> (après l’adjectif)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>How ___ people came?</i> (many / much)",
+            "<i>Can I have ___ advice?</i> (a / some)",
+            "<i>He is ___ to drive.</i> (enough old / old enough)"
+          ],
+          "reponses": "1) many 2) some (a piece of advice) 3) old enough"
+        }
+      ]
+    }
+  ]
+}

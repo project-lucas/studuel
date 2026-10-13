@@ -1,0 +1,185 @@
+{
+  "titre": "Les questions",
+  "titreSurligne": "questions",
+  "accroche": "Un auxiliaire devant le sujet.",
+  "bonus": "(mot interrogatif) + **auxiliaire** + sujet + verbe à la **base**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/anglais/les-questions.webp",
+    "prompt": "a glossy violet speech bubble with a big golden question mark, a small golden magnifying glass beside it, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Une question&nbsp;?\nL’auxiliaire d’abord&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’ordre des mots",
+          "lignes": [
+            "mot interrogatif + **aux.** + sujet + base"
+          ],
+          "petite": true,
+          "regle": "Sans auxiliaire dans la phrase, on le fabrique avec **do / does / did**. Le verbe reste à la **base**&nbsp;: une seule marque par groupe verbal.",
+          "note": "Where does she live?"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les mots interrogatifs",
+          "entetes": [
+            "Le mot",
+            "Il demande",
+            "Le mot",
+            "Il demande"
+          ],
+          "lignes": [
+            [
+              "<i>who</i>",
+              "qui",
+              "<i>how long</i>",
+              "la durée"
+            ],
+            [
+              "<i>what</i>",
+              "quoi",
+              "<i>how far</i>",
+              "la distance"
+            ],
+            [
+              "<i>which</i>",
+              "lequel (un choix)",
+              "<i>how often</i>",
+              "la fréquence"
+            ],
+            [
+              "<i>where, when, why, how</i>",
+              "lieu, moment, raison, manière",
+              "<i>how much / many</i>",
+              "la quantité"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Trois types de questions",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Avec un auxiliaire",
+              "texte": "<i>**Have** you finished?</i> · <i>**Can** he swim?</i> — l’auxiliaire passe devant le sujet."
+            },
+            {
+              "titre": "Sans auxiliaire",
+              "texte": "On ajoute **do** : <i>**Does** she like it?</i> · <i>**Did** you see him?</i>"
+            },
+            {
+              "titre": "Les question tags",
+              "texte": "Polarité **inversée** : <i>You’re French, **aren’t you**?</i> · <i>He can’t swim, **can he**?</i> · <i>She likes it, **doesn’t she**?</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Sujet ou complément&nbsp;?",
+          "oui": {
+            "titre": "Le mot est le sujet",
+            "texte": "<i>**Who** broke the window?</i> — pas d’auxiliaire, pas de <i>did</i>."
+          },
+          "non": {
+            "titre": "Le mot est complément",
+            "texte": "<i>**Who** did you see?</i> — <i>did</i> obligatoire."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Where ___ she live?</i> → **does**&nbsp;; et le verbe reste <i>live</i>, pas <i>lives</i>."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Cherche l’auxiliaire",
+              "texte": "<i>be, have</i>, un modal&nbsp;? Sinon, **do / does / did**."
+            },
+            {
+              "titre": "Place-le avant le sujet",
+              "texte": "Le mot interrogatif, s’il y en a un, passe **tout devant**."
+            },
+            {
+              "titre": "Verbe à la base",
+              "texte": "L’auxiliaire porte le temps&nbsp;: le verbe ne bouge plus."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Les tags",
+              "texte": "Phrase positive → tag négatif, et l’inverse. Sans auxiliaire&nbsp;: <i>do</i>."
+            },
+            {
+              "titre": "What … like",
+              "texte": "<i>What is he like?</i> = son caractère."
+            },
+            {
+              "titre": "How is he",
+              "texte": "<i>How is he?</i> = sa santé, son humeur."
+            },
+            {
+              "titre": "Which",
+              "texte": "un choix limité&nbsp;: <i>Which one?</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Where does she lives?</i> → <i>Where does she **live**?</i>",
+            "<i>You like it?</i> à l’écrit → <i>**Do** you like it?</i>",
+            "<i>Who did break the window?</i> → <i>Who **broke** it?</i>",
+            "<i>What is he like?</i> ≠ <i>How is he?</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Where ___ she live?</i>",
+            "<i>She likes it, ___ she?</i>",
+            "<i>Who ___ (break) the window?</i> (Who est sujet.)"
+          ],
+          "reponses": "1) does 2) doesn’t 3) broke (pas de did)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "titre": "Réponses courtes, reprises",
+  "titreSurligne": "reprises",
+  "accroche": "L’auxiliaire répond à ta place.",
+  "bonus": "**So** + auxiliaire + sujet · **Neither** + auxiliaire + sujet",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/anglais/les-reponses-courtes-et-les-reprises-so-do-i-neither-can-she.webp",
+    "prompt": "two glossy violet speech bubbles facing each other, one with a golden check mark and one with a golden mirror arrow, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Moi aussi&nbsp;?\nSo do I&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle",
+          "lignes": [
+            "**So / Neither** + aux. + sujet"
+          ],
+          "petite": true,
+          "regle": "L’auxiliaire se choisit **sur la phrase de départ** et passe **avant** le sujet&nbsp;: <i>I can’t swim. — Neither **can** I.</i>",
+          "note": "so = +, neither = −"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les réponses courtes",
+          "entetes": [
+            "Question",
+            "Oui",
+            "Non"
+          ],
+          "lignes": [
+            [
+              "<i>Do you like tea?</i>",
+              "<i>Yes, I **do**.</i>",
+              "<i>No, I **don’t**.</i>"
+            ],
+            [
+              "<i>Is she French?</i>",
+              "<i>Yes, she **is**.</i>",
+              "<i>No, she **isn’t**.</i>"
+            ],
+            [
+              "<i>Have they finished?</i>",
+              "<i>Yes, they **have**.</i>",
+              "<i>No, they **haven’t**.</i>"
+            ],
+            [
+              "<i>Did you see it?</i>",
+              "<i>Yes, I **did**.</i>",
+              "<i>No, I **didn’t**.</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Accord ou désaccord&nbsp;?",
+          "oui": {
+            "titre": "Moi aussi",
+            "texte": "<i>I love pizza. — **So do I.**</i> (moi aussi)\n<i>I can’t swim. — **Neither can I.**</i> (moi non plus)"
+          },
+          "non": {
+            "titre": "Moi, non / si",
+            "texte": "<i>I love pizza. — Oh, I **don’t**.</i> Le sujet reste devant, la polarité s’inverse."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>He went home. — So ___ I.</i> → **did**&nbsp;: l’auxiliaire suit « went » (prétérit)."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Lis la phrase",
+              "texte": "Affirmative → **so**. Négative → **neither / nor**."
+            },
+            {
+              "titre": "Trouve l’auxiliaire",
+              "texte": "<i>have been</i> → have, <i>went</i> → did, <i>can’t</i> → can, <i>love</i> → do."
+            },
+            {
+              "titre": "Inverse",
+              "texte": "Auxiliaire **avant** le sujet&nbsp;: <i>So do I.</i>"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "<i>Tom doesn’t eat meat.</i> Et sa sœur&nbsp;?",
+          "calcul": "<i>Neither does his sister.</i>",
+          "aparte": "doesn’t → does",
+          "resultat": "[[Neither does]]"
+        }
+      ],
+      "colonnes": "1fr 262px"
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Les reprises",
+          "deux": true,
+          "items": [
+            {
+              "titre": "I think so / I don’t think so",
+              "texte": "je crois que oui / que non"
+            },
+            {
+              "titre": "I hope so / I hope not",
+              "texte": "j’espère / j’espère que non"
+            },
+            {
+              "titre": "I’m afraid so / not",
+              "texte": "hélas oui / hélas non"
+            },
+            {
+              "titre": "Have you?",
+              "texte": "Ah bon&nbsp;? (<i>I’ve just moved.</i>)"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Yes, I’m</i> → <i>Yes, I **am**.</i> (jamais de contraction à l’affirmatif)",
+            "<i>Neither I can</i> → <i>Neither **can I**.</i>",
+            "<i>I don’t think not</i> → <i>I hope **not**.</i>",
+            "<i>Yes.</i> tout seul sonne sec&nbsp;: reprends l’auxiliaire."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>She has been to London. — So ___ I.</i>",
+            "<i>They won’t come. — Neither ___ we.</i>",
+            "Réponds&nbsp;: <i>Can he swim?</i> (oui)"
+          ],
+          "reponses": "1) have 2) will 3) Yes, he can."
+        }
+      ]
+    }
+  ]
+}

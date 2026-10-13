@@ -1,0 +1,186 @@
+{
+  "titre": "Colorisation d’image",
+  "titreSurligne": "Colorisation",
+  "accroche": "Retoucher, c’est calculer sur chaque pixel.",
+  "bonus": "Négatif = **255 − valeur** · gris = moyenne ou **luminance** · seuillage = **noir ou blanc** · colorisation IA = **vraisemblable**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/snt/la-colorisation-d-une-image.webp",
+    "prompt": "a glossy violet paint palette with golden round color spots and a golden brush, sparkles"
+  },
+  "marcel": "Une retouche,\nun simple calcul !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les transformations",
+          "items": [
+            {
+              "terme": "Niveaux de gris",
+              "definition": "**moyenne** (R + V + B) / 3 ou **luminance** pondérée"
+            },
+            {
+              "terme": "Négatif",
+              "definition": "chaque composante devient **255 − valeur**"
+            },
+            {
+              "terme": "Seuillage",
+              "definition": "au-dessus du seuil **blanc**, en dessous **noir**"
+            },
+            {
+              "terme": "Sépia",
+              "definition": "combinaison linéaire des trois composantes"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Couleur et négatif",
+          "entetes": [
+            "Pixel",
+            "Son négatif"
+          ],
+          "lignes": [
+            [
+              "Noir (0, 0, 0)",
+              "Blanc (255, 255, 255)"
+            ],
+            [
+              "Rouge vif (255, 0, 0)",
+              "Cyan (0, 255, 255)"
+            ],
+            [
+              "Blanc (255, 255, 255)",
+              "Noir (0, 0, 0)"
+            ],
+            [
+              "Appliqué **deux fois**",
+              "l’image d’**origine**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Transformer une image en trois temps",
+          "etapes": [
+            {
+              "titre": "Lire",
+              "texte": "chaque pixel est un triplet (R, V, B)"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "on applique la même fonction à tous les pixels"
+            },
+            {
+              "titre": "Écrire",
+              "texte": "les nouvelles valeurs forment l’image retouchée"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Négatif du pixel (200, 50, 0). __Quel triplet__&nbsp;?",
+          "calcul": "(255 − 200, 255 − 50, 255 − 0)",
+          "aparte": "255 moins chaque valeur",
+          "resultat": "= [[(55, 205, 255)]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Gris&nbsp;: quelle méthode&nbsp;?",
+          "oui": {
+            "titre": "Luminance",
+            "texte": "Moyenne **pondérée**&nbsp;: le **vert** compte davantage, rendu meilleur."
+          },
+          "non": {
+            "titre": "Moyenne",
+            "texte": "(R + V + B) / 3&nbsp;: simple, résultat correct mais moins fidèle."
+          },
+          "essai": {
+            "texte": "On pondère car l’œil est plus sensible au **vert** qu’au bleu."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "Autres transformations",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Permuter",
+              "texte": "échanger deux canaux, rouge et bleu par exemple"
+            },
+            {
+              "titre": "Coloriser",
+              "texte": "un modèle d’apprentissage **prédit** des couleurs plausibles"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Une image est un tableau de nombres.",
+              "quoi": "le principe"
+            },
+            {
+              "texte": "On applique une fonction à chaque pixel.",
+              "quoi": "la méthode"
+            },
+            {
+              "texte": "Le seuillage sépare la forme du fond.",
+              "quoi": "l’usage"
+            }
+          ],
+          "pied": "Une colorisation automatique est ==vraisemblable==, pas ==véridique==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que la colorisation **retrouve** les vraies couleurs.",
+            "Oublier que le négatif est **réversible**.",
+            "Calculer le négatif avec **256** au lieu de 255.",
+            "Penser qu’une retouche est un geste **magique**&nbsp;: c’est une fonction."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel est le **négatif** de la valeur 100&nbsp;?",
+            "À quoi sert le **seuillage**&nbsp;?",
+            "Pourquoi pondérer le **vert**&nbsp;?"
+          ],
+          "reponses": "1) 155 (255 − 100) · 2) séparer la forme du fond · 3) l’œil y est plus sensible"
+        }
+      ]
+    }
+  ]
+}

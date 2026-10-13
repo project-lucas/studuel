@@ -1,0 +1,210 @@
+{
+  "titre": "Pathogènes et vecteurs",
+  "titreSurligne": "vecteurs",
+  "accroche": "Qui rend malade, et comment il voyage.",
+  "bonus": "Paludisme = <i>Plasmodium</i> · moustique **tigre** = dengue, chikungunya, Zika · tique = **Lyme** (bactérie)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/svt/agents-pathogenes-et-maladies-a-vecteur.webp",
+    "prompt": "a glossy golden mosquito with violet wings above a small violet droplet of water, tiny golden germs, sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Le moustique voyage,\nle microbe aussi !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les quatre familles d’agents",
+          "entetes": [
+            "Agent",
+            "Nature",
+            "Exemples"
+          ],
+          "lignes": [
+            [
+              "**Bactéries**",
+              "cellules procaryotes",
+              "tuberculose, salmonellose"
+            ],
+            [
+              "**Virus**",
+              "**pas** des cellules, parasites",
+              "grippe, VIH, Covid-19"
+            ],
+            [
+              "**Champignons**",
+              "eucaryotes",
+              "mycoses"
+            ],
+            [
+              "**Protozoaires**",
+              "eucaryotes unicellulaires",
+              "paludisme, toxoplasmose"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les maladies à vecteur",
+          "entetes": [
+            "Vecteur",
+            "Maladie",
+            "Agent"
+          ],
+          "lignes": [
+            [
+              "<i>Anopheles</i>",
+              "**paludisme**",
+              "protozoaire <i>Plasmodium</i>"
+            ],
+            [
+              "Moustique **tigre**",
+              "dengue, chikungunya, Zika",
+              "virus"
+            ],
+            [
+              "**Tique**",
+              "maladie de **Lyme**",
+              "bactérie"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les modes de transmission",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Directe",
+              "texte": "Contact, **gouttelettes**."
+            },
+            {
+              "titre": "Indirecte",
+              "texte": "**Eau**, aliments, objets."
+            },
+            {
+              "titre": "Vectorielle",
+              "texte": "Un **animal** porte l’agent d’un hôte à l’autre."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Ce qui favorise les maladies à vecteur",
+          "entetes": [
+            "Facteur",
+            "Effet"
+          ],
+          "lignes": [
+            [
+              "**Climat**",
+              "fixe l’aire du vecteur"
+            ],
+            [
+              "**Eau stagnante**",
+              "gîtes larvaires"
+            ],
+            [
+              "**Urbanisation**, déforestation",
+              "rapprochent hôtes et vecteurs"
+            ],
+            [
+              "**Déplacements** humains",
+              "importent les agents"
+            ],
+            [
+              "**Réchauffement**",
+              "le moustique tigre gagne vers le nord"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Expliquer une maladie à vecteur",
+          "etapes": [
+            {
+              "titre": "Identifier",
+              "texte": "l’agent (virus, bactérie, protozoaire) et le vecteur"
+            },
+            {
+              "titre": "Relier",
+              "texte": "au milieu : climat, eau stagnante, déplacements"
+            },
+            {
+              "titre": "Prévenir",
+              "texte": "gîtes, protection, surveillance, vaccin"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Prévenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Vider",
+              "texte": "les eaux stagnantes"
+            },
+            {
+              "titre": "Se protéger",
+              "texte": "répulsifs, moustiquaires"
+            },
+            {
+              "titre": "Surveiller",
+              "texte": "les cas, vacciner"
+            },
+            {
+              "titre": "Hygiène",
+              "texte": "mains, aliments, eau"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que les **virus** sont des cellules.",
+            "Voir le vecteur comme un simple **transporteur** (le parasite y vit une partie de son cycle).",
+            "Penser que seule la protection **individuelle** compte.",
+            "Croire le moustique tigre limité aux **tropiques**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel agent cause le **paludisme**&nbsp;?",
+            "Quelle bactérie transmise par une tique&nbsp;?",
+            "Cite un mode de transmission **indirecte**."
+          ],
+          "reponses": "1) un protozoaire, Plasmodium · 2) la maladie de Lyme · 3) eau, aliments ou objets"
+        }
+      ]
+    }
+  ]
+}

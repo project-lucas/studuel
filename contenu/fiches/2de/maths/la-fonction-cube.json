@@ -1,0 +1,160 @@
+{
+  "titre": "La fonction cube",
+  "titreSurligne": "cube",
+  "accroche": "Croissante partout, et impaire.",
+  "epreuve": "socle",
+  "bonus": "f(x) = **x³** · croissante sur ℝ · impaire · x³ = k a **toujours une** solution",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/maths/la-fonction-cube.webp",
+    "prompt": "a glossy violet S-shaped curve rising across a golden grid with a small golden cube, a tiny cartoon marble riding the curve, sparkles"
+  },
+  "marcel": "Le cube garde\nle signe&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La fonction",
+          "petite": true,
+          "lignes": [
+            "f(x) = x³"
+          ],
+          "regle": "**Croissante** sur tout ℝ&nbsp;: elle conserve l’ordre (a &lt; b ⟹ a³ &lt; b³), sans minimum ni maximum. Elle est **impaire** : (−x)³ = −x³, courbe symétrique par rapport à l’**origine**. Son signe est celui de x.",
+          "note": "x³ = k : une seule solution"
+        },
+        {
+          "type": "figures",
+          "numero": 2,
+          "titre": "La courbe",
+          "figures": [
+            {
+              "svg": "<svg viewBox='0 0 220 170' aria-hidden='true'><g stroke='#2b2350' stroke-width='2' stroke-linecap='round'><line x1='10' y1='85' x2='214' y2='85'></line><line x1='110' y1='164' x2='110' y2='6'></line></g><polygon points='214,85 206,80 206,90' fill='#2b2350'></polygon><polygon points='110,6 105,14 115,14' fill='#2b2350'></polygon><path d='M45,160 C85,150 98,92 110,85 C122,78 135,20 175,10' fill='none' stroke='#7a3fe0' stroke-width='4' stroke-linecap='round'></path><circle cx='110' cy='85' r='5' fill='#f5b722' stroke='#2b2350' stroke-width='2'></circle><g font-family=\"Baloo 2\" font-weight='800' font-size='14' fill='#2b2350'><text x='116' y='104' fill='#b8860b'>O</text><text x='150' y='40' fill='#7a3fe0'>x³</text></g></svg>",
+              "legende": "y = x³",
+              "sous": "symétrique par rapport à O"
+            }
+          ],
+          "legende": {
+            "jeton": "x³ = k",
+            "texte": "toujours **1** solution"
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre une inéquation en x³",
+          "etapes": [
+            {
+              "titre": "Écrire k en cube",
+              "texte": "8 = 2³, −27 = (−3)³"
+            },
+            {
+              "titre": "Appliquer",
+              "texte": "le cube est croissante&nbsp;: on garde le sens de l’inégalité"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "écrire l’intervalle de x"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Résoudre __x³ ≤ 8__.",
+          "calcul": "8 = 2³ donc x³ ≤ 2³",
+          "aparte": "cube croissant",
+          "resultat": "S = ]−∞&nbsp;; 2], soit [[x ≤ 2]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Cube contre carré",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Variations",
+              "texte": "Cube **croissant** sur ℝ&nbsp;; carré décroît puis croît."
+            },
+            {
+              "titre": "Parité",
+              "texte": "Cube **impair** (origine)&nbsp;; carré **pair** (axe y)."
+            },
+            {
+              "titre": "x³ = −8",
+              "texte": "Une solution&nbsp;: **x = −2**. Pour x² = −8&nbsp;: aucune."
+            },
+            {
+              "titre": "[0&nbsp;; 1]",
+              "texte": "x³ ≤ x² ≤ x ; sur [1&nbsp;; +∞[ c’est **l’inverse**."
+            },
+            {
+              "titre": "Signe",
+              "texte": "x³ a **le signe de x** : négatif, nul, positif."
+            },
+            {
+              "titre": "Racine cubique",
+              "texte": "x³ = 27 donne x = **3** ; x³ = −27 donne x = **−3**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "8 = 2³, donc x³ ≤ 2³",
+              "quoi": "on écrit en cube"
+            },
+            {
+              "texte": "La fonction cube est croissante sur ℝ",
+              "quoi": "on justifie"
+            },
+            {
+              "texte": "Donc x ≤ 2, S = ]−∞&nbsp;; 2]",
+              "quoi": "on conclut"
+            }
+          ],
+          "pied": "Citer le ==sens de variation== avant de supprimer les cubes."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que x³ = −27 n’a **pas de solution**.",
+            "Donner **deux** solutions à x³ = 8&nbsp;: il n’y a que 2.",
+            "Penser que le cube a un **minimum en 0**.",
+            "Croire que x³ ≤ x² partout&nbsp;: c’est vrai sur [0&nbsp;; 1] seulement."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Résoudre **x³ = −64**.",
+            "Comparer **(−2)³** et **(−1)³**.",
+            "Comparer **0,3²** et **0,3³**."
+          ],
+          "reponses": "1) x = −4 · 2) −8 &lt; −1 · 3) 0,09 &gt; 0,027"
+        }
+      ]
+    }
+  ]
+}

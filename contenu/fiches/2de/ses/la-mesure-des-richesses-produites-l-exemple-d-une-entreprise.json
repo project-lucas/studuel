@@ -1,0 +1,154 @@
+{
+  "titre": "La valeur ajoutée",
+  "titreSurligne": "valeur ajoutée",
+  "accroche": "Chiffre d’affaires n’est pas richesse.",
+  "bonus": "**VA = chiffre d’affaires − consommations intermédiaires** · Σ des VA = **PIB**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/ses/la-mesure-des-richesses-produites-l-exemple-d-une-entreprise.webp",
+    "prompt": "a glossy violet bakery loaf next to a golden coin stack and a small ascending golden arrow, tiny golden sparkles"
+  },
+  "marcel": "Additionner les VA,\npas les ventes !",
+  "rangs": [
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La formule",
+          "lignes": [
+            "VA = CA − CI"
+          ],
+          "regle": "Valeur ajoutée = chiffre d’affaires moins consommations intermédiaires",
+          "note": "ce que l’entreprise ajoute vraiment",
+          "teinte": "jaune"
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Ventes de pain&nbsp;: 300 000 €\nFarine, levure, énergie&nbsp;: 90 000 €",
+          "calcul": "300 000 − 90 000",
+          "resultat": "[[VA = 210 000 €]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Le partage de la valeur ajoutée",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Salariés",
+              "texte": "Salaires et cotisations."
+            },
+            {
+              "titre": "État",
+              "texte": "Les impôts liés à la production."
+            },
+            {
+              "titre": "Prêteurs",
+              "texte": "Les intérêts."
+            },
+            {
+              "titre": "Propriétaires",
+              "texte": "Les dividendes."
+            },
+            {
+              "titre": "Entreprise",
+              "texte": "Ce qui reste&nbsp;: l’**autofinancement**."
+            },
+            {
+              "titre": "Un enjeu",
+              "texte": "Ce partage est un **conflit permanent**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Calculer et utiliser la VA",
+          "etapes": [
+            {
+              "titre": "Relever",
+              "texte": "le chiffre d’affaires et les consommations intermédiaires"
+            },
+            {
+              "titre": "Soustraire",
+              "texte": "CA − CI pour obtenir la valeur ajoutée"
+            },
+            {
+              "titre": "Partager",
+              "texte": "salaires, impôts, intérêts, dividendes, autofinancement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "À retenir",
+          "paragraphes": [
+            "La VA mesure la **richesse réellement créée** par l’entreprise&nbsp;; elle sert à calculer le PIB et à asseoir la TVA."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Le chiffre d’affaires compte aussi ce que l’entreprise a acheté à d’autres.",
+              "quoi": "constater"
+            },
+            {
+              "texte": "La valeur ajoutée est égale au chiffre d’affaires moins les consommations intermédiaires.",
+              "quoi": "définir"
+            },
+            {
+              "texte": "Sommer les VA évite le double compte&nbsp;: c’est la base du PIB et de la TVA.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Additionner les chiffres d’affaires compterait la ==farine== plusieurs fois."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **chiffre d’affaires** et valeur ajoutée.",
+            "Oublier de retrancher les **consommations intermédiaires**.",
+            "Croire que la VA va **tout entière** aux salariés.",
+            "Additionner les CA pour calculer le **PIB**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Comment calcule-t-on la **valeur ajoutée**&nbsp;?",
+            "Quelle est la VA si CA = 500 et CI = 200&nbsp;?",
+            "À quoi sert la somme des **VA** d’un pays&nbsp;?"
+          ],
+          "reponses": "1) CA − CI · 2) 300 · 3) à calculer le PIB"
+        }
+      ]
+    }
+  ]
+}

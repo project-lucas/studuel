@@ -1,0 +1,210 @@
+{
+  "titre": "La déclinaison",
+  "titreSurligne": "déclinaison",
+  "accroche": "La finale dit la fonction du mot.",
+  "bonus": "**Neutre** : nominatif = accusatif, toujours · l’**article** donne le cas",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/grec/la-declinaison-grecque.webp",
+    "prompt": "a glossy violet Greek column capital with golden letters alpha and omega on its base, sparkles, same art style as the reference icons, on a magenta background, no text, no numbers"
+  },
+  "marcel": "La finale parle,\nlis-la&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les cinq cas",
+          "entetes": [
+            "Cas",
+            "Fonction"
+          ],
+          "lignes": [
+            [
+              "**Nominatif**",
+              "sujet, attribut"
+            ],
+            [
+              "**Vocatif**",
+              "interpellation"
+            ],
+            [
+              "**Accusatif**",
+              "COD, direction"
+            ],
+            [
+              "**Génitif**",
+              "complément du nom, origine"
+            ],
+            [
+              "**Datif**",
+              "COI, moyen, lieu"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les deux premières déclinaisons",
+          "entetes": [
+            "Type",
+            "Nominatif",
+            "Génitif"
+          ],
+          "lignes": [
+            [
+              "1re, fém.",
+              "ἡ τιμή",
+              "τῆς τιμῆς"
+            ],
+            [
+              "1re, masc.",
+              "ὁ πολίτης",
+              "τοῦ πολίτου"
+            ],
+            [
+              "2e, masc.",
+              "ὁ λόγος",
+              "τοῦ λόγου"
+            ],
+            [
+              "2e, neutre",
+              "τὸ δῶρον",
+              "τοῦ δώρου"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Trois repères rentables",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Le neutre",
+              "texte": "**nominatif** et **accusatif** sont toujours identiques."
+            },
+            {
+              "titre": "L’article",
+              "texte": "ὁ / ἡ / τό se décline&nbsp;: sa finale donne le **cas**."
+            },
+            {
+              "titre": "L’ordre",
+              "texte": "très libre&nbsp;: c’est la **terminaison** qui fait la fonction."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Analyser un mot grec",
+          "etapes": [
+            {
+              "titre": "Article",
+              "texte": "lis-le avant le nom"
+            },
+            {
+              "titre": "Finale",
+              "texte": "repère la terminaison du nom"
+            },
+            {
+              "titre": "Cas",
+              "texte": "déduis la fonction dans la phrase"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple",
+          "donnees": "τοῦ λόγου",
+          "calcul": "article τοῦ + finale -ου",
+          "resultat": "[[génitif : de la parole]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": false,
+          "items": [
+            {
+              "titre": "1re déclinaison",
+              "texte": "féminins en -η, -α"
+            },
+            {
+              "titre": "2e déclinaison",
+              "texte": "masculins en -ος, neutres en -ον"
+            },
+            {
+              "titre": "Génitif",
+              "texte": "complément du nom, origine"
+            },
+            {
+              "titre": "Datif",
+              "texte": "COI, moyen, lieu"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Chercher la fonction d’après la **place** du mot.",
+            "Oublier que le **neutre** a la même forme au nominatif et à l’accusatif.",
+            "Ignorer l’**article** devant un mot inconnu.",
+            "Confondre **génitif** et **datif**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Le grec marque la fonction par la terminaison, non par la place du mot.",
+              "quoi": "définir"
+            },
+            {
+              "texte": "Au neutre, le nominatif et l’accusatif ont toujours la même forme.",
+              "quoi": "règle"
+            },
+            {
+              "texte": "Devant un mot inconnu, je lis d’abord l’article pour trouver le cas.",
+              "quoi": "méthode"
+            }
+          ],
+          "pied": "La finale ==dit== la fonction."
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel cas note le **COD**&nbsp;?",
+            "Que donne le neutre au **nominatif** et à l’**accusatif**&nbsp;?",
+            "Que lit-on **avant** le nom pour trouver le cas&nbsp;?"
+          ],
+          "reponses": "1) l’accusatif · 2) la même forme · 3) l’article"
+        }
+      ]
+    }
+  ]
+}

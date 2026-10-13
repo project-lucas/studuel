@@ -1,0 +1,128 @@
+{
+  "titre": "Les auxiliaires modaux",
+  "titreSurligne": "modaux",
+  "accroche": "Ce que pense celui qui parle.",
+  "bonus": "**mustn’t** = interdit · **don’t have to** = pas obligé",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/anglais/les-auxiliaires-modaux.webp",
+    "prompt": "a glossy violet speech bubble with a golden exclamation-like star inside and a small golden key, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Can, must, should&nbsp;:\nmon avis compte&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La forme",
+          "lignes": ["modal + **base verbale**"],
+          "petite": true,
+          "regle": "Pas de **-s** à la 3<sup>e</sup> personne, pas de **to**&nbsp;: <i>He can swim.</i> Deux modaux ne se suivent jamais&nbsp;: « il pourra » = <i>he will **be able to**</i>.",
+          "note": "he can, jamais he cans"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les valeurs",
+          "entetes": ["Modal", "Il exprime", "Exemple"],
+          "lignes": [
+            ["**can / could**", "Capacité, permission", "<i>She can drive.</i>"],
+            ["**may / might**", "Possibilité incertaine", "<i>It might rain.</i>"],
+            ["**must**", "Obligation du locuteur", "<i>You must go now.</i>"],
+            ["**have to**", "Obligation extérieure", "<i>I have to work.</i>"],
+            ["**should**", "Conseil", "<i>You should rest.</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Mustn’t ou don’t have to&nbsp;?",
+          "oui": {
+            "titre": "Mustn’t : interdit",
+            "texte": "<i>You **mustn’t** park here.</i> — il ne faut pas."
+          },
+          "non": {
+            "titre": "Don’t have to : libre",
+            "texte": "<i>You **don’t have to** come.</i> — ce n’est pas la peine."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« Tu n’es pas obligé de venir » → <i>You ___ come.</i> → **don’t have to**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": "★",
+          "titre": "Choisir le bon modal",
+          "etapes": [
+            {"titre": "Quel avis&nbsp;?", "texte": "Capacité, devoir, conseil, doute&nbsp;?"},
+            {"titre": "D’où vient-il&nbsp;?", "texte": "De moi → **must**&nbsp;; des circonstances → **have to**."},
+            {"titre": "Présent ou passé&nbsp;?", "texte": "Passé → modal + **have** + participe passé."}
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Modal + have + participe passé : regard sur le passé",
+          "entetes": ["Structure", "Il exprime", "Exemple"],
+          "lignes": [
+            ["**must have** + pp", "Déduction", "<i>He must have missed the train.</i>"],
+            ["**should have** + pp", "Reproche, regret", "<i>She should have called.</i>"],
+            ["**might have** + pp", "Hypothèse", "<i>They might have forgotten.</i>"],
+            ["**can’t have** + pp", "Déduction négative", "<i>He can’t have seen us.</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "Le double sens de must",
+          "colonnes": 1,
+          "cartes": [
+            {"titre": "Radical : un ordre", "texte": "<i>You **must** go.</i> (il faut que tu partes)"},
+            {"titre": "Épistémique : une déduction", "texte": "<i>He **must** be exhausted.</i> (il doit être épuisé) — le contexte tranche."}
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>He cans swim</i> → <i>He **can** swim.</i>",
+            "<i>She must to go</i> → <i>She **must** go.</i>",
+            "<i>He will can</i> → <i>He will **be able to**.</i>",
+            "<i>You mustn’t come</i> ≠ <i>don’t have to</i>&nbsp;: sens opposés."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>He ___ swim.</i> (can / cans)",
+            "« Tu aurais dû appeler. » → <i>You ___ called.</i>",
+            "« Il n’est pas obligé. » → <i>He ___ come.</i>"
+          ],
+          "reponses": "1) can 2) should have 3) doesn’t have to"
+        }
+      ]
+    }
+  ]
+}

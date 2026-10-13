@@ -1,0 +1,116 @@
+{
+  "titre": "Diversité génétique",
+  "titreSurligne": "génétique",
+  "accroche": "Mêmes gènes, allèles différents.",
+  "bonus": "**Mutation** crée · **méiose** brasse · **fécondation** réunit au hasard · 2<sup>23</sup> &gt; **8 millions** de gamètes",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/svt/la-diversite-genetique-au-sein-d-une-espece.webp",
+    "prompt": "a glossy violet DNA double helix with golden and violet beads of different colors on each rung, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Personne n’est\nle même !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Gène et allèle",
+          "items": [
+            { "terme": "Gène", "definition": "séquence d’ADN portant l’information d’un **caractère**" },
+            { "terme": "Allèle", "definition": "une **version** d’un gène" },
+            { "terme": "Individu diploïde", "definition": "**deux** allèles par gène, un sur chaque chromosome de la paire" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les sources de diversité",
+          "entetes": ["Source", "Effet"],
+          "lignes": [
+            ["**Mutation**", "**crée** de nouveaux allèles"],
+            ["**Brassage** (méiose)", "recombine l’existant"],
+            ["**Fécondation**", "réunit deux gamètes au hasard"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Mutations et brassages",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Spontanée", "texte": "une erreur de **réplication**." },
+            { "titre": "Provoquée", "texte": "**UV**, rayons X, substances mutagènes." },
+            { "titre": "Effet", "texte": "souvent **neutre**, parfois défavorable, rarement avantageux." },
+            { "titre": "Interchromosomique", "texte": "répartition **indépendante** des chromosomes de chaque paire." },
+            { "titre": "Intrachromosomique", "texte": "échanges entre homologues&nbsp;: **crossing-over**." },
+            { "titre": "Avantage", "texte": "dépend de l’**environnement**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Expliquer une diversité",
+          "etapes": [
+            { "titre": "Allèles", "texte": "comparer les versions du gène" },
+            { "titre": "Origine", "texte": "mutation, brassage ou fécondation&nbsp;?" },
+            { "titre": "Effet", "texte": "avantage ou non dans le milieu" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Calcul à retenir",
+          "donnees": "23 paires de chromosomes",
+          "calcul": "2<sup>23</sup> combinaisons de gamètes",
+          "resultat": "[[plus de 8 millions]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Une population diverse a plus de chances de compter des individus résistants.", "quoi": "idée" },
+            { "texte": "Une population peu diverse est fragile.", "quoi": "contraste" }
+          ],
+          "pied": "Seule la ==mutation== **crée** un nouvel allèle."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **gène** et **allèle**.",
+            "Dire que le brassage **crée** de nouveaux allèles.",
+            "Croire toutes les mutations **nocives**.",
+            "Oublier le hasard de la **fécondation**.",
+            "Écrire 2<sup>23</sup> pour le nombre de **chromosomes**&nbsp;: ce sont les gamètes."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Qu’est-ce qu’un allèle&nbsp;?",
+            "Quel phénomène crée de nouveaux allèles&nbsp;?",
+            "Comment s’appelle l’échange entre chromosomes homologues&nbsp;?"
+          ],
+          "reponses": "1) une version d’un gène · 2) la mutation · 3) le crossing-over"
+        }
+      ]
+    }
+  ]
+}

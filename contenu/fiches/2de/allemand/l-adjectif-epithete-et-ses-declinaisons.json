@@ -1,0 +1,127 @@
+{
+  "titre": "L’adjectif épithète",
+  "titreSurligne": "épithète",
+  "accroche": "Qui porte la marque du cas&nbsp;?",
+  "bonus": "**faible** -e / -en · **mixte** -er / -es là où <i>ein</i> se tait · **forte** = article défini",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/allemand/l-adjectif-epithete-et-ses-declinaisons.webp",
+    "prompt": "a glossy violet ribbon tag attached to a small golden house, with three tiny golden labels hanging, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "La marque du cas&nbsp;?\nUne seule fois&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le principe",
+          "lignes": ["cas marqué **1 fois**"],
+          "petite": true,
+          "regle": "Si le **déterminant** porte la marque du cas, l’adjectif prend -e / -en. Sinon, l’adjectif la porte **à sa place**.",
+          "note": "der alte Mann"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois déclinaisons",
+          "entetes": ["Après", "Déclinaison", "Terminaisons"],
+          "lignes": [
+            ["<i>der, dieser, jeder, alle</i>", "**faible**", "-e ou -en"],
+            ["<i>ein, kein, mein</i>", "**mixte**", "-er, -es là où <i>ein</i> ne marque rien"],
+            ["aucun déterminant", "**forte**", "celles de l’article défini"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "La faible, en détail",
+          "entetes": ["Cas", "Masc.", "Fém.", "Neutre", "Pluriel"],
+          "lignes": [
+            ["Nominatif", "<i>der alt**e**</i>", "<i>die alt**e**</i>", "<i>das alt**e**</i>", "<i>die alt**en**</i>"],
+            ["Accusatif", "<i>den alt**en**</i>", "<i>die alt**e**</i>", "<i>das alt**e**</i>", "<i>die alt**en**</i>"],
+            ["Datif, génitif", "-en", "-en", "-en", "-en"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "La mixte et ses « trous »",
+          "oui": {
+            "titre": "L’adjectif compense",
+            "texte": "<i>ein **alter** Mann, ein **altes** Haus</i> — <i>ein</i> ne marque rien."
+          },
+          "non": {
+            "titre": "Faible par erreur",
+            "texte": "<i>ein alte Mann, ein alte Haus</i> — la marque du cas a disparu."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>eine ___ Frau</i> (alt) → <i>eine **alte** Frau</i>&nbsp;: <i>eine</i> marque déjà."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode en devoir",
+          "etapes": [
+            { "titre": "Cas et genre", "texte": "Repère le **cas** et le **genre** du groupe nominal." },
+            { "titre": "Le déterminant", "texte": "Marque-t-il déjà le cas&nbsp;? Oui → **-e / -en**." },
+            { "titre": "Sinon", "texte": "L’adjectif prend la terminaison de l’**article défini**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Forte et irréguliers",
+          "deux": true,
+          "items": [
+            { "titre": "Forte", "texte": "<i>kalter Kaffee, frische Milch, mit guten Freunden</i>" },
+            { "titre": "hoch", "texte": "perd son c&nbsp;: <i>ein hoher Berg</i>" },
+            { "titre": "teuer, dunkel", "texte": "perdent leur e&nbsp;: <i>ein teures Auto</i>" },
+            { "titre": "Invariables", "texte": "<i>rosa, lila, prima</i>&nbsp;: <i>ein rosa Kleid</i>" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>ein alt Mann</i> → <i>ein **alter** Mann.</i>",
+            "<i>mit gut Freunden</i> → <i>mit **guten** Freunden.</i>",
+            "<i>ein hochen Berg</i> → <i>ein **hoher** Berg</i> (le c tombe).",
+            "Décliner un adjectif en -a&nbsp;: <i>ein rosa Kleid</i>, pas <i>rosanes</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>der ___ (alt) Mann</i> au nominatif&nbsp;?",
+            "<i>ein ___ (alt) Haus</i>&nbsp;?",
+            "<i>mit ___ (gut) Freunden</i>&nbsp;?"
+          ],
+          "reponses": "1) der alte Mann 2) ein altes Haus 3) mit guten Freunden"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "titre": "L’auxiliaire haber",
+  "titreSurligne": "haber",
+  "accroche": "Un seul auxiliaire, jamais d’accord.",
+  "bonus": "**he, has, ha, hemos, habéis, han** · **hay** invariable · **hay que** + infinitif",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/espagnol/l-auxiliaire-haber.webp",
+    "prompt": "a glossy violet key with a golden handle unlocking a golden clock gear, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "¡Siempre haber,\nnunca ser&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le temps composé",
+          "lignes": ["<i>haber</i> + participe passé"],
+          "petite": true,
+          "regle": "Un seul auxiliaire&nbsp;: <i>haber</i>. Au présent&nbsp;: **he, has, ha, hemos, habéis, han**. Le participe ne s’accorde **jamais**.",
+          "note": "<i>He comido</i>"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les temps composés",
+          "entetes": ["Temps", "Formation", "L’exemple"],
+          "lignes": [
+            ["Plus-que-parfait", "<i>había</i> + part.", "<i>Había salido cuando llegué</i>"],
+            ["Futur antérieur", "<i>habré</i> + part.", "<i>Ya habré terminado</i>"],
+            ["Conditionnel passé", "<i>habría</i> + part.", "<i>Habría venido</i>"],
+            ["Subjonctif passé", "<i>haya</i> + part.", "<i>Espero que haya llegado</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Hay : « il y a »",
+          "entetes": ["Temps", "Forme", "L’exemple"],
+          "lignes": [
+            ["Présent", "<i>hay</i>", "<i>Hay dos libros</i>"],
+            ["Imparfait", "<i>había</i>", "<i>Había muchos alumnos</i>"],
+            ["Passé simple", "<i>hubo</i>", "<i>Hubo un accidente</i>"],
+            ["Futur", "<i>habrá</i>", "<i>Habrá una fiesta</i>"],
+            ["Passé composé", "<i>ha habido</i>", "<i>Ha habido cambios</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Un bloc soudé",
+          "oui": {
+            "titre": "Pronom et négation devant",
+            "texte": "<i>**No lo he** visto nunca</i> · <i>La carta que he **escrito**</i> (participe invariable)."
+          },
+          "non": {
+            "titre": "Rien entre haber et le participe",
+            "texte": "« he nunca visto » · « la carta que he escrita » — deux fautes."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Las cartas que he ___ (escribir)</i> → **escrito**&nbsp;: jamais d’accord."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            { "titre": "Quel temps&nbsp;?", "texte": "Choisis la forme de <i>haber</i> (<i>he, había, habré, haya…</i>)." },
+            { "titre": "Ajoute le participe", "texte": "Invariable, accolé à l’auxiliaire." },
+            { "titre": "Pronom, négation", "texte": "Placés **avant** <i>haber</i>&nbsp;: <i>No lo he visto</i>." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            { "titre": "Hay ou está&nbsp;?", "texte": "<i>Hay un banco en la plaza</i> (existence) / <i>El banco está en la plaza</i> (lieu)." },
+            { "titre": "Hay que", "texte": "obligation impersonnelle&nbsp;: <i>Hay que estudiar</i>." },
+            { "titre": "Haber de", "texte": "obligation atténuée, littéraire&nbsp;: <i>He de irme</i>." },
+            { "titre": "Hay invariable", "texte": "même devant un pluriel&nbsp;: <i>Hay dos libros</i>." }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Hay dos libros</i> → jamais « Han dos libros ».",
+            "<i>he nunca visto</i> → <i>**nunca he** visto</i>.",
+            "<i>la carta que he escrita</i> → <i>he **escrito**</i>.",
+            "<i>Hay el banco en la plaza</i> → <i>El banco **está** en la plaza</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Ayer ___ un accidente.</i> (il y a eu)",
+            "<i>La carta que he ___.</i> (escribir)",
+            "Il faut étudier&nbsp;: <i>___ estudiar.</i>"
+          ],
+          "reponses": "1) hubo 2) escrito 3) Hay que"
+        }
+      ]
+    }
+  ]
+}

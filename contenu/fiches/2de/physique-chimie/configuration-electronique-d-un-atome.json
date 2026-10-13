@@ -1,0 +1,125 @@
+{
+  "titre": "Structure électronique",
+  "titreSurligne": "électronique",
+  "accroche": "Ranger les électrons pour prévoir.",
+  "bonus": "Ordre&nbsp;: **1s, 2s, 2p, 3s, 3p, 4s** · s&nbsp;: **2** e⁻ max · p&nbsp;: **6** e⁻ max",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/configuration-electronique-d-un-atome.webp",
+    "prompt": "a glossy violet atom with a golden nucleus and concentric golden shells holding small glowing electrons, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Les électrons\nfont la queue&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Quelques configurations",
+          "entetes": ["Élément", "Z", "Configuration"],
+          "lignes": [
+            ["Carbone", "6", "1s² 2s² 2p²"],
+            ["Oxygène", "8", "1s² 2s² 2p⁴"],
+            ["Sodium", "11", "1s² 2s² 2p⁶ 3s¹"],
+            ["Chlore", "17", "1s² 2s² 2p⁶ 3s² 3p⁵"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Valence",
+          "items": [
+            { "terme": "Couche externe", "definition": "celle de plus grand numéro" },
+            { "terme": "Électrons de valence", "definition": "ceux de la couche externe, les seuls à intervenir en chimie" },
+            { "terme": "Famille", "definition": "colonne&nbsp;: même nombre d’électrons de valence" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Écrire une configuration",
+          "etapes": [
+            { "titre": "Compter", "texte": "atome neutre&nbsp;: nombre d’électrons = Z" },
+            { "titre": "Remplir", "texte": "dans l’ordre 1s, 2s, 2p, 3s… sans dépasser 2 (s) ou 6 (p)" },
+            { "titre": "Repérer", "texte": "la couche externe&nbsp;: ses électrons sont ceux de valence" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Configuration et valence du fluor (__Z = 9__)&nbsp;?",
+          "calcul": "1s² 2s² 2p⁵ (2 + 2 + 5 = 9)",
+          "aparte": "couche externe n = 2",
+          "resultat": "[[7 électrons]] de valence"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les grandes familles",
+          "colonnes": 1,
+          "cartes": [
+            { "titre": "Alcalins (1re colonne)", "texte": "très réactifs, perdent facilement 1 électron" },
+            { "titre": "Halogènes", "texte": "gagnent facilement 1 électron" },
+            { "titre": "Gaz nobles (dernière)", "texte": "couche externe saturée&nbsp;: inertes" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Z = 17 : 17 électrons", "quoi": "le point de départ" },
+            { "texte": "1s² 2s² 2p⁶ 3s² 3p⁵", "quoi": "la configuration" },
+            { "texte": "3s² 3p⁵ : 7 électrons de valence", "quoi": "la couche externe" }
+          ],
+          "pied": "Le classement actuel suit le ==numéro atomique== croissant, pas la masse."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mettre **plus de 6** électrons dans une sous-couche p.",
+            "Oublier que **4s** se remplit avant 3d.",
+            "Compter **tous** les électrons comme électrons de valence.",
+            "Confondre **ligne** (période) et **colonne** (famille)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 6,
+          "titre": "Mendeleïev et aujourd’hui",
+          "paragraphes": ["Mendeleïev classait par masse croissante et propriétés voisines&nbsp;; le tableau actuel suit le **numéro atomique** croissant."]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Configuration du carbone (Z = 6)&nbsp;?",
+            "Nombre d’électrons de valence du sodium (Z = 11)&nbsp;?",
+            "Pourquoi les gaz nobles sont-ils inertes&nbsp;?"
+          ],
+          "reponses": "1) 1s² 2s² 2p² · 2) 1 · 3) couche externe saturée"
+        }
+      ]
+    }
+  ]
+}

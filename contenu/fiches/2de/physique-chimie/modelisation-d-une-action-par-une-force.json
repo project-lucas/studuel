@@ -1,0 +1,154 @@
+{
+  "titre": "Modéliser par une force",
+  "titreSurligne": "force",
+  "accroche": "Chaque action devient une flèche.",
+  "bonus": "P = m × g · g ≈ 9,8 N·kg⁻¹ · F = G × m<sub>A</sub> × m<sub>B</sub> ÷ d² · force en **N**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/physique-chimie/modelisation-d-une-action-par-une-force.webp",
+    "prompt": "a glossy violet weight hanging from a golden spring scale with a big golden arrow pointing down, sparkles"
+  },
+  "marcel": "Une action,\nune force !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le poids",
+          "petite": true,
+          "lignes": [
+            "P = m × g"
+          ],
+          "regle": "**P** en newtons (N), **m** en kilogrammes, **g** ≈ 9,8 N·kg⁻¹ sur Terre et ≈ 1,6 sur la Lune. Vertical, vers le bas, appliqué au ==centre de gravité==.",
+          "note": "la masse, elle, ne change pas&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux types d’actions",
+          "entetes": [
+            "Type",
+            "Condition",
+            "Exemples"
+          ],
+          "lignes": [
+            [
+              "**Contact**",
+              "un contact matériel",
+              "support, fil, ressort, frottements"
+            ],
+            [
+              "**À distance**",
+              "aucun contact",
+              "pesanteur, magnétisme, électrostatique"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le bilan des forces en trois temps",
+          "etapes": [
+            {
+              "titre": "Choisir",
+              "texte": "le système étudié (un seul objet)"
+            },
+            {
+              "titre": "Inventorier",
+              "texte": "ce qui agit sur lui, contact et distance"
+            },
+            {
+              "titre": "Représenter",
+              "texte": "chaque force : point d’application, direction, sens, valeur en N"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un astronaute de 80 kg sur la Lune (g = 1,6 N·kg⁻¹). Son __poids__&nbsp;?",
+          "calcul": "P = m × g = 80 × 1,6",
+          "aparte": "sur Terre : 784 N",
+          "resultat": "P = [[128 N]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Masse ou poids&nbsp;?",
+          "oui": {
+            "titre": "La masse",
+            "texte": "En **kg**, elle caractérise l’objet seul&nbsp;: **identique** partout."
+          },
+          "non": {
+            "titre": "Le poids",
+            "texte": "En **N**, il dépend du **lieu**&nbsp;: six fois plus faible sur la Lune."
+          },
+          "essai": {
+            "texte": "Doubler la distance entre deux astres&nbsp;: la gravitation est <i>divisée par quatre</i> (en 1/d²)."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Système : l’astronaute. Référentiel lunaire.",
+              "quoi": "le système"
+            },
+            {
+              "texte": "Bilan : le poids <b>P</b> (distance), la réaction du sol (contact).",
+              "quoi": "l’inventaire"
+            },
+            {
+              "texte": "P = m × g = 80 × 1,6 = 128 N",
+              "quoi": "calcul et unité"
+            },
+            {
+              "texte": "Gravitation : F = G × m<sub>A</sub> × m<sub>B</sub> ÷ d²",
+              "quoi": "si deux astres"
+            }
+          ],
+          "pied": "Actions réciproques&nbsp;: A sur B et B sur A sont ==opposées==, mais sur deux objets différents."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire le poids en **kg** ou la masse en N.",
+            "Croire que les deux forces réciproques **se compensent**.",
+            "Oublier une force de **contact** (le sol).",
+            "Appliquer le poids ailleurs qu’au **centre de gravité**.",
+            "Confondre **attractive** (toujours) et répulsive."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**P** d’un objet de 5,0 kg (g = 9,8 N·kg⁻¹)&nbsp;?",
+            "La gravitation est-elle **attractive** ou répulsive&nbsp;?",
+            "Distance × 3&nbsp;: la gravitation est divisée par&nbsp;?"
+          ],
+          "reponses": "1) 49 N · 2) toujours attractive · 3) 9"
+        }
+      ]
+    }
+  ]
+}

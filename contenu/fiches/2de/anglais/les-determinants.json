@@ -1,0 +1,137 @@
+{
+  "titre": "Les déterminants",
+  "titreSurligne": "déterminants",
+  "accroche": "A, an, the… ou rien du tout.",
+  "bonus": "**a / an** = le son · **the** = identifié · **Ø** = général",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/anglais/les-determinants.webp",
+    "prompt": "a glossy violet signpost with three golden arrows pointing in different directions, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "A, the ou rien&nbsp;?\nJe te montre&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "320px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’arbre de décision",
+          "lignes": ["**the** · **a / an** · **Ø**"],
+          "petite": true,
+          "regle": "1) L’interlocuteur sait **lequel** → **the**. 2) Sinon, singulier dénombrable → **a / an**. 3) Sinon (pluriel, indénombrable) → **Ø**, on n’écrit rien.",
+          "note": "a / an : le son, pas la lettre"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le nom est…",
+          "entetes": ["Le nom", "Non identifié", "Identifié"],
+          "lignes": [
+            ["Singulier dénombrable", "<i>**a** book</i>", "<i>**the** book</i>"],
+            ["Pluriel", "<i>**Ø** books</i>", "<i>**the** books</i>"],
+            ["Indénombrable", "<i>**Ø** water</i>", "<i>**the** water</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "L’article zéro",
+          "oui": {
+            "titre": "Sens général",
+            "texte": "<i>**Life** is hard. I like **music**. **Dogs** are loyal.</i> — rien devant le nom."
+          },
+          "non": {
+            "titre": "Faute du français",
+            "texte": "<i>The life is hard. I like the music.</i> — le français met « la », pas l’anglais."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« L’eau est indispensable » → <i>___ water is essential.</i> → **Ø**&nbsp;: on parle de l’eau en général."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "La méthode",
+          "etapes": [
+            {"titre": "Général&nbsp;?", "texte": "Pluriel ou indénombrable dit en général → **Ø**."},
+            {"titre": "Identifié&nbsp;?", "texte": "Déjà cité, précisé, unique → **the**."},
+            {"titre": "Sinon", "texte": "Un exemplaire quelconque → **a** (consonne) / **an** (voyelle)."}
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "À retenir en plus",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "this / that",
+              "texte": "Proche&nbsp;: <i>**this** / **these**</i>. Éloigné&nbsp;: <i>**that** / **those**</i>. <i>Those days are gone.</i>"
+            },
+            {
+              "titre": "Le génitif",
+              "texte": "<i>Peter**’s** car</i> · <i>the students**’** bags</i> · <i>the children**’s** toys</i> — le possesseur passe devant."
+            },
+            {
+              "titre": "Les possessifs",
+              "texte": "Le **possesseur** commande&nbsp;: <i>**his** sister</i> (sœur de Paul), <i>**her** brother</i> (frère de Marie). <i>its</i> sans apostrophe."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Quand dire « the »",
+          "deux": true,
+          "items": [
+            {"titre": "Déjà mentionné", "texte": "<i>I bought a car. **The** car is red.</i>"},
+            {"titre": "Précisé", "texte": "<i>**the** book I bought</i>"},
+            {"titre": "Unique", "texte": "<i>the sun, the moon</i>"},
+            {"titre": "Superlatif", "texte": "<i>**the** best student</i>"}
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>a university</i> mais <i>**an** hour</i>&nbsp;: on prononce avant d’écrire.",
+            "Métier&nbsp;: <i>She is **a** dentist</i> — l’article reste.",
+            "<i>It’s</i> = it is&nbsp;; <i>**its**</i> = son, sa (sans apostrophe).",
+            "<i>the Thames, the Alps, the United States</i> gardent « the ».",
+            "Astuce&nbsp;: si on peut ajouter « en général » en français, c’est **Ø**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>___ life is hard.</i> (la vie en général)",
+            "<i>She is ___ engineer.</i>",
+            "<i>Paul’s sister</i> : <i>___ sister</i> (his / her)"
+          ],
+          "reponses": "1) Ø (rien) 2) an 3) his"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "titre": "Familles de nombres",
+  "titreSurligne": "nombres",
+  "accroche": "L’écriture décimale dit tout.",
+  "epreuve": "socle",
+  "bonus": "fini → **décimal** · périodique → **rationnel** · infini sans période → **irrationnel**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/maths/les-nombres-decimaux-rationnels-et-irrationnels.webp",
+    "prompt": "three glossy nested violet and golden rings like a target, a tiny cartoon pi symbol sparkling outside the rings, sparkles"
+  },
+  "marcel": "Fini, périodique\nou sans fin&nbsp;?",
+  "rangs": [
+    {
+      "colonnes": "1fr 300px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Lire l’écriture",
+          "taille": "mini",
+          "lignes": ["fini ⟹ décimal", "périodique ⟹ rationnel", "infini, sans période ⟹ irrationnel"],
+          "regle": "Un **décimal** s’écrit {a/10<sup>n</sup>} avec a entier. Un **rationnel** est un quotient de deux entiers. Tout décimal est rationnel&nbsp;; √2, π et le nombre d’or ne le sont pas.",
+          "note": "1/3 = 0,333… n’est pas décimal&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois exemples",
+          "entetes": ["Nombre", "Famille"],
+          "lignes": [
+            ["0,25 = 25/100", "**décimal**"],
+            ["3/8 = 0,375", "**décimal**"],
+            ["7/12 = 0,58333…", "rationnel, **pas** décimal"],
+            ["√2 = 1,41421…", "**irrationnel**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Un périodique en fraction",
+          "etapes": [
+            { "titre": "Décaler", "texte": "multiplier par 10, 100… pour décaler d’une période" },
+            { "titre": "Soustraire", "texte": "retirer x&nbsp;: la partie infinie disparaît" },
+            { "titre": "Isoler", "texte": "diviser par le coefficient de x, simplifier" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Écrire __x = 0,2727…__ en fraction.",
+          "calcul": "100x − x = 27,2727… − 0,2727… = 27\n99x = 27",
+          "aparte": "période 27",
+          "resultat": "x = {27/99} = [[{3/11}]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Décimal ?", "texte": "Fraction irréductible dont le dénominateur n’a que les facteurs **2 et 5**." },
+            { "titre": "√2 irrationnel", "texte": "Absurde : p et q seraient **tous deux pairs**, or {p/q} est irréductible." },
+            { "titre": "Additionner", "texte": "Même dénominateur&nbsp;: {2/3} + {1/6} = **{5/6}**." },
+            { "titre": "Diviser", "texte": "Multiplier par l’**inverse**&nbsp;: {2/3} ÷ {4/5} = {2/3} × {5/4}." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Soit x = 0,2727… Alors 100x = 27,2727…", "quoi": "on décale d’une période" },
+            { "texte": "100x − x = 27, donc 99x = 27", "quoi": "la queue s’annule" },
+            { "texte": "x = {27/99} = {3/11}&nbsp;: x est rationnel", "quoi": "on conclut" }
+          ],
+          "pied": "Garder la valeur ==exacte== (1/3, √2), pas un arrondi."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’un nombre à virgule est **toujours décimal**.",
+            "Additionner numérateurs et dénominateurs&nbsp;: {2/3} + {1/6} ≠ {3/9}.",
+            "Prendre 1,414213562 de la calculatrice pour **√2 lui-même**.",
+            "Penser que 7/12 est décimal&nbsp;: 12 contient un **3**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "{7/12} est-il **décimal**&nbsp;?",
+            "Calculer **{2/3} + {1/6}**.",
+            "Écrire **0,111…** en fraction."
+          ],
+          "reponses": "1) non, 12 contient un 3 · 2) {5/6} · 3) 10x − x = 1, donc {1/9}"
+        }
+      ]
+    }
+  ]
+}

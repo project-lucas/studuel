@@ -1,0 +1,104 @@
+{
+  "titre": "Dérive et sélection",
+  "titreSurligne": "sélection",
+  "accroche": "Les allèles changent de fréquence.",
+  "bonus": "**Dérive** = hasard (petite population) · **sélection** = tri par l’avantage · **isolement** → **spéciation**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/2de/svt/la-biodiversite-et-son-evolution-dans-le-temps.webp",
+    "prompt": "a glossy violet moth with golden wings on a dark tree trunk, a lighter moth beside it, tiny golden sparkles, same art style as the reference icons"
+  },
+  "marcel": "Le plus adapté\nlaisse plus d’enfants !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Deux mécanismes",
+          "entetes": ["Mécanisme", "Nature", "Amplifié par"],
+          "lignes": [
+            ["**Dérive** génétique", "aléatoire", "population **petite**"],
+            ["**Sélection** naturelle", "non aléatoire", "avantage de survie ou de reproduction"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "L’évolution",
+          "teinte": "jaune",
+          "lignes": ["évolution = changement de ==fréquence== des allèles"],
+          "regle": "La sélection **trie** les allèles, elle ne les **crée** pas.",
+          "note": "la mutation crée"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "La phalène du bouleau",
+          "entetes": ["Époque", "Troncs", "Forme majoritaire"],
+          "lignes": [
+            ["Avant l’industrie", "clairs, lichens", "**claire**"],
+            ["Avec la suie", "**noircis**", "**sombre** (moins vue des oiseaux)"],
+            ["Après dépollution", "de nouveau clairs", "la **claire** revient"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 4,
+          "titre": "La spéciation",
+          "horizontale": true,
+          "etapes": [
+            { "date": "Isolement", "texte": "barrière géographique, décalage des reproductions ou des comportements" },
+            { "date": "Accumulation", "texte": "les différences génétiques s’accumulent" },
+            { "date": "Spéciation", "texte": "plus de descendance **fertile** entre les deux populations" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Les porteurs de l’allèle avantageux laissent plus de descendants.", "quoi": "sélection" },
+            { "texte": "La fréquence de cet allèle augmente de génération en génération.", "quoi": "résultat" },
+            { "texte": "Dans une petite population, le hasard seul peut changer les fréquences.", "quoi": "dérive" }
+          ],
+          "pied": "Espèce = individus ==interféconds== à descendance fertile (limites : fossiles, asexués, hybrides)."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que le milieu **fait apparaître** l’allèle voulu.",
+            "Croire la dérive **orientée** vers un avantage.",
+            "Penser que les grandes populations subissent autant la dérive.",
+            "Appliquer la définition de l’espèce aux **fossiles**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel mécanisme évolutif est aléatoire&nbsp;?",
+            "La sélection naturelle crée-t-elle des allèles&nbsp;?",
+            "Que doit-on constater pour parler de spéciation&nbsp;?"
+          ],
+          "reponses": "1) la dérive · 2) non, elle les trie · 3) plus de descendance fertile entre les populations"
+        }
+      ]
+    }
+  ]
+}

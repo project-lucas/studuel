@@ -1,0 +1,163 @@
+{
+  "titre": "Fluides et Bernoulli",
+  "titreSurligne": "Bernoulli",
+  "accroche": "Faire circuler, puis séparer.",
+  "epreuve": "bac",
+  "bonus": "Q<sub>v</sub> = S × v · p + ½ρv² + ρgz = cte · P<sub>h</sub> = Q<sub>v</sub> × Δp · 1 bar = 10⁵ Pa",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/spcl/ecoulements-theoreme-de-bernoulli-et-distillation-fractionne.webp",
+    "prompt": "a glossy violet pipe narrowing with golden flowing water next to a small distillation column, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Tuyau plus étroit,\nfluide plus vite !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Débit et conservation",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "Q<sub>v</sub> = S × v",
+            "S₁ × v₁ = S₂ × v₂"
+          ],
+          "regle": "Liquide incompressible, écoulement permanent&nbsp;: le débit **se conserve**. q<sub>m</sub> = ρ × Q<sub>v</sub>.",
+          "note": "rétrécir = accélérer"
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Bernoulli",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "p + ½ρv² + ρgz = cte"
+          ],
+          "regle": "Fluide parfait, le long d’une ligne de courant. Réel&nbsp;: ajouter la **pompe** et les **pertes de charge**.",
+          "note": "10 m d’eau ≈ 1 bar"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire un diagramme binaire",
+          "etapes": [
+            {
+              "titre": "Ébullition",
+              "texte": "courbe du **bas** : première bulle"
+            },
+            {
+              "titre": "Rosée",
+              "texte": "courbe du **haut** : première goutte"
+            },
+            {
+              "titre": "Entre les deux",
+              "texte": "vapeur **plus riche** en volatil"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Eau à 1,5 m/s dans 2,0 cm², puis 0,50 cm². __v₂__&nbsp;?",
+          "calcul": "v₂ = 1,5 × 2,0 / 0,50",
+          "aparte": "S₁v₁ = S₂v₂",
+          "resultat": "v₂ = [[6,0 m/s]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Distillation fractionnée",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "En tête",
+              "texte": "le constituant le plus **volatil**, ou l’azéotrope"
+            },
+            {
+              "titre": "Au bouilleur",
+              "texte": "le constituant le moins volatil"
+            },
+            {
+              "titre": "Reflux",
+              "texte": "renvoyer du distillat : **meilleure séparation**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Pompe et pression",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Puissance utile",
+              "texte": "P<sub>h</sub> = Q<sub>v</sub> × Δp"
+            },
+            {
+              "titre": "Rendement",
+              "texte": "η = P<sub>h</sub> / P absorbée"
+            },
+            {
+              "titre": "Statique",
+              "texte": "plus profond, **plus de pression**"
+            },
+            {
+              "titre": "Azéotrope",
+              "texte": "bout à T **constante**"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’un **azéotrope** se sépare par distillation simple.",
+            "Oublier de convertir **cm²** en m² pour Q<sub>v</sub>.",
+            "Confondre courbes d’**ébullition** et de rosée.",
+            "Ignorer les **pertes de charge** dans une installation réelle."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 6,
+          "titre": "À retenir",
+          "paragraphes": [
+            "Plus on descend dans un liquide, plus la **pression** augmente&nbsp;: p<sub>B</sub> − p<sub>A</sub> = ρ × g × (z<sub>A</sub> − z<sub>B</sub>). Un capteur de pression au fond d’une cuve mesure donc la **hauteur de liquide**. Pour un azéotrope eau-éthanol, on sort à 95,6 % en masse d’éthanol."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que devient **v** si la section est divisée par 2&nbsp;?",
+            "Quelle courbe donne la **première bulle**&nbsp;?",
+            "Que reste-t-il au **bouilleur**&nbsp;?"
+          ],
+          "reponses": "1) elle double · 2) la courbe d’ébullition · 3) le moins volatil"
+        }
+      ]
+    }
+  ]
+}

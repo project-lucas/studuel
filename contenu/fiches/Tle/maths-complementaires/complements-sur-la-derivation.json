@@ -1,0 +1,169 @@
+{
+  "titre": "Compléments dérivation",
+  "titreSurligne": "dérivation",
+  "accroche": "Dériver pour optimiser.",
+  "epreuve": "bac",
+  "bonus": "(eᵘ)′ = u′eᵘ · (ln u)′ = u′ ÷ u · (uv)′ = u′v + uv′ · tangente y = f′(a)(x − a) + f(a)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-complementaires/complements-sur-la-derivation.webp",
+    "prompt": "a glossy violet hill curve with a golden tangent line touching its peak, sparkles"
+  },
+  "marcel": "N’oublie pas\nle facteur u′ !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Dériver les composées",
+          "taille": "mini",
+          "lignes": [
+            "(eᵘ)′ = u′ eᵘ",
+            "(ln u)′ = u′ ÷ u",
+            "(uⁿ)′ = n u′ uⁿ⁻¹"
+          ],
+          "regle": "Aussi (uv)′ = **u′v + uv′** et (u/v)′ = **(u′v − uv′) ÷ v²**. Le facteur **u′** est celui qu’on oublie&nbsp;: (e<sup>−0,2x</sup>)′ = ==−0,2 e<sup>−0,2x</sup>==.",
+          "note": "oublier u′ inverse les variations"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Signe et variations",
+          "entetes": [
+            "Sur un intervalle",
+            "Conséquence"
+          ],
+          "lignes": [
+            [
+              "f′ > 0",
+              "f **croissante**"
+            ],
+            [
+              "f′ < 0",
+              "f **décroissante**"
+            ],
+            [
+              "f′ s’annule en changeant de signe",
+              "**extremum** local"
+            ],
+            [
+              "f′(0) = 0 pour x³",
+              "pas d’extremum"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Optimiser",
+          "etapes": [
+            {
+              "titre": "Traduire",
+              "texte": "une fonction d’une variable, avec son intervalle"
+            },
+            {
+              "titre": "Dériver",
+              "texte": "puis factoriser"
+            },
+            {
+              "titre": "Signe de f′",
+              "texte": "tableau de variations"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "valeur de f, unité, bornes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Concentration f(x) = x e<sup>−0,2x</sup> sur [0 ; 20]. __Maximum ?__",
+          "calcul": "f′(x) = e<sup>−0,2x</sup>(1 − 0,2x)",
+          "aparte": "f′ > 0 si x < 5, f′ < 0 si x > 5",
+          "resultat": "maximum en x = 5 : f(5) = [[5e⁻¹ ≈ 1,84]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Tangente",
+              "texte": "y = f′(a)(x − a) + f(a)&nbsp;: **pente** f′(a)."
+            },
+            {
+              "titre": "Coût marginal",
+              "texte": "dérivée du **coût** total."
+            },
+            {
+              "titre": "Bénéfice max",
+              "texte": "coût marginal = **recette** marginale."
+            },
+            {
+              "titre": "Au bord",
+              "texte": "optimum hors intervalle&nbsp;: extremum **au bord**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "f est dérivable et f′(x) = e<sup>−0,2x</sup>(1 − 0,2x)",
+              "quoi": "la dérivée"
+            },
+            {
+              "texte": "e<sup>−0,2x</sup> > 0, donc f′ a le signe de 1 − 0,2x",
+              "quoi": "le signe"
+            },
+            {
+              "texte": "f est maximale en 5, avec f(5) ≈ 1,84.",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "La dérivée dit ==où== est le maximum&nbsp;; il faut ensuite calculer f en ce point."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier **u′** dans (e<sup>u</sup>)′.",
+            "Dire que (uv)′ = **u′ × v′**.",
+            "Conclure à un extremum parce que **f′ = 0** seulement.",
+            "Donner l’optimum **hors** de l’intervalle."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dérivée de **e<sup>3x</sup>**&nbsp;?",
+            "Dérivée de **ln(2x + 1)**&nbsp;?",
+            "Dérivée de **x² e<sup>x</sup>**&nbsp;?"
+          ],
+          "reponses": "1) 3e<sup>3x</sup> · 2) 2 ÷ (2x + 1) · 3) 2x e<sup>x</sup> + x² e<sup>x</sup>"
+        }
+      ]
+    }
+  ]
+}

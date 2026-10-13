@@ -1,0 +1,173 @@
+{
+  "titre": "Logarithme népérien",
+  "titreSurligne": "Logarithme",
+  "accroche": "La fonction des seuils.",
+  "epreuve": "bac",
+  "bonus": "ln(ab) = ln a + ln b · ln(aⁿ) = n ln a · (ln u)′ = u′ ÷ u · ln(1) = 0 · ln(e) = 1",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-complementaires/fonction-logarithme-neperien-ln.webp",
+    "prompt": "a glossy violet curve rising slowly with a golden ruler scale on its side, sparkles"
+  },
+  "marcel": "L’exposant descend\navec ln !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les propriétés",
+          "taille": "mini",
+          "lignes": [
+            "ln(ab) = ln a + ln b",
+            "ln(a/b) = ln a − ln b",
+            "ln(aⁿ) = n × ln a"
+          ],
+          "regle": "Défini pour **x > 0** seulement&nbsp;: ln est la réciproque de l’exponentielle, avec e<sup>ln x</sup> = x et ln(e<sup>x</sup>) = x. Dérivée **1/x**, ==strictement croissante==, concave.",
+          "note": "ln(a + b) ≠ ln a + ln b"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois usages",
+          "entetes": [
+            "Usage",
+            "Ce qu’on fait"
+          ],
+          "lignes": [
+            [
+              "Seuil",
+              "inconnue en exposant → **ln**"
+            ],
+            [
+              "Échelle (dB, pH)",
+              "+1 unité = grandeur **multipliée**"
+            ],
+            [
+              "Linéarisation",
+              "ln(uₙ) = ln u₀ + n ln q"
+            ],
+            [
+              "Nuage des ln aligné",
+              "le modèle est **exponentiel**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre un seuil",
+          "etapes": [
+            {
+              "titre": "Écrire",
+              "texte": "l’inéquation, par ex. 1,04ⁿ ≥ 2"
+            },
+            {
+              "titre": "Passer au ln",
+              "texte": "n·ln 1,04 ≥ ln 2 (ln 1,04 > 0)"
+            },
+            {
+              "titre": "Arrondir",
+              "texte": "dans le sens qui respecte l’inégalité"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un capital placé à 4&nbsp;% par an. __Quand double-t-il ?__",
+          "calcul": "1,04ⁿ ≥ 2 ⇔ n ≥ ln 2 ÷ ln 1,04",
+          "aparte": "≈ 0,693 ÷ 0,0392 ≈ 17,7",
+          "resultat": "il double au bout de [[18 ans]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Condition",
+              "texte": "vérifier **x > 0** avant tout calcul."
+            },
+            {
+              "titre": "Limites",
+              "texte": "ln x → −∞ en 0⁺ et → +∞ en +∞ (**lentement**)."
+            },
+            {
+              "titre": "Dériver",
+              "texte": "(ln u)′ = **u′ ÷ u**, pour u > 0."
+            },
+            {
+              "titre": "Seuil",
+              "texte": "modèle **géométrique**&nbsp;: logarithme."
+            },
+            {
+              "titre": "Échelles",
+              "texte": "décibels, pH&nbsp;: +1 unité = grandeur **multipliée**."
+            },
+            {
+              "titre": "Valeurs clés",
+              "texte": "ln 1 = 0 et ln e = 1."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "1,04ⁿ ≥ 2 ⇔ n ln 1,04 ≥ ln 2",
+              "quoi": "le passage au ln"
+            },
+            {
+              "texte": "ln 1,04 > 0, donc n ≥ ln 2 ÷ ln 1,04 ≈ 17,7",
+              "quoi": "le signe cité"
+            },
+            {
+              "texte": "Le plus petit entier est 18&nbsp;: 18 ans.",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Vérifie&nbsp;: 1,04¹⁷ ≈ ==1,95== < 2 et 1,04¹⁸ ≈ ==2,03== ≥ 2. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire **ln(a + b) = ln a + ln b**.",
+            "Arrondir **17,7** à 18 au « plus proche » par hasard.",
+            "Diviser par **ln q** sans vérifier son signe.",
+            "Oublier la condition **x > 0**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Valeur de **ln(1) + ln(e)**&nbsp;?",
+            "Dérivée de **ln(x² + 1)**&nbsp;?",
+            "Plus petit n tel que **2ⁿ ≥ 1000**&nbsp;?"
+          ],
+          "reponses": "1) 0 + 1 = 1 · 2) 2x ÷ (x² + 1) · 3) n ≥ 9,97, donc 10"
+        }
+      ]
+    }
+  ]
+}

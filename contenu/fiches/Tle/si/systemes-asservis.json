@@ -1,0 +1,111 @@
+{
+  "titre": "Systèmes asservis",
+  "titreSurligne": "asservis",
+  "accroche": "Mesurer, comparer, corriger en boucle.",
+  "epreuve": "bac",
+  "bonus": "stabilité · précision · rapidité = **antagonistes** · P rapide · I précis · D amortit",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/si/systemes-asservis.webp",
+    "prompt": "a glossy violet circular loop of arrows with a golden sensor and a golden thermostat dial in the middle, small sparkles, same art style as the reference icons"
+  },
+  "marcel": "Je mesure, je compare,\nje corrige&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le comparateur",
+          "petite": true,
+          "lignes": ["erreur = consigne − mesure"],
+          "regle": "Un **capteur** mesure la sortie, le comparateur calcule l’==erreur==, le correcteur agit. Sans capteur, c’est une **boucle ouverte**&nbsp;: aucune correction.",
+          "note": "la mesure revient en entrée&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le correcteur PID",
+          "entetes": ["Action", "Apporte", "Coûte"],
+          "lignes": [
+            ["P proportionnel", "Rapidité", "Erreur statique"],
+            ["I intégral", "Erreur statique nulle", "Ralentit, déstabilise"],
+            ["D dérivé", "Amortit les oscillations", "Amplifie le bruit"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire une réponse indicielle",
+          "etapes": [
+            { "titre": "Temps à 5 %", "texte": "le système est-il assez rapide pour rejoindre sa valeur finale&nbsp;?" },
+            { "titre": "Dépassement", "texte": "en pourcentage de la valeur finale&nbsp;: est-il stable&nbsp;?" },
+            { "titre": "Erreur statique", "texte": "l’écart résiduel entre consigne et valeur finale" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Échelon de consigne à __100 °C__. La température se stabilise à 96 °C après un pic à 108 °C.",
+          "calcul": "erreur statique = 100 − 96 = 4 °C ; dépassement = (108 − 96) ÷ 96",
+          "aparte": "en % de la valeur finale",
+          "resultat": "erreur [[4 °C]] · dépassement 12,5 %"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quel diagnostic&nbsp;?",
+          "oui": { "titre": "Erreur statique persistante", "texte": "Correcteur **purement proportionnel**&nbsp;: il faut ajouter une action ==intégrale==." },
+          "non": { "titre": "Fort dépassement", "texte": "Avec une erreur statique nulle, l’action **intégrale** est trop marquée." },
+          "essai": { "texte": "Régler un asservissement, ce n’est pas optimiser, c’est <i>arbitrer</i> entre stabilité, précision et rapidité." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Boucle fermée&nbsp;: erreur = consigne − mesure", "quoi": "la structure" },
+            { "texte": "Erreur statique = 4 °C ⇒ pas de terme I", "quoi": "la mesure lue" },
+            { "texte": "Ajouter I annule l’erreur mais ralentit", "quoi": "le compromis" }
+          ],
+          "pied": "Les trois performances sont ==antagonistes==&nbsp;: toujours justifier le compromis."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’on peut tout **améliorer** à la fois.",
+            "Calculer le dépassement sur la **consigne** au lieu de la valeur finale.",
+            "Oublier que **D** amplifie le **bruit**.",
+            "Confondre **boucle ouverte** et fermée."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel organe calcule l’**erreur**&nbsp;?",
+            "Quelle action **annule** l’erreur statique&nbsp;?",
+            "Un four réglé sur une **durée**&nbsp;: boucle ouverte ou fermée&nbsp;?"
+          ],
+          "reponses": "1) le comparateur · 2) l’action intégrale (I) · 3) ouverte"
+        }
+      ]
+    }
+  ]
+}

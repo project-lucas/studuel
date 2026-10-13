@@ -1,0 +1,116 @@
+{
+  "titre": "Asservissement",
+  "titreSurligne": "Asservissement",
+  "accroche": "Mesurer, comparer, corriger.",
+  "epreuve": "bac",
+  "bonus": "**ε = consigne − mesure** · dépassement = (max − final) / final",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/i2d/asservissement-et-regulation.webp",
+    "prompt": "a glossy violet thermostat dial with a golden circular feedback arrow and a small temperature sensor, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Je mesure, je compare,\nje corrige&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "La boucle fermée",
+          "items": [
+            { "terme": "Consigne", "definition": "la valeur **voulue** (21 °C)" },
+            { "terme": "Comparateur", "definition": "calcule l’écart **ε = consigne − mesure**" },
+            { "terme": "Correcteur", "definition": "élabore la **commande** à partir de ε" },
+            { "terme": "Perturbation", "definition": "ce qui dérange (fenêtre ouverte, vent)" },
+            { "terme": "Capteur", "definition": "mesure la grandeur **réglée**" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les correcteurs",
+          "entetes": ["Correcteur", "Effet"],
+          "lignes": [
+            ["**TOR**", "simple, oscille"],
+            ["**P** (Kp × ε)", "rapide, erreur statique"],
+            ["**I** (somme)", "annule l’erreur, ralentit"],
+            ["**D** (variation)", "amortit, anticipe"],
+            ["**PID**", "les trois réunis"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire une réponse indicielle",
+          "etapes": [
+            { "titre": "Dépassement", "texte": "(max − valeur finale) / valeur finale" },
+            { "titre": "Erreur statique", "texte": "consigne − valeur finale" },
+            { "titre": "Temps à 5 %", "texte": "la sortie reste dans ± 5 % de la finale" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Échelon 100 tr/min. Pic __108__, valeur finale __98__. Dépassement&nbsp;?",
+          "calcul": "(108 − 98) / 98",
+          "aparte": "erreur statique : 2 tr/min",
+          "resultat": "≈ [[10 %]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Régulation ou asservissement&nbsp;?",
+          "oui": { "titre": "Régulation", "texte": "Consigne **fixe**, on lutte contre les perturbations." },
+          "non": { "titre": "Asservissement", "texte": "La sortie **suit** une consigne qui change." },
+          "essai": { "texte": "Un chauffage à 21 °C est une <i>régulation</i>&nbsp;; un drone qui suit une trajectoire, un <i>asservissement</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Consigne 20 °C, hystérésis ± 0,5 °C", "quoi": "les données" },
+            { "texte": "Marche si T < 19,5 · arrêt si T > 20,5", "quoi": "la règle TOR" },
+            { "texte": "Sans hystérésis, le relais claque et s’use", "quoi": "la justification" }
+          ],
+          "pied": "Toujours un ==compromis rapidité / stabilité== : plus de gain, plus d’oscillations."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire ε = **mesure** − consigne.",
+            "Croire qu’un gain **plus grand** est toujours meilleur.",
+            "Oublier que le correcteur est un **programme** échantillonné.",
+            "Confondre **erreur statique** et dépassement."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que calcule le **comparateur**&nbsp;?",
+            "Quel correcteur **annule** l’erreur statique&nbsp;?",
+            "Pourquoi une **hystérésis** en TOR&nbsp;?"
+          ],
+          "reponses": "1) l’écart ε · 2) l’intégral (I) · 3) éviter que le relais claque"
+        }
+      ]
+    }
+  ]
+}

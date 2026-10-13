@@ -1,0 +1,160 @@
+{
+  "titre": "Chaînes de Markov",
+  "titreSurligne": "Markov",
+  "accroche": "L’avenir ne dépend que du présent.",
+  "epreuve": "bac",
+  "bonus": "P(n) = P(0) Tⁿ · π T = π, somme de π = **1** · chaque ligne de T somme à **1**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-expertes/chaines-de-markov.webp",
+    "prompt": "a glossy violet two-state graph with golden arrows looping and crossing between the two round nodes, sparkles"
+  },
+  "marcel": "Sans mémoire,\nmais bien rangé !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Évolution et état stable",
+          "taille": "mini",
+          "lignes": [
+            "P(n) = P(0) Tⁿ",
+            "π T = π"
+          ],
+          "regle": "Distributions écrites **en ligne**&nbsp;: P(n+1) = P(n) T. Pour π, on résout le système **et** on ajoute la condition ==somme = 1==.",
+          "note": "convention ligne fixée dès le début"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Sans mémoire",
+              "definition": "l’état suivant ne dépend que de l’état **actuel**."
+            },
+            {
+              "terme": "Graphe probabiliste",
+              "definition": "états en sommets, probabilités sur les arcs, somme des arcs sortants **= 1**."
+            },
+            {
+              "terme": "Matrice stochastique",
+              "definition": "coefficients positifs, chaque **ligne** de somme 1."
+            },
+            {
+              "terme": "Convention",
+              "definition": "lignes ou colonnes, **fixée au début** et tenue."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Trouver l’état stable",
+          "etapes": [
+            {
+              "titre": "Équation",
+              "texte": "écrire π T = π avec π = (a ; b)"
+            },
+            {
+              "titre": "Compléter",
+              "texte": "ajouter a + b = 1, sans elle, une infinité de solutions"
+            },
+            {
+              "titre": "Résoudre",
+              "texte": "puis vérifier que les composantes somment à 1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "T = (0,9 0,1 ; 0,2 0,8). __État stable__ π = (a ; b)&nbsp;?",
+          "calcul": "0,9a + 0,2b = a ⇒ a = 2b",
+          "aparte": "et a + b = 1",
+          "resultat": "π = [[({2/3} ; {1/3})]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À long terme",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Convergence",
+              "texte": "une puissance de T **sans coefficient nul**&nbsp;: P(n) tend vers π."
+            },
+            {
+              "titre": "Oubli du départ",
+              "texte": "la limite ne dépend **pas** de P(0)."
+            },
+            {
+              "titre": "Coefficient de Tⁿ",
+              "texte": "(i ; j)&nbsp;: probabilité d’être en j après n étapes depuis i."
+            },
+            {
+              "titre": "Modélisation",
+              "texte": "l’hypothèse sans mémoire se **discute**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "π T = π ⇔ 0,9a + 0,2b = a et 0,1a + 0,8b = b",
+              "quoi": "le système"
+            },
+            {
+              "texte": "Les deux équations donnent a = 2b, avec a + b = 1",
+              "quoi": "la condition"
+            },
+            {
+              "texte": "b = {1/3} et a = {2/3}",
+              "quoi": "la solution"
+            }
+          ],
+          "pied": "Contrôle&nbsp;: lignes de T de somme 1 ✔, ==a + b = 1== ✔."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier la condition **somme de π = 1**.",
+            "Mélanger la convention **ligne** et **colonne**.",
+            "Une ligne de T qui ne somme pas à **1**.",
+            "Conclure à la convergence avec des **coefficients nuls** partout."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Somme de chaque **ligne** de T&nbsp;?",
+            "**P(0) = (1 ; 0)** avec T ci-dessus&nbsp;: P(1)&nbsp;?",
+            "Que vaut la **somme** des composantes de π&nbsp;?"
+          ],
+          "reponses": "1) 1 · 2) (1 ; 0) × T = (0,9 ; 0,1) · 3) 1"
+        }
+      ]
+    }
+  ]
+}

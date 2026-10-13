@@ -1,0 +1,168 @@
+{
+  "titre": "Probas conditionnelles",
+  "titreSurligne": "conditionnelles",
+  "accroche": "Sachant que B, quelle chance pour A ?",
+  "epreuve": "bac",
+  "bonus": "P_B(A) = P(A∩B) ÷ P(B) · P(A∩B) = P(B) × P_B(A) · indépendants : P(A∩B) = P(A)×P(B)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-complementaires/probabilites-conditionnelles.webp",
+    "prompt": "a glossy violet probability tree with golden branches and two golden nodes, sparkles"
+  },
+  "marcel": "Sachant B,\non réévalue !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La définition",
+          "taille": "mini",
+          "lignes": [
+            "P_B(A) = P(A ∩ B) ÷ P(B)",
+            "P(A ∩ B) = P(B) × P_B(A)"
+          ],
+          "regle": "Avec **P(B) ≠ 0**. Conditionner, c’est ==réévaluer== une probabilité à la lumière d’une information. A et B sont **indépendants** si P(A ∩ B) = P(A) × P(B).",
+          "note": "P_B(A) ≠ P_A(B)&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "L’arbre pondéré",
+          "entetes": [
+            "Règle",
+            "Ce qu’elle dit"
+          ],
+          "lignes": [
+            [
+              "Un nœud",
+              "somme des branches = **1**"
+            ],
+            [
+              "Un chemin",
+              "**produit** des probabilités"
+            ],
+            [
+              "Un événement",
+              "**somme** des chemins qui y mènent"
+            ],
+            [
+              "Dernière ligne",
+              "formule des **probabilités totales**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre avec un arbre",
+          "etapes": [
+            {
+              "titre": "Dessiner",
+              "texte": "événements, branches et probabilités"
+            },
+            {
+              "titre": "Multiplier",
+              "texte": "le long de chaque chemin"
+            },
+            {
+              "titre": "Additionner",
+              "texte": "les chemins qui mènent à l’événement"
+            },
+            {
+              "titre": "Retourner",
+              "texte": "P_T(M) = P(M∩T) ÷ P(T)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "P(M) = 0,01 ; P_M(T) = 0,95 ; P_M̄(T) = 0,05. __Calcule P_T(M).__",
+          "calcul": "P(T) = 0,01×0,95 + 0,99×0,05 = 0,059",
+          "aparte": "P(M∩T) = 0,0095",
+          "resultat": "P_T(M) = 0,0095 ÷ 0,059 ≈ [[0,16]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Faux positifs",
+              "texte": "maladie rare&nbsp;: le test positif trompe **souvent**."
+            },
+            {
+              "titre": "Deux probas",
+              "texte": "P(positif | malade) ≠ P(malade | positif)."
+            },
+            {
+              "titre": "Indépendance",
+              "texte": "P_B(A) = P(A)&nbsp;: B n’**apprend rien** sur A."
+            },
+            {
+              "titre": "L’arbre",
+              "texte": "c’est la **démonstration**, pas un dessin d’appoint."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "D’après la formule des probabilités totales, P(T) = 0,059",
+              "quoi": "la formule citée"
+            },
+            {
+              "texte": "P_T(M) = P(M ∩ T) ÷ P(T) = 0,0095 ÷ 0,059",
+              "quoi": "la définition"
+            },
+            {
+              "texte": "Un test positif ne prouve la maladie que dans 16&nbsp;% des cas.",
+              "quoi": "la phrase"
+            }
+          ],
+          "pied": "Contrôle&nbsp;: les branches de chaque nœud ==somment à 1==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **P_B(A)** et **P_A(B)**.",
+            "Additionner les probabilités le long d’un **chemin**.",
+            "Oublier de **nommer** la formule des probabilités totales.",
+            "Croire que « incompatibles » veut dire **indépendants**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "P(A∩B) = 0,2 et P(B) = 0,5&nbsp;: **P_B(A)**&nbsp;?",
+            "P(B) = 0,5 et P_B(A) = 0,3&nbsp;: **P(A∩B)**&nbsp;?",
+            "Somme des branches d’un **nœud**&nbsp;?"
+          ],
+          "reponses": "1) 0,2 ÷ 0,5 = 0,4 · 2) 0,5 × 0,3 = 0,15 · 3) 1"
+        }
+      ]
+    }
+  ]
+}

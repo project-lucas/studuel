@@ -1,0 +1,182 @@
+{
+  "titre": "Flux de glucose",
+  "titreSurligne": "glucose",
+  "accroche": "Tenir la glycémie à 1 g/L.",
+  "epreuve": "bac",
+  "bonus": "Glycémie ≈ **1 g/L** · **insuline** seule hormone hypoglycémiante · **glucagon** hyperglycémiant · à l’effort, **GLUT4** sans insuline",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/svt/le-controle-des-flux-de-glucose-source-essentielle-d-energie.webp",
+    "prompt": "a glossy violet pancreas next to a golden sugar cube and a balance scale, golden drops, sparkles"
+  },
+  "marcel": "Insuline ou glucagon,\nla balance tient !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Homéostasie",
+              "definition": "stabilité obtenue par **régulation active**"
+            },
+            {
+              "terme": "Îlots de Langerhans",
+              "definition": "cellules du pancréas qui **mesurent** la glycémie et répondent"
+            },
+            {
+              "terme": "GLUT4",
+              "definition": "transporteur qui fait **entrer** le glucose dans la fibre"
+            },
+            {
+              "terme": "Insulinorésistance",
+              "definition": "l’insuline est présente, mais **sans effet**"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux hormones antagonistes",
+          "entetes": [
+            "",
+            "Insuline",
+            "Glucagon"
+          ],
+          "lignes": [
+            [
+              "**Cellules**",
+              "β",
+              "α"
+            ],
+            [
+              "**Quand**",
+              "glycémie monte",
+              "glycémie baisse"
+            ],
+            [
+              "**Effet**",
+              "entrée du glucose, stockage",
+              "libère le glycogène du foie"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Repères à connaître",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Pancréas",
+              "texte": "**Capteur** et émetteur : il mesure et il répond."
+            },
+            {
+              "titre": "Foie",
+              "texte": "**Effecteur** principal : son glycogène nourrit **tout** l’organisme."
+            },
+            {
+              "titre": "Muscle",
+              "texte": "Gros **consommateur** : son glycogène ne sert qu’à lui."
+            },
+            {
+              "titre": "À l’effort",
+              "texte": "Insuline en baisse, glucagon en hausse, le foie **déstocke**."
+            },
+            {
+              "titre": "Diabète de type 1",
+              "texte": "Destruction **auto-immune** des cellules β : insuline à vie."
+            },
+            {
+              "titre": "Diabète de type 2",
+              "texte": "**Insulinorésistance**, sédentarité, surpoids : mode de vie d’abord."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Schéma de régulation",
+          "etapes": [
+            {
+              "titre": "Capteur",
+              "texte": "le pancréas mesure la glycémie"
+            },
+            {
+              "titre": "Messager",
+              "texte": "insuline ou glucagon dans le sang"
+            },
+            {
+              "titre": "Effecteur",
+              "texte": "le foie et le muscle corrigent"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple",
+          "donnees": "Glycémie qui chute à l’effort.",
+          "calcul": "Les cellules α libèrent du **glucagon**.",
+          "resultat": "[[le foie déstocke]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "Après le repas, la glycémie monte.",
+              "quoi": "constater"
+            },
+            {
+              "texte": "Les cellules β libèrent de l’insuline.",
+              "quoi": "expliquer"
+            },
+            {
+              "texte": "Le glucose entre dans les cellules et est stocké.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Nomme toujours ==capteur==, ==messager== et ==effecteur==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que le glycogène **musculaire** nourrit tout le corps.",
+            "Confondre diabète de type **1** et **2**.",
+            "Oublier que le pancréas est à la fois capteur et **émetteur**.",
+            "Croire que l’effort exige **toujours** de l’insuline."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle hormone est la seule **hypoglycémiante**&nbsp;?",
+            "Quel organe **libère** du glucose dans le sang&nbsp;?",
+            "Quelle est la cause du diabète de **type 1**&nbsp;?"
+          ],
+          "reponses": "1) l’insuline · 2) le foie · 3) la destruction auto-immune des cellules β"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "titre": "Premiers et Fermat",
+  "titreSurligne": "Fermat",
+  "accroche": "Les briques de tous les entiers.",
+  "epreuve": "bac",
+  "bonus": "a<sup>p−1</sup> ≡ 1 [p] (p premier, p ∤ a) · a<sup>p</sup> ≡ a [p] · test de primalité : diviseurs jusqu’à **√n**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-expertes/nombres-premiers-et-petit-theoreme-de-fermat.webp",
+    "prompt": "a glossy violet wall of building bricks each marked with a golden dot, one golden brick shining, sparkles"
+  },
+  "marcel": "Seul 2 est\npremier et pair !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Petit théorème de Fermat",
+          "taille": "mini",
+          "lignes": [
+            "a<sup>p−1</sup> ≡ 1 [p]",
+            "a<sup>p</sup> ≡ a [p]"
+          ],
+          "regle": "**Restreinte**&nbsp;: p premier et a non divisible par p. **Générale**&nbsp;: pour tout entier a. Faux pour un modulo **composé**.",
+          "note": "p premier, indispensable&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Lire une décomposition",
+          "entetes": [
+            "On cherche",
+            "On lit"
+          ],
+          "lignes": [
+            [
+              "Nombre de diviseurs",
+              "produit des exposants **+ 1**"
+            ],
+            [
+              "PGCD",
+              "facteurs communs, **plus petits** exposants"
+            ],
+            [
+              "PPCM",
+              "tous les facteurs, **plus grands** exposants"
+            ],
+            [
+              "Unicité",
+              "à l’ordre près, 1 **n’est pas** premier"
+            ],
+            [
+              "Crible d’Ératosthène",
+              "raturer les multiples, jusqu’à **√n**"
+            ],
+            [
+              "Le seul pair",
+              "**2**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer a<sup>N</sup> modulo p",
+          "etapes": [
+            {
+              "titre": "Vérifier",
+              "texte": "p premier et p ne divise pas a"
+            },
+            {
+              "titre": "Diviser",
+              "texte": "N = (p − 1) q + r, on garde le reste r"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "a<sup>N</sup> ≡ a<sup>r</sup> [p], car a<sup>p−1</sup> ≡ 1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Reste de __2<sup>100</sup>__ modulo 7&nbsp;?",
+          "calcul": "2<sup>6</sup> ≡ 1 [7], 100 = 6 × 16 + 4",
+          "aparte": "2<sup>4</sup> = 16 = 2 × 7 + 2",
+          "resultat": "2<sup>100</sup> ≡ [[2]] [7]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Définition",
+              "texte": "premier&nbsp;: **deux** diviseurs positifs, 1 et lui-même."
+            },
+            {
+              "titre": "Crible",
+              "texte": "tester jusqu’à **√n** suffit pour savoir si n est premier."
+            },
+            {
+              "titre": "Euclide",
+              "texte": "les premiers sont **infinis** (produit de tous, plus 1)."
+            },
+            {
+              "titre": "Contraposée",
+              "texte": "a<sup>n−1</sup> non congru à 1&nbsp;: n **n’est pas** premier."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "7 est premier et ne divise pas 2",
+              "quoi": "les hypothèses"
+            },
+            {
+              "texte": "D’après Fermat, 2<sup>6</sup> ≡ 1 [7]",
+              "quoi": "le théorème"
+            },
+            {
+              "texte": "100 = 6 × 16 + 4, donc 2<sup>100</sup> ≡ 2<sup>4</sup> ≡ 2 [7]",
+              "quoi": "la réduction"
+            }
+          ],
+          "pied": "Conclusion&nbsp;: le reste de la division de 2<sup>100</sup> par 7 est ==2==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Compter **1** parmi les nombres premiers.",
+            "Appliquer Fermat à un modulo **composé**.",
+            "Croire que a<sup>n−1</sup> ≡ 1 **prouve** que n est premier.",
+            "Oublier de vérifier que **p ne divise pas a**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**1** est-il premier&nbsp;?",
+            "**3<sup>6</sup>** modulo 7&nbsp;?",
+            "Pour tester **97**, jusqu’où essayer les diviseurs&nbsp;?"
+          ],
+          "reponses": "1) non, un seul diviseur · 2) 1 (Fermat, p = 7) · 3) jusqu’à √97 ≈ 9,8 : 2, 3, 5, 7"
+        }
+      ]
+    }
+  ]
+}

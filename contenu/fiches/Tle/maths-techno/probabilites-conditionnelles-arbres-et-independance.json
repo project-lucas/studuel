@@ -1,0 +1,116 @@
+{
+  "titre": "Probas conditionnelles",
+  "titreSurligne": "conditionnelles",
+  "accroche": "On multiplie, puis on additionne.",
+  "epreuve": "bac",
+  "bonus": "P(A ∩ B) = P(A) × P<sub>A</sub>(B) · P(B) = Σ P(A<sub>i</sub>) × P<sub>A<sub>i</sub></sub>(B) · indépendants : P(A ∩ B) = P(A) × P(B)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-techno/probabilites-conditionnelles-arbres-et-independance.webp",
+    "prompt": "a glossy violet probability tree with golden branches and three round leaves, tiny golden sparkles"
+  },
+  "marcel": "Multiplie le long,\nadditionne les chemins !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Conditionner",
+          "petite": true,
+          "lignes": ["P<sub>A</sub>(B) = {P(A ∩ B)/P(A)}", "P(B) = P(A<sub>1</sub>) × P<sub>A<sub>1</sub></sub>(B) + …"],
+          "regle": "Avec P(A) ≠ 0. Les A<sub>i</sub> forment une ==partition==&nbsp;: sans chevauchement, ils couvrent tout.",
+          "note": "chemins qui mènent à B&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les règles de l’arbre",
+          "entetes": ["Règle", "Contenu"],
+          "lignes": [
+            ["Branches d’un nœud", "somme = **1**"],
+            ["Second niveau", "probas **conditionnelles**"],
+            ["Un chemin", "**produit** des branches"],
+            ["Un événement", "**somme** des chemins"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre un problème d’arbre",
+          "etapes": [
+            { "titre": "L’arbre", "texte": "placer les données, vérifier que chaque nœud somme à 1" },
+            { "titre": "Les chemins", "texte": "multiplier le long de chaque chemin qui mène à B" },
+            { "titre": "Additionner", "texte": "P(B) par probabilités totales, puis P<sub>B</sub>(A) en divisant" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Machines A (50&nbsp;%, 2&nbsp;% de défauts), B (30&nbsp;%, 3&nbsp;%), C (20&nbsp;%, 5&nbsp;%). __P(D)__&nbsp;?",
+          "calcul": "0,5 × 0,02 + 0,3 × 0,03 + 0,2 × 0,05\n= 0,010 + 0,009 + 0,010",
+          "aparte": "probabilités totales",
+          "resultat": "P(D) = [[0,029]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Retourner", "texte": "P<sub>D</sub>(C) = 0,010 ÷ 0,029 ≈ **0,345**&nbsp;: un tiers des défauts." },
+            { "titre": "Indépendance", "texte": "P<sub>C</sub>(D) = 0,05 ≠ P(D) = 0,029&nbsp;: **pas indépendants**." },
+            { "titre": "Symétrique", "texte": "Si B est indépendant de A, **A l’est de B**." },
+            { "titre": "Deux événements", "texte": "La partition est simplement **A et son contraire**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "A, B, C forment une partition de l’univers", "quoi": "la justification" },
+            { "texte": "P(D) = P(A∩D) + P(B∩D) + P(C∩D)", "quoi": "probas totales" },
+            { "texte": "P(D) = 0,010 + 0,009 + 0,010 = 0,029", "quoi": "le calcul" }
+          ],
+          "pied": "Contrôle&nbsp;: les chemins d’un nœud somment à ==1==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **P<sub>A</sub>(B)** et P<sub>B</sub>(A).",
+            "**Additionner** le long d’un chemin.",
+            "Confondre **indépendants** et incompatibles.",
+            "Oublier de justifier la **partition**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Probabilité d’un **chemin** de l’arbre&nbsp;?",
+            "P(A) = 0,5 et P<sub>A</sub>(B) = 0,4&nbsp;: **P(A ∩ B)**&nbsp;?",
+            "Deux événements incompatibles de probas non nulles sont-ils indépendants&nbsp;?"
+          ],
+          "reponses": "1) le produit des branches · 2) 0,2 · 3) non, jamais"
+        }
+      ]
+    }
+  ]
+}

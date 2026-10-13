@@ -1,0 +1,163 @@
+{
+  "titre": "La fonction inverse",
+  "titreSurligne": "inverse",
+  "accroche": "Grand ici, petit là, jamais nul.",
+  "epreuve": "bac",
+  "bonus": "f(x) = 1/x sur ℝ* · f′(x) = −1/x² · décroissante sur ]−∞ ; 0[ et sur ]0 ; +∞[ · asymptotes : les deux axes",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-techno/la-fonction-inverse.webp",
+    "prompt": "a glossy violet hyperbola with two curved branches and golden dashed asymptote lines crossing at the center, tiny sparkles"
+  },
+  "marcel": "Deux branches,\njamais de zéro !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La fonction inverse",
+          "lignes": [
+            "f(x) = {1/x}",
+            "f′(x) = −{1/x²}"
+          ],
+          "regle": "Définie pour tout x **non nul**. Dérivée négative&nbsp;: ==décroissante== sur chaque intervalle.",
+          "note": "pas sur tout ℝ*&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Aux bornes",
+          "entetes": [
+            "Quand x…",
+            "1/x…"
+          ],
+          "lignes": [
+            [
+              "très grand (+)",
+              "tend vers **0⁺**"
+            ],
+            [
+              "tend vers 0 par la droite",
+              "très grand **positif**"
+            ],
+            [
+              "tend vers 0 par la gauche",
+              "très grand **négatif**"
+            ],
+            [
+              "très grand négatif",
+              "tend vers **0⁻**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Tangente en un point a",
+          "etapes": [
+            {
+              "titre": "f(a)",
+              "texte": "calculer l’image, ici 1/a"
+            },
+            {
+              "titre": "f′(a)",
+              "texte": "calculer −1/a², le coefficient directeur"
+            },
+            {
+              "titre": "L’équation",
+              "texte": "y = f′(a)(x − a) + f(a), puis réduire"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Tangente à f(x) = 1/x en __a = 2__.",
+          "calcul": "f(2) = 0,5 et f′(2) = −1/4 = −0,25\ny = −0,25(x − 2) + 0,5",
+          "aparte": "on développe",
+          "resultat": "y = [[−0,25x + 1]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "L’hyperbole",
+              "texte": "Deux branches, symétriques par rapport à l’**origine**."
+            },
+            {
+              "titre": "Asymptotes",
+              "texte": "Les **deux axes**&nbsp;: la courbe s’en approche sans les toucher."
+            },
+            {
+              "titre": "Coût moyen",
+              "texte": "C(q) = 500 + 2q&nbsp;: coût moyen **2 + 500/q**, qui tend vers 2&nbsp;€."
+            },
+            {
+              "titre": "Vitesse, durée",
+              "texte": "Pour 120&nbsp;km, la durée est **inversement** proportionnelle à la vitesse."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "f est dérivable sur ]0 ; +∞[, f′(x) = −1/x²",
+              "quoi": "la dérivée"
+            },
+            {
+              "texte": "−1/x² &lt; 0 donc f est décroissante",
+              "quoi": "les variations"
+            },
+            {
+              "texte": "T : y = −0,25x + 1",
+              "quoi": "la tangente"
+            }
+          ],
+          "pied": "Contrôle&nbsp;: en x = 2, −0,25 × 2 + 1 = ==0,5== = f(2). ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire que f est décroissante sur **tout** ℝ* (−1 &lt; 1 mais f(−1) &lt; f(1)).",
+            "Calculer **1/0**&nbsp;: valeur interdite.",
+            "Dériver 1/x en **ln x** ou en 1/x².",
+            "Oublier le **signe −** dans la dérivée."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dérivée de f(x) = 1/x&nbsp;?",
+            "Les **asymptotes** de l’hyperbole sont&nbsp;?",
+            "Pente de la tangente en a = 2&nbsp;?"
+          ],
+          "reponses": "1) −1/x² · 2) les deux axes · 3) −1/4 = −0,25"
+        }
+      ]
+    }
+  ]
+}

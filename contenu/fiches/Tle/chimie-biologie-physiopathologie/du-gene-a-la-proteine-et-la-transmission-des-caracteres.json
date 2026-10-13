@@ -1,0 +1,204 @@
+{
+  "titre": "Du gène à la protéine",
+  "titreSurligne": "protéine",
+  "accroche": "ADN, ARNm, protéine, hérédité.",
+  "epreuve": "bac",
+  "bonus": "A–T · G–C · ARNm : **U** à la place de T · AUG = **début**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/chimie-biologie-physiopathologie/du-gene-a-la-proteine-et-la-transmission-des-caracteres.webp",
+    "prompt": "a glossy violet DNA double helix turning into a golden chain of beads, tiny sparkles, same art style as the reference icons, on a magenta background, no text, no numbers"
+  },
+  "marcel": "L’ADN s’écrit,\nla protéine travaille !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Transcription et traduction",
+          "entetes": [
+            "",
+            "Transcription",
+            "Traduction"
+          ],
+          "lignes": [
+            [
+              "**Lieu**",
+              "noyau",
+              "ribosomes"
+            ],
+            [
+              "**Principe**",
+              "ADN → **ARNm**",
+              "ARNm lu par **codons** → acides aminés"
+            ],
+            [
+              "**Acteurs**",
+              "ARN polymérase",
+              "ribosomes, ARN de transfert"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Allèle",
+              "definition": "une version d’un gène"
+            },
+            {
+              "terme": "Génotype / phénotype",
+              "definition": "allèles portés / caractère observé"
+            },
+            {
+              "terme": "Récessif",
+              "definition": "s’exprime seulement chez l’**homozygote**"
+            },
+            {
+              "terme": "Codominance",
+              "definition": "les deux allèles s’expriment (groupe AB)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Les mutations ponctuelles",
+          "entetes": [
+            "Mutation",
+            "Effet possible"
+          ],
+          "lignes": [
+            [
+              "**Substitution**",
+              "aucun, un acide aminé changé, ou codon **stop**"
+            ],
+            [
+              "**Insertion**, **délétion**",
+              "décalage : tous les codons suivants changent"
+            ],
+            [
+              "**Exemple**",
+              "drépanocytose : A → T, un acide aminé change"
+            ]
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Transcrire puis traduire",
+          "donnees": "Brin d’ADN : TAC GGA TTT",
+          "calcul": "ARNm : AUG CCU AAA",
+          "resultat": "[[Met – Pro – Lys]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Lire un arbre généalogique",
+          "etapes": [
+            {
+              "titre": "Parents sains, enfant malade",
+              "texte": "l’allèle de la maladie est **récessif**"
+            },
+            {
+              "titre": "Surtout des garçons atteints",
+              "texte": "penser à un gène du **chromosome X**"
+            },
+            {
+              "titre": "Sinon",
+              "texte": "gène **autosomique** (mucoviscidose, drépanocytose)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "46 chromosomes",
+              "texte": "22 paires d’autosomes + XX ou XY"
+            },
+            {
+              "titre": "Mitose",
+              "texte": "deux cellules filles identiques"
+            },
+            {
+              "titre": "Code génétique",
+              "texte": "64 codons, 3 codons **stop**"
+            },
+            {
+              "titre": "Complémentarité",
+              "texte": "A–T et G–C"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 5,
+          "titre": "Échiquier : deux parents N//m",
+          "entetes": [
+            "",
+            "N",
+            "m"
+          ],
+          "lignes": [
+            [
+              "**N**",
+              "N//N sain",
+              "N//m porteur"
+            ],
+            [
+              "**m**",
+              "N//m porteur",
+              "m//m **malade**"
+            ]
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que le risque de **1/4** « se rattrape » : il est le même à chaque grossesse.",
+            "Confondre **transcription** (noyau) et **traduction** (ribosomes).",
+            "Écrire **T** dans l’ARNm au lieu de U.",
+            "Oublier que la **mitose** donne deux cellules identiques."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de **chromosomes** compte l’être humain&nbsp;?",
+            "Que donne **TAC** transcrit en ARNm&nbsp;?",
+            "Quel est le risque d’enfant **malade** (parents N//m)&nbsp;?"
+          ],
+          "reponses": "1) 46 (22 paires + XX ou XY) · 2) AUG · 3) 1/4 à chaque grossesse"
+        }
+      ]
+    }
+  ]
+}

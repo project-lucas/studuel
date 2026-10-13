@@ -1,0 +1,113 @@
+{
+  "titre": "Flux et résistance",
+  "titreSurligne": "résistance",
+  "epreuve": "bac",
+  "accroche": "Combien de watts traversent un mur&nbsp;?",
+  "bonus": "Φ = ΔT ÷ R<sub>th</sub> · R<sub>th</sub> = e ÷ (λ × S) · en série&nbsp;: R<sub>1</sub> + R<sub>2</sub> + … · λ air = 0,025",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie-maths/isolation-flux-et-resistance-thermiques.webp",
+    "prompt": "a glossy violet brick wall with a thick golden insulation layer, small golden heat arrows stopped by the wall, a tiny house, sparkles"
+  },
+  "marcel": "Plus de résistance,\nmoins de fuite !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Flux thermique",
+          "petite": true,
+          "lignes": ["Φ = ΔT ÷ R<sub>th</sub>", "R<sub>th</sub> = e ÷ (λ × S)"],
+          "regle": "**Φ** en W, **ΔT** en K ou °C, **R<sub>th</sub>** en K/W, **e** en m, **λ** en W/(m·K), **S** en m². Régime permanent.",
+          "note": "comme I = U ÷ R"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Conductivité λ",
+          "entetes": ["Matériau", "λ (W/(m·K))", "Isole&nbsp;?"],
+          "lignes": [
+            ["Cuivre", "390", "non"],
+            ["Béton", "1,75", "peu"],
+            ["Bois", "0,15", "un peu"],
+            ["Laine de verre", "0,04", "**oui**"],
+            ["Air immobile", "0,025", "**oui**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Chaque couche", "texte": "R<sub>th</sub> = e ÷ (λ × S), épaisseur en mètres" },
+            { "titre": "Additionner", "texte": "couches traversées l’une après l’autre&nbsp;: R totale = R<sub>1</sub> + R<sub>2</sub> + …" },
+            { "titre": "Flux", "texte": "Φ = ΔT ÷ R totale, en watts" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Mur de 10 m² en béton de 20 cm, 20 °C dedans, 0 °C dehors. Le __flux__&nbsp;?",
+          "calcul": "R = 0,20 ÷ (1,75 × 10) ≈ 0,011 4 K/W",
+          "aparte": "puis ΔT ÷ R",
+          "resultat": "Φ = 20 ÷ 0,011 4 ≈ [[1 750 W]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Ajouter un isolant",
+          "oui": { "titre": "10 cm de laine", "texte": "R = 0,10 ÷ (0,04 × 10) = 0,25 K/W. Total 0,261 K/W, donc **Φ ≈ 77 W**." },
+          "non": { "titre": "Le verre isole", "texte": "Faux&nbsp;: dans un double vitrage, c’est la **lame de gaz immobile** qui isole, pas le verre." },
+          "essai": { "texte": "Lame d’air de 16 mm sur 1 m²&nbsp;: R = <i>0,016 ÷ 0,025 = 0,64 K/W</i>, contre 0,004 K/W pour 4 mm de verre." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "R<sub>th</sub> = e ÷ (λ × S) = 0,20 ÷ (1,75 × 10)", "quoi": "la résistance" },
+            { "texte": "Φ = ΔT ÷ R<sub>th</sub> = 20 ÷ 0,011 4 ≈ 1 750 W", "quoi": "formule puis nombres" },
+            { "texte": "La fuite est divisée par plus de 20", "quoi": "la conclusion" }
+          ],
+          "pied": "Une caméra ==infrarouge== repère les **ponts thermiques**&nbsp;: jonctions dalle-mur, tours de fenêtres."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Laisser l’épaisseur en **cm** au lieu de m.",
+            "Additionner les **flux** au lieu des résistances.",
+            "Croire que Φ est une **énergie** (c’est une puissance).",
+            "Oublier la **surface** S dans R<sub>th</sub>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**Φ** pour ΔT = 10 K et R<sub>th</sub> = 0,5 K/W&nbsp;?",
+            "Épaisseur doublée&nbsp;: R<sub>th</sub> devient&nbsp;?",
+            "Couches en série&nbsp;: R totale&nbsp;?"
+          ],
+          "reponses": "1) 20 W · 2) doublée · 3) somme des R"
+        }
+      ]
+    }
+  ]
+}

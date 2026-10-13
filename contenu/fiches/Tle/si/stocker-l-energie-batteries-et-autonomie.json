@@ -1,0 +1,180 @@
+{
+  "titre": "Batteries, autonomie",
+  "titreSurligne": "autonomie",
+  "accroche": "Lire ce qui est écrit dessus.",
+  "epreuve": "bac",
+  "bonus": "**W = Q × U** en Wh · série : U s’additionne · parallèle : Q s’additionne · **t = W<sub>utile</sub> ÷ P**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/si/stocker-l-energie-batteries-et-autonomie.webp",
+    "prompt": "a glossy violet battery pack with a golden charge level bar and a tiny golden bolt, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Compare en Wh,\npas en Ah&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’énergie stockée",
+          "petite": true,
+          "lignes": [
+            "W = Q × U",
+            "t = {W utile/P}"
+          ],
+          "regle": "**Q** en Ah, **U** en V, **W** en Wh. On ne décharge jamais à 100&nbsp;%&nbsp;: on retient l’énergie ==utilisable==.",
+          "note": "comparer en Wh"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Associer des cellules",
+          "entetes": [
+            "Association",
+            "Tension",
+            "Capacité"
+          ],
+          "lignes": [
+            [
+              "Série",
+              "s’additionne",
+              "d’une cellule"
+            ],
+            [
+              "Parallèle",
+              "d’une cellule",
+              "s’additionne"
+            ],
+            [
+              "10S4P",
+              "10 en série",
+              "4 branches"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer l’autonomie en trois temps",
+          "etapes": [
+            {
+              "titre": "Énergie",
+              "texte": "W = Q × U"
+            },
+            {
+              "titre": "Utilisable",
+              "texte": "× 80 % de décharge"
+            },
+            {
+              "titre": "Durée",
+              "texte": "diviser par la puissance moyenne"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Vélo __36 V, 10 Ah__, 12 Wh/km, 80 %.",
+          "calcul": "W = 36 × 10 = 360 Wh ; utilisable : 0,8 × 360 = 288 Wh",
+          "aparte": "288 ÷ 12",
+          "resultat": "autonomie ≈ [[24 km]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Ah ou Wh&nbsp;?",
+          "oui": {
+            "titre": "Comparer en Wh",
+            "texte": "**W = Q × U** : c’est ce qui fixe l’==autonomie==."
+          },
+          "non": {
+            "titre": "Comparer en Ah",
+            "texte": "10 Ah en 12 V et 10 Ah en 36 V ne se valent **pas**."
+          },
+          "essai": {
+            "texte": "Supercondensateur&nbsp;: faible énergie (½ C U²) mais <i>puissance</i> énorme, pour les pics et le freinage récupératif."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "W = 36 × 10 = 360 Wh",
+              "quoi": "l’énergie"
+            },
+            {
+              "texte": "W<sub>utile</sub> = 0,8 × 360 = 288 Wh",
+              "quoi": "l’énergie utilisable"
+            },
+            {
+              "texte": "t = 288 ÷ 12 = 24 km",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "L’autonomie dépend aussi du ==rendement== et de la température."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Comparer des **Ah** à tensions différentes.",
+            "Oublier la **profondeur de décharge**.",
+            "Inverser **série** et parallèle.",
+            "Négliger le **froid**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "À retenir",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Série",
+              "texte": "la tension s’additionne (10 × 3,6 V)"
+            },
+            {
+              "titre": "Parallèle",
+              "texte": "la capacité s’additionne (4 × 2,5 Ah)"
+            },
+            {
+              "titre": "Pics de puissance",
+              "texte": "le supercondensateur, pas la batterie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Énergie de **12 V, 5 Ah**&nbsp;?",
+            "En série, quelle grandeur **s’additionne**&nbsp;?",
+            "Cellules d’une **10S4P**&nbsp;?"
+          ],
+          "reponses": "1) 60 Wh · 2) la tension · 3) 40 cellules"
+        }
+      ]
+    }
+  ]
+}

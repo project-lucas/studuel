@@ -1,0 +1,176 @@
+{
+  "titre": "Forme exponentielle",
+  "titreSurligne": "exponentielle",
+  "accroche": "Multiplier, c’est additionner les angles.",
+  "epreuve": "bac",
+  "bonus": "e<sup>iπ</sup> + 1 = 0 · (r e<sup>iθ</sup>)ⁿ = rⁿ e<sup>inθ</sup> · racines n-ièmes de 1 : e<sup>2ikπ/n</sup>, somme **nulle**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-expertes/nombres-complexes-et-trigonometrie.webp",
+    "prompt": "a glossy violet unit circle with a golden regular hexagon inscribed in it and a rotating golden arrow, sparkles"
+  },
+  "marcel": "e puissance iπ\nplus un égale zéro !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Notation exponentielle",
+          "taille": "mini",
+          "lignes": [
+            "e<sup>iθ</sup> = cos θ + i sin θ",
+            "z = r e<sup>iθ</sup>"
+          ],
+          "regle": "Choisie car e<sup>iθ</sup> × e<sup>iθ′</sup> = e<sup>i(θ+θ′)</sup>. Valeurs&nbsp;: e<sup>i0</sup> = 1, e<sup>iπ/2</sup> = **i**, e<sup>iπ</sup> = **−1**.",
+          "note": "comme les exponentielles réelles"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Règles de calcul",
+          "entetes": [
+            "Opération",
+            "Résultat"
+          ],
+          "lignes": [
+            [
+              "Produit",
+              "r r′ e<sup>i(θ+θ′)</sup>"
+            ],
+            [
+              "Quotient",
+              "(r ÷ r′) e<sup>i(θ−θ′)</sup>"
+            ],
+            [
+              "**Moivre**",
+              "(r e<sup>iθ</sup>)ⁿ = rⁿ e<sup>inθ</sup>"
+            ],
+            [
+              "Conjugué",
+              "r e<sup>−iθ</sup>"
+            ],
+            [
+              "Euler",
+              "cos θ = (e<sup>iθ</sup> + e<sup>−iθ</sup>) ÷ 2"
+            ],
+            [
+              "Inverse",
+              "(1 ÷ r) e<sup>−iθ</sup>"
+            ],
+            [
+              "sin θ",
+              "(e<sup>iθ</sup> − e<sup>−iθ</sup>) ÷ 2i"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Linéariser cosⁿ θ",
+          "etapes": [
+            {
+              "titre": "Euler",
+              "texte": "remplacer cos θ par (e<sup>iθ</sup> + e<sup>−iθ</sup>) ÷ 2"
+            },
+            {
+              "titre": "Développer",
+              "texte": "le binôme, puis regrouper e<sup>ikθ</sup> et e<sup>−ikθ</sup>"
+            },
+            {
+              "titre": "Revenir",
+              "texte": "chaque paire donne 2 cos(kθ)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Calculer __(1 + i)<sup>8</sup>__.",
+          "calcul": "1 + i = √2 e<sup>iπ/4</sup>",
+          "aparte": "Moivre : (√2)<sup>8</sup> = 16",
+          "resultat": "16 e<sup>2iπ</sup> = [[16]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Quatre applications",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Addition",
+              "texte": "développer e<sup>i(a+b)</sup> = e<sup>ia</sup> e<sup>ib</sup>, identifier."
+            },
+            {
+              "titre": "Duplication",
+              "texte": "même méthode avec e<sup>2iθ</sup>."
+            },
+            {
+              "titre": "Factoriser",
+              "texte": "e<sup>ia</sup> + e<sup>ib</sup>&nbsp;: sortir l’**angle moyen**."
+            },
+            {
+              "titre": "Racines de 1",
+              "texte": "e<sup>2ikπ/n</sup>, k de 0 à n − 1&nbsp;: un **polygone régulier**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "|1 + i| = √2 et arg(1 + i) = {π/4}",
+              "quoi": "la forme exponentielle"
+            },
+            {
+              "texte": "(1 + i)<sup>8</sup> = (√2)<sup>8</sup> e<sup>8iπ/4</sup>",
+              "quoi": "Moivre"
+            },
+            {
+              "texte": "= 16 e<sup>2iπ</sup> = 16",
+              "quoi": "le résultat"
+            }
+          ],
+          "pied": "Forme ==algébrique== pour additionner, ==exponentielle== pour multiplier et élever."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Développer un **binôme** au lieu d’utiliser Moivre.",
+            "Oublier le **rⁿ** devant l’exponentielle.",
+            "Écrire cos θ = e<sup>iθ</sup> ÷ 2&nbsp;: il faut **e<sup>−iθ</sup>** aussi.",
+            "Oublier une des **n racines** de zⁿ = 1."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**(e<sup>iπ/6</sup>)<sup>6</sup>**&nbsp;?",
+            "**Somme** des racines n-ièmes de 1 (n ≥ 2)&nbsp;?",
+            "**e<sup>iπ</sup> + 1**&nbsp;?"
+          ],
+          "reponses": "1) e^(iπ) = −1 · 2) 0 · 3) 0"
+        }
+      ]
+    }
+  ]
+}

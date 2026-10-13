@@ -1,0 +1,118 @@
+{
+  "titre": "Programmes et données",
+  "titreSurligne": "données",
+  "accroche": "Un programme est une donnée comme une autre.",
+  "epreuve": "bac",
+  "bonus": "von Neumann = <b>une seule mémoire</b> · compilé = rapide · interprété = portable · arrêt = <b>indécidable</b>",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/nsi/programmes-et-donnees.webp",
+    "prompt": "a glossy violet memory chip holding both golden code brackets and golden data cubes, sparkles"
+  },
+  "marcel": "Le code,\nc’est aussi des données !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "von Neumann", "definition": "instructions et données dans la **même mémoire**" },
+            { "terme": "Fonction de 1re classe", "definition": "stockée dans une variable, **passée** en argument, **renvoyée**" },
+            { "terme": "Typage dynamique", "definition": "types vérifiés **à l’exécution** (Python)" },
+            { "terme": "Typage fort", "definition": "pas de conversion implicite hasardeuse" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Compilateur ou interpréteur",
+          "entetes": ["", "Compilé (C)", "Interprété (Python)"],
+          "lignes": [
+            ["Traduction", "**une fois** pour toutes", "**au fil** de la lecture"],
+            ["Exécution", "rapide", "plus lente"],
+            ["Erreurs de type", "**avant** l’exécution", "à l’exécution"],
+            ["Portabilité", "liée à la machine", "programme portable"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Pourquoi tester reste indispensable",
+          "etapes": [
+            { "titre": "Programme = donnée", "texte": "un programme peut en **analyser** un autre" },
+            { "titre": "Turing", "texte": "le **problème de l’arrêt** est indécidable" },
+            { "titre": "Conséquence", "texte": "aucun outil ne prouve **tout** programme correct" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "En Python&nbsp;: <i>3 + \"4\"</i>. __Que se passe-t-il__&nbsp;?",
+          "calcul": "typage **dynamique** : pas de déclaration<br>typage **fort** : int + str refusé",
+          "aparte": "erreur à l’exécution",
+          "resultat": "= [[TypeError]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Mixte", "texte": "Java compile vers un code intermédiaire, lu par une **machine virtuelle**." },
+            { "titre": "Fonction en argument", "texte": "<i>sorted(l, key=len)</i> : la clé de tri est une fonction." },
+            { "titre": "Annotations", "texte": "<i>def f(x: int)</i> : facultatives, **non vérifiées** par Python." },
+            { "titre": "Les bits", "texte": "Le type est dans l’**interprétation**, pas dans la donnée." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "« instructions et données dans la même mémoire »", "quoi": "von Neumann" },
+            { "texte": "« indécidable : aucun programme ne le décide pour tous »", "quoi": "l’arrêt" },
+            { "texte": "« typage dynamique et fort »", "quoi": "Python" }
+          ],
+          "pied": "Compilé = ==rapide==, interprété = ==portable==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que Python est à typage **faible** : il est **fort**.",
+            "Croire que les annotations de type sont **vérifiées**.",
+            "Penser que le problème de l’arrêt est **difficile** : il est impossible.",
+            "Dire qu’un langage est « compilé » ou « interprété » sans nuance : des solutions **mixtes** existent."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que partagent **instructions** et **données** chez von Neumann&nbsp;?",
+            "Que dit Turing du **problème de l’arrêt**&nbsp;?",
+            "Python est-il typé **statiquement** ou **dynamiquement**&nbsp;?"
+          ],
+          "reponses": "1) la même mémoire · 2) il est indécidable · 3) dynamiquement (et fortement)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "titre": "Précision d’une boucle",
+  "titreSurligne": "boucle",
+  "accroche": "Plus le gain est grand, moins d’erreur.",
+  "epreuve": "bac",
+  "bonus": "série&nbsp;: A₁ × A₂ · **A ÷ (1 + A)** · ε = 1 ÷ (1 + A)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/si/schema-bloc-et-precision-d-une-boucle.webp",
+    "prompt": "a glossy violet feedback loop of arrows around a golden gear block with a small golden target, sparkles, same art style as the reference icons"
+  },
+  "marcel": "La boucle ne corrige\nque ce qu’elle mesure !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Boucle fermée",
+          "petite": true,
+          "lignes": ["{A/1 + A}", "ε = {1/1 + A}"],
+          "regle": "Chaîne directe de gain **A**, ==retour unitaire==. Avec un retour de gain B&nbsp;: **A ÷ (1 + A × B)**. Des blocs en série&nbsp;: les gains se ==multiplient==.",
+          "note": "gains statiques"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Gain et erreur restante",
+          "entetes": ["A", "Sortie / consigne", "Erreur"],
+          "lignes": [
+            ["1", "0,5", "50 %"],
+            ["9", "0,9", "10 %"],
+            ["99", "0,99", "1 %"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer la précision",
+          "etapes": [
+            { "titre": "Regrouper", "texte": "multiplier les gains en série pour obtenir A" },
+            { "titre": "Appliquer", "texte": "ε = 1 ÷ (1 + A) puis comparer à l’erreur permise" },
+            { "titre": "Conclure", "texte": "sortie finale = consigne × A ÷ (1 + A)" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Correcteur K<sub>p</sub>, moteur de gain __0,5__, retour unitaire. Erreur ≤ __5 %__&nbsp;: K<sub>p</sub>&nbsp;?",
+          "calcul": "1 ÷ (1 + A) ≤ 0,05 ⇒ A ≥ 19 · A = K<sub>p</sub> × 0,5",
+          "aparte": "consigne 100 rad/s",
+          "resultat": "K<sub>p</sub> ≥ [[38]] · sortie 95 rad/s"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Gain élevé&nbsp;?",
+          "oui": { "titre": "Plus précis", "texte": "Une perturbation voit son effet divisé par environ **1 + A**." },
+          "non": { "titre": "Pas sans limite", "texte": "Un gain trop fort rend le système ==oscillant==, voire instable." },
+          "essai": { "texte": "Capteur faux de 2 %&nbsp;: la sortie est fausse de <i>2 %</i>, quel que soit le gain." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "ε = 1 ÷ (1 + A) ≤ 0,05 ⇒ A ≥ 19", "quoi": "la condition" },
+            { "texte": "K<sub>p</sub> ≥ 19 ÷ 0,5 = 38", "quoi": "avec le calcul" },
+            { "texte": "38 est le gain minimal pour respecter 5 %", "quoi": "la conclusion" }
+          ],
+          "pied": "L’action ==intégrale== annule l’erreur sans pousser le gain."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "**Additionner** les gains en série.",
+            "Oublier le **1 +** au dénominateur.",
+            "Croire que la boucle corrige un **capteur** faux.",
+            "Confondre **A** (chaîne directe) et le gain de boucle."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Boucle à retour unitaire, **A = 4**&nbsp;: erreur&nbsp;?",
+            "Blocs en série de gains **2** et **3**&nbsp;?",
+            "Gain trop élevé&nbsp;: quel risque&nbsp;?"
+          ],
+          "reponses": "1) 1 ÷ 5 = 20 % · 2) 6 · 3) oscillations, instabilité"
+        }
+      ]
+    }
+  ]
+}

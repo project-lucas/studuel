@@ -1,0 +1,115 @@
+{
+  "titre": "Modéliser et simuler",
+  "titreSurligne": "simuler",
+  "accroche": "Prédire avant de fabriquer.",
+  "epreuve": "bac",
+  "bonus": "modèle **valide dans un domaine** · simulation **vs** mesures · SysML&nbsp;: exigences, blocs, états, séquence",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/si/modelisation-et-simulation.webp",
+    "prompt": "a glossy violet computer screen showing a golden curve over a small blueprint gear, tiny golden sparkles, same art style as the reference icons"
+  },
+  "marcel": "Un modèle n’est pas vrai,\nil est valide&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Un modèle multiphysique",
+          "entetes": ["Domaine", "Exemple de couplage"],
+          "lignes": [
+            ["Mécanique", "Le couple sur l’arbre"],
+            ["Électrique", "Le courant absorbé"],
+            ["Thermique", "L’échauffement dégrade le couple"],
+            ["Informatique", "Le correcteur compense la dérive"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les diagrammes SysML",
+          "entetes": ["Diagramme", "Il décrit"],
+          "lignes": [
+            ["Exigences", "ce qu’il doit faire"],
+            ["Définition de blocs", "de quoi il est fait"],
+            ["Blocs internes", "comment les blocs échangent"],
+            ["États · séquence", "son comportement dans le temps"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Valider un modèle en trois temps",
+          "etapes": [
+            { "titre": "Simuler", "texte": "avec un modèle construit pour une question précise" },
+            { "titre": "Comparer", "texte": "la simulation aux mesures expérimentales" },
+            { "titre": "Expliquer l’écart", "texte": "chercher l’hypothèse écartée avant de rejeter le modèle" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "La simulation prévoit un temps de réponse de __0,20 s__ ; l’essai donne 0,35 s. Quelle hypothèse interroger&nbsp;?",
+          "calcul": "réponse plus lente que prévu ⇒ un effet retardateur a été négligé",
+          "aparte": "l’écart a une cause",
+          "resultat": "[[inertie]] ou [[jeu mécanique]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Que dit un écart&nbsp;?",
+          "oui": { "titre": "Amplitude plus faible", "texte": "Pense aux **frottements** négligés&nbsp;; un retard constant, au ==capteur==." },
+          "non": { "titre": "Un écart = modèle faux&nbsp;?", "texte": "**Pas forcément**&nbsp;: d’abord l’hypothèse écartée qui l’explique." },
+          "essai": { "texte": "Le frottement sec suffit pour dimensionner un frein, pas pour prévoir son <i>usure</i>&nbsp;: validité limitée." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Le modèle est valide pour la question posée", "quoi": "le domaine" },
+            { "texte": "Écart simulation/mesure = 0,15 s", "quoi": "l’écart chiffré" },
+            { "texte": "Cause probable&nbsp;: inertie négligée", "quoi": "l’hypothèse" }
+          ],
+          "pied": "Jamais « modèle ==faux== » sans chercher l’hypothèse écartée."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Juger un modèle « **vrai** » ou « faux ».",
+            "Oublier un **couplage** (thermique, par exemple).",
+            "Confondre diagramme d’**exigences** et de **blocs**.",
+            "Valider sur **une seule** mesure."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que décrit un diagramme **d’exigences**&nbsp;?",
+            "On compare la simulation à quoi pour **valider**&nbsp;?",
+            "Retard **constant** observé&nbsp;: quelle cause&nbsp;?"
+          ],
+          "reponses": "1) ce que le système doit faire · 2) aux mesures · 3) le capteur"
+        }
+      ]
+    }
+  ]
+}

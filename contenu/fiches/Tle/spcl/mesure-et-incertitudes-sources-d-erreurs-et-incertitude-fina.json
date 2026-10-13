@@ -1,0 +1,153 @@
+{
+  "titre": "Incertitude finale",
+  "titreSurligne": "finale",
+  "accroche": "Attaque la source qui domine.",
+  "epreuve": "bac",
+  "bonus": "Produit ou quotient&nbsp;: on additionne les **carrés** des incertitudes **relatives** · **z ≤ 2** = compatible",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/spcl/mesure-et-incertitudes-sources-d-erreurs-et-incertitude-fina.webp",
+    "prompt": "a glossy violet burette and pipette above a flask with a golden error bar and a tiny balance, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Une seule source\nfait la loi&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Types A et B",
+          "entetes": [
+            "Type",
+            "Quand",
+            "Formule"
+          ],
+          "lignes": [
+            [
+              "**A**",
+              "n mesures répétées",
+              "u = s ÷ √n"
+            ],
+            [
+              "**B**",
+              "une mesure, instrument",
+              "u = Δ ÷ √3"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Combiner (produit, quotient)",
+          "petite": true,
+          "lignes": [
+            "u(c)/c = √( r₁² + r₂² + r₃² )"
+          ],
+          "regle": "**r = u ÷ valeur** (relative) de chaque grandeur de c = c₁ × V<sub>E</sub> ÷ V₀, **indépendantes**. Relation en général **fournie**.",
+          "note": "des carrés&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Trouver la source dominante",
+          "etapes": [
+            {
+              "titre": "Relatives",
+              "texte": "calculer chaque **u ÷ valeur**"
+            },
+            {
+              "titre": "Ranger",
+              "texte": "la source **dix fois** plus grande fixe presque seule u"
+            },
+            {
+              "titre": "Améliorer",
+              "texte": "cibler **elle seule** (burette de classe A, prise d’essai plus grande…)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Titrage&nbsp;: c₁ = 0,100 (u = 0,0005) · V<sub>E</sub> = 12,4 mL (u = 0,05) · V₀ = 10,00 mL (u = 0,02). __u(c)__&nbsp;?",
+          "calcul": "0,5 % ; 0,40 % ; 0,20 % → √(0,25 + 0,16 + 0,04) ≈ 0,67 %",
+          "aparte": "c = 0,124 mol/L",
+          "resultat": "u(c) ≈ [[0,0008 mol/L]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Compatible ou pas",
+          "oui": {
+            "titre": "z ≤ 2",
+            "texte": "Résultat **compatible** avec la référence."
+          },
+          "non": {
+            "titre": "z > 2",
+            "texte": "Cherche une **erreur systématique**."
+          },
+          "essai": {
+            "texte": "Source **dominante** = celle qu’on améliore, pas les autres."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Relatives&nbsp;: 0,5 % ; 0,40 % ; 0,20 %",
+              "quoi": "chaque source"
+            },
+            {
+              "texte": "u(c) ÷ c = √(0,5² + 0,4² + 0,2²) % ≈ 0,67 %",
+              "quoi": "la combinaison"
+            },
+            {
+              "texte": "c = (0,124 ± 0,001) mol/L",
+              "quoi": "le résultat"
+            },
+            {
+              "texte": "z = |x − x<sub>réf</sub>| ÷ u ≤ 2&nbsp;: compatible",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "u garde **1 ou 2** chiffres significatifs, la valeur est arrondie au **même rang**."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "**Additionner** directement les incertitudes relatives.",
+            "Oublier la **racine** après la somme des carrés.",
+            "Améliorer une source **déjà négligeable**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Incertitudes relatives de 3 % et 4 %&nbsp;: **u(c) ÷ c**&nbsp;?",
+            "Quelle source **améliorer** en priorité&nbsp;?",
+            "Série resserrée mais loin de la référence&nbsp;: **fidèle** ou **juste**&nbsp;?"
+          ],
+          "reponses": "1) √(9+16) = 5 % · 2) la dominante · 3) fidèle (pas juste)"
+        }
+      ]
+    }
+  ]
+}

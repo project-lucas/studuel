@@ -1,0 +1,166 @@
+{
+  "titre": "L’intensité sonore",
+  "titreSurligne": "sonore",
+  "accroche": "Une échelle de décibels, pas ordinaire.",
+  "epreuve": "bac",
+  "bonus": "L = 10 log(I/I₀) · I₀ = 1,0×10⁻¹² W·m⁻² · ×10 = +10 dB · ×2 = +3 dB · doubler d = −6 dB",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/l-intensite-sonore.webp",
+    "prompt": "a glossy violet loudspeaker with golden concentric sound waves spreading out and a small golden decibel meter, tiny sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Deux sources égales,\nseulement +3 dB !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Niveau d’intensité",
+          "petite": true,
+          "lignes": [
+            "L = 10 × log({I/I₀})",
+            "I = {P/4π d²}"
+          ],
+          "regle": "**I** en W·m⁻², **L** en **dB**, I₀ = 1,0×10⁻¹² W·m⁻² le ==seuil d’audibilité==. À 0 dB&nbsp;: au seuil, pas « sans son ».",
+          "note": "log décimal !"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les repères",
+          "entetes": [
+            "Situation",
+            "I (W·m⁻²)",
+            "L (dB)"
+          ],
+          "lignes": [
+            [
+              "Seuil d’audibilité",
+              "10⁻¹²",
+              "0"
+            ],
+            [
+              "Conversation",
+              "10⁻⁶",
+              "60"
+            ],
+            [
+              "Rue passante",
+              "10⁻⁴",
+              "80"
+            ],
+            [
+              "Seuil de douleur",
+              "1",
+              "120"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Convertir",
+              "texte": "en W·m⁻² si on part de L&nbsp;: I = I₀ × 10<sup>L/10</sup>, avec I₀ = 10⁻¹² W·m⁻²"
+            },
+            {
+              "titre": "Sommer",
+              "texte": "les intensités des sources, jamais les niveaux en dB&nbsp;: ils ne s’additionnent pas"
+            },
+            {
+              "titre": "Reconvertir",
+              "texte": "avec L = 10 log(I/I₀), puis ajouter l’atténuation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Deux machines identiques font chacune __60 dB__. Niveau de l’ensemble&nbsp;?",
+          "calcul": "I double donc L = 60 + 10 log 2",
+          "aparte": "10 log 2 ≈ 3",
+          "resultat": "L ≈ [[63 dB]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Additionner des niveaux",
+          "oui": {
+            "titre": "Deux sources égales",
+            "texte": "L’intensité est ==doublée== : le niveau gagne **3 dB**, il ne double pas."
+          },
+          "non": {
+            "titre": "60 + 60 = 120 dB&nbsp;?",
+            "texte": "**Faux**&nbsp;: l’échelle est logarithmique, les niveaux ne s’additionnent pas."
+          },
+          "essai": {
+            "texte": "I ×10 : <i>+10 dB</i>. Distance doublée : <i>−6 dB</i> d’atténuation géométrique."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Deux atténuations",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Géométrique",
+              "texte": "l’énergie s’étale, rien n’est perdu"
+            },
+            {
+              "titre": "Absorption",
+              "texte": "A = L émis − L reçu"
+            },
+            {
+              "titre": "Cumul",
+              "texte": "elles s’additionnent en dB"
+            },
+            {
+              "titre": "Oreille",
+              "texte": "sensible entre 1 et 4 kHz, dB(A)"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Additionner des **dB** comme des intensités.",
+            "Oublier que 0 dB est le **seuil**, pas le silence.",
+            "Confondre **I** (W·m⁻²) et **L** (dB).",
+            "Ignorer le danger au-delà de **85 dB**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "I est multipliée par 10 : le niveau varie de combien&nbsp;?",
+            "On **double** la distance à la source : variation de L&nbsp;?",
+            "Deux sources de 70 dB : niveau **total** environ&nbsp;?"
+          ],
+          "reponses": "1) +10 dB · 2) −6 dB · 3) 73 dB"
+        }
+      ]
+    }
+  ]
+}

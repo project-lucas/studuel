@@ -1,0 +1,116 @@
+{
+  "titre": "La traction",
+  "titreSurligne": "traction",
+  "accroche": "L’effort ramené à la surface.",
+  "epreuve": "bac",
+  "bonus": "σ = N ÷ S · σ = E × ε · **σ ≤ R<sub>e</sub> ÷ s** · 1 MPa = 1 N/mm²",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/si/contraintes-et-deformations-la-traction.webp",
+    "prompt": "a glossy violet metal rod pulled at both ends by golden arrows, slightly stretched, tiny golden spring beside it, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Tirer, c’est\nrépartir l’effort !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Contrainte et Hooke",
+          "petite": true,
+          "lignes": ["σ = {N/S}", "σ = E × ε"],
+          "regle": "**σ** en MPa, **N** effort normal (N), **S** section (mm²). **ε = ΔL ÷ L<sub>0</sub>** sans unité. La loi de Hooke vaut dans le domaine ==élastique==.",
+          "note": "E = raideur du matériau"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Module d’Young E",
+          "entetes": ["Matériau", "E (ordre de grandeur)"],
+          "lignes": [
+            ["Acier", "210 000 MPa"],
+            ["Aluminium", "70 000 MPa"],
+            ["Bois (sens des fibres)", "10 000 MPa"],
+            ["Polymère courant", "1 000 à 3 000 MPa"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Vérifier une pièce tendue",
+          "etapes": [
+            { "titre": "Section", "texte": "calculer S en mm² (disque&nbsp;: π × r²)" },
+            { "titre": "Contrainte", "texte": "σ = N ÷ S, avec N en newtons" },
+            { "titre": "Comparer", "texte": "σ ≤ R<sub>e</sub> ÷ s, puis ε et ΔL si on le demande" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Tirant en acier (R<sub>e</sub> = 235 MPa), __Ø 10 mm__, __2 m__, tiré par 10 kN&nbsp;: σ, s et ΔL&nbsp;?",
+          "calcul": "S = π × 5² ≈ 78,5 mm² · σ = 10 000 ÷ 78,5 ≈ 127 MPa",
+          "aparte": "235 ÷ 127 ; ε = 127 ÷ 210 000",
+          "resultat": "s ≈ [[1,85]] · ΔL ≈ 1,2 mm"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "La courbe de l’essai",
+          "entetes": ["Zone", "Ce qui se passe"],
+          "lignes": [
+            ["Élastique", "la pièce reprend sa forme"],
+            ["Limite R<sub>e</sub>", "la déformation devient permanente"],
+            ["Plastique", "allongement durable"],
+            ["R<sub>m</sub>", "contrainte maximale avant rupture"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "σ = N ÷ S = 10 000 ÷ 78,5 ≈ 127 MPa", "quoi": "formule puis calcul" },
+            { "texte": "127 MPa < R<sub>e</sub> = 235 MPa", "quoi": "la comparaison" },
+            { "texte": "s = 1,85&nbsp;: la condition est vérifiée", "quoi": "la conclusion" }
+          ],
+          "pied": "Le coefficient de sécurité est plus grand quand des ==personnes== sont en jeu."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Garder l’effort en **kN** avec une section en mm².",
+            "Calculer S avec le **diamètre** au lieu du rayon.",
+            "Dépasser **R<sub>e</sub>** en croyant à Hooke.",
+            "Confondre **R<sub>e</sub>** et **R<sub>m</sub>**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "N = 6 000 N sur **S = 100 mm²**&nbsp;: σ&nbsp;?",
+            "σ = 100 MPa, **E = 200 000 MPa**&nbsp;: ε&nbsp;?",
+            "Que garantit **σ ≤ R<sub>e</sub> ÷ s**&nbsp;?"
+          ],
+          "reponses": "1) 60 MPa · 2) 0,0005 · 3) pas de déformation permanente"
+        }
+      ]
+    }
+  ]
+}

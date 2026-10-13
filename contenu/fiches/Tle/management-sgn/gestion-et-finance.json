@@ -1,0 +1,131 @@
+{
+  "titre": "Gestion et finance",
+  "titreSurligne": "finance",
+  "accroche": "Enregistrer, analyser, décider.",
+  "epreuve": "bac",
+  "bonus": "**Partie double** : débit = crédit · amortissement linéaire = coût ÷ durée",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/management-sgn/gestion-et-finance.webp",
+    "prompt": "a glossy violet calculator with a golden coin stack and a small rising graph, tiny golden sparkles, same art style as the reference icons, on magenta background, no text"
+  },
+  "marcel": "Compter pour\nmieux décider&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les deux rentabilités",
+          "lignes": [
+            "Rent. éco = {résultat d’exploitation/capitaux investis}",
+            "Rent. fin = {résultat net/capitaux propres}"
+          ],
+          "regle": "Rent. éco supérieure au taux d’intérêt : l’endettement profite aux associés (levier)",
+          "note": "levier = gain + risque",
+          "teinte": "jaune"
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "RE 60&nbsp;000 € ; capitaux investis 400&nbsp;000 € ; RN 30&nbsp;000 € ; CP 150&nbsp;000 €.",
+          "calcul": "60 ÷ 400 = 15&nbsp;% · 30 ÷ 150 = 20&nbsp;%",
+          "resultat": "[[15 % et 20 %]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les oppositions comptables",
+          "entetes": [
+            "Notion",
+            "Sens"
+          ],
+          "lignes": [
+            [
+              "**Flux / stock**",
+              "résultat de l’exercice / patrimoine à une date"
+            ],
+            [
+              "**Actif / passif**",
+              "ce qu’on possède / comment on le finance"
+            ],
+            [
+              "**Charge / produit**",
+              "appauvrit / enrichit"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 3,
+          "titre": "Analyser et décider",
+          "items": [
+            {
+              "terme": "EBE",
+              "definition": "valeur ajoutée + subventions − impôts et taxes − charges de personnel"
+            },
+            {
+              "terme": "CAF",
+              "definition": "ressources générées par l’activité, disponibles pour investir"
+            },
+            {
+              "terme": "Coût marginal",
+              "definition": "coût d’une unité **supplémentaire**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Rentabilité économique = 60 000 ÷ 400 000 = 15&nbsp;%.",
+              "quoi": "calcul"
+            },
+            {
+              "texte": "15&nbsp;% dépasse le taux d’emprunt de 5&nbsp;%.",
+              "quoi": "comparer"
+            },
+            {
+              "texte": "L’effet de levier est favorable, mais le risque augmente.",
+              "quoi": "interpréter"
+            }
+          ],
+          "pied": "Un calcul sans ==interprétation== ne rapporte qu’une partie des points."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Traiter une immobilisation en **charge**.",
+            "Confondre **flux** et stock.",
+            "Oublier la **TVA** : collectée moins déductible.",
+            "Calculer sans **interpréter**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Un bien durable est-il une **charge** ou un actif&nbsp;?",
+            "Que mesure la **rentabilité financière**&nbsp;?",
+            "Quand l’**effet de levier** est-il positif&nbsp;?"
+          ],
+          "reponses": "1) un actif, amorti · 2) résultat net ÷ capitaux propres · 3) rentabilité économique > taux d’intérêt"
+        }
+      ]
+    }
+  ]
+}

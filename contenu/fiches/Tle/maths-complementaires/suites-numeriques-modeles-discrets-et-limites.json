@@ -1,0 +1,173 @@
+{
+  "titre": "Suites et limites",
+  "titreSurligne": "limites",
+  "accroche": "Que devient la suite à long terme ?",
+  "epreuve": "bac",
+  "bonus": "q > 1 : +∞ · −1 < q < 1 : 0 · croissante et majorée : converge · seuil : ln ou algorithme",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-complementaires/suites-numeriques-modeles-discrets-et-limites.webp",
+    "prompt": "a glossy violet staircase climbing toward a golden horizon line, sparkles"
+  },
+  "marcel": "Vers où va\nla suite ?",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les limites à connaître",
+          "taille": "mini",
+          "lignes": [
+            "qⁿ → 0 si −1 < q < 1",
+            "qⁿ → +∞ si q > 1",
+            "u → c si −1 < a < 1"
+          ],
+          "regle": "Pour u(n+1) = a·u(n) + b avec **−1 < a < 1**, la limite est le __point fixe c__ = b ÷ (1 − a), quel que soit u(0)&nbsp;: c’est l’**état d’équilibre**.",
+          "note": "q ≤ −1&nbsp;: pas de limite"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Selon la suite",
+          "entetes": [
+            "Suite",
+            "Limite"
+          ],
+          "lignes": [
+            [
+              "Géométrique, −1 < q < 1",
+              "**0**"
+            ],
+            [
+              "Géométrique, q > 1",
+              "**+∞**"
+            ],
+            [
+              "Arithmétique, r ≠ 0",
+              "**±∞** selon le signe de r"
+            ],
+            [
+              "Croissante et majorée",
+              "**converge** (valeur inconnue)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Trouver un seuil",
+          "etapes": [
+            {
+              "titre": "Traduire",
+              "texte": "écrire l’inégalité u(n) ≥ S"
+            },
+            {
+              "titre": "Choisir",
+              "texte": "géométrique&nbsp;: logarithme ; sinon algorithme"
+            },
+            {
+              "titre": "Arrondir",
+              "texte": "dans le sens qui respecte l’inégalité"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "u(n) = 200×1,1ⁿ. __À partir de quel rang u(n) ≥ 1000 ?__",
+          "calcul": "1,1ⁿ ≥ 5 donc n ≥ ln 5 ÷ ln 1,1",
+          "aparte": "≈ 1,609 ÷ 0,0953 ≈ 16,9",
+          "resultat": "n ≥ 16,9 donc [[n = 17]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Limite monotone",
+              "texte": "croissante **et** majorée&nbsp;: elle converge."
+            },
+            {
+              "titre": "Existence ≠ valeur",
+              "texte": "le théorème ne donne **pas** la limite."
+            },
+            {
+              "titre": "Algorithme",
+              "texte": "« tant que u < S&nbsp;: n ← n + 1 » quand le log ne marche pas."
+            },
+            {
+              "titre": "Équilibre",
+              "texte": "limite = point fixe&nbsp;: **indépendante** de u(0)."
+            },
+            {
+              "titre": "Arithmétique",
+              "texte": "r ≠ 0&nbsp;: la suite part vers **±∞**."
+            },
+            {
+              "titre": "Interpréter",
+              "texte": "« la population se stabilise autour de c »."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "(u(n)) est géométrique de raison 1,1 > 1",
+              "quoi": "le modèle"
+            },
+            {
+              "texte": "1,1ⁿ ≥ 5 ⇔ n ≥ ln 5 ÷ ln 1,1 ≈ 16,9",
+              "quoi": "l’inéquation"
+            },
+            {
+              "texte": "Le plus petit entier est n = 17.",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Vérifie&nbsp;: 200×1,1¹⁶ ≈ ==915==, 200×1,1¹⁷ ≈ ==1007==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Arrondir **16,9** à 17 « au plus proche » sans vérifier le sens.",
+            "Croire qu’une suite **majorée** converge.",
+            "Confondre « la limite existe » et « je connais sa **valeur** ».",
+            "Oublier que ln 1,1 > 0 avant de **diviser**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Limite de **1,05ⁿ**&nbsp;?",
+            "Limite de **0,3ⁿ**&nbsp;?",
+            "Limite de **u(n+1) = 0,5·u(n) + 3**&nbsp;?"
+          ],
+          "reponses": "1) +∞ (1,05 > 1) · 2) 0 · 3) c = 0,5c + 3, donc 6"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "titre": "Graphes et matrices",
+  "titreSurligne": "matrices",
+  "accroche": "Une puissance compte des chemins.",
+  "epreuve": "bac",
+  "bonus": "(Mᵏ)<sub>ij</sub> = chemins de longueur **k** de i à j · eulérienne : 0 ou 2 sommets impairs · χ ≤ degré max + 1",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-expertes/graphes-et-matrices.webp",
+    "prompt": "a glossy violet graph of five round nodes linked by golden edges beside a small golden grid of numbers, sparkles"
+  },
+  "marcel": "Une puissance\ncompte les chemins !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Matrice d’adjacence",
+          "taille": "mini",
+          "lignes": [
+            "m<sub>ij</sub> = 1 si i → j",
+            "(Mᵏ)<sub>ij</sub> = nb de chemins"
+          ],
+          "regle": "Le coefficient (i ; j) de **Mᵏ** compte les chemins de longueur **exactement k** de i à j. Graphe non orienté&nbsp;: M **symétrique**.",
+          "note": "un dénombrement devient un calcul"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "La question, le calcul",
+          "entetes": [
+            "Question",
+            "Calcul"
+          ],
+          "lignes": [
+            [
+              "Longueur exactement k",
+              "coefficient de **Mᵏ**"
+            ],
+            [
+              "Longueur au plus k",
+              "M + M² + … + Mᵏ"
+            ],
+            [
+              "Graphe connexe ?",
+              "I + M + … + Mⁿ⁻¹ sans coefficient nul"
+            ],
+            [
+              "Nombre chromatique",
+              "entre la plus grande clique et deg max + 1"
+            ],
+            [
+              "Degré d’un sommet",
+              "nombre d’arêtes qui y arrivent"
+            ],
+            [
+              "Pondéré",
+              "chaque lien porte un nombre"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Compter des chemins",
+          "etapes": [
+            {
+              "titre": "Matrice",
+              "texte": "écrire M avec les sommets dans un ordre fixé"
+            },
+            {
+              "titre": "Puissance",
+              "texte": "calculer Mᵏ, à la calculatrice si l’énoncé le permet"
+            },
+            {
+              "titre": "Lire",
+              "texte": "le coefficient ligne i, colonne j, avec la bonne longueur"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Triangle ABC, M = (0 1 1 ; 1 0 1 ; 1 1 0). Chemins de longueur 2 de __A à A__&nbsp;?",
+          "calcul": "M² = (2 1 1 ; 1 2 1 ; 1 1 2)",
+          "aparte": "A→B→A et A→C→A",
+          "resultat": "coefficient (1 ; 1) = [[2]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Chaînes et couleurs",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Eulérienne",
+              "texte": "chaque **arête** une fois&nbsp;: connexe et 0 ou 2 sommets de degré impair."
+            },
+            {
+              "titre": "Cycle eulérien",
+              "texte": "si 0 sommet impair."
+            },
+            {
+              "titre": "Hamiltonienne",
+              "texte": "chaque **sommet** une fois&nbsp;: aucun critère simple."
+            },
+            {
+              "titre": "Coloration",
+              "texte": "deux sommets adjacents, deux couleurs&nbsp;: planning sans conflit."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Les sommets sont ordonnés A, B, C, M est la matrice d’adjacence",
+              "quoi": "la convention"
+            },
+            {
+              "texte": "Le coefficient (1 ; 1) de M² est le nombre de chemins de longueur 2 de A à A",
+              "quoi": "le théorème"
+            }
+          ],
+          "pied": "Donc il y a ==2 chemins==&nbsp;: A→B→A et A→C→A."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre longueur **exactement** k et **au plus** k.",
+            "Lire la **mauvaise** ligne ou colonne.",
+            "Parler de critère pour une chaîne **hamiltonienne**.",
+            "Oublier que M est **symétrique** si le graphe est non orienté."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Chaîne **eulérienne**&nbsp;: combien de sommets de degré impair&nbsp;?",
+            "Que donne le coefficient (i ; j) de **M³**&nbsp;?",
+            "Graphe **non orienté**&nbsp;: M est&nbsp;?"
+          ],
+          "reponses": "1) 0 ou 2 · 2) les chemins de longueur 3 de i à j · 3) symétrique"
+        }
+      ]
+    }
+  ]
+}

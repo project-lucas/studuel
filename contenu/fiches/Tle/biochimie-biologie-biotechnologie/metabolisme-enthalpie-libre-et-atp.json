@@ -1,0 +1,113 @@
+{
+  "titre": "Énergie, ΔrG’° et ATP",
+  "titreSurligne": "ATP",
+  "accroche": "L’énergie circule par couplages.",
+  "epreuve": "bac",
+  "bonus": "ΔrG’° < 0 : **exergonique** · hydrolyse de l’ATP ≈ **−30,5 kJ·mol⁻¹** · couplage : on **additionne** les ΔrG’°",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/biochimie-biologie-biotechnologie/metabolisme-enthalpie-libre-et-atp.webp",
+    "prompt": "a glossy violet battery shaped like a molecule with three golden phosphate spheres, one sphere detaching with a spark, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "L’ATP, ma monnaie\npréférée !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Deux sens du métabolisme",
+          "entetes": ["Voie", "Énergie", "Exemples"],
+          "lignes": [
+            ["**Catabolisme**", "libère", "glycolyse, lipolyse"],
+            ["**Anabolisme**", "consomme", "cycle de Calvin, glycogénogenèse"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le couplage énergétique",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": ["ΔrG’°<sub>couplée</sub> = ΔrG’°<sub>1</sub> + ΔrG’°<sub>2</sub>"],
+          "regle": "Somme **négative** : la réaction couplée est **spontanée**. Une réaction endergonique (ΔrG’° > 0) devient possible couplée à l’**hydrolyse de l’ATP**.",
+          "note": "conditions standard : pH 7, 25 °C"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Prévoir le sens d’une oxydoréduction",
+          "etapes": [
+            { "titre": "Repérer", "texte": "les deux couples et leur **E’°** (NAD⁺/NADH, FAD/FADH₂…)" },
+            { "titre": "Orienter", "texte": "les électrons vont du E’° le plus **bas** au plus **haut**" },
+            { "titre": "Calculer", "texte": "ΔrG’° = −n × F × ΔE’°, avec ΔE’° = E’°<sub>accepteur</sub> − E’°<sub>donneur</sub>" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Glucose + Pi → glucose-6-phosphate&nbsp;: ΔrG’° = +13,8. Hydrolyse de l’ATP&nbsp;: −30,5 kJ·mol⁻¹.",
+          "calcul": "+13,8 + (−30,5)",
+          "aparte": "1re étape de la glycolyse",
+          "resultat": "ΔrG’° = [[−16,7 kJ·mol⁻¹]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "À retenir",
+          "items": [
+            { "titre": "ATP", "texte": "deux liaisons à **haut potentiel** ; le catabolisme la produit, l’anabolisme la consomme." },
+            { "titre": "Coenzymes", "texte": "NAD⁺ + 2 e⁻ + H⁺ → NADH ; FAD + 2 e⁻ + 2 H⁺ → FADH₂." },
+            { "titre": "Équation-bilan", "texte": "deux demi-équations, électrons **égalisés**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "La réaction est endergonique&nbsp;: ΔrG’° > 0, impossible seule.", "quoi": "constater" },
+            { "texte": "Je la couple à l’hydrolyse de l’ATP&nbsp;: j’additionne les ΔrG’°.", "quoi": "coupler" },
+            { "texte": "La somme est négative&nbsp;: la réaction couplée est spontanée.", "quoi": "conclure" }
+          ],
+          "pied": "Je précise toujours l’==unité== : kJ·mol⁻¹."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **ΔrG’°** (standard) et **ΔrG** (réel).",
+            "Croire qu’un ΔrG’° > 0 est toujours **impossible** en cellule.",
+            "Oublier d’**égaliser** les électrons.",
+            "Inverser **accepteur** et **donneur** dans ΔE’°."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que signifie **ΔrG < 0**&nbsp;?",
+            "Que produit l’**hydrolyse de l’ATP**&nbsp;?",
+            "Dans quel sens vont les électrons selon **E’°**&nbsp;?"
+          ],
+          "reponses": "1) réaction exergonique, spontanée · 2) ADP + Pi, −30,5 kJ/mol · 3) du E’° le plus bas au plus haut"
+        }
+      ]
+    }
+  ]
+}

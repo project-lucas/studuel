@@ -1,0 +1,119 @@
+{
+  "titre": "Trier avec SQL",
+  "titreSurligne": "Trier",
+  "accroche": "Ordonner, classer, extraire le haut.",
+  "epreuve": "bac",
+  "bonus": "<b>ORDER BY</b> **avant** <b>LIMIT</b> · ASC par défaut · tri général en **n log n** · filtrer **avant** de trier",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/nsi/tri-de-donnees-avec-le-langage-sql.webp",
+    "prompt": "a glossy violet column of three bars sorted from tall to short with a golden arrow pointing downward, sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Pas de LIMIT\nsans ORDER BY !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les clauses",
+          "entetes": ["Clause", "Rôle"],
+          "lignes": [
+            ["<i>ORDER BY col</i>", "trie le résultat"],
+            ["<i>ASC</i> / <i>DESC</i>", "croissant (défaut) / décroissant"],
+            ["<i>ORDER BY a, b</i>", "**b** départage les ex æquo"],
+            ["<i>LIMIT n</i>", "borne le nombre de lignes"],
+            ["<i>OFFSET k</i>", "saute **k** lignes (pagination)"],
+            ["<i>AS alias</i>", "nomme une colonne calculée"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trier n’est pas indexer",
+          "entetes": ["<i>ORDER BY</i>", "Index"],
+          "lignes": [
+            ["ordonne le **résultat**", "structure **auxiliaire**"],
+            ["le temps de la requête", "**permanent**"],
+            ["ne change pas la table", "ne change pas la table"],
+            ["plus rapide si colonne indexée", "fournit déjà l’ordre"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Les trois meilleurs",
+          "oui": { "titre": "Juste", "texte": "<i>ORDER BY moyenne DESC LIMIT 3</i>&nbsp;: les **trois plus fortes** moyennes." },
+          "non": { "titre": "Faux", "texte": "<i>LIMIT 3</i> **sans** ORDER BY&nbsp;: trois lignes **arbitraires**." },
+          "essai": { "titre": "À retenir", "texte": "erreur ==silencieuse==&nbsp;: le résultat a l’air juste, il ne l’est pas." }
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Moyennes par classe, de la meilleure à la pire. __Requête__&nbsp;?",
+          "calcul": "GROUP BY classe_id, AVG(moyenne) AS moy",
+          "aparte": "alias réutilisé",
+          "resultat": "= [[ORDER BY moy DESC]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Bon à savoir",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "TEXT", "texte": "un numéro trié en texte&nbsp;: « 10 » passe **avant** « 9 »." },
+            { "titre": "Collation", "texte": "majuscules et accents se classent selon la **base**." },
+            { "titre": "Coût", "texte": "un tri coûte de l’ordre de **n log n**." },
+            { "titre": "En cours", "texte": "tris par insertion et sélection **n²** ; fusion **n log n**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Je trie par moyenne décroissante.", "quoi": "le tri" },
+            { "texte": "Je borne le résultat avec LIMIT 3.", "quoi": "l’extraction" },
+            { "texte": "ORDER BY précède LIMIT dans la requête.", "quoi": "l’ordre" }
+          ],
+          "pied": "Filtrer ==avant== de trier, et ne trier que le nécessaire."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<b>LIMIT</b> **sans** <b>ORDER BY</b>&nbsp;: lignes arbitraires.",
+            "Oublier <b>DESC</b> pour « les meilleurs ».",
+            "Confondre <b>ORDER BY</b> et **index**.",
+            "Trier un million de lignes pour en afficher **dix**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel est l’ordre **par défaut** de ORDER BY&nbsp;?",
+            "Que renvoie **LIMIT** sans ORDER BY&nbsp;?",
+            "Pourquoi un **alias** (AS) est-il utile&nbsp;?"
+          ],
+          "reponses": "1) croissant (ASC) · 2) des lignes arbitraires · 3) on le réutilise dans ORDER BY"
+        }
+      ]
+    }
+  ]
+}

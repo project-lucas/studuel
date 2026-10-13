@@ -1,0 +1,114 @@
+{
+  "titre": "Molécules organiques",
+  "titreSurligne": "organiques",
+  "accroche": "Squelette, groupes et espace.",
+  "epreuve": "bac",
+  "bonus": "aldéhyde&nbsp;: **bout** de chaîne · cétone&nbsp;: **milieu** · alcool tertiaire&nbsp;: **ne s’oxyde pas** · C* = 4 substituants **différents**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/structure-des-molecules-organiques.webp",
+    "prompt": "a glossy violet and golden molecular model with a hexagon carbon ring and small side groups, two mirror-image shapes beside it, sparkles"
+  },
+  "marcel": "Groupe caractéristique,\nréactivité !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les familles",
+          "entetes": ["Famille", "Groupe", "Place"],
+          "lignes": [
+            ["Alcool", "—OH", "carbone tétragonal"],
+            ["Aldéhyde", "—CHO", "bout de chaîne"],
+            ["Cétone", "—CO—", "milieu de chaîne"],
+            ["Acide carboxylique", "—COOH", "bout de chaîne"],
+            ["Ester · Amide", "—COO— · —CONH—", "dans la chaîne"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les isoméries",
+          "items": [
+            { "terme": "Constitution", "definition": "enchaînement différent des atomes (chaîne, position, fonction)" },
+            { "terme": "Z / E", "definition": "disposition autour d’une double liaison C=C" },
+            { "terme": "Énantiomères", "definition": "images dans un miroir, non superposables : un C* à 4 substituants différents" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Analyser une molécule",
+          "etapes": [
+            { "titre": "Repérer", "texte": "la chaîne carbonée, puis les groupes caractéristiques" },
+            { "titre": "Classer", "texte": "la famille, et pour un alcool : primaire, secondaire ou tertiaire" },
+            { "titre": "Chercher", "texte": "un carbone asymétrique C* (quatre substituants différents) ou une C=C" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Le butan-2-ol CH₃—CH(OH)—CH₂—CH₃ a-t-il un __carbone asymétrique__&nbsp;?",
+          "calcul": "C2 porte : —OH, —H, —CH₃, —CH₂CH₃",
+          "aparte": "4 substituants différents",
+          "resultat": "C2 est [[asymétrique]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Énantiomères",
+          "oui": { "titre": "Mêmes propriétés physiques", "texte": "Même température de fusion, même solubilité, mais des effets ==biologiques== parfois très différents." },
+          "non": { "titre": "C₂H₆O est une seule molécule&nbsp;?", "texte": "**Faux**&nbsp;: éthanol et méthoxyméthane sont des **isomères de constitution**." },
+          "essai": { "texte": "Un récepteur biologique est <i>chiral</i> : il ne reconnaît qu’un des deux énantiomères." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Le carbone C2 porte —OH, —H, —CH₃ et —C₂H₅.", "quoi": "les substituants" },
+            { "texte": "Ces 4 substituants sont différents.", "quoi": "la condition" },
+            { "texte": "C2 est asymétrique : la molécule est chirale.", "quoi": "conclure" }
+          ],
+          "pied": "Le carbone d’une liaison polarisée (C—O, C=O) est un site ==accepteur== δ⁺."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mettre un **aldéhyde** au milieu de la chaîne.",
+            "Croire qu’un alcool **tertiaire** s’oxyde.",
+            "Oublier les **isomères de constitution** de la formule brute.",
+            "Chercher un C* sur un carbone **à deux H**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Groupe d’une **cétone**&nbsp;?",
+            "Un alcool **tertiaire** s’oxyde-t-il&nbsp;?",
+            "Il faut combien de substituants **différents** pour un C*&nbsp;?"
+          ],
+          "reponses": "1) —CO— · 2) non · 3) quatre"
+        }
+      ]
+    }
+  ]
+}

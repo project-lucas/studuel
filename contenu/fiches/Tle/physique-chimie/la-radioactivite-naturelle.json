@@ -1,0 +1,112 @@
+{
+  "titre": "La radioactivité",
+  "titreSurligne": "radioactivité",
+  "accroche": "Le noyau se transforme.",
+  "epreuve": "bac",
+  "bonus": "Soddy&nbsp;: **A** et **Z** se conservent · E = Δm × c² · γ&nbsp;: ni A ni Z ne changent · α = ⁴₂He · β⁻ = ⁰₋₁e",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/la-radioactivite-naturelle.webp",
+    "prompt": "a glossy violet atom nucleus ejecting a small golden particle with a golden arrow, orbit rings, sparkles"
+  },
+  "marcel": "A et Z\nse conservent !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Lois de Soddy",
+          "petite": true,
+          "lignes": ["ᴬ_Z X → ᴬ'_Z' Y + ᴬ''_Z'' P", "A = A’ + A’’ · Z = Z’ + Z’’"],
+          "regle": "Le noyau se note ᴬ_Z X&nbsp;: **Z** protons (==fixe l’élément==), **A** nucléons, donc A − Z neutrons. Deux **isotopes** ont le même Z, des A différents.",
+          "note": "somme en haut = somme en bas&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les désintégrations",
+          "entetes": ["Type", "Émis", "Le fils"],
+          "lignes": [
+            ["α", "⁴₂He", "A − 4 ; Z − 2"],
+            ["β⁻", "⁰₋₁e", "A ; Z + 1"],
+            ["β⁺", "⁰₊₁e", "A ; Z − 1"],
+            ["γ", "un photon", "A et Z inchangés"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Écrire une désintégration",
+          "etapes": [
+            { "titre": "Identifier", "texte": "le type : α pour un noyau lourd, β⁻ si trop de neutrons, β⁺ si trop de protons" },
+            { "titre": "Conserver", "texte": "A et Z de chaque côté de la flèche" },
+            { "titre": "Nommer", "texte": "le noyau fils avec le tableau périodique, à partir de son Z" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "L’uranium __²³⁸₉₂U__ se désintègre par émission α. Quel est le noyau fils&nbsp;?",
+          "calcul": "A = 238 − 4 = 234 · Z = 92 − 2 = 90",
+          "aparte": "Z = 90 : le thorium",
+          "resultat": "²³⁸₉₂U → [[²³⁴₉₀Th]] + ⁴₂He"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Les trois caractères",
+          "oui": { "titre": "Spontanée, aléatoire, inéluctable", "texte": "Rien ne la ==déclenche==, on ne peut pas ==prédire== quand un noyau se désintègre, ni température ni réaction chimique n’y changent rien." },
+          "non": { "titre": "Le rayonnement γ est une désintégration&nbsp;?", "texte": "**Faux**&nbsp;: c’est la désexcitation d’un noyau, **A et Z** restent les mêmes." },
+          "essai": { "texte": "Le défaut de masse Δm donne <i>E = Δm c²</i>&nbsp;: une énergie colossale devant celle d’une réaction chimique." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Lois de Soddy : A = 234 + 4 et Z = 90 + 2", "quoi": "conservation" },
+            { "texte": "Z = 90 : l’élément est le thorium Th.", "quoi": "identifier" },
+            { "texte": "²³⁸₉₂U → ²³⁴₉₀Th + ⁴₂He", "quoi": "l’équation" }
+          ],
+          "pied": "Le noyau fils excité se désexcite en émettant un ==photon γ==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier de vérifier **A et Z**.",
+            "Penser que γ change l’**élément**.",
+            "Confondre **β⁻** (Z + 1) et β⁺ (Z − 1).",
+            "Dire que « naturel » veut dire **inoffensif**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Particule émise en **α**&nbsp;?",
+            "En **β⁻**, Z augmente ou diminue de 1&nbsp;?",
+            "Noyau de 14 nucléons et 6 protons&nbsp;: combien de **neutrons**&nbsp;?"
+          ],
+          "reponses": "1) un noyau d’hélium ⁴₂He · 2) augmente · 3) 8"
+        }
+      ]
+    }
+  ]
+}

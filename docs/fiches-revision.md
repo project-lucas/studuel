@@ -45,7 +45,7 @@ Une **rangée** = une ligne de la page ; `colonnes` est une `grid-template-colum
 
 ### Le balisage dans les chaînes
 
-`**gras**` · `==surligné==` · `__violet__` · `~~à la main~~` (Caveat, violet) · `{num/dén}` fraction · `[[entouré]]` (le résultat cerclé de corail, dans un post-it) · `\n` saut de ligne · `&nbsp;` avant `: ; ? !` · le HTML (`<i>`, `<sup>`, `<br>`) passe tel quel.
+`**gras**` · `==surligné==` · `__violet__` · `~~à la main~~` (Caveat, violet) · `{num/dén}` fraction · `[[entouré]]` (le résultat cerclé de corail, dans un post-it) · `\n` saut de ligne · `&nbsp;` avant `: ; ? !` · le HTML (`<i>`, `<sup>`, `<sub>`, `<br>`) passe tel quel — y compris dans les lignes d'une `formule` et le `calcul` d'un post-it (depuis le 13/10/2026 : l'exposant posé à même la ligne y est recollé et levé par le gabarit, et le trait de fraction est le premier `/` qui ne ferme pas une balise, `{x<sub>0</sub>/2}` garde son indice).
 
 ### Les blocs
 

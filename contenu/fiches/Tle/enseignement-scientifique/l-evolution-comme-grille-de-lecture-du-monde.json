@@ -1,0 +1,118 @@
+{
+  "titre": "Sélection et dérive",
+  "titreSurligne": "dérive",
+  "accroche": "L’évolution lit le présent.",
+  "bonus": "Darwin, **1859** · variation · hérédité · succès reproducteur inégal",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/enseignement-scientifique/l-evolution-comme-grille-de-lecture-du-monde.webp",
+    "prompt": "a glossy violet finch bird with a golden beak on a branch next to a golden bacteria and a small DNA helix, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "La mutation précède\nla pression !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 1,
+          "titre": "Le mécanisme darwinien : trois conditions observables",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "1. Variation", "texte": "les individus d’une population **diffèrent**" },
+            { "titre": "2. Hérédité", "texte": "une partie de la variation **se transmet**" },
+            { "titre": "3. Succès inégal", "texte": "tous n’ont pas la même **descendance**" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Sélection naturelle ou dérive",
+          "entetes": ["", "Sélection naturelle", "Dérive génétique"],
+          "lignes": [
+            ["Moteur", "l’**avantage reproductif**", "le **hasard** de l’échantillonnage"],
+            ["Amplifiée par", "une pression forte", "une **petite** population"],
+            ["Résultat", "les allèles utiles se répandent", "un allèle disparaît **sans désavantage**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Expliquer une résistance",
+          "etapes": [
+            { "titre": "Mutation", "texte": "aléatoire, **avant** la pression" },
+            { "titre": "Tri", "texte": "l’antibiotique élimine les autres" },
+            { "titre": "Fréquence", "texte": "les résistantes se multiplient" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Applications",
+          "deux": false,
+          "items": [
+            { "titre": "Antibiorésistance", "texte": "chaque usage inutile **sélectionne** des souches résistantes" },
+            { "titre": "Insecticides", "texte": "même mécanisme chez les insectes" },
+            { "titre": "Sélection artificielle", "texte": "l’humain **trie** : races de chiens, blé" },
+            { "titre": "Grippe", "texte": "virus qui mute vite : vaccin annuel" }
+          ]
+        },
+        {
+          "type": "texte",
+          "numero": "!",
+          "titre": "Ce que l’évolution n’est pas",
+          "paragraphes": [
+            "Ni un **progrès** (sans but ni direction), ni une **hiérarchie** (une bactérie actuelle a autant d’évolution derrière elle qu’un mammifère), ni une recherche de **perfection** : elle bricole avec l’existant. Elle agit sur la **fréquence des allèles**, pas sur l’individu."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un antibiotique tue 99,9 % des bactéries d’une culture. Pourquoi des survivantes __résistantes__&nbsp;?",
+          "calcul": "mutation aléatoire déjà présente",
+          "aparte": "avant l’antibiotique",
+          "resultat": "[[tri, puis multiplication]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire qu’une bactérie « devient » résistante **pour** survivre.",
+            "Croire que la sélection agit sur l’**individu** : c’est la population.",
+            "Voir dans l’évolution un **progrès** vers la perfection.",
+            "Oublier la **dérive** : le hasard compte en petite population."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Cite les **trois conditions** de la sélection naturelle.",
+            "Quel facteur domine la **dérive** génétique&nbsp;?",
+            "Qui est apparu en premier&nbsp;: la **mutation** ou l’antibiotique&nbsp;?"
+          ],
+          "reponses": "1) variation, hérédité, succès inégal · 2) le hasard · 3) la mutation (elle précède la pression)"
+        }
+      ]
+    }
+  ]
+}

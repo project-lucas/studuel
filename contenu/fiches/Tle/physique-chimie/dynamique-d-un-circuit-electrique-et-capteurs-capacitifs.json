@@ -1,0 +1,173 @@
+{
+  "titre": "Circuit RC, capteurs",
+  "titreSurligne": "RC",
+  "accroche": "Le temps qu’un condensateur se remplisse.",
+  "epreuve": "bac",
+  "bonus": "q = C u · i = C du/dt · τ = RC · u(τ) = 63&nbsp;% de E · 5τ ≈ régime permanent · E = ½ C u²",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/dynamique-d-un-circuit-electrique-et-capteurs-capacitifs.webp",
+    "prompt": "a glossy violet capacitor with two golden plates and a golden rising exponential curve glowing beside it, tiny sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "À 5τ, c’est\npresque fini !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Charge d’un dipôle RC",
+          "petite": true,
+          "lignes": [
+            "u(t) = E (1 − e<sup>−t/τ</sup>)",
+            "τ = R × C"
+          ],
+          "regle": "RC du/dt + u = E. **τ** en secondes (Ω × F = s). Décharge&nbsp;: ==u = E e<sup>−t/τ</sup>==.",
+          "note": "u tend vers E sans l’atteindre"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Lire τ sur la courbe",
+          "entetes": [
+            "Repère",
+            "Charge",
+            "Décharge"
+          ],
+          "lignes": [
+            [
+              "t = τ",
+              "63 % de E",
+              "37 % de E"
+            ],
+            [
+              "Tangente à l’origine",
+              "coupe E en τ",
+              "coupe 0 en τ"
+            ],
+            [
+              "t = 5τ",
+              "régime permanent",
+              "u ≈ 0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Équation",
+              "texte": "loi des mailles&nbsp;: RC du/dt + u = E, avec i = C du/dt"
+            },
+            {
+              "titre": "Solution",
+              "texte": "u(t) = E (1 − e<sup>−t/τ</sup>), avec τ = R C"
+            },
+            {
+              "titre": "Exploiter",
+              "texte": "τ au graphique (63 % de E) ou la tangente à l’origine"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "R = __10 kΩ__ et C = 100 µF. Quelle est la constante de temps&nbsp;?",
+          "calcul": "τ = 10×10³ × 100×10⁻⁶",
+          "aparte": "kΩ et µF en unités SI&nbsp;!",
+          "resultat": "τ = [[1,0 s]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Régime permanent",
+          "oui": {
+            "titre": "u = E constante",
+            "texte": "Alors i = C du/dt = 0&nbsp;: le condensateur se comporte comme un ==interrupteur ouvert==."
+          },
+          "non": {
+            "titre": "u atteint E à t = τ&nbsp;?",
+            "texte": "**Faux**&nbsp;: à t = τ la tension n’est qu’à **63 %** de E."
+          },
+          "essai": {
+            "texte": "Condensateur plus grand : <i>τ plus grand</i>, donc une charge plus lente."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Capteurs capacitifs",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Principe",
+              "texte": "un paramètre change C, donc τ"
+            },
+            {
+              "titre": "Tactile",
+              "texte": "le doigt change la capacité"
+            },
+            {
+              "titre": "Niveau",
+              "texte": "le liquide remplace l’air"
+            },
+            {
+              "titre": "Énergie",
+              "texte": "E = ½ C u², restituée très vite"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Laisser **kΩ** ou **µF** sans les convertir.",
+            "Lire τ à **100&nbsp;%** de E.",
+            "Dire que i est **constant** en régime permanent.",
+            "Oublier le **carré** dans ½ C u²."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "?",
+          "titre": "Une analogie formelle",
+          "paragraphes": [
+            "Le condensateur est le **troisième** système de l’année à décroissance exponentielle, après les noyaux radioactifs et le refroidissement d’un corps. Trois phénomènes sans rapport, **une seule équation**. Un flash charge lentement sa pile puis se décharge en quelques millisecondes. On parle d’**analogie formelle**&nbsp;: elle vaut d’être vue comme telle. Un écran tactile, un capteur de niveau ou d’humidité font varier C, donc τ, donc une durée mesurable."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "À t = τ, la tension de charge vaut quel **pourcentage** de E&nbsp;?",
+            "R = 2,0 kΩ, C = 5,0 µF : **τ**&nbsp;?",
+            "En régime permanent, le condensateur est un interrupteur **ouvert** ou fermé&nbsp;?"
+          ],
+          "reponses": "1) 63 % · 2) 10 ms · 3) ouvert"
+        }
+      ]
+    }
+  ]
+}

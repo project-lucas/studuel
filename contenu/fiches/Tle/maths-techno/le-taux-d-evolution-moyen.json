@@ -1,0 +1,116 @@
+{
+  "titre": "Taux d’évolution moyen",
+  "titreSurligne": "moyen",
+  "accroche": "Une seule évolution en remplace plusieurs.",
+  "epreuve": "bac",
+  "bonus": "c = C<sup>1/n</sup> · taux moyen = C<sup>1/n</sup> − 1 · pas la moyenne des pourcentages",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-techno/le-taux-d-evolution-moyen.webp",
+    "prompt": "a glossy violet arrow climbing a golden staircase of equal steps, one golden magnifier on the middle step, tiny sparkles"
+  },
+  "marcel": "On prend la racine\ndu coefficient !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le taux moyen",
+          "petite": true,
+          "lignes": ["c<sup>n</sup> = C", "taux moyen = C<sup>1/n</sup> − 1"],
+          "regle": "**C** est le ==coefficient global== sur n périodes, **c** le coefficient de chaque période. Valeur finale ÷ valeur initiale = C.",
+          "note": "On raisonne en coefficients&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Quelques cas",
+          "entetes": ["Globale", "n", "C<sup>1/n</sup>", "Taux moyen"],
+          "lignes": [
+            ["+ 21 %", "2", "1,1", "+ 10 %"],
+            ["+ 44 %", "2", "1,2", "+ 20 %"],
+            ["− 19 %", "2", "0,9", "− 10 %"],
+            ["+ 33,1 %", "3", "1,1", "+ 10 %"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Coefficient global", "texte": "C = valeur finale ÷ valeur initiale, ou produit des CM" },
+            { "titre": "Racine n-ième", "texte": "calculer C<sup>1/n</sup>, avec n le nombre de périodes" },
+            { "titre": "Retrancher 1", "texte": "C<sup>1/n</sup> − 1, écrit en pourcentage" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une ville passe de __50 000 à 60 500__ habitants en 2 ans.",
+          "calcul": "C = 60 500 ÷ 50 000 = 1,21\nC<sup>1/2</sup> = √1,21 = 1,1",
+          "aparte": "50 000 → 55 000 → 60 500",
+          "resultat": "[[+ 10 %]] par an"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Taux mensuel", "texte": "12 %/an : 1,12<sup>1/12</sup> ≈ 1,0095, soit **0,95 %** par mois." },
+            { "titre": "Pas 12 ÷ 12", "texte": "Les intérêts se capitalisent : un peu **moins de 1 %**." },
+            { "titre": "Quand s’en servir", "texte": "Population, chiffre d’affaires, crédit." },
+            { "titre": "Contrôle", "texte": "On remultiplie **n fois** le coefficient moyen." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "C = 60 500 ÷ 50 000 = 1,21", "quoi": "le coefficient global" },
+            { "texte": "c = 1,21<sup>1/2</sup> = 1,1", "quoi": "la racine" },
+            { "texte": "1,1 − 1 = 0,1 : hausse moyenne de 10 %", "quoi": "le taux moyen" }
+          ],
+          "pied": "Contrôle&nbsp;: 1,1 × 1,1 = ==1,21==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Faire la **moyenne** des pourcentages&nbsp;: 21 ÷ 2 = 10,5 %, faux.",
+            "Diviser par n au lieu de prendre la **racine** n-ième.",
+            "Oublier de **retrancher 1** à la fin.",
+            "Compter les **dates** au lieu des périodes pour n."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**+ 44 %** en 2 ans&nbsp;: taux moyen annuel&nbsp;?",
+            "**− 19 %** en 2 ans&nbsp;: taux moyen annuel&nbsp;?",
+            "**+ 33,1 %** en 3 ans&nbsp;: taux moyen annuel&nbsp;?"
+          ],
+          "reponses": "1) √1,44 = 1,2 : + 20 % · 2) √0,81 = 0,9 : − 10 % · 3) + 10 %"
+        }
+      ]
+    }
+  ]
+}

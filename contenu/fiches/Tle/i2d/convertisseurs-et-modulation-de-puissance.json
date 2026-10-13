@@ -1,0 +1,184 @@
+{
+  "titre": "Convertisseurs, MLI",
+  "titreSurligne": "MLI",
+  "accroche": "Doser l’énergie électrique.",
+  "epreuve": "bac",
+  "bonus": "**α = t<sub>on</sub> / T** · **U<sub>moy</sub> = α × U** · **n = 60 f / p**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/i2d/convertisseurs-et-modulation-de-puissance.webp",
+    "prompt": "a glossy violet transistor with a golden square wave and a small electric motor, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Je règle α,\nle moteur obéit !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les 4 convertisseurs",
+          "entetes": [
+            "Nom",
+            "Conversion"
+          ],
+          "lignes": [
+            [
+              "**Redresseur**",
+              "AC → DC"
+            ],
+            [
+              "**Hacheur**",
+              "DC → DC réglable"
+            ],
+            [
+              "**Onduleur**",
+              "DC → AC, f réglable"
+            ],
+            [
+              "**Gradateur**",
+              "AC → AC réglable"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "MLI et vitesse",
+          "taille": "mini",
+          "lignes": [
+            "α = {t_on/T}",
+            "U moy = α × U alim"
+          ],
+          "regle": "Rapport cyclique ==entre 0 et 1==. Moteur alternatif : n = {60 × f/p} en tr/min.",
+          "note": "f en Hz, p paires de pôles"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Régler un hacheur",
+          "etapes": [
+            {
+              "titre": "Calculer α",
+              "texte": "= tension voulue / tension d’alimentation"
+            },
+            {
+              "titre": "Période",
+              "texte": "T = 1 / f de découpage"
+            },
+            {
+              "titre": "Durée",
+              "texte": "t<sub>on</sub> = α × T"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Batterie __24 V__, moteur à __18 V__ moyens, découpage __20 kHz__.",
+          "calcul": "α = 18 / 24 = 0,75 · T = 50 µs",
+          "aparte": "t_on = 0,75 × 50",
+          "resultat": "t<sub>on</sub> = [[37,5 µs]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Convertisseur réversible&nbsp;?",
+          "oui": {
+            "titre": "Réversible",
+            "texte": "Hacheur 4 quadrants, onduleur : **renvoient** l’énergie."
+          },
+          "non": {
+            "titre": "Non",
+            "texte": "Redresseur à **diodes** : sens unique."
+          },
+          "essai": {
+            "texte": "Le freinage <i>récupératif</i> d’une voiture électrique gagne 10 à 25 % d’autonomie en ville."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Pont en H",
+              "texte": "4 interrupteurs : sens de rotation"
+            },
+            {
+              "titre": "Rendement",
+              "texte": "&gt; 95 % : le transistor commute"
+            },
+            {
+              "titre": "20 kHz",
+              "texte": "au-dessus de l’audible"
+            },
+            {
+              "titre": "Modulation",
+              "texte": "commandée ≠ adaptation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "α = U moy / U alim = 18 / 24 = 0,75",
+              "quoi": "la formule"
+            },
+            {
+              "texte": "T = 1 / 20 000 = 50 µs",
+              "quoi": "la période"
+            },
+            {
+              "texte": "t_on = 0,75 × 50 = 37,5 µs",
+              "quoi": "le résultat"
+            }
+          ],
+          "pied": "On écrit ==la formule==, puis ==l’application== avec les ==unités==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **onduleur** (DC/AC) et redresseur (AC/DC).",
+            "Oublier de convertir **kHz** en Hz.",
+            "Donner **α** en pourcentage dans la formule.",
+            "Croire qu’un transistor **dissipe** beaucoup."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel convertisseur règle un moteur **à courant continu**&nbsp;?",
+            "Que vaut la vitesse de synchronisme à 50 Hz, **2 paires de pôles**&nbsp;?",
+            "Que permet le **pont en H**&nbsp;?"
+          ],
+          "reponses": "1) le hacheur · 2) 60 × 50 / 2 = 1 500 tr/min · 3) inverser le sens de rotation"
+        }
+      ]
+    }
+  ]
+}

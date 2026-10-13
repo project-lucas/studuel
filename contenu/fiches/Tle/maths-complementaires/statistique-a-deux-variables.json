@@ -1,0 +1,176 @@
+{
+  "titre": "Deux variables",
+  "titreSurligne": "variables",
+  "accroche": "Un lien n’est pas une cause.",
+  "epreuve": "bac",
+  "bonus": "droite de régression : passe par G(x̄ ; ȳ) · r proche de ±1 : lien affine · z = ln y : exponentiel",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-complementaires/statistique-a-deux-variables.webp",
+    "prompt": "a glossy violet scatter plot with a golden regression line through the points, sparkles"
+  },
+  "marcel": "Corrélation n’est pas\ncausalité !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La droite de régression",
+          "taille": "mini",
+          "lignes": [
+            "y = a x + b",
+            "passe par G( x̄ ; ȳ )"
+          ],
+          "regle": "Méthode des **moindres carrés**&nbsp;: elle rend minimale la somme des ==carrés des écarts verticaux==. La régression de x en y est une **autre** droite.",
+          "note": "regarde le nuage avant de calculer"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le coefficient r",
+          "entetes": [
+            "Valeur de r",
+            "Ce que ça dit"
+          ],
+          "lignes": [
+            [
+              "proche de 1",
+              "droite **croissante**"
+            ],
+            [
+              "proche de −1",
+              "droite **décroissante**"
+            ],
+            [
+              "proche de 0",
+              "pas de lien **affine**"
+            ],
+            [
+              "parabole parfaite",
+              "r peut être **nul**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Prévoir avec un ajustement",
+          "etapes": [
+            {
+              "titre": "Nuage",
+              "texte": "le regarder, repérer les points aberrants"
+            },
+            {
+              "titre": "Ajuster",
+              "texte": "droite de régression, G dessus"
+            },
+            {
+              "titre": "Prévoir",
+              "texte": "interpoler ou extrapoler"
+            },
+            {
+              "titre": "Réserver",
+              "texte": "assortir l’extrapolation d’une réserve"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "x de 1 à 5, x̄ = 3, ȳ = 7, droite y = 2x + 1. __Prévois y pour x = 10.__",
+          "calcul": "contrôle : 2×3 + 1 = 7 = ȳ, G est sur la droite",
+          "aparte": "x = 10 est hors de [1 ; 5]",
+          "resultat": "y ≈ [[21]] (extrapolation, avec réserve)"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Interpoler",
+              "texte": "à l’**intérieur** de la plage observée&nbsp;: raisonnable."
+            },
+            {
+              "titre": "Extrapoler",
+              "texte": "**au-delà**&nbsp;: beaucoup plus risqué."
+            },
+            {
+              "titre": "Facteur commun",
+              "texte": "glaces et noyades&nbsp;: la **chaleur** explique les deux."
+            },
+            {
+              "titre": "Linéariser",
+              "texte": "z = ln y redresse un modèle **exponentiel**."
+            },
+            {
+              "titre": "Point moyen",
+              "texte": "G( x̄ ; ȳ ) : un **contrôle** immédiat."
+            },
+            {
+              "titre": "Choix",
+              "texte": "régression de y en x pour **prévoir y**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "La droite d’ajustement a pour équation y = 2x + 1",
+              "quoi": "le modèle"
+            },
+            {
+              "texte": "Pour x = 10, y = 2×10 + 1 = 21",
+              "quoi": "la prévision"
+            },
+            {
+              "texte": "x = 10 est hors des données&nbsp;: prévision à prendre avec réserve.",
+              "quoi": "la réserve"
+            }
+          ],
+          "pied": "Seule une ==expérience contrôlée== prouve une causalité, jamais un r."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Lire une **causalité** dans un coefficient r.",
+            "Conclure « pas de lien » parce que **r ≈ 0**.",
+            "Extrapoler **sans réserve**.",
+            "Oublier que la droite passe par **G**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "r = −0,97&nbsp;: **lien**&nbsp;?",
+            "Un r élevé **prouve-t-il** une cause&nbsp;?",
+            "Quel modèle linéarise **z = ln y**&nbsp;?"
+          ],
+          "reponses": "1) affine, décroissant, fort · 2) non, jamais · 3) un modèle exponentiel"
+        }
+      ]
+    }
+  ]
+}

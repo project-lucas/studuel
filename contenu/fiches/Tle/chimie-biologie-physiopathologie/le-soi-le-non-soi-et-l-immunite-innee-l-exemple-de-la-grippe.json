@@ -1,0 +1,117 @@
+{
+  "titre": "Immunité innée",
+  "titreSurligne": "innée",
+  "accroche": "La première défense, rapide et large.",
+  "epreuve": "bac",
+  "bonus": "Inflammation : **rougeur · chaleur · gonflement · douleur**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/chimie-biologie-physiopathologie/le-soi-le-non-soi-et-l-immunite-innee-l-exemple-de-la-grippe.webp",
+    "prompt": "a glossy violet shield with a golden cell engulfing a tiny round germ, small golden sparkles, same art style as the reference icons, on a magenta background, no text, no numbers"
+  },
+  "marcel": "Ce qui n’est pas moi\nest repéré !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Soi et non-soi",
+          "items": [
+            { "terme": "Soi", "definition": "molécules propres à l’individu, **tolérées** (CMH I, CMH II, groupes sanguins)" },
+            { "terme": "Non-soi", "definition": "étranger, ou soi **modifié** (cellule infectée, cancéreuse)" },
+            { "terme": "Antigène", "definition": "molécule reconnue comme étrangère" },
+            { "terme": "Épitope", "definition": "la petite partie de l’antigène réellement reconnue" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois barrières",
+          "entetes": ["Type", "Exemples"],
+          "lignes": [
+            ["**Mécanique**", "kératine, mucus, cils"],
+            ["**Chimique**", "acidité, lysozyme (larmes)"],
+            ["**Biologique**", "flore microbienne"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "La réaction inflammatoire",
+          "entetes": ["Le signe", "Son explication"],
+          "lignes": [
+            ["**Rougeur**, **chaleur**", "vasodilatation : plus de sang arrive"],
+            ["**Gonflement** (œdème)", "capillaires plus perméables : du plasma passe dans les tissus"],
+            ["**Douleur**", "médiateurs (histamine, prostaglandines)"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "La phagocytose",
+          "etapes": [
+            { "titre": "Adhérer", "texte": "le phagocyte se fixe sur le micro-organisme" },
+            { "titre": "Ingérer", "texte": "il l’enferme dans une vésicule, digérée par les **lysosomes**" },
+            { "titre": "Présenter", "texte": "des fragments d’antigène aux lymphocytes" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "La grippe",
+          "donnees": "Virus influenza (ARN enveloppé, protéines H et N).",
+          "calcul": "Voie respiratoire → cellules épithéliales\nFièvre, courbatures, toux sèche",
+          "resultat": "[[traitement symptomatique]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": false,
+          "items": [
+            { "titre": "Phagocytes", "texte": "**neutrophiles** et **macrophages** (issus des monocytes)" },
+            { "titre": "Diapédèse", "texte": "les leucocytes quittent les vaisseaux" },
+            { "titre": "Organes", "texte": "primaires : moelle, thymus · secondaires : ganglions, rate" },
+            { "titre": "Innée", "texte": "rapide, **non spécifique**" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Soigner la grippe par **antibiotique** : c’est un virus.",
+            "Dire que l’immunité innée est **spécifique**.",
+            "Confondre **antigène** (la molécule) et **épitope** (sa partie).",
+            "Oublier que la fièvre est un effet de la **réponse immunitaire**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel marqueur du soi est présent sur **toutes** les cellules nucléées&nbsp;?",
+            "Citez deux **phagocytes**.",
+            "Pourquoi la zone enflammée est-elle **rouge et chaude**&nbsp;?"
+          ],
+          "reponses": "1) CMH de classe I · 2) neutrophile, macrophage · 3) vasodilatation, afflux de sang"
+        }
+      ]
+    }
+  ]
+}

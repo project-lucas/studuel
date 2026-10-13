@@ -1,0 +1,176 @@
+{
+  "titre": "Ondes stationnaires",
+  "titreSurligne": "stationnaires",
+  "accroche": "Pourquoi une corde chante sa note.",
+  "epreuve": "bac",
+  "bonus": "L = 10 log {I/I₀} · I₀ = 1,0 × 10⁻¹² W·m⁻² · **+3 dB = intensité ×2**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/spcl/ondes-sonores-et-ondes-stationnaires.webp",
+    "prompt": "a glossy violet guitar string vibrating in a standing wave with golden nodes and antinodes, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Des nœuds,\ndes ventres !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le son",
+          "items": [
+            {
+              "terme": "Onde sonore",
+              "definition": "onde **mécanique longitudinale**, absente du vide"
+            },
+            {
+              "terme": "Célérité",
+              "definition": "air ≈ 340 m·s⁻¹, eau ≈ 1 500, acier ≈ 5 000"
+            },
+            {
+              "terme": "Hauteur",
+              "definition": "fréquence du **fondamental**"
+            },
+            {
+              "terme": "Timbre",
+              "definition": "composition en **harmoniques**"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Modes propres d’une corde",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "L = n × {λ/2}",
+            "f<sub>n</sub> = n × {v/2L}"
+          ],
+          "regle": "Deux **nœuds** consécutifs sont distants de **λ/2**. n = 1&nbsp;: fondamental.",
+          "note": "tendre = plus aigu"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Colonne d’air",
+          "entetes": [
+            "Tuyau",
+            "Extrémités",
+            "Fréquences propres"
+          ],
+          "lignes": [
+            [
+              "**ouvert** aux deux bouts",
+              "deux ventres",
+              "f<sub>n</sub> = n × v / 2L"
+            ],
+            [
+              "**fermé** à un bout",
+              "un nœud, un ventre",
+              "f<sub>n</sub> = (2n − 1) × v / 4L"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Trouver la célérité d’une corde",
+          "etapes": [
+            {
+              "titre": "λ₁",
+              "texte": "fondamental&nbsp;: **λ₁ = 2L**"
+            },
+            {
+              "titre": "v",
+              "texte": "**v = λ₁ × f₁**"
+            },
+            {
+              "titre": "Harmoniques",
+              "texte": "**f<sub>n</sub> = n × f₁**"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Corde de 65 cm, la à 110 Hz. __v__&nbsp;?",
+          "calcul": "λ₁ = 2 × 0,65 = 1,30 m",
+          "aparte": "v = λ₁ × f₁",
+          "resultat": "v = 1,30 × 110 ≈ [[143 m/s]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Niveau sonore",
+          "deux": true,
+          "items": [
+            {
+              "titre": "+3 dB",
+              "texte": "intensité **doublée**"
+            },
+            {
+              "titre": "+10 dB",
+              "texte": "intensité **×10**"
+            },
+            {
+              "titre": "85 dB",
+              "texte": "seuil de risque prolongé"
+            },
+            {
+              "titre": "2 × 60 dB",
+              "texte": "donnent **63 dB**"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Additionner des **décibels** (60 + 60 ≠ 120).",
+            "Dire que le son se propage dans le **vide**.",
+            "Utiliser n × v / 2L pour un tuyau **fermé**.",
+            "Confondre **hauteur** (fréquence) et **intensité**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 6,
+          "titre": "À dire sur la copie",
+          "paragraphes": [
+            "Écris toujours ==L = n × λ/2== pour une corde fixée aux deux bouts, puis **f<sub>n</sub> = n × v / 2L**&nbsp;: la célérité v dépend de la **tension** et de la **masse linéique**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Distance entre deux **nœuds** consécutifs&nbsp;?",
+            "Un tuyau **fermé** produit quels harmoniques&nbsp;?",
+            "Intensité ×10&nbsp;: quel gain en dB&nbsp;?"
+          ],
+          "reponses": "1) λ/2 · 2) les impairs seulement · 3) +10 dB"
+        }
+      ]
+    }
+  ]
+}

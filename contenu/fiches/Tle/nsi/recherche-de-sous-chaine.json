@@ -1,0 +1,105 @@
+{
+  "titre": "Recherche de motif",
+  "titreSurligne": "motif",
+  "accroche": "Retrouver un motif sans tout relire.",
+  "epreuve": "bac",
+  "bonus": "naïf <b>m × n</b> · Boyer-Moore-Horspool : saute en pratique · Knuth-Morris-Pratt <b>n + m</b>",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/nsi/recherche-de-sous-chaine.webp",
+    "prompt": "a glossy violet strip of golden letters with a magnifying glass sliding along it, sparkles"
+  },
+  "marcel": "Je saute les cases\ninutiles !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois algorithmes (motif m, texte n)",
+          "entetes": ["Algorithme", "Coût", "Idée"],
+          "lignes": [
+            ["**Naïf**", "jusqu’à **m × n**", "décaler d’un cran à chaque échec"],
+            ["**Boyer-Moore-Horspool**", "m × n au pire, rapide en pratique", "comparer de **droite à gauche**, sauter"],
+            ["**Knuth-Morris-Pratt**", "**n + m**, garanti", "ne **jamais reculer** dans le texte"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 2,
+          "titre": "Le principe des algorithmes efficaces",
+          "etapes": [
+            { "titre": "Prétraiter", "texte": "investir **m opérations** sur le motif" },
+            { "titre": "Table", "texte": "décalage (Horspool) ou plus long préfixe-suffixe (KMP)" },
+            { "titre": "Économiser", "texte": "ne pas recomparer ce qu’on sait déjà" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Horspool : le caractère du texte est absent du motif de longueur 5. __De combien décale-t-on__&nbsp;?",
+          "calcul": "aucune occurrence possible<br>sur ces positions",
+          "aparte": "positions jamais examinées",
+          "resultat": "= [[5 cases]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Choisir",
+          "colonnes": 1,
+          "cartes": [
+            { "titre": "Court et vite écrit", "texte": "le **naïf**." },
+            { "titre": "Texte naturel, motif long", "texte": "**Boyer-Moore**." },
+            { "titre": "Garantie, motif répétitif", "texte": "**Knuth-Morris-Pratt**." },
+            { "titre": "Texte fixe, nombreuses requêtes", "texte": "un **index** construit une fois." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "« chaque échec oublie ce qui a été comparé »", "quoi": "défaut du naïf" },
+            { "texte": "« plus long préfixe qui est aussi suffixe »", "quoi": "table KMP" },
+            { "texte": "« prétraitement rentable si le texte est long »", "quoi": "intérêt" }
+          ],
+          "pied": "Le fil commun&nbsp;: ==ne pas refaire== ce qui est fait."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Pire cas du naïf&nbsp;: une lettre **répétée** et un motif presque identique.",
+            "Dire que Horspool est **linéaire** dans tous les cas.",
+            "Confondre le coût du **prétraitement** (m) et de la recherche (n).",
+            "Reculer dans le texte avec KMP."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel est le coût **garanti** de Knuth-Morris-Pratt&nbsp;?",
+            "Dans quel sens Boyer-Moore **compare-t-il**&nbsp;?",
+            "Pourquoi **prétraiter** le motif&nbsp;?"
+          ],
+          "reponses": "1) n + m · 2) de droite à gauche · 3) pour économiser des comparaisons sur le texte"
+        }
+      ]
+    }
+  ]
+}

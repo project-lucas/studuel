@@ -1,0 +1,117 @@
+{
+  "titre": "Conteneurs de données",
+  "titreSurligne": "Conteneurs",
+  "accroche": "Choisir la boîte selon l’opération.",
+  "epreuve": "bac",
+  "bonus": "pile **LIFO** · file **FIFO** · tableau&nbsp;: accès **constant** · liste chaînée&nbsp;: insertion en tête **constante** · dictionnaire&nbsp;: **clé → valeur**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/nsi/conteneurs-de-donnees.webp",
+    "prompt": "a glossy violet stack of three open boxes with golden labels, one box with a golden arrow going in, sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "La bonne boîte,\nle bon programme !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Type abstrait", "definition": "un jeu d’**opérations** et leur comportement" },
+            { "terme": "Implémentation", "definition": "la façon dont la promesse est **tenue**" },
+            { "terme": "Maillon", "definition": "une valeur et une **référence** vers le suivant" },
+            { "terme": "Dictionnaire", "definition": "une **clé** associée à une valeur, par hachage" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Pile et file",
+          "entetes": ["", "Règle"],
+          "lignes": [
+            ["**Pile** (LIFO)", "dernier entré, premier sorti"],
+            ["opérations", "empiler, dépiler, sommet"],
+            ["usage", "**pile d’appels**, historique"],
+            ["**File** (FIFO)", "premier entré, premier sorti"],
+            ["usage", "attente, **parcours en largeur**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Tableau ou liste chaînée",
+          "oui": { "titre": "Tableau", "texte": "accès au i-ième élément en temps **constant**&nbsp;; insertion en tête coûteuse." },
+          "non": { "titre": "Liste chaînée", "texte": "insertion en tête **constante**&nbsp;; accès au i-ième **linéaire**." },
+          "essai": { "titre": "Le critère", "texte": "beaucoup d’accès par indice&nbsp;: ==tableau== — beaucoup d’insertions en tête&nbsp;: ==liste==." }
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "On empile 1, 2, 3 puis on dépile une fois. __Valeur rendue__&nbsp;?",
+          "calcul": "pile (haut → bas) : 3, 2, 1",
+          "aparte": "LIFO",
+          "resultat": "= [[3]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Quelle structure&nbsp;?",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Par indice", "texte": "beaucoup d’accès&nbsp;: le **tableau**." },
+            { "titre": "Aux extrémités", "texte": "insertions, suppressions&nbsp;: **pile**, **file**, liste chaînée." },
+            { "titre": "Par identifiant", "texte": "« la valeur **associée à** »&nbsp;: le **dictionnaire**." },
+            { "titre": "Relations", "texte": "hiérarchique&nbsp;: **arbre** — quelconque&nbsp;: **graphe**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "On cherche un élève par son identifiant.", "quoi": "l’opération" },
+            { "texte": "Un dictionnaire associe clé et valeur.", "quoi": "la structure" },
+            { "texte": "Recherche en temps constant en moyenne.", "quoi": "le coût" }
+          ],
+          "pied": "Une structure mal choisie rend le programme ==lent==, pas faux."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **pile** (LIFO) et **file** (FIFO).",
+            "Croire l’accès au i-ième **constant** dans une liste chaînée.",
+            "Parler de la structure sans citer l’**opération** visée.",
+            "Chercher par indice là où une **clé** suffit."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle structure stocke la **pile d’appels**&nbsp;?",
+            "On défile après avoir enfilé **a, b, c**&nbsp;: qui sort&nbsp;?",
+            "Quel conteneur pour retrouver un **numéro d’élève**&nbsp;?"
+          ],
+          "reponses": "1) une pile · 2) a (premier entré) · 3) un dictionnaire"
+        }
+      ]
+    }
+  ]
+}

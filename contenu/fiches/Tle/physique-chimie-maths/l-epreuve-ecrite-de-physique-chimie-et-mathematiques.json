@@ -1,0 +1,137 @@
+{
+  "titre": "L’épreuve écrite",
+  "titreSurligne": "épreuve",
+  "accroche": "Trois heures, deux disciplines.",
+  "epreuve": "bac",
+  "bonus": "3 h · coefficient 16 · **14 pts** physique-chimie + **6 pts** maths",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie-maths/l-epreuve-ecrite-de-physique-chimie-et-mathematiques.webp",
+    "prompt": "a glossy violet stopwatch next to a golden exam paper and a pencil, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Le temps suit\nle barème !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Ce qui t’attend",
+          "entetes": ["Élément", "Le texte officiel"],
+          "lignes": [
+            ["Durée", "**3 heures**"],
+            ["Coefficient", "**16**"],
+            ["Notation", "**14** pts physique-chimie, **6** pts maths"],
+            ["Structure", "3 à 5 exercices indépendants"],
+            ["Correction", "un professeur de chaque discipline"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Gérer son temps",
+          "entetes": ["Moment", "Durée"],
+          "lignes": [
+            ["Lire le sujet entier", "10 min"],
+            ["Physique-chimie", "≈ 1 h 55"],
+            ["Mathématiques", "≈ 50 min"],
+            ["Relecture : unités, chiffres significatifs", "5 min"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Rédiger un calcul de physique",
+          "etapes": [
+            { "titre": "Littéral", "texte": "l’**expression** d’abord : P = U × I × cos φ" },
+            { "titre": "Numérique", "texte": "P = 230 × 10 × 0,80, puis le résultat **avec son unité**" },
+            { "titre": "Conclure", "texte": "chiffres significatifs, puis une **phrase** qui répond" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "U = 230 V, I = 10 A, cos φ = 0,80. __Puissance__&nbsp;?",
+          "calcul": "P = U × I × cos φ\nP = 230 × 10 × 0,80",
+          "aparte": "unité : le watt",
+          "resultat": "P = [[1 840 W]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Les verbes des consignes",
+          "entetes": ["Verbe", "On attend"],
+          "lignes": [
+            ["Montrer que", "arriver au résultat **donné**"],
+            ["Justifier", "citer la **loi** utilisée"],
+            ["Déterminer", "une démarche et une **valeur**"],
+            ["Estimer", "un **ordre de grandeur**"],
+            ["Exploiter", "une valeur **du document**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "Les bons réflexes",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Exercice mixte", "texte": "écrire le passage de la **phrase physique** à l’équation" },
+            { "titre": "Maths", "texte": "annoncer la formule ; **tableau** de signes ; vérifier une primitive en la dérivant" },
+            { "titre": "Bloqué ?", "texte": "utiliser le résultat **donné** pour la suite" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Dernière semaine",
+          "deux": false,
+          "items": [
+            { "titre": "Sujets", "texte": "deux sujets complets en **temps réel**" },
+            { "titre": "Formules", "texte": "P = UI · E = PΔt · n = m/M · λ = v/f" },
+            { "titre": "Calculatrice", "texte": "piles et **mode examen**" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Un résultat **sans unité** est faux.",
+            "Passer 20 min sur une question à **1 point**.",
+            "Ne pas réagir à une valeur **absurde** (rendement de 140 %).",
+            "Bloquer sur « montrer que » et **abandonner la suite**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de points valent les **maths** sur 20&nbsp;?",
+            "Que faire si on ne réussit pas un « **montrer que** »&nbsp;?",
+            "Un moteur de rendement **140 %**&nbsp;: réaction&nbsp;?"
+          ],
+          "reponses": "1) 6 points · 2) utiliser le résultat donné · 3) signaler l’absurdité"
+        }
+      ]
+    }
+  ]
+}

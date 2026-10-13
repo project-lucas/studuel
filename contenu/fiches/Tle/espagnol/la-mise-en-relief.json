@@ -1,0 +1,172 @@
+{
+  "titre": "La mise en relief",
+  "titreSurligne": "relief",
+  "accroche": "C’est… qui, c’est… que : en espagnol.",
+  "bonus": "**ser** + élément + relatif · **ser** s’accorde en personne et prend le temps de l’action",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/espagnol/la-mise-en-relief.webp",
+    "prompt": "a glossy violet spotlight beam lighting a single golden star on a small stage, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Sous le projecteur,\nce que je dis&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La structure",
+          "lignes": [
+            "**ser** + élément + **relatif**"
+          ],
+          "petite": true,
+          "regle": "Le relatif s’adapte à l’élément&nbsp;: personne → <i>quien</i>, chose → <i>el que</i>, lieu → <i>donde</i>, moment → <i>cuando</i>, manière → <i>como</i>.",
+          "note": "Fue María quien ganó"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Quel relatif&nbsp;?",
+          "entetes": [
+            "Élément",
+            "Relatif",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "personne",
+              "<i>quien, el que</i>",
+              "<i>Fue María quien ganó.</i>"
+            ],
+            [
+              "chose, idée",
+              "<i>el que, lo que</i>",
+              "<i>Es la verdad lo que importa.</i>"
+            ],
+            [
+              "lieu",
+              "<i>donde</i>",
+              "<i>Es aquí donde nací.</i>"
+            ],
+            [
+              "moment",
+              "<i>cuando</i>",
+              "<i>Fue en 1492 cuando llegó Colón.</i>"
+            ],
+            [
+              "manière",
+              "<i>como</i>",
+              "<i>Es así como se hace.</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Le relatif qui convient",
+          "oui": {
+            "titre": "Donde, cuando, como",
+            "texte": "<i>Es aquí **donde** nací.</i> · <i>Fue ayer **cuando** lo vi.</i>"
+          },
+          "non": {
+            "titre": "Calque du français",
+            "texte": "<i>Es aquí **que** nací.</i> — « c’est… que » ne passe pas tel quel."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>___ (ser) ellos quienes llamaron.</i> (passé) → **Fueron**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Les deux accords de ser",
+          "etapes": [
+            {
+              "titre": "Choisis l’élément",
+              "texte": "La personne, le lieu, le moment… que tu veux souligner."
+            },
+            {
+              "titre": "Accorde ser",
+              "texte": "Personne et nombre&nbsp;: <i>Soy yo quien lo dice. Fueron ellos quienes…</i>"
+            },
+            {
+              "titre": "Temps de l’action",
+              "texte": "<i>Fue ayer cuando…</i> (passé) · <i>Será mañana cuando…</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple : Picasso pintó el Guernica en París en 1937",
+          "donnees": "On souligne tour à tour la personne, le lieu, le moment.",
+          "calcul": "<i>Fue Picasso quien pintó el Guernica.</i>\n<i>Fue en París donde Picasso lo pintó.</i>",
+          "resultat": "[[Fue en 1937 cuando lo pintó]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "Autres moyens d’insister",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "lo + adj. + que",
+              "texte": "<i>No sabes lo difícil que es.</i> L’adjectif s’accorde."
+            },
+            {
+              "titre": "el caso es que",
+              "texte": "toujours est-il que&nbsp;; <i>es que</i> = c’est que."
+            },
+            {
+              "titre": "sí que",
+              "texte": "<i>Esto sí que es importante.</i>"
+            },
+            {
+              "titre": "mismo",
+              "texte": "<i>Hoy mismo. Él mismo lo dijo.</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Es aquí que nací</i> → <i>Es aquí **donde** nací.</i>",
+            "<i>Es yo quien lo dice</i> → <i>**Soy** yo quien lo dice.</i>",
+            "<i>No imaginas lo cansado que estaban</i> → <i>lo **cansadas** que estaban.</i>",
+            "<i>Fue ayer cuando lo veo</i> → <i>cuando lo **vi**.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Mets en relief le lieu&nbsp;: <i>Nací en Madrid.</i>",
+            "<i>___ (ser) nosotros quienes lo hicimos.</i>",
+            "<i>No sabes ___ difícil que es.</i>"
+          ],
+          "reponses": "1) Es en Madrid donde nací 2) Fuimos 3) lo"
+        }
+      ]
+    }
+  ]
+}

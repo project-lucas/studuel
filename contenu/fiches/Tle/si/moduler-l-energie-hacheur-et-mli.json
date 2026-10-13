@@ -1,0 +1,180 @@
+{
+  "titre": "Hacheur et MLI",
+  "titreSurligne": "MLI",
+  "accroche": "Découper la tension pour la doser.",
+  "epreuve": "bac",
+  "bonus": "**Umoy = α × Ualim** · α = t<sub>on</sub> ÷ T · diode de roue libre · pont en H",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/si/moduler-l-energie-hacheur-et-mli.webp",
+    "prompt": "a glossy violet square wave signal on a golden switch with a small golden transistor, sparkles, same art style as the reference icons"
+  },
+  "marcel": "On change la largeur,\npas la hauteur&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le hacheur",
+          "petite": true,
+          "lignes": [
+            "Umoy = α × Ualim",
+            "α = {ton/T}"
+          ],
+          "regle": "Un transistor s’ouvre et se ferme à fréquence fixe, **T = 1 ÷ f**. En ==MLI== on règle la largeur des créneaux.",
+          "note": "α entre 0 et 1"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le pont en H",
+          "entetes": [
+            "Quadrant",
+            "Fonctionnement"
+          ],
+          "lignes": [
+            [
+              "1 : v +, C +",
+              "moteur, avant"
+            ],
+            [
+              "2 : v +, C −",
+              "freinage, avant"
+            ],
+            [
+              "3 : v −, C −",
+              "moteur, arrière"
+            ],
+            [
+              "4 : v −, C +",
+              "freinage, arrière"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Doser la tension en trois temps",
+          "etapes": [
+            {
+              "titre": "Période",
+              "texte": "T = 1 ÷ f"
+            },
+            {
+              "titre": "Rapport",
+              "texte": "α = U voulue ÷ Ualim"
+            },
+            {
+              "titre": "Durée",
+              "texte": "t<sub>on</sub> = α × T"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "12 V, découpage 20 kHz, tension moyenne voulue __9 V__.",
+          "calcul": "T = 1 ÷ 20 000 = 50 µs ; α = 9 ÷ 12 = 0,75",
+          "aparte": "t<sub>on</sub> = 0,75 × 50",
+          "resultat": "t<sub>on</sub> = [[37,5 µs]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Hacheur ou résistance&nbsp;?",
+          "oui": {
+            "titre": "Hacheur",
+            "texte": "Interrupteur idéal&nbsp;: U × I ≈ 0, rendement souvent ==supérieur à 90 %==."
+          },
+          "non": {
+            "titre": "Résistance série",
+            "texte": "Elle **brûle** toute la tension qu’elle retient."
+          },
+          "essai": {
+            "texte": "Sans diode de roue libre, l’ouverture du transistor produit une <i>surtension</i> qui le détruit."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "α = t<sub>on</sub> ÷ T = 9 ÷ 12 = 0,75",
+              "quoi": "le rapport cyclique"
+            },
+            {
+              "texte": "t<sub>on</sub> = 0,75 × 50 µs",
+              "quoi": "la durée"
+            },
+            {
+              "texte": "Umoy = 0,75 × 12 = 9 V",
+              "quoi": "la vérification"
+            }
+          ],
+          "pied": "Le moteur ne voit que la ==moyenne== de la tension."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que la **hauteur** des créneaux varie.",
+            "Oublier la **diode de roue libre**.",
+            "Confondre **T** et t<sub>on</sub>.",
+            "Donner α **> 1**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "À retenir",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Rapport cyclique",
+              "texte": "α = ton ÷ T, entre 0 et 1"
+            },
+            {
+              "titre": "Fréquence",
+              "texte": "au-delà de 20 kHz, le moteur ne siffle plus"
+            },
+            {
+              "titre": "Pont en H",
+              "texte": "règle à la fois le sens et la vitesse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "α pour 6 V sous **12 V**&nbsp;?",
+            "Que signifie **MLI**&nbsp;?",
+            "Rôle de la **diode de roue libre**&nbsp;?"
+          ],
+          "reponses": "1) 0,5 · 2) modulation de largeur d’impulsion · 3) chemin du courant"
+        }
+      ]
+    }
+  ]
+}

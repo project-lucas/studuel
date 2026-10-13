@@ -1,0 +1,203 @@
+{
+  "titre": "Éco-conception",
+  "titreSurligne": "Éco-conception",
+  "accroche": "Forme, matériau, procédé : un trio.",
+  "epreuve": "bac",
+  "bonus": "Coût total = **coût fixe + coût par pièce × n** · injection : dépouille **1 à 2°**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/i2d/innovation-technologique-et-eco-conception.webp",
+    "prompt": "a glossy violet injection-moulded part next to a golden gear and a small green leaf, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Une pièce, un matériau,\nun procédé&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les procédés",
+          "entetes": [
+            "Procédé",
+            "Série"
+          ],
+          "lignes": [
+            [
+              "**Moulage** (injection)",
+              "grande série"
+            ],
+            [
+              "**Usinage**",
+              "unité à moyenne"
+            ],
+            [
+              "**Déformation** (pliage)",
+              "grande série"
+            ],
+            [
+              "**Additive** (3D)",
+              "unité, formes complexes"
+            ],
+            [
+              "**Découpe** (laser)",
+              "toutes, pièces planes"
+            ]
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Concevoir pour l’injection",
+          "items": [
+            {
+              "titre": "Épaisseur constante",
+              "texte": "sinon retassures"
+            },
+            {
+              "titre": "Dépouilles",
+              "texte": "1 à 2° pour démouler"
+            },
+            {
+              "titre": "Congés et nervures",
+              "texte": "rigidifier sans épaissir"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Choisir un procédé",
+          "etapes": [
+            {
+              "titre": "Quantité",
+              "texte": "combien de pièces par an&nbsp;?"
+            },
+            {
+              "titre": "Coût total",
+              "texte": "fixe + unitaire × n pour chaque procédé"
+            },
+            {
+              "titre": "Seuil",
+              "texte": "égaliser deux coûts pour trouver n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Moule __25 000 €__ + 0,80 €/pièce, ou 3D à __6 €__/pièce. À partir de quand l’injection gagne&nbsp;?",
+          "calcul": "25 000 + 0,8 n = 6 n",
+          "aparte": "n = 25 000 / 5,2",
+          "resultat": "n ≈ [[4 800]] pièces"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Assemblage&nbsp;?",
+          "oui": {
+            "titre": "Démontable",
+            "texte": "Vis, clips&nbsp;: **réparable**, recyclable."
+          },
+          "non": {
+            "titre": "Permanent",
+            "texte": "Soudure, collage, rivet&nbsp;: difficile à **recycler**."
+          },
+          "essai": {
+            "texte": "En éco-conception, on préfère des pièces <i>monomatériau</i> et démontables."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 5,
+          "titre": "Solutions mécaniques",
+          "entetes": [
+            "Fonction",
+            "Solutions"
+          ],
+          "lignes": [
+            [
+              "**Guidage rotation**",
+              "coussinet, roulement"
+            ],
+            [
+              "**Transmission**",
+              "engrenage, courroie"
+            ],
+            [
+              "**Transformation**",
+              "vis-écrou, came, bielle"
+            ],
+            [
+              "**Étanchéité**",
+              "joint torique, à lèvre"
+            ]
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Choisir le matériau **sans** regarder le procédé.",
+            "Oublier le **coût du moule** en petite série.",
+            "Innover sans **chiffrer** le gain (masse, coût, impact).",
+            "Mettre des angles vifs au lieu de **congés**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Innover",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Intégrer",
+              "texte": "une pièce, charnière et clips intégrés"
+            },
+            {
+              "titre": "Alléger",
+              "texte": "optimisation topologique"
+            },
+            {
+              "titre": "Matériaux",
+              "texte": "biosourcés ou recyclés"
+            },
+            {
+              "titre": "Réparer",
+              "texte": "concevoir pour la réparation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel procédé pour **50 000** boîtiers par an&nbsp;?",
+            "À quoi sert la **dépouille**&nbsp;?",
+            "Que fait l’**optimisation topologique**&nbsp;?"
+          ],
+          "reponses": "1) l’injection · 2) démouler la pièce · 3) retire la matière inutile"
+        }
+      ]
+    }
+  ]
+}

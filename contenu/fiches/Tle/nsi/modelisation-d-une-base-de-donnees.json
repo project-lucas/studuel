@@ -1,0 +1,118 @@
+{
+  "titre": "Modéliser une base",
+  "titreSurligne": "Modéliser",
+  "accroche": "Chaque information écrite une seule fois.",
+  "epreuve": "bac",
+  "bonus": "Codd, **1970** · clé primaire&nbsp;: **unique** et non nulle · clé étrangère&nbsp;: pointe vers un enregistrement **existant** · plusieurs-à-plusieurs&nbsp;: **table de jonction**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/nsi/modelisation-d-une-base-de-donnees.webp",
+    "prompt": "a glossy violet table grid linked by a golden key-shaped connector to a second smaller table, sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Une info,\nune seule fois !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le modèle relationnel",
+          "items": [
+            { "terme": "Relation", "definition": "une **table**, faite d’attributs et d’enregistrements" },
+            { "terme": "Attribut", "definition": "une **colonne**, avec son **domaine** de valeurs" },
+            { "terme": "Clé primaire", "definition": "identifie chaque enregistrement&nbsp;: **unique**, jamais nulle" },
+            { "terme": "Clé étrangère", "definition": "**référence** la clé primaire d’une autre table" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les anomalies d’un grand tableau",
+          "entetes": ["Anomalie", "Effet"],
+          "lignes": [
+            ["**Redondance**", "information répétée"],
+            ["**Mise à jour**", "un oubli rend la base incohérente"],
+            ["**Insertion**", "professeur sans classe impossible"],
+            ["**Suppression**", "effacer l’élève efface sa classe"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Relier deux tables",
+          "etapes": [
+            { "titre": "Cardinalité", "texte": "un à plusieurs, ou plusieurs à plusieurs&nbsp;?" },
+            { "titre": "Clé étrangère", "texte": "du côté **plusieurs** pour un à plusieurs" },
+            { "titre": "Jonction", "texte": "sinon une table avec **les deux clés étrangères**" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un élève suit plusieurs matières, une matière a plusieurs élèves. __Schéma__&nbsp;?",
+          "calcul": "plusieurs à plusieurs → table de jonction",
+          "aparte": "deux clés",
+          "resultat": "= [[suit(#eleve_id, #matiere_id)]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les contraintes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Référentielle", "texte": "une clé étrangère pointe vers un enregistrement **existant**." },
+            { "titre": "Domaine", "texte": "une note comprise entre **0 et 20**." },
+            { "titre": "Unicité", "texte": "deux comptes, jamais la même **adresse**." },
+            { "titre": "Schéma", "texte": "<i>eleve(<b>id</b>, nom, #classe_id)</i>&nbsp;: gras = clé primaire." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Un élève a une classe, une classe a plusieurs élèves.", "quoi": "la relation" },
+            { "texte": "La clé étrangère classe_id va dans eleve.", "quoi": "où la placer" },
+            { "texte": "Chaque information est écrite une seule fois.", "quoi": "le principe" }
+          ],
+          "pied": "Plusieurs à plusieurs&nbsp;: ==table de jonction== obligatoire."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mettre la clé étrangère du côté **un** au lieu de plusieurs.",
+            "Oublier la **table de jonction**.",
+            "Une clé primaire **dupliquée** ou nulle.",
+            "Garder un seul grand tableau&nbsp;: **redondance**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que garantit l’intégrité **référentielle**&nbsp;?",
+            "Où place-t-on la clé étrangère d’un lien **un à plusieurs**&nbsp;?",
+            "Que faut-il pour un lien **plusieurs à plusieurs**&nbsp;?"
+          ],
+          "reponses": "1) la clé étrangère vise un enregistrement existant · 2) côté « plusieurs » · 3) une table de jonction"
+        }
+      ]
+    }
+  ]
+}

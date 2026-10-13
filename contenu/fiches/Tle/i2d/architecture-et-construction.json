@@ -1,0 +1,153 @@
+{
+  "titre": "Architecture et AC",
+  "titreSurligne": "Architecture",
+  "accroche": "Tenir, isoler, consommer peu.",
+  "epreuve": "bac",
+  "bonus": "**R = e / λ** · **Φ = S × ΔT / R** · RE2020 : Bbio, énergie, **carbone**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/i2d/architecture-et-construction.webp",
+    "prompt": "a glossy violet small house with a golden sun roof, thick insulation layer cutaway and a tiny crane, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Un bon bâtiment tient\net garde la chaleur&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 1,
+          "titre": "La descente de charges",
+          "etapes": [
+            {
+              "titre": "Porteurs horizontaux",
+              "texte": "planchers, poutres"
+            },
+            {
+              "titre": "Porteurs verticaux",
+              "texte": "poteaux, voiles"
+            },
+            {
+              "titre": "Fondations → sol",
+              "texte": "semelles ou pieux"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les fondations",
+          "entetes": [
+            "Type",
+            "Quand"
+          ],
+          "lignes": [
+            [
+              "**Superficielles** (semelles, radier)",
+              "bon sol peu profond"
+            ],
+            [
+              "**Profondes** (pieux)",
+              "sol porteur profond"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "Résistance et flux thermiques",
+          "teinte": "jaune",
+          "lignes": [
+            "R = {e/λ}",
+            "Φ = {S × ΔT/R}"
+          ],
+          "regle": "R en **m²·K/W** ; les résistances des couches **s’additionnent**. Φ est la **déperdition** en W.",
+          "note": "plus R est grand, moins on perd&nbsp;!"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Mur __20 m²__ : béton 20 cm (λ = 2), laine de bois 16 cm (λ = 0,04), ΔT __20 °C__.",
+          "calcul": "R = 0,1 + 4 = 4,1 · Φ = 20 × 20 / 4,1",
+          "aparte": "sans isolant : 4 000 W",
+          "resultat": "Φ ≈ [[98 W]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Bioclimatique",
+          "items": [
+            {
+              "titre": "Orienter",
+              "texte": "grandes baies au **sud**"
+            },
+            {
+              "titre": "Stocker",
+              "texte": "**inertie** thermique"
+            },
+            {
+              "titre": "Isoler",
+              "texte": "supprimer les ponts thermiques"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 5,
+          "titre": "Les matériaux",
+          "entetes": [
+            "Matériau",
+            "Atout / limite"
+          ],
+          "lignes": [
+            [
+              "**Béton armé**",
+              "compression, carbone"
+            ],
+            [
+              "**Acier**",
+              "grandes portées, feu"
+            ],
+            [
+              "**Bois**",
+              "biosourcé, humidité"
+            ]
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier de **convertir** cm en m dans R = e / λ.",
+            "Compter la surface en **mm²** sans convertir en m²."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que transmet un **poteau** à la fondation&nbsp;?",
+            "Quelle est l’unité de **R**&nbsp;?",
+            "Pourquoi des baies au **sud**&nbsp;?"
+          ],
+          "reponses": "1) les charges · 2) m²·K/W · 3) capter le soleil d’hiver"
+        }
+      ]
+    }
+  ]
+}

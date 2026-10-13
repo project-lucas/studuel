@@ -1,0 +1,129 @@
+{
+  "titre": "Exponentielle et ln",
+  "titreSurligne": "ln",
+  "accroche": "Deux fonctions réciproques.",
+  "epreuve": "bac",
+  "bonus": "(eˣ)′ = eˣ · (ln x)′ = 1/x · ln(ab) = ln a + ln b · t½ = ln 2 / λ",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie-maths/exponentielle-et-logarithme-neperien.webp",
+    "prompt": "a glossy violet exponential curve rising steeply next to its golden mirror curve, a small golden letter e shape without text, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "e et ln se\nannulent entre eux !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les deux réciproques",
+          "taille": "mini",
+          "lignes": ["e<sup>ln a</sup> = a  (a &gt; 0)", "ln(eˣ) = x"],
+          "regle": "(eˣ)′ = eˣ, e⁰ = 1, eˣ &gt; 0. **ln est défini pour a &gt; 0** ; ln 1 = 0, ln e = 1, (ln x)′ = 1/x. (e<sup>kx</sup>)′ = k e<sup>kx</sup>.",
+          "note": "même sens de variation : croissantes"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Règles de calcul",
+          "entetes": ["Exponentielle", "Logarithme"],
+          "lignes": [
+            ["e<sup>a+b</sup> = eᵃ × eᵇ", "ln(ab) = ln a + ln b"],
+            ["e<sup>−a</sup> = 1 / eᵃ", "ln(a/b) = ln a − ln b"],
+            ["(eᵃ)ⁿ = e<sup>na</sup>", "ln(aⁿ) = n ln a"],
+            ["eᵃ / eᵇ = e<sup>a−b</sup>", "ln √a = ½ ln a"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre une équation",
+          "etapes": [
+            { "titre": "Isoler", "texte": "l’exponentielle (ou le ln) d’un côté" },
+            { "titre": "Appliquer", "texte": "**ln** des deux côtés (ou **exp**) : e<sup>u</sup> = c ⇔ u = ln c" },
+            { "titre": "Vérifier", "texte": "le sens : diviser par un **négatif** inverse l’inégalité" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Résoudre __e<sup>3x</sup> = 5__.",
+          "calcul": "3x = ln 5\nx = ln 5 ÷ 3",
+          "aparte": "ln 5 ≈ 1,609",
+          "resultat": "x ≈ [[0,54]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Limites à connaître",
+          "entetes": ["Quand", "Limite"],
+          "lignes": [
+            ["eˣ, x → +∞", "+∞"],
+            ["eˣ, x → −∞", "**0** (asymptote)"],
+            ["ln x, x → 0⁺", "−∞"],
+            ["xⁿ e<sup>−x</sup>, x → +∞", "**0** (croissances comparées)"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Demi-vie",
+          "oui": { "titre": "Bien posé", "texte": "N₀e<sup>−λt</sup> = N₀/2, donc **t½ = ln 2 / λ**." },
+          "non": { "titre": "Faux", "texte": "Écrire ln(a + b) = ln a + ln b : le ln transforme les **produits**." },
+          "essai": { "texte": "λ = 0,1 j⁻¹ : t½ = 0,693 ÷ 0,1 ≈ <i>6,9 jours</i>" }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À savoir",
+          "deux": false,
+          "items": [
+            { "titre": "k &lt; 0", "texte": "e<sup>kx</sup> **décroît** vers 0 : la décharge, la désintégration" },
+            { "titre": "ln x &gt; 1", "texte": "⇔ x &gt; e, car ln est **croissante**" },
+            { "titre": "log x", "texte": "= ln x / ln 10 : le pH et les dB" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire **ln(a + b)** = ln a + ln b.",
+            "Prendre le ln d’un nombre **négatif ou nul**.",
+            "Garder le sens de l’inégalité en divisant par un **négatif**.",
+            "Oublier que e<sup>−a</sup> vaut **1/eᵃ**, pas −eᵃ."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Résous **ln x = 2**.",
+            "Dérivée de **x e<sup>−x</sup>**&nbsp;?",
+            "Résous **e<sup>−0,2x</sup> &gt; 0,5**."
+          ],
+          "reponses": "1) x = e² ≈ 7,39 · 2) (1 − x)e<sup>−x</sup> · 3) x &lt; ln 0,5 / (−0,2) ≈ 3,47"
+        }
+      ]
+    }
+  ]
+}

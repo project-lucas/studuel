@@ -1,0 +1,133 @@
+{
+  "titre": "Signaux et ondes",
+  "titreSurligne": "ondes",
+  "accroche": "Lire un spectre, mesurer un son.",
+  "epreuve": "bac",
+  "bonus": "L = 10 log(I / I₀) · I₀ = 10⁻¹² W/m² · c = λ × f · c = 3,00 × 10⁸ m/s",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie-maths/signaux-sons-et-ondes-electromagnetiques.webp",
+    "prompt": "a glossy violet loudspeaker emitting golden sound waves and a small antenna, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Chaque son a\nson spectre !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Décomposer un signal",
+          "items": [
+            { "terme": "Composante continue", "definition": "la **valeur moyenne** du signal" },
+            { "terme": "Fondamental", "definition": "sinusoïde de fréquence **f₁**" },
+            { "terme": "Harmoniques", "definition": "sinusoïdes de fréquences **2f₁, 3f₁…**" },
+            { "terme": "Spectre", "definition": "une **raie** par composante : position = f, hauteur = amplitude" }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Niveau sonore",
+          "taille": "mini",
+          "lignes": ["L = 10 × log(I / I₀)", "c = λ × f"],
+          "regle": "L en **dB**, I₀ = 10⁻¹² W/m². Intensité **×2** : **+3 dB**. Intensité **×10** : **+10 dB**. Rang d’un harmonique : n = f<sub>n</sub> / f₁.",
+          "note": "deux machines à 70 dB : 73 dB"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire un spectre",
+          "etapes": [
+            { "titre": "Continu", "texte": "la raie à **0 Hz** donne la composante continue" },
+            { "titre": "Fondamental", "texte": "la **première** raie non nulle, de fréquence f₁" },
+            { "titre": "Harmoniques", "texte": "rang n = f ÷ f₁ ; bande utile : de **0** à la dernière raie" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "I = 10⁻⁵ W/m². __Niveau sonore__&nbsp;?",
+          "calcul": "L = 10 × log(10⁻⁵ / 10⁻¹²)\nL = 10 × log(10⁷)",
+          "aparte": "log(10⁷) = 7",
+          "resultat": "L = [[70 dB]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Ondes et usages",
+          "entetes": ["Usage", "Fréquence", "λ"],
+          "lignes": [
+            ["Radio FM", "≈ 100 MHz", "≈ 3 m"],
+            ["Mobile", "0,7 à 3,5 GHz", "10 à 40 cm"],
+            ["Wi-Fi", "2,4 et 5 GHz", "12,5 et 6 cm"],
+            ["Fibre optique", "≈ 2 × 10¹⁴ Hz", "1,55 µm"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "Sons et transmission",
+          "colonnes": 4,
+          "cartes": [
+            { "titre": "Hauteur", "texte": "grave ou aigu : fixée par le **fondamental**" },
+            { "titre": "Timbre", "texte": "les **harmoniques** et leurs amplitudes" },
+            { "titre": "Isoler", "texte": "matériau **lourd, étanche** : limite la transmission" },
+            { "titre": "Absorber", "texte": "matériau **poreux** : réduit l’écho" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Repères",
+          "deux": false,
+          "items": [
+            { "titre": "Audition", "texte": "de **20 Hz à 20 kHz**" },
+            { "titre": "Danger", "texte": "dès **85 dB**, douleur vers 120 dB" },
+            { "titre": "Antenne", "texte": "de l’ordre de **λ/4 ou λ/2**" },
+            { "titre": "Fibre", "texte": "infrarouge guidé par **réflexion totale**" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Additionner les **dB** : 70 + 70 ≠ 140.",
+            "Oublier que le spectre d’amplitude **ne dit pas** la forme du signal.",
+            "Mélanger **hauteur** (fondamental) et **timbre** (harmoniques).",
+            "Calculer λ avec f en **MHz** sans convertir en Hz."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Raies à 100 Hz et 300 Hz&nbsp;: **rang** du second&nbsp;?",
+            "Wi-Fi à 2,4 GHz&nbsp;: **λ** (c = 3,00 × 10⁸ m/s)&nbsp;?",
+            "Intensité **×10** : variation de niveau&nbsp;?"
+          ],
+          "reponses": "1) rang 3 · 2) λ = c / f = 12,5 cm · 3) +10 dB"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "titre": "Immunotechniques",
+  "titreSurligne": "Immuno",
+  "accroche": "L’anticorps, outil de détection.",
+  "epreuve": "bac",
+  "bonus": "Réaction antigène-anticorps = **spécifique** · témoins **positif**, **négatif**, de **spécificité**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/biochimie-biologie-biotechnologie/immunotechniques-agglutination-precipitation-et-elisa.webp",
+    "prompt": "a glossy violet Y-shaped antibody gripping a golden key-shaped antigen, a small microplate with golden wells behind, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Un anticorps,\nune seule cible&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Trois techniques",
+          "entetes": [
+            "Technique",
+            "Antigène",
+            "Signe"
+          ],
+          "lignes": [
+            [
+              "**Agglutination**",
+              "particulaire",
+              "agglutinats visibles"
+            ],
+            [
+              "**Précipitation**",
+              "soluble",
+              "arc ou anneau"
+            ],
+            [
+              "**ELISA**",
+              "capté en puits",
+              "couleur"
+            ]
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Exemples à connaître",
+          "items": [
+            {
+              "titre": "Groupage sanguin",
+              "texte": "globules rouges + anti-A."
+            },
+            {
+              "titre": "Ouchterlony",
+              "texte": "double diffusion : arcs de **fusion** ou de croisement."
+            },
+            {
+              "titre": "Immunodiffusion radiale",
+              "texte": "diamètre de l’anneau ↔ concentration, avec une **courbe d’étalonnage**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "ELISA sandwich",
+          "etapes": [
+            {
+              "titre": "Capter",
+              "texte": "anticorps fixé au puits, puis l’échantillon : l’antigène se fixe. **Lavage**"
+            },
+            {
+              "titre": "Marquer",
+              "texte": "second anticorps **conjugué** à une enzyme. **Lavage**"
+            },
+            {
+              "titre": "Révéler",
+              "texte": "substrat **chromogène** : couleur, A mesurée"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "À retenir",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Détecter un antigène",
+              "texte": "anticorps de **capture** au fond du puits."
+            },
+            {
+              "titre": "Chercher des anticorps",
+              "texte": "antigène au fond, conjugué **anti-immunoglobuline humaine**."
+            },
+            {
+              "titre": "Doser",
+              "texte": "intensité de la couleur, lue au **spectrophotomètre**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "ELISA : puits du patient jaunes, témoin négatif incolore, témoin positif jaune.",
+          "calcul": "témoins validés → test valide",
+          "aparte": "négatif jaune = invalide",
+          "resultat": "le patient a [[l’antigène]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Précipitation",
+          "oui": {
+            "titre": "Équivalence",
+            "texte": "Antigène et anticorps en **proportions équivalentes** : le réseau se forme, l’arc apparaît."
+          },
+          "non": {
+            "titre": "Excès",
+            "texte": "Trop d’un des deux : pas de réseau, **pas de précipité**."
+          },
+          "essai": {
+            "texte": "Un anneau absent ne dit pas « pas d’antigène » : on <i>vérifie les proportions</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Points critiques",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Lavages",
+              "texte": "sinon tout se colore."
+            },
+            {
+              "titre": "Concentrations",
+              "texte": "à respecter."
+            },
+            {
+              "titre": "Temps",
+              "texte": "d’incubation fixé."
+            },
+            {
+              "titre": "Température",
+              "texte": "d’incubation fixée."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier les **lavages**&nbsp;: le conjugué libre colore tout.",
+            "Interpréter sans vérifier les **témoins**.",
+            "Confondre agglutination (particule) et **précipitation** (soluble).",
+            "Chercher un **anticorps** avec un conjugué anti-antigène&nbsp;: il faut un anti-immunoglobuline."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel **type d’antigène** s’agglutine&nbsp;?",
+            "Que doit faire le témoin **négatif**&nbsp;?",
+            "Que porte le **conjugué** d’un ELISA&nbsp;?"
+          ],
+          "reponses": "1) particulaire · 2) ne pas réagir (rester incolore) · 3) une enzyme"
+        }
+      ]
+    }
+  ]
+}

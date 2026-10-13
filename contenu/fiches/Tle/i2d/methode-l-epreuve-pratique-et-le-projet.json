@@ -1,0 +1,203 @@
+{
+  "titre": "Épreuve pratique",
+  "titreSurligne": "pratique",
+  "accroche": "Concevoir, simuler, expérimenter.",
+  "epreuve": "bac",
+  "bonus": "Pratique **2 h**, coef. **7** · projet de **72 h** · lien avec le **Grand oral**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/i2d/methode-l-epreuve-pratique-et-le-projet.webp",
+    "prompt": "a glossy violet lab bench with a golden multimeter, a small laptop showing a curve and a tiny gear prototype, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Explique ce que tu fais,\net pourquoi&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le format",
+          "entetes": [
+            "Élément",
+            "À savoir"
+          ],
+          "lignes": [
+            [
+              "**Durée**",
+              "2 h"
+            ],
+            [
+              "**Coefficient**",
+              "7"
+            ],
+            [
+              "**Lieu**",
+              "un laboratoire de 2I2D"
+            ],
+            [
+              "**Examinateur**",
+              "un professeur du spécifique"
+            ],
+            [
+              "**Note**",
+              "sur 20, avec commentaire"
+            ]
+          ]
+        },
+        {
+          "type": "cartes",
+          "numero": 2,
+          "titre": "Trois compétences",
+          "colonnes": 1,
+          "cartes": [
+            {
+              "titre": "Concevoir (CO5.8)",
+              "texte": "proposer, choisir, modifier une solution"
+            },
+            {
+              "titre": "Simuler (CO6.5)",
+              "texte": "paramétrer, interpréter, conclure"
+            },
+            {
+              "titre": "Expérimenter (CO7.6)",
+              "texte": "protocole, mesures, comparaison"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La structure du sujet",
+          "etapes": [
+            {
+              "titre": "Découverte",
+              "texte": "produit et problématique, souvent une reconception"
+            },
+            {
+              "titre": "Conception",
+              "texte": "puis simulation et expérimentation"
+            },
+            {
+              "titre": "Ordre libre",
+              "texte": "les parties 2 à 4 peuvent s’inverser"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu (SIN)",
+          "donnees": "Un portail doit s’arrêter en moins de __0,5 s__. Mesure&nbsp;: __0,08 s__.",
+          "calcul": "0,08 s &lt; 0,5 s",
+          "aparte": "lecture par interruption",
+          "resultat": "[[conforme]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Pendant l’épreuve",
+          "items": [
+            {
+              "titre": "Lire",
+              "texte": "tout le sujet avant le matériel"
+            },
+            {
+              "titre": "Sécurité",
+              "texte": "câblage hors tension, arrêt d’urgence repéré"
+            },
+            {
+              "titre": "Expliquer",
+              "texte": "l’examinateur juge la démarche"
+            },
+            {
+              "titre": "Noter",
+              "texte": "mesures en tableau, avec unités"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Si la mesure contredit la simulation",
+          "lignes": [
+            {
+              "texte": "Mesure 0,08 s, simulation 0,05 s",
+              "quoi": "le constat"
+            },
+            {
+              "texte": "Frottements et capteur non simulés",
+              "quoi": "l’hypothèse"
+            },
+            {
+              "texte": "Écart acceptable : exigence respectée",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Un écart n’est pas un échec&nbsp;: ==explique-le==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Toucher le matériel avant d’avoir **tout lu**.",
+            "Câbler **sous tension**.",
+            "Se taire quand un appareil ne répond pas : **dis-le**.",
+            "Réciter au Grand oral au lieu de **raisonner**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Du projet de 72 h au Grand oral",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Projet",
+              "texte": "en équipe, **matière, énergie et information**"
+            },
+            {
+              "titre": "Question",
+              "texte": "précise, liée à un vrai choix technique"
+            },
+            {
+              "titre": "Preuves",
+              "texte": "un chiffre, une mesure, un schéma"
+            },
+            {
+              "titre": "Compromis",
+              "texte": "coût, performance, environnement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle est la **durée** de l’épreuve pratique&nbsp;?",
+            "Quelles sont les **trois** compétences&nbsp;?",
+            "Que faire si la mesure **contredit** la simulation&nbsp;?"
+          ],
+          "reponses": "1) 2 h · 2) concevoir, simuler, expérimenter · 3) expliquer l’écart"
+        }
+      ]
+    }
+  ]
+}

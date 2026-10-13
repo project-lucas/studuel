@@ -1,0 +1,187 @@
+{
+  "titre": "Photosynthèse, trophie",
+  "titreSurligne": "trophie",
+  "accroche": "Qui mange quoi, avec quelle énergie.",
+  "epreuve": "bac",
+  "bonus": "Thylakoïdes : **O₂, NADPH, ATP** · stroma : **Calvin** · énergie / électrons / carbone : **photo- ou chimio-, litho- ou organo-, auto- ou hétéro-**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/biochimie-biologie-biotechnologie/photosynthese-types-trophiques-et-cycles-du-carbone-et-de-l.webp",
+    "prompt": "a glossy violet leaf with a golden sun above it and a tiny golden chloroplast glowing inside, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "La lumière en\nmonnaie sonnante !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Dans le chloroplaste",
+          "entetes": [
+            "Étape",
+            "Entrées → sorties"
+          ],
+          "lignes": [
+            [
+              "**Thylakoïdes** (lumière)",
+              "H₂O, NADP⁺, ADP → O₂, NADPH, ATP"
+            ],
+            [
+              "**Stroma** (Calvin)",
+              "CO₂, NADPH, ATP → glycéraldéhyde 3-phosphate"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les types trophiques",
+          "entetes": [
+            "Question",
+            "Réponses"
+          ],
+          "lignes": [
+            [
+              "Énergie",
+              "**photo-** / **chimio-**"
+            ],
+            [
+              "Électrons",
+              "**litho-** / **organo-**"
+            ],
+            [
+              "Carbone",
+              "**auto-** (CO₂) / **hétéro-**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Trois exemples",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Plante",
+              "texte": "**photolithoautotrophe**."
+            },
+            {
+              "titre": "Humain, E. coli",
+              "texte": "**chimioorganohétérotrophes**."
+            },
+            {
+              "titre": "Bactéries nitrifiantes",
+              "texte": "**chimiolithoautotrophes**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Aquarium neuf, bandelettes&nbsp;: l’ammoniaque monte, puis les nitrites, puis les nitrates.",
+          "calcul": "NH₄⁺ → NO₂⁻ → NO₃⁻",
+          "aparte": "bactéries nitrifiantes",
+          "resultat": "[[nitrification]], aérobie"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Cycles courts",
+          "items": [
+            {
+              "titre": "Carbone",
+              "texte": "CO₂ → photosynthèse → matière organique → respiration, fermentation → CO₂."
+            },
+            {
+              "titre": "Azote",
+              "texte": "**ammonification** puis **nitrification**, **assimilation** par les plantes."
+            },
+            {
+              "titre": "Dénitrification",
+              "texte": "NO₃⁻ → N₂ : respiration **anaérobie**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "Les micro-organismes dans l’écosystème",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Saprophytisme",
+              "texte": "décomposer la **matière morte**."
+            },
+            {
+              "titre": "Symbiose",
+              "texte": "bénéfice mutuel : **Rhizobium** fixe le diazote des Fabacées."
+            },
+            {
+              "titre": "Entre eux",
+              "texte": "**compétition**, **coopération**, **biofilm**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Énergie lumineuse&nbsp;: photo-. Électrons de l’eau&nbsp;: litho-.",
+              "quoi": "énergie, électrons"
+            },
+            {
+              "texte": "Le carbone vient du CO₂&nbsp;: autotrophe.",
+              "quoi": "carbone"
+            },
+            {
+              "texte": "Le milieu de culture n’a pas besoin de carbone organique.",
+              "quoi": "conséquence"
+            }
+          ],
+          "pied": "Même ==couplage chimio-osmotique== qu’en respiration."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **minéralisation** (organique → minéral) et **assimilation**.",
+            "Dire que le Calvin a lieu dans les **thylakoïdes**.",
+            "Oublier l’**eau**, source des électrons et de l’O₂.",
+            "Croire la **dénitrification** aérobie."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Où se déroule le **cycle de Calvin**&nbsp;?",
+            "Type trophique de la **plante**&nbsp;?",
+            "Que devient **NO₃⁻** lors de la dénitrification&nbsp;?"
+          ],
+          "reponses": "1) dans le stroma · 2) photolithoautotrophe · 3) du diazote N₂"
+        }
+      ]
+    }
+  ]
+}

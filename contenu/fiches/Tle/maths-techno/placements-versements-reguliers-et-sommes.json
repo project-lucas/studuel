@@ -1,0 +1,164 @@
+{
+  "titre": "Placements et sommes",
+  "titreSurligne": "sommes",
+  "accroche": "Chaque versement est un terme géométrique.",
+  "epreuve": "bac",
+  "bonus": "valeur acquise = V × ((1 + t)ⁿ − 1) ÷ t · simples : arithmétique · composés : géométrique",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-techno/placements-versements-reguliers-et-sommes.webp",
+    "prompt": "a glossy violet piggy bank with a golden coin dropping in and a small golden growing stack of coins, tiny sparkles"
+  },
+  "marcel": "Chaque versement\nrapporte plus !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Versements réguliers",
+          "petite": true,
+          "lignes": [
+            "V × (1 + (1+t) + … + (1+t)<sup>n−1</sup>)",
+            "= V × {((1+t)<sup>n</sup> − 1)/t}"
+          ],
+          "regle": "**V** versé chaque début d’année à ==t %== (en décimal : 5 % donne 0,05), juste après le n-ième versement. Le dernier vaut V, le premier V(1 + t)<sup>n−1</sup>.",
+          "note": "Une somme géométrique de raison 1 + t&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Simples ou composés&nbsp;?",
+          "entetes": [
+            "",
+            "Simples",
+            "Composés"
+          ],
+          "lignes": [
+            [
+              "Intérêts sur",
+              "le capital de départ",
+              "le capital + intérêts"
+            ],
+            [
+              "Modèle",
+              "arithmétique",
+              "géométrique"
+            ],
+            [
+              "1 000 € à 5 %, 2 ans",
+              "1 100 €",
+              "1 102,50 €"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Chaque versement",
+              "texte": "le dernier vaut V, le précédent V(1 + t), etc."
+            },
+            {
+              "titre": "Reconnaître",
+              "texte": "une somme géométrique de raison 1 + t, avec n termes"
+            },
+            {
+              "titre": "Appliquer",
+              "texte": "V × ((1 + t)<sup>n</sup> − 1) ÷ t, ou additionner à la main"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "__1 000 €__ chaque 1<sup>er</sup> janvier à 5 %. Après le 3<sup>e</sup> versement&nbsp;?",
+          "calcul": "1 000 × (1,05³ − 1) ÷ 0,05",
+          "aparte": "1,05³ − 1 = 0,157625",
+          "resultat": "[[3 152,50 €]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Sommes Σ et Python",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Σ k²",
+              "texte": "k de 1 à 4&nbsp;: 1 + 4 + 9 + 16 = **30**."
+            },
+            {
+              "titre": "Σ k³",
+              "texte": "k de 1 à 4&nbsp;: 1 + 8 + 27 + 64 = **100**."
+            },
+            {
+              "titre": "Accumulateur",
+              "texte": "<b>s = 0</b> au départ, puis <b>s = s + pow(k, 2)</b>."
+            },
+            {
+              "titre": "Bornes",
+              "texte": "<b>range(1, n + 1)</b> s’arrête à **n**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "versements : 1 000 × 1,05², 1 000 × 1,05, 1 000",
+              "quoi": "les termes"
+            },
+            {
+              "texte": "somme géométrique de raison 1,05, 3 termes",
+              "quoi": "la nature"
+            },
+            {
+              "texte": "1 000 × (1,05³ − 1) ÷ 0,05 = 3 152,50",
+              "quoi": "le calcul"
+            }
+          ],
+          "pied": "Contrôle&nbsp;: 1 102,50 + 1 050 + 1 000 = ==3 152,50==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire t = **5** au lieu de 0,05 dans la formule.",
+            "Prendre la **raison 1** au lieu de 1 + t.",
+            "Oublier que le **dernier** versement ne rapporte rien.",
+            "Écrire <b>range(1, n)</b>&nbsp;: la borne **n est exclue**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "1 000 € à **5 % composés**, 2 ans&nbsp;?",
+            "Dernier versement de V&nbsp;: **valeur juste après**&nbsp;?",
+            "Σ k pour k de **1 à 4**&nbsp;?"
+          ],
+          "reponses": "1) 1 000 × 1,05² = 1 102,50 € · 2) V · 3) 1 + 2 + 3 + 4 = 10"
+        }
+      ]
+    }
+  ]
+}

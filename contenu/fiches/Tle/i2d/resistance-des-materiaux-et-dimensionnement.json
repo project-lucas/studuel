@@ -1,0 +1,184 @@
+{
+  "titre": "Résistance, dimensions",
+  "titreSurligne": "Résistance",
+  "accroche": "Ne pas rompre, ne pas trop fléchir.",
+  "epreuve": "bac",
+  "bonus": "**σ = N / S** · **ε = ΔL / L<sub>0</sub>** · **σ = E ε** · **σ ≤ Re / s**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/i2d/resistance-des-materiaux-et-dimensionnement.webp",
+    "prompt": "a glossy violet I-beam bending under a golden weight, with a small steel tie rod, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Loin de la fibre\nneutre, c’est costaud !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Contrainte et déformation",
+          "taille": "mini",
+          "lignes": [
+            "σ = {N/S}",
+            "σ = E × ε"
+          ],
+          "regle": "σ en ==MPa== si N en N et S en mm². Limite : ==σ ≤ Re / s==.",
+          "note": "acier : E = 210 000 MPa"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Sollicitations",
+          "entetes": [
+            "Sollicitation",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "**Traction**",
+              "tirant"
+            ],
+            [
+              "**Flexion**",
+              "poutre, étagère"
+            ],
+            [
+              "**Torsion**",
+              "arbre"
+            ],
+            [
+              "**Cisaillement**",
+              "rivet, axe"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Dimensionner un tirant",
+          "etapes": [
+            {
+              "titre": "Calculer",
+              "texte": "σ = N / S dans la section"
+            },
+            {
+              "titre": "Borner",
+              "texte": "σ admissible = Re / s"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "S minimale = N / (Re / s)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Tirant acier __Re = 235 MPa__, 2 m, __100 mm²__, __15 kN__. Quel coefficient s&nbsp;?",
+          "calcul": "σ = 15 000 / 100 = 150 MPa",
+          "aparte": "ΔL = (150 / 210 000) × 2 000 ≈ 1,4 mm",
+          "resultat": "s = 235 / 150 ≈ [[1,6]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quelle section en flexion&nbsp;?",
+          "oui": {
+            "titre": "En I ou tube",
+            "texte": "Matière **loin de la fibre neutre** : très résistant."
+          },
+          "non": {
+            "titre": "Pleine et plate",
+            "texte": "Même masse mais **bien moins** résistante."
+          },
+          "essai": {
+            "texte": "Les poutres sont en I et les cadres de vélo en <i>tube</i> : on gagne de la masse sans perdre de tenue."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Simulation et pièges de forme",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Éléments finis",
+              "texte": "maillage, matériau, liaisons, charges"
+            },
+            {
+              "titre": "Von Mises",
+              "texte": "contrainte à comparer à Re / s"
+            },
+            {
+              "titre": "Concentration",
+              "texte": "angles vifs et trous : un congé aide"
+            },
+            {
+              "titre": "Flambement",
+              "texte": "pièce élancée en compression"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "σ = N / S = 15 000 / 100 = 150 MPa",
+              "quoi": "la contrainte"
+            },
+            {
+              "texte": "s = Re / σ = 235 / 150 ≈ 1,6",
+              "quoi": "le coefficient"
+            },
+            {
+              "texte": "Pour s ≥ 2 : S ≥ 15 000 / 117,5 ≈ 128 mm²",
+              "quoi": "le dimensionnement"
+            }
+          ],
+          "pied": "On écrit ==la formule==, puis les ==unités== dans le résultat."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mélanger **MPa** et N/m².",
+            "Confondre **Re** et le module d’Young **E**.",
+            "Oublier le **coefficient de sécurité**.",
+            "Ignorer le **flambement** d’une pièce élancée."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que vaut **σ** pour 15 kN sur **100 mm²**&nbsp;?",
+            "Où la contrainte de **flexion** est-elle maximale&nbsp;?",
+            "Que réduit un **congé** de raccordement&nbsp;?"
+          ],
+          "reponses": "1) 150 MPa · 2) sur les fibres extrêmes · 3) les concentrations de contraintes"
+        }
+      ]
+    }
+  ]
+}

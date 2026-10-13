@@ -1,0 +1,112 @@
+{
+  "titre": "Le pH des solutions",
+  "titreSurligne": "pH",
+  "accroche": "Une échelle de puissances de dix.",
+  "epreuve": "bac",
+  "bonus": "pH = −log([H₃O⁺]/c°) · [H₃O⁺] = c° × 10<sup>−pH</sup> · K<sub>e</sub> = 1,0 × 10⁻¹⁴ à **25 °C** · neutre&nbsp;: pH = 7,0",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/le-ph-des-solutions.webp",
+    "prompt": "a glossy violet beaker with a golden liquid and a vertical color scale bar from violet to gold beside it, tiny golden bubbles, sparkles"
+  },
+  "marcel": "Un pH de moins,\nc’est ×10 en H₃O⁺ !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La définition du pH",
+          "petite": true,
+          "lignes": ["pH = −log ([H₃O⁺] ÷ c°)", "[H₃O⁺] = c° × 10<sup>−pH</sup>"],
+          "regle": "**c° = 1 mol·L⁻¹** rend l’argument du log sans dimension&nbsp;: le pH n’a ==pas d’unité==. Une unité de pH de moins, c’est [H₃O⁺] ==multipliée par 10==.",
+          "note": "échelle logarithmique&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Acide, neutre, basique (25 °C)",
+          "entetes": ["Solution", "Relation", "pH"],
+          "lignes": [
+            ["Acide", "[H₃O⁺] &gt; [HO⁻]", "&lt; 7,0"],
+            ["Neutre", "[H₃O⁺] = [HO⁻]", "= 7,0"],
+            ["Basique", "[H₃O⁺] &lt; [HO⁻]", "&gt; 7,0"],
+            ["Produit ionique", "K<sub>e</sub> = [H₃O⁺][HO⁻]", "p K<sub>e</sub> = 14,0"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Convertir", "texte": "passer de la concentration au pH, ou l’inverse, avec le log et 10<sup>x</sup>" },
+            { "titre": "Relier", "texte": "[HO⁻] = K<sub>e</sub> ÷ [H₃O⁺] : les deux concentrations sont liées" },
+            { "titre": "Conclure", "texte": "comparer le pH à 7,0 (à 25 °C) : acide, neutre ou basique" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une solution a [H₃O⁺] = __2,5 × 10⁻⁴ mol·L⁻¹__. Quel est son pH, et quelle est [HO⁻]&nbsp;?",
+          "calcul": "pH = −log(2,5 × 10⁻⁴) · [HO⁻] = 10⁻¹⁴ ÷ (2,5 × 10⁻⁴)",
+          "aparte": "pH &lt; 7 : solution acide",
+          "resultat": "pH = [[3,6]] · [HO⁻] = 4,0 × 10⁻¹¹ mol·L⁻¹"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Dilution et chiffres",
+          "oui": { "titre": "Diluer 10 fois", "texte": "Un acide fort voit son pH ==augmenter de 1==, une base forte le voit ==baisser de 1==&nbsp;: il se rapproche de 7 sans le franchir." },
+          "non": { "titre": "pH 3 → pH 2 : +⅓ ?", "texte": "**Faux**&nbsp;: [H₃O⁺] est **multipliée par 10**, pas augmentée d’un tiers." },
+          "essai": { "texte": "Un pH-mètre se donne au dixième&nbsp;: <i>pH = 3,6</i>, pas 3,6021. Il s’**étalonne** avant chaque série (tampons pH 4,0 et 7,0)." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "pH = −log([H₃O⁺] ÷ c°) avec c° = 1 mol·L⁻¹", "quoi": "la définition" },
+            { "texte": "pH = −log(2,5 × 10⁻⁴) = 3,6", "quoi": "le calcul" },
+            { "texte": "pH &lt; 7,0 à 25 °C : la solution est acide.", "quoi": "la conclusion" }
+          ],
+          "pied": "Le 7 vaut ==à 25 °C== seulement&nbsp;: K<sub>e</sub> dépend de la température."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que pH 7 est **universel** (c’est 25 °C).",
+            "Dire qu’une base ne contient **aucun H₃O⁺**.",
+            "Donner un pH avec **quatre décimales**.",
+            "Penser qu’une dilution fait passer un acide en **base**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "[H₃O⁺] = 1,0 × 10⁻⁵ mol·L⁻¹&nbsp;: **pH**&nbsp;?",
+            "pH = 9,0&nbsp;: **[H₃O⁺]** vaut&nbsp;?",
+            "Un acide fort de pH 2 est dilué 100 fois&nbsp;: **pH**&nbsp;?"
+          ],
+          "reponses": "1) 5,0 · 2) 1,0 × 10⁻⁹ mol·L⁻¹ · 3) 4"
+        }
+      ]
+    }
+  ]
+}

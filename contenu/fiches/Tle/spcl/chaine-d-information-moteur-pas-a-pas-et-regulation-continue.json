@@ -1,0 +1,180 @@
+{
+  "titre": "Régulation continue",
+  "titreSurligne": "continue",
+  "accroche": "Mesurer, transmettre, corriger.",
+  "epreuve": "bac",
+  "bonus": "G = 20 log {U<sub>s</sub>/U<sub>e</sub>} · q = {plage/2ⁿ} · ON = √(n₁² − n₂²) · **PI : écart statique nul**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/spcl/chaine-d-information-moteur-pas-a-pas-et-regulation-continue.webp",
+    "prompt": "a glossy violet feedback loop with a golden thermometer, a small stepper motor and arrows, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Écart mesuré,\nécart corrigé !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Chaîne d’information",
+          "items": [
+            {
+              "titre": "Capteur",
+              "texte": "grandeur → signal électrique"
+            },
+            {
+              "titre": "Filtre",
+              "texte": "garde les fréquences utiles, coupure à **−3 dB**"
+            },
+            {
+              "titre": "CAN",
+              "texte": "tension → nombre sur **n bits**"
+            },
+            {
+              "titre": "Microcontrôleur",
+              "texte": "traite et commande"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Moteur pas à pas",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "angle par pas = {360°/pas par tour}"
+          ],
+          "regle": "Chaque **impulsion** fait tourner le rotor d’un angle fixe&nbsp;: on positionne **sans capteur**.",
+          "note": "bobines → champ → rotor"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Trois régulations",
+          "entetes": [
+            "Régulation",
+            "Principe",
+            "Défaut"
+          ],
+          "lignes": [
+            [
+              "**TOR**",
+              "actionneur à 0 % ou 100 %",
+              "oscillations"
+            ],
+            [
+              "**P**",
+              "action ∝ écart (gain K)",
+              "**écart statique**"
+            ],
+            [
+              "**PI**",
+              "l’intégrale accumule l’écart",
+              "plus lente, oscillante"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Juger une régulation",
+          "etapes": [
+            {
+              "titre": "Écart statique",
+              "texte": "consigne − valeur finale"
+            },
+            {
+              "titre": "Temps à 5 %",
+              "texte": "durée pour rester dans ±5 %"
+            },
+            {
+              "titre": "Dépassement",
+              "texte": "premier pic au-dessus de la valeur finale"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Consigne 60 °C, correction P, eau stable à 57 °C. Écart&nbsp;?",
+          "calcul": "écart = 60 − 57",
+          "aparte": "K doublé → écart ≈ 1,5 °C",
+          "resultat": "écart statique = [[3 °C]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Fibre optique",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Guidage",
+              "texte": "**réflexion totale**, cœur n₁ > gaine n₂"
+            },
+            {
+              "titre": "Ouverture",
+              "texte": "ON = sin θ<sub>max</sub> = √(n₁² − n₂²)"
+            },
+            {
+              "titre": "Dispersion",
+              "texte": "l’impulsion **s’élargit**"
+            },
+            {
+              "titre": "Débit",
+              "texte": "limité par cet élargissement"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que P seul **annule** l’écart statique.",
+            "Augmenter K sans voir le **dépassement** monter.",
+            "Oublier que le **CAN** découpe en 2<sup>n</sup> niveaux.",
+            "Confondre **consigne** et mesure."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 6,
+          "titre": "Pourquoi corriger ?",
+          "paragraphes": [
+            "Une **perturbation** (porte ouverte, débit qui change) écarte la grandeur réglée de la consigne&nbsp;: la boucle compare, corrige, et ramène la mesure vers la **consigne**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle correction **annule** l’écart statique&nbsp;?",
+            "**Angle par pas** pour 200 pas par tour&nbsp;?",
+            "**Quantum** d’un CAN 10 bits sur 5 V&nbsp;?"
+          ],
+          "reponses": "1) la correction PI · 2) 1,8° · 3) 5 / 1 024 ≈ 4,9 mV"
+        }
+      ]
+    }
+  ]
+}

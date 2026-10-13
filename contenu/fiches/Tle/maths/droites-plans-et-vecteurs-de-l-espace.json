@@ -1,0 +1,169 @@
+{
+  "titre": "Vecteurs de l’espace",
+  "titreSurligne": "espace",
+  "accroche": "Une coordonnée de plus, une notion neuve.",
+  "epreuve": "bac",
+  "bonus": "w = a u + b v ⇒ **coplanaires** · AB(xB − xA ; yB − yA ; zB − zA) · distance : repère **orthonormé**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths/droites-plans-et-vecteurs-de-l-espace.webp",
+    "prompt": "a glossy violet 3D coordinate frame with three golden arrows and a translucent violet plane, sparkles"
+  },
+  "marcel": "Trois vecteurs\nsur un même plan ?",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Coplanaires",
+          "taille": "mini",
+          "lignes": [
+            "w = a u + b v",
+            "u(x ; y ; z)"
+          ],
+          "regle": "u, v, w sont **coplanaires** si w se décompose sur u et v. Trois vecteurs **non coplanaires** forment une **base** de l’espace.",
+          "note": "rien de tel dans le plan&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Droite et plan",
+          "entetes": [
+            "",
+            "Droite",
+            "Plan"
+          ],
+          "lignes": [
+            [
+              "Défini par",
+              "A et **un** vecteur directeur u",
+              "A et **deux** vecteurs non colinéaires"
+            ],
+            [
+              "M appartient si",
+              "AM **colinéaire** à u",
+              "AM, u, v **coplanaires**"
+            ],
+            [
+              "Autre façon",
+              "deux points",
+              "trois points non alignés"
+            ],
+            [
+              "Distance AB",
+              "√(Δx² + Δy² + Δz²)",
+              "repère **orthonormé**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Montrer que trois vecteurs sont coplanaires",
+          "etapes": [
+            {
+              "titre": "Coordonnées",
+              "texte": "écrire u, v, w sous la forme (x ; y ; z)"
+            },
+            {
+              "titre": "Décomposer",
+              "texte": "chercher a et b tels que w = a u + b v, coordonnée par coordonnée"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "un couple (a ; b) qui marche pour les trois lignes&nbsp;: coplanaires"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "u(1 ; 0 ; 1), v(0 ; 1 ; 1), w(2 ; 3 ; 5). __Coplanaires__&nbsp;?",
+          "calcul": "2u + 3v = (2 ; 3 ; 2 + 3)",
+          "aparte": "les trois lignes concordent",
+          "resultat": "w = 2u + 3v : [[coplanaires]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les théorèmes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Droite // plan",
+              "texte": "parallèle à une droite **du plan**&nbsp;: parallèle au plan."
+            },
+            {
+              "titre": "Plans parallèles",
+              "texte": "coupés par un 3e plan&nbsp;: deux droites **parallèles**."
+            },
+            {
+              "titre": "Théorème du toit",
+              "texte": "deux plans sécants contenant deux droites parallèles&nbsp;: leur **intersection** leur est parallèle."
+            },
+            {
+              "titre": "Repère",
+              "texte": "milieu de [AB]&nbsp;: la **moyenne** des coordonnées."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "On cherche a, b tels que w = a u + b v",
+              "quoi": "la méthode"
+            },
+            {
+              "texte": "2 = a, 3 = b et 5 = a + b&nbsp;: ✔",
+              "quoi": "les trois équations"
+            },
+            {
+              "texte": "Donc w = 2u + 3v",
+              "quoi": "la décomposition"
+            }
+          ],
+          "pied": "Conclusion&nbsp;: u, v et w sont ==coplanaires==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Conclure «&nbsp;sécantes ou parallèles&nbsp;» **comme dans le plan**.",
+            "Utiliser la formule de distance hors repère **orthonormé**.",
+            "Vérifier **deux** coordonnées sur trois seulement.",
+            "Oublier que le plan veut **deux** vecteurs non colinéaires."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**AB** pour A(1 ; 2 ; 3) et B(4 ; 0 ; 5)&nbsp;?",
+            "Deux droites **ni sécantes ni parallèles**&nbsp;: leur nom&nbsp;?",
+            "Que faire quand une configuration **résiste**&nbsp;?"
+          ],
+          "reponses": "1) (3 ; −2 ; 2) · 2) non coplanaires · 3) poser un repère et calculer"
+        }
+      ]
+    }
+  ]
+}

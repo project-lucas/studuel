@@ -1,0 +1,141 @@
+{
+  "titre": "Acides, bases et pH",
+  "titreSurligne": "pH",
+  "accroche": "Un nombre pour mesurer l’acidité.",
+  "epreuve": "bac",
+  "bonus": "pH = −log [H<sub>3</sub>O⁺] · [H<sub>3</sub>O⁺] = 10<sup>−pH</sup> · C<sub>mère</sub>V<sub>mère</sub> = C<sub>fille</sub>V<sub>fille</sub>",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie-maths/acides-bases-et-ph.webp",
+    "prompt": "a glossy violet beaker with a golden pH strip dipped in it, tiny golden bubbles, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Un pH de moins,\n10 fois plus acide !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Acide, base, couple",
+          "items": [
+            { "terme": "Acide", "definition": "espèce qui **cède** un ion H⁺" },
+            { "terme": "Base", "definition": "espèce qui **capte** un ion H⁺" },
+            { "terme": "Couple", "definition": "AH / A⁻ : AH = A⁻ + H⁺" },
+            { "terme": "Eau", "definition": "acide (H<sub>2</sub>O/HO⁻) **et** base (H<sub>3</sub>O⁺/H<sub>2</sub>O)" }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le pH",
+          "taille": "mini",
+          "lignes": ["pH = −log [H<sub>3</sub>O⁺]", "[H<sub>3</sub>O⁺] = 10<sup>−pH</sup>"],
+          "regle": "Concentration en **mol/L**. À 25 °C : **pH &lt; 7** acide · **pH = 7** neutre · **pH &gt; 7** basique.",
+          "note": "−1 de pH = ×10 en H<sub>3</sub>O⁺"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Préparer une solution diluée",
+          "etapes": [
+            { "titre": "Calculer", "texte": "V<sub>mère</sub> = C<sub>fille</sub> × V<sub>fille</sub> ÷ C<sub>mère</sub>" },
+            { "titre": "Prélever", "texte": "à la **pipette jaugée**, verser dans la **fiole jaugée**" },
+            { "titre": "Compléter", "texte": "à l’eau distillée jusqu’au **trait de jauge**, homogénéiser" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "[H<sub>3</sub>O⁺] = 2,0 × 10⁻³ mol/L. __pH__&nbsp;?",
+          "calcul": "pH = −log(2,0 × 10⁻³)",
+          "aparte": "−log(10⁻³) = 3, un peu moins",
+          "resultat": "pH ≈ [[2,7]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Quelques couples à connaître",
+          "entetes": ["Acide", "Base"],
+          "lignes": [
+            ["CH<sub>3</sub>COOH (éthanoïque)", "CH<sub>3</sub>COO⁻"],
+            ["NH<sub>4</sub>⁺ (ammonium)", "NH<sub>3</sub> (ammoniac)"],
+            ["H<sub>3</sub>O⁺ (oxonium)", "H<sub>2</sub>O"],
+            ["H<sub>2</sub>O", "HO⁻ (hydroxyde)"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 5,
+          "titre": "Réaction acide-base",
+          "taille": "mini",
+          "lignes": ["Acide 1 + Base 2 → Base 1 + Acide 2"],
+          "regle": "Un **H⁺** passe de l’acide d’un couple à la base de l’autre. <i>CH<sub>3</sub>COOH + HO⁻ → CH<sub>3</sub>COO⁻ + H<sub>2</sub>O</i>",
+          "note": "le proton voyage"
+        },
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "En contexte",
+          "deux": false,
+          "items": [
+            { "titre": "Dilution", "texte": "un acide dilué voit son pH **monter vers 7**, sans le dépasser" },
+            { "titre": "Océans", "texte": "pH 8,2 → 8,1 : **26 %** d’ions H<sub>3</sub>O⁺ en plus" },
+            { "titre": "Piscine", "texte": "pH entre **7,2 et 7,4**" },
+            { "titre": "Mesure", "texte": "pH-mètre étalonné, papier pH approché" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "pH = −log [H<sub>3</sub>O⁺]", "quoi": "la définition" },
+            { "texte": "pH = −log(2,0 × 10⁻³) ≈ 2,7", "quoi": "l’application" },
+            { "texte": "pH &lt; 7 : la solution est acide", "quoi": "la conclusion" }
+          ],
+          "pied": "Dilution ×10 d’un acide fort&nbsp;: ==le pH gagne 1 unité==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **signe −** devant le log.",
+            "Croire que le pH est **linéaire** : il est logarithmique.",
+            "Penser qu’un acide dilué peut passer **au-dessus de 7**.",
+            "Confondre **pipette jaugée** et éprouvette pour prélever."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "[H<sub>3</sub>O⁺] = 1,0 × 10⁻⁴ mol/L&nbsp;: **pH**&nbsp;?",
+            "Quel volume de solution à 0,10 mol/L pour 100 mL à 0,010 mol/L&nbsp;?",
+            "Un pH baisse de **2** unités&nbsp;: [H<sub>3</sub>O⁺] est multipliée par&nbsp;?"
+          ],
+          "reponses": "1) pH = 4 · 2) 10 mL · 3) 100 (10²)"
+        }
+      ]
+    }
+  ]
+}

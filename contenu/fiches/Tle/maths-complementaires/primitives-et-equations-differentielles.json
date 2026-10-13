@@ -1,0 +1,176 @@
+{
+  "titre": "Primitives et EDO",
+  "titreSurligne": "Primitives",
+  "accroche": "De la vitesse à la quantité.",
+  "epreuve": "bac",
+  "bonus": "y′ = ay → Ceᵃˣ · y′ = ay + b → Ceᵃˣ − b÷a · u′eᵘ → eᵘ · u′ ÷ u → ln|u|",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-complementaires/primitives-et-equations-differentielles.webp",
+    "prompt": "a glossy violet family of curves converging to one golden horizontal line, sparkles"
+  },
+  "marcel": "Une famille de courbes,\nune condition initiale !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les équations différentielles",
+          "taille": "mini",
+          "lignes": [
+            "y′ = a y  →  y = C eᵃˣ",
+            "y′ = a y + b  →  y = C eᵃˣ − b÷a"
+          ],
+          "regle": "Solution particulière constante **y = −b ÷ a**, plus les solutions sans second membre, puis **C** fixé par la ==condition initiale==. Si a < 0, y tend vers **−b ÷ a**.",
+          "note": "a < 0 : état d’équilibre"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Primitives usuelles",
+          "entetes": [
+            "f",
+            "Une primitive F"
+          ],
+          "lignes": [
+            [
+              "xⁿ (n ≠ −1)",
+              "xⁿ⁺¹ ÷ (n + 1)"
+            ],
+            [
+              "1/x",
+              "ln|x|"
+            ],
+            [
+              "u′ eᵘ",
+              "**eᵘ**"
+            ],
+            [
+              "u′ ÷ u",
+              "**ln|u|**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre y′ = a y + b",
+          "etapes": [
+            {
+              "titre": "Particulière",
+              "texte": "solution constante −b ÷ a"
+            },
+            {
+              "titre": "Homogène",
+              "texte": "ajouter C eᵃˣ"
+            },
+            {
+              "titre": "Condition initiale",
+              "texte": "trouver C avec y(0)"
+            },
+            {
+              "titre": "Limite",
+              "texte": "si a < 0, vers −b ÷ a"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "y′ = −0,5y + 2 et y(0) = 10. __Donne y puis sa limite.__",
+          "calcul": "−b ÷ a = 4 ; y = C e<sup>−0,5x</sup> + 4",
+          "aparte": "y(0) = C + 4 = 10, donc C = 6",
+          "resultat": "y = 6e<sup>−0,5x</sup> + 4 → [[4]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Primitive",
+              "texte": "F′ = f&nbsp;; deux primitives diffèrent d’une **constante**."
+            },
+            {
+              "titre": "Reconnaître u′",
+              "texte": "toute la méthode&nbsp;; corriger le **facteur constant**."
+            },
+            {
+              "titre": "a > 0",
+              "texte": "croissance **exponentielle**."
+            },
+            {
+              "titre": "a < 0",
+              "texte": "décroissance&nbsp;: refroidissement, **élimination**."
+            },
+            {
+              "titre": "Lien discret",
+              "texte": "uₙ₊₁ = a·uₙ + b est la **version suite** de y′ = ay + b."
+            },
+            {
+              "titre": "1/√x",
+              "texte": "a pour primitive **2√x**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Les solutions sont x ↦ C e<sup>−0,5x</sup> + 4, C réel",
+              "quoi": "la famille"
+            },
+            {
+              "texte": "y(0) = 10 donne C + 4 = 10, soit C = 6",
+              "quoi": "la condition initiale"
+            },
+            {
+              "texte": "−0,5 < 0 donc y tend vers 4.",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Vérifie&nbsp;: y′ = −3e<sup>−0,5x</sup> et −0,5y + 2 = ==−3e<sup>−0,5x</sup>==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier la **condition initiale** (une famille ≠ une courbe).",
+            "Oublier le facteur constant avec **u′**.",
+            "Prendre **+b ÷ a** au lieu de −b ÷ a.",
+            "Écrire ln x sans la **valeur absolue** ni le domaine."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Primitive de **2x e<sup>x²</sup>**&nbsp;?",
+            "Solutions de **y′ = 3y**&nbsp;?",
+            "Équilibre de **y′ = −2y + 6**&nbsp;?"
+          ],
+          "reponses": "1) e<sup>x²</sup> · 2) y = C e<sup>3x</sup> · 3) −6 ÷ (−2) = 3"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "titre": "Acides et titrages",
+  "titreSurligne": "titrages",
+  "accroche": "Le pKa lit la courbe de pH.",
+  "epreuve": "bac",
+  "bonus": "pH = pKa + log([A⁻] ÷ [AH]) · demi-équivalence&nbsp;: **pH = pKa** (acide **faible**) · indicateur&nbsp;: virage **contient** le pH<sub>E</sub>",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/spcl/acides-bases-et-titrages-ph-metriques.webp",
+    "prompt": "a glossy violet pH meter probe dipping into a flask with a golden S-shaped titration curve floating above, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "À la demi-équivalence,\npH = pKa&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Henderson-Hasselbalch",
+          "petite": true,
+          "lignes": ["Ka = [A⁻][H₃O⁺] ÷ [AH]", "pH = pKa + log([A⁻] ÷ [AH])"],
+          "regle": "pKa **petit** = acide **fort**. Tampon&nbsp;: AH et A⁻ en quantités voisines, pH ≈ pKa.",
+          "note": "pKa = −log Ka"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Espèce prédominante",
+          "entetes": ["pH", "Forme"],
+          "lignes": [
+            ["pH &lt; pKa", "acide **AH**"],
+            ["pH = pKa", "[AH] = [A⁻]"],
+            ["pH &gt; pKa", "base **A⁻**"],
+            ["acide fort c", "pH = −log c"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Exploiter un titrage pH-métrique",
+          "etapes": [
+            { "titre": "Relever", "texte": "le **pH** après chaque ajout de titrant" },
+            { "titre": "Repérer V<sub>E</sub>", "texte": "**saut de pH**&nbsp;: tangentes ou maximum de dpH/dV" },
+            { "titre": "Calculer", "texte": "n(titré) = n(titrant) versé, puis **c**" },
+            { "titre": "pKa", "texte": "pH lu à **V<sub>E</sub> ÷ 2**" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "10,0 mL d’acide éthanoïque (pKa 4,8) + soude 0,100 mol/L, V<sub>E</sub> = 15,0 mL. __c__&nbsp;?",
+          "calcul": "c = 0,100 × 15,0 ÷ 10,0",
+          "aparte": "à 7,5 mL, pH ≈ 4,8",
+          "resultat": "c = [[0,150 mol/L]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quel indicateur ?",
+          "oui": { "titre": "Phénolphtaléine", "texte": "Virage **8,2 – 10** : il contient le pH à l’équivalence (≈ 8,7)." },
+          "non": { "titre": "Hélianthine", "texte": "Son virage est **acide** : il ne contient pas le pH<sub>E</sub>." },
+          "essai": { "texte": "Direct&nbsp;: titrant sur l’espèce. <i>Indirect</i>&nbsp;: excès connu, on titre **le reste**, dosé = **différence**." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "CH₃COOH + HO⁻ → CH₃COO⁻ + H₂O", "quoi": "la réaction" },
+            { "texte": "À l’équivalence, n(acide) = n(HO⁻) versé", "quoi": "l’égalité" },
+            { "texte": "c = C<sub>B</sub>V<sub>E</sub> ÷ V<sub>A</sub> = 0,150 mol/L", "quoi": "calcul" },
+            { "texte": "À V<sub>E</sub>÷2 = 7,5 mL, pH = pKa ≈ 4,8", "quoi": "le pKa" }
+          ],
+          "pied": "Un diacide donne **plusieurs sauts**&nbsp;: appuie-toi sur le diagramme de distribution."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Lire pH = pKa à la demi-équivalence pour un acide **fort**.",
+            "Oublier que le pH<sub>E</sub> d’un acide faible est **basique**.",
+            "Confondre **pKa petit** et acide faible.",
+            "Prendre un indicateur dont le virage **rate** le pH<sub>E</sub>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel pH pour [A⁻] = [AH]&nbsp;?",
+            "Acide fort à 0,010 mol/L&nbsp;: **pH**&nbsp;?",
+            "Que lit-on à la **demi-équivalence**&nbsp;?"
+          ],
+          "reponses": "1) pH = pKa · 2) pH = 2,0 · 3) le pKa (acide faible)"
+        }
+      ]
+    }
+  ]
+}

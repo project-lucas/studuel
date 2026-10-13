@@ -1,0 +1,171 @@
+{
+  "titre": "États d’un système",
+  "titreSurligne": "système",
+  "accroche": "Quatre grandeurs pour 10²⁵ molécules.",
+  "epreuve": "bac",
+  "bonus": "T(K) = θ(°C) + 273,15 · C = m c · c(eau) = 4185 J·kg⁻¹·K⁻¹ · U fonction d’état",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/description-d-un-systeme-thermodynamique.webp",
+    "prompt": "a glossy violet sealed glass vessel with golden gas molecules bouncing inside and a small golden thermometer, tiny sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Kelvin, toujours\ndans les formules !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Température et capacité",
+          "petite": true,
+          "lignes": [
+            "T(K) = θ(°C) + 273,15",
+            "C = m × c"
+          ],
+          "regle": "**c** capacité thermique massique en J·kg⁻¹·K⁻¹&nbsp;; eau liquide&nbsp;: ==4185==. Les °C ne sont permis que pour un écart **ΔT**.",
+          "note": "zéro absolu : 0 K !"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le type de système",
+          "entetes": [
+            "Notion",
+            "Échange / sens",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "Ouvert",
+              "matière et énergie",
+              "casserole ouverte"
+            ],
+            [
+              "Fermé",
+              "énergie seulement",
+              "bouteille bouchée"
+            ],
+            [
+              "Isolé",
+              "rien",
+              "calorimètre idéal"
+            ],
+            [
+              "Équilibre",
+              "P, V, T constantes",
+              "fin de transformation"
+            ],
+            [
+              "Transformation",
+              "état initial → final",
+              "chauffage d’un gaz"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Délimiter",
+              "texte": "le système et son extérieur, puis son type&nbsp;: ouvert, fermé ou isolé"
+            },
+            {
+              "titre": "Décrire",
+              "texte": "l’état par P, V, T et n, avec la température toujours en kelvin"
+            },
+            {
+              "titre": "Compter",
+              "texte": "l’énergie interne&nbsp;: agitation et interactions, jamais le mouvement d’ensemble"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un gaz est à __θ = 27 °C__. Quelle est sa température absolue&nbsp;?",
+          "calcul": "T = 27 + 273,15",
+          "aparte": "toujours en kelvin&nbsp;!",
+          "resultat": "T ≈ [[300 K]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Énergie interne",
+          "oui": {
+            "titre": "Bouteille dans un train",
+            "texte": "Posée ou lancée à grande vitesse, sa ==même énergie interne==&nbsp;: U ignore le mouvement d’ensemble."
+          },
+          "non": {
+            "titre": "U contient la pesanteur&nbsp;?",
+            "texte": "**Faux**&nbsp;: U ne comprend ni l’énergie cinétique d’ensemble ni celle de **pesanteur**."
+          },
+          "essai": {
+            "texte": "ΔU ne dépend que de l’état initial et final : <i>fonction d’état</i>, jamais du chemin suivi pour y arriver."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Deux échelles",
+              "texte": "P, V, T sont des moyennes"
+            },
+            {
+              "titre": "Pression",
+              "texte": "chocs moyens sur les parois"
+            },
+            {
+              "titre": "Température",
+              "texte": "agitation moyenne"
+            },
+            {
+              "titre": "Eau",
+              "texte": "c élevée, climats adoucis"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mettre des **°C** dans une formule.",
+            "Dire qu’un corps « contient de la **chaleur** ».",
+            "Compter l’énergie de **pesanteur** dans U.",
+            "Confondre **température** et transfert thermique."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Une bouteille bouchée est un système **ouvert**, fermé ou isolé&nbsp;?",
+            "θ = 20 °C : **T** en kelvin, environ&nbsp;?",
+            "ΔU dépend-elle du **chemin** suivi&nbsp;?"
+          ],
+          "reponses": "1) fermé · 2) 293 K · 3) non"
+        }
+      ]
+    }
+  ]
+}

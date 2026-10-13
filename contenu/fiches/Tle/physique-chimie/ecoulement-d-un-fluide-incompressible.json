@@ -1,0 +1,178 @@
+{
+  "titre": "Écoulement d’un fluide",
+  "titreSurligne": "fluide",
+  "accroche": "Là où ça va vite, la pression tombe.",
+  "epreuve": "bac",
+  "bonus": "Dv = S v · S₁v₁ = S₂v₂ · P + ½ρv² + ρgz = cte · Venturi&nbsp;: v augmente, P diminue",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/ecoulement-d-un-fluide-incompressible.webp",
+    "prompt": "a glossy violet pipe narrowing in the middle with golden flowing water streamlines and small golden pressure gauges, tiny sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Plus étroit,\nplus rapide !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Débit et Bernoulli",
+          "petite": true,
+          "lignes": [
+            "S₁ v₁ = S₂ v₂",
+            "P + ½ρv² + ρgz = cte"
+          ],
+          "regle": "**Dv = S × v** en m³·s⁻¹. Bernoulli vaut le long d’une ==même ligne de courant==, fluide parfait, écoulement stationnaire.",
+          "note": "S en m², v en m·s⁻¹ !"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois termes",
+          "entetes": [
+            "Terme",
+            "Nom",
+            "Représente"
+          ],
+          "lignes": [
+            [
+              "P",
+              "statique",
+              "la pression"
+            ],
+            [
+              "½ρv²",
+              "dynamique",
+              "le mouvement"
+            ],
+            [
+              "ρgz",
+              "hauteur",
+              "l’altitude"
+            ],
+            [
+              "Horizontal",
+              "z constant",
+              "P + ½ρv² = cte"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Vérifier",
+              "texte": "les hypothèses&nbsp;: incompressible, stationnaire, sans viscosité"
+            },
+            {
+              "titre": "Conserver",
+              "texte": "le débit pour trouver la vitesse dans chaque section"
+            },
+            {
+              "titre": "Appliquer",
+              "texte": "Bernoulli entre deux points de la même ligne de courant"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un tuyau passe de __S₁ = 8,0 cm²__ à S₂ = 2,0 cm². Si v₁ = 1,0 m·s⁻¹, v₂&nbsp;?",
+          "calcul": "v₂ = S₁ v₁ ÷ S₂ = 8,0 × 1,0 ÷ 2,0",
+          "aparte": "les unités de S se simplifient",
+          "resultat": "v₂ = [[4,0 m·s⁻¹]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Effet Venturi",
+          "oui": {
+            "titre": "Rétrécissement horizontal",
+            "texte": "La vitesse **augmente**, donc la pression ==diminue==&nbsp;: trompe à eau, portance d’une aile."
+          },
+          "non": {
+            "titre": "Vite donc plus comprimé&nbsp;?",
+            "texte": "**Faux**&nbsp;: le fluide va plus vite là où il est le **moins** comprimé."
+          },
+          "essai": {
+            "texte": "Section divisée par 4 : <i>vitesse ×4</i>, et P plus faible dans l’étranglement."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Limites du modèle",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Viscosité",
+              "texte": "les frottements font chuter P"
+            },
+            {
+              "titre": "Gaz rapide",
+              "texte": "plus incompressible"
+            },
+            {
+              "titre": "Deux lignes",
+              "texte": "on ne les compare pas"
+            },
+            {
+              "titre": "Turbulent",
+              "texte": "beaucoup plus de dissipation"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Appliquer Bernoulli sans **vérifier** les hypothèses.",
+            "Oublier de convertir **cm²** en m².",
+            "Croire que P **augmente** avec v.",
+            "Comparer deux **lignes** de courant différentes."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "?",
+          "titre": "Laminaire ou turbulent",
+          "paragraphes": [
+            "Un écoulement **laminaire** se fait en couches parallèles qui ne se mélangent pas&nbsp;: il coûte peu d’énergie. Un écoulement **turbulent** est chaotique et dissipe beaucoup plus. Le passage de l’un à l’autre dépend de la vitesse, du diamètre et de la viscosité."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "La section se **rétrécit** : la vitesse augmente ou diminue&nbsp;?",
+            "Dans un étranglement horizontal, **P** augmente ou diminue&nbsp;?",
+            "S = 0,50 m², v = 2,0 m·s⁻¹&nbsp;: **Dv**&nbsp;?"
+          ],
+          "reponses": "1) augmente · 2) diminue · 3) 1,0 m³·s⁻¹"
+        }
+      ]
+    }
+  ]
+}

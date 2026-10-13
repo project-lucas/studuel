@@ -1,0 +1,165 @@
+{
+  "titre": "Lois discrètes",
+  "titreSurligne": "discrètes",
+  "accroche": "Compter les issues, pondérer les gains.",
+  "epreuve": "bac",
+  "bonus": "E(X) = Σ pᵢxᵢ · V(X) = E(X²) − E(X)² · B(n ; p) : E = np, V = np(1 − p)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-complementaires/lois-discretes.webp",
+    "prompt": "a glossy violet die next to a golden bar chart of probabilities, sparkles"
+  },
+  "marcel": "Trois conditions\npour une binomiale !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Espérance et variance",
+          "taille": "mini",
+          "lignes": [
+            "E(X) = Σ pᵢ xᵢ",
+            "V(X) = E(X²) − E(X)²  ·  σ = √V",
+            "E(aX + b) = aE(X) + b  ·  V(aX + b) = a²V(X)"
+          ],
+          "regle": "La somme des probabilités vaut **1**. Un jeu est ==équitable== si E(gain) = 0. E(X + Y) = E(X) + E(Y) toujours&nbsp;; V(X + Y) = V(X) + V(Y) seulement si **indépendantes**.",
+          "note": "le b disparaît de la variance"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Bernoulli et binomiale",
+          "entetes": [
+            "",
+            "Loi"
+          ],
+          "lignes": [
+            [
+              "Bernoulli",
+              "1 épreuve : E = **p**, V = p(1 − p)"
+            ],
+            [
+              "Binomiale B(n ; p)",
+              "nombre de succès : E = **np**"
+            ],
+            [
+              "Variance",
+              "**np(1 − p)**"
+            ],
+            [
+              "P(X = k)",
+              "C(n,k) pᵏ (1 − p)ⁿ⁻ᵏ"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Utiliser une loi binomiale",
+          "etapes": [
+            {
+              "titre": "Vérifier",
+              "texte": "identiques, indépendantes, deux issues"
+            },
+            {
+              "titre": "Nommer",
+              "texte": "X ~ B(n ; p)"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "P(X = k), ou le complémentaire"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "X ~ B(10 ; 0,2). __Calcule E(X) et P(X ≥ 1).__",
+          "calcul": "E(X) = 10×0,2 = 2",
+          "aparte": "P(X ≥ 1) = 1 − P(X = 0) = 1 − 0,8¹⁰",
+          "resultat": "E = 2 · P = 1 − 0,107 ≈ [[0,893]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Espérance",
+              "texte": "peut ne **pas** être une valeur de X (dé&nbsp;: 3,5)."
+            },
+            {
+              "titre": "Écart-type",
+              "texte": "dispersion dans la **même unité** que X."
+            },
+            {
+              "titre": "Au moins k",
+              "texte": "P(X ≥ k) = **1 − P(X ≤ k−1)**."
+            },
+            {
+              "titre": "Sans remise",
+              "texte": "petite population&nbsp;: épreuves **non** indépendantes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "X compte les succès de 10 épreuves identiques et indépendantes",
+              "quoi": "les trois conditions"
+            },
+            {
+              "texte": "Donc X suit la loi binomiale B(10 ; 0,2)",
+              "quoi": "la loi"
+            },
+            {
+              "texte": "P(X ≥ 1) = 1 − P(X = 0) = 1 − 0,8¹⁰ ≈ 0,893",
+              "quoi": "le complémentaire"
+            }
+          ],
+          "pied": "Espérance négative&nbsp;: jeu ==perdant== à long terme, quelle que soit la chance."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire « binomiale » **sans** vérifier les conditions.",
+            "Additionner des variances de variables **non indépendantes**.",
+            "Calculer **P(X ≥ k)** comme 1 − P(X ≤ k).",
+            "Oublier le carré **a²** dans V(aX + b)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "E(X) = 4&nbsp;: **E(2X + 3)**&nbsp;?",
+            "V(X) = 5&nbsp;: **V(2X + 3)**&nbsp;?",
+            "X ~ B(3 ; 0,5)&nbsp;: **P(X ≥ 1)**&nbsp;?"
+          ],
+          "reponses": "1) 2×4 + 3 = 11 · 2) 2²×5 = 20 · 3) 1 − 0,5³ = 0,875"
+        }
+      ]
+    }
+  ]
+}

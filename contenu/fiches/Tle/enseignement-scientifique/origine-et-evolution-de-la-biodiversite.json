@@ -1,0 +1,127 @@
+{
+  "titre": "La biodiversité",
+  "titreSurligne": "biodiversité",
+  "accroche": "Trois niveaux, cinq crises, une sixième.",
+  "bonus": "**2 millions** d’espèces décrites · **8 à 10 millions** estimées · Permien-Trias **−252 Ma** · Crétacé **−66 Ma**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/enseignement-scientifique/origine-et-evolution-de-la-biodiversite.webp",
+    "prompt": "a glossy violet butterfly with golden wings next to a golden leaf and a small tree, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Un état instantané\ndu vivant !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Trois niveaux",
+          "entetes": ["Niveau", "Ce qu’il désigne"],
+          "lignes": [
+            ["**Génétique**", "diversité des **allèles** dans une espèce"],
+            ["**Spécifique**", "diversité des **espèces** d’un milieu"],
+            ["**Écosystémique**", "diversité des **milieux** eux-mêmes"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Capture-marquage-recapture",
+          "petite": true,
+          "lignes": ["N = {n<sub>1</sub> × n<sub>2</sub>/m}"],
+          "regle": "**n<sub>1</sub>** marqués la 1re fois · **n<sub>2</sub>** capturés la 2e fois · **m** parmi eux, marqués.",
+          "note": "toujours une incertitude"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 3,
+          "titre": "Crises biologiques",
+          "horizontale": true,
+          "etapes": [
+            { "date": "−252 Ma", "texte": "**Permien-Trias** : plus de 90 % des espèces marines disparaissent." },
+            { "date": "−66 Ma", "texte": "**Crétacé-Paléogène** : dinosaures non aviens ; astéroïde et volcanisme." },
+            { "date": "Aujourd’hui", "texte": "**Sixième crise** : extinctions 100 à 1 000 fois le rythme naturel." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Estimer une population",
+          "etapes": [
+            { "titre": "Capturer, marquer", "texte": "n<sub>1</sub> individus, puis on les relâche" },
+            { "titre": "Recapturer", "texte": "n<sub>2</sub> individus, dont m marqués" },
+            { "titre": "Calculer et critiquer", "texte": "N = n<sub>1</sub>n<sub>2</sub>/m, puis tester les hypothèses" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Hypothèses de la méthode",
+          "deux": false,
+          "items": [
+            { "titre": "Remélange", "texte": "les marqués se sont **remélangés**" },
+            { "titre": "Population stable", "texte": "ni naissance ni mort entre les captures" },
+            { "titre": "Marquage neutre", "texte": "il ne change pas la chance d’être repris" }
+          ]
+        },
+        {
+          "type": "texte",
+          "numero": "!",
+          "titre": "Les causes de la sixième crise",
+          "paragraphes": [
+            "Elles sont **anthropiques** : destruction des habitats, surexploitation, espèces invasives, pollutions, changement climatique. Après chaque crise, les survivants se **diversifient** : les mammifères doivent leur essor à celle du Crétacé."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "On marque 50 poissons. À la 2e pêche : 40 poissons dont 10 marqués. Effectif __total__&nbsp;?",
+          "calcul": "N = {50 × 40/10}",
+          "aparte": "2000 ÷ 10",
+          "resultat": "N ≈ [[200 poissons]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que toutes les espèces sont **inventoriées** : 2 sur 8 à 10 millions.",
+            "Donner N **sans incertitude** ni hypothèses.",
+            "Confondre les **trois niveaux** de biodiversité.",
+            "Attribuer la sixième crise à une cause **naturelle**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quels sont les **trois niveaux** de biodiversité&nbsp;?",
+            "Quelle crise a emporté les **dinosaures** non aviens&nbsp;?",
+            "Quelle est la cause de la **sixième** crise&nbsp;?"
+          ],
+          "reponses": "1) génétique, spécifique, écosystémique · 2) Crétacé-Paléogène · 3) les activités humaines"
+        }
+      ]
+    }
+  ]
+}

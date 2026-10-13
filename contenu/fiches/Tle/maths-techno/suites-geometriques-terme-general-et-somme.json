@@ -1,0 +1,116 @@
+{
+  "titre": "Suites géométriques",
+  "titreSurligne": "géométriques",
+  "accroche": "On multiplie toujours par le même nombre.",
+  "epreuve": "bac",
+  "bonus": "u(n) = u(0) × qⁿ · 1 + q + … + qⁿ = (1 − qⁿ⁺¹) ÷ (1 − q) · moyenne géométrique : b = √(ac)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-techno/suites-geometriques-terme-general-et-somme.webp",
+    "prompt": "a glossy golden staircase whose steps grow taller and taller, a tiny violet ball rolling up, small sparkles"
+  },
+  "marcel": "Un quotient constant,\nc’est géométrique !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Terme et somme",
+          "petite": true,
+          "lignes": ["u(n) = u(0) × q<sup>n</sup>", "S = 1<sup>er</sup> × {(1 − q<sup>N</sup>)/(1 − q)}"],
+          "regle": "**q** est la ==raison== (q ≠ 1). L’exposant **N** est le ==nombre de termes==, pas le rang du dernier. Aussi u(n) = u(1) × q<sup>n−1</sup>.",
+          "note": "Si q = 1, la suite est constante&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Sens de variation",
+          "entetes": ["Raison q", "Termes positifs"],
+          "lignes": [
+            ["q &gt; 1", "croissante"],
+            ["0 &lt; q &lt; 1", "décroissante"],
+            ["q = 1", "constante"],
+            ["Arithmétique / géométrique", "+ r / × q"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "premier terme, raison q (en % : 1 ± t/100) et nombre de termes N" },
+            { "titre": "Écrire", "texte": "u(n) = u(0) × q<sup>n</sup>, ou la somme avec N en exposant" },
+            { "titre": "Calculer", "texte": "puissance d’abord, puis le quotient" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "500 abonnés, puis __+ 20 %__ de gains par semaine. Total en 4 semaines&nbsp;?",
+          "calcul": "S = 500 × (1 − 1,2⁴) ÷ (1 − 1,2)\n1,2⁴ = 2,0736",
+          "aparte": "500+600+720+864",
+          "resultat": "S = [[2 684]] abonnés"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Trois termes consécutifs", "texte": "a, b, c conviennent si **b² = a × c**. 4 ; 6 ; 9&nbsp;: 36 = 36." },
+            { "titre": "Moyenne géométrique", "texte": "De 2 et 8&nbsp;: √16 = **4** (et non 5)." },
+            { "titre": "Capital placé", "texte": "2 000 € à 5 % : u(n) = 2 000 × **1,05<sup>n</sup>**." },
+            { "titre": "Puissances de 2", "texte": "1 + 2 + … + 2⁹ = **1 023**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "premier terme 500, raison q = 1,2, N = 4", "quoi": "les données" },
+            { "texte": "S = 500 × (1 − 1,2⁴) ÷ (1 − 1,2)", "quoi": "la formule" },
+            { "texte": "S = 500 × (−1,0736) ÷ (−0,2) = 2 684", "quoi": "le calcul" }
+          ],
+          "pied": "Contrôle&nbsp;: 500 + 600 + 720 + 864 = ==2 684==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mettre en exposant le **rang** du dernier terme au lieu du nombre de termes.",
+            "Écrire q = **0,2** pour + 20 %&nbsp;: c’est 1,2.",
+            "Calculer **u(0) × n × q** au lieu de u(0) × q<sup>n</sup>.",
+            "Utiliser la formule avec **q = 1** (division par 0)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "u(0) = 3 et q = 2&nbsp;: **u(4)**&nbsp;?",
+            "**3 + 6 + 12 + 24**&nbsp;?",
+            "**2 ; 6 ; 18**&nbsp;: nature et raison&nbsp;?"
+          ],
+          "reponses": "1) 3 × 16 = 48 · 2) 3 × (1 − 16) ÷ (1 − 2) = 45 · 3) géométrique, q = 3"
+        }
+      ]
+    }
+  ]
+}

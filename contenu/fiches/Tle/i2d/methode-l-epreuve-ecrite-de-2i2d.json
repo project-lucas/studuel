@@ -1,0 +1,120 @@
+{
+  "titre": "L’écrit de 2I2D",
+  "titreSurligne": "écrit",
+  "accroche": "3 h 30 : formule, calcul, conclusion.",
+  "epreuve": "bac",
+  "bonus": "Écrit **3 h 30**, coef. **9** · pratique 2 h, coef. **7**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/i2d/methode-l-epreuve-ecrite-de-2i2d.webp",
+    "prompt": "a glossy violet exam sheet with a golden pencil and a small calculator and a stopwatch, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Un résultat comparé\nrapporte tout&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le format",
+          "entetes": ["Élément", "À savoir"],
+          "lignes": [
+            ["**Durée**", "3 h 30"],
+            ["**Découpage**", "≈ 2 h 30 tronc commun + 1 h spécifique"],
+            ["**Coefficient**", "9"],
+            ["**Support**", "1 ou 2 produits réels, DT et DR"],
+            ["**Compétences**", "analyser, modéliser, justifier"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Gérer le temps",
+          "entetes": ["Étape", "Temps"],
+          "lignes": [
+            ["**Lecture** du sujet", "10 à 15 min"],
+            ["**Tronc commun**", "≈ 2 h 15"],
+            ["**Spécifique** (AC, EE, ITEC, SIN)", "1 h"],
+            ["**Relecture**, documents réponses", "5 à 10 min"],
+            ["**Réponses**", "numérotées, tous les DR rendus"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Rédiger un calcul complet",
+          "etapes": [
+            { "titre": "Formule", "texte": "littérale : P = C × ω" },
+            { "titre": "Application", "texte": "numérique, avec les unités" },
+            { "titre": "Résultat + conclusion", "texte": "comparé au critère du cahier des charges" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Batterie __48 V – 20 Ah__, conso moyenne __280 W__. Tient-elle 3 h&nbsp;?",
+          "calcul": "E = 48 × 20 = 960 Wh · besoin 280 × 3 = 840 Wh",
+          "aparte": "marge ≈ 14 %",
+          "resultat": "960 &gt; 840 : [[exigence satisfaite]]"
+        },
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "E = U × Q = 48 × 20 = 960 Wh", "quoi": "le calcul" },
+            { "texte": "960 Wh &gt; 840 Wh nécessaires", "quoi": "la comparaison" },
+            { "texte": "L’exigence est satisfaite", "quoi": "la conclusion" }
+          ],
+          "pied": "Un résultat seul rapporte peu&nbsp;: ==comparé au critère==, il rapporte tout."
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Questions qui reviennent",
+          "items": [
+            { "titre": "Relever", "texte": "identifiant, valeur, document" },
+            { "titre": "Compléter", "texte": "ibd, chaîne de puissance, Sankey" },
+            { "titre": "Justifier", "texte": "comparaison chiffrée" },
+            { "titre": "Conclure", "texte": "reprendre les résultats" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier une **conversion** : tr/min en rad/s, Wh en J.",
+            "Donner un résultat **sans unité**.",
+            "Bloquer sur une question : les parties sont **indépendantes**.",
+            "Oublier de rendre les **documents réponses**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle est la **durée** de l’écrit&nbsp;?",
+            "Que faire d’une question qui **bloque**&nbsp;?",
+            "Que doit conclure un calcul de **justification**&nbsp;?"
+          ],
+          "reponses": "1) 3 h 30 · 2) la sauter, y revenir · 3) comparer au critère"
+        }
+      ]
+    }
+  ]
+}

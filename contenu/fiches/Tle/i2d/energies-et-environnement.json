@@ -1,0 +1,114 @@
+{
+  "titre": "Énergies et EE",
+  "titreSurligne": "Énergies",
+  "accroche": "Produire, distribuer, ne pas gaspiller.",
+  "epreuve": "bac",
+  "bonus": "**COP = chaleur fournie / énergie électrique** · pertes Joule = **R × I²**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/i2d/energies-et-environnement.webp",
+    "prompt": "a glossy violet solar panel with a golden sun and a small wind turbine and a lightning bolt, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Le meilleur kilowattheure\nest celui qu’on évite&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 1,
+          "titre": "Le réseau électrique",
+          "etapes": [
+            { "titre": "Transport", "texte": "400 kV, 225 kV" },
+            { "titre": "Distribution", "texte": "20 kV puis 400/230 V" },
+            { "titre": "Équilibre", "texte": "production = consommation, sinon 50 Hz dérive" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Produire",
+          "entetes": ["Source", "Grandeur clé"],
+          "lignes": [
+            ["**Photovoltaïque**", "Wc · 1 000 à 1 400 kWh/kWc/an"],
+            ["**Éolien**", "P ∝ vitesse du vent au cube"],
+            ["**Hydraulique**", "P = ρ g Qv h η"],
+            ["**Cogénération**", "électricité et chaleur"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "La pompe à chaleur",
+          "teinte": "jaune",
+          "lignes": ["COP = {chaleur fournie/énergie électrique consommée}"],
+          "regle": "Avec un COP de **3,5**, 1 kWh électrique donne 3,5 kWh de chaleur, dont **2,5 kWh** pris à l’environnement.",
+          "note": "le COP baisse par grand froid"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "18 panneaux de __400 Wc__, __1 200__ kWh/kWc/an. Production annuelle&nbsp;?",
+          "calcul": "18 × 0,4 = 7,2 kWc · 7,2 × 1 200",
+          "aparte": "foyer : 6 000 kWh/an",
+          "resultat": "≈ [[8 640 kWh]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Pourquoi la haute tension&nbsp;?",
+          "oui": { "titre": "Haute tension", "texte": "À même puissance, **I plus faible** donc pertes Joule réduites." },
+          "non": { "titre": "Basse tension", "texte": "Courant fort, pertes **R × I²** élevées." },
+          "essai": { "texte": "On transporte à 400 kV pour <i>réduire les pertes</i>, puis un transformateur abaisse la tension." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Gérer l’énergie",
+          "deux": true,
+          "items": [
+            { "titre": "Réguler", "texte": "chauffage par pièce, programmation" },
+            { "titre": "Récupérer", "texte": "VMC double flux (70 à 90 %)" },
+            { "titre": "Mesurer", "texte": "sous-comptage" },
+            { "titre": "Stocker", "texte": "ballon piloté, batterie" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **kW** (puissance) et **kWh** (énergie).",
+            "Oublier le **kWc** : 18 × 400 Wc = 7,2 kWc.",
+            "Croire qu’un COP de 3,5 crée de l’énergie **gratuite**.",
+            "Dire que le smart grid **ajoute** de l’énergie."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Pourquoi transporter en **haute tension**&nbsp;?",
+            "Que mesure le **COP**&nbsp;?",
+            "Que vaut **R × I²**&nbsp;?"
+          ],
+          "reponses": "1) moins de pertes Joule · 2) chaleur fournie / énergie élec. · 3) les pertes"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "titre": "L’équilibre chimique",
+  "titreSurligne": "équilibre",
+  "accroche": "Réactifs et produits coexistent.",
+  "epreuve": "bac",
+  "bonus": "Q<sub>r,i</sub> &lt; K&nbsp;: sens **direct** · Q<sub>r,i</sub> &gt; K&nbsp;: sens **indirect** · K ne dépend que de **T** · τ = x<sub>f</sub> ÷ x<sub>max</sub>",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/l-equilibre-chimique.webp",
+    "prompt": "a glossy violet and golden balance scale in perfect equilibrium with two glowing beakers, two golden arrows in opposite directions, sparkles"
+  },
+  "marcel": "À l’équilibre,\nça bouge encore !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Quotient de réaction",
+          "petite": true,
+          "lignes": ["Q<sub>r</sub> = ([C]<sup>c</sup> [D]<sup>d</sup>) ÷ ([A]<sup>a</sup> [B]<sup>b</sup>)", "à l’équilibre&nbsp;: Q<sub>r,éq</sub> = K"],
+          "regle": "Pour a A + b B = c C + d D, chaque [X] est divisée par **c°**&nbsp;: Q<sub>r</sub> est ==sans unité==. Les **solides** et le **solvant** n’y figurent pas.",
+          "note": "K ne dépend que de T&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le critère d’évolution",
+          "entetes": ["Comparaison", "Le système évolue"],
+          "lignes": [
+            ["Q<sub>r,i</sub> &lt; K", "sens direct (produits)"],
+            ["Q<sub>r,i</sub> &gt; K", "sens indirect"],
+            ["Q<sub>r,i</sub> = K", "reste à l’équilibre"],
+            ["K &gt; 10⁴", "quasi totale"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Prévoir le sens",
+          "etapes": [
+            { "titre": "Calculer", "texte": "Q<sub>r,i</sub> avec les concentrations initiales, sans solide ni solvant" },
+            { "titre": "Comparer", "texte": "Q<sub>r,i</sub> à K : le système évolue pour que Q<sub>r</sub> tende vers K" },
+            { "titre": "Conclure", "texte": "sens direct ou indirect, sans aucun calcul d’avancement" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Pour A + B = C + D, K = __10__. À l’état initial, toutes les concentrations valent __0,10 mol·L⁻¹__ sauf [D] = 0,50. Quel sens&nbsp;?",
+          "calcul": "Q<sub>r,i</sub> = (0,10 × 0,50) ÷ (0,10 × 0,10) = 5,0",
+          "aparte": "5,0 &lt; 10",
+          "resultat": "Q<sub>r,i</sub> &lt; K : sens [[direct]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "K ou τ&nbsp;?",
+          "oui": { "titre": "K", "texte": "Une ==constante== du couple, ne dépend que de la **température**, ni du volume ni d’un catalyseur." },
+          "non": { "titre": "Équilibre = tout s’arrête&nbsp;?", "texte": "**Faux**&nbsp;: les deux réactions continuent à la **même vitesse**&nbsp;; seules les concentrations cessent de varier." },
+          "essai": { "texte": "Diluer un acide faible <i>augmente τ</i>, alors que K ne bouge pas." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Q<sub>r,i</sub> = (0,10 × 0,50) ÷ (0,10 × 0,10) = 5,0", "quoi": "le quotient" },
+            { "texte": "Q<sub>r,i</sub> &lt; K = 10", "quoi": "la comparaison" },
+            { "texte": "Le système évolue dans le sens direct.", "quoi": "conclure" }
+          ],
+          "pied": "L’équilibre est ==dynamique== : deux réactions inverses, même vitesse."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mettre un **solide** ou l’eau dans Q<sub>r</sub>.",
+            "Confondre **K** et **τ**.",
+            "Penser que K dépend du **catalyseur**.",
+            "Inverser le sens pour **Q<sub>r,i</sub> &lt; K**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Q<sub>r,i</sub> = 2 et K = 50&nbsp;: quel **sens**&nbsp;?",
+            "De quoi dépend **K**&nbsp;?",
+            "Le solvant figure-t-il dans **Q<sub>r</sub>**&nbsp;?"
+          ],
+          "reponses": "1) direct · 2) de la température seule · 3) non"
+        }
+      ]
+    }
+  ]
+}

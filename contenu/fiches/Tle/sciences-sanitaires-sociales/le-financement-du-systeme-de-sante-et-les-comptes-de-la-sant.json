@@ -1,0 +1,111 @@
+{
+  "titre": "Financer la santé",
+  "titreSurligne": "Financer",
+  "accroche": "Qui paie la santé, et combien ?",
+  "epreuve": "bac",
+  "bonus": "CSBM ~**250 Md€** · Sécu ~**80 %** · T2A **2004**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/sciences-sanitaires-sociales/le-financement-du-systeme-de-sante-et-les-comptes-de-la-sant.webp",
+    "prompt": "a glossy violet piggy bank with a golden medical cross on its side and golden coins falling in, sparkles, same art style as the reference icons, on magenta background, no text"
+  },
+  "marcel": "100 € de soins,\n80 € pris en charge !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les mots clés",
+          "items": [
+            { "terme": "CSBM", "definition": "valeur des soins et **biens médicaux** consommés dans l’année" },
+            { "terme": "DCSi", "definition": "CSBM + longue durée, prévention, gouvernance : sert aux **comparaisons** entre pays" },
+            { "terme": "ONDAM", "definition": "objectif national de **dépenses** d’assurance maladie, voté dans la LFSS" },
+            { "terme": "Reste à charge", "definition": "part payée par le **ménage**, faible en France" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Qui finance la CSBM ?",
+          "entetes": ["Financeur", "Part"],
+          "lignes": [
+            ["**Sécurité sociale**", "environ 80 %"],
+            ["**Complémentaires**", "environ 12 %"],
+            ["**Ménages**", "environ 7 à 8 %"],
+            ["**État, collectivités**", "environ 1 à 2 %"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce qu’il faut savoir expliquer",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Ressources", "texte": "**Cotisations**, CSG, impôts et taxes affectés." },
+            { "titre": "Hôpitaux", "texte": "Payés à l’**activité** (T2A, 2004) plus des dotations." },
+            { "titre": "Libéraux", "texte": "Payés à l’**acte**, avec des forfaits qui montent." },
+            { "titre": "Patients", "texte": "Ticket modérateur, **franchises**, forfait journalier." },
+            { "titre": "Hausse des dépenses", "texte": "**Vieillissement**, maladies chroniques, progrès techniques." },
+            { "titre": "Régulation", "texte": "La **LFSS** fixe l’ONDAM chaque automne." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Lire un chiffre des comptes",
+          "etapes": [
+            { "titre": "Identifier", "texte": "quel agrégat : CSBM ou DCSi ?" },
+            { "titre": "Traduire", "texte": "« 80 % » = 80 € sur 100 € de soins" },
+            { "titre": "Interpréter", "texte": "qui paie, quel effet sur l’accès aux soins" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "La CSBM mesure les soins et biens médicaux consommés dans l’année.", "quoi": "définir" },
+            { "texte": "La Sécurité sociale en finance environ 80 %, les ménages 7 à 8 %.", "quoi": "chiffrer" },
+            { "texte": "Un faible reste à charge favorise l’accès aux soins.", "quoi": "conclure" }
+          ],
+          "pied": "Source : les comptes de la santé, publiés chaque année par la ==DREES==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **dépenses de santé** et dépenses de l’assurance maladie.",
+            "Confondre **CSBM** et DCSi.",
+            "Oublier les **complémentaires**.",
+            "Lire « 80 % » comme 80 € **par personne**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel service publie les **comptes de la santé** ?",
+            "Que fixe la **LFSS** pour l’assurance maladie ?",
+            "Quelle est la **part** de la Sécu dans la CSBM ?"
+          ],
+          "reponses": "1) la DREES · 2) l’ONDAM · 3) environ 80 %"
+        }
+      ]
+    }
+  ]
+}

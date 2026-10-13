@@ -1,0 +1,161 @@
+{
+  "titre": "Nernst et électrolyse",
+  "titreSurligne": "Nernst",
+  "accroche": "Des électrons échangés, ou forcés.",
+  "epreuve": "bac",
+  "bonus": "Anode **+** = **oxydation** · cathode **−** = **réduction** · Q = I × Δt · F = **96 500 C/mol**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/spcl/oxydoreduction-relation-de-nernst-titrages-et-electrolyse.webp",
+    "prompt": "a glossy violet electrolysis cell with two golden electrodes and sparkling bubbles, tiny lightning bolt, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Spontané, ou\nforcé par un courant&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Relation de Nernst",
+          "petite": true,
+          "lignes": [
+            "E = E° + (0,059 ÷ n) × log([Ox] ÷ [Red])"
+          ],
+          "regle": "À 25&nbsp;°C, pour Ox + n e⁻ = Red. Plus [Ox] est grand, plus E est **élevé**. Sens spontané&nbsp;: l’oxydant du couple de **plus haut E** réagit.",
+          "note": "log K = n(E°₁ − E°₂) ÷ 0,059"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "L’électrolyse",
+          "entetes": [
+            "Électrode",
+            "Pôle",
+            "Réaction"
+          ],
+          "lignes": [
+            [
+              "**Anode**",
+              "+",
+              "**oxydation**"
+            ],
+            [
+              "**Cathode**",
+              "−",
+              "**réduction**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Rendement faradique",
+          "etapes": [
+            {
+              "titre": "Charge",
+              "texte": "**Q = I × Δt** (Δt en secondes)"
+            },
+            {
+              "titre": "Électrons",
+              "texte": "**n(e⁻) = Q ÷ F** puis la demi-équation"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "produit **obtenu** ÷ produit **attendu**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Cu²⁺ + 2 e⁻ → Cu, I = 0,50 A pendant 30 min, on pèse 0,27 g. __Rendement__&nbsp;?",
+          "calcul": "Q = 900 C ; n(e⁻) ≈ 9,3×10⁻³ mol ; n(Cu) ≈ 4,7×10⁻³ mol, m ≈ 0,30 g",
+          "aparte": "0,27 ÷ 0,30",
+          "resultat": "rendement ≈ [[90 %]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Titrages et usages",
+          "items": [
+            {
+              "titre": "Couleur",
+              "texte": "MnO₄⁻ violet → Mn²⁺ incolore&nbsp;; la **1ʳᵉ goutte** en excès colore"
+            },
+            {
+              "titre": "Potentiométrique",
+              "texte": "équivalence au **saut de potentiel**&nbsp;; à V<sub>E</sub>÷2, E = E°"
+            },
+            {
+              "titre": "Indirect",
+              "texte": "libérer du **diiode**, titré par le thiosulfate"
+            },
+            {
+              "titre": "Applications",
+              "texte": "dichlore, aluminium, **galvanoplastie**, affinage du cuivre"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Cathode (−)&nbsp;: Cu²⁺ + 2 e⁻ → Cu",
+              "quoi": "demi-équation"
+            },
+            {
+              "texte": "Q = I × Δt = 0,50 × 1 800 = 900 C",
+              "quoi": "la charge"
+            },
+            {
+              "texte": "n(Cu) = Q ÷ (2F) ≈ 4,7×10⁻³ mol",
+              "quoi": "attendu"
+            },
+            {
+              "texte": "rendement = 0,27 ÷ 0,30 ≈ 90 %",
+              "quoi": "conclusion"
+            }
+          ],
+          "pied": "Un écart de **0,3 V** ou plus&nbsp;: réaction quasi totale."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Placer l’oxydation à la **cathode**.",
+            "Oublier de convertir **Δt en secondes**.",
+            "Croire une réaction favorable **forcément rapide**.",
+            "Oublier le **n** (2 e⁻) dans n(e⁻) → n(Cu)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle réaction à l’**anode**&nbsp;?",
+            "I = 1,0 A pendant 965 s&nbsp;: **Q**&nbsp;?",
+            "Pourquoi une réaction **favorable** peut-elle ne pas se faire&nbsp;?"
+          ],
+          "reponses": "1) oxydation · 2) 965 C (0,010 mol e⁻) · 3) blocage cinétique (trop lente)"
+        }
+      ]
+    }
+  ]
+}

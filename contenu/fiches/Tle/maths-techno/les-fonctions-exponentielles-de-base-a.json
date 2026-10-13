@@ -1,0 +1,180 @@
+{
+  "titre": "Exponentielles base a",
+  "titreSurligne": "Exponentielles",
+  "accroche": "La suite géométrique, au temps continu.",
+  "epreuve": "bac",
+  "bonus": "aˣ > 0 · a⁰ = 1 · a<sup>x+y</sup> = aˣ × aʸ · a > 1 croissante · 0 < a < 1 décroissante",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-techno/les-fonctions-exponentielles-de-base-a.webp",
+    "prompt": "a glossy violet curve rising ever faster through a golden point on the vertical axis, tiny golden sparkles"
+  },
+  "marcel": "Une courbe qui\ndécolle toujours !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La fonction aˣ",
+          "petite": true,
+          "lignes": [
+            "f(x) = a<sup>x</sup> (a &gt; 0)",
+            "a<sup>x+y</sup> = a<sup>x</sup> × a<sup>y</sup>"
+          ],
+          "regle": "a⁰ = 1, a<sup>−x</sup> = 1 ÷ a<sup>x</sup>, a<sup>1/2</sup> = √a. Toujours ==strictement positive==, la courbe passe par **(0 ; 1)**.",
+          "note": "L’exposant varie, pas la base&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Sens de variation",
+          "entetes": [
+            "Cas",
+            "Variation"
+          ],
+          "lignes": [
+            [
+              "a &gt; 1",
+              "croissante"
+            ],
+            [
+              "0 &lt; a &lt; 1",
+              "décroissante"
+            ],
+            [
+              "k × aˣ avec k &gt; 0",
+              "comme aˣ"
+            ],
+            [
+              "k × aˣ avec k &lt; 0",
+              "**contraire** de aˣ"
+            ],
+            [
+              "a = 1",
+              "constante (égale à 1)"
+            ],
+            [
+              "k × aˣ, k &lt; 0 : exemple",
+              "−3 × 0,8ˣ croissante"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Modéliser",
+              "texte": "t % par unité de temps : f(x) = k × (1 + t/100)<sup>x</sup>"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "remplacer x, même par une fraction (1/2 : racine carrée)"
+            },
+            {
+              "titre": "Variation",
+              "texte": "regarder a (&gt; 1 ou &lt; 1) puis le signe de k"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "500 bactéries, __+ 40 % par heure__. N(t) = 500 × 1,4<sup>t</sup>. Après 2 h&nbsp;?",
+          "calcul": "N(2) = 500 × 1,4²\n1,4² = 1,96",
+          "aparte": "1,4 &gt; 1 et k &gt; 0 : croissante",
+          "resultat": "N(2) = [[980]] bactéries"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Demi-unité",
+              "texte": "N(0,5) = 500 × √1,4 ≈ **592** : la suite ne le donnait pas."
+            },
+            {
+              "titre": "Exposant négatif",
+              "texte": "4<sup>−1/2</sup> = 1 ÷ 2 = **0,5**."
+            },
+            {
+              "titre": "Produit",
+              "texte": "2<sup>1,5</sup> × 2<sup>0,5</sup> = 2² = **4**."
+            },
+            {
+              "titre": "Puissance",
+              "texte": "(1,1<sup>x</sup>)² = **1,21<sup>x</sup>**."
+            },
+            {
+              "titre": "Lien avec les suites",
+              "texte": "u(n) = u(0) × q<sup>n</sup> devient f(x) = k × a<sup>x</sup>, **x réel**."
+            },
+            {
+              "titre": "Quotient",
+              "texte": "10<sup>2,5</sup> ÷ 10<sup>0,5</sup> = 10² = **100**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "N(t) = 500 × 1,4<sup>t</sup> avec 1,4 = 1 + 40 %",
+              "quoi": "le modèle"
+            },
+            {
+              "texte": "N(2) = 500 × 1,96 = 980",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "1,4 &gt; 1 et 500 &gt; 0 : N est croissante",
+              "quoi": "la variation"
+            }
+          ],
+          "pied": "Contrôle&nbsp;: 500 → 700 → ==980==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre <b>aˣ</b> (exposant variable) avec <b>x²</b> (base variable).",
+            "Croire que k &lt; 0 laisse le **même** sens.",
+            "Écrire a<sup>x+y</sup> = a<sup>x</sup> + a<sup>y</sup>.",
+            "Oublier que a<sup>x</sup> est **toujours &gt; 0**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**a⁰** et **a¹** valent&nbsp;?",
+            "f(x) = −3 × 0,8<sup>x</sup>&nbsp;: **variation**&nbsp;?",
+            "**9<sup>1/2</sup>** vaut&nbsp;?"
+          ],
+          "reponses": "1) 1 et a · 2) croissante (0,8 décroît, k &lt; 0) · 3) √9 = 3"
+        }
+      ]
+    }
+  ]
+}

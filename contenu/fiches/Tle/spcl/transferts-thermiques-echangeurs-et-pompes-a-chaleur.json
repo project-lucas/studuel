@@ -1,0 +1,178 @@
+{
+  "titre": "Transferts thermiques",
+  "titreSurligne": "thermiques",
+  "accroche": "Déplacer la chaleur où l’on veut.",
+  "epreuve": "bac",
+  "bonus": "Φ = ΔT / R<sub>th</sub> · R<sub>th</sub> = e/(λS) · Φ = q<sub>m</sub> c ΔT · COP = Q<sub>c</sub> / W",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/spcl/transferts-thermiques-echangeurs-et-pompes-a-chaleur.webp",
+    "prompt": "a glossy violet heat exchanger with golden hot and cool pipes and a small heat pump, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Du chaud vers\nle froid, sauf PAC !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Trois modes de transfert",
+          "entetes": [
+            "Mode",
+            "Support"
+          ],
+          "lignes": [
+            [
+              "**conduction**",
+              "de proche en proche, sans déplacement"
+            ],
+            [
+              "**convection**",
+              "déplacement d’un fluide"
+            ],
+            [
+              "**rayonnement**",
+              "ondes EM, même dans le vide"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Flux à travers une paroi",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "Φ = {ΔT/R<sub>th</sub>}",
+            "R<sub>th</sub> = {e/λS}"
+          ],
+          "regle": "Φ en **W**. Un isolant a un **λ faible**&nbsp;; en couches, les R<sub>th</sub> **s’additionnent**.",
+          "note": "chaud vers froid"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Dimensionner un échange",
+          "etapes": [
+            {
+              "titre": "Flux",
+              "texte": "**Φ = q<sub>m</sub> × c × ΔT**"
+            },
+            {
+              "titre": "Sens",
+              "texte": "**contre-courant** : échange plus efficace"
+            },
+            {
+              "titre": "Combustible",
+              "texte": "masse = énergie / **PC**"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "0,50 kg/s d’eau chauffée de 15 à 55 °C, PAC de COP 4. __Φ__ et __W__&nbsp;?",
+          "calcul": "Φ = 0,50 × 4 180 × 40",
+          "aparte": "W = Φ / COP",
+          "resultat": "Φ ≈ [[84 kW]], W = 21 kW"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "La pompe à chaleur en quatre temps",
+          "colonnes": 4,
+          "cartes": [
+            {
+              "titre": "Évaporation",
+              "texte": "côté froid, prélève **Q<sub>f</sub>**"
+            },
+            {
+              "titre": "Compression",
+              "texte": "travail **W**, la température monte"
+            },
+            {
+              "titre": "Condensation",
+              "texte": "côté chaud, cède **Q<sub>c</sub>**"
+            },
+            {
+              "titre": "Détente",
+              "texte": "la température baisse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Principes",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Premier",
+              "texte": "**Q<sub>c</sub> = W + Q<sub>f</sub>**"
+            },
+            {
+              "titre": "Second",
+              "texte": "pas de transfert **spontané** du froid vers le chaud"
+            },
+            {
+              "titre": "COP PAC",
+              "texte": "Q<sub>c</sub> / W"
+            },
+            {
+              "titre": "COP frigo",
+              "texte": "Q<sub>f</sub> / W"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que COP &gt; 1 **crée** de l’énergie.",
+            "Additionner des **conductivités** au lieu des R<sub>th</sub>.",
+            "Oublier l’énergie de **vaporisation** q<sub>m</sub> × L.",
+            "Oublier que le transfert va du **chaud vers le froid**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 6,
+          "titre": "Pourquoi COP &gt; 1 ?",
+          "paragraphes": [
+            "La pompe **déplace** de l’énergie depuis l’extérieur."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**Mode** de transfert possible dans le vide&nbsp;?",
+            "Comment s’associent les **R<sub>th</sub>** de couches&nbsp;?",
+            "**COP** de 3 pour 1 kWh électrique&nbsp;?"
+          ],
+          "reponses": "1) le rayonnement · 2) elles s’additionnent · 3) 3 kWh de chaleur"
+        }
+      ]
+    }
+  ]
+}

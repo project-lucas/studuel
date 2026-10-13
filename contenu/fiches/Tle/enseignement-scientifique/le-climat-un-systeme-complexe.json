@@ -1,0 +1,190 @@
+{
+  "titre": "Un système complexe",
+  "titreSurligne": "complexe",
+  "accroche": "Le climat se répond à lui-même.",
+  "bonus": "climat = statistique sur **30 ans** · reçu **340 W/m²** · albédo **30 %** · **−18 °C** → **+15 °C** · océan : **> 90 %** de la chaleur",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/enseignement-scientifique/le-climat-un-systeme-complexe.webp",
+    "prompt": "a glossy violet loop of arrows around a small golden Earth, feedback cycle, snowflake and sun symbols, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Un petit coup,\nun grand effet !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le bilan radiatif",
+          "entetes": [
+            "Flux",
+            "Valeur",
+            "Devenir"
+          ],
+          "lignes": [
+            [
+              "Reçu du Soleil",
+              "**340 W/m²**",
+              "en moyenne"
+            ],
+            [
+              "Réfléchi",
+              "**30 %**",
+              "albédo"
+            ],
+            [
+              "Absorbé",
+              "le reste",
+              "réémis en **infrarouge**"
+            ]
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "L’effet de serre",
+          "deux": false,
+          "items": [
+            {
+              "titre": "Les gaz",
+              "texte": "vapeur d’eau, **CO<sub>2</sub>**, **CH<sub>4</sub>**, N<sub>2</sub>O"
+            },
+            {
+              "titre": "Le mécanisme",
+              "texte": "ils absorbent l’infrarouge du sol et en renvoient **vers le bas**"
+            },
+            {
+              "titre": "Le résultat",
+              "texte": "**−18 °C** sans, **+15 °C** avec"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Les rétroactions",
+          "entetes": [
+            "Type",
+            "Mécanisme",
+            "Effet"
+          ],
+          "lignes": [
+            [
+              "**Positive**",
+              "la glace fond, l’albédo baisse, la surface absorbe plus, elle fond plus",
+              "**amplifie**"
+            ],
+            [
+              "**Positive**",
+              "air plus chaud : plus de vapeur d’eau, gaz à effet de serre",
+              "amplifie"
+            ],
+            [
+              "**Négative**",
+              "sol plus chaud : plus d’infrarouge évacué",
+              "**freine**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les couplages",
+          "colonnes": 1,
+          "cartes": [
+            {
+              "titre": "L’océan",
+              "texte": "absorbe **> 90 %** de la chaleur en excès et un quart du CO<sub>2</sub> ; circulation **thermohaline**"
+            },
+            {
+              "titre": "L’atmosphère",
+              "texte": "redistribue par les cellules de **convection** ; **El Niño** dérègle les pluies"
+            }
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Pourquoi « complexe »",
+          "deux": false,
+          "items": [
+            {
+              "titre": "Variables",
+              "texte": "nombreuses, aucune ne suffit"
+            },
+            {
+              "titre": "Échelles de temps",
+              "texte": "atmosphère : jours ; océan profond : siècles"
+            },
+            {
+              "titre": "Seuils",
+              "texte": "réponse ni linéaire ni immédiate"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "La banquise fond. Quel effet sur la __température__&nbsp;?",
+          "calcul": "glace : albédo élevé\nocéan : albédo faible",
+          "aparte": "absorbe plus",
+          "resultat": "rétroaction [[positive]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **météo** et **climat** (30 ans au moins).",
+            "Croire qu’une rétroaction **positive** est « bonne » : elle amplifie.",
+            "Penser que l’effet de serre est **un défaut** : il donne +15 °C.",
+            "Oublier la **lenteur** de l’océan à répondre."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "À l’équilibre, énergie **reçue = énergie renvoyée**.",
+              "quoi": "bilan"
+            },
+            {
+              "texte": "Un **forçage positif** crée un déséquilibre : la Terre se réchauffe jusqu’à un nouvel équilibre.",
+              "quoi": "forçage"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Sur quelle durée définit-on un **climat**&nbsp;?",
+            "Que provoque une **rétroaction positive**&nbsp;?",
+            "Quel réservoir absorbe plus de **90 %** de l’excès de chaleur&nbsp;?"
+          ],
+          "reponses": "1) au moins 30 ans · 2) une amplification · 3) l’océan"
+        }
+      ]
+    }
+  ]
+}

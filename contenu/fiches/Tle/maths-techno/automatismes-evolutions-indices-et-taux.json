@@ -1,0 +1,116 @@
+{
+  "titre": "Évolutions et indices",
+  "titreSurligne": "indices",
+  "accroche": "Un pourcentage, un coefficient.",
+  "epreuve": "bac",
+  "bonus": "CM = 1 ± t/100 · successives : on multiplie · réciproque : on prend l’inverse · indice = 100 × V ÷ V₀",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-techno/automatismes-evolutions-indices-et-taux.webp",
+    "prompt": "a glossy violet price tag with a golden percent sign and a small golden gauge showing base 100, tiny sparkles"
+  },
+  "marcel": "Traduis le %\nen coefficient !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Coefficient et indice",
+          "petite": true,
+          "lignes": ["valeur finale = valeur initiale × CM", "indice = 100 × {V/V₀}"],
+          "regle": "**Hausse de t %** : CM = 1 + {t/100}. **Baisse de t %** : CM = 1 − {t/100}. Taux = ==(finale − initiale) ÷ initiale==.",
+          "note": "Indices : base 100 seulement&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Que fait-on&nbsp;?",
+          "entetes": ["Situation", "On…"],
+          "lignes": [
+            ["Évolutions successives", "**multiplie** les CM"],
+            ["Évolution réciproque", "prend l’**inverse** du CM"],
+            ["Valeur initiale", "**divise** par le CM"],
+            ["« + 4 % par an »", "suite de raison 1,04"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Traduire", "texte": "chaque pourcentage ou indice en coefficient multiplicateur" },
+            { "titre": "Combiner", "texte": "multiplier les CM, ou prendre l’inverse pour revenir en arrière" },
+            { "titre": "Reconvertir", "texte": "CM − 1 donne le taux global, écrit en pourcentage" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Abonnement __+ 10 %__ en 2024, puis __− 10 %__ en 2025.",
+          "calcul": "CM = 1,1 × 0,9 = 0,99\nCM − 1 = −0,01",
+          "aparte": "il a baissé&nbsp;!",
+          "resultat": "évolution globale : [[− 1 %]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Indice", "texte": "80 € → 92 €&nbsp;: 100 × 92 ÷ 80 = **115**, soit + 15 %." },
+            { "titre": "Entre deux indices", "texte": "120 → 150&nbsp;: 30 ÷ 120 = **+ 25 %**, pas + 30 %." },
+            { "titre": "Annuler + 25 %", "texte": "On multiplie par 1 ÷ 1,25 = 0,8, soit **− 20 %**." },
+            { "titre": "Doubler, diviser", "texte": "« Double » : CM = 2. « Moitié » : CM = **0,5**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "CM₁ = 1,1 et CM₂ = 0,9", "quoi": "les coefficients" },
+            { "texte": "CM = 1,1 × 0,9 = 0,99", "quoi": "le coefficient global" },
+            { "texte": "0,99 = 1 − 0,01 : baisse de 1 %", "quoi": "le taux global" }
+          ],
+          "pied": "Contrôle&nbsp;: 100 → 110 → ==99==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Additionner les pourcentages&nbsp;: + 10 % puis − 10 % ne fait **pas 0**.",
+            "Lire une **différence d’indices** comme un pourcentage.",
+            "Prendre **1,5** pour + 5 %&nbsp;: c’est 1,05.",
+            "Annuler + 25 % par **− 25 %**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**+ 20 %** puis **+ 50 %**&nbsp;: évolution globale&nbsp;?",
+            "Un indice passe de **200 à 250**&nbsp;: taux&nbsp;?",
+            "Pour annuler une baisse de **20 %**&nbsp;: CM&nbsp;?"
+          ],
+          "reponses": "1) 1,2 × 1,5 = 1,8, soit + 80 % · 2) + 25 % · 3) 1 ÷ 0,8 = 1,25"
+        }
+      ]
+    }
+  ]
+}

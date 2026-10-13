@@ -1,0 +1,117 @@
+{
+  "titre": "Sécurité des réseaux",
+  "titreSurligne": "Sécurité",
+  "accroche": "Chiffrer, signer, authentifier.",
+  "epreuve": "bac",
+  "bonus": "chiffrer = **clé publique du destinataire** · signer = **clé privée de l’émetteur** · HTTPS = asymétrique puis **symétrique**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/nsi/securite-des-reseaux.webp",
+    "prompt": "a glossy violet padlock with a golden key crossing it, tiny golden sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Chiffrer n’est pas\nsigner !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les trois garanties",
+          "items": [
+            { "terme": "Confidentialité", "definition": "personne d’autre ne lit&nbsp;: le **chiffrement**" },
+            { "terme": "Intégrité", "definition": "rien n’a été modifié&nbsp;: le **hachage**" },
+            { "terme": "Authenticité", "definition": "l’interlocuteur est le bon&nbsp;: **signature** et **certificat**" },
+            { "terme": "Sel", "definition": "aléa ajouté au mot de passe avant le **hachage**" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Symétrique ou asymétrique",
+          "entetes": ["", "Clés"],
+          "lignes": [
+            ["**Symétrique** (AES)", "**une** clé partagée"],
+            ["rapide", "gros volumes"],
+            ["**Asymétrique** (RSA)", "paire **publique / privée**"],
+            ["lent", "sert à échanger une clé"],
+            ["**HTTPS**", "RSA puis AES"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Chiffrer ou signer",
+          "oui": { "titre": "Chiffrer", "texte": "avec la **clé publique du destinataire**&nbsp;: lui seul déchiffre." },
+          "non": { "titre": "Signer", "texte": "avec **sa propre clé privée**&nbsp;: tous vérifient l’origine." },
+          "essai": { "titre": "À retenir", "texte": "la signature ne cache rien&nbsp;: elle ==prouve== qui a écrit." }
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Alice veut un message __secret__ pour Bob. Quelle clé&nbsp;?",
+          "calcul": "seul Bob doit lire → seul Bob déchiffre",
+          "aparte": "clé de Bob",
+          "resultat": "= [[clé publique de Bob]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Attaques et parades",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Homme du milieu", "texte": "s’intercale et relaie&nbsp;: **certificat** vérifié." },
+            { "titre": "Hameçonnage", "texte": "fausse page&nbsp;: **vigilance**, double facteur." },
+            { "titre": "Déni de service", "texte": "saturer un serveur de requêtes&nbsp;: **pare-feu**." },
+            { "titre": "Injection SQL", "texte": "requête détournée par la saisie&nbsp;: requêtes **préparées**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Alice chiffre avec la clé publique de Bob.", "quoi": "la clé" },
+            { "texte": "Seul Bob possède la clé privée associée.", "quoi": "pourquoi" },
+            { "texte": "Donc seul Bob peut lire&nbsp;: confidentialité.", "quoi": "la garantie" }
+          ],
+          "pied": "Le hachage **SHA-256** est à ==sens unique==, avec effet d’avalanche."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Chiffrer avec sa **clé privée** et croire le message secret.",
+            "Dire que le cadenas **garantit** un site honnête.",
+            "Stocker les mots de passe **en clair**, ou sans sel.",
+            "Confondre hachage (sans retour) et **chiffrement**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle garantie apporte la **signature**&nbsp;?",
+            "À quoi sert RSA dans **HTTPS**&nbsp;?",
+            "Peut-on retrouver un message depuis son **empreinte**&nbsp;?"
+          ],
+          "reponses": "1) l’authenticité (et l’intégrité) · 2) échanger la clé de session · 3) non, sens unique"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "titre": "Changements d’état",
+  "titreSurligne": "état",
+  "epreuve": "bac",
+  "accroche": "Ce que coûte un état, ce que rend un feu.",
+  "bonus": "Q = m × c × ΔT · Q = m × L · Q = n × E<sub>molaire</sub> · L<sub>vap</sub> eau = 2 260 kJ/kg · L<sub>fus</sub> = 334 kJ/kg",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie-maths/changements-d-etat-et-combustions-bilans-energetiques.webp",
+    "prompt": "a glossy violet ice cube melting into a golden water drop above a small golden flame, steam swirls, sparkles"
+  },
+  "marcel": "Fondre coûte cher,\nbrûler rapporte !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les bilans d’énergie",
+          "petite": true,
+          "lignes": ["Q = m × c × ΔT", "Q = n × E<sub>molaire</sub>"],
+          "regle": "Rompre des liaisons **coûte** de l’énergie (fusion, vaporisation)&nbsp;; en former en **libère**. Eau&nbsp;: fusion 334 kJ/kg, vaporisation 2 260 kJ/kg.",
+          "note": "liaisons hydrogène"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le diagramme (P, T)",
+          "entetes": ["Repère", "Eau", "Sens"],
+          "lignes": [
+            ["Point triple", "0,01 °C, 611 Pa", "3 états coexistent"],
+            ["Point critique", "374 °C, 221 bars", "liquide = gaz"],
+            ["Sous 1 bar", "100 °C", "ébullition"],
+            ["Autocuiseur, 2 bars", "environ 120 °C", "cuit plus vite"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Découper", "texte": "chauffer la glace, la fondre, chauffer l’eau&nbsp;: une étape par palier" },
+            { "titre": "Calculer", "texte": "Q = m × c × ΔT, ou Q = m × L pour un changement d’état" },
+            { "titre": "Sommer", "texte": "additionner les Q, en kJ, puis comparer les parts" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "0,5 kg de glace de −10 °C à de l’eau à 20 °C. L’__énergie__ totale&nbsp;?",
+          "calcul": "10,5 + 167 + 41,8 kJ",
+          "aparte": "glace, fusion, eau",
+          "resultat": "Q ≈ [[219 kJ]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Combustion",
+          "oui": { "titre": "Méthane", "texte": "CH<sub>4</sub> + 2 O<sub>2</sub> → CO<sub>2</sub> + 2 H<sub>2</sub>O. 1 m³ ≈ 41,7 mol, soit **33 MJ** (9,3 kWh) et 1,8 kg de CO<sub>2</sub>." },
+          "non": { "titre": "Combustion propre", "texte": "Faux&nbsp;: un combustible fossile libère du **carbone stocké** depuis des millions d’années." },
+          "essai": { "texte": "Octane&nbsp;: 2 C<sub>8</sub>H<sub>18</sub> + 25 O<sub>2</sub> → 16 CO<sub>2</sub> + 18 H<sub>2</sub>O, donc <i>8 mol de CO<sub>2</sub> par mol brûlée</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Q<sub>1</sub> = 0,5 × 2 100 × 10 = 10,5 kJ", "quoi": "chauffer la glace" },
+            { "texte": "Q<sub>2</sub> = 0,5 × 334 = 167 kJ", "quoi": "la fusion" },
+            { "texte": "Q<sub>3</sub> = 0,5 × 4 180 × 20 = 41,8 kJ, total ≈ 219 kJ", "quoi": "avec l’unité" }
+          ],
+          "pied": "La fusion pèse ==trois quarts== du total&nbsp;; une chaudière **à condensation** récupère environ 10 % de plus."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier l’étape de **changement d’état**.",
+            "Utiliser c de l’eau pour la **glace**.",
+            "Mélanger **kJ** et **J** dans la somme.",
+            "Confondre énergie **molaire** et par kilogramme."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Se **vaporiser** : l’énergie est-elle absorbée ou libérée&nbsp;?",
+            "Au **point critique**, que devient la différence liquide-gaz&nbsp;?",
+            "**Q** pour 2 mol brûlées à 800 kJ/mol&nbsp;?"
+          ],
+          "reponses": "1) absorbée · 2) elle disparaît · 3) 1 600 kJ"
+        }
+      ]
+    }
+  ]
+}

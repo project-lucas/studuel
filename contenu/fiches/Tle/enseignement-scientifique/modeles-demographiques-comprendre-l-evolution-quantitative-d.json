@@ -1,0 +1,174 @@
+{
+  "titre": "Modèles démographiques",
+  "titreSurligne": "démographiques",
+  "accroche": "Trois modèles, et leurs limites.",
+  "bonus": "Règle des 70 · **8 milliards** en 2022 · plafond vers **10 milliards**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/enseignement-scientifique/modeles-demographiques-comprendre-l-evolution-quantitative-d.webp",
+    "prompt": "a glossy violet S-shaped curve graph with golden dots and a row of tiny golden people, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Un modèle prolonge\nune hypothèse !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois modèles",
+          "entetes": [
+            "Modèle",
+            "Constant",
+            "Formule",
+            "Courbe"
+          ],
+          "lignes": [
+            [
+              "**Linéaire**",
+              "un **nombre**",
+              "N(t) = N<sub>0</sub> + a × t",
+              "droite"
+            ],
+            [
+              "**Exponentiel**",
+              "un **%**",
+              "N(t) = N<sub>0</sub> × (1 + r)<sup>t</sup>",
+              "s’envole"
+            ],
+            [
+              "**Logistique**",
+              "rien : K limite",
+              "plateau vers K",
+              "courbe en **S**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Règle des 70",
+          "petite": true,
+          "lignes": [
+            "doublement ≈ {70/taux en %}"
+          ],
+          "regle": "En croissance **exponentielle**, le temps de doublement est **constant**. 2 % par an : environ **35 ans**.",
+          "note": "r = 0,02 pour +2 %"
+        },
+        {
+          "type": "definitions",
+          "numero": 3,
+          "titre": "À définir",
+          "items": [
+            {
+              "terme": "Capacité biotique K",
+              "definition": "effectif **maximal** que le milieu peut soutenir"
+            },
+            {
+              "terme": "Transition démographique",
+              "definition": "mortalité puis natalité baissent : l’**écart** fait la croissance"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Choisir un modèle",
+          "etapes": [
+            {
+              "titre": "Observer",
+              "texte": "nombre fixe ou %&nbsp;?"
+            },
+            {
+              "titre": "Tester",
+              "texte": "**données** passées"
+            },
+            {
+              "titre": "Limiter",
+              "texte": "ressources : **K**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 5,
+          "titre": "Population humaine",
+          "entetes": [
+            "Repère",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Seuil franchi en 2022",
+              "**8 milliards**"
+            ],
+            [
+              "Taux d’accroissement",
+              "**diminue** depuis les années 1970"
+            ],
+            [
+              "Plafond projeté",
+              "≈ **10 milliards**"
+            ]
+          ]
+        },
+        {
+          "type": "texte",
+          "numero": "!",
+          "titre": "Un modèle ne prédit pas",
+          "paragraphes": [
+            "Il **prolonge une hypothèse** : change le taux, la courbe change. Le passage au **logistique** arrive quand les ressources deviennent **limitantes**."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une population croît de 3,5 % par an. Temps de __doublement__&nbsp;?",
+          "calcul": "70 ÷ 3,5",
+          "aparte": "règle des 70",
+          "resultat": "≈ [[20 ans]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre « +50 » (**linéaire**) et « +5 % » (**exponentiel**).",
+            "Écrire r = 2 pour +2 % : r = **0,02**.",
+            "Croire qu’un modèle **prédit**.",
+            "Oublier le **plateau K**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle courbe a la forme d’un **S**&nbsp;?",
+            "Doublement à **2 %** par an&nbsp;?",
+            "Que représente **K** dans le modèle logistique&nbsp;?"
+          ],
+          "reponses": "1) la logistique · 2) environ 35 ans · 3) la capacité biotique (effectif maximal)"
+        }
+      ]
+    }
+  ]
+}

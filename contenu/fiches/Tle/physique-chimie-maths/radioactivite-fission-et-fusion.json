@@ -1,0 +1,112 @@
+{
+  "titre": "Radioactivité",
+  "titreSurligne": "Radioactivité",
+  "epreuve": "bac",
+  "accroche": "Au cœur des noyaux, la moitié part.",
+  "bonus": "N(t) = N<sub>0</sub> e<sup>−λt</sup> · t<sub>½</sub> = ln 2 ÷ λ · après n demi-vies&nbsp;: N<sub>0</sub> ÷ 2<sup>n</sup> · E = Δm × c²",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie-maths/radioactivite-fission-et-fusion.webp",
+    "prompt": "a glossy violet atom nucleus splitting in two with golden glowing particles and small golden rays, sparkles"
+  },
+  "marcel": "Une demi-vie,\nla moitié a filé !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Décroissance",
+          "petite": true,
+          "lignes": ["N(t) = N<sub>0</sub> × e<sup>−λ × t</sup>", "t<sub>½</sub> = ln 2 ÷ λ"],
+          "regle": "**Activité** en becquerels (Bq) = désintégrations par seconde. Après **n** demi-vies, il reste **N<sub>0</sub> ÷ 2<sup>n</sup>**. Dans une équation nucléaire, **A** et **Z** se conservent.",
+          "note": "exponentielle, jamais zéro"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les rayonnements",
+          "entetes": ["Type", "Particule", "Arrêté par"],
+          "lignes": [
+            ["α", "noyau d’hélium", "une feuille de papier"],
+            ["β⁻ / β⁺", "électron / positon", "quelques mm d’aluminium"],
+            ["γ", "photon très énergétique", "plomb, béton épais"],
+            ["Demi-vie", "C 14&nbsp;: 5 730 ans", "F 18&nbsp;: 110 min"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Équation", "texte": "écrire la réaction et vérifier la conservation de A et de Z" },
+            { "titre": "Demi-vies", "texte": "reste en fraction 1/2<sup>n</sup>&nbsp;: compter n, puis t = n × t<sub>½</sub>" },
+            { "titre": "Énergie", "texte": "défaut de masse Δm en kg, puis E = Δm × c²" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Il reste 25 % du carbone 14 initial (t<sub>½</sub> = 5 730 ans). Son __âge__&nbsp;?",
+          "calcul": "25 % = 1/4 = 1/2², donc n = 2",
+          "aparte": "puis n × t<sub>½</sub>",
+          "resultat": "t = 2 × 5 730 = [[11 460 ans]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Fission et fusion",
+          "oui": { "titre": "Fission", "texte": "<sup>235</sup>U + n → <sup>92</sup>Kr + <sup>141</sup>Ba + 3 n. A&nbsp;: 235 + 1 = 92 + 141 + 3. Z&nbsp;: 92 = 36 + 56." },
+          "non": { "titre": "Fusion", "texte": "Deux noyaux légers **fusionnent**&nbsp;: deutérium + tritium → hélium 4 + neutron. C’est le Soleil, et le projet **ITER**." },
+          "essai": { "texte": "Δm ≈ 3,5 × 10⁻²⁸ kg&nbsp;: E = <i>3,5 × 10⁻²⁸ × (3,00 × 10⁸)² ≈ 3,2 × 10⁻¹¹ J</i>, environ 200 MeV." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "N = 25 % de N<sub>0</sub> = N<sub>0</sub> ÷ 2², donc n = 2", "quoi": "compter les demi-vies" },
+            { "texte": "t = n × t<sub>½</sub> = 2 × 5 730", "quoi": "formule puis nombres" },
+            { "texte": "t ≈ 11 460 ans", "quoi": "avec l’unité" }
+          ],
+          "pied": "Une réaction nucléaire n’est utile que si le ==défaut de masse est positif==, avec une réaction en chaîne contrôlée."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’après **deux** demi-vies tout a disparu.",
+            "Oublier de convertir **Δm en kg** pour E = Δm × c².",
+            "Confondre **Bq** (désintégrations/s) et demi-vie.",
+            "Écrire une équation où **A ou Z** ne se conserve pas."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Il reste **N<sub>0</sub> ÷ 8**&nbsp;: combien de demi-vies&nbsp;?",
+            "Particule **α**&nbsp;: A et Z&nbsp;?",
+            "Qui arrête le rayonnement **γ**&nbsp;?"
+          ],
+          "reponses": "1) 3 · 2) A = 4, Z = 2 (hélium) · 3) plomb ou béton épais"
+        }
+      ]
+    }
+  ]
+}

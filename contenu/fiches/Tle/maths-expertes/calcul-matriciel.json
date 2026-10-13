@@ -1,0 +1,176 @@
+{
+  "titre": "Calcul matriciel",
+  "titreSurligne": "matriciel",
+  "accroche": "Un tableau de nombres qu’on multiplie.",
+  "epreuve": "bac",
+  "bonus": "A (n×p) × B (p×q) = (n×q) · AB ≠ BA · inversible ⇔ ad − bc ≠ 0 · Aⁿ = P Dⁿ P⁻¹ · AX = B ⇒ X = A⁻¹B",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-expertes/calcul-matriciel.webp",
+    "prompt": "a glossy violet square grid of numbered tiles framed by golden brackets, sparkles"
+  },
+  "marcel": "AB n’est pas BA,\nattention au côté !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le produit",
+          "taille": "mini",
+          "lignes": [
+            "A (n × p) · B (p × q)",
+            "= AB (n × q)"
+          ],
+          "regle": "Défini si colonnes de A = lignes de B. Coefficient (i ; j)&nbsp;: **ligne i de A** × **colonne j de B**. Non commutatif, et un produit peut être **nul** sans facteur nul.",
+          "note": "de quel côté on multiplie&nbsp;?"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Matrice 2 × 2 (a b ; c d)",
+          "entetes": [
+            "Notion",
+            "Règle"
+          ],
+          "lignes": [
+            [
+              "Déterminant",
+              "**ad − bc**"
+            ],
+            [
+              "Inversible",
+              "si et seulement si det ≠ 0"
+            ],
+            [
+              "Inverse",
+              "échanger a et d, changer le signe de b et c, diviser par det"
+            ],
+            [
+              "Identité Iₙ",
+              "AI = IA = A"
+            ],
+            [
+              "Vocabulaire",
+              "carrée n = p · colonne p = 1 · ligne n = 1"
+            ],
+            [
+              "Produit nul",
+              "possible sans facteur nul"
+            ],
+            [
+              "Puissance",
+              "par récurrence ou P Dⁿ P⁻¹"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer Aⁿ par diagonalisation",
+          "etapes": [
+            {
+              "titre": "Donnée",
+              "texte": "l’énoncé fournit P inversible et D diagonale avec A = P D P⁻¹"
+            },
+            {
+              "titre": "Puissance de D",
+              "texte": "chaque coefficient diagonal passe à la puissance n"
+            },
+            {
+              "titre": "Recomposer",
+              "texte": "Aⁿ = P Dⁿ P⁻¹"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "A = (2 1 ; 5 3). Inverse de __A__&nbsp;?",
+          "calcul": "det = 2 × 3 − 1 × 5 = 1 ≠ 0",
+          "aparte": "inversible",
+          "resultat": "A⁻¹ = [[(3 −1 ; −5 2)]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Systèmes et puissances",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "AX = B",
+              "texte": "A inversible&nbsp;: **X = A⁻¹B**, solution unique."
+            },
+            {
+              "titre": "Non inversible",
+              "texte": "une infinité de solutions, ou aucune."
+            },
+            {
+              "titre": "Récurrence",
+              "texte": "conjecturer Aⁿ sur les premières puissances, puis démontrer."
+            },
+            {
+              "titre": "Taille",
+              "texte": "somme et produit par un réel&nbsp;: **même taille**, terme à terme."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "det A = 2 × 3 − 1 × 5 = 1, non nul",
+              "quoi": "le déterminant"
+            },
+            {
+              "texte": "A⁻¹ = (1 ÷ 1) × (3 −1 ; −5 2)",
+              "quoi": "la formule"
+            },
+            {
+              "texte": "Vérif.&nbsp;: A A⁻¹ = (6−5 −2+2 ; 15−15 −5+6) = I",
+              "quoi": "le contrôle"
+            }
+          ],
+          "pied": "Pour résoudre AX = B&nbsp;: ==multiplier à gauche== par A⁻¹ des deux côtés."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire **AB = BA**.",
+            "Simplifier **sans regarder** le côté de la multiplication.",
+            "Croire que AB = 0 impose **A = 0 ou B = 0**.",
+            "Inverser une matrice dont le **déterminant est nul**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Taille de **A × B** : A 2×3, B 3×4&nbsp;?",
+            "**Déterminant** de (1 2 ; 3 4)&nbsp;?",
+            "**AX = B**, A inversible&nbsp;: X&nbsp;?"
+          ],
+          "reponses": "1) 2 × 4 · 2) 1 × 4 − 2 × 3 = −2 · 3) X = A⁻¹B"
+        }
+      ]
+    }
+  ]
+}

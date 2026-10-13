@@ -1,0 +1,172 @@
+{
+  "titre": "Bonnes pratiques",
+  "titreSurligne": "pratiques",
+  "accroche": "Écrire pour celui qui relira.",
+  "epreuve": "bac",
+  "bonus": "nommer · commenter le <b>pourquoi</b> · tester · versionner (git) · spécifier d’abord",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/nsi/bonnes-pratiques-logicielles.webp",
+    "prompt": "a glossy violet clipboard checklist with golden check marks and a tiny golden pencil, sparkles"
+  },
+  "marcel": "Clair aujourd’hui,\nsauvé demain !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Les règles d’écriture",
+          "deux": false,
+          "items": [
+            {
+              "titre": "Nommer",
+              "texte": "<i>nb_eleves_inscrits</i> plutôt que <i>x</i> : plus la portée est large, plus le nom est explicite."
+            },
+            {
+              "titre": "Commenter",
+              "texte": "le **pourquoi**, jamais « incrémente i »."
+            },
+            {
+              "titre": "Pas de duplication",
+              "texte": "un bug se corrigerait à **un seul** endroit."
+            },
+            {
+              "titre": "Fonctions courtes",
+              "texte": "une fonction fait **une seule chose**."
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les cas d’un test unitaire",
+          "entetes": [
+            "Cas",
+            "Exemples"
+          ],
+          "lignes": [
+            [
+              "**Nominal**",
+              "l’usage attendu"
+            ],
+            [
+              "**Limite**",
+              "liste vide, un élément, borne exacte"
+            ],
+            [
+              "**Erreur**",
+              "entrée invalide"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Livrer un programme sûr",
+          "etapes": [
+            {
+              "titre": "Spécifier",
+              "texte": "ce qu’il doit faire **et ne pas faire**"
+            },
+            {
+              "titre": "Tester",
+              "texte": "écrire des tests, puis refactoriser sans crainte"
+            },
+            {
+              "titre": "Versionner",
+              "texte": "petits enregistrements, message qui dit l’**intention**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un test réussit sur 5 cas. __Le programme est-il prouvé correct__&nbsp;?",
+          "calcul": "Dijkstra : un test montre la **présence**<br>de bugs, jamais l’absence",
+          "aparte": "5 cas seulement",
+          "resultat": "= [[Non]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "git",
+              "texte": "historique, retour en arrière, travail à plusieurs."
+            },
+            {
+              "titre": "Refactorisation",
+              "texte": "rendue possible par les **tests**."
+            },
+            {
+              "titre": "Commentaire faux",
+              "texte": "pire que **pas** de commentaire."
+            },
+            {
+              "titre": "Mauvaise spec",
+              "texte": "un programme **raté**, même sans bug."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "« les tests ne prouvent pas l’absence de bugs »",
+              "quoi": "Dijkstra"
+            },
+            {
+              "texte": "« cas nominal, limites et erreurs »",
+              "quoi": "tests"
+            },
+            {
+              "texte": "« commit petit, message explicite »",
+              "quoi": "git"
+            }
+          ],
+          "pied": "Une fonction dont le nom contient « ==et== » en fait deux."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Commenter **ce que fait** le code au lieu du pourquoi.",
+            "Ne tester que le cas **nominal**.",
+            "Copier-coller un bloc&nbsp;: les deux copies **divergeront**.",
+            "Croire qu’un test réussi **prouve** le programme."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que doit expliquer un **commentaire** utile&nbsp;?",
+            "Citer **deux** cas limites d’un test.",
+            "Que disent les tests selon **Dijkstra**&nbsp;?"
+          ],
+          "reponses": "1) le pourquoi · 2) liste vide, un seul élément, borne exacte · 3) la présence de bugs, jamais leur absence"
+        }
+      ]
+    }
+  ]
+}

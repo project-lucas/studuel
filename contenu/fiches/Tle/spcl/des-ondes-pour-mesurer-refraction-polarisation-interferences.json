@@ -1,0 +1,178 @@
+{
+  "titre": "Ondes pour mesurer",
+  "titreSurligne": "mesurer",
+  "accroche": "Un indice, une taille, une vitesse.",
+  "epreuve": "bac",
+  "bonus": "n₁ sin i₁ = n₂ sin i₂ · θ ≈ λ/a · sin θ = k λ/a · Δf ≈ f v/c",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/spcl/des-ondes-pour-mesurer-refraction-polarisation-interferences.webp",
+    "prompt": "a glossy violet laser beam passing through a thin hair producing golden diffraction fringes on a screen, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Une onde,\nune mesure !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Réfraction",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "n₁ × sin i₁ = n₂ × sin i₂",
+            "sin i<sub>lim</sub> = {n₂/n₁}"
+          ],
+          "regle": "Angles mesurés par rapport à la **normale**. Au-delà de i<sub>lim</sub>&nbsp;: **réflexion totale** (fibre optique).",
+          "note": "n₂ > n₁ : on se rapproche de la normale"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Interférences",
+          "entetes": [
+            "Différence de chemin",
+            "Résultat"
+          ],
+          "lignes": [
+            [
+              "δ = k × λ",
+              "**constructives** : maximum"
+            ],
+            [
+              "δ = (k + ½) × λ",
+              "**destructives** : minimum"
+            ],
+            [
+              "réseau",
+              "sin θ = k × λ / a"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Quelle onde pour quelle mesure ?",
+          "colonnes": 4,
+          "cartes": [
+            {
+              "titre": "Réfraction",
+              "texte": "un **indice** (réfractomètre, sucre)"
+            },
+            {
+              "titre": "Polarisation",
+              "texte": "une **concentration** (angle de rotation)"
+            },
+            {
+              "titre": "Diffraction",
+              "texte": "une **taille** a, avec θ ≈ λ/a"
+            },
+            {
+              "titre": "Doppler",
+              "texte": "une **vitesse**, Δf ≈ f × v/c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Mesurer par diffraction",
+          "etapes": [
+            {
+              "titre": "Écran",
+              "texte": "mesurer la **tache centrale** L et la distance D"
+            },
+            {
+              "titre": "Angle",
+              "texte": "**θ = (L/2) / D**, en radians"
+            },
+            {
+              "titre": "Taille",
+              "texte": "**a = λ / θ**"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Laser 650 nm, tache de 4,0 cm à 2,0 m. __a__ d’un cheveu&nbsp;?",
+          "calcul": "θ = 0,020 / 2,0 = 0,010 rad",
+          "aparte": "a = λ / θ",
+          "resultat": "a = 650 × 10⁻⁹ / 0,010 = [[65 µm]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Polariseur et Doppler",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Analyseur croisé",
+              "texte": "à **90°**, il éteint la lumière"
+            },
+            {
+              "titre": "Solution chirale",
+              "texte": "fait **tourner** la polarisation"
+            },
+            {
+              "titre": "Rapprochement",
+              "texte": "fréquence reçue **plus grande**"
+            },
+            {
+              "titre": "Éloignement",
+              "texte": "fréquence reçue **plus petite**"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mesurer l’angle de Snell par rapport à la **surface**.",
+            "Mettre θ en **degrés** dans θ ≈ λ/a.",
+            "Oublier le **1/2** : θ se lit sur la moitié de la tache.",
+            "Confondre franges **constructives** et destructives."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 6,
+          "titre": "Une idée commune",
+          "paragraphes": [
+            "Chaque mesure revient à lire un **angle**, un **retard** ou un **décalage de fréquence**, puis à appliquer la formule du phénomène."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quand a lieu la **réflexion totale**&nbsp;?",
+            "Condition d’interférences **constructives**&nbsp;?",
+            "Source qui s’approche&nbsp;: **f** reçue&nbsp;?"
+          ],
+          "reponses": "1) n₁ > n₂, i > i_lim · 2) δ = kλ · 3) plus grande que f émise"
+        }
+      ]
+    }
+  ]
+}

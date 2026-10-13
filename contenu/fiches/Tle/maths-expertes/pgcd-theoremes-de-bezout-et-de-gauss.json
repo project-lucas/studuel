@@ -1,0 +1,185 @@
+{
+  "titre": "PGCD, Bézout, Gauss",
+  "titreSurligne": "PGCD",
+  "accroche": "Bézout prouve, Gauss conclut.",
+  "epreuve": "bac",
+  "bonus": "au + bv = 1 ⇔ **premiers entre eux** · a | bc et PGCD(a ; b) = 1 ⇒ a | c · ax + by = c : PGCD | c",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-expertes/pgcd-theoremes-de-bezout-et-de-gauss.webp",
+    "prompt": "a glossy violet pair of interlocking gears with a golden key between them, sparkles"
+  },
+  "marcel": "Premiers entre eux,\npas premiers !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Bézout et Gauss",
+          "taille": "mini",
+          "lignes": [
+            "au + bv = 1 ⇔ PGCD(a ; b) = 1",
+            "a | bc et PGCD(a ; b) = 1 ⇒ a | c"
+          ],
+          "regle": "**Bézout**&nbsp;: un seul couple (u ; v) suffit à prouver que a et b sont premiers entre eux. **Gauss**&nbsp;: sans l’hypothèse de primalité, c’est faux.",
+          "note": "6 | 4 × 3, mais ni 4 ni 3&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Euclide pour (1071 ; 462)",
+          "entetes": [
+            "Étape",
+            "Division"
+          ],
+          "lignes": [
+            [
+              "1",
+              "1071 = 2 × 462 + **147**"
+            ],
+            [
+              "2",
+              "462 = 3 × 147 + **21**"
+            ],
+            [
+              "3",
+              "147 = 7 × 21 + **0**"
+            ],
+            [
+              "PGCD",
+              "dernier reste non nul : **21**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre ax + by = c en entiers",
+          "etapes": [
+            {
+              "titre": "Condition",
+              "texte": "calculer le PGCD&nbsp;: il doit diviser c"
+            },
+            {
+              "titre": "Solution particulière",
+              "texte": "à vue, ou en remontant Euclide"
+            },
+            {
+              "titre": "Soustraire",
+              "texte": "l’équation particulière de l’équation générale"
+            },
+            {
+              "titre": "Gauss",
+              "texte": "conclure et écrire la forme générale"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": "?",
+          "titre": "Bézout ou Gauss",
+          "oui": {
+            "titre": "Bézout",
+            "texte": "prouver que a et b sont **premiers entre eux** : exhiber 8u + 15v = 1."
+          },
+          "non": {
+            "titre": "Gauss",
+            "texte": "conclure qu’un facteur **divise** : 8 | 15c et PGCD(8 ; 15) = 1, donc 8 | c."
+          },
+          "essai": {
+            "titre": "Piège",
+            "texte": "Gauss sans primalité : 6 | 4 × 3, mais 6 ne divise ni 4 ni 3."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "8 et 15 sont-ils __premiers entre eux__&nbsp;?",
+          "calcul": "2 × 8 − 1 × 15 = 1",
+          "aparte": "un couple (2 ; −1) suffit",
+          "resultat": "PGCD(8 ; 15) = [[1]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À retenir",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Premiers entre eux",
+              "texte": "PGCD = 1&nbsp;: 8 et 9 le sont, aucun n’est premier."
+            },
+            {
+              "titre": "Identité de Bézout",
+              "texte": "au + bv = PGCD(a ; b) a **toujours** une solution entière."
+            },
+            {
+              "titre": "Corollaire",
+              "texte": "b | a, c | a, b et c premiers entre eux&nbsp;: **bc | a**."
+            },
+            {
+              "titre": "PPCM",
+              "texte": "PGCD × PPCM = |ab|&nbsp;: l’un donne l’autre."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "On remarque 2 × 8 + (−1) × 15 = 16 − 15 = 1",
+              "quoi": "le couple"
+            },
+            {
+              "texte": "Il existe u = 2 et v = −1 tels que 8u + 15v = 1",
+              "quoi": "l’existence"
+            }
+          ],
+          "pied": "D’après le théorème de Bézout, 8 et 15 sont ==premiers entre eux==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre «&nbsp;premiers entre eux&nbsp;» et «&nbsp;nombres **premiers**&nbsp;».",
+            "Appliquer **Gauss** sans vérifier la primalité.",
+            "Oublier la condition **PGCD | c** d’une équation diophantienne.",
+            "Prendre un reste d’Euclide autre que le **dernier non nul**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Le **PGCD** de 1071 et 462&nbsp;?",
+            "**6x + 9y = 10**&nbsp;: des solutions entières&nbsp;?",
+            "Les coefficients u et v se calculent en **remontant** quoi&nbsp;?"
+          ],
+          "reponses": "1) 21 · 2) non, 3 ne divise pas 10 · 3) l’algorithme d’Euclide"
+        }
+      ]
+    }
+  ]
+}

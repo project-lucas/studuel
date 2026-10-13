@@ -1,0 +1,184 @@
+{
+  "titre": "Oscillateurs et ondes",
+  "titreSurligne": "ondes",
+  "accroche": "Du mouvement qui se répète à l’onde.",
+  "epreuve": "bac",
+  "bonus": "T₀ = 2π√(m÷k) · T₀ = 2π√(LC) · **λ = v × T** · θ ≈ **λ ÷ a** · f fixée par la **source**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/spcl/oscillateurs-resonance-et-ondes-progressives.webp",
+    "prompt": "a glossy violet spring with a golden mass and a sine wave rippling outward, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "La source fixe f,\nle milieu fixe λ&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Oscillateurs",
+          "entetes": [
+            "Oscillateur",
+            "Période propre"
+          ],
+          "lignes": [
+            [
+              "masse-ressort",
+              "T₀ = 2π √(m ÷ k)"
+            ],
+            [
+              "circuit LC",
+              "T₀ = 2π √(L × C)"
+            ],
+            [
+              "libre amorti",
+              "pseudo-période, amplitude **décroît**"
+            ],
+            [
+              "auto-entretenu",
+              "pertes **compensées** (quartz)"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Ondes progressives",
+          "petite": true,
+          "lignes": [
+            "λ = v × T = v ÷ f",
+            "τ = d ÷ v"
+          ],
+          "regle": "**T** : périodicité dans le **temps**, **λ** dans l’**espace**. Une onde transporte de l’**énergie**, pas de matière.",
+          "note": "retard τ"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résonance et diffraction",
+          "etapes": [
+            {
+              "titre": "Forcer",
+              "texte": "l’excitateur impose sa fréquence **f**"
+            },
+            {
+              "titre": "Résonance",
+              "texte": "amplitude **maximale** quand f ≈ f₀&nbsp;; **Q = f₀ ÷ Δf**"
+            },
+            {
+              "titre": "Diffraction",
+              "texte": "ouverture a ≈ λ&nbsp;: l’onde **s’étale**, θ ≈ λ ÷ a"
+            },
+            {
+              "titre": "Retard",
+              "texte": "un point reproduit la source avec **τ = d ÷ v**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Ultrasons 40 kHz dans l’air (v = 340 m/s). __λ__&nbsp;?",
+          "calcul": "λ = 340 ÷ 40 000",
+          "aparte": "deux récepteurs à 17 mm = 2λ",
+          "resultat": "λ = [[8,5 mm]] (en phase)"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "À retenir",
+          "items": [
+            {
+              "titre": "Libre non amorti",
+              "texte": "l’énergie **totale se conserve** (cinétique ↔ potentielle, magnétique ↔ électrique)"
+            },
+            {
+              "titre": "Analogie",
+              "texte": "masse ↔ inductance, raideur ↔ **inverse** de C"
+            },
+            {
+              "titre": "Spectre",
+              "texte": "onde périodique = **fondamental f** + harmoniques 2f, 3f…"
+            },
+            {
+              "titre": "Q grand",
+              "texte": "oscillateur peu amorti, résonance **aiguë**"
+            },
+            {
+              "titre": "Puissance",
+              "texte": "proportionnelle au **carré** de l’amplitude"
+            },
+            {
+              "titre": "Valeur moyenne",
+              "texte": "composante de fréquence **nulle** du spectre"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "λ = v ÷ f = 340 ÷ 40 000 = 8,5×10⁻³ m",
+              "quoi": "formule puis nombres"
+            },
+            {
+              "texte": "T = 1 ÷ f = 25 µs",
+              "quoi": "la période"
+            },
+            {
+              "texte": "17 mm = 2 × 8,5 mm&nbsp;: écart de 2λ",
+              "quoi": "comparer"
+            },
+            {
+              "texte": "Signaux en phase",
+              "quoi": "la conclusion"
+            },
+            {
+              "texte": "Résonance&nbsp;: f ≈ f₀, amplitude maximale",
+              "quoi": "définir"
+            }
+          ],
+          "pied": "Dans un autre milieu, **f ne change pas**&nbsp;; λ change."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que la **fréquence** change de milieu.",
+            "Confondre **T** (temps) et **λ** (espace).",
+            "Croire qu’une onde **transporte de la matière**.",
+            "Laisser une fréquence en **kHz** dans v = λ f.",
+            "Oublier que la puissance varie comme le **carré** de l’amplitude."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**T₀** pour L = 0,10 H et C = 10 µF&nbsp;?",
+            "Que devient la **diffraction** si a diminue&nbsp;?",
+            "Une onde change de milieu&nbsp;: **f** ou **λ** change&nbsp;?"
+          ],
+          "reponses": "1) 2π√(10⁻⁶) ≈ 6,3 ms · 2) plus marquée · 3) λ change, f non"
+        }
+      ]
+    }
+  ]
+}

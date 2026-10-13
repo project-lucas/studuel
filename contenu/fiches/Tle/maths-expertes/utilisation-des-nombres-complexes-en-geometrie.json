@@ -1,0 +1,172 @@
+{
+  "titre": "Géométrie complexe",
+  "titreSurligne": "complexe",
+  "accroche": "Une transformation devient une opération.",
+  "epreuve": "bac",
+  "bonus": "rotation : z′ − ω = e<sup>iθ</sup>(z − ω) · |Z| = AC ÷ AB · arg Z = (AB, AC) · Z = e<sup>iπ/3</sup> : équilatéral direct",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-expertes/utilisation-des-nombres-complexes-en-geometrie.webp",
+    "prompt": "a glossy violet triangle rotating around a golden center point with a curved golden arrow, sparkles"
+  },
+  "marcel": "Multiplier,\nc’est tourner !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les transformations",
+          "entetes": [
+            "Transformation",
+            "Écriture"
+          ],
+          "lignes": [
+            [
+              "Translation (vecteur b)",
+              "z′ = z + b"
+            ],
+            [
+              "Homothétie (ω, k réel)",
+              "z′ − ω = k (z − ω)"
+            ],
+            [
+              "Rotation (ω, θ)",
+              "z′ − ω = **e<sup>iθ</sup>** (z − ω)"
+            ],
+            [
+              "Similitude directe",
+              "z′ − ω = k e<sup>iθ</sup> (z − ω)"
+            ],
+            [
+              "Cercle · médiatrice",
+              "|z − a| = R · |z − a| = |z − b|"
+            ],
+            [
+              "Demi-droite",
+              "arg(z − a) = θ [2π]"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Lire une figure",
+          "taille": "mini",
+          "lignes": [
+            "Z = (z<sub>C</sub> − z<sub>A</sub>) ÷ (z<sub>B</sub> − z<sub>A</sub>)",
+            "|Z| = AC ÷ AB"
+          ],
+          "regle": "arg Z est l’angle orienté entre **AB** et **AC**. Multiplier par **i**&nbsp;: rotation de +π/2&nbsp;; par **−1**&nbsp;: demi-tour.",
+          "note": "module 1 : rotation, réel : homothétie"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode d’un exercice",
+          "etapes": [
+            {
+              "titre": "Traduire",
+              "texte": "l’énoncé en affixes"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "le quotient ou l’expression demandée"
+            },
+            {
+              "titre": "Interpréter",
+              "texte": "module = longueur, argument = angle"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "sur la nature de la figure"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Rotation de centre O, angle {π/2}. Image de __A(2 + i)__&nbsp;?",
+          "calcul": "z′ = e<sup>iπ/2</sup> z = i z",
+          "aparte": "i(2 + i) = 2i − 1",
+          "resultat": "A′ d’affixe [[−1 + 2i]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Que vaut Z ?",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Réel",
+              "texte": "A, B, C **alignés**."
+            },
+            {
+              "titre": "Imaginaire pur",
+              "texte": "(AB) ⊥ (AC)&nbsp;: angle droit en A."
+            },
+            {
+              "titre": "Module 1",
+              "texte": "AB = AC&nbsp;: triangle **isocèle** en A."
+            },
+            {
+              "titre": "Z = e<sup>iπ/3</sup>",
+              "texte": "triangle **équilatéral direct**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "La rotation de centre O d’angle {π/2} s’écrit z′ = e<sup>iπ/2</sup> z",
+              "quoi": "l’écriture complexe"
+            },
+            {
+              "texte": "z<sub>A′</sub> = i (2 + i) = 2i + i² = −1 + 2i",
+              "quoi": "le calcul"
+            }
+          ],
+          "pied": "Vérification&nbsp;: |−1 + 2i| = √5 = |2 + i|, ==OA′ = OA== ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire **z′ = e<sup>iθ</sup> z** quand le centre n’est pas l’origine.",
+            "Confondre rotation (module **1**) et homothétie (**réel**).",
+            "Permuter B et C dans le quotient Z.",
+            "Appliquer les complexes à un problème de l’**espace**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Multiplier par **i** : quelle transformation&nbsp;?",
+            "**arg(z − a) = θ [2π]**&nbsp;: quel ensemble&nbsp;?",
+            "**|Z| = 1** : que dit-on du triangle ABC&nbsp;?"
+          ],
+          "reponses": "1) rotation de +π/2 autour de O · 2) demi-droite d’origine a · 3) isocèle en A"
+        }
+      ]
+    }
+  ]
+}

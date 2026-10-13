@@ -1,0 +1,110 @@
+{
+  "titre": "La flexion simple",
+  "titreSurligne": "flexion",
+  "accroche": "La hauteur compte au cube.",
+  "epreuve": "bac",
+  "bonus": "σ<sub>max</sub> = M<sub>f</sub> × v ÷ I · I = b h³ ÷ 12 · flèche ∝ **L³**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/si/la-flexion-simple-des-poutres.webp",
+    "prompt": "a glossy violet beam resting on two golden supports and bending slightly under a golden weight, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Sur chant,\nça plie bien moins !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Contrainte maximale",
+          "petite": true,
+          "lignes": ["σ<sub>max</sub> = M<sub>f</sub> × v ÷ I", "I = {b × h³/12}"],
+          "regle": "**v** distance à la fibre extrême (mm), **I** moment quadratique (mm⁴). Contrainte ==nulle== sur la fibre neutre, maximale aux extrémités.",
+          "note": "h au cube&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux cas à connaître",
+          "entetes": ["Cas", "M<sub>f</sub> max", "Flèche max"],
+          "lignes": [
+            ["2 appuis", "F L ÷ 4", "F L³ ÷ (48 E I)"],
+            ["Console", "F L", "F L³ ÷ (3 E I)"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Dimensionner une poutre",
+          "etapes": [
+            { "titre": "Modéliser", "texte": "appuis, charges, portée, puis M<sub>f</sub> maximal" },
+            { "titre": "Résistance", "texte": "I et v de la section, σ<sub>max</sub> ≤ R<sub>e</sub> ÷ s" },
+            { "titre": "Déformation", "texte": "flèche ≤ flèche admise par le cahier des charges" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Poutre acier __20 × 60 mm__ sur chant, appuis à __1 m__, charge 1 000 N au milieu&nbsp;: σ<sub>max</sub>&nbsp;?",
+          "calcul": "I = 20 × 60³ ÷ 12 = 360 000 mm⁴ · M<sub>f</sub> = 250 000 N·mm",
+          "aparte": "250 000 × 30 ÷ 360 000",
+          "resultat": "σ<sub>max</sub> ≈ [[21 MPa]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "À plat ou sur chant",
+          "oui": { "titre": "Sur chant", "texte": "I = 360 000 mm⁴&nbsp;: matière ==loin== de la fibre neutre." },
+          "non": { "titre": "À plat", "texte": "I = 40 000 mm⁴, **neuf fois moins**." },
+          "essai": { "texte": "Portée ×2&nbsp;: flèche ×<i>8</i> (L³)." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "M<sub>f</sub> max = F × L ÷ 4 = 250 000 N·mm", "quoi": "le moment" },
+            { "texte": "σ<sub>max</sub> = M<sub>f</sub> × v ÷ I ≈ 21 MPa", "quoi": "formule puis résultat" },
+            { "texte": "21 MPa &lt; R<sub>e</sub> ÷ s&nbsp;: la poutre résiste", "quoi": "la conclusion" }
+          ],
+          "pied": "==Résistance== **et** flèche."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Inverser **b** et **h** dans I.",
+            "Oublier la **conversion** m → mm.",
+            "Oublier de vérifier la **flèche**.",
+            "Placer v sur la **fibre neutre**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Fibres du **haut** (charge vers le bas)&nbsp;?",
+            "Contrainte sur la **fibre neutre**&nbsp;?",
+            "Portée **×2**&nbsp;: flèche ×&nbsp;?"
+          ],
+          "reponses": "1) comprimées · 2) nulle · 3) 8"
+        }
+      ]
+    }
+  ]
+}

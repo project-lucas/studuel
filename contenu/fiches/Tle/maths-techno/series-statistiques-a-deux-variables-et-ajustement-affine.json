@@ -1,0 +1,167 @@
+{
+  "titre": "Ajustement affine",
+  "titreSurligne": "affine",
+  "accroche": "Du nuage de points à la prévision.",
+  "epreuve": "bac",
+  "bonus": "point moyen G(x̄ ; ȳ) · moindres carrés : droite par G · interpoler = dans les données · extrapoler = au-delà",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-techno/series-statistiques-a-deux-variables-et-ajustement-affine.webp",
+    "prompt": "a glossy violet scatter of dots roughly aligned with a golden straight line through them and a tiny golden target dot, sparkles"
+  },
+  "marcel": "Une droite pour\nprévoir la suite !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les mots à connaître",
+          "items": [
+            {
+              "terme": "Nuage de points",
+              "definition": "les couples (x<sub>i</sub> ; y<sub>i</sub>) placés dans un repère."
+            },
+            {
+              "terme": "Point moyen",
+              "definition": "G(x̄ ; ȳ), les moyennes des x<sub>i</sub> et des y<sub>i</sub>."
+            },
+            {
+              "terme": "Moindres carrés",
+              "definition": "la droite qui rend minimale la somme des carrés des écarts verticaux."
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Redresser un nuage courbe",
+          "entetes": [
+            "Si y ≈…",
+            "On pose…"
+          ],
+          "lignes": [
+            [
+              "k × a<sup>x</sup>",
+              "z = **log y**"
+            ],
+            [
+              "a/x + b",
+              "t = **1/x**"
+            ],
+            [
+              "ax² + b",
+              "u = **x²**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Du nuage à la prévision",
+          "etapes": [
+            {
+              "titre": "Regarder",
+              "texte": "nuage et point moyen&nbsp;: forme allongée ou incurvée&nbsp;?"
+            },
+            {
+              "titre": "Ajuster",
+              "texte": "droite y = ax + b à la calculatrice (ou changement de variable)"
+            },
+            {
+              "titre": "Estimer",
+              "texte": "remplacer x, puis dire si l’on interpole ou extrapole"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Publicité x (k€), ventes y (milliers). Droite : __y = 1,8x + 12__.",
+          "calcul": "x = 10 (dans les données) : y = 1,8 × 10 + 12\ny = 30, soit 30&nbsp;000 unités",
+          "aparte": "interpolation, fiable",
+          "resultat": "ventes estimées : [[30 000]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Interpoler",
+              "texte": "Estimer **dans** le domaine des données&nbsp;: fiable si le nuage est aligné."
+            },
+            {
+              "titre": "Extrapoler",
+              "texte": "Prévoir **au-delà**&nbsp;: x = 50 donne 102, mais le marché sature."
+            },
+            {
+              "titre": "Exponentiel",
+              "texte": "y ≈ 3 × 2<sup>x</sup>&nbsp;: log y ≈ log 3 + x log 2, **pente 0,301**."
+            },
+            {
+              "titre": "Passer par G",
+              "texte": "La droite des moindres carrés passe **toujours** par G."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "La calculatrice donne y = 1,8x + 12",
+              "quoi": "l’ajustement"
+            },
+            {
+              "texte": "10 est dans le domaine observé : interpolation",
+              "quoi": "la nature"
+            },
+            {
+              "texte": "Pour x = 50, prévision à prendre avec réserve",
+              "quoi": "la limite"
+            }
+          ],
+          "pied": "Un ajustement est un ==modèle==&nbsp;: il décrit une tendance, il ne prouve pas une cause."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Conclure à un lien de **cause à effet**.",
+            "Extrapoler très loin **sans réserve**.",
+            "Ajuster une droite sur un nuage **incurvé**.",
+            "Oublier que la droite passe par **G**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelles sont les **coordonnées** du point moyen G&nbsp;?",
+            "Prévoir **hors** des données s’appelle&nbsp;?",
+            "Si y ≈ k × a<sup>x</sup>, on pose quelle variable&nbsp;?"
+          ],
+          "reponses": "1) (x̄ ; ȳ) · 2) extrapoler · 3) z = log(y)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "titre": "Modèles du climat",
+  "titreSurligne": "Modèles",
+  "accroche": "De la physique, pas une boule de cristal.",
+  "bonus": "maille : **dizaines de km** · météo : **~10 jours** · climat : **statistiques** · incertitude n°1 : le **scénario**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/enseignement-scientifique/modeles-predictifs-du-climat-du-futur.webp",
+    "prompt": "a glossy violet globe covered by a golden grid of cells with a small rising curve, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Le futur dépend\nsurtout de nous !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 1,
+          "titre": "Dans chaque maille",
+          "etapes": [
+            {
+              "titre": "Fluides",
+              "texte": "mouvements d’air et d’eau"
+            },
+            {
+              "titre": "Rayonnement",
+              "texte": "transfert radiatif"
+            },
+            {
+              "titre": "Chaleur",
+              "texte": "thermodynamique"
+            }
+          ]
+        },
+        {
+          "type": "texte",
+          "numero": "!",
+          "titre": "Le paramétrage",
+          "paragraphes": [
+            "Ce qui est plus petit qu’une maille (un nuage, un orage) est **paramétré** : représenté de façon approchée. C’est la principale **incertitude physique**."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Valider un modèle",
+          "deux": false,
+          "items": [
+            {
+              "titre": "XXe siècle",
+              "texte": "rejouer le climat **mesuré**"
+            },
+            {
+              "titre": "Éruptions",
+              "texte": "retrouver le **refroidissement** qui suit"
+            },
+            {
+              "titre": "Climats anciens",
+              "texte": "retrouver les **glaciations**"
+            },
+            {
+              "titre": "Test décisif",
+              "texte": "réchauffement reproduit **seulement avec** les émissions humaines"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Météo ou climat",
+          "entetes": [
+            "",
+            "Météo",
+            "Climat"
+          ],
+          "lignes": [
+            [
+              "Horizon",
+              "≈ **10 jours**",
+              "un **siècle**"
+            ],
+            [
+              "Donne",
+              "le temps de tel jour",
+              "des **statistiques**"
+            ],
+            [
+              "Limite",
+              "système **chaotique**",
+              "forçage connu"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Trois sources d’incertitude",
+          "entetes": [
+            "Source",
+            "Poids"
+          ],
+          "lignes": [
+            [
+              "Le **scénario** d’émissions : nos choix",
+              "**de loin la plus grande**"
+            ],
+            [
+              "La physique du modèle",
+              "modéré"
+            ],
+            [
+              "La variabilité naturelle",
+              "faible à long terme"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un modèle n’annonce pas la pluie du 3 mars 2100. __Faut-il s’en méfier__&nbsp;?",
+          "calcul": "il projette des\nmoyennes et extrêmes",
+          "aparte": "pas un jour précis",
+          "resultat": "[[statistiques]], pas météo"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **prévision météo** et **projection climatique**.",
+            "Croire un modèle **faux** parce que la météo est imprévisible.",
+            "Penser qu’il prédit **un** avenir : il donne des **scénarios**.",
+            "Oublier que le plus grand doute vient de **nos choix**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Un modèle résout des **équations de physique** dans des mailles.",
+              "quoi": "principe"
+            },
+            {
+              "texte": "Il est **validé** en rejouant le passé (XXe siècle, éruptions).",
+              "quoi": "preuve"
+            }
+          ],
+          "pied": "principe → preuve → limite"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Comment **valide-t-on** un modèle climatique&nbsp;?",
+            "Pourquoi la météo est-elle limitée à ~10 jours&nbsp;?",
+            "Quelle est la plus grande source d’**incertitude**&nbsp;?"
+          ],
+          "reponses": "1) en rejouant le passé · 2) le système est chaotique · 3) le scénario d’émissions"
+        }
+      ]
+    }
+  ]
+}

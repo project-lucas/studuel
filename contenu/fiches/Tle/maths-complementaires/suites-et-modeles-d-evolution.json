@@ -1,0 +1,168 @@
+{
+  "titre": "Suites et évolution",
+  "titreSurligne": "évolution",
+  "accroche": "Ajouter, multiplier, ou les deux ?",
+  "epreuve": "bac",
+  "bonus": "u(n+1) = a·u(n) + b · point fixe c = b ÷ (1 − a) · u(n) = (u(0) − c)·aⁿ + c",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-complementaires/suites-et-modeles-d-evolution.webp",
+    "prompt": "a glossy violet seedling growing in steps on golden stairs, tiny golden sparkles"
+  },
+  "marcel": "Ajoute ou multiplie :\nchoisis ton modèle !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les deux modèles",
+          "taille": "mini",
+          "lignes": [
+            "u(n+1) = u(n) + r  →  u(n) = u(0) + n·r",
+            "u(n+1) = q × u(n)  →  u(n) = u(0) × qⁿ"
+          ],
+          "regle": "**Arithmétique** = on __ajoute__ toujours la même quantité. **Géométrique** = on __multiplie__ toujours par le même nombre. Une hausse de t&nbsp;% donne **q = 1 + t÷100**.",
+          "note": "les % se multiplient, jamais ne s’additionnent&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le long terme (q > 0)",
+          "entetes": [
+            "Raison q",
+            "La suite"
+          ],
+          "lignes": [
+            [
+              "q > 1",
+              "**croît** sans limite"
+            ],
+            [
+              "q = 1",
+              "**constante**"
+            ],
+            [
+              "0 < q < 1",
+              "tend vers **0**"
+            ],
+            [
+              "+10&nbsp;% puis −10&nbsp;%",
+              "1,1 × 0,9 = **0,99**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre u(n+1) = a·u(n) + b",
+          "etapes": [
+            {
+              "titre": "Point fixe",
+              "texte": "résoudre c = a·c + b"
+            },
+            {
+              "titre": "Poser v(n)",
+              "texte": "v(n) = u(n) − c, géométrique de raison a"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "u(n) = v(n) + c"
+            },
+            {
+              "titre": "Interpréter",
+              "texte": "si −1 < a < 1, u tend vers c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "u(0) = 1000 et u(n+1) = 0,8·u(n) + 100. __Donne u(n) et la limite.__",
+          "calcul": "c = 0,8c + 100 donc c = 500 ; v(n) = u(n) − 500, v(0) = 500",
+          "aparte": "v géométrique, q = 0,8",
+          "resultat": "u(n) = 500×0,8ⁿ + 500 → [[500]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Deux hausses",
+              "texte": "+10&nbsp;% deux fois&nbsp;: 1,1² = 1,21, soit **+21&nbsp;%**."
+            },
+            {
+              "titre": "Versement fixe",
+              "texte": "ajout constant&nbsp;: modèle **arithmétique**."
+            },
+            {
+              "titre": "Taux + apport",
+              "texte": "u(n+1) = a·u(n) + b&nbsp;: **arithmético-géométrique**."
+            },
+            {
+              "titre": "Équilibre",
+              "texte": "la limite c ne dépend **pas** de u(0)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Soit v(n) = u(n) − 500.",
+              "quoi": "le changement de suite"
+            },
+            {
+              "texte": "v(n+1) = 0,8·v(n), donc v est géométrique de raison 0,8",
+              "quoi": "la preuve"
+            },
+            {
+              "texte": "0 < 0,8 < 1 donc u(n) tend vers 500.",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Vérifie&nbsp;: u(1) = 0,8×1000 + 100 = ==900==, et 500×0,8 + 500 = 900. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Additionner les pourcentages au lieu de **multiplier**.",
+            "Oublier de montrer que v est **géométrique**.",
+            "Dire « q > 0 donc croissante » sans regarder **q > 1**.",
+            "Oublier le point fixe en revenant à **u(n)**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Coefficient d’une baisse de **20&nbsp;%**&nbsp;?",
+            "Point fixe de **u(n+1) = 0,5·u(n) + 3**&nbsp;?",
+            "**0,9ⁿ** tend vers&nbsp;?"
+          ],
+          "reponses": "1) 0,8 · 2) c = 0,5c + 3, donc c = 6 · 3) 0 (car 0 < 0,9 < 1)"
+        }
+      ]
+    }
+  ]
+}

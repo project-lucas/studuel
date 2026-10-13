@@ -1,0 +1,188 @@
+{
+  "titre": "Immunité adaptative",
+  "titreSurligne": "adaptative",
+  "accroche": "Une réponse taillée pour l’antigène.",
+  "epreuve": "bac",
+  "bonus": "**B** → plasmocyte · **T4** (CD4) → auxiliaire · **T8** (CD8) → cytotoxique · réponse **secondaire** : rapide, forte, **IgG**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/biochimie-biologie-biotechnologie/immunite-adaptative-lymphocytes-anticorps-et-memoire.webp",
+    "prompt": "a glossy violet Y-shaped antibody locking onto a golden antigen shape, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Un anticorps, un\nseul antigène !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Trois lymphocytes",
+          "entetes": [
+            "",
+            "Récepteur",
+            "Devient"
+          ],
+          "lignes": [
+            [
+              "**B**",
+              "BCR",
+              "plasmocyte"
+            ],
+            [
+              "**T4**",
+              "TCR + CD4",
+              "T auxiliaire"
+            ],
+            [
+              "**T8**",
+              "TCR + CD8",
+              "T cytotoxique"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La reconnaissance T",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "peptide + CMH → TCR"
+          ],
+          "regle": "La **CPA** phagocyte, découpe et présente le peptide sur le **CMH**. Un T ne reconnaît **jamais** un antigène libre.",
+          "note": "CPA = cellule dendritique"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La coopération cellulaire",
+          "etapes": [
+            {
+              "titre": "Sélection",
+              "texte": "le T4 reconnaît le complexe et se multiplie : **clone**"
+            },
+            {
+              "titre": "Messagers",
+              "texte": "le T auxiliaire sécrète des **interleukines**"
+            },
+            {
+              "titre": "Effecteurs",
+              "texte": "T8 → **cytotoxiques**, B → **plasmocytes**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Sérologie&nbsp;: IgM anti-virus élevées, IgG faibles.",
+          "calcul": "IgM = réponse primaire",
+          "aparte": "IgG seules : infection ancienne",
+          "resultat": "infection [[récente]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Effecteurs et anticorps",
+          "items": [
+            {
+              "titre": "T cytotoxique",
+              "texte": "lyse la cellule infectée : **perforine** et **granzymes**."
+            },
+            {
+              "titre": "Plasmocyte",
+              "texte": "riche en **REG** ; sécrète des anticorps."
+            },
+            {
+              "titre": "Anticorps",
+              "texte": "**paratope** ↔ **épitope** ; **neutralise** et **opsonise**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": "★",
+          "titre": "La mémoire immunitaire",
+          "entetes": [
+            "Réponse",
+            "Délai",
+            "Intensité",
+            "Anticorps"
+          ],
+          "lignes": [
+            [
+              "**Primaire** (1er contact)",
+              "1 à 2 semaines",
+              "faible",
+              "IgM puis IgG"
+            ],
+            [
+              "**Secondaire** (contacts suivants)",
+              "quelques jours",
+              "forte, durable",
+              "IgG"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Au 2e contact, des lymphocytes mémoire existent déjà.",
+              "quoi": "expliquer"
+            },
+            {
+              "texte": "La réponse secondaire est plus rapide, plus forte, surtout en IgG.",
+              "quoi": "comparer"
+            },
+            {
+              "texte": "La mémoire immunitaire est constituée.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Primaire : 1 à 2 semaines · secondaire : ==quelques jours==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que l’anticorps **détruit** : il marque.",
+            "Confondre **paratope** et épitope.",
+            "Croire qu’un T voit l’antigène **libre**.",
+            "Inverser **IgM** (récente) et **IgG**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel marqueur porte un **lymphocyte T8**&nbsp;?",
+            "Que fait la **perforine**&nbsp;?",
+            "Que signent des **IgM** spécifiques&nbsp;?"
+          ],
+          "reponses": "1) CD8 · 2) elle perce la membrane de la cellule cible · 3) une infection récente"
+        }
+      ]
+    }
+  ]
+}

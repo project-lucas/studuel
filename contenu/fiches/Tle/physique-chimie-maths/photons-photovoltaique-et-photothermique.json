@@ -1,0 +1,112 @@
+{
+  "titre": "Photons et solaire",
+  "titreSurligne": "solaire",
+  "epreuve": "bac",
+  "accroche": "La lumière livre l’énergie par paquets.",
+  "bonus": "E = h × f = h × c ÷ λ · h = 6,63 × 10⁻³⁴ J·s · 1 eV = 1,60 × 10⁻¹⁹ J · η = P<sub>utile</sub> ÷ P<sub>reçue</sub>",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie-maths/photons-photovoltaique-et-photothermique.webp",
+    "prompt": "a glossy violet solar panel under a golden sun with small glowing golden photon dots, sparkles"
+  },
+  "marcel": "Un photon,\nun grain d’énergie !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Énergie d’un photon",
+          "petite": true,
+          "lignes": ["E = h × f = h × c ÷ λ"],
+          "regle": "**E** en J, **h** = 6,63 × 10⁻³⁴ J·s, **c** = 3,00 × 10⁸ m/s, **λ** en m. 1 eV = 1,60 × 10⁻¹⁹ J. Absorption ou émission&nbsp;: ΔE = h × f.",
+          "note": "λ petite, photon énergétique"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux conversions",
+          "entetes": ["Conversion", "Chaîne", "Rendement"],
+          "lignes": [
+            ["Photovoltaïque", "lumière → électricité", "15 à 22 %"],
+            ["Photothermique", "lumière → chaleur", "50 à 70 %"],
+            ["Point de puissance max", "près du « coude » de I(U)", "onduleur"],
+            ["Point de fonctionnement", "caractéristique ∩ charge", "U = R × I"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Puissance reçue", "texte": "éclairement (W/m²) × surface (m²)" },
+            { "titre": "Puissance utile", "texte": "U × I au point de fonctionnement, ou rendement × puissance reçue" },
+            { "titre": "Rendement", "texte": "η = P<sub>utile</sub> ÷ P<sub>reçue</sub>, sans unité" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Panneau de 1,6 m² sous 1 000 W/m², à 33 V et 9,1 A. Son __rendement__&nbsp;?",
+          "calcul": "P<sub>reçue</sub> = 1 600 W · P<sub>élec</sub> = 33 × 9,1 ≈ 300 W",
+          "aparte": "puis ÷",
+          "resultat": "η = 300 ÷ 1 600 ≈ [[19 %]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quel photon&nbsp;?",
+          "oui": { "titre": "Ultraviolet", "texte": "Fréquence plus grande donc photon **plus énergétique** que le rouge, lui-même plus que l’infrarouge." },
+          "non": { "titre": "Meilleur rendement", "texte": "Le photothermique rend plus, mais donne de la **chaleur**, moins facile à transporter que l’électricité." },
+          "essai": { "texte": "λ = 600 nm&nbsp;: f = <i>5,0 × 10¹⁴ Hz</i>, E = <i>6,63 × 10⁻³⁴ × 5,0 × 10¹⁴ ≈ 3,3 × 10⁻¹⁹ J</i>, soit 2,1 eV." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Capteurs&nbsp;: 0,60 × 800 × 4 = 1 920 W utiles", "quoi": "puissance utile" },
+            { "texte": "Q = 200 × 4 180 × 30 ≈ 25 MJ", "quoi": "énergie à fournir" },
+            { "texte": "t = 25 × 10⁶ ÷ 1 920 ≈ 13 000 s ≈ 3 h 40", "quoi": "avec l’unité" }
+          ],
+          "pied": "Le photon n’est absorbé que si ==h × f égale l’écart== entre deux niveaux d’énergie."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Laisser **λ en nm** dans E = h × c ÷ λ.",
+            "Confondre **eV** et **joule**.",
+            "Oublier la **surface** dans la puissance reçue.",
+            "Lire le rendement en **W** au lieu d’un rapport."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**η** d’un panneau recevant 1 000 W et fournissant 200 W&nbsp;?",
+            "Photon bleu ou rouge&nbsp;: le plus **énergétique**&nbsp;?",
+            "1 eV en joules&nbsp;?"
+          ],
+          "reponses": "1) 0,20 (20 %) · 2) le bleu · 3) 1,60 × 10⁻¹⁹ J"
+        }
+      ]
+    }
+  ]
+}

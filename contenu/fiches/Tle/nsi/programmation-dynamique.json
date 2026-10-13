@@ -1,0 +1,174 @@
+{
+  "titre": "Prog. dynamique",
+  "titreSurligne": "dynamique",
+  "accroche": "Ne jamais calculer deux fois la même chose.",
+  "epreuve": "bac",
+  "bonus": "sous-structure <b>optimale</b> + sous-problèmes qui se <b>chevauchent</b> · on échange mémoire contre temps",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/nsi/programmation-dynamique.webp",
+    "prompt": "a glossy violet grid table being filled with golden numbers cell by cell, sparkles"
+  },
+  "marcel": "Je mémorise,\nje ne recalcule pas !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les deux conditions",
+          "items": [
+            {
+              "terme": "Sous-structure optimale",
+              "definition": "l’optimum se construit sur les optimums des **sous-problèmes**"
+            },
+            {
+              "terme": "Chevauchement",
+              "definition": "les mêmes sous-problèmes **réapparaissent**"
+            },
+            {
+              "terme": "Mémoïsation",
+              "definition": "ranger chaque résultat dans un **dictionnaire**"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux façons de faire",
+          "entetes": [
+            "",
+            "Descendante",
+            "Ascendante"
+          ],
+          "lignes": [
+            [
+              "Nom",
+              "mémoïsation",
+              "tabulation"
+            ],
+            [
+              "Écriture",
+              "récursive",
+              "**tableau** rempli"
+            ],
+            [
+              "Atout",
+              "code presque inchangé",
+              "pas de dépassement de pile"
+            ],
+            [
+              "Contrainte",
+              "pile limitée",
+              "bon **ordre** à trouver"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Repérer et appliquer",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "dans l’arbre des appels, **le même argument** revient"
+            },
+            {
+              "titre": "Mémoriser",
+              "texte": "dictionnaire, ou tableau rempli du plus petit au plus grand"
+            },
+            {
+              "titre": "Réutiliser",
+              "texte": "chaque sous-problème n’est calculé qu’**une fois**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Pièces 1, 3, 4. __Rendre 6 avec le moins de pièces__&nbsp;?",
+          "calcul": "glouton : 4 + 1 + 1 (trois pièces)<br>dynamique : 3 + 3 (deux pièces)",
+          "aparte": "le glouton échoue",
+          "resultat": "= [[2 pièces]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Fibonacci, 30e terme",
+          "entetes": [
+            "Version",
+            "Coût",
+            "Appels"
+          ],
+          "lignes": [
+            [
+              "Naïve",
+              "**exponentiel**",
+              "plus d’un million"
+            ],
+            [
+              "Mémoïsée",
+              "**linéaire**",
+              "trente"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "<i>memo = {}</i> puis <i>if n in memo: return memo[n]</i>",
+              "quoi": "mémoïsation"
+            },
+            {
+              "texte": "<i>memo[n] = r</i> avant de renvoyer",
+              "quoi": "stockage"
+            },
+            {
+              "texte": "« tableau de 0 à la somme visée »",
+              "quoi": "rendu de monnaie"
+            }
+          ],
+          "pied": "Même algorithme + un dictionnaire = ==autre classe== de complexité."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Appliquer la programmation dynamique **sans chevauchement** : diviser pour régner suffit.",
+            "Croire que le **glouton** est toujours optimal.",
+            "Remplir le tableau dans le **mauvais ordre**.",
+            "Oublier que la mémoire **augmente**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle condition **justifie** la programmation dynamique&nbsp;?",
+            "Que fait la **mémoïsation**&nbsp;?",
+            "Quel compromis fait-on&nbsp;?"
+          ],
+          "reponses": "1) des sous-problèmes qui se chevauchent · 2) elle range chaque résultat · 3) de la mémoire contre du temps"
+        }
+      ]
+    }
+  ]
+}

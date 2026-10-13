@@ -1,0 +1,130 @@
+{
+  "titre": "Complexes, forme exp.",
+  "titreSurligne": "exp.",
+  "accroche": "Tourner et multiplier sans effort.",
+  "epreuve": "bac",
+  "bonus": "e<sup>iθ</sup> = cos θ + i sin θ · z = r e<sup>iθ</sup> · modules ×, arguments +",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie-maths/nombres-complexes-forme-exponentielle.webp",
+    "prompt": "a glossy violet unit circle with a golden arrow rotating around it and a small golden point, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Multiplier, c’est\nadditionner les angles !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Forme exponentielle",
+          "taille": "mini",
+          "lignes": ["e<sup>iθ</sup> = cos θ + i sin θ", "z = r e<sup>iθ</sup>"],
+          "regle": "r = |z| = √(a² + b²), puis cos θ = a/r et sin θ = b/r. Le point e<sup>iθ</sup> est sur le **cercle unité** (module 1).",
+          "note": "e<sup>iπ</sup> = −1"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Valeurs de e<sup>iθ</sup>",
+          "entetes": ["θ", "e<sup>iθ</sup>"],
+          "lignes": [
+            ["0", "1"],
+            ["π/2", "i"],
+            ["π", "−1"],
+            ["π/4", "√2/2 + i √2/2"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer avec la forme exponentielle",
+          "etapes": [
+            { "titre": "Passer", "texte": "de a + ib à r e<sup>iθ</sup> : module, puis angle" },
+            { "titre": "Opérer", "texte": "**multiplier** les modules, **additionner** les arguments" },
+            { "titre": "Revenir", "texte": "à la forme algébrique avec cos θ et sin θ" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "2e<sup>iπ/6</sup> × 3e<sup>iπ/3</sup>&nbsp;?",
+          "calcul": "modules : 2 × 3 = 6\narguments : π/6 + π/3 = π/2",
+          "aparte": "e<sup>iπ/2</sup> = i",
+          "resultat": "= 6e<sup>iπ/2</sup> = [[6i]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Transformations",
+          "entetes": ["z ↦", "Effet"],
+          "lignes": [
+            ["z + b", "**translation** de vecteur b"],
+            ["k z (k réel)", "**homothétie** de centre O, rapport k"],
+            ["e<sup>iθ</sup> z", "**rotation** de centre O, angle θ"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "Trigonométrie et signaux",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Addition", "texte": "cos(a + b) = cos a cos b − sin a sin b ; sin 2a = **2 sin a cos a**" },
+            { "titre": "Linéariser", "texte": "cos² a = (1 + cos 2a)/2 ; moyenne de cos² sur une période : **½**" },
+            { "titre": "Réduire", "texte": "a cos ωt + b sin ωt = **A cos(ωt + φ)**, A = √(a² + b²)" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "|1 + i| = √2 et cos θ = sin θ = √2/2", "quoi": "module, angle" },
+            { "texte": "donc θ = π/4", "quoi": "l’argument" },
+            { "texte": "1 + i = √2 e<sup>iπ/4</sup>", "quoi": "la conclusion" }
+          ],
+          "pied": "Électricité&nbsp;: un courant I√2 cos(ωt + φ) devient ==I e<sup>iφ</sup>== ; on note j au lieu de i."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "**Additionner** les modules au lieu de les multiplier.",
+            "Choisir θ avec le **cosinus seul**, sans le signe du sinus.",
+            "Oublier l’**argument à 2π près**.",
+            "Se tromper sur φ : sin φ = **−b/A**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Forme algébrique de **2e<sup>iπ/3</sup>**&nbsp;?",
+            "Multiplier par **i** fait tourner de quel angle&nbsp;?",
+            "Résous **z² = −9**."
+          ],
+          "reponses": "1) 1 + i√3 · 2) π/2 (un quart de tour) · 3) z = 3i ou z = −3i"
+        }
+      ]
+    }
+  ]
+}

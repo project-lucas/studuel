@@ -1,0 +1,181 @@
+{
+  "titre": "Le moteur à CC",
+  "titreSurligne": "CC",
+  "accroche": "Le courant fait le couple.",
+  "epreuve": "bac",
+  "bonus": "U = E + R I · E = k Ω · **C = k I** · au démarrage **I = U ÷ R**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/si/le-moteur-a-courant-continu.webp",
+    "prompt": "a glossy violet DC motor with a golden shaft and a golden lightning bolt, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Courant pour le couple,\ntension pour la vitesse&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Trois équations",
+          "petite": true,
+          "lignes": [
+            "U = E + R × I",
+            "E = k × Ω",
+            "Cem = k × I"
+          ],
+          "regle": "**k** en N·m/A. Le courant fait le ==couple==, la tension fait la ==vitesse==. Inductance négligée en régime permanent.",
+          "note": "k unique pour E et C"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Bilan des puissances",
+          "entetes": [
+            "Puissance",
+            "Expression"
+          ],
+          "lignes": [
+            [
+              "Absorbée",
+              "U × I"
+            ],
+            [
+              "Pertes Joule",
+              "R × I²"
+            ],
+            [
+              "Électromagnétique",
+              "E × I = C × Ω"
+            ],
+            [
+              "Rendement",
+              "η = P<sub>u</sub> ÷ P<sub>abs</sub>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Courant",
+              "texte": "I = C ÷ k"
+            },
+            {
+              "titre": "Vitesse",
+              "texte": "E = U − R I, puis Ω = E ÷ k"
+            },
+            {
+              "titre": "Bilan",
+              "texte": "puissances et rendement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "R = 1 Ω, k = 0,05, __24 V__, 0,1 N·m.",
+          "calcul": "I = C ÷ k = 0,1 ÷ 0,05 = 2 A ; E = U − R I = 24 − 1 × 2 = 22 V",
+          "aparte": "Ω = 22 ÷ 0,05",
+          "resultat": "Ω = [[440 rad/s]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Au démarrage&nbsp;?",
+          "oui": {
+            "titre": "À l’arrêt",
+            "texte": "E = 0 donc **I = U ÷ R**&nbsp;: souvent ==10 fois== le nominal."
+          },
+          "non": {
+            "titre": "Plein courant d’un coup",
+            "texte": "Danger pour le **bobinage**&nbsp;: monter la tension progressivement."
+          },
+          "essai": {
+            "texte": "Entraîné mécaniquement, le moteur devient <i>génératrice</i> (E = k Ω)&nbsp;: freinage récupératif."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "U = E + R I ⇒ E = 24 − 1 × 2 = 22 V",
+              "quoi": "la tension"
+            },
+            {
+              "texte": "Ω = 22 ÷ 0,05 = 440 rad/s",
+              "quoi": "la vitesse"
+            },
+            {
+              "texte": "η = 44 ÷ 48 ≈ 92 %",
+              "quoi": "le rendement"
+            }
+          ],
+          "pied": "Vérifie : ==E × I = C × Ω== (44 W)."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier la **chute R × I**.",
+            "Confondre **E** et U.",
+            "Laisser Ω en **tr/min**.",
+            "Ignorer le courant de **démarrage**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "À retenir",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Vitesse",
+              "texte": "Ω = E ÷ k&nbsp;: plus de tension, plus vite"
+            },
+            {
+              "titre": "Couple",
+              "texte": "C = k I&nbsp;: plus de couple, plus de courant"
+            },
+            {
+              "titre": "Génératrice",
+              "texte": "entraîné, il produit E = k Ω"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle grandeur fait le **couple**&nbsp;?",
+            "Courant à l’**arrêt**&nbsp;?",
+            "P<sub>J</sub> pour R = 1 Ω, I = 2 A&nbsp;?"
+          ],
+          "reponses": "1) le courant · 2) U ÷ R · 3) 4 W"
+        }
+      ]
+    }
+  ]
+}

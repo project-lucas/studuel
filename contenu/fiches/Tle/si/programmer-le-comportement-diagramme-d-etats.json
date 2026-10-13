@@ -1,0 +1,118 @@
+{
+  "titre": "Le diagramme d’états",
+  "titreSurligne": "états",
+  "accroche": "Des états, des transitions, une boucle.",
+  "epreuve": "bac",
+  "bonus": "transition = **événement [garde] / effet** · boucle&nbsp;: lire → décider → commander",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/si/programmer-le-comportement-diagramme-d-etats.webp",
+    "prompt": "a glossy violet automatic gate with golden arrows looping between three rounded state bubbles, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Un état,\nun événement, un saut&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire SysML",
+          "items": [
+            { "terme": "État", "definition": "situation stable, rectangle arrondi" },
+            { "terme": "Transition", "definition": "flèche d’un état à un autre" },
+            { "terme": "Événement", "definition": "ce qui la déclenche" },
+            { "terme": "Garde", "definition": "condition entre crochets [obstacle = faux]" },
+            { "terme": "Effet", "definition": "action après la barre / allumer feu" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le portail automatique",
+          "entetes": ["Départ", "Événement", "Arrivée"],
+          "lignes": [
+            ["Fermé", "appui télécommande", "Ouverture"],
+            ["Ouverture", "fin de course haut", "Ouvert"],
+            ["Ouvert", "30 s écoulées", "Fermeture"],
+            ["Fermeture", "obstacle détecté", "Ouverture"],
+            ["Fermeture", "fin de course bas", "Fermé"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Du diagramme au programme",
+          "etapes": [
+            { "titre": "Lire", "texte": "les entrées&nbsp;: capteurs et boutons" },
+            { "titre": "Décider", "texte": "selon l’état courant et l’événement, changer d’état" },
+            { "titre": "Commander", "texte": "les sorties (moteur, voyant) selon l’état" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Scrutation ou interruption",
+          "entetes": ["Méthode", "Quand"],
+          "lignes": [
+            ["Scrutation", "lecture à chaque tour&nbsp;: événements lents"],
+            ["Interruption", "le matériel suspend le programme&nbsp;: urgent, bref (arrêt d’urgence, codeur)"]
+          ]
+        },
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Une exigence de sécurité",
+          "oui": { "titre": "Une ligne dédiée", "texte": "« obstacle détecté » se lit ==tout de suite== sur le diagramme." },
+          "non": { "titre": "Oubliée", "texte": "La porte **écrase** l’obstacle." },
+          "essai": { "texte": "Un bouton qui rebondit&nbsp;: sans <i>anti-rebond</i>, un appui = plusieurs transitions." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Fermeture → Ouverture", "quoi": "la transition" },
+            { "texte": "obstacle détecté [position &lt; fermé]", "quoi": "événement et garde" },
+            { "texte": "/ arrêter le moteur de fermeture", "quoi": "l’effet" }
+          ],
+          "pied": "Chaque état devient un ==cas== du programme, chaque transition un **test**."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **état** (stable) et **action** (ponctuelle).",
+            "Oublier l’**état initial**.",
+            "Écrire la garde **hors des crochets**.",
+            "Négliger l’**anti-rebond**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Forme générale d’une **transition**&nbsp;?",
+            "Où s’écrit la **garde**&nbsp;?",
+            "Pour un **arrêt d’urgence**&nbsp;: scrutation ou interruption&nbsp;?"
+          ],
+          "reponses": "1) événement [garde] / effet · 2) entre crochets · 3) interruption"
+        }
+      ]
+    }
+  ]
+}

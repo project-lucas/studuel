@@ -1,0 +1,168 @@
+{
+  "titre": "Solubilité et Ks",
+  "titreSurligne": "Ks",
+  "accroche": "Dissoudre, précipiter, conduire.",
+  "epreuve": "bac",
+  "bonus": "Qr &lt; Ks&nbsp;: se dissout · Qr = Ks&nbsp;: saturée · Qr &gt; Ks&nbsp;: **précipité** · σ = Σ λᵢ[Xᵢ] avec [X] en **mol/m³**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/spcl/solubilite-produit-de-solubilite-et-conductimetrie.webp",
+    "prompt": "a glossy violet beaker with golden crystals settling at the bottom and a small conductivity probe, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Au-delà de Ks,\nça précipite&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Constante de solubilité",
+          "petite": true,
+          "lignes": [
+            "AgCl(s) ⇌ Ag⁺ + Cl⁻",
+            "Ks = [Ag⁺] × [Cl⁻] = s²"
+          ],
+          "regle": "Le **solide** n’apparaît pas dans Qr. **s** = quantité maximale dissoute par litre&nbsp;: s = √Ks. pKs = −log Ks.",
+          "note": "AgCl&nbsp;: s ≈ 1,3×10⁻⁵ mol/L"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Sens d’évolution",
+          "entetes": [
+            "Situation",
+            "Conclusion"
+          ],
+          "lignes": [
+            [
+              "Qr &lt; Ks",
+              "**pas saturée** : le solide se dissout encore"
+            ],
+            [
+              "Qr = Ks",
+              "équilibre : solution **saturée**"
+            ],
+            [
+              "Qr &gt; Ks",
+              "**précipité** jusqu’à Qr = Ks"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Titrage conductimétrique",
+          "etapes": [
+            {
+              "titre": "Suivre",
+              "texte": "mesurer **σ** après chaque ajout de titrant"
+            },
+            {
+              "titre": "Tracer",
+              "texte": "σ = f(V)&nbsp;: des **segments de droite**"
+            },
+            {
+              "titre": "Lire",
+              "texte": "**V<sub>E</sub>** à l’intersection, où la **pente change**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "AgCl&nbsp;: Ks = 1,8×10⁻¹⁰. [Ag⁺] = [Cl⁻] = s. __s__&nbsp;?",
+          "calcul": "Ks = s² donc s = √(1,8×10⁻¹⁰)",
+          "aparte": "en mol/L",
+          "resultat": "s ≈ [[1,3×10⁻⁵ mol/L]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Ce qui fait varier s",
+          "items": [
+            {
+              "titre": "Ion commun",
+              "texte": "du Cl⁻ ajouté **diminue** la solubilité"
+            },
+            {
+              "titre": "pH",
+              "texte": "les hydroxydes précipitent à des pH différents&nbsp;: **précipitation sélective**"
+            },
+            {
+              "titre": "Température",
+              "texte": "Ks augmente en général&nbsp;: on **recristallise** en refroidissant"
+            },
+            {
+              "titre": "Kohlrausch",
+              "texte": "σ = Σ λᵢ[Xᵢ]&nbsp;; H₃O⁺ et HO⁻ conduisent **bien mieux** que les autres ions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "AgCl(s) ⇌ Ag⁺(aq) + Cl⁻(aq)",
+              "quoi": "l’équilibre"
+            },
+            {
+              "texte": "Qr = [Ag⁺][Cl⁻] comparé à Ks",
+              "quoi": "le quotient"
+            },
+            {
+              "texte": "σ = k × G, k constante de cellule",
+              "quoi": "la mesure"
+            },
+            {
+              "texte": "Avant V<sub>E</sub> σ baisse un peu, après V<sub>E</sub> σ monte nettement",
+              "quoi": "la courbe"
+            },
+            {
+              "texte": "c(Cl⁻)·V₀ = c(Ag⁺)·V<sub>E</sub>",
+              "quoi": "l’équivalence"
+            }
+          ],
+          "pied": "Dans Kohlrausch, **1 mol/L = 1 000 mol/m³**."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire le **solide** dans le quotient Qr.",
+            "Oublier de passer en **mol/m³** dans σ = Σ λᵢ[Xᵢ].",
+            "Penser que l’**ion commun** augmente s.",
+            "Lire V<sub>E</sub> sur **un seul** segment.",
+            "Confondre **conductance** G (S) et **conductivité** σ (S/m)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Qr &gt; Ks&nbsp;: que se passe-t-il&nbsp;?",
+            "Ks = 4×10⁻⁸ pour AB (1 : 1)&nbsp;: **s**&nbsp;?",
+            "Comment repère-t-on **V<sub>E</sub>** par conductimétrie&nbsp;?"
+          ],
+          "reponses": "1) un précipité se forme · 2) 2×10⁻⁴ mol/L · 3) changement de pente de σ(V)"
+        }
+      ]
+    }
+  ]
+}

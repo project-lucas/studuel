@@ -1,0 +1,179 @@
+{
+  "titre": "Transmetteurs",
+  "titreSurligne": "Transmetteurs",
+  "accroche": "Adapter vitesse, couple, mouvement.",
+  "epreuve": "bac",
+  "bonus": "rapport k < 1 : sortie **plus lente**, couple **plus fort** · rendements **multipliés** · réversible ou non",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/si/les-transmetteurs-de-mouvement.webp",
+    "prompt": "a glossy violet pair of meshing gears with a golden belt pulley and a golden screw, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Ce qu’on gagne en couple,\non le perd en vitesse&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Lois entrée-sortie",
+          "entetes": [
+            "Transmetteur",
+            "Loi"
+          ],
+          "lignes": [
+            [
+              "Engrenage",
+              "ω₂ ÷ ω₁ = Z₁ ÷ Z₂"
+            ],
+            [
+              "Poulies-courroie",
+              "ω₂ ÷ ω₁ = d₁ ÷ d₂"
+            ],
+            [
+              "Pignon-crémaillère",
+              "v = ω × R"
+            ],
+            [
+              "Vis-écrou",
+              "v = pas × N"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Couple et rendement",
+          "petite": true,
+          "lignes": [
+            "Cs = {η × Ce/k}"
+          ],
+          "regle": "**k = ω<sub>s</sub> ÷ ω<sub>e</sub>**. Sur une chaîne, les ==rendements se multiplient==.",
+          "note": "la puissance se conserve, aux pertes près"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "la nature des mouvements d’entrée et de sortie"
+            },
+            {
+              "titre": "Enchaîner",
+              "texte": "la loi de chaque étage, rapports puis rendements"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "vitesse et couple de sortie au cahier des charges"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "3 000 tr/min, 2 N·m ; engrenage 12/48 (η 0,9), vis de pas 4 mm.",
+          "calcul": "12 ÷ 48 = 1/4 ⇒ 750 tr/min ; C = 0,9 × 2 × 4 = 7,2 N·m",
+          "aparte": "écrou : 750 × 4 = 3 000 mm/min",
+          "resultat": "C = [[7,2 N·m]] · 50 mm/s"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Réversible&nbsp;?",
+          "oui": {
+            "titre": "Engrenage droit",
+            "texte": "**Réversible**&nbsp;: la sortie peut entraîner l’entrée."
+          },
+          "non": {
+            "titre": "Vis-écrou à pas fin",
+            "texte": "Souvent **non** : ==sécurité== d’un cric, mais rendement faible."
+          },
+          "essai": {
+            "texte": "Rendement global 0,9 × 0,4 = <i>0,36</i>&nbsp;: la vis-écrou est l’étage qui coûte le plus."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "ω<sub>s</sub> = 3 000 × 12 ÷ 48 = 750 tr/min",
+              "quoi": "la vitesse"
+            },
+            {
+              "texte": "C<sub>s</sub> = 0,9 × 2 × 4 = 7,2 N·m",
+              "quoi": "le couple"
+            },
+            {
+              "texte": "η = 0,9 × 0,4 = 0,36",
+              "quoi": "le rendement global"
+            }
+          ],
+          "pied": "Écris la loi de ==chaque== étage avant de multiplier."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Inverser **Z₁ et Z₂** dans le rapport.",
+            "**Additionner** les rendements.",
+            "Oublier le **sens** inversé d’un contact extérieur.",
+            "Gagner sur couple **et** vitesse."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "À retenir",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Réduire",
+              "texte": "sortie plus lente, couple multiplié"
+            },
+            {
+              "titre": "Chaîne",
+              "texte": "on multiplie les rapports et les rendements"
+            },
+            {
+              "titre": "Réversibilité",
+              "texte": "vis-écrou à pas fin&nbsp;: la charge ne redescend pas seule"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Réducteur **1/4**&nbsp;: vitesse de sortie&nbsp;?",
+            "Rendements de 0,9 et 0,9&nbsp;: global&nbsp;?",
+            "Rotation → translation avec R&nbsp;?"
+          ],
+          "reponses": "1) 4 fois plus faible · 2) 0,81 · 3) v = ω × R"
+        }
+      ]
+    }
+  ]
+}

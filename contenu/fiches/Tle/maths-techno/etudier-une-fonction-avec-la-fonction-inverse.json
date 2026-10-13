@@ -1,0 +1,118 @@
+{
+  "titre": "Optimum avec 1/x",
+  "titreSurligne": "1/x",
+  "accroche": "Dériver, réduire, étudier le signe.",
+  "epreuve": "bac",
+  "bonus": "(k/x)′ = −k/x² · (ax + b)′ = a · (x²)′ = 2x · (x³)′ = 3x² · extremum calculé avec **f**, pas f′",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-techno/etudier-une-fonction-avec-la-fonction-inverse.webp",
+    "prompt": "a glossy violet U-shaped curve with a golden dot at its lowest point and a small golden down arrow, tiny sparkles"
+  },
+  "marcel": "Le coût moyen\nau plus bas !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les dérivées utiles",
+          "entetes": ["f(x)", "f′(x)"],
+          "lignes": [
+            ["k/x", "**−k/x²**"],
+            ["ax + b", "**a**"],
+            ["x²", "**2x**"],
+            ["x³", "**3x²**"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Même dénominateur",
+          "petite": true,
+          "lignes": ["1 − {16/x²} = {(x − 4)(x + 4)/x²}"],
+          "regle": "Sur ]0 ; +∞[, x² &gt; 0&nbsp;: le signe de f′ est celui du ==numérateur==.",
+          "note": "écrire x² quand même&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Trouver l’optimum en quatre temps",
+          "etapes": [
+            { "titre": "Dériver", "texte": "intervalle d’étude, puis f′ terme à terme" },
+            { "titre": "Réduire", "texte": "même dénominateur, numérateur factorisé" },
+            { "titre": "Signe", "texte": "signe du numérateur, tableau de variations" },
+            { "titre": "Extremum", "texte": "calculer sa valeur avec f" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = x² + 2/x sur ]0 ; +∞[. __Minimum__&nbsp;?",
+          "calcul": "f′(x) = 2x − 2/x² = 2(x³ − 1) ÷ x²\nx³ − 1 &lt; 0 si x &lt; 1, &gt; 0 si x &gt; 1",
+          "aparte": "x³ est croissante",
+          "resultat": "min en 1 : f(1) = [[3]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Coût moyen",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Le modèle", "texte": "C(q) = 2q² + 50&nbsp;: coût moyen **2q + 50/q**." },
+            { "titre": "Sa dérivée", "texte": "C<sub>M</sub>′(q) = 2(q − 5)(q + 5) ÷ q²." },
+            { "titre": "Le signe", "texte": "Celui de **q − 5**&nbsp;: décroît puis croît." },
+            { "titre": "La conclusion", "texte": "Minimum en q = 5, soit **500 objets**, à 20&nbsp;€ l’objet." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "f′(x) = 2x − 2/x² = 2(x³ − 1) ÷ x²", "quoi": "la dérivée" },
+            { "texte": "x² &gt; 0, donc f′ a le signe de x³ − 1", "quoi": "le signe" },
+            { "texte": "f décroît sur ]0 ; 1], croît sur [1 ; +∞[", "quoi": "les variations" },
+            { "texte": "Le minimum est f(1) = 3", "quoi": "la conclusion" }
+          ],
+          "pied": "Contrôle&nbsp;: f(1) = 1 + 2/1 = ==3==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Calculer le minimum dans **f′** au lieu de f.",
+            "Dériver k/x en **k/x** ou en k/x² (sans le −).",
+            "Oublier de **réduire** au même dénominateur.",
+            "Étudier le signe sur ℝ au lieu de **]0 ; +∞[**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dérivée de f(x) = x + 16/x&nbsp;?",
+            "Pour q &gt; 0, le signe de 2(q − 5)(q + 5) ÷ q² est celui de&nbsp;?",
+            "f(x) = x + 16/x a pour minimum en x = 4 la valeur&nbsp;?"
+          ],
+          "reponses": "1) 1 − 16/x² · 2) q − 5 · 3) f(4) = 4 + 4 = 8"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "titre": "Stockage de l’énergie",
+  "titreSurligne": "énergie",
+  "accroche": "Mettre l’énergie de côté pour plus tard.",
+  "epreuve": "bac",
+  "bonus": "**E = U × Q** · **E / 0,8** si décharge à 80 % · **Q = m c ΔT**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/i2d/le-stockage-de-l-energie.webp",
+    "prompt": "a glossy violet battery pack with a golden lightning bolt and a small water tank, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Batterie : énergie,\nsupercondo : punch !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les 4 formes",
+          "entetes": [
+            "Forme",
+            "Exemples"
+          ],
+          "lignes": [
+            [
+              "**Chimique**",
+              "lithium-ion, plomb, hydrogène"
+            ],
+            [
+              "**Électrostatique**",
+              "supercondensateur"
+            ],
+            [
+              "**Mécanique**",
+              "volant, STEP, air comprimé"
+            ],
+            [
+              "**Thermique**",
+              "ballon, sels fondus"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Énergie massique",
+          "entetes": [
+            "Technologie",
+            "Wh/kg"
+          ],
+          "lignes": [
+            [
+              "**Plomb**",
+              "30 à 40"
+            ],
+            [
+              "**Lithium-ion**",
+              "150 à 250"
+            ],
+            [
+              "**Supercondensateur**",
+              "5 à 10, très forte puissance"
+            ],
+            [
+              "**Série / parallèle**",
+              "U s’additionne / Q s’additionne"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Dimensionner une batterie",
+          "etapes": [
+            {
+              "titre": "Énergie",
+              "texte": "E = P × t"
+            },
+            {
+              "titre": "Marge",
+              "texte": "÷ profondeur de décharge (0,8)"
+            },
+            {
+              "titre": "Capacité",
+              "texte": "Q = E / U, puis masse = E / Wh·kg⁻¹"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Robot de __60 W__ pendant __4 h__, 24 V, décharge à __80 %__, lithium __180 Wh/kg__.",
+          "calcul": "240 / 0,8 = 300 Wh · Q = 300 / 24",
+          "aparte": "m = 300 / 180",
+          "resultat": "Q = [[12,5 Ah]] · m ≈ 1,7 kg"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quelle technologie&nbsp;?",
+          "oui": {
+            "titre": "Batterie",
+            "texte": "Beaucoup d’**énergie** : longue autonomie."
+          },
+          "non": {
+            "titre": "Supercondensateur",
+            "texte": "Beaucoup de **puissance** d’un coup, peu d’énergie."
+          },
+          "essai": {
+            "texte": "Un tramway associe les deux : <i>supercondensateur</i> pour le démarrage, batterie pour la distance."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Pack 10S3P",
+              "texte": "36 V · 9 Ah · 324 Wh"
+            },
+            {
+              "titre": "BMS",
+              "texte": "surveille, équilibre, coupe"
+            },
+            {
+              "titre": "Ballon 200 L",
+              "texte": "≈ 10,5 kWh de chaleur"
+            },
+            {
+              "titre": "Intermittence",
+              "texte": "le stockage la compense"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "E = 60 × 4 = 240 Wh",
+              "quoi": "l’énergie"
+            },
+            {
+              "texte": "À installer : 240 / 0,8 = 300 Wh",
+              "quoi": "la marge"
+            },
+            {
+              "texte": "Q = 300 / 24 = 12,5 Ah",
+              "quoi": "la capacité"
+            }
+          ],
+          "pied": "On écrit ==la formule==, puis ==l’unité== (Wh, Ah, kg)."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier la **profondeur de décharge**.",
+            "Mélanger **Wh** (énergie) et **Ah** (charge).",
+            "Additionner les capacités **en série**.",
+            "Négliger le **BMS** d’une batterie lithium.",
+            "Compter la **masse** de l’électronique : la masse de système est plus lourde."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que vaut l’énergie d’une batterie de **24 V et 12,5 Ah**&nbsp;?",
+            "Que s’additionne **en parallèle**&nbsp;?",
+            "Quel rôle a le **BMS**&nbsp;?"
+          ],
+          "reponses": "1) 24 × 12,5 = 300 Wh · 2) les capacités · 3) surveiller et équilibrer les cellules, couper si danger"
+        }
+      ]
+    }
+  ]
+}

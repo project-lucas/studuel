@@ -1,0 +1,115 @@
+{
+  "titre": "Suites en colonnes",
+  "titreSurligne": "colonnes",
+  "accroche": "Deux suites qui s’entraînent.",
+  "epreuve": "bac",
+  "bonus": "U(n+1) = A U(n) ⇒ U(n) = Aⁿ U(0) · affine : U(n) = Aⁿ (U(0) − C) + C · C = A C + B",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-expertes/suites-de-matrices-colonnes.webp",
+    "prompt": "a glossy violet column of two stacked golden numbers repeating along a staircase of steps, sparkles"
+  },
+  "marcel": "Deux suites,\nune seule colonne !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le principe",
+          "taille": "mini",
+          "lignes": ["U(n+1) = A U(n)", "U(n) = Aⁿ U(0)"],
+          "regle": "On range u(n) et v(n) dans une **colonne** U(n). Tout se ramène au calcul de **Aⁿ**, par récurrence ou par P Dⁿ P⁻¹.",
+          "note": "A porte les coefficients du système"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le cas affine U(n+1) = A U(n) + B",
+          "entetes": ["Étape", "Ce qu’on fait"],
+          "lignes": [
+            ["1", "état stable C&nbsp;: C = A C + B"],
+            ["2", "V(n) = U(n) − C vérifie V(n+1) = A V(n)"],
+            ["3", "**U(n) = Aⁿ (U(0) − C) + C**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Rédiger un exercice",
+          "etapes": [
+            { "titre": "Écrire A", "texte": "traduire le système en français en matrice" },
+            { "titre": "Calculer Aⁿ", "texte": "avec la matrice P fournie, A = P D P⁻¹" },
+            { "titre": "Interpréter", "texte": "la limite, en phrase&nbsp;: elle vaut autant que le calcul" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "u<sub>n+1</sub> = 0,9u<sub>n</sub> + 0,2v<sub>n</sub> et v<sub>n+1</sub> = 0,1u<sub>n</sub> + 0,8v<sub>n</sub>.",
+          "calcul": "U(n) = (u<sub>n</sub> ; v<sub>n</sub>), A = (0,9 0,2 ; 0,1 0,8)",
+          "aparte": "une ligne par suite",
+          "resultat": "U(n+1) = A U(n), donc [[U(n) = Aⁿ U(0)]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Comportement à l’infini",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Aⁿ → L", "texte": "alors U(n) converge vers **L U(0)**." },
+            { "titre": "Aⁿ → 0 (affine)", "texte": "U(n) converge vers l’**état stable C**." },
+            { "titre": "État attractif", "texte": "la répartition finale **ne dépend pas** du départ." },
+            { "titre": "Modèles", "texte": "abonnés, migrations, parts de marché, populations." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Posons U(n) = (u<sub>n</sub> ; v<sub>n</sub>) et A = (0,9 0,2 ; 0,1 0,8)", "quoi": "la matrice" },
+            { "texte": "Pour tout n, U(n+1) = A U(n)", "quoi": "la relation" },
+            { "texte": "Par récurrence immédiate, U(n) = Aⁿ U(0)", "quoi": "la forme explicite" }
+          ],
+          "pied": "On interprète&nbsp;: à long terme, ==la répartition se stabilise== quel que soit le départ."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mélanger **lignes** et **colonnes** de A.",
+            "Oublier le terme **B** dans le cas affine.",
+            "Écrire U(n) = U(0) Aⁿ : le produit se fait **à gauche**.",
+            "Calculer sans **interpréter** la limite."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**U(n+1) = A U(n)** : U(n) en fonction de U(0)&nbsp;?",
+            "**État stable** C dans le cas affine&nbsp;?",
+            "Si **Aⁿ → 0** dans le cas affine&nbsp;?"
+          ],
+          "reponses": "1) Aⁿ U(0) · 2) C = A C + B · 3) U(n) converge vers C"
+        }
+      ]
+    }
+  ]
+}

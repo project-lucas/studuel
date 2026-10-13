@@ -1,0 +1,112 @@
+{
+  "titre": "Conductivité des ions",
+  "titreSurligne": "Conductivité",
+  "accroche": "Les ions portent le courant.",
+  "epreuve": "bac",
+  "bonus": "σ = Σ λᵢ[Xᵢ] · [Xᵢ] en **mol·m⁻³** · 1 mol·L⁻¹ = 10³ mol·m⁻³ · G = σ S ÷ L · λ(H₃O⁺) = 35,0 mS·m²·mol⁻¹",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/proprietes-electriques-des-solutions.webp",
+    "prompt": "a glossy violet beaker with two golden electrodes dipped in it and tiny golden glowing ions moving between them, sparkles"
+  },
+  "marcel": "Plus d’ions,\nplus de courant !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Loi de Kohlrausch",
+          "petite": true,
+          "lignes": ["σ = Σ λᵢ × [Xᵢ]", "G = {1/R} = σ × {S/L}"],
+          "regle": "**σ** conductivité (S·m⁻¹), **λᵢ** conductivité molaire ionique (S·m²·mol⁻¹), **[Xᵢ]** en ==mol·m⁻³==. Valable en solution ==diluée==, chaque ion apporte sa part.",
+          "note": "pas de mol·L⁻¹ ici&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Conductance ou conductivité",
+          "entetes": ["Grandeur", "Unité", "Dépend de"],
+          "lignes": [
+            ["Conductance G", "siemens (S)", "solution + cellule"],
+            ["Conductivité σ", "S·m⁻¹", "solution seule"],
+            ["H₃O⁺", "λ = 35,0 mS·m²·mol⁻¹", "relais de proton"],
+            ["HO⁻", "λ = 19,9 mS·m²·mol⁻¹", "relais de proton"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le titrage conductimétrique",
+          "etapes": [
+            { "titre": "Étalonner", "texte": "le conductimètre sur une solution de conductivité connue" },
+            { "titre": "Mesurer", "texte": "σ à chaque ajout de titrant, dans un grand volume ou en corrigeant la dilution" },
+            { "titre": "Lire", "texte": "deux droites : leur intersection (rupture de pente) donne l’équivalence" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une solution contient des ions Na⁺ et Cl⁻ à __0,010 mol·L⁻¹__ chacun. λ(Na⁺) = 5,0 et λ(Cl⁻) = 7,6 mS·m²·mol⁻¹. Quelle est σ&nbsp;?",
+          "calcul": "[X] = 10 mol·m⁻³ · σ = (5,0 + 7,6) × 10⁻³ × 10",
+          "aparte": "0,010 mol·L⁻¹ = 10 mol·m⁻³",
+          "resultat": "σ = [[0,13 S·m⁻¹]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quand choisir la conductimétrie",
+          "oui": { "titre": "Solution colorée ou trouble", "texte": "Un indicateur coloré y serait invisible&nbsp;: la conductimétrie ==ne dépend pas== de la couleur ni du saut de pH." },
+          "non": { "titre": "Tous les ions conduisent pareil&nbsp;?", "texte": "**Faux**&nbsp;: H₃O⁺ et HO⁻ conduisent environ **cinq fois mieux**." },
+          "essai": { "texte": "Au dosage d’un acide par une base, les segments sont des <i>droites</i>&nbsp;: un jeu d’ions donné, une pente donnée." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "σ = Σ λᵢ[Xᵢ], avec [Xᵢ] en mol·m⁻³", "quoi": "la loi et l’unité" },
+            { "texte": "σ = (5,0 + 7,6) × 10⁻³ × 10", "quoi": "le calcul" },
+            { "texte": "σ = 0,13 S·m⁻¹", "quoi": "le résultat" }
+          ],
+          "pied": "Rupture de pente = ==équivalence== : on trace les deux droites et on lit leur intersection."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Garder les concentrations en **mol·L⁻¹** (erreur ×1000).",
+            "Confondre **G** et **σ**.",
+            "Oublier la **dilution** qui courbe les droites.",
+            "Mesurer sans **étalonner**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "0,10 mol·L⁻¹ vaut combien en **mol·m⁻³**&nbsp;?",
+            "Quel ion conduit **le mieux**&nbsp;: Cl⁻ ou H₃O⁺&nbsp;?",
+            "Que marque une **rupture de pente**&nbsp;?"
+          ],
+          "reponses": "1) 100 mol·m⁻³ · 2) H₃O⁺ · 3) l’équivalence"
+        }
+      ]
+    }
+  ]
+}

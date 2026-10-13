@@ -1,0 +1,113 @@
+{
+  "titre": "Capteur et numérisation",
+  "titreSurligne": "numérisation",
+  "accroche": "De la grandeur physique au nombre.",
+  "epreuve": "bac",
+  "bonus": "**q = U<sub>ref</sub> ÷ 2<sup>n</sup>** · N ≈ U ÷ q · codeur&nbsp;: 360° ÷ impulsions par tour",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/si/choisir-un-capteur-et-numeriser-la-mesure.webp",
+    "prompt": "a glossy violet sensor probe sending a golden wave into a small chip showing binary dots, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Un bon correcteur ne\nsauve pas un capteur !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Trois familles",
+          "entetes": ["Famille", "Sortie", "Exemple"],
+          "lignes": [
+            ["Tout ou rien", "0 ou 1", "fin de course"],
+            ["Analogique", "tension continue", "thermistance"],
+            ["Numérique", "nombres, impulsions", "codeur, I2C"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le quantum du CAN",
+          "petite": true,
+          "lignes": ["q = U<sub>ref</sub> ÷ 2<sup>n</sup>", "N ≈ {U/q}"],
+          "regle": "Un CAN de **n bits** découpe la plage en ==2<sup>n</sup> niveaux==. **q** est la plus petite variation codée. N est arrondi à l’entier inférieur.",
+          "note": "résolution ≠ précision"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "De la mesure au nombre",
+          "etapes": [
+            { "titre": "Conditionner", "texte": "pont diviseur (résistance en tension), amplification, filtrage des parasites" },
+            { "titre": "Adapter", "texte": "occuper toute la plage du CAN, sans jamais la dépasser (sinon saturation)" },
+            { "titre": "Convertir", "texte": "q = U<sub>ref</sub> ÷ 2<sup>n</sup>, puis la résolution en °C" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Capteur __10 mV/°C__ sur 0–100 °C (0 à 1 V), CAN __10 bits__ de 5 V. Résolution, avant puis après amplification&nbsp;?",
+          "calcul": "q = 5 ÷ 1 024 ≈ 4,9 mV ⇒ 4,9 ÷ 10 ≈ 0,49 °C",
+          "aparte": "avec un gain de 5",
+          "resultat": "≈ [[0,1 °C]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Amplifier avant de convertir",
+          "oui": { "titre": "Jusqu’à 5 V", "texte": "Le signal occupe **toute** la plage&nbsp;: la résolution est cinq fois meilleure." },
+          "non": { "titre": "Au-delà de U<sub>ref</sub>", "texte": "Le CAN ==sature==&nbsp;: toutes les valeurs hautes donnent le même nombre." },
+          "essai": { "texte": "Codeur de 500 impulsions par tour&nbsp;: <i>360 ÷ 500 = 0,72°</i> par impulsion. Deux voies décalées donnent aussi le **sens**." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Lire une documentation",
+          "deux": true,
+          "items": [
+            { "titre": "Étendue", "texte": "mesure-t-il toute la plage utile&nbsp;?" },
+            { "titre": "Sensibilité", "texte": "de combien la sortie varie par unité" },
+            { "titre": "Précision", "texte": "de combien il peut se tromper" },
+            { "titre": "Temps de réponse", "texte": "suit-il assez vite&nbsp;?" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **résolution** et **précision**.",
+            "Oublier que 10 bits donnent **1 024** niveaux.",
+            "**Saturer** le CAN avec un gain trop fort.",
+            "Oublier que deux voies décalées donnent le **sens** de rotation."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Niveaux d’un CAN **8 bits**&nbsp;?",
+            "Quantum d’un CAN **10 bits** de **5 V**&nbsp;?",
+            "Que permet le **conditionnement**&nbsp;?"
+          ],
+          "reponses": "1) 256 · 2) ≈ 4,9 mV · 3) adapter le signal au CAN"
+        }
+      ]
+    }
+  ]
+}

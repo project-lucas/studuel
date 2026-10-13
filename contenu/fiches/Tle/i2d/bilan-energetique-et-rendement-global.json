@@ -1,0 +1,180 @@
+{
+  "titre": "Bilan et rendement",
+  "titreSurligne": "rendement",
+  "accroche": "Chaque watt compte, de la source à l’effet.",
+  "epreuve": "bac",
+  "bonus": "**E = P t** · **η = P utile / P absorbée** · **η global = η<sub>1</sub> × η<sub>2</sub> × …**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/i2d/bilan-energetique-et-rendement-global.webp",
+    "prompt": "a glossy violet elevator cabin with a golden energy flow and a small power meter, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Cherche l’étage\nqui perd le plus !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Rendement et pertes",
+          "taille": "mini",
+          "lignes": [
+            "η = {P utile/P absorbée}",
+            "η global = η1 × η2 × …"
+          ],
+          "regle": "Pertes = ==P absorbée − P utile==. Les rendements des étages ==se multiplient==.",
+          "note": "E = P × t"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Puissances",
+          "entetes": [
+            "Domaine",
+            "Formule"
+          ],
+          "lignes": [
+            [
+              "**Électrique continu**",
+              "P = U × I"
+            ],
+            [
+              "**Rotation**",
+              "P = C × ω"
+            ],
+            [
+              "**Translation**",
+              "P = F × v"
+            ],
+            [
+              "**Hydraulique**",
+              "P = Δp × Q<sub>v</sub>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Faire un bilan",
+          "etapes": [
+            {
+              "titre": "Utile",
+              "texte": "énergie ou puissance à l’effecteur"
+            },
+            {
+              "titre": "Chaîne",
+              "texte": "multiplier les η de chaque étage"
+            },
+            {
+              "titre": "Absorbée",
+              "texte": "P utile / η global, puis pertes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Ascenseur : __200 kg__ nets montés de __12 m__ en __15 s__. η : 0,96 · 0,88 · 0,70 · 0,97.",
+          "calcul": "E = 200 × 9,81 × 12 ≈ 23,5 kJ → 1,57 kW",
+          "aparte": "η = 0,96 × 0,88 × 0,70 × 0,97 ≈ 0,57",
+          "resultat": "P absorbée = 1,57 / 0,57 ≈ [[2,75 kW]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Transitoire ou établi&nbsp;?",
+          "oui": {
+            "titre": "Transitoire",
+            "texte": "Les grandeurs **varient** : énergie = aire sous P(t)."
+          },
+          "non": {
+            "titre": "Établi",
+            "texte": "Les grandeurs sont **stables** : E = P × t."
+          },
+          "essai": {
+            "texte": "Montée linéaire de 0 à 2 kW en 4 s : E = ½ × 2 000 × 4 = <i>4 kJ</i>."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Optimiser",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Réduire",
+              "texte": "meilleurs η, isolation"
+            },
+            {
+              "titre": "Récupérer",
+              "texte": "freinage, VMC double flux"
+            },
+            {
+              "titre": "Piloter",
+              "texte": "au plus près du η maximal"
+            },
+            {
+              "titre": "Stocker",
+              "texte": "décaler dans le temps"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "E utile = m g h = 200 × 9,81 × 12 ≈ 23,5 kJ",
+              "quoi": "l’utile"
+            },
+            {
+              "texte": "η global = 0,96 × 0,88 × 0,70 × 0,97 ≈ 0,57",
+              "quoi": "le rendement"
+            }
+          ],
+          "pied": "==Formule==, ==application numérique== avec unités, puis ==conclusion==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "**Additionner** les rendements au lieu de les multiplier.",
+            "Oublier le **contrepoids** dans la masse nette.",
+            "Prendre P utile pour P **absorbée**.",
+            "Confondre **énergie** (J, Wh) et **puissance** (W)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que vaut **η global** de deux étages à 0,9 et 0,8&nbsp;?",
+            "Comment calcule-t-on les **pertes**&nbsp;?",
+            "Comment mesure-t-on une **puissance** mécanique de rotation&nbsp;?"
+          ],
+          "reponses": "1) 0,72 · 2) P absorbée − P utile · 3) couplemètre et tachymètre : P = C × ω"
+        }
+      ]
+    }
+  ]
+}

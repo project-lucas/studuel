@@ -1,0 +1,129 @@
+{
+  "titre": "Emploi et chômage",
+  "titreSurligne": "chômage",
+  "accroche": "Mesurer, comprendre, agir.",
+  "epreuve": "bac",
+  "bonus": "chômage = chômeurs ÷ **pop. active** · activité et emploi = ÷ **pop. 15-64 ans**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/droit-economie/emploi-et-chomage.webp",
+    "prompt": "a glossy violet briefcase with a golden magnifying glass and a small golden job-offer board, tiny golden sparkles, same art style as the reference icons, on a magenta background, no text, no numbers"
+  },
+  "marcel": "Qui est vraiment\nchômeur ?",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le chômeur selon le BIT",
+          "items": [
+            { "terme": "Sans emploi", "definition": "pas **une heure** travaillée la semaine de référence" },
+            { "terme": "Disponible", "definition": "pour travailler sous **deux semaines**" },
+            { "terme": "Recherche active", "definition": "dans le **mois** précédent" },
+            { "terme": "Population active", "definition": "actifs **occupés** + chômeurs" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le vocabulaire s’inverse",
+          "entetes": ["Marché du travail", "Qui ?", "Autre nom"],
+          "lignes": [
+            ["**Offre de travail**", "ménages", "demande d’emploi"],
+            ["**Demande de travail**", "entreprises", "offre d’emploi"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les formes de chômage",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Frictionnel", "texte": "Passage d’un emploi à l’autre, **même au plein emploi**." },
+            { "titre": "Conjoncturel", "texte": "**Demande insuffisante** : on produit moins, on embauche moins." },
+            { "titre": "Structurel", "texte": "**Durable** : qualifications inadaptées, rigidités, coût du travail." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Choisir la politique",
+          "etapes": [
+            { "titre": "Diagnostiquer", "texte": "conjoncturel ou structurel ?" },
+            { "titre": "Agir", "texte": "active : créer ou retrouver un emploi" },
+            { "titre": "Atténuer", "texte": "passive : indemniser" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Les taux d’un pays",
+          "donnees": "40 M de 15-64 ans ; 28 M d’actifs occupés ; 2 M de chômeurs.",
+          "calcul": "Active = 30 M.\n2 ÷ 30 × 100 ; 30 ÷ 40 ; 28 ÷ 40.",
+          "resultat": "[[6,7 % · 75 % · 70 %]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Politiques de l’emploi",
+          "deux": true,
+          "items": [
+            { "titre": "Actives", "texte": "formation, accompagnement, **aides à l’embauche**" },
+            { "titre": "Passives", "texte": "**indemnisation** des chômeurs" },
+            { "titre": "SMIC", "texte": "protège le pouvoir d’achat, mais pèse sur le **coût du travail**" },
+            { "titre": "Allègements", "texte": "baisse des **cotisations** sur les bas salaires" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’un inscrit à France Travail est **toujours** chômeur.",
+            "Diviser par la population **totale** au lieu de l’active.",
+            "Penser que plein emploi = **zéro** chômeur.",
+            "Intervertir **offre** et **demande** de travail."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "À retenir",
+          "paragraphes": [
+            "Pour bien agir contre le chômage, il faut d’abord savoir s’il est **conjoncturel** (manque de demande : on relance) ou **structurel** (fonctionnement du marché du travail : on réforme)."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelles sont les **trois conditions** du chômeur au BIT ?",
+            "Quelle forme de chômage vient d’un **manque de demande** ?",
+            "Citez une politique **active** de l’emploi."
+          ],
+          "reponses": "1) sans emploi, disponible, cherche · 2) conjoncturel · 3) formation"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "titre": "Le plan complexe",
+  "titreSurligne": "complexe",
+  "accroche": "Distance = module, angle = argument.",
+  "epreuve": "bac",
+  "bonus": "AB = |z<sub>B</sub> − z<sub>A</sub>| · arg(zz′) = arg z + arg z′ · **0 n’a pas d’argument**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-expertes/le-point-de-vue-geometrique-des-nombres-complexes.webp",
+    "prompt": "a glossy violet complex plane with a golden point, a golden arrow from the origin and a curved angle arc, sparkles"
+  },
+  "marcel": "Un complexe,\nun point du plan !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le dictionnaire",
+          "entetes": ["Géométrie", "Complexe"],
+          "lignes": [
+            ["Vecteur AB", "z<sub>B</sub> − z<sub>A</sub>"],
+            ["Distance AB", "**module** de z<sub>B</sub> − z<sub>A</sub>"],
+            ["Milieu de [AB]", "(z<sub>A</sub> + z<sub>B</sub>) ÷ 2"],
+            ["Symétrique / axe des x", "le **conjugué** z̄"],
+            ["Symétrique / origine", "**−z**"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Forme trigonométrique",
+          "taille": "mini",
+          "lignes": ["z = r (cos θ + i sin θ)", "arg(zz′) = arg z + arg z′"],
+          "regle": "r = |z|, θ = arg z **modulo 2π**. Quotient&nbsp;: **−** · puissance&nbsp;: arg(zⁿ) = **n** arg z · conjugué&nbsp;: arg z̄ = **−** arg z.",
+          "note": "multiplier = additionner les angles"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "De a + ib à r(cos θ + i sin θ)",
+          "etapes": [
+            { "titre": "Module", "texte": "r = √(a² + b²)" },
+            { "titre": "Deux équations", "texte": "cos θ = a ÷ r **et** sin θ = b ÷ r" },
+            { "titre": "Angle", "texte": "l’angle qui vérifie les deux, modulo 2π" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Forme trigonométrique de __z = 1 + i__.",
+          "calcul": "r = √2, cos θ = sin θ = {1/√2}",
+          "aparte": "les deux équations",
+          "resultat": "z = [[√2 (cos π/4 + i sin π/4)]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Lire une figure",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Cercle", "texte": "|z − z<sub>A</sub>| = R&nbsp;: cercle de centre A, de rayon R." },
+            { "titre": "Médiatrice", "texte": "|z − z<sub>A</sub>| = |z − z<sub>B</sub>|&nbsp;: médiatrice de [AB]." },
+            { "titre": "Z réel", "texte": "Z = (z<sub>C</sub> − z<sub>A</sub>) ÷ (z<sub>B</sub> − z<sub>A</sub>) réel&nbsp;: A, B, C **alignés**." },
+            { "titre": "Z imaginaire pur", "texte": "(AB) et (AC) sont **perpendiculaires**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "|z|² = 1² + 1² = 2, donc |z| = √2", "quoi": "le module" },
+            { "texte": "cos θ = {1/√2} et sin θ = {1/√2}", "quoi": "les deux équations" },
+            { "texte": "Donc θ = {π/4} [2π]", "quoi": "l’argument" }
+          ],
+          "pied": "Conclusion&nbsp;: z = ==√2 e<sup>iπ/4</sup>==, à distance √2 de O."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Donner un argument à **0**&nbsp;: il n’en a pas.",
+            "N’écrire que **cos θ**&nbsp;: deux angles restent possibles.",
+            "Oublier le **modulo 2π**.",
+            "Écrire arg(z/z′) = arg z **+** arg z′."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**arg(z²)** si arg z = {π/6}&nbsp;?",
+            "**|z − 2i| = 3**&nbsp;: quel ensemble&nbsp;?",
+            "**Z imaginaire pur**&nbsp;: quelle figure&nbsp;?"
+          ],
+          "reponses": "1) π/3 · 2) cercle de centre 2i, rayon 3 · 3) (AB) ⊥ (AC)"
+        }
+      ]
+    }
+  ]
+}

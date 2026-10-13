@@ -1,0 +1,130 @@
+{
+  "titre": "Intégrales, moyenne",
+  "titreSurligne": "Intégrales",
+  "accroche": "Une aire sous la courbe, une énergie.",
+  "epreuve": "bac",
+  "bonus": "∫ₐᵇ f = F(b) − F(a) · μ = {1/(b − a)} ∫ₐᵇ f · E = ∫ P(t) dt",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie-maths/integrales-et-valeur-moyenne.webp",
+    "prompt": "a glossy violet curve with the area under it filled in golden, a small golden integral sign, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "L’aire sous la courbe,\nc’est l’intégrale !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Calculer une intégrale",
+          "taille": "mini",
+          "lignes": ["∫ₐᵇ f(x) dx = F(b) − F(a)", "μ = {1/(b − a)} × ∫ₐᵇ f(x) dx"],
+          "regle": "F est une **primitive** de f. Pour f ≥ 0, l’intégrale est l’**aire** sous la courbe ; si f ≤ 0, c’est l’**opposé** de l’aire. μ est la **valeur moyenne**.",
+          "note": "échanger les bornes change le signe"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Propriétés",
+          "entetes": ["Nom", "Énoncé"],
+          "lignes": [
+            ["Linéarité", "∫(f + g) = ∫f + ∫g ; ∫kf = k∫f"],
+            ["Positivité", "f ≥ 0 ⇒ ∫ₐᵇ f ≥ 0"],
+            ["Croissance", "f ≤ g ⇒ ∫f ≤ ∫g"],
+            ["Chasles", "∫ de a à c = ∫ de a à b + ∫ de b à c"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer une intégrale",
+          "etapes": [
+            { "titre": "Primitive", "texte": "trouver une primitive **F** de f" },
+            { "titre": "Bornes", "texte": "calculer **F(b)** puis **F(a)**, faire la différence" },
+            { "titre": "Interpréter", "texte": "aire, **énergie**, ou moyenne si on divise par b − a" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "∫₀² (3x² + 1) dx et valeur moyenne sur [0 ; 2].",
+          "calcul": "F(x) = x³ + x\nF(2) − F(0) = 10 − 0",
+          "aparte": "μ = 10 ÷ (2 − 0)",
+          "resultat": "∫ = [[10]] ; μ = 5"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "En physique",
+          "entetes": ["On connaît", "L’intégrale donne"],
+          "lignes": [
+            ["Puissance P(t)", "**l’énergie** E = ∫ P dt"],
+            ["Puissance sur une période", "sa moyenne = puissance **active**"],
+            ["Vitesse v(t)", "la **distance** parcourue"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "Autres calculs de cours",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Rectangles", "texte": "n bandes de largeur **(b − a)/n**" },
+            { "titre": "Entre deux courbes", "texte": "f ≥ g : ∫(f − g). Exemple : **1/6**" },
+            { "titre": "Moteur", "texte": "P = 500t sur 4 s : **4 000 J**" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "F(x) = x³ + x est une primitive de 3x² + 1", "quoi": "la primitive" },
+            { "texte": "∫₀² (3x² + 1) dx = F(2) − F(0) = 10", "quoi": "le calcul" },
+            { "texte": "μ = {1/2} × 10 = 5", "quoi": "la moyenne" }
+          ],
+          "pied": "Une énergie en joules&nbsp;: ==∫ P(t) dt==, avec P en watts et t en secondes."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier **F(a)** et ne garder que F(b).",
+            "Oublier de **diviser par b − a** pour la moyenne.",
+            "Compter positivement une aire **sous l’axe**.",
+            "Se tromper de **signe** en échangeant les bornes."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "∫₀³ 4 dx&nbsp;?",
+            "∫₀¹ 2x dx&nbsp;?",
+            "Valeur moyenne de **f(x) = 2x** sur [0 ; 1]&nbsp;?"
+          ],
+          "reponses": "1) 12 (rectangle 3 × 4) · 2) [x²] = 1 · 3) 1 ÷ 1 = 1"
+        }
+      ]
+    }
+  ]
+}

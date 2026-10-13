@@ -1,0 +1,117 @@
+{
+  "titre": "Les paradigmes",
+  "titreSurligne": "paradigmes",
+  "accroche": "Quatre façons de dire la même chose.",
+  "epreuve": "bac",
+  "bonus": "impératif · fonctionnel · objet · événementiel — Python est <b>multiparadigme</b>",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/nsi/paradigmes-de-programmation.webp",
+    "prompt": "a glossy violet four-way crossroads signpost with golden arrows, sparkles"
+  },
+  "marcel": "Quatre styles,\nun seul calcul !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les quatre paradigmes",
+          "entetes": ["Paradigme", "Le programme est…", "Son terrain"],
+          "lignes": [
+            ["**Impératif**", "une suite d’**instructions** qui modifient l’état", "algorithme court, performance"],
+            ["**Fonctionnel**", "une **composition de fonctions**", "calcul, données, tests fiables"],
+            ["**Objet**", "des **objets** qui échangent des messages", "modéliser un domaine"],
+            ["**Événementiel**", "une **réaction** à des événements", "interface, réseau, temps réel"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le fonctionnel",
+          "items": [
+            { "terme": "Effet de bord", "definition": "modification **hors** de la fonction (à éviter)" },
+            { "terme": "Transparence référentielle", "definition": "mêmes arguments, **même résultat**" },
+            { "terme": "Immutabilité", "definition": "on crée une **nouvelle** valeur" }
+          ]
+        },
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Choisir",
+          "colonnes": 1,
+          "cartes": [
+            { "titre": "Fonction pure", "texte": "facile à **tester**, sûre en parallèle." },
+            { "titre": "État global", "texte": "raisonnement et tests **pénibles**." },
+            { "titre": "Interface", "texte": "le flot est décidé par **ce qui arrive**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "<i>def carre(x): return x*x</i>. __Quel paradigme, quel avantage__&nbsp;?",
+          "calcul": "aucun effet de bord<br>carre(3) vaut toujours 9",
+          "aparte": "test immédiat",
+          "resultat": "= [[fonction pure]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "À retenir",
+          "deux": false,
+          "items": [
+            { "titre": "Même puissance", "texte": "tous les paradigmes calculent la **même chose**." },
+            { "titre": "Le lecteur", "texte": "ils changent le **coût de la modification**." },
+            { "titre": "Mélange", "texte": "un vrai programme les **combine**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "« fonction pure : pas d’effet de bord »", "quoi": "fonctionnel" },
+            { "texte": "« même entrée, même sortie »", "quoi": "transparence" },
+            { "texte": "« gestionnaire appelé à l’événement »", "quoi": "événementiel" }
+          ],
+          "pied": "Justifie ton choix par le ==coût de maintenance==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’un paradigme calcule **plus** qu’un autre.",
+            "Penser qu’un programme n’a qu’**un** paradigme.",
+            "Appeler « pure » une fonction qui **modifie** son argument.",
+            "Oublier que l’état partagé complique l’**impératif**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Citer les **quatre** paradigmes du programme.",
+            "Qu’est-ce que la **transparence référentielle**&nbsp;?",
+            "Quel paradigme convient à une **interface graphique**&nbsp;?"
+          ],
+          "reponses": "1) impératif, fonctionnel, objet, événementiel · 2) mêmes arguments, même résultat · 3) événementiel"
+        }
+      ]
+    }
+  ]
+}

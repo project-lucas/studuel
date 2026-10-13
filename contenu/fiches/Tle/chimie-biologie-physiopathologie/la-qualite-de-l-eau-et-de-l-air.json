@@ -1,0 +1,191 @@
+{
+  "titre": "L’eau et l’air",
+  "titreSurligne": "l’air",
+  "accroche": "Des ions dans l’eau, des gaz dans l’air.",
+  "epreuve": "bac",
+  "bonus": "**PV = nRT** · R = 8,314 J/(mol·K) · T en **kelvins** · eau potable&nbsp;: nitrates ≤ 50 mg/L, pH de 6,5 à 9",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/chimie-biologie-physiopathologie/la-qualite-de-l-eau-et-de-l-air.webp",
+    "prompt": "a glossy violet water droplet beside a golden gas cylinder with swirling air bubbles and small sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Une eau, un air&nbsp;:\nça se contrôle&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le gaz parfait",
+          "petite": true,
+          "lignes": [
+            "P × V = n × R × T"
+          ],
+          "regle": "**P** en Pa, **V** en m³, **T** en K (θ + 273), R = 8,314 J/(mol·K).",
+          "note": "5 L = 5 × 10⁻³ m³"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "L’air sec",
+          "entetes": [
+            "Gaz",
+            "Part molaire"
+          ],
+          "lignes": [
+            [
+              "Diazote N₂",
+              "≈ 78 %"
+            ],
+            [
+              "Dioxygène O₂",
+              "≈ 21 %"
+            ],
+            [
+              "Argon",
+              "≈ 0,9 %"
+            ],
+            [
+              "CO₂",
+              "≈ 0,04 %"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 3,
+          "titre": "L’eau et ses ions",
+          "items": [
+            {
+              "terme": "Hydratation",
+              "definition": "les ions d’un solide ionique s’entourent d’eau, molécule **polaire**"
+            },
+            {
+              "terme": "Conductivité σ",
+              "definition": "en S/m&nbsp;: grâce aux **ions**, elle croît avec leur concentration"
+            },
+            {
+              "terme": "Équivalence",
+              "definition": "changement de **pente** de la courbe σ = f(V)"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "O₂ médical&nbsp;: 5 L, 2,0 × 10⁷ Pa, 293 K.",
+          "calcul": "n = {PV/RT} = {2,0×10⁷ × 5×10⁻³/8,314 × 293}",
+          "aparte": "≈ 1 000 L à 1 atm",
+          "resultat": "n ≈ [[41 mol]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Reconnaître un gaz ou une eau",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "CO₂",
+              "texte": "**Trouble l’eau de chaux**."
+            },
+            {
+              "titre": "Vapeur d’eau",
+              "texte": "**Bleuit** le sulfate de cuivre anhydre."
+            },
+            {
+              "titre": "Dioxygène",
+              "texte": "**Ravive** une bûchette incandescente."
+            },
+            {
+              "titre": "Eau potable",
+              "texte": "Nitrates ≤ **50 mg/L**, pH de **6,5 à 9**, critères microbiologiques."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Doser des ions sulfate par conductimétrie",
+          "etapes": [
+            {
+              "titre": "Ajouter",
+              "texte": "Ba²⁺ par petits volumes : précipité BaSO₄"
+            },
+            {
+              "titre": "Mesurer",
+              "texte": "σ après chaque ajout, tracer la courbe"
+            },
+            {
+              "titre": "Lire",
+              "texte": "avant : σ varie peu&nbsp;; après : σ monte, d’où l’équivalence"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Gaz et polluants",
+          "deux": false,
+          "items": [
+            {
+              "titre": "CO",
+              "texte": "se fixe **200 fois** mieux que O₂ sur l’hémoglobine"
+            },
+            {
+              "titre": "Ozone",
+              "texte": "**protège** en altitude, **polluant** au sol"
+            },
+            {
+              "titre": "Primaire / secondaire",
+              "texte": "émis directement / formé dans l’air"
+            },
+            {
+              "titre": "Traiter",
+              "texte": "adsorption sur charbon actif, oxydation par O₃"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Laisser **T en °C** dans PV = nRT.",
+            "Confondre eau **distillée** (vaporisée) et **déminéralisée** (résines).",
+            "Dire que l’ozone est **toujours** nocif.",
+            "Prendre un macropolluant pour un **micropolluant** (pesticides, médicaments)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Pourquoi une eau salée **conduit**-elle le courant&nbsp;?",
+            "Quel test **trouble l’eau de chaux**&nbsp;?",
+            "À quoi sert l’**adsorption** sur charbon actif&nbsp;?"
+          ],
+          "reponses": "1) elle contient des ions mobiles · 2) le dioxyde de carbone · 3) fixer des polluants en surface"
+        }
+      ]
+    }
+  ]
+}

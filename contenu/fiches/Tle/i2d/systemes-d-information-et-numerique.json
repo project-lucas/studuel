@@ -1,0 +1,115 @@
+{
+  "titre": "Numérique et SIN",
+  "titreSurligne": "Numérique",
+  "accroche": "Programmer un produit communicant.",
+  "epreuve": "bac",
+  "bonus": "Programme = **initialisation + boucle infinie** · langages : **Python** et **C++**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/i2d/systemes-d-information-et-numerique.webp",
+    "prompt": "a glossy violet microcontroller board with golden pins, a small sensor and a glowing code bracket, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Une boucle infinie,\net des idées claires&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le matériel",
+          "entetes": ["Composant", "Usage"],
+          "lignes": [
+            ["**Microcontrôleur**", "entrées-sorties, temps réel, sobre"],
+            ["**Nano-ordinateur**", "système, serveur web, caméra"],
+            ["**Objet connecté**", "carte + capteurs + radio"],
+            ["**Entrées-sorties**", "TOR, analogique (CAN), MLI, bus"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le logiciel",
+          "items": [
+            { "terme": "Fonction", "definition": "traitement **réutilisable**" },
+            { "terme": "Bibliothèque", "definition": "code fourni pour un capteur" },
+            { "terme": "Interruption", "definition": "traite un événement **urgent**" },
+            { "terme": "Variable", "definition": "nom, **type**, portée" },
+            { "terme": "Programme", "definition": "initialisation, puis **boucle** infinie" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Mettre au point",
+          "etapes": [
+            { "titre": "Décrire", "texte": "diagramme d’états, de séquence, d’activité" },
+            { "titre": "Simuler", "texte": "tester la logique avant de câbler" },
+            { "titre": "Déboguer", "texte": "pas à pas, console série, tests unitaires" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu : la serre",
+          "donnees": "Humidité entre __40 et 60 %__, mesure envoyée toutes les 10 min.",
+          "calcul": "h &lt; 40 → pompe ON · h &gt; 60 → OFF",
+          "aparte": "envoi si t − dernier ≥ 600 s",
+          "resultat": "[[TOR avec hystérésis]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Attendre 600 s&nbsp;?",
+          "oui": { "titre": "Comparer le temps", "texte": "On teste __temps() − dernier_envoi ≥ 600__ à chaque tour." },
+          "non": { "titre": "Instruction attendre", "texte": "Elle **bloque** la régulation pendant dix minutes." },
+          "essai": { "texte": "La pompe doit rester <i>régulée</i> pendant l’attente&nbsp;: on compare les dates." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Sécurité et données",
+          "items": [
+            { "titre": "Identifiants", "texte": "changer ceux **par défaut**" },
+            { "titre": "Chiffrement", "texte": "HTTPS, TLS, mises à jour" },
+            { "titre": "RGPD", "texte": "seulement les données **nécessaires**" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Tester une fonction avec **une seule** valeur.",
+            "Bloquer le programme avec une **attente** longue.",
+            "Oublier les **effets de bord** : mémoire, dépassement.",
+            "Une IHM illisible ou aux commandes **peu sûres**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelles valeurs tester pour les seuils 40 et 60&nbsp;?",
+            "Que fait une **interruption**&nbsp;?",
+            "Quel module radio pour une **longue portée**&nbsp;?"
+          ],
+          "reponses": "1) 39, 40, 61 · 2) traite un événement urgent · 3) LoRa"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "titre": "Mise au point",
+  "titreSurligne": "Mise au point",
+  "accroche": "Trouver la cause, pas le symptôme.",
+  "epreuve": "bac",
+  "bonus": "syntaxe · exécution · <b>logique</b> (la plus dangereuse) — reproduire, localiser, comprendre, corriger, tester",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/nsi/mise-au-point-logicielle.webp",
+    "prompt": "a glossy violet bug with a golden magnifying glass over it, sparkles"
+  },
+  "marcel": "Un bug a toujours\nune cause !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois familles d’erreurs",
+          "entetes": ["Famille", "Quand", "Danger"],
+          "lignes": [
+            ["**Syntaxe**", "avant l’exécution", "facile"],
+            ["**Exécution**", "le programme s’arrête", "repérable"],
+            ["**Logique**", "jamais : résultat faux", "**le plus grand**"]
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Les outils",
+          "deux": false,
+          "items": [
+            { "titre": "Affichage", "texte": "valeurs intermédiaires, rudimentaire." },
+            { "titre": "Débogueur", "texte": "points d’arrêt, pas à pas." },
+            { "titre": "Assertions", "texte": "échec **au moment exact** de l’hypothèse violée." },
+            { "titre": "Journalisation", "texte": "une trace en production." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en cinq temps",
+          "etapes": [
+            { "titre": "Reproduire", "texte": "avec le plus **petit** cas possible" },
+            { "titre": "Localiser", "texte": "encadrer la zone où l’état devient faux" },
+            { "titre": "Comprendre", "texte": "la cause, puis **corriger**" },
+            { "titre": "Tester", "texte": "ajouter un test qui **échouait** avant" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "<i>for i in range(len(t)+1): print(t[i])</i>. __Quelle erreur__&nbsp;?",
+          "calcul": "dernier tour : i = len(t)<br>indice hors bornes",
+          "aparte": "décalage d’un rang",
+          "resultat": "= [[IndexError]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les exceptions",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Où traiter", "texte": "au niveau où l’on sait **quoi faire**." },
+            { "titre": "Tout attraper", "texte": "les bugs sont **masqués**." },
+            { "titre": "Rien attraper", "texte": "chute sur une cause **prévisible**." },
+            { "titre": "Flux normal", "texte": "une exception signale l’**exceptionnel**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "<i>try: … except FileNotFoundError: …</i>", "quoi": "exception ciblée" },
+            { "texte": "« erreur de logique : résultat faux sans message »", "quoi": "famille" },
+            { "texte": "« j’ajoute un test qui échouait avant »", "quoi": "correction" },
+            { "texte": "« reproduire, localiser, comprendre, corriger »", "quoi": "méthode" }
+          ],
+          "pied": "Un programme correct mais ==trop lent== est inutilisable."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Corriger le **symptôme** sans chercher la cause.",
+            "Confondre **affectation** et comparaison.",
+            "Modifier une liste **pendant** son parcours.",
+            "Oublier le cas **collection vide**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle erreur est la **plus dangereuse**&nbsp;?",
+            "Quelle est la **dernière** étape de la méthode&nbsp;?",
+            "Pourquoi ne pas tout attraper avec <i>except</i>&nbsp;?"
+          ],
+          "reponses": "1) l’erreur de logique · 2) ajouter un test qui échouait avant · 3) les bugs sont masqués"
+        }
+      ]
+    }
+  ]
+}

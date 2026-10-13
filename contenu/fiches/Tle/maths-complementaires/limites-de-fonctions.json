@@ -1,0 +1,165 @@
+{
+  "titre": "Limites de fonctions",
+  "titreSurligne": "Limites",
+  "accroche": "Où va le modèle sur le long terme ?",
+  "epreuve": "bac",
+  "bonus": "eˣ/xⁿ → +∞ · ln x/x → 0 · asymptote y = ℓ : saturation · x = a : valeur interdite",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-complementaires/limites-de-fonctions.webp",
+    "prompt": "a glossy violet curve flattening toward a golden dashed horizontal line, sparkles"
+  },
+  "marcel": "Factorise le terme\ndominant !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les limites de référence",
+          "taille": "mini",
+          "lignes": [
+            "x, x², eˣ, ln x → +∞ en +∞",
+            "1/x, 1/x², e⁻ˣ → 0 en +∞",
+            "1/x → +∞ et ln x → −∞ en 0⁺"
+          ],
+          "regle": "Quatre formes indéterminées&nbsp;: **∞ − ∞ · 0 × ∞ · ∞/∞ · 0/0**. Ce n’est pas « pas de limite »&nbsp;: il faut ==transformer l’écriture==.",
+          "note": "en +∞ : facteur dominant"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Croissances comparées",
+          "entetes": [
+            "Rapport",
+            "Limite en +∞"
+          ],
+          "lignes": [
+            [
+              "eˣ ÷ xⁿ",
+              "**+∞**"
+            ],
+            [
+              "ln x ÷ x",
+              "**0**"
+            ],
+            [
+              "x e⁻ˣ",
+              "**0**"
+            ],
+            [
+              "Asymptote y = ℓ",
+              "f(x) → ℓ, **saturation**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer une limite",
+          "etapes": [
+            {
+              "titre": "Substituer",
+              "texte": "regarder si la forme est déterminée"
+            },
+            {
+              "titre": "Factoriser",
+              "texte": "par le terme de plus haut degré"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "limite, asymptote, puis phrase sur le modèle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = (3x² + x) ÷ (x² + 2) en +∞. __Limite et asymptote ?__",
+          "calcul": "f(x) = x²(3 + 1/x) ÷ x²(1 + 2/x²)",
+          "aparte": "1/x → 0 et 2/x² → 0",
+          "resultat": "f(x) → [[3]] : y = 3"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Polynôme",
+              "texte": "en ±∞, comme son terme de plus haut **degré**."
+            },
+            {
+              "titre": "Fraction",
+              "texte": "comme le quotient des termes **dominants**."
+            },
+            {
+              "titre": "Horizontale",
+              "texte": "y = ℓ&nbsp;: la population **plafonne**."
+            },
+            {
+              "titre": "Verticale",
+              "texte": "x = a&nbsp;: valeur **interdite** du modèle."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Pour x ≠ 0, f(x) = (3 + 1/x) ÷ (1 + 2/x²)",
+              "quoi": "la factorisation"
+            },
+            {
+              "texte": "1/x → 0 et 2/x² → 0, donc f(x) → 3",
+              "quoi": "la limite"
+            },
+            {
+              "texte": "La courbe admet la droite y = 3 pour asymptote.",
+              "quoi": "la phrase sur le modèle"
+            }
+          ],
+          "pied": "Interprète en français&nbsp;: « le modèle ==se stabilise== autour de 3 ». ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire « **∞ − ∞ = 0** ».",
+            "Oublier de conclure par une **phrase** sur le modèle.",
+            "Appliquer les croissances comparées **sans** les citer.",
+            "Confondre asymptote **horizontale** et verticale."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Limite de **e⁻ˣ** en +∞&nbsp;?",
+            "Limite de **(2x + 1) ÷ (x − 1)** en +∞&nbsp;?",
+            "Limite de **ln x ÷ x** en +∞&nbsp;?"
+          ],
+          "reponses": "1) 0 · 2) 2x ÷ x → 2 (asymptote y = 2) · 3) 0 (croissances comparées)"
+        }
+      ]
+    }
+  ]
+}

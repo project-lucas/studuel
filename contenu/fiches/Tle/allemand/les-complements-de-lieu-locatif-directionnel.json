@@ -1,0 +1,201 @@
+{
+  "titre": "Compléments de lieu",
+  "titreSurligne": "lieu",
+  "accroche": "Wo, wohin, woher&nbsp;: trois questions.",
+  "bonus": "**wo** = datif · **wohin** = nach, in + acc., zu · **woher** = aus, von",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/allemand/les-complements-de-lieu-locatif-directionnel.webp",
+    "prompt": "a glossy violet map pin with a golden compass rose and a golden dotted path, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Où, vers où,\nd’où&nbsp;? Trois mots&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois questions",
+          "entetes": [
+            "Question",
+            "Ce qu’elle demande",
+            "Le cas"
+          ],
+          "lignes": [
+            [
+              "**wo**&nbsp;?",
+              "où (position)",
+              "datif"
+            ],
+            [
+              "**wohin**&nbsp;?",
+              "vers où (but)",
+              "accusatif, nach, zu"
+            ],
+            [
+              "**woher**&nbsp;?",
+              "d’où (origine)",
+              "datif : aus, von"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Wohin&nbsp;? le choix du mot",
+          "entetes": [
+            "Mot",
+            "L’exemple",
+            "En français"
+          ],
+          "lignes": [
+            [
+              "**nach**",
+              "<i>nach Deutschland, nach Hause</i>",
+              "en Allemagne, chez soi"
+            ],
+            [
+              "**in** + acc.",
+              "<i>in die Stadt, ins Kino</i>",
+              "en ville, au cinéma"
+            ],
+            [
+              "**zu** + dat.",
+              "<i>zum Arzt, zu meiner Tante</i>",
+              "chez le médecin"
+            ],
+            [
+              "**an** + acc.",
+              "<i>ans Meer, an die Grenze</i>",
+              "à la mer, à la frontière"
+            ],
+            [
+              "**auf** + acc.",
+              "<i>auf die Post, aufs Land</i>",
+              "à la poste, à la campagne"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Woher&nbsp;? et les particules",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "aus + datif",
+              "texte": "Sortir d’un lieu, venir d’un pays&nbsp;: <i>aus Frankreich, aus dem Haus</i>."
+            },
+            {
+              "titre": "von + datif",
+              "texte": "Un point de départ, une personne&nbsp;: <i>von der Arbeit, von meiner Oma</i>."
+            },
+            {
+              "titre": "hin / her",
+              "texte": "<i>hin</i> : on s’éloigne (<i>Geh hin!</i>) · <i>her</i> : on se rapproche (<i>Komm her!</i>)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Chez le médecin",
+          "oui": {
+            "titre": "Aller chez lui",
+            "texte": "<i>Ich gehe **zum** Arzt.</i> (J’y vais.) — <i>zu</i> + mouvement."
+          },
+          "non": {
+            "titre": "Être chez lui",
+            "texte": "<i>Ich bin **beim** Arzt.</i> (J’y suis.) — <i>bei</i>, sans mouvement."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Wir fahren ___ Berlin.</i> → **nach**&nbsp;: une ville sans article."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Pose la question",
+              "texte": "**Wo, wohin** ou **woher**&nbsp;?"
+            },
+            {
+              "titre": "Regarde le lieu",
+              "texte": "Pays ou ville → <i>nach</i> · personne → <i>zu</i> · nom avec article → <i>in</i>."
+            },
+            {
+              "titre": "Accorde le cas",
+              "texte": "But avec <i>in, an, auf</i> → accusatif. Position et origine → datif."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les paires figées",
+          "deux": true,
+          "items": [
+            {
+              "titre": "nach Hause / zu Hause",
+              "texte": "rentrer / être à la maison"
+            },
+            {
+              "titre": "aufs Land / auf dem Land",
+              "texte": "à la campagne (but / position)"
+            },
+            {
+              "titre": "ins Ausland / im Ausland",
+              "texte": "à l’étranger (but / position)"
+            },
+            {
+              "titre": "in die Schule / in der Schule",
+              "texte": "aller à l’école / y être"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "« Chez » ne se traduit pas par un seul mot&nbsp;: <i>zum Arzt</i> (but), <i>beim Arzt</i> (position).",
+            "<i>Ich gehe nach die Stadt</i> → <i>Ich gehe **in die** Stadt.</i> (<i>nach</i> : sans article.)",
+            "<i>Ich komme von Frankreich</i> → <i>Ich komme **aus** Frankreich.</i>",
+            "<i>Ich bin nach Hause</i> → <i>Ich bin **zu Hause**.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Wir fahren ___ Wien.</i>",
+            "<i>Ich gehe ___ Arzt (zu + der).</i>",
+            "<i>Ich komme ___ der Schweiz.</i>"
+          ],
+          "reponses": "1) nach 2) zum 3) aus"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "titre": "Besoin et exigences",
+  "titreSurligne": "exigences",
+  "accroche": "Du besoin de l’usager au critère chiffré.",
+  "epreuve": "bac",
+  "bonus": "**Vérifier** = par rapport aux **spécifications** · **Valider** = par rapport au **besoin**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/i2d/analyse-du-besoin-et-exigences.webp",
+    "prompt": "a glossy violet clipboard with a golden checklist and a small bike charging station, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Un besoin, des\nexigences chiffrées !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Du besoin au système",
+          "entetes": [
+            "Étape",
+            "Diagramme"
+          ],
+          "lignes": [
+            [
+              "**Cas d’utilisation** : quels services ?",
+              "uc"
+            ],
+            [
+              "**Exigences** : quelles performances ?",
+              "req"
+            ],
+            [
+              "**Architecture** : quels blocs, flux ?",
+              "bdd, ibd"
+            ],
+            [
+              "**Comportement** : états, échanges",
+              "stm, sd"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Relations entre exigences",
+          "entetes": [
+            "Relation",
+            "Sens"
+          ],
+          "lignes": [
+            [
+              "**contient**",
+              "décompose en sous-exigences"
+            ],
+            [
+              "**dérive de**",
+              "découle d’une exigence"
+            ],
+            [
+              "**satisfait**",
+              "un bloc répond à l’exigence"
+            ],
+            [
+              "**vérifie**",
+              "un essai la contrôle"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Justifier une exigence",
+          "etapes": [
+            {
+              "titre": "Identifier",
+              "texte": "l’exigence visée : son **numéro** et son critère"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "la **valeur** de la solution, avec ses unités"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "au **critère** et conclure : satisfaite ou non"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Recharger **500 Wh** en moins de 4 h avec un chargeur de __150 W__, rendement __0,9__.",
+          "calcul": "P = 150 × 0,9 = 135 W",
+          "aparte": "t = 500 / 135",
+          "resultat": "t ≈ [[3,7 h < 4 h]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Vérifier ou valider&nbsp;?",
+          "oui": {
+            "titre": "Vérifier",
+            "texte": "Le constituant respecte sa **spécification**."
+          },
+          "non": {
+            "titre": "Valider",
+            "texte": "Le système répond au **besoin** de l’usager."
+          },
+          "essai": {
+            "texte": "Un essai de charge chronométré <i>vérifie</i> l’exigence 1.1 ; l’avis des usagers la <i>valide</i>."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "L’IVVQ en un coup d’œil",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Intégration",
+              "texte": "assembler les constituants"
+            },
+            {
+              "titre": "Vérification",
+              "texte": "conforme à la spécification ?"
+            },
+            {
+              "titre": "Validation",
+              "texte": "conforme au besoin ?"
+            },
+            {
+              "titre": "Qualification",
+              "texte": "performances réelles mesurées"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Exigence 1.1 : t = 500 / (150 × 0,9) ≈ 3,7 h",
+              "quoi": "la valeur"
+            },
+            {
+              "texte": "3,7 h < 4 h : exigence satisfaite",
+              "quoi": "la comparaison"
+            },
+            {
+              "texte": "Marge faible : un chargeur de 120 W (4,6 h) échoue",
+              "quoi": "la remarque"
+            }
+          ],
+          "pied": "On cite ==l’identifiant== puis ==la valeur== face au ==critère==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier une **partie prenante** (mainteneur, norme) : donc une exigence.",
+            "Confondre **vérifier** et **valider**.",
+            "Répondre sans **valeur chiffrée** ni critère.",
+            "Inverser le sens de **satisfait** et de **vérifie**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle relation relie un **bloc** à une exigence qu’il couvre&nbsp;?",
+            "Que compare-t-on lors d’une **validation**&nbsp;?",
+            "Que cite-t-on pour **justifier** une exigence&nbsp;?"
+          ],
+          "reponses": "1) satisfait · 2) le système au besoin de l’usager · 3) l’identifiant, la valeur calculée et le critère"
+        }
+      ]
+    }
+  ]
+}

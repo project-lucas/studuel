@@ -1,0 +1,184 @@
+{
+  "titre": "Échantillonnage",
+  "titreSurligne": "Échantillonnage",
+  "accroche": "Ce qu’un sondage peut (ne pas) dire.",
+  "epreuve": "bac",
+  "bonus": "IC 95&nbsp;% = [f − 1/√n ; f + 1/√n] · binomiale : E = np, V = np(1−p) · n×4 → marge ÷2",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-complementaires/statistiques-et-echantillonnage.webp",
+    "prompt": "a glossy violet bar chart with a golden confidence bracket above one bar, sparkles"
+  },
+  "marcel": "Un point d’écart,\nc’est du bruit !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’intervalle de confiance",
+          "taille": "mini",
+          "lignes": [
+            "IC = [ f − 1/√n ; f + 1/√n ]",
+            "E(X) = np · V(X) = np(1 − p)"
+          ],
+          "regle": "Niveau **95&nbsp;%**, fréquence f observée sur n individus. La marge décroît en 1/√n&nbsp;: ==quadrupler== l’échantillon ne divise l’incertitude que par **2**.",
+          "note": "au-delà de 1 000, on gagne peu"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Marge d’erreur",
+          "entetes": [
+            "Taille n",
+            "Marge ≈"
+          ],
+          "lignes": [
+            [
+              "100",
+              "± 10 points"
+            ],
+            [
+              "1 000",
+              "± 3 points"
+            ],
+            [
+              "4 000",
+              "± 1,6 point"
+            ],
+            [
+              "10 000",
+              "± 1 point"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire un sondage",
+          "etapes": [
+            {
+              "titre": "Calculer",
+              "texte": "la marge 1/√n"
+            },
+            {
+              "titre": "Encadrer",
+              "texte": "IC = [f − marge ; f + marge]"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "les intervalles se chevauchent-ils ?"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "« on ne peut pas départager »"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Sondage de n = 1000 : f = 0,52 pour A. __Peut-on dire que A l’emporte ?__",
+          "calcul": "1/√1000 ≈ 0,032",
+          "aparte": "IC ≈ [0,488 ; 0,552]",
+          "resultat": "0,5 ∈ IC : [[on ne peut pas conclure]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Moyenne",
+              "texte": "sensible aux **valeurs extrêmes**."
+            },
+            {
+              "titre": "Médiane",
+              "texte": "centre au sens du **rang**."
+            },
+            {
+              "titre": "Écart-type",
+              "texte": "dispersion, dans l’**unité** de la série."
+            },
+            {
+              "titre": "Binomiale",
+              "texte": "n épreuves **indépendantes** à deux issues."
+            },
+            {
+              "titre": "Bruit",
+              "texte": "un écart plus petit que la marge n’est **pas** un écart."
+            },
+            {
+              "titre": "Graphique",
+              "texte": "même moyenne, allures **différentes**&nbsp;: dessine."
+            },
+            {
+              "titre": "Binomiale : E",
+              "texte": "E(X) = **np**, la moyenne des succès."
+            },
+            {
+              "titre": "Binomiale : V",
+              "texte": "V(X) = **np(1 − p)**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "n = 1000 et f = 0,52, donc 1/√n ≈ 0,032",
+              "quoi": "les données"
+            },
+            {
+              "texte": "IC à 95&nbsp;% ≈ [0,488 ; 0,552]",
+              "quoi": "l’intervalle"
+            },
+            {
+              "texte": "0,5 appartient à l’intervalle&nbsp;: écart non significatif.",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Deux séries de même moyenne peuvent être très ==différentes==&nbsp;: regarde le graphique, puis conclus par une phrase."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Commenter un écart d’**un point** entre deux candidats.",
+            "Croire que **quadrupler n** divise la marge par 4.",
+            "Prendre la marge pour une **certitude** à 100&nbsp;%.",
+            "Oublier de vérifier l’**indépendance** (binomiale)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Marge pour **n = 400**&nbsp;?",
+            "On **quadruple** n&nbsp;: la marge est…&nbsp;?",
+            "X ~ B(10 ; 0,3)&nbsp;: **E(X)**&nbsp;?"
+          ],
+          "reponses": "1) 1/20 = 0,05 (5 points) · 2) divisée par 2 · 3) 10 × 0,3 = 3"
+        }
+      ]
+    }
+  ]
+}

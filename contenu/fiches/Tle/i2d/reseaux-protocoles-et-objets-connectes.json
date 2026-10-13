@@ -1,0 +1,117 @@
+{
+  "titre": "Réseaux connectés",
+  "titreSurligne": "connectés",
+  "accroche": "Bus, radio, adresses IP et MQTT.",
+  "epreuve": "bac",
+  "bonus": "Réseau = **IP ET masque** · /24 = **254** machines · MQTT = **publier / s’abonner**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/i2d/reseaux-protocoles-et-objets-connectes.webp",
+    "prompt": "a glossy violet connected sensor with golden wireless signal waves linking to a small cloud server, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Qui parle à qui,\net par quel fil&nbsp;?",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les liaisons série",
+          "entetes": ["Liaison", "Usage"],
+          "lignes": [
+            ["**UART** (TX, RX)", "GPS, Bluetooth, console"],
+            ["**I2C** (SDA, SCL)", "capteurs, plusieurs esclaves"],
+            ["**SPI** (4 fils)", "écrans, mémoire, débit élevé"],
+            ["**CAN**", "véhicules, robuste"],
+            ["**Trame**", "start · données · parité · stop"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le sans-fil (IoT)",
+          "entetes": ["Réseau", "Portée", "Conso"],
+          "lignes": [
+            ["**BLE**", "~10 m", "très faible"],
+            ["**Wi-Fi**", "~50 m", "élevée"],
+            ["**LoRa**", "des km", "très faible"],
+            ["**4G/5G**", "opérateur", "élevée"],
+            ["**Débit**", "fort : Wi-Fi, 4G", "faible : LoRa"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "L’adresse réseau (IPv4)",
+          "teinte": "jaune",
+          "lignes": ["réseau = adresse IP <b>ET</b> masque"],
+          "regle": "Deux équipements dialoguent **directement** s’ils ont la **même adresse réseau** ; sinon, ils passent par la **passerelle** (routeur). Ex. : 192.168.10.37/24 → réseau **192.168.10.0**, diffusion .255.",
+          "note": "/24 = masque 255.255.255.0"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Automate __192.168.1.20/24__, supervision __192.168.2.5/24__, sans routeur. Dialoguent-ils&nbsp;?",
+          "calcul": "réseaux 192.168.1.0 ≠ 192.168.2.0",
+          "aparte": "fix : 192.168.1.x",
+          "resultat": "[[non]], réseaux différents"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quel réseau pour un capteur&nbsp;?",
+          "oui": { "titre": "LoRa", "texte": "Une mesure par heure sur **batterie** : longue portée, basse conso." },
+          "non": { "titre": "Wi-Fi", "texte": "Débit élevé, mais **consommation** élevée." },
+          "essai": { "texte": "Un capteur de serre isolé envoie une mesure par heure&nbsp;: <i>LoRa</i>, pas Wi-Fi." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "TCP/IP et MQTT",
+          "items": [
+            { "titre": "TCP", "texte": "fiable, avec accusés de réception" },
+            { "titre": "UDP", "texte": "rapide, sans garantie" },
+            { "titre": "MQTT", "texte": "un capteur **publie** sur un broker, les abonnés reçoivent" },
+            { "titre": "Sécurité", "texte": "mot de passe changé, HTTPS/TLS, réseau des objets séparé" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Compter **256** adresses utilisables en /24 : il y en a **254**.",
+            "Penser que deux réseaux différents se parlent **sans routeur**.",
+            "Garder le mot de passe **par défaut** d’un objet.",
+            "Confondre **TCP** (fiable) et UDP (rapide)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quels fils compte une liaison **I2C**&nbsp;?",
+            "Combien de machines dans un réseau **/24**&nbsp;?",
+            "Que fait un capteur **MQTT**&nbsp;?"
+          ],
+          "reponses": "1) SDA et SCL · 2) 254 · 3) il publie sur un broker"
+        }
+      ]
+    }
+  ]
+}

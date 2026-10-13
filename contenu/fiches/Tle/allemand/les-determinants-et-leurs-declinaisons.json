@@ -1,0 +1,207 @@
+{
+  "titre": "Les quatre cas",
+  "titreSurligne": "quatre cas",
+  "accroche": "Un tableau, et presque tout se décline pareil.",
+  "bonus": "masculin seul à changer entre nominatif et accusatif · datif pluriel : nom en **-n** · génitif : nom en **-(e)s**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/allemand/les-determinants-et-leurs-declinaisons.webp",
+    "prompt": "a glossy violet table grid with four golden cells highlighted, small golden arrows between them, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Quatre cas&nbsp;?\nUn seul tableau&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "À quoi sert chaque cas",
+          "lignes": [
+            "**Nom.** · **Akk.** · **Dat.** · **Gen.**"
+          ],
+          "petite": true,
+          "regle": "**Nominatif** : le sujet. **Accusatif** : le COD. **Datif** : le COI. **Génitif** : le complément du nom (la possession).",
+          "note": "le masculin change le plus"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "L’article défini",
+          "entetes": [
+            "Cas",
+            "Masc.",
+            "Fém.",
+            "Neutre",
+            "Plur."
+          ],
+          "lignes": [
+            [
+              "Nominatif",
+              "<i>der</i>",
+              "<i>die</i>",
+              "<i>das</i>",
+              "<i>die</i>"
+            ],
+            [
+              "Accusatif",
+              "<i>**den**</i>",
+              "<i>die</i>",
+              "<i>das</i>",
+              "<i>die</i>"
+            ],
+            [
+              "Datif",
+              "<i>dem</i>",
+              "<i>der</i>",
+              "<i>dem</i>",
+              "<i>**den**</i>"
+            ],
+            [
+              "Génitif",
+              "<i>des</i>",
+              "<i>der</i>",
+              "<i>des</i>",
+              "<i>der</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "L’article indéfini (kein et les possessifs se déclinent pareil)",
+          "entetes": [
+            "Cas",
+            "Masculin",
+            "Féminin",
+            "Neutre"
+          ],
+          "lignes": [
+            [
+              "Nominatif",
+              "<i>ein</i>",
+              "<i>eine</i>",
+              "<i>ein</i>"
+            ],
+            [
+              "Accusatif",
+              "<i>**einen**</i>",
+              "<i>eine</i>",
+              "<i>ein</i>"
+            ],
+            [
+              "Datif",
+              "<i>einem</i>",
+              "<i>einer</i>",
+              "<i>einem</i>"
+            ],
+            [
+              "Génitif",
+              "<i>eines</i>",
+              "<i>einer</i>",
+              "<i>eines</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Nominatif ou accusatif&nbsp;?",
+          "oui": {
+            "titre": "Accusatif = den",
+            "texte": "<i>Ich sehe **den** Mann.</i> — le COD masculin prend <i>den / einen</i>."
+          },
+          "non": {
+            "titre": "Nominatif conservé",
+            "texte": "<i>Ich sehe der Mann.</i> — c’est le sujet qui reste en <i>der</i> : <i>**Der** Mann kommt.</i>"
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Ich habe ___ Hund.</i> (masc., COD) → <i>**einen**</i>"
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Décliner un groupe nominal",
+          "etapes": [
+            {
+              "titre": "Trouve la fonction",
+              "texte": "Sujet, COD, COI ou possession ? → **le cas**."
+            },
+            {
+              "titre": "Genre et nombre",
+              "texte": "Masculin, féminin, neutre ou pluriel → **la colonne**."
+            },
+            {
+              "titre": "Marque sur le nom",
+              "texte": "Datif pluriel : <i>-n</i> ; génitif masc. et neutre : <i>-(e)s</i>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les familles de déterminants",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Comme ein",
+              "texte": "<i>kein, mein, dein, sein, ihr, unser, euer, Ihr</i> ; ils ont un pluriel : <i>meine, meinen…</i>"
+            },
+            {
+              "titre": "Comme der",
+              "texte": "<i>dieser, jeder, welcher, mancher, solcher, aller</i> : <i>diesen Mann, jedem Kind</i>."
+            },
+            {
+              "titre": "Datif pluriel",
+              "texte": "le nom prend **-n** : <i>mit den Kindern</i>."
+            },
+            {
+              "titre": "Génitif",
+              "texte": "<i>das Auto **des Vaters**</i> (nom en -(e)s)."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Ich sehe der Mann</i> → <i>Ich sehe **den** Mann.</i>",
+            "<i>mit den Kinder</i> → <i>mit den Kinder**n**</i>.",
+            "<i>das Auto der Vater</i> → <i>das Auto **des Vaters**</i>.",
+            "<i>jeder</i> n’a pas de pluriel : on dit <i>alle</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Ich helfe ___ Kind.</i> (neutre, datif)",
+            "<i>das Auto ___ Vaters</i> (génitif masc.)",
+            "<i>Wir sprechen mit ___ Freunde___.</i> (datif pluriel)"
+          ],
+          "reponses": "1) dem 2) des 3) den Freunden"
+        }
+      ]
+    }
+  ]
+}

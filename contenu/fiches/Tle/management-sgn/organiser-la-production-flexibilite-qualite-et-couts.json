@@ -1,0 +1,169 @@
+{
+  "titre": "Coûts et qualité",
+  "titreSurligne": "Coûts",
+  "accroche": "Vite, bien et pas trop cher.",
+  "epreuve": "bac",
+  "bonus": "**Poussés** = on prévoit puis on stocke · **tendus** = on produit à la commande",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/management-sgn/organiser-la-production-flexibilite-qualite-et-couts.webp",
+    "prompt": "a glossy violet factory conveyor belt carrying golden boxes with a small golden check mark, tiny golden sparkles, same art style as the reference icons, on magenta background, no text"
+  },
+  "marcel": "Flexible, de qualité,\net pas cher&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La marge spécifique",
+          "lignes": [
+            "Marge sur coût spécifique = CA − (charges variables + fixes spécifiques)"
+          ],
+          "regle": "Négative, le produit ne couvre pas ses propres charges ; positive, il contribue aux charges communes",
+          "note": "avant les charges communes",
+          "teinte": "jaune"
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Gamme Course : CA 200 000, variables 150 000, fixes spécifiques 70 000.",
+          "calcul": "200 000 − 220 000",
+          "resultat": "[[− 20 000 €]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les modes de production",
+          "entetes": [
+            "Mode",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "**À l’unité**",
+              "un bateau"
+            ],
+            [
+              "**En série**",
+              "voitures"
+            ],
+            [
+              "**En continu**",
+              "raffinerie"
+            ],
+            [
+              "**En discontinu**",
+              "imprimerie (lots)"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Deux méthodes de coûts",
+          "entetes": [
+            "Méthode",
+            "Utilité"
+          ],
+          "lignes": [
+            [
+              "**Coût complet**",
+              "fixer un prix"
+            ],
+            [
+              "**Coût spécifique**",
+              "juger un produit"
+            ],
+            [
+              "**Direct**",
+              "affecté sans calcul"
+            ],
+            [
+              "**Indirect**",
+              "réparti par une clé"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "La démarche qualité (roue de Deming)",
+          "etapes": [
+            {
+              "titre": "Planifier",
+              "texte": "fixer objectifs et méthode"
+            },
+            {
+              "titre": "Faire",
+              "texte": "produire"
+            },
+            {
+              "titre": "Vérifier",
+              "texte": "contrôler la conformité"
+            },
+            {
+              "titre": "Agir",
+              "texte": "corriger, améliorer en continu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Marge Ville = 400 000 − 310 000 = 90 000 €.",
+              "quoi": "calcul"
+            },
+            {
+              "texte": "Marge Course = − 20 000 €&nbsp;: elle ne couvre pas ses charges.",
+              "quoi": "interpréter"
+            },
+            {
+              "texte": "Supprimer, relancer ou garder pour l’image&nbsp;?",
+              "quoi": "décider"
+            }
+          ],
+          "pied": "Résultat global = 90 000 − 20 000 − 50 000 = ==20 000 €=="
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Supprimer un produit **déficitaire en coût complet** alors qu’il couvre ses charges spécifiques.",
+            "Confondre **contrôle** qualité et démarche qualité.",
+            "Croire qu’un **flux tendu** n’a pas de risque.",
+            "Oublier les **charges communes**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel mode produit des **lots** avec changements de réglage&nbsp;?",
+            "Quel est le risque des **flux tendus**&nbsp;?",
+            "Que mesure la marge sur **coût spécifique**&nbsp;?"
+          ],
+          "reponses": "1) discontinu · 2) vulnérabilité aux ruptures · 3) la contribution du produit aux charges communes"
+        }
+      ]
+    }
+  ]
+}

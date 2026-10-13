@@ -1,0 +1,182 @@
+{
+  "titre": "Image numérique",
+  "titreSurligne": "numérique",
+  "accroche": "Pixels, formats, valeur de preuve.",
+  "bonus": "**Bitmap**&nbsp;: pixels, se dégrade · **vectoriel**&nbsp;: formules, reste net · **Benjamin**, 1935&nbsp;: l’aura",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/arts-plastiques/image-numerique-et-creation.webp",
+    "prompt": "a glossy violet monitor with golden pixels forming a heart and a tiny golden cursor arrow, sparkles, same art style as the reference icons, on a magenta background, no text, no numbers"
+  },
+  "marcel": "Zoome&nbsp;: pixels\nou vecteurs&nbsp;?",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "titre": "Pixel ou vecteur",
+          "entetes": [
+            "",
+            "Matricielle (bitmap)",
+            "Vectorielle"
+          ],
+          "lignes": [
+            [
+              "**Description**",
+              "une grille de pixels colorés",
+              "des formules géométriques"
+            ],
+            [
+              "**Agrandie**",
+              "se dégrade, se pixellise",
+              "reste nette, sans perte"
+            ],
+            [
+              "**Usage**",
+              "photographie, peinture numérique",
+              "logo, typographie, pictogramme"
+            ]
+          ],
+          "numero": 1
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "titre": "Les formats",
+          "entetes": [
+            "Format",
+            "Ce qu’il fait",
+            "Quand l’employer"
+          ],
+          "lignes": [
+            [
+              "**JPEG**",
+              "compresse en perdant de l’information",
+              "photo pour le web"
+            ],
+            [
+              "**PNG**",
+              "compresse sans perte, garde la transparence",
+              "image détourée, capture"
+            ],
+            [
+              "**TIFF**",
+              "qualité maximale",
+              "archivage, impression"
+            ],
+            [
+              "**SVG**",
+              "vectoriel, éditable en texte",
+              "logo, icône, schéma"
+            ]
+          ],
+          "numero": 2
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "texte",
+          "titre": "Montage et retouche",
+          "paragraphes": [
+            "Calques, masques, détourage, fondus&nbsp;: on crée des images **sans référent réel**, photographiquement parfaites.",
+            "Que reste-t-il de la **valeur de preuve** d’une photo quand la retouche ne laisse plus de trace&nbsp;?"
+          ],
+          "teinte": "jaune",
+          "numero": 3
+        },
+        {
+          "type": "texte",
+          "titre": "L’œuvre reproductible",
+          "paragraphes": [
+            "**Walter Benjamin** (1935)&nbsp;: la reproduction fait perdre à l’œuvre son «&nbsp;aura&nbsp;», son ici-et-maintenant.",
+            "Le numérique pousse la logique à l’extrême&nbsp;: copie parfaite, diffusion instantanée, auteur parfois indéterminé."
+          ],
+          "numero": 4
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Résolution",
+              "texte": "en pixels (dimensions) et en ppp / dpi (finesse à l’impression)"
+            },
+            {
+              "titre": "Calque",
+              "texte": "un niveau de l’image, modifiable sans toucher aux autres"
+            },
+            {
+              "titre": "Masque",
+              "texte": "cache une zone sans l’effacer"
+            },
+            {
+              "titre": "Détourage",
+              "texte": "isoler un sujet de son fond"
+            },
+            {
+              "titre": "Fondu",
+              "texte": "passage progressif entre deux images"
+            },
+            {
+              "titre": "PPP / DPI",
+              "texte": "finesse à l’impression"
+            }
+          ],
+          "numero": 5
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Agrandir un **bitmap** en espérant qu’il reste net.",
+            "Archiver en **JPEG**&nbsp;: la perte est définitive.",
+            "Confondre **pixels** (dimensions) et **ppp** (finesse).",
+            "Croire une photo **retouchée** toujours prouvée."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Cette image est vectorielle&nbsp;: elle reste nette à toute échelle.",
+              "quoi": "décrire"
+            },
+            {
+              "texte": "La retouche ne laisse plus de trace&nbsp;: que vaut la photographie comme preuve&nbsp;?",
+              "quoi": "questionner"
+            }
+          ],
+          "pied": "Choisir le format ==selon l’usage==."
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle image reste nette à l’agrandissement&nbsp;?",
+            "Quel format garde la **transparence** sans perte&nbsp;?",
+            "Que perd l’œuvre reproduite selon **Benjamin**&nbsp;?"
+          ],
+          "reponses": "1) la vectorielle 2) le PNG 3) son aura"
+        }
+      ]
+    }
+  ]
+}

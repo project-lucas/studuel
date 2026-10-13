@@ -1,0 +1,120 @@
+{
+  "titre": "Diviser pour régner",
+  "titreSurligne": "régner",
+  "accroche": "Couper, résoudre, recoller.",
+  "epreuve": "bac",
+  "bonus": "dichotomie : <b>log n</b> (tableau trié) · tri fusion : <b>n log n</b> · insertion : <b>n²</b>",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/nsi/diviser-pour-regner.webp",
+    "prompt": "a glossy violet block splitting in two golden halves with a small golden arrow, sparkles"
+  },
+  "marcel": "Coupe en deux,\ngagne du temps !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 1,
+          "titre": "Les trois étapes",
+          "etapes": [
+            { "titre": "Diviser", "texte": "couper l’entrée, souvent en **deux moitiés**" },
+            { "titre": "Régner", "texte": "résoudre chaque partie par **récursion**, jusqu’au cas de base" },
+            { "titre": "Combiner", "texte": "reconstruire la solution globale" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux algorithmes",
+          "entetes": ["", "Dichotomie", "Tri fusion"],
+          "lignes": [
+            ["Condition", "tableau **trié**", "aucune"],
+            ["Combiner", "triviale", "**fusionner**"],
+            ["Coût", "**log n**", "**n log n**"],
+            ["Mémoire", "aucune", "tableau auxiliaire"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Pour un million d’éléments",
+          "entetes": ["Méthode", "Opérations"],
+          "lignes": [
+            ["Séquentielle", "jusqu’à **10<sup>6</sup>**"],
+            ["Dichotomique", "environ **20**"],
+            ["Tri en **n²**", "environ **10<sup>12</sup>**"],
+            ["Tri fusion", "environ **2 × 10<sup>7</sup>**"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Dichotomie dans un tableau trié de **1 024** cases. __Combien de comparaisons au plus__&nbsp;?",
+          "calcul": "on divise par 2 à chaque tour<br>1024 → 512 → … → 1",
+          "aparte": "2<sup>10</sup> = 1024",
+          "resultat": "= [[10]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Stable", "texte": "le tri fusion garde l’ordre de deux éléments **égaux**." },
+            { "titre": "Logarithme", "texte": "diviser par 2 jusqu’à 1 : **log₂(n)** étapes." },
+            { "titre": "Autres exemples", "texte": "exponentiation rapide, tri rapide, Karatsuba." },
+            { "titre": "Limite", "texte": "sous-problèmes **indépendants** requis." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "« je divise, je règne, je combine »", "quoi": "stratégie" },
+            { "texte": "« chaque comparaison écarte la moitié »", "quoi": "dichotomie" },
+            { "texte": "« coût en n log n dans tous les cas »", "quoi": "tri fusion" },
+            { "texte": "« log₂(n) étapes pour atteindre 1 »", "quoi": "logarithme" }
+          ],
+          "pied": "Sous-problèmes qui se ==recouvrent== : programmation dynamique."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Lancer une dichotomie sur un tableau **non trié** : résultat faux, sans alerte.",
+            "Oublier le **cas de base** de la récursion.",
+            "Oublier que la fusion coûte de la **mémoire**.",
+            "Confondre <b>n²</b> et <b>n log n</b> : « instantané » contre « impossible »."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle **condition** exige la dichotomie&nbsp;?",
+            "Quel est le coût du **tri fusion**&nbsp;?",
+            "Quelle étape est **coûteuse** dans le tri fusion&nbsp;?"
+          ],
+          "reponses": "1) un tableau trié · 2) n log n dans tous les cas · 3) combiner (fusionner les deux moitiés)"
+        }
+      ]
+    }
+  ]
+}

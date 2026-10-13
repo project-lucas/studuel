@@ -1,0 +1,113 @@
+{
+  "titre": "Puissances du réseau",
+  "titreSurligne": "réseau",
+  "epreuve": "bac",
+  "accroche": "Apparente, active&nbsp;: laquelle payer&nbsp;?",
+  "bonus": "S = U × I (VA) · k = P ÷ S = cos φ · P<sub>J</sub> = R × I² · m = U<sub>2</sub> ÷ U<sub>1</sub> = N<sub>2</sub> ÷ N<sub>1</sub> · 50 Hz",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie-maths/regime-sinusoidal-puissances-et-reseau-electrique.webp",
+    "prompt": "a glossy violet high-voltage pylon with golden power lines and a small golden transformer, a glowing sine wave, sparkles"
+  },
+  "marcel": "Haute tension,\nmoins de pertes !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Facteur de puissance",
+          "petite": true,
+          "lignes": ["k = P ÷ S = cos φ"],
+          "regle": "**S = U × I** en VA (dimensionner câbles et disjoncteurs). **P** en W, valeur moyenne de u × i (ce qui est consommé et facturé).",
+          "note": "radiateur&nbsp;: k = 1"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le transformateur",
+          "entetes": ["Grandeur", "Relation", "Rôle"],
+          "lignes": [
+            ["Rapport", "m = U<sub>2</sub> ÷ U<sub>1</sub> = N<sub>2</sub> ÷ N<sub>1</sub>", "élever ou abaisser"],
+            ["Rendement", "η = P<sub>2</sub> ÷ P<sub>1</sub>", "95 à 99 %"],
+            ["Isolation", "pas de contact", "galvanique"],
+            ["Courant", "**alternatif** seulement", "50 Hz"],
+            ["Danger", "30 mA", "paralysie respiratoire"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Calculer S", "texte": "S = U × I avec les valeurs efficaces, en VA" },
+            { "titre": "Comparer à P", "texte": "k = P ÷ S&nbsp;: plus il est bas, plus I est grand pour la même puissance" },
+            { "titre": "Évaluer les pertes", "texte": "P<sub>J</sub> = R × I², avec I = P ÷ (U × k)" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Moteur sous 230 V, 10 A, wattmètre à 1 840 W. Son __facteur de puissance__&nbsp;?",
+          "calcul": "S = 230 × 10 = 2 300 VA",
+          "aparte": "puis P ÷ S",
+          "resultat": "k = 1 840 ÷ 2 300 = [[0,80]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Transport en THT",
+          "oui": { "titre": "Tension × 10", "texte": "Intensité **÷ 10**, pertes en R × I² **÷ 100**. D’où les lignes à 400 kV." },
+          "non": { "titre": "Mauvais k", "texte": "Un **mauvais** facteur de puissance augmente I donc les pertes&nbsp;: on incite à le relever." },
+          "essai": { "texte": "Transformateur 230 V → 12 V, N<sub>1</sub> = 1 150&nbsp;: N<sub>2</sub> = <i>1 150 × 12 ÷ 230 = 60 spires</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "S = U × I = 230 × 10 = 2 300 VA", "quoi": "puissance apparente" },
+            { "texte": "k = P ÷ S = 1 840 ÷ 2 300 = 0,80", "quoi": "formule puis nombres" },
+            { "texte": "Le câble doit supporter 10 A, pas 8 A", "quoi": "la conclusion" }
+          ],
+          "pied": "Sécurité&nbsp;: ==différentiel 30 mA== pour les personnes, fusible et disjoncteur pour le matériel."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **VA** (apparente) et **W** (active).",
+            "Croire que le disjoncteur ordinaire **protège une personne**.",
+            "Utiliser un transformateur en **continu**.",
+            "Oublier que les pertes sont en **I²**, pas en I."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**S** pour 230 V et 5 A&nbsp;?",
+            "Tension ×&nbsp;10&nbsp;: pertes en ligne multipliées par&nbsp;?",
+            "**k** d’une résistance pure&nbsp;?"
+          ],
+          "reponses": "1) 1 150 VA · 2) divisées par 100 · 3) k = 1 (φ = 0)"
+        }
+      ]
+    }
+  ]
+}

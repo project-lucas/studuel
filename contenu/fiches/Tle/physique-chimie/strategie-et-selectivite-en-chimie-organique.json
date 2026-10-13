@@ -1,0 +1,181 @@
+{
+  "titre": "Stratégie en synthèse",
+  "titreSurligne": "synthèse",
+  "accroche": "Choisir un chemin, pas une réaction.",
+  "epreuve": "bac",
+  "bonus": "Substitution · addition (insaturation disparaît) · élimination (elle apparaît) · rendement global = produit des rendements",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/strategie-et-selectivite-en-chimie-organique.webp",
+    "prompt": "a glossy violet round-bottom flask with a golden arrow path of three steps leading to a golden molecule, tiny sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Peu d’étapes,\ntrès sélectives !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Trois catégories de réactions",
+          "entetes": [
+            "Réaction",
+            "Ce qui se passe",
+            "Repère"
+          ],
+          "lignes": [
+            [
+              "Substitution",
+              "un groupe en remplace un autre",
+              "groupe échangé"
+            ],
+            [
+              "Addition",
+              "deux entités sur une liaison multiple",
+              "insaturation disparaît"
+            ],
+            [
+              "Élimination",
+              "une liaison multiple se crée",
+              "insaturation apparaît"
+            ],
+            [
+              "Méthode",
+              "comparer réactif et produit",
+              "jamais le nom"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois sélectivités",
+          "entetes": [
+            "Sélectivité",
+            "Garantit"
+          ],
+          "lignes": [
+            [
+              "Chimiosélectivité",
+              "type de groupe réagit"
+            ],
+            [
+              "Régiosélectivité",
+              "position réagit"
+            ],
+            [
+              "Stéréosélectivité",
+              "stéréo-isomère se forme"
+            ],
+            [
+              "Réactif brutal",
+              "un mélange à purifier"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Protéger une fonction",
+          "etapes": [
+            {
+              "titre": "Protéger",
+              "texte": "transformer le groupe en un groupe inerte"
+            },
+            {
+              "titre": "Réagir",
+              "texte": "réaliser l’étape voulue ailleurs sur la molécule"
+            },
+            {
+              "titre": "Déprotéger",
+              "texte": "restaurer le groupe d’origine"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Synthèse en __5 étapes__, chacune à 80&nbsp;% de rendement. Rendement global&nbsp;?",
+          "calcul": "η = 0,80 × 0,80 × 0,80 × 0,80 × 0,80",
+          "aparte": "on multiplie, on n’additionne pas&nbsp;!",
+          "resultat": "η = 0,80⁵ ≈ [[33 %]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Reconnaître la réaction",
+          "oui": {
+            "titre": "On compare",
+            "texte": "On compare **réactif et produit**&nbsp;: une C=C a disparu, c’est une ==addition==."
+          },
+          "non": {
+            "titre": "On lit le nom&nbsp;?",
+            "texte": "**Faux**&nbsp;: le nom du réactif ne dit pas le type de réaction."
+          },
+          "essai": {
+            "texte": "Une C=C apparaît à partir d’un alcool&nbsp;: <i>élimination</i>. Protéger ajoute deux étapes, donc une perte de rendement."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Un bon chemin",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Peu d’étapes",
+              "texte": "le rendement s’effondre sinon"
+            },
+            {
+              "titre": "Coûteux en dernier",
+              "texte": "les étapes chères le plus tard"
+            },
+            {
+              "titre": "Chimie verte",
+              "texte": "catalyse, moins de solvants"
+            },
+            {
+              "titre": "Au TP",
+              "texte": "reflux, purifier, CCM, rendement"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "**Additionner** les rendements des étapes.",
+            "Confondre **chimio-** et **régio**sélectivité.",
+            "Juger la réaction sur le **nom** du réactif.",
+            "Oublier la **déprotection** finale."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Une C=C disparaît&nbsp;: **substitution**, addition ou élimination&nbsp;?",
+            "3 étapes à 90&nbsp;%&nbsp;: rendement global **approximatif**&nbsp;?",
+            "Une seule position réagit&nbsp;: quelle **sélectivité**&nbsp;?"
+          ],
+          "reponses": "1) addition · 2) 73 % · 3) régiosélectivité"
+        }
+      ]
+    }
+  ]
+}

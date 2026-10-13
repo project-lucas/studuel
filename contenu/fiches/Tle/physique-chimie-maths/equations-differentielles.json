@@ -1,0 +1,115 @@
+{
+  "titre": "Équations différentielles",
+  "titreSurligne": "différentielles",
+  "accroche": "L’inconnue est une fonction.",
+  "epreuve": "bac",
+  "bonus": "y′ = ay ⇒ y = Ce<sup>ax</sup> · y′ = ay + b ⇒ y = Ce<sup>ax</sup> − {b/a} · Euler : y(x + h) ≈ y(x) + h y′(x)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie-maths/equations-differentielles.webp",
+    "prompt": "a glossy violet cooling coffee cup with a golden decaying curve rising from it, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "La vitesse dépend\nde l’état !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les solutions",
+          "taille": "mini",
+          "lignes": ["y′ = ay ⇒ y = Ce<sup>ax</sup>", "y′ = ay + b ⇒ y = Ce<sup>ax</sup> − {b/a}"],
+          "regle": "a ≠ 0, C réel. −b/a est une **solution particulière** constante. Avec une **condition initiale** y(x₀) = y₀, la solution est **unique**.",
+          "note": "C se trouve avec y(x₀)"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Vocabulaire",
+          "items": [
+            { "terme": "Équation différentielle", "definition": "relie y, sa variable et ses **dérivées**" },
+            { "terme": "Solution", "definition": "fonction qui vérifie l’égalité sur **tout** l’intervalle" },
+            { "terme": "dy/dt", "definition": "même chose que **y′**, notation de physicien" },
+            { "terme": "Euler", "definition": "approche la solution **pas à pas**, pas h" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre une équation y′ = ay + b",
+          "etapes": [
+            { "titre": "Identifier", "texte": "repérer **a** et **b** ; −b/a est la valeur d’équilibre" },
+            { "titre": "Forme générale", "texte": "y = C e<sup>ax</sup> − b/a" },
+            { "titre": "Condition initiale", "texte": "remplacer x par x₀ : trouver **C**, puis répondre" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "θ′ = −0,1θ + 2, θ(0) = 90. __Solution__&nbsp;?",
+          "calcul": "θ = Ce<sup>−0,1t</sup> + 20\nθ(0) = C + 20 = 90",
+          "aparte": "−b/a = −2 / (−0,1) = 20",
+          "resultat": "θ(t) = [[70e<sup>−0,1t</sup> + 20]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Où on les rencontre",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Radioactivité", "texte": "dN/dt = −λN : **N₀e<sup>−λt</sup>**" },
+            { "titre": "Refroidissement", "texte": "tend vers la température de la **pièce**" },
+            { "titre": "Chimie d’ordre 1", "texte": "[A] = [A]₀ e<sup>−kt</sup>" },
+            { "titre": "Oscillateur", "texte": "y″ + 9y = 0 a pour solution **cos 3t**" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "θ′ = aθ + b avec a = −0,1 et b = 2", "quoi": "je reconnais" },
+            { "texte": "θ(t) = Ce<sup>−0,1t</sup> + 20, C ∈ ℝ", "quoi": "forme générale" },
+            { "texte": "θ(0) = 90 ⇒ C = 70 ; θ(10) ≈ 45,8 °C", "quoi": "la suite" }
+          ],
+          "pied": "30 °C atteints quand 70e<sup>−0,1t</sup> = 10, soit ==t = 10 ln 7 ≈ 19,5 min=="
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire **+ b/a** au lieu de − b/a.",
+            "Oublier de **déterminer C** avec la condition initiale.",
+            "Ne pas **vérifier** en réinjectant dans l’équation.",
+            "Un pas **h trop grand** dans la méthode d’Euler."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Solutions de **y′ = 2y**&nbsp;?",
+            "y′ = y − 3 : valeur d’**équilibre**&nbsp;?",
+            "Euler, y′ = y, y(0) = 1, h = 0,1&nbsp;: **y(0,1)**&nbsp;?"
+          ],
+          "reponses": "1) y = Ce<sup>2x</sup> · 2) −b/a = 3 · 3) 1 + 0,1 × 1 = 1,1"
+        }
+      ]
+    }
+  ]
+}

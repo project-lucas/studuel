@@ -1,0 +1,168 @@
+{
+  "titre": "Fonctions convexes",
+  "titreSurligne": "convexes",
+  "accroche": "De plus en plus vite, ou moins vite ?",
+  "epreuve": "bac",
+  "bonus": "convexe ⇔ f′ croissante ⇔ f″ ≥ 0 · inflexion : f″ change de signe · logistique : vitesse max à mi-plafond",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-complementaires/fonctions-convexes.webp",
+    "prompt": "a glossy violet S-shaped curve with a golden dot at its inflection point, sparkles"
+  },
+  "marcel": "f″ dit si ça\ns’emballe !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Convexe ou concave",
+          "taille": "mini",
+          "lignes": [
+            "convexe ⇔ f′ croissante ⇔ f″ ≥ 0",
+            "concave ⇔ f′ décroissante ⇔ f″ ≤ 0"
+          ],
+          "regle": "Convexe&nbsp;: la courbe est ==au-dessus== de ses tangentes (elle « tient l’eau »). Concave&nbsp;: au-dessous. **Point d’inflexion**&nbsp;: f″ s’annule ==en changeant de signe==.",
+          "note": "x⁴ : f″(0) = 0 sans inflexion"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Ce que fait la grandeur",
+          "entetes": [
+            "Signes",
+            "Interprétation"
+          ],
+          "lignes": [
+            [
+              "f′ > 0 et f″ > 0",
+              "augmente **de plus en plus vite**"
+            ],
+            [
+              "f′ > 0 et f″ < 0",
+              "augmente **de moins en moins vite**"
+            ],
+            [
+              "x², eˣ",
+              "**convexes**"
+            ],
+            [
+              "ln sur ]0 ; +∞[",
+              "**concave**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Étudier la convexité",
+          "etapes": [
+            {
+              "titre": "Dériver deux fois",
+              "texte": "calculer f′ puis f″"
+            },
+            {
+              "titre": "Signe de f″",
+              "texte": "tableau de signes"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "convexe, concave, inflexion"
+            },
+            {
+              "titre": "Interpréter",
+              "texte": "emballement ou ralentissement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = x³ − 3x². __Étudie la convexité.__",
+          "calcul": "f′(x) = 3x² − 6x ; f″(x) = 6x − 6",
+          "aparte": "f″ change de signe en 1",
+          "resultat": "concave sur ]−∞ ; 1], convexe après : inflexion en [[x = 1]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Logistique",
+              "texte": "courbe en **S**&nbsp;: convexe, puis concave."
+            },
+            {
+              "titre": "Inflexion",
+              "texte": "**pic de vitesse** de croissance, pas le maximum."
+            },
+            {
+              "titre": "Épidémie",
+              "texte": "inflexion = jour des **nouveaux cas** max."
+            },
+            {
+              "titre": "Indépendance",
+              "texte": "on peut baisser **en accélérant** ou en ralentissant."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "f est deux fois dérivable, f″(x) = 6x − 6",
+              "quoi": "la dérivée seconde"
+            },
+            {
+              "texte": "f″ est négative avant 1 et positive après",
+              "quoi": "le signe"
+            },
+            {
+              "texte": "f est concave puis convexe&nbsp;: point d’inflexion d’abscisse 1.",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Variation et convexité sont ==indépendantes==&nbsp;: ne les mélange pas."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Conclure à une inflexion parce que **f″ = 0** seulement.",
+            "Confondre l’**inflexion** et le maximum de la courbe.",
+            "Mélanger **variation** (f′) et **convexité** (f″).",
+            "Inverser « au-dessus / au-dessous » des tangentes."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**f″ ≥ 0** sur I&nbsp;: f est…&nbsp;?",
+            "x⁴ a-t-elle un **point d’inflexion** en 0&nbsp;?",
+            "Sur une courbe logistique, l’inflexion est…&nbsp;?"
+          ],
+          "reponses": "1) convexe · 2) non, f″ ne change pas de signe · 3) le pic de la vitesse de croissance"
+        }
+      ]
+    }
+  ]
+}

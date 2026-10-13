@@ -1,0 +1,182 @@
+{
+  "titre": "Ondes et information",
+  "titreSurligne": "information",
+  "accroche": "Du spectre aux fibres optiques.",
+  "epreuve": "bac",
+  "bonus": "c = 3,00 × 10⁸ m·s⁻¹ · h = 6,63 × 10⁻³⁴ J·s · λ<sub>max</sub> × T = 2,90 × 10⁻³ m·K",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/spcl/ondes-electromagnetiques-lumiere-et-transmission-de-l-inform.webp",
+    "prompt": "a glossy violet optical fiber carrying golden light pulses from a rainbow spectrum, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Même famille,\ndes radios aux X !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le spectre",
+          "entetes": [
+            "Domaine",
+            "Longueur d’onde"
+          ],
+          "lignes": [
+            [
+              "ondes radio",
+              "> 1 mm"
+            ],
+            [
+              "infrarouge",
+              "800 nm à 1 mm"
+            ],
+            [
+              "**visible**",
+              "400 nm à 800 nm"
+            ],
+            [
+              "ultraviolet",
+              "10 à 400 nm"
+            ],
+            [
+              "rayons X, γ",
+              "< 10 nm"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Onde et photon",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "λ = {c/f}",
+            "E = h × f = {h × c/λ}"
+          ],
+          "regle": "Plus λ est **courte**, plus le photon est énergétique&nbsp;: UV et X **ionisent**.",
+          "note": "dans un milieu : v = c / n"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les sources de lumière",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Thermique",
+              "texte": "spectre **continu**, loi de Wien&nbsp;: plus chaud, plus bleu"
+            },
+            {
+              "titre": "Lampes",
+              "texte": "flux (lm), efficacité (lm/W), température de couleur"
+            },
+            {
+              "titre": "Laser",
+              "texte": "**monochromatique**, directif, cohérent&nbsp;: protéger les yeux"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Chaîne de transmission",
+          "etapes": [
+            {
+              "titre": "Émetteur",
+              "texte": "code le signal sur une **porteuse**"
+            },
+            {
+              "titre": "Canal",
+              "texte": "libre (Wi-Fi) ou **guidé** (câble, fibre)"
+            },
+            {
+              "titre": "Récepteur",
+              "texte": "décode, après une **atténuation** A (dB)"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Fibre de 20 km, 0,2 dB/km. Part de puissance restante&nbsp;?",
+          "calcul": "A = 0,2 × 20 = 4 dB",
+          "aparte": "P<sub>s</sub> = P<sub>e</sub> / 10<sup>A/10</sup>",
+          "resultat": "P<sub>s</sub> ≈ [[0,40 × P<sub>e</sub>]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Stocker et afficher",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Disque optique",
+              "texte": "lecture par **interférences** (λ/2)"
+            },
+            {
+              "titre": "Laser bleu",
+              "texte": "λ courte, creux plus petits"
+            },
+            {
+              "titre": "Écran LCD",
+              "texte": "deux **polariseurs** croisés"
+            },
+            {
+              "titre": "Photométrie",
+              "texte": "l’œil est maximal à **555 nm**"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que la lumière a besoin d’un **milieu**.",
+            "Confondre **W** et **lm** (énergétique / photométrique).",
+            "Oublier le **log** pour passer de A en dB à P.",
+            "Juger la température d’un corps à sa **couleur** de jour."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 6,
+          "titre": "Le lien à retenir",
+          "paragraphes": [
+            "Un photon de **faible λ** porte beaucoup d’énergie&nbsp;: c’est pourquoi les **seuils d’exposition** aux UV et aux rayons X sont réglementés, alors que les ondes radio sont inoffensives à puissance modérée."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel **photon** est le plus énergétique&nbsp;: UV ou IR&nbsp;?",
+            "Que mesure le **débit binaire**&nbsp;?",
+            "Formule de l’**atténuation** en dB&nbsp;?"
+          ],
+          "reponses": "1) l’UV · 2) des bit par seconde · 3) A = 10 log(Pe/Ps)"
+        }
+      ]
+    }
+  ]
+}

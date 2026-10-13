@@ -1,0 +1,117 @@
+{
+  "titre": "Stéréochimie",
+  "titreSurligne": "Stéréochimie",
+  "accroche": "La forme des molécules, le chemin des e⁻.",
+  "epreuve": "bac",
+  "bonus": "α = [α] × ℓ × c (ℓ en dm) · **ee** = |α mélange ÷ α pur| × 100 · racémique&nbsp;: ee = **0 %**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/spcl/stereochimie-et-mecanismes-reactionnels.webp",
+    "prompt": "two glossy violet and golden molecules that are mirror images of each other facing a small mirror, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Même formule,\nmais pas superposables&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Stéréoisomères",
+          "items": [
+            { "terme": "Carbone asymétrique", "definition": "porte **quatre groupes différents**" },
+            { "terme": "Énantiomères", "definition": "images **miroir** non superposables&nbsp;; dévient la lumière en **sens opposés**" },
+            { "terme": "Diastéréoisomères", "definition": "stéréoisomères **non énantiomères** (Z / E)&nbsp;; propriétés physiques **différentes**" },
+            { "terme": "Racémique", "definition": "deux énantiomères en **parts égales**&nbsp;: inactif" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Intermédiaires",
+          "entetes": ["Espèce", "Stabilité"],
+          "lignes": [
+            ["**carbocation** (+)", "III &gt; II &gt; I"],
+            ["**carbanion** (−)", "I &gt; II &gt; III"],
+            ["**radical** (e⁻ seul)", "III &gt; II &gt; I"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Mesurer un excès énantiomérique",
+          "etapes": [
+            { "titre": "Polarimètre", "texte": "mesurer **α** du mélange, à concentration **connue**" },
+            { "titre": "Référence", "texte": "α de l’énantiomère **pur**, même c" },
+            { "titre": "Rapport", "texte": "**ee = |α ÷ α<sub>pur</sub>| × 100**" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Énantiomère pur&nbsp;: α = +12,0°. Mélange de même c&nbsp;: α = +9,0°. __ee__&nbsp;?",
+          "calcul": "ee = 9,0 ÷ 12,0 × 100",
+          "aparte": "reste : 12,5 % de l’autre",
+          "resultat": "ee = [[75 %]] (87,5 % dextrogyre)"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Mécanismes",
+          "items": [
+            { "titre": "Flèche courbe", "texte": "d’un site **riche** (doublet, liaison multiple) vers un site **pauvre**" },
+            { "titre": "Mésomérie", "texte": "électrons **délocalisés**&nbsp;: formes reliées par une flèche à deux pointes, espèce **stabilisée**" },
+            { "titre": "Catalyseur", "texte": "agit dans une étape, **régénéré**, absent du bilan" },
+            { "titre": "Intermédiaire", "texte": "le plus **stable** se forme le plus facilement" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "C* porte 4 groupes différents&nbsp;: molécule chirale", "quoi": "justifier" },
+            { "texte": "α = [α] × ℓ × c, avec ℓ en dm", "quoi": "la loi de Biot" },
+            { "texte": "ee = 9,0 ÷ 12,0 × 100 = 75 %", "quoi": "calcul" },
+            { "texte": "Flèches courbes du doublet vers le site pauvre", "quoi": "mécanisme" }
+          ],
+          "pied": "Les énantiomères ont les **mêmes** T<sub>éb</sub> et solubilité."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire qu’un racémique n’a **aucun** énantiomère.",
+            "Séparer des **énantiomères** par simple distillation.",
+            "Écrire ℓ en **cm** dans la loi de Biot.",
+            "Tracer une flèche **vers** le site riche."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel ee pour un **racémique**&nbsp;?",
+            "Carbocation le plus stable&nbsp;: I, II ou III&nbsp;?",
+            "Les **diastéréoisomères** ont-ils la même T<sub>fus</sub>&nbsp;?"
+          ],
+          "reponses": "1) 0 % · 2) tertiaire (III) · 3) non, propriétés différentes"
+        }
+      ]
+    }
+  ]
+}

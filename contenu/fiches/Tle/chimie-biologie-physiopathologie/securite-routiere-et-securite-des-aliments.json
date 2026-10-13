@@ -1,0 +1,176 @@
+{
+  "titre": "Airbag et alcootest",
+  "titreSurligne": "alcootest",
+  "accroche": "Un bilan de matière, une oxydoréduction.",
+  "epreuve": "bac",
+  "bonus": "V = n × Vm · Vm ≈ 24 L/mol · seuil **0,5 g/L** de sang (0,25 mg/L d’air expiré) · DJA en **mg/kg/jour**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/chimie-biologie-physiopathologie/securite-routiere-et-securite-des-aliments.webp",
+    "prompt": "a glossy violet airbag cushion inflating from a steering wheel next to a golden breathalyzer tube with a green band, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Un bilan de matière\nsauve des vies&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le volume d’un gaz",
+          "petite": true,
+          "lignes": [
+            "V = n × V<sub>m</sub>"
+          ],
+          "regle": "**V<sub>m</sub> ≈ 24 L/mol** à 20 °C. Airbag&nbsp;: 2 NaN₃ → 2 Na + **3 N₂**, les coefficients donnent les **proportions**.",
+          "note": "n = m ÷ M"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les aliments qui s’abîment",
+          "entetes": [
+            "Phénomène",
+            "Cause"
+          ],
+          "lignes": [
+            [
+              "**Brunissement**",
+              "enzyme + O₂ oxydent des polyphénols"
+            ],
+            [
+              "**Rancissement oxydatif**",
+              "O₂ sur acides gras insaturés"
+            ],
+            [
+              "**Rancissement hydrolytique**",
+              "hydrolyse des triglycérides"
+            ],
+            [
+              "**Caillage du lait**",
+              "bactéries&nbsp;: lactose → acide lactique"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Bilan de matière d’un gaz",
+          "etapes": [
+            {
+              "titre": "Calculer n",
+              "texte": "n = m ÷ M du réactif"
+            },
+            {
+              "titre": "Proportions",
+              "texte": "lire les coefficients de l’équation"
+            },
+            {
+              "titre": "Volume",
+              "texte": "V = n × V<sub>m</sub>"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "130 g de NaN₃ (M = 65 g/mol).",
+          "calcul": "n = 130 ÷ 65 = 2,0 mol\nn(N₂) = 2,0 × 3 ÷ 2 = 3,0 mol",
+          "aparte": "V = 3,0 × 24",
+          "resultat": "V(N₂) = [[72 L]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Alcootest et conservation",
+          "deux": false,
+          "items": [
+            {
+              "titre": "Dichromate",
+              "texte": "Cr₂O₇²⁻ **orange** oxyde l’éthanol, devient Cr³⁺ **vert**"
+            },
+            {
+              "titre": "Procédés physiques",
+              "texte": "froid, chaleur, séchage, sous vide"
+            },
+            {
+              "titre": "Procédés chimiques",
+              "texte": "conservateurs E200-E299, antioxydants E300+"
+            }
+          ]
+        },
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "Contrôler la qualité",
+          "colonnes": 1,
+          "cartes": [
+            {
+              "titre": "Lait frais",
+              "texte": "Acidité 15 à 18 °D&nbsp;; **1 °D = 0,1 g/L** d’acide lactique."
+            },
+            {
+              "titre": "DJA",
+              "texte": "Dose d’additif tolérée **chaque jour, toute la vie**, en mg/kg (ex.&nbsp;: 40 × 25 kg = 1 000 mg)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "n(NaN₃) = m ÷ M = 130 ÷ 65 = 2,0 mol",
+              "quoi": "quantité"
+            },
+            {
+              "texte": "D’après l’équation, n(N₂) = {3/2} × n(NaN₃)",
+              "quoi": "proportions"
+            },
+            {
+              "texte": "V = n × V<sub>m</sub> = 3,0 × 24 = 72 L",
+              "quoi": "volume"
+            }
+          ],
+          "pied": "Les stupéfiants se dépistent par ==test salivaire==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier de **rapporter** n à l’équation (3 N₂ pour 2 NaN₃).",
+            "Confondre le seuil dans le **sang** et dans l’**air expiré**.",
+            "Oublier la **masse** du sujet pour la DJA.",
+            "Croire le rancissement lié au seul O₂&nbsp;: l’**hydrolyse** aussi."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle couleur prend l’ion **chrome III** dans l’alcootest&nbsp;?",
+            "Volume de gaz pour **0,50 mol** (V<sub>m</sub> = 24 L/mol)&nbsp;?",
+            "DJA de 2 mg/kg/jour&nbsp;: dose max pour **50 kg**&nbsp;?"
+          ],
+          "reponses": "1) vert · 2) 12 L · 3) 100 mg par jour"
+        }
+      ]
+    }
+  ]
+}

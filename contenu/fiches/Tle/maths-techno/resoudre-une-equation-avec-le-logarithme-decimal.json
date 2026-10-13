@@ -1,0 +1,164 @@
+{
+  "titre": "Équation et log",
+  "titreSurligne": "log",
+  "accroche": "Le log fait descendre l’exposant.",
+  "epreuve": "bac",
+  "bonus": "a<sup>x</sup> = b ⇔ x = log b ÷ log a · x<sup>a</sup> = b ⇔ x = b<sup>1/a</sup> · log a &lt; 0 si 0 &lt; a &lt; 1",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-techno/resoudre-une-equation-avec-le-logarithme-decimal.webp",
+    "prompt": "a glossy violet exponent number floating high above a golden coin stack with a small golden magnifier and a downward arrow, tiny sparkles"
+  },
+  "marcel": "Le log fait\ndescendre l’exposant !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Inconnue dans l’exposant",
+          "petite": true,
+          "lignes": [
+            "a<sup>x</sup> = b ⇔ x × log a = log b",
+            "x = {log b/log a}"
+          ],
+          "regle": "Pour a &gt; 0, a ≠ 1 et b &gt; 0. Le logarithme ==fait descendre== l’exposant.",
+          "note": "si a &lt; 1, log a &lt; 0&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Où est l’inconnue&nbsp;?",
+          "entetes": [
+            "Équation",
+            "Solution"
+          ],
+          "lignes": [
+            [
+              "2<sup>x</sup> = 10",
+              "x = log 10 ÷ log 2 ≈ **3,32**"
+            ],
+            [
+              "x³ = 27",
+              "x = 27<sup>1/3</sup> = **3**"
+            ],
+            [
+              "(1 + t)⁵ = 1,5",
+              "1 + t = 1,5<sup>1/5</sup>"
+            ],
+            [
+              "1,05<sup>n</sup> ≥ 2",
+              "n ≥ 14,2… donc **15**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Isoler",
+              "texte": "obtenir a<sup>x</sup> = b (diviser par le capital de départ)"
+            },
+            {
+              "titre": "Passer au log",
+              "texte": "log des deux membres, puis x × log a = log b"
+            },
+            {
+              "titre": "Diviser, conclure",
+              "texte": "surveiller le signe de log a, puis une phrase avec le premier entier"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "3&nbsp;000 € à 5&nbsp;% par an. __Quand dépasse-t-il 6&nbsp;000 €__&nbsp;?",
+          "calcul": "1,05<sup>n</sup> ≥ 2 ⇒ n × log 1,05 ≥ log 2\nn ≥ 0,3010 ÷ 0,0212 ≈ 14,2",
+          "aparte": "log 1,05 &gt; 0",
+          "resultat": "le capital double en [[15 ans]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Base &lt; 1",
+              "texte": "0,8<sup>n</sup> &lt; 0,1&nbsp;: log 0,8 &lt; 0, le sens **change**, n &gt; 10,3."
+            },
+            {
+              "titre": "Vérifier",
+              "texte": "0,8<sup>10</sup> ≈ 0,107 et 0,8<sup>11</sup> ≈ 0,086&nbsp;: **n = 11**."
+            },
+            {
+              "titre": "Taux moyen",
+              "texte": "L’inconnue est la base&nbsp;: on élève à la puissance **1/a**."
+            },
+            {
+              "titre": "Entier",
+              "texte": "Pour des années, on garde le **premier entier** qui convient."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "n × log 1,05 ≥ log 2",
+              "quoi": "je passe au log"
+            },
+            {
+              "texte": "log 1,05 &gt; 0 donc n ≥ 14,2…",
+              "quoi": "je divise"
+            },
+            {
+              "texte": "Le capital double au bout de 15 ans",
+              "quoi": "ma phrase"
+            }
+          ],
+          "pied": "Contrôle&nbsp;: 1,05<sup>15</sup> ≈ ==2,08== ≥ 2. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Ne pas changer le sens quand **log a &lt; 0**.",
+            "Arrondir **n** à l’entier inférieur.",
+            "Oublier d’**isoler** la puissance avant le log.",
+            "Écrire log(a<sup>x</sup>) = log a<sup>x</sup> au lieu de **x log a**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Résoudre 2<sup>x</sup> = 10&nbsp;: **x** vaut environ&nbsp;?",
+            "x³ = 27&nbsp;: **x** vaut&nbsp;?",
+            "0,8<sup>n</sup> &lt; 0,1&nbsp;: le **sens** change-t-il&nbsp;?"
+          ],
+          "reponses": "1) log 10 ÷ log 2 ≈ 3,32 · 2) 3 · 3) oui, log 0,8 &lt; 0"
+        }
+      ]
+    }
+  ]
+}

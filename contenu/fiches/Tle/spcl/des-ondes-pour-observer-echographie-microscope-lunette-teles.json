@@ -1,0 +1,184 @@
+{
+  "titre": "Ondes pour observer",
+  "titreSurligne": "observer",
+  "accroche": "Voir dedans, plus petit, plus loin.",
+  "epreuve": "bac",
+  "bonus": "d = v Δt / 2 · G<sub>c</sub> = 0,25 / f’ · G = f’₁ / f’₂ · θ<sub>min</sub> ≈ 1,22 λ/D",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/spcl/des-ondes-pour-observer-echographie-microscope-lunette-teles.webp",
+    "prompt": "a glossy violet microscope and a small golden telescope side by side with a sound wave, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Plus petit,\nplus loin !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Échographie",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "d = {v × Δt/2}"
+          ],
+          "regle": "v ≈ 1 540 m·s⁻¹ dans les tissus mous. Le **/ 2** vient de l’**aller-retour**.",
+          "note": "gel : supprime l’air"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les instruments",
+          "entetes": [
+            "Instrument",
+            "Grossissement"
+          ],
+          "lignes": [
+            [
+              "**loupe**",
+              "G<sub>c</sub> = 0,25 / f’"
+            ],
+            [
+              "**microscope**",
+              "G<sub>c</sub> = |γ<sub>obj</sub>| × G<sub>c,oc</sub>"
+            ],
+            [
+              "**lunette**",
+              "G = f’₁ / f’₂ (afocal)"
+            ],
+            [
+              "**télescope**",
+              "miroir convergent"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "À retenir sur la résolution",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Échographie",
+              "texte": "fréquence **élevée** : meilleure résolution, moins de profondeur"
+            },
+            {
+              "titre": "Microscope",
+              "texte": "limité par la **diffraction** ; mieux si λ diminue"
+            },
+            {
+              "titre": "Lunette",
+              "texte": "plus D est grand, plus on **résout** et on collecte"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Profondeur par échographie",
+          "etapes": [
+            {
+              "titre": "Durée",
+              "texte": "relever Δt de l’aller-retour"
+            },
+            {
+              "titre": "Distance",
+              "texte": "**v × Δt**"
+            },
+            {
+              "titre": "Profondeur",
+              "texte": "diviser par **2**"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Écho reçu 65 µs après l’émission. __d__&nbsp;?",
+          "calcul": "d = 1 540 × 65 × 10⁻⁶ / 2",
+          "aparte": "v = 1 540 m/s",
+          "resultat": "d ≈ [[5,0 cm]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Lunette et télescope",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Afocal",
+              "texte": "foyers **confondus**, objet et image à l’infini"
+            },
+            {
+              "titre": "Objectif",
+              "texte": "grande focale f’₁"
+            },
+            {
+              "titre": "Télescope",
+              "texte": "pas d’**aberration chromatique**"
+            },
+            {
+              "titre": "Microscope ×40 et ×10",
+              "texte": "grossissement **400**"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **/ 2** dans d = v × Δt / 2.",
+            "Prendre f’ en **cm** dans G<sub>c</sub> = 0,25 / f’.",
+            "Inverser **objectif** et oculaire dans G = f’₁ / f’₂.",
+            "Chercher la résolution dans le seul **grossissement**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "d = {v × Δt/2} = {1 540 × 65 × 10⁻⁶/2}",
+              "quoi": "formule puis nombres"
+            },
+            {
+              "texte": "G<sub>c</sub> = {0,25/f’}, f’ en mètres",
+              "quoi": "la loupe"
+            }
+          ],
+          "pied": "Une meilleure **résolution** n’est pas un plus grand grossissement."
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**G<sub>c</sub>** d’une loupe de f’ = 5 cm&nbsp;?",
+            "**G** si f’₁ = 100 cm et f’₂ = 2 cm&nbsp;?",
+            "Pourquoi un **gel** en échographie&nbsp;?"
+          ],
+          "reponses": "1) 5 · 2) 50 · 3) il chasse l’air qui réfléchirait l’onde"
+        }
+      ]
+    }
+  ]
+}

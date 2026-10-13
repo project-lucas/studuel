@@ -1,0 +1,175 @@
+{
+  "titre": "Moment d’inertie",
+  "titreSurligne": "inertie",
+  "accroche": "La masse de la rotation.",
+  "epreuve": "bac",
+  "bonus": "J = Σ m r² en **kg·m²** · doubler r **quadruple** J · réducteur 1/10 ⇒ inertie ÷ 100",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/si/moment-d-inertie-et-inertie-equivalente.webp",
+    "prompt": "a glossy violet flywheel disk with golden spokes and a small golden gear next to it, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Le rayon compte\nau carré&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Moment d’inertie",
+          "entetes": [
+            "Forme",
+            "J autour de son axe"
+          ],
+          "lignes": [
+            [
+              "Masse ponctuelle",
+              "m × r²"
+            ],
+            [
+              "Anneau, tube mince",
+              "m × R²"
+            ],
+            [
+              "Disque plein",
+              "½ × m × R²"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Inertie équivalente",
+          "petite": true,
+          "lignes": [
+            "Jeq = Jm + Jc × k²"
+          ],
+          "regle": "Ramenée sur l’arbre moteur, avec **k = ω<sub>c</sub> ÷ ω<sub>m</sub>**. On écrit que l’==énergie cinétique== est la même.",
+          "note": "k est au carré&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Ramener une inertie en trois temps",
+          "etapes": [
+            {
+              "titre": "Calculer",
+              "texte": "l’inertie de chaque pièce par rapport à son axe"
+            },
+            {
+              "titre": "Pondérer",
+              "texte": "la multiplier par k²"
+            },
+            {
+              "titre": "Additionner",
+              "texte": "le tout, rotor du moteur compris"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Plateau plein 20 kg, R = __0,4 m__, k = 1/10, rotor 0,001 kg·m².",
+          "calcul": "J<sub>c</sub> = ½ × 20 × 0,4² = 1,6 ; ramené : 1,6 × (1/10)² = 0,016 ; plus le rotor",
+          "aparte": "plus le rotor",
+          "resultat": "J<sub>eq</sub> = [[0,017 kg·m²]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Masse ou rayon&nbsp;?",
+          "oui": {
+            "titre": "Doubler le rayon",
+            "texte": "L’inertie est **quadruplée**&nbsp;: on allège la ==périphérie==."
+          },
+          "non": {
+            "titre": "Doubler la masse",
+            "texte": "L’inertie est seulement **doublée**."
+          },
+          "essai": {
+            "texte": "Pour accélérer le moteur à 200 rad/s²&nbsp;: C = 0,017 × 200 = <i>3,4 N·m</i>, sans les frottements."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "J<sub>c</sub> = ½ m R² = 1,6 kg·m²",
+              "quoi": "l’inertie du plateau"
+            },
+            {
+              "texte": "J<sub>eq</sub> = 0,001 + 1,6 × k²",
+              "quoi": "le ramené"
+            },
+            {
+              "texte": "J<sub>eq</sub> = 0,017 kg·m²",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Le moteur ressent l’inertie de la charge, mais ==réduite== par k²."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **carré** de k.",
+            "Oublier le **rotor** du moteur.",
+            "Utiliser m R² pour un **disque plein**.",
+            "Confondre **J** et la masse."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "À retenir",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Anneau",
+              "texte": "J = m R², toute la masse est à la périphérie"
+            },
+            {
+              "titre": "Disque plein",
+              "texte": "J = ½ m R², moitié moins qu’un anneau"
+            },
+            {
+              "titre": "Réducteur",
+              "texte": "1/10 divise par 100 l’inertie vue par le moteur"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Inertie d’un **disque plein**&nbsp;?",
+            "Un réducteur 1/10 divise J par combien&nbsp;?",
+            "Unité de **J**&nbsp;?"
+          ],
+          "reponses": "1) ½ m R² · 2) par 100 · 3) kg·m²"
+        }
+      ]
+    }
+  ]
+}

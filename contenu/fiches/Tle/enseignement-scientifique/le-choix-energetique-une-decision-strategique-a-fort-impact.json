@@ -1,0 +1,119 @@
+{
+  "titre": "Le choix énergétique",
+  "titreSurligne": "énergétique",
+  "accroche": "Arbitrer avec des chiffres.",
+  "bonus": "Centrale : **5 à 15 ans** de chantier, **40 à 60 ans** de vie · logements : **1 %** renouvelés par an",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/enseignement-scientifique/le-choix-energetique-une-decision-strategique-a-fort-impact.webp",
+    "prompt": "a glossy violet balance scale holding a golden lightning bolt on one side and a golden wind turbine on the other, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Aucune filière\nn’a tout bon !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Les critères d’un choix",
+          "deux": false,
+          "items": [
+            { "titre": "CO<sub>2</sub> par kWh", "texte": "sur tout le **cycle de vie**" },
+            { "titre": "Coût du kWh", "texte": "investissement compris : le **coût complet**" },
+            { "titre": "Disponibilité", "texte": "pilotable ou **intermittente**" },
+            { "titre": "Autres", "texte": "emprise au sol, risques, importations, emplois" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "L’inertie",
+          "entetes": ["Objet", "Durée"],
+          "lignes": [
+            ["Construire une centrale", "**5 à 15 ans**"],
+            ["Vie d’une centrale", "**40 à 60 ans**"],
+            ["Parc de logements", "renouvelé à **1 % par an**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Le mix reflète l’histoire et la géographie",
+          "entetes": ["Pays", "Son mix", "Sa raison"],
+          "lignes": [
+            ["**France**", "nucléaire", "indépendance énergétique après 1973"],
+            ["**Norvège**", "hydraulique", "relief et précipitations"],
+            ["**Allemagne**", "sortie du nucléaire, charbon longtemps", "choix politique assumé"],
+            ["Pays du Golfe", "hydrocarbures", "ressource du sous-sol"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Raisonner sur documents",
+          "etapes": [
+            { "titre": "Lire", "texte": "le graphique d’émissions ou de coûts" },
+            { "titre": "Comparer", "texte": "deux filières sur un **critère explicite**" },
+            { "titre": "Nuancer", "texte": "fait mesuré ou jugement ? Limites : périmètre, année, source" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "!",
+          "titre": "Un choix politique, argumenté par des données",
+          "paragraphes": [
+            "**Aucune filière n’est la meilleure sur tous les critères à la fois.** Le choix se tranche politiquement, mais doit s’argumenter avec des **données mesurables**, pas avec des impressions. Une décision énergétique **engage plusieurs décennies**."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une centrale se construit en 10 ans et dure 50 ans. Décision en 2030 : fin de __vie__Années d’__exploitation__ après la mise en service&nbsp;?nbsp;?",
+          "calcul": "2030 + 10 (chantier) + 50",
+          "aparte": "l’inertie",
+          "resultat": "[[jusqu’en 2090]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Chercher **la meilleure** filière sur tous les critères : elle n’existe pas.",
+            "Donner une **opinion** au lieu d’un raisonnement chiffré.",
+            "Mélanger **fait mesuré** et jugement de valeur.",
+            "Oublier de citer les **limites** des données : source, année, périmètre."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle durée de vie pour une **centrale**&nbsp;?",
+            "Pourquoi la **France** a-t-elle choisi le nucléaire&nbsp;?",
+            "Quelle limite faut-il toujours préciser sur une **donnée**&nbsp;?"
+          ],
+          "reponses": "1) 40 à 60 ans · 2) l’indépendance énergétique · 3) la source, l’année, le périmètre"
+        }
+      ]
+    }
+  ]
+}

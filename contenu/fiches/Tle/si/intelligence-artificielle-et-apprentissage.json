@@ -1,0 +1,206 @@
+{
+  "titre": "IA et apprentissage",
+  "titreSurligne": "apprentissage",
+  "accroche": "Apprendre une règle par l’exemple.",
+  "epreuve": "bac",
+  "bonus": "exactitude = (VP + VN) ÷ total · entraînement **80 %** / test **20 %** · k impair",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/si/intelligence-artificielle-et-apprentissage.webp",
+    "prompt": "a glossy violet neural network of connected golden nodes above small sorted golden and violet pieces, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Des exemples,\npas des règles&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Programmer ou faire apprendre",
+          "entetes": [
+            "",
+            "Classique",
+            "Apprentissage"
+          ],
+          "lignes": [
+            [
+              "On fournit",
+              "les règles",
+              "des exemples"
+            ],
+            [
+              "On obtient",
+              "des réponses",
+              "un modèle"
+            ],
+            [
+              "Adapté si",
+              "règle simple",
+              "règle floue"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Supervisé ou non",
+          "items": [
+            {
+              "terme": "Supervisé",
+              "definition": "exemples **étiquetés**&nbsp;: conforme ou défectueuse"
+            },
+            {
+              "terme": "Non supervisé",
+              "definition": "sans étiquette&nbsp;: regrouper ce qui se ressemble"
+            },
+            {
+              "terme": "k plus proches voisins",
+              "definition": "classe **majoritaire** des k exemples les plus proches"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Entraîner, puis tester",
+          "etapes": [
+            {
+              "titre": "Rassembler",
+              "texte": "des données étiquetées, représentatives des cas réels"
+            },
+            {
+              "titre": "Séparer",
+              "texte": "entraînement (80 %) et test (20 %) jamais vu pendant l’apprentissage"
+            },
+            {
+              "titre": "Évaluer",
+              "texte": "sur le jeu de test, jamais sur l’entraînement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "100 pièces&nbsp;: __45__ VP, __5__ FN, __40__ VN, __10__ FP. Exactitude&nbsp;?",
+          "calcul": "(45 + 40) ÷ 100",
+          "aparte": "5 pièces défectueuses livrées",
+          "resultat": "[[85 %]], mais 5 FN"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Les deux pièges",
+          "oui": {
+            "titre": "Test séparé",
+            "texte": "Un score mesuré sur des données **jamais vues** prouve quelque chose."
+          },
+          "non": {
+            "titre": "Surapprentissage",
+            "texte": "Excellent à l’entraînement, mauvais au test&nbsp;: ==appris par cœur==."
+          },
+          "essai": {
+            "texte": "Données qui oublient certains cas&nbsp;: <i>biais</i>, erreurs systématiques."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 5,
+          "titre": "Matrice de confusion",
+          "entetes": [
+            "Réel  prédit",
+            "Défectueux",
+            "Conforme"
+          ],
+          "lignes": [
+            [
+              "Défectueux",
+              "vrais positifs",
+              "**faux négatifs**"
+            ],
+            [
+              "Conforme",
+              "faux positifs",
+              "vrais négatifs"
+            ]
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À retenir",
+          "deux": false,
+          "items": [
+            {
+              "titre": "Données représentatives",
+              "texte": "sinon le modèle est biaisé"
+            },
+            {
+              "titre": "Test jamais vu",
+              "texte": "seul juge honnête du modèle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "exactitude = (45 + 40) ÷ 100 = 85 %",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "5 faux négatifs&nbsp;: pièces défectueuses livrées",
+              "quoi": "la lecture"
+            },
+            {
+              "texte": "régler le modèle pour réduire les FN",
+              "quoi": "la décision"
+            }
+          ],
+          "pied": "En industrie, un ==faux négatif== coûte souvent plus cher qu’un faux positif."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Évaluer sur les données d’**entraînement**.",
+            "Se contenter de l’**exactitude**.",
+            "Prendre **k pair** et risquer l’égalité.",
+            "Confondre **faux positif** et **faux négatif**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Exemples **étiquetés**&nbsp;: apprentissage&nbsp;?",
+            "Part du jeu de **test** souvent retenue&nbsp;?",
+            "Excellent à l’entraînement, mauvais au test&nbsp;?"
+          ],
+          "reponses": "1) supervisé · 2) environ 20 % · 3) surapprentissage"
+        }
+      ]
+    }
+  ]
+}

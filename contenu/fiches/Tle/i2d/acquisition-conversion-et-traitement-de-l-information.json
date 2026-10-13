@@ -1,0 +1,184 @@
+{
+  "titre": "Acquisition, CAN",
+  "titreSurligne": "CAN",
+  "accroche": "Du phénomène physique au nombre traité.",
+  "epreuve": "bac",
+  "bonus": "**q = pleine échelle / 2<sup>n</sup>** · **f<sub>c</sub> = 1 / 2πRC** · **f<sub>e</sub> ≥ 2 f<sub>max</sub>**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/i2d/acquisition-conversion-et-traitement-de-l-information.webp",
+    "prompt": "a glossy violet sensor with a golden binary number stream and a small microcontroller, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Du capteur au nombre,\nbien échantillonné !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "La chaîne d’acquisition",
+          "entetes": [
+            "Étage",
+            "Rôle"
+          ],
+          "lignes": [
+            [
+              "**Capteur**",
+              "grandeur → signal électrique"
+            ],
+            [
+              "**Conditionnement**",
+              "amplifier, filtrer"
+            ],
+            [
+              "**CAN**",
+              "tension → nombre entier"
+            ],
+            [
+              "**Traitement**",
+              "convertir, comparer, décider"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Quantum et filtre",
+          "taille": "mini",
+          "lignes": [
+            "q = {pleine échelle/2^n}",
+            "fc = {1/2πRC}"
+          ],
+          "regle": "N = ==partie entière== de U / q. Échantillonnage : ==f<sub>e</sub> ≥ 2 f<sub>max</sub>== (Shannon).",
+          "note": "passe-bas : coupe le bruit"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Analyser une mesure",
+          "etapes": [
+            {
+              "titre": "Sensibilité",
+              "texte": "pente de la caractéristique du capteur"
+            },
+            {
+              "titre": "Quantum",
+              "texte": "q, puis résolution = q / sensibilité"
+            },
+            {
+              "titre": "Reconstituer",
+              "texte": "U ≈ N × q, puis la grandeur physique"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Capteur __0,5 V → 4,5 V__ pour 0 → 2 m. CAN __12 bits__, __5 V__. Résolution en hauteur&nbsp;?",
+          "calcul": "sensibilité = 4 / 2 = 2 V/m",
+          "aparte": "q = 5 / 4 096 ≈ 1,22 mV",
+          "resultat": "1,22 mV / 2 V/m ≈ [[0,61 mm]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Échantillonnage correct&nbsp;?",
+          "oui": {
+            "titre": "Correct",
+            "texte": "f<sub>e</sub> **au moins deux fois** la fréquence utile."
+          },
+          "non": {
+            "titre": "Faux",
+            "texte": "Trop lent : le signal reconstruit est **faux**."
+          },
+          "essai": {
+            "texte": "Un niveau d’eau varie lentement : inutile d’échantillonner à <i>10 kHz</i>, on gaspille mémoire et calcul."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Effets de bord du traitement",
+          "deux": true,
+          "items": [
+            {
+              "titre": "8 bits",
+              "texte": "déborde au-delà de 255"
+            },
+            {
+              "titre": "16 bits signé",
+              "texte": "déborde au-delà de 32 767"
+            },
+            {
+              "titre": "Division entière",
+              "texte": "7 / 2 donne 3"
+            },
+            {
+              "titre": "Temps réel",
+              "texte": "le temps de calcul compte"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "q = 5 / 2<sup>12</sup> = 5 / 4 096 ≈ 1,22 mV",
+              "quoi": "le quantum"
+            },
+            {
+              "texte": "N = 2 048 → U ≈ 2,5 V",
+              "quoi": "la lecture"
+            },
+            {
+              "texte": "h = (2,5 − 0,5) / 2 = 1 m",
+              "quoi": "la grandeur"
+            }
+          ],
+          "pied": "On écrit ==la formule==, ==l’application== puis l’==unité physique==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **quantum** (en volts) et résolution en grandeur physique.",
+            "Oublier **2<sup>n</sup>** : q dépend du nombre de bits.",
+            "Échantillonner **moins vite** que 2 f<sub>max</sub>.",
+            "Négliger les **grandeurs d’influence** du capteur."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel est le **quantum** d’un CAN 8 bits sur **5 V**&nbsp;?",
+            "Quelle est la **fréquence de coupure** d’un filtre RC&nbsp;?",
+            "Que dit le théorème de **Shannon**&nbsp;?"
+          ],
+          "reponses": "1) 5 / 256 ≈ 19,5 mV · 2) fc = 1 / (2πRC) · 3) fe ≥ 2 × la fréquence maximale utile"
+        }
+      ]
+    }
+  ]
+}

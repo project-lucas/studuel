@@ -1,0 +1,177 @@
+{
+  "titre": "Les bus embarqués",
+  "titreSurligne": "bus",
+  "accroche": "UART, I2C ou SPI&nbsp;: lequel choisir&nbsp;?",
+  "epreuve": "bac",
+  "bonus": "UART 8N1 = **10 bits par octet** · durée = bits ÷ débit · TX ↔ RX **croisés**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/si/les-bus-de-communication-d-un-systeme-embarque.webp",
+    "prompt": "a glossy violet microchip connected by golden wires to two small modules, golden data dots traveling along the wires, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Peu de fils ou\nbeaucoup de débit&nbsp;?",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois bus à connaître",
+          "entetes": [
+            "Bus",
+            "Fils",
+            "Type",
+            "Ce qui le caractérise"
+          ],
+          "lignes": [
+            [
+              "UART",
+              "TX, RX, masse",
+              "asynchrone, point à point",
+              "débit convenu (9 600 bauds), TX sur RX"
+            ],
+            [
+              "I2C",
+              "SDA, SCL",
+              "synchrone, 1 maître, N esclaves",
+              "adresse sur 7 bits, accusé de réception"
+            ],
+            [
+              "SPI",
+              "MOSI, MISO, SCK, CS",
+              "synchrone, full duplex",
+              "rapide, un fil CS par esclave"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "La trame UART",
+          "entetes": [
+            "Élément",
+            "Bits"
+          ],
+          "lignes": [
+            [
+              "Départ (start)",
+              "1"
+            ],
+            [
+              "Données",
+              "8"
+            ],
+            [
+              "Parité (facultative)",
+              "0 ou 1"
+            ],
+            [
+              "Arrêt (stop)",
+              "1 ou 2"
+            ],
+            [
+              "Total minimal",
+              "10 bits"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "Durée d’envoi",
+          "petite": true,
+          "lignes": [
+            "t = {bits/débit}"
+          ],
+          "regle": "Compter les bits **réellement envoyés** (données + encadrement), puis diviser par le débit en bits par seconde.",
+          "note": "comparer au cahier des charges"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "__100 octets__ en UART à __9 600 bauds__, 8 bits, sans parité, 1 arrêt&nbsp;: durée&nbsp;?",
+          "calcul": "8 bits + 1 départ + 1 arrêt = 10 bits par octet, soit 100 × 10 = 1 000 bits",
+          "aparte": "1 000 ÷ 9 600",
+          "resultat": "t ≈ [[0,104 s]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Brancher deux modules",
+          "oui": {
+            "titre": "TX sur RX",
+            "texte": "Ce qui sort de l’un doit ==entrer== dans l’autre&nbsp;: on **croise** TX et RX, et on partage la masse."
+          },
+          "non": {
+            "titre": "TX sur TX",
+            "texte": "Rien ne marche&nbsp;: deux sorties face à face, personne n’écoute."
+          },
+          "essai": {
+            "texte": "Même trame à 115 200 bauds&nbsp;: <i>moins de 9 ms</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Choisir son bus",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Peu de broches",
+              "texte": "I2C&nbsp;: deux fils (SDA, SCL) pour tout le bus, chaque esclave a son adresse"
+            },
+            {
+              "titre": "Du débit",
+              "texte": "SPI&nbsp;: rapide, émission et réception simultanées (full duplex)"
+            },
+            {
+              "titre": "Deux modules",
+              "texte": "UART&nbsp;: simple, point à point"
+            },
+            {
+              "titre": "Synchrone",
+              "texte": "une horloge cadence les bits"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Compter **8 bits** par octet au lieu de 10.",
+            "Relier **TX à TX**.",
+            "Confondre débit **brut** et débit utile.",
+            "Penser qu’I2C est **plus rapide** que SPI.",
+            "Oublier **l’adresse** dans les bits I2C comptés."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Bits envoyés pour **1 octet** en UART 8N1&nbsp;?",
+            "Bus à **deux fils** avec adresses&nbsp;?",
+            "Rôle du fil **CS** en SPI&nbsp;?"
+          ],
+          "reponses": "1) 10 · 2) I2C (SDA, SCL) · 3) choisir l’esclave interrogé"
+        }
+      ]
+    }
+  ]
+}

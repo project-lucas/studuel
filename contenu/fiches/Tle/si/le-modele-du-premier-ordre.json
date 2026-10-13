@@ -1,0 +1,111 @@
+{
+  "titre": "Le premier ordre",
+  "titreSurligne": "premier ordre",
+  "accroche": "63 % à t = τ, 95 % à 3τ.",
+  "epreuve": "bac",
+  "bonus": "s(t) = K E₀ (1 − e<sup>−t/τ</sup>) · 63 % à **τ** · 95 % à **3τ** · 99 % à 5τ",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/si/le-modele-du-premier-ordre.webp",
+    "prompt": "a glossy violet rising curve flattening toward a golden dotted line with a small golden stopwatch, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Pas de dépassement,\nc’est du premier ordre !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Réponse à un échelon",
+          "petite": true,
+          "lignes": ["s(t) = K E₀ (1 − e<sup>−t/τ</sup>)", "s<sub>final</sub> = K × E₀"],
+          "regle": "**K** gain statique (valeur finale), **τ** constante de temps en secondes (la rapidité). La sortie monte ==sans jamais dépasser== sa valeur finale.",
+          "note": "tangente en 0 : coupe à τ"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les repères",
+          "entetes": ["Instant", "Part atteinte"],
+          "lignes": [
+            ["t = τ", "63 %"],
+            ["t = 3τ", "95 % (temps de réponse à 5 %)"],
+            ["t = 5τ", "99 %"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Identifier sur une courbe",
+          "etapes": [
+            { "titre": "Vérifier", "texte": "pente non nulle au départ, aucun dépassement, stabilisation" },
+            { "titre": "Lire K", "texte": "K = Δs ÷ Δe avec la valeur finale" },
+            { "titre": "Lire τ", "texte": "instant où la sortie atteint 63 %, contrôle à 3τ = 95 %" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Moteur, échelon de __12 V__, vitesse finale 600 rad/s, 378 rad/s à __0,2 s__&nbsp;: K, τ, t<sub>5%</sub>&nbsp;?",
+          "calcul": "K = 600 ÷ 12 = 50 rad/s/V · 378 ÷ 600 = 0,63 ⇒ τ = 0,2 s",
+          "aparte": "3 × 0,2",
+          "resultat": "t<sub>5%</sub> = [[0,6 s]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quel modèle&nbsp;?",
+          "oui": { "titre": "Premier ordre", "texte": "Montée régulière, ==jamais== au-dessus de la valeur finale." },
+          "non": { "titre": "Au moins deuxième ordre", "texte": "La courbe **dépasse** puis revient&nbsp;: le modèle est plus complexe." },
+          "essai": { "texte": "Même moteur sous 6 V&nbsp;: <i>300 rad/s</i> à la fin, avec le même τ." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "K = s<sub>final</sub> ÷ E₀ = 600 ÷ 12 = 50 rad/s/V", "quoi": "le gain" },
+            { "texte": "s(τ) = 0,63 × 600 = 378 ⇒ τ = 0,2 s", "quoi": "la constante" },
+            { "texte": "t<sub>5%</sub> = 3τ = 0,6 s", "quoi": "avec l’unité" }
+          ],
+          "pied": "Circuit RC&nbsp;: ==τ = R × C==. Four, radiateur&nbsp;: τ de plusieurs minutes."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Lire τ à **95 %** au lieu de 63 %.",
+            "Confondre **K** et la valeur finale (K × E₀).",
+            "Oublier l’**unité** de τ (secondes).",
+            "Appliquer le modèle à une courbe qui **dépasse**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Part de la valeur finale à **t = τ**&nbsp;?",
+            "τ = 2 s&nbsp;: temps de réponse à **5 %**&nbsp;?",
+            "Circuit RC&nbsp;: **τ** vaut&nbsp;?"
+          ],
+          "reponses": "1) 63 % · 2) 6 s · 3) R × C"
+        }
+      ]
+    }
+  ]
+}

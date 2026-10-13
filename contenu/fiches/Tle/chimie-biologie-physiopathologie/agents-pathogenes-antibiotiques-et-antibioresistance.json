@@ -1,0 +1,119 @@
+{
+  "titre": "Antibiorésistance",
+  "titreSurligne": "résistance",
+  "accroche": "Bactérie ou virus : pas le même soin.",
+  "epreuve": "bac",
+  "bonus": "Antibiotique = **bactéries** seulement · jamais pour une grippe",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/chimie-biologie-physiopathologie/agents-pathogenes-antibiotiques-et-antibioresistance.webp",
+    "prompt": "a glossy violet petri dish with golden round bacteria colonies and a golden capsule pill with clear circles around it, tiny sparkles, same art style as the reference icons, on a magenta background, no text, no numbers"
+  },
+  "marcel": "Les antibiotiques,\nc’est pas automatique !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Bactérie ou virus ?",
+          "entetes": ["", "Bactérie", "Virus"],
+          "lignes": [
+            ["**Taille**", "1 à 10 µm (microscope optique)", "20 à 300 nm (microscope électronique)"],
+            ["**Nature**", "cellule **procaryote** : paroi, ribosomes, ADN libre", "**pas une cellule** : acide nucléique + **capside**"],
+            ["**Reproduction**", "seule, par **division**", "**dans une cellule hôte** seulement"],
+            ["**Traitement**", "**antibiotiques**", "antiviraux ; antibiotiques **inefficaces**"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les cibles des antibiotiques",
+          "entetes": ["La cible", "La famille"],
+          "lignes": [
+            ["**Paroi**", "pénicillines"],
+            ["**Ribosomes**", "aminosides, macrolides"],
+            ["**ADN**", "quinolones"],
+            ["**Membrane**", "polymyxines"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 3,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Bactéricide", "definition": "tue les bactéries" },
+            { "terme": "Bactériostatique", "definition": "bloque leur multiplication" },
+            { "terme": "Nosocomiale", "definition": "infection contractée en établissement de santé" },
+            { "terme": "Mycose", "definition": "infection due à un champignon" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Lire un antibiogramme",
+          "etapes": [
+            { "titre": "Étaler", "texte": "la bactérie du patient sur gélose, disques d’antibiotiques déposés" },
+            { "titre": "Mesurer", "texte": "le diamètre de la **zone d’inhibition** autour de chaque disque" },
+            { "titre": "Conclure", "texte": "comparer aux valeurs critiques : **sensible** ou **résistante**" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Comment naît la résistance",
+          "donnees": "Un traitement inutile, répété.",
+          "calcul": "Sensibles : meurent\nRésistantes : survivent, se multiplient",
+          "resultat": "[[sélection]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": false,
+          "items": [
+            { "titre": "Naturelle", "texte": "toute l’espèce y échappe" },
+            { "titre": "Acquise", "texte": "**mutation** ou **transfert de gènes** (plasmides)" },
+            { "titre": "Cycle viral", "texte": "fixation → pénétration → réplication → assemblage → libération" },
+            { "titre": "Règle", "texte": "ne jamais arrêter seul un traitement prescrit" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Prescrire un **antibiotique** pour une grippe ou un rhume.",
+            "Dire que le **corps** devient résistant : c’est la **bactérie**.",
+            "Croire qu’un virus a un **ribosome** ou une paroi à cibler.",
+            "Prendre les antibiotiques **d’un autre**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Pourquoi un antibiotique est-il **inefficace** sur un virus&nbsp;?",
+            "Que mesure-t-on sur un **antibiogramme**&nbsp;?",
+            "Comment une souche devient-elle **résistante**&nbsp;?"
+          ],
+          "reponses": "1) pas de paroi ni ribosome · 2) zone d’inhibition · 3) mutation, transfert de gènes, sélection"
+        }
+      ]
+    }
+  ]
+}

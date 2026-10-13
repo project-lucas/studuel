@@ -1,0 +1,121 @@
+{
+  "titre": "Matériels et systèmes",
+  "titreSurligne": "systèmes",
+  "accroche": "Chaque couche ne connaît que sa voisine.",
+  "epreuve": "bac",
+  "bonus": "OS&nbsp;: **ordonnancer** · mémoire · fichiers · droits — TCP/IP&nbsp;: **4 couches** — TCP **fiable**, UDP **rapide**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/nsi/materiels-systemes-et-logiciels.webp",
+    "prompt": "a glossy violet microchip stacked on layered golden platters like a small tower, sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Quatre couches,\nun seul message !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le système d’exploitation",
+          "items": [
+            { "terme": "Ordonnancer", "definition": "donner à chaque **processus** son tour de processeur" },
+            { "terme": "Gérer la mémoire", "definition": "allouer, libérer, **isoler** les processus" },
+            { "terme": "Gérer les fichiers", "definition": "l’**arborescence** et son accès" },
+            { "terme": "Gérer les droits", "definition": "propriétaire et permissions&nbsp;: **lecture, écriture, exécution**" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le modèle TCP/IP",
+          "entetes": ["Couche", "Exemples"],
+          "lignes": [
+            ["4. **Application**", "HTTP, DNS, SMTP"],
+            ["3. **Transport**", "TCP, UDP"],
+            ["2. **Internet**", "IP (adressage, routage)"],
+            ["1. **Accès réseau**", "Ethernet, Wi-Fi"],
+            ["mémoire vive", "**perdue** à l’extinction"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Envoyer un message&nbsp;: l’encapsulation",
+          "etapes": [
+            { "titre": "Descendre", "texte": "chaque couche ajoute son **en-tête** aux données reçues" },
+            { "titre": "Router", "texte": "les routeurs transmettent le paquet au voisin le plus proche" },
+            { "titre": "Remonter", "texte": "à l’arrivée, on retire les en-têtes dans l’**ordre inverse**" },
+            { "titre": "Choisir", "texte": "TCP si la **fiabilité** compte, UDP si c’est le **temps réel**" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un direct vidéo&nbsp;: __TCP ou UDP__&nbsp;?",
+          "calcul": "une image perdue gêne moins qu’un retard",
+          "aparte": "pas de retransmission",
+          "resultat": "= [[UDP]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Routage et transport",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "RIP", "texte": "le moins de **sauts** (15 au plus), aveugle au débit." },
+            { "titre": "OSPF", "texte": "un **coût** par lien, plus court chemin par **Dijkstra**." },
+            { "titre": "TCP", "texte": "connexion, pertes **retransmises**, ordre rétabli." },
+            { "titre": "UDP", "texte": "aucune connexion, pertes **ignorées**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le jeu en ligne tolère une perte, pas un retard.", "quoi": "le besoin" },
+            { "texte": "UDP n’établit pas de connexion.", "quoi": "le protocole" },
+            { "texte": "Donc on choisit UDP.", "quoi": "la conclusion" },
+            { "texte": "Le retard coûte plus cher que la perte.", "quoi": "la justification" }
+          ],
+          "pied": "Le critère&nbsp;: ce qui se passe quand un ==paquet se perd==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **processus** et programme&nbsp;: le processus est en cours d’exécution.",
+            "Croire que RIP tient compte du **débit**.",
+            "Penser UDP « mauvais »&nbsp;: il est juste **sans garantie**.",
+            "Un **interblocage**&nbsp;: chacun attend la ressource de l’autre."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle couche TCP/IP s’occupe du **routage**&nbsp;?",
+            "Que fait l’**ordonnanceur**&nbsp;?",
+            "Quel protocole retransmet les **pertes**&nbsp;?"
+          ],
+          "reponses": "1) Internet (IP) · 2) il répartit le processeur entre processus · 3) TCP"
+        }
+      ]
+    }
+  ]
+}

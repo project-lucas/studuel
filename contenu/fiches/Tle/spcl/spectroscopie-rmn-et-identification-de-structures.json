@@ -1,0 +1,119 @@
+{
+  "titre": "RMN du proton",
+  "titreSurligne": "RMN",
+  "accroche": "Lire l’environnement de chaque H.",
+  "epreuve": "bac",
+  "bonus": "n voisins → **n + 1 pics** · δ en ppm (TMS = 0) · intégration = **proportions**, pas des nombres absolus",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/spcl/spectroscopie-rmn-et-identification-de-structures.webp",
+    "prompt": "a glossy violet NMR spectrum with golden peaks of different heights and a tiny molecule model, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Chaque signal,\nun groupe de H&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Trois infos par signal",
+          "entetes": ["Information", "Ce qu’elle dit"],
+          "lignes": [
+            ["**Nombre** de signaux", "groupes de H **équivalents**"],
+            ["**Déplacement** δ", "voisinage&nbsp;: O, N, halogène → δ **grand**"],
+            ["**Intégration**", "nombre **relatif** de H"],
+            ["**Multiplicité**", "nombre de H **voisins**"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Règle des (n + 1)",
+          "petite": true,
+          "lignes": ["n voisins → n + 1 pics"],
+          "regle": "0 voisin&nbsp;: **singulet** · 1&nbsp;: **doublet** · 2&nbsp;: **triplet** · 3&nbsp;: **quadruplet**. Les H portés par O ne se couplent pas.",
+          "note": "voisins = carbones adjacents"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Attribuer un spectre",
+          "etapes": [
+            { "titre": "Compter", "texte": "les groupes de H **équivalents**" },
+            { "titre": "Associer", "texte": "signal ↔ groupe par l’**intégration**" },
+            { "titre": "Vérifier", "texte": "multiplicité (n + 1), puis **δ** avec la table" },
+            { "titre": "Confirmer", "texte": "**IR**&nbsp;: C=O ≈ 1 700 cm⁻¹, O–H large ≈ 3 300" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Éthanoate d’éthyle CH₃–CO–O–CH₂–CH₃&nbsp;: trois groupes de H, donc __3 signaux__.",
+          "calcul": "CH₃CO : singulet ≈ 2,0 · OCH₂ : quadruplet ≈ 4,1 · CH₃ : triplet ≈ 1,3",
+          "aparte": "intégration",
+          "resultat": "rapport [[3 : 2 : 3]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Repères de δ (ppm)",
+          "entetes": ["Proton", "δ"],
+          "lignes": [
+            ["CH₃ de chaîne", "0,9 – 1,3"],
+            ["H voisin de C=O", "2,0 – 2,7"],
+            ["H sur C–O", "3,3 – 4,3"],
+            ["H aromatique", "6,5 – 8"],
+            ["aldéhyde · acide", "9 – 10 · 10 – 13"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "3 groupes de H équivalents → 3 signaux", "quoi": "le nombre" },
+            { "texte": "OCH₂ : 2 H, 3 voisins → quadruplet", "quoi": "multiplicité" },
+            { "texte": "δ ≈ 4,1 ppm, H lié à O", "quoi": "déplacement" },
+            { "texte": "Intégration 3 : 2 : 3 cohérente", "quoi": "conclusion" }
+          ],
+          "pied": "Utilise toujours la **table fournie** pour les δ."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Lire l’intégration comme un nombre **absolu** de H.",
+            "Compter les **H du groupe lui-même** comme voisins.",
+            "Coupler les H de **O–H** (ils donnent un singulet).",
+            "Oublier le **TMS** (δ = 0) comme référence."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Un CH₂ avec **3 voisins**&nbsp;: quel signal&nbsp;?",
+            "Rapport 1 : 1,5&nbsp;: combien de H possibles&nbsp;?",
+            "Un H d’**aldéhyde** sort vers quel δ&nbsp;?"
+          ],
+          "reponses": "1) un quadruplet · 2) 2 H et 3 H · 3) 9 – 10 ppm"
+        }
+      ]
+    }
+  ]
+}

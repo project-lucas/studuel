@@ -1,0 +1,117 @@
+{
+  "titre": "Réussir l’épreuve",
+  "titreSurligne": "épreuve",
+  "accroche": "3 heures, 20 points, une méthode.",
+  "epreuve": "bac",
+  "bonus": "Épreuve écrite de **3 h** · coefficient **16** · **6 pts** connaissances + **14 pts** dossier",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/sciences-sanitaires-sociales/methode-reussir-l-epreuve-ecrite-de-stss.webp",
+    "prompt": "a glossy violet pencil and a golden stopwatch on a stack of documents, sparkles, same art style as the reference icons, on magenta background, no text"
+  },
+  "marcel": "Idée, preuve,\nconnaissance !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "La structure",
+          "entetes": ["Partie", "Points", "Temps"],
+          "lignes": [
+            ["**Connaissances**", "6", "environ 45 min"],
+            ["**Dossier** (5 docs au plus)", "14", "2 h 15 dont 10 min de relecture"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Lire les chiffres",
+          "entetes": ["Outil", "Calcul"],
+          "lignes": [
+            ["**Répartition**", "partie ÷ total × 100"],
+            ["**Variation**", "(arrivée − départ) ÷ départ"],
+            ["**Écart**", "différence de deux %"],
+            ["**Coefficient**", "arrivée ÷ départ"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Exploiter le dossier",
+          "etapes": [
+            { "titre": "Analyser", "texte": "mots clés, champ, problématique" },
+            { "titre": "Lire", "texte": "nature, source, date, idée, **chiffre parlant**" },
+            { "titre": "Construire", "texte": "un plan par **idée**, pas par document" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les connaissances (6 pts)",
+          "colonnes": 1,
+          "cartes": [
+            { "titre": "Verbe", "texte": "Repère-le : définir, expliquer, montrer." },
+            { "titre": "Définir", "texte": "Les **notions** dès le début." },
+            { "titre": "Illustrer", "texte": "Un **exemple précis** par idée." },
+            { "titre": "Structurer", "texte": "Intro courte, **2-3 idées**, pas de hors-sujet." }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Chaque argument",
+          "donnees": "idée",
+          "calcul": "preuve citée (« document 3 »)",
+          "aparte": "puis connaissance qui explique",
+          "resultat": "[[idée · preuve · savoir]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le taux est passé de 12 % à 15 %, soit une hausse de 3 points.", "quoi": "lire" },
+            { "texte": "Selon le document 3, … ; cela s’explique par …", "quoi": "citer" },
+            { "texte": "Ainsi, les dispositifs réduisent en partie les inégalités.", "quoi": "conclure" }
+          ],
+          "pied": "La conclusion ==répond== à la question posée."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **3 points** et 3 %.",
+            "**Paraphraser** les documents.",
+            "Un plan « **document 1**, document 2… ».",
+            "Chiffres sans **unité**, date ni source."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de points vaut la partie **dossier** ?",
+            "De **12 % à 15 %** : écart ou évolution ?",
+            "Faut-il un plan **par document** ?"
+          ],
+          "reponses": "1) 14 points · 2) + 3 points, soit + 25 % · 3) non, par idée"
+        }
+      ]
+    }
+  ]
+}

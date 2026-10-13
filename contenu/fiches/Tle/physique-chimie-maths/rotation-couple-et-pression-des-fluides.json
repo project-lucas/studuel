@@ -1,0 +1,112 @@
+{
+  "titre": "Couple et pression",
+  "titreSurligne": "pression",
+  "epreuve": "bac",
+  "accroche": "Faire tourner, comprendre la pression.",
+  "bonus": "ω = 2π N ÷ 60 · M = F × d · P = C × ω · p = F ÷ S · Δp = ρ × g × h · 1 bar = 10⁵ Pa",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie-maths/rotation-couple-et-pression-des-fluides.webp",
+    "prompt": "a glossy violet wrench turning a golden bolt with a curved arrow, a small golden pressure gauge beside it, sparkles"
+  },
+  "marcel": "Loin de l’axe,\nça tourne mieux !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Rotation et couple",
+          "petite": true,
+          "lignes": ["M = F × d", "P = C × ω"],
+          "regle": "**M** en N·m, **d** = bras de levier, distance **perpendiculaire** à l’axe. **ω = 2π × N ÷ 60** (N en tr/min), en rad/s. Et v = R × ω.",
+          "note": "droite d’action par l’axe&nbsp;: M = 0"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux pressions",
+          "entetes": ["Pression", "Référence", "Mesure"],
+          "lignes": [
+            ["Absolue", "le vide", "baromètre"],
+            ["Relative", "l’atmosphère", "manomètre"],
+            ["p = F ÷ S", "en pascal (Pa)", "1 bar = 10⁵ Pa"],
+            ["Atmosphère", "≈ 1,013 × 10⁵ Pa", "p<sub>rel</sub> = p<sub>abs</sub> − p<sub>atm</sub>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Convertir", "texte": "tr/min en rad/s, cm en m, bar en Pa" },
+            { "titre": "Choisir la loi", "texte": "M = F × d, P = C × ω, ou Δp = ρ × g × h pour un liquide au repos" },
+            { "titre": "Interpréter", "texte": "à l’équilibre, couple moteur = couple résistant&nbsp;: c’est le point de fonctionnement" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un moteur de 20 N·m tourne à 1 500 tr/min. Sa __puissance__&nbsp;?",
+          "calcul": "ω = 2π × 1 500 ÷ 60 ≈ 157 rad/s",
+          "aparte": "puis C × ω",
+          "resultat": "P = 20 × 157 ≈ [[3,1 kW]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Hydrostatique",
+          "oui": { "titre": "Liquide au repos", "texte": "**p<sub>B</sub> − p<sub>A</sub> = ρ × g × (z<sub>A</sub> − z<sub>B</sub>)**&nbsp;: la pression ne dépend que de la **profondeur**." },
+          "non": { "titre": "Pneu à 2 bars", "texte": "C’est une pression **relative**&nbsp;: environ **3 bars absolus**." },
+          "essai": { "texte": "Sous 10 m d’eau&nbsp;: Δp = <i>1 000 × 9,81 × 10 ≈ 98 000 Pa</i>, soit environ 1 bar de plus qu’en surface." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "ω = 2π × N ÷ 60 = 2π × 1 500 ÷ 60", "quoi": "conversion en rad/s" },
+            { "texte": "P = C × ω = 20 × 157 ≈ 3,1 kW", "quoi": "formule puis nombres" },
+            { "texte": "Point de fonctionnement&nbsp;: C<sub>m</sub> = C<sub>r</sub>", "quoi": "l’intersection" }
+          ],
+          "pied": "Château d’eau de 30 m&nbsp;: ==ρ × g × h ≈ 2,9 bars== au pied, sans aucune pompe."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Garder la fréquence en **tr/min** dans P = C × ω.",
+            "Prendre pour **d** la distance oblique, non perpendiculaire.",
+            "Confondre pression **absolue** et relative.",
+            "Oublier de passer les **bars en pascals**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**M** d’une force de 40 N à 0,25 m de l’axe&nbsp;?",
+            "**v** d’un point à R = 0,30 m, ω = 50 rad/s&nbsp;?",
+            "Pression relative de 2 bars&nbsp;: **absolue** environ&nbsp;?"
+          ],
+          "reponses": "1) 10 N·m · 2) 15 m/s · 3) environ 3 bars"
+        }
+      ]
+    }
+  ]
+}

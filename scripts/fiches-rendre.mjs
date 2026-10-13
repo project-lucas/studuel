@@ -64,7 +64,8 @@ export function md(s) {
     // coiffe CSS (.vec), l'équivalence un ⇔ que les polices de repli connaissent.
     .replace(/([A-Za-z0-9]{1,3}['’]?)⃗/g, '<span class="vec">$1</span>')
     .replace(/⟺/g, '⇔')
-    .replace(/\{([^{}/]+)\/([^{}]+)\}/g, '<span class="frac"><span>$1</span><span>$2</span></span>')
+    // Le trait de fraction est le premier « / » qui ne ferme pas une balise : {x<sub>0</sub>/2} garde son indice.
+    .replace(/\{((?:[^{}/]|<\/)+)\/([^{}]+)\}/g, '<span class="frac"><span>$1</span><span>$2</span></span>')
     .replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>')
     // Un « = » seul reste permis dans le surligné (==aire = 4==), seul le double ferme la marque.
     .replace(/==((?:[^=]|=(?!=))+)==/g, '<mark>$1</mark>')

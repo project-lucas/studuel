@@ -1,0 +1,112 @@
+{
+  "titre": "Électrolyse et piles",
+  "titreSurligne": "Électrolyse",
+  "accroche": "Remonter la pente, par force.",
+  "epreuve": "bac",
+  "bonus": "**anode = oxydation** · **cathode = réduction** · n(e⁻) = I × Δt ÷ F · F ≈ 96 500 C·mol⁻¹ · électrolyse&nbsp;: Q<sub>r</sub> s’**éloigne** de K",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/electrolyse-et-generateurs-electrochimiques.webp",
+    "prompt": "a glossy violet beaker with two golden electrodes connected to a golden battery, small golden bubbles rising from one electrode, sparkles"
+  },
+  "marcel": "Anode = oxydation,\ntoujours !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Bilan quantitatif",
+          "petite": true,
+          "lignes": ["n(e⁻) = {I × Δt/F}", "F ≈ 96 500 C·mol⁻¹"],
+          "regle": "**I** en A, **Δt** en s, **n(e⁻)** en mol. On en tire la ==masse déposée== ou le ==volume de gaz==.",
+          "note": "Δt toujours en secondes&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Pile ou électrolyse",
+          "entetes": ["", "Pile", "Électrolyse"],
+          "lignes": [
+            ["Sens", "spontané", "forcé"],
+            ["Q<sub>r</sub> et K", "se rapprochent", "s’éloignent"],
+            ["Anode", "pôle négatif", "reliée à la borne +"],
+            ["Cathode", "pôle positif", "reliée à la borne −"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Analyser une électrolyse",
+          "etapes": [
+            { "titre": "Repérer", "texte": "la borne + du générateur : l’électrode qui lui est reliée est l’anode" },
+            { "titre": "Écrire", "texte": "oxydation à l’anode, réduction à la cathode, avec les demi-équations" },
+            { "titre": "Calculer", "texte": "n(e⁻) = I Δt ÷ F, puis la quantité de matière formée" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Dépôt de cuivre (Cu²⁺ + 2 e⁻ → Cu) avec __I = 2,0 A__ pendant __30 min__. Quelle quantité de cuivre&nbsp;?",
+          "calcul": "n(e⁻) = (2,0 × 1800) ÷ 96 500 = 0,037 mol · n(Cu) = n(e⁻) ÷ 2",
+          "aparte": "30 min = 1800 s",
+          "resultat": "n(Cu) = [[0,019 mol]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Accumulateur",
+          "oui": { "titre": "Réversible", "texte": "Décharge&nbsp;: ==pile==. Recharge&nbsp;: ==électrolyseur==, anode et cathode échangent leurs places." },
+          "non": { "titre": "L’anode change de définition&nbsp;?", "texte": "**Faux**&nbsp;: anode = oxydation, **toujours**&nbsp;; c’est le branchement qui change." },
+          "essai": { "texte": "Une pile à combustible ne rejette que de l’<i>eau</i>, mais on l’alimente en continu." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Cu²⁺ + 2 e⁻ = Cu à la cathode (réduction)", "quoi": "la demi-équation" },
+            { "texte": "n(e⁻) = I Δt ÷ F = 2,0 × 1800 ÷ 96 500", "quoi": "le calcul" },
+            { "texte": "n(Cu) = 0,019 mol", "quoi": "le résultat" }
+          ],
+          "pied": "Le générateur impose une tension ==supérieure== à celle de la pile correspondante."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Lier **anode** au pôle + dans les deux cas.",
+            "Garder **Δt en minutes**.",
+            "Oublier le **nombre d’e⁻** échangés.",
+            "Croire à un rendement de **100 %**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dans une électrolyse, que se passe-t-il à la **cathode**&nbsp;?",
+            "I = 1,0 A pendant 96 500 s&nbsp;: **n(e⁻)**&nbsp;?",
+            "Q<sub>r</sub> s’éloigne ou se rapproche de K en **électrolyse**&nbsp;?"
+          ],
+          "reponses": "1) réduction · 2) 1,0 mol · 3) s’éloigne"
+        }
+      ]
+    }
+  ]
+}

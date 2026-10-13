@@ -1,0 +1,192 @@
+{
+  "titre": "Électricité durable",
+  "titreSurligne": "durable",
+  "accroche": "Un vecteur, pas une source.",
+  "bonus": "charbon **820** · gaz **490** · éolien, hydraulique, nucléaire **5 à 15** g CO<sub>2</sub>/kWh · moteur électrique **> 90 %**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/enseignement-scientifique/les-atouts-de-l-electricite-et-ses-enjeux-dans-le-developpem.webp",
+    "prompt": "a glossy violet electric plug with a golden leaf growing from its cable, tiny sparks, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Propre ? Ça dépend\nde la production !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Les atouts",
+          "deux": false,
+          "items": [
+            {
+              "titre": "Polyvalence",
+              "texte": "chaleur, lumière, mouvement, information"
+            },
+            {
+              "titre": "Transport",
+              "texte": "des centaines de km, quelques % de pertes"
+            },
+            {
+              "titre": "Rendement d’usage",
+              "texte": "moteur électrique **> 90 %**, thermique 30 à 40 %"
+            },
+            {
+              "titre": "Zéro émission",
+              "texte": "au point d’usage : l’air des villes"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Intensité carbone",
+          "entetes": [
+            "Filière",
+            "g CO<sub>2</sub>/kWh"
+          ],
+          "lignes": [
+            [
+              "Charbon",
+              "≈ **820**"
+            ],
+            [
+              "Gaz",
+              "≈ **490**"
+            ],
+            [
+              "Photovoltaïque",
+              "quelques dizaines"
+            ],
+            [
+              "Éolien, hydro, nucléaire",
+              "**5 à 15**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "L’analyse du cycle de vie",
+          "etapes": [
+            {
+              "titre": "Extraire",
+              "texte": "les matériaux"
+            },
+            {
+              "titre": "Fabriquer",
+              "texte": "puis transporter"
+            },
+            {
+              "titre": "Utiliser",
+              "texte": "la phase d’usage"
+            },
+            {
+              "titre": "Recycler",
+              "texte": "fin de vie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "!",
+          "titre": "Vecteur, pas source",
+          "paragraphes": [
+            "On ne trouve pas l’électricité dans le sol : on la **fabrique** puis on la transporte. Elle n’est **propre** que si sa production l’est : une voiture électrique dépend du **mix** du pays."
+          ],
+          "teinte": "jaune"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Les enjeux",
+          "deux": false,
+          "items": [
+            {
+              "titre": "Électrifier",
+              "texte": "transport, chauffage"
+            },
+            {
+              "titre": "Intermittence",
+              "texte": "stockage, pilotage, interconnexions"
+            },
+            {
+              "titre": "Ressources",
+              "texte": "cuivre, lithium, terres rares"
+            },
+            {
+              "titre": "Sobriété",
+              "texte": "l’énergie qu’on ne consomme pas"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une maison consomme 1 000 kWh sur un mix à 490 g/kWh (gaz). __CO<sub>2</sub>__&nbsp;?",
+          "calcul": "1 000 × 490 = 490 000 g",
+          "aparte": "= 490 kg",
+          "resultat": "≈ [[490 kg]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que l’électricité est une **source** d’énergie.",
+            "Juger une technologie sur son **usage** seul, sans cycle de vie.",
+            "Croire un panneau solaire **sans impact** de fabrication.",
+            "Oublier que la voiture électrique dépend du **mix**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "L’électricité est un **vecteur** : sa « propreté » dépend de la **production**.",
+              "quoi": "thèse"
+            },
+            {
+              "texte": "On compare les filières par leur **intensité carbone** sur tout le **cycle de vie**.",
+              "quoi": "méthode"
+            },
+            {
+              "texte": "Les enjeux : **intermittence**, **ressources critiques**, **sobriété**.",
+              "quoi": "enjeux"
+            }
+          ],
+          "pied": "thèse → méthode → enjeux"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "L’électricité est-elle une **source** ou un **vecteur**&nbsp;?",
+            "Que compte l’**ACV** d’un panneau solaire&nbsp;?",
+            "Quelle filière émet le plus de CO<sub>2</sub> par kWh&nbsp;?"
+          ],
+          "reponses": "1) un vecteur · 2) toutes les phases, de l’extraction au recyclage · 3) le charbon"
+        }
+      ]
+    }
+  ]
+}

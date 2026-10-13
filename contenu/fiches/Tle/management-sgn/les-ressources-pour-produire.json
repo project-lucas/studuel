@@ -1,0 +1,149 @@
+{
+  "titre": "Les ressources",
+  "titreSurligne": "ressources",
+  "accroche": "FRNG, BFR, trésorerie : le trio.",
+  "epreuve": "bac",
+  "bonus": "**FRNG > BFR** = trésorerie positive · **GPEC** = recruter, former, muter",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/management-sgn/les-ressources-pour-produire.webp",
+    "prompt": "a glossy violet toolbox overflowing with golden coins and a golden gear, tiny golden sparkles, same art style as the reference icons, on magenta background, no text"
+  },
+  "marcel": "Produire, c’est aussi\nfinancer&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’équilibre financier",
+          "lignes": [
+            "FRNG = ressources stables − emplois stables",
+            "BFR = stocks + créances − dettes fournisseurs",
+            "Trésorerie nette = FRNG − BFR"
+          ],
+          "regle": "FRNG > BFR : trésorerie positive",
+          "teinte": "jaune"
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Stables 500 000 / 420 000 · stocks 60 000, clients 90 000, fournisseurs 70 000.",
+          "calcul": "FRNG 80 000 · BFR 80 000",
+          "resultat": "[[trésorerie nette = 0 €]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Financer l’investissement",
+          "entetes": [
+            "Moyen",
+            "Attention"
+          ],
+          "lignes": [
+            [
+              "**Fonds propres**",
+              "pouvoir dilué"
+            ],
+            [
+              "**Emprunt**",
+              "intérêts à payer"
+            ],
+            [
+              "**Crédit-bail**",
+              "coût total plus élevé"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Deux types de ressources",
+          "entetes": [
+            "Tangibles",
+            "Intangibles"
+          ],
+          "lignes": [
+            [
+              "bâtiments, machines",
+              "marque, brevets"
+            ],
+            [
+              "stocks, trésorerie",
+              "savoir-faire, réputation"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Prévoir les compétences (GPEC)",
+          "etapes": [
+            {
+              "titre": "Comparer",
+              "texte": "besoins futurs et ressources actuelles"
+            },
+            {
+              "titre": "Combler",
+              "texte": "recruter, former, muter en interne"
+            },
+            {
+              "titre": "Assouplir",
+              "texte": "CDD, intérim, sous-traitance"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "FRNG = 80 000 € ; BFR = 60 000 + 90 000 − 70 000 = 80 000 €.",
+              "quoi": "calcul"
+            },
+            {
+              "texte": "Trésorerie nulle : si les clients tardent, elle devient négative.",
+              "quoi": "interpréter"
+            }
+          ],
+          "pied": "Un calcul sans ==interprétation== perd des points."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Inverser **stocks** et dettes dans le BFR.",
+            "Croire qu’un BFR est toujours **positif**.",
+            "Oublier le **crédit-bail**, sans décaissement initial."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Comment calcule-t-on la **trésorerie nette**&nbsp;?",
+            "Que prévoit la **GPEC**&nbsp;?",
+            "Pourquoi un supermarché a-t-il souvent un BFR **négatif**&nbsp;?"
+          ],
+          "reponses": "1) FRNG − BFR · 2) recrutements, formations, mobilités · 3) clients payent comptant, fournisseurs à 45 j"
+        }
+      ]
+    }
+  ]
+}

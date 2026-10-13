@@ -1,0 +1,164 @@
+{
+  "titre": "Dosages et analyses",
+  "titreSurligne": "Dosages",
+  "accroche": "Une concentration, une norme, un avis.",
+  "epreuve": "bac",
+  "bonus": "**Cm = C × M** · **C₁V₁ = C₂V₂** · **A = k × C** · glycémie 0,70 à 1,10 g/L · Na⁺ 135 à 145 mmol/L",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/chimie-biologie-physiopathologie/les-analyses-medicales-et-l-analyse-des-milieux-naturels.webp",
+    "prompt": "a glossy violet blood sample tube and a golden volumetric flask side by side with a tiny rising curve, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Mesurer, comparer,\npuis conclure&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Concentrations",
+          "petite": true,
+          "lignes": [
+            "C = {n/V}",
+            "C<sub>m</sub> = C × M"
+          ],
+          "regle": "**C** en mol/L, **C<sub>m</sub>** en g/L, **M** en g/mol. Dans CaCl₂, [Cl⁻] = **2 × C**.",
+          "note": "mmol/L ou g/L"
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Dilution",
+          "petite": true,
+          "lignes": [
+            "C<sub>mère</sub>V<sub>mère</sub> = C<sub>fille</sub>V<sub>fille</sub>"
+          ],
+          "regle": "La **quantité de soluté se conserve**. Facteur **F = C<sub>mère</sub> ÷ C<sub>fille</sub> = V<sub>fille</sub> ÷ V<sub>mère</sub>**.",
+          "note": "pipette jaugée + fiole"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Doser par étalonnage",
+          "etapes": [
+            {
+              "titre": "Gamme étalon",
+              "texte": "solutions de C connues, mesurer leur A"
+            },
+            {
+              "titre": "Droite",
+              "texte": "tracer A = f(C), passe par l’origine"
+            },
+            {
+              "titre": "Lire",
+              "texte": "A de l’échantillon, d’où sa C"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "100 mL à 0,10 mol/L, depuis 1,0 mol/L.",
+          "calcul": "F = 1,0 ÷ 0,10 = 10\nV<sub>mère</sub> = 100 ÷ 10",
+          "aparte": "compléter à 100 mL",
+          "resultat": "prélever [[10 mL]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Valeurs de référence",
+          "entetes": [
+            "Paramètre",
+            "Adulte"
+          ],
+          "lignes": [
+            [
+              "Glycémie à jeun",
+              "0,70 à 1,10 g/L"
+            ],
+            [
+              "Natrémie (Na⁺)",
+              "135 à 145 mmol/L"
+            ],
+            [
+              "Kaliémie (K⁺)",
+              "3,5 à 5,0 mmol/L"
+            ]
+          ]
+        },
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "Milieux naturels",
+          "colonnes": 1,
+          "cartes": [
+            {
+              "titre": "Pluies acides",
+              "texte": "pH ≈ 5,6 (CO₂)&nbsp;; **SO₂** acidifie."
+            },
+            {
+              "titre": "Océans",
+              "texte": "+ CO₂ → + H⁺ → pH ↓, **carbonates rares**."
+            },
+            {
+              "titre": "Bioaccumulation",
+              "texte": "Mercure : s’accumule dans la **chaîne**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "C = {9/58,5} ≈ 0,15 mol/L",
+              "quoi": "calculer"
+            },
+            {
+              "texte": "Glycémie 1,4 g/L > 1,10 g/L",
+              "quoi": "comparer à la norme"
+            }
+          ],
+          "pied": "Un résultat se lit ==avec le contexte clinique==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier que CaCl₂ libère **2 Cl⁻**.",
+            "Croire la droite A = f(C) **sans origine**.",
+            "Confondre **mère** et **fille** dans la dilution.",
+            "Un résultat hors norme **n’est pas** un diagnostic."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle loi relie **A** et **C**&nbsp;?",
+            "**F** pour passer de 1,0 à 0,05 mol/L&nbsp;?",
+            "Pourquoi l’océan s’acidifie-t-il&nbsp;?"
+          ],
+          "reponses": "1) Beer-Lambert, A = k × C · 2) F = 20 · 3) il absorbe du CO₂ qui libère des H⁺"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "titre": "Mesurer les inégalités",
+  "titreSurligne": "inégalités",
+  "accroche": "Trois outils, trois questions.",
+  "epreuve": "bac",
+  "bonus": "**D9/D1** ≈ 3,4 · **Gini** de 0 à 1 · **Lorenz** · parts de masse",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/ses/la-mesure-des-inegalites-economiques-une-diversite-d-outils.webp",
+    "prompt": "a glossy violet curve graph with a golden diagonal line and a golden ruler, sparkles"
+  },
+  "marcel": "Choisir l’outil,\nc’est choisir&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Décile",
+              "definition": "dix parts égales de la population, séparées par **D1 à D9**"
+            },
+            {
+              "terme": "Rapport D9/D1",
+              "definition": "seuil des 10&nbsp;% aisés ÷ seuil des 10&nbsp;% modestes"
+            },
+            {
+              "terme": "Courbe de Lorenz",
+              "definition": "part cumulée du revenu selon la population cumulée"
+            },
+            {
+              "terme": "Revenu disponible",
+              "definition": "revenu **après** prélèvements et prestations"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois familles d’outils",
+          "entetes": [
+            "Outil",
+            "Ce qu’il regarde"
+          ],
+          "lignes": [
+            [
+              "**Quantiles**, D9/D1",
+              "deux **seuils**"
+            ],
+            [
+              "**Lorenz**, Gini",
+              "la distribution **entière**"
+            ],
+            [
+              "**Parts de masse**",
+              "le **haut** de la distribution"
+            ],
+            [
+              "**Gini = 0 / 1**",
+              "égalité parfaite / un seul détient tout"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les points à retenir",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "D9 est un seuil",
+              "texte": "Pas le revenu des 10&nbsp;% **les plus riches**."
+            },
+            {
+              "titre": "Lorenz",
+              "texte": "Plus la courbe s’écarte de la **diagonale**, plus l’inégalité est forte."
+            },
+            {
+              "titre": "Force du Gini",
+              "texte": "Un chiffre unique&nbsp;; faiblesse&nbsp;: deux distributions, **même Gini**."
+            },
+            {
+              "titre": "Parts de masse",
+              "texte": "Piketty&nbsp;: la part des **1&nbsp;%** que le Gini lisse."
+            },
+            {
+              "titre": "Redistribution",
+              "texte": "D9/D1 passe d’environ **22** à **3,4**, surtout par les **prestations**."
+            },
+            {
+              "titre": "Angles morts",
+              "texte": "Ni **patrimoine**, ni **mobilité**, ni inégalités non monétaires."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Choisir et justifier un indicateur",
+          "etapes": [
+            {
+              "titre": "Cibler",
+              "texte": "que veut-on montrer&nbsp;: seuils, ensemble, haut&nbsp;?"
+            },
+            {
+              "titre": "Lire",
+              "texte": "avant ou après redistribution&nbsp;?"
+            },
+            {
+              "titre": "Limiter",
+              "texte": "dire ce que l’indicateur **ne dit pas**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "Le rapport D9/D1 compare deux seuils de la distribution.",
+              "quoi": "définir"
+            },
+            {
+              "texte": "Lecture&nbsp;: après redistribution, D9/D1 est d’environ 3,4.",
+              "quoi": "lire"
+            },
+            {
+              "texte": "Mais le Gini ne renseigne ni sur le patrimoine ni sur la mobilité.",
+              "quoi": "limite"
+            },
+            {
+              "texte": "Choisir un indicateur, c’est choisir ce dont on veut parler.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "==Justifier== ton indicateur vaut mieux qu’aligner les chiffres."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire que **D9** est le revenu des plus riches.",
+            "Oublier de dire si le revenu est **primaire** ou **disponible**.",
+            "Croire que le Gini dit **tout** de la distribution.",
+            "Confondre **part de masse** et **seuil**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que représente la **diagonale** de la courbe de Lorenz&nbsp;?",
+            "Que vaut le **Gini** en cas d’égalité parfaite&nbsp;?",
+            "Quel outil éclaire le **haut** de la distribution&nbsp;?"
+          ],
+          "reponses": "1) l’égalité parfaite · 2) 0 · 3) les parts de masse"
+        }
+      ]
+    }
+  ]
+}

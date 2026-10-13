@@ -1,0 +1,119 @@
+{
+  "titre": "Immunité innée",
+  "titreSurligne": "innée",
+  "accroche": "Reconnaître l’intrus, donner l’alerte.",
+  "epreuve": "bac",
+  "bonus": "Innée = **immédiate · non spécifique · sans mémoire** · inflammation : **rougeur, chaleur, gonflement, douleur**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/biochimie-biologie-biotechnologie/soi-non-soi-et-reponse-immunitaire-innee.webp",
+    "prompt": "a glossy violet shield with a golden magnifying glass scanning a tiny bacterium, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Alerte, un intrus\nest entré !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les mots clés",
+          "items": [
+            { "terme": "Soi", "definition": "molécules propres à l’individu, **tolérées**." },
+            { "terme": "Non-soi", "definition": "tout ce qui est étranger : bactérie, virus, greffon." },
+            { "terme": "Antigène", "definition": "molécule **reconnue** par le système immunitaire." }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les barrières naturelles",
+          "entetes": ["Barrière", "Action"],
+          "lignes": [
+            ["**Épithélium**", "obstacle physique"],
+            ["**pH acide**", "milieu défavorable"],
+            ["**Mucus**", "piège, évacué par les cils"],
+            ["**Lysozyme**", "hydrolyse le peptidoglycane"],
+            ["**Microbiote**", "occupe la place"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 3,
+          "titre": "La réaction inflammatoire",
+          "horizontale": true,
+          "etapes": [
+            { "date": "Alerte", "texte": "cellules sentinelles : molécules pro-inflammatoires" },
+            { "date": "Vasodilatation", "texte": "rougeur, chaleur" },
+            { "date": "Exsudation", "texte": "œdème, douleur" },
+            { "date": "Diapédèse", "texte": "les phagocytes traversent la paroi" },
+            { "date": "Chimiotactisme", "texte": "ils rejoignent le foyer" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Antibiotiques au long cours, puis mycose buccale à <i>Candida albicans</i>.",
+          "calcul": "flore bactérienne réduite",
+          "aparte": "la levure prend la place",
+          "resultat": "[[opportunisme]] : déséquilibre du microbiote"
+        },
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "La phagocytose",
+          "etapes": [
+            { "titre": "Adhésion", "texte": "le phagocyte se fixe à la bactérie" },
+            { "titre": "Endocytose", "texte": "formation du **phagosome**" },
+            { "titre": "Digestion", "texte": "fusion avec les **lysosomes**" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Les cellules sentinelles reconnaissent des motifs comme le LPS.", "quoi": "reconnaître" },
+            { "texte": "Elles phagocytent et libèrent des molécules pro-inflammatoires.", "quoi": "agir" },
+            { "texte": "La réponse est immédiate, non spécifique, sans mémoire.", "quoi": "conclure" }
+          ],
+          "pied": "Fin de phagocytose : ==exocytose== des débris ou présentation aux lymphocytes."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire l’innée **spécifique** d’un pathogène.",
+            "Oublier le **microbiote** parmi les barrières.",
+            "Confondre **vasodilatation** et exsudation.",
+            "Dire que l’innée a une **mémoire**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Citer **deux** cellules sentinelles.",
+            "Que cause la **vasodilatation**&nbsp;?",
+            "Quelle enzyme des larmes attaque la **paroi** bactérienne&nbsp;?"
+          ],
+          "reponses": "1) macrophage, cellule dendritique, mastocyte · 2) rougeur et chaleur · 3) le lysozyme"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "titre": "Graphes abstraits",
+  "titreSurligne": "Graphes",
+  "accroche": "Des sommets, des arêtes, des cycles.",
+  "epreuve": "bac",
+  "bonus": "matrice&nbsp;: **n²** cases · liste d’adjacence&nbsp;: **arêtes** · BFS = **file** · DFS = **pile** · Dijkstra&nbsp;: poids **positifs**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/nsi/graphes-abstraits.webp",
+    "prompt": "a glossy violet network of five round nodes linked by golden lines forming a loop, sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Marque les sommets,\nsinon ça boucle !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Orienté", "definition": "la relation a un **sens** («&nbsp;suit&nbsp;»)" },
+            { "terme": "Pondéré", "definition": "chaque arête porte une **valeur**" },
+            { "terme": "Degré", "definition": "le nombre de **voisins** d’un sommet" },
+            { "terme": "Cycle", "definition": "un chemin qui **revient** à son départ" },
+            { "terme": "Connexe", "definition": "tout sommet est **atteignable** depuis tout autre" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux représentations",
+          "entetes": ["", "Choix"],
+          "lignes": [
+            ["**Matrice** n × n", "test d’adjacence **constant**"],
+            ["mémoire en **n²**", "graphe dense et petit"],
+            ["**Listes** de voisins", "mémoire ~ **arêtes**"],
+            ["graphe creux", "presque tous les graphes réels"],
+            ["graphe dense", "la matrice se justifie"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Parcours en largeur (BFS)",
+          "etapes": [
+            { "titre": "Enfiler", "texte": "le sommet de départ, **marqué** visité" },
+            { "titre": "Défiler", "texte": "un sommet, puis enfiler ses voisins **non marqués**" },
+            { "titre": "Répéter", "texte": "jusqu’à ce que la **file** soit vide" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Arêtes A–B, A–C, B–D, C–D. __BFS depuis A__&nbsp;?",
+          "calcul": "file : A → B, C → D (déjà vu ensuite)",
+          "aparte": "niveau par niveau",
+          "resultat": "= [[A, B, C, D]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "BFS, DFS, Dijkstra",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "BFS", "texte": "**file**&nbsp;: plus court chemin en **nombre d’arêtes**, non pondéré." },
+            { "titre": "DFS", "texte": "**pile** ou récursivité&nbsp;: cycles, composantes connexes." },
+            { "titre": "Dijkstra", "texte": "sommet **le plus proche** d’abord, poids **positifs**." },
+            { "titre": "Usages", "texte": "GPS, routage **OSPF**, réseaux sociaux." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Graphe creux&nbsp;: j’emploie des listes d’adjacence.", "quoi": "le choix" },
+            { "texte": "La matrice coûterait n² cases, presque vides.", "quoi": "pourquoi" },
+            { "texte": "Je marque chaque sommet visité.", "quoi": "la précaution" }
+          ],
+          "pied": "Sans ==marquage==, un cycle fait boucler le parcours."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier de **marquer** les sommets visités.",
+            "Utiliser BFS pour un plus court chemin **pondéré**.",
+            "Dijkstra avec un poids **négatif**&nbsp;: faux.",
+            "Confondre **arbre** et graphe&nbsp;: les cycles sont permis."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle structure pilote le parcours en **largeur**&nbsp;?",
+            "Quel est le **degré** de A dans l’exemple&nbsp;?",
+            "Quelle représentation pour un **grand graphe creux**&nbsp;?"
+          ],
+          "reponses": "1) une file · 2) 2 (voisins B et C) · 3) les listes d’adjacence"
+        }
+      ]
+    }
+  ]
+}

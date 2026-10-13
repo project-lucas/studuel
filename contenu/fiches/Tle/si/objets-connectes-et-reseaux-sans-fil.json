@@ -1,0 +1,177 @@
+{
+  "titre": "Objets connectés",
+  "titreSurligne": "connectés",
+  "accroche": "Portée, débit, consommation&nbsp;: choisir.",
+  "epreuve": "bac",
+  "bonus": "I<sub>moy</sub> = I<sub>actif</sub> × t<sub>actif</sub> ÷ T + I<sub>veille</sub> · autonomie = capacité ÷ I<sub>moy</sub>",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/si/objets-connectes-et-reseaux-sans-fil.webp",
+    "prompt": "a glossy violet small sensor device with golden radio waves rising from it and a tiny battery, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Mesurer, émettre,\npuis dormir&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Portée, débit, énergie",
+          "entetes": [
+            "Technologie",
+            "Portée",
+            "Débit",
+            "Conso."
+          ],
+          "lignes": [
+            [
+              "Bluetooth LE",
+              "10 à 50 m",
+              "moyen",
+              "très faible"
+            ],
+            [
+              "Wi-Fi",
+              "dizaines de m",
+              "élevé",
+              "élevée"
+            ],
+            [
+              "LoRa",
+              "km",
+              "très faible",
+              "très faible"
+            ],
+            [
+              "Cellulaire",
+              "nationale",
+              "élevé",
+              "élevée"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La veille fait l’autonomie",
+          "petite": true,
+          "lignes": [
+            "I<sub>moy</sub> = I<sub>actif</sub> × t<sub>actif</sub> ÷ T + I<sub>veille</sub>"
+          ],
+          "regle": "Un objet sur pile passe l’essentiel du temps en ==veille==. Autonomie = **capacité ÷ I<sub>moy</sub>**.",
+          "note": "dormir, c’est durer"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "De l’objet à l’application",
+          "etapes": [
+            {
+              "titre": "Objet",
+              "texte": "capteur, microcontrôleur et radio&nbsp;: mesurer et émettre sobrement"
+            },
+            {
+              "titre": "Passerelle",
+              "texte": "reçoit la radio et relaie vers Internet, jusqu’au serveur"
+            },
+            {
+              "titre": "Application",
+              "texte": "le serveur stocke et alerte&nbsp;; l’application affiche"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "__20 mA__ pendant 1 s toutes les 10 min, __10 µA__ en veille, pile __2 000 mAh__&nbsp;: autonomie&nbsp;?",
+          "calcul": "20 × 1 ÷ 600 ≈ 0,033 mA · I<sub>moy</sub> ≈ 0,043 mA",
+          "aparte": "2 000 ÷ 0,043 ≈ 46 000 h",
+          "resultat": "plus de [[5 ans]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quelle radio&nbsp;?",
+          "oui": {
+            "titre": "LoRa",
+            "texte": "Quelques octets par heure sur ==des kilomètres==, presque sans énergie."
+          },
+          "non": {
+            "titre": "Wi-Fi",
+            "texte": "Débit inutile pour quelques octets, et pile vidée en quelques jours."
+          },
+          "essai": {
+            "texte": "Longue portée et faible consommation se paient en <i>débit</i>&nbsp;: on ne peut pas tout avoir."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 5,
+          "titre": "Sécurité dès la conception",
+          "entetes": [
+            "Risque",
+            "Parade"
+          ],
+          "lignes": [
+            [
+              "Mot de passe par défaut",
+              "identifiant unique"
+            ],
+            [
+              "Données interceptées",
+              "chiffrement"
+            ],
+            [
+              "Faux objet",
+              "authentification"
+            ],
+            [
+              "Faille après la vente",
+              "mises à jour à distance"
+            ],
+            [
+              "Pile vidée trop vite",
+              "veille profonde"
+            ]
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier la **veille** dans le calcul.",
+            "Mélanger **mA** et **µA**.",
+            "Choisir le **Wi-Fi** par réflexe.",
+            "Croire que l’objet doit **connaître** ses destinataires (MQTT&nbsp;: publication / abonnement)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Technologie à **longue portée** et **faible débit**&nbsp;?",
+            "Rôle de la **passerelle**&nbsp;?",
+            "Que fait un objet **abonné** en MQTT&nbsp;?"
+          ],
+          "reponses": "1) LoRa · 2) relayer la radio vers Internet · 3) reçoit les mesures d’un sujet"
+        }
+      ]
+    }
+  ]
+}

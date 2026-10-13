@@ -1,0 +1,156 @@
+{
+  "titre": "Modéliser un mouvement",
+  "titreSurligne": "mouvement",
+  "accroche": "Où, à quelle vitesse, et ça change comment.",
+  "epreuve": "bac",
+  "bonus": "v = dOM/dt · a = dv/dt · aₜ = dv/dt · aₙ = v²/R · uniforme ≠ sans accélération",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/modelisation-d-un-mouvement.webp",
+    "prompt": "a glossy violet ball moving along a curved golden trajectory with golden velocity and acceleration arrows, tiny sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Uniforme ne veut pas\ndire a = 0 !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Vitesse et accélération",
+          "petite": true,
+          "lignes": [
+            "v = {dOM/dt}",
+            "a = {dv/dt}"
+          ],
+          "regle": "La **vitesse** est **tangente** à la trajectoire&nbsp;; l’**accélération** pointe vers l’==intérieur== de la courbure.",
+          "note": "dérivée seconde de OM !"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Repère de Frenet",
+          "entetes": [
+            "Composante",
+            "Formule",
+            "Traduit"
+          ],
+          "lignes": [
+            [
+              "Tangentielle aₜ",
+              "dv/dt",
+              "valeur de v"
+            ],
+            [
+              "Normale aₙ",
+              "v²/R",
+              "direction de v"
+            ],
+            [
+              "Circulaire uniforme",
+              "a = v²/R",
+              "vers le centre"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Choisir",
+              "texte": "le référentiel (terrestre, géocentrique, héliocentrique)"
+            },
+            {
+              "titre": "Dériver",
+              "texte": "OM(t) pour v, puis v pour a"
+            },
+            {
+              "titre": "Projeter",
+              "texte": "sur les axes, ou dans le repère de Frenet"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un point décrit un cercle de rayon __R = 2,0 m__ à v = 4,0 m·s⁻¹ constante. Valeur de a&nbsp;?",
+          "calcul": "a = v² ÷ R = 4,0² ÷ 2,0",
+          "aparte": "dirigée vers le centre",
+          "resultat": "a = [[8,0 m·s⁻²]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Mouvement uniforme",
+          "oui": {
+            "titre": "Circulaire uniforme",
+            "texte": "La valeur de v est constante mais sa ==direction== change&nbsp;: a ≠ 0, dirigée vers le centre."
+          },
+          "non": {
+            "titre": "Uniforme donc a = 0&nbsp;?",
+            "texte": "**Faux**&nbsp;: « uniforme » ne parle que de la **valeur** de la vitesse."
+          },
+          "essai": {
+            "texte": "Un passager est immobile dans le train, à 300 km/h dans le référentiel du sol&nbsp;: <i>les deux sont vrais</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "Référentiel terrestre, repère (O ; x, y)",
+              "quoi": "le cadre"
+            },
+            {
+              "texte": "v = dOM/dt, a = dv/dt",
+              "quoi": "les dérivations"
+            },
+            {
+              "texte": "aₙ = v²/R, vers le centre",
+              "quoi": "la direction"
+            }
+          ],
+          "pied": "Plus τ est petit, plus la dérivée est fine mais plus l’==incertitude de pointage== pèse."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire « **uniforme** = pas d’accélération ».",
+            "Tracer **a** le long de la trajectoire.",
+            "Oublier de nommer le **référentiel**.",
+            "Mélanger **v** et **a** sur le schéma."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "La vitesse est **tangente** ou normale à la trajectoire&nbsp;?",
+            "v = 10 m·s⁻¹, R = 5 m&nbsp;: **aₙ**&nbsp;?",
+            "Rectiligne uniforme&nbsp;: **a** vaut&nbsp;?"
+          ],
+          "reponses": "1) tangente · 2) 20 m·s⁻² · 3) 0"
+        }
+      ]
+    }
+  ]
+}

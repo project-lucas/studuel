@@ -1,0 +1,131 @@
+{
+  "titre": "L’État et le marché",
+  "titreSurligne": "marché",
+  "accroche": "Le marché échoue, l’État aussi.",
+  "epreuve": "bac",
+  "bonus": "solde = **recettes − dépenses** · déficit = **flux** · dette = **stock** · prélèvements > **40 %** du PIB",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/droit-economie/l-etat-dans-l-economie-et-les-defaillances-de-marche.webp",
+    "prompt": "a glossy violet classical government building with a golden balance scale in front, tiny golden sparkles, same art style as the reference icons, on a magenta background, no text, no numbers"
+  },
+  "marcel": "Marché ou État ?\nCela dépend !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les mots clés",
+          "items": [
+            { "terme": "Externalité", "definition": "effet sur les autres **sans compensation**, négatif ou positif" },
+            { "terme": "Bien public", "definition": "**non rival** et **non exclusif**" },
+            { "terme": "Bien commun", "definition": "**rival** mais non exclusif : risque de surexploitation" },
+            { "terme": "Asymétrie d’information", "definition": "un acteur en sait **plus** que l’autre" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux conceptions de l’État",
+          "entetes": ["", "Gendarme", "Providence"],
+          "lignes": [
+            ["**Fonctions**", "régaliennes", "régaliennes + économie et social"],
+            ["**Idée**", "le marché s’autorégule", "le marché est corrigé"],
+            ["**Période**", "XIXe siècle", "après 1945"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les quatre défaillances et la réponse",
+          "colonnes": 4,
+          "cartes": [
+            { "titre": "Information", "texte": "Labels, garanties, **autorités** comme l’AMF." },
+            { "titre": "Concurrence imparfaite", "texte": "**Politique de la concurrence**." },
+            { "titre": "Externalités", "texte": "**Taxer** les négatives, **subventionner** les positives." },
+            { "titre": "Biens publics et communs", "texte": "**Produire** les premiers, **réglementer** les seconds." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Justifier une intervention",
+          "etapes": [
+            { "titre": "Défaillance", "texte": "laquelle des quatre ?" },
+            { "titre": "Outil", "texte": "taxe, subvention, réglementation" },
+            { "titre": "Limite", "texte": "coût, lenteur, groupes d’intérêt" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Un déficit public",
+          "donnees": "Recettes 1 500 Md€ ; dépenses 1 650 ; PIB 3 000.",
+          "calcul": "1 500 − 1 650 = − 150.\n150 ÷ 3 000 × 100.",
+          "resultat": "[[− 150 Md€ = 5 % du PIB]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Trois fonctions de l’État",
+          "deux": true,
+          "items": [
+            { "titre": "Allocation", "texte": "produire ce que le marché ne produit pas" },
+            { "titre": "Redistribution", "texte": "corriger la répartition des revenus" },
+            { "titre": "Stabilisation", "texte": "amortir les fluctuations" },
+            { "titre": "Limites", "texte": "l’État a aussi ses **défaillances**" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **déficit** (flux) et **dette** (stock).",
+            "Croire un bien commun **non rival**.",
+            "Opposer « marché » et « État » sans nuance.",
+            "Oublier les **défaillances de l’État**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "À retenir",
+          "paragraphes": [
+            "La vraie question n’est pas « marché ou État ? » mais **quelle intervention, pour quelle défaillance, à quel coût ?** Il faut donc **évaluer** les politiques publiques."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "La **pollution** est une externalité de quel type ?",
+            "Un **bien public** est-il rival ?",
+            "Que représente la **dette publique** ?"
+          ],
+          "reponses": "1) négative · 2) non, ni exclusif · 3) les déficits accumulés"
+        }
+      ]
+    }
+  ]
+}

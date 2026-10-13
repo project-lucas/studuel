@@ -1,0 +1,178 @@
+{
+  "titre": "Transport électrique",
+  "titreSurligne": "Transport",
+  "accroche": "Monter la tension pour perdre moins.",
+  "bonus": "**P = R × I²** · THT **225 000** et **400 000 V** · pertes **2 à 3 %** · **50 Hz** · gestion : **RTE**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/enseignement-scientifique/le-transport-de-l-electricite.webp",
+    "prompt": "a glossy violet high-voltage pylon with golden power lines and a small transformer box glowing, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Moins d’intensité,\nmoins de pertes !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’effet Joule",
+          "petite": true,
+          "lignes": [
+            "P<sub>perdue</sub> = R × I²",
+            "P = U × I"
+          ],
+          "regle": "Pour la **même** puissance, plus **U** est grand, plus **I** est petit.",
+          "note": "le carré commande tout"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Effet du carré",
+          "entetes": [
+            "Si I…",
+            "Les pertes…"
+          ],
+          "lignes": [
+            [
+              "double",
+              "× **4**"
+            ],
+            [
+              "÷ 10",
+              "÷ **100**"
+            ],
+            [
+              "÷ 100",
+              "÷ **10 000**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Le transformateur",
+          "entetes": [
+            "",
+            "Continu",
+            "Alternatif"
+          ],
+          "lignes": [
+            [
+              "Fonctionne ?",
+              "**non**",
+              "**oui**"
+            ],
+            [
+              "Pourquoi",
+              "champ constant : pas d’induction",
+              "champ variable : **induction**"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "La chaîne",
+          "entetes": [
+            "Étape",
+            "Tension"
+          ],
+          "lignes": [
+            [
+              "Centrale",
+              "quelques kV"
+            ],
+            [
+              "**Élévateur** / lignes THT",
+              "**400 kV**"
+            ],
+            [
+              "Distribution",
+              "20 kV"
+            ],
+            [
+              "**Abaisseur** de quartier",
+              "**230 V**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "!",
+          "titre": "L’équilibre permanent",
+          "paragraphes": [
+            "L’électricité ne se stocke pas à grande échelle : production = consommation **à chaque instant**, sinon la **fréquence** (50 Hz) dérive. **RTE** pilote en temps réel ; les stockages massifs sont les **STEP** (pompage-turbinage), puis les batteries."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "On passe de 100 A à 10 A pour la même puissance. __Pertes__&nbsp;?",
+          "calcul": "(10 ÷ 100)² = 0,01",
+          "aparte": "÷ 100",
+          "resultat": "pertes [[÷ 100]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire **P = R × I** : c’est I **au carré**.",
+            "Croire que le transformateur marche en **continu**.",
+            "Penser qu’on élève la tension pour **augmenter** la puissance.",
+            "Oublier que production et consommation doivent **s’égaler**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Les pertes par effet Joule valent **R × I²**.",
+              "quoi": "loi"
+            },
+            {
+              "texte": "Pour transporter la même **P = U × I**, on augmente **U** pour réduire **I**.",
+              "quoi": "méthode"
+            },
+            {
+              "texte": "Un **transformateur** élève puis abaisse U : il exige un courant **alternatif**.",
+              "quoi": "outil"
+            }
+          ],
+          "pied": "loi → méthode → outil"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que devient la perte si on **double** l’intensité&nbsp;?",
+            "Pourquoi le courant du réseau est-il **alternatif**&nbsp;?",
+            "Quelle est la **fréquence** du réseau européen&nbsp;?"
+          ],
+          "reponses": "1) multipliée par 4 · 2) le transformateur l’exige · 3) 50 Hz"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "titre": "Mécanisme réactionnel",
+  "titreSurligne": "Mécanisme",
+  "accroche": "Le trajet que le bilan cache.",
+  "epreuve": "bac",
+  "bonus": "acte élémentaire&nbsp;: **au plus 2** entités · flèche courbe&nbsp;: **donneur → accepteur** · le catalyseur ne change pas **K**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/etapes-d-une-transformation-chimique-modele-microscopique.webp",
+    "prompt": "two glossy violet and golden molecules colliding with a curved golden arrow between them, tiny sparks, sparkles"
+  },
+  "marcel": "La flèche part\ndu donneur !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les notions de base",
+          "items": [
+            { "terme": "Acte élémentaire", "definition": "une étape en une seule rencontre, au plus <b>deux</b> entités" },
+            { "terme": "Mécanisme", "definition": "suite d’actes élémentaires dont la <b>somme</b> redonne le bilan" },
+            { "terme": "Intermédiaire", "definition": "espèce formée puis consommée, absente du bilan" },
+            { "terme": "Catalyseur", "definition": "consommé puis <b>régénéré</b>, absent du bilan" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Sites donneur et accepteur",
+          "entetes": ["Site", "Ce qui le signale"],
+          "lignes": [
+            ["Donneur", "doublet non liant, liaison multiple, δ⁻"],
+            ["Accepteur", "charge positive ou δ⁺ (C—O, C—Cl, C=O)"],
+            ["Le catalyseur change", "la durée, le chemin"],
+            ["Il ne change pas", "l’état final, K"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Écrire une étape",
+          "etapes": [
+            { "titre": "Repérer", "texte": "le site donneur (doublet, δ⁻) et le site accepteur (δ⁺)" },
+            { "titre": "Flécher", "texte": "du doublet donneur vers l’accepteur : une flèche courbe par doublet déplacé" },
+            { "titre": "Vérifier", "texte": "les charges et les doublets, puis écrire l’espèce obtenue" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une réaction a pour mécanisme __A + B → I__ puis __I + A → P__. Quel est le bilan, et que vaut I&nbsp;?",
+          "calcul": "A + B + I + A → I + P · on simplifie I",
+          "aparte": "I est formé puis consommé",
+          "resultat": "bilan : [[2 A + B → P]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Chocs et mécanisme",
+          "oui": { "titre": "Un choc efficace", "texte": "Assez ==énergétique== et bien ==orienté==&nbsp;: la concentration augmente le nombre de chocs, la température leur énergie." },
+          "non": { "titre": "Deviner le mécanisme d’après le bilan&nbsp;?", "texte": "**Faux**&nbsp;: il s’établit **expérimentalement**." },
+          "essai": { "texte": "Deux réactions au bilan identique peuvent suivre des <i>chemins</i> très différents." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Le site donneur est le doublet de …, δ⁻.", "quoi": "nommer" },
+            { "texte": "La flèche part du donneur, vers l’accepteur δ⁺.", "quoi": "flécher" },
+            { "texte": "I n’apparaît pas au bilan : c’est un intermédiaire.", "quoi": "conclure" }
+          ],
+          "pied": "Une flèche courbe représente le ==mouvement d’un doublet==, jamais d’un atome."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Tracer la flèche **à l’envers**.",
+            "Faire partir la flèche d’un **atome**, pas d’un doublet.",
+            "Écrire un choc à **trois** entités.",
+            "Confondre **intermédiaire** et catalyseur."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien d’entités au plus dans un **acte élémentaire**&nbsp;?",
+            "D’où part une **flèche courbe**&nbsp;?",
+            "Un catalyseur modifie-t-il l’**état final**&nbsp;?"
+          ],
+          "reponses": "1) deux · 2) du site donneur · 3) non"
+        }
+      ]
+    }
+  ]
+}

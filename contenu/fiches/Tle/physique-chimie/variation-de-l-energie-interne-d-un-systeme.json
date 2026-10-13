@@ -1,0 +1,171 @@
+{
+  "titre": "Variation de U",
+  "titreSurligne": "U",
+  "accroche": "Chauffer ou changer d’état : deux factures.",
+  "epreuve": "bac",
+  "bonus": "ΔU = m c ΔT · Q = m L · reçu = + · cédé = − · calorimètre&nbsp;: Q₁ + Q₂ = 0",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/variation-de-l-energie-interne-d-un-systeme.webp",
+    "prompt": "a glossy violet calorimeter flask with a golden thermometer and a golden ice cube melting beside it, tiny sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Découpe le calcul\nen tranches !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les deux factures",
+          "petite": true,
+          "lignes": [
+            "ΔU = m × c × ΔT",
+            "Q = m × L"
+          ],
+          "regle": "Phase condensée qui chauffe&nbsp;: T ==varie==. Changement d’état&nbsp;: T reste ==constante==. **L** en J·kg⁻¹.",
+          "note": "reçu = positif !"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Changements d’état et transferts",
+          "entetes": [
+            "Eau / mode",
+            "Nature",
+            "Repère"
+          ],
+          "lignes": [
+            [
+              "Fusion",
+              "3,34×10⁵ J·kg⁻¹",
+              "≈ 80 °C"
+            ],
+            [
+              "Vaporisation",
+              "2,26×10⁶ J·kg⁻¹",
+              "≈ 540 °C"
+            ],
+            [
+              "Travail W",
+              "transfert ordonné",
+              "par une force"
+            ],
+            [
+              "Transfert Q",
+              "transfert désordonné",
+              "écart de T"
+            ],
+            [
+              "Calorimètre",
+              "Q₁ + Q₂ = 0",
+              "système isolé"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Découper",
+              "texte": "chauffer jusqu’au changement d’état, changer d’état, réchauffer"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "m c ΔT pour chaque tranche, m L pour la transition elle-même"
+            },
+            {
+              "titre": "Signer",
+              "texte": "positif si l’énergie est reçue, négatif si elle est cédée par le système"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "On chauffe __2,0 kg__ d’eau de 20 °C à 50 °C. c = 4185 J·kg⁻¹·K⁻¹. ΔU&nbsp;?",
+          "calcul": "ΔU = 2,0 × 4185 × (50 − 20)",
+          "aparte": "ΔT en °C ou K, même valeur",
+          "resultat": "ΔU ≈ [[2,5×10⁵ J]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "À travers un changement d’état",
+          "oui": {
+            "titre": "Trois tranches",
+            "texte": "Chauffer la glace, ==fondre== à température constante, puis chauffer l’eau liquide."
+          },
+          "non": {
+            "titre": "m c ΔT d’un seul bloc&nbsp;?",
+            "texte": "**Faux**&nbsp;: la formule ne traverse **pas** un changement d’état."
+          },
+          "essai": {
+            "texte": "Pendant la fusion, le thermomètre ne bouge pas : <i>l’énergie rompt des interactions</i>, elle n’agite pas plus."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "Système isolé : Q₁ + Q₂ = 0",
+              "quoi": "le bilan"
+            },
+            {
+              "texte": "m₁ c (T_f − T₁) + m₂ c (T_f − T₂) = 0",
+              "quoi": "les termes"
+            },
+            {
+              "texte": "T_f = … avec l’unité",
+              "quoi": "le résultat"
+            },
+            {
+              "texte": "Q = m L pendant le changement d’état",
+              "quoi": "la transition"
+            }
+          ],
+          "pied": "On tient compte de la ==valeur en eau== du calorimètre, qui modélise sa capacité et ses pertes."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Appliquer **m c ΔT** à travers la fusion.",
+            "Se tromper de **signe** reçu ou cédé.",
+            "Prendre **Q** pour une température.",
+            "Oublier la **valeur en eau**.",
+            "Oublier que la **fusion** coûte moins que la vaporisation."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Pendant une fusion, T **varie** ou reste constante&nbsp;?",
+            "Énergie **cédée** par le système : signe&nbsp;?",
+            "Fondre ou **vaporiser** coûte le plus d’énergie&nbsp;?"
+          ],
+          "reponses": "1) constante · 2) négatif · 3) vaporiser"
+        }
+      ]
+    }
+  ]
+}

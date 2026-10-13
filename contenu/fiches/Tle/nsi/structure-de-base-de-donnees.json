@@ -1,0 +1,116 @@
+{
+  "titre": "Structure d’une base",
+  "titreSurligne": "Structure",
+  "accroche": "Sans contraintes, ce n’est qu’un tableur.",
+  "epreuve": "bac",
+  "bonus": "NULL ≠ 0 · on teste avec **IS NULL** · index&nbsp;: recherche **logarithmique**, insertions plus lentes · **moindre privilège**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/nsi/structure-de-base-de-donnees.webp",
+    "prompt": "a glossy violet cylinder database with golden bands and a small golden padlock, sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "NULL, c’est\nl’absence de valeur !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les types",
+          "entetes": ["Type", "Accueille"],
+          "lignes": [
+            ["**INTEGER, REAL**", "entiers, décimaux"],
+            ["**TEXT**", "les chaînes"],
+            ["**DATE, BOOLEAN**", "dates, vrai/faux"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les mots-clés",
+          "entetes": ["Mot-clé", "Impose"],
+          "lignes": [
+            ["<i>PRIMARY KEY</i>", "identifiant **unique**"],
+            ["<i>NOT NULL</i>, <i>UNIQUE</i>", "obligatoire, sans doublon"],
+            ["<i>CHECK</i>", "une **condition**"],
+            ["<i>REFERENCES</i>", "clé **étrangère**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Tester NULL",
+          "oui": { "titre": "Juste", "texte": "<i>WHERE note IS NULL</i>&nbsp;: renvoie les valeurs absentes." },
+          "non": { "titre": "Faux", "texte": "<i>WHERE note = NULL</i>&nbsp;: la comparaison est **toujours inconnue**." },
+          "essai": { "titre": "À retenir", "texte": "NULL n’est ni ==zéro== ni la chaîne vide&nbsp;: c’est l’absence." }
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Interdire une note hors de 0–20. __Quel mot-clé__&nbsp;?",
+          "calcul": "une condition à respecter à chaque insertion",
+          "aparte": "contrainte de domaine",
+          "resultat": "= [[CHECK (note BETWEEN 0 AND 20)]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Index, vues, droits",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Index", "texte": "recherche **linéaire → logarithmique**, au prix de l’espace." },
+            { "titre": "Vue", "texte": "une requête **nommée**, qui peut cacher des colonnes." },
+            { "titre": "GRANT", "texte": "donne un droit&nbsp;: SELECT, INSERT, UPDATE, DELETE." },
+            { "titre": "REVOKE", "texte": "le retire&nbsp;: **moindre privilège**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "La note doit être comprise entre 0 et 20.", "quoi": "la règle" },
+            { "texte": "J’ajoute une contrainte CHECK à la colonne.", "quoi": "le mot-clé" },
+            { "texte": "Le SGBD refuse alors toute valeur invalide.", "quoi": "l’effet" }
+          ],
+          "pied": "La clé primaire est ==indexée== automatiquement."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire <i>= NULL</i> au lieu de <i>IS NULL</i>.",
+            "Indexer **toutes** les colonnes&nbsp;: insertions ralenties.",
+            "Stocker un nombre en **TEXT**&nbsp;: tri alphabétique.",
+            "Donner l’accès à la table entière plutôt qu’à une **vue**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "NULL **= NULL** renvoie quoi&nbsp;?",
+            "Quel mot-clé relie une colonne à une **autre table**&nbsp;?",
+            "Quel est le coût d’un **index**&nbsp;?"
+          ],
+          "reponses": "1) inconnu, jamais vrai · 2) REFERENCES · 3) de l’espace et des insertions plus lentes"
+        }
+      ]
+    }
+  ]
+}

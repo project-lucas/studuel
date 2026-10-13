@@ -1,0 +1,191 @@
+{
+  "titre": "Positions relatives",
+  "titreSurligne": "Positions",
+  "accroche": "Combien de points communs ? 0, 1 ou ∞.",
+  "epreuve": "bac",
+  "bonus": "deux droites : **3 cas** · droite // plan ⇔ u ⊥ n · deux plans sécants : une **droite**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths/positions-relatives-de-droites-et-de-plans-de-l-espace.webp",
+    "prompt": "a glossy violet plane crossed by a golden line at a single sparkling point, a second parallel golden line floating above, sparkles"
+  },
+  "marcel": "Zéro, un point\nou une infinité !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Deux droites",
+          "entetes": [
+            "Cas",
+            "Points communs"
+          ],
+          "lignes": [
+            [
+              "Sécantes",
+              "**un** (directeurs non colinéaires)"
+            ],
+            [
+              "Parallèles",
+              "aucun, ou ∞ si confondues"
+            ],
+            [
+              "Non coplanaires",
+              "**aucun**, et pas parallèles"
+            ],
+            [
+              "Parallèles confondues",
+              "tous (∞), un point commun suffit"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Droite, plan, deux plans",
+          "entetes": [
+            "Cas",
+            "Intersection"
+          ],
+          "lignes": [
+            [
+              "Droite incluse",
+              "**∞** de points"
+            ],
+            [
+              "Droite // plan",
+              "aucun"
+            ],
+            [
+              "Droite sécante",
+              "**un** point"
+            ],
+            [
+              "Deux plans sécants",
+              "une **droite**"
+            ],
+            [
+              "Plans // stricts",
+              "aucune"
+            ],
+            [
+              "Plans confondus",
+              "le plan lui-même"
+            ],
+            [
+              "Trois plans",
+              "un point, une droite, un plan, ou rien"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode générale",
+          "etapes": [
+            {
+              "titre": "Équations",
+              "texte": "paramétrique de chaque droite, cartésienne de chaque plan"
+            },
+            {
+              "titre": "Substituer",
+              "texte": "une représentation dans l’autre&nbsp;: une équation en un seul paramètre"
+            },
+            {
+              "titre": "Lire",
+              "texte": "une solution&nbsp;: un point · aucune&nbsp;: parallèle · toujours vraie&nbsp;: incluse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "d&nbsp;: (1 + t ; 2 − t ; t), P&nbsp;: x + y + z − 5 = 0.",
+          "calcul": "(1 + t) + (2 − t) + t − 5 = t − 2",
+          "aparte": "une seule solution t = 2",
+          "resultat": "sécants en [[(3 ; 0 ; 2)]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les critères",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Droite et plan",
+              "texte": "u ⊥ n&nbsp;: **parallèle** (incluse si un point y est). Sinon sécante."
+            },
+            {
+              "titre": "Deux plans",
+              "texte": "normaux colinéaires&nbsp;: parallèles ou confondus. Sinon une **droite**."
+            },
+            {
+              "titre": "Trois plans",
+              "texte": "un point, une droite, un plan, rien&nbsp;: ou un **prisme**."
+            },
+            {
+              "titre": "Système",
+              "texte": "1 solution&nbsp;: sécants · ∞&nbsp;: inclusion · 0&nbsp;: parallèles **ou** non coplanaires."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "On remplace x, y, z par l’équation paramétrique dans celle de P",
+              "quoi": "la substitution"
+            },
+            {
+              "texte": "t − 2 = 0, donc t = 2",
+              "quoi": "une unique solution"
+            },
+            {
+              "texte": "En t = 2&nbsp;: (3 ; 0 ; 2)",
+              "quoi": "le point"
+            }
+          ],
+          "pied": "Conclusion&nbsp;: d et P sont ==sécants== en (3 ; 0 ; 2)."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Conclure «&nbsp;parallèles&nbsp;» **sans solution** : elles peuvent être non coplanaires.",
+            "Dire que deux plans sécants se coupent en **un point**.",
+            "Oublier de tester **un point** pour la droite incluse.",
+            "Confondre vecteur **directeur** et vecteur **normal**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Deux plans sécants&nbsp;: **intersection**&nbsp;?",
+            "**u ⊥ n** : que dit-on de la droite et du plan&nbsp;?",
+            "Système **sans solution** pour deux droites&nbsp;: conclusion&nbsp;?"
+          ],
+          "reponses": "1) une droite · 2) droite parallèle au plan · 3) parallèles ou non coplanaires"
+        }
+      ]
+    }
+  ]
+}

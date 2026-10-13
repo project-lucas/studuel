@@ -1,0 +1,185 @@
+{
+  "titre": "L’électricité, XXe",
+  "titreSurligne": "XXe",
+  "accroche": "Le siècle du réseau et des centrales.",
+  "bonus": "**1946** EDF · **1973** choc pétrolier · **1974** plan Messmer · nucléaire : **65 à 70 %** · **1947** transistor",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/enseignement-scientifique/l-energie-electrique-au-cours-des-deux-derniers-siecles-l-2.webp",
+    "prompt": "a glossy violet cooling tower and a golden electric pylon with glowing wires, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Une source, une turbine,\nun alternateur !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 1,
+          "titre": "Le schéma commun",
+          "etapes": [
+            {
+              "titre": "Source",
+              "texte": "eau, vapeur, fission"
+            },
+            {
+              "titre": "Turbine",
+              "texte": "elle est entraînée"
+            },
+            {
+              "titre": "Alternateur",
+              "texte": "il produit le courant"
+            }
+          ]
+        },
+        {
+          "type": "texte",
+          "numero": "!",
+          "titre": "Une exception",
+          "paragraphes": [
+            "Toutes les filières suivent ce schéma **sauf le photovoltaïque**, qui convertit directement la lumière en électricité."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les grandes filières",
+          "entetes": [
+            "Filière",
+            "Fait tourner la turbine",
+            "Qualité"
+          ],
+          "lignes": [
+            [
+              "**Hydraulique**",
+              "l’eau d’un barrage",
+              "mobilisable en minutes"
+            ],
+            [
+              "**Thermique à flamme**",
+              "vapeur : charbon, fioul, gaz",
+              "pilotable, mais carbonée"
+            ],
+            [
+              "**Nucléaire**",
+              "vapeur chauffée par **fission**",
+              "massive, peu carbonée"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 3,
+          "titre": "Le nucléaire français",
+          "etapes": [
+            {
+              "date": "1946",
+              "texte": "création d’**EDF**"
+            },
+            {
+              "date": "1973",
+              "texte": "**choc pétrolier**"
+            },
+            {
+              "date": "1974",
+              "texte": "**plan Messmer**"
+            },
+            {
+              "date": "1975-90",
+              "texte": "l’essentiel du parc construit"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Le système hérité",
+          "entetes": [
+            "XXe",
+            "XXIe"
+          ],
+          "lignes": [
+            [
+              "centralisé",
+              "**décentralisé**"
+            ],
+            [
+              "sources **pilotables**",
+              "**intermittentes**"
+            ],
+            [
+              "sens unique",
+              "clients qui **produisent**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Quelle chaîne fait tourner une centrale __nucléaire__&nbsp;?",
+          "calcul": "fission → chaleur → vapeur\nvapeur → turbine → alternateur",
+          "aparte": "4 conversions",
+          "resultat": "énergie [[électrique]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le **nucléaire** produit sans turbine ni vapeur.",
+            "Dater EDF **avant 1946** : c’est la nationalisation.",
+            "Oublier que le **solaire** photovoltaïque n’a pas de turbine.",
+            "Confondre sources **pilotables** et **intermittentes**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Une **source** fait tourner une **turbine** qui entraîne un **alternateur**.",
+              "quoi": "schéma"
+            },
+            {
+              "texte": "Après le **choc pétrolier** de 1973, le **plan Messmer** développe le nucléaire.",
+              "quoi": "contexte"
+            },
+            {
+              "texte": "Le système **centralisé** doit accueillir des sources **intermittentes**.",
+              "quoi": "enjeu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel événement de **1973** relance le nucléaire&nbsp;?",
+            "Quel organe produit le courant dans une centrale&nbsp;?",
+            "Quelle part de l’électricité française est **nucléaire**&nbsp;?"
+          ],
+          "reponses": "1) le choc pétrolier · 2) l’alternateur · 3) environ 65 à 70 %"
+        }
+      ]
+    }
+  ]
+}

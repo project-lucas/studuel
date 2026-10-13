@@ -1,0 +1,111 @@
+{
+  "titre": "Translation, rotation",
+  "titreSurligne": "rotation",
+  "accroche": "Suivre une pièce entière.",
+  "epreuve": "bac",
+  "bonus": "ω = 2πN ÷ 60 · **v = ω × R** · distance = **aire** sous v(t) · 1 tour = 2π rad",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/si/mouvements-de-translation-et-de-rotation-du-solide.webp",
+    "prompt": "a glossy violet conveyor belt on two golden rollers with a small crate, a curved golden arrow around one roller, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Loin de l’axe,\non va plus vite&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les deux mouvements",
+          "entetes": ["", "Translation", "Rotation"],
+          "lignes": [
+            ["Position", "x (m)", "θ (rad)"],
+            ["Vitesse", "v (m/s)", "ω (rad/s)"],
+            ["Accélération", "a (m/s²)", "α (rad/s²)"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Passer de l’un à l’autre",
+          "petite": true,
+          "lignes": ["ω = {2π × N/60}", "v = ω × R"],
+          "regle": "**N** en tr/min, **ω** en rad/s. En rotation, la vitesse d’un point ==croît avec R==. Mouvement uniformément varié&nbsp;: <b>ω = α t + ω₀</b>.",
+          "note": "convertir les tr/min&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le profil de vitesse en trapèze",
+          "etapes": [
+            { "titre": "Accélérer", "texte": "a = Δv ÷ Δt, aire du triangle ½ × t × v" },
+            { "titre": "Palier", "texte": "vitesse constante, aire du rectangle v × t" },
+            { "titre": "Décélérer", "texte": "second triangle&nbsp;; la distance totale est la somme des aires" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Convoyeur&nbsp;: 0 → __2 m/s__ en 0,5 s, palier de 3 s, arrêt en 0,5 s. Distance&nbsp;?",
+          "calcul": "2 × (½ × 0,5 × 2) + 2 × 3 = 1 + 6",
+          "aparte": "aire sous la courbe",
+          "resultat": "d = [[7 m]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Tous à la même vitesse&nbsp;?",
+          "oui": { "titre": "Translation", "texte": "**Tous les points** ont la même vitesse v." },
+          "non": { "titre": "Rotation", "texte": "Les points n’ont **pas** la même vitesse&nbsp;: v = ω × R." },
+          "essai": { "texte": "Un tambour de rayon 0,1 m à 2 m/s&nbsp;: ω = 2 ÷ 0,1 = <i>20 rad/s</i>, soit environ 191 tr/min." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "d = aire du trapèze de v(t)", "quoi": "la méthode" },
+            { "texte": "a = 2 ÷ 0,5 = 4 m/s²", "quoi": "l’accélération" },
+            { "texte": "ω = v ÷ R = 20 rad/s", "quoi": "avec l’unité" }
+          ],
+          "pied": "Pas besoin d’équation horaire&nbsp;: on ==additionne== triangles et rectangles. Un tour complet = 2π rad, donc θ = 2π × nombre de tours."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Laisser N en **tr/min** dans ω.",
+            "Oublier le facteur **½** du triangle.",
+            "Croire que tous les points tournent à la même **vitesse linéaire**.",
+            "Mélanger **rad** et **tours**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**1 500 tr/min** en rad/s, environ&nbsp;?",
+            "Vitesse d’un point à **R = 0,2 m** si ω = 10 rad/s&nbsp;?",
+            "Que représente l’**aire** sous v(t)&nbsp;?"
+          ],
+          "reponses": "1) 157 rad/s · 2) 2 m/s · 3) la distance parcourue"
+        }
+      ]
+    }
+  ]
+}

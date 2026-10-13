@@ -1,0 +1,176 @@
+{
+  "titre": "Énergie et moteur",
+  "titreSurligne": "moteur",
+  "accroche": "Dimensionner par l’énergie.",
+  "epreuve": "bac",
+  "bonus": "Ec = ½ m v² · **P = F v** · **P = C ω** · pic de puissance ≠ moyenne",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/si/energie-cinetique-et-choix-d-un-moteur.webp",
+    "prompt": "a glossy violet electric car with a golden battery bolt and a golden speed arrow, sparkles, same art style as the reference icons"
+  },
+  "marcel": "La vitesse compte\nau carré&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Énergie cinétique",
+          "petite": true,
+          "lignes": [
+            "Ec = ½ m v²",
+            "Ec = ½ J ω²"
+          ],
+          "regle": "Deux fois plus vite&nbsp;: ==quatre fois== plus d’énergie à dissiper. Un mouvement combiné ajoute les deux.",
+          "note": "v est au carré&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Ce qu’on vérifie",
+          "entetes": [
+            "Critère",
+            "Sinon"
+          ],
+          "lignes": [
+            [
+              "Couple max ≥ pointe",
+              "profil non atteint"
+            ],
+            [
+              "P nominale ≥ continue",
+              "le moteur chauffe"
+            ],
+            [
+              "Vitesse max ≥ palier",
+              "palier inaccessible"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Choisir un moteur en trois temps",
+          "etapes": [
+            {
+              "titre": "Profil",
+              "texte": "tracer v(t), puis le couple de chaque phase"
+            },
+            {
+              "titre": "Puissance",
+              "texte": "P = C × ω à chaque instant"
+            },
+            {
+              "titre": "Catalogue",
+              "texte": "couvrir couple de pointe et puissance, avec marge"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Voiture de __1 200 kg__ : 0 → 20 m/s en 8 s.",
+          "calcul": "Ec = ½ × 1 200 × 20² = 240 000 J ; P<sub>moy</sub> = 240 000 ÷ 8 = 30 kW",
+          "aparte": "pic : 3 000 × 20 = 60 kW",
+          "resultat": "Ec = [[240 kJ]] · 30 kW"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Moyenne ou pic&nbsp;?",
+          "oui": {
+            "titre": "Le pic",
+            "texte": "60 kW en fin d’accélération&nbsp;: c’est lui qui ==dimensionne== le moteur."
+          },
+          "non": {
+            "titre": "La moyenne",
+            "texte": "30 kW seulement&nbsp;: **le double** plus bas que le pic."
+          },
+          "essai": {
+            "texte": "Au freinage l’énergie part en chaleur, ou vers la <i>batterie</i> si la chaîne est réversible."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "Ec = ½ m v² = 240 000 J",
+              "quoi": "l’énergie"
+            },
+            {
+              "texte": "P<sub>moy</sub> = 240 000 ÷ 8 = 30 kW",
+              "quoi": "la moyenne"
+            },
+            {
+              "texte": "P<sub>max</sub> = F × v = 60 kW",
+              "quoi": "le pic retenu"
+            }
+          ],
+          "pied": "On choisit sur le ==pire== moment, avec une marge."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dimensionner sur la **puissance moyenne**.",
+            "Oublier le **carré** de v.",
+            "Mettre v en **km/h** dans Ec.",
+            "Négliger la **marge** de sécurité."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "À retenir",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Translation",
+              "texte": "Ec = ½ m v², en joules"
+            },
+            {
+              "titre": "Rotation",
+              "texte": "Ec = ½ J ω², avec ω en rad/s"
+            },
+            {
+              "titre": "Récupérer",
+              "texte": "le freinage récupératif renvoie l’énergie vers la batterie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Ec d’une masse de **2 kg** à **3 m/s**&nbsp;?",
+            "Puissance en **rotation**&nbsp;?",
+            "Où va l’énergie au **freinage**&nbsp;?"
+          ],
+          "reponses": "1) 9 J · 2) P = C × ω · 3) chaleur ou batterie"
+        }
+      ]
+    }
+  ]
+}

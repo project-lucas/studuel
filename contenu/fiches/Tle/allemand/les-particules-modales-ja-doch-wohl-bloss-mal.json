@@ -1,0 +1,131 @@
+{
+  "titre": "Les particules modales",
+  "titreSurligne": "modales",
+  "accroche": "Les petits mots qui disent le ton.",
+  "bonus": "**ja** évidence · **doch** insistance · **wohl** supposition · **mal** adoucit · **eben / halt** résignation",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/allemand/les-particules-modales-ja-doch-wohl-bloss-mal.webp",
+    "prompt": "a glossy violet speech bubble with a golden musical tone wave and a tiny golden wink face, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Le ton fait\nla phrase&nbsp;!",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les principales particules",
+          "entetes": ["Particule", "Ajoute", "Exemple"],
+          "lignes": [
+            ["<i>ja</i>", "évidence, surprise", "<i>Das ist **ja** toll!</i> (mais c’est génial&nbsp;!)"],
+            ["<i>doch</i>", "insistance, rappel", "<i>Komm **doch** mit!</i> (viens donc&nbsp;!)"],
+            ["<i>wohl</i>", "supposition", "<i>Er ist **wohl** krank.</i> (sans doute)"],
+            ["<i>bloß, nur</i>", "avertissement, souhait", "<i>Mach das **bloß** nicht!</i> (surtout pas)"],
+            ["<i>mal</i>", "adoucit", "<i>Komm **mal** her!</i> (viens voir)"],
+            ["<i>eben, halt</i>", "résignation", "<i>Das ist **eben** so.</i> (c’est comme ça)"],
+            ["<i>denn</i>", "intérêt (question)", "<i>Was ist **denn** los?</i>"],
+            ["<i>eigentlich</i>", "« au fait »", "<i>Wie heißt du **eigentlich**?</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Une phrase, cinq tons",
+          "entetes": ["Phrase", "Ton"],
+          "lignes": [
+            ["<i>Das ist teuer.</i>", "constat"],
+            ["<i>Das ist **ja** teuer!</i>", "surprise"],
+            ["<i>Das ist **doch** teuer!</i>", "reproche"],
+            ["<i>Das ist **wohl** teuer.</i>", "supposition"],
+            ["<i>Das ist **eben** teuer.</i>", "résignation"]
+          ]
+        },
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Accent ou pas&nbsp;?",
+          "oui": {
+            "titre": "Sans accent",
+            "texte": "<i>Komm doch mit!</i> — particule modale, au milieu de la phrase."
+          },
+          "non": {
+            "titre": "Accentuée",
+            "texte": "<i>DOCH!</i> — réponse : « si&nbsp;! »"
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« Viens donc&nbsp;! » → <i>Komm ___ mit!</i> → **doch**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "S’en servir",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Commenter un texte",
+              "texte": "Repère la particule pour lire l’**attitude** : <i>Seine Reaktion war **ja** zu erwarten</i> — le narrateur n’est pas surpris, voire ironique."
+            },
+            {
+              "titre": "À l’oral",
+              "texte": "Poli : <i>Könnten Sie mir **mal** helfen?</i> Encourager : <i>Versuch es **doch**!</i> Conclure : <i>Das ist **halt** so.</i>"
+            },
+            {
+              "titre": "Traduire",
+              "texte": "Rarement mot à mot : on rend le **ton** (« donc », « bien », « sans doute », « surtout », « au fait »)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Où les placer&nbsp;?",
+          "deux": true,
+          "items": [
+            { "titre": "Place", "texte": "après le verbe conjugué et les pronoms" },
+            { "titre": "Registre", "texte": "dialogue et oral, pas l’écrit formel" },
+            { "titre": "Souhait", "texte": "<i>Wenn ich bloß Zeit hätte!</i> (si seulement)" },
+            { "titre": "Question", "texte": "<i>denn</i> marque l’intérêt" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Une particule **n’est pas accentuée** ; accentuée, <i>doch</i> devient une réponse.",
+            "Elle ne change pas l’information, seulement le **ton**.",
+            "Trop de particules **alourdissent** un écrit formel.",
+            "<i>bloß</i> ≈ <i>nur</i> : « surtout pas » ou « si seulement » selon la phrase."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle particule exprime la supposition&nbsp;?",
+            "Que marque <i>Das ist doch teuer!</i>&nbsp;?",
+            "Que fait <i>mal</i> dans <i>Komm mal her!</i>&nbsp;?"
+          ],
+          "reponses": "1) wohl 2) un reproche 3) il adoucit la demande"
+        }
+      ]
+    }
+  ]
+}

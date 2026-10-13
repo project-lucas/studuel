@@ -1,0 +1,172 @@
+{
+  "titre": "Suites arithmétiques",
+  "titreSurligne": "arithmétiques",
+  "accroche": "On ajoute toujours la même quantité.",
+  "epreuve": "bac",
+  "bonus": "u(n) = u(0) + n r · somme = nb de termes × (1er + dernier) ÷ 2 · 1 + … + n = n(n+1) ÷ 2",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-techno/suites-arithmetiques-terme-general-et-somme.webp",
+    "prompt": "a glossy golden regular staircase with equal steps and a tiny violet ball on top, small sparkles"
+  },
+  "marcel": "Premier plus dernier,\ndivisé par deux !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Terme et somme",
+          "petite": true,
+          "lignes": [
+            "u(n) = u(0) + n × r",
+            "S = N × {(1er + dernier)/2}"
+          ],
+          "regle": "**r** est la ==raison==. **N** est le nombre de termes&nbsp;: de u(0) à u(n), il y en a **n + 1**. Aussi u(n) = u(1) + (n − 1) r.",
+          "note": "On apparie premier et dernier&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Sommes à connaître",
+          "entetes": [
+            "Somme",
+            "Calcul",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "1 + 2 + … + 100",
+              "100 × 101 ÷ 2",
+              "5 050"
+            ],
+            [
+              "u(0) + … + u(9), u(n) = 3 + 2n",
+              "10 × (3 + 21) ÷ 2",
+              "120"
+            ],
+            [
+              "Σ k, k de 1 à 4",
+              "1 + 2 + 3 + 4",
+              "10"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "u(1) ou u(0), la raison r, et le nombre de termes N"
+            },
+            {
+              "titre": "Dernier terme",
+              "texte": "u(n) = u(0) + n r, ou u(1) + (n − 1) r"
+            },
+            {
+              "titre": "Sommer",
+              "texte": "N × (premier + dernier) ÷ 2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "40 adhérents la 1<sup>re</sup> année, __+ 6 par an__. Total sur 10 ans&nbsp;?",
+          "calcul": "u(10) = 40 + 9 × 6 = 94\nS = 10 × (40 + 94) ÷ 2",
+          "aparte": "10 termes, de u(1) à u(10)",
+          "resultat": "S = [[670]] adhésions"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Trois termes consécutifs",
+              "texte": "a, b, c conviennent si **b = (a + c) ÷ 2**."
+            },
+            {
+              "titre": "Contre-exemple",
+              "texte": "2 ; 5 ; 9&nbsp;: écarts 3 et 4, **pas arithmétique**."
+            },
+            {
+              "titre": "Intérêts simples",
+              "texte": "1 000 € à 3 % : u(n) = 1 000 + **30 n**."
+            },
+            {
+              "titre": "Croissance linéaire",
+              "texte": "Les points (n ; u(n)) sont **alignés**."
+            },
+            {
+              "titre": "Notation Σ",
+              "texte": "Σ u(k), k de 0 à n = u(0) + … + u(n), soit **n + 1** termes."
+            },
+            {
+              "titre": "Somme 1 à n",
+              "texte": "1 + 2 + … + n = **n(n + 1) ÷ 2**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "(u(n)) est arithmétique, u(1) = 40 et r = 6",
+              "quoi": "la nature"
+            },
+            {
+              "texte": "u(10) = 40 + 9 × 6 = 94",
+              "quoi": "le dernier terme"
+            },
+            {
+              "texte": "S = 10 × (40 + 94) ÷ 2 = 670",
+              "quoi": "la somme"
+            }
+          ],
+          "pied": "Contrôle&nbsp;: 10 termes autour de la moyenne 67 : ==670==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Compter **n termes** de u(0) à u(n)&nbsp;: il y en a n + 1.",
+            "Oublier le **÷ 2** de la somme.",
+            "Écrire u(1) + **n** r au lieu de u(1) + (n − 1) r.",
+            "Prendre une suite à écarts inégaux pour arithmétique."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "u(0) = 12 et r = −1,5&nbsp;: **u(8)**&nbsp;?",
+            "**1 + 2 + … + 20**&nbsp;?",
+            "5 ; 8 ; x consécutifs&nbsp;: **x** pour que ce soit arithmétique&nbsp;?"
+          ],
+          "reponses": "1) 12 − 12 = 0 · 2) 20 × 21 ÷ 2 = 210 · 3) x = 11"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "titre": "BE + -ING partout",
+  "titreSurligne": "BE + -ING",
+  "accroche": "L’action vue de l’intérieur.",
+  "bonus": "**will be** + V-ing · **will have been** + V-ing · **modal + be / have been** + V-ing",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/anglais/be-ing-a-tous-les-temps-et-avec-les-modaux.webp",
+    "prompt": "a glossy violet running figure silhouette on a golden circular arrow with a tiny golden clock, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "En cours,\ntoujours en cours&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La valeur",
+          "lignes": ["**BE** + verbe-**ING**"],
+          "petite": true,
+          "regle": "Une action **en cours**, inachevée ou temporaire. Seul le repère change : passé, futur, hypothèse.",
+          "note": "le même sens à tous les temps"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le futur",
+          "entetes": ["Forme", "Exemple"],
+          "lignes": [
+            ["<i>will be</i> + V-ing", "<i>This time tomorrow, I’ll **be flying** to Boston.</i>"],
+            ["<i>will have been</i> + V-ing", "<i>By June, she **will have been working** here for ten years.</i>"],
+            ["question polie", "<i>Will you **be using** the car tonight?</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Avec un modal",
+          "entetes": ["Forme", "Exemple", "Sens"],
+          "lignes": [
+            ["modal + <i>be</i> + V-ing", "<i>She **must be sleeping**.</i>", "Déduction sur le présent"],
+            ["modal + <i>be</i> + V-ing", "<i>They **might be waiting** for us.</i>", "Peut-être en ce moment"],
+            ["modal + <i>have been</i> + V-ing", "<i>He **must have been lying**.</i>", "Déduction sur le passé"],
+            ["<i>should have been</i> + V-ing", "<i>You **should have been listening**!</i>", "Reproche"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Ponctuel ou en cours&nbsp;?",
+          "oui": {
+            "titre": "Fait ponctuel",
+            "texte": "<i>He must have **lied**.</i> — il a dû mentir (une fois)."
+          },
+          "non": {
+            "titre": "En cours",
+            "texte": "<i>He must have been **lying**.</i> — il était en train de mentir, tout ce temps."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>I will be knowing the results.</i> → <i>I will **know**</i> : verbe d’état."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            { "titre": "Verbe d’état&nbsp;?", "texte": "<i>know, believe, own, seem</i> → **jamais** de V-ing." },
+            { "titre": "Choisis le repère", "texte": "Futur : <i>will be</i> ; passé : <i>have been</i> ; hypothèse : modal." },
+            { "titre": "Ajoute -ING", "texte": "Au verbe lexical, l’auxiliaire porte le temps." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            { "titre": "Past perfect continu", "texte": "<i>She **had been crying** when I arrived.</i>" },
+            { "titre": "Durée", "texte": "<i>for hours, since June</i> accompagnent <i>have been V-ing</i>." },
+            { "titre": "Politesse", "texte": "<i>Will you be using…?</i> demande sans presser." },
+            { "titre": "Verbes d’état", "texte": "<i>By then, I **will have known** him for twenty years.</i>" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>will have been knowing</i> → <i>will have **known**</i>.",
+            "<i>must be sleep</i> → <i>must be **sleeping**</i>.",
+            "<i>must have lied</i> ≠ <i>must have been lying</i> : durée ou non.",
+            "Le modal ne prend jamais de -s ni de -ING."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>This time tomorrow, I ___ (fly) to Rome.</i>",
+            "Corrige&nbsp;: <i>I will be knowing the result.</i>",
+            "<i>He ___ (must / lie) all along.</i> (déduction, durée)"
+          ],
+          "reponses": "1) will be flying 2) will know 3) must have been lying"
+        }
+      ]
+    }
+  ]
+}

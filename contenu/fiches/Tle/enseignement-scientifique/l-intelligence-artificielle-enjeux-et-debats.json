@@ -1,0 +1,120 @@
+{
+  "titre": "L’IA et ses débats",
+  "titreSurligne": "débats",
+  "accroche": "Elle généralise, elle ne comprend pas.",
+  "bonus": "Le mot « IA » : **1956** · trois ingrédients : **données**, **calcul**, **optimisation**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/enseignement-scientifique/l-intelligence-artificielle-enjeux-et-debats.webp",
+    "prompt": "a glossy violet robot head with a golden glowing neural network pattern, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Des exemples,\npas des règles !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Apprendre au lieu d’être programmé",
+          "entetes": ["", "Programme classique", "Apprentissage automatique"],
+          "lignes": [
+            ["On fournit", "des **règles** écrites par un humain", "un grand nombre d’**exemples**"],
+            ["La machine produit", "le résultat de ces règles", "des **paramètres ajustés**"],
+            ["Explicable ?", "chaque décision", "difficilement : **boîte noire**"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Trois ingrédients",
+          "deux": false,
+          "items": [
+            { "titre": "Données massives", "texte": "des exemples en grand nombre" },
+            { "titre": "Puissance de calcul", "texte": "considérable" },
+            { "titre": "Optimisation", "texte": "des algorithmes efficaces" }
+          ]
+        },
+        {
+          "type": "texte",
+          "numero": "!",
+          "titre": "Elle ne « comprend » pas",
+          "paragraphes": [
+            "Un système d’IA **généralise à partir des données** montrées. D’où sa force, et **toutes** ses faiblesses. Les **réseaux de neurones artificiels**, vaguement inspirés des neurones biologiques, ne sont pas un modèle du cerveau."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les enjeux",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Biais", "texte": "vient des **données**, pas d’une intention" },
+            { "titre": "Explicabilité", "texte": "justifier une décision médicale ou judiciaire" },
+            { "titre": "Responsabilité", "texte": "qui répond d’un accident de véhicule autonome ?" },
+            { "titre": "Emploi", "texte": "des tâches disparaissent : le **rythme**" },
+            { "titre": "Vie privée", "texte": "l’IA a faim de **données personnelles**" },
+            { "titre": "Énergie", "texte": "électricité, eau, métaux : rejoint le **climat**" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Traiter un débat",
+          "etapes": [
+            { "titre": "Fait technique", "texte": "comment ça marche, ses limites" },
+            { "titre": "Choix de société", "texte": "ce qu’on autorise, sous quel contrôle" },
+            { "titre": "Données", "texte": "argumenter avec des chiffres" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une IA de tri de CV, entraînée sur d’anciens recrutements, écarte des profils. __Origine__ du biais&nbsp;?",
+          "calcul": "le modèle reproduit ses exemples",
+          "aparte": "données biaisées",
+          "resultat": "[[les données, pas l’IA]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que l’IA « comprend » : elle **généralise**.",
+            "Voir une **intention** dans le biais : il vient des données.",
+            "Mélanger **fait technique** et choix de société.",
+            "Défendre une **crainte** ou un enthousiasme sans données."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que fournit-on à une IA par **apprentissage**&nbsp;?",
+            "D’où vient un **biais** algorithmique&nbsp;?",
+            "Quel lien entre IA et **climat**&nbsp;?"
+          ],
+          "reponses": "1) des exemples · 2) des données biaisées · 3) sa consommation d’énergie (et d’eau, de métaux)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "titre": "Démarche d’ingénieur",
+  "titreSurligne": "ingénieur",
+  "accroche": "Une démarche, pas qu’un prototype.",
+  "epreuve": "bac",
+  "bonus": "7 étapes, un **livrable** chacune · ACV&nbsp;: **5 phases**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/si/projet-et-demarche-d-ingenieur.webp",
+    "prompt": "a glossy violet blueprint roll with a golden compass and a small golden gear prototype, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Chaque choix\nse justifie&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Les sept étapes",
+          "items": [
+            { "titre": "Besoin", "texte": "pour qui, pourquoi" },
+            { "titre": "Solutions", "texte": "plusieurs, différentes" },
+            { "titre": "Choix", "texte": "argumenté, critères" },
+            { "titre": "Conception", "texte": "dimensionner, interfaces" },
+            { "titre": "Réalisation", "texte": "le prototype" },
+            { "titre": "Essais", "texte": "protocole écrit" },
+            { "titre": "Validation", "texte": "besoin satisfait&nbsp;?" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Un protocole d’essai précise",
+          "entetes": ["Il précise", "Pourquoi"],
+          "lignes": [
+            ["La grandeur mesurée", "savoir ce qu’on compare"],
+            ["Le moyen de mesure", "il porte son incertitude"],
+            ["Les conditions", "température, charge, alimentation"],
+            ["Les répétitions", "une mesure ne prouve rien"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Choisir une solution en trois temps",
+          "etapes": [
+            { "titre": "Critères", "texte": "pondérés, tirés du cahier des charges" },
+            { "titre": "Comparer", "texte": "les solutions dans un tableau" },
+            { "titre": "Tracer", "texte": "garder la raison de chaque rejet" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Système économe à l’usage, coûteux à produire&nbsp;: bon&nbsp;?",
+          "calcul": "les __cinq phases__ du cycle de vie",
+          "aparte": "analyse du cycle de vie",
+          "resultat": "bilan [[global]] avant de conclure"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Un résultat d’essai",
+          "oui": { "titre": "Mesure avec incertitude", "texte": "Un **résultat**&nbsp;: ==répétitions==, conditions." },
+          "non": { "titre": "Un chiffre isolé", "texte": "Sans incertitude, c’est un **chiffre**." },
+          "essai": { "texte": "Le score du tableau compte moins que la <i>traçabilité</i> des choix, six mois plus tard." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Solution retenue&nbsp;: B, car critère « coût » prioritaire", "quoi": "le choix argumenté" },
+            { "texte": "Mesure répétée 5 fois, incertitude donnée", "quoi": "l’essai" },
+            { "texte": "Besoin initial satisfait&nbsp;: oui, car…", "quoi": "la validation" }
+          ],
+          "pied": "On évalue une ==démarche==&nbsp;: justifie."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Présenter un prototype **sans justifier**.",
+            "Ne chercher qu’**une** solution.",
+            "Annoncer une mesure **sans incertitude**.",
+            "Ne juger que la phase **d’usage**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle est la **première** étape&nbsp;?",
+            "Combien de phases dans l’**ACV**&nbsp;?",
+            "Que garantit le **tableau** de comparaison&nbsp;?"
+          ],
+          "reponses": "1) analyser le besoin · 2) cinq · 3) la traçabilité des choix"
+        }
+      ]
+    }
+  ]
+}

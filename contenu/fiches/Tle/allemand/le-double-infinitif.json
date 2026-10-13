@@ -1,0 +1,180 @@
+{
+  "titre": "Le double infinitif",
+  "titreSurligne": "double infinitif",
+  "accroche": "Deux infinitifs, aucun participe.",
+  "bonus": "**haben** + infinitif + modal · subordonnée : **hat** avant les deux infinitifs",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/allemand/le-double-infinitif.webp",
+    "prompt": "a glossy violet pair of linked chain rings with two golden arrows and tiny sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Pas de participe\nici&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle",
+          "lignes": [
+            "**haben** … infinitif + **modal**"
+          ],
+          "petite": true,
+          "regle": "Au parfait, un modal accompagné d’un infinitif garde l’**infinitif** (pas de <i>gemusst</i>). Auxiliaire toujours **haben**.",
+          "note": "même chose avec lassen"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Présent → parfait",
+          "entetes": [
+            "Présent",
+            "Parfait"
+          ],
+          "lignes": [
+            [
+              "<i>Ich muss arbeiten.</i>",
+              "<i>Ich habe arbeiten **müssen**.</i>"
+            ],
+            [
+              "<i>Er kann nicht kommen.</i>",
+              "<i>Er hat nicht kommen **können**.</i>"
+            ],
+            [
+              "<i>Wir wollen helfen.</i>",
+              "<i>Wir haben helfen **wollen**.</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "citation",
+          "texte": "Brecht hat die dänische Sprache nicht lernen wollen.",
+          "auteur": "l’exemple type (Brecht n’a pas voulu apprendre le danois)"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Modal seul ou avec infinitif&nbsp;?",
+          "oui": {
+            "titre": "Avec infinitif",
+            "texte": "<i>Ich habe es machen **müssen**.</i> — double infinitif."
+          },
+          "non": {
+            "titre": "Modal seul",
+            "texte": "<i>Ich habe es **gemusst**.</i> — participe normal."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Er hat nicht kommen ___.</i> (können) → **können** (et non <i>gekonnt</i>)."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Les autres temps et verbes",
+          "entetes": [
+            "Temps / verbe",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "Plus-que-parfait",
+              "<i>Er hatte nicht kommen können.</i>"
+            ],
+            [
+              "Subj. II passé",
+              "<i>Du hättest mich anrufen sollen.</i> (tu aurais dû)"
+            ],
+            [
+              "Futur",
+              "<i>Wir werden warten müssen.</i>"
+            ],
+            [
+              "<i>lassen, sehen, hören</i>",
+              "<i>Ich habe ihn kommen sehen.</i>"
+            ]
+          ]
+        },
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Dans la subordonnée",
+          "etapes": [
+            {
+              "titre": "Le piège",
+              "texte": "L’auxiliaire passe **devant** les deux infinitifs."
+            },
+            {
+              "titre": "Exemple",
+              "texte": "<i>…, weil ich **habe** arbeiten müssen.</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Reproche",
+              "texte": "<i>Ich hätte mehr lernen sollen.</i>"
+            },
+            {
+              "titre": "Faire faire",
+              "texte": "<i>Ich habe mein Fahrrad reparieren lassen.</i>"
+            },
+            {
+              "titre": "Subordonnée",
+              "texte": "<i>…, dass er es hätte wissen können.</i>"
+            },
+            {
+              "titre": "Niveau",
+              "texte": "Détail qui distingue une copie de niveau B2."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Ich habe arbeiten gemusst</i> → <i>Ich habe arbeiten **müssen**.</i>",
+            "<i>…, weil ich arbeiten müssen habe</i> → <i>…, weil ich **habe** arbeiten müssen.</i>",
+            "L’auxiliaire est **haben**, même pour <i>kommen können</i>.",
+            "Modal **seul** = participe : <i>Ich habe es gemusst.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Ich habe es machen ___.</i> (müssen)",
+            "<i>Wir haben helfen ___.</i> (wollen)",
+            "Où se place l’auxiliaire dans la subordonnée&nbsp;?"
+          ],
+          "reponses": "1) müssen 2) wollen 3) devant les deux infinitifs"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "titre": "Le photon",
+  "titreSurligne": "photon",
+  "accroche": "Une onde qui arrive par paquets.",
+  "epreuve": "bac",
+  "bonus": "E = hν = hc/λ · h = 6,63×10⁻³⁴ J·s · 1 eV = 1,60×10⁻¹⁹ J · seuil&nbsp;: hν > W₀ · ΔE = hν",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/modele-corpusculaire-de-la-lumiere-le-photon.webp",
+    "prompt": "a glossy violet metal plate hit by a golden light packet knocking out a small golden electron, tiny sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Un photon entier,\nou rien !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Énergie d’un photon",
+          "petite": true,
+          "lignes": [
+            "E = h ν = {h c/λ}",
+            "ΔE = E<sub>haut</sub> − E<sub>bas</sub> = h ν"
+          ],
+          "regle": "h = 6,63×10⁻³⁴ J·s, c = 3,00×10⁸ m·s⁻¹. E dépend de la ==fréquence== seule, jamais de l’intensité. 1 eV = 1,60×10⁻¹⁹ J.",
+          "note": "λ en mètres !"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Quel modèle ?",
+          "entetes": [
+            "Phénomène",
+            "Modèle"
+          ],
+          "lignes": [
+            [
+              "Diffraction, interférences",
+              "ondulatoire"
+            ],
+            [
+              "Effet photoélectrique",
+              "corpusculaire"
+            ],
+            [
+              "Absorption, émission",
+              "corpusculaire"
+            ],
+            [
+              "Fentes d’Young photon par photon",
+              "les deux"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Calculer",
+              "texte": "l’énergie du photon avec E = hc/λ, en joules"
+            },
+            {
+              "titre": "Convertir",
+              "texte": "en eV en divisant par 1,60×10⁻¹⁹"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "à W₀ ou à ΔE entre deux niveaux, pour conclure"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Lumière bleue de __λ = 450 nm__. Énergie d’un photon en eV&nbsp;?",
+          "calcul": "E = 6,63×10⁻³⁴ × 3,00×10⁸ ÷ 450×10⁻⁹ ÷ 1,60×10⁻¹⁹",
+          "aparte": "nm → m d’abord&nbsp;!",
+          "resultat": "E ≈ [[2,8 eV]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Effet photoélectrique",
+          "oui": {
+            "titre": "UV très faible",
+            "texte": "Un seul photon assez énergétique suffit&nbsp;: hν > W₀, l’électron est ==arraché== aussitôt."
+          },
+          "non": {
+            "titre": "Rouge intense, ça finit par marcher&nbsp;?",
+            "texte": "**Faux**&nbsp;: chaque photon est trop peu énergétique, l’intensité n’y change rien."
+          },
+          "essai": {
+            "texte": "Un électron reçoit <i>un photon entier ou rien</i>. Le modèle ondulatoire ne produit pas ce seuil."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Spectres et laser",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Raies",
+              "texte": "chaque élément a ses longueurs d’onde"
+            },
+            {
+              "titre": "Étoiles",
+              "texte": "composition lue sans y aller"
+            },
+            {
+              "titre": "Laser",
+              "texte": "émission stimulée, photons identiques"
+            },
+            {
+              "titre": "Faisceau",
+              "texte": "monochromatique, directif, cohérent"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que E dépend de l’**intensité**.",
+            "Oublier de convertir **nm** en m.",
+            "Dire que le photon a une **masse**.",
+            "Confondre **eV** et joule."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "?",
+          "titre": "Onde et corpuscule",
+          "paragraphes": [
+            "Aux fentes d’Young **photon par photon**, chaque photon arrive en un point unique (corpuscule), mais des milliers d’impacts reconstituent les **franges** (onde). Les deux modèles décrivent des aspects différents du même objet."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "E d’un photon dépend de la **fréquence** ou de l’intensité&nbsp;?",
+            "Pour arracher un électron, il faut hν **supérieur** à quoi&nbsp;?",
+            "Le laser repose sur l’émission **stimulée** ou spontanée&nbsp;?"
+          ],
+          "reponses": "1) fréquence · 2) W₀ · 3) stimulée"
+        }
+      ]
+    }
+  ]
+}

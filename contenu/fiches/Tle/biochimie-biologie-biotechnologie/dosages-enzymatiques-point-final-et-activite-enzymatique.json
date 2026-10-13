@@ -1,0 +1,161 @@
+{
+  "titre": "Dosages enzymatiques",
+  "titreSurligne": "enzymatiques",
+  "accroche": "L’enzyme : outil ou cible.",
+  "epreuve": "bac",
+  "bonus": "1 U = 1 µmol·min<sup>−1</sup> ≈ 16,67 nkat · vitesse **initiale** seulement",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/biochimie-biologie-biotechnologie/dosages-enzymatiques-point-final-et-activite-enzymatique.webp",
+    "prompt": "a glossy violet enzyme shaped like a pac-man gripping a golden substrate gem, a small cuvette with pink liquid, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Qui est en excès,\nqui est limitant&nbsp;?",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Deux logiques",
+          "entetes": [
+            "",
+            "Point final",
+            "Activité"
+          ],
+          "lignes": [
+            [
+              "**On dose**",
+              "un substrat",
+              "une enzyme"
+            ],
+            [
+              "**En excès**",
+              "enzymes, réactifs",
+              "le substrat"
+            ],
+            [
+              "**Limitant**",
+              "le substrat",
+              "l’enzyme"
+            ],
+            [
+              "**On lit**",
+              "A à la fin",
+              "ΔA/Δt initial"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Étalon unique",
+          "teinte": "jaune",
+          "petite": true,
+          "lignes": [
+            "c<sub>essai</sub> = c<sub>étalon</sub> × A<sub>essai</sub> / A<sub>étalon</sub>"
+          ],
+          "regle": "Valable si la **linéarité** est connue (Beer-Lambert). Sinon : **gamme** d’étalonnage.",
+          "note": "A = ε × ℓ × c"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Doser une activité enzymatique",
+          "etapes": [
+            {
+              "titre": "Régler",
+              "texte": "substrat **saturant**, T thermostatée, **tampon** au pH optimal"
+            },
+            {
+              "titre": "Suivre",
+              "texte": "A en fonction du temps ; garder la partie **linéaire** (période initiale)"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "pente ΔA/Δt ÷ ε·ℓ, puis ramener au **volume d’échantillon**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "ΔA/Δt = 0,050 min<sup>−1</sup> ; ε = 18&nbsp;500 ; ℓ = 1&nbsp;cm ; cuve 3,0&nbsp;mL ; prise 0,10&nbsp;mL.",
+          "calcul": "0,050 / 18&nbsp;500 = 2,7 µmol·L<sup>−1</sup>·min<sup>−1</sup>",
+          "aparte": "× 3,0 mL = 8,1·10<sup>−3</sup> µmol/min",
+          "resultat": "b = 8,1·10<sup>−3</sup> / 0,10·10<sup>−3</sup> ≈ [[81 U/L]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "GOD-POD (glucose)",
+          "items": [
+            {
+              "titre": "Principale",
+              "texte": "glucose + O₂ → acide gluconique + H₂O₂ (**GOD**)."
+            },
+            {
+              "titre": "Indicatrice",
+              "texte": "2 H₂O₂ + chromogène → **chromophore** rose (**POD**)."
+            },
+            {
+              "titre": "Stœchiométrie",
+              "texte": "2 glucoses pour 1 chromophore."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 5,
+          "titre": "Grandeurs",
+          "items": [
+            {
+              "terme": "Activité z",
+              "definition": "substrat transformé par unité de temps (kat ou **U**)."
+            },
+            {
+              "terme": "Concentration b",
+              "definition": "activité par volume (U·L<sup>−1</sup>)."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mesurer hors de la **période initiale**&nbsp;: activité sous-estimée.",
+            "Oublier la **prise d’essai** dans le calcul de b.",
+            "Inverser **excès** et **limitant** selon le dosage.",
+            "Négliger la **thermostatisation** et le pH.",
+            "Oublier le **tableau de manipulation** : volumes du blanc, des étalons, des essais."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dosage d’un **substrat** : l’enzyme est en…&nbsp;?",
+            "Quelle **unité** pour une activité (µmol·min<sup>−1</sup>)&nbsp;?",
+            "Quelle partie de la courbe donne la **vitesse**&nbsp;?"
+          ],
+          "reponses": "1) excès · 2) l’unité U · 3) la période initiale, linéaire"
+        }
+      ]
+    }
+  ]
+}

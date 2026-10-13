@@ -1,0 +1,121 @@
+{
+  "titre": "Le SGBD",
+  "titreSurligne": "SGBD",
+  "accroche": "Le programme qui garde la base cohérente.",
+  "epreuve": "bac",
+  "bonus": "ACID&nbsp;: **Atomicité · Cohérence · Isolation · Durabilité** — COMMIT valide, ROLLBACK annule",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/nsi/systeme-de-gestion-de-bases-de-donnees-sgbd.webp",
+    "prompt": "a glossy violet database cylinder guarded by a golden shield with a check mark, sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Tout réussit,\nou rien du tout !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Ce que prend en charge le SGBD",
+          "items": [
+            { "terme": "Requêtes", "definition": "exécution et **optimisation** du plan" },
+            { "terme": "Concurrence", "definition": "plusieurs clients écrivent **sans se corrompre**" },
+            { "terme": "Droits", "definition": "gérés **par utilisateur**" },
+            { "terme": "Contraintes", "definition": "respectées, qu’**aucune** application ne peut contourner" },
+            { "terme": "Persistance", "definition": "reprise **après panne**, grâce au journal" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les propriétés ACID",
+          "entetes": ["Propriété", "Promesse"],
+          "lignes": [
+            ["**Atomicité**", "tout ou rien"],
+            ["**Cohérence**", "d’un état valide à un autre"],
+            ["**Isolation**", "comme si c’était successif"],
+            ["**Durabilité**", "survit à une panne (journal)"],
+            ["le journal", "écrit **avant** les données"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Une transaction",
+          "etapes": [
+            { "titre": "Ouvrir", "texte": "regrouper les opérations en un **tout indivisible**" },
+            { "titre": "Exécuter", "texte": "débiter un compte, créditer l’autre" },
+            { "titre": "Conclure", "texte": "<b>COMMIT</b> si tout réussit, <b>ROLLBACK</b> sinon" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Virement de 50 €&nbsp;: le débit réussit, le crédit échoue. __Que fait le SGBD__&nbsp;?",
+          "calcul": "atomicité : tout ou rien",
+          "aparte": "ROLLBACK",
+          "resultat": "= [[débit annulé]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À connaître",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Verrous", "texte": "ou **versions**&nbsp;: évitent d’écraser le travail d’un autre." },
+            { "titre": "Interblocage", "texte": "deux transactions s’attendent&nbsp;: l’une est **annulée**." },
+            { "titre": "Client-serveur", "texte": "centralisé, mais **point de défaillance unique**." },
+            { "titre": "SQLite", "texte": "**embarqué**, sans serveur&nbsp;; PostgreSQL, MySQL&nbsp;: serveurs." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le virement est une transaction.", "quoi": "la notion" },
+            { "texte": "Par atomicité, tout est validé ou tout est annulé.", "quoi": "la propriété" },
+            { "texte": "Le journal garantit la durabilité après panne.", "quoi": "le mécanisme" },
+            { "texte": "Sans ROLLBACK, la base serait incohérente.", "quoi": "le risque" }
+          ],
+          "pied": "Une contrainte dans le ==SGBD== protège toutes les applications."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’une base est un simple **fichier**.",
+            "Confondre **cohérence** (état valide) et isolation.",
+            "Mettre les contraintes **seulement** dans l’application.",
+            "Oublier le **journal** pour la durabilité."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle propriété ACID assure le **tout ou rien**&nbsp;?",
+            "Quelle commande **annule** une transaction&nbsp;?",
+            "Quel est le défaut du modèle **client-serveur**&nbsp;?"
+          ],
+          "reponses": "1) l’atomicité · 2) ROLLBACK · 3) le serveur est un point de défaillance unique"
+        }
+      ]
+    }
+  ]
+}

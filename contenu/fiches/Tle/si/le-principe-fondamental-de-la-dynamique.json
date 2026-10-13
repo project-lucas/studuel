@@ -1,0 +1,176 @@
+{
+  "titre": "Le PFD",
+  "titreSurligne": "PFD",
+  "accroche": "Les efforts fixent le mouvement.",
+  "epreuve": "bac",
+  "bonus": "ΣF = m a · **ΣM = J α** · statique = cas où a = 0 · on dimensionne sur le **pire** moment",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/si/le-principe-fondamental-de-la-dynamique.webp",
+    "prompt": "a glossy violet elevator cabin hanging from a golden cable with a golden arrow pointing up, small downward arrow, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Isoler, bilan,\nprojeter, résoudre&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les deux formes",
+          "petite": true,
+          "lignes": [
+            "ΣF = m × a",
+            "ΣM = J × α"
+          ],
+          "regle": "**Translation**&nbsp;: forces (N), m (kg), a (m/s²). **Rotation** autour d’un axe fixe&nbsp;: moments (N·m), **J** (kg·m²), α (rad/s²). Si ==a = 0==, c’est la statique.",
+          "note": "la statique est un cas particulier"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Ce que fournit le moteur",
+          "entetes": [
+            "Phase",
+            "Couple moteur"
+          ],
+          "lignes": [
+            [
+              "Accélération",
+              "résistant + celui de l’inertie"
+            ],
+            [
+              "Vitesse constante",
+              "résistant seulement"
+            ],
+            [
+              "Décélération",
+              "moins, voire freinage"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Isoler",
+              "texte": "le solide, puis le bilan des actions extérieures"
+            },
+            {
+              "titre": "Écrire",
+              "texte": "le principe, projeté sur l’axe du mouvement"
+            },
+            {
+              "titre": "Résoudre",
+              "texte": "puis vérifier le signe et l’ordre de grandeur"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Cabine de __800 kg__ qui monte avec a = 1 m/s² (g = 9,81).",
+          "calcul": "T − m g = m a ⇒ T = m (g + a) = 800 × (9,81 + 1)",
+          "aparte": "on isole la cabine",
+          "resultat": "T ≈ [[8 650 N]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quel couple moteur&nbsp;?",
+          "oui": {
+            "titre": "Accélération",
+            "texte": "C’est elle qui fixe le couple ==maximal== : on dimensionne sur le pire moment."
+          },
+          "non": {
+            "titre": "La moyenne",
+            "texte": "Dimensionner sur la **moyenne** sous-estime le besoin."
+          },
+          "essai": {
+            "texte": "Tambour J = 0,5, 0 → 100 rad/s en 2 s, frottement 5 N·m&nbsp;: C = 5 + 0,5 × 50 = <i>30 N·m</i>, puis 5 N·m au palier."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "T − m × g = m × a",
+              "quoi": "le principe projeté"
+            },
+            {
+              "texte": "T = 800 × (9,81 + 1)",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "T ≈ 8 650 N",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Le principe s’applique à un solide ==isolé==, forces extérieures seulement."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **poids** dans le bilan.",
+            "Ignorer le **couple résistant**.",
+            "Mélanger **m** et **J**.",
+            "Dimensionner sur la **moyenne**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "À retenir",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Translation",
+              "texte": "ΣF = m a&nbsp;: la force fait accélérer la masse"
+            },
+            {
+              "titre": "Rotation",
+              "texte": "ΣM = J α&nbsp;: le couple fait accélérer l’inertie"
+            },
+            {
+              "titre": "Dimensionner",
+              "texte": "sur la phase d’accélération, pas sur la moyenne"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Principe en **rotation**&nbsp;?",
+            "À a = 0, on retrouve quel principe&nbsp;?",
+            "Quelle phase fixe le couple **maximal**&nbsp;?"
+          ],
+          "reponses": "1) ΣM = J α · 2) la statique · 3) l’accélération"
+        }
+      ]
+    }
+  ]
+}

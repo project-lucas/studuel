@@ -1,0 +1,115 @@
+{
+  "titre": "Respirer ou fermenter",
+  "titreSurligne": "fermenter",
+  "accroche": "Tout oxyder, ou s’arrêter en route.",
+  "epreuve": "bac",
+  "bonus": "Glycolyse : **2 ATP** · respiration ≈ **30 ATP** · fermentation **2 ATP** · accepteur final : **O₂** ou **interne**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/biochimie-biologie-biotechnologie/respiration-et-fermentation-deux-facons-d-oxyder-le-glucose.webp",
+    "prompt": "a glossy violet yeast cell with golden bubbles rising from it, beside a small golden glowing mitochondria, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Avec ou sans air,\nla levure s’en sort !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La glycolyse, départ commun",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": ["Glucose → 2 pyruvate"],
+          "regle": "Dans le **cytoplasme** : **2 ATP** nets (phosphorylation au niveau du substrat) et **2 NADH** à réoxyder.",
+          "note": "6 C → 2 × 3 C"
+        },
+        {
+          "type": "frise",
+          "numero": 2,
+          "titre": "La respiration eucaryote",
+          "etapes": [
+            { "date": "Cytoplasme", "texte": "glycolyse" },
+            { "date": "Matrice", "texte": "cycle de Krebs : CO₂, NADH, FADH₂" },
+            { "date": "Membrane interne", "texte": "chaîne respiratoire, O₂ → H₂O" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Comparer les bilans",
+          "entetes": ["Critère", "Respiration", "Fermentation"],
+          "lignes": [
+            ["**Accepteur final**", "externe (O₂, nitrate)", "interne (pyruvate…)"],
+            ["**Oxydation**", "complète (CO₂)", "partielle"],
+            ["**ATP**", "substrat + oxydative", "substrat seulement"],
+            ["**ATP par glucose**", "≈ 30", "2"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "1 mol de glucose consommée par des levures&nbsp;: aérobiose puis anaérobiose.",
+          "calcul": "O₂ : 30 ATP, 6 CO₂\nsans O₂ : 2 éthanol + 2 CO₂",
+          "aparte": "biomasse ou éthanol&nbsp;?",
+          "resultat": "anaérobie : [[2 mol d’ATP]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Deux fermentations",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Lactique", "texte": "**lactate**, yaourts et fromages, le milieu s’**acidifie**." },
+            { "titre": "Alcoolique", "texte": "**éthanol + CO₂** : pain, bière, vin, bioéthanol." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Sans accepteur externe, la cellule doit réoxyder son NADH.", "quoi": "le problème" },
+            { "texte": "Elle réduit le pyruvate&nbsp;: c’est la fermentation.", "quoi": "la solution" },
+            { "texte": "L’oxydation est partielle&nbsp;: 2 ATP au plus par glucose.", "quoi": "conclure" }
+          ],
+          "pied": "La fermentation régénère les ==coenzymes==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire la fermentation **« ratée »** : elle régénère le NAD⁺.",
+            "Confondre **anaérobie** et fermentation : le **nitrate** existe.",
+            "Oublier que la glycolyse est **commune** aux deux.",
+            "Placer le Krebs dans le **cytoplasme**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Où a lieu la **glycolyse**&nbsp;?",
+            "Quel est l’**accepteur final** de la respiration aérobie&nbsp;?",
+            "Pourquoi la cellule **fermente-t-elle**&nbsp;?"
+          ],
+          "reponses": "1) cytoplasme · 2) le dioxygène (réduit en eau) · 3) réoxyder le NADH pour que la glycolyse continue"
+        }
+      ]
+    }
+  ]
+}

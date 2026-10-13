@@ -1,0 +1,196 @@
+{
+  "titre": "Éco-conception et ACV",
+  "titreSurligne": "ACV",
+  "accroche": "Chiffrer l’impact pour mieux le réduire.",
+  "epreuve": "bac",
+  "bonus": "Même **unité fonctionnelle** pour comparer · l’**usage** domine souvent l’impact",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/i2d/eco-conception-et-analyse-de-cycle-de-vie.webp",
+    "prompt": "a glossy violet LED bulb with a golden leaf and a small recycling loop, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Compare des services,\npas des objets !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Les 4 temps de l’ACV",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Objectif et champ",
+              "texte": "définir l’unité fonctionnelle"
+            },
+            {
+              "titre": "Inventaire",
+              "texte": "matières, énergie, transports"
+            },
+            {
+              "titre": "Impacts",
+              "texte": "climat, eau, ressources"
+            },
+            {
+              "titre": "Interprétation",
+              "texte": "quelle phase pèse le plus ?"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Indicateurs",
+          "entetes": [
+            "Indicateur",
+            "Unité"
+          ],
+          "lignes": [
+            [
+              "**Climat**",
+              "kg éq. CO<sub>2</sub>"
+            ],
+            [
+              "**Énergie primaire**",
+              "MJ ou kWh"
+            ],
+            [
+              "**Ressources**",
+              "kg éq. antimoine"
+            ],
+            [
+              "**Eau**",
+              "m³"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Comparer deux solutions",
+          "etapes": [
+            {
+              "titre": "Fixer",
+              "texte": "la même **unité fonctionnelle**"
+            },
+            {
+              "titre": "Chiffrer",
+              "texte": "chaque phase : fabrication, usage, fin de vie"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "sur la phase qui **domine** le total"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "10 000 h d’éclairage : halogène __53 W__ (5 ampoules), LED __8 W__ (1). Mix : __60 g/kWh__.",
+          "calcul": "usage : 530 kWh → 31,8 kg · 80 kWh → 4,8 kg",
+          "aparte": "+ fabrication : 2,5 kg et 2 kg",
+          "resultat": "halogène ≈ 34 kg · LED ≈ [[7 kg éq. CO<sub>2</sub>]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Comparaison juste ou non&nbsp;?",
+          "oui": {
+            "titre": "Juste",
+            "texte": "Deux produits pour le **même service** rendu."
+          },
+          "non": {
+            "titre": "Faux",
+            "texte": "Comparer des **objets** de durées de vie différentes."
+          },
+          "essai": {
+            "texte": "Une LED de 10 000 h se compare à <i>cinq</i> halogènes de 2 000 h, pas à une seule."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Leviers d’éco-conception",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Alléger",
+              "texte": "mais l’aluminium coûte en énergie"
+            },
+            {
+              "titre": "Durer",
+              "texte": "pièces vissées, détachées"
+            },
+            {
+              "titre": "Efficacité",
+              "texte": "moteur à haut rendement"
+            },
+            {
+              "titre": "Fin de vie",
+              "texte": "monomatériau, recyclage"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Unité fonctionnelle : 800 lm pendant 10 000 h",
+              "quoi": "le cadre"
+            },
+            {
+              "texte": "LED : 4,8 + 2 ≈ 7 kg contre 34 kg",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "L’usage domine : on réduit la consommation",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Un choix se ==justifie par un calcul== et par la ==phase== qu’il améliore."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Comparer sans **unité fonctionnelle**.",
+            "Oublier la phase de **fabrication** ou de fin de vie.",
+            "Justifier par une **impression** sans chiffre.",
+            "Croire qu’alléger est **toujours** gagnant."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que fixe l’**unité fonctionnelle**&nbsp;?",
+            "Quelle est l’unité de l’impact **climat**&nbsp;?",
+            "Citez deux **labels** ou réglementations."
+          ],
+          "reponses": "1) le service rendu à comparer · 2) kg éq. CO2 · 3) RE2020, indice de réparabilité, étiquette énergie"
+        }
+      ]
+    }
+  ]
+}

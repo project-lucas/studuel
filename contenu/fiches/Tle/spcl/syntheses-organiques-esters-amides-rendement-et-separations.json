@@ -1,0 +1,117 @@
+{
+  "titre": "Synthèses organiques",
+  "titreSurligne": "Synthèses",
+  "accroche": "Fabriquer plus, puis isoler.",
+  "epreuve": "bac",
+  "bonus": "Rendement = n<sub>obtenu</sub> ÷ n<sub>max</sub> · **Dean-Stark** retire l’eau · saponification = **totale**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/spcl/syntheses-organiques-esters-amides-rendement-et-separations.webp",
+    "prompt": "a glossy violet round-bottom flask on a golden heating mantle with a reflux condenser and sparkling droplets, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "On pilote la synthèse,\npuis on isole&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Transformations",
+          "entetes": ["Transformation", "Produit"],
+          "lignes": [
+            ["**Estérification** (acide + alcool)", "ester + eau, équilibre lent"],
+            ["**Saponification** (ester + HO⁻)", "carboxylate + alcool, **totale**"],
+            ["**Amide** (acide ou chlorure d’acyle + amine)", "amide"],
+            ["Alcool **I**aire / **II**aire oxydé", "aldéhyde puis acide / **cétone**"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Rendement",
+          "petite": true,
+          "lignes": ["η = n(produit obtenu) ÷ n(produit maximal)"],
+          "regle": "Estérification équimolaire&nbsp;: η ≈ **67 %**. Alcool **tertiaire**&nbsp;: pas d’oxydation. Cétone + NaBH₄ → alcool II.",
+          "note": "η ≤ 100 %&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Améliorer le rendement",
+          "etapes": [
+            { "titre": "Excès", "texte": "un réactif en **excès** (le moins cher)" },
+            { "titre": "Éliminer", "texte": "retirer l’**eau** par **Dean-Stark**" },
+            { "titre": "Changer", "texte": "un **anhydride** rend la réaction totale" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "0,20 mol d’acide éthanoïque + 0,20 mol d’éthanol, on obtient 0,13 mol d’ester. __η__&nbsp;?",
+          "calcul": "n<sub>max</sub> = 0,20 mol (réactifs 1 : 1)",
+          "aparte": "0,13 ÷ 0,20",
+          "resultat": "η = [[65 %]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Isoler et purifier",
+          "entetes": ["Technique", "Principe"],
+          "lignes": [
+            ["**Extraction** liquide-liquide", "solvant non miscible à l’eau, produit très soluble"],
+            ["**Recristallisation**", "soluble à **chaud**, peu à **froid**"],
+            ["**Hydrodistillation**", "entraîner à la vapeur d’eau"],
+            ["**Distillation fractionnée**", "liquides miscibles, T<sub>éb</sub> voisines"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Équation&nbsp;: acide + alcool ⇌ ester + eau", "quoi": "la réaction" },
+            { "texte": "n<sub>max</sub> fixé par le réactif **limitant**", "quoi": "le maximum" },
+            { "texte": "η = 0,13 ÷ 0,20 = 65 %", "quoi": "le rendement" },
+            { "texte": "Chauffage à reflux, catalyseur H₂SO₄", "quoi": "la cinétique" }
+          ],
+          "pied": "Facteurs cinétiques&nbsp;: **température**, **concentration**, **catalyseur**."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que le **catalyseur** déplace l’équilibre.",
+            "Prendre la saponification pour une réaction **équilibrée**.",
+            "Calculer n<sub>max</sub> avec le réactif **en excès**.",
+            "Oxyder un alcool **tertiaire**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que retire un **Dean-Stark**&nbsp;?",
+            "Oxydation d’un alcool **secondaire**&nbsp;: produit&nbsp;?",
+            "0,09 mol obtenues pour 0,12 mol max&nbsp;: **η**&nbsp;?"
+          ],
+          "reponses": "1) l’eau formée · 2) une cétone · 3) 0,09 ÷ 0,12 = 75 %"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "titre": "Les démonstratifs",
+  "titreSurligne": "démonstratifs",
+  "accroche": "Trois distances, pas deux.",
+  "bonus": "**este** près de moi · **ese** près de toi · **aquel** loin de nous deux · **esto, eso, aquello**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/espagnol/les-demonstratifs.webp",
+    "prompt": "a glossy violet pointing hand with golden rays and three small golden dots getting smaller into the distance, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Ici, là,\nlà-bas&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les trois distances",
+          "lignes": [
+            "**este · ese · aquel**"
+          ],
+          "petite": true,
+          "regle": "Le français n’a que « ce… -ci / -là »&nbsp;: l’espagnol règle la distance sur **trois** niveaux, dans l’espace, le temps ou le discours.",
+          "note": "aquel, sans -o !"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois séries",
+          "entetes": [
+            "Distance",
+            "Singulier",
+            "Pluriel",
+            "Adverbe"
+          ],
+          "lignes": [
+            [
+              "Près de moi",
+              "<i>este, esta</i>",
+              "<i>estos, estas</i>",
+              "<i>aquí</i>"
+            ],
+            [
+              "Près de toi",
+              "<i>ese, esa</i>",
+              "<i>esos, esas</i>",
+              "<i>ahí</i>"
+            ],
+            [
+              "Loin de nous deux",
+              "<i>aquel, aquella</i>",
+              "<i>aquellos, aquellas</i>",
+              "<i>allí</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les neutres : jamais devant un nom",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "esto",
+              "texte": "Une chose non identifiée, proche&nbsp;: <i>¿Qué es **esto**?</i>"
+            },
+            {
+              "titre": "eso",
+              "texte": "Une idée, ce qui vient d’être dit&nbsp;: <i>**Eso** no es verdad.</i>"
+            },
+            {
+              "titre": "aquello",
+              "texte": "Un souvenir, du lointain&nbsp;: <i>Todo **aquello** me pareció extraño.</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Reprendre une phrase entière",
+          "oui": {
+            "titre": "Un neutre",
+            "texte": "<i>No vino, y **eso** me molestó.</i> — invariable, sans accent."
+          },
+          "non": {
+            "titre": "Este ou ese",
+            "texte": "<i>No vino, y ese me molestó.</i> — ils s’accordent avec un nom, jamais avec une idée."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>___ año (près de moi)</i> → **este año**&nbsp;; <i>aquellos tiempos</i> (lointain)."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Quelle distance&nbsp;?",
+              "texte": "Moi → este. Toi → ese. Loin des deux → aquel."
+            },
+            {
+              "titre": "Un nom derrière&nbsp;?",
+              "texte": "Oui → forme accordée. Non (idée, chose) → neutre."
+            },
+            {
+              "titre": "L’accent&nbsp;?",
+              "texte": "Pronom ou adjectif : pas d’accent (norme RAE 2010)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Au-delà de l’espace",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Dans le temps",
+              "texte": "<i>este año</i> · <i>ese año</i> · <i>aquellos tiempos</i>"
+            },
+            {
+              "titre": "Dans le discours",
+              "texte": "<i>este</i> = ce qu’on vient de dire, <i>aquel</i> = le plus éloigné"
+            },
+            {
+              "titre": "Adjectif ou pronom",
+              "texte": "même forme&nbsp;: <i>Este libro es mío</i> · <i>Este es mío</i>"
+            },
+            {
+              "titre": "Deux tournures",
+              "texte": "<i>en aquel entonces</i> · <i>ni esto ni aquello</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>aquelo</i> → <i>**aquel** libro</i> (pas de -o au masculin singulier).",
+            "Mettre un nom après un neutre&nbsp;: <i>esto libro</i> → <i>este libro</i>.",
+            "Accentuer le pronom&nbsp;: <i>éste</i> n’est plus la norme (non compté faux).",
+            "N’avoir que deux distances comme en français : il y en a **trois**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>___ libro (près de toi, singulier)</i>",
+            "<i>No vino, y ___ me molestó.</i> (ese / eso)",
+            "Masculin singulier de la 3<sup>e</sup> série&nbsp;?"
+          ],
+          "reponses": "1) ese libro 2) eso 3) aquel"
+        }
+      ]
+    }
+  ]
+}

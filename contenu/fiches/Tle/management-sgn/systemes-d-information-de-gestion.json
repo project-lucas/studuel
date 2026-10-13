@@ -1,0 +1,170 @@
+{
+  "titre": "Systèmes d’information",
+  "titreSurligne": "information",
+  "accroche": "Des données aux décisions.",
+  "epreuve": "bac",
+  "bonus": "**Clé primaire** identifie une ligne · **clé étrangère** renvoie à une autre table",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/management-sgn/systemes-d-information-de-gestion.webp",
+    "prompt": "a glossy violet database cylinder linked to a golden cloud, tiny golden sparkles, same art style as the reference icons, on magenta background, no text"
+  },
+  "marcel": "Des données bien\nrangées, des choix&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les mots clés",
+          "items": [
+            {
+              "terme": "Système d’information",
+              "definition": "ressources humaines, matérielles, logicielles, **données**, procédures"
+            },
+            {
+              "terme": "Système informatique",
+              "definition": "matériel, logiciel, infrastructure : une **partie** du SI"
+            },
+            {
+              "terme": "Infogérance",
+              "definition": "confier son informatique à un prestataire"
+            },
+            {
+              "terme": "API",
+              "definition": "permet à deux applications d’**échanger** des données"
+            }
+          ]
+        },
+        {
+          "type": "texte",
+          "numero": 2,
+          "titre": "Interroger la base en SQL",
+          "paragraphes": [
+            "<b>SELECT</b> nom, ville<br><b>FROM</b> CLIENT<br><b>WHERE</b> ville = 'Lyon'<br><b>ORDER BY</b> nom ;",
+            "Affiche les clients lyonnais, triés par nom. Une **jointure** (JOIN … ON) relie deux tables."
+          ],
+          "teinte": "lavande"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Quatre thèmes du programme",
+          "colonnes": 4,
+          "cartes": [
+            {
+              "titre": "Organisation",
+              "texte": "SI, **risques** : cyberattaque, vie privée, numérique responsable."
+            },
+            {
+              "titre": "Management",
+              "texte": "Métiers, **projet SI**, recette, méthodes agiles."
+            },
+            {
+              "titre": "Information",
+              "texte": "Base relationnelle, SQL, **big data**, algorithmes, IA."
+            },
+            {
+              "titre": "Échange",
+              "texte": "Balisage, **protocoles**, réseaux, sécurité, cloud."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "De la donnée à la décision",
+          "etapes": [
+            {
+              "titre": "Données",
+              "texte": "tables reliées par clés"
+            },
+            {
+              "titre": "Requête",
+              "texte": "SQL, jointure, condition"
+            },
+            {
+              "titre": "Décision",
+              "texte": "action et indicateur"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Clients sans commande depuis un an&nbsp;?",
+          "calcul": "jointure + date",
+          "resultat": "[[1 240 inactifs relancés]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "La clé étrangère relie COMMANDE à CLIENT.",
+              "quoi": "structure"
+            },
+            {
+              "texte": "La requête SQL produit une liste de clients inactifs.",
+              "quoi": "information"
+            },
+            {
+              "texte": "La relance respecte le RGPD&nbsp;: consentement, désinscription.",
+              "quoi": "limite"
+            }
+          ],
+          "pied": "Fiables, structurées, protégées&nbsp;: ==trois conditions== d’une bonne information."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **SI** et système informatique.",
+            "Confondre clé **primaire** et étrangère.",
+            "Oublier les **risques** du numérique.",
+            "Croire que l’**IA** remplace le jugement humain."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "À retenir",
+          "paragraphes": [
+            "Le SI transforme des données éparses en **informations utiles**, si elles sont fiables, structurées et protégées."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que fait l’instruction **WHERE**&nbsp;?",
+            "Qu’est-ce qu’une **clé étrangère**&nbsp;?",
+            "Que vérifie la **recette** d’un projet SI&nbsp;?"
+          ],
+          "reponses": "1) filtre les lignes · 2) un champ qui renvoie à une autre table · 3) que le système répond au besoin"
+        }
+      ]
+    }
+  ]
+}

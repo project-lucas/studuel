@@ -1,0 +1,175 @@
+{
+  "titre": "La phrase déclarative",
+  "titreSurligne": "déclarative",
+  "accroche": "Le verbe reste toujours en 2e place.",
+  "bonus": "**V2** · le 2<sup>e</sup> morceau du verbe **ferme** la phrase · **Te Ka Mo Lo** · datif avant accusatif",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/allemand/la-syntaxe-de-la-phrase-declarative.webp",
+    "prompt": "a glossy violet block with a golden number 2 shape and three small golden word-blocks around it, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Le verbe&nbsp;?\nToujours en 2e&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La règle V2",
+          "lignes": [
+            "groupe 1 · **verbe** · le reste"
+          ],
+          "petite": true,
+          "regle": "Le verbe conjugué occupe la **2<sup>e</sup> place** : le 2<sup>e</sup> **groupe**, pas forcément le 2<sup>e</sup> mot.",
+          "note": "autre chose ouvre ? sujet derrière"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Qui ouvre la phrase",
+          "entetes": [
+            "1<sup>re</sup> place",
+            "Verbe",
+            "Le reste"
+          ],
+          "lignes": [
+            [
+              "<i>Ich</i>",
+              "<i>fahre</i>",
+              "<i>morgen nach Berlin.</i>"
+            ],
+            [
+              "<i>Morgen</i>",
+              "<i>fahre</i>",
+              "<i>ich nach Berlin.</i>"
+            ],
+            [
+              "<i>Nach Berlin</i>",
+              "<i>fahre</i>",
+              "<i>ich morgen.</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "La parenthèse verbale",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Temps composé",
+              "texte": "<i>Ich **habe** gestern einen Film **gesehen**.</i> — l’auxiliaire ouvre, le participe ferme."
+            },
+            {
+              "titre": "Modal",
+              "texte": "<i>Ich **muss** heute Abend **arbeiten**.</i> — le modal ouvre, l’infinitif ferme."
+            },
+            {
+              "titre": "Préverbe séparable",
+              "texte": "<i>Ich **stehe** um sieben Uhr **auf**.</i> — le préverbe part à la fin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Inversion du sujet",
+          "oui": {
+            "titre": "Verbe en 2e place",
+            "texte": "<i>Heute **gehe** ich ins Kino.</i> (Aujourd’hui, je vais au cinéma.)"
+          },
+          "non": {
+            "titre": "Sujet resté devant",
+            "texte": "<i>Heute ich gehe ins Kino.</i> — calque du français : la faute la plus visible d’une copie."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Dann ich gehe nach Hause.</i> → <i>Dann **gehe ich** nach Hause.</i>"
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Construire la phrase",
+          "etapes": [
+            {
+              "titre": "Choisis la 1<sup>re</sup> place",
+              "texte": "Sujet, temps, lieu… un seul **groupe**."
+            },
+            {
+              "titre": "Verbe conjugué en 2<sup>e</sup>",
+              "texte": "Si ce n’est pas le sujet qui ouvre, il passe **derrière** le verbe."
+            },
+            {
+              "titre": "Ferme avec le 2<sup>e</sup> morceau",
+              "texte": "Participe, infinitif ou préverbe : tout à la **fin**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "L’ordre des compléments",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Te Ka Mo Lo",
+              "texte": "**Te**mporel, **Ka**usal, **Mo**dal, **Lo**kal : <i>morgen, wegen der Arbeit, mit dem Zug, nach München</i>."
+            },
+            {
+              "titre": "Datif puis accusatif",
+              "texte": "<i>Ich gebe **dem Kind das Buch**.</i>"
+            },
+            {
+              "titre": "Pronom en premier",
+              "texte": "<i>Ich gebe **es** dem Kind.</i> — l’accusatif pronom passe devant."
+            },
+            {
+              "titre": "Tout entre les deux",
+              "texte": "les compléments se placent **dans** la parenthèse verbale."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Heute er geht</i> → <i>Heute **geht er**.</i>",
+            "<i>Ich habe gesehen einen Film</i> → participe **à la fin**.",
+            "<i>Ich gebe das Buch dem Kind</i> → <i>…**dem Kind das Buch**</i> (ou <i>es dem Kind</i>).",
+            "<i>nach München mit dem Zug</i> → <i>**mit dem Zug nach München**</i> (Mo avant Lo)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Commence par <i>gestern</i>&nbsp;: <i>Ich habe ein Buch gelesen.</i>",
+            "Place <i>auf</i>&nbsp;: <i>Ich (aufstehen) um sieben Uhr.</i>",
+            "<i>Ich gebe ___ (le livre = es) dem Kind.</i> — où mettre <i>es</i>&nbsp;?"
+          ],
+          "reponses": "1) Gestern habe ich ein Buch gelesen 2) stehe… auf 3) Ich gebe es dem Kind"
+        }
+      ]
+    }
+  ]
+}

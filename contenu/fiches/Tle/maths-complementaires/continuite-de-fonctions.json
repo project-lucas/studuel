@@ -1,0 +1,169 @@
+{
+  "titre": "Continuité",
+  "titreSurligne": "Continuité",
+  "accroche": "Passe-t-elle forcément par cette valeur ?",
+  "epreuve": "bac",
+  "bonus": "continue → existence · strictement monotone → unicité · algorithme → valeur approchée",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-complementaires/continuite-de-fonctions.webp",
+    "prompt": "a glossy violet unbroken curve crossing a golden horizontal line at one sparkling point"
+  },
+  "marcel": "Sans lever\nle crayon !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le théorème des valeurs intermédiaires",
+          "taille": "mini",
+          "lignes": [
+            "f continue sur [a ; b]",
+            "k entre f(a) et f(b)",
+            "f(x) = k a une solution"
+          ],
+          "regle": "Si de plus f est **strictement monotone**, la solution est ==unique==. Une grandeur qui passe de 12 à 40 passe forcément par 25.",
+          "note": "f continue : sinon, pas de théorème"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Continue ou pas ?",
+          "entetes": [
+            "Modèle",
+            "Continuité"
+          ],
+          "lignes": [
+            [
+              "Polynôme, exp, ln, racine",
+              "**continu**"
+            ],
+            [
+              "Tarif par tranches",
+              "**discontinu**"
+            ],
+            [
+              "Nombre d’individus",
+              "**discontinu**"
+            ],
+            [
+              "Dérivable ?",
+              "alors **continue** (réciproque fausse)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Montrer qu’une équation a une solution",
+          "etapes": [
+            {
+              "titre": "Continuité",
+              "texte": "f est continue sur l’intervalle"
+            },
+            {
+              "titre": "Monotonie",
+              "texte": "f est strictement croissante (ou décroissante)"
+            },
+            {
+              "titre": "Encadrer k",
+              "texte": "f(a) < k < f(b)"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "une unique solution α"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = x³ + x − 5 sur [1 ; 2]. __Montre que f(x) = 0 a une unique solution.__",
+          "calcul": "f continue ; f′(x) = 3x² + 1 > 0 donc f strictement croissante",
+          "aparte": "f(1) = −3 < 0 < 5 = f(2)",
+          "resultat": "une unique solution [[α]] dans [1&nbsp;; 2]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Existence",
+              "texte": "donnée par la **continuité** (TVI)."
+            },
+            {
+              "titre": "Unicité",
+              "texte": "donnée par la stricte **monotonie**."
+            },
+            {
+              "titre": "Balayage",
+              "texte": "évaluer de proche en proche, **pas** décroissant."
+            },
+            {
+              "titre": "Dichotomie",
+              "texte": "couper en deux&nbsp;: précision **divisée par 2** à chaque étape."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "f est continue et strictement croissante sur [1 ; 2]",
+              "quoi": "les hypothèses"
+            },
+            {
+              "texte": "f(1) = −3 < 0 < 5 = f(2)",
+              "quoi": "l’encadrement de k = 0"
+            },
+            {
+              "texte": "Donc f(x) = 0 admet une unique solution α.",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Dichotomie&nbsp;: milieu 1,5, f(1,5) = ==−0,125 < 0==, donc α ∈ [1,5 ; 2]."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Appliquer le théorème à un modèle **discret**.",
+            "Oublier la **stricte monotonie** et conclure à l’unicité.",
+            "Oublier d’**encadrer k** entre f(a) et f(b).",
+            "Croire que le théorème donne la **valeur**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "f continue, f(0) = −2, f(4) = 7&nbsp;: **f(x) = 0** a… ?",
+            "Quelle condition donne l’**unicité**&nbsp;?",
+            "Premier **milieu** de la dichotomie sur [1 ; 2]&nbsp;?"
+          ],
+          "reponses": "1) au moins une solution (TVI) · 2) stricte monotonie · 3) 1,5"
+        }
+      ]
+    }
+  ]
+}

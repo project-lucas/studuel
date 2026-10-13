@@ -1,0 +1,184 @@
+{
+  "titre": "Transmission, couples",
+  "titreSurligne": "couples",
+  "accroche": "Échanger de la vitesse contre du couple.",
+  "epreuve": "bac",
+  "bonus": "**v = R ω** · **ω = 2πN / 60** · **P = C ω** · **ΣF = m a**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/i2d/transmission-de-puissance-cinematique-et-dynamique.webp",
+    "prompt": "a glossy violet gear train with a golden winch drum and a rope, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Moins vite,\nplus de couple !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Vitesse, rapport, couple",
+          "taille": "mini",
+          "lignes": [
+            "k = {ω sortie/ω entrée}",
+            "P = C × ω"
+          ],
+          "regle": "Engrenage : k = ==Z entrée / Z sortie==. Plusieurs étages : on ==multiplie==. C sortie = {η × C entrée/k}.",
+          "note": "réducteur : k &lt; 1"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Transmetteurs",
+          "entetes": [
+            "Type",
+            "Rapport"
+          ],
+          "lignes": [
+            [
+              "**Engrenage**",
+              "Z entrée / Z sortie"
+            ],
+            [
+              "**Poulies-courroie**",
+              "D entrée / D sortie"
+            ],
+            [
+              "**Vis-écrou**",
+              "v = pas × N / 60"
+            ],
+            [
+              "**Pignon-crémaillère**",
+              "v = R × ω"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Suivre la chaîne",
+          "etapes": [
+            {
+              "titre": "Entrée",
+              "texte": "ω moteur = 2πN / 60"
+            },
+            {
+              "titre": "Rapport",
+              "texte": "k = produit des étages"
+            },
+            {
+              "titre": "Sortie",
+              "texte": "ω, puis C = η P / ω, puis F = C / R"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Moteur __1 500 tr/min__, __500 W__, k = 1/16, η = __0,9__, tambour R = __0,1 m__.",
+          "calcul": "ω = 157 rad/s · ω tamb = 9,8 rad/s",
+          "aparte": "P = 450 W · C = 450 / 9,8",
+          "resultat": "F = C / R = [[460 N]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Démarrage ou régime établi&nbsp;?",
+          "oui": {
+            "titre": "Démarrage",
+            "texte": "Effort **résistant + d’accélération** : il dimensionne le moteur."
+          },
+          "non": {
+            "titre": "Établi",
+            "texte": "Seul l’effort **résistant** s’applique."
+          },
+          "essai": {
+            "texte": "Chariot de 200 kg à 1 m/s en 2 s : <i>100 N</i> d’accélération + 60 N, soit 160 N."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Translation",
+              "texte": "ΣF = m × a"
+            },
+            {
+              "titre": "Rotation",
+              "texte": "ΣC = J × dω/dt"
+            },
+            {
+              "titre": "Bielle-manivelle",
+              "texte": "loi entrée-sortie non constante"
+            },
+            {
+              "titre": "Rendement",
+              "texte": "P sortie = η × P entrée"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "ω = 2π × 1 500 / 60 ≈ 157 rad/s",
+              "quoi": "l’entrée"
+            },
+            {
+              "texte": "k = 0,25 × 0,25 = 1/16, ω = 9,8 rad/s",
+              "quoi": "le rapport"
+            },
+            {
+              "texte": "C = 0,9 × 500 / 9,8 ≈ 46 N·m",
+              "quoi": "le couple"
+            }
+          ],
+          "pied": "La ==formule==, l’==application== avec ==unités==, puis la ==comparaison== au critère."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier de convertir les **tr/min** en rad/s.",
+            "Inverser **k** : sortie sur entrée, non l’inverse.",
+            "Négliger le **rendement** η.",
+            "Dimensionner sur le régime établi, pas le **démarrage**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que vaut **ω** pour N = 60 tr/min&nbsp;?",
+            "Que fait un **réducteur** au couple&nbsp;?",
+            "Quelle formule lie **puissance** et couple&nbsp;?"
+          ],
+          "reponses": "1) 2π ≈ 6,28 rad/s · 2) il l’augmente (et baisse la vitesse) · 3) P = C × ω"
+        }
+      ]
+    }
+  ]
+}

@@ -91,6 +91,14 @@ b, strong { font-weight: 900; }
 .egalite.mini .egal { font-size: 17px; }
 .egalite.mini .frac span:last-child { border-top-width: 3px; padding-top: 3px; }
 .egalite sup, .calcul sup, .resultat sup { font-size: 0.55em; line-height: 0; vertical-align: 0.55em; }
+/* Un exposant ou un indice posé À MÊME une ligne de formule ou un calcul de post-it est un ITEM de leur
+   grille flex : vertical-align n'y joue pas (il restait à la ligne de base) et le gap l'écartait de sa base.
+   On le recolle (marge négative = le gap de colonne) et on le lève ou le descend par l'alignement. */
+.egalite > sup, .egalite > sub, .calcul > sup, .calcul > sub { line-height: 1; margin-left: -13px; }
+.egalite.mini > sup, .egalite.mini > sub { margin-left: -9px; }
+.calcul > sup, .calcul > sub { margin-left: -10px; }
+.egalite > sup, .calcul > sup { transform: translateY(-40%); }
+.egalite > sub, .calcul > sub { transform: translateY(35%); }
 sup { font-size: 0.72em; line-height: 0; vertical-align: 0.4em; }
 sub { font-size: 0.72em; line-height: 0; vertical-align: -0.2em; }
 .egalite + .egalite { margin-top: 6px; }

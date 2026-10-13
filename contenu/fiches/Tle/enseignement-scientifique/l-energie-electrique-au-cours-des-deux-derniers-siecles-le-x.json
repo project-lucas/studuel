@@ -1,0 +1,173 @@
+{
+  "titre": "L’électricité, XIXe",
+  "titreSurligne": "XIXe",
+  "accroche": "De la pile de Volta aux premiers réseaux.",
+  "bonus": "**1800** pile · **1820** Œrsted · **1831** induction · **1869** dynamo · **1879** lampe d’Edison · **1 kWh = 3,6 × 10<sup>6</sup> J**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/enseignement-scientifique/l-energie-electrique-au-cours-des-deux-derniers-siecles-le-x.webp",
+    "prompt": "a glossy violet voltaic pile of stacked discs with a golden light bulb glowing above it and tiny sparks, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Un aimant qui tourne,\net la lumière !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "Les découvertes et les machines",
+          "horizontale": true,
+          "etapes": [
+            {
+              "date": "1800",
+              "texte": "**Volta** : la **pile**, courant continu"
+            },
+            {
+              "date": "1820",
+              "texte": "**Œrsted** : électricité et magnétisme liés"
+            },
+            {
+              "date": "1831",
+              "texte": "**Faraday** : **induction** électromagnétique"
+            },
+            {
+              "date": "1869",
+              "texte": "**Gramme** : la **dynamo** industrielle"
+            },
+            {
+              "date": "1879",
+              "texte": "**Edison** : lampe à **incandescence**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "!",
+          "titre": "L’induction, principe de tout",
+          "paragraphes": [
+            "Faire tourner un **aimant devant des bobines** produit du courant. Centrale nucléaire, barrage, éolienne : seul change **ce qui fait tourner l’aimant**. La même machine est **générateur** (mécanique → électrique) ou **moteur** (l’inverse)."
+          ],
+          "teinte": "jaune"
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Puissance et énergie",
+          "petite": true,
+          "lignes": [
+            "P = U × I",
+            "E = P × t"
+          ],
+          "regle": "**P** en W, **U** en V, **I** en A, **E** en J, **t** en s. **1 kWh = 3,6 × 10<sup>6</sup> J**.",
+          "note": "rendement = utile ÷ reçue"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Dynamo et alternateur",
+          "entetes": [
+            "Machine",
+            "Apporte"
+          ],
+          "lignes": [
+            [
+              "**Dynamo** (1869)",
+              "courant en quantité industrielle"
+            ],
+            [
+              "**Alternateur**",
+              "courant **alternatif**"
+            ]
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Le rendement",
+          "deux": false,
+          "items": [
+            {
+              "titre": "Définition",
+              "texte": "énergie **utile** ÷ énergie **reçue**"
+            },
+            {
+              "titre": "Valeur",
+              "texte": "toujours **inférieur à 1**"
+            },
+            {
+              "titre": "L’écart",
+              "texte": "part en **chaleur** : conversion irréversible"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une lampe de 60 W reste allumée 5 h. __Énergie en kWh__&nbsp;?",
+          "calcul": "E = 0,060 kW × 5 h",
+          "aparte": "P en kW",
+          "resultat": "E = [[0,30 kWh]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **puissance** (W) et **énergie** (J, kWh).",
+            "Croire que la **pile** produit du courant alternatif : il est continu.",
+            "Oublier de passer les **W en kW** avant de calculer des kWh.",
+            "Penser qu’un rendement peut valoir **1** ou plus."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "En **1831**, Faraday découvre l’**induction** : un aimant mobile devant une bobine crée un courant.",
+              "quoi": "principe"
+            },
+            {
+              "texte": "Elle fonde **toute** la production actuelle : seule la source de rotation change.",
+              "quoi": "portée"
+            },
+            {
+              "texte": "La conversion a un **rendement < 1** : le reste part en chaleur.",
+              "quoi": "limite"
+            }
+          ],
+          "pied": "date → principe → portée"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel savant découvre l’**induction** en 1831&nbsp;?",
+            "Quelle formule donne la **puissance** électrique&nbsp;?",
+            "Que devient l’énergie « perdue » d’une conversion&nbsp;?"
+          ],
+          "reponses": "1) Faraday · 2) P = U × I · 3) de la chaleur"
+        }
+      ]
+    }
+  ]
+}

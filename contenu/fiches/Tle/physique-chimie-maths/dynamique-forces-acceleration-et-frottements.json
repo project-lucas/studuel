@@ -1,0 +1,113 @@
+{
+  "titre": "Forces et mouvement",
+  "titreSurligne": "mouvement",
+  "epreuve": "bac",
+  "accroche": "La force change la vitesse.",
+  "bonus": "ΣF = m × a · v = dx/dt · a = dv/dt · F = ½ρSC<sub>x</sub>v² · ΔE<sub>c</sub> = ΣW",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie-maths/dynamique-forces-acceleration-et-frottements.webp",
+    "prompt": "a glossy violet toy car speeding with golden force arrows and small golden speed lines, sparkles"
+  },
+  "marcel": "Pas de force,\npas de changement !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le principe fondamental",
+          "petite": true,
+          "lignes": ["ΣF = m × a"],
+          "regle": "**F** en N, **m** en kg, **a** en m/s². Avec v = dx/dt et a = dv/dt. Même direction, même sens.",
+          "note": "force = variation de v"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Lire la somme",
+          "entetes": ["Si", "Alors", "Exemple"],
+          "lignes": [
+            ["ΣF = 0", "v constante ou repos", "roule à vitesse stable"],
+            ["ΣF dans le sens", "il accélère", "démarrage"],
+            ["ΣF opposée", "il ralentit", "freinage"],
+            ["Poids seul (aucun frottement)", "a = g ≈ 9,81 m/s²", "chute libre"],
+            ["Chute de 2 s", "v ≈ 19,6 m/s", "h ≈ 19,6 m"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Système", "texte": "le définir, puis faire le bilan des forces extérieures" },
+            { "titre": "Choisir", "texte": "ΣF = m × a pour une accélération&nbsp;; ΔE<sub>c</sub> = ΣW pour des distances et des vitesses" },
+            { "titre": "Calculer", "texte": "en unités SI&nbsp;: km/h ÷ 3,6 pour des m/s" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Voiture de 1 200 kg, de 0 à 100 km/h (27,8 m/s) en 10 s. La __force__ résultante&nbsp;?",
+          "calcul": "a = 27,8 ÷ 10 = 2,78 m/s²",
+          "aparte": "puis m × a",
+          "resultat": "ΣF = 1 200 × 2,78 ≈ [[3 340 N]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Les frottements",
+          "oui": { "titre": "Fluide (air, eau)", "texte": "**F = ½ × ρ × S × C<sub>x</sub> × v²**&nbsp;: la traînée croît avec le **carré** de la vitesse." },
+          "non": { "titre": "Avancer exige F", "texte": "Faux&nbsp;: à vitesse constante, la force motrice **compense** les frottements, ΣF = 0." },
+          "essai": { "texte": "S × C<sub>x</sub> = 0,7 m², 30 m/s&nbsp;: F = <i>0,5 × 1,2 × 0,7 × 900 ≈ 378 N</i>, soit P = F × v ≈ 11,3 kW." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Système&nbsp;: le palet de 0,5 kg lancé à 4 m/s. Seul le frottement travaille.", "quoi": "le bilan" },
+            { "texte": "ΔE<sub>c</sub> = 0 − ½ × 0,5 × 4² = −4 J = −f × 8", "quoi": "théorème de E<sub>c</sub>" },
+            { "texte": "f = 4 ÷ 8 = 0,5 N", "quoi": "avec l’unité, en newtons" }
+          ],
+          "pied": "Chute libre&nbsp;: a = g **quelle que soit la masse**, v = g × t et h = ==½ × g × t²==. On valide ce modèle en pointant une vidéo de chute."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’une force est **nécessaire** pour avancer à vitesse constante.",
+            "Garder des **km/h** dans ΣF = m × a, qui veut des **m/s**, des kg et des newtons.",
+            "Oublier que la traînée varie en **v²**.",
+            "Oublier le **signe** de ΔE<sub>c</sub>&nbsp;: toujours final − initial."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**a** pour ΣF = 100 N et m = 20 kg&nbsp;?",
+            "Vitesse ×&nbsp;2&nbsp;: la traînée est multipliée par&nbsp;?",
+            "Chute libre de 2 s&nbsp;: **v**&nbsp;?"
+          ],
+          "reponses": "1) 5 m/s² · 2) 4 · 3) v = g × t ≈ 19,6 m/s"
+        }
+      ]
+    }
+  ]
+}

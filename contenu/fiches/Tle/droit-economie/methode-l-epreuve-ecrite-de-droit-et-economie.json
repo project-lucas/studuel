@@ -1,0 +1,131 @@
+{
+  "titre": "L’épreuve écrite",
+  "titreSurligne": "écrite",
+  "accroche": "Quatre heures, deux méthodes.",
+  "epreuve": "bac",
+  "bonus": "**4 h** · droit **/10** (dont 1,5 orthographe) · économie **/10** (dont 0,5) · session **2027**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/droit-economie/methode-l-epreuve-ecrite-de-droit-et-economie.webp",
+    "prompt": "a glossy violet exam paper with a golden pen and a small golden hourglass, tiny golden sparkles, same art style as the reference icons, on a magenta background, no text, no numbers"
+  },
+  "marcel": "Une méthode,\net les points suivent !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le barème",
+          "entetes": ["Partie", "Points", "Orthographe"],
+          "lignes": [
+            ["**Juridique**", "10", "1,5 point"],
+            ["**Économique**", "10", "0,5 point"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les mots clés",
+          "items": [
+            { "terme": "Syllogisme juridique", "definition": "règle (majeure), faits (mineure), **solution**" },
+            { "terme": "AEI", "definition": "**A**ffirmer, **E**xpliquer, **I**llustrer" },
+            { "terme": "Phrase de lecture", "definition": "une donnée, sa **source** et sa **date**" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le cas pratique en cinq temps",
+          "etapes": [
+            { "titre": "Faits", "texte": "résumés et qualifiés" },
+            { "titre": "Problème de droit", "texte": "général, sans les noms" },
+            { "titre": "Règle", "texte": "avec sa source" },
+            { "titre": "Application", "texte": "faits contre conditions" },
+            { "titre": "Solution", "texte": "réponse nette" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie (droit)",
+          "lignes": [
+            { "texte": "Mme Petit est consommatrice ; le contrat est conclu à distance.", "quoi": "qualifier" },
+            { "texte": "Le consommateur a 14 jours pour se rétracter sans se justifier.", "quoi": "règle" },
+            { "texte": "Elle agit au 7e jour : elle peut être remboursée.", "quoi": "appliquer" }
+          ],
+          "pied": "Ne saute jamais l’==application== : c’est là que se gagnent les points."
+        },
+        {
+          "type": "postit",
+          "titre": "Taux de variation",
+          "donnees": "Un prix passe de 10 € à 11 €.",
+          "calcul": "(11 − 10) ÷ 10 × 100.",
+          "resultat": "[[+ 10 %]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "La partie économique",
+          "deux": true,
+          "items": [
+            { "titre": "Expliquer", "texte": "notions et **mécanismes**" },
+            { "titre": "Interpréter", "texte": "tableaux, graphiques" },
+            { "titre": "Calculer", "texte": "variation, taux, solde, part" },
+            { "titre": "Argumenter", "texte": "introduction, deux temps, **conclusion**" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Passer de la règle à la **conclusion** sans appliquer.",
+            "Citer des **noms propres** dans le problème de droit.",
+            "Oublier **source**, date et unité.",
+            "Bâcler la **relecture** : 2 points d’orthographe."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 5,
+          "titre": "Gérer ses 4 heures",
+          "entetes": ["Temps", "Conseil"],
+          "lignes": [
+            ["**Début**", "lire tout le sujet, repérer les questions faciles"],
+            ["**2 h par partie**", "commencer par celle où l’on est le plus à l’aise"],
+            ["**10 dernières minutes**", "relire l’orthographe"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de **parties** et de points compte l’épreuve ?",
+            "Que signifie **AEI** ?",
+            "À quoi servent les **10 dernières minutes** ?"
+          ],
+          "reponses": "1) deux, 10 points chacune · 2) affirmer, expliquer, illustrer · 3) relire"
+        }
+      ]
+    }
+  ]
+}

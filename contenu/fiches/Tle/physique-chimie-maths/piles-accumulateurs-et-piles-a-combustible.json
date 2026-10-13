@@ -1,0 +1,112 @@
+{
+  "titre": "Piles et accumulateurs",
+  "titreSurligne": "accumulateurs",
+  "epreuve": "bac",
+  "accroche": "Stocker du chimique, rendre de l’électrique.",
+  "bonus": "E = U × Q (Wh) · 1 Ah = 3 600 C · n(e⁻) = Q ÷ 96 500 · 2 H<sub>2</sub> + O<sub>2</sub> → 2 H<sub>2</sub>O",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie-maths/piles-accumulateurs-et-piles-a-combustible.webp",
+    "prompt": "a glossy violet rechargeable battery with a golden lightning bolt, small golden charge arrows going in and out, sparkles"
+  },
+  "marcel": "Je charge, je décharge,\nje recommence !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’énergie stockée",
+          "petite": true,
+          "lignes": ["E = U × Q"],
+          "regle": "**E** en Wh si **U** en V et **Q** (capacité) en Ah. Avec 1 Ah = 3 600 C. Énergie massique en Wh/kg, volumique en Wh/L.",
+          "note": "lis la fiche technique&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Quel générateur&nbsp;?",
+          "entetes": ["Type", "Sens", "Exemple"],
+          "lignes": [
+            ["Pile", "un seul sens, jetable", "pile alcaline"],
+            ["Accumulateur", "**réversible**", "lithium-ion"],
+            ["Pile à combustible", "réactifs **en continu**", "véhicule H<sub>2</sub>"],
+            ["Batterie", "série&nbsp;: U s’additionne", "dérivation&nbsp;: Q s’additionne"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "anode (borne −, oxydation) et cathode (borne +, réduction) en décharge" },
+            { "titre": "Convertir", "texte": "Q en coulombs ou en Ah, puis E = U × Q en Wh" },
+            { "titre": "Conclure", "texte": "autonomie = E ÷ P, ou n(e⁻) = Q ÷ 96 500 pour la matière" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Batterie de vélo 48 V, 13 Ah, moteur de 250 W. Son __autonomie__ à pleine puissance&nbsp;?",
+          "calcul": "E = U × Q = 48 × 13 = 624 Wh",
+          "aparte": "puis E ÷ P",
+          "resultat": "t = 624 ÷ 250 ≈ [[2,5 h]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Pile à combustible",
+          "oui": { "titre": "Anode et cathode", "texte": "Anode&nbsp;: H<sub>2</sub> → 2 H⁺ + 2 e⁻. Cathode&nbsp;: O<sub>2</sub> + 4 H⁺ + 4 e⁻ → 2 H<sub>2</sub>O. Bilan&nbsp;: **2 H<sub>2</sub> + O<sub>2</sub> → 2 H<sub>2</sub>O**." },
+          "non": { "titre": "« Elle ne pollue pas »", "texte": "Elle ne rejette que de l’eau, mais son **bilan carbone** dépend de la production du dihydrogène." },
+          "essai": { "texte": "10 A pendant 1 h&nbsp;: Q = <i>36 000 C</i>, n(e⁻) ≈ <i>0,373 mol</i>, donc n(H<sub>2</sub>) ≈ <i>0,187 mol</i>, soit 0,37 g." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Q = 13 Ah = 13 × 3 600 = 46 800 C", "quoi": "la conversion" },
+            { "texte": "E = U × Q = 48 × 13 = 624 Wh", "quoi": "formule puis nombres" },
+            { "texte": "Autonomie = 624 ÷ 250 ≈ 2,5 h", "quoi": "avec l’unité" }
+          ],
+          "pied": "En charge, un ==générateur extérieur== force la réaction **inverse**&nbsp;: c’est la réversibilité."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **pile** (un sens) et **accumulateur** (réversible).",
+            "Mélanger **Ah** et **Wh** (il manque la tension).",
+            "Inverser **anode** et **cathode** en décharge.",
+            "Oublier que **2 e⁻** sont échangés par H<sub>2</sub>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**E** d’une batterie de 12 V, 50 Ah, en Wh&nbsp;?",
+            "**Q** en coulombs pour 2 Ah&nbsp;?",
+            "À l’**anode** d’une pile en décharge&nbsp;: oxydation ou réduction&nbsp;?"
+          ],
+          "reponses": "1) 600 Wh · 2) 7 200 C · 3) oxydation (borne −)"
+        }
+      ]
+    }
+  ]
+}

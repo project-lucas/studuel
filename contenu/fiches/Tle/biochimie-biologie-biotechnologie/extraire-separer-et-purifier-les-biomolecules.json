@@ -1,0 +1,132 @@
+{
+  "titre": "Séparer et purifier",
+  "titreSurligne": "purifier",
+  "accroche": "Du broyat à la protéine pure.",
+  "epreuve": "bac",
+  "bonus": "Anode **+** · cathode **−** · une molécule négative migre vers l’**anode** · au pHi : **pas de migration**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/biochimie-biologie-biotechnologie/extraire-separer-et-purifier-les-biomolecules.webp",
+    "prompt": "a glossy violet chromatography column with golden beads and a drop of golden liquid, a small electrophoresis gel with glowing bands, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Chaque étape\ntrie autrement&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Fractionner",
+          "items": [
+            {
+              "terme": "Filtration",
+              "definition": "**rétentat** (retenu) et **filtrat** (passé)."
+            },
+            {
+              "terme": "Centrifugation",
+              "definition": "**culot** dense, **surnageant** au-dessus."
+            }
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Électrophorèse",
+          "items": [
+            {
+              "titre": "Protéines",
+              "texte": "charge selon le **pH du tampon** par rapport au pHi."
+            },
+            {
+              "titre": "ADN",
+              "texte": "tous vers l’anode, séparés par la **taille** : les petits vont plus loin."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Chromatographies",
+          "entetes": [
+            "Type",
+            "Critère",
+            "Sortent en premier"
+          ],
+          "lignes": [
+            [
+              "**Exclusion**",
+              "taille",
+              "les **grosses** molécules"
+            ],
+            [
+              "**Échange d’ions**",
+              "charge",
+              "même charge que la résine, ou neutres"
+            ],
+            [
+              "**Affinité**",
+              "ligand fixé",
+              "tout sauf la cible (décrochée ensuite)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 4,
+          "titre": "Suivre une purification",
+          "teinte": "jaune",
+          "petite": true,
+          "lignes": [
+            "Act. spécifique = {activité totale/masse de protéines}",
+            "Rendement = {act. totale étape/act. totale départ} × 100",
+            "Enrichissement = {act. spécifique étape/act. spécifique départ}"
+          ],
+          "regle": "Une bonne étape **augmente l’activité spécifique** en perdant le moins d’activité possible.",
+          "note": "U·mg<sup>−1</sup>"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Brut : 200 U, 400 mg (0,5 U/mg). Après colonne : 120 U, 20 mg (6 U/mg).",
+          "calcul": "rendement = 120 / 200 = 60 %",
+          "aparte": "perdu : 40 %",
+          "resultat": "enrichissement = 6 / 0,5 = [[12]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "En **exclusion**, les grosses molécules sortent **avant** les petites (l’inverse du gel d’ADN).",
+            "Jeter une fraction **avant** d’avoir vérifié où est la cible.",
+            "Confondre **culot** et **surnageant**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Vers quelle électrode migre une molécule **négative**&nbsp;?",
+            "Quel est le **rendement** : 60 U conservées sur 200 U&nbsp;?",
+            "Quelles molécules sortent **d’abord** en exclusion&nbsp;?"
+          ],
+          "reponses": "1) l’anode (+) · 2) 60 / 200 = 30 % · 3) les plus grosses"
+        }
+      ]
+    }
+  ]
+}

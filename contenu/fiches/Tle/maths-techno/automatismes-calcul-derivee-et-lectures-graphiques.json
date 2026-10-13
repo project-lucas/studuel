@@ -1,0 +1,184 @@
+{
+  "titre": "Calcul et dérivée",
+  "titreSurligne": "dérivée",
+  "accroche": "Dériver, lire une pente, trouver un signe.",
+  "epreuve": "bac",
+  "bonus": "(xⁿ)′ = n xⁿ⁻¹ · pente de la tangente en a = f′(a) · a² − b² = (a − b)(a + b)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-techno/automatismes-calcul-derivee-et-lectures-graphiques.webp",
+    "prompt": "a glossy violet curve with a golden tangent line touching it at one point, tiny golden sparkles"
+  },
+  "marcel": "Dérive terme\nà terme !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Dériver un polynôme",
+          "entetes": [
+            "f(x)",
+            "f′(x)"
+          ],
+          "lignes": [
+            [
+              "k",
+              "0"
+            ],
+            [
+              "x",
+              "1"
+            ],
+            [
+              "x²",
+              "2x"
+            ],
+            [
+              "x³",
+              "3x²"
+            ],
+            [
+              "2x³ − 5x² + 4x − 1",
+              "**6x² − 10x + 4**"
+            ],
+            [
+              "−x² + 6",
+              "−2x"
+            ],
+            [
+              "x³ + 3x",
+              "3x² + 3"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Pente et différence de carrés",
+          "petite": true,
+          "lignes": [
+            "pente de la tangente en a = f′(a)",
+            "a² − b² = (a − b)(a + b)"
+          ],
+          "regle": "Sur un graphique&nbsp;: pente = ==(y<sub>B</sub> − y<sub>A</sub>) ÷ (x<sub>B</sub> − x<sub>A</sub>)==. Exemple&nbsp;: x² − 9 = (x − 3)(x + 3).",
+          "note": "Le signe de f′ donne les variations&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Dériver",
+              "texte": "terme à terme, puis factoriser f′(x) si possible"
+            },
+            {
+              "titre": "Signe de f′",
+              "texte": "imaginer la parabole : a &gt; 0 vers le haut, a &lt; 0 vers le bas"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "f′ &gt; 0 : f croissante · f′ &lt; 0 : f décroissante"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = x³ − 3x². __Variations et pente en 1__&nbsp;?",
+          "calcul": "f′(x) = 3x² − 6x = 3x(x − 2)\nf′ &lt; 0 sur ]0 ; 2[",
+          "aparte": "f′(1) = 3 − 6",
+          "resultat": "f décroît sur [0 ; 2] ; pente en 1 : [[−3]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Parabole mentale",
+              "texte": "(x − 1)(x − 3) &lt; 0 sur **]1 ; 3[** (branches vers le haut)."
+            },
+            {
+              "titre": "Inégalité",
+              "texte": "Multiplier par un négatif **change le sens**."
+            },
+            {
+              "titre": "x² = a",
+              "texte": "Deux solutions si a &gt; 0, **aucune** si a &lt; 0."
+            },
+            {
+              "titre": "Isoler",
+              "texte": "P = U × I donne I = **P ÷ U**."
+            },
+            {
+              "titre": "Puissances",
+              "texte": "10³ × 10<sup>−5</sup> = **10<sup>−2</sup>** · (2³)² = 2⁶."
+            },
+            {
+              "titre": "Écriture scientifique",
+              "texte": "0,000 32 = **3,2 × 10<sup>−4</sup>**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "f′(x) = 3x² − 6x = 3x(x − 2)",
+              "quoi": "la dérivée"
+            },
+            {
+              "texte": "f′(x) &lt; 0 sur ]0 ; 2[, &gt; 0 ailleurs",
+              "quoi": "le signe"
+            },
+            {
+              "texte": "f décroissante sur [0 ; 2]",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Contrôle&nbsp;: f′(1) = ==−3== &lt; 0, la courbe descend. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dériver une **constante** : f′ vaut 0, pas k.",
+            "Écrire (x²)′ = **x**&nbsp;: c’est 2x.",
+            "Oublier le **changement de sens** avec un coefficient négatif.",
+            "Confondre f′(a) (la pente) et **f(a)** (la hauteur)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dériver **f(x) = x³ − 4x + 7**&nbsp;?",
+            "**Factoriser** x² − 25&nbsp;?",
+            "Pente de la tangente à f(x) = x² en **a = 3**&nbsp;?"
+          ],
+          "reponses": "1) 3x² − 4 · 2) (x − 5)(x + 5) · 3) f′(3) = 6"
+        }
+      ]
+    }
+  ]
+}

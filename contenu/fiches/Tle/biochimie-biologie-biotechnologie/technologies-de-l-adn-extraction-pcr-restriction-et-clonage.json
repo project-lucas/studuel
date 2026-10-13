@@ -1,0 +1,131 @@
+{
+  "titre": "Technologies de l’ADN",
+  "titreSurligne": "ADN",
+  "accroche": "Copier, couper, coller le vivant.",
+  "epreuve": "bac",
+  "bonus": "A260/A280 ≈ **1,8** = ADN pur · 1 unité A260 ≈ **50 µg/mL** · EcoRI : G↓AATTC",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/biochimie-biologie-biotechnologie/technologies-de-l-adn-extraction-pcr-restriction-et-clonage.webp",
+    "prompt": "a glossy violet DNA double helix with golden base pairs and a golden pair of scissors cutting it, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Couper, copier,\ncoller&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Un cycle de PCR",
+          "entetes": ["Étape", "T", "Rôle"],
+          "lignes": [
+            ["**Dénaturation**", "≈ 95 °C", "brins séparés"],
+            ["**Hybridation**", "50-65 °C", "amorces fixées"],
+            ["**Élongation**", "72 °C", "Taq synthétise"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Après n cycles",
+          "teinte": "jaune",
+          "petite": true,
+          "lignes": ["jusqu’à 2<sup>n</sup> copies"],
+          "regle": "30 cycles ≈ un milliard de copies. Les **amorces** décident la région copiée.",
+          "note": "spécificité"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Préparer l’ADN",
+          "etapes": [
+            { "titre": "Lyser", "texte": "détergent, puis **protéase** : on retire les protéines et les nucléases" },
+            { "titre": "Précipiter", "texte": "éthanol froid : l’ADN forme une **pelote**" },
+            { "titre": "Contrôler", "texte": "spectrophotomètre : **concentration** (A260) et **pureté** (A260/A280)" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 4,
+          "titre": "Restriction",
+          "items": [
+            { "terme": "Site", "definition": "courte séquence **palindromique**." },
+            { "terme": "Bouts collants", "definition": "coupure décalée : se réassocient." },
+            { "terme": "Bouts francs", "definition": "coupure droite." },
+            { "terme": "Fragments", "definition": "linéaire : **n + 1** ; circulaire : **n**." }
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Un vecteur de clonage",
+          "items": [
+            { "titre": "Origine de réplication", "texte": "il se copie." },
+            { "titre": "Site de clonage", "texte": "où coller le gène." },
+            { "titre": "Marqueur", "texte": "résistance à un **antibiotique**." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 6,
+          "titre": "Cloner un gène",
+          "horizontale": true,
+          "etapes": [
+            { "date": "1", "texte": "Digestion du vecteur et du gène" },
+            { "date": "2", "texte": "Ligation (ligase)" },
+            { "date": "3", "texte": "Transformation de bactéries compétentes" },
+            { "date": "4", "texte": "Sélection sur antibiotique" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Plasmide circulaire coupé par une enzyme à 3 sites. Combien de fragments&nbsp;?",
+          "calcul": "circulaire : n sites → n fragments",
+          "aparte": "linéaire : n + 1",
+          "resultat": "[[3 fragments]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Penser que toute bactérie qui pousse porte le **gène**&nbsp;: elle a un plasmide, pas forcément le recombinant.",
+            "Oublier le **témoin négatif** (sans ADN) en PCR.",
+            "Compter n + 1 fragments sur un **plasmide**.",
+            "Travailler sans **gants** : nos nucléases dégradent l’ADN."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle **enzyme** synthétise le brin à 72&nbsp;°C&nbsp;?",
+            "À quoi servent les **amorces** en PCR&nbsp;?",
+            "Quelle enzyme **soude** le gène au plasmide&nbsp;?"
+          ],
+          "reponses": "1) la Taq polymérase · 2) elles encadrent la cible · 3) la ligase"
+        }
+      ]
+    }
+  ]
+}

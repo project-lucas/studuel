@@ -1,0 +1,121 @@
+{
+  "titre": "Action sociale",
+  "titreSurligne": "sociale",
+  "accroche": "Qui fait quoi, avec quel argent ?",
+  "epreuve": "bac",
+  "bonus": "Département chef de file depuis **2004** · CCAS : analyse des besoins sociaux **obligatoire**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/sciences-sanitaires-sociales/l-action-sociale-acteurs-territoires-et-financement.webp",
+    "prompt": "a glossy violet town hall building linked by golden threads to small golden coins and hands, sparkles, same art style as the reference icons, on magenta background, no text"
+  },
+  "marcel": "Cinq acteurs,\nun seul accompagnement !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les mots clés",
+          "items": [
+            { "terme": "Action sociale", "definition": "interventions qui **préviennent**, promeuvent l’autonomie et la cohésion" },
+            { "terme": "Aide sociale", "definition": "les prestations **légales** : plus étroite que l’action sociale" },
+            { "terme": "Chef de file", "definition": "le département **coordonne** l’action sociale" },
+            { "terme": "Contractualisation", "definition": "conventions et appels à projets entre partenaires" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les acteurs publics",
+          "entetes": ["Acteur", "Rôle"],
+          "lignes": [
+            ["**État**", "politiques, RSA, AAH, urgence"],
+            ["**Département**", "ASE, PMI, RSA, APA, MDPH"],
+            ["**Commune**", "CCAS : aides facultatives"],
+            ["**Sécu**", "CAF, retraite, MSA, CNSA"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les financements",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Départements", "texte": "Impôts locaux, dotations de l’État, **CNSA** pour APA et PCH." },
+            { "titre": "Sécurité sociale", "texte": "Branche famille (**CAF**), branche autonomie." },
+            { "titre": "Communes", "texte": "Budget du **CCAS**." },
+            { "titre": "Europe", "texte": "**FSE+** pour l’insertion." },
+            { "titre": "Dons, mécénat", "texte": "Associations **caritatives**." },
+            { "titre": "Usagers", "texte": "Participation selon les **ressources** (EHPAD)." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Acteurs privés et territoire",
+          "deux": false,
+          "items": [
+            { "titre": "Associations", "texte": "loi de 1901, établissements et terrain" },
+            { "titre": "Fondations, mutuelles", "texte": "économie sociale et solidaire" },
+            { "titre": "Maisons des solidarités", "texte": "lieu du diagnostic et de la coordination" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Payeur ≠ opérateur",
+          "donnees": "RSA : décidé et financé par",
+          "calcul": "le département",
+          "aparte": "mais versé par",
+          "resultat": "[[la CAF ou la MSA]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le département est chef de file de l’action sociale depuis 2004.", "quoi": "acteur" },
+            { "texte": "La décentralisation rapproche les décisions du terrain.", "quoi": "force" },
+            { "texte": "Mais elle crée des inégalités entre départements.", "quoi": "limite" }
+          ],
+          "pied": "Plusieurs acteurs, un seul ==accompagnement== : c’est la ==complémentarité==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **payeur** et opérateur.",
+            "Confondre action sociale et **aide sociale**.",
+            "Oublier les acteurs **privés**.",
+            "Attribuer l’ASE à la **commune**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Qui est **chef de file** de l’action sociale ?",
+            "Que gère un **CCAS** ?",
+            "Qui **verse** le RSA ?"
+          ],
+          "reponses": "1) le département · 2) les aides facultatives de la commune · 3) la CAF ou la MSA"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "titre": "Identifier une souche",
+  "titreSurligne": "souche",
+  "accroche": "Un indice après l’autre.",
+  "epreuve": "bac",
+  "bonus": "Toujours une **souche pure** · un test sans **témoin** ne prouve rien",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/biochimie-biologie-biotechnologie/identifier-une-souche-morphologie-metabolisme-et-galeries.webp",
+    "prompt": "a glossy violet magnifying glass over a petri dish with golden colonies and a small strip of colored test wells, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "À l’enquête,\nindice par indice&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Caractères morphologiques",
+          "items": [
+            {
+              "titre": "Colonies",
+              "texte": "taille, forme, bord, couleur."
+            },
+            {
+              "titre": "État frais",
+              "texte": "forme, groupement, **mobilité**."
+            },
+            {
+              "titre": "Gram",
+              "texte": "positif ou négatif."
+            },
+            {
+              "titre": "But",
+              "texte": "orienter vers une **famille**."
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux démarches",
+          "entetes": [
+            "",
+            "Principe"
+          ],
+          "lignes": [
+            [
+              "**Dichotomique**",
+              "une clé : chaque test coupe en deux"
+            ],
+            [
+              "**Probabiliste**",
+              "galerie + base de données : espèce et % de certitude"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Caractères métaboliques",
+          "entetes": [
+            "Test",
+            "Ce qu’il révèle"
+          ],
+          "lignes": [
+            [
+              "**Type respiratoire**",
+              "aérobie strict, anaérobie strict, facultatif, microaérophile"
+            ],
+            [
+              "**Catalase** (eau oxygénée)",
+              "bulles : enzyme qui détruit H₂O₂"
+            ],
+            [
+              "**Oxydase**",
+              "cytochrome de la chaîne respiratoire"
+            ],
+            [
+              "**Glucose**",
+              "voie oxydative ou fermentative"
+            ],
+            [
+              "**Exo-enzyme**",
+              "halo autour de la colonie (amylase au lugol)"
+            ],
+            [
+              "**Nitrate réductase**",
+              "respiration anaérobie sur nitrate"
+            ],
+            [
+              "**Auxanogramme**",
+              "sources de carbone utilisables en milieu synthétique"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Mener l’identification",
+          "etapes": [
+            {
+              "titre": "Purifier",
+              "texte": "vérifier la **souche pure** : colonies homogènes, un seul type de cellules"
+            },
+            {
+              "titre": "Orienter",
+              "texte": "morphologie, **Gram**, oxydase, catalase : une famille"
+            },
+            {
+              "titre": "Nommer",
+              "texte": "**galerie** : profil numérique lu dans le catalogue"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "?",
+          "titre": "Lire une galerie",
+          "teinte": "jaune",
+          "paragraphes": [
+            "Chaque groupe de **trois tests** est codé par une somme (1, 2, 4) : le profil obtenu est un nombre."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Bacilles Gram −, mobiles, oxydase −, catalase +, glucose fermenté avec gaz, nitrate réduit.",
+          "calcul": "profil de galerie : 5&nbsp;144&nbsp;572",
+          "aparte": "lu dans le catalogue",
+          "resultat": "[[entérobactérie]], <i>E. coli</i>"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Tester un **mélange** d’espèces&nbsp;: il faut une souche pure.",
+            "Oublier les **témoins** positif et négatif sur souches connues.",
+            "Confondre **oxydase** (cytochrome) et **catalase** (H₂O₂).",
+            "Conclure sur un seul caractère&nbsp;: on **accumule** les indices."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel test donne des **bulles** avec l’eau oxygénée&nbsp;?",
+            "Quelle démarche donne un **pourcentage** de certitude&nbsp;?",
+            "Que révèle un **halo clair** au lugol sur gélose à l’amidon&nbsp;?"
+          ],
+          "reponses": "1) la catalase · 2) probabiliste (galerie) · 3) une amylase sécrétée"
+        }
+      ]
+    }
+  ]
+}

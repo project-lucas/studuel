@@ -1,0 +1,117 @@
+{
+  "titre": "Immunité adaptative",
+  "titreSurligne": "adaptative",
+  "accroche": "Une réponse précise, avec mémoire.",
+  "epreuve": "bac",
+  "bonus": "**IgM** = infection récente · **IgG** seules = ancienne ou vaccin",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/chimie-biologie-physiopathologie/l-immunite-adaptative-la-vaccination-et-les-analyses-sanguin.webp",
+    "prompt": "a glossy violet Y-shaped antibody holding a golden key-shaped antigen, a small golden syringe beside it, tiny sparkles, same art style as the reference icons, on a magenta background, no text, no numbers"
+  },
+  "marcel": "Une fois vu,\njamais oublié !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 1,
+          "titre": "La réponse humorale",
+          "etapes": [
+            { "titre": "Reconnaître", "texte": "le **LB** repère l’antigène" },
+            { "titre": "Activer", "texte": "aidé par les interleukines du **LT4**" },
+            { "titre": "Produire", "texte": "**plasmocytes** (anticorps) et LB mémoire" }
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les acteurs",
+          "items": [
+            { "terme": "LT4", "definition": "chef d’orchestre : sécrète les **interleukines**" },
+            { "terme": "LT8 → LT cytotoxique", "definition": "détruit la cellule infectée (**cytolyse**) via le CMH I" },
+            { "terme": "Plasmocyte", "definition": "RE granuleux et Golgi **très développés**" },
+            { "terme": "Anticorps (IgG)", "definition": "forme en Y, deux **paratopes**" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Primaire ou secondaire ?",
+          "entetes": ["", "Réponse primaire", "Réponse secondaire"],
+          "lignes": [
+            ["**Délai**", "1 à 2 semaines", "quelques jours"],
+            ["**Anticorps**", "peu", "beaucoup plus"],
+            ["**Durée**", "courte", "prolongée (cellules **mémoire**)"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Ce que fait l’anticorps",
+          "deux": false,
+          "items": [
+            { "titre": "Neutralisation", "texte": "complexe immun, l’antigène est bloqué" },
+            { "titre": "Opsonisation", "texte": "le phagocyte s’accroche au pied" },
+            { "titre": "Complément", "texte": "perfore la membrane de la cible" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Vacciner",
+          "donnees": "Antigène rendu inoffensif.",
+          "calcul": "Vaccin → réponse primaire sans maladie\nVraie infection → réponse secondaire",
+          "resultat": "[[rapide et forte]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 5,
+          "titre": "Lire une NFS",
+          "entetes": ["Ça augmente", "Ça évoque"],
+          "lignes": [
+            ["**Neutrophiles**", "infection bactérienne"],
+            ["**Lymphocytes**", "infection virale"],
+            ["**Éosinophiles**", "allergie, parasite"],
+            ["**CRP**", "inflammation (en quelques heures)"]
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le **VIH** détruit les anticorps : il détruit les **LT4**.",
+            "Dire qu’un vaccin donne la maladie.",
+            "Oublier que le vaccin grippal change chaque **année**.",
+            "Confondre **IgM** (récente) et **IgG** (ancienne)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle cellule sécrète les **anticorps**&nbsp;?",
+            "Quelle cellule détruit une cellule **infectée**&nbsp;?",
+            "Pourquoi la réponse **secondaire** est-elle plus rapide&nbsp;?"
+          ],
+          "reponses": "1) le plasmocyte · 2) le LT cytotoxique (LT8) · 3) grâce aux cellules mémoire"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "titre": "Force acides et bases",
+  "titreSurligne": "Force",
+  "accroche": "Fort ou faible : un taux, pas un danger.",
+  "epreuve": "bac",
+  "bonus": "pK<sub>a</sub> = −log K<sub>a</sub> · plus l’acide est **fort**, plus le pK<sub>a</sub> est **petit** · CH₃COOH/CH₃COO⁻&nbsp;: **4,8** · NH₄⁺/NH₃&nbsp;: **9,2**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/force-des-acides-et-des-bases.webp",
+    "prompt": "a glossy violet strong-man dumbbell next to a small golden dumbbell, a pH scale bar with a golden marker, sparkles"
+  },
+  "marcel": "pK<sub>a</sub> petit,\nacide fort !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Constante d’acidité",
+          "petite": true,
+          "lignes": ["K<sub>a</sub> = [A⁻][H₃O⁺] ÷ ([AH] c°)", "pH = pK<sub>a</sub> + log ([A⁻] ÷ [AH])"],
+          "regle": "**pK<sub>a</sub> = −log K<sub>a</sub>**. L’échelle est ==inversée== : un acide plus fort a un K<sub>a</sub> plus grand et un pK<sub>a</sub> plus petit. La seconde ligne est la relation de ==Henderson==, obtenue en passant au logarithme l’expression de K<sub>a</sub>.",
+          "note": "pK<sub>a</sub> 3 plus fort que 9&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Fort ou faible",
+          "entetes": ["", "Acide fort", "Acide faible"],
+          "lignes": [
+            ["Réaction avec l’eau", "totale", "équilibre"],
+            ["Flèche", "simple", "double"],
+            ["En solution", "plus de AH", "AH et A⁻"],
+            ["Exemples", "HCl, HNO₃", "CH₃COOH, HF"],
+            ["Bases", "HO⁻ (forte)", "NH₃ (faible)"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire un diagramme de prédominance",
+          "etapes": [
+            { "titre": "Placer", "texte": "le pK<sub>a</sub> sur l’axe de pH : il coupe l’axe en deux domaines" },
+            { "titre": "Comparer", "texte": "le pH au pK<sub>a</sub> : à gauche l’acide AH, à droite la base A⁻" },
+            { "titre": "Choisir", "texte": "un indicateur dont la zone de virage tient dans le saut de pH du titrage" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "L’ammoniac NH₃ (couple NH₄⁺/NH₃, pK<sub>a</sub> __9,2__) est dans une solution de pH __8,2__. Quelle forme domine, et quel rapport&nbsp;?",
+          "calcul": "pH − pK<sub>a</sub> = 8,2 − 9,2 = −1 · [NH₃] ÷ [NH₄⁺] = 10⁻¹",
+          "aparte": "pH &lt; pK<sub>a</sub> : l’acide domine",
+          "resultat": "[[NH₄⁺]] domine, 10 fois plus"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Fort ne veut pas dire dangereux",
+          "oui": { "titre": "Acide fort", "texte": "Sa réaction avec l’eau est ==totale==&nbsp;: il ne reste plus de AH du tout en solution." },
+          "non": { "titre": "Fort = plus corrosif&nbsp;?", "texte": "**Faux**&nbsp;: un acide faible concentré peut être plus corrosif qu’un acide fort dilué." },
+          "essai": { "texte": "Un indicateur change de couleur sur une <i>zone de virage</i> d’environ 2 unités, centrée sur son pK<sub>a</sub>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "pH − pK<sub>a</sub> = 8,2 − 9,2 = −1 &lt; 0", "quoi": "comparer" },
+            { "texte": "L’acide NH₄⁺ prédomine.", "quoi": "conclure" },
+            { "texte": "[NH₃] ÷ [NH₄⁺] = 10⁻¹ = 0,1", "quoi": "quantifier" }
+          ],
+          "pied": "Un virage qui sort du saut de pH ==ne marque pas== l’équivalence."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Lire l’échelle des pK<sub>a</sub> **à l’endroit**.",
+            "Écrire une **flèche simple** pour un acide faible.",
+            "Dire que fort veut dire **dangereux**.",
+            "Choisir un indicateur **hors du saut** de pH."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Entre pK<sub>a</sub> 3 et pK<sub>a</sub> 9, quel acide est le **plus fort**&nbsp;?",
+            "pH = pK<sub>a</sub>&nbsp;: que vaut **[A⁻] ÷ [AH]**&nbsp;?",
+            "Un acide fort réagit-il **totalement** avec l’eau&nbsp;?"
+          ],
+          "reponses": "1) celui de pK<sub>a</sub> 3 · 2) 1 · 3) oui"
+        }
+      ]
+    }
+  ]
+}

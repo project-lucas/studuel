@@ -1,0 +1,172 @@
+{
+  "titre": "Équations dans ℂ",
+  "titreSurligne": "ℂ",
+  "accroche": "Toute équation polynomiale a ses racines.",
+  "epreuve": "bac",
+  "bonus": "Δ &lt; 0 : (−b ± i√(−Δ)) ÷ 2a · somme = −b ÷ a, produit = c ÷ a · zⁿ = a : **n** solutions",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-expertes/equations-polynomiales-et-nombres-complexes.webp",
+    "prompt": "a glossy violet parabola that never touches the axis, with two golden mirrored points above and below it, sparkles"
+  },
+  "marcel": "Plus jamais\n« sans solution » !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "az² + bz + c = 0, a, b, c réels",
+          "entetes": [
+            "Signe de Δ",
+            "Solutions"
+          ],
+          "lignes": [
+            [
+              "**Δ &gt; 0**",
+              "deux **réelles** : (−b ± √Δ) ÷ 2a"
+            ],
+            [
+              "**Δ = 0**",
+              "une **double** : −b ÷ 2a"
+            ],
+            [
+              "**Δ &lt; 0**",
+              "deux **conjuguées** : (−b ± i√(−Δ)) ÷ 2a"
+            ],
+            [
+              "Somme",
+              "−b ÷ a"
+            ],
+            [
+              "Produit",
+              "c ÷ a"
+            ],
+            [
+              "Factorisation",
+              "a (z − z₁)(z − z₂)"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Les équations zⁿ = a",
+          "taille": "mini",
+          "lignes": [
+            "z = r<sup>1/n</sup> e<sup>i(θ+2kπ)/n</sup>",
+            "k = 0, 1, …, n − 1"
+          ],
+          "regle": "On pose a = r e<sup>iθ</sup>, z = ρ e<sup>iφ</sup>&nbsp;: ρⁿ = r **et** nφ = θ + 2kπ. Les images forment un **polygone régulier**.",
+          "note": "les n valeurs de k&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Factoriser un polynôme de degré 3",
+          "etapes": [
+            {
+              "titre": "Racine évidente",
+              "texte": "tester 0, ±1, ±i… jusqu’à trouver z₀"
+            },
+            {
+              "titre": "Poser",
+              "texte": "P(z) = (z − z₀)(αz² + βz + γ), coefficients inconnus"
+            },
+            {
+              "titre": "Identifier",
+              "texte": "développer, égaler les coefficients, puis résoudre le trinôme"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Résoudre __z<sup>4</sup> = 16__ dans ℂ.",
+          "calcul": "16 = 16 e<sup>i0</sup>, z = 2 e<sup>2ikπ/4</sup>",
+          "aparte": "k = 0, 1, 2, 3",
+          "resultat": "z ∈ [[2, 2i, −2, −2i]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Théorème fondamental",
+              "texte": "degré n&nbsp;: **exactement n racines** comptées avec multiplicité."
+            },
+            {
+              "titre": "Coefficients réels",
+              "texte": "si z est racine, **z̄ aussi**&nbsp;: les racines non réelles vont par paires."
+            },
+            {
+              "titre": "Degré impair",
+              "texte": "à coefficients réels&nbsp;: au moins une racine **réelle**."
+            },
+            {
+              "titre": "Seconde racine",
+              "texte": "la première connue, la somme ou le produit donne l’autre."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "16 = 16 e<sup>i0</sup>, on pose z = ρ e<sup>iφ</sup>",
+              "quoi": "la mise en forme"
+            },
+            {
+              "texte": "ρ<sup>4</sup> = 16 et 4φ = 2kπ",
+              "quoi": "module et argument"
+            },
+            {
+              "texte": "ρ = 2, φ = {kπ/2}, k = 0, 1, 2, 3",
+              "quoi": "les quatre valeurs"
+            }
+          ],
+          "pied": "Conclusion&nbsp;: S = ==2, 2i, −2, −2i==, un carré inscrit dans le cercle de rayon 2."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire **√(−4) = 2i** : passer par i√4.",
+            "Conclure «&nbsp;Δ &lt; 0, **pas de solution**&nbsp;».",
+            "Ne donner qu’**une** racine à zⁿ = a.",
+            "Oublier le **2kπ** dans l’argument."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de solutions si **Δ &lt; 0**&nbsp;?",
+            "**Somme** des racines de z² − 4z + 13&nbsp;?",
+            "Combien de solutions complexes pour **z<sup>5</sup> = 1**&nbsp;?"
+          ],
+          "reponses": "1) deux, conjuguées · 2) 4 (2 ± 3i) · 3) cinq"
+        }
+      ]
+    }
+  ]
+}

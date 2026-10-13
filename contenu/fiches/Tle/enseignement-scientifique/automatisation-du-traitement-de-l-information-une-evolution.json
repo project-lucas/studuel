@@ -1,0 +1,187 @@
+{
+  "titre": "L’automatisation",
+  "titreSurligne": "automatisation",
+  "accroche": "De la Pascaline au transistor.",
+  "bonus": "Pascaline **1642** · Turing **1936** · transistor **1947** · loi de Moore **1965**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/enseignement-scientifique/automatisation-du-traitement-de-l-information-une-evolution.webp",
+    "prompt": "a glossy violet mechanical calculator with golden gears next to a tiny golden microchip, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Déléguer à la machine,\nmais jusqu’où ?",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "La chronologie",
+          "horizontale": true,
+          "etapes": [
+            {
+              "date": "1642",
+              "texte": "**Pascaline** : machine à additionner."
+            },
+            {
+              "date": "XIXe s.",
+              "texte": "**Babbage**, **Ada Lovelace** : premier algorithme."
+            },
+            {
+              "date": "1936",
+              "texte": "**Turing** : le calculable."
+            },
+            {
+              "date": "1947",
+              "texte": "**Transistor**."
+            },
+            {
+              "date": "1965",
+              "texte": "**Moore** : doublement tous les 2 ans."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "À définir",
+          "items": [
+            {
+              "terme": "Algorithme",
+              "definition": "suite **finie** d’instructions **non ambiguës** résolvant un problème"
+            },
+            {
+              "terme": "Programme",
+              "definition": "sa traduction dans un **langage exécutable**"
+            },
+            {
+              "terme": "Calculable",
+              "definition": "problème qu’une machine de Turing peut résoudre"
+            }
+          ]
+        },
+        {
+          "type": "texte",
+          "numero": "!",
+          "titre": "Des limites théoriques",
+          "paragraphes": [
+            "Turing montre que certains problèmes ne sont **pas calculables**, quelle que soit la puissance de la machine. Aucun progrès matériel ne repoussera cette limite : elle n’est pas seulement **technique**."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Ce que la machine change",
+          "entetes": [
+            "La machine…",
+            "Exemples"
+          ],
+          "lignes": [
+            [
+              "**Augmente** des capacités",
+              "mémoire, vitesse de calcul, accès à l’information"
+            ],
+            [
+              "**Délègue** des capacités",
+              "orientation, calcul mental, mémorisation"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": "★",
+          "titre": "Pourquoi le transistor compte",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Plus petit",
+              "texte": "que le tube à vide"
+            },
+            {
+              "titre": "Plus fiable",
+              "texte": "moins de pannes"
+            },
+            {
+              "titre": "Moins gourmand",
+              "texte": "moins d’énergie"
+            },
+            {
+              "titre": "Intégrable",
+              "texte": "des milliards sur une puce"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Argumenter sur la délégation",
+          "etapes": [
+            {
+              "titre": "Décrire",
+              "texte": "ce que la machine fait à notre place"
+            },
+            {
+              "titre": "Peser",
+              "texte": "gain de puissance, perte d’autonomie"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "ce qu’on garde la capacité de faire"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Loi de Moore : doublement tous les 2 ans. Facteur de croissance en __10 ans__&nbsp;?",
+          "calcul": "10 ÷ 2 = 5 doublements",
+          "aparte": "2<sup>5</sup>",
+          "resultat": "[[× 32]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que la puissance règle **tout** : certains problèmes sont incalculables.",
+            "Confondre **algorithme** et programme.",
+            "Penser que la machine est **neutre** : elle délègue nos capacités.",
+            "Oublier qu’un traitement suppose des données **codées en binaire**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle machine date de **1642**&nbsp;?",
+            "Que délimite la machine de **Turing**&nbsp;?",
+            "Que dit la **loi de Moore**&nbsp;?"
+          ],
+          "reponses": "1) la Pascaline · 2) ce qui est calculable · 3) transistors doublés tous les 2 ans"
+        }
+      ]
+    }
+  ]
+}

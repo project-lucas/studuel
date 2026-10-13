@@ -1,0 +1,155 @@
+{
+  "titre": "Enzymes, Km et Vmax",
+  "titreSurligne": "Enzymes",
+  "accroche": "Des catalyseurs sur mesure.",
+  "epreuve": "bac",
+  "bonus": "**v₀** = pente initiale · **Vmax** = saturation · **Km** : [S] pour v₀ = Vmax / 2 · Km petit = **forte affinité**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/biochimie-biologie-biotechnologie/les-enzymes-catalyse-cinetique-et-regulation.webp",
+    "prompt": "a glossy violet enzyme protein with a golden pocket holding a small golden key-shaped substrate, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Une clé, une serrure,\nune enzyme !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Site actif",
+              "definition": "poche où se fixe le **substrat**, formée par la structure 3D."
+            },
+            {
+              "terme": "Cofacteur",
+              "definition": "ion métallique ou **coenzyme** ; lié durablement : groupement prosthétique."
+            },
+            {
+              "terme": "Proenzyme",
+              "definition": "forme inactive (pepsinogène → pepsine)."
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La cinétique",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "E + S → ES → E + P"
+          ],
+          "regle": "À faible [S], v₀ croît presque **proportionnellement** ; à forte [S], elle **plafonne** à Vmax (enzyme saturée).",
+          "note": "on mesure toujours v₀"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire Km sur une courbe",
+          "etapes": [
+            {
+              "titre": "Plateau",
+              "texte": "repérer **Vmax** : la courbe tend vers un palier"
+            },
+            {
+              "titre": "Moitié",
+              "texte": "calculer **Vmax / 2**"
+            },
+            {
+              "titre": "Lire",
+              "texte": "l’abscisse correspondante est **Km**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "[S] = 1 ; 2 ; 4 ; 10 ; 40 mmol·L⁻¹ donnent v₀ = 20 ; 30 ; 40 ; 50 ; 58 µmol·min⁻¹. Vmax ≈ 60.",
+          "calcul": "Vmax / 2 = 30 µmol·min⁻¹",
+          "aparte": "atteinte pour [S] = 2",
+          "resultat": "Km ≈ [[2 mmol·L⁻¹]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Les facteurs",
+          "items": [
+            {
+              "titre": "Température",
+              "texte": "optimum, puis **dénaturation** souvent irréversible."
+            },
+            {
+              "titre": "pH",
+              "texte": "optimal propre à chaque enzyme (pepsine ≈ 2, trypsine ≈ 8)."
+            },
+            {
+              "titre": "Inhibiteur",
+              "texte": "un **analogue structural** du substrat entre en compétition pour le site actif."
+            },
+            {
+              "titre": "Rétro-inhibition",
+              "texte": "le produit final freine une enzyme du début de la voie."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "À forte [S], v₀ atteint un plateau&nbsp;: tous les sites actifs sont occupés.",
+              "quoi": "interpréter"
+            },
+            {
+              "texte": "Km est la [S] qui donne v₀ = Vmax / 2.",
+              "quoi": "définir"
+            },
+            {
+              "texte": "Plus Km est petit, plus l’affinité est grande.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Pour mesurer Vmax : substrat ==saturant==, au moins 10 × Km."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que le **froid dénature** l’enzyme : il la ralentit seulement.",
+            "Croire l’enzyme **consommée** par la réaction.",
+            "Lire Km en **ordonnée**.",
+            "Confondre Km **grand** et affinité forte."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que représente la **vitesse initiale** v₀&nbsp;?",
+            "Définir **Km**.",
+            "Un Km **faible** signifie quoi&nbsp;?"
+          ],
+          "reponses": "1) la pente initiale de la courbe produit/temps · 2) [S] pour v₀ = Vmax/2 · 3) forte affinité pour le substrat"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "titre": "Sommes de variables",
+  "titreSurligne": "Sommes",
+  "accroche": "Espérance : toujours additive.",
+  "epreuve": "bac",
+  "bonus": "E(aX + b) = aE(X) + b · V(aX + b) = **a²** V(X) · σ(M) = {σ/√n} · B(n ; p) = somme de n Bernoulli",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths/sommes-de-variables-aleatoires.webp",
+    "prompt": "a glossy violet pair of dice with a golden plus sign between them and a bell curve behind, sparkles"
+  },
+  "marcel": "L’espérance s’ajoute,\nla variance… ça dépend !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Somme de deux variables",
+          "taille": "mini",
+          "lignes": [
+            "E(X + Y) = E(X) + E(Y)",
+            "V(X + Y) = V(X) + V(Y)"
+          ],
+          "regle": "L’espérance s’ajoute **toujours**. La variance s’ajoute **seulement si X et Y sont indépendantes**. Affine&nbsp;: E(aX + b) = aE(X) + b, V(aX + b) = ==a² V(X)==.",
+          "note": "le b disparaît de V&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "L’échantillon de taille n",
+          "entetes": [
+            "Grandeur",
+            "Espérance",
+            "Écart-type"
+          ],
+          "lignes": [
+            [
+              "Somme S",
+              "n μ",
+              "**σ √n**"
+            ],
+            [
+              "Moyenne M = {S/n}",
+              "**μ**",
+              "**{σ/√n}**"
+            ],
+            [
+              "Binomiale B(n ; p)",
+              "n p",
+              "√(n p (1 − p))"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer sur une somme",
+          "etapes": [
+            {
+              "titre": "Indépendance ?",
+              "texte": "oui&nbsp;: variances additives · non&nbsp;: seulement l’espérance"
+            },
+            {
+              "titre": "Espérance",
+              "texte": "linéarité&nbsp;: E(aX + bY) = aE(X) + bE(Y)"
+            },
+            {
+              "titre": "Variance",
+              "texte": "chaque coefficient passe **au carré** : a² V(X) + b² V(Y)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": "?",
+          "titre": "Peut-on additionner les variances",
+          "oui": {
+            "titre": "Oui",
+            "texte": "X et Y **indépendantes**&nbsp;: V(X + Y) = V(X) + V(Y)."
+          },
+          "non": {
+            "titre": "Non",
+            "texte": "X = Y par exemple&nbsp;: V(X + X) = 4V(X), pas 2V(X)."
+          },
+          "essai": {
+            "titre": "À toi",
+            "texte": "Lancer deux dés&nbsp;: indépendants. Un dé et son double&nbsp;: dépendants."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "X, Y indépendantes. E(X) = 3, V(X) = 4, E(Y) = 1, V(Y) = 2. __E et V de 2X + Y__.",
+          "calcul": "E = 2 × 3 + 1 = 7",
+          "aparte": "V = 2² × 4 + 2",
+          "resultat": "E = [[7]] et V = [[18]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Ce que ça donne",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Sans biais",
+              "texte": "E(M) = μ&nbsp;: la moyenne ne se trompe pas **systématiquement**."
+            },
+            {
+              "titre": "Lentement",
+              "texte": "σ(M) = {σ/√n}&nbsp;: diviser par 2 demande **4 fois** plus de données."
+            },
+            {
+              "titre": "Binomiale",
+              "texte": "somme de n Bernoulli&nbsp;: E = np, V = np(1 − p)."
+            },
+            {
+              "titre": "Constante ajoutée",
+              "texte": "elle **décale** sans changer la dispersion."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "E(2X + Y) = 2E(X) + E(Y) = 7",
+              "quoi": "l’espérance"
+            },
+            {
+              "texte": "X et Y sont indépendantes",
+              "quoi": "l’hypothèse"
+            },
+            {
+              "texte": "V(2X + Y) = 4V(X) + V(Y) = 18",
+              "quoi": "la variance"
+            }
+          ],
+          "pied": "Écart-type&nbsp;: ==σ = √18 = 3√2== ≈ 4,24."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Additionner les variances **sans indépendance**.",
+            "Oublier le **carré** : V(2X) = 4V(X).",
+            "Garder le **b** dans V(aX + b).",
+            "Confondre σ(S) = σ√n et σ(M) = σ/√n."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**V(3X + 5)** si V(X) = 2&nbsp;?",
+            "**σ(M)** pour n = 100 et σ = 5&nbsp;?",
+            "**V** de B(10 ; 0,3)&nbsp;?"
+          ],
+          "reponses": "1) 9 × 2 = 18 · 2) 5 ÷ 10 = 0,5 · 3) 10 × 0,3 × 0,7 = 2,1"
+        }
+      ]
+    }
+  ]
+}

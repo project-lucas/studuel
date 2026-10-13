@@ -1,0 +1,113 @@
+{
+  "titre": "Spectres UV, IR, RMN",
+  "titreSurligne": "RMN",
+  "accroche": "La lumière signe l’espèce.",
+  "epreuve": "bac",
+  "bonus": "A = ε ℓ c · A sans unité · O—H alcool&nbsp;: **3300 cm⁻¹** · C=O&nbsp;: **1700 cm⁻¹** · RMN&nbsp;: n voisins → **n+1** pics",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/physique-chimie/proprietes-spectrales-des-substances-chimiques-et-solutions.webp",
+    "prompt": "a glossy violet glass cuvette crossed by a golden light beam splitting into a small rainbow spectrum, sparkles"
+  },
+  "marcel": "UV mesure, IR reconnaît,\nRMN reconstruit !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Loi de Beer-Lambert",
+          "petite": true,
+          "lignes": ["A = ε × ℓ × c"],
+          "regle": "**ε** en L·mol⁻¹·cm⁻¹, **ℓ** en cm, **c** en mol·L⁻¹, **A** ==sans unité==. Proportionnelle à c, mais seulement en solution ==diluée== (au-delà de A ≈ 2, la loi décroche).",
+          "note": "mesurer à λ<sub>max</sub> !"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois spectroscopies",
+          "entetes": ["Technique", "Elle sonde", "Elle donne"],
+          "lignes": [
+            ["UV-visible", "les électrons", "une concentration"],
+            ["Infrarouge", "les vibrations", "les groupes"],
+            ["RMN du proton", "les noyaux H", "le squelette"],
+            ["Bande IR O—H acide", "2500–3200 cm⁻¹", "très large"],
+            ["Bande IR C=O", "vers 1700 cm⁻¹", "fine, intense"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Doser par étalonnage",
+          "etapes": [
+            { "titre": "Préparer", "texte": "une gamme de concentrations connues, et régler le blanc avec le solvant seul" },
+            { "titre": "Tracer", "texte": "A = f(c) à λ<sub>max</sub> : une droite qui passe par l’origine" },
+            { "titre": "Reporter", "texte": "l’absorbance de la solution inconnue sur la droite pour lire c" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une solution a A = __0,60__ dans une cuve de __1,0 cm__. ε = 3,0 × 10³ L·mol⁻¹·cm⁻¹. Quelle est c&nbsp;?",
+          "calcul": "c = A ÷ (ε ℓ) = 0,60 ÷ (3,0 × 10³ × 1,0)",
+          "aparte": "A &lt; 2 : la loi s’applique",
+          "resultat": "c = [[2,0 × 10⁻⁴ mol·L⁻¹]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Lire un signal RMN",
+          "oui": { "titre": "Trois lectures", "texte": "Le ==déplacement chimique== dit l’environnement, l’==intégration== le nombre d’H, la ==multiplicité== le nombre de voisins." },
+          "non": { "titre": "L’IR compte les atomes&nbsp;?", "texte": "**Faux**&nbsp;: il dit seulement **quelles familles** de groupes sont présentes." },
+          "essai": { "texte": "Un signal à 3 pics a <i>2 voisins</i> (n+1 = 3)&nbsp;: c’est un triplet." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "A = ε ℓ c, donc c = A ÷ (ε ℓ)", "quoi": "la loi" },
+            { "texte": "c = 0,60 ÷ (3,0 × 10³ × 1,0)", "quoi": "le calcul" },
+            { "texte": "c = 2,0 × 10⁻⁴ mol·L⁻¹", "quoi": "l’unité" }
+          ],
+          "pied": "Une solution bleue absorbe dans l’==orange== : la couleur complémentaire de celle qu’elle laisse passer."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Donner une **unité** à l’absorbance, qui est un nombre pur.",
+            "Oublier le **blanc** avec le solvant.",
+            "Appliquer Beer-Lambert à une solution **concentrée**.",
+            "Confondre bande **O—H alcool** (large) et **acide** (très large)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle technique donne une **concentration**&nbsp;?",
+            "Bande fine et intense vers 1700 cm⁻¹&nbsp;: quelle **liaison**&nbsp;?",
+            "Un signal RMN a 2 voisins&nbsp;: combien de **pics**&nbsp;?"
+          ],
+          "reponses": "1) UV-visible · 2) C=O · 3) 3 pics"
+        }
+      ]
+    }
+  ]
+}

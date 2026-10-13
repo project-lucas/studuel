@@ -1,0 +1,185 @@
+{
+  "titre": "Imagerie médicale",
+  "titreSurligne": "Imagerie",
+  "accroche": "Ondes et noyaux pour voir le corps.",
+  "epreuve": "bac",
+  "bonus": "**λ = c ÷ f** · c = 3,00 × 10⁸ m/s · ultrasons&nbsp;: 1 540 m/s dans les tissus · activité en **Bq** · dose en **Sv**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/chimie-biologie-physiopathologie/l-imagerie-medicale-ondes-et-radioactivite.webp",
+    "prompt": "a glossy violet ultrasound probe emitting golden concentric waves over a small skeleton hand silhouette, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Voir sans ouvrir&nbsp;:\nune onde suffit&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Profondeur d’un écho",
+          "petite": true,
+          "lignes": [
+            "d = {v × Δt/2}"
+          ],
+          "regle": "Le **÷ 2** vient de l’**aller et retour** de l’ultrason. Effet Doppler&nbsp;: cible qui s’approche, fréquence **plus haute**.",
+          "note": "mesure la vitesse du sang"
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Écho reçu 130 µs après l’émission.",
+          "calcul": "d = 1 540 × 130×10⁻⁶ ÷ 2",
+          "aparte": "130 µs = 130×10⁻⁶ s",
+          "resultat": "d ≈ [[0,10 m]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Quelle technique pour quoi ?",
+          "entetes": [
+            "Technique",
+            "Principe",
+            "Montre"
+          ],
+          "lignes": [
+            [
+              "**Échographie**",
+              "ultrasons (onde mécanique), échos",
+              "organes, fœtus, flux sanguin"
+            ],
+            [
+              "**Radiographie**",
+              "rayons X absorbés selon Z",
+              "os (blancs), poumons (noirs)"
+            ],
+            [
+              "**Scanner**",
+              "rayons X + produit de contraste iodé",
+              "vaisseaux, organes en coupes"
+            ],
+            [
+              "**IRM**",
+              "champ magnétique + radiofréquences sur H",
+              "tissus mous, sans irradiation"
+            ],
+            [
+              "**Scintigraphie / TEP**",
+              "marqueur radioactif γ / β⁺",
+              "os, thyroïde, cellules cancéreuses"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Les désintégrations",
+          "entetes": [
+            "Émission",
+            "Particule"
+          ],
+          "lignes": [
+            [
+              "**α**",
+              "noyau d’hélium (2 p + 2 n)"
+            ],
+            [
+              "**β⁻**",
+              "électron"
+            ],
+            [
+              "**β⁺**",
+              "positon"
+            ],
+            [
+              "**γ**",
+              "photon très énergétique"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 4,
+          "titre": "Mesurer",
+          "items": [
+            {
+              "terme": "Activité",
+              "definition": "désintégrations par seconde (**Bq**)"
+            },
+            {
+              "terme": "Dose",
+              "definition": "effet biologique (**Sv**)"
+            },
+            {
+              "terme": "Période T",
+              "definition": "durée pour que **la moitié** des noyaux disparaisse"
+            },
+            {
+              "terme": "Contraste",
+              "definition": "iode (vaisseaux), baryum (tube digestif), gadolinium (IRM)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Se protéger",
+          "deux": false,
+          "items": [
+            {
+              "titre": "Durée",
+              "texte": "exposition la plus courte possible"
+            },
+            {
+              "titre": "Distance",
+              "texte": "s’éloigner de la source"
+            },
+            {
+              "titre": "Écran",
+              "texte": "plomb, dosimètre, trèfle de signalisation"
+            },
+            {
+              "titre": "Exemple",
+              "texte": "Tc-99m, T ≈ 6 h&nbsp;: après 24 h, il reste **1/16**"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **÷ 2** de l’aller-retour.",
+            "Dire que l’**IRM** irradie&nbsp;: non.",
+            "Confondre **radiographie** (diagnostic) et **radiothérapie** (traitement).",
+            "Confondre **Bq** (activité) et **Sv** (dose)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que devient la quantité après **2 périodes**&nbsp;?",
+            "Pourquoi les **os** sont-ils blancs à la radio&nbsp;?",
+            "Quel émetteur sert à la **TEP**&nbsp;?"
+          ],
+          "reponses": "1) il en reste 1/4 · 2) ils absorbent beaucoup les rayons X (Z élevé) · 3) le fluor 18, émetteur β⁺"
+        }
+      ]
+    }
+  ]
+}

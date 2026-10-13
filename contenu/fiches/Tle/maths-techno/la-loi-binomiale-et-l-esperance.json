@@ -1,0 +1,168 @@
+{
+  "titre": "Loi binomiale",
+  "titreSurligne": "binomiale",
+  "accroche": "Compter les succès, en moyenne n × p.",
+  "epreuve": "bac",
+  "bonus": "P(X = k) = (n k) p<sup>k</sup> (1 − p)<sup>n−k</sup> · E(X) = n × p · P(X ≥ 1) = 1 − (1 − p)<sup>n</sup>",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/maths-techno/la-loi-binomiale-et-l-esperance.webp",
+    "prompt": "a glossy violet bar chart of a bell-shaped distribution with a golden coin on top and a tiny golden balance mark, sparkles"
+  },
+  "marcel": "On compte les\nsuccès, n × p !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La loi B(n ; p)",
+          "petite": true,
+          "lignes": [
+            "P(X = k) = (n k) × p<sup>k</sup> × (1 − p)<sup>n−k</sup>",
+            "E(X) = n × p"
+          ],
+          "regle": "X ==compte les succès== de n épreuves identiques et indépendantes, à deux issues.",
+          "note": "E(X) = moyenne à long terme"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les probabilités utiles",
+          "entetes": [
+            "Événement",
+            "Probabilité"
+          ],
+          "lignes": [
+            [
+              "X = 0",
+              "(1 − p)<sup>n</sup>"
+            ],
+            [
+              "X = n",
+              "p<sup>n</sup>"
+            ],
+            [
+              "X = 1",
+              "n × p × (1 − p)<sup>n−1</sup>"
+            ],
+            [
+              "X ≥ 1",
+              "**1 − (1 − p)<sup>n</sup>**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Reconnaître puis calculer",
+          "etapes": [
+            {
+              "titre": "Reconnaître",
+              "texte": "deux issues, n répétitions identiques et indépendantes, X compte les succès"
+            },
+            {
+              "titre": "Poser",
+              "texte": "X suit B(n ; p), on écrit n et p"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "la formule de P(X = k), ou le contraire pour « au moins un »"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "4 lancers d’une pièce équilibrée, X = nombre de « pile ». X suit __B(4 ; 0,5)__.",
+          "calcul": "P(X = 2) = (4 2) × 0,5² × 0,5²\n= 6 × 0,0625",
+          "aparte": "(4 2) = 6",
+          "resultat": "P(X = 2) = [[0,375]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Au moins un",
+              "texte": "P(X ≥ 1) = 1 − 0,5⁴ = 1 − 0,0625 = **0,9375**."
+            },
+            {
+              "titre": "Espérance",
+              "texte": "E(X) = 4 × 0,5 = **2**&nbsp;: deux « pile » en moyenne."
+            },
+            {
+              "titre": "Contrôle qualité",
+              "texte": "B(3 ; 0,1)&nbsp;: P(X = 0) = 0,9³ = **0,729**."
+            },
+            {
+              "titre": "Jeu équitable",
+              "texte": "L’espérance du gain est **nulle**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Deux issues, 4 lancers identiques et indépendants",
+              "quoi": "la justification"
+            },
+            {
+              "texte": "X suit la loi binomiale B(4 ; 0,5)",
+              "quoi": "la loi"
+            },
+            {
+              "texte": "P(X = 2) = 6 × 0,5² × 0,5² = 0,375",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "E(X) = 4 × 0,5 = 2",
+              "quoi": "l’espérance"
+            }
+          ],
+          "pied": "Contrôle&nbsp;: la somme des P(X = k) vaut ==1==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier de justifier **indépendance** et répétition.",
+            "Oublier le **coefficient (n k)**.",
+            "Calculer « au moins un » en additionnant **tout** au lieu de 1 − P(X = 0).",
+            "Confondre **p** et 1 − p dans les exposants."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "X suit B(10 ; 0,8)&nbsp;: **E(X)**&nbsp;?",
+            "X suit B(3 ; 0,1)&nbsp;: **P(X ≥ 1)**&nbsp;?",
+            "Que **compte** une variable binomiale&nbsp;?"
+          ],
+          "reponses": "1) 10 × 0,8 = 8 · 2) 1 − 0,729 = 0,271 · 3) les succès"
+        }
+      ]
+    }
+  ]
+}

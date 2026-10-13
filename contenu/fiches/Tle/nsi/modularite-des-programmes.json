@@ -1,0 +1,119 @@
+{
+  "titre": "Modularité",
+  "titreSurligne": "Modularité",
+  "accroche": "Découper pour changer d’avis plus tard.",
+  "epreuve": "bac",
+  "bonus": "forte <b>cohésion</b> · faible <b>couplage</b> · interface visible, implémentation cachée",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/nsi/modularite-des-programmes.webp",
+    "prompt": "a glossy violet building-block puzzle of interlocking modules with golden connectors, sparkles"
+  },
+  "marcel": "Un module,\nune seule mission !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Interface", "definition": "ce que le module **promet**" },
+            { "terme": "Implémentation", "definition": "comment il **tient** sa promesse (cachée)" },
+            { "terme": "Cohésion", "definition": "tout concerne le **même sujet**" },
+            { "terme": "Couplage", "definition": "dépendance entre modules (à **réduire**)" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les niveaux de découpage",
+          "entetes": ["Niveau", "Il regroupe"],
+          "lignes": [
+            ["**Fonction**", "une tâche, un nom, des paramètres"],
+            ["**Module**", "un fichier cohérent"],
+            ["**Paquet**", "un ensemble de modules"],
+            ["**Bibliothèque**", "un paquet à **réutiliser**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Contrat d’une fonction",
+          "etapes": [
+            { "titre": "Précondition", "texte": "garantie par l’**appelant** : liste non vide" },
+            { "titre": "Postcondition", "texte": "garantie par la **fonction** : liste triée" },
+            { "titre": "Docstring", "texte": "décrit le **contrat**, pas l’algorithme" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un module « lit le fichier <b>et</b> affiche les stats ». __Bien découpé__&nbsp;?",
+          "calcul": "une phrase avec « et »<br>→ deux responsabilités",
+          "aparte": "à scinder",
+          "resultat": "= [[2 modules]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les imports en Python",
+          "colonnes": 1,
+          "cartes": [
+            { "titre": "Module entier", "texte": "<i>import math</i> puis <i>math.sqrt(4)</i> : le plus **lisible**." },
+            { "titre": "Nom précis", "texte": "<i>from math import sqrt</i> : commode, origine **perdue**." },
+            { "titre": "Tout importer", "texte": "<i>from math import *</i> : **à proscrire**, un nom en écrase un autre." },
+            { "titre": "Réutiliser", "texte": "chercher d’abord une **bibliothèque** éprouvée avant de réécrire." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "« l’utilisateur ne connaît que l’interface »", "quoi": "principe" },
+            { "texte": "<i>assert len(l) &gt; 0</i>", "quoi": "précondition" },
+            { "texte": "« forte cohésion, faible couplage »", "quoi": "critère" },
+            { "texte": "« un module se décrit en une phrase sans « et » »", "quoi": "test" }
+          ],
+          "pied": "Une bibliothèque ==éprouvée== vaut mieux qu’un code maison."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Employer <i>assert</i> pour gérer les **erreurs en production**&nbsp;: il peut être désactivé.",
+            "Décrire l’**algorithme** dans la docstring plutôt que le contrat.",
+            "Utiliser <i>import *</i>&nbsp;: **écrasement silencieux**.",
+            "Réécrire un tri ou une date au lieu d’une **bibliothèque**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que doit connaître l’utilisateur d’un module&nbsp;?",
+            "Qui garantit une **précondition**&nbsp;?",
+            "Pourquoi éviter <i>from m import *</i>&nbsp;?"
+          ],
+          "reponses": "1) seulement son interface · 2) l’appelant · 3) un nom peut écraser silencieusement un autre"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "titre": "ADN, réplication, cancer",
+  "titreSurligne": "réplication",
+  "accroche": "On le chauffe, on le copie, on le dérègle.",
+  "epreuve": "bac",
+  "bonus": "ADN : absorbe à **260 nm** · **Tm** monte avec le %(C+G) · réplication **semi-conservative**, sens **5’→3’**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/biochimie-biologie-biotechnologie/proprietes-de-l-adn-replication-cancer-et-cellules-souches.webp",
+    "prompt": "a glossy violet DNA double helix half unzipped with golden sparkles at the opening, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Deux brins, deux\ncopies, zéro faute !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Propriétés de l’ADN",
+          "items": [
+            { "titre": "Polyanion", "texte": "phosphates chargés −, migre vers l’**anode**." },
+            { "titre": "Précipitation", "texte": "sel + éthanol froid : **extraction**." },
+            { "titre": "UV", "texte": "absorption max. vers **260 nm**." }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Dénaturation, Tm",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": ["A=T : 2 liaisons H · C≡G : 3"],
+          "regle": "La chaleur rompt les **liaisons hydrogène**, pas les liaisons phosphodiester. Plus de **C+G**, plus la **Tm** est haute.",
+          "note": "effet hyperchrome à 260 nm"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Les acteurs de la réplication",
+          "entetes": ["Acteur", "Rôle"],
+          "lignes": [
+            ["**Hélicase**", "ouvre la double hélice"],
+            ["**Amorce** (ARN)", "point de départ"],
+            ["**ADN polymérase**", "ajoute des dNTP, sens **5’→3’**"],
+            ["**Ligase**", "relie les fragments du brin discontinu"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Deux ADN de même longueur&nbsp;: 40 % de C+G et 60 % de C+G.",
+          "calcul": "plus de C≡G = plus de liaisons H",
+          "aparte": "il résiste mieux à la chaleur",
+          "resultat": "Tm la plus haute : [[l’ADN à 60 %]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Cancer, cellules souches",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Cancérogenèse", "texte": "mutations : plus d’**inhibition de contact**, prolifération anarchique." },
+            { "titre": "Pluripotente", "texte": "donne presque tous les types cellulaires ; **thérapie génique**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Chaque molécule fille garde un brin parental&nbsp;: semi-conservative.", "quoi": "réplication" },
+            { "texte": "En G2, la cellule contient deux fois plus d’ADN qu’en G1.", "quoi": "cycle" },
+            { "texte": "Différenciée : mêmes gènes, mais certains réprimés.", "quoi": "différenciation" }
+          ],
+          "pied": "Au refroidissement, l’==hybridation== réassocie les brins complémentaires."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que le chauffage rompt les **liaisons covalentes**.",
+            "Croire qu’une cellule différenciée a **perdu** des gènes.",
+            "Lire la polymérase en sens **3’→5’**.",
+            "Oublier que le brin discontinu exige la **ligase**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle longueur d’onde dose l’**ADN**&nbsp;?",
+            "Que rompt la **dénaturation**&nbsp;?",
+            "Que contient une cellule en **G2** par rapport à G1&nbsp;?"
+          ],
+          "reponses": "1) 260 nm · 2) les liaisons hydrogène entre bases · 3) deux fois plus d’ADN"
+        }
+      ]
+    }
+  ]
+}

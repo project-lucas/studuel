@@ -1,0 +1,125 @@
+{
+  "titre": "Le groupe participial",
+  "titreSurligne": "participial",
+  "accroche": "Un nom qui arrive tard.",
+  "bonus": "**participe I** = infinitif + **d** · **participe II** = <i>ge-…-t / -en</i> · **zu** + part. I = à faire",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/allemand/le-groupe-participial-epithete.webp",
+    "prompt": "a glossy violet bracket frame holding a small golden word block with a golden arrow pointing to it, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "L’article attend\nson nom&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le schéma",
+          "lignes": ["**article** … **participe** + **nom**"],
+          "petite": true,
+          "regle": "Les compléments se glissent **entre l’article et le nom**, et le participe se décline comme un adjectif épithète.",
+          "note": "à lire comme une relative"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les deux participes",
+          "entetes": ["Participe", "Formation", "Sens"],
+          "lignes": [
+            ["**I**", "infinitif + <i>d</i>", "actif, en cours : <i>die blühende Landschaft</i>"],
+            ["**II**", "<i>ge-…-t / -en</i>", "passif ou accompli : <i>die verbannten Künstler</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Du groupe à la relative",
+          "entetes": ["Groupe participial", "Relative"],
+          "lignes": [
+            ["<i>die im Frühling **blühende** Landschaft</i>", "le paysage **qui fleurit** au printemps"],
+            ["<i>die von den Nazis **verbannten** Künstler</i>", "les artistes **qui avaient été bannis** par les nazis"],
+            ["<i>das 1949 **verabschiedete** Grundgesetz</i>", "la Loi fondamentale **adoptée** en 1949"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "La méthode de lecture",
+          "etapes": [
+            {
+              "titre": "Alerte",
+              "texte": "Un article suivi d’une préposition ou d’un complément, pas d’un nom."
+            },
+            {
+              "titre": "Saute",
+              "texte": "Cherche le **participe décliné** juste avant le nom."
+            },
+            {
+              "titre": "Traduis",
+              "texte": "Le nom + participe d’abord, puis les compléments en relative."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "<i>Die seit Jahren steigenden Mieten in den Großstädten sind ein Problem.</i>",
+          "calcul": "<i>Mieten</i> = loyers · <i>steigenden</i> = part. I, qui augmentent · <i>seit Jahren</i> = depuis des années",
+          "resultat": "[[Les loyers qui augmentent depuis des années]] sont un problème."
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À savoir faire",
+          "deux": true,
+          "items": [
+            { "titre": "Relative → groupe", "texte": "<i>die in Armut lebenden Menschen</i>" },
+            { "titre": "<i>zu</i> + part. I", "texte": "<i>die zu lösende Aufgabe</i> = la tâche à résoudre" },
+            { "titre": "Déclinaison", "texte": "<i>ein schlafendes Kind</i>" },
+            { "titre": "Où&nbsp;?", "texte": "Presse, histoire, science : l’allemand écrit" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Participe **I** = action en cours (actif) ; participe **II** = accompli ou passif.",
+            "Ne pas chercher le nom juste après l’article : il est **à la fin du groupe**.",
+            "Le participe prend les terminaisons de l’**adjectif épithète**.",
+            "<i>zu lösende</i> = qui doit être résolu, pas « qui résout »."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Participe I de <i>blühen</i> (+ -e)&nbsp;?",
+            "Traduis <i>die verbannten Künstler</i>.",
+            "Que veut dire <i>die zu lösende Aufgabe</i>&nbsp;?"
+          ],
+          "reponses": "1) blühende 2) les artistes bannis 3) la tâche à résoudre"
+        }
+      ]
+    }
+  ]
+}

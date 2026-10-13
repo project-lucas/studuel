@@ -1,0 +1,184 @@
+{
+  "titre": "Croissance microbienne",
+  "titreSurligne": "Croissance",
+  "accroche": "Faire pousser, ou l’empêcher.",
+  "epreuve": "bac",
+  "bonus": "ln N en fonction de t : la phase **exponentielle** devient une **droite** · pente = **µ**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/biochimie-biologie-biotechnologie/croissance-microbienne-et-agents-antimicrobiens.webp",
+    "prompt": "a glossy violet petri dish with golden bacterial colonies growing and a small golden growth curve arrow, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Ça double, ça double,\nça double&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les six phases",
+          "entetes": [
+            "Phase",
+            "Vitesse"
+          ],
+          "lignes": [
+            [
+              "**Latence**",
+              "nulle"
+            ],
+            [
+              "**Accélération**",
+              "croissante"
+            ],
+            [
+              "**Exponentielle**",
+              "maximale, constante"
+            ],
+            [
+              "**Ralentissement**",
+              "décroissante"
+            ],
+            [
+              "**Stationnaire**",
+              "nulle (morts = divisions)"
+            ],
+            [
+              "**Déclin**",
+              "négative"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Phase exponentielle",
+          "teinte": "jaune",
+          "petite": true,
+          "lignes": [
+            "N = N<sub>0</sub> × 2<sup>n</sup>",
+            "µ = ln 2 / G ≈ 0,69 / G"
+          ],
+          "regle": "**n = t / G** générations · **G** temps de génération · **µ** taux de croissance (pente de ln N).",
+          "note": "milieu non renouvelé"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "10<sup>3</sup> → 10<sup>6</sup> bact·mL<sup>−1</sup> en 200&nbsp;min. __G__&nbsp;?",
+          "calcul": "×1 000 ≈ 2<sup>10</sup> → n = 10",
+          "aparte": "G = 200 / 10",
+          "resultat": "G = [[20 min]] ; µ ≈ 0,035 min<sup>−1</sup>"
+        },
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Agents antimicrobiens",
+          "entetes": [
+            "Agent",
+            "Où",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "**Antiseptique**",
+              "tissu vivant",
+              "chlorhexidine"
+            ],
+            [
+              "**Désinfectant**",
+              "surface inerte",
+              "eau de Javel"
+            ],
+            [
+              "**Antibiotique**",
+              "dans l’organisme",
+              "amoxicilline"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Lire un antibiogramme",
+          "etapes": [
+            {
+              "titre": "Mesurer",
+              "texte": "le **diamètre** de la zone d’inhibition autour du disque"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "aux **valeurs critiques** de l’antibiotique"
+            },
+            {
+              "titre": "Classer",
+              "texte": "souche **sensible**, **intermédiaire** ou **résistante**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 5,
+          "titre": "À distinguer",
+          "items": [
+            {
+              "terme": "-cide / -statique",
+              "definition": "tue / bloque seulement la croissance."
+            },
+            {
+              "terme": "CMI",
+              "definition": "plus petite concentration sans croissance visible."
+            },
+            {
+              "terme": "Résistance acquise",
+              "definition": "mutation ou **plasmide** reçu."
+            },
+            {
+              "terme": "Milieu sélectif",
+              "definition": "inhibe les autres espèces."
+            },
+            {
+              "terme": "Bioréacteur",
+              "definition": "cuve qui régule **T, pH, agitation, O₂**."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Lire G sur la phase de **latence** ou stationnaire&nbsp;: seule l’exponentielle compte.",
+            "Confondre **antiseptique** (vivant) et **désinfectant** (inerte).",
+            "Oublier de **standardiser** l’inoculum, la gélose, la durée.",
+            "Croire une résistance **naturelle** acquise&nbsp;: elle concerne toute l’espèce."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que vaut la vitesse en phase de **latence**&nbsp;?",
+            "**G** = 30 min : combien de générations en 2&nbsp;h&nbsp;?",
+            "Que mesure-t-on autour d’un disque d’**antibiotique**&nbsp;?"
+          ],
+          "reponses": "1) nulle · 2) n = 120 / 30 = 4 générations · 3) la zone d’inhibition"
+        }
+      ]
+    }
+  ]
+}

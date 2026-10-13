@@ -1,0 +1,175 @@
+{
+  "titre": "Digestion enzymatique",
+  "titreSurligne": "enzymatique",
+  "accroche": "Simplifier les molécules pour les absorber.",
+  "bonus": "**Hydrolyse** = coupure par une molécule d’eau · enzyme **spécifique**, pH et **37 °C** optimaux · sels biliaires = **pas** des enzymes",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biochimie-biologie/l-appareil-digestif-et-la-digestion-enzymatique.webp",
+    "prompt": "a glossy violet scissors-shaped enzyme cutting a long golden bead chain into short pieces, a droplet of water beside it, tiny golden sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Les enzymes\ncoupent, j’avale !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Trois mécanismes",
+          "entetes": [
+            "Mécanisme",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "**Mécanique**",
+              "mastication, péristaltisme"
+            ],
+            [
+              "**Chimique**",
+              "acidité (HCl), bile qui émulsionne"
+            ],
+            [
+              "**Enzymatique**",
+              "hydrolyse par amylase, pepsine, lipase"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Lumière",
+              "definition": "intérieur du tube digestif&nbsp;: **milieu extérieur**."
+            },
+            {
+              "terme": "Glande exocrine",
+              "definition": "sécrète vers une cavité&nbsp;; **endocrine** vers le sang."
+            },
+            {
+              "terme": "Péristaltisme",
+              "definition": "contractions des **muscles lisses** qui font avancer le contenu."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Les enzymes à connaître",
+          "entetes": [
+            "Enzyme",
+            "Lieu",
+            "Substrat → produits",
+            "pH"
+          ],
+          "lignes": [
+            [
+              "**Amylase salivaire**",
+              "bouche",
+              "amidon → maltose",
+              "≈ 7"
+            ],
+            [
+              "**Pepsine**",
+              "estomac",
+              "protéines → peptides",
+              "≈ 2"
+            ],
+            [
+              "**Amylase pancréatique**",
+              "intestin grêle",
+              "amidon → maltose",
+              "≈ 8"
+            ],
+            [
+              "**Lipase pancréatique**",
+              "intestin grêle",
+              "triglycérides → acides gras + monoglycérides",
+              "≈ 8"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Interpréter une expérience",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "le témoin et la condition testée"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "le test à l’amidon (eau iodée) et aux sucres (Fehling)"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "l’enzyme agit, ou pas"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Amidon + salive à 37 °C&nbsp;: l’eau iodée ne bleuit plus, Fehling chauffée donne un précipité rouge brique.",
+          "calcul": "salive ébouillie ou à 0 °C&nbsp;: rien",
+          "aparte": "enzyme dénaturée ou inactive",
+          "resultat": "amidon [[hydrolysé en maltose]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Avec la salive, l’amidon disparaît et un sucre réducteur apparaît.",
+              "quoi": "constat"
+            },
+            {
+              "texte": "L’amylase hydrolyse l’amidon en maltose, à 37 °C et à son pH optimal.",
+              "quoi": "interpréter"
+            }
+          ],
+          "pied": "Les **sels biliaires émulsionnent** les lipides&nbsp;: plus de surface pour la ==lipase==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que la **bile** est une enzyme.",
+            "Placer la **lumière** à l’intérieur de l’organisme.",
+            "Confondre **hydrolyse** et simple broyage.",
+            "Croire qu’une enzyme **bouillie** fonctionne encore."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle enzyme digère les **protéines** dans l’estomac&nbsp;?",
+            "Que fait la **bile** sur les lipides&nbsp;?",
+            "Que fait le **microbiote** du gros intestin&nbsp;?"
+          ],
+          "reponses": "1) la pepsine (pH ≈ 2) · 2) elle les émulsionne · 3) il fermente les fibres, produit des vitamines"
+        }
+      ]
+    }
+  ]
+}

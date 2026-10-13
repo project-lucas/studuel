@@ -1,0 +1,109 @@
+{
+  "titre": "La cancérisation",
+  "titreSurligne": "cancérisation",
+  "accroche": "Une cellule échappe au contrôle.",
+  "bonus": "**Initiation** → **promotion** → **progression** → **métastases** · mutations surtout **somatiques**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/svt/origine-et-mecanismes-de-la-cancerisation.webp",
+    "prompt": "a glossy violet cell dividing into a growing cluster of golden cells, one cell escaping along a tiny vessel, sparkles"
+  },
+  "marcel": "Plusieurs mutations,\nun seul clone qui s’emballe !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les gènes en cause",
+          "entetes": ["Gène", "Si mutation", "Image"],
+          "lignes": [
+            ["**Proto-oncogène**", "devient **oncogène**, hyperactif", "accélérateur bloqué"],
+            ["**Suppresseur de tumeur** (p53)", "perte de fonction", "frein qui lâche"],
+            ["**Réparation** de l’ADN", "mutations accumulées plus vite", "correcteur en panne"]
+          ]
+        },
+        {
+          "type": "frise",
+          "numero": 2,
+          "titre": "Les quatre étapes",
+          "etapes": [
+            { "date": "Initiation", "texte": "Une **première mutation** dans une cellule." },
+            { "date": "Promotion", "texte": "D’autres mutations&nbsp;: un **clone** prolifère." },
+            { "date": "Progression", "texte": "Tumeur **maligne**, **angiogenèse**, invasion." },
+            { "date": "Métastases", "texte": "Cellules migrant par sang ou lymphe." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Risques et traitements",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Environnement", "texte": "**Tabac** (1re cause évitable), alcool, UV, amiante, papillomavirus." },
+            { "titre": "Génétique", "texte": "**Prédispositions** héritées, comme <i>BRCA1</i> et <i>BRCA2</i>." },
+            { "titre": "Mode de vie", "texte": "Alimentation, **sédentarité**, surpoids." },
+            { "titre": "Pas une cause", "texte": "Un facteur de risque augmente une **probabilité**." },
+            { "titre": "Prévention", "texte": "Ne pas fumer, se protéger du soleil, **vaccin HPV**, **dépistage**." },
+            { "titre": "Traitements", "texte": "Chirurgie, radio, chimio, thérapies ciblées, **immunothérapies**." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Expliquer l’apparition d’un cancer",
+          "etapes": [
+            { "titre": "Cibler", "texte": "les gènes mutés&nbsp;: oncogène, suppresseur de tumeur, réparation de l’ADN" },
+            { "titre": "Cumuler", "texte": "plusieurs mutations dans une même lignée" },
+            { "titre": "Conclure", "texte": "prolifération sans contrôle, puis invasion d’autres organes" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Un oncogène hyperactif stimule en permanence la division cellulaire.", "quoi": "expliquer" },
+            { "texte": "La perte de p53 supprime le frein à la division et le déclenchement de l’apoptose.", "quoi": "relier" },
+            { "texte": "Les mutations sont somatiques&nbsp;: elles ne se transmettent pas.", "quoi": "préciser" }
+          ],
+          "pied": "Ce qui se transmet, c’est une ==prédisposition==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’**une seule** mutation suffit.",
+            "Dire qu’un cancer **se transmet** toujours aux enfants.",
+            "Confondre **oncogène** (accélérateur bloqué) et gène suppresseur de tumeur (frein).",
+            "Voir un facteur de risque comme une **cause suffisante**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel gène devient un **oncogène**&nbsp;?",
+            "Quelle est la **dernière** étape de la cancérisation&nbsp;?",
+            "Les mutations d’un cancer sont-elles souvent **transmissibles**&nbsp;?"
+          ],
+          "reponses": "1) un proto-oncogène · 2) les métastases · 3) non, elles sont somatiques"
+        }
+      ]
+    }
+  ]
+}

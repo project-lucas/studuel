@@ -1,0 +1,208 @@
+{
+  "titre": "Cellule et imagerie",
+  "titreSurligne": "imagerie",
+  "accroche": "De l’organe à l’organite.",
+  "bonus": "1 mm = **1 000 µm** · 1 µm = **1 000 nm** · taille réelle = taille image ÷ grossissement",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biochimie-biologie/la-cellule-les-echelles-et-l-imagerie-medicale.webp",
+    "prompt": "a glossy violet microscope looking at a golden round cell with a nucleus, tiny sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Zoom sur la cellule,\net ses organites&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Ordres de grandeur",
+          "entetes": [
+            "Objet",
+            "Taille"
+          ],
+          "lignes": [
+            [
+              "Organe (rein)",
+              "≈ 10 cm"
+            ],
+            [
+              "Cellule animale",
+              "10 à 100 µm"
+            ],
+            [
+              "Bactérie",
+              "1 à 5 µm"
+            ],
+            [
+              "Mitochondrie",
+              "≈ 1 µm"
+            ],
+            [
+              "Virus",
+              "20 à 300 nm"
+            ],
+            [
+              "Membrane plasmique",
+              "≈ 7 nm"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les organites",
+          "entetes": [
+            "Organite",
+            "Rôle"
+          ],
+          "lignes": [
+            [
+              "**Noyau**",
+              "protège l’ADN, pores nucléaires"
+            ],
+            [
+              "**RE rugueux**",
+              "protéines à sécréter"
+            ],
+            [
+              "**Golgi**",
+              "modifie, emballe en vésicules"
+            ],
+            [
+              "**Mitochondrie**",
+              "respiration, ATP"
+            ],
+            [
+              "**Membrane**",
+              "limite et échanges"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 3,
+          "titre": "La voie de sécrétion",
+          "horizontale": true,
+          "etapes": [
+            {
+              "date": "Ribosome",
+              "texte": "fabrique la protéine"
+            },
+            {
+              "date": "Réticulum",
+              "texte": "rugueux, ribosomes accrochés"
+            },
+            {
+              "date": "Golgi",
+              "texte": "modifie et emballe"
+            },
+            {
+              "date": "Exocytose",
+              "texte": "la vésicule libère son contenu"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Quelle imagerie&nbsp;?",
+          "entetes": [
+            "Technique",
+            "On voit bien"
+          ],
+          "lignes": [
+            [
+              "**Radiographie** (rayons X)",
+              "les **os**"
+            ],
+            [
+              "**Échographie** (ultrasons)",
+              "les **tissus mous**"
+            ],
+            [
+              "Produit de contraste",
+              "vaisseaux, tube digestif"
+            ]
+          ]
+        },
+        {
+          "type": "texte",
+          "numero": 5,
+          "titre": "Microscopes",
+          "paragraphes": [
+            "**Optique**&nbsp;: sépare deux points à plus de 0,2 µm.",
+            "**Électronique**&nbsp;: descend au nanomètre. La **procaryote** n’a ni noyau, ni organites membranaires."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Photo grossie 1&nbsp;000 fois&nbsp;: la cellule mesure 25 mm. Taille réelle&nbsp;?",
+          "calcul": "25 mm ÷ 1&nbsp;000",
+          "aparte": "= 0,025 mm",
+          "resultat": "[[25 µm]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier de convertir **mm en µm** (× 1 000).",
+            "Prendre l’**échographie** pour des rayons X&nbsp;: ce sont des ultrasons.",
+            "Dire que la **bactérie** a un noyau.",
+            "Placer le Golgi avant le **réticulum** dans la sécrétion."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 6,
+          "titre": "Deux tissus et un noyau",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Épithélium",
+              "texte": "Cellules **jointives** sur une membrane basale, jonctions serrées."
+            },
+            {
+              "titre": "Polarisées",
+              "texte": "Face **apicale** et face **basale**&nbsp;: absorption ou sécrétion."
+            },
+            {
+              "titre": "Noyau en mitose",
+              "texte": "L’enveloppe se fragmente puis se reforme."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle imagerie pour un **fœtus**&nbsp;?",
+            "Taille d’une **mitochondrie**&nbsp;?",
+            "Ordre de la **sécrétion**&nbsp;?"
+          ],
+          "reponses": "1) échographie · 2) ≈ 1 µm · 3) ribosome, réticulum, Golgi, vésicule"
+        }
+      ]
+    }
+  ]
+}

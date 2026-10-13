@@ -1,0 +1,115 @@
+{
+  "titre": "Simulation",
+  "titreSurligne": "Simulation",
+  "accroche": "La moyenne se stabilise.",
+  "epreuve": "bac-1re",
+  "bonus": "random() < p&nbsp;: succès de probabilité p · écart type des moyennes ≈ {σ/√n} · simulation = estimation",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/simulation-et-echantillonnage-la-moyenne-se-stabilise.webp",
+    "prompt": "a glossy violet six-sided die with golden dots and a few small golden dots scattered around it forming a bell shape, sparkles, same art style as the reference icons, on a flat magenta background, no text, no numbers"
+  },
+  "marcel": "Plus on lance,\nplus ça colle !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La fluctuation",
+          "petite": true,
+          "lignes": ["écart type de m ≈ {σ/√n}", "m ∈ [μ − {2σ/√n} ; μ + {2σ/√n}]"],
+          "regle": "Vrai pour environ **95 %** des échantillons de taille n. La moyenne m se rapproche de l’espérance μ.",
+          "note": "n × 16 ⇒ ÷ 4&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le hasard en Python",
+          "entetes": ["Instruction", "Renvoie"],
+          "lignes": [
+            ["random()", "un réel de [0 ; 1[ "],
+            ["randint(1, 6)", "un entier de 1 à 6, **bornes comprises**"],
+            ["random() < p", "vrai avec probabilité **p**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Simuler en trois temps",
+          "etapes": [
+            { "titre": "Une expérience", "texte": "une fonction qui renvoie 1 (succès) ou 0" },
+            { "titre": "Répéter", "texte": "n fois, puis calculer la moyenne ou la fréquence" },
+            { "titre": "Comparer", "texte": "à l’espérance μ ou à la probabilité p" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un dé&nbsp;: μ = 3,5 et σ ≈ 1,71. __n = 1 000__&nbsp;?",
+          "calcul": "{σ/√n} = {1,71/√1 000}\n= 1,71 ÷ 31,6",
+          "aparte": "dispersion des moyennes",
+          "resultat": "≈ [[0,054]] · m proche de [[3,5]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les idées à retenir",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Fluctuation", "texte": "deux échantillons donnent deux moyennes **différentes**." },
+            { "titre": "Grands nombres", "texte": "plus n est grand, plus m est **proche de μ**." },
+            { "titre": "Estimer", "texte": "une fréquence sur beaucoup d’essais **estime** p." },
+            { "titre": "Limite", "texte": "la simulation **propose**, le calcul **dispose**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "def essai(p) :", "quoi": "la fonction" },
+            { "texte": "····if random() < p : return 1", "quoi": "le succès" },
+            { "texte": "····return 0", "quoi": "l’échec" }
+          ],
+          "pied": "Fréquence = (nombre de succès) ÷ n&nbsp;; ==plus n est grand==, mieux c’est. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’une simulation **démontre** un résultat.",
+            "Exclure la borne 6 de **randint(1, 6)**.",
+            "Penser que deux simulations donnent **le même résultat**.",
+            "Oublier de répéter **assez** d’essais."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "randint(1, 6) peut-il donner **6**&nbsp;?",
+            "n est multiplié par 16&nbsp;: **dispersion**&nbsp;?",
+            "Une simulation **démontre**-t-elle&nbsp;?"
+          ],
+          "reponses": "1) oui, bornes comprises · 2) divisée par 4 · 3) non, elle estime"
+        }
+      ]
+    }
+  ]
+}

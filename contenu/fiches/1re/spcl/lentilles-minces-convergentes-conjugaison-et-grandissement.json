@@ -1,0 +1,129 @@
+{
+  "titre": "Lentilles convergentes",
+  "titreSurligne": "convergentes",
+  "accroche": "Prévoir où se forme l’image.",
+  "bonus": "f’ = OF’ en **m** · V = {1/f’} en **δ** · objet réel&nbsp;: **OA &lt; 0**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/spcl/lentilles-minces-convergentes-conjugaison-et-grandissement.webp",
+    "prompt": "a glossy violet convex lens with three golden light rays crossing at a focal point, sparkles"
+  },
+  "marcel": "Trois rayons,\nune image !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Conjugaison et grandissement",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "{1/OA’} − {1/OA} = {1/f’}",
+            "γ = {A’B’/AB} = {OA’/OA}"
+          ],
+          "regle": "Mesures **algébriques**, origine en **O**. Si **γ &lt; 0**, image **renversée**&nbsp;; si |γ| &gt; 1, **agrandie**.",
+          "note": "OA &lt; 0 pour un objet réel&nbsp;!"
+        },
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Trois rayons particuliers",
+          "items": [
+            {
+              "titre": "Par O",
+              "texte": "n’est **pas dévié**"
+            },
+            {
+              "titre": "Parallèle à l’axe",
+              "texte": "ressort par **F’**"
+            },
+            {
+              "titre": "Par F",
+              "texte": "ressort **parallèle** à l’axe"
+            },
+            {
+              "titre": "Deux suffisent",
+              "texte": "pour construire B’"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "AB = 2,0 cm à 30 cm d’une lentille de f’ = 10 cm. __OA’__ et __γ__&nbsp;?",
+          "calcul": "{1/OA’} = {1/10} − {1/30} = {2/30}",
+          "aparte": "OA = −30 cm",
+          "resultat": "OA’ = [[15 cm]], γ = −0,5"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Image réelle ou virtuelle",
+          "oui": {
+            "titre": "Objet avant F",
+            "texte": "Image **réelle**, qu’on peut recueillir sur un **écran**."
+          },
+          "non": {
+            "titre": "Objet entre F et O",
+            "texte": "Image **virtuelle**, **droite** et **agrandie**&nbsp;: c’est la **loupe**."
+          },
+          "essai": {
+            "texte": "Exemple&nbsp;: f’ = 50 mm = 0,050 m donne <i>V = 20 δ</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "{1/OA’} = {1/f’} + {1/OA} = {1/10} − {1/30}",
+              "quoi": "la relation, puis nombres"
+            },
+            {
+              "texte": "OA’ = 15 cm &gt; 0",
+              "quoi": "image réelle après la lentille"
+            },
+            {
+              "texte": "γ = {OA’/OA} = −0,5",
+              "quoi": "renversée, 2 fois plus petite"
+            }
+          ],
+          "pied": "Focométrie&nbsp;: mesurer OA et OA’ pour ==plusieurs positions== et évaluer l’incertitude."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **signe** de OA (négatif).",
+            "S’arrêter à {1/OA’} sans **inverser** à la fin.",
+            "Mélanger **cm** et **m** dans f’ et V.",
+            "Dire qu’une image virtuelle se projette sur un **écran**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**V** pour f’ = 25 cm&nbsp;?",
+            "**γ** si OA’ = 20 cm et OA = −10 cm&nbsp;?",
+            "Que dire si γ &lt; 0&nbsp;?"
+          ],
+          "reponses": "1) 4 δ · 2) γ = −2 · 3) l’image est renversée"
+        }
+      ]
+    }
+  ]
+}

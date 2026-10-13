@@ -1,0 +1,110 @@
+{
+  "titre": "Transferts thermiques",
+  "titreSurligne": "thermiques",
+  "accroche": "Chauffer, fondre&nbsp;: Q = mcΔθ ou mL.",
+  "bonus": "Q = m × c × Δθ · Q = m × L · T(K) = θ(°C) + 273,15 · c<sub>eau</sub> = 4 180 J/(kg·°C)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-maths/energie-interne-et-transferts-thermiques.webp",
+    "prompt": "a glossy violet pot of water on a golden heat plate with rising steam and a small ice cube melting, sparkles"
+  },
+  "marcel": "Du chaud vers\nle froid, toujours !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Deux situations",
+          "petite": true,
+          "lignes": ["Q = m × c × Δθ", "Q = m × L"],
+          "regle": "**Q** en J, **m** en kg, **c** capacité thermique massique (J/(kg·°C)), **L** énergie massique de changement d’état (J/kg). Pendant un changement d’état, ==θ reste constante==.",
+          "note": "m en kilogrammes&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois transferts",
+          "entetes": ["Mode", "Principe", "Exemple"],
+          "lignes": [
+            ["Conduction", "de proche en proche", "manche de casserole"],
+            ["Convection", "fluide en mouvement", "air chaud qui monte"],
+            ["Rayonnement", "ondes, même dans le vide", "Soleil"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "chauffage simple (θ change) ou changement d’état (θ constante)" },
+            { "titre": "Choisir", "texte": "Q = m × c × Δθ ou Q = m × L, avec les valeurs du sujet" },
+            { "titre": "Calculer", "texte": "en kg et en J, puis la durée avec Δt = Q ÷ P" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Chauffer 2 kg d’eau de 20 °C à 100 °C (c = 4 180). L’__énergie__ reçue&nbsp;?",
+          "calcul": "Δθ = 100 − 20 = 80 °C",
+          "aparte": "Q = m × c × Δθ",
+          "resultat": "Q = 2 × 4 180 × 80 = [[668 800 J]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Chaleur ou température",
+          "oui": { "titre": "La température", "texte": "Une **propriété** d’un corps&nbsp;: elle mesure l’agitation des particules." },
+          "non": { "titre": "La chaleur", "texte": "Un **transfert** d’énergie Q qui passe d’un corps à un autre, du chaud vers le froid." },
+          "essai": { "texte": "Fusion, vaporisation&nbsp;: le corps <i>reçoit</i> de l’énergie. Solidification, liquéfaction&nbsp;: il en <i>cède</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Pas de changement d’état&nbsp;: Q = m × c × Δθ", "quoi": "justifier la formule" },
+            { "texte": "Q = 2 × 4 180 × 80 = 668 800 J", "quoi": "formule puis nombres" },
+            { "texte": "Δt = Q ÷ P = 668 800 ÷ 1 400 ≈ 478 s", "quoi": "avec P utile = 1 400 W" }
+          ],
+          "pied": "Isoler, c’est ==emprisonner de l’air immobile==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **chaleur** et **température**.",
+            "Laisser la masse en **grammes**.",
+            "Utiliser Q = mcΔθ pendant un **changement d’état**.",
+            "Oublier le **rendement** de la plaque."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**Q** pour 1 kg d’eau de 10 à 12 °C&nbsp;?",
+            "**Q** pour fondre 0,5 kg de glace (334 kJ/kg)&nbsp;?",
+            "Quel transfert traverse le **vide**&nbsp;?"
+          ],
+          "reponses": "1) 8 360 J · 2) 167 kJ · 3) le rayonnement"
+        }
+      ]
+    }
+  ]
+}

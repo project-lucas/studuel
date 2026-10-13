@@ -1,0 +1,129 @@
+{
+  "titre": "Générer une suite",
+  "titreSurligne": "suite",
+  "accroche": "Pas à pas, ou d’un seul saut.",
+  "bonus": "u(n) n’est pas u × n · croissante ⇔ u(n+1) − u(n) > 0 · nuage de points isolés",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths-techno/les-suites-numeriques-generer-et-representer.webp",
+    "prompt": "a glossy violet row of numbered stepping stones with a golden ball hopping from one to the next, tiny sparkles"
+  },
+  "marcel": "Récurrence : pas à pas.\nExplicite : un saut !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Deux façons de générer",
+          "entetes": ["Mode", "Exemple"],
+          "lignes": [
+            ["**Explicite**", "u(n) = 3n + 1 : u(100) direct"],
+            ["**Récurrence**", "u(0) = 2 et u(n+1) = 2u(n) − 1"],
+            ["Récurrence", "pour u(10), tous les termes avant"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le sens de variation",
+          "petite": true,
+          "lignes": ["u(n+1) − u(n) > 0 : croissante", "u(n+1) − u(n) < 0 : décroissante"],
+          "regle": "Pour tout n, on étudie le ==signe== de u(n+1) − u(n). Égal à 0&nbsp;: la suite est **constante**.",
+          "note": "n entier : points isolés"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Repérer le mode", "texte": "explicite ou par récurrence" },
+            { "titre": "Calculer", "texte": "u(1), u(2), u(3)… un terme après l’autre" },
+            { "titre": "Conclure", "texte": "écarts ou quotients constants ? sinon ni l’un ni l’autre" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "u(0) = 2 et __u(n+1) = 2u(n) − 1__. Trois premiers termes&nbsp;?",
+          "calcul": "u(1) = 2 × 2 − 1 = 3\nu(2) = 2 × 3 − 1 = 5",
+          "aparte": "écarts : 1, 2, 4",
+          "resultat": "u(3) = [[9]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Variation", "texte": "u(n) = 5 − 2n&nbsp;: u(n+1) − u(n) = **−2** &lt; 0, décroissante." },
+            { "titre": "Représentation", "texte": "Les points **(n ; u(n))** : jamais une courbe continue." },
+            { "titre": "Ni l’une ni l’autre", "texte": "u(n) = n² : ni arithmétique, ni géométrique." },
+            { "titre": "Tableur", "texte": "Récurrence&nbsp;: <b>=2*B1−1</b> recopiée vers le bas." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": "?",
+          "titre": "Quelle suite est-ce&nbsp;?",
+          "entetes": ["Écarts u(n+1) − u(n)", "Quotients u(n+1) ÷ u(n)", "Conclusion"],
+          "lignes": [
+            ["constants", "—", "**arithmétique**"],
+            ["—", "constants", "**géométrique**"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Chercher un seuil",
+          "deux": false,
+          "items": [
+            { "titre": "n ← 0 ; u ← 2", "texte": "on part du premier terme" },
+            { "titre": "tant que u ≤ 100", "texte": "n ← n + 1 ; u ← 2u − 1" },
+            { "titre": "afficher n", "texte": "le premier rang où u(n) > 100" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Lire **u(n)** comme u × n.",
+            "Relier les points par une **courbe**.",
+            "Décaler le rang&nbsp;: u(0) est le **premier** terme.",
+            "Conclure sur deux termes seulement."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "u(n) = 3n + 1 : **u(4)**&nbsp;?",
+            "u(0) = 1, u(n+1) = u(n) + 2 : **u(3)**&nbsp;?",
+            "u(n+1) − u(n) = −2 : la suite est&nbsp;?"
+          ],
+          "reponses": "1) 13 · 2) 7 · 3) décroissante"
+        }
+      ]
+    }
+  ]
+}

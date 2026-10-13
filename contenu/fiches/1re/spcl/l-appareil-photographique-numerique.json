@@ -1,0 +1,179 @@
+{
+  "titre": "L’appareil photo",
+  "titreSurligne": "photo",
+  "accroche": "Ouverture, temps de pose, profondeur.",
+  "bonus": "N = {f’/D} · éclairement ∝ {1/N²} · énergie ∝ éclairement × **temps de pose**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/spcl/l-appareil-photographique-numerique.webp",
+    "prompt": "a glossy violet digital camera with a golden lens and a round aperture diaphragm, sparkles"
+  },
+  "marcel": "Petit N,\ngrande lumière !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le modèle",
+          "entetes": [
+            "Réel",
+            "Modèle"
+          ],
+          "lignes": [
+            [
+              "Objectif",
+              "lentille convergente f’"
+            ],
+            [
+              "Diaphragme",
+              "ouverture de diamètre D"
+            ],
+            [
+              "Obturateur",
+              "temps de pose"
+            ],
+            [
+              "Capteur",
+              "écran de pixels"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Nombre d’ouverture",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "N = {f’/D}"
+          ],
+          "regle": "Gravé f/2 ; f/2,8 ; f/4 ; f/5,6 ; f/8… Chaque cran **divise par 2** la lumière reçue.",
+          "note": "petit N = grande ouverture"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Compenser une exposition",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "le réglage de départ&nbsp;: N et **temps de pose**"
+            },
+            {
+              "titre": "Changer N",
+              "texte": "un cran de plus = **moitié** de lumière"
+            },
+            {
+              "titre": "Compenser",
+              "texte": "**doubler** le temps de pose"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Objectif f’ = 50 mm, ouverture D = 12,5 mm. __N__&nbsp;?",
+          "calcul": "N = {f’/D}",
+          "aparte": "mêmes unités (mm)",
+          "resultat": "N = 50 ÷ 12,5 = [[4]], soit f/4"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Profondeur de champ",
+          "oui": {
+            "titre": "Elle augmente",
+            "texte": "Si N **augmente**, si la focale **diminue**, si le sujet est **éloigné**."
+          },
+          "non": {
+            "titre": "Elle diminue",
+            "texte": "Portrait à f/2&nbsp;: **arrière-plan flou** qui isole le sujet."
+          },
+          "essai": {
+            "texte": "Paysage à <i>f/11</i> net du premier plan à l’horizon&nbsp;; 1/250 s à f/4 équivaut à 1/125 s à f/5,6."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Capteur et champ",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Résolution",
+              "texte": "nombre de **pixels** (24 millions)"
+            },
+            {
+              "titre": "ISO",
+              "texte": "amplifie, mais ajoute du **bruit**"
+            },
+            {
+              "titre": "Angle de champ",
+              "texte": "**diminue** quand f’ augmente"
+            },
+            {
+              "titre": "Temps court",
+              "texte": "fige&nbsp;; long = **flou de bougé**"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’un **grand** N laisse passer plus de lumière.",
+            "Mélanger **mm** et **m** dans N = f’ ÷ D.",
+            "Confondre **angle de champ** et **profondeur de champ**.",
+            "Oublier que l’énergie dépend du **temps de pose**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "N = {f’/D} = 50 ÷ 12,5 = 4",
+              "quoi": "formule, nombres, même unité"
+            },
+            {
+              "texte": "f/4 à f/5,6 : lumière ÷ 2, donc pose × 2",
+              "quoi": "la compensation"
+            }
+          ],
+          "pied": "Cite le ==modèle== : diaphragme, lentille, capteur."
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**N** pour f’ = 100 mm et D = 25 mm&nbsp;?",
+            "f/4 vers f/5,6&nbsp;: la lumière est…&nbsp;?",
+            "Un téléobjectif a un angle de champ…&nbsp;?"
+          ],
+          "reponses": "1) N = 4 · 2) divisée par 2 · 3) petit (étroit)"
+        }
+      ]
+    }
+  ]
+}

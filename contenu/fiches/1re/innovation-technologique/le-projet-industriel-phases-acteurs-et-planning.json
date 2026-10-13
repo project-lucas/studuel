@@ -1,0 +1,170 @@
+{
+  "titre": "Projet industriel",
+  "titreSurligne": "Projet",
+  "accroche": "Du besoin au produit, jalon par jalon.",
+  "bonus": "**MOA** = quoi et pour combien · **MOE** = comment · **chemin critique** = durée minimale",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/innovation-technologique/le-projet-industriel-phases-acteurs-et-planning.webp",
+    "prompt": "a glossy violet Gantt chart with golden horizontal bars and a small golden flag at the end, tiny sparkles, same art style as the reference icons, no text, magenta background"
+  },
+  "marcel": "Un projet, c’est\nun plan et un but !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les acteurs",
+          "entetes": [
+            "Acteur",
+            "Rôle"
+          ],
+          "lignes": [
+            [
+              "**Maître d’ouvrage** (MOA)",
+              "le client : besoin, budget"
+            ],
+            [
+              "**Maître d’œuvre** (MOE)",
+              "conçoit et dirige la réalisation"
+            ],
+            [
+              "**Entreprises**",
+              "fabrication, chantier, code"
+            ],
+            [
+              "**Contrôleurs**",
+              "conformité, sécurité, règles"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les mots à connaître",
+          "items": [
+            {
+              "terme": "Jalon",
+              "definition": "fin de phase : **revue de projet**"
+            },
+            {
+              "terme": "Antériorité",
+              "definition": "ce qui doit être **fini avant**"
+            },
+            {
+              "terme": "Chemin critique",
+              "definition": "tâches dont le retard **décale la fin**"
+            },
+            {
+              "terme": "Marge",
+              "definition": "retard possible sans effet sur la fin"
+            },
+            {
+              "terme": "APS / APD",
+              "definition": "avant-projet **sommaire** / **définitif** (bâtiment)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Les cinq phases, en trois temps",
+          "etapes": [
+            {
+              "titre": "Imaginer",
+              "texte": "marketing et besoin, puis pré-conception"
+            },
+            {
+              "titre": "Concevoir",
+              "texte": "conception détaillée, pré-industrialisation, prototypes"
+            },
+            {
+              "titre": "Produire",
+              "texte": "industrialisation, puis vie du produit et fin de vie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "A __2 j__ · B __3 j__ (après A) · C __4 j__ (après A) · D __5 j__ (après B et C).",
+          "calcul": "A→B = 5 j, A→C = 6 j : D démarre au jour 6, puis 6 + 5",
+          "aparte": "le plus long gagne",
+          "resultat": "[[11 jours]] · chemin A→C→D"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Un retard : grave ou pas&nbsp;?",
+          "oui": {
+            "titre": "Sur le chemin critique",
+            "texte": "Tâche A, C ou D : un jour de retard **décale** tout le projet."
+          },
+          "non": {
+            "titre": "Hors chemin",
+            "texte": "Tâche B : elle a **1 jour de marge**, elle peut glisser."
+          },
+          "essai": {
+            "texte": "Le chemin critique est le chemin <i>le plus long</i>, pas le plus court."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Le MOA exprime le besoin, le MOE conçoit la réponse.",
+              "quoi": "les acteurs"
+            },
+            {
+              "texte": "Chaque phase se termine par une revue de projet.",
+              "quoi": "le jalon"
+            },
+            {
+              "texte": "Durée minimale = chemin le plus long.",
+              "quoi": "le planning"
+            }
+          ],
+          "pied": "On suit aussi le ==budget== et la ==réglementation== dès la conception."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **MOA** (client) et **MOE** (concepteur).",
+            "**Additionner** des tâches qui se font en parallèle.",
+            "Oublier les **antériorités** dans le calcul.",
+            "Négliger le **bilan** de fin de projet."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Qui fixe le **budget** d’un projet&nbsp;?",
+            "Que décide-t-on à un **jalon**&nbsp;?",
+            "Que représente le **chemin critique**&nbsp;?"
+          ],
+          "reponses": "1) le maître d’ouvrage · 2) continuer, corriger, arrêter · 3) la durée minimale"
+        }
+      ]
+    }
+  ]
+}

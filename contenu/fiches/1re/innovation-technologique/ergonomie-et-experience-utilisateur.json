@@ -1,0 +1,121 @@
+{
+  "titre": "Ergonomie et UX",
+  "titreSurligne": "Ergonomie",
+  "accroche": "Concevoir pour l’humain qui s’en sert.",
+  "bonus": "**Confort · efficacité · sécurité** · du **5e au 95e centile** · observer un vrai utilisateur",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/innovation-technologique/ergonomie-et-experience-utilisateur.webp",
+    "prompt": "a glossy violet hand holding a golden smartphone with a glowing golden touch button, tiny sparkles, same art style as the reference icons, no text, magenta background"
+  },
+  "marcel": "Un produit doit\nêtre agréable !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois objectifs",
+          "entetes": ["Objectif", "Exemple"],
+          "lignes": [
+            ["**Confort**", "poignée adaptée à la main"],
+            ["**Efficacité**", "bouton principal visible"],
+            ["**Sécurité**", "arrêt d’urgence rouge"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les mots à connaître",
+          "items": [
+            { "terme": "Anthropométrie", "definition": "dimensions du corps, en **centiles**" },
+            { "terme": "Feedback", "definition": "chaque action produit une **réponse**" },
+            { "terme": "Détrompeur", "definition": "rend la **mauvaise manœuvre** impossible" },
+            { "terme": "Persona", "definition": "utilisateur type, **fictif mais réaliste**" },
+            { "terme": "UX", "definition": "tout le **parcours** de l’utilisateur" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Étudier l’expérience utilisateur",
+          "etapes": [
+            { "titre": "Persona", "texte": "qui est l’utilisateur, ses habitudes, ses besoins" },
+            { "titre": "Scénario", "texte": "le déroulé pas à pas d’un usage" },
+            { "titre": "Test", "texte": "observer de vrais utilisateurs sur un prototype" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Borne de recharge de trottinettes : la prise est __trop basse__. Quel défaut&nbsp;?",
+          "calcul": "gêne pour brancher",
+          "aparte": "objectif touché",
+          "resultat": "[[inconfort]] → prise à 90 cm"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Un retour d’information&nbsp;?",
+          "oui": {
+            "titre": "Avec feedback",
+            "texte": "Un voyant vert/orange dit où en est la **charge**."
+          },
+          "non": {
+            "titre": "Sans feedback",
+            "texte": "Aucun signal : l’utilisateur **ne sait pas** si ça marche."
+          },
+          "essai": {
+            "texte": "Un clic, une LED ou un son : chaque action doit recevoir une <i>réponse</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le produit couvre du 5e au 95e centile.", "quoi": "la population" },
+            { "texte": "Le test révèle ce problème, je le corrige ainsi.", "quoi": "la démarche" },
+            { "texte": "Visibilité, feedback, cohérence, prévention.", "quoi": "les principes" }
+          ],
+          "pied": "On conçoit pour la ==diversité== : grands, petits, gauchers, âgés, handicapés."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Concevoir pour **un seul** utilisateur type.",
+            "Confondre **ergonomie** et esthétique.",
+            "Valider sans **test utilisateur**.",
+            "Oublier la **sécurité** (câble au sol)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quels sont les **trois objectifs** de l’ergonomie&nbsp;?",
+            "Que fait un **détrompeur**&nbsp;?",
+            "Qu’est-ce qu’un **persona**&nbsp;?"
+          ],
+          "reponses": "1) confort, efficacité, sécurité · 2) empêche l’erreur de manœuvre · 3) un utilisateur type fictif"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "titre": "Mouvements et forces",
+  "titreSurligne": "forces",
+  "accroche": "Bilan des forces, bilan des énergies.",
+  "bonus": "W = F × AB × cos α · E<sub>c</sub> = ½mv² · E<sub>pp</sub> = mgz · P = W ÷ Δt",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-maths/energie-mecanique-mouvements-et-forces.webp",
+    "prompt": "a glossy violet sled sliding down a golden snowy slope with small force arrows, sparkles"
+  },
+  "marcel": "Une force agit,\nl’énergie change !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Travail et énergies",
+          "petite": true,
+          "lignes": ["W = F × AB × cos α", "<span>E<sub>c</sub></span> = {1/2} × m × v²"],
+          "regle": "**W** en J (moteur si &gt; 0, résistant si &lt; 0, nul si perpendiculaire). **E<sub>pp</sub>** = m × g × z, **E<sub>m</sub>** = E<sub>c</sub> + E<sub>pp</sub>. Sans frottement, E<sub>m</sub> se ==conserve==.",
+          "note": "v en m/s : 1 m/s = 3,6 km/h"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les forces usuelles",
+          "entetes": ["Force", "Expression", "Direction"],
+          "lignes": [
+            ["Poids", "P = m × g", "verticale, vers le bas"],
+            ["Réaction", "sans frottement", "perpendiculaire au support"],
+            ["Ressort", "F = k × Δl", "selon le ressort"],
+            ["Frottement", "croît avec v", "opposée au mouvement"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Bilan", "texte": "les forces qui s’exercent, avec leurs travaux (moteur ou résistant)" },
+            { "titre": "Énergies", "texte": "E<sub>c</sub> et E<sub>pp</sub> aux deux positions, E<sub>m</sub> = E<sub>c</sub> + E<sub>pp</sub>" },
+            { "titre": "Comparer", "texte": "E<sub>m</sub> constante sans frottement, sinon la perte est thermique" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Luge de 50 kg partie sans vitesse, 8 m de dénivelé, sans frottement. Sa __vitesse__ en bas&nbsp;?",
+          "calcul": "E<sub>pp</sub> = 50 × 9,81 × 8 ≈ 3 924 J",
+          "aparte": "en bas, tout en E<sub>c</sub>",
+          "resultat": "v = √(2 × 3 924 ÷ 50) ≈ [[12,5 m/s]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Avec ou sans frottement",
+          "oui": { "titre": "Sans frottement", "texte": "E<sub>m</sub> se **conserve**&nbsp;: E<sub>pp</sub> devient E<sub>c</sub>." },
+          "non": { "titre": "Avec frottements", "texte": "E<sub>m</sub> **diminue**&nbsp;: l’énergie perdue devient thermique." },
+          "essai": { "texte": "Vitesse réelle 9 m/s&nbsp;: E<sub>c</sub> = <i>½ × 50 × 81 = 2 025 J</i>. Dissipé&nbsp;: 3 924 − 2 025 ≈ <i>1 900 J</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Sans frottement&nbsp;: E<sub>m</sub> se conserve.", "quoi": "justifier" },
+            { "texte": "E<sub>c,B</sub> = E<sub>pp,A</sub> = 50 × 9,81 × 8 = 3 924 J", "quoi": "l’égalité" },
+            { "texte": "v = √(2 E<sub>c</sub> ÷ m) ≈ 12,5 m/s", "quoi": "avec l’unité" }
+          ],
+          "pied": "Théorème de l’énergie cinétique&nbsp;: ==ΔE<sub>c</sub> = somme des travaux==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier que la vitesse est **au carré** dans E<sub>c</sub>.",
+            "Un travail **positif** pour une force qui freine.",
+            "Laisser la vitesse en **km/h**.",
+            "Conserver E<sub>m</sub> malgré des **frottements**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**E<sub>c</sub>** de 2 kg à 3 m/s&nbsp;?",
+            "**W** d’une force perpendiculaire au déplacement&nbsp;?",
+            "**P** si W = 500 J en 10 s&nbsp;?"
+          ],
+          "reponses": "1) 9 J · 2) nul (cos 90° = 0) · 3) 50 W"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "titre": "La complétive",
+  "titreSurligne": "complétive",
+  "accroche": "Que + indicatif ou que + subjonctif.",
+  "bonus": "**creo que viene** · **no creo que venga** · même sujet : **infinitif**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/espagnol/la-proposition-subordonnee-completive.webp",
+    "prompt": "a glossy violet switch lever flipping between a golden check mark and a golden question mark, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Certitude&nbsp;?\nIndicatif&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La question clé",
+          "lignes": ["**que** + indicatif ou subjonctif ?"],
+          "petite": true,
+          "regle": "Le verbe principal **affirme** (indicatif) ou exprime **volonté, sentiment, doute, jugement** (subjonctif). Le **que** ne se supprime jamais.",
+          "note": "<i>Espero que me llames</i>"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Quel mode&nbsp;?",
+          "entetes": ["Le verbe principal exprime", "Mode", "Exemple"],
+          "lignes": [
+            ["Déclaration, perception, opinion, certitude", "Indicatif", "<i>Digo que viene. Creo que tiene razón.</i>"],
+            ["Volonté, ordre, souhait", "Subjonctif", "<i>Quiero que vengas. Ojalá llueva.</i>"],
+            ["Sentiment", "Subjonctif", "<i>Me alegro de que estés aquí.</i>"],
+            ["Doute, certitude niée, jugement impersonnel", "Subjonctif", "<i>Dudo que sea verdad. Es necesario que estudies.</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Trois réflexes",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Même sujet", "texte": "**Infinitif**, sans <i>que</i>&nbsp;: <i>Quiero venir.</i> Sujet différent&nbsp;: <i>Quiero **que** vengas.</i>" },
+            { "titre": "Nier la certitude", "texte": "Le mode bascule&nbsp;: <i>Creo que viene</i> → <i>**No creo que venga**.</i>" },
+            { "titre": "Au passé", "texte": "Le subjonctif devient imparfait&nbsp;: <i>Quería que **vinieras**</i> (ou <i>vinieses</i>)." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Creer : quel mode&nbsp;?",
+          "oui": { "titre": "Opinion affirmée", "texte": "<i>Creo que **viene**.</i> — indicatif." },
+          "non": { "titre": "Certitude niée", "texte": "<i>No creo que **venga**.</i> — subjonctif. Le verbe n’a pas changé, sa polarité si." },
+          "essai": { "titre": "Essai", "texte": "<i>Dudo que ___ (ser) verdad.</i> → **sea**&nbsp;: le doute appelle le subjonctif." }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            { "titre": "Même sujet&nbsp;?", "texte": "Oui → infinitif, pas de <i>que</i>." },
+            { "titre": "Que dit le verbe&nbsp;?", "texte": "Il affirme → indicatif. Il veut, sent, doute, juge → subjonctif." },
+            { "titre": "Quel temps&nbsp;?", "texte": "Verbe principal au passé → imparfait du subjonctif." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            { "titre": "Deux formes équivalentes", "texte": "-<i>ra</i> et -<i>se</i>&nbsp;: <i>vinieras = vinieses</i>" },
+            { "titre": "Jugement impersonnel", "texte": "<i>Es necesario que estudies.</i> → <i>Era necesario que estudiaras.</i>" },
+            { "titre": "Certitude", "texte": "<i>Es verdad que llueve.</i> → indicatif" },
+            { "titre": "Souhait", "texte": "<i>Ojalá llueva.</i> → subjonctif" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>No creo que viene</i> → <i>No creo que **venga**.</i>",
+            "Supprimer le <i>que</i> comme en français&nbsp;: <i>Espero me llames</i> → <i>Espero **que** me llames.</i>",
+            "<i>Quiero que venir</i> / <i>Quiero que vengo</i> → <i>Quiero **que vengas**.</i>",
+            "<i>Quería que vengas</i> → <i>Quería que **vinieras**.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Creo que ___ (venir, él).</i> / <i>No creo que ___ (venir, él).</i>",
+            "<i>Quiero ___ (venir, yo) a tu casa.</i> (même sujet)",
+            "<i>Quería que ___ (venir, tú).</i>"
+          ],
+          "reponses": "1) viene / venga 2) venir 3) vinieras (vinieses)"
+        }
+      ]
+    }
+  ]
+}

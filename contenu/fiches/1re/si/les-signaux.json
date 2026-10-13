@@ -1,0 +1,163 @@
+{
+  "titre": "Les signaux",
+  "titreSurligne": "signaux",
+  "accroche": "Analogique, numérique ou logique.",
+  "bonus": "**f = 1 ÷ T** · **f<sub>e</sub> ≥ 2 × f<sub>max</sub>** · n bits = **2<sup>n</sup>** niveaux · MLI = rapport cyclique variable",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/les-signaux.webp",
+    "prompt": "a glossy violet smooth wave turning into golden square steps on a small screen, sparkles, same art style as the reference icons"
+  },
+  "marcel": "La courbe devient\ndes 0 et des 1 !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Échantillonner",
+          "petite": true,
+          "lignes": [
+            "f = {1/T}",
+            "f<sub>e</sub> ≥ 2 × f<sub>max</sub>"
+          ],
+          "regle": "Si la fréquence d’==échantillonnage== est trop basse, l’information est **irrémédiablement perdue**. Avec **n bits**, on a 2<sup>n</sup> niveaux.",
+          "note": "au moins le double&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois natures de signal",
+          "entetes": [
+            "Nature",
+            "Valeurs"
+          ],
+          "lignes": [
+            [
+              "**Analogique**",
+              "une infinité, continu"
+            ],
+            [
+              "**Numérique**",
+              "nombre fini, en binaire"
+            ],
+            [
+              "**Logique**",
+              "deux seulement, 0 et 1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "De l’analogique au numérique",
+          "etapes": [
+            {
+              "titre": "Échantillonner",
+              "texte": "prélever la valeur à intervalles réguliers"
+            },
+            {
+              "titre": "Quantifier",
+              "texte": "arrondir chaque échantillon au niveau disponible le plus proche"
+            },
+            {
+              "titre": "Coder",
+              "texte": "écrire chaque niveau en binaire"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un signal périodique de période __T = 2 ms__. Sa fréquence, puis la fréquence d’échantillonnage minimale&nbsp;?",
+          "calcul": "f = 1 ÷ 0,002 = 500 Hz",
+          "aparte": "fe au moins le double",
+          "resultat": "f<sub>e</sub> ≥ [[1000 Hz]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Copier un signal",
+          "oui": {
+            "titre": "Numérique",
+            "texte": "Il se **régénère exactement** tant que le bruit reste sous le seuil de décision."
+          },
+          "non": {
+            "titre": "Analogique",
+            "texte": "Il se **dégrade**&nbsp;: le bruit accumulé ne s’enlève plus."
+          },
+          "essai": {
+            "texte": "Plus d’échantillons et de bits&nbsp;: une copie <i>plus fidèle</i>, mais un fichier plus lourd."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "T = 2 ms donc f = 1 ÷ T = 500 Hz",
+              "quoi": "la fréquence"
+            },
+            {
+              "texte": "f<sub>e</sub> ≥ 2 × 500 = 1000 Hz",
+              "quoi": "la condition"
+            },
+            {
+              "texte": "8 bits : 2<sup>8</sup> = 256 niveaux",
+              "quoi": "la résolution"
+            }
+          ],
+          "pied": "Le ==rapport cyclique== est la fraction de la période où le signal vaut 1."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Échantillonner à **exactement** la fréquence du signal.",
+            "Oublier de passer la période en **secondes**.",
+            "Croire qu’un signal numérique est **toujours** parfait.",
+            "Confondre **amplitude** et fréquence."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "À retenir",
+          "paragraphes": [
+            "Un signal est la grandeur physique qui porte l’information&nbsp;: tension, courant, onde lumineuse ou radio. La **MLI** règle la puissance d’un moteur ou d’une LED en faisant varier le rapport cyclique."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Fréquence d’un signal de période **10 ms**&nbsp;?",
+            "Combien de **niveaux** avec 4 bits&nbsp;?",
+            "Combien de valeurs pour un signal **logique**&nbsp;?"
+          ],
+          "reponses": "1) 100 Hz · 2) 16 · 3) deux, 0 et 1"
+        }
+      ]
+    }
+  ]
+}

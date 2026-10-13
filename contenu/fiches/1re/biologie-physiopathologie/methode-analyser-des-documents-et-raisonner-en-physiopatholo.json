@@ -1,0 +1,134 @@
+{
+  "titre": "Méthode physiopatho",
+  "titreSurligne": "physiopatho",
+  "accroche": "Un plan, un document, une conclusion.",
+  "bonus": "Plan : **physiologie → signes → mécanisme → risques → traitement → prévention** · une idée, une donnée, une explication",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biologie-physiopathologie/methode-analyser-des-documents-et-raisonner-en-physiopatholo.webp",
+    "prompt": "a glossy violet magnifying glass over a small golden chart with a stethoscope curling around it, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Une idée, une donnée,\nune explication !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "Le plan d’une pathologie",
+          "etapes": [
+            { "date": "Rappel", "texte": "Physiologie normale de l’organe." },
+            { "date": "Signes", "texte": "**Cliniques** (patient) et **paracliniques** (examens)." },
+            { "date": "Mécanisme", "texte": "Dysfonctionnement, **risques**, traitements, prévention." }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le vocabulaire médical",
+          "entetes": ["Élément", "Sens"],
+          "lignes": [
+            ["**-ite**", "inflammation (gastrite)"],
+            ["**-ose**", "affection non inflammatoire"],
+            ["**-algie**, **-ectomie**", "douleur, ablation"],
+            ["**-scopie**, **-graphie**", "examen visuel, image"],
+            ["**dys-**, **a-/an-**", "difficulté, absence"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Analyser un document",
+          "etapes": [
+            { "titre": "Lire", "texte": "titre, axes, unités" },
+            { "titre": "Décrire", "texte": "des valeurs précises" },
+            { "titre": "Comparer", "texte": "à une référence" },
+            { "titre": "Interpréter", "texte": "avec le cours, puis conclure" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "La troponine passe de 0,01 à 2,5 µg/L en 6 heures.", "quoi": "décrire" },
+            { "texte": "Elle est libérée par les cellules nécrosées du myocarde.", "quoi": "expliquer" },
+            { "texte": "Ces données indiquent donc un infarctus.", "quoi": "conclure" }
+          ],
+          "pied": "Toujours une ==donnée chiffrée== avec son unité."
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Justifier un bronchodilatateur dans l’asthme.",
+          "calcul": "Il relâche le muscle lisse → les bronches s’ouvrent",
+          "resultat": "[[l’air passe]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "Justifier un traitement",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Mécanisme", "texte": "Nommer le dysfonctionnement à corriger." },
+            { "titre": "Action", "texte": "Dire ce que le traitement change." },
+            { "titre": "Effet", "texte": "Relier au signe qui disparaît." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Réussir un schéma",
+          "deux": false,
+          "items": [
+            { "titre": "Titre", "texte": "précis" },
+            { "titre": "Tracé", "texte": "net et proportionné" },
+            { "titre": "Légendes", "texte": "traits à la règle, sans croisement" },
+            { "titre": "Flèches", "texte": "sens des flux" },
+            { "titre": "Orientation", "texte": "droite du patient, sens de l’influx" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre signe **clinique** et **paraclinique**.",
+            "Réciter le cours sans **utiliser le document**.",
+            "Répondre sans **unité** (mmHg, L/min, g/dL).",
+            "Oublier la **conclusion** qui répond à la question.",
+            "Écrire un schéma **au stylo** : crayon d’abord."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que signifie le suffixe **-ite**&nbsp;?",
+            "Un ECG est-il un signe **clinique**&nbsp;?",
+            "Que doit finir une réponse&nbsp;?"
+          ],
+          "reponses": "1) inflammation · 2) non, paraclinique (examen complémentaire) · 3) par une conclusion"
+        }
+      ]
+    }
+  ]
+}

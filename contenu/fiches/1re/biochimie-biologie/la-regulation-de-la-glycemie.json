@@ -1,0 +1,117 @@
+{
+  "titre": "La glycémie",
+  "titreSurligne": "glycémie",
+  "accroche": "Un taux tenu à un gramme près.",
+  "bonus": "Consigne ≈ **1 g·L⁻¹** · insuline = **seule hormone hypoglycémiante** · glucagon **hyperglycémiant** · **rétroaction négative**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biochimie-biologie/la-regulation-de-la-glycemie.webp",
+    "prompt": "a glossy violet balance scale with a golden sugar cube on one side and a droplet on the other, perfectly level, tiny golden sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Ni trop, ni trop peu\nde sucre !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "La boucle de régulation",
+          "entetes": ["Élément", "Ici"],
+          "lignes": [
+            ["**Grandeur régulée**", "la glycémie"],
+            ["**Consigne**", "≈ 1 g·L⁻¹"],
+            ["**Capteurs**", "îlots de Langerhans"],
+            ["**Messagers**", "insuline, glucagon"],
+            ["**Effecteurs**", "foie, muscles, tissu adipeux"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux hormones antagonistes",
+          "entetes": ["", "Insuline", "Glucagon"],
+          "lignes": [
+            ["Cellules", "**β**", "**α**"],
+            ["Quand", "hyperglycémie", "hypoglycémie"],
+            ["Effet", "glucose entre, glycogène, lipogenèse : **baisse**", "glycogénolyse du foie : **monte**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Expliquer un retour à la normale",
+          "etapes": [
+            { "titre": "Écart", "texte": "la glycémie s’éloigne de la consigne" },
+            { "titre": "Réponse", "texte": "les îlots sécrètent l’hormone adaptée" },
+            { "titre": "Retour", "texte": "l’écart diminue&nbsp;: rétroaction négative" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "75 g de glucose à jeun&nbsp;: la glycémie monte à 1,4 g·L⁻¹, l’insulinémie la suit.",
+          "calcul": "puis la glycémie redescend",
+          "aparte": "à 2 h&nbsp;: sous 1,4 g·L⁻¹",
+          "resultat": "sujet [[sain]] (diabétique : > 2 g·L⁻¹)"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Les deux diabètes",
+          "entetes": ["", "Type 1", "Type 2"],
+          "lignes": [
+            ["Cause", "destruction auto-immune des cellules β", "résistance à l’insuline"],
+            ["Insuline", "absente", "présente, peu efficace"],
+            ["Traitement", "injections d’insuline", "hygiène de vie, médicaments"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Après un repas, la glycémie augmente&nbsp;: les cellules β sécrètent de l’insuline.", "quoi": "réponse" },
+            { "texte": "L’insuline fait entrer le glucose dans les cellules et stocker du glycogène.", "quoi": "effet" },
+            { "texte": "La glycémie baisse&nbsp;: c’est une rétroaction négative.", "quoi": "conclure" }
+          ],
+          "pied": "Une ==hormone== agit à distance sur des cellules qui portent son ==récepteur==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que le **glucagon** fait baisser la glycémie.",
+            "Confondre cellules **α** et **β**.",
+            "Croire qu’une autre hormone remplace l’**insuline**.",
+            "Mélanger **type 1** (insuline absente) et **type 2**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Valeur de la **glycémie** à jeun&nbsp;?",
+            "Quelle hormone **baisse** la glycémie&nbsp;?",
+            "Que détruit le **diabète de type 1**&nbsp;?"
+          ],
+          "reponses": "1) environ 1 g·L⁻¹ · 2) l’insuline (cellules β) · 3) les cellules β du pancréas"
+        }
+      ]
+    }
+  ]
+}

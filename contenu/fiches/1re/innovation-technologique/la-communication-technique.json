@@ -1,0 +1,125 @@
+{
+  "titre": "Communiquer une idée",
+  "titreSurligne": "idée",
+  "accroche": "Le bon outil pour le bon public.",
+  "bonus": "**Quoi transmettre** + **à qui** = le bon outil · **PLM** produit · **BIM** bâtiment",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/innovation-technologique/la-communication-technique.webp",
+    "prompt": "a glossy violet pencil sketching a golden light bulb next to a small mind map with golden nodes, sparkles, same art style as the reference icons, no text, magenta background"
+  },
+  "marcel": "Une idée claire\nse partage mieux !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Un outil, un public",
+          "entetes": ["Outil", "Pour qui"],
+          "lignes": [
+            ["**Croquis**", "l’équipe, en créativité"],
+            ["**Carte mentale**", "toi, pour explorer"],
+            ["**Schéma simple**", "public non spécialiste"],
+            ["**Organigramme**", "programmeurs, techniciens"],
+            ["**SysML**", "ingénieurs"],
+            ["**Rendu 3D**", "client, jury"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Travailler à plusieurs",
+          "items": [
+            { "terme": "Cloud", "definition": "fichiers partagés, **à jour pour tous**" },
+            { "terme": "PLM", "definition": "plans, versions et nomenclatures d’un **produit**" },
+            { "terme": "BIM", "definition": "maquette 3D **unique** d’un bâtiment" },
+            { "terme": "Prototype", "definition": "l’objet réel, à **manipuler**" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Réussir un croquis",
+          "etapes": [
+            { "titre": "Volumes", "texte": "d’abord les grands volumes, puis les détails" },
+            { "titre": "Vue", "texte": "perspective pour un objet, face pour un mécanisme" },
+            { "titre": "Annoter", "texte": "flèches, noms des pièces, cotes principales" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une __lampe solaire__ : expliquer le principe au jury.",
+          "calcul": "panneau → batterie → carte → LED",
+          "aparte": "flèches d’énergie",
+          "resultat": "[[schéma simple]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quel schéma&nbsp;?",
+          "oui": {
+            "titre": "Adapté",
+            "texte": "Un schéma **simple** pour le jury, un organigramme pour le programmeur."
+          },
+          "non": {
+            "titre": "Inadapté",
+            "texte": "Le schéma électrique **détaillé** montré à un public non spécialiste."
+          },
+          "essai": {
+            "texte": "Pour coder « si luminosité faible, allumer », je choisis l’<i>organigramme</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Je choisis cet outil car il s’adresse à ce public.", "quoi": "justifier" },
+            { "texte": "Une idée par diapositive, un visuel par idée.", "quoi": "l’oral" },
+            { "texte": "Nous avons choisi… parce que…", "quoi": "l’argument" },
+            { "texte": "Un croquis lisible, annoté, cotes principales.", "quoi": "le croquis" }
+          ],
+          "pied": "Le programme demande aussi de présenter ==en langue étrangère==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Choisir l’outil **sans penser au public**.",
+            "Croire qu’un croquis doit être **beau** : il doit être lisible.",
+            "Oublier d’**annoter** (noms, cotes).",
+            "Confondre **PLM** (produit) et **BIM** (bâtiment).",
+            "Surcharger une diapositive de **texte**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "De quoi dépend le **choix de l’outil**&nbsp;?",
+            "À quoi sert la **carte mentale**&nbsp;?",
+            "Que partage le **BIM**&nbsp;?"
+          ],
+          "reponses": "1) du message et du public · 2) explorer, ne rien oublier · 3) une maquette 3D du bâtiment"
+        }
+      ]
+    }
+  ]
+}

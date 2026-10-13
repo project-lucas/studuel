@@ -1,0 +1,115 @@
+{
+  "titre": "Bernoulli et espérance",
+  "titreSurligne": "Bernoulli",
+  "accroche": "Répéter, compter, calculer en moyenne.",
+  "bonus": "Bernoulli : E(X) = p · E(X) = x₁p₁ + … + xₙpₙ · jeu équitable ⇔ E(X) = 0 · somme des p = **1**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths-techno/epreuves-de-bernoulli-et-variables-aleatoires.webp",
+    "prompt": "a glossy violet coin and a golden die side by side with a small golden balance scale, tiny sparkles"
+  },
+  "marcel": "Espérance : la\nmoyenne à long terme !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’espérance",
+          "petite": true,
+          "lignes": ["E(X) = x₁p₁ + x₂p₂ + … + xₙpₙ", "Bernoulli : E(X) = p"],
+          "regle": "Épreuve de **Bernoulli**&nbsp;: succès (p) ou échec (1 − p). L’espérance est la ==moyenne à long terme== d’un gain.",
+          "note": "somme des p = 1&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "3 tirs réussis à 0,6",
+          "entetes": ["Succès", "Chemins", "Probabilité"],
+          "lignes": [
+            ["3", "1", "0,6³ = 0,216"],
+            ["2", "3", "3 × 0,6² × 0,4 = 0,432"],
+            ["1", "3", "3 × 0,6 × 0,4² = 0,288"],
+            ["0", "1", "0,4³ = 0,064"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer une probabilité ou une espérance",
+          "etapes": [
+            { "titre": "L’arbre", "texte": "épreuves identiques et indépendantes : on multiplie le long d’un chemin" },
+            { "titre": "La loi", "texte": "regrouper les chemins par valeur de X, vérifier que la somme vaut 1" },
+            { "titre": "E(X)", "texte": "additionner les valeurs × leurs probabilités" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "X vaut −2 (0,5), 0 (0,3) ou 10 (0,2). __E(X)__&nbsp;?",
+          "calcul": "E(X) = −2 × 0,5 + 0 × 0,3 + 10 × 0,2\nE(X) = −1 + 0 + 2",
+          "aparte": "gain moyen par partie",
+          "resultat": "E(X) = [[1]] €"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Une défectueuse", "texte": "Conforme à 0,9, deux pièces&nbsp;: 2 × 0,9 × 0,1 = **0,18**." },
+            { "titre": "Jeu équitable", "texte": "**E(X) = 0**&nbsp;: ni gain ni perte à long terme." },
+            { "titre": "Lire la loi", "texte": "P(X ≤ 0) = 0,5 + 0,3 = **0,8**." },
+            { "titre": "Échantillons", "texte": "La fréquence varie autour de p, d’environ **1 ÷ √n**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Les épreuves sont identiques et indépendantes", "quoi": "la justification" },
+            { "texte": "Chemin : 0,9 × 0,1 = 0,09", "quoi": "un chemin" },
+            { "texte": "Deux chemins&nbsp;: 2 × 0,09 = 0,18", "quoi": "le total" }
+          ],
+          "pied": "Contrôle&nbsp;: la somme des probabilités de la loi vaut ==1==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **nombre de chemins** (le 3 de 3 × 0,6² × 0,4).",
+            "Une loi dont la somme des p n’est pas **1**.",
+            "Croire que E(X) est la valeur de la **prochaine** partie.",
+            "Diviser la dispersion par 2 avec **2 fois** plus d’essais (il en faut 4)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Bernoulli de paramètre 0,3&nbsp;: **E(X)**&nbsp;?",
+            "X : 0 (0,6) et 5 (0,4)&nbsp;: **E(X)**&nbsp;?",
+            "Pour diviser la dispersion par 2, on multiplie n par&nbsp;?"
+          ],
+          "reponses": "1) 0,3 · 2) 0,4 × 5 = 2 · 3) 4"
+        }
+      ]
+    }
+  ]
+}

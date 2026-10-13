@@ -1,0 +1,162 @@
+{
+  "titre": "L’énergie électrique",
+  "titreSurligne": "électrique",
+  "accroche": "Puissance, effet Joule et rendement.",
+  "epreuve": "bac",
+  "bonus": "**1 kWh** = 3,6 × 10⁶ J · énergie fournie = énergie **utile** + énergie **dissipée**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/l-energie-electrique.webp",
+    "prompt": "a glossy violet lightbulb connected to a golden battery by a bright wire, tiny golden sparks and heat waves, sparkles"
+  },
+  "marcel": "Plus de courant,\nplus de pertes !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Puissance et énergie",
+          "petite": true,
+          "lignes": [
+            "P = U × I",
+            "E = P × Δt"
+          ],
+          "regle": "**P** en watts (U en volts, I en ampères). **E** en joules si Δt est en **secondes**. Le **kilowattheure** des factures vaut 3,6 × 10⁶ J.",
+          "note": "Δt en secondes&nbsp;!"
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Effet Joule",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "U = R × I",
+            "P = R × I²"
+          ],
+          "regle": "Un conducteur ohmique dissipe **toute** sa puissance en chaleur. Les pertes varient avec le **carré** de I.",
+          "note": "d’où la très haute tension"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": "★",
+          "titre": "Rendement : lampes",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Incandescence",
+              "texte": "rendement lumineux **inférieur à 5 %**&nbsp;: presque tout part en chaleur"
+            },
+            {
+              "titre": "LED",
+              "texte": "rendement lumineux **largement supérieur à 30 %**&nbsp;: moins de pertes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Faire un bilan d’énergie",
+          "etapes": [
+            {
+              "titre": "Calculer",
+              "texte": "la puissance reçue, **P = U × I**, puis l’énergie **E = P × Δt**"
+            },
+            {
+              "titre": "Séparer",
+              "texte": "la part **utile** et la part **dissipée** par effet Joule"
+            },
+            {
+              "titre": "Rendement",
+              "texte": "**η = E<sub>utile</sub> ÷ E<sub>reçue</sub>**, toujours inférieur à 1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un radiateur de résistance 23 Ω est sous 230 V pendant 2 h. __P__&nbsp;?",
+          "calcul": "I = U ÷ R = 230 ÷ 23 = 10 A",
+          "aparte": "puis P = U × I",
+          "resultat": "P = 230 × 10 = [[2 300 W]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "L’effet Joule",
+          "oui": {
+            "titre": "Utile",
+            "texte": "Radiateur, grille-pain, fusible&nbsp;: la chaleur est le **but**."
+          },
+          "non": {
+            "titre": "Nuisible",
+            "texte": "Ordinateur, ligne électrique&nbsp;: la chaleur est une **perte**."
+          },
+          "essai": {
+            "texte": "Le générateur réel aussi dissipe&nbsp;: <i>U = E − r × I</i>, la tension chute quand le courant appelé augmente."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "P = U × I = 230 × 10",
+              "quoi": "formule puis nombres"
+            },
+            {
+              "texte": "E = P × Δt = 2 300 × 7 200 = 1,66 × 10⁷ J",
+              "quoi": "Δt en secondes"
+            },
+            {
+              "texte": "η = E<sub>utile</sub> ÷ E<sub>reçue</sub> &lt; 1",
+              "quoi": "vérifier le sens"
+            }
+          ],
+          "pied": "Écris le bilan ==fournie = utile + dissipée== avant de conclure."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Laisser Δt en **heures** avec E en joules.",
+            "Écrire P = R × I au lieu de **R × I²**.",
+            "Trouver un rendement **supérieur à 1**.",
+            "Oublier la **résistance interne** r du générateur."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle est l’unité de l’**énergie** dans la formule P × Δt&nbsp;?",
+            "Que devient la perte si I est **doublée**&nbsp;?",
+            "Pourquoi transporter l’électricité à **très haute tension**&nbsp;?"
+          ],
+          "reponses": "1) le joule · 2) multipliée par 4 · 3) I plus faible, donc moins de pertes"
+        }
+      ]
+    }
+  ]
+}

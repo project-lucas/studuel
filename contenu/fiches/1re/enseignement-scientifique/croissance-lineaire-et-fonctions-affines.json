@@ -1,0 +1,183 @@
+{
+  "titre": "Fonctions affines",
+  "titreSurligne": "affines",
+  "accroche": "La droite, version continue.",
+  "bonus": "**f(x) = ax + b** · a = Δf / Δx · **raison de la suite = a** · valable sur un **intervalle**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/enseignement-scientifique/croissance-lineaire-et-fonctions-affines.webp",
+    "prompt": "a glossy violet straight line rising on a graph with two golden points and a coordinate grid, sparkles"
+  },
+  "marcel": "Une droite,\nc’est a x + b !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Fonction affine",
+          "petite": true,
+          "lignes": [
+            "f(x) = a x + b",
+            "a = {f(x<sub>2</sub>) − f(x<sub>1</sub>)/x<sub>2</sub> − x<sub>1</sub>}"
+          ],
+          "regle": "**a** : coefficient directeur (gain quand x augmente de 1). **b** = f(0), ordonnée à l’origine.",
+          "note": "même a quels que soient les points"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Cas à connaître",
+          "entetes": [
+            "Cas",
+            "Ce que c’est"
+          ],
+          "lignes": [
+            [
+              "**b = 0**",
+              "fonction **linéaire** : proportionnalité"
+            ],
+            [
+              "**a = 0**",
+              "fonction **constante**"
+            ],
+            [
+              "**a > 0**",
+              "droite **croissante**"
+            ],
+            [
+              "**a < 0**",
+              "droite **décroissante**"
+            ],
+            [
+              "Tracer",
+              "points (0 ; b) et (1 ; a + b)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Modéliser et résoudre",
+          "etapes": [
+            {
+              "titre": "Lire",
+              "texte": "b (part fixe) et a (part par unité)"
+            },
+            {
+              "titre": "Écrire",
+              "texte": "f(x) = a x + b"
+            },
+            {
+              "titre": "Résoudre",
+              "texte": "f(x) = valeur cherchée, puis conclure"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Forfait 10 € fixes + 0,05 € par minute. Pour 25 €&nbsp;?",
+          "calcul": "0,05 x + 10 = 25 ⇒ 0,05 x = 15",
+          "aparte": "x = 15 ÷ 0,05",
+          "resultat": "x = [[300 minutes]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Suite ou fonction ?",
+          "oui": {
+            "titre": "Suite",
+            "texte": "u(n) = u(0) + n r&nbsp;: croissance **par pas** entiers."
+          },
+          "non": {
+            "titre": "Fonction",
+            "texte": "f(x) = r x + u(0)&nbsp;: croissance **continue**, tout x."
+          },
+          "essai": {
+            "texte": "La <b>raison r</b> de la suite est le <b>coefficient directeur a</b> de la fonction&nbsp;: même croissance, deux écritures."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Lecture",
+              "texte": "**a** : ce que gagne f quand x augmente de 1."
+            },
+            {
+              "titre": "Départ",
+              "texte": "**b** = f(0), le point de départ."
+            },
+            {
+              "titre": "Lien",
+              "texte": "la **raison** de la suite est le coefficient **a**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "a = (f(x<sub>2</sub>) − f(x<sub>1</sub>)) / (x<sub>2</sub> − x<sub>1</sub>)",
+              "quoi": "le coefficient"
+            },
+            {
+              "texte": "f(x) = 0,05 x + 10",
+              "quoi": "le modèle"
+            },
+            {
+              "texte": "f(x) = 25 ⇒ x = 300 min",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Un modèle affine n’est valable que sur un ==intervalle==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **a** (pente) et **b** (départ).",
+            "**Extrapoler** hors du domaine de validité.",
+            "Dire qu’une fonction affine est toujours **linéaire**.",
+            "Oublier l’**unité** dans la conclusion."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "f(x) = 3x + 2&nbsp;: **f(0)**&nbsp;?",
+            "Quel est le **coefficient directeur** de f(x) = −2x + 7&nbsp;?",
+            "Quand f est-elle **linéaire**&nbsp;?"
+          ],
+          "reponses": "1) 2 · 2) −2 (décroissante) · 3) quand b = 0"
+        }
+      ]
+    }
+  ]
+}

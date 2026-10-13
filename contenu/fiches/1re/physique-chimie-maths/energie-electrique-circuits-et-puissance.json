@@ -1,0 +1,111 @@
+{
+  "titre": "Circuits et puissance",
+  "titreSurligne": "puissance",
+  "accroche": "Nœuds, mailles, Ohm&nbsp;: tout un circuit.",
+  "bonus": "U = R × I · P = U × I = R × I² · U<sub>eff</sub> = U<sub>max</sub> ÷ √2 · 230 V, 50 Hz",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-maths/energie-electrique-circuits-et-puissance.webp",
+    "prompt": "a glossy violet electric circuit with a golden bulb and battery, small glowing current arrows, sparkles"
+  },
+  "marcel": "Du courant,\nde la tension !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les lois",
+          "petite": true,
+          "lignes": ["U = R × I", "P = U × I = R × I²"],
+          "regle": "**U** en V, **I** en A, **R** en Ω, **P** en W. Nœuds&nbsp;: Σ I entrants = Σ I sortants. Mailles&nbsp;: Σ U = 0. Énergie&nbsp;: E = P × Δt.",
+          "note": "P = R × I² : effet Joule"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Série ou dérivation",
+          "entetes": ["Montage", "Courant", "Tension"],
+          "lignes": [
+            ["En série", "le **même**", "elles s’**additionnent**"],
+            ["En dérivation", "elles s’**additionnent**", "la **même**"],
+            ["Générateur", "U et I même sens", "P &gt; 0 fournie"],
+            ["Récepteur", "U et I sens opposés", "P &gt; 0 reçue"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Flécher", "texte": "U et I en choisissant la convention générateur ou récepteur" },
+            { "titre": "Appliquer", "texte": "la loi des nœuds, des mailles ou d’Ohm" },
+            { "titre": "Calculer", "texte": "P = U × I, puis E = P × Δt avec les bonnes unités" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Radiateur R = 26,5 Ω sous 230 V. Sa __puissance__ et l’énergie en 3 h&nbsp;?",
+          "calcul": "I = U ÷ R = 230 ÷ 26,5 ≈ 8,7 A",
+          "aparte": "P = U × I, puis × 3 h",
+          "resultat": "P ≈ [[2 000 W]], E = [[6 kWh]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Valeur efficace",
+          "oui": { "titre": "Signal sinusoïdal", "texte": "**U<sub>eff</sub> = U<sub>max</sub> ÷ √2**. Secteur&nbsp;: 230 V efficaces, soit 325 V au maximum, f = 50 Hz, T = 20 ms." },
+          "non": { "titre": "Valeur moyenne", "texte": "Pour une tension sinusoïdale, la valeur **moyenne est nulle**&nbsp;: elle ne dit rien de l’effet Joule." },
+          "essai": { "texte": "U<sub>max</sub> = <i>230 × √2 ≈ 325 V</i>. Période T = <i>1 ÷ f = 1 ÷ 50 = 0,02 s</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Loi d’Ohm&nbsp;: I = U ÷ R = 230 ÷ 26,5", "quoi": "la loi utilisée" },
+            { "texte": "P = U × I = 230 × 8,7 ≈ 2 000 W", "quoi": "formule puis nombres" },
+            { "texte": "E = 2 kW × 3 h = 6 kWh", "quoi": "avec l’unité" }
+          ],
+          "pied": "Sécurité&nbsp;: ==différentiel 30 mA== pour les personnes, disjoncteur pour les surintensités."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **valeur efficace** et valeur maximale.",
+            "Additionner les **courants** en série.",
+            "Oublier de passer **W en kW** pour des kWh.",
+            "Mal choisir la **convention** récepteur."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**I** pour U = 12 V et R = 6 Ω&nbsp;?",
+            "**E** d’une lampe de 100 W allumée 5 h&nbsp;?",
+            "**U<sub>max</sub>** pour U<sub>eff</sub> = 230 V&nbsp;?"
+          ],
+          "reponses": "1) 2 A · 2) 0,5 kWh · 3) 230 × √2 ≈ 325 V"
+        }
+      ]
+    }
+  ]
+}

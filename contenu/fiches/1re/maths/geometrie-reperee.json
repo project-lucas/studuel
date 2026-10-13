@@ -1,0 +1,114 @@
+{
+  "titre": "Géométrie repérée",
+  "titreSurligne": "repérée",
+  "accroche": "Des figures qui se calculent.",
+  "epreuve": "bac-1re",
+  "bonus": "m = {yB − yA/xB − xA} · parallèles&nbsp;: m = m′ · perpendiculaires&nbsp;: m × m′ = −1 · (x − a)² + (y − b)² = r²",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/geometrie-reperee.webp",
+    "prompt": "a glossy violet coordinate grid with a golden circle and a golden straight line crossing it at two sparkling points, same art style as the reference icons, on a flat magenta background, no text, no numbers"
+  },
+  "marcel": "Une figure,\ndes équations !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Droite et cercle",
+          "petite": true,
+          "lignes": ["ax + by + c = 0", "y = mx + p", "(x − a)² + (y − b)² = r²"],
+          "regle": "Droite&nbsp;: vecteur **directeur** (−b ; a), vecteur **normal** (a ; b). Cercle de centre Ω(a ; b) et de rayon r.",
+          "note": "verticale&nbsp;: x = k"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Parallèles, perpendiculaires",
+          "entetes": ["", "Coefficients", "Vecteurs"],
+          "lignes": [
+            ["**Parallèles**", "m = m′", "colinéaires"],
+            ["**Perpendic.**", "m × m′ = **−1**", "produit scalaire nul"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Reconnaître un cercle",
+          "etapes": [
+            { "titre": "Regrouper", "texte": "les termes en x, puis ceux en y" },
+            { "titre": "Compléter", "texte": "les carrés, comme une forme canonique" },
+            { "titre": "Lire", "texte": "second membre > 0 : cercle · = 0 : point · < 0 : vide" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "x² + y² − 2x + 4y − 4 = 0&nbsp;: __quel ensemble__&nbsp;?",
+          "calcul": "(x − 1)² − 1 + (y + 2)² − 4 − 4 = 0\n(x − 1)² + (y + 2)² = 9",
+          "aparte": "9 > 0",
+          "resultat": "cercle de centre [[(1 ; −2)]], rayon [[3]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les formules de base",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Milieu de [AB]", "texte": "({xA + xB/2} ; {yA + yB/2})." },
+            { "titre": "Distance AB", "texte": "√((xB − xA)² + (yB − yA)²)." },
+            { "titre": "Coefficient", "texte": "m = {yB − yA/xB − xA}, **si xB ≠ xA**." },
+            { "titre": "Diamètre [AB]", "texte": "M est sur le cercle ⇔ **MA · MB = 0**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "x² − 2x + y² + 4y − 4 = (x − 1)² + (y + 2)² − 9", "quoi": "les carrés" },
+            { "texte": "(x − 1)² + (y + 2)² = 9 = 3²", "quoi": "la forme du cercle" },
+            { "texte": "Centre Ω(1 ; −2) et rayon r = 3", "quoi": "la conclusion" }
+          ],
+          "pied": "Contrôle&nbsp;: (4 ; −2) donne 9 + 0 = ==9==, il est sur le cercle. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Lire le centre **(−1 ; 2)** au lieu de (1 ; −2).",
+            "Donner **r² = 9** comme rayon.",
+            "Utiliser y = mx + p pour une droite **verticale**.",
+            "Oublier que m × m′ = −1 impose m **≠ 0**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Coefficient de (AB), **A(1 ; 2) et B(3 ; 8)**&nbsp;?",
+            "Pente d’une **perpendiculaire** à y = 2x + 1&nbsp;?",
+            "(x − 2)² + (y + 1)² = 4&nbsp;: **centre** et **rayon**&nbsp;?"
+          ],
+          "reponses": "1) 3 · 2) −1/2 · 3) centre (2 ; −1), rayon 2"
+        }
+      ]
+    }
+  ]
+}

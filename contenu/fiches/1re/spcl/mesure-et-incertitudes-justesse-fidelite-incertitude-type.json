@@ -1,0 +1,109 @@
+{
+  "titre": "Mesure et incertitudes",
+  "titreSurligne": "incertitudes",
+  "accroche": "Une mesure n’est jamais exacte.",
+  "bonus": "Résultat&nbsp;: **x = x̄ avec u(x)** et l’unité · 1 ou 2 chiffres significatifs pour u · **z ≤ 2** = compatible",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/spcl/mesure-et-incertitudes-justesse-fidelite-incertitude-type.webp",
+    "prompt": "a glossy violet target with golden darts grouped tightly beside a measuring cylinder and a small ruler, sparkles"
+  },
+  "marcel": "Mesurer, c’est\nquantifier le doute !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Fidélité et justesse",
+          "entetes": ["Qualité", "Sens", "Défaut"],
+          "lignes": [
+            ["**Fidélité**", "mesures **proches entre elles**", "dispersion (aléatoire)"],
+            ["**Justesse**", "moyenne **proche de la référence**", "décalage (systématique)"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Incertitude-type",
+          "petite": true,
+          "lignes": ["u(x̄) = {s/√n}", "u = {Δ/√3}"],
+          "regle": "**Type A**&nbsp;: n mesures, écart-type **s**. **Type B**&nbsp;: mesure unique, tolérance ± **Δ** de l’instrument.",
+          "note": "plus n grandit, plus u baisse&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Évaluer et conclure",
+          "etapes": [
+            { "titre": "Moyenne", "texte": "calculer **x̄** de la série" },
+            { "titre": "Écart-type", "texte": "**s** à la calculatrice, puis **u = s ÷ √n**" },
+            { "titre": "Comparer", "texte": "**z = |x − x<sub>réf</sub>| ÷ u** et on conclut" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "5 mesures de ρ&nbsp;: x̄ = 0,790 g/mL, s = 0,0027. Référence 0,789 g/mL. __Compatible__&nbsp;?",
+          "calcul": "u = 0,0027 ÷ √5 ≈ 0,0012",
+          "aparte": "puis z = écart ÷ u",
+          "resultat": "z = 0,001 ÷ 0,0012 ≈ [[0,8 ≤ 2 : compatible]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Compatible ou pas",
+          "oui": { "titre": "z ≤ 2", "texte": "Le résultat est **compatible** avec la valeur de référence." },
+          "non": { "titre": "z > 2", "texte": "Écart trop grand&nbsp;: on cherche une **erreur systématique** (étalonnage, méthode)." },
+          "essai": { "texte": "Des impacts <i>groupés mais loin du centre</i>&nbsp;: **fidèle** mais pas **juste**." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "u(x̄) = s ÷ √n = 0,0027 ÷ √5 ≈ 0,0012 g/mL", "quoi": "formule puis nombres" },
+            { "texte": "ρ = 0,790 g/mL avec u(ρ) = 0,0012 g/mL", "quoi": "le résultat" },
+            { "texte": "z ≈ 0,8 ≤ 2&nbsp;: compatible avec 0,789 g/mL", "quoi": "la conclusion" }
+          ],
+          "pied": "Arrondis la valeur **au même rang** que l’incertitude."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **fidélité** (dispersion) et **justesse** (décalage).",
+            "Oublier de diviser par **√n** : u n’est pas s.",
+            "Écrire 5 chiffres pour u au lieu d’**1 ou 2**.",
+            "Résultat **sans unité** ni incertitude."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Mesures groupées mais loin de la référence&nbsp;: **fidèles** ou **justes**&nbsp;?",
+            "**u** pour s = 0,04 et n = 4&nbsp;?",
+            "Quelle valeur de **z** garantit la compatibilité&nbsp;?"
+          ],
+          "reponses": "1) fidèles · 2) 0,04 ÷ 2 = 0,02 · 3) z ≤ 2"
+        }
+      ]
+    }
+  ]
+}

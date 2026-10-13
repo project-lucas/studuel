@@ -1,0 +1,164 @@
+{
+  "titre": "Capteurs et programme",
+  "titreSurligne": "Capteurs",
+  "accroche": "Percevoir, décider, agir, recommencer.",
+  "bonus": "**TOR · analogique · numérique** · 2<sup>n</sup> niveaux pour n bits · **f<sub>éch</sub> ≥ 2 × f<sub>max</sub>** (Shannon)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/information-capteurs-et-programmation.webp",
+    "prompt": "a glossy violet microcontroller chip with a golden sensor and a small sine wave signal, same art style as the reference icons, sparkles"
+  },
+  "marcel": "Je lis, je calcule,\nj’écris, je boucle !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les capteurs",
+          "entetes": [
+            "Type",
+            "Rend",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "**TOR**",
+              "2 états",
+              "fin de course"
+            ],
+            [
+              "**Analogique**",
+              "tension continue",
+              "température"
+            ],
+            [
+              "**Numérique**",
+              "valeur codée",
+              "capteur I2C"
+            ],
+            [
+              "**Qualités**",
+              "sensibilité, précision, temps de réponse"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le CAN",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "N = 2<sup>n</sup>",
+            "f<sub>éch</sub> ≥ 2 × f<sub>max</sub>"
+          ],
+          "regle": "Le CAN **échantillonne** (dans le temps) et **quantifie** (en amplitude). 8 bits&nbsp;: 256 niveaux&nbsp;; 10 bits&nbsp;: 1&nbsp;024.",
+          "note": "Shannon&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La boucle d’un système embarqué",
+          "etapes": [
+            {
+              "titre": "Lire",
+              "texte": "les entrées : les capteurs"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "l’action à mener, selon l’algorithme"
+            },
+            {
+              "titre": "Écrire",
+              "texte": "les sorties : les actionneurs, puis on recommence"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un signal monte à __500 Hz__. Fréquence d’échantillonnage minimale&nbsp;?",
+          "calcul": "f<sub>éch</sub> ≥ 2 × 500",
+          "aparte": "théorème de Shannon",
+          "resultat": "au moins [[1 000 Hz]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Échantillonner assez vite&nbsp;?",
+          "oui": {
+            "titre": "f<sub>éch</sub> ≥ 2 f<sub>max</sub>",
+            "texte": "Le signal est **fidèlement** reconstruit."
+          },
+          "non": {
+            "titre": "f<sub>éch</sub> trop basse",
+            "texte": "Signal **irrémédiablement déformé** : aucun traitement ne le récupère."
+          },
+          "essai": {
+            "texte": "Un portail a <i>quatre états</i>&nbsp;: fermé, en ouverture, ouvert, en fermeture."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Type de capteur : TOR, analogique ou numérique",
+              "quoi": "le choix"
+            },
+            {
+              "texte": "N = 2<sup>n</sup> niveaux",
+              "quoi": "la résolution"
+            },
+            {
+              "texte": "États, transitions, conditions",
+              "quoi": "le diagramme"
+            },
+            {
+              "texte": "Étendue de mesure, sensibilité, précision, temps de réponse",
+              "quoi": "le capteur"
+            }
+          ],
+          "pied": "On décrit l’==algorithme== (organigramme, états) avant de le coder."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Un capteur **précis** mais trop **lent** fausse l’asservissement.",
+            "Confondre **échantillonner** et **quantifier**.",
+            "Échantillonner **sous** le double de f<sub>max</sub>.",
+            "Coder **avant** d’écrire l’algorithme."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Niveaux d’un CAN **10 bits**&nbsp;?",
+            "Un **fin de course** est un capteur de quel type&nbsp;?",
+            "Quels maillons dans la **boucle** embarquée&nbsp;?"
+          ],
+          "reponses": "1) 1 024 · 2) TOR · 3) lire, calculer, écrire"
+        }
+      ]
+    }
+  ]
+}

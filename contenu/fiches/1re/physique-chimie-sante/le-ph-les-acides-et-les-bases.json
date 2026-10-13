@@ -1,0 +1,124 @@
+{
+  "titre": "Le pH, acides et bases",
+  "titreSurligne": "pH",
+  "accroche": "Acide ou base&nbsp;: mesurer, puis se protéger.",
+  "bonus": "[H₃O⁺] = 10<sup>−pH</sup> · pH < 7 **acide** · pH = 7 **neutre** · pH > 7 **basique** · K<sub>e</sub> = 10<sup>−14</sup> à 25 °C",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-sante/le-ph-les-acides-et-les-bases.webp",
+    "prompt": "a glossy violet pH meter probe dipping into a golden beaker, a rainbow color scale bar floating beside it, a small corrosive warning diamond without symbols, sparkles"
+  },
+  "marcel": "Un pH bas ?\nBeaucoup d’acide !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le pH",
+          "petite": true,
+          "lignes": ["[H₃O⁺] = 10<sup>−pH</sup>"],
+          "regle": "**[H₃O⁺]** en mol/L. Plus le pH est **bas**, plus il y a d’ions oxonium&nbsp;: pH 2 = **dix fois** plus de H₃O⁺ que pH 3.",
+          "note": "papier pH ou pH-mètre"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Selon Brönsted",
+          "items": [
+            { "terme": "Acide", "definition": "espèce qui peut **céder** un ion H⁺" },
+            { "terme": "Base", "definition": "espèce qui peut **capter** un ion H⁺" },
+            { "terme": "Couple", "definition": "AH / A⁻&nbsp;: deux espèces liées par un échange de H⁺" },
+            { "terme": "Eau", "definition": "à la fois acide et base&nbsp;: 2 H₂O ⇌ H₃O⁺ + HO⁻" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Des produits courants",
+          "entetes": ["Produit", "Formule", "Nature"],
+          "lignes": [
+            ["Vinaigre", "CH₃COOH", "acide"],
+            ["Acide chlorhydrique", "H₃O⁺ + Cl⁻", "acide"],
+            ["Soude", "Na⁺ + HO⁻", "base"],
+            ["Ammoniac", "NH₃", "base"],
+            ["Eau pure", "pH = 7", "neutre"]
+          ]
+        },
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "En cas de projection",
+          "etapes": [
+            { "titre": "Rincer", "texte": "tout de suite, à grande eau, 15 min" },
+            { "titre": "Retirer", "texte": "les vêtements souillés" },
+            { "titre": "Alerter", "texte": "les secours" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un détartrant a un pH de 2. Sa __concentration en H₃O⁺__&nbsp;?",
+          "calcul": "[H₃O⁺] = 10<sup>−pH</sup>",
+          "aparte": "pH en exposant",
+          "resultat": "[H₃O⁺] = 10<sup>−2</sup> = [[0,01 mol/L]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Diluer un acide",
+          "oui": { "titre": "L’acide dans l’eau", "texte": "On verse **doucement l’acide dans l’eau**, avec blouse, gants et lunettes." },
+          "non": { "titre": "L’eau dans l’acide", "texte": "La dilution dégage de la chaleur&nbsp;: **projections** et brûlures." },
+          "essai": { "texte": "Un déchet acide se **neutralise** avec une base jusqu’à un pH proche de 7. Pictogramme **corrosif**&nbsp;: il brûle peau et yeux. Ne jamais mélanger deux produits ménagers." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "pH = 2 < 7&nbsp;: la solution est acide.", "quoi": "conclure" },
+            { "texte": "[H₃O⁺] = 10<sup>−2</sup> = 0,01 mol/L", "quoi": "calculer" },
+            { "texte": "CH₃COOH + HO⁻ → CH₃COO⁻ + H₂O", "quoi": "échange de H⁺" }
+          ],
+          "pied": "Un pH se donne ==sans unité==, à 25 °C."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’un pH **plus petit** est moins acide.",
+            "Verser **l’eau dans l’acide** concentré.",
+            "Confondre **acide** (cède H⁺) et **base** (capte H⁺).",
+            "Oublier les **lunettes** et les gants."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "pH = 12&nbsp;: acide, neutre ou **basique**&nbsp;?",
+            "[H₃O⁺] pour pH = 3&nbsp;?",
+            "Un **acide** cède ou capte H⁺&nbsp;?"
+          ],
+          "reponses": "1) basique · 2) 10⁻³ mol/L · 3) il cède H⁺"
+        }
+      ]
+    }
+  ]
+}

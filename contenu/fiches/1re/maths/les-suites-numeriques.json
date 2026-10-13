@@ -1,0 +1,164 @@
+{
+  "titre": "Les suites numériques",
+  "titreSurligne": "suites",
+  "accroche": "Des termes, un rang, un sens.",
+  "epreuve": "bac-1re",
+  "bonus": "u(n+1) − u(n) ≥ 0 ⇔ **croissante** · quotient&nbsp;: termes **> 0** · représentation&nbsp;: points isolés (n ; u(n))",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/les-suites-numeriques.webp",
+    "prompt": "a glossy violet staircase of rising steps with a golden ball on each step, tiny golden dots in a row, sparkles, same art style as the reference icons, on a flat magenta background, no text, no numbers"
+  },
+  "marcel": "Un terme après\nl’autre !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le sens de variation",
+          "petite": true,
+          "lignes": [
+            "u(n+1) − u(n) ≥ 0",
+            "{u(n+1)/u(n)} ≥ 1",
+            "u(n) = f(n)"
+          ],
+          "regle": "Différence&nbsp;: **toujours** possible. Quotient&nbsp;: seulement si tous les termes sont **> 0**. Fonction associée&nbsp;: suite **explicite** seulement.",
+          "note": "u(n) ≠ u × n&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux définitions",
+          "entetes": [
+            "Définition",
+            "On donne",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "**Explicite**",
+              "u(n) selon n",
+              "u(n) = 3n − 2"
+            ],
+            [
+              "**Récurrence**",
+              "u(0) et u(n+1) selon u(n)",
+              "u(0) = 5, u(n+1) = 2u(n) + 1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Étudier le sens de variation",
+          "etapes": [
+            {
+              "titre": "Calculer",
+              "texte": "u(n+1) − u(n) et le simplifier"
+            },
+            {
+              "titre": "Signe",
+              "texte": "étudier le signe, pour tout entier n"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "≥ 0 : croissante · ≤ 0 : décroissante"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "u(n) = 3n − 2. __Sens de variation__&nbsp;?",
+          "calcul": "u(n+1) − u(n)\n= 3(n+1) − 2 − (3n − 2) = 3",
+          "aparte": "positif pour tout n",
+          "resultat": "(u) est [[croissante]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les mots à connaître",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Majorée",
+              "texte": "il existe M tel que **u(n) ≤ M** pour tout n."
+            },
+            {
+              "titre": "Minorée",
+              "texte": "il existe m tel que **u(n) ≥ m** pour tout n."
+            },
+            {
+              "titre": "Bornée",
+              "texte": "majorée **et** minorée à la fois."
+            },
+            {
+              "titre": "Récurrente",
+              "texte": "u(0) = 5 et u(n+1) = 2u(n) + 1&nbsp;: u(1) = 11, u(2) = **23**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Pour tout entier n, u(n+1) − u(n) = 3",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "3 > 0 donc u(n+1) > u(n)",
+              "quoi": "le signe"
+            },
+            {
+              "texte": "La suite (u) est strictement croissante",
+              "quoi": "la conclusion"
+            },
+            {
+              "texte": "Croissante, donc minorée par u(0) = −2",
+              "quoi": "un bonus"
+            }
+          ],
+          "pied": "Contrôle&nbsp;: u(0) = −2, u(1) = 1, u(2) = ==4==&nbsp;: ça monte. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire **u × n** au lieu de u(n).",
+            "Faire le quotient avec des termes **négatifs**.",
+            "Relier les points d’une suite par une **courbe**.",
+            "Prendre u(n) + 1 pour **u(n+1)**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "u(n) = 2n + 1&nbsp;: **u(10)**&nbsp;?",
+            "u(n+1) − u(n) = −3&nbsp;: **variation**&nbsp;?",
+            "u(0) = 1 et u(n+1) = 3u(n)&nbsp;: **u(2)**&nbsp;?"
+          ],
+          "reponses": "1) 21 · 2) décroissante · 3) u(1) = 3 puis u(2) = 9"
+        }
+      ]
+    }
+  ]
+}

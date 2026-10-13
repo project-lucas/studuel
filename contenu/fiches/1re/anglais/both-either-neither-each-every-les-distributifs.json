@@ -1,0 +1,128 @@
+{
+  "titre": "Both, either, each…",
+  "titreSurligne": "Both",
+  "accroche": "Les deux, l’un ou l’autre, chacun.",
+  "bonus": "**both** + pluriel · **either / neither / each / every** + singulier",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/anglais/both-either-neither-each-every-les-distributifs.webp",
+    "prompt": "a glossy violet balance scale holding two golden coins, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Deux ou plus&nbsp;?\nChoisis bien&nbsp;!",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le tableau d’ensemble",
+          "entetes": ["Mot", "Combien&nbsp;?", "Sens", "Exemple"],
+          "lignes": [
+            ["**both**", "2", "les deux, ensemble", "<i>**Both** answers are correct.</i>"],
+            ["**either**", "2", "l’un ou l’autre", "<i>You can take **either** bus.</i>"],
+            ["**neither**", "2", "aucun des deux", "<i>**Neither** answer is correct.</i>"],
+            ["**each**", "2 ou plus", "chacun, un par un", "<i>**Each** student has a book.</i>"],
+            ["**every**", "3 ou plus", "tous, sans exception", "<i>**Every** student has a book.</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Les couples",
+          "lignes": ["**both** … **and**"],
+          "petite": true,
+          "regle": "**either … or** (l’un ou l’autre) · **neither … nor** (ni l’un ni l’autre).",
+          "note": "neither est déjà négatif"
+        },
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "La grammaire de chacun",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "both", "texte": "+ **pluriel**, devant le verbe&nbsp;: <i>They **both** agree.</i>" },
+            { "titre": "either / neither", "texte": "+ **singulier**&nbsp;: <i>**Neither** of them came.</i>" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Each ou every&nbsp;?",
+          "oui": {
+            "titre": "Each = l’individu",
+            "texte": "Dès 2 éléments, et seul possible&nbsp;: <i>They cost ten pounds **each**.</i> <i>**each of** us</i>."
+          },
+          "non": {
+            "titre": "Every = le groupe",
+            "texte": "À partir de 3, jamais seul&nbsp;: <i>**every one of** us</i> (pas <i>every of</i>)."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« Aucun des deux n’est venu. » → <i>___ of them came.</i> → **Neither**, sans négation en plus."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            { "titre": "Combien&nbsp;?", "texte": "Deux → <i>both, either, neither</i>. Trois ou plus → <i>every</i>." },
+            { "titre": "Ensemble ou séparés&nbsp;?", "texte": "Ensemble → <i>both</i>. Un par un → <i>each</i>." },
+            { "titre": "L’accord", "texte": "Tout sauf <i>both</i> → **verbe au singulier**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Bons réflexes",
+          "deux": true,
+          "items": [
+            { "titre": "every other day", "texte": "un jour sur deux&nbsp;; <i>every three weeks</i> = toutes les trois semaines." },
+            { "titre": "either en fin de phrase", "texte": "= non plus&nbsp;: <i>I don’t like it **either**.</i>" },
+            { "titre": "Either … or", "texte": "<i>You can **either** stay **or** leave.</i>" },
+            { "titre": "Neither … nor", "texte": "<i>**Neither** Tom **nor** Anna came.</i>" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Neither of them didn’t come</i> → <i>**Neither** of them came.</i>",
+            "<i>Every students</i> → <i>Every **student**</i> (singulier).",
+            "<i>Every of us</i> → <i>**Each** of us</i> ou <i>every one of us</i>.",
+            "<i>Each student have</i> → <i>Each student **has**.</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "« Chaque élève a un livre. » → <i>___ student has a book.</i>",
+            "« Ni Tom ni Anna n’est venu. » → <i>Neither Tom ___ Anna came.</i>",
+            "« Je n’aime pas ça non plus. » → <i>I don’t like it ___.</i>"
+          ],
+          "reponses": "1) Each / Every 2) nor 3) either"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "titre": "Démarche de projet",
+  "titreSurligne": "projet",
+  "accroche": "Du problème à la présentation.",
+  "bonus": "S’approprier · Analyser · Réaliser · Valider · **Communiquer**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/spcl/la-demarche-de-projet-en-spcl.webp",
+    "prompt": "a glossy violet laboratory notebook with a golden pencil, a small flask and a rising golden arrow, sparkles"
+  },
+  "marcel": "Une question précise,\nun bon projet !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Les cinq phases",
+          "items": [
+            { "titre": "S’approprier", "texte": "cerner le sujet, énoncer la **problématique**" },
+            { "titre": "Analyser", "texte": "hypothèses, protocole, **planning**" },
+            { "titre": "Réaliser", "texte": "mesurer, noter dans le **cahier de laboratoire**" },
+            { "titre": "Valider", "texte": "esprit critique, **incertitudes**, améliorations" },
+            { "titre": "Communiquer", "texte": "**note concise** et oral" }
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les outils",
+          "items": [
+            { "terme": "Cahier des charges", "definition": "grandeurs, **exactitude**, contraintes (coût, sécurité, durée)" },
+            { "terme": "Cahier de laboratoire", "definition": "protocoles et mesures **brutes**, datés" },
+            { "terme": "Problématique", "definition": "question **précise et mesurable**" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Thème ou problématique",
+          "oui": { "titre": "Problématique", "texte": "« La **conductivité** d’un lait détecte-t-elle un ajout d’eau &gt; 10 % ? »" },
+          "non": { "titre": "Simple thème", "texte": "« Étudier le lait »&nbsp;: trop **vague**, impossible à mesurer." },
+          "essai": { "texte": "Une bonne question <i>précise et mesurable</i> dit ce qu’on mesure, avec quelle exactitude." }
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Capteur de température bon marché et microcontrôleur. Peut-il remplacer le thermomètre à __0,5 °C__ près&nbsp;?",
+          "calcul": "étalonner, estimer u, comparer",
+          "aparte": "au cahier des charges",
+          "resultat": "conclure : u &lt; [[0,5 °C]] ou non"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Présenter à l’oral",
+          "entetes": ["À faire", "À éviter"],
+          "lignes": [
+            ["annoncer la **problématique**", "lire ses notes"],
+            ["graphique lisible, unités, incertitudes", "diapositives chargées"],
+            ["expliquer un choix et sa limite", "cacher un résultat décevant"],
+            ["répondre à la question posée", "finir sur « voilà »"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Dans ton dossier",
+          "lignes": [
+            { "texte": "problématique en une question mesurable", "quoi": "au début" },
+            { "texte": "mesures brutes, datées, avec les réglages", "quoi": "le cahier de laboratoire" },
+            { "texte": "résultat confronté au cahier des charges", "quoi": "la validation" }
+          ],
+          "pied": "Chaque choix doit se ==justifier== par rapport au cahier des charges."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Partir d’un **thème** sans question précise.",
+            "**Recopier** les mesures au propre après coup.",
+            "Cacher un résultat décevant au lieu de l’**expliquer**.",
+            "Oublier de **répartir les rôles** dans l’équipe."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle phase vient après **Analyser**&nbsp;?",
+            "Que note-t-on dans le **cahier de laboratoire**&nbsp;?",
+            "Comment finir un **oral**&nbsp;?"
+          ],
+          "reponses": "1) Réaliser · 2) protocoles et mesures brutes · 3) en répondant à la question"
+        }
+      ]
+    }
+  ]
+}

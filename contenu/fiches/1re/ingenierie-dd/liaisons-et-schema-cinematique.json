@@ -1,0 +1,119 @@
+{
+  "titre": "Liaisons cinématiques",
+  "titreSurligne": "Liaisons",
+  "accroche": "Comment les pièces bougent entre elles.",
+  "bonus": "Solide libre = **6 degrés de liberté** (3 translations + 3 rotations) · une liaison en **supprime**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/ingenierie-dd/liaisons-et-schema-cinematique.webp",
+    "prompt": "a glossy violet bench vise with a golden screw handle and sliding jaw, small golden arrows showing rotation and translation, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Une liaison,\ndes mouvements en moins !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les liaisons usuelles",
+          "entetes": ["Liaison", "Mouvements"],
+          "lignes": [
+            ["**Encastrement**", "aucun"],
+            ["**Pivot**", "1 rotation"],
+            ["**Glissière**", "1 translation"],
+            ["**Hélicoïdale**", "1 rotation et 1 translation liées"],
+            ["**Pivot glissant**", "1 rotation et 1 translation libres"],
+            ["**Rotule**", "3 rotations"],
+            ["**Appui plan**", "2 translations, 1 rotation"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Exemples du quotidien",
+          "entetes": ["Liaison", "Exemple"],
+          "lignes": [
+            ["**Pivot**", "roue de vélo sur son axe"],
+            ["**Glissière**", "tiroir sur ses rails"],
+            ["**Hélicoïdale**", "vis et écrou"],
+            ["**Pivot glissant**", "tige de vérin"],
+            ["**Rotule**", "rotule de direction"],
+            ["**Appui plan**", "objet posé sur une table"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Du mécanisme au schéma cinématique",
+          "etapes": [
+            { "titre": "Classes", "texte": "regrouper les pièces sans mouvement relatif" },
+            { "titre": "Graphe", "texte": "un cercle par classe, un trait par liaison nommée" },
+            { "titre": "Schéma", "texte": "chaque liaison avec son symbole normalisé" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu : un étau",
+          "donnees": "La __vis__ tourne et fait avancer l’__écrou__ du mors mobile. Liaison vis/écrou&nbsp;?",
+          "calcul": "rotation → translation liée",
+          "aparte": "1 R + 1 T liées",
+          "resultat": "liaison [[hélicoïdale]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Pivot glissant ou hélicoïdale&nbsp;?",
+          "oui": { "titre": "Pivot glissant", "texte": "Rotation et translation **indépendantes**." },
+          "non": { "titre": "Hélicoïdale", "texte": "Rotation et translation **liées** par le pas." },
+          "essai": { "texte": "La tige d’un vérin tourne et coulisse librement&nbsp;: <i>pivot glissant</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Classe 1 : corps + mors fixe", "quoi": "les classes" },
+            { "texte": "1/2 glissière · 1/3 pivot · 3/2 hélicoïdale", "quoi": "les liaisons" },
+            { "texte": "Liaisons parfaites : ni jeu ni frottement", "quoi": "l’hypothèse" }
+          ],
+          "pied": "On justifie par ==les mouvements possibles== et les surfaces en contact."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mettre deux pièces **vissées** dans deux classes.",
+            "Confondre **pivot** (1 rotation) et rotule (3).",
+            "Oublier de **nommer** chaque liaison du graphe.",
+            "Compter les **vis** comme des liaisons."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de **degrés de liberté** a un solide libre&nbsp;?",
+            "Quelle liaison autorise une **seule translation**&nbsp;?",
+            "Quelle liaison relie une **vis** et un écrou&nbsp;?"
+          ],
+          "reponses": "1) six · 2) la glissière · 3) l’hélicoïdale"
+        }
+      ]
+    }
+  ]
+}

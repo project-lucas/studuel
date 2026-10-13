@@ -1,0 +1,124 @@
+{
+  "titre": "Éco-conception",
+  "titreSurligne": "Éco-conception",
+  "accroche": "Agir tôt, sur tout le cycle de vie.",
+  "bonus": "**80 %** de l’impact se fixe à la **conception** · aluminium recyclé = **95 %** d’énergie en moins",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/innovation-technologique/cycle-de-vie-et-eco-conception.webp",
+    "prompt": "a glossy violet circular arrow loop around a golden kettle with tiny golden leaves, sparkles, same art style as the reference icons, no text, magenta background"
+  },
+  "marcel": "Un bon produit\nse pense dès le début !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les cinq phases",
+          "entetes": ["Phase", "Consomme ou rejette"],
+          "lignes": [
+            ["**Extraction**", "minerais, pétrole, eau"],
+            ["**Fabrication**", "énergie, chutes, rejets"],
+            ["**Transport**", "carburant, emballages"],
+            ["**Utilisation**", "énergie, consommables"],
+            ["**Fin de vie**", "déchets, recyclage"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les mots à connaître",
+          "items": [
+            { "terme": "ACV", "definition": "impacts mesurés sur **plusieurs critères**" },
+            { "terme": "Transfert de pollution", "definition": "réduire un impact en **aggravant** un autre" },
+            { "terme": "Berceau au berceau", "definition": "la matière devient celle d’un **nouveau produit**" },
+            { "terme": "Éco-conception", "definition": "l’environnement pris en compte **dès le croquis**" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Éco-concevoir",
+          "etapes": [
+            { "titre": "Mesurer", "texte": "ACV : la part de chaque phase dans l’impact" },
+            { "titre": "Cibler", "texte": "repérer la phase qui pèse le plus" },
+            { "titre": "Agir", "texte": "matière, fabrication, usage, durée de vie, fin de vie" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Bouilloire : matières __8 %__, fabrication __5 %__, transport __2 %__, usage __83 %__, fin __2 %__.",
+          "calcul": "plus grande part de l’impact climatique",
+          "aparte": "électricité",
+          "resultat": "phase [[utilisation]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quel levier&nbsp;?",
+          "oui": {
+            "titre": "Bien ciblé",
+            "texte": "Graduation visible et isolation : on chauffe **juste l’eau voulue**."
+          },
+          "non": {
+            "titre": "Mal ciblé",
+            "texte": "Un plastique « vert » : on agit sur **8 %** seulement de l’impact."
+          },
+          "essai": {
+            "texte": "On repère d’abord la phase qui pèse le plus, <i>puis</i> on agit sur elle."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Impact dominant : la phase d’utilisation.", "quoi": "le constat" },
+            { "texte": "Moins de matière, matériaux recyclés, démontage facile.", "quoi": "les leviers" },
+            { "texte": "Durée de vie longue : réparable, pièces disponibles.", "quoi": "durer" },
+            { "texte": "Fin de vie prévue : matériaux identifiés, peu de collage.", "quoi": "la fin" }
+          ],
+          "pied": "On raisonne ==du berceau à la tombe== sur tout le cycle de vie."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Regarder **un seul** critère (le CO<sub>2</sub>).",
+            "Agir sur une phase **négligeable**.",
+            "Oublier le **transfert de pollution**.",
+            "Penser l’environnement **après** la conception.",
+            "Choisir un matériau **sans** regarder son histoire."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de **phases** compte le cycle de vie&nbsp;?",
+            "Quelle part de l’impact se fixe à la **conception**&nbsp;?",
+            "Que signifie **ACV**&nbsp;?"
+          ],
+          "reponses": "1) cinq · 2) environ 80 % · 3) analyse de cycle de vie"
+        }
+      ]
+    }
+  ]
+}

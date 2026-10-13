@@ -1,0 +1,158 @@
+{
+  "titre": "Le passif",
+  "titreSurligne": "passif",
+  "accroche": "werden + participe II, jamais sein.",
+  "bonus": "**werden** + participe II · parfait : <i>ist … **worden**</i> · agent : **von** (personne) / **durch** (moyen)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/allemand/la-phrase-a-la-voix-passive.webp",
+    "prompt": "a glossy violet house being built with a golden crane and golden bricks, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Passif&nbsp;?\nWerden, pas sein&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La forme",
+          "lignes": ["**werden** + participe II"],
+          "petite": true,
+          "regle": "Le passif d’action se construit avec **werden**, **jamais** avec <i>sein</i>. Le participe II part **à la fin**.",
+          "note": "le français dit « être »&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les temps du passif",
+          "entetes": ["Temps", "Forme", "L’exemple"],
+          "lignes": [
+            ["Présent", "<i>wird</i> + part.", "<i>Das Haus **wird** gebaut.</i>"],
+            ["Prétérit", "<i>wurde</i> + part.", "<i>Das Haus **wurde** gebaut.</i>"],
+            ["Parfait", "<i>ist</i> + part. + <i>worden</i>", "<i>Das Haus **ist** gebaut **worden**.</i>"],
+            ["Futur", "<i>wird</i> + part. + <i>werden</i>", "<i>Das Haus **wird** gebaut **werden**.</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Trois choses à savoir",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Action ou état",
+              "texte": "<i>werden</i> = le film : <i>Das Haus wird gebaut.</i> · <i>sein</i> = la photo : <i>Das Haus ist gebaut.</i>"
+            },
+            {
+              "titre": "L’agent",
+              "texte": "**von** + datif : une personne (<i>von Goethe</i>) · **durch** + accusatif : un moyen (<i>durch ein Erdbeben</i>)."
+            },
+            {
+              "titre": "Sans COD",
+              "texte": "Passif **impersonnel** : <i>Hier wird getanzt.</i> (Ici, on danse.) · avec modal : <i>muss gemacht **werden**</i>."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Worden ou geworden&nbsp;?",
+          "oui": {
+            "titre": "worden",
+            "texte": "<i>Das Haus ist gebaut **worden**.</i> — au parfait du passif, <i>werden</i> perd son <i>ge-</i>."
+          },
+          "non": {
+            "titre": "geworden",
+            "texte": "<i>Das Haus ist gebaut geworden.</i> — <i>geworden</i> est réservé à « devenir » : <i>Er ist Arzt **geworden**.</i>"
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Der Brief ist geschrieben ___.</i> → <i>**worden**</i>"
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Passer à la voix passive",
+          "etapes": [
+            {
+              "titre": "Le COD devient sujet",
+              "texte": "<i>Man baut ein Haus</i> → <i>**Ein Haus** …</i> (nominatif)."
+            },
+            {
+              "titre": "werden + participe II",
+              "texte": "<i>werden</i> au temps voulu, participe **à la fin**."
+            },
+            {
+              "titre": "L’agent&nbsp;?",
+              "texte": "Facultatif : <i>von</i> + datif ou <i>durch</i> + accusatif."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À l’oral : man",
+          "deux": true,
+          "items": [
+            {
+              "titre": "man + actif",
+              "texte": "<i>Man baut ein Haus.</i> = <i>Ein Haus wird gebaut.</i>"
+            },
+            {
+              "titre": "Agent personne",
+              "texte": "<i>Das Buch wurde **von Goethe** geschrieben.</i>"
+            },
+            {
+              "titre": "Agent moyen",
+              "texte": "<i>Die Stadt wurde **durch ein Erdbeben** zerstört.</i>"
+            },
+            {
+              "titre": "Avec modal",
+              "texte": "<i>Die Arbeit **muss** heute gemacht **werden**.</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Das Haus ist gebaut</i> = état. Pour l’action : <i>Das Haus **wird** gebaut.</i>",
+            "<i>ist gebaut geworden</i> → <i>ist gebaut **worden**</i>.",
+            "<i>von ein Erdbeben</i> → <i>**durch** ein Erdbeben</i> (un moyen).",
+            "Oublier que le participe II est **en fin de phrase**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Passif présent&nbsp;: <i>Man baut das Haus.</i>",
+            "Passif parfait&nbsp;: <i>Das Haus ___ gebaut ___.</i>",
+            "<i>Das Buch wurde ___ Goethe geschrieben.</i> (von / durch)"
+          ],
+          "reponses": "1) Das Haus wird gebaut 2) ist … worden 3) von"
+        }
+      ]
+    }
+  ]
+}

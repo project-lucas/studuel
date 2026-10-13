@@ -1,0 +1,118 @@
+{
+  "titre": "Les dorsales",
+  "titreSurligne": "dorsales",
+  "accroche": "Là où naît la croûte océanique.",
+  "epreuve": "bac",
+  "bonus": "**Décompression** → fusion partielle de la **péridotite** · un magma, deux roches : **gabbro** (profondeur), **basalte** (surface)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/svt/les-zones-de-divergence-entre-les-plaques-lithospheriques.webp",
+    "prompt": "a glossy violet underwater ridge with golden magma rising at its center and two plates moving apart, tiny golden bubbles and sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Les plaques s’écartent,\nla croûte naît !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 1,
+          "titre": "Le mécanisme de fusion",
+          "etapes": [
+            { "titre": "Écartement", "texte": "les plaques s’éloignent" },
+            { "titre": "Décompression", "texte": "le manteau remonte, la pression baisse" },
+            { "titre": "Fusion", "texte": "la **péridotite** fond partiellement, sans apport de chaleur" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Un magma, deux roches",
+          "entetes": ["Roche", "Où", "Structure"],
+          "lignes": [
+            ["**Gabbro**", "en profondeur, refroidissement lent", "**grenue**"],
+            ["**Basalte**", "en surface, refroidissement brutal", "**microlitique**, laves en coussins"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce qu’il faut savoir expliquer",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Fusion partielle", "texte": "Par **décompression adiabatique**&nbsp;: mécanisme à connaître précisément." },
+            { "titre": "Dorsale rapide", "texte": "Pacifique est, jusqu’à 15 cm/an&nbsp;: profil **bombé**, sans rift." },
+            { "titre": "Dorsale lente", "texte": "Atlantique, 2 à 3 cm/an&nbsp;: **rift** axial profond." },
+            { "titre": "Sismicité", "texte": "**Superficielle** et de faible magnitude." },
+            { "titre": "Failles normales", "texte": "Signature de l’**extension**." },
+            { "titre": "Fumeurs noirs", "texte": "Eau à plus de **300 °C**, riche en métaux&nbsp;: écosystèmes sans lumière." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Les indices d’une dorsale",
+          "deux": true,
+          "items": [
+            { "titre": "Flux élevé", "texte": "chaleur qui remonte" },
+            { "titre": "Séismes", "texte": "peu profonds, faibles" },
+            { "titre": "Failles normales", "texte": "extension" },
+            { "titre": "Hydrothermalisme", "texte": "fumeurs noirs" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple",
+          "donnees": "Un même magma basaltique donne gabbro et basalte.",
+          "calcul": "Seule la vitesse de refroidissement diffère.",
+          "resultat": "[[lent = gabbro, rapide = basalte]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Le manteau remonte sous la dorsale et subit une baisse de pression.", "quoi": "décrire" },
+            { "texte": "Sans apport de chaleur, la péridotite fond partiellement.", "quoi": "expliquer" },
+            { "texte": "Le magma basaltique forme la croûte océanique.", "quoi": "conclure" }
+          ],
+          "pied": "En s’éloignant, la lithosphère se ==refroidit==, s’épaissit et devient ==plus dense== : elle sera subductible."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que la fusion vient d’un **apport de chaleur**.",
+            "Croire que le magma est du **manteau fondu entièrement**&nbsp;: c’est partiel.",
+            "Confondre **gabbro** (profondeur) et **basalte** (surface).",
+            "Placer un **rift** sur toutes les dorsales."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle roche du manteau **fond** sous une dorsale&nbsp;?",
+            "Quelle roche a une structure **grenue**&nbsp;?",
+            "Quelle dorsale possède un **rift** profond&nbsp;?"
+          ],
+          "reponses": "1) la péridotite · 2) le gabbro · 3) la dorsale lente (Atlantique)"
+        }
+      ]
+    }
+  ]
+}

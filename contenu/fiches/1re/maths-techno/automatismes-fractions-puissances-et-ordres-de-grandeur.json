@@ -1,0 +1,114 @@
+{
+  "titre": "Fractions, puissances",
+  "titreSurligne": "puissances",
+  "accroche": "Calculer vite et juste, sans machine.",
+  "bonus": "aire ⇒ **×100²** · volume ⇒ **×10³** · 1 m/s = **3,6 km/h** · 1 h = 3 600 s",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths-techno/automatismes-fractions-puissances-et-ordres-de-grandeur.webp",
+    "prompt": "a glossy violet pie cut into slices with a golden slice pulled out and a tiny golden exponent number floating above, sparkles"
+  },
+  "marcel": "Sans calculatrice,\nsans panique !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les fractions",
+          "entetes": ["Opération", "Règle"],
+          "lignes": [
+            ["Additionner", "même **dénominateur** d’abord"],
+            ["Multiplier", "haut × haut, bas × bas"],
+            ["Diviser", "multiplier par l’**inverse**"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Les puissances",
+          "petite": true,
+          "lignes": ["aᵐ × aⁿ = aᵐ⁺ⁿ", "aᵐ ÷ aⁿ = aᵐ⁻ⁿ", "(aᵐ)ⁿ = aᵐˣⁿ"],
+          "regle": "a⁰ = 1 et a⁻ⁿ = {1/aⁿ}. Écriture scientifique&nbsp;: **a × 10ⁿ** avec ==1 ≤ a < 10==.",
+          "note": "10⁻³ = 0,001"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Simplifier", "texte": "unités identiques, fractions réduites, puissances regroupées" },
+            { "titre": "Calculer", "texte": "à la main, étape par étape" },
+            { "titre": "Contrôler", "texte": "avec un ordre de grandeur : on arrondit avant de calculer" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une voiture roule à __90 km/h__. Distance en 20 min&nbsp;?",
+          "calcul": "20 min = {1/3} h\nd = 90 × {1/3}",
+          "aparte": "d = v × t",
+          "resultat": "d = [[30 km]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Fractions", "texte": "{1/2} + {1/3} = {3/6} + {2/6} = **{5/6}**." },
+            { "titre": "Scientifique", "texte": "45 000 = **4,5 × 10⁴** · 0,00045 = **4,5 × 10⁻⁴**." },
+            { "titre": "Ordre de grandeur", "texte": "49 × 2 012 ≈ 50 × 2 000 = **100 000**." },
+            { "titre": "Volumes", "texte": "1 L = 1 dm³ · 1 m³ = **1 000 L**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "20 min = {20/60} h = {1/3} h", "quoi": "la conversion" },
+            { "texte": "d = 90 × {1/3} = 30", "quoi": "le calcul" },
+            { "texte": "Il parcourt 30 km.", "quoi": "la phrase" }
+          ],
+          "pied": "Contrôle&nbsp;: 90 km en 1 h, donc ==30 km== en un tiers d’heure. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Additionner les **dénominateurs** : {1/2} + {1/3} ≠ {2/5}.",
+            "Convertir une aire **comme** une longueur.",
+            "Écrire 45 × 10³ : ce n’est pas une écriture **scientifique**.",
+            "Confondre **20 min** et 0,20 h."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**{3/4} ÷ {1/2}**&nbsp;?",
+            "**10⁵ ÷ 10²**&nbsp;?",
+            "**36 km/h** en m/s&nbsp;?"
+          ],
+          "reponses": "1) {3/2} · 2) 10³ = 1 000 · 3) 10 m/s"
+        }
+      ]
+    }
+  ]
+}

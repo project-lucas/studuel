@@ -1,0 +1,174 @@
+{
+  "titre": "Simplifier une équation",
+  "titreSurligne": "Simplifier",
+  "accroche": "Moins de portes, moins de coût.",
+  "bonus": "Gray&nbsp;: **00 · 01 · 11 · 10** · groupes de **1, 2, 4, 8** · le tableau se **referme**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/simplification-des-expressions-logiques.webp",
+    "prompt": "a glossy violet grid of sixteen cells with a golden rounded rectangle grouping four cells, tiny golden sparkles, same art style as the reference icons, on magenta background, no text no digits"
+  },
+  "marcel": "Des gros groupes,\npeu de portes !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Pourquoi simplifier",
+          "items": [
+            {
+              "titre": "Moins de portes",
+              "texte": "moins de composants et de place"
+            },
+            {
+              "titre": "Moins de conso",
+              "texte": "moins de circuits alimentés"
+            },
+            {
+              "titre": "Moins de pannes",
+              "texte": "moins de points de défaillance"
+            },
+            {
+              "titre": "Coût plus bas",
+              "texte": "moins de matière et de câblage"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le tableau de Karnaugh",
+          "entetes": [
+            "Règle",
+            "Contenu"
+          ],
+          "lignes": [
+            [
+              "**Cases**",
+              "2<sup>n</sup>, une par ligne de la table"
+            ],
+            [
+              "**Voisines**",
+              "ne diffèrent que d’**une** variable"
+            ],
+            [
+              "**En-têtes**",
+              "code de **Gray** : 00, 01, 11, 10"
+            ],
+            [
+              "**Groupes**",
+              "rectangles de 1, 2, 4 ou 8 cases"
+            ],
+            [
+              "**Bords**",
+              "gauche-droite et haut-bas se touchent"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Simplifier avec Karnaugh",
+          "etapes": [
+            {
+              "titre": "Remplir",
+              "texte": "les 1 de la table de vérité, en-têtes en Gray"
+            },
+            {
+              "titre": "Grouper",
+              "texte": "les 1 voisins, en groupes aussi grands que possible"
+            },
+            {
+              "titre": "Lire",
+              "texte": "chaque groupe = un terme, avec les variables constantes"
+            },
+            {
+              "titre": "Écrire",
+              "texte": "S = la somme (OU) de tous les termes lus"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un groupe de __4 cases__ où seule c est constante (c = 1) en 3 variables.",
+          "calcul": "a et b changent → éliminées",
+          "aparte": "2 cases de plus = 1 variable de moins",
+          "resultat": "S = [[c]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Les cas indifférents",
+          "oui": {
+            "titre": "Les inclure",
+            "texte": "Une combinaison impossible, notée **φ**, entre dans un groupe ==si elle l’agrandit==."
+          },
+          "non": {
+            "titre": "Les ignorer",
+            "texte": "Sinon on la laisse de côté&nbsp;: elle ne ==force== jamais un groupe."
+          },
+          "essai": {
+            "texte": "Un φ qui complète un groupe de 2 en groupe de 4 supprime <i>une variable de plus</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Tableau en code de Gray",
+              "quoi": "les en-têtes"
+            },
+            {
+              "texte": "Groupe de 4 cases : on garde c",
+              "quoi": "la lecture"
+            },
+            {
+              "texte": "S = c",
+              "quoi": "l’équation simplifiée"
+            }
+          ],
+          "pied": "Tracer les ==groupes== à la main sur le tableau."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "En-têtes en **binaire naturel** : voisinages faux.",
+            "De **petits groupes** : juste, mais pas simplifié.",
+            "Oublier que les **bords** se rejoignent.",
+            "Former un groupe de **3** ou de 6 cases."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel code pour les **en-têtes**&nbsp;?",
+            "Un groupe **deux fois plus grand** élimine&nbsp;?",
+            "Comment traite-t-on un **cas indifférent**&nbsp;?"
+          ],
+          "reponses": "1) code de Gray · 2) une variable de plus · 3) inclus s’il agrandit un groupe"
+        }
+      ]
+    }
+  ]
+}

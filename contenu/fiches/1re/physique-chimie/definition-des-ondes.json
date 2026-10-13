@@ -1,0 +1,170 @@
+{
+  "titre": "Les ondes",
+  "titreSurligne": "ondes",
+  "accroche": "Une perturbation qui se propage.",
+  "bonus": "λ = v × T = v ÷ f · f = 1 ÷ T · son&nbsp;: ≈ 340 m/s · lumière&nbsp;: 3,00 × 10⁸ m/s",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/definition-des-ondes.webp",
+    "prompt": "a glossy violet water ripple with golden concentric waves around a floating cork, sparkles"
+  },
+  "marcel": "L’onde voyage,\npas la matière !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La relation clé",
+          "petite": true,
+          "lignes": [
+            "λ = v × T",
+            "λ = {v/f}"
+          ],
+          "regle": "**λ** longueur d’onde (m), **v** célérité (m/s), **T** période (s), **f** fréquence (Hz) avec f = 1 ÷ T. La ==fréquence== est imposée par la source.",
+          "note": "v change avec le milieu&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Mécanique ou non&nbsp;?",
+          "entetes": [
+            "Onde",
+            "Milieu",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "**Mécanique**",
+              "indispensable",
+              "son, vagues, séismes"
+            ],
+            [
+              "**Électromagnétique**",
+              "inutile (vide)",
+              "lumière"
+            ],
+            [
+              "**Transversale**",
+              "perturbation ⊥ propagation",
+              "corde"
+            ],
+            [
+              "**Longitudinale**",
+              "perturbation ∥ propagation",
+              "son dans l’air"
+            ],
+            [
+              "Célérité du son",
+              "air 340 · eau 1 500 m/s",
+              "acier 5 000 m/s"
+            ],
+            [
+              "Retard",
+              "τ = d ÷ v",
+              "localiser un orage"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Identifier",
+              "texte": "la grandeur connue&nbsp;: T, f ou v, et le milieu"
+            },
+            {
+              "titre": "Relier",
+              "texte": "λ = v × T, ou λ = v ÷ f, avec f = 1 ÷ T"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "en unités SI puis conclure avec l’unité (m, s ou Hz)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un son de fréquence 440 Hz dans l’air (v = 340 m/s). Sa __longueur d’onde__&nbsp;?",
+          "calcul": "λ = v ÷ f = 340 ÷ 440",
+          "aparte": "f est imposée par la source",
+          "resultat": "λ ≈ [[0,77 m]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le son dans le vide",
+          "oui": {
+            "titre": "Onde mécanique",
+            "texte": "Le son a besoin d’un **milieu matériel**&nbsp;: air, eau, acier. Plus il est rigide, plus il va vite."
+          },
+          "non": {
+            "titre": "Dans le vide",
+            "texte": "Le son **ne se propage pas** dans le vide, contrairement à la lumière."
+          },
+          "essai": {
+            "texte": "Éclair, puis tonnerre 3 s après&nbsp;: d = v × τ = 340 × 3 ≈ <i>1 km</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "λ = v ÷ f",
+              "quoi": "la relation"
+            },
+            {
+              "texte": "λ = 340 ÷ 440",
+              "quoi": "les nombres"
+            },
+            {
+              "texte": "λ ≈ 0,77 m",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "L’onde transporte de l’==énergie==, jamais de matière&nbsp;: le bouchon ne suit pas la vague."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que l’onde **transporte de la matière**.",
+            "Croire que le son passe dans le **vide**.",
+            "Penser que **f** change avec le milieu.",
+            "Oublier que **λ** dépend du milieu."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**f** pour T = 0,02 s&nbsp;?",
+            "Retard du tonnerre à 1 020 m (v = 340 m/s)&nbsp;?",
+            "Que ne change pas une onde en changeant de milieu&nbsp;?"
+          ],
+          "reponses": "1) 50 Hz · 2) 3 s · 3) sa fréquence"
+        }
+      ]
+    }
+  ]
+}

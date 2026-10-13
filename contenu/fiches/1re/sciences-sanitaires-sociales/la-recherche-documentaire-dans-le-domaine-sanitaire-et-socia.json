@@ -1,0 +1,111 @@
+{
+  "titre": "Recherche documentaire",
+  "titreSurligne": "documentaire",
+  "accroche": "Trouver, trier, citer ses sources.",
+  "bonus": "**ET** précise · **OU** élargit · **SAUF** exclut · croiser **2 sources** au moins",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/sciences-sanitaires-sociales/la-recherche-documentaire-dans-le-domaine-sanitaire-et-socia.webp",
+    "prompt": "a glossy violet magnifying glass over a stack of golden documents, sparkles, same art style as the reference icons, on magenta background, no text"
+  },
+  "marcel": "Un chiffre sans source,\nc’est une rumeur !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les mots clés",
+          "items": [
+            { "terme": "Source primaire", "definition": "un document **original** : enquête, loi" },
+            { "terme": "Source secondaire", "definition": "sa **présentation** ou son analyse : article de presse" },
+            { "terme": "Corpus documentaire", "definition": "l’ensemble des documents **retenus** pour l’étude" },
+            { "terme": "QQOQCP", "definition": "qui, quoi, où, quand, comment, pourquoi : **délimiter** le sujet" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les types de sources",
+          "entetes": ["Type", "Exemples"],
+          "lignes": [
+            ["**Statistiques**", "INSEE, DREES, Santé publique France"],
+            ["**Textes officiels**", "Légifrance, Bulletin officiel"],
+            ["**Rapports**", "Cour des comptes, Défenseur des droits"],
+            ["**Études**", "Cairn, Persée, HAL"],
+            ["**Grand public**", "service-public.fr, presse"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Évaluer la fiabilité",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Auteur", "texte": "Compétent, **identifiable** ?" },
+            { "titre": "Producteur", "texte": "Organisme **public**, scientifique, associatif ou commercial ?" },
+            { "titre": "Date", "texte": "L’information est-elle **à jour** ?" },
+            { "titre": "Objectivité", "texte": "Il **informe** ou cherche à convaincre, à vendre ?" },
+            { "titre": "Références", "texte": "Données **sourcées** et vérifiables ?" },
+            { "titre": "Qualité", "texte": "**Méthode** exposée, cohérence avec d’autres sources." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Mener sa recherche",
+          "etapes": [
+            { "titre": "Questionner", "texte": "QQOQCP, **mots-clés** et synonymes" },
+            { "titre": "Chercher", "texte": "requêtes **ET / OU / SAUF**, bases adaptées" },
+            { "titre": "Évaluer et citer", "texte": "trier les sources, **synthétiser**, référencer" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Selon la DREES, en 2022, …", "quoi": "citer un chiffre" },
+            { "texte": "Un site : organisme, titre de la page, adresse, date de consultation.", "quoi": "référencer" },
+            { "texte": "La source est fiable : auteur identifié, données sourcées, date récente.", "quoi": "évaluer" }
+          ],
+          "pied": "Un chiffre sans source n’est pas une donnée : c’est une ==affirmation==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Citer un chiffre **sans source ni date**.",
+            "Confondre source **primaire** et **secondaire**.",
+            "Se fier à **une seule** source.",
+            "Oublier la **date de consultation** d’un site."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel opérateur **exclut** un mot ?",
+            "Un article sur une enquête est-il une source **primaire** ?",
+            "Que doit-on noter pour citer un **site** ?"
+          ],
+          "reponses": "1) SAUF · 2) non, secondaire · 3) organisme, titre, adresse, date de consultation"
+        }
+      ]
+    }
+  ]
+}

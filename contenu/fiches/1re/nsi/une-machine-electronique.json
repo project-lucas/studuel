@@ -1,0 +1,201 @@
+{
+  "titre": "Du transistor au CPU",
+  "titreSurligne": "transistor",
+  "accroche": "Remonter la chaîne de la machine.",
+  "bonus": "**charger → décoder → exécuter** · programme et données dans la **même mémoire** · 3 GHz = 3 milliards de cycles/s",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/nsi/une-machine-electronique.webp",
+    "prompt": "a glossy violet microchip with golden pins and a tiny golden transistor symbol glowing on top, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Des milliards\nd’interrupteurs !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "De bas en haut",
+          "items": [
+            {
+              "titre": "Transistor",
+              "texte": "interrupteur **commandé électriquement**, sans pièce mobile"
+            },
+            {
+              "titre": "Porte logique",
+              "texte": "quelques transistors&nbsp;: NON, ET, OU"
+            },
+            {
+              "titre": "Circuit combinatoire",
+              "texte": "additionneur, comparateur, multiplexeur"
+            },
+            {
+              "titre": "Bascule",
+              "texte": "**garde un bit**&nbsp;: le circuit se souvient"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le modèle de von Neumann",
+          "entetes": [
+            "La partie",
+            "Son rôle"
+          ],
+          "lignes": [
+            [
+              "**UAL**",
+              "elle calcule"
+            ],
+            [
+              "**Unité de commande**",
+              "séquence les instructions"
+            ],
+            [
+              "**Mémoire**",
+              "données **et** programme"
+            ],
+            [
+              "**Entrées-sorties**",
+              "relient au monde"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le cycle d’exécution, répété sans fin",
+          "etapes": [
+            {
+              "titre": "Charger",
+              "texte": "l’instruction pointée par le **compteur ordinal**"
+            },
+            {
+              "titre": "Décoder",
+              "texte": "reconnaître l’opération et ses opérandes"
+            },
+            {
+              "titre": "Exécuter",
+              "texte": "la réaliser, puis passer à la suivante"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 4,
+          "titre": "L’horloge",
+          "lignes": [
+            "1 GHz = 10<sup>9</sup> cycles par seconde"
+          ],
+          "regle": "Plus la fréquence est haute, plus le processeur enchaîne de **cycles** par seconde.",
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un processeur à __3 GHz__&nbsp;: combien de cycles en 1 s&nbsp;?",
+          "calcul": "3 GHz = 3 × 10<sup>9</sup> Hz",
+          "aparte": "l’horloge rythme",
+          "resultat": "= [[3 milliards]] de cycles"
+        },
+        {
+          "type": "tableau",
+          "numero": 5,
+          "titre": "La hiérarchie des mémoires",
+          "entetes": [
+            "Mémoire",
+            "Vitesse",
+            "Taille",
+            "Reste ?"
+          ],
+          "lignes": [
+            [
+              "**Registres**",
+              "maximale",
+              "quelques mots",
+              "volatile"
+            ],
+            [
+              "**Cache**",
+              "très rapide",
+              "quelques Mo",
+              "volatile"
+            ],
+            [
+              "**Mémoire vive**",
+              "rapide",
+              "quelques Go",
+              "volatile"
+            ],
+            [
+              "**Stockage**",
+              "lente",
+              "plusieurs To",
+              "**persistant**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Programme et données dans la même mémoire.",
+              "quoi": "von Neumann"
+            },
+            {
+              "texte": "On peut donc charger un autre logiciel.",
+              "quoi": "la conséquence"
+            },
+            {
+              "texte": "Plus c’est rapide, plus c’est cher et petit.",
+              "quoi": "les mémoires"
+            }
+          ],
+          "pied": "La mémoire vive est ==volatile==, le stockage ne l’est pas."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **mémoire vive** et **stockage**.",
+            "Croire que le transistor **calcule** seul&nbsp;: il commute.",
+            "Oublier que le **programme** est aussi en mémoire.",
+            "Confondre bascule (se **souvient**) et porte (calcule)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel composant **garde un bit**&nbsp;?",
+            "Citer les **3 étapes** du cycle.",
+            "La mémoire vive est-elle **persistante**&nbsp;?"
+          ],
+          "reponses": "1) la bascule · 2) charger, décoder, exécuter · 3) non, elle est volatile"
+        }
+      ]
+    }
+  ]
+}

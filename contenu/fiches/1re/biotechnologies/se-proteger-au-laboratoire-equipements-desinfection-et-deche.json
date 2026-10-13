@@ -1,0 +1,194 @@
+{
+  "titre": "Se protéger au labo",
+  "titreSurligne": "protéger",
+  "accroche": "Les bons gestes, dans le bon ordre.",
+  "bonus": "**Collectif** d’abord, **individuel** en complément · désinfecter **avant** et **après**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biotechnologies/se-proteger-au-laboratoire-equipements-desinfection-et-deche.webp",
+    "prompt": "a glossy violet lab coat with golden buttons, a golden pair of safety goggles and a glove, soap bubbles and sparkles"
+  },
+  "marcel": "Blouse, gants,\net bons gestes !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "EPC et EPI",
+          "entetes": [
+            "",
+            "EPC",
+            "EPI"
+          ],
+          "lignes": [
+            [
+              "**Sens**",
+              "protection **collective**",
+              "protection **individuelle**"
+            ],
+            [
+              "**Exemples**",
+              "hotte, PSM, rince-œil",
+              "blouse, lunettes, gants"
+            ],
+            [
+              "**Protège**",
+              "tout le laboratoire",
+              "celui qui les porte"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Désinfection",
+              "definition": "élimine la **majorité** des micro-organismes d’une surface"
+            },
+            {
+              "terme": "Stérilisation",
+              "definition": "détruit **tous** les micro-organismes, spores comprises"
+            },
+            {
+              "terme": "PSM",
+              "definition": "poste de sécurité microbiologique : il **filtre** l’air"
+            },
+            {
+              "terme": "DASRI",
+              "definition": "déchets d’activités de soins à **risques infectieux**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Se laver les mains",
+          "etapes": [
+            {
+              "titre": "Mouiller et savonner",
+              "texte": "**30 s** au moins, ongles, pouces, doigts"
+            },
+            {
+              "titre": "Rincer",
+              "texte": "abondamment"
+            },
+            {
+              "titre": "Sécher",
+              "texte": "essuie-mains à **usage unique**, qui ferme le robinet"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": "★",
+          "titre": "Organiser son poste",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Paillasse dégagée",
+              "texte": "sacs et vêtements rangés."
+            },
+            {
+              "titre": "Cheveux attachés",
+              "texte": "pas de bijoux aux mains."
+            },
+            {
+              "titre": "Flux séparés",
+              "texte": "matériel propre d’un côté, sale de l’autre."
+            },
+            {
+              "titre": "Rien à la bouche",
+              "texte": "ni boire, ni manger, ni maquillage."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Où jeter une boîte de Petri ensemencée, et des solutions chimiques&nbsp;?",
+          "calcul": "déchet infectieux ≠ déchet chimique",
+          "aparte": "jamais à l’évier",
+          "resultat": "boîte → [[conteneur DASRI]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Désinfecter la paillasse",
+          "oui": {
+            "titre": "Avant et après",
+            "texte": "Désinfectant adapté, **temps de contact** respecté, **avant** et **après** la manipulation."
+          },
+          "non": {
+            "titre": "Seulement après",
+            "texte": "Essuyer **aussitôt** annule l’action du désinfectant."
+          },
+          "essai": {
+            "texte": "L’éthanol à 70&nbsp;% doit <i>rester au contact</i> de la surface le temps indiqué."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Je porte une blouse fermée et des lunettes (EPI).",
+              "quoi": "protection"
+            },
+            {
+              "texte": "Je travaille sous PSM (EPC).",
+              "quoi": "collective"
+            },
+            {
+              "texte": "Cultures et cônes souillés&nbsp;: DASRI.",
+              "quoi": "déchets"
+            }
+          ],
+          "pied": "Ni ==boire==, ni manger, ni se maquiller au laboratoire."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **désinfection** et **stérilisation**.",
+            "Jeter une solution chimique à l’**évier**.",
+            "Garder les gants pour toucher téléphone et poignées.",
+            "Oublier de laver les mains **après** les gants."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que signifie **EPC**&nbsp;?",
+            "Où jeter un objet **piquant** souillé&nbsp;?",
+            "Quel niveau de confinement au **lycée**&nbsp;?"
+          ],
+          "reponses": "1) équipement de protection collective · 2) collecteur rigide DASRI · 3) L1, parfois L2"
+        }
+      ]
+    }
+  ]
+}

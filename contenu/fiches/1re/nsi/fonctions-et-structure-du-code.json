@@ -1,0 +1,118 @@
+{
+  "titre": "Fonctions et structure",
+  "titreSurligne": "structure",
+  "accroche": "Découper pour mieux maîtriser.",
+  "bonus": "paramètre = définition · argument = appel · <b>return</b> rend, <b>print</b> affiche",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/nsi/fonctions-et-structure-du-code.webp",
+    "prompt": "a glossy violet building block assembled from several smaller golden blocks, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Un nom,\ndix lignes en moins !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Paramètre", "definition": "le nom dans la **définition**" },
+            { "terme": "Argument", "definition": "la valeur donnée à l’**appel**" },
+            { "terme": "Retour", "definition": "la valeur rendue (<b>None</b> si rien)" },
+            { "terme": "Effet de bord", "definition": "modifier autre chose que la valeur rendue" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Portée des variables",
+          "entetes": ["Variable", "Où ?", "Verdict"],
+          "lignes": [
+            ["**Locale**", "dans la fonction", "le bon usage"],
+            ["**Globale**", "partout", "dépendances cachées"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Spécifier une fonction (docstring)",
+          "etapes": [
+            { "titre": "Que fait-elle ?", "texte": "son objet, en une phrase" },
+            { "titre": "Que reçoit-elle ?", "texte": "types et **préconditions**" },
+            { "titre": "Que rend-elle ?", "texte": "type, sens et **postconditions**" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "<b>def f(x): print(x * 2)</b> puis <b>y = f(4) + 1</b>. __Que se passe-t-il__&nbsp;?",
+          "calcul": "f affiche 8 mais rend None",
+          "aparte": "print ≠ return",
+          "resultat": "= [[TypeError]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Pourquoi découper",
+          "deux": true,
+          "items": [
+            { "titre": "Réutiliser", "texte": "une correction vaut partout." },
+            { "titre": "Tester", "texte": "chaque morceau seul." },
+            { "titre": "Lire", "texte": "un nom remplace dix lignes." },
+            { "titre": "Répartir", "texte": "le travail à plusieurs." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "<b>def moyenne(liste):</b>", "quoi": "nom et paramètre" },
+            { "texte": "docstring : rend la moyenne", "quoi": "la spécification" },
+            { "texte": "<b>assert len(liste) &gt; 0</b>", "quoi": "la précondition" },
+            { "texte": "<b>return sum(liste) / len(liste)</b>", "quoi": "le retour" }
+          ],
+          "pied": "Une ==assertion== arrête le programme au bon endroit."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "**Afficher** au lieu de **retourner**&nbsp;: la valeur n’est plus utilisable.",
+            "Utiliser une variable **globale** au lieu d’un paramètre.",
+            "Modifier la liste reçue **sans le dire**&nbsp;: bug difficile à localiser.",
+            "Confondre **paramètre** et **argument**.",
+            "Oublier la **docstring**&nbsp;: personne ne sait ce que la fonction promet.",
+            "Écrire une fonction de **cinquante lignes** qui fait tout."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que rend une fonction **sans return**&nbsp;?",
+            "Qu’est-ce qu’une **précondition**&nbsp;?",
+            "Où s’écrit la **spécification** en Python&nbsp;?"
+          ],
+          "reponses": "1) None · 2) ce que doivent vérifier les arguments · 3) dans la docstring, sous la définition"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "titre": "De l’ADN à la protéine",
+  "titreSurligne": "protéine",
+  "accroche": "Lire un gène, étape par étape.",
+  "bonus": "**AUG** démarre (Met) · **UAA, UAG, UGA** arrêtent · 64 codons pour 20 acides aminés",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biochimie-biologie/de-l-adn-a-la-proteine-transcription-traduction-mutations.webp",
+    "prompt": "a glossy violet DNA strand copied into a golden ribbon passing through a ribosome that outputs a chain of colorful beads, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Un gène, un ARNm,\nune protéine&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "Les deux étapes",
+          "etapes": [
+            {
+              "date": "Transcription",
+              "texte": "Dans le **noyau**, l’**ARN polymérase** copie le brin transcrit en ARNm (T→U)."
+            },
+            {
+              "date": "Traduction",
+              "texte": "Dans le **cytoplasme**, le **ribosome** lit l’ARNm par **codons**."
+            }
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Le code génétique",
+          "items": [
+            {
+              "titre": "AUG",
+              "texte": "codon initiateur, fixe le cadre de lecture"
+            },
+            {
+              "titre": "Stop",
+              "texte": "UAA, UAG, UGA ne codent rien"
+            },
+            {
+              "titre": "Redondant",
+              "texte": "plusieurs codons, un même acide aminé"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Les mutations ponctuelles",
+          "entetes": [
+            "Mutation",
+            "Effet",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "**Silencieuse**",
+              "aucun, même acide aminé",
+              "CCU → CCC (Pro)"
+            ],
+            [
+              "**Faux-sens**",
+              "un acide aminé change",
+              "GAG → GUG&nbsp;: Glu → Val"
+            ],
+            [
+              "**Non-sens**",
+              "codon stop, protéine tronquée",
+              "AAG → UAG"
+            ],
+            [
+              "**Décalage**",
+              "tous les codons suivants changent",
+              "ajout ou perte d’un nucléotide"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Traduire un gène",
+          "etapes": [
+            {
+              "titre": "Transcrire",
+              "texte": "brin transcrit → ARNm, complémentaire, U au lieu de T"
+            },
+            {
+              "titre": "Découper",
+              "texte": "repérer AUG, couper en codons jusqu’au stop"
+            },
+            {
+              "titre": "Traduire",
+              "texte": "avec le code, puis comparer sauvage et muté"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Brin transcrit 3’-TAC GGA TTC-5’. Quel peptide&nbsp;?",
+          "calcul": "ARNm 5’-AUG CCU AAG-3’",
+          "aparte": "Met · Pro · Lys",
+          "resultat": "[[Met-Pro-Lys]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire **T** dans l’ARNm&nbsp;: c’est **U**.",
+            "Lire le brin **transcrit** comme s’il était l’ARNm.",
+            "Dire qu’une mutation change toujours le **phénotype**.",
+            "Oublier que le **décalage** modifie tout ce qui suit."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Le brin transcrit TAC donne l’ARNm AUG, par complémentarité.",
+              "quoi": "transcrire"
+            },
+            {
+              "texte": "AUG est un codon&nbsp;: il code la méthionine.",
+              "quoi": "traduire"
+            },
+            {
+              "texte": "Le codon CCC code aussi Pro&nbsp;: la mutation est silencieuse.",
+              "quoi": "nommer"
+            }
+          ],
+          "pied": "Une mutation modifie le ==génotype==&nbsp;; le phénotype ne change que si la fonction change."
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Où a lieu la **traduction**&nbsp;?",
+            "AAG devient UAG&nbsp;: quelle **mutation**&nbsp;?",
+            "Comment se nomme l’acide aminé de **AUG**&nbsp;?"
+          ],
+          "reponses": "1) cytoplasme, ribosome · 2) non-sens · 3) méthionine"
+        }
+      ]
+    }
+  ]
+}

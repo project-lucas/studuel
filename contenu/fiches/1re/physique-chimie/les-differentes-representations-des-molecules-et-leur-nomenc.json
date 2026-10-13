@@ -1,0 +1,183 @@
+{
+  "titre": "Représenter et nommer",
+  "titreSurligne": "nommer",
+  "accroche": "Quatre écritures, une seule molécule.",
+  "epreuve": "bac",
+  "bonus": "Méth 1 · éth 2 · prop 3 · but 4 · pent 5 · hex 6 · hept 7 · oct 8",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/les-differentes-representations-des-molecules-et-leur-nomenc.webp",
+    "prompt": "a glossy violet zigzag skeletal carbon chain with golden bead atoms at each vertex and a small name tag, sparkles"
+  },
+  "marcel": "Le plus long\nchemin, c’est la chaîne !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le butane de quatre façons",
+          "entetes": [
+            "Formule",
+            "Ce qu’elle montre"
+          ],
+          "lignes": [
+            [
+              "Brute&nbsp;: C₄H₁₀",
+              "le nombre de **chaque atome**"
+            ],
+            [
+              "Développée",
+              "**toutes** les liaisons, H compris"
+            ],
+            [
+              "Semi-développée",
+              "CH₃−CH₂−CH₂−CH₃"
+            ],
+            [
+              "Topologique",
+              "ligne brisée&nbsp;: un **C** à chaque sommet"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les familles",
+          "entetes": [
+            "Famille",
+            "Terminaison"
+          ],
+          "lignes": [
+            [
+              "Alcane",
+              "-ane"
+            ],
+            [
+              "Alcène",
+              "-ène (indice de C=C)"
+            ],
+            [
+              "Alcool",
+              "-ol"
+            ],
+            [
+              "Aldéhyde · cétone",
+              "-al · -one"
+            ],
+            [
+              "Acide carboxylique",
+              "acide …-oïque"
+            ],
+            [
+              "Ester",
+              "-oate de …-yle"
+            ],
+            [
+              "Amine",
+              "-amine"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Nommer une molécule",
+          "etapes": [
+            {
+              "titre": "Chaîne principale",
+              "texte": "la **plus longue**, numérotée pour les **plus petits indices**"
+            },
+            {
+              "titre": "Ramifications",
+              "texte": "méthyl-, éthyl-, avec indice et **di-, tri-** si besoin"
+            },
+            {
+              "titre": "Terminaison",
+              "texte": "celle de la **famille** (-ane, -ol, -one…)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "CH₃−CH(OH)−CH₂−CH₃. __Nom__&nbsp;?",
+          "calcul": "4 carbones : but- · groupe OH : -ol",
+          "aparte": "OH sur le C n° 2",
+          "resultat": "[[butan-2-ol]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Ce que change la structure",
+          "oui": {
+            "titre": "Chaîne linéaire",
+            "texte": "Les molécules s’emboîtent bien&nbsp;: Van der Waals **fortes**, ébullition plus haute."
+          },
+          "non": {
+            "titre": "Chaîne ramifiée",
+            "texte": "Emboîtement moins bon&nbsp;: interactions **plus faibles**, ébullition plus basse."
+          },
+          "essai": {
+            "texte": "Deux molécules de même formule brute mais de structures différentes sont des <i>isomères</i>&nbsp;: propriétés différentes."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "La chaîne principale compte 4 carbones&nbsp;: but-.",
+              "quoi": "la chaîne"
+            },
+            {
+              "texte": "Le groupe OH donne la terminaison -ol, en position 2.",
+              "quoi": "la fonction"
+            },
+            {
+              "texte": "La molécule est le butan-2-ol.",
+              "quoi": "le nom"
+            }
+          ],
+          "pied": "En topologique, ==les H portés par les C== ne s’écrivent pas."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Prendre une chaîne qui n’est **pas la plus longue**.",
+            "Numéroter dans le mauvais sens (**indices trop grands**).",
+            "Oublier un **C** à une extrémité en topologique.",
+            "Confondre **formule brute** et structure."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel préfixe pour **3 carbones**&nbsp;?",
+            "Quelle terminaison pour un **alcool**&nbsp;?",
+            "Comment appelle-t-on deux molécules de même formule brute&nbsp;?"
+          ],
+          "reponses": "1) prop- · 2) -ol · 3) des isomères"
+        }
+      ]
+    }
+  ]
+}

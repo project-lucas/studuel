@@ -1,0 +1,159 @@
+{
+  "titre": "Fonction exponentielle",
+  "titreSurligne": "Fonction",
+  "accroche": "La courbe qui s’envole.",
+  "bonus": "**f(x) = k × q<sup>x</sup>** · **q<sup>a+b</sup> = q<sup>a</sup> × q<sup>b</sup>** · toujours **> 0** · échelle log : une **droite**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/enseignement-scientifique/croissance-et-fonctions-exponentielles.webp",
+    "prompt": "a glossy violet exponential curve starting flat then soaring upward, golden dots along the curve, sparkles"
+  },
+  "marcel": "Lente au début,\npuis elle s’envole !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Fonction exponentielle",
+          "petite": true,
+          "lignes": [
+            "f(x) = k × q<sup>x</sup>",
+            "q<sup>a+b</sup> = q<sup>a</sup> × q<sup>b</sup>"
+          ],
+          "regle": "**q > 0**, **k = f(0)**. Additionner les durées revient à **multiplier** les facteurs&nbsp;: c’est la croissance exponentielle.",
+          "note": "suite géométrique = restriction aux entiers"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Propriétés",
+          "entetes": [
+            "Propriété",
+            "Ce qu’elle dit"
+          ],
+          "lignes": [
+            [
+              "Toujours **> 0**",
+              "ne s’annule jamais"
+            ],
+            [
+              "**q > 1**",
+              "croissante : part lentement, puis **s’envole**"
+            ],
+            [
+              "**0 < q < 1**",
+              "décroissante"
+            ],
+            [
+              "Échelle **log**",
+              "une exponentielle devient une **droite**"
+            ],
+            [
+              "Modèles",
+              "radioactivité, placement, refroidissement"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire un graphique exponentiel",
+          "etapes": [
+            {
+              "titre": "Mesurer",
+              "texte": "le temps pour doubler (ou diviser par 2)"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "au même intervalle plus tard&nbsp;: constant ?"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "temps de doublement constant ⇒ exponentielle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une grandeur double en 5 ans (2000 → 2005). En 2020 → 2025&nbsp;?",
+          "calcul": "temps de doublement constant",
+          "aparte": "même durée au début et à la fin",
+          "resultat": "[[elle double encore]] en 5 ans"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Droite ou courbe ?",
+          "oui": {
+            "titre": "Échelle log",
+            "texte": "Verticale logarithmique&nbsp;: l’exponentielle devient une **droite**, qui se lit."
+          },
+          "non": {
+            "titre": "Échelle normale",
+            "texte": "La courbe **s’envole** et se subit&nbsp;: un % constant ne donne jamais une droite."
+          },
+          "essai": {
+            "texte": "Modèles&nbsp;: radioactivité <b>N(t) = N<sub>0</sub> × 0,5<sup>t/T</sup></b>, placement <b>C<sub>0</sub> × 1,04<sup>t</sup></b>, refroidissement."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "f(x) = k × q<sup>x</sup> avec q > 0",
+              "quoi": "le modèle"
+            },
+            {
+              "texte": "f(x+5) = f(x) × q<sup>5</sup> = 2 f(x)",
+              "quoi": "doublement"
+            },
+            {
+              "texte": "Le temps de doublement est constant.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "La **demi-vie T** d’une décroissance radioactive est ==constante==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire qu’une exponentielle peut devenir **négative**.",
+            "Confondre **fonction** exponentielle et suite **arithmétique**.",
+            "Croire qu’un % constant donne une **droite**.",
+            "Oublier que **k = f(0)**, la valeur initiale."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Une exponentielle peut-elle s’annuler&nbsp;?",
+            "q<sup>2</sup> × q<sup>3</sup> s’écrit…&nbsp;?",
+            "En échelle log verticale, la courbe devient…&nbsp;?"
+          ],
+          "reponses": "1) non, toujours > 0 · 2) q<sup>5</sup> · 3) une droite"
+        }
+      ]
+    }
+  ]
+}

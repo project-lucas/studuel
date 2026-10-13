@@ -1,0 +1,181 @@
+{
+  "titre": "Sismologie et Terre",
+  "titreSurligne": "Sismologie",
+  "accroche": "Les ondes éclairent l’intérieur du globe.",
+  "epreuve": "bac",
+  "bonus": "**P** traverse solides et liquides · **S** les solides seulement · **Moho** 30/7 km · **Gutenberg** 2 900 km · **Lehmann** 5 100 km",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/svt/sismologie-et-structure-de-la-terre.webp",
+    "prompt": "a glossy violet cutaway globe showing golden concentric layers with golden wave lines crossing it, tiny sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Des ondes pour\nvoir l’invisible !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les deux ondes",
+          "entetes": [
+            "Onde",
+            "Nature",
+            "Traverse"
+          ],
+          "lignes": [
+            [
+              "**P** (primaire)",
+              "compression, **plus rapide**",
+              "solides **et** liquides"
+            ],
+            [
+              "**S** (secondaire)",
+              "cisaillement, plus lente",
+              "**solides** uniquement"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les discontinuités",
+          "entetes": [
+            "Nom",
+            "Profondeur",
+            "Indice"
+          ],
+          "lignes": [
+            [
+              "**Moho**",
+              "30 km (continents), 7 km (océans)",
+              "les ondes **accélèrent**"
+            ],
+            [
+              "**Gutenberg**",
+              "~2 900 km",
+              "ondes S **disparues**&nbsp;: noyau externe liquide"
+            ],
+            [
+              "**Lehmann**",
+              "~5 100 km",
+              "graine **solide**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce qu’il faut savoir expliquer",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Vitesse des ondes",
+              "texte": "Elle dépend de la **rigidité** et de la **densité**&nbsp;; un saut brutal = **discontinuité**."
+            },
+            {
+              "titre": "Zone d’ombre",
+              "texte": "De 103° à 143°&nbsp;: **réfraction** des P, **extinction** des S."
+            },
+            {
+              "titre": "Découpage chimique",
+              "texte": "Croûte / manteau / noyau, selon la **composition**."
+            },
+            {
+              "titre": "Découpage mécanique",
+              "texte": "**Lithosphère** rigide (~100 km) sur **asthénosphère** ductile."
+            },
+            {
+              "titre": "LVZ",
+              "texte": "Ralentissement des ondes&nbsp;: signe de l’**asthénosphère**."
+            },
+            {
+              "titre": "Tectonique",
+              "texte": "Ce sont des plaques **lithosphériques** qui se déplacent."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Lire un sismogramme ou un profil de vitesses",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "les ondes P et S, et leur vitesse à chaque profondeur"
+            },
+            {
+              "titre": "Localiser",
+              "texte": "le saut de vitesse ou la disparition des S"
+            },
+            {
+              "titre": "Déduire",
+              "texte": "la discontinuité et l’état (solide, liquide) du milieu"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple",
+          "donnees": "Les ondes S disparaissent à 2 900 km de profondeur.",
+          "calcul": "S ne traversent que les solides, donc le milieu est liquide.",
+          "resultat": "[[noyau externe liquide]]"
+        }
+      ],
+      "colonnes": "1fr 262px"
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "Les ondes S ne se propagent plus au-delà de 2 900 km de profondeur.",
+              "quoi": "constater"
+            },
+            {
+              "texte": "Elles ne traversent pas les liquides.",
+              "quoi": "expliquer"
+            },
+            {
+              "texte": "Le noyau externe est donc liquide.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Le forage le plus profond atteint ==12 km== sur 6 371 km de rayon : tout le reste se lit aux ondes."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que les ondes **S** traversent le noyau externe.",
+            "Confondre découpage **chimique** et **mécanique**.",
+            "Placer la **lithosphère** uniquement dans la croûte.",
+            "Oublier que le **Moho** sépare croûte et manteau."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle onde ne traverse pas les **liquides**&nbsp;?",
+            "Quelle discontinuité sépare **manteau et noyau**&nbsp;?",
+            "De quoi la lithosphère est-elle **formée**&nbsp;?"
+          ],
+          "reponses": "1) l’onde S · 2) Gutenberg · 3) la croûte et le manteau supérieur"
+        }
+      ]
+    }
+  ]
+}

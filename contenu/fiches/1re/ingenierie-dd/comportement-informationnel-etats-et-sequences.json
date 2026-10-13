@@ -1,0 +1,170 @@
+{
+  "titre": "États et séquences",
+  "titreSurligne": "États",
+  "accroche": "Réagir selon l’état du système.",
+  "bonus": "**stm** = les états · **sd** = les messages dans le temps · **boucle fermée** = capteur + correction",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/ingenierie-dd/comportement-informationnel-etats-et-sequences.webp",
+    "prompt": "a glossy violet automatic gate with a golden remote control, three round state bubbles joined by golden arrows, sparkles, magenta background, same art style as the reference icons, no text"
+  },
+  "marcel": "Même événement,\nautre état, autre effet !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le diagramme d’états",
+          "items": [
+            {
+              "terme": "État",
+              "definition": "situation **stable** du système"
+            },
+            {
+              "terme": "Transition",
+              "definition": "passage d’un état à un autre"
+            },
+            {
+              "terme": "Événement",
+              "definition": "ce qui **déclenche** la transition"
+            },
+            {
+              "terme": "Garde",
+              "definition": "condition entre crochets : [obstacle = faux]"
+            },
+            {
+              "terme": "Action",
+              "definition": "ce que fait le système en entrant, pendant, en sortant"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Nature de l’information",
+          "entetes": [
+            "Nature",
+            "Valeurs",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "**Logique** (TOR)",
+              "0 ou 1",
+              "bouton appuyé"
+            ],
+            [
+              "**Analogique**",
+              "continue",
+              "tension d’un capteur"
+            ],
+            [
+              "**Numérique**",
+              "nombres, instants précis",
+              "CAN toutes les 10 ms"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Construire un diagramme d’états",
+          "etapes": [
+            {
+              "titre": "Lister",
+              "texte": "les **états** stables : Fermé, Ouverture, Ouvert…"
+            },
+            {
+              "titre": "Relier",
+              "texte": "chaque **transition** avec son événement et sa garde"
+            },
+            {
+              "titre": "Ajouter",
+              "texte": "les **actions** et les sécurités (obstacle)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Portail en __Fermeture__, un obstacle est détecté. Que fait-il&nbsp;?",
+          "calcul": "événement : obstacle",
+          "aparte": "c’est une sécurité",
+          "resultat": "retour à l’état [[Ouverture]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quelle commande&nbsp;?",
+          "oui": {
+            "titre": "Boucle fermée",
+            "texte": "Un **capteur** mesure, on corrige l’écart avec la **consigne**."
+          },
+          "non": {
+            "titre": "Boucle ouverte",
+            "texte": "L’ordre part **sans vérifier** le résultat."
+          },
+          "essai": {
+            "texte": "Un four à thermostat corrige la chaleur perdue&nbsp;; un grille-pain minuté, <i>non</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Fermé → Ouverture : appui télécommande",
+              "quoi": "la transition"
+            },
+            {
+              "texte": "Fermeture → Ouverture : obstacle détecté",
+              "quoi": "la sécurité"
+            },
+            {
+              "texte": "Un sd donne les messages, de haut en bas",
+              "quoi": "le temps"
+            }
+          ],
+          "pied": "Une transition s’écrit ==événement [garde] / action==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **état** (stable) et **action** (ce qu’on fait).",
+            "Oublier la **garde** entre crochets.",
+            "Mélanger **stm** (états) et **sd** (messages dans le temps).",
+            "Croire une boucle ouverte capable de **compenser** une perturbation."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Qu’est-ce qui **déclenche** une transition&nbsp;?",
+            "Que compare le **comparateur** d’une boucle fermée&nbsp;?",
+            "Que garantit un système **temps réel**&nbsp;?"
+          ],
+          "reponses": "1) un événement · 2) la consigne et la mesure (l’écart) · 3) une réponse dans un délai garanti"
+        }
+      ]
+    }
+  ]
+}

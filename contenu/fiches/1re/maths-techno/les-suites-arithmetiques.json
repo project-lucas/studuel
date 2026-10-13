@@ -1,0 +1,125 @@
+{
+  "titre": "Suites arithmétiques",
+  "titreSurligne": "arithmétiques",
+  "accroche": "On ajoute toujours la même quantité.",
+  "bonus": "u(n+1) = u(n) + r · u(n) = u(0) + nr · points alignés sur y = rx + u(0)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths-techno/les-suites-arithmetiques.webp",
+    "prompt": "a glossy violet staircase of equal steps with a golden ball climbing it and a small golden plus sign, sparkles"
+  },
+  "marcel": "Un écart constant,\nc’est arithmétique !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le terme de rang n",
+          "petite": true,
+          "lignes": ["u(n+1) = u(n) + r", "u(n) = u(0) + n × r", "u(n) = u(p) + (n − p) × r"],
+          "regle": "**r** est la ==raison==. Pour démontrer qu’une suite est arithmétique, on montre que **u(n+1) − u(n)** est constant.",
+          "note": "r = 0 : suite constante"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Sens de variation",
+          "entetes": ["La raison", "La suite"],
+          "lignes": [
+            ["r > 0", "**croissante**"],
+            ["r < 0", "**décroissante**"],
+            ["r = 0", "**constante**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Reconnaître", "texte": "« + 15 chaque mois » : écart constant, raison r = 15" },
+            { "titre": "Écrire u(n)", "texte": "u(n) = u(0) + n × r" },
+            { "titre": "Calculer", "texte": "remplacer n, ou résoudre une inéquation pour un seuil" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": "★",
+          "titre": "Arithmétique ou géométrique&nbsp;?",
+          "entetes": ["", "Arithmétique", "Géométrique"],
+          "lignes": [["Représentation", "points **alignés**", "points sur une **courbe**"]]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "250 inscrits en janvier (n = 0), __+ 15 par mois__. En décembre&nbsp;?",
+          "calcul": "u(n) = 250 + 15n\nu(11) = 250 + 165",
+          "aparte": "décembre : n = 11",
+          "resultat": "u(11) = [[415]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Oui", "texte": "« + 40 € par an » : r = **40**. « − 3 élèves par an » : r = **−3**." },
+            { "titre": "Non", "texte": "« + 3 % par an » : relatif, donc **géométrique**." },
+            { "titre": "Seuil", "texte": "10 + 7n > 100 ⇒ n > 12,86, donc **n = 13**." },
+            { "titre": "Tableur", "texte": "**=B1+15** recopiée vers le bas ; ou <b>=250+15*A2</b>." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "u(n+1) = u(n) + 15 pour tout n", "quoi": "la relation" },
+            { "texte": "(u(n)) est arithmétique de raison 15", "quoi": "la nature" },
+            { "texte": "u(11) = 250 + 15 × 11 = 415", "quoi": "le calcul" }
+          ],
+          "pied": "Contrôle&nbsp;: 250 + 165 = ==415==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre « + 15 » et « **+ 15 %** ».",
+            "Écrire u(n) = u(0) + **r** au lieu de n × r.",
+            "Compter **n** termes de u(0) à u(n) : il y en a n + 1.",
+            "Conclure sans montrer que l’écart est **constant**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "u(0) = 4 et r = −2 : **u(3)**&nbsp;?",
+            "**2 ; 6 ; 18** : arithmétique&nbsp;?",
+            "u(0) = 10 et r = 7 : premier rang où **u(n) > 100**&nbsp;?"
+          ],
+          "reponses": "1) −2 · 2) non, écarts 4 et 12 · 3) n = 13 (u(13) = 101)"
+        }
+      ]
+    }
+  ]
+}

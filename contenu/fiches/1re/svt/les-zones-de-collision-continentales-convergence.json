@@ -1,0 +1,110 @@
+{
+  "titre": "Chaînes de collision",
+  "titreSurligne": "collision",
+  "accroche": "Quand un océan a disparu.",
+  "bonus": "Cycle de Wilson&nbsp;: **rift** → **océanisation** → **subduction** → **collision** → **érosion**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/svt/les-zones-de-collision-continentales-convergence.webp",
+    "prompt": "a glossy violet mountain range pushed up between two golden continental blocks, folded layers visible, tiny golden sparkles"
+  },
+  "marcel": "Deux continents se heurtent,\nles montagnes montent !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "Le cycle de Wilson",
+          "etapes": [
+            { "date": "Rift", "texte": "Un continent se **fracture** et s’ouvre." },
+            { "date": "Océanisation", "texte": "Un **océan** naît, bordé de **marges passives**." },
+            { "date": "Subduction", "texte": "La lithosphère océanique **plonge**, l’océan se ferme." },
+            { "date": "Collision", "texte": "Les deux continents se heurtent&nbsp;: la chaîne se dresse." }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les marqueurs de collision",
+          "entetes": ["Marqueur", "Ce qu’il montre"],
+          "lignes": [
+            ["**Plis**", "un raccourcissement"],
+            ["**Failles inverses**, chevauchements", "l’empilement des unités"],
+            ["**Nappes de charriage**", "des terrains déplacés sur des dizaines de km"],
+            ["**Racine crustale** (jusqu’à 70 km)", "elle soutient le relief par isostasie"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les témoins d’un océan disparu",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Ophiolites", "texte": "Péridotites, gabbros et basaltes **charriés** en altitude&nbsp;: un océan existait là." },
+            { "titre": "Marges fossiles", "texte": "Blocs basculés et **failles normales**&nbsp;: l’ouverture initiale de l’océan." },
+            { "titre": "Pas de plongée", "texte": "Deux croûtes continentales, légères&nbsp;: aucune ne subduit, la croûte **s’épaissit**." },
+            { "titre": "Métamorphisme", "texte": "Pression et température changent la **minéralogie** sans fusion." },
+            { "titre": "Marqueurs", "texte": "**Glaucophane**, **disthène**, **sillimanite**, **grenat**&nbsp;: ils datent le trajet P-T." },
+            { "titre": "Chaînes anciennes", "texte": "Massif central, Appalaches&nbsp;: usées. Alpes et Himalaya montent encore." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Reconstituer l’histoire d’une chaîne",
+          "etapes": [
+            { "titre": "Repérer", "texte": "les marqueurs&nbsp;: plis, failles inverses, nappes, ophiolites" },
+            { "titre": "Situer", "texte": "chaque roche dans le cycle de Wilson" },
+            { "titre": "Conclure", "texte": "un océan a disparu, puis la collision a épaissi la croûte" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Des ophiolites en altitude prouvent qu’un océan a existé ici.", "quoi": "prouver" },
+            { "texte": "Plis et nappes montrent un raccourcissement et un empilement.", "quoi": "décrire" },
+            { "texte": "La racine remonte quand le sommet s’érode&nbsp;: les roches profondes affleurent.", "quoi": "expliquer" }
+          ],
+          "pied": "L’==érosion== allège, l’==isostasie== relève."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que **l’une des croûtes continentales** plonge.",
+            "Confondre **ophiolites** et roches de la croûte continentale.",
+            "Oublier la **racine crustale** qui soutient le relief.",
+            "Croire que le **métamorphisme** passe par la fusion."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelles roches prouvent qu’un **océan** a disparu&nbsp;?",
+            "Pourquoi la croûte **s’épaissit**-elle&nbsp;?",
+            "Quel est le **dernier** stade du cycle de Wilson&nbsp;?"
+          ],
+          "reponses": "1) les ophiolites · 2) aucune croûte ne subduit · 3) l’érosion"
+        }
+      ]
+    }
+  ]
+}

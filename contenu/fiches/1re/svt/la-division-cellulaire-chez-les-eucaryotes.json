@@ -1,0 +1,111 @@
+{
+  "titre": "La division cellulaire",
+  "titreSurligne": "cellulaire",
+  "accroche": "Copier pour croître, brasser pour varier.",
+  "epreuve": "bac",
+  "bonus": "**Mitose** = 2 cellules identiques (2n) · **méiose** = 4 cellules haploïdes (n) · brassage **inter** et **intra**chromosomique",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/svt/la-division-cellulaire-chez-les-eucaryotes.webp",
+    "prompt": "a glossy violet cell splitting in two with golden chromosomes pulled apart by thin golden fibers, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Une cellule,\ndeux cellules !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "Le cycle cellulaire",
+          "etapes": [
+            { "date": "G1", "texte": "Croissance de la cellule." },
+            { "date": "S", "texte": "**Réplication** de l’ADN&nbsp;: chaque chromosome passe à **deux chromatides**." },
+            { "date": "G2", "texte": "Préparation à la division." },
+            { "date": "Mitose", "texte": "La division elle-même. G1 + S + G2 = **interphase**." }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Mitose, phase par phase",
+          "entetes": ["Phase", "Ce qui se passe"],
+          "lignes": [
+            ["**Prophase**", "chromosomes condensés, enveloppe nucléaire détruite"],
+            ["**Métaphase**", "chromosomes alignés à l’équateur"],
+            ["**Anaphase**", "les deux chromatides migrent aux pôles"],
+            ["**Télophase**", "deux noyaux se reforment, puis cytodiérèse"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce qu’il faut savoir expliquer",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Mitose", "texte": "Une cellule mère donne **deux cellules filles identiques** à elle&nbsp;: croissance, renouvellement, reproduction asexuée." },
+            { "titre": "Méiose I", "texte": "**Réductionnelle**&nbsp;: elle sépare les chromosomes **homologues**." },
+            { "titre": "Méiose II", "texte": "**Équationnelle**&nbsp;: elle sépare les chromatides, comme une mitose." },
+            { "titre": "Brassage inter", "texte": "Répartition **aléatoire** des homologues&nbsp;: 2<sup>23</sup>, soit plus de 8 millions de combinaisons." },
+            { "titre": "Brassage intra", "texte": "Le **crossing-over** échange des morceaux entre homologues." },
+            { "titre": "Points de contrôle", "texte": "Ils vérifient l’ADN&nbsp;; leur défaillance ouvre la voie au **cancer**." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Reconnaître une division sur un document",
+          "etapes": [
+            { "titre": "Compter", "texte": "les chromosomes et les chromatides de la cellule de départ" },
+            { "titre": "Repérer", "texte": "ce qui migre aux pôles&nbsp;: chromatides ou homologues" },
+            { "titre": "Conclure", "texte": "mitose ou méiose, et le nombre de cellules obtenues" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Les deux chromatides de chaque chromosome migrent vers les pôles opposés.", "quoi": "décrire" },
+            { "texte": "Les cellules filles reçoivent la même information génétique que la cellule mère.", "quoi": "expliquer" },
+            { "texte": "Il s’agit donc d’une mitose.", "quoi": "conclure" }
+          ],
+          "pied": "La méiose produit ==quatre cellules haploïdes== toutes différentes."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **chromatides** (séparées en mitose) et **homologues** (séparés en méiose I).",
+            "Dire que la **réplication** a lieu en mitose&nbsp;: elle a lieu en phase **S**.",
+            "Oublier que la méiose II ne brasse **rien**.",
+            "Croire que la méiose donne **deux** cellules."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que devient l’ADN en **phase S**&nbsp;?",
+            "Combien de cellules donne une **méiose**, et de quel type&nbsp;?",
+            "Quelle division est **réductionnelle**&nbsp;?"
+          ],
+          "reponses": "1) il est répliqué · 2) quatre, haploïdes (n) · 3) la méiose I"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "titre": "Trigo et sinusoïdes",
+  "titreSurligne": "sinusoïdes",
+  "accroche": "Le cercle qui dessine les signaux.",
+  "bonus": "**cos² x + sin² x = 1** · 180° = **π rad** · **ω = 2π f** · T = {2π/ω}",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-maths/trigonometrie-et-fonctions-sinusoidales.webp",
+    "prompt": "a glossy violet unit circle with a golden point and a smooth golden sine wave unrolling from it, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Un tour de cercle,\nune sinusoïde !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Valeurs remarquables",
+          "entetes": [
+            "x",
+            "cos x",
+            "sin x"
+          ],
+          "lignes": [
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "π/6",
+              "√3/2",
+              "1/2"
+            ],
+            [
+              "π/4",
+              "√2/2",
+              "√2/2"
+            ],
+            [
+              "π/3",
+              "1/2",
+              "√3/2"
+            ],
+            [
+              "π/2",
+              "0",
+              "1"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le cercle",
+          "taille": "mini",
+          "lignes": [
+            "M(cos x ; sin x)",
+            "cos² x + sin² x = 1"
+          ],
+          "regle": "Cercle de **rayon 1**, sens **direct**. x et x + 2kπ repèrent le **même point**. Mesure principale dans ]−π ; π].",
+          "note": "degrés × π ÷ 180 = radians"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre cos x = a",
+          "etapes": [
+            {
+              "titre": "Placer",
+              "texte": "a sur l’**axe des abscisses** du cercle"
+            },
+            {
+              "titre": "Repérer",
+              "texte": "les **deux points** du cercle correspondants"
+            },
+            {
+              "titre": "Lire",
+              "texte": "leurs angles, **symétriques** par rapport à l’axe"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Tension du secteur u(t) = 325 cos(100π t). __Période__&nbsp;?",
+          "calcul": "T = 2π ÷ ω = 2π ÷ 100π",
+          "aparte": "ω = 100π rad/s",
+          "resultat": "T = [[0,02 s]] → 50 Hz"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "u(t) = A cos(ω t + φ)",
+          "entetes": [
+            "Paramètre",
+            "Nom",
+            "Unité"
+          ],
+          "lignes": [
+            [
+              "A",
+              "amplitude",
+              "V, m…"
+            ],
+            [
+              "ω",
+              "pulsation",
+              "rad/s"
+            ],
+            [
+              "φ",
+              "phase à l’origine",
+              "rad"
+            ],
+            [
+              "ω t + φ",
+              "phase à l’instant t",
+              "rad"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "Deux solutions à savoir retrouver",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "cos x = 1/2 sur ]−π ; π]",
+              "texte": "deux points d’abscisse 1/2 : **x = π/3 ou x = −π/3**"
+            },
+            {
+              "titre": "sin x = 1/2 sur [0 ; 2π[",
+              "texte": "car sin(π − x) = sin x : **x = π/6 ou x = 5π/6**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 5,
+          "titre": "Angles associés",
+          "entetes": [
+            "Angle",
+            "cos",
+            "sin"
+          ],
+          "lignes": [
+            [
+              "−x",
+              "cos x",
+              "−sin x"
+            ],
+            [
+              "π − x",
+              "−cos x",
+              "sin x"
+            ],
+            [
+              "π + x",
+              "−cos x",
+              "−sin x"
+            ],
+            [
+              "π/2 − x",
+              "sin x",
+              "cos x"
+            ]
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Calculatrice en **degrés** au lieu des radians.",
+            "Oublier la **2e solution** de cos x = a.",
+            "Confondre **pulsation** ω et **fréquence** f.",
+            "Oublier que cos et sin restent entre **−1 et 1**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Convertis **60°** en radians.",
+            "Résous cos x = 1/2 sur ]−π ; π].",
+            "u(t) = 5 cos(20π t) : **f** ?"
+          ],
+          "reponses": "1) π/3 · 2) x = π/3 ou x = −π/3 · 3) f = ω ÷ 2π = 10 Hz"
+        }
+      ]
+    }
+  ]
+}

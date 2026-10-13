@@ -1,0 +1,123 @@
+{
+  "titre": "Échanges gazeux",
+  "titreSurligne": "gazeux",
+  "accroche": "De l’air aux mitochondries.",
+  "bonus": "Barrière alvéolo-capillaire ≈ **0,5 µm**, ≈ **100 m²** · O₂ : 98 % sur l’**hémoglobine** · CO₂ : 70 % en **HCO₃⁻**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biologie-physiopathologie/l-appareil-respiratoire-et-les-echanges-gazeux.webp",
+    "prompt": "a glossy violet pair of lungs with a branching airway ending in tiny round alveoli and golden oxygen bubbles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Un gaz va toujours\nvers la basse pression !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "Le trajet de l’air",
+          "etapes": [
+            { "date": "Voies hautes", "texte": "Fosses nasales → pharynx → **larynx**." },
+            { "date": "Voies basses", "texte": "**Trachée** → bronches → bronchioles." },
+            { "date": "Échanges", "texte": "**Alvéoles** entourées de capillaires." }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les sens de diffusion",
+          "entetes": ["Lieu", "O₂", "CO₂"],
+          "lignes": [
+            ["**Poumons**", "air (100) → sang (40 mmHg)", "sang (46) → air (40 mmHg)"],
+            ["**Tissus**", "sang → cellules", "cellules → sang"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les idées clés",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Barrière", "texte": "Épithélium, **lame basale**, endothélium : très fine, très étendue." },
+            { "titre": "Hémoglobine", "texte": "4 chaînes, 4 **hèmes** à fer Fe²⁺ : jusqu’à **4 O₂**." },
+            { "titre": "Effet Bohr", "texte": "pH ↓, CO₂ ↑, T ↑ : l’Hb **libère** plus d’O₂." },
+            { "titre": "Trachée", "texte": "Anneaux de **cartilage**, cils et **mucus**." },
+            { "titre": "Bronchioles", "texte": "**Muscle lisse** : règlent le passage de l’air." },
+            { "titre": "Respiration cellulaire", "texte": "Mitochondries : glucose + O₂ → CO₂ + H₂O + **ATP**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Prévoir le sens d’un échange",
+          "etapes": [
+            { "titre": "Comparer", "texte": "les pressions partielles" },
+            { "titre": "Orienter", "texte": "du plus fort vers le plus faible" },
+            { "titre": "Conclure", "texte": "sens du gaz, par diffusion" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "PO₂ = 100 mmHg dans l’alvéole, 40 dans le sang veineux.",
+          "calcul": "100 > 40 : l’O₂ va vers le sang",
+          "resultat": "[[alvéole → sang]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": false,
+          "items": [
+            { "titre": "Ventilation", "texte": "diaphragme et muscles intercostaux" },
+            { "titre": "Plèvre", "texte": "enveloppe des poumons" },
+            { "titre": "Muscle actif", "texte": "chaud, acide, riche en CO₂" },
+            { "titre": "Racines", "texte": "**pneum(o)**, **bronch(o)**, **-pnée**" },
+            { "titre": "Alvéoles", "texte": "paroi très fine, **capillaires** autour" },
+            { "titre": "Transport", "texte": "O₂ : oxyhémoglobine ; CO₂ : HCO₃⁻" },
+            { "titre": "Pression", "texte": "le gaz va du fort vers le faible" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que le CO₂ est transporté **surtout** par l’hémoglobine : c’est en HCO₃⁻.",
+            "Inverser le sens de diffusion des gaz.",
+            "Croire que l’alvéole est **musclée** : c’est la bronchiole.",
+            "Oublier les **mitochondries**, lieu de consommation de l’O₂.",
+            "Confondre **oxyhémoglobine** et **carbaminohémoglobine**.",
+            "Oublier que le **CO₂** diffuse aussi, mais en sens inverse.",
+            "Dire que le **mucus** bloque l’air : il piège les particules."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel gaz se fixe sur l’**hémoglobine**&nbsp;?",
+            "Que fait l’effet **Bohr**&nbsp;?",
+            "Où l’O₂ est-il consommé&nbsp;?"
+          ],
+          "reponses": "1) le dioxygène (≈ 98 %) · 2) il libère plus d’O₂ aux tissus · 3) dans les mitochondries"
+        }
+      ]
+    }
+  ]
+}

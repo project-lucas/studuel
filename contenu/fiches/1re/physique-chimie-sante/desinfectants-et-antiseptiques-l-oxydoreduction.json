@@ -1,0 +1,115 @@
+{
+  "titre": "L’oxydoréduction",
+  "titreSurligne": "oxydoréduction",
+  "accroche": "Des électrons qui passent, des microbes qui tombent.",
+  "bonus": "Ox + n e⁻ = Red · l’oxydant **capte** · le réducteur **cède** · Javel + acide = **dichlore toxique**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-sante/desinfectants-et-antiseptiques-l-oxydoreduction.webp",
+    "prompt": "a glossy violet spray bottle and a small golden dropper bottle of antiseptic, tiny golden electrons hopping between them, sparkles"
+  },
+  "marcel": "L’oxydant capte,\nle réducteur donne !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Oxydant", "definition": "espèce qui **capte** un ou plusieurs électrons" },
+            { "terme": "Réducteur", "definition": "espèce qui **cède** un ou plusieurs électrons" },
+            { "terme": "Couple", "definition": "Ox / Red, avec sa demi-équation&nbsp;: Ox + n e⁻ = Red" },
+            { "terme": "Réaction", "definition": "**transfert d’électrons** entre l’oxydant d’un couple et le réducteur d’un autre" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les produits du quotidien",
+          "entetes": ["Produit", "Espèce active", "Usage"],
+          "lignes": [
+            ["Eau de Javel", "ClO⁻", "désinfectant"],
+            ["Eau oxygénée", "H₂O₂", "antiseptique"],
+            ["Bétadine", "diiode I₂", "antiseptique"],
+            ["Alcool médical", "éthanol 70 %", "antiseptique"],
+            ["Berlingot de Javel", "9,6 % de chlore actif", "à diluer"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Écrire l’équation en trois temps",
+          "etapes": [
+            { "titre": "Écrire", "texte": "les deux demi-équations, chacune dans le sens où l’espèce **réagit**" },
+            { "titre": "Égaliser", "texte": "le nombre d’**électrons** en multipliant" },
+            { "titre": "Additionner", "texte": "les électrons disparaissent de l’équation bilan" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Le diiode oxyde les ions thiosulfate. I₂ + 2 e⁻ = 2 I⁻ et 2 S₂O₃²⁻ = S₄O₆²⁻ + 2 e⁻. __L’équation__&nbsp;?",
+          "calcul": "2 e⁻ de chaque côté",
+          "aparte": "on additionne",
+          "resultat": "I₂ + 2 S₂O₃²⁻ → [[2 I⁻ + S₄O₆²⁻]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Désinfectant ou antiseptique",
+          "oui": { "titre": "Antiseptique", "texte": "S’applique sur les **tissus vivants** (peau)&nbsp;: eau oxygénée, Bétadine, alcool." },
+          "non": { "titre": "Désinfectant", "texte": "Agit sur les **surfaces et objets inertes**&nbsp;: l’eau de Javel, pas sur la peau." },
+          "essai": { "texte": "Javel + détartrant acide libère du **dichlore**, gaz très toxique&nbsp;: ClO⁻ + Cl⁻ + 2 H⁺ → Cl₂ + H₂O. Ne jamais les mélanger." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "I₂ + 2 e⁻ = 2 I⁻ (I₂ / I⁻)", "quoi": "demi-équation" },
+            { "texte": "I₂ capte des électrons&nbsp;: c’est l’oxydant.", "quoi": "justifier" },
+            { "texte": "2 H₂O₂ → 2 H₂O + O₂", "quoi": "vieillissement" },
+            { "texte": "Dose respectée&nbsp;: ni inefficace, ni dangereux.", "quoi": "diluer" }
+          ],
+          "pied": "L’eau oxygénée se décompose&nbsp;: ==à garder au frais, à l’abri de la lumière==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Inverser **oxydant** et **réducteur**.",
+            "Laisser des **électrons** dans l’équation bilan.",
+            "Mélanger **Javel** et détartrant.",
+            "Utiliser un **vieux flacon** d’eau oxygénée."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Un **oxydant** capte ou cède des électrons&nbsp;?",
+            "L’eau de Javel sert sur des **surfaces** ou sur la **peau**&nbsp;?",
+            "Quel gaz toxique avec Javel + acide&nbsp;?"
+          ],
+          "reponses": "1) il capte · 2) surfaces inertes · 3) le dichlore"
+        }
+      ]
+    }
+  ]
+}

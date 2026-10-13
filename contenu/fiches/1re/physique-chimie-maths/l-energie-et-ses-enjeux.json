@@ -1,0 +1,112 @@
+{
+  "titre": "Énergie et enjeux",
+  "titreSurligne": "enjeux",
+  "accroche": "L’énergie se convertit, jamais ne se perd.",
+  "bonus": "E = P × Δt · η = P utile ÷ P reçue · 1 kWh = 3,6 × 10⁶ J",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-maths/l-energie-et-ses-enjeux.webp",
+    "prompt": "a glossy violet battery with a golden lightning bolt, small wind turbine and sun beside it, sparkles"
+  },
+  "marcel": "Tout se convertit,\nrien ne se perd !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Énergie et rendement",
+          "petite": true,
+          "lignes": ["E = P × Δt", "η = {P utile/P reçue}"],
+          "regle": "**E** en J, **P** en W, **Δt** en s. Conservation&nbsp;: E reçue = E utile + E perdue. Le rendement est ==inférieur à 1==.",
+          "note": "en kWh&nbsp;: P en kW, Δt en h"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Formes et stockage",
+          "entetes": ["Forme", "Exemple", "Stockage"],
+          "lignes": [
+            ["Chimique", "carburant", "batterie"],
+            ["Potentielle", "eau en hauteur", "barrage, STEP"],
+            ["Thermique", "eau chaude", "ballon"],
+            ["Cinétique", "voiture", "volant d’inertie"],
+            ["Électrique", "courant", "condensateur"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Schématiser", "texte": "la chaîne énergétique&nbsp;: réservoirs, convertisseurs, flèches" },
+            { "titre": "Bilan", "texte": "E reçue = E utile + E perdue (les pertes sont thermiques)" },
+            { "titre": "Calculer", "texte": "le rendement η, ou l’énergie avec E = P × Δt" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une perceuse reçoit 600 W et fournit 450 W mécaniques. Son __rendement__&nbsp;?",
+          "calcul": "pertes = 600 − 450 = 150 W (chaleur)",
+          "aparte": "η = P utile ÷ P reçue",
+          "resultat": "η = 450 ÷ 600 = [[0,75 = 75 %]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Les ressources",
+          "oui": { "titre": "Renouvelables", "texte": "Solaire, éolien, hydraulique, biomasse, géothermie&nbsp;: flux **inépuisable**, souvent **intermittent**." },
+          "non": { "titre": "Non renouvelables", "texte": "Pétrole, gaz, charbon, uranium&nbsp;: **stock limité**, les fossiles émettent du **CO<sub>2</sub>**." },
+          "essai": { "texte": "Batterie de 360 Wh, appareil de 45 W&nbsp;: autonomie = <i>360 ÷ 45 = 8 h</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "E reçue = P × Δt = 600 × 600 = 360 kJ", "quoi": "l’énergie en J" },
+            { "texte": "η = 450 ÷ 600 = 0,75", "quoi": "formule puis nombres" },
+            { "texte": "1 kWh = 3,6 × 10⁶ J, soit 0,1 kWh", "quoi": "la conversion" }
+          ],
+          "pied": "Pas d’énergie qui disparaît&nbsp;: elle devient ==inutilisable==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Un rendement **supérieur à 1**&nbsp;: impossible.",
+            "Mélanger **kWh** et **J** sans convertir.",
+            "Confondre **énergie** (J) et **puissance** (W).",
+            "Croire qu’une énergie « **se perd** »."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**E** d’un appareil de 2 kW pendant 3 h&nbsp;?",
+            "**η** si on reçoit 40 W et fournit 30 W&nbsp;?",
+            "**1 kWh** en joules&nbsp;?"
+          ],
+          "reponses": "1) 6 kWh · 2) 0,75 (75 %) · 3) 3,6 × 10⁶ J"
+        }
+      ]
+    }
+  ]
+}

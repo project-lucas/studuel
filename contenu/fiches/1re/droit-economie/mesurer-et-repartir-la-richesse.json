@@ -1,0 +1,170 @@
+{
+  "titre": "Mesurer la richesse",
+  "titreSurligne": "richesse",
+  "accroche": "VA, PIB, revenus : qui reçoit quoi ?",
+  "bonus": "**VA** = production − CI · **PIB** = ΣVA + impôts − subventions · prélèvements ≈ **43 %** du PIB",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/droit-economie/mesurer-et-repartir-la-richesse.webp",
+    "prompt": "a glossy violet pie chart split into slices with a golden slice pulled out and a golden coin, tiny golden sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Compter la richesse,\nsans doublon !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les mots clés",
+          "items": [
+            {
+              "terme": "Valeur ajoutée",
+              "definition": "production − **consommations intermédiaires**"
+            },
+            {
+              "terme": "PIB",
+              "definition": "richesse produite **sur le territoire** en un an"
+            },
+            {
+              "terme": "IDH",
+              "definition": "revenu, **espérance de vie** et éducation (0 à 1)"
+            },
+            {
+              "terme": "Redistribution",
+              "definition": "l’État **corrige** la répartition primaire"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les revenus primaires",
+          "entetes": [
+            "Revenu",
+            "Exemples"
+          ],
+          "lignes": [
+            [
+              "**Du travail**",
+              "salaires, traitements"
+            ],
+            [
+              "**Du capital**",
+              "intérêts, dividendes, loyers"
+            ],
+            [
+              "**Mixtes**",
+              "artisan, agriculteur"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les idées à savoir",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Pas de double compte",
+              "texte": "On additionne les **VA**, pas les chiffres d’affaires."
+            },
+            {
+              "titre": "Non marchand",
+              "texte": "École, hôpital public : évalués à leur **coût de production**."
+            },
+            {
+              "titre": "Limites du PIB",
+              "texte": "Il ignore le travail **domestique**, les inégalités, l’**environnement**."
+            },
+            {
+              "titre": "Partage de la VA",
+              "texte": "Salariés, **État**, prêteurs, actionnaires, entreprise."
+            },
+            {
+              "titre": "Prélèvements",
+              "texte": "**Impôts et cotisations** : environ 43 % du PIB."
+            },
+            {
+              "titre": "Impôt progressif",
+              "texte": "Le **taux marginal** monte par tranche : 0, 11, 30, 41, 45 %."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Calculer une valeur ajoutée",
+          "etapes": [
+            {
+              "titre": "Production",
+              "texte": "relever le chiffre d’affaires"
+            },
+            {
+              "titre": "Soustraire",
+              "texte": "les consommations intermédiaires"
+            },
+            {
+              "titre": "Partager",
+              "texte": "part des salaires = salaires ÷ VA × 100"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "CA 800 000 €, achats 350 000 €, salaires et cotisations 300 000 €.",
+          "calcul": "VA = 800 000 − 350 000 = 450 000.\nSalaires : 300 000 ÷ 450 000 × 100\nLe reste va à l’État, aux prêteurs, aux actionnaires.",
+          "resultat": "[[≈ 66,7 %]] de la VA"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Additionner les **chiffres d’affaires** de toute la filière.",
+            "Oublier de retirer les **consommations intermédiaires**.",
+            "Croire que le PIB mesure le **bien-être**.",
+            "Confondre revenus **primaires** et revenus après redistribution."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "À retenir",
+          "paragraphes": [
+            "On mesure la richesse par la **valeur ajoutée**, jamais par le chiffre d’affaires ; l’État **redistribue** ensuite les revenus par les impôts, les cotisations et les prestations. Le PIB et l’IDH donnent deux regards : **production** et **développement**."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Comment calcule-t-on la **valeur ajoutée** ?",
+            "Quels critères combine l’**IDH** ?",
+            "Que fait l’**impôt progressif** pour les inégalités ?"
+          ],
+          "reponses": "1) production − consommations intermédiaires · 2) revenu, santé, éducation · 3) il les réduit"
+        }
+      ]
+    }
+  ]
+}

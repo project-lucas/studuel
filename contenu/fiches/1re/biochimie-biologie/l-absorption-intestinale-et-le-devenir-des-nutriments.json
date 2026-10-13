@@ -1,0 +1,186 @@
+{
+  "titre": "Absorption intestinale",
+  "titreSurligne": "Absorption",
+  "accroche": "Du chyle au foie, par 200 m².",
+  "bonus": "Surface ≈ **200 m²** (replis × 3, villosités × 10, microvillosités × 20) · hydrosolubles → **sang, veine porte** · lipides → **lymphe**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biochimie-biologie/l-absorption-intestinale-et-le-devenir-des-nutriments.webp",
+    "prompt": "a glossy violet finger-like intestinal villus with golden beads passing through its wall into a tiny vessel, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Je plisse tout\npour absorber !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Multiplier la surface",
+          "entetes": [
+            "Niveau",
+            "Structure",
+            "Effet"
+          ],
+          "lignes": [
+            [
+              "Organe",
+              "replis circulaires",
+              "× 3"
+            ],
+            [
+              "Tissu",
+              "**villosités**",
+              "× 10"
+            ],
+            [
+              "Cellule",
+              "**microvillosités**",
+              "× 20"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les modes de transport",
+          "entetes": [
+            "Mode",
+            "Énergie",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "**Diffusion simple**",
+              "non",
+              "acides gras"
+            ],
+            [
+              "**Passif facilité**",
+              "non",
+              "fructose"
+            ],
+            [
+              "**Actif**",
+              "oui",
+              "glucose + Na⁺"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce qu’il faut savoir expliquer",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Entérocyte polarisé",
+              "texte": "Membranes **apicale** et **basale** avec des transporteurs différents&nbsp;; **jonctions serrées**."
+            },
+            {
+              "titre": "Co-transport",
+              "texte": "Le glucose entre avec **Na⁺**&nbsp;; la pompe Na⁺/K⁺ consomme de l’**ATP** et entretient le gradient."
+            },
+            {
+              "titre": "Voie sanguine",
+              "texte": "Glucose, acides aminés, vitamines B et C&nbsp;: **veine porte** puis foie (système porte)."
+            },
+            {
+              "titre": "Voie lymphatique",
+              "texte": "Lipides en **chylomicrons** dans le **chylifère**, puis la lymphe."
+            },
+            {
+              "titre": "Hépatocyte",
+              "texte": "**Glycogénogenèse** (stocker) et **glycogénolyse** (libérer du glucose)."
+            },
+            {
+              "titre": "Adipocyte",
+              "texte": "**Lipogenèse** (mettre en réserve) et **lipolyse** (libérer des acides gras)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Identifier un mode de transport",
+          "etapes": [
+            {
+              "titre": "Gradient",
+              "texte": "le soluté va-t-il vers le plus ou le moins concentré&nbsp;?"
+            },
+            {
+              "titre": "Transporteur",
+              "texte": "traverse-t-il seul la bicouche ou grâce à une protéine&nbsp;?"
+            },
+            {
+              "titre": "Énergie",
+              "texte": "ATP ou gradient d’ion consommé&nbsp;? Alors transport actif"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Le fructose passe de la lumière au sang sans ATP, selon son gradient, par un transporteur.",
+          "calcul": "sans énergie, selon le gradient",
+          "aparte": "avec une protéine de transport",
+          "resultat": "transport [[passif facilité]]"
+        }
+      ],
+      "colonnes": "1fr 262px"
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Le glucose entre dans l’entérocyte contre son gradient.",
+              "quoi": "constat"
+            },
+            {
+              "texte": "Il est co-transporté avec Na⁺, dont le gradient est entretenu grâce à l’ATP.",
+              "quoi": "mécanisme"
+            },
+            {
+              "texte": "Il s’agit donc d’un transport actif.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Le muscle garde son glycogène&nbsp;; le ==foie== le libère dans le sang."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Envoyer les **lipides** dans le sang d’abord&nbsp;: c’est la lymphe.",
+            "Dire que le glucose entre par **diffusion**.",
+            "Oublier que les cellules sont **soudées** : il faut traverser.",
+            "Confondre **anabolisme** (stocker) et **catabolisme**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Surface d’échange de l’intestin grêle&nbsp;?",
+            "Quel vaisseau conduit le glucose au **foie**&nbsp;?",
+            "Comment s’appelle le stockage du glucose en **glycogène**&nbsp;?"
+          ],
+          "reponses": "1) environ 200 m² · 2) la veine porte hépatique · 3) la glycogénogenèse"
+        }
+      ]
+    }
+  ]
+}

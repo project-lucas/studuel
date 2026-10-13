@@ -1,0 +1,129 @@
+{
+  "titre": "Cause et conséquence",
+  "titreSurligne": "conséquence",
+  "accroche": "Expliquer pourquoi, puis ce qui en découle.",
+  "bonus": "**como** en tête · **porque** après · **así que** · **por lo tanto** · **tan… que**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/espagnol/exprimer-la-cause-et-la-consequence.webp",
+    "prompt": "a glossy violet domino tile falling and knocking a golden domino tile with a small golden arrow between them, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Como d’abord,\nporque ensuite&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La place compte",
+          "lignes": ["**como**… / …**porque**"],
+          "petite": true,
+          "regle": "<i>Como</i> ouvre la phrase (cause en tête). <i>Porque</i> vient **après** la principale, jamais en tête.",
+          "note": "<i>como llovía…</i>"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Exprimer la cause",
+          "entetes": ["Connecteur", "Nuance", "Exemple"],
+          "lignes": [
+            ["como", "en tête", "<i>Como llovía, no salí.</i>"],
+            ["ya que, puesto que", "cause connue", "<i>Ya que estás aquí…</i>"],
+            ["debido a + nom", "soutenu", "<i>Debido a la lluvia…</i>"],
+            ["gracias a + nom", "cause heureuse", "<i>Aprobé gracias a ti.</i>"],
+            ["por + infinitif", "reproche", "<i>Lo castigaron por mentir.</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Porque ou como&nbsp;?",
+          "oui": {
+            "titre": "Cause en tête : como",
+            "texte": "<i>**Como** llovía, no salí.</i> · <i>No salí **porque** llovía.</i>"
+          },
+          "non": {
+            "titre": "Porque en tête",
+            "texte": "<i>Porque llovía, no salí.</i> : on commence par <i>como</i>."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>___ estaba cansado, me acosté.</i> → **Como**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Exprimer la conséquence",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Connecteurs", "texte": "**así que** (donc) · **por eso** (c’est pourquoi) · **por lo tanto**, **por consiguiente** (écrit) · **de modo que** + indicatif." },
+            { "titre": "L’intensité", "texte": "**tan** + adj. + **que** : <i>tan cansado que se durmió</i>. **tanto/a/os/as** + nom + **que** : <i>tanta gente que…</i>" },
+            { "titre": "Nier une cause", "texte": "**No porque** + subjonctif, puis **sino porque** + indicatif : <i>No lo digo porque seas mi amigo, sino porque es verdad.</i>" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Relier deux idées",
+          "etapes": [
+            { "titre": "Repère", "texte": "Quelle idée est la **cause**, laquelle la **conséquence**&nbsp;?" },
+            { "titre": "Cause en tête", "texte": "<i>Como los alquileres suben, muchos jóvenes viven con sus padres.</i>" },
+            { "titre": "Intensité", "texte": "<i>Los alquileres suben **tanto que** muchos jóvenes…</i>" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Attention au mode",
+          "deux": true,
+          "items": [
+            { "titre": "de modo que + indicatif", "texte": "conséquence&nbsp;: <i>habló alto, de modo que todos lo oyeron</i>" },
+            { "titre": "de modo que + subjonctif", "texte": "but&nbsp;: <i>habla alto de modo que todos te oigan</i>" },
+            { "titre": "conque", "texte": "alors (familier)&nbsp;: <i>conque vámonos</i>" },
+            { "titre": "por eso", "texte": "<i>Llovía; por eso no salí.</i>" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Porque llovía, no salí</i> → <i>**Como** llovía, no salí</i>.",
+            "<i>De modo que</i> + subjonctif exprime le **but**, pas la conséquence.",
+            "<i>Tan gente</i> → <i>**tanta** gente</i> (accord devant un nom).",
+            "<i>Conque</i> est familier&nbsp;: dans une argumentation, écris **por lo tanto**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>___ llovía, no salí.</i> (como / porque)",
+            "<i>Había ___ gente que no pudimos entrar.</i>",
+            "<i>No lo digo porque (tú) ___ (ser) mi amigo.</i>"
+          ],
+          "reponses": "1) Como 2) tanta 3) seas"
+        }
+      ]
+    }
+  ]
+}

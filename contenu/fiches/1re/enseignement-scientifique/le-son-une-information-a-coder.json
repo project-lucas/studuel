@@ -1,0 +1,192 @@
+{
+  "titre": "Coder le son",
+  "titreSurligne": "son",
+  "accroche": "De l’onde continue aux nombres.",
+  "bonus": "**fe ≥ 2 × f<sub>max</sub>** · CD : **44,1 kHz**, **16 bits** · taille = **fe × n × durée × voies**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/enseignement-scientifique/le-son-une-information-a-coder.webp",
+    "prompt": "a glossy violet sound wave turning into a staircase of golden digital steps, a small violet microphone beside it, sparkles"
+  },
+  "marcel": "Le son devient\ndes nombres&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Numériser un signal",
+          "entetes": [
+            "Opération",
+            "Découpe",
+            "Paramètre"
+          ],
+          "lignes": [
+            [
+              "**Échantillonner**",
+              "le **temps**",
+              "fréquence **fe**"
+            ],
+            [
+              "**Quantifier**",
+              "l’**amplitude**",
+              "résolution en **bits**"
+            ],
+            [
+              "n bits",
+              "**2<sup>n</sup>** niveaux",
+              "8 bits → 256"
+            ],
+            [
+              "16 bits",
+              "65 536 niveaux",
+              "moins de bruit"
+            ],
+            [
+              "**Bruit**",
+              "de quantification",
+              "↓ si n ↑"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La taille d’un fichier",
+          "petite": true,
+          "lignes": [
+            "taille = fe × n × durée × voies"
+          ],
+          "regle": "Critère de **Shannon-Nyquist**&nbsp;: **fe ≥ 2 × f<sub>max</sub>**. Trop lent&nbsp;: **repliement de spectre**, des fréquences inventées.",
+          "note": "20 kHz ⇒ plus de 40 kHz"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer le poids d’un son",
+          "etapes": [
+            {
+              "titre": "Relever",
+              "texte": "fe (Hz), n (bits), la durée (s), le nombre de voies"
+            },
+            {
+              "titre": "Multiplier",
+              "texte": "fe × n × durée × voies, en bits"
+            },
+            {
+              "titre": "Convertir",
+              "texte": "÷ 8 pour les octets, puis ko, Mo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une seconde de CD stéréo&nbsp;: 44 100 Hz, 16 bits, 2 voies.",
+          "calcul": "44 100 × 16 × 2",
+          "aparte": "÷ 8 pour les octets",
+          "resultat": "[[1 411 200 bits]] ≈ 176 ko"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Compresser",
+          "oui": {
+            "titre": "Sans perte",
+            "texte": "FLAC, ZIP&nbsp;: gain **modeste**, fichier restitué **à l’identique**."
+          },
+          "non": {
+            "titre": "Avec perte",
+            "texte": "MP3, AAC&nbsp;: supprime les sons **masqués**, divise par **dix**, **non récupérable**."
+          },
+          "essai": {
+            "texte": "Trois minutes de CD ≈ <b>30 Mo</b>&nbsp;: d’où la compression, et le prix du streaming."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Pourquoi le numérique",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Se régénère",
+              "texte": "l’analogique se **dégrade** à chaque copie."
+            },
+            {
+              "titre": "Se corrige",
+              "texte": "codes **détecteurs d’erreurs**."
+            },
+            {
+              "titre": "Se duplique",
+              "texte": "**sans perte**, à l’infini."
+            },
+            {
+              "titre": "Se traite",
+              "texte": "**par calcul** : filtres, montage, compression."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "fe = 44,1 kHz ≥ 2 × 20 kHz = 40 kHz",
+              "quoi": "Shannon"
+            },
+            {
+              "texte": "taille = 44 100 × 16 × 2 × 1 s",
+              "quoi": "la formule"
+            },
+            {
+              "texte": "= 1 411 200 bits ≈ 176 ko",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Le numérique se ==régénère==, se corrige et se duplique sans perte."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **nombre de voies** (stéréo = 2).",
+            "Confondre **bits** et **octets** (1 octet = 8 bits).",
+            "Échantillonner **en dessous** de 2 × f<sub>max</sub>.",
+            "Croire que le MP3 se **restitue** à l’identique."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Nombre de niveaux avec **8 bits**&nbsp;?",
+            "Fréquence d’échantillonnage minimale pour 20 kHz&nbsp;?",
+            "Quelle compression est **non réversible**&nbsp;?"
+          ],
+          "reponses": "1) 256 · 2) plus de 40 kHz · 3) la compression avec perte (MP3)"
+        }
+      ]
+    }
+  ]
+}

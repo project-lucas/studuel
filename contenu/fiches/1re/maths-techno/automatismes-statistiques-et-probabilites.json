@@ -1,0 +1,115 @@
+{
+  "titre": "Stats et probabilités",
+  "titreSurligne": "probabilités",
+  "accroche": "Tirer un nombre juste d’un tableau.",
+  "bonus": "P<sub>A</sub>(B) = {P(A ∩ B)/P(A)} · P(A ∩ B) = P(A) × P<sub>A</sub>(B)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths-techno/automatismes-statistiques-et-probabilites.webp",
+    "prompt": "a glossy violet box-plot chart next to a golden probability tree with two branches and a tiny golden die, sparkles"
+  },
+  "marcel": "Sachant quoi ?\nChoisis ta population !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les indicateurs",
+          "entetes": ["Indicateur", "Comment"],
+          "lignes": [
+            ["Moyenne", "somme ÷ effectif total"],
+            ["Médiane", "valeur du **milieu** des valeurs rangées"],
+            ["Q1, Q3", "un quart sous Q1, trois quarts sous Q3"],
+            ["Étendue", "maximum − minimum"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Sachant que…",
+          "petite": true,
+          "lignes": ["P<sub>A</sub>(B) = {P(A ∩ B)/P(A)}"],
+          "regle": "En effectifs&nbsp;: **P<sub>A</sub>(B) = effectif de (A et B) ÷ effectif de A**. Sur un arbre, un chemin se calcule par ==produit==.",
+          "note": "P<sub>F</sub>(S) ≠ P<sub>S</sub>(F)&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "La population", "texte": "après « sachant que », on ne regarde que cette ligne ou colonne" },
+            { "titre": "Le compte", "texte": "effectif de la partie cherchée dans cette population" },
+            { "titre": "Le quotient", "texte": "partie ÷ population, en fraction ou en décimal" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "88 sportifs dont __40 garçons__. P(G) sachant sportif&nbsp;?",
+          "calcul": "population : 88\nP<sub>S</sub>(G) = {40/88}",
+          "aparte": "{40/88} = {5/11}",
+          "resultat": "P<sub>S</sub>(G) = [[{5/11}]] ≈ [[0,45]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Moyenne pondérée", "texte": "10 (coef. 1) et 16 (coef. 2)&nbsp;: (10 + 32) ÷ 3 = **14**." },
+            { "titre": "Diagramme en boîte", "texte": "La boîte va de Q1 à Q3&nbsp;: **la moitié** des valeurs." },
+            { "titre": "Arbre", "texte": "P(A) = 0,3 et P<sub>A</sub>(B) = 0,5&nbsp;: P(A ∩ B) = **0,15**." },
+            { "titre": "Axes", "texte": "Un axe qui ne part pas de 0 **grossit** les écarts." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "On se place parmi les 88 sportifs.", "quoi": "la population" },
+            { "texte": "P<sub>S</sub>(G) = {40/88}", "quoi": "le calcul" },
+            { "texte": "P<sub>S</sub>(G) = {5/11} ≈ 0,45", "quoi": "le résultat" }
+          ],
+          "pied": "Contrôle&nbsp;: 40 ≤ 88, donc ==P ≤ 1==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Diviser par le **total** (200) au lieu de la population.",
+            "Confondre **P<sub>F</sub>(S)** et P<sub>S</sub>(F).",
+            "Additionner au lieu de **multiplier** sur un arbre.",
+            "Confondre **médiane** et moyenne."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**P(A) = 0,4** et **P<sub>A</sub>(B) = 0,5** : P(A ∩ B)&nbsp;?",
+            "Étendue de **3 ; 8 ; 12**&nbsp;?",
+            "Médiane de **2 ; 5 ; 9**&nbsp;?"
+          ],
+          "reponses": "1) 0,4 × 0,5 = 0,2 · 2) 12 − 3 = 9 · 3) 5"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "titre": "Phénomènes aléatoires",
+  "titreSurligne": "aléatoires",
+  "accroche": "Imprévisible seul, régulier en nombre.",
+  "bonus": "**P(A) = favorables / possibles** (équiprobabilité) · fluctuation en **1/√n** · le hasard n’a **pas de mémoire**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/enseignement-scientifique/phenomenes-aleatoires.webp",
+    "prompt": "a glossy violet die next to a golden coin and a small rising bar chart converging, sparkles"
+  },
+  "marcel": "Le hasard\nn’a pas de mémoire&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Vocabulaire",
+          "items": [
+            {
+              "terme": "Expérience aléatoire",
+              "definition": "plusieurs **issues** possibles"
+            },
+            {
+              "terme": "Univers",
+              "definition": "l’ensemble des issues"
+            },
+            {
+              "terme": "Événement",
+              "definition": "un ensemble d’issues"
+            },
+            {
+              "terme": "Probabilité",
+              "definition": "entre **0** (impossible) et **1** (certain)"
+            },
+            {
+              "terme": "Équiprobabilité",
+              "definition": "toutes les issues ont la **même** probabilité"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Équiprobabilité",
+          "petite": true,
+          "lignes": [
+            "P(A) = {favorables/possibles}",
+            "Σ P(issues) = 1"
+          ],
+          "regle": "Dé équilibré&nbsp;: P(pair) = {3/6} = **0,5**. Fréquence = réalisations / essais, **après coup**.",
+          "note": "loi des grands nombres"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Étudier une fluctuation",
+          "etapes": [
+            {
+              "titre": "Fixer",
+              "texte": "p et la taille n de l’échantillon"
+            },
+            {
+              "titre": "Encadrer",
+              "texte": "[p − 1/√n ; p + 1/√n] contient ≈ 95 % des fréquences"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "la fréquence observée à l’intervalle, puis conclure"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Pièce équilibrée (p = 0,5), n = 100 lancers. Intervalle de fluctuation&nbsp;?",
+          "calcul": "1/√100 = 0,1",
+          "aparte": "p ± 0,1",
+          "resultat": "[[0,4 ; 0,6]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Fréquence ou probabilité ?",
+          "oui": {
+            "titre": "Probabilité",
+            "texte": "Un **modèle** posé **avant**, par hypothèse."
+          },
+          "non": {
+            "titre": "Fréquence",
+            "texte": "Mesurée **après coup** sur des données&nbsp;: elle fluctue."
+          },
+          "essai": {
+            "texte": "Quand n grandit, la fluctuation diminue en <b>1/√n</b>&nbsp;: n × 100 divise l’incertitude par seulement <b>10</b>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Univers : 6 issues équiprobables (1 à 6)",
+              "quoi": "le modèle"
+            },
+            {
+              "texte": "P(pair) = 3/6 = 0,5",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "La fréquence observée est dans l’intervalle : compatible.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "On **simule** des milliers de tirages (tableur, programme) pour ==observer la régularité== avant d’en écrire la loi."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **fréquence** et **probabilité**.",
+            "Croire que 5 « pile » de suite rendent « face » **plus probable**.",
+            "Dire qu’un écart à p est **anormal** (fluctuation normale).",
+            "Oublier que la somme des probabilités vaut **1**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "P(obtenir un nombre **pair**) avec un dé&nbsp;?",
+            "Après 5 « pile », P(pile) au 6<sup>e</sup> lancer&nbsp;?",
+            "n × 100&nbsp;: l’incertitude est divisée par…&nbsp;?"
+          ],
+          "reponses": "1) 0,5 · 2) toujours 1/2 · 3) 10"
+        }
+      ]
+    }
+  ]
+}

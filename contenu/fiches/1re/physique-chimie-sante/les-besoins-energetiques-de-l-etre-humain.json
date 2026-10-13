@@ -1,0 +1,113 @@
+{
+  "titre": "Besoins énergétiques",
+  "titreSurligne": "énergétiques",
+  "accroche": "Dépenser, perdre, apporter de l’énergie.",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-sante/les-besoins-energetiques-de-l-etre-humain.webp",
+    "prompt": "a glossy violet running shoe with a golden lightning bolt, a glossy apple and a small bread loaf beside it, sparkles, same art style as the reference icons, on a magenta background, no text, no numbers"
+  },
+  "marcel": "Du carburant\npour chaque effort !",
+  "bonus": "1 kcal ≈ **4,18 kJ** · glucides et protides ≈ **17 kJ/g** · lipides ≈ **38 kJ/g**",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’énergie d’un aliment",
+          "petite": true,
+          "lignes": ["DEJ = MB × coeff.", "E = Σ m × e"],
+          "regle": "**DEJ** dépense journalière, **MB** métabolisme de base, coefficient d’activité (≈ 1,4 à 2) donné dans l’énoncé. **m** masse de chaque nutriment, **e** énergie par gramme.",
+          "note": "kJ ou kcal&nbsp;?"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les pertes de chaleur",
+          "entetes": ["Mode", "Exemple"],
+          "lignes": [
+            ["Conduction", "assis sur un sol froid"],
+            ["Convection", "le vent refroidit la peau"],
+            ["Rayonnement", "infrarouges, sans contact"],
+            ["Évaporation", "la sueur se vaporise"],
+            ["Bilan du muscle", "chimique = mécanique + chaleur"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer l’énergie d’un aliment",
+          "etapes": [
+            { "titre": "Relever", "texte": "les masses de glucides, protides et lipides pour la portion" },
+            { "titre": "Multiplier", "texte": "chaque masse par son énergie massique (17 ou 38 kJ/g)" },
+            { "titre": "Additionner", "texte": "puis convertir si besoin&nbsp;: kJ ÷ 4,18 = kcal" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "100 g de pain&nbsp;: 50 g de glucides, 9 g de protides, 1 g de lipides.",
+          "calcul": "50×17 + 9×17 + 1×38",
+          "aparte": "850 + 153 + 38",
+          "resultat": "E ≈ [[1 041 kJ]] ≈ 250 kcal"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le muscle, convertisseur",
+          "oui": { "titre": "Chimique → mécanique + chaleur", "texte": "Rendement de **20 à 25 %**&nbsp;: l’essentiel part en chaleur, d’où l’échauffement à l’effort." },
+          "non": { "titre": "Rendement de 100 %", "texte": "Aucune conversion n’est parfaite&nbsp;: une part est toujours dissipée en chaleur." },
+          "essai": { "texte": "La combustion du glucose est **exothermique** (elle libère de la chaleur)&nbsp;; l’évaporation de la sueur est **endothermique** (elle en absorbe)." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "E = 50 × 17 + 9 × 17 + 1 × 38", "quoi": "la relation" },
+            { "texte": "E ≈ 1 041 kJ", "quoi": "le calcul" },
+            { "texte": "1 041 ÷ 4,18 ≈ 250 kcal", "quoi": "la conversion" },
+            { "texte": "Le muscle dégage surtout de la chaleur.", "quoi": "interpréter" }
+          ],
+          "pied": "Sur une étiquette, « calorie » veut dire ==kilocalorie==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **calorie** et **kilocalorie**.",
+            "Donner **9 kcal/g** aux glucides&nbsp;: c’est 4.",
+            "Oublier le **coefficient d’activité** dans la DEJ.",
+            "Confondre **exo**thermique et **endo**thermique."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel nutriment apporte le plus d’énergie **par gramme**&nbsp;?",
+            "Que vaut **1 kcal** en kJ&nbsp;?",
+            "Une transformation qui **absorbe** de la chaleur est…&nbsp;?"
+          ],
+          "reponses": "1) les lipides (38 kJ/g) · 2) ≈ 4,18 kJ · 3) endothermique"
+        }
+      ]
+    }
+  ]
+}

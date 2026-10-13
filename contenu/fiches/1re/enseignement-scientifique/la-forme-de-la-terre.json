@@ -1,0 +1,198 @@
+{
+  "titre": "La forme de la Terre",
+  "titreSurligne": "Terre",
+  "accroche": "Une ombre, un angle, un rayon.",
+  "bonus": "Ératosthène : **7,2° = 1/50** de 360° · **40 075 km** · 1 degré de latitude ≈ **111 km** · **L = R × α**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/enseignement-scientifique/la-forme-de-la-terre.webp",
+    "prompt": "a glossy violet globe with golden meridian and latitude lines, a small stick casting a short shadow beside it, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Un bâton, une ombre,\net la Terre mesurée !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois indices anciens",
+          "entetes": [
+            "Observation",
+            "Preuve"
+          ],
+          "lignes": [
+            [
+              "Ombre **circulaire** sur la Lune",
+              "la Terre est ronde"
+            ],
+            [
+              "Navire qui disparaît **par la coque**",
+              "surface **courbe**"
+            ],
+            [
+              "Étoile qui **change de hauteur**",
+              "Terre **mesurable**"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Ératosthène, vers 240 av. J.-C.",
+          "entetes": [
+            "Donnée",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Syène, au solstice",
+              "Soleil au **zénith**"
+            ],
+            [
+              "Alexandrie, même instant",
+              "ombre de **7,2°**"
+            ],
+            [
+              "Distance entre les villes",
+              "≈ **5 000 stades**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "Longueur d’un arc",
+          "petite": true,
+          "lignes": [
+            "L = R × α"
+          ],
+          "regle": "**α** en **radians**. Latitude : −90° à +90°, longitude : −180° à +180° depuis **Greenwich**.",
+          "note": "1 minute d’arc = 1 852 m"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Rayons de la Terre",
+          "entetes": [
+            "Rayon",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "**Équatorial**",
+              "6 378 km"
+            ],
+            [
+              "**Polaire**",
+              "6 357 km"
+            ],
+            [
+              "Écart",
+              "21 km, moins de **0,4 %**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Mesurer la Terre à la Ératosthène",
+          "etapes": [
+            {
+              "titre": "Mesurer",
+              "texte": "l’angle de l’ombre à un endroit, zéro à l’autre"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "à 360° : combien de fois l’angle y entre"
+            },
+            {
+              "titre": "Multiplier",
+              "texte": "ce nombre par la distance entre les deux villes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "Ni ronde, ni plate : à retenir",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Un ellipsoïde",
+              "texte": "Aplati par la **rotation** : 21 km d’écart entre les rayons."
+            },
+            {
+              "titre": "Le mètre",
+              "texte": "En **1791**, dix-millionième du **quart du méridien** : d’où les 40 000 km."
+            },
+            {
+              "titre": "Le plus court",
+              "texte": "L’avion suit l’**orthodromie**, qui semble remonter vers le nord sur un planisphère."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "!",
+          "titre": "Repérer un point",
+          "paragraphes": [
+            "La **latitude** mesure l’angle depuis l’équateur, la **longitude** l’angle depuis le méridien de Greenwich. Un degré de latitude vaut environ **111 km**, une minute d’arc **1 852 m**, soit un **mille marin**."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Angle 7,2°, distance 5 000 stades. __Circonférence__&nbsp;?",
+          "calcul": "360 ÷ 7,2 = 50",
+          "aparte": "50 fois l’arc",
+          "resultat": "50 × 5 000 = [[250 000 stades]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que la rondeur de la Terre est une découverte **moderne**.",
+            "Laisser l’angle en **degrés** dans L = R × α.",
+            "Dire que la Terre est une **sphère parfaite** : c’est un ellipsoïde.",
+            "Confondre **orthodromie** (la plus courte) et **loxodromie**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel angle mesure Ératosthène à **Alexandrie**&nbsp;?",
+            "Quel rayon est le **plus grand** : équatorial ou polaire&nbsp;?",
+            "Comment s’appelle le trajet le **plus court** sur la sphère&nbsp;?"
+          ],
+          "reponses": "1) 7,2° · 2) l’équatorial (6 378 km) · 3) l’orthodromie, arc de grand cercle"
+        }
+      ]
+    }
+  ]
+}

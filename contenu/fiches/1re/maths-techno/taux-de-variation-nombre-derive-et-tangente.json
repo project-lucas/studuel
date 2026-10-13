@@ -1,0 +1,117 @@
+{
+  "titre": "Dérivé et tangente",
+  "titreSurligne": "tangente",
+  "accroche": "De la sécante à la tangente.",
+  "bonus": "taux = {f(b) − f(a)/b − a} · tangente&nbsp;: y = f′(a)(x − a) + f(a) · f′(a) = **pente**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths-techno/taux-de-variation-nombre-derive-et-tangente.webp",
+    "prompt": "a glossy violet curve with a golden straight tangent line touching it at one sparkling point and a thin secant line nearby, tiny sparkles"
+  },
+  "marcel": "f′(a) est la pente\nde la tangente !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Taux et tangente",
+          "petite": true,
+          "lignes": ["taux = {f(b) − f(a)/b − a}", "y = f′(a)(x − a) + f(a)"],
+          "regle": "Le taux est la **pente de la sécante** (AB). Quand B se rapproche de A, on obtient le ==nombre dérivé== f′(a), pente de la tangente.",
+          "note": "f′(a) : un nombre&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Lire f′(a)",
+          "entetes": ["f′(a)", "Tangente en a"],
+          "lignes": [
+            ["> 0", "**monte**"],
+            ["< 0", "**descend**"],
+            ["= 0", "**horizontale**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Écrire une tangente en trois temps",
+          "etapes": [
+            { "titre": "Les deux valeurs", "texte": "relever f(a) et f′(a)" },
+            { "titre": "Remplacer", "texte": "y = f′(a)(x − a) + f(a)" },
+            { "titre": "Simplifier", "texte": "développer pour obtenir la forme y = mx + p" },
+            { "titre": "Contrôler", "texte": "en x = a, on doit retrouver exactement y = f(a)" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(2) = 5 et f′(2) = 3. __Tangente en 2__&nbsp;?",
+          "calcul": "y = 3(x − 2) + 5\ny = 3x − 6 + 5",
+          "aparte": "on développe",
+          "resultat": "y = [[3x − 1]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Taux de x²", "texte": "Entre 1 et 3&nbsp;: (9 − 1) ÷ (3 − 1) = **4**." },
+            { "titre": "Avec h", "texte": "Pour x² en 1&nbsp;: ((1 + h)² − 1) ÷ h = 2 + h, donc **f′(1) = 2**." },
+            { "titre": "Sur un graphique", "texte": "Tangente par (0 ; 1) et (2 ; 5)&nbsp;: f′(a) = 4 ÷ 2 = **2**." },
+            { "titre": "En contexte", "texte": "Vitesse moyenne → vitesse **instantanée** ; coût moyen → coût **marginal**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "f(2) = 5 et f′(2) = 3", "quoi": "les données" },
+            { "texte": "T&nbsp;: y = 3(x − 2) + 5", "quoi": "la formule" },
+            { "texte": "T&nbsp;: y = 3x − 6 + 5", "quoi": "on développe" },
+            { "texte": "T&nbsp;: y = 3x − 1", "quoi": "simplifiée" }
+          ],
+          "pied": "Contrôle&nbsp;: en x = 2, y = 3 × 2 − 1 = ==5== = f(2). ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier **+ f(a)** dans l’équation.",
+            "Confondre le **taux** (sécante) et le nombre dérivé.",
+            "Écrire (b − a) ÷ (f(b) − f(a)), **à l’envers**.",
+            "Se tromper de signe en développant **x − a**.",
+            "Prendre **f′(a)** pour la valeur f(a)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "f(1) = 3, f(3) = 11&nbsp;: **taux** entre 1 et 3&nbsp;?",
+            "f′(1) = −2&nbsp;: la tangente **monte** ou descend&nbsp;?",
+            "f(0) = 1 et f′(0) = 4&nbsp;: **tangente** en 0&nbsp;?"
+          ],
+          "reponses": "1) 8 ÷ 2 = 4 · 2) elle descend · 3) y = 4x + 1"
+        }
+      ]
+    }
+  ]
+}

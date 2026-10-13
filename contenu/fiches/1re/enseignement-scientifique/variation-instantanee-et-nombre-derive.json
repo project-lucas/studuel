@@ -1,0 +1,187 @@
+{
+  "titre": "Nombre dérivé",
+  "titreSurligne": "dérivé",
+  "accroche": "La pente en un point.",
+  "bonus": "**f’(a)** = pente de la **tangente** · tangente : **y = f’(a)(x − a) + f(a)** · position → vitesse → accélération",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/enseignement-scientifique/variation-instantanee-et-nombre-derive.webp",
+    "prompt": "a glossy violet curve with a golden tangent line touching it at one point and a small speedometer, sparkles"
+  },
+  "marcel": "La pente de la\ntangente, c’est f’(a)&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Taux de variation",
+          "petite": true,
+          "lignes": [
+            "{f(a + h) − f(a)/h}",
+            "h → 0 : f’(a)"
+          ],
+          "regle": "Taux moyen = pente de la **sécante**. Quand **h tend vers 0**, la sécante pivote jusqu’à la **tangente**.",
+          "note": "nombre unique ⇒ nombre dérivé"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Signe de f’(a)",
+          "entetes": [
+            "Signe",
+            "En a"
+          ],
+          "lignes": [
+            [
+              "**Positif**",
+              "f **croît**, la tangente monte"
+            ],
+            [
+              "**Négatif**",
+              "f **décroît**"
+            ],
+            [
+              "**Nul**",
+              "tangente **horizontale** : extremum possible"
+            ],
+            [
+              "Position x(t)",
+              "dérivée = **vitesse** instantanée"
+            ],
+            [
+              "Vitesse v(t)",
+              "dérivée = **accélération**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer un nombre dérivé",
+          "etapes": [
+            {
+              "titre": "Écrire",
+              "texte": "le quotient (f(a + h) − f(a)) / h"
+            },
+            {
+              "titre": "Simplifier",
+              "texte": "développer, factoriser h, le simplifier"
+            },
+            {
+              "titre": "Passer à la limite",
+              "texte": "h tend vers 0 ⇒ lire f’(a)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = x², en a = 3. Que vaut f’(3)&nbsp;?",
+          "calcul": "((3+h)² − 9)/h = (6h + h²)/h = 6 + h",
+          "aparte": "h tend vers 0",
+          "resultat": "f’(3) = [[6]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Sécante ou tangente ?",
+          "oui": {
+            "titre": "Tangente",
+            "texte": "Pente **en un point** : f’(a), la vitesse du **compteur**."
+          },
+          "non": {
+            "titre": "Sécante",
+            "texte": "Pente **entre deux points** : la vitesse moyenne du trajet."
+          },
+          "essai": {
+            "texte": "Lire f’(a) sur un graphique&nbsp;: deux points de la tangente, puis <b>« ce qu’on monte divisé par ce qu’on avance »</b>."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Taux moyen",
+              "texte": "(f(b) − f(a)) / (b − a) : coefficient directeur de la sécante."
+            },
+            {
+              "titre": "Fonction affine",
+              "texte": "son taux de variation est **constant**."
+            },
+            {
+              "titre": "Nombre dérivé",
+              "texte": "limite du quotient quand **h tend vers 0**."
+            },
+            {
+              "titre": "Graphique",
+              "texte": "deux points de la tangente, puis monter ÷ avancer."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "(f(3+h) − f(3))/h = 6 + h",
+              "quoi": "le quotient"
+            },
+            {
+              "texte": "Quand h tend vers 0, le quotient tend vers 6.",
+              "quoi": "la limite"
+            },
+            {
+              "texte": "Donc f’(3) = 6 : tangente de pente 6.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Tangente en a&nbsp;: ==y = f’(a)(x − a) + f(a)==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **taux moyen** (sécante) et **nombre dérivé**.",
+            "Oublier de **simplifier par h** avant de passer à la limite.",
+            "Prendre f’(a) pour **f(a)**.",
+            "Croire que f’(a) = 0 donne **toujours** un extremum."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "f’(a) est la pente de quelle droite&nbsp;?",
+            "Si f’(a) > 0, f en a est…&nbsp;?",
+            "Dérivée de la position par rapport au temps&nbsp;?"
+          ],
+          "reponses": "1) la tangente en a · 2) croissante · 3) la vitesse instantanée"
+        }
+      ]
+    }
+  ]
+}

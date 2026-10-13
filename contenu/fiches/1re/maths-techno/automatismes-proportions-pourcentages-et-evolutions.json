@@ -1,0 +1,115 @@
+{
+  "titre": "Pourcentages",
+  "titreSurligne": "Pourcentages",
+  "accroche": "Un pourcentage, un coefficient.",
+  "bonus": "+ t % ⇒ **1 + t/100** · − t % ⇒ **1 − t/100** · les coefficients se multiplient",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths-techno/automatismes-proportions-pourcentages-et-evolutions.webp",
+    "prompt": "a glossy violet price tag with a golden percent sign and a small golden arrow going up and down, tiny sparkles"
+  },
+  "marcel": "Traduis le %\nen coefficient !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le coefficient multiplicateur",
+          "petite": true,
+          "lignes": ["valeur finale = valeur initiale × CM", "taux = {finale − initiale/initiale}"],
+          "regle": "**Hausse de t %** : CM = 1 + {t/100}. **Baisse de t %** : CM = 1 − {t/100}. Une proportion, c’est ==partie ÷ tout==.",
+          "note": "Évolutions successives : on multiplie&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Du % au coefficient",
+          "entetes": ["Évolution", "CM"],
+          "lignes": [
+            ["+ 5 %", "× 1,05"],
+            ["− 30 %", "× 0,7"],
+            ["+ 100 %", "× 2"],
+            ["indice 112", "+ 12 % depuis la base 100"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Traduire", "texte": "chaque pourcentage d’évolution en coefficient multiplicateur" },
+            { "titre": "Multiplier", "texte": "valeur × CM, ou CM₁ × CM₂ pour deux évolutions" },
+            { "titre": "Reconvertir", "texte": "CM − 1 donne le taux global, en pourcentage" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "80 € : __+ 20 % puis − 20 %__. Prix final&nbsp;?",
+          "calcul": "CM = 1,2 × 0,8 = 0,96\n80 × 0,96 = 76,80",
+          "aparte": "0,96 = 1 − 0,04",
+          "resultat": "[[76,80 €]], soit [[− 4 %]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Prendre t %", "texte": "15 % de 80 = 0,15 × 80 = **12**." },
+            { "titre": "Taux d’évolution", "texte": "40 € → 50 €&nbsp;: 10 ÷ 40 = 0,25, soit **+ 25 %**." },
+            { "titre": "Proportion de proportion", "texte": "40 % puis 25 %&nbsp;: 0,4 × 0,25 = **10 %**." },
+            { "titre": "Évolution réciproque", "texte": "Après × 1,25, on revient avec 1 ÷ 1,25 = 0,8, soit **− 20 %**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "CM₁ = 1,2 et CM₂ = 0,8", "quoi": "les coefficients" },
+            { "texte": "CM = 1,2 × 0,8 = 0,96", "quoi": "le coefficient global" },
+            { "texte": "0,96 = 1 − 0,04 : baisse de 4 %", "quoi": "le taux global" }
+          ],
+          "pied": "Contrôle&nbsp;: 80 × 1,2 = 96 puis 96 × 0,8 = ==76,8==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Additionner deux pourcentages&nbsp;: **+ 10 % puis + 10 % = + 21 %**.",
+            "Croire qu’une hausse puis une baisse égales **s’annulent**.",
+            "Prendre **1,5** pour une hausse de 5 %&nbsp;: c’est 1,05.",
+            "Diviser par la valeur **finale** pour le taux."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Prix de 60 € en baisse de **30 %**&nbsp;?",
+            "Taux d’évolution de **50 € à 45 €**&nbsp;?",
+            "**+ 10 %** deux fois de suite&nbsp;?"
+          ],
+          "reponses": "1) 60 × 0,7 = 42 € · 2) − 10 % · 3) 1,1 × 1,1 = 1,21, soit + 21 %"
+        }
+      ]
+    }
+  ]
+}

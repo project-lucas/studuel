@@ -1,0 +1,111 @@
+{
+  "titre": "Les écosystèmes",
+  "titreSurligne": "écosystèmes",
+  "accroche": "Des êtres vivants et leur milieu.",
+  "bonus": "**Énergie**&nbsp;: milieu **ouvert**, ~10&nbsp;% par niveau · **Matière**&nbsp;: cycle **fermé** grâce aux décomposeurs",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/svt/les-ecosystemes-des-interactions-dynamiques-entre-les-etres.webp",
+    "prompt": "a glossy violet pond ecosystem with a golden sun, a tree, a fish and a small food chain of golden arrows, sparkles"
+  },
+  "marcel": "Tout est relié&nbsp;:\nl’énergie passe, la matière tourne !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Biocénose", "definition": "les êtres vivants d’un milieu" },
+            { "terme": "Biotope", "definition": "le milieu physico-chimique" },
+            { "terme": "Écosystème", "definition": "les deux, plus toutes leurs **interactions**" },
+            { "terme": "Résilience", "definition": "capacité à retrouver un fonctionnement comparable après une perturbation" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les interactions",
+          "entetes": ["Interaction", "Bilan", "Exemple"],
+          "lignes": [
+            ["**Prédation**", "l’un mange l’autre", "renard, lapin"],
+            ["**Compétition**", "même ressource limitée", "2 plantes, la lumière"],
+            ["**Mutualisme**", "les deux gagnent", "mycorhizes"],
+            ["**Parasitisme**", "l’un gagne, l’autre perd", "tique"],
+            ["**Commensalisme**", "l’un gagne, l’autre indifférent", "épiphytes"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Énergie et matière",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Entrée d’énergie", "texte": "La **photosynthèse** des **producteurs primaires**." },
+            { "titre": "Réseau trophique", "texte": "L’énergie circule de proie en prédateur." },
+            { "titre": "Perte de 90&nbsp;%", "texte": "Seulement **~10&nbsp;%** passe au niveau suivant&nbsp;: chaleur et respiration." },
+            { "titre": "Décomposeurs", "texte": "Bactéries, champignons, faune du sol **minéralisent** la matière morte." },
+            { "titre": "Matière recyclée", "texte": "Azote, phosphore, carbone sont **réutilisés** par les producteurs." },
+            { "titre": "Chaînes courtes", "texte": "4 ou 5 maillons au plus&nbsp;: peu de grands prédateurs." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Après une perturbation",
+          "etapes": [
+            { "titre": "Perturbation", "texte": "incendie, tempête, maladie, activité humaine" },
+            { "titre": "Succession", "texte": "du stade pionnier au stade mature" },
+            { "titre": "Résilience ou bascule", "texte": "retour au fonctionnement, ou autre état au-delà d’un seuil" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Renard et lapin&nbsp;: l’un se nourrit de l’autre, c’est de la prédation.", "quoi": "nommer" },
+            { "texte": "Si ~10&nbsp;% passe à chaque niveau, 1&nbsp;000 unités n’en donnent que 100 au suivant.", "quoi": "calculer" },
+            { "texte": "L’énergie traverse l’écosystème, la matière y tourne en boucle.", "quoi": "opposer" }
+          ],
+          "pied": "Un écosystème est ==ouvert== pour l’énergie, ==fermé== pour la matière."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire que l’énergie **circule en boucle**.",
+            "Confondre **mutualisme** (les deux gagnent) et **commensalisme**.",
+            "Oublier les **décomposeurs** dans le cycle.",
+            "Croire que la résilience est **illimitée**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle **part** d’énergie passe au niveau trophique suivant&nbsp;?",
+            "Qui **minéralise** la matière organique morte&nbsp;?",
+            "Un parasite, une tique&nbsp;: quel **bilan**&nbsp;?"
+          ],
+          "reponses": "1) environ 10 % · 2) les décomposeurs · 3) l’un gagne, l’autre perd"
+        }
+      ]
+    }
+  ]
+}

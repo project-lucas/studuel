@@ -1,0 +1,111 @@
+{
+  "titre": "Pureté et rendement",
+  "titreSurligne": "rendement",
+  "accroche": "Qu’a-t-on vraiment obtenu&nbsp;?",
+  "bonus": "**η = n obtenu ÷ n maximal** · toujours **< 100 %** · réactif limitant = celui qui s’épuise",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/spcl/controler-la-purete-et-calculer-un-rendement.webp",
+    "prompt": "a glossy violet Kofler melting bench with a golden crystal and a small gauge showing a percentage arc, sparkles"
+  },
+  "marcel": "Pur, et combien\nen a-t-on&nbsp;?",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Contrôler la pureté",
+          "entetes": ["Technique", "Produit pur"],
+          "lignes": [
+            ["**T de fusion** (Kofler)", "valeur nette = valeur tabulée"],
+            ["T d’ébullition", "valeur tabulée"],
+            ["Masse volumique", "valeur tabulée"],
+            ["**CCM**", "**une seule tache**, comme la référence"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le rendement",
+          "petite": true,
+          "lignes": ["η = {n obtenu/n max}", "n = {ρ × V/M}"],
+          "regle": "**n max** = x<sub>max</sub>, fixé par le **réactif limitant**. Un solide impur fond **plus bas**, sur un intervalle.",
+          "note": "η en % !"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer le rendement",
+          "etapes": [
+            { "titre": "Limitant", "texte": "calculer les **n initiaux**, le plus petit (coefficients 1) est limitant" },
+            { "titre": "Maximum", "texte": "**m<sub>max</sub> = n<sub>max</sub> × M** du produit" },
+            { "titre": "Rapport", "texte": "**η = m obtenue ÷ m<sub>max</sub>**" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "0,20 mol d’alcool et 0,40 mol d’acide. M(ester) = 130 g/mol. On récupère 17,6 g. __η__&nbsp;?",
+          "calcul": "limitant : alcool, n max = 0,20 mol, m max = 26 g",
+          "aparte": "puis η = 17,6 ÷ 26",
+          "resultat": "η ≈ 0,68 soit [[68 %]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "La CCM",
+          "oui": { "titre": "Pur et complet", "texte": "**Une seule tache** au niveau de la référence, **aucune** au niveau du réactif." },
+          "non": { "titre": "Impur ou incomplet", "texte": "Plusieurs taches, ou une tache à la hauteur du **réactif de départ**." },
+          "essai": { "texte": "Un produit pur n’est pas forcément <i>le bon</i>&nbsp;: on confronte aussi T de fusion ou spectre IR à la molécule attendue." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Réactif limitant&nbsp;: l’alcool, n<sub>max</sub> = 0,20 mol.", "quoi": "le limitant" },
+            { "texte": "m<sub>max</sub> = 0,20 × 130 = 26 g", "quoi": "le maximum" },
+            { "texte": "η = 17,6 ÷ 26 ≈ 0,68 = 68 %", "quoi": "le rendement" }
+          ],
+          "pied": "L’excès d’un réactif ==améliore== le rendement du plus précieux."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Prendre le réactif **en excès** pour le limitant.",
+            "Un rendement **> 100 %** (impuretés, produit humide).",
+            "Oublier la **masse molaire** pour passer à la masse.",
+            "Dire « pur » avec **deux taches** en CCM."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que vaut **η** si on obtient 15 g pour 20 g possibles&nbsp;?",
+            "Un solide impur fond-il plus **haut** ou plus **bas**&nbsp;?",
+            "Combien de **taches** pour un produit pur&nbsp;?"
+          ],
+          "reponses": "1) 75 % · 2) plus bas · 3) une seule"
+        }
+      ]
+    }
+  ]
+}

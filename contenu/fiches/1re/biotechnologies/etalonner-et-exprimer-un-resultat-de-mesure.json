@@ -1,0 +1,161 @@
+{
+  "titre": "Étalonner une mesure",
+  "titreSurligne": "Étalonner",
+  "accroche": "De l’absorbance à un résultat défendable.",
+  "bonus": "Résultat = valeur **± incertitude** + **unité** · étalon de contrôle ≠ étalon de dosage",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biotechnologies/etalonner-et-exprimer-un-resultat-de-mesure.webp",
+    "prompt": "a glossy violet spectrophotometer cuvette with a golden rising calibration line graph, sparkles"
+  },
+  "marcel": "Une gamme, un contrôle,\net on valide !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Deux étalonnages",
+          "entetes": [
+            "Méthode",
+            "Principe"
+          ],
+          "lignes": [
+            [
+              "**Étalon unique**",
+              "on suppose la **proportionnalité**"
+            ],
+            [
+              "**Gamme d’étalonnage**",
+              "plusieurs étalons, **courbe**, lecture de l’essai"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Étalon unique",
+          "petite": true,
+          "lignes": [
+            "<span>C<sub>essai</sub></span> = <span>C<sub>étalon</sub></span> × {A<sub>essai</sub>/A<sub>étalon</sub>}"
+          ],
+          "regle": "Valable si la relation est **proportionnelle**. Avec une gamme, on lit seulement **à l’intérieur** de l’intervalle de mesure.",
+          "note": "A = absorbance"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le modèle de mesure",
+          "etapes": [
+            {
+              "titre": "Équation aux grandeurs",
+              "texte": "la relation **littérale**"
+            },
+            {
+              "titre": "Équation aux unités",
+              "texte": "vérifier l’**homogénéité**"
+            },
+            {
+              "titre": "Équation aux valeurs",
+              "texte": "les **nombres**, puis le calcul"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Étalon 5,00 mmol·L<sup>−1</sup>, A = 0,400. Essai&nbsp;: A = 0,520. <b>C<sub>essai</sub></b>&nbsp;?",
+          "calcul": "5,00 × 0,520 ÷ 0,400",
+          "aparte": "grandeurs, unités, valeurs",
+          "resultat": "C<sub>essai</sub> = [[6,50 mmol·L<sup>−1</sup>]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Les erreurs",
+          "entetes": [
+            "Erreur",
+            "Caractère",
+            "Repérage"
+          ],
+          "lignes": [
+            [
+              "**Aléatoire**",
+              "varie à chaque mesure",
+              "dispersion des répétitions"
+            ],
+            [
+              "**Systématique**",
+              "décale toujours pareil",
+              "étalon de contrôle"
+            ],
+            [
+              "**Grossière**",
+              "faute ponctuelle",
+              "valeur aberrante"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Valeur cible 4,00 ± 0,20&nbsp;: [3,80&nbsp;; 4,20].",
+              "quoi": "intervalle"
+            },
+            {
+              "texte": "Valeur mesurée 4,12 : dans l’intervalle.",
+              "quoi": "comparer"
+            },
+            {
+              "texte": "La série est validée.",
+              "quoi": "conclure"
+            },
+            {
+              "texte": "C = (6,5 ± 0,3) mmol·L<sup>−1</sup>.",
+              "quoi": "le résultat"
+            }
+          ],
+          "pied": "Le nombre de chiffres suit l’==incertitude== : pas 5,2437 ± 0,3."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre étalon de **dosage** et de **contrôle**.",
+            "Lire un essai **hors** de l’intervalle de mesure.",
+            "Écrire un résultat sans **incertitude** ni unité.",
+            "Trop de **chiffres significatifs** pour l’incertitude."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "À quoi sert l’**étalon de contrôle**&nbsp;?",
+            "Quelle erreur décale **toujours** dans le même sens&nbsp;?",
+            "Que signifie **EMT**&nbsp;?"
+          ],
+          "reponses": "1) vérifier l’exactitude · 2) l’erreur systématique · 3) erreur maximale tolérée"
+        }
+      ]
+    }
+  ]
+}

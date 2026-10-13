@@ -1,0 +1,149 @@
+{
+  "titre": "Lentille convergente",
+  "titreSurligne": "convergente",
+  "accroche": "Vergence, image et grandissement.",
+  "bonus": "C = 1 ÷ f′ (**δ**) · 1 ÷ OA′ − 1 ÷ OA = 1 ÷ f′ · γ = OA′ ÷ OA",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/vergence-image-grandissement-et-relation-de-conjugaison.webp",
+    "prompt": "a glossy violet converging lens with golden light rays meeting at a focal point, sparkles"
+  },
+  "marcel": "Ça converge,\nça fait une image !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les trois relations",
+          "petite": true,
+          "lignes": [
+            "C = {1/f′}",
+            "{1/OA′} − {1/OA} = {1/f′}"
+          ],
+          "regle": "**C** en dioptries (δ), mesures ==algébriques== depuis O. Grandissement γ = OA′ ÷ OA&nbsp;: **γ < 0** renversée, **|γ| > 1** agrandie.",
+          "note": "signes algébriques&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Réelle ou virtuelle",
+          "entetes": [
+            "Image",
+            "Objet",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "**Réelle** (renversée)",
+              "au-delà de F",
+              "œil, appareil photo"
+            ],
+            [
+              "**Virtuelle** (droite)",
+              "entre O et F",
+              "loupe"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Données",
+              "texte": "f′ et OA **algébrique** (négatif)"
+            },
+            {
+              "titre": "Position",
+              "texte": "conjugaison, pour OA′"
+            },
+            {
+              "titre": "Grandissement",
+              "texte": "γ = OA′ ÷ OA&nbsp;: lire le signe et la valeur absolue"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Lentille de f′ = 0,20 m, objet à OA = −0,30 m. __Image__ et __grandissement__&nbsp;?",
+          "calcul": "1/OA′ = 1/0,20 + 1/(−0,30) = 5,0 − 3,33 = 1,67",
+          "aparte": "OA′ = 1 ÷ 1,67",
+          "resultat": "OA′ = [[0,60 m]], γ = 0,60 ÷ (−0,30) = [[−2]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Lire le grandissement",
+          "oui": {
+            "titre": "γ = −2",
+            "texte": "Image **renversée** (γ négatif) et **agrandie** (|γ| supérieur à 1), donc réelle."
+          },
+          "non": {
+            "titre": "γ positif",
+            "texte": "Image **droite**&nbsp;: c’est le cas d’une image virtuelle, comme avec la loupe."
+          },
+          "essai": {
+            "texte": "<i>5 δ</i> ⇒ f′ = <i>0,20 m</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "1/OA′ = 1/f′ + 1/OA = 5,0 − 3,33",
+              "quoi": "la conjugaison"
+            },
+            {
+              "texte": "OA′ = 0,60 m",
+              "quoi": "la position"
+            },
+            {
+              "texte": "γ = OA′ ÷ OA = −2&nbsp;: renversée, agrandie ×2",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Deux rayons suffisent&nbsp;: ==centre O== (non dévié) et ==parallèle à l’axe== (par F′)."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **signe** de OA (négatif).",
+            "Confondre image **réelle** et virtuelle.",
+            "Lire **γ négatif** comme une image droite."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**C** pour f′ = 0,25 m&nbsp;?",
+            "γ = −0,5&nbsp;: renversée ou droite&nbsp;? agrandie&nbsp;?",
+            "Loupe&nbsp;: image réelle ou virtuelle&nbsp;?"
+          ],
+          "reponses": "1) 4 δ · 2) renversée, réduite · 3) virtuelle (objet entre O et F)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "titre": "Couleurs",
+  "titreSurligne": "Couleurs",
+  "accroche": "Lumière, objet, œil.",
+  "bonus": "Additive&nbsp;: **RVB** → blanc · soustractive&nbsp;: **CMJ** → noir · cônes&nbsp;: R, V, B",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/couleurs.webp",
+    "prompt": "a glossy violet color wheel with golden red green blue overlapping light circles and a tiny eye, sparkles"
+  },
+  "marcel": "La couleur, c’est\ndans ta tête !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les deux synthèses",
+          "petite": true,
+          "lignes": [
+            "R + V + B = blanc",
+            "C + M + J = noir"
+          ],
+          "regle": "**Additive**&nbsp;: on ajoute des ==lumières== (écrans). **Soustractive**&nbsp;: des ==matières== retranchent des longueurs d’onde (impression, peinture).",
+          "note": "écran ≠ imprimante&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Complémentaires",
+          "entetes": [
+            "Couleur",
+            "Complémentaire",
+            "Somme (additive)"
+          ],
+          "lignes": [
+            [
+              "Rouge",
+              "Cyan",
+              "blanc"
+            ],
+            [
+              "Vert",
+              "Magenta",
+              "blanc"
+            ],
+            [
+              "Bleu",
+              "Jaune",
+              "blanc"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Lumière",
+              "texte": "quelles couleurs **éclairent** l’objet&nbsp;?"
+            },
+            {
+              "titre": "Objet",
+              "texte": "opaque&nbsp;: il **diffuse** une partie et absorbe le reste"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "la couleur perçue est celle de la lumière **diffusée**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un pull rouge éclairé en lumière verte seule. Sa __couleur__ perçue&nbsp;?",
+          "calcul": "rouge : diffuse le rouge, absorbe le vert",
+          "aparte": "plus rien à diffuser",
+          "resultat": "il paraît [[noir]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Absorbé ou diffusé&nbsp;?",
+          "oui": {
+            "titre": "Objet opaque",
+            "texte": "Sa couleur est celle de la lumière qu’il **diffuse**&nbsp;; un objet blanc les diffuse toutes."
+          },
+          "non": {
+            "titre": "Objet noir",
+            "texte": "Il **absorbe** toutes les longueurs d’onde&nbsp;: rien n’est diffusé vers l’œil."
+          },
+          "essai": {
+            "texte": "Une solution <i>bleue</i> absorbe le jaune-orangé, sa complémentaire."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Le pull rouge diffuse le rouge et absorbe le vert",
+              "quoi": "l’objet"
+            },
+            {
+              "texte": "Éclairé en vert seul&nbsp;: rien n’est diffusé",
+              "quoi": "la lumière"
+            },
+            {
+              "texte": "Il paraît noir",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "La couleur est une ==construction== du cerveau&nbsp;: cônes (R, V, B) en pleine lumière, bâtonnets sans couleur."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre synthèse **additive** et **soustractive**.",
+            "Dire qu’un objet « a » une couleur **propre**.",
+            "Oublier que les **bâtonnets** ne voient pas la couleur.",
+            "Inverser **complémentaire** et primaire."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "R + V + B en synthèse additive donne&nbsp;?",
+            "Complémentaire du **bleu**&nbsp;?",
+            "Les **bâtonnets** distinguent-ils les couleurs&nbsp;?"
+          ],
+          "reponses": "1) du blanc · 2) le jaune · 3) non, aveugles à la couleur"
+        }
+      ]
+    }
+  ]
+}

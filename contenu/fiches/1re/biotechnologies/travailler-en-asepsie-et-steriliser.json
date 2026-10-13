@@ -1,0 +1,170 @@
+{
+  "titre": "Asepsie et stérilité",
+  "titreSurligne": "Asepsie",
+  "accroche": "Rien n’entre, rien ne sort.",
+  "bonus": "Autoclave : **121 °C**, ~20 min · filtration : pores de **0,22 µm** · zone d’asepsie : 15 à 20 cm",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biotechnologies/travailler-en-asepsie-et-steriliser.webp",
+    "prompt": "a glossy violet autoclave with a golden pressure gauge and a small golden bunsen burner flame, sparkles"
+  },
+  "marcel": "Près de la flamme,\ntout reste propre !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Stérile",
+              "definition": "exempt de **tout** micro-organisme vivant"
+            },
+            {
+              "terme": "Aseptique",
+              "definition": "qui empêche l’apport de micro-organismes **extérieurs**"
+            },
+            {
+              "terme": "Stérilisation",
+              "definition": "rend stérile, **spores** comprises"
+            },
+            {
+              "terme": "Désinfection",
+              "definition": "élimine la **plupart** des micro-organismes d’une surface"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les procédés",
+          "entetes": [
+            "Procédé",
+            "Pour quoi"
+          ],
+          "lignes": [
+            [
+              "**Autoclave**",
+              "milieux, verrerie, déchets"
+            ],
+            [
+              "**Four Pasteur**",
+              "verrerie vide (170-180 °C)"
+            ],
+            [
+              "**Filtration**",
+              "liquides **thermosensibles**"
+            ],
+            [
+              "**Flambage**",
+              "anses, tubes"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Travailler près du bec Bunsen",
+          "etapes": [
+            {
+              "titre": "Préparer",
+              "texte": "désinfecter la paillasse, matériel **dans la zone**"
+            },
+            {
+              "titre": "Manipuler",
+              "texte": "ouvrir **peu de temps**, **flamber** anse et tubes"
+            },
+            {
+              "titre": "Ne rien poser",
+              "texte": "ni bouchon ni pipette stérile sur la paillasse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un milieu contient une vitamine <b>thermosensible</b>. Comment le stériliser&nbsp;?",
+          "calcul": "milieu autoclavé, vitamine filtrée",
+          "aparte": "ajout après refroidissement",
+          "resultat": "vitamine par [[filtration 0,22 µm]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Autoclave ou four ?",
+          "oui": {
+            "titre": "Chaleur humide",
+            "texte": "Vapeur **sous pression** : 121 °C pour milieux, verrerie et déchets contaminés."
+          },
+          "non": {
+            "titre": "Chaleur sèche",
+            "texte": "**Four Pasteur** : 170 à 180 °C, 1 h ou plus, pour la verrerie vide."
+          },
+          "essai": {
+            "texte": "Sous pression, l’eau bout <i>au-dessus de 100 °C</i>&nbsp;: manomètre et barème à lire."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Je travaille près du bec Bunsen, en zone d’asepsie.",
+              "quoi": "le geste"
+            },
+            {
+              "texte": "Je flambe l’anse avant et après usage.",
+              "quoi": "stérilité"
+            },
+            {
+              "texte": "Les cultures partent en DASRI après autoclavage.",
+              "quoi": "déchets"
+            },
+            {
+              "texte": "Le composé thermosensible est filtré à part.",
+              "quoi": "milieu"
+            }
+          ],
+          "pied": "L’asepsie protège la ==culture== et le manipulateur."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **désinfection** et **stérilisation**.",
+            "Autoclaver un composé **thermosensible**.",
+            "Laisser une boîte **ouverte** longtemps.",
+            "Manipuler loin de la **flamme**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelles conditions pour l’**autoclave**&nbsp;?",
+            "Comment stériliser un liquide **thermosensible**&nbsp;?",
+            "Que fait la **flamme** du bec Bunsen&nbsp;?"
+          ],
+          "reponses": "1) 121 °C, ~20 min · 2) par filtration · 3) elle crée une zone d’asepsie"
+        }
+      ]
+    }
+  ]
+}

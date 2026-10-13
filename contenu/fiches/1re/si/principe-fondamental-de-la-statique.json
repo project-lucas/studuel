@@ -1,0 +1,112 @@
+{
+  "titre": "Principe fondamental",
+  "titreSurligne": "fondamental",
+  "accroche": "Ni translation, ni rotation.",
+  "bonus": "**3** équations dans le plan · au plus **3** inconnues · frottement&nbsp;: **T ≤ f × N**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/principe-fondamental-de-la-statique.webp",
+    "prompt": "a glossy violet beam balanced on a golden pivot with two weights, perfectly level, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Tout est en place,\nrien ne bouge !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les deux conditions",
+          "petite": true,
+          "lignes": ["ΣF = 0", "ΣM = 0"],
+          "regle": "Somme **vectorielle** des actions extérieures nulle&nbsp;: pas de ==translation==. Somme des moments **au même point** nulle&nbsp;: pas de ==rotation==.",
+          "note": "les deux, toujours ensemble&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Dans le plan",
+          "entetes": ["Équation", "Écriture"],
+          "lignes": [
+            ["Sur **x**", "Σ F<sub>x</sub> = 0"],
+            ["Sur **y**", "Σ F<sub>y</sub> = 0"],
+            ["Moments", "Σ M<sub>A</sub> = 0"],
+            ["Plus de 3 inconnues", "**hyperstatique**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode, dans l’ordre",
+          "etapes": [
+            { "titre": "Isoler et bilan", "texte": "le solide, puis chaque action extérieure" },
+            { "titre": "Repère et point", "texte": "le point où passent le plus d’inconnues&nbsp;: leur moment y est nul" },
+            { "titre": "Écrire", "texte": "les trois équations, puis résoudre" },
+            { "titre": "Vérifier", "texte": "unités, vraisemblance, somme des forces" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Planche AB de 4 m sur deux appuis, poids négligé. Charge de 600 N à 1 m de A. Appui en __B__&nbsp;?",
+          "calcul": "Σ M<sub>A</sub> = 0 : B × 4 − 600 × 1 = 0",
+          "aparte": "A est choisi : son moment est nul",
+          "resultat": "B = [[150 N]], puis A = 450 N"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le solide glisse-t-il&nbsp;?",
+          "oui": { "titre": "Il adhère", "texte": "**T ≤ f × N**&nbsp;: la composante tangentielle s’ajuste, le solide reste immobile." },
+          "non": { "titre": "Il glisse", "texte": "T dépasse la limite f × N&nbsp;: le **glissement** commence." },
+          "essai": { "texte": "N = 100 N et f = 0,4&nbsp;: T limite = <i>40 N</i>. Avec 30 N, la pièce ne bouge pas." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "On isole S, en équilibre dans un référentiel galiléen", "quoi": "la phrase" },
+            { "texte": "PFS&nbsp;: Σ F = 0 et Σ M<sub>A</sub> = 0", "quoi": "le principe" },
+            { "texte": "Projection sur x puis sur y", "quoi": "les équations" }
+          ],
+          "pied": "Le choix du ==point== des moments décide de la difficulté de l’exercice."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Calculer les moments en **deux points différents** dans la même équation.",
+            "Oublier le **couple** de deux forces égales mais non alignées.",
+            "Laisser plus de **3 inconnues** sans le dire.",
+            "Confondre **adhérence** et frottement en cours."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien d’**équations** scalaires dans un problème plan&nbsp;?",
+            "Que garantit **Σ M = 0**&nbsp;?",
+            "Que signifie **hyperstatique**&nbsp;?"
+          ],
+          "reponses": "1) trois · 2) pas de rotation · 3) plus de 3 inconnues, hypothèses en plus"
+        }
+      ]
+    }
+  ]
+}

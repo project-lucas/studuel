@@ -1,0 +1,110 @@
+{
+  "titre": "Mutations et santé",
+  "titreSurligne": "santé",
+  "accroche": "Un allèle muté, une maladie.",
+  "bonus": "**Récessive**&nbsp;: homozygote atteint, parents porteurs sains · **Liée à l’X**&nbsp;: surtout les garçons",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/svt/mutations-patrimoine-genetique-et-sante.webp",
+    "prompt": "a glossy violet DNA helix with one golden mutated segment, and a small family tree of round golden and violet circles, sparkles"
+  },
+  "marcel": "Un seul gène muté\npeut tout changer !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les modes de transmission",
+          "entetes": ["Mode", "Qui est malade", "Exemple"],
+          "lignes": [
+            ["**Autosomique récessive**", "seul l’**homozygote**", "mucoviscidose"],
+            ["**Autosomique dominante**", "un allèle suffit", "Huntington"],
+            ["**Liée à l’X**", "surtout les garçons", "hémophilie"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Lire un arbre généalogique",
+          "entetes": ["Observation", "Conclusion"],
+          "lignes": [
+            ["2 parents **sains**, 1 enfant atteint", "allèle **récessif**"],
+            ["Maladie récessive surtout chez les garçons", "gène sur l’**X**"],
+            ["Un parent atteint, la moitié des enfants atteints", "plutôt **dominant**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "À savoir",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Monogénique", "texte": "**Un seul gène**&nbsp;: transmission selon les lois de **Mendel**." },
+            { "titre": "Multifactorielle", "texte": "Plusieurs gènes de **prédisposition** et l’**environnement**." },
+            { "titre": "Prédisposition", "texte": "Un allèle de risque n’est pas la maladie&nbsp;: une **probabilité** plus forte." },
+            { "titre": "Séquençage", "texte": "Repère une mutation **avant** les symptômes." },
+            { "titre": "Thérapies", "texte": "**Thérapie génique** (gène fonctionnel) ou **CRISPR-Cas9** (édition)." },
+            { "titre": "Bioéthique", "texte": "Cellules **somatiques** (soigner) ou **germinales** (descendance)&nbsp;: encadré par la loi." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Analyser un arbre",
+          "etapes": [
+            { "titre": "Repérer", "texte": "les atteints et le sexe de chacun" },
+            { "titre": "Raisonner", "texte": "2 parents sains + enfant atteint ⇒ récessif" },
+            { "titre": "Tester", "texte": "autosomique ou lié à l’X, avec les génotypes" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Les parents sains ont un enfant malade&nbsp;: l’allèle est récessif.", "quoi": "déduire" },
+            { "texte": "Un garçon n’a qu’un X&nbsp;: un seul allèle muté suffit à le rendre malade.", "quoi": "justifier" },
+            { "texte": "Les deux parents sont donc hétérozygotes&nbsp;: des porteurs sains.", "quoi": "conclure" },
+            { "texte": "Chaque enfant a un risque sur quatre d’être atteint.", "quoi": "prévoir" }
+          ],
+          "pied": "Une mutation altère une ==protéine==, donc une ==fonction==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire qu’un **porteur sain** est malade.",
+            "Conclure à une liaison à l’X **sans argument**.",
+            "Confondre **prédisposition** et maladie.",
+            "Mélanger cellules **somatiques** et **germinales**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Qui exprime une maladie **autosomique récessive**&nbsp;?",
+            "Pourquoi l’**hémophilie** touche surtout les garçons&nbsp;?",
+            "Que cible la **thérapie génique**&nbsp;?"
+          ],
+          "reponses": "1) l’homozygote · 2) ils n’ont qu’un X · 3) apporter un gène fonctionnel"
+        }
+      ]
+    }
+  ]
+}

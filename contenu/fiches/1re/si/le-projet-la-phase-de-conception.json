@@ -1,0 +1,169 @@
+{
+  "titre": "Phase de conception",
+  "titreSurligne": "conception",
+  "accroche": "Des idées aux solutions comparables.",
+  "bonus": "**Diverger** (ne pas juger) → **converger** (choisir) · le tableau multicritère rend le choix **discutable**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/le-projet-la-phase-de-conception.webp",
+    "prompt": "a glossy violet light bulb with a golden filament next to a rolled blueprint and a pencil, same art style as the reference icons, sparkles"
+  },
+  "marcel": "Beaucoup d’idées,\npuis on choisit !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Du besoin à la solution",
+          "entetes": [
+            "Niveau",
+            "Il décrit"
+          ],
+          "lignes": [
+            [
+              "**Fonction de service**",
+              "ce que le produit rend"
+            ],
+            [
+              "**Fonction technique**",
+              "comment le système s’y prend"
+            ],
+            [
+              "**Solution constructive**",
+              "la pièce, le composant, le programme"
+            ],
+            [
+              "**Un même besoin**",
+              "plusieurs solutions possibles"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les deux temps",
+          "entetes": [
+            "Temps",
+            "Faire",
+            "Interdit"
+          ],
+          "lignes": [
+            [
+              "**Divergence**",
+              "un maximum d’idées",
+              "**juger**"
+            ],
+            [
+              "**Convergence**",
+              "évaluer, retenir",
+              "rouvrir la liste"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Comparer des solutions",
+          "etapes": [
+            {
+              "titre": "Pondérer",
+              "texte": "donner un poids à chaque critère selon son importance pour le besoin"
+            },
+            {
+              "titre": "Noter",
+              "texte": "attribuer une note à chaque solution, critère par critère"
+            },
+            {
+              "titre": "Totaliser",
+              "texte": "somme des notes × poids : le total classe les solutions"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Solution A : note __4__ en coût (poids 3) et __2__ en robustesse (poids 2). Total&nbsp;?",
+          "calcul": "4 × 3 + 2 × 2 = 12 + 4",
+          "aparte": "somme pondérée",
+          "resultat": "total A = [[16 points]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Simulation fiable&nbsp;?",
+          "oui": {
+            "titre": "Avec hypothèses",
+            "texte": "Solide indéformable, frottements négligés, régime permanent : **nommées**."
+          },
+          "non": {
+            "titre": "Sans hypothèses",
+            "texte": "Un résultat de simulation sans hypothèses n’a **aucune valeur**."
+          },
+          "essai": {
+            "texte": "La maquette numérique (CAO) vérifie l’<i>encombrement</i> et les <i>interférences</i> entre pièces."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Fonction de service → fonction technique → solution",
+              "quoi": "la descente"
+            },
+            {
+              "texte": "Tableau multicritère : critères, poids, notes, total",
+              "quoi": "le choix"
+            },
+            {
+              "texte": "Hypothèses simplificatrices de la simulation",
+              "quoi": "la limite"
+            },
+            {
+              "texte": "Prototypage rapide : éprouver avant de s’engager",
+              "quoi": "le test"
+            }
+          ],
+          "pied": "Changer les ==poids== change le classement : sache le montrer."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "**Juger** pendant la divergence.",
+            "Croire que le tableau multicritère est un **oracle**.",
+            "Oublier les **hypothèses** d’une simulation.",
+            "N’imaginer qu’**une seule** solution."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que **fait-on** en convergence&nbsp;?",
+            "Que reçoit chaque critère d’un tableau **multicritère**&nbsp;?",
+            "À quoi sert la **CAO** ici&nbsp;?"
+          ],
+          "reponses": "1) évaluer et retenir · 2) un poids · 3) vérifier encombrement et interférences"
+        }
+      ]
+    }
+  ]
+}

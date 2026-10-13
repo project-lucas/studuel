@@ -1,0 +1,118 @@
+{
+  "titre": "Réseau de données",
+  "titreSurligne": "Réseau",
+  "accroche": "Adresses, couches et topologies.",
+  "bonus": "**MAC** = carte (switch) · **IP** = machine (routeur) · **port** = application",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/reseau-de-donnees.webp",
+    "prompt": "a glossy violet network switch connected by golden cables to three small computers in a star shape, tiny golden sparkles, same art style as the reference icons, on magenta background, no text"
+  },
+  "marcel": "Une adresse,\nun chemin !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Échelles et topologies",
+          "entetes": ["Nom", "Principe"],
+          "lignes": [
+            ["**PAN**", "quelques mètres (Bluetooth)"],
+            ["**LAN**", "un bâtiment (Ethernet, Wi-Fi)"],
+            ["**WAN**", "large étendue (Internet)"],
+            ["**Étoile**", "tous reliés à un nœud central"],
+            ["**Maillée**", "plusieurs chemins, robuste"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les adresses",
+          "entetes": ["Adresse", "Désigne"],
+          "lignes": [
+            ["**MAC**", "la carte réseau, unique, physique"],
+            ["**IP**", "la machine dans le réseau, logique"],
+            ["**Masque**", "partie réseau / partie machine"],
+            ["**Port**", "l’application destinataire"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Les couches et leurs protocoles",
+          "entetes": ["Couche", "Protocole", "Rôle"],
+          "lignes": [
+            ["Accès", "**Ethernet / Wi-Fi**", "le média physique"],
+            ["Réseau", "**IP**", "adressage et routage, sans garantie"],
+            ["Transport", "**TCP**", "fiable : accusés, ordre, retransmission"],
+            ["Transport", "**UDP**", "rapide, sans garantie (direct)"],
+            ["Application", "**HTTP, FTP, MQTT**", "le service rendu"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un objet connecté envoie une mesure à un serveur. Quel protocole d’application&nbsp;?",
+          "calcul": "léger + publication-abonnement",
+          "aparte": "la référence des objets connectés",
+          "resultat": "[[MQTT]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "TCP ou UDP&nbsp;?",
+          "oui": { "titre": "TCP", "texte": "Connexion **fiable**&nbsp;: données reçues dans l’ordre, retransmises si perdues." },
+          "non": { "titre": "UDP", "texte": "**Sans garantie** mais rapide&nbsp;: voix et vidéo en direct." },
+          "essai": { "texte": "Un fichier à télécharger&nbsp;: <i>TCP</i>. Un appel vidéo en direct&nbsp;: <i>UDP</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Les équipements",
+          "items": [
+            { "titre": "Commutateur", "texte": "trames d’un LAN, d’après la **MAC**" },
+            { "titre": "Routeur", "texte": "relie des réseaux, d’après l’**IP**" },
+            { "titre": "Point d’accès", "texte": "raccorde les équipements sans fil" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre adresse **MAC** et adresse **IP**.",
+            "Croire qu’**IP** garantit la livraison.",
+            "Oublier le rôle du **masque** de sous-réseau.",
+            "Placer le **commutateur** au niveau IP."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle adresse est **unique** et fixée en usine&nbsp;?",
+            "Quel équipement relie **deux réseaux**&nbsp;?",
+            "Que fait **TCP** que UDP ne fait pas&nbsp;?"
+          ],
+          "reponses": "1) l’adresse MAC · 2) le routeur · 3) il garantit la livraison (fiable)"
+        }
+      ]
+    }
+  ]
+}

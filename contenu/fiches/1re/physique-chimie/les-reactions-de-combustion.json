@@ -1,0 +1,171 @@
+{
+  "titre": "Les combustions",
+  "titreSurligne": "combustions",
+  "accroche": "Brûler : l’énergie et le bilan.",
+  "epreuve": "bac",
+  "bonus": "Combustion **exothermique** · complète : CO₂ + H₂O · incomplète : **CO** (mortel) et suie",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/les-reactions-de-combustion.webp",
+    "prompt": "a glossy violet and golden flame on a small candle with tiny sparkles and heat waves"
+  },
+  "marcel": "Du dioxygène\nou gare au CO !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Complète ou incomplète",
+          "entetes": [
+            "Combustion",
+            "O₂",
+            "Produits"
+          ],
+          "lignes": [
+            [
+              "Complète",
+              "excès",
+              "CO₂ et H₂O"
+            ],
+            [
+              "Incomplète",
+              "défaut",
+              "CO et suie"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Énergie libérée",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "E = m × PCI"
+          ],
+          "regle": "Le **pouvoir calorifique** est l’énergie libérée par la combustion complète de **1 kg** (ou 1 m³). Bilan en énergies de liaison **négatif**.",
+          "note": "rompre coûte, former libère"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": "★",
+          "titre": "Bilan par les énergies de liaison",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Rompre",
+              "texte": "les liaisons des **réactifs** coûte de l’énergie"
+            },
+            {
+              "titre": "Former",
+              "texte": "celles des **produits** en libère&nbsp;; le total est **négatif**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Ajuster l’équation",
+          "etapes": [
+            {
+              "titre": "Carbone",
+              "texte": "d’abord, un CO₂ par **atome de C**"
+            },
+            {
+              "titre": "Hydrogène",
+              "texte": "ensuite, un H₂O pour **deux H**"
+            },
+            {
+              "titre": "Oxygène",
+              "texte": "**en dernier**, en comptant les O de CO₂ et H₂O"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Combustion complète du méthane CH₄. __Équation__&nbsp;?",
+          "calcul": "C : 1 CO₂ · H : 2 H₂O · O : 2 + 2 = 4",
+          "aparte": "donc 2 O₂",
+          "resultat": "[[CH₄ + 2 O₂ → CO₂ + 2 H₂O]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Danger et climat",
+          "oui": {
+            "titre": "Combustion complète",
+            "texte": "**CO₂ et eau** seulement&nbsp;: flamme bleue, sans suie."
+          },
+          "non": {
+            "titre": "Combustion incomplète",
+            "texte": "**CO** inodore et incolore, fixé sur l’hémoglobine&nbsp;; flamme jaune et suie."
+          },
+          "essai": {
+            "texte": "Fossile&nbsp;: <i>ajout net</i> de carbone dans l’atmosphère&nbsp;; biomasse&nbsp;: carbone prélevé récemment, bilan <i>différent</i>, mais particules et NOx restent."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "Combustion complète&nbsp;: CH₄ + 2 O₂ → CO₂ + 2 H₂O.",
+              "quoi": "l’équation"
+            },
+            {
+              "texte": "La réaction est exothermique&nbsp;: elle cède de l’énergie au milieu.",
+              "quoi": "le sens"
+            },
+            {
+              "texte": "E = m × pouvoir calorifique.",
+              "quoi": "l’énergie"
+            }
+          ],
+          "pied": "Ajuste ==C, puis H, puis O== : jamais l’oxygène en premier."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Ajuster l’**oxygène** avant C et H.",
+            "Oublier le **CO** d’une combustion incomplète.",
+            "Dire que la biomasse n’émet **aucun** polluant.",
+            "Confondre le signe d’une réaction **exothermique**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quels sont les produits d’une combustion **complète**&nbsp;?",
+            "Pourquoi le **CO** est-il dangereux&nbsp;?",
+            "Dans quel ordre ajuste-t-on l’équation&nbsp;?"
+          ],
+          "reponses": "1) CO₂ et eau · 2) se fixe sur l’hémoglobine · 3) C, H, puis O"
+        }
+      ]
+    }
+  ]
+}

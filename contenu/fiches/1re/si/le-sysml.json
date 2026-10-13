@@ -1,0 +1,103 @@
+{
+  "titre": "Le SysML",
+  "titreSurligne": "SysML",
+  "accroche": "Besoin, structure, comportement.",
+  "bonus": "**Exigences · cas d’utilisation** (besoin) · **blocs** (structure) · **états · séquence** (comportement)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/le-sysml.webp",
+    "prompt": "a glossy violet diagram with connected rounded boxes and golden arrows, a small gear in one box, same art style as the reference icons, sparkles"
+  },
+  "marcel": "Trois questions,\ntrois familles !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois familles de diagrammes",
+          "entetes": ["Question", "Diagramme", "Il montre"],
+          "lignes": [
+            ["**Besoin**", "exigences", "l’arbre des exigences, vérifiables"],
+            ["", "cas d’utilisation", "les acteurs et les services rendus"],
+            ["**Structure**", "définition de blocs", "la décomposition en blocs"],
+            ["", "blocs internes", "les flux : matière, énergie, information"],
+            ["**Comportement**", "états", "états, transitions, gardes"],
+            ["", "séquence", "les messages dans le temps"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 2,
+          "titre": "Choisir le bon diagramme",
+          "etapes": [
+            { "titre": "Besoin&nbsp;?", "texte": "à quoi le système doit-il répondre : exigences ou cas d’utilisation" },
+            { "titre": "Structure&nbsp;?", "texte": "de quoi est-il fait : blocs, puis blocs internes pour les flux" },
+            { "titre": "Comportement&nbsp;?", "texte": "que fait-il : états, ou séquence pour les échanges" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "On veut montrer les __états__ d’un portail et ce qui déclenche chaque changement.",
+          "calcul": "états + transitions + événements",
+          "aparte": "comportement",
+          "resultat": "diagramme [[d’états]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Information ou énergie&nbsp;?",
+          "oui": { "titre": "Information", "texte": "Acquérir (capteur) → traiter (calculateur) → communiquer." },
+          "non": { "titre": "Énergie", "texte": "Alimenter → distribuer → convertir → transmettre → agir." },
+          "essai": { "texte": "La chaîne d’information <i>commande</i> celle d’énergie&nbsp;; le capteur ferme la boucle." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Nommer le diagramme et sa famille", "quoi": "la question" },
+            { "texte": "Acteurs, blocs, flux, états ou messages", "quoi": "les éléments" },
+            { "texte": "Un modèle retient ce qui est utile", "quoi": "la limite" }
+          ],
+          "pied": "Un même système reçoit ==plusieurs modèles== selon ce qu’on veut prévoir."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **besoin**, **structure** et **comportement**.",
+            "Prendre le modèle pour la **réalité**.",
+            "Oublier la **garde** d’une transition.",
+            "Mélanger **bloc** et **flux** d’un bloc interne."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel diagramme montre les **acteurs**&nbsp;?",
+            "Quel diagramme montre les **flux**&nbsp;?",
+            "Qui **commande** la chaîne d’énergie&nbsp;?"
+          ],
+          "reponses": "1) cas d’utilisation · 2) blocs internes · 3) la chaîne d’information"
+        }
+      ]
+    }
+  ]
+}

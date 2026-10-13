@@ -1,0 +1,164 @@
+{
+  "titre": "Équilibre, résistance",
+  "titreSurligne": "résistance",
+  "accroche": "Tenir en place, ne pas casser.",
+  "bonus": "**ΣF = 0** et **ΣM = 0** · **σ = F / S** · on veut **σ ≤ Re / s**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/ingenierie-dd/comportement-mecanique-equilibre-et-resistance.webp",
+    "prompt": "a glossy violet shelf bracket holding a golden weight, a golden screw and a small triangular truss, tiny golden arrows for forces, sparkles, magenta background, same art style as the reference icons, no text"
+  },
+  "marcel": "Équilibré, solide\net bien triangulé !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Équilibre et contrainte",
+          "taille": "mini",
+          "lignes": [
+            "M = F × d",
+            "σ = {F/S}"
+          ],
+          "regle": "Équilibre : ==somme des forces nulle== et ==somme des moments nulle==. σ en MPa si F en N et S en mm².",
+          "note": "1 MPa = 1 N/mm²&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les sollicitations",
+          "entetes": [
+            "Sollicitation",
+            "Effet"
+          ],
+          "lignes": [
+            [
+              "**Traction**",
+              "la pièce s’allonge"
+            ],
+            [
+              "**Compression**",
+              "elle se raccourcit (flambage)"
+            ],
+            [
+              "**Flexion**",
+              "elle se courbe"
+            ],
+            [
+              "**Torsion**",
+              "elle se tord"
+            ],
+            [
+              "**Cisaillement**",
+              "deux sections glissent"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Vérifier une pièce",
+          "etapes": [
+            {
+              "titre": "Calculer",
+              "texte": "la contrainte **σ = F / S** dans la section"
+            },
+            {
+              "titre": "Borner",
+              "texte": "limite admissible **Re / s** avec le coefficient de sécurité"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "σ ≤ Re / s : la pièce est **conforme**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Tirant acier __Re = 235 MPa__, __50 mm²__, __5 000 N__, s = 2. Conforme&nbsp;?",
+          "calcul": "σ = 5 000 / 50 = 100 MPa",
+          "aparte": "limite : 235 / 2 = 117,5 MPa",
+          "resultat": "100 &lt; 117,5 : [[conforme]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Stable ou non&nbsp;?",
+          "oui": {
+            "titre": "Stable",
+            "texte": "La verticale du **centre de gravité** tombe dans la base d’appui."
+          },
+          "non": {
+            "titre": "Bascule",
+            "texte": "La verticale sort de la base : l’objet **se renverse**."
+          },
+          "essai": {
+            "texte": "Une grue gagne en stabilité avec un <i>contrepoids</i> et un centre de gravité bas."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Moment de la charge : 200 × 0,30 = 60 N·m",
+              "quoi": "le moment"
+            },
+            {
+              "texte": "Vis : F × 0,10 = 60, donc F = 600 N",
+              "quoi": "l’effort"
+            },
+            {
+              "texte": "Bras de levier doublé : F = 300 N",
+              "quoi": "la conclusion"
+            },
+            {
+              "texte": "σ = 5 000 / 50 = 100 MPa < 117,5 MPa",
+              "quoi": "la vérification"
+            }
+          ],
+          "pied": "On écrit ==la formule==, puis ==les unités== dans le résultat."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier d’écrire la **distance en mètres** dans le moment.",
+            "Mélanger **Re** (limite élastique) et **Rm** (rupture).",
+            "Négliger le **coefficient de sécurité** s.",
+            "Laisser une charpente en **parallélogramme** au lieu de la trianguler.",
+            "Oublier que **σ** dépend de la **section** : fine ou épaisse, pas pareil."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que vaut la **somme des moments** à l’équilibre&nbsp;?",
+            "Quelle est l’unité de **σ**&nbsp;?",
+            "Comment rendre une charpente **indéformable**&nbsp;?"
+          ],
+          "reponses": "1) zéro · 2) le pascal (1 MPa = 1 N/mm²) · 3) en la triangulant"
+        }
+      ]
+    }
+  ]
+}

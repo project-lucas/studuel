@@ -1,0 +1,129 @@
+{
+  "titre": "Les pronoms relatifs",
+  "titreSurligne": "relatifs",
+  "accroche": "Que, quien, el que, cuyo.",
+  "bonus": "**cuyo** s’accorde avec la chose possédée · **lo que** reprend une idée · jamais d’article après <i>cuyo</i>",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/espagnol/les-pronoms-relatifs.webp",
+    "prompt": "a glossy violet chain link joining two golden sentence blocks, tiny sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Que, quien, cuyo…\n¡Choisis bien&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le cas général",
+          "lignes": ["le nom + **que**", "<i>el libro que leo</i>"],
+          "petite": true,
+          "regle": "**Que** est invariable : personnes et choses, sujet ou complément. Après une préposition, on lui ajoute l’**article**.",
+          "note": "<i>la casa en la que vivo</i>"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le tableau des relatifs",
+          "entetes": ["Pronom", "Il reprend", "Quand"],
+          "lignes": [
+            ["<i>que</i>", "personnes, choses", "cas général"],
+            ["<i>quien(es)</i>", "personnes seules", "après préposition, explicative"],
+            ["<i>el que, la que…</i>", "tout", "marquer genre et nombre"],
+            ["<i>cuyo / a / os / as</i>", "un possesseur", "le « dont » de possession"],
+            ["<i>lo que, lo cual</i>", "une idée entière", "jamais un nom"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Cuyo, le dont possessif",
+          "oui": {
+            "titre": "Accord avec la chose",
+            "texte": "<i>El escritor **cuya** novela leí</i> (<i>novela</i> fém.) · <i>La casa **cuyos** muros son blancos</i>."
+          },
+          "non": {
+            "titre": "Jamais",
+            "texte": "<i>cuyo el libro</i> (article) et <i>¿Cuyo es?</i> (question) n’existent pas&nbsp;: <i>¿De quién es?</i>"
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "L’écrivain dont j’ai lu les livres&nbsp;: <i>el escritor ___ libros leí.</i> → **cuyos**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Que, quien, lo que",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Que + préposition", "texte": "<i>el libro **del que** te hablé</i> · <i>la casa **en la que** vivo</i>." },
+            { "titre": "Quien", "texte": "Après préposition (<i>la persona con **quien** hablo</i>), en explicative (<i>Mi hermano, **quien** vive en Madrid…</i>)." },
+            { "titre": "Lo que, lo cual", "texte": "Une **idée entière**&nbsp;: <i>Llegó tarde, **lo que** me molestó.</i>" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            { "titre": "Que reprend-on&nbsp;?", "texte": "Un nom → <i>que</i>, <i>el que</i>. Une idée entière → **lo que**." },
+            { "titre": "Préposition&nbsp;?", "texte": "Ajoute l’article à <i>que</i>, ou emploie <i>quien</i> pour une personne." },
+            { "titre": "Possession&nbsp;?", "texte": "**cuyo**, accordé avec la **chose possédée**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            { "titre": "Donde, cuando, como", "texte": "lieu, temps, manière&nbsp;: **sans accent** en relatif." },
+            { "titre": "Quien mucho abarca", "texte": "sans antécédent&nbsp;: <i>Quien mucho abarca, poco aprieta.</i>" },
+            { "titre": "El cual, la cual", "texte": "registre soutenu, après une préposition longue." },
+            { "titre": "Cuyo", "texte": "<i>El escritor cuya novela leí</i>&nbsp;: accord avec <i>novela</i>." }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>el libro de que te hablé</i> → <i>el libro **del que** te hablé</i>.",
+            "<i>Llegó tarde, el que me molestó</i> → <i>…**lo que** me molestó</i>.",
+            "<i>cuyo el libro</i> → <i>cuyo libro</i> (jamais d’article).",
+            "<i>el escritor cuyo novela</i> → <i>cuy**a** novela</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "La maison où je vis&nbsp;: <i>la casa en ___ vivo.</i> (la que / que)",
+            "Il est arrivé tard, ce qui m’a gêné&nbsp;: <i>…, ___ me molestó.</i>",
+            "Le mur dont les murs sont blancs&nbsp;: <i>la casa ___ muros…</i>"
+          ],
+          "reponses": "1) la que 2) lo que 3) cuyos"
+        }
+      ]
+    }
+  ]
+}

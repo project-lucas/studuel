@@ -1,0 +1,113 @@
+{
+  "titre": "La vision",
+  "titreSurligne": "vision",
+  "accroche": "Une image nette sur la rétine.",
+  "bonus": "V = 1 ÷ f’ (en **dioptries δ**, f’ en m) · V = V₁ + V₂ · convergente **V > 0** · divergente **V < 0**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-sante/la-vision-l-oeil-les-lentilles-et-la-correction.webp",
+    "prompt": "a glossy violet eye with a golden lens in front of it, a pair of round glasses beside it, light rays converging, sparkles"
+  },
+  "marcel": "Myope, lentille\ndivergente !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La vergence",
+          "petite": true,
+          "lignes": ["V = {1/f’}", "V = V₁ + V₂"],
+          "regle": "**f’** distance focale (m), **V** vergence en dioptries (δ). Deux lentilles accolées&nbsp;: les vergences s’**additionnent**.",
+          "note": "f’ = OF’"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "L’œil, un système optique",
+          "entetes": ["L’élément", "Son rôle", "Modèle"],
+          "lignes": [
+            ["Cornée + cristallin", "font converger", "lentille convergente"],
+            ["Iris", "règle la lumière", "diaphragme"],
+            ["Rétine", "reçoit l’image", "écran"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Les défauts de la vision et leur correction",
+          "entetes": ["Défaut", "Ce qui se passe", "Correction"],
+          "lignes": [
+            ["Myopie", "image **avant** la rétine, loin flou", "lentille **divergente**"],
+            ["Hypermétropie", "image **derrière** la rétine", "lentille **convergente**"],
+            ["Presbytie", "accommodation insuffisante, près flou", "lentille **convergente**"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une lentille a une distance focale de 50 cm. Sa __vergence__&nbsp;?",
+          "calcul": "f’ = 50 cm = 0,50 m",
+          "aparte": "en mètres&nbsp;!",
+          "resultat": "V = 1 ÷ 0,50 = [[+ 2,0 δ]]"
+        },
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Construire l’image d’un point B",
+          "etapes": [
+            { "titre": "Par O", "texte": "le rayon passant par le centre optique **n’est pas dévié**" },
+            { "titre": "Parallèle", "texte": "le rayon parallèle à l’axe ressort par **F’**" },
+            { "titre": "Croiser", "texte": "les deux rayons se coupent en **B’**" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "f’ = 50 cm = 0,50 m", "quoi": "convertir" },
+            { "texte": "V = 1 ÷ f’ = 1 ÷ 0,50 = + 2,0 δ", "quoi": "formule, nombres" },
+            { "texte": "V > 0&nbsp;: la lentille est convergente.", "quoi": "conclure" }
+          ],
+          "pied": "Pour voir de près, le cristallin ==se bombe== (accommodation)&nbsp;: sa vergence augmente."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Garder **f’ en cm** dans V = 1 ÷ f’.",
+            "Corriger la **myopie** par une lentille convergente.",
+            "Oublier le **signe** de la vergence.",
+            "Confondre image **réelle** (sur écran) et **virtuelle**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**V** pour f’ = 25 cm&nbsp;?",
+            "Quelle lentille corrige une **myopie**&nbsp;?",
+            "Deux lentilles de + 2 δ et − 0,5 δ accolées&nbsp;: **V**&nbsp;?"
+          ],
+          "reponses": "1) + 4 δ · 2) une divergente · 3) + 1,5 δ"
+        }
+      ]
+    }
+  ]
+}

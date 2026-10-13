@@ -1,0 +1,119 @@
+{
+  "titre": "Vérifications",
+  "titreSurligne": "Vérifications",
+  "accroche": "« Ça a l’air de marcher » ne suffit pas.",
+  "bonus": "tests = présence de bugs, jamais leur absence · invariant = juste · variant = termine",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/nsi/verifications.webp",
+    "prompt": "a glossy violet shield with a golden check mark and a small golden magnifying glass, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Les cas limites\nfont tomber les bugs !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Un bon jeu de tests",
+          "entetes": ["Cas", "Exemples"],
+          "lignes": [
+            ["**Courants**", "liste ordinaire, valeur typique"],
+            ["**Limites**", "liste vide, un élément, zéro, négatif"],
+            ["**Interdits**", "la fonction refuse proprement"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Test unitaire", "definition": "vérifie **une** fonction" },
+            { "terme": "Intégration", "definition": "les fonctions marchent **ensemble**" },
+            { "terme": "Régression", "definition": "un bug **réapparu** dans du code qui marchait" },
+            { "terme": "Invariant", "definition": "propriété vraie à chaque tour de boucle" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Déboguer en quatre temps",
+          "etapes": [
+            { "titre": "Reproduire", "texte": "avec l’entrée la plus petite" },
+            { "titre": "Localiser", "texte": "afficher, ou pas à pas" },
+            { "titre": "Comprendre", "texte": "la cause **avant** de corriger" },
+            { "titre": "Tester", "texte": "ajouter le test qui échouait" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "<b>maxi(liste)</b>&nbsp;: quels tests choisir&nbsp;? __Trois cas__.",
+          "calcul": "[3, 9, 4] · [7] · []",
+          "aparte": "courant, limite, limite",
+          "resultat": "= [[9 · 7 · erreur prévue]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Bonnes pratiques",
+          "deux": false,
+          "items": [
+            { "titre": "Nommer", "texte": "clairement, indenter, docstring." },
+            { "titre": "Commenter", "texte": "le **pourquoi**, jamais le quoi." },
+            { "titre": "Versions", "texte": "historique, retour arrière, travail à plusieurs." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "les tests montrent la **présence** de bugs", "quoi": "leur limite" },
+            { "texte": "il faut **prouver** pour garantir", "quoi": "la conclusion" },
+            { "texte": "invariant vrai, variant décroît", "quoi": "la preuve de boucle" }
+          ],
+          "pied": "Cent tests réussis ne prouvent ==rien== sur le cent-unième."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Ne tester que des cas **courants**.",
+            "Conclure « c’est correct » parce que les tests passent.",
+            "Corriger **au hasard**&nbsp;: le bug se déplace.",
+            "Commenter le **quoi** au lieu du pourquoi.",
+            "Supprimer les tests après la correction&nbsp;: la **régression** reviendra.",
+            "Déboguer sans avoir **reproduit** le bug.",
+            "Tester avec les **mêmes** valeurs que celles qu’on avait en tête en codant."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quels cas **trouvent** le plus de bugs&nbsp;?",
+            "Que détecte un test **rejoué**&nbsp;?",
+            "Que garantit un **variant** qui décroît&nbsp;?"
+          ],
+          "reponses": "1) les cas limites · 2) une régression · 3) que la boucle termine"
+        }
+      ]
+    }
+  ]
+}

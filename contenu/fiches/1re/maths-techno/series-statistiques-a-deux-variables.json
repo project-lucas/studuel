@@ -1,0 +1,115 @@
+{
+  "titre": "Deux variables",
+  "titreSurligne": "variables",
+  "accroche": "Un nuage, un point moyen, une droite.",
+  "bonus": "G(x̄ ; ȳ) · Mayer : droite (G₁G₂) · moindres carrés : calculatrice · interpoler ✔ · extrapoler **prudence**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths-techno/series-statistiques-a-deux-variables.webp",
+    "prompt": "a glossy violet scatter of dots with a golden straight line passing through them and one larger golden dot as the mean point, tiny sparkles"
+  },
+  "marcel": "La droite passe\npar le point moyen !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le point moyen",
+          "petite": true,
+          "lignes": ["G(x̄ ; ȳ)", "x̄ = {Σ xᵢ/n}"],
+          "regle": "x̄ est la moyenne des abscisses, ȳ celle des ordonnées. Les droites de **Mayer** et des **moindres carrés** passent par G.",
+          "note": "G est sur la droite&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois ajustements",
+          "entetes": ["Méthode", "Principe"],
+          "lignes": [
+            ["**Au jugé**", "à la règle, au milieu du nuage"],
+            ["**Mayer**", "deux groupes, G₁ et G₂, droite (G₁G₂)"],
+            ["**Moindres carrés**", "somme des écarts² minimale"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode de Mayer en quatre temps",
+          "etapes": [
+            { "titre": "Deux groupes", "texte": "couper la série en deux paquets d’effectifs voisins" },
+            { "titre": "G₁ et G₂", "texte": "calculer le point moyen de chaque groupe" },
+            { "titre": "Droite", "texte": "coefficient a = {yG₂ − yG₁/xG₂ − xG₁}, puis b" },
+            { "titre": "Prévoir", "texte": "contrôler par G, puis lire ou calculer" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "x : 1 ; 2 ; 3 ; 4 et y : 3 ; 5 ; 6 ; 10. __Mayer__&nbsp;?",
+          "calcul": "G₁(1,5 ; 4), G₂(3,5 ; 8)\na = (8 − 4) ÷ 2 = 2, b = 4 − 3 = 1",
+          "aparte": "contrôle par G(2,5 ; 6)",
+          "resultat": "y = [[2x + 1]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Interpoler", "texte": "Estimer **à l’intérieur** des données&nbsp;: risque faible." },
+            { "titre": "Extrapoler", "texte": "Prévoir **au-delà**&nbsp;: x = 6 donne y = 13, à prendre avec prudence." },
+            { "titre": "Point moyen", "texte": "x̄ = 10 ÷ 4 = 2,5 et ȳ = 24 ÷ 4 = 6, donc **G(2,5 ; 6)**." },
+            { "titre": "Corrélation", "texte": "Un bon ajustement **ne prouve pas** que x cause y." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "G₁(1,5 ; 4) et G₂(3,5 ; 8)", "quoi": "les points moyens" },
+            { "texte": "a = {8 − 4/3,5 − 1,5} = 2", "quoi": "le coefficient" },
+            { "texte": "4 = 2 × 1,5 + b, donc b = 1&nbsp;: y = 2x + 1", "quoi": "la conclusion" }
+          ],
+          "pied": "Contrôle&nbsp;: 2 × 2,5 + 1 = ==6==, la droite passe par G. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier de **contrôler** que la droite passe par G.",
+            "Extrapoler très loin et **tout croire**.",
+            "Conclure que x est la **cause** de y.",
+            "Inverser x et y dans le coefficient **a**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "x : 2 ; 4 et y : 1 ; 5&nbsp;: **point moyen**&nbsp;?",
+            "Droite par G₁(1 ; 2) et G₂(3 ; 8)&nbsp;: **coefficient a**&nbsp;?",
+            "Prévoir hors du domaine observé&nbsp;: **interpoler** ou extrapoler&nbsp;?"
+          ],
+          "reponses": "1) G(3 ; 3) · 2) a = 6 ÷ 2 = 3 · 3) extrapoler, avec prudence"
+        }
+      ]
+    }
+  ]
+}

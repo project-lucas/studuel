@@ -1,0 +1,200 @@
+{
+  "titre": "Squelette et imagerie",
+  "titreSurligne": "imagerie",
+  "accroche": "La charpente du mouvement.",
+  "bonus": "**206 os** · radio et scanner = **rayons X** · **IRM** = champ magnétique, sans rayonnement ionisant",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biologie-physiopathologie/le-squelette-les-articulations-et-leur-imagerie.webp",
+    "prompt": "a glossy violet knee joint skeleton with golden cartilage and a small golden X-ray frame, sparkles"
+  },
+  "marcel": "Des os et\ndes images !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le squelette",
+          "entetes": [
+            "Ensemble",
+            "Contenu"
+          ],
+          "lignes": [
+            [
+              "**Axial**",
+              "crâne, colonne vertébrale, côtes, sternum"
+            ],
+            [
+              "**Appendiculaire**",
+              "ceintures scapulaire et pelvienne, membres"
+            ],
+            [
+              "**Moelle rouge**",
+              "fabrique les cellules sanguines"
+            ],
+            [
+              "**Rôles**",
+              "soutien, protection, levier, réserve de calcium"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "L’articulation mobile",
+          "items": [
+            {
+              "terme": "Cartilage",
+              "definition": "recouvre l’os, amortit et glisse"
+            },
+            {
+              "terme": "Capsule",
+              "definition": "manchon fibreux"
+            },
+            {
+              "terme": "Synoviale",
+              "definition": "sécrète le **liquide synovial**"
+            },
+            {
+              "terme": "Ligament",
+              "definition": "relie **os à os**"
+            },
+            {
+              "terme": "Tendon",
+              "definition": "relie **muscle à os**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Trois techniques d’imagerie",
+          "entetes": [
+            "Technique",
+            "Principe",
+            "Limite"
+          ],
+          "lignes": [
+            [
+              "**Radiographie**",
+              "rayons X absorbés&nbsp;: l’os apparaît **blanc**",
+              "rayons ionisants, image plane"
+            ],
+            [
+              "**Scanner**",
+              "rayons X, reconstruction en **coupes** et 3D",
+              "dose plus élevée"
+            ],
+            [
+              "**IRM**",
+              "champ magnétique et ondes&nbsp;: **tissus mous**",
+              "contre-indiquée avec certains métaux"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Choisir un examen",
+          "etapes": [
+            {
+              "titre": "Cibler",
+              "texte": "os (fracture) ou tissu mou (ligament, encéphale)"
+            },
+            {
+              "titre": "Vérifier",
+              "texte": "contre-indications&nbsp;: grossesse, pacemaker, métal"
+            },
+            {
+              "titre": "Choisir",
+              "texte": "radio, scanner ou IRM"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "L’IRM est indiquée pour explorer les tissus mous (ligaments, ménisques, encéphale).",
+              "quoi": "justifier"
+            },
+            {
+              "texte": "Elle n’utilise aucun rayonnement ionisant.",
+              "quoi": "avantage"
+            },
+            {
+              "texte": "Elle est contre-indiquée avec certains dispositifs métalliques.",
+              "quoi": "limite"
+            }
+          ],
+          "pied": "Radio et scanner montrent l’==os==&nbsp;; l’IRM montre ce que les rayons X voient mal."
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Racines à connaître",
+          "deux": true,
+          "items": [
+            {
+              "titre": "osté(o)",
+              "texte": "os"
+            },
+            {
+              "titre": "arthr(o)",
+              "texte": "articulation"
+            },
+            {
+              "titre": "chondr(o)",
+              "texte": "cartilage"
+            },
+            {
+              "titre": "cox(o), gon(o)",
+              "texte": "hanche, genou"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **ligament** (os-os) et **tendon** (muscle-os).",
+            "Prescrire l’**IRM** à une personne avec un éclat métallique.",
+            "Oublier que radio et scanner sont **ionisants**.",
+            "Dire que l’IRM utilise des **rayons X**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle technique n’utilise **aucun rayonnement ionisant**&nbsp;?",
+            "Que relie un **tendon**&nbsp;?",
+            "Que désigne la **gonarthrose**&nbsp;?"
+          ],
+          "reponses": "1) l’IRM · 2) un muscle à un os · 3) l’arthrose du genou"
+        }
+      ]
+    }
+  ]
+}

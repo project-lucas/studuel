@@ -1,0 +1,111 @@
+{
+  "titre": "Système de protection",
+  "titreSurligne": "protection",
+  "accroche": "Régimes, branches, complémentaires.",
+  "bonus": "**Régime général** · **MSA** · **2021** : branche autonomie · **2020** : les indépendants rejoignent le régime général",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/sciences-sanitaires-sociales/l-organisation-du-systeme-de-protection-sociale.webp",
+    "prompt": "a glossy violet building with golden columns and five golden branches growing from it like a tree, sparkles, same art style as the reference icons, on magenta background, no text"
+  },
+  "marcel": "Derrière la carte Vitale,\ntout un réseau !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les mots clés",
+          "items": [
+            { "terme": "Régime général", "definition": "couvre la **grande majorité** de la population (salariés du privé, indépendants depuis 2020)" },
+            { "terme": "Complémentaire", "definition": "couvre ce que le régime de base **ne rembourse pas**" },
+            { "terme": "Subsidiaire", "definition": "n’intervient qu’**en dernier recours**" },
+            { "terme": "Aide sociale", "definition": "obligation de la collectivité, dont le **département** est chef de file" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Branches et caisses",
+          "entetes": ["Branche", "Caisse nationale", "Local"],
+          "lignes": [
+            ["**Maladie**, AT-MP", "CNAM", "CPAM"],
+            ["**Vieillesse**", "CNAV", "Carsat"],
+            ["**Famille**", "CNAF", "CAF"],
+            ["**Autonomie**", "CNSA", "départements, MDPH"],
+            ["**Recouvrement**", "Urssaf", "Urssaf"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les composantes du système",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Sécurité sociale", "texte": "Maladie, AT-MP, vieillesse, famille, autonomie : les **régimes de base**." },
+            { "titre": "Retraite complémentaire", "texte": "**Agirc-Arrco** pour les salariés du privé." },
+            { "titre": "Assurance chômage", "texte": "Gérée par l’**Unédic**, versée par **France Travail** depuis 2024." },
+            { "titre": "Complémentaire santé", "texte": "Mutuelles, institutions de prévoyance, assurances ; **obligatoire** pour les salariés du privé depuis 2016." },
+            { "titre": "Aide sociale", "texte": "**Départements** (RSA, ASE, APA, PCH) et communes via le **CCAS**." },
+            { "titre": "Autres régimes", "texte": "**MSA** (agricole) et régimes spéciaux." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Consultation à 30 €",
+          "etapes": [
+            { "titre": "Assurance maladie", "texte": "rembourse **70 %** : 21 €, moins **2 €** de participation forfaitaire" },
+            { "titre": "Complémentaire", "texte": "rembourse le **ticket modérateur** : 30 %, soit 9 €" },
+            { "titre": "Patient", "texte": "garde les **2 €** de participation forfaitaire" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "La CPAM est le réseau local de la CNAM, branche maladie du régime général.", "quoi": "situer" },
+            { "texte": "La mutuelle est complémentaire : elle rembourse le ticket modérateur.", "quoi": "distinguer" },
+            { "texte": "L’aide sociale est subsidiaire : elle intervient quand les autres solutions sont épuisées.", "quoi": "qualifier" }
+          ],
+          "pied": "Le **département** est le ==chef de file== de l’aide sociale."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **CAF**, **CPAM**, **France Travail** et **département**.",
+            "Dire que la mutuelle rembourse la **participation forfaitaire**.",
+            "Croire que l’**Unédic** verse les allocations : c’est France Travail.",
+            "Oublier que la Sécu a **cinq branches** depuis 2021."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle caisse gère la branche **famille** ?",
+            "Que rembourse la **complémentaire** santé ?",
+            "Qui est le chef de file de l’**aide sociale** ?"
+          ],
+          "reponses": "1) la CNAF, avec les CAF · 2) le ticket modérateur · 3) le département"
+        }
+      ]
+    }
+  ]
+}

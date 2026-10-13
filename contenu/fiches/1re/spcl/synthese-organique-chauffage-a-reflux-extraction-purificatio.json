@@ -1,0 +1,156 @@
+{
+  "titre": "Synthèse organique",
+  "titreSurligne": "Synthèse",
+  "accroche": "Fabriquer, isoler, purifier.",
+  "bonus": "Reflux&nbsp;: eau **en bas, sortie en haut** · phase la plus **dense en bas** · ballon rempli à **moitié** au plus",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/spcl/synthese-organique-chauffage-a-reflux-extraction-purificatio.webp",
+    "prompt": "a glossy violet round-bottom flask with a golden condenser on top in a reflux setup, golden vapor drops, sparkles"
+  },
+  "marcel": "Réagir, isoler,\npurifier&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 1,
+          "titre": "Les trois temps",
+          "etapes": [
+            {
+              "titre": "Transformer",
+              "texte": "chauffage à **reflux**"
+            },
+            {
+              "titre": "Isoler",
+              "texte": "**extraction** ou filtration"
+            },
+            {
+              "titre": "Purifier",
+              "texte": "distillation, **recristallisation**"
+            }
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le reflux",
+          "items": [
+            {
+              "terme": "Ballon",
+              "definition": "réactifs et **pierre ponce** pour régulariser l’ébullition"
+            },
+            {
+              "terme": "Réfrigérant à boules",
+              "definition": "vertical, eau par le **bas**"
+            },
+            {
+              "terme": "Intérêt",
+              "definition": "les vapeurs **retombent**&nbsp;: aucune perte de matière"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Purifier",
+          "entetes": [
+            "Technique",
+            "Pour",
+            "Principe"
+          ],
+          "lignes": [
+            [
+              "**Distillation** simple",
+              "liquides",
+              "le plus volatil se vaporise puis se condense"
+            ],
+            [
+              "**Recristallisation**",
+              "solides",
+              "soluble à chaud, peu à froid"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Arôme de banane&nbsp;: acétate d’isoamyle. Dans quelle phase est l’__ester__ après décantation&nbsp;?",
+          "calcul": "ester moins dense que l’eau salée",
+          "aparte": "le sel : relargage",
+          "resultat": "ester dans la [[phase du haut]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le solvant extracteur",
+          "oui": {
+            "titre": "Bon extracteur",
+            "texte": "**Non miscible** avec l’eau, dissout **mieux** le produit, peu dangereux et volatil."
+          },
+          "non": {
+            "titre": "Mauvais choix",
+            "texte": "Un solvant **miscible** avec l’eau&nbsp;: une seule phase, pas d’extraction."
+          },
+          "essai": {
+            "texte": "On agite en <i>dégazant</i> régulièrement, on laisse reposer, on compare les densités pour garder la bonne phase."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Chauffage à reflux&nbsp;: les vapeurs se condensent et retombent.",
+              "quoi": "pourquoi le reflux"
+            },
+            {
+              "texte": "Extraction par un solvant non miscible, phase la plus dense en bas.",
+              "quoi": "l’ampoule"
+            },
+            {
+              "texte": "Lavage, séchage, puis distillation ou recristallisation.",
+              "quoi": "la purification"
+            }
+          ],
+          "pied": "Précise ==où entre l’eau== dans le réfrigérant&nbsp;: par le bas."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Eau du réfrigérant qui entre par le **haut**.",
+            "Chauffer un montage **fermé** sans reflux ni issue.",
+            "Garder la **mauvaise phase** sans comparer les densités."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Par où entre l’**eau** du réfrigérant&nbsp;?",
+            "Quelle phase est **en bas** dans l’ampoule&nbsp;?",
+            "Quelle technique purifie un **solide**&nbsp;?"
+          ],
+          "reponses": "1) par le bas · 2) la plus dense · 3) la recristallisation"
+        }
+      ]
+    }
+  ]
+}

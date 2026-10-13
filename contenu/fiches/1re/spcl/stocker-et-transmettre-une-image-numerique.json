@@ -1,0 +1,166 @@
+{
+  "titre": "Image numérique",
+  "titreSurligne": "numérique",
+  "accroche": "Des millions de nombres à stocker.",
+  "bonus": "1 octet = **8 bits** · 1 Mo = 10⁶ octets · 8 bits par couleur = **256** valeurs",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/spcl/stocker-et-transmettre-une-image-numerique.webp",
+    "prompt": "a glossy violet photo frame made of tiny golden pixels with a sparkling data stream flowing out, sparkles"
+  },
+  "marcel": "Un pixel,\ntrois octets !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le codage RVB",
+          "entetes": [
+            "Couleur",
+            "R",
+            "V",
+            "B"
+          ],
+          "lignes": [
+            [
+              "Noir",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "Blanc",
+              "255",
+              "255",
+              "255"
+            ],
+            [
+              "Rouge pur",
+              "255",
+              "0",
+              "0"
+            ],
+            [
+              "Jaune",
+              "255",
+              "255",
+              "0"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Taille et durée",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "taille = pixels × octets/pixel",
+            "durée = {taille (bits)/débit}"
+          ],
+          "regle": "RVB 24 bits&nbsp;: **3 octets** par pixel. Niveaux de gris&nbsp;: **1 octet**.",
+          "note": "octets × 8 = bits !"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer une durée de transfert",
+          "etapes": [
+            {
+              "titre": "Convertir",
+              "texte": "la taille en **bits** (octets × 8)"
+            },
+            {
+              "titre": "Diviser",
+              "texte": "par le **débit** en bit·s⁻¹"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "durée en **secondes**, avec l’unité"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Image de 4,5 Mo, débit 20 Mbit·s⁻¹. La __durée__&nbsp;?",
+          "calcul": "4,5 × 10⁶ × 8 = 3,6 × 10⁷ bits",
+          "aparte": "octets → bits",
+          "resultat": "t = 3,6 × 10⁷ ÷ 2,0 × 10⁷ = [[1,8 s]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Définition ou résolution",
+          "oui": {
+            "titre": "Définition",
+            "texte": "Nombre de **pixels** de l’image (6 000 × 4 000)."
+          },
+          "non": {
+            "titre": "Résolution",
+            "texte": "Pixels par unité de longueur, en **ppp** (pixels par pouce)."
+          },
+          "essai": {
+            "texte": "3 000 pixels imprimés à <i>300 ppp</i> font 10 pouces, soit environ 25 cm."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "4 000 × 3 000 = 12 × 10⁶ pixels",
+              "quoi": "le nombre de pixels"
+            },
+            {
+              "texte": "12 × 10⁶ × 3 = 36 × 10⁶ octets",
+              "quoi": "3 octets par pixel"
+            },
+            {
+              "texte": "taille = 36 Mo, sans compression",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "JPEG compresse, parfois ==avec perte== de qualité."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Diviser des **octets** par un débit en **bits**.",
+            "Oublier que RVB prend **3 octets** par pixel.",
+            "Confondre **Mo** (10⁶) et **Mio** (1 024²).",
+            "Mélanger **définition** et **résolution**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien d’**octets** par pixel en RVB 8 bits&nbsp;?",
+            "Combien de **valeurs** par composante sur 8 bits&nbsp;?",
+            "**Durée** : 2 Mo à 8 Mbit·s⁻¹&nbsp;?"
+          ],
+          "reponses": "1) 3 octets · 2) 256 · 3) 16 000 000 ÷ 8 000 000 = 2 s"
+        }
+      ]
+    }
+  ]
+}

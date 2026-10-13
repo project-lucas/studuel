@@ -1,0 +1,111 @@
+{
+  "titre": "Mesure et incertitudes",
+  "titreSurligne": "incertitudes",
+  "accroche": "Une mesure sans incertitude ne vaut rien.",
+  "bonus": "T = 1,43 ± 0,01 s · u = s ÷ √n · z &lt; 2 ⇒ **compatible**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-maths/mesure-et-incertitudes.webp",
+    "prompt": "a glossy violet caliper measuring a golden pendulum bob, a small gold target with clustered arrows, sparkles"
+  },
+  "marcel": "Mesurer, c’est\nassumer un doute !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Série de mesures",
+          "petite": true,
+          "lignes": ["m = {Σ x/n}", "u = {s/√n}"],
+          "regle": "**m** moyenne, **s** écart-type de la série, **n** nombre de mesures, **u** incertitude-type sur la moyenne.",
+          "note": "s se lit sur la calculatrice&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Erreur ou qualité&nbsp;?",
+          "entetes": ["Notion", "Ce que c’est", "Effet"],
+          "lignes": [
+            ["Aléatoire", "lecture, conditions", "mesures **dispersées**"],
+            ["Systématique", "appareil mal étalonné", "tout est **décalé**"],
+            ["Fidélité", "peu de dispersion", "flèches groupées"],
+            ["Justesse", "moyenne proche du vrai", "centre touché"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Calculer", "texte": "la moyenne m et l’écart-type s de la série" },
+            { "titre": "Diviser", "texte": "u = s ÷ √n, arrondie à 1 ou 2 chiffres significatifs" },
+            { "titre": "Écrire", "texte": "m ± u, la valeur arrondie à la même décimale que u" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Période d’un pendule, 5 mesures&nbsp;: 1,42 ; 1,45 ; 1,40 ; 1,44 ; 1,44 s. Le __résultat__&nbsp;?",
+          "calcul": "m = 7,15 ÷ 5 = 1,43 s, s ≈ 0,020 s",
+          "aparte": "u = 0,020 ÷ √5 ≈ 0,009 s",
+          "resultat": "T = [[1,43 ± 0,01 s]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Comparer à la référence",
+          "oui": { "titre": "z inférieur à 2", "texte": "z = |mesure − référence| ÷ u. Si z &lt; 2 environ, la mesure est **compatible** avec la référence." },
+          "non": { "titre": "z supérieur à 2", "texte": "Écart trop grand&nbsp;: on cherche une **erreur systématique** (frottements, longueur mal mesurée)." },
+          "essai": { "texte": "g = 9,70 ± 0,05 m/s², référence 9,81&nbsp;: z = <i>0,11 ÷ 0,05 = 2,2</i>, juste au-delà de 2." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "m = 1,43 s ; s ≈ 0,020 s", "quoi": "moyenne et écart-type" },
+            { "texte": "u = s ÷ √n = 0,020 ÷ √5 ≈ 0,009 s", "quoi": "l’incertitude" },
+            { "texte": "T = 1,43 ± 0,01 s", "quoi": "avec l’unité" }
+          ],
+          "pied": "L’incertitude garde ==1 ou 2 chiffres significatifs==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire « 1,4312 ± 0,009 »&nbsp;: **trop de chiffres** dans la valeur.",
+            "Oublier de diviser s par **√n**.",
+            "Confondre **fidélité** et **justesse**.",
+            "Écrire un résultat **sans unité**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**Moyenne** de 12 ; 14 ; 13&nbsp;?",
+            "**u** pour s = 0,6 et n = 9&nbsp;?",
+            "Mesure 9,80 ± 0,10, référence 9,81&nbsp;: **compatible**&nbsp;?"
+          ],
+          "reponses": "1) 13 · 2) 0,2 (0,6 ÷ 3) · 3) oui, z = 0,1 &lt; 2"
+        }
+      ]
+    }
+  ]
+}

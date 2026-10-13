@@ -1,0 +1,108 @@
+{
+  "titre": "Mesurer la délinquance",
+  "titreSurligne": "délinquance",
+  "accroche": "Trois sources, aucune parfaite.",
+  "bonus": "Une hausse des plaintes : **plus de violences** ou **plus de paroles** de victimes ?",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/ses/comment-mesurer-le-niveau-de-la-delinquance.webp",
+    "prompt": "a glossy violet magnifying glass over a golden bar chart with one bar hidden in shadow, sparkles, same art style as the reference icons, on magenta background, no text"
+  },
+  "marcel": "Compter, c’est\nchoisir comment !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Trois sources",
+          "entetes": ["Source", "Ce qu’elle compte", "Limite"],
+          "lignes": [
+            ["**Statistiques administratives**", "plaintes, condamnations", "seulement ce qui est **déclaré**"],
+            ["**Enquêtes de victimation**", "atteintes **subies**", "reposent sur le **souvenir**"],
+            ["**Chiffre noir**", "l’écart entre les deux", "ne se mesure pas directement"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le chiffre noir",
+          "entetes": ["Infraction", "Chiffre noir", "Pourquoi"],
+          "lignes": [
+            ["**Vol de voiture**", "très **faible**", "l’assurance exige la plainte"],
+            ["**Violences intrafamiliales**", "très **élevé**", "honte, peur, dépendance"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce qu’il faut savoir expliquer",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Activité", "texte": "Plus de contrôles routiers, **mécaniquement** plus d’infractions constatées." },
+            { "titre": "Législation", "texte": "Un acte peut **entrer ou sortir** du champ pénal." },
+            { "titre": "Plainte", "texte": "La **propension à porter plainte** varie selon l’infraction." },
+            { "titre": "Victimation", "texte": "<i>Cadre de vie et sécurité</i> : un échantillon **représentatif**." },
+            { "titre": "Sans victime", "texte": "Trafic, corruption, fraude fiscale : **mal couverts**." },
+            { "titre": "Filtre pénal", "texte": "Détenus surtout **jeunes, masculins, populaires** : la délinquance en col blanc est moins sanctionnée." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Lire un chiffre de délinquance",
+          "etapes": [
+            { "titre": "Source", "texte": "plaintes ou enquête de victimation ?" },
+            { "titre": "Biais", "texte": "activité des services, loi, plaintes" },
+            { "titre": "Conclure", "texte": "croiser les sources, nuancer" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Les statistiques administratives ne comptent que les faits déclarés ou constatés.", "quoi": "la limite" },
+            { "texte": "Les enquêtes de victimation interrogent un échantillon sur les atteintes subies.", "quoi": "l’autre source" },
+            { "texte": "L’écart entre les deux est le chiffre noir.", "quoi": "la notion" }
+          ],
+          "pied": "Compter la délinquance est d’abord un ==problème de méthode==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Lire une hausse de plaintes comme une hausse **certaine** des faits.",
+            "Croire que les statistiques mesurent la délinquance **elle-même**.",
+            "Oublier les infractions **sans victime** directe.",
+            "Ignorer le **filtre pénal** inégal."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que désigne le **chiffre noir** ?",
+            "Citez un biais des **statistiques** administratives.",
+            "Quelles infractions les enquêtes couvrent-elles **mal** ?"
+          ],
+          "reponses": "1) l’écart plaintes/faits subis · 2) l’activité des services · 3) celles sans victime directe"
+        }
+      ]
+    }
+  ]
+}

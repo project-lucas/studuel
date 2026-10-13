@@ -1,0 +1,201 @@
+{
+  "titre": "Sons et ondes EM",
+  "titreSurligne": "ondes",
+  "accroche": "De l’énergie qui voyage, sans matière.",
+  "bonus": "**f = 1/T** · **λ = v × T = v/f** · c = 3,00 × 10⁸ m/s · son : 340 m/s dans l’air",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-maths/ondes-sonores-et-electromagnetiques.webp",
+    "prompt": "a glossy violet loudspeaker emitting golden concentric sound waves next to a small golden sine wave, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Le son a besoin\nd’un milieu !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Deux familles",
+          "entetes": [
+            "Onde",
+            "Propagation"
+          ],
+          "lignes": [
+            [
+              "Mécanique (son, vague)",
+              "il faut un **milieu** matériel"
+            ],
+            [
+              "Électromagnétique (lumière, radio)",
+              "possible dans le **vide**"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Onde périodique",
+          "taille": "mini",
+          "lignes": [
+            "f = {1/T}",
+            "λ = v × T"
+          ],
+          "regle": "**f** en hertz (Hz), **T** période en s, **λ** longueur d’onde en m, **v** vitesse en m/s. λ est la distance parcourue pendant **une période**.",
+          "note": "v = c dans le vide"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Échographie : la profondeur",
+          "etapes": [
+            {
+              "titre": "Mesurer",
+              "texte": "la durée Δt de l’**aller-retour** de l’ultrason"
+            },
+            {
+              "titre": "Diviser par 2",
+              "texte": "l’onde fait **aller et retour**"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "d = v × Δt ÷ 2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Écho reçu **40 µs** après l’émission, v ≈ 1 540 m/s. __Profondeur__&nbsp;?",
+          "calcul": "d = 1 540 × 40 × 10⁻⁶ ÷ 2",
+          "aparte": "aller-retour",
+          "resultat": "d ≈ [[3,1 cm]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Le spectre électromagnétique",
+          "entetes": [
+            "Domaine",
+            "λ",
+            "Usage"
+          ],
+          "lignes": [
+            [
+              "X",
+              "10 pm à 10 nm",
+              "radiographie"
+            ],
+            [
+              "Ultraviolet",
+              "10 à 400 nm",
+              "stérilisation"
+            ],
+            [
+              "**Visible**",
+              "**400 à 800 nm**",
+              "vision"
+            ],
+            [
+              "Infrarouge",
+              "800 nm à 1 mm",
+              "télécommande"
+            ],
+            [
+              "Micro-ondes, radio",
+              "> 1 mm",
+              "Wi-Fi, radio"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "Quelle source lumineuse ?",
+          "colonnes": 4,
+          "cartes": [
+            {
+              "titre": "Soleil, corps chaud",
+              "texte": "spectre **continu**"
+            },
+            {
+              "titre": "Lampe spectrale",
+              "texte": "spectre de **raies**"
+            },
+            {
+              "titre": "LED",
+              "texte": "bande **étroite**, bon rendement"
+            },
+            {
+              "titre": "Laser",
+              "texte": "lumière **monochromatique**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Le son",
+          "deux": false,
+          "items": [
+            {
+              "titre": "Audible",
+              "texte": "de **20 Hz à 20 kHz**"
+            },
+            {
+              "titre": "Infrasons / ultrasons",
+              "texte": "en dessous / au-dessus"
+            },
+            {
+              "titre": "Vitesse",
+              "texte": "340 m/s dans l’air, 1 500 m/s dans l’eau"
+            },
+            {
+              "titre": "Longitudinal",
+              "texte": "perturbation **parallèle** à la propagation"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le son se propage dans le **vide**.",
+            "Oublier de **diviser par 2** en échographie.",
+            "Mélanger **µs** et **s** (1 µs = 10⁻⁶ s).",
+            "Confondre la **période** (s) et la **fréquence** (Hz)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Son de 440 Hz, v = 340 m/s : **λ** ?",
+            "Wi-Fi à 2,4 GHz : **λ** ?",
+            "Une onde sonore est-elle **transversale** ?"
+          ],
+          "reponses": "1) 0,77 m · 2) 3,00 × 10⁸ ÷ 2,4 × 10⁹ = 0,125 m · 3) non, longitudinale"
+        }
+      ]
+    }
+  ]
+}

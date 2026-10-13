@@ -1,0 +1,170 @@
+{
+  "titre": "Testostérone",
+  "titreSurligne": "Testostérone",
+  "accroche": "Des gonades sous contrôle du cerveau.",
+  "bonus": "GnRH → **LH** (cellules de Leydig) et **FSH** (cellules de Sertoli) → **testostérone** · **rétrocontrôle négatif**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biochimie-biologie/les-appareils-reproducteurs-et-la-testosterone.webp",
+    "prompt": "a glossy violet brain connected by a golden arrow to a small violet gland, with a golden feedback loop arrow returning, tiny sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Le cerveau pilote,\nle testicule suit !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le testicule, deux fonctions",
+          "items": [
+            {
+              "terme": "Tubes séminifères",
+              "definition": "**spermatogenèse**, avec les cellules de **Sertoli** qui nourrissent les cellules germinales."
+            },
+            {
+              "terme": "Cellules de Leydig",
+              "definition": "entre les tubes&nbsp;: sécrètent la **testostérone** dans le sang."
+            },
+            {
+              "terme": "Caractères sexuels",
+              "definition": "**primaires** = organes génitaux&nbsp;; **secondaires** = apparus à la puberté."
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "L’axe hypothalamo-hypophysaire",
+          "entetes": [
+            "Étage",
+            "Hormone",
+            "Cible"
+          ],
+          "lignes": [
+            [
+              "**Hypothalamus**",
+              "GnRH",
+              "hypophyse antérieure"
+            ],
+            [
+              "**Hypophyse**",
+              "LH et FSH",
+              "testicule"
+            ],
+            [
+              "**Testicule**",
+              "testostérone",
+              "organes, hypothalamus, hypophyse"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Interpréter une perturbation hormonale",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "quelle hormone est ajoutée ou supprimée"
+            },
+            {
+              "titre": "Suivre",
+              "texte": "l’effet sur hypothalamus, hypophyse, testicule"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "rétrocontrôle négatif ou stimulation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un sportif prend des stéroïdes anabolisants de synthèse&nbsp;: ses testicules diminuent de volume.",
+          "calcul": "hormone ajoutée : rétrocontrôle négatif",
+          "aparte": "LH et FSH s’effondrent",
+          "resultat": "testicule [[non stimulé]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Le rôle de la testostérone",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Spermatogenèse",
+              "texte": "elle la **permet**."
+            },
+            {
+              "titre": "Caractères secondaires",
+              "texte": "elle les **entretient** (pilosité, voix, muscles)."
+            },
+            {
+              "titre": "Castration",
+              "texte": "caractères secondaires **régressent**&nbsp;; l’injection les restaure."
+            },
+            {
+              "titre": "Hormone stéroïde",
+              "texte": "dérivée du **cholestérol**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "La testostérone élevée freine la sécrétion de GnRH, de LH et de FSH.",
+              "quoi": "rétrocontrôle"
+            },
+            {
+              "texte": "Sa concentration reste ainsi à peu près constante.",
+              "quoi": "conclure"
+            },
+            {
+              "texte": "La testostérone agit comme un frein sur l’axe.",
+              "quoi": "en plus"
+            }
+          ],
+          "pied": "La LH stimule les cellules de ==Leydig== (testostérone)&nbsp;; la FSH, les cellules de ==Sertoli== (spermatogenèse)."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre cellules de **Leydig** et de **Sertoli**.",
+            "Écrire que la testostérone **stimule** LH et FSH.",
+            "Dire que le testicule ne fait que des **gamètes**.",
+            "Mélanger **GnRH** (hypothalamus) et **LH** (hypophyse)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelles cellules sécrètent la **testostérone**&nbsp;?",
+            "Que stimule la **FSH**&nbsp;?",
+            "Quel est l’effet d’un excès de testostérone sur la **LH**&nbsp;?"
+          ],
+          "reponses": "1) cellules de Leydig · 2) les cellules de Sertoli (spermatogenèse) · 3) elle diminue (rétrocontrôle négatif)"
+        }
+      ]
+    }
+  ]
+}

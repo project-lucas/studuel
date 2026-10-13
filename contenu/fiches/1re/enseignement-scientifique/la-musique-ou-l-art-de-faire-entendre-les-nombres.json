@@ -1,0 +1,111 @@
+{
+  "titre": "Musique et nombres",
+  "titreSurligne": "nombres",
+  "accroche": "Une gamme est une suite de rapports.",
+  "bonus": "**la3 = 440 Hz** · octave **2/1** · quinte **3/2** · demi-ton **2<sup>1/12</sup> ≈ 1,059** · comma ≈ **1,4 %**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/enseignement-scientifique/la-musique-ou-l-art-de-faire-entendre-les-nombres.webp",
+    "prompt": "a glossy violet monochord with a golden string and a movable bridge, small golden musical notes floating above, sparkles"
+  },
+  "marcel": "La musique,\nc’est des maths !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les intervalles consonants",
+          "entetes": ["Intervalle", "Rapport de fréquences"],
+          "lignes": [
+            ["**Octave**", "2/1 (la3 440 Hz → la4 880 Hz)"],
+            ["**Quinte**", "3/2"],
+            ["**Quarte**", "4/3"],
+            ["**Corde**", "longueur ÷ 2 ⇒ fréquence × 2"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le comma",
+          "petite": true,
+          "lignes": ["(3/2)<sup>12</sup> ≈ 129,7", "2<sup>7</sup> = 128"],
+          "regle": "Douze quintes ne retombent **jamais** sur sept octaves : l’écart (≈ **1,4 %**) est le **comma pythagoricien**.",
+          "note": "la gamme ne se referme pas&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Construire la gamme de Pythagore",
+          "etapes": [
+            { "titre": "Empiler", "texte": "des quintes&nbsp;: on multiplie par 3/2" },
+            { "titre": "Ramener", "texte": "dans l’octave de départ en divisant par 2" },
+            { "titre": "Constater", "texte": "7 notes, puis 12… mais un écart (comma)" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un demi-tempéré a pour rapport 2<sup>1/12</sup>. Que donnent 12 demi-tons&nbsp;?",
+          "calcul": "(2<sup>1/12</sup>)<sup>12</sup> = 2<sup>1</sup>",
+          "aparte": "on retombe pile sur l’octave",
+          "resultat": "rapport = [[2/1]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Gamme tempérée",
+          "oui": { "titre": "Ce qu’on gagne", "texte": "**12 demi-tons égaux**, de rapport 2<sup>1/12</sup> ≈ 1,059&nbsp;: **toutes les tonalités** sont jouables." },
+          "non": { "titre": "Ce qu’on perd", "texte": "Plus aucun intervalle **parfaitement juste** (sauf l’octave)." },
+          "essai": { "texte": "Quinte tempérée&nbsp;: <b>1,498</b> au lieu de 1,5. C’est un **compromis assumé** entre pureté arithmétique et liberté musicale." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Les intervalles consonants correspondent à des rapports d’entiers simples.", "quoi": "la découverte" },
+            { "texte": "(3/2)<sup>12</sup> ≈ 129,7 ≠ 2<sup>7</sup> = 128", "quoi": "le calcul" },
+            { "texte": "Aucune puissance de 3/2 n’égale une puissance de 2.", "quoi": "conclure" }
+          ],
+          "pied": "Le tempérament répartit l’écart ==également== sur les douze demi-tons."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que la fréquence est **proportionnelle** à la longueur de corde (elle lui est **inversement** proportionnelle).",
+            "Dire que le comma est **nul**.",
+            "Penser que la gamme tempérée est **exacte**.",
+            "Confondre **quinte** (3/2) et **quarte** (4/3)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Rapport de fréquences d’une **octave**&nbsp;?",
+            "Fréquence du la4, octave au-dessus du la3 (440 Hz)&nbsp;?",
+            "Pourquoi un instrument pythagoricien sonne-t-il faux&nbsp;?"
+          ],
+          "reponses": "1) 2/1 · 2) 880 Hz · 3) la gamme ne se referme pas (comma)"
+        }
+      ]
+    }
+  ]
+}

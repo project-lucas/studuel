@@ -1,0 +1,175 @@
+{
+  "titre": "Beer-Lambert",
+  "titreSurligne": "Beer-Lambert",
+  "accroche": "Plus c’est coloré, plus c’est concentré.",
+  "bonus": "A proportionnelle à c · valable en solution **diluée** (A &lt; 1,5 à 2) · le **blanc** fait le zéro",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biotechnologies/doser-par-spectrophotometrie-la-loi-de-beer-lambert.webp",
+    "prompt": "a glossy violet spectrophotometer with a golden light beam crossing a small cuvette of glowing liquid, sparkles"
+  },
+  "marcel": "L’absorbance monte\navec la concentration !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La loi de Beer-Lambert",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "A = ε × ℓ × c"
+          ],
+          "regle": "**A** absorbance (sans unité) · **ε** coefficient molaire (L·mol<sup>−1</sup>·cm<sup>−1</sup>) · **ℓ** longueur de cuve (cm) · **c** concentration (mol/L).",
+          "note": "à λ et ℓ fixés"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Chromophore",
+              "definition": "coloré par lui-même : **dosage direct**"
+            },
+            {
+              "terme": "Chromogène",
+              "definition": "produit coloré formé par **réaction** : dosage indirect"
+            },
+            {
+              "terme": "Point final",
+              "definition": "on attend la **fin** de la réaction, puis on lit A"
+            },
+            {
+              "terme": "Gamme d’étalonnage",
+              "definition": "tubes de concentrations **connues** croissantes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "À retenir",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Dosage direct",
+              "texte": "ADN à 260&nbsp;nm, protéines à 280&nbsp;nm : molécules qui absorbent seules."
+            },
+            {
+              "titre": "Dosage chimique",
+              "texte": "le **biuret** forme un chromogène avec les protéines."
+            },
+            {
+              "titre": "Dosage enzymatique",
+              "texte": "glucose oxydase-peroxydase pour le **glucose**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Doser avec une gamme",
+          "etapes": [
+            {
+              "titre": "Préparer",
+              "texte": "tubes 0 (blanc), 1 à 4 et essai, **même volume** de réactif"
+            },
+            {
+              "titre": "Mesurer",
+              "texte": "A de chaque tube à **λ<sub>max</sub>**, zéro avec le blanc"
+            },
+            {
+              "titre": "Exploiter",
+              "texte": "droite A = f(m) **par l’origine**, lire l’essai"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Droite A = 0,62 × m (m en mg). Essai A = 0,31 pour 0,5&nbsp;mL. __C__&nbsp;?",
+          "calcul": "m = 0,31 / 0,62 = 0,50 mg",
+          "aparte": "dans 0,5 mL",
+          "resultat": "C = 0,50 / 0,5 = [[1,0 g/L]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Un essai dans la gamme",
+          "oui": {
+            "titre": "Dans la gamme",
+            "texte": "L’absorbance de l’essai tombe **entre** celles des étalons&nbsp;: on lit sur la droite."
+          },
+          "non": {
+            "titre": "Hors gamme",
+            "texte": "A trop forte&nbsp;: la loi n’est plus **linéaire**, on ne peut pas lire."
+          },
+          "essai": {
+            "texte": "Dans ce cas on <i>dilue l’essai</i> puis on tient compte du facteur de dilution."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "La droite A = f(m) passe par l’origine : A est proportionnelle à m.",
+              "quoi": "justifier"
+            },
+            {
+              "texte": "m = A / 0,62 = 0,50 mg dans le tube.",
+              "quoi": "lire"
+            },
+            {
+              "texte": "C = m / V<sub>échantillon</sub> = 1,0 g/L",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Même **cuve**, même **temps** de réaction, un étalon de **contrôle**."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **blanc** pour faire le zéro.",
+            "Oublier le **volume prélevé** ou les dilutions.",
+            "Utiliser la loi pour une solution **trop concentrée**.",
+            "Changer **l’ordre** des réactifs ou le temps."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que vaut l’absorbance d’un **blanc**&nbsp;?",
+            "Quelle est la **forme** de la droite d’étalonnage&nbsp;?",
+            "ℓ doublée, c et ε fixes&nbsp;: **A**&nbsp;?"
+          ],
+          "reponses": "1) zéro · 2) une droite passant par l’origine · 3) A est doublée"
+        }
+      ]
+    }
+  ]
+}

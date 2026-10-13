@@ -1,0 +1,180 @@
+{
+  "titre": "Distance d’arrêt",
+  "titreSurligne": "arrêt",
+  "accroche": "Vitesse ×2, énergie ×4.",
+  "bonus": "v (m/s) = v (km/h) ÷ 3,6 · D<sub>A</sub> = D<sub>R</sub> + D<sub>F</sub> · D<sub>R</sub> = v × t<sub>R</sub> · D<sub>F</sub> varie comme **v²**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-sante/la-securite-routiere-vitesse-et-distance-d-arret.webp",
+    "prompt": "a glossy violet small car with golden skid marks behind it and a round speed limit sign without numbers, sparkles"
+  },
+  "marcel": "Deux fois plus vite,\nquatre fois plus loin !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’énergie cinétique",
+          "petite": true,
+          "lignes": [
+            "E<sub>c</sub> = {1/2} × m × v²"
+          ],
+          "regle": "**E<sub>c</sub>** en joules, **m** en kg, **v** en m/s. Vitesse doublée&nbsp;: énergie **quadruplée**.",
+          "note": "convertir km/h en m/s"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois distances",
+          "entetes": [
+            "Distance",
+            "Définition",
+            "Dépend de"
+          ],
+          "lignes": [
+            [
+              "D<sub>R</sub> réaction",
+              "pendant le temps de réaction (≈ 1 s)",
+              "fatigue, alcool, téléphone"
+            ],
+            [
+              "D<sub>F</sub> freinage",
+              "du début du freinage à l’arrêt",
+              "v², route, pneus, freins"
+            ],
+            [
+              "D<sub>A</sub> arrêt",
+              "D<sub>R</sub> + D<sub>F</sub>",
+              "tout cela"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": "★",
+          "titre": "Sur route sèche",
+          "entetes": [
+            "Vitesse",
+            "D<sub>R</sub> (1 s)",
+            "D<sub>F</sub>"
+          ],
+          "lignes": [
+            [
+              "90 km/h",
+              "≈ 25 m",
+              "≈ 45 m"
+            ],
+            [
+              "130 km/h",
+              "≈ 36 m",
+              "≈ 95 m"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer une distance d’arrêt",
+          "etapes": [
+            {
+              "titre": "Convertir",
+              "texte": "la vitesse en **m/s** (÷ 3,6)"
+            },
+            {
+              "titre": "Réaction",
+              "texte": "D<sub>R</sub> = v × t<sub>R</sub>, vitesse constante"
+            },
+            {
+              "titre": "Additionner",
+              "texte": "D<sub>A</sub> = D<sub>R</sub> + D<sub>F</sub> (D<sub>F</sub> donnée ou lue)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Voiture de 1 200 kg à 50 km/h. Son __énergie cinétique__&nbsp;?",
+          "calcul": "v = 50 ÷ 3,6 = 13,9 m/s",
+          "aparte": "à 100 km/h&nbsp;: ×4",
+          "resultat": "E<sub>c</sub> = 0,5 × 1 200 × 13,9² ≈ [[1,16 × 10⁵ J]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Rouler plus vite",
+          "oui": {
+            "titre": "Vitesse adaptée",
+            "texte": "Distance de sécurité d’**au moins 2 s**, ceinture, pneus et freins entretenus."
+          },
+          "non": {
+            "titre": "Vitesse excessive",
+            "texte": "Énergie ×4, **D<sub>F</sub> ×4** quand v double."
+          },
+          "essai": {
+            "texte": "À 90 km/h (≈ 25 m/s) avec 1 s de réaction, D<sub>R</sub> ≈ 25 m. Sur route **mouillée**, D<sub>F</sub> augmente (≈ ×1,5)."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "v = 50 ÷ 3,6 ≈ 13,9 m/s",
+              "quoi": "convertir"
+            },
+            {
+              "texte": "E<sub>c</sub> = ½ × 1 200 × 13,9² ≈ 1,16 × 10⁵ J",
+              "quoi": "formule, nombres"
+            },
+            {
+              "texte": "D<sub>R</sub> = 13,9 × 1 ≈ 14 m",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Freiner, c’est ==dissiper toute l’énergie cinétique==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Utiliser **km/h** dans E<sub>c</sub> = ½ m v².",
+            "Oublier le **carré** sur la vitesse.",
+            "Croire que D<sub>F</sub> **double** quand v double.",
+            "Oublier la **distance de réaction**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**E<sub>c</sub>** pour m = 1 000 kg et v = 10 m/s&nbsp;?",
+            "**D<sub>R</sub>** à 20 m/s avec t<sub>R</sub> = 1 s&nbsp;?",
+            "Vitesse ×2&nbsp;: D<sub>F</sub> est multipliée par combien&nbsp;?"
+          ],
+          "reponses": "1) 5,0 × 10⁴ J · 2) 20 m · 3) par 4"
+        }
+      ]
+    }
+  ]
+}

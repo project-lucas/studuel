@@ -1,0 +1,155 @@
+{
+  "titre": "Champ gravitationnel",
+  "titreSurligne": "gravitationnel",
+  "accroche": "Deux masses, toujours attirées.",
+  "bonus": "G ≈ 6,67 × 10⁻¹¹ SI · P = m × g · Terre&nbsp;: g ≈ 9,8 N/kg · Lune&nbsp;: ≈ 1,6 N/kg",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/le-champ-gravitationnel.webp",
+    "prompt": "a glossy violet planet with a golden orbit ring and a small golden moon, arrows pointing to the center, sparkles"
+  },
+  "marcel": "La masse attire,\ntoujours !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Force et champ",
+          "petite": true,
+          "lignes": [
+            "F = G {m<sub>A</sub> m<sub>B</sub>/d²}",
+            "g = G {M/d²}"
+          ],
+          "regle": "**d** distance des centres (m), **M** masse de l’astre (kg). Le champ **g** est dirigé vers le ==centre== de l’astre&nbsp;; une masse m subit F = m × g.",
+          "note": "d est au carré&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Effet de la distance",
+          "entetes": [
+            "La distance",
+            "La force",
+            "Pourquoi"
+          ],
+          "lignes": [
+            [
+              "Doublée",
+              "divisée par **4**",
+              "1 ÷ 2² = 1 ÷ 4"
+            ],
+            [
+              "Triplée",
+              "divisée par **9**",
+              "1 ÷ 3² = 1 ÷ 9"
+            ],
+            [
+              "Divisée par 2",
+              "multipliée par **4**",
+              "1 ÷ (½)² = 4"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "l’astre (masse M) et la distance d entre les **centres**"
+            },
+            {
+              "titre": "Choisir",
+              "texte": "**g** = G × M ÷ d², puis **P** = m × g pour le poids"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "en unités SI, puis conclure avec l’unité (N/kg ou N)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un astronaute de 80 kg sur la Lune (g = 1,6 N/kg). Son __poids__, puis sa masse&nbsp;?",
+          "calcul": "P = m × g = 80 × 1,6",
+          "aparte": "sur Terre&nbsp;: 80 × 9,8 = 784 N",
+          "resultat": "P = [[128 N]], m = 80 kg"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Masse ou poids&nbsp;?",
+          "oui": {
+            "titre": "La masse",
+            "texte": "En **kg**, elle ne dépend que du corps&nbsp;: elle est **invariable**."
+          },
+          "non": {
+            "titre": "Le poids",
+            "texte": "En **N**, P = m × g dépend de l’**astre**&nbsp;: il change avec g."
+          },
+          "essai": {
+            "texte": "Sur la Lune, le même astronaute a la <i>même masse</i> mais un poids <i>six fois plus faible</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "P = m × g",
+              "quoi": "la relation"
+            },
+            {
+              "texte": "P = 80 × 1,6",
+              "quoi": "les nombres"
+            },
+            {
+              "texte": "P = 128 N (la masse reste 80 kg)",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Le champ est ==uniforme== dans une salle de classe, ==non uniforme== pour un satellite."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **masse** (kg) et **poids** (N).",
+            "Oublier le **carré** de la distance.",
+            "Mesurer d à la **surface** et non au centre.",
+            "Dire que g change d’une salle à l’autre."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Distance ×2&nbsp;: la force est multipliée par&nbsp;?",
+            "**P** de 60 kg avec g = 10 N/kg&nbsp;?",
+            "La **masse** change-t-elle sur la Lune&nbsp;?"
+          ],
+          "reponses": "1) ¼ (divisée par 4) · 2) 600 N · 3) non, elle est invariable"
+        }
+      ]
+    }
+  ]
+}

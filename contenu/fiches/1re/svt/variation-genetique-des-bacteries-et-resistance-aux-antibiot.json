@@ -1,0 +1,110 @@
+{
+  "titre": "Bactéries résistantes",
+  "titreSurligne": "résistantes",
+  "accroche": "La sélection naturelle en direct.",
+  "bonus": "L’antibiotique **ne crée pas** la résistance&nbsp;: il **sélectionne** les bactéries déjà résistantes",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/svt/variation-genetique-des-bacteries-et-resistance-aux-antibiot.webp",
+    "prompt": "a glossy violet petri dish with many pale bacteria and a few golden shielded ones surviving around a capsule pill, sparkles"
+  },
+  "marcel": "Les résistantes étaient déjà là,\nl’antibiotique les révèle !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "D’où vient la résistance",
+          "entetes": ["Origine", "Mécanisme"],
+          "lignes": [
+            ["**Mutation**", "spontanée, au hasard"],
+            ["**Conjugaison**", "échange de **plasmides** entre bactéries"],
+            ["**Transformation**", "capture d’ADN libre dans le milieu"],
+            ["**Transduction**", "gènes transportés par un bactériophage"]
+          ]
+        },
+        {
+          "type": "frise",
+          "numero": 2,
+          "titre": "La sélection pas à pas",
+          "etapes": [
+            { "date": "Avant", "texte": "Une mutation **préexiste**, rare, au hasard." },
+            { "date": "Traitement", "texte": "Les bactéries **sensibles** sont éliminées." },
+            { "date": "Après", "texte": "Les résistantes se multiplient et deviennent **majoritaires**." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Accélérer ou freiner",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Surprescription", "texte": "Notamment contre des infections **virales** : l’antibiotique n’y fait rien." },
+            { "titre": "Arrêt précoce", "texte": "Les bactéries les moins sensibles **survivent**." },
+            { "titre": "Élevage", "texte": "Usage **massif**, longtemps comme facteur de croissance." },
+            { "titre": "Antibiogramme", "texte": "Teste **in vitro** la sensibilité et cible la molécule efficace." },
+            { "titre": "Hygiène", "texte": "Isolement des porteurs, **lavage des mains**." },
+            { "titre": "Recherche", "texte": "Nouvelles molécules, **phagothérapie**, sans dispenser du bon usage." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Expliquer l’apparition d’une résistance",
+          "etapes": [
+            { "titre": "Variation", "texte": "des mutations ou des gènes transférés existent déjà" },
+            { "titre": "Sélection", "texte": "l’antibiotique élimine les sensibles, pas les résistantes" },
+            { "titre": "Multiplication", "texte": "les résistantes dominent la population" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "La mutation existe avant le traitement, au hasard.", "quoi": "situer" },
+            { "texte": "L’antibiotique sélectionne les bactéries résistantes, qui se multiplient.", "quoi": "expliquer" },
+            { "texte": "Les transferts de gènes expliquent la rapidité de diffusion.", "quoi": "ajouter" },
+            { "texte": "Une bactérie se divise toutes les vingt minutes&nbsp;: l’évolution est rapide.", "quoi": "chiffrer" }
+          ],
+          "pied": "C’est de la ==sélection naturelle==, observable en quelques jours."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire que l’antibiotique **provoque** la mutation.",
+            "Prescrire contre un **virus** (grippe, rhume).",
+            "**Arrêter** le traitement dès que ça va mieux.",
+            "Oublier les **transferts** de gènes entre bactéries."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "L’antibiotique **crée**-t-il la résistance&nbsp;?",
+            "Quel échange se fait par **plasmide**&nbsp;?",
+            "Quel test choisit la molécule **efficace**&nbsp;?"
+          ],
+          "reponses": "1) non, il sélectionne · 2) la conjugaison · 3) l’antibiogramme"
+        }
+      ]
+    }
+  ]
+}

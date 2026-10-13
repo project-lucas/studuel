@@ -1,0 +1,206 @@
+{
+  "titre": "L’épreuve de maths",
+  "titreSurligne": "maths",
+  "accroche": "Deux heures, sans calculatrice.",
+  "bonus": "2 h · **sans calculatrice** · coefficient 2 · QCM **6 pts** + exercices **14 pts**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths-techno/l-epreuve-anticipee-de-mathematiques.webp",
+    "prompt": "a glossy violet hourglass with golden sand and a small golden pencil next to it, tiny sparkles"
+  },
+  "marcel": "Lis tout,\npuis calcule !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le format",
+          "entetes": [
+            "",
+            "À savoir"
+          ],
+          "lignes": [
+            [
+              "Durée",
+              "**2 heures**"
+            ],
+            [
+              "Calculatrice",
+              "**non autorisée**"
+            ],
+            [
+              "Coefficient",
+              "**2**, notée sur 20"
+            ],
+            [
+              "Partie 1",
+              "automatismes en QCM, **6 pts**"
+            ],
+            [
+              "Partie 2",
+              "2 ou 3 exercices guidés, **14 pts**"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Gérer les 2 heures",
+          "entetes": [
+            "Temps",
+            "Étape"
+          ],
+          "lignes": [
+            [
+              "0 – 25 min",
+              "QCM d’automatismes"
+            ],
+            [
+              "25 – 110 min",
+              "exercices, dans l’ordre voulu"
+            ],
+            [
+              "110 – 120 min",
+              "relecture"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Réussir le QCM en trois temps",
+          "etapes": [
+            {
+              "titre": "Lire les réponses",
+              "texte": "elles orientent le calcul"
+            },
+            {
+              "titre": "Éliminer",
+              "texte": "écarter l’absurde par un ordre de grandeur"
+            },
+            {
+              "titre": "Passer",
+              "texte": "une minute ou deux par question, on y revient à la fin"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Réussir les exercices en trois temps",
+          "etapes": [
+            {
+              "titre": "Tout lire",
+              "texte": "une question s’appuie souvent sur la précédente"
+            },
+            {
+              "titre": "Admettre",
+              "texte": "si tu bloques, admets le résultat et continue"
+            },
+            {
+              "titre": "Rédiger",
+              "texte": "une phrase de conclusion avec l’unité"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Un réflexe sans calculatrice",
+          "donnees": "Une hausse de 10 % puis de 10 %&nbsp;?",
+          "calcul": "1,1 × 1,1\n= 1,21",
+          "aparte": "on multiplie",
+          "resultat": "hausse de [[21 %]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Pourcentage",
+              "texte": "Passer par le **coefficient multiplicateur**."
+            },
+            {
+              "titre": "À connaître",
+              "texte": "1,1² = **1,21** et 0,9² = **0,81**."
+            },
+            {
+              "titre": "Division difficile",
+              "texte": "**Simplifier** la fraction d’abord."
+            },
+            {
+              "titre": "Résultat étrange",
+              "texte": "Contrôler par un **ordre de grandeur**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les thèmes qui reviennent",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Suites",
+              "texte": "capital, population"
+            },
+            {
+              "titre": "Dérivation",
+              "texte": "tangente, bénéfice maximal"
+            },
+            {
+              "titre": "Probabilités",
+              "texte": "arbre, indépendance"
+            },
+            {
+              "titre": "Statistiques",
+              "texte": "nuage, ajustement"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "**Additionner** des pourcentages successifs.",
+            "Oublier de **changer le sens** d’une inégalité.",
+            "Confondre P_A(B) et **P(A ∩ B)**.",
+            "Remplacer x dans **f′** au lieu de f pour un extremum."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle est la **durée** de l’épreuve, et la calculatrice&nbsp;?",
+            "Combien de points valent les **automatismes**&nbsp;?",
+            "Tu bloques sur une question guidée&nbsp;: que fais-tu&nbsp;?"
+          ],
+          "reponses": "1) 2 h, interdite · 2) 6 points · 3) j’admets le résultat et je continue"
+        }
+      ]
+    }
+  ]
+}

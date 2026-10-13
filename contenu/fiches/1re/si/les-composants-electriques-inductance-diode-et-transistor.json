@@ -1,0 +1,186 @@
+{
+  "titre": "Bobine, diode, transistor",
+  "titreSurligne": "transistor",
+  "accroche": "Il module l’énergie, il ne la crée pas.",
+  "bonus": "**Condensateur**&nbsp;: U continue · **Bobine**&nbsp;: I continu · seuil de la diode ≈ **0,7 V**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/les-composants-electriques-inductance-diode-et-transistor.webp",
+    "prompt": "a glossy violet coil inductor, a golden diode symbol and a small transistor chip side by side, tiny golden sparkles, same art style as the reference icons, on magenta background, no text"
+  },
+  "marcel": "Un robinet\nbien commandé !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Bobine ou condensateur",
+          "entetes": [
+            "Composant",
+            "Ne varie pas brusquement",
+            "En continu établi"
+          ],
+          "lignes": [
+            [
+              "**Condensateur**",
+              "la **tension**",
+              "interrupteur ouvert"
+            ],
+            [
+              "**Bobine**",
+              "le **courant**",
+              "un simple **fil**"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Énergie d’une bobine",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "E = {1/2} × L × I²"
+          ],
+          "regle": "L en <b>henrys</b>. La bobine stocke de l’énergie sous forme ==magnétique==.",
+          "note": "couper le courant = surtension&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Diode et transistor",
+          "entetes": [
+            "Composant",
+            "Comportement",
+            "Usage"
+          ],
+          "lignes": [
+            [
+              "**Diode, sens direct**",
+              "conduit au-dessus du seuil (0,7 V)",
+              "redresser, protéger"
+            ],
+            [
+              "**Diode, sens inverse**",
+              "bloque",
+              "protéger une inversion"
+            ],
+            [
+              "**Transistor commutation**",
+              "bloqué ou saturé",
+              "numérique, puissance"
+            ],
+            [
+              "**Transistor amplification**",
+              "sortie = entrée en plus grand",
+              "analogique"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": "★",
+          "titre": "Piloter une charge inductive",
+          "etapes": [
+            {
+              "titre": "Commuter",
+              "texte": "le transistor ouvre et ferme la puissance"
+            },
+            {
+              "titre": "Protéger",
+              "texte": "diode de roue libre en inverse"
+            },
+            {
+              "titre": "Alimenter",
+              "texte": "l’énergie vient de l’alimentation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un microcontrôleur (quelques mA) doit piloter un __moteur__ avec un relais.",
+          "calcul": "transistor en commutation",
+          "aparte": "+ diode de roue libre en inverse",
+          "resultat": "[[transistor]] + diode"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le rôle du transistor",
+          "oui": {
+            "titre": "Il module",
+            "texte": "Un signal **faible** commande un courant **fort**&nbsp;: il ouvre et ferme le robinet."
+          },
+          "non": {
+            "titre": "Il ne fournit pas",
+            "texte": "La puissance vient de l’**alimentation**, jamais du transistor."
+          },
+          "essai": {
+            "texte": "Bobine d’un relais coupée d’un coup&nbsp;: la <i>diode de roue libre</i> offre un chemin au courant."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Ce qu’il faut retenir",
+          "items": [
+            {
+              "titre": "Non linéaires",
+              "texte": "diode et transistor"
+            },
+            {
+              "titre": "LED",
+              "texte": "toujours avec une résistance en série"
+            },
+            {
+              "titre": "Roue libre",
+              "texte": "diode montée en inverse sur la bobine"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le transistor **crée** de l’énergie.",
+            "Couper une bobine **sans diode** de protection.",
+            "Monter la diode de roue libre **dans le mauvais sens**.",
+            "Oublier la résistance d’une **LED**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle grandeur la **bobine** garde-t-elle continue&nbsp;?",
+            "Quel est le seuil d’une **diode** silicium&nbsp;?",
+            "Les deux régimes d’un **transistor**&nbsp;?"
+          ],
+          "reponses": "1) le courant · 2) environ 0,7 V · 3) commutation et amplification"
+        }
+      ]
+    }
+  ]
+}

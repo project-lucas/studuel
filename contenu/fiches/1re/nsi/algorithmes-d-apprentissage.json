@@ -1,0 +1,130 @@
+{
+  "titre": "Apprentissage",
+  "titreSurligne": "Apprentissage",
+  "accroche": "La règle vient des exemples.",
+  "bonus": "supervisé = étiquettes · k plus proches voisins · apprentissage / test",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/nsi/algorithmes-d-apprentissage.webp",
+    "prompt": "a glossy violet brain made of connected golden dots with small golden data points around it, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Je regarde mes voisins\net je vote !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Deux familles",
+          "entetes": ["Famille", "Données", "But"],
+          "lignes": [
+            ["**Supervisé**", "exemples étiquetés", "prédire l’étiquette"],
+            ["**Non supervisé**", "sans étiquette", "trouver une structure"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Classification", "definition": "prédire une **classe**" },
+            { "terme": "Régression", "definition": "prédire une **valeur**" },
+            { "terme": "Partitionnement", "definition": "regrouper des données semblables" },
+            { "terme": "Surapprentissage", "definition": "avoir retenu les exemples sans en tirer de règle" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Les k plus proches voisins",
+          "etapes": [
+            { "titre": "Distances", "texte": "du point nouveau à tous les points connus" },
+            { "titre": "Voisins", "texte": "retenir les **k** plus proches" },
+            { "titre": "Vote", "texte": "classe **majoritaire** parmi eux" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les limites du modèle",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Biais", "texte": "il perpétue des décisions passées inégalitaires." },
+            { "titre": "Corrélation", "texte": "il corrèle sans expliquer." },
+            { "titre": "Couverture", "texte": "il ne sait rien de ce que ses données ignorent." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "k = 3 ; voisins : rouge, bleu, rouge. __Classe du point__&nbsp;?",
+          "calcul": "2 rouges contre 1 bleu",
+          "aparte": "vote majoritaire",
+          "resultat": "= [[rouge]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "Les réglages",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "k trop petit", "texte": "la prédiction suit le **bruit**." },
+            { "titre": "k trop grand", "texte": "les frontières sont **lissées**." },
+            { "titre": "Échelles", "texte": "**normaliser** : sinon une variable écrase l’autre." },
+            { "titre": "Coût", "texte": "pas d’entraînement ; **linéaire** par point à classer." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "séparer apprentissage et test", "quoi": "l’évaluation" },
+            { "texte": "mesurer sur des données jamais vues", "quoi": "le test" },
+            { "texte": "dire d’où viennent les données", "quoi": "les limites" }
+          ],
+          "pied": "Biais, corrélation, ==couverture== : trois limites au programme."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Évaluer sur les données d’**apprentissage**&nbsp;: résultat flatteur et faux.",
+            "Confondre **corrélation** et **cause**.",
+            "Oublier les **biais** des décisions passées.",
+            "Prédire hors de ce que les données **couvrent**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que contiennent les données d’un apprentissage **supervisé**&nbsp;?",
+            "Que fait-on avec les **k voisins**&nbsp;?",
+            "Pourquoi garder un ensemble de **test**&nbsp;?"
+          ],
+          "reponses": "1) des exemples étiquetés · 2) on prend la classe majoritaire · 3) évaluer sur des données jamais vues"
+        }
+      ]
+    }
+  ]
+}

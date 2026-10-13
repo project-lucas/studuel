@@ -1,0 +1,116 @@
+{
+  "titre": "Les éléments chimiques",
+  "titreSurligne": "éléments",
+  "accroche": "Des atomes fabriqués par les étoiles.",
+  "bonus": "**Z** = nombre de **protons** · fusion jusqu’au **fer** · demi-vie : **N = N<sub>0</sub> × (½)<sup>t/T</sup>**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/enseignement-scientifique/un-niveau-d-organisation-les-elements-chimiques.webp",
+    "prompt": "a glossy violet star exploding into golden sparkling atoms and tiny glowing beads, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Nous sommes\nfaits d’étoiles !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Élément", "definition": "même nombre de **protons**, donc même numéro atomique **Z**" },
+            { "terme": "Isotopes", "definition": "même Z, **neutrons différents** : carbone 12 et carbone 14" },
+            { "terme": "Conservation", "definition": "l’élément se conserve dans une transformation chimique" },
+            { "terme": "Demi-vie T", "definition": "durée pour que **la moitié** des noyaux se désintègre" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois fabriques",
+          "entetes": ["Fabrique", "Quand", "Produit"],
+          "lignes": [
+            ["**Primordiale**", "3 premières minutes, 13,8 Ga", "**H** et **He**"],
+            ["**Stellaire**", "vie de l’étoile (fusion)", "jusqu’au **fer**"],
+            ["**Explosions**", "supernovae, astres compacts", "plus lourds que le fer"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 3,
+          "titre": "Les abondances",
+          "deux": false,
+          "items": [
+            { "titre": "Univers", "texte": "**92 %** d’hydrogène, près de 8 % d’hélium" },
+            { "titre": "Croûte terrestre", "texte": "**oxygène** (47 %) et **silicium** (28 %)" },
+            { "titre": "Corps humain", "texte": "**O, C, H, N** : environ **96 %** de la masse" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "La décroissance",
+          "entetes": ["Temps écoulé", "Noyaux restants"],
+          "lignes": [
+            ["1 demi-vie", "la **moitié**"],
+            ["2 demi-vies", "le **quart**"],
+            ["3 demi-vies", "le **huitième**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Dater avec une demi-vie",
+          "etapes": [
+            { "titre": "Comparer", "texte": "la quantité de noyaux restants à celle de départ" },
+            { "titre": "Compter", "texte": "combien de fois on a divisé par 2" },
+            { "titre": "Multiplier", "texte": "ce nombre par la demi-vie T" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un échantillon a perdu les {7/8} de ses noyaux radioactifs (T = 5 730 ans). Son __âge__&nbsp;?",
+          "calcul": "il reste {1/8} = (½)<sup>3</sup>",
+          "aparte": "donc 3 demi-vies",
+          "resultat": "t = 3 × 5 730 = [[17 190 ans]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’un élément change de **Z** quand on le brûle : il se **conserve**.",
+            "Penser que le **fer** vient du Big Bang : il vient des **étoiles**.",
+            "Dire que la **température** accélère la désintégration : **jamais**.",
+            "Écrire qu’après 2 demi-vies il reste **0** : il reste le **quart**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que définit le **numéro atomique Z**&nbsp;?",
+            "Quels éléments naissent dans les **3 premières minutes**&nbsp;?",
+            "Que reste-t-il après **3 demi-vies**&nbsp;?"
+          ],
+          "reponses": "1) le nombre de protons · 2) hydrogène et hélium · 3) le huitième des noyaux"
+        }
+      ]
+    }
+  ]
+}

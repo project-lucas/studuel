@@ -1,0 +1,192 @@
+{
+  "titre": "L’octet",
+  "titreSurligne": "octet",
+  "accroche": "Huit bits pour coder le monde.",
+  "bonus": "1 octet = 8 bits = **256** valeurs · ko = 1 000 · Kio = 1 024 · **b** bit, **B** octet",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/nsi/une-machine-a-calculer-l-octet.webp",
+    "prompt": "a glossy violet box made of eight small golden cubes in a row, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Huit bits,\nun octet !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Octet",
+              "definition": "**8 bits**&nbsp;: 256 valeurs, de 0 à 255"
+            },
+            {
+              "terme": "Hexadécimal",
+              "definition": "base 16&nbsp;: **un chiffre = 4 bits**, deux par octet"
+            },
+            {
+              "terme": "ASCII",
+              "definition": "7 bits, **128** caractères sans accent"
+            },
+            {
+              "terme": "UTF-8",
+              "definition": "Unicode sur **1 à 4 octets**, ASCII inchangé"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les multiples",
+          "entetes": [
+            "Décimal",
+            "Binaire"
+          ],
+          "lignes": [
+            [
+              "ko = 1&nbsp;000 octets",
+              "Kio = **1&nbsp;024** octets"
+            ],
+            [
+              "Mo = 10<sup>6</sup> octets",
+              "Mio = 2<sup>20</sup> octets"
+            ],
+            [
+              "Go = 10<sup>9</sup> octets",
+              "Gio = 2<sup>30</sup> octets"
+            ],
+            [
+              "**b** minuscule",
+              "le **bit**"
+            ],
+            [
+              "**B** majuscule (ou o)",
+              "l’**octet**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "Le poids d’une image",
+          "lignes": [
+            "largeur × hauteur × 3 octets"
+          ],
+          "regle": "Image **matricielle** : un tableau de pixels, chacun sur 3 octets.",
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Calculer le poids brut d’une image",
+          "etapes": [
+            {
+              "titre": "Pixels",
+              "texte": "largeur × hauteur"
+            },
+            {
+              "titre": "Octets",
+              "texte": "× **3** (rouge, vert, bleu)"
+            },
+            {
+              "titre": "Unité",
+              "texte": "convertir en ko ou Mo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Image de __100 × 50__ pixels, non compressée.",
+          "calcul": "100 × 50 = 5 000 pixels\n5 000 × 3 octets",
+          "aparte": "avant compression",
+          "resultat": "= [[15 000 octets]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "À savoir lire",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "#FF8000",
+              "texte": "rouge **255**, vert **128**, bleu **0**."
+            },
+            {
+              "titre": "Accents cassés",
+              "texte": "l’octet est intact, la **table de lecture** est fausse."
+            },
+            {
+              "titre": "Mb/s ou Mo/s",
+              "texte": "un Mb/s vaut **8 fois moins** qu’un Mo/s."
+            },
+            {
+              "titre": "3 octets/pixel",
+              "texte": "plus de **16 millions** de couleurs."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "1 pixel = 3 octets (R, V, B).",
+              "quoi": "le codage"
+            },
+            {
+              "texte": "Poids = largeur × hauteur × 3.",
+              "quoi": "la formule"
+            },
+            {
+              "texte": "Résultat en octets, puis converti.",
+              "quoi": "l’unité"
+            }
+          ],
+          "pied": "Ce poids est ==avant compression==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **b** (bit) et **B** (octet).",
+            "Croire que **ko** et **Kio** sont identiques.",
+            "Compter **1 octet** par pixel couleur.",
+            "Accuser le fichier quand c’est **l’encodage**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de valeurs dans **un octet**&nbsp;?",
+            "Combien de chiffres hexa pour **un octet**&nbsp;?",
+            "Poids brut d’une image **10 × 10** en couleur&nbsp;?"
+          ],
+          "reponses": "1) 256 (de 0 à 255) · 2) deux · 3) 10 × 10 × 3 = 300 octets"
+        }
+      ]
+    }
+  ]
+}

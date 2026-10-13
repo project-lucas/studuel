@@ -1,0 +1,112 @@
+{
+  "titre": "Les concentrations",
+  "titreSurligne": "concentrations",
+  "accroche": "Doser juste, c’est soigner sans blesser.",
+  "bonus": "n = m ÷ M · C = n ÷ V · C<sub>m</sub> = C × M · dilution&nbsp;: C<sub>mère</sub> × V<sub>prélevé</sub> = C<sub>fille</sub> × V<sub>fille</sub>",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-sante/quantite-de-matiere-et-concentrations.webp",
+    "prompt": "a glossy violet volumetric flask with a golden liquid up to the gauge line, a small dropper bottle beside it, tiny golden bubbles, sparkles"
+  },
+  "marcel": "Bien dosé,\nbien soigné !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les relations",
+          "petite": true,
+          "lignes": ["n = {m/M}", "C = {n/V}"],
+          "regle": "**n** quantité de matière (mol), **M** masse molaire (g/mol), **C** concentration molaire (mol/L), **V** volume de solution (L).",
+          "note": "C<sub>m</sub> = C × M"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Soluté, solvant, solution",
+          "entetes": ["Le mot", "Ce que c’est", "Le sérum"],
+          "lignes": [
+            ["Soluté", "l’espèce dissoute", "NaCl"],
+            ["Solvant", "le liquide qui dissout", "l’eau"],
+            ["Solution", "le mélange homogène", "le sérum"],
+            ["C<sub>m</sub>", "masse par litre (g/L)", "9 g/L"],
+            ["C", "mol par litre (mol/L)", "≈ 0,15 mol/L"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Préparer par dissolution",
+          "etapes": [
+            { "titre": "Calculer", "texte": "la masse à peser&nbsp;: m = C<sub>m</sub> × V" },
+            { "titre": "Dissoudre", "texte": "dans la **fiole jaugée**, aux trois quarts, en rinçant la coupelle" },
+            { "titre": "Compléter", "texte": "jusqu’au **trait de jauge**, boucher, **homogénéiser**" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Sérum physiologique à 9,0 g/L de NaCl (M = 58,5 g/mol). Sa __concentration molaire__&nbsp;?",
+          "calcul": "C = C<sub>m</sub> ÷ M = 9,0 ÷ 58,5",
+          "aparte": "C<sub>m</sub> = C × M",
+          "resultat": "C ≈ [[0,15 mol/L]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Préparer par dilution",
+          "oui": { "titre": "Pipette et fiole jaugées", "texte": "On prélève la solution mère à la **pipette jaugée**, on la verse dans la **fiole jaugée**, on complète à l’eau distillée jusqu’au trait." },
+          "non": { "titre": "Verrerie approximative", "texte": "Éprouvette ou bécher&nbsp;: le volume est approximatif, la concentration fausse." },
+          "essai": { "texte": "La quantité de soluté **ne change pas**. Facteur F = C<sub>mère</sub> ÷ C<sub>fille</sub>. Diluer <i>10 fois</i> pour 100,0 mL&nbsp;: prélever 10,0 mL." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "M(NaCl) = 23,0 + 35,5 = 58,5 g/mol", "quoi": "masse molaire" },
+            { "texte": "n = m ÷ M = 9,0 ÷ 58,5 ≈ 0,15 mol", "quoi": "formule, nombres" },
+            { "texte": "C = n ÷ V = 0,15 mol/L", "quoi": "avec l’unité" }
+          ],
+          "pied": "Lors d’une dilution, ==la quantité de soluté se conserve==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Laisser le volume en **mL** dans C = n ÷ V.",
+            "Confondre **C** (mol/L) et **C<sub>m</sub>** (g/L).",
+            "Penser que la **dilution** change la quantité de soluté.",
+            "Écrire une concentration **sans unité**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**n** pour m = 11,7 g de NaCl (M = 58,5 g/mol)&nbsp;?",
+            "**C** si n = 0,30 mol dans 2,0 L&nbsp;?",
+            "Que garde-t-on lors d’une **dilution**&nbsp;?"
+          ],
+          "reponses": "1) 0,20 mol · 2) 0,15 mol/L · 3) la quantité de soluté"
+        }
+      ]
+    }
+  ]
+}

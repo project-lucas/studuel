@@ -1,0 +1,111 @@
+{
+  "titre": "Les mutations de l’ADN",
+  "titreSurligne": "mutations",
+  "accroche": "Une erreur de copie, source de diversité.",
+  "epreuve": "bac",
+  "bonus": "**Silencieuse** = protéine inchangée · **faux-sens** = 1 acide aminé change · **non-sens** = protéine tronquée · seule la **germinale** se transmet",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/svt/les-mutations-de-l-adn-et-la-variabilite-genetique.webp",
+    "prompt": "a glossy violet DNA double helix with one golden bead swapped for a different shining bead, tiny sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Une lettre change,\ntout peut changer !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois types de mutation",
+          "entetes": ["Type", "Ce qui change"],
+          "lignes": [
+            ["**Substitution**", "un nucléotide est remplacé par un autre"],
+            ["**Délétion**", "un ou plusieurs nucléotides sont perdus"],
+            ["**Insertion**", "un ou plusieurs nucléotides sont ajoutés"],
+            ["**Décalage**", "délétion ou insertion non multiple de 3&nbsp;: toute la suite est modifiée"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Conséquences sur la protéine",
+          "entetes": ["Mutation", "Protéine"],
+          "lignes": [
+            ["**Silencieuse** (codon synonyme)", "inchangée"],
+            ["**Faux-sens** (acide aminé remplacé)", "fonctionnelle, moins efficace ou inactive"],
+            ["**Non-sens** (codon stop)", "tronquée, le plus souvent inactive"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce qu’il faut savoir expliquer",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Somatique", "texte": "Dans une cellule du corps&nbsp;: transmise aux cellules filles seulement, **point de départ des cancers**." },
+            { "titre": "Germinale", "texte": "Dans la lignée reproductrice&nbsp;: **transmise à la descendance**, seule utile à l’évolution." },
+            { "titre": "Allèles", "texte": "Les mutations accumulées créent des **versions différentes d’un même gène**." },
+            { "titre": "Sélection", "texte": "Elle **favorise** les allèles avantageux." },
+            { "titre": "Dérive", "texte": "Effet du **hasard**, surtout dans les petites populations." },
+            { "titre": "Migrations", "texte": "Elles font **circuler** les allèles entre populations." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Prévoir l’effet d’une mutation",
+          "etapes": [
+            { "titre": "Comparer", "texte": "les séquences d’ADN, nucléotide par nucléotide" },
+            { "titre": "Traduire", "texte": "les codons avec le code génétique, des deux séquences" },
+            { "titre": "Conclure", "texte": "silencieuse, faux-sens, non-sens ou décalage" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "La substitution remplace un acide aminé par un autre dans la protéine.", "quoi": "constater" },
+            { "texte": "La protéine perd son efficacité&nbsp;: la fonction est altérée.", "quoi": "expliquer" },
+            { "texte": "Un allèle est avantageux ou non selon l’environnement.", "quoi": "nuancer" }
+          ],
+          "pied": "Une mutation n’est ni bonne ni mauvaise&nbsp;: ==l’environnement décide==. L’allèle de la drépanocytose protège du paludisme."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que toute mutation est **nocive**.",
+            "Confondre **silencieuse** (protéine inchangée) et **absence** de mutation.",
+            "Dire qu’une mutation **somatique** passe aux enfants.",
+            "Oublier que la délétion d’un seul nucléotide **décale** le cadre de lecture."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle mutation crée un **codon stop** prématuré&nbsp;?",
+            "Quelle mutation est **transmise** à la descendance&nbsp;?",
+            "Citez les **trois forces** qui font évoluer les fréquences d’allèles."
+          ],
+          "reponses": "1) non-sens · 2) germinale · 3) sélection, dérive, migrations"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "titre": "Client et serveur",
+  "titreSurligne": "serveur",
+  "accroche": "Le client demande, le serveur répond.",
+  "bonus": "2 succès · 3 redirection · 4 faute du **client** · 5 faute du **serveur** · HTTP **sans état**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/nsi/interactions-client-serveur.webp",
+    "prompt": "a glossy violet browser window and a golden server tower exchanging two glowing envelopes, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Je demande,\nil répond !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "GET ou POST",
+          "entetes": [
+            "",
+            "GET",
+            "POST"
+          ],
+          "lignes": [
+            [
+              "Données",
+              "dans l’**URL**",
+              "dans le **corps**"
+            ],
+            [
+              "Visibilité",
+              "visible, historisée",
+              "non affichée"
+            ],
+            [
+              "Usage",
+              "**lectures**",
+              "formulaires, mots de passe"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les codes de statut",
+          "entetes": [
+            "Code",
+            "Sens"
+          ],
+          "lignes": [
+            [
+              "**200**",
+              "succès"
+            ],
+            [
+              "**301**, **302**",
+              "redirection"
+            ],
+            [
+              "**403**",
+              "accès interdit"
+            ],
+            [
+              "**404**",
+              "introuvable"
+            ],
+            [
+              "**500**",
+              "erreur du serveur"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Ouvrir une page web",
+          "etapes": [
+            {
+              "titre": "DNS",
+              "texte": "nom de domaine → adresse **IP**"
+            },
+            {
+              "titre": "TCP",
+              "texte": "connexion, port **80** (HTTP) ou **443** (HTTPS)"
+            },
+            {
+              "titre": "Requête",
+              "texte": "le client envoie une **requête HTTP**"
+            },
+            {
+              "titre": "Réponse",
+              "texte": "statut, en-têtes, corps"
+            },
+            {
+              "titre": "Ressources",
+              "texte": "styles, scripts, images&nbsp;: **redemandés** un par un"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un site renvoie __404__. De qui vient la faute&nbsp;?",
+          "calcul": "premier chiffre 4 : faute du client",
+          "aparte": "adresse erronée",
+          "resultat": "= [[le client]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Cookie",
+              "texte": "donnée déposée chez le client, **renvoyée** à chaque requête."
+            },
+            {
+              "titre": "Sans état",
+              "texte": "chaque requête est **indépendante**."
+            },
+            {
+              "titre": "HTTPS",
+              "texte": "HTTP **chiffré** par TLS, serveur attesté par un certificat."
+            },
+            {
+              "titre": "Cadenas",
+              "texte": "n’assure **pas** l’honnêteté du site."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Mot de passe&nbsp;: méthode POST.",
+              "quoi": "le choix"
+            },
+            {
+              "texte": "En GET il apparaîtrait dans l’URL.",
+              "quoi": "la raison"
+            },
+            {
+              "texte": "…et dans l’historique et les journaux.",
+              "quoi": "le risque"
+            },
+            {
+              "texte": "Le premier chiffre du code situe la faute.",
+              "quoi": "le statut"
+            }
+          ],
+          "pied": "Une page affichée = ==des dizaines== de requêtes."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Envoyer un **identifiant en GET**.",
+            "Croire que le cadenas prouve un site **honnête**.",
+            "Croire que le serveur **se souvient** du client.",
+            "Penser que le serveur prend **l’initiative**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que signifie un code **500**&nbsp;?",
+            "Pourquoi un **cookie**&nbsp;?",
+            "GET ou POST pour un **mot de passe**&nbsp;?"
+          ],
+          "reponses": "1) erreur du serveur · 2) reconnaître le visiteur, HTTP étant sans état · 3) POST"
+        }
+      ]
+    }
+  ]
+}

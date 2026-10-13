@@ -1,0 +1,118 @@
+{
+  "titre": "Tables de données",
+  "titreSurligne": "données",
+  "accroche": "Lire, trier, agréger, nettoyer.",
+  "bonus": "CSV = texte, séparateur · liste de dictionnaires > liste de listes · clé = identifiant unique",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/nsi/traitement-de-tables-matricielles-tableur.webp",
+    "prompt": "a glossy violet spreadsheet table with golden cells and a golden funnel above it, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Le plus dur,\nc’est le nettoyage !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Enregistrement", "definition": "une **ligne** de la table" },
+            { "terme": "Descripteur", "definition": "une **colonne**, avec son nom" },
+            { "terme": "CSV", "definition": "fichier **texte**, valeurs séparées par , ou ;" },
+            { "terme": "Clé", "definition": "descripteur qui identifie **un seul** enregistrement" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Représenter une table",
+          "entetes": ["Forme", "Accès", "Verdict"],
+          "lignes": [
+            ["Liste de listes", "par numéro", "fragile"],
+            ["Liste de dictionnaires", "par **nom**", "à préférer"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Les trois traitements",
+          "etapes": [
+            { "titre": "Sélectionner", "texte": "garder les lignes qui vérifient une condition" },
+            { "titre": "Trier", "texte": "selon un ou plusieurs descripteurs" },
+            { "titre": "Agréger", "texte": "compter, sommer, moyenner, par groupe" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "notes : Léa 15, Tom 9, Inès 12. __Moyenne des notes ≥ 10__&nbsp;?",
+          "calcul": "on garde 15 et 12 : (15 + 12) / 2",
+          "aparte": "sélection, puis agrégat",
+          "resultat": "= [[13,5]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Le nettoyage",
+          "entetes": ["Problème", "Décision"],
+          "lignes": [
+            ["Valeurs manquantes", "écarter, remplacer, signaler"],
+            ["Doublons", "choisir la clé"],
+            ["Dates en 3 formats", "un format cible"],
+            ["Unités mélangées", "une unité de référence"],
+            ["Fautes de frappe", "normaliser"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "la clé identifie un enregistrement", "quoi": "fusion de tables" },
+            { "texte": "chaque décision est documentée", "quoi": "le nettoyage" },
+            { "texte": "regrouper = une sélection par valeur", "quoi": "agréger par groupe" }
+          ],
+          "pied": "Une clé en double donne des ==doublons== silencieux."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Un **séparateur** présent dans une valeur du CSV.",
+            "Une **virgule décimale** prise pour un séparateur.",
+            "Un **encodage** mal deviné&nbsp;: lettres accentuées abîmées.",
+            "Fusionner sur une clé **non unique**.",
+            "Corriger les données **sans le documenter**.",
+            "Accéder à une colonne par son **numéro** : tout casse si elle bouge."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que contient la **première ligne** d’un CSV&nbsp;?",
+            "Quelle représentation en mémoire **résiste** à un changement d’ordre&nbsp;?",
+            "Que doit vérifier une **clé**&nbsp;?"
+          ],
+          "reponses": "1) les noms des descripteurs · 2) la liste de dictionnaires · 3) identifier un enregistrement de façon unique"
+        }
+      ]
+    }
+  ]
+}

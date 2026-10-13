@@ -1,0 +1,190 @@
+{
+  "titre": "Le message nerveux",
+  "titreSurligne": "nerveux",
+  "accroche": "Du neurone au nerf : l’influx.",
+  "bonus": "Repos **− 70 mV** · PA jusqu’à **+ 30 mV** · loi du **tout ou rien** · fréquence = intensité",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biologie-physiopathologie/le-systeme-nerveux-et-le-message-nerveux.webp",
+    "prompt": "a glossy violet neuron with golden dendrites and a golden electric spark travelling along its axon, sparkles"
+  },
+  "marcel": "L’influx file\ndans l’axone !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le neurone",
+          "items": [
+            {
+              "terme": "Dendrites",
+              "definition": "**reçoivent** les messages"
+            },
+            {
+              "terme": "Corps cellulaire",
+              "definition": "contient le **noyau**"
+            },
+            {
+              "terme": "Axone",
+              "definition": "**conduit** l’influx"
+            },
+            {
+              "terme": "Myéline",
+              "definition": "gaine isolante, interrompue par les **nœuds de Ranvier**"
+            },
+            {
+              "terme": "Nerf",
+              "definition": "faisceau de **fibres nerveuses**"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le potentiel d’action",
+          "entetes": [
+            "Phase",
+            "Ce qui se passe"
+          ],
+          "lignes": [
+            [
+              "**Repos**",
+              "intérieur négatif, − 70 mV"
+            ],
+            [
+              "**Dépolarisation**",
+              "le potentiel devient positif"
+            ],
+            [
+              "**Repolarisation**",
+              "il redescend"
+            ],
+            [
+              "**Hyperpolarisation**",
+              "sous le repos, puis retour"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce qu’il faut savoir expliquer",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "SNC et SNP",
+              "texte": "**Encéphale et moelle** commandent&nbsp;; les **nerfs** relient aux organes."
+            },
+            {
+              "titre": "Tout ou rien",
+              "texte": "Sous le **seuil**, pas de PA&nbsp;; au-dessus, amplitude **constante**."
+            },
+            {
+              "titre": "Codage",
+              "texte": "L’intensité est codée par la **fréquence** des PA."
+            },
+            {
+              "titre": "Propagation",
+              "texte": "Le PA se propage **sans s’affaiblir**."
+            },
+            {
+              "titre": "Fibre myélinisée",
+              "texte": "Le PA **saute** de nœud en nœud&nbsp;: conduction plus **rapide**."
+            },
+            {
+              "titre": "Dans un nerf",
+              "texte": "L’amplitude **augmente** avec la stimulation&nbsp;: **recrutement** de fibres."
+            },
+            {
+              "titre": "Nerfs",
+              "texte": "**12** paires crâniennes, **31** paires rachidiennes."
+            },
+            {
+              "titre": "Un nerf",
+              "texte": "Faisceau de fibres en **fascicules**, enveloppé de conjonctif."
+            },
+            {
+              "titre": "Racines",
+              "texte": "**neur(o)** = nerf&nbsp;; **médull(o)** = moelle."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Analyser un enregistrement",
+          "etapes": [
+            {
+              "titre": "Lire",
+              "texte": "potentiel de repos, seuil, amplitude du PA"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "fibre ou nerf&nbsp;? amplitude constante ou variable&nbsp;?"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "tout ou rien (fibre) ou recrutement (nerf)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Sous le seuil, aucun potentiel d’action n’apparaît.",
+              "quoi": "constater"
+            },
+            {
+              "texte": "Au-dessus, l’amplitude du PA reste constante.",
+              "quoi": "comparer"
+            },
+            {
+              "texte": "La fibre obéit à la loi du tout ou rien.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Le nerf, lui, répond par ==recrutement== de fibres."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que l’**amplitude** du PA augmente avec l’intensité.",
+            "Confondre **fibre** (tout ou rien) et **nerf** (recrutement).",
+            "Confondre **dendrites** (reçoivent) et **axone** (conduit).",
+            "Oublier que la myéline **accélère** la conduction.",
+            "Confondre fibres **sensitives** (vers le SNC) et **motrices** (vers le muscle)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle est la valeur du **potentiel de repos**&nbsp;?",
+            "Comment l’**intensité** est-elle codée&nbsp;?",
+            "Que sont les **nœuds de Ranvier**&nbsp;?"
+          ],
+          "reponses": "1) environ − 70 mV · 2) par la fréquence des PA · 3) les interruptions de la myéline"
+        }
+      ]
+    }
+  ]
+}

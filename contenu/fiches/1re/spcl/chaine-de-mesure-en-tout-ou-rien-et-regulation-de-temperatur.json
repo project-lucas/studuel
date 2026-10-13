@@ -1,0 +1,111 @@
+{
+  "titre": "Tout ou rien",
+  "titreSurligne": "rien",
+  "accroche": "Allumé, éteint… et la température oscille.",
+  "bonus": "Deux seuils = **hystérésis** · hystérésis faible → oscillations **petites mais fréquentes**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/spcl/chaine-de-mesure-en-tout-ou-rien-et-regulation-de-temperatur.webp",
+    "prompt": "a glossy violet incubator with a golden thermostat dial and a small glowing heating coil, sparkles"
+  },
+  "marcel": "Trop froid, ça chauffe,\ntrop chaud, stop !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Tout ou rien", "definition": "sortie à **deux états** (0 ou 1, marche ou arrêt)" },
+            { "terme": "Seuil", "definition": "valeur qui déclenche l’**action**" },
+            { "terme": "Consigne", "definition": "température **visée**" },
+            { "terme": "Hystérésis", "definition": "écart entre le seuil d’**allumage** et celui d’**extinction**" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Choisir l’hystérésis",
+          "entetes": ["Hystérésis", "Oscillations", "Commutations"],
+          "lignes": [
+            ["faible", "amplitude faible", "très fréquentes"],
+            ["grande", "amplitude grande", "rares"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La chaîne en tout ou rien",
+          "etapes": [
+            { "titre": "Mesurer", "texte": "le **capteur** et le conditionneur donnent une tension" },
+            { "titre": "Comparer", "texte": "au **seuil**, par un comparateur ou un microcontrôleur" },
+            { "titre": "Agir", "texte": "alarme, relais ou **chauffage** s’allume ou s’éteint" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Incubateur à 37 °C, hystérésis ± 0,5 °C. Les __seuils__&nbsp;?",
+          "calcul": "37 − 0,5 et 37 + 0,5",
+          "aparte": "chauffage ON / OFF",
+          "resultat": "allume sous [[36,5 °C]], éteint au-dessus de 37,5 °C"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Un seul seuil ou deux",
+          "oui": { "titre": "Deux seuils", "texte": "Le relais bascule **rarement** : moins d’usure." },
+          "non": { "titre": "Un seul seuil", "texte": "Le chauffage bascule **sans cesse** autour de la consigne." },
+          "essai": { "texte": "Même avec deux seuils, la température <i>dépasse un peu</i> : l’eau garde de l’**inertie** après l’arrêt." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "si T &lt; 36,5 °C alors chauffage allumé", "quoi": "le test à lire dans le code" },
+            { "texte": "sinon si T &gt; 37,5 °C alors chauffage éteint", "quoi": "le second seuil" },
+            { "texte": "sur la courbe : montée, consigne, amplitude, période", "quoi": "exploiter l’enregistrement" }
+          ],
+          "pied": "Pour adapter un code, change ==le seuil==, la broche ou l’attente."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’une régulation tout ou rien est **parfaitement stable**.",
+            "Oublier l’**inertie** du système.",
+            "Confondre **consigne** et seuil.",
+            "Penser qu’une grande hystérésis rend les commutations **plus fréquentes**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien d’**états** a la sortie&nbsp;?",
+            "Pourquoi utiliser **deux seuils**&nbsp;?",
+            "Que fait la température autour de la **consigne**&nbsp;?"
+          ],
+          "reponses": "1) deux · 2) éviter les basculements incessants · 3) elle oscille"
+        }
+      ]
+    }
+  ]
+}

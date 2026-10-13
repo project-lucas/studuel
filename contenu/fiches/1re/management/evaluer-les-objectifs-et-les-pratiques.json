@@ -1,0 +1,146 @@
+{
+  "titre": "Mesurer les résultats",
+  "titreSurligne": "Mesurer",
+  "accroche": "Indicateurs, écarts, taux.",
+  "bonus": "Écart = résultat − objectif · réalisation = résultat ÷ objectif × 100",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/management/evaluer-les-objectifs-et-les-pratiques.webp",
+    "prompt": "a glossy violet dashboard gauge with a golden needle and three colored lights, tiny golden sparkles, same art style as the reference icons, on magenta background, no text"
+  },
+  "marcel": "On gère ce qu’on\nmesure !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Un objectif, un indicateur",
+          "entetes": [
+            "Objectif",
+            "Indicateur"
+          ],
+          "lignes": [
+            [
+              "fidéliser",
+              "taux de réachat"
+            ],
+            [
+              "réduire l’absentéisme",
+              "taux d’absentéisme"
+            ],
+            [
+              "réduire l’empreinte carbone",
+              "tonnes de CO<sub>2</sub> par an"
+            ],
+            [
+              "améliorer la qualité",
+              "taux de retours"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les mots clés",
+          "items": [
+            {
+              "terme": "Indicateur",
+              "definition": "information chiffrée (**quantitatif**) ou qualitative qui mesure un objectif"
+            },
+            {
+              "terme": "Tableau de bord",
+              "definition": "quelques indicateurs clés avec **codes couleur**"
+            },
+            {
+              "terme": "Mesure correctrice",
+              "definition": "action décidée après constat d’un écart"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "Les trois calculs",
+          "lignes": [
+            "Écart = résultat − objectif",
+            "Réalisation = {résultat/objectif} × 100",
+            "Évolution = {arrivée − départ/départ} × 100"
+          ],
+          "teinte": "jaune"
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Objectif 500&nbsp;000&nbsp;€, réalisé 460&nbsp;000&nbsp;€, l’an passé 400&nbsp;000&nbsp;€.",
+          "calcul": "écart&nbsp;: 460 − 500 = −40&nbsp;000&nbsp;€\nréalisation&nbsp;: 460 ÷ 500 = 92&nbsp;%",
+          "resultat": "[[+ 15&nbsp;%]] sur un an"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "À retenir",
+          "paragraphes": [
+            "On gère ce que l’on mesure, mais on **déforme** ce que l’on mesure mal&nbsp;: plusieurs indicateurs **pertinents**, comparés dans le temps, débouchent sur des mesures correctrices."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "L’objectif n’est pas atteint&nbsp;: l’écart est défavorable de 40&nbsp;000&nbsp;€.",
+              "quoi": "constater"
+            },
+            {
+              "texte": "Mais la progression sur un an est forte, +15&nbsp;%.",
+              "quoi": "nuancer"
+            },
+            {
+              "texte": "L’objectif était-il trop ambitieux&nbsp;? Faut-il une promotion&nbsp;?",
+              "quoi": "corriger"
+            }
+          ],
+          "pied": "On évalue aussi les ==pratiques==, pas seulement les résultats."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Se fier à **un seul** indicateur.",
+            "Confondre **écart** et taux de réalisation.",
+            "Oublier la **comparaison** dans le temps.",
+            "Une prime qui **épuise** les salariés n’est pas une bonne pratique."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Objectif 200, résultat 150&nbsp;: quel est l’**écart**&nbsp;?",
+            "Et le **taux de réalisation**&nbsp;?",
+            "À quoi servent les **codes couleur** du tableau de bord&nbsp;?"
+          ],
+          "reponses": "1) −50 · 2) 75&nbsp;% · 3) repérer vite objectif atteint, vigilance ou alerte"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "titre": "Produit scalaire",
+  "titreSurligne": "scalaire",
+  "accroche": "Deux vecteurs, un nombre.",
+  "bonus": "**u · v = ‖u‖ ‖v‖ cos θ** · **x x’ + y y’** · orthogonaux ⇔ **u · v = 0** · **W = F · AB**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-maths/produit-scalaire.webp",
+    "prompt": "two glossy violet vectors with a golden angle arc between them and a small golden dot symbol, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Deux vecteurs,\nun seul nombre !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les deux expressions",
+          "taille": "mini",
+          "lignes": [
+            "u · v = ‖u‖ × ‖v‖ × cos θ",
+            "u · v = x x’ + y y’"
+          ],
+          "regle": "La 1re avec l’**angle** θ entre les vecteurs, la 2e avec les **coordonnées** dans un repère orthonormé. Si u ou v est nul, u · v = 0.",
+          "note": "u · u = ‖u‖²"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Signe de u · v",
+          "entetes": [
+            "Angle θ",
+            "u · v"
+          ],
+          "lignes": [
+            [
+              "aigu (< 90°)",
+              "positif"
+            ],
+            [
+              "droit (90°)",
+              "**nul**"
+            ],
+            [
+              "obtus (> 90°)",
+              "négatif"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer un angle",
+          "etapes": [
+            {
+              "titre": "Produit",
+              "texte": "u · v = x x’ + y y’"
+            },
+            {
+              "titre": "Normes",
+              "texte": "‖u‖ = √(x² + y²), idem pour v"
+            },
+            {
+              "titre": "Cosinus",
+              "texte": "cos θ = u · v ÷ (‖u‖ × ‖v‖), puis θ"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "u(1 ; 1) et v(1 ; 0). __Angle__&nbsp;?",
+          "calcul": "u · v = 1 · ‖u‖ = √2 · ‖v‖ = 1",
+          "aparte": "cos θ = 1/√2",
+          "resultat": "cos θ = √2/2 → θ = [[45°]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Al-Kashi et travail",
+          "deux": false,
+          "items": [
+            {
+              "titre": "Al-Kashi",
+              "texte": "a² = b² + c² − 2 b c cos Â ; si Â = 90°, on retrouve **Pythagore**"
+            },
+            {
+              "titre": "Exemple",
+              "texte": "b = 5, c = 8, Â = 60° : a² = 49, **a = 7**"
+            },
+            {
+              "titre": "Travail",
+              "texte": "W = F × AB × cos α ; 100 N sur 10 m à 60° : **500 J**"
+            },
+            {
+              "titre": "Poids",
+              "texte": "perpendiculaire au déplacement horizontal : **W = 0**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "Trois façons de le lire",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Par l’angle",
+              "texte": "‖u‖ × ‖v‖ × cos θ : donne les **angles**"
+            },
+            {
+              "titre": "Par la projection",
+              "texte": "(projection de u sur v) × ‖v‖ : le **travail**"
+            },
+            {
+              "titre": "Par les coordonnées",
+              "texte": "x x’ + y y’ : le **calcul** rapide"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Prouver une orthogonalité",
+          "lignes": [
+            {
+              "texte": "u(2 ; 3) et v(−3 ; 2)",
+              "quoi": "les données"
+            },
+            {
+              "texte": "u · v = 2 × (−3) + 3 × 2 = 0",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "Donc u et v sont orthogonaux.",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Propriétés&nbsp;: ==symétrie== u · v = v · u, ==bilinéarité== u · (v + w) = u · v + u · w."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que u · v est un **vecteur** : c’est un nombre.",
+            "Oublier le **signe −** avec une coordonnée négative.",
+            "Calculatrice en **radians** au lieu des degrés.",
+            "Oublier le **2** dans Al-Kashi."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "u(3 ; 4) et v(2 ; −1) : **u · v** ?",
+            "Que vaut u · v si θ = 90° ?",
+            "Al-Kashi, b = 5, c = 8, Â = 60° : **a** ?"
+          ],
+          "reponses": "1) 3×2 + 4×(−1) = 2 · 2) 0, orthogonaux · 3) a² = 49, a = 7"
+        }
+      ]
+    }
+  ]
+}

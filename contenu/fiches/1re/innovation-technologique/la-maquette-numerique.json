@@ -1,0 +1,123 @@
+{
+  "titre": "Maquette numérique",
+  "titreSurligne": "numérique",
+  "accroche": "Concevoir en 3D avant de fabriquer.",
+  "bonus": "**Esquisse → contraintes → volume** · une cote modifiée met **tout à jour**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/innovation-technologique/la-maquette-numerique.webp",
+    "prompt": "a glossy violet 3D cube wireframe with golden axis arrows and a small golden gear, sparkles, same art style as the reference icons, no text, magenta background"
+  },
+  "marcel": "Modifie une cote,\ntout se met à jour !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Des esquisses au volume",
+          "entetes": ["Fonction", "Effet"],
+          "lignes": [
+            ["**Extrusion**", "pousse l’esquisse en épaisseur"],
+            ["**Révolution**", "tourne autour d’un axe"],
+            ["**Enlèvement**", "creuse, perce"],
+            ["**Congé, chanfrein**", "arrondit ou casse une arête"],
+            ["**Répétition**", "copie en ligne ou en cercle"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les mots à connaître",
+          "items": [
+            { "terme": "CAO", "definition": "conception **assistée** par ordinateur" },
+            { "terme": "Contrainte", "definition": "cote ou relation : **parallèle**, tangent…" },
+            { "terme": "Arbre de construction", "definition": "garde l’**historique** : conception paramétrée" },
+            { "terme": "Interférence", "definition": "deux pièces qui **se chevauchent**" },
+            { "terme": "Jumeau numérique", "definition": "reflet virtuel **dynamique** du produit réel" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Construire une pièce",
+          "etapes": [
+            { "titre": "Esquisser", "texte": "un dessin 2D sur un plan" },
+            { "titre": "Contraindre", "texte": "cotes et relations, jusqu’à ce que plus rien ne bouge" },
+            { "titre": "Donner du volume", "texte": "extrusion, révolution, enlèvement" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Encoche de __8 mm__ pour un téléphone de __9 mm__ : que corriger&nbsp;?",
+          "calcul": "une seule cote de l’esquisse, avec du jeu",
+          "aparte": "mise à jour auto",
+          "resultat": "encoche [[8 → 10 mm]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Esquisse bien contrainte&nbsp;?",
+          "oui": {
+            "titre": "Totalement contrainte",
+            "texte": "Plus rien ne peut bouger : la pièce est **facile à modifier**."
+          },
+          "non": {
+            "titre": "Sous-contrainte",
+            "texte": "Des éléments **flottent** : la modification déforme la pièce."
+          },
+          "essai": {
+            "texte": "Détecter une <i>interférence</i> en 3D coûte trente secondes, pas une impression ratée."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Je modifie la cote dans l’esquisse.", "quoi": "la méthode" },
+            { "texte": "Assemblage : coaxialité, contact plan sur plan.", "quoi": "positionner" },
+            { "texte": "Mise en plan, rendu, export pour impression 3D.", "quoi": "exploiter" }
+          ],
+          "pied": "La maquette donne ==masse==, ==volume== et ==centre de gravité== du matériau choisi."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Laisser une esquisse **non contrainte**.",
+            "Oublier d’attribuer le **matériau** avant la masse.",
+            "Confondre **maquette** numérique et jumeau numérique.",
+            "Ne pas chercher les **interférences**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que fait une **extrusion**&nbsp;?",
+            "Que garde l’**arbre de construction**&nbsp;?",
+            "Que détecte-t-on par une **interférence**&nbsp;?"
+          ],
+          "reponses": "1) pousse l’esquisse en épaisseur · 2) l’historique de la pièce · 3) deux pièces qui se chevauchent"
+        }
+      ]
+    }
+  ]
+}

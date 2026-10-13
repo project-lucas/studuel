@@ -1,0 +1,113 @@
+{
+  "titre": "Vaccin, immunothérapie",
+  "titreSurligne": "Vaccin",
+  "accroche": "Utiliser l’immunité comme soin.",
+  "bonus": "**Vaccin**&nbsp;: antigène, lent, durable, **mémoire** · **Sérum**&nbsp;: anticorps, immédiat, bref",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/svt/la-vaccination-et-l-immunotherapie.webp",
+    "prompt": "a glossy violet syringe with golden droplets beside a small shield and a few antibody Y-shapes, sparkles"
+  },
+  "marcel": "Le vaccin entraîne,\nle sérum remplace !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Vaccin ou sérum",
+          "entetes": ["Critère", "Vaccin", "Sérum"],
+          "lignes": [
+            ["Injecté", "un **antigène**", "des **anticorps**"],
+            ["Système immunitaire", "il **travaille**", "il est **remplacé**"],
+            ["Délai", "lent", "**immédiat**"],
+            ["Durée", "durable", "brève"],
+            ["Mémoire", "**oui**", "aucune"],
+            ["Usage", "prévention", "urgence"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Immunothérapies antitumorales",
+          "entetes": ["Technique", "Principe"],
+          "lignes": [
+            ["**Anticorps monoclonaux**", "visent une cible de la tumeur"],
+            ["**Inhibiteurs de points de contrôle**", "lèvent le frein sur les lymphocytes T"],
+            ["**CAR-T**", "lymphocytes du patient modifiés, réinjectés"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Comprendre la vaccination",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Antigène inoffensif", "texte": "Agent inactivé ou atténué, fragment protéique, **ARN messager**." },
+            { "titre": "Réponse active", "texte": "Réponse adaptative complète et **mémoire**, sans la maladie." },
+            { "titre": "Rappel", "texte": "Les lymphocytes **mémoire** donnent une réponse secondaire plus forte." },
+            { "titre": "Adjuvant", "texte": "Il stimule l’**immunité innée** au point d’injection." },
+            { "titre": "Immunité collective", "texte": "Au-delà d’un taux de couverture, la **transmission** se rompt." },
+            { "titre": "Les plus fragiles", "texte": "Nourrissons et immunodéprimés sont protégés par les autres." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Choisir vaccin ou sérum",
+          "etapes": [
+            { "titre": "Situer", "texte": "prévention à l’avance, ou urgence maintenant&nbsp;?" },
+            { "titre": "Comparer", "texte": "mémoire et durée contre rapidité" },
+            { "titre": "Conclure", "texte": "vaccin pour durer, sérum pour agir tout de suite" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le vaccin déclenche une réponse adaptative et crée des cellules mémoire.", "quoi": "expliquer" },
+            { "texte": "Le sérum apporte des anticorps déjà formés&nbsp;: effet immédiat, mais bref.", "quoi": "opposer" },
+            { "texte": "Un taux de couverture élevé protège aussi les non vaccinés.", "quoi": "élargir" },
+            { "texte": "Les immunothérapies réactivent les lymphocytes T contre la tumeur.", "quoi": "ouvrir" }
+          ],
+          "pied": "Le vaccin ==prévient==, le sérum ==soigne== en urgence."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que le vaccin injecte des **anticorps**.",
+            "Croire que le sérum donne une **mémoire**.",
+            "Oublier la dimension **collective** du vaccin.",
+            "Confondre **immunothérapie** et chimiothérapie."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que contient un **vaccin**&nbsp;?",
+            "Un **sérum** laisse-t-il une mémoire&nbsp;?",
+            "À quoi sert un **adjuvant**&nbsp;?"
+          ],
+          "reponses": "1) un antigène inoffensif · 2) non · 3) stimuler l’immunité innée"
+        }
+      ]
+    }
+  ]
+}

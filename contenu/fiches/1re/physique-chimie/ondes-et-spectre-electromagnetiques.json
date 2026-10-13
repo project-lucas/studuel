@@ -1,0 +1,170 @@
+{
+  "titre": "Spectre des ondes",
+  "titreSurligne": "Spectre",
+  "accroche": "Du gamma aux ondes radio.",
+  "bonus": "c ≈ 3,00 × 10⁸ m/s · visible&nbsp;: **400 à 800 nm** · λ = c ÷ f",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/ondes-et-spectre-electromagnetiques.webp",
+    "prompt": "a glossy violet prism splitting a golden beam into a rainbow spectrum, sparkles"
+  },
+  "marcel": "Le visible, c’est\nune toute petite bande !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Dans le vide",
+          "petite": true,
+          "lignes": [
+            "λ = {c/f}",
+            "c ≈ 3,00 × 10⁸ m/s"
+          ],
+          "regle": "Toutes les ondes électromagnétiques vont à **c** dans le vide. Seules **f** et **λ** les distinguent&nbsp;: plus f est grande, plus l’==énergie== augmente.",
+          "note": "λ ↑ quand f ↓"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les domaines",
+          "entetes": [
+            "Domaine",
+            "Longueur d’onde",
+            "Usage"
+          ],
+          "lignes": [
+            [
+              "Ondes radio",
+              "> 1 m",
+              "télécoms"
+            ],
+            [
+              "Micro-ondes",
+              "mm à dm",
+              "radar, four, Wi-Fi"
+            ],
+            [
+              "Infrarouge",
+              "800 nm à 1 mm",
+              "chaleur"
+            ],
+            [
+              "**Visible**",
+              "**400 à 800 nm**",
+              "violet → rouge"
+            ],
+            [
+              "Ultraviolet",
+              "10 à 400 nm",
+              "bronzage"
+            ],
+            [
+              "Rayons X, gamma",
+              "< 10 nm",
+              "radiographie"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire un spectre en trois temps",
+          "etapes": [
+            {
+              "titre": "Aspect",
+              "texte": "fond continu, raies colorées sur noir, ou raies noires sur fond continu"
+            },
+            {
+              "titre": "Source",
+              "texte": "corps chaud&nbsp;: continu&nbsp;; gaz excité&nbsp;: **émission**&nbsp;; gaz froid&nbsp;: **absorption**"
+            },
+            {
+              "titre": "Identifier",
+              "texte": "les raies sont la **signature** de l’élément chimique"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Le Wi-Fi émet à f = 2,4 GHz. Sa __longueur d’onde__ dans l’air&nbsp;?",
+          "calcul": "f = 2,4 GHz = 2,4 × 10⁹ Hz",
+          "aparte": "λ = c ÷ f",
+          "resultat": "λ = 3,00 × 10⁸ ÷ 2,4 × 10⁹ ≈ [[0,13 m]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Émission ou absorption&nbsp;?",
+          "oui": {
+            "titre": "Raies d’émission",
+            "texte": "Un gaz atomique **excité** donne quelques raies colorées sur fond noir."
+          },
+          "non": {
+            "titre": "Raies d’absorption",
+            "texte": "Lumière blanche traversant un gaz **froid**&nbsp;: fond continu barré de raies **noires**."
+          },
+          "essai": {
+            "texte": "Les raies noires sont aux <i>mêmes positions</i> que les raies d’émission du même gaz."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "λ = c ÷ f, avec f en hertz",
+              "quoi": "la relation"
+            },
+            {
+              "texte": "λ = 3,00 × 10⁸ ÷ 2,4 × 10⁹",
+              "quoi": "les nombres"
+            },
+            {
+              "texte": "λ ≈ 0,13 m (micro-onde)",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Plus la ==température== d’un corps monte, plus le maximum de son spectre se déplace vers le bleu."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le **visible** est le spectre entier.",
+            "Laisser f en **GHz** dans λ = c ÷ f.",
+            "Confondre raies d’**émission** et d’**absorption**.",
+            "Inverser&nbsp;: les **UV** sont plus énergétiques que l’IR."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Intervalle du **visible**&nbsp;?",
+            "Plus énergétique&nbsp;: UV ou infrarouge&nbsp;?",
+            "Raies noires sur fond continu&nbsp;: quel spectre&nbsp;?"
+          ],
+          "reponses": "1) 400 à 800 nm · 2) l’ultraviolet · 3) spectre de raies d’absorption"
+        }
+      ]
+    }
+  ]
+}

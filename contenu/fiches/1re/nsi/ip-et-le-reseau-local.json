@@ -1,0 +1,191 @@
+{
+  "titre": "IP et réseau local",
+  "titreSurligne": "IP",
+  "accroche": "Désigner, puis acheminer.",
+  "bonus": "MAC = **local**, gravée · IP = **mondiale**, logique · IP ne promet **ni ordre, ni arrivée**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/nsi/ip-et-le-reseau-local.webp",
+    "prompt": "a glossy violet router with golden antennas and small golden envelopes travelling along cables, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Sur mon réseau\nou pas ?",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Deux adresses",
+          "entetes": [
+            "",
+            "MAC",
+            "IP"
+          ],
+          "lignes": [
+            [
+              "Nature",
+              "physique",
+              "logique"
+            ],
+            [
+              "Donnée par",
+              "le constructeur",
+              "le réseau (DHCP)"
+            ],
+            [
+              "Portée",
+              "réseau **local**",
+              "**mondiale**"
+            ],
+            [
+              "IPv4",
+              "4 octets",
+              "épuisé"
+            ],
+            [
+              "IPv6",
+              "16 octets",
+              "illimité"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Masque",
+              "definition": "sépare **réseau** et **machine** dans l’adresse IP"
+            },
+            {
+              "terme": "Passerelle",
+              "definition": "le **routeur** qui sort du réseau local"
+            },
+            {
+              "terme": "Table de routage",
+              "definition": "donne le **prochain saut**"
+            },
+            {
+              "terme": "TTL",
+              "definition": "baisse à chaque routeur, **0 = paquet détruit**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Envoyer un paquet",
+          "etapes": [
+            {
+              "titre": "Comparer",
+              "texte": "le destinataire est-il sur **mon réseau** (masque)&nbsp;?"
+            },
+            {
+              "titre": "Oui",
+              "texte": "on lui parle **directement**, via son adresse MAC"
+            },
+            {
+              "titre": "Non",
+              "texte": "on remet le paquet à la **passerelle**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Masque <i>255.255.255.0</i>, machine <i>192.168.1.10</i>&nbsp;: __quel réseau__&nbsp;?",
+          "calcul": "3 premiers octets = réseau\ndernier octet = machine",
+          "aparte": "le .10",
+          "resultat": "réseau [[192.168.1]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Les équipements",
+          "entetes": [
+            "Équipement",
+            "Rôle",
+            "Adresse"
+          ],
+          "lignes": [
+            [
+              "**Commutateur**",
+              "trames du réseau local",
+              "MAC"
+            ],
+            [
+              "**Routeur**",
+              "relie les réseaux",
+              "IP"
+            ],
+            [
+              "**Serveur DNS**",
+              "nom → adresse IP",
+              "base de noms"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Le masque donne la partie réseau.",
+              "quoi": "l’analyse"
+            },
+            {
+              "texte": "Même réseau&nbsp;: envoi direct, adresse MAC.",
+              "quoi": "cas 1"
+            },
+            {
+              "texte": "Sinon&nbsp;: la passerelle, de proche en proche.",
+              "quoi": "cas 2"
+            },
+            {
+              "texte": "Un serveur DNS donne l’adresse IP d’un nom.",
+              "quoi": "le nom"
+            }
+          ],
+          "pied": "IP est ==sans connexion et sans garantie==&nbsp;: la couche au-dessus corrige."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que l’adresse **MAC** voyage sur Internet.",
+            "Croire qu’un paquet connaît **tout son trajet**.",
+            "Oublier que les paquets peuvent arriver **dans le désordre**.",
+            "Confondre **commutateur** (MAC) et **routeur** (IP)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle adresse est **gravée** par le constructeur&nbsp;?",
+            "À quoi sert le **TTL**&nbsp;?",
+            "Quel équipement relie des **réseaux différents**&nbsp;?"
+          ],
+          "reponses": "1) l’adresse MAC · 2) détruire un paquet qui tourne en rond · 3) le routeur"
+        }
+      ]
+    }
+  ]
+}

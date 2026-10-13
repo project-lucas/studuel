@@ -1,0 +1,155 @@
+{
+  "titre": "Photons et niveaux",
+  "titreSurligne": "Photons",
+  "accroche": "La lumière en grains d’énergie.",
+  "bonus": "E = h × c ÷ λ · h ≈ 6,63 × 10⁻³⁴ J·s · 1 eV ≈ 1,60 × 10⁻¹⁹ J",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/les-photons-et-l-interaction-matiere-lumiere.webp",
+    "prompt": "a glossy violet atom with golden energy level rungs and a glowing golden photon arrow jumping between them, sparkles"
+  },
+  "marcel": "Un photon, un saut\nd’énergie !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Énergie d’un photon",
+          "petite": true,
+          "lignes": [
+            "E = h × f",
+            "E = h {c/λ}"
+          ],
+          "regle": "**E** en joules, **λ** en mètres. Un photon **bleu** (λ petite) est plus énergétique qu’un **rouge**. Entre deux niveaux&nbsp;: E = E<sub>haut</sub> − E<sub>bas</sub>.",
+          "note": "λ en mètres&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Absorption, émission",
+          "entetes": [
+            "Phénomène",
+            "Condition",
+            "Résultat"
+          ],
+          "lignes": [
+            [
+              "**Absorption**",
+              "E photon = écart exact",
+              "atome excité"
+            ],
+            [
+              "**Émission**",
+              "retour vers le bas",
+              "photon émis"
+            ],
+            [
+              "Énergie intermédiaire",
+              "aucun écart égal",
+              "pas absorbé"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Écart",
+              "texte": "calculer ΔE = E<sub>haut</sub> − E<sub>bas</sub> sur le **diagramme** de niveaux"
+            },
+            {
+              "titre": "Photon",
+              "texte": "comparer à E = h × c ÷ λ, avec λ en **mètres**"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "égalité exacte&nbsp;: absorbé ou émis&nbsp;; sinon, **rien** ne se passe"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un photon de longueur d’onde 600 nm. Son __énergie__ en eV&nbsp;?",
+          "calcul": "E = 6,63 × 10⁻³⁴ × 3,00 × 10⁸ ÷ 600 × 10⁻⁹ ≈ 3,3 × 10⁻¹⁹ J",
+          "aparte": "puis ÷ 1,60 × 10⁻¹⁹",
+          "resultat": "E ≈ [[2,1 eV]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Un photon est-il absorbé&nbsp;?",
+          "oui": {
+            "titre": "Énergie = écart",
+            "texte": "L’énergie du photon est **exactement** l’écart entre deux niveaux&nbsp;: il est absorbé."
+          },
+          "non": {
+            "titre": "Énergie intermédiaire",
+            "texte": "Il n’existe pas de **demi-transition**&nbsp;: le photon n’est pas absorbé du tout."
+          },
+          "essai": {
+            "texte": "Niveaux −3,4 eV et −1,5 eV&nbsp;: seul un photon de <i>1,9 eV</i> est absorbé."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "E = h × c ÷ λ, avec λ en mètres",
+              "quoi": "la formule"
+            },
+            {
+              "texte": "E = 6,63 × 10⁻³⁴ × 3,00 × 10⁸ ÷ 6,00 × 10⁻⁷",
+              "quoi": "les nombres"
+            },
+            {
+              "texte": "E ≈ 3,3 × 10⁻¹⁹ J ≈ 2,1 eV",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Chaque raie d’un spectre correspond à un ==écart d’énergie== propre à l’élément."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Laisser λ en **nm** dans E = h c ÷ λ.",
+            "Oublier de convertir les **eV en joules**.",
+            "Inverser **haut** et **bas** dans ΔE.",
+            "Croire qu’un photon intermédiaire est **partiellement** absorbé."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Plus énergétique&nbsp;: photon bleu ou rouge&nbsp;?",
+            "Photon pour passer de −3,4 eV à −1,5 eV&nbsp;?",
+            "Photon d’énergie intermédiaire&nbsp;: absorbé&nbsp;?"
+          ],
+          "reponses": "1) le bleu · 2) 1,9 eV · 3) non, jamais partiellement"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "titre": "Étalonnage et titrage",
+  "titreSurligne": "titrage",
+  "accroche": "Deux chemins vers une concentration.",
+  "bonus": "Beer-Lambert&nbsp;: **A = ε ℓ c** · titrage&nbsp;: réaction **totale, rapide, unique** · équivalence = changement de limitant",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/spcl/doser-par-etalonnage-et-par-titrage-direct.webp",
+    "prompt": "a glossy violet spectrophotometer cuvette beside a golden burette dripping into a flask, sparkles"
+  },
+  "marcel": "Une droite ou\nune goutte&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Étalonnage",
+          "petite": true,
+          "lignes": [
+            "A = ε × ℓ × c"
+          ],
+          "regle": "**A** sans unité, **ε** en L/(mol·cm), **ℓ** en cm. A est **proportionnelle** à c si la solution est diluée&nbsp;: droite par l’origine.",
+          "note": "c = A ÷ k"
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Titrage",
+          "petite": true,
+          "lignes": [
+            "{C<sub>A</sub>V<sub>A</sub>/a} = {C<sub>B</sub>V<sub>E</sub>/b}"
+          ],
+          "regle": "Pour a A + b B → produits (**A titré**, **B titrant**). À l’**équivalence**, proportions stœchiométriques.",
+          "note": "V<sub>E</sub> lu&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Étalonner",
+          "etapes": [
+            {
+              "titre": "Gamme",
+              "texte": "étalons par **dilution** de la solution mère"
+            },
+            {
+              "titre": "Mesurer",
+              "texte": "**A** à λ<sub>max</sub>, zéro avec le solvant"
+            },
+            {
+              "titre": "Lire",
+              "texte": "tracer **A = f(c)** et placer l’inconnue"
+            },
+            {
+              "titre": "Titrage",
+              "texte": "repérer **V<sub>E</sub>** (virage, saut de pH), puis **égalité**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "20,0 mL de Fe²⁺ + MnO₄⁻ (0,020 mol/L). MnO₄⁻ + 5 Fe²⁺ + 8 H⁺ → … V<sub>E</sub> = 12,5 mL. __C<sub>A</sub>__&nbsp;?",
+          "calcul": "n(Fe²⁺) = 5 × 0,020 × 12,5×10⁻³ = 1,25×10⁻³ mol",
+          "aparte": "puis ÷ V<sub>A</sub>",
+          "resultat": "C<sub>A</sub> = [[6,25×10⁻² mol/L]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Lequel choisir&nbsp;?",
+          "entetes": [
+            "",
+            "Étalonnage",
+            "Titrage"
+          ],
+          "lignes": [
+            [
+              "Espèce",
+              "non consommée",
+              "consommée"
+            ],
+            [
+              "Condition",
+              "A ∝ c",
+              "réaction totale, rapide, unique"
+            ],
+            [
+              "Atout",
+              "faibles concentrations",
+              "exact, sans gamme"
+            ],
+            [
+              "Repérage",
+              "droite A = f(c)",
+              "virage, saut de pH"
+            ],
+            [
+              "Matériel",
+              "spectrophotomètre, cuve",
+              "burette, bécher"
+            ],
+            [
+              "Résultat",
+              "c lue sur la droite",
+              "c calculée avec V<sub>E</sub>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Réaction support&nbsp;: MnO₄⁻ + 5 Fe²⁺ + 8 H⁺ → Mn²⁺ + 5 Fe³⁺ + 4 H₂O",
+              "quoi": "l’équation"
+            },
+            {
+              "texte": "À l’équivalence, n(Fe²⁺) ÷ 5 = n(MnO₄⁻) versé.",
+              "quoi": "l’égalité"
+            },
+            {
+              "texte": "C<sub>A</sub> = 5 × C<sub>B</sub> × V<sub>E</sub> ÷ V<sub>A</sub>",
+              "quoi": "formule"
+            },
+            {
+              "texte": "C<sub>A</sub> = 6,25×10⁻² mol/L",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Dis ==comment== l’équivalence est repérée (teinte violette persistante)."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier les **coefficients** a et b dans l’égalité.",
+            "Confondre **titrant** (burette) et espèce **titrée**.",
+            "Laisser V<sub>E</sub> en **mL** sans convertir.",
+            "Étalonner avec une solution trop **concentrée** (A plus proportionnelle).",
+            "Repérer l’équivalence au **premier** virage non persistant."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que devient **A** si c double (solution diluée)&nbsp;?",
+            "Qu’est-ce que l’**équivalence**&nbsp;?",
+            "k = 1 250 L/mol, A = 0,25&nbsp;: **c**&nbsp;?"
+          ],
+          "reponses": "1) A double · 2) proportions stœchiométriques · 3) 2,0×10⁻⁴ mol/L"
+        }
+      ]
+    }
+  ]
+}

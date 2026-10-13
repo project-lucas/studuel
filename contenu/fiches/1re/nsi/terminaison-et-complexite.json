@@ -1,0 +1,120 @@
+{
+  "titre": "Arrêt et complexité",
+  "titreSurligne": "complexité",
+  "accroche": "S’arrête-t-il ? Combien ça coûte ?",
+  "bonus": "variant : s’arrête · invariant : juste · on raisonne sur le pire cas",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/nsi/terminaison-et-complexite.webp",
+    "prompt": "a glossy violet hourglass with golden sand and a small golden stop sign, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Le variant décroît,\nla boucle s’arrête !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Variant", "definition": "entier **positif** qui **décroît strictement** à chaque tour" },
+            { "terme": "Invariant", "definition": "propriété vraie avant, pendant et après chaque tour" },
+            { "terme": "Boucle bornée", "definition": "pour : termine **par construction**" },
+            { "terme": "Boucle non bornée", "definition": "tant que : terminaison à **prouver**" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les classes de coût",
+          "entetes": ["Classe", "Exemple"],
+          "lignes": [
+            ["Constant", "accès à t[i]"],
+            ["Logarithmique", "dichotomie"],
+            ["Linéaire", "recherche dans une liste"],
+            ["n log n", "bons tris"],
+            ["Quadratique", "tri par sélection, insertion"],
+            ["Exponentiel", "toutes les combinaisons"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Prouver un « tant que »",
+          "etapes": [
+            { "titre": "Variant", "texte": "exhiber un entier positif qui décroît" },
+            { "titre": "Terminaison", "texte": "une suite d’entiers positifs strictement décroissante est finie" },
+            { "titre": "Invariant", "texte": "vrai avant, conservé, donne le résultat à la sortie" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "<b>while n &gt; 0: n = n - 2</b>, avec n = 9. __Variant__&nbsp;?",
+          "calcul": "n : 9, 7, 5, 3, 1, −1",
+          "aparte": "entier, décroît",
+          "resultat": "= [[n]] (positif tant qu’on boucle)"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Sur un million d’éléments",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Linéaire", "texte": "un million d’opérations : **une seconde**." },
+            { "titre": "Quadratique", "texte": "mille milliards d’opérations : **des semaines**." },
+            { "titre": "Pire cas", "texte": "élément absent : **n** comparaisons." },
+            { "titre": "Meilleur cas", "texte": "élément en tête : **une** comparaison." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "le variant est un entier positif", "quoi": "sa nature" },
+            { "texte": "il décroît strictement à chaque tour", "quoi": "sa preuve" },
+            { "texte": "donc la boucle termine", "quoi": "la conclusion" }
+          ],
+          "pied": "Un meilleur ==algorithme== bat toujours une machine plus rapide."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’un algorithme qui **termine** est **correct**.",
+            "Un variant qui peut devenir **négatif** ou décimal.",
+            "Raisonner sur le **meilleur cas** au lieu du pire.",
+            "Compter le **temps** en secondes plutôt que les opérations.",
+            "Oublier l’**invariant** : sans lui, on ne sait pas si c’est juste."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel outil prouve qu’une boucle **s’arrête**&nbsp;?",
+            "Quelle classe pour la **recherche dichotomique**&nbsp;?",
+            "Quelle classe pour deux boucles **imbriquées**&nbsp;?"
+          ],
+          "reponses": "1) le variant · 2) logarithmique · 3) quadratique"
+        }
+      ]
+    }
+  ]
+}

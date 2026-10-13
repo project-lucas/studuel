@@ -1,0 +1,126 @@
+{
+  "titre": "Lectures graphiques",
+  "titreSurligne": "graphiques",
+  "accroche": "Où regarder, et quoi lire.",
+  "bonus": "y = mx + p · m = {yB − yA/xB − xA} · (0 ; p) est sur l’axe des ordonnées",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths-techno/automatismes-lectures-graphiques-et-droites.webp",
+    "prompt": "a glossy violet graph frame with a golden curve and a straight golden line crossing it, a tiny golden magnifying glass, sparkles"
+  },
+  "marcel": "Image : ordonnée.\nAntécédent : abscisse !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Lire une courbe",
+          "entetes": ["On cherche", "On lit"],
+          "lignes": [
+            ["**image** de a", "l’**ordonnée** en x = a"],
+            ["**antécédents** de k", "les **abscisses** en y = k"],
+            ["f(x) < k", "courbe **sous** y = k"],
+            ["f(x) = 0", "courbe sur l’**axe des x**"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La droite",
+          "petite": true,
+          "lignes": ["y = mx + p", "m = {yB − yA/xB − xA}"],
+          "regle": "**m** : on avance de 1, on monte de m. **p** : la droite coupe l’axe en ==(0 ; p)==. Si m > 0 elle monte, si m < 0 elle descend.",
+          "note": "A est sur la courbe ⇔ y = f(x)"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Repérer", "texte": "l’origine et les unités de chaque axe" },
+            { "titre": "Tracer", "texte": "un repère horizontal ou vertical jusqu’à la courbe" },
+            { "titre": "Lire", "texte": "l’abscisse ou l’ordonnée du point trouvé" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": "★",
+          "titre": "Le signe de m",
+          "entetes": ["m > 0", "m < 0", "m = 0"],
+          "lignes": [["la droite **monte**", "la droite **descend**", "la droite est **horizontale**"]]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Droite par __A(0 ; −2)__ et __B(2 ; 4)__.",
+          "calcul": "m = {4 − (−2)/2 − 0} = 3\np = −2",
+          "aparte": "A est sur l’axe y",
+          "resultat": "y = [[3x − 2]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Image", "texte": "Un nombre a **une seule** image." },
+            { "titre": "Antécédents", "texte": "Un nombre en a **zéro, un ou plusieurs**." },
+            { "titre": "Variations", "texte": "On suit la courbe de gauche à droite&nbsp;: elle **monte** ou **descend**." },
+            { "titre": "Tracer", "texte": "Deux points suffisent&nbsp;: x = 0 et x = 2." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "m = {4 − (−2)/2 − 0} = 3", "quoi": "le coefficient" },
+            { "texte": "A(0 ; −2) donc p = −2", "quoi": "l’ordonnée à l’origine" },
+            { "texte": "y = 3x − 2", "quoi": "l’équation" }
+          ],
+          "pied": "Contrôle avec B&nbsp;: 3 × 2 − 2 = ==4==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Lire l’**abscisse** quand on demande l’image.",
+            "Oublier de lire les **unités** des axes.",
+            "Inverser **yB − yA** et xB − xA dans le calcul de m.",
+            "Croire qu’un nombre a **un seul** antécédent."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**f(x) = 2** : on lit quoi sur la courbe&nbsp;?",
+            "Droite par **(0 ; 1)** et **(1 ; 4)**&nbsp;?",
+            "**m = −2** : la droite monte ou descend&nbsp;?"
+          ],
+          "reponses": "1) les abscisses où la courbe coupe y = 2 · 2) y = 3x + 1 · 3) elle descend"
+        }
+      ]
+    }
+  ]
+}

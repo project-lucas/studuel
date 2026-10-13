@@ -1,0 +1,187 @@
+{
+  "titre": "Préparer une solution",
+  "titreSurligne": "solution",
+  "accroche": "Le bon geste, au bon volume.",
+  "bonus": "Pesée&nbsp;: **m = ρ × V** · Dilution&nbsp;: **C<sub>i</sub>V<sub>i</sub> = C<sub>f</sub>V<sub>f</sub>** · **F = C<sub>i</sub>/C<sub>f</sub>**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biotechnologies/preparer-une-solution-par-pesee-ou-par-dilution.webp",
+    "prompt": "a glossy violet volumetric flask with a golden gauge line and a golden pipette dripping a drop into it, sparkles"
+  },
+  "marcel": "Jusqu’au trait\nde jauge, pas plus !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Deux façons de préparer",
+          "entetes": [
+            "",
+            "Par pesée",
+            "Par dilution"
+          ],
+          "lignes": [
+            [
+              "**Départ**",
+              "un solide",
+              "une solution **mère**"
+            ],
+            [
+              "**On mesure**",
+              "la **masse**",
+              "le **volume** prélevé"
+            ],
+            [
+              "**Matériel**",
+              "balance, fiole jaugée",
+              "pipette jaugée, fiole jaugée"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La dilution",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "C<sub>i</sub> V<sub>i</sub> = C<sub>f</sub> V<sub>f</sub>"
+          ],
+          "regle": "La quantité de soluté se **conserve**&nbsp;: V<sub>i</sub> = C<sub>f</sub> V<sub>f</sub> / C<sub>i</sub>. Facteur **F = V<sub>f</sub> / V<sub>i</sub>**.",
+          "note": "i = initiale, f = finale"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "À retenir",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Pesée",
+              "texte": "**m = ρ × V** : on pèse, on dissout dans la moitié du solvant, on complète."
+            },
+            {
+              "titre": "Ménisque",
+              "texte": "le **bas du ménisque** affleure le trait, l’œil à la hauteur du trait."
+            },
+            {
+              "titre": "Jamais dans le flacon",
+              "texte": "on verse la solution mère dans un **bécher**, puis on pipette."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La dilution, pas à pas",
+          "etapes": [
+            {
+              "titre": "Calculer",
+              "texte": "le volume V<sub>i</sub> à **prélever**"
+            },
+            {
+              "titre": "Prélever",
+              "texte": "à la **pipette jaugée**, dans un bécher, puis verser dans la fiole"
+            },
+            {
+              "titre": "Compléter",
+              "texte": "**au trait**, boucher, **homogénéiser**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "50,0&nbsp;mL à 0,20&nbsp;mol/L depuis 1,0&nbsp;mol/L. __V<sub>i</sub>__&nbsp;?",
+          "calcul": "F = 1,0 / 0,20 = 5",
+          "aparte": "F = V<sub>f</sub>/V<sub>i</sub>",
+          "resultat": "V<sub>i</sub> = 50,0 / 5 = [[10,0 mL]]"
+        },
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Par pesée&nbsp;: m = 5,0 × 0,1000 = 0,50 g pour 100,0 mL à 5,0 g/L.",
+              "quoi": "la masse"
+            },
+            {
+              "texte": "Je rince la coupelle, je dissous, je complète au trait.",
+              "quoi": "le geste"
+            },
+            {
+              "texte": "J’homogénéise en retournant la fiole.",
+              "quoi": "la fin"
+            }
+          ],
+          "pied": "Je note la **masse exacte** pesée."
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Choisir le matériel",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Contenir",
+              "texte": "un volume exact&nbsp;: **fiole jaugée**"
+            },
+            {
+              "titre": "Délivrer",
+              "texte": "un volume exact&nbsp;: **pipette jaugée**"
+            },
+            {
+              "titre": "Peser 0,50 g",
+              "texte": "balance au centigramme au moins"
+            },
+            {
+              "titre": "Approximatif",
+              "texte": "éprouvette ou bécher"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "**Dépasser** le trait de jauge&nbsp;: tout recommencer.",
+            "Oublier de **rincer** la coupelle&nbsp;: concentration trop faible.",
+            "Ne pas **homogénéiser** la solution.",
+            "Confondre C<sub>i</sub> et C<sub>f</sub> dans la formule."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel matériel **contient** un volume exact&nbsp;?",
+            "Que se **conserve**-t-il en diluant&nbsp;?",
+            "Passer de 1,0 à 0,10&nbsp;mol/L&nbsp;: **F**&nbsp;?"
+          ],
+          "reponses": "1) la fiole jaugée · 2) la quantité de soluté · 3) F = 10"
+        }
+      ]
+    }
+  ]
+}

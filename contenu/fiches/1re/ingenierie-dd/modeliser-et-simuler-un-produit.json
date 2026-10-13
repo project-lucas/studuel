@@ -1,0 +1,189 @@
+{
+  "titre": "Modéliser et simuler",
+  "titreSurligne": "simuler",
+  "accroche": "Prévoir avant de fabriquer.",
+  "bonus": "**Modèle → simulation → mesure sur le réel → recalage** · plus le pas est petit, plus c’est précis… et long",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/ingenierie-dd/modeliser-et-simuler-un-produit.webp",
+    "prompt": "a glossy violet laptop showing a golden curve graph and a 3D cube model beside a small gear, tiny golden sparks, sparkles, magenta background, same art style as the reference icons, no text"
+  },
+  "marcel": "Je simule d’abord,\nje fabrique après !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les types de modèles",
+          "entetes": [
+            "Modèle",
+            "Représente"
+          ],
+          "lignes": [
+            [
+              "**Volumique**",
+              "formes, masses (CAO)"
+            ],
+            [
+              "**Multiphysique**",
+              "électrique, mécanique, thermique"
+            ],
+            [
+              "**Fonctionnel**",
+              "blocs reliés par des signaux"
+            ],
+            [
+              "**Comportemental**",
+              "états, logique"
+            ],
+            [
+              "**De régression**",
+              "loi tirée de mesures"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Effort × flux = puissance",
+          "entetes": [
+            "Domaine",
+            "Effort",
+            "Flux",
+            "P"
+          ],
+          "lignes": [
+            [
+              "Électrique",
+              "U (V)",
+              "I (A)",
+              "U × I"
+            ],
+            [
+              "Translation",
+              "F (N)",
+              "v (m/s)",
+              "F × v"
+            ],
+            [
+              "Rotation",
+              "C (N·m)",
+              "ω (rad/s)",
+              "C × ω"
+            ],
+            [
+              "Hydraulique",
+              "p (Pa)",
+              "Qv (m³/s)",
+              "p × Qv"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Conduire une simulation",
+          "etapes": [
+            {
+              "titre": "Paramétrer",
+              "texte": "variables **internes** (constituants) et **externes** (entrées)"
+            },
+            {
+              "titre": "Simuler",
+              "texte": "choisir le **pas** et le solveur, lancer le calcul"
+            },
+            {
+              "titre": "Exploiter",
+              "texte": "lire les courbes, comparer au cahier des charges, **conclure**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Moteur 12 V : montée en __0,4 s__ simulée, __0,5 s__ mesurée. Écart&nbsp;?",
+          "calcul": "(0,5 − 0,4) / 0,4",
+          "aparte": "modèle trop optimiste",
+          "resultat": "écart de [[25 %]] : on recale"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quel solveur&nbsp;?",
+          "oui": {
+            "titre": "Pas variable",
+            "texte": "Pas **réduit** quand ça varie vite, agrandi quand c’est calme."
+          },
+          "non": {
+            "titre": "Pas fixe",
+            "texte": "Même pas partout : **simple**, mais lent ou imprécis."
+          },
+          "essai": {
+            "texte": "Un démarrage brutal suivi d’un régime calme se traite mieux à pas <i>variable</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Un résultat n’a de valeur que si les hypothèses sont connues",
+              "quoi": "la réserve"
+            },
+            {
+              "texte": "L’écart simulation / mesure est de 25 %",
+              "quoi": "le chiffre"
+            },
+            {
+              "texte": "L’inertie est sous-estimée : on recale le paramètre",
+              "quoi": "la suite"
+            },
+            {
+              "texte": "Entrées : échelon, rampe, sinusoïde",
+              "quoi": "les sources"
+            }
+          ],
+          "pied": "On ==chiffre l’écart==, puis on propose une cause."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre un **flux MEI** et une **grandeur flux** (I, v, ω, Qv).",
+            "Croire qu’un **petit pas** est toujours le meilleur choix.",
+            "Fournir une courbe **sans conclure** sur le cahier des charges.",
+            "Oublier que le produit de l’effort par le flux est une **puissance**.",
+            "Oublier de **recaler** le modèle après la mesure."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle puissance en **rotation**&nbsp;?",
+            "Que fait un **pas** plus petit&nbsp;?",
+            "Que faire après un **écart** modèle / réel&nbsp;?"
+          ],
+          "reponses": "1) P = C × ω · 2) plus précis, calcul plus long · 3) recaler les paramètres"
+        }
+      ]
+    }
+  ]
+}

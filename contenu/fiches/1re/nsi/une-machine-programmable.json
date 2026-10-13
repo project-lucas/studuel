@@ -1,0 +1,115 @@
+{
+  "titre": "Machine programmable",
+  "titreSurligne": "programmable",
+  "accroche": "Décrire quoi faire, puis le changer.",
+  "bonus": "machine → assembleur → **haut niveau** · compilé = tout avant · interprété = pendant · <i>0,1 + 0,2 ≠ 0,3</i>",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/nsi/une-machine-programmable.webp",
+    "prompt": "a glossy violet punched card with golden holes feeding into a small golden gear, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Compiler ou\ninterpréter ?",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les trois langages",
+          "items": [
+            { "terme": "Machine", "definition": "le **binaire** exécuté, propre à chaque processeur" },
+            { "terme": "Assembleur", "definition": "sa traduction lisible, **un mot par instruction**" },
+            { "terme": "Haut niveau", "definition": "proche des maths et du langage naturel" },
+            { "terme": "Flottant", "definition": "pas un réel exact&nbsp;: comparer **à une tolérance**" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Ce qu’un programme manipule",
+          "entetes": ["Élément", "Ce que c’est"],
+          "lignes": [
+            ["**Variable**", "une case nommée"],
+            ["**Type**", "entier, flottant, booléen, chaîne, liste"],
+            ["**Contrôle**", "test, boucle bornée ou non"],
+            ["**Fonction**", "un traitement nommé, réutilisable"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Compilation ou interprétation",
+          "oui": { "titre": "Compilation", "texte": "traduit **tout** avant l’exécution&nbsp;: exécutable rapide, lié à une plateforme." },
+          "non": { "titre": "Interprétation", "texte": "traduit **ligne à ligne** pendant&nbsp;: souple, aucun fichier produit." },
+          "essai": { "titre": "Python", "texte": "est **interprété**&nbsp;: une erreur d’exécution peut attendre la fin." }
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "En Python&nbsp;: <i>0.1 + 0.2 == 0.3</i> vaut __quoi__&nbsp;?",
+          "calcul": "0,1 n’a pas d’écriture binaire finie",
+          "aparte": "arrondi",
+          "resultat": "= [[False]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les limites",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Complexité", "texte": "calculable ne veut pas dire **en temps raisonnable**." },
+            { "titre": "Indécidabilité", "texte": "aucun programme ne dit si un autre **s’arrêtera**." },
+            { "titre": "Démontré", "texte": "ce n’est pas une limite **technique** à lever." },
+            { "titre": "Comparer", "texte": "<i>abs(a - b) &lt; 1e-9</i> plutôt que <i>a <b>==</b> b</i>." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Compilé&nbsp;: traduit en entier avant.", "quoi": "le principe" },
+            { "texte": "Exécutable rapide mais dépend de la plateforme.", "quoi": "l’atout et le coût" },
+            { "texte": "Python&nbsp;: interprété, ligne par ligne.", "quoi": "le contre-exemple" }
+          ],
+          "pied": "Une erreur de ==syntaxe== est vue avant le lancement, même en Python."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Tester l’**égalité** de deux flottants.",
+            "Croire qu’un programme qui démarre est juste&nbsp;: une erreur d’**exécution** n’apparaît qu’en arrivant sur la ligne fautive, tout ce qui précède a déjà tourné.",
+            "Confondre **assembleur** et langage machine.",
+            "Croire que tout calculable se calcule **vite**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Qui traduit **tout avant** l’exécution&nbsp;?",
+            "Pourquoi 0,1 + 0,2 n’est-il pas **0,3**&nbsp;?",
+            "Que dit l’**indécidabilité**&nbsp;?"
+          ],
+          "reponses": "1) la compilation · 2) 0,1 n’a pas d’écriture binaire finie · 3) on ne peut pas prédire l’arrêt"
+        }
+      ]
+    }
+  ]
+}

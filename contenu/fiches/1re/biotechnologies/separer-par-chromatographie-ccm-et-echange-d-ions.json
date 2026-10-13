@@ -1,0 +1,182 @@
+{
+  "titre": "La chromatographie",
+  "titreSurligne": "chromatographie",
+  "accroche": "Chaque molécule avance à son rythme.",
+  "bonus": "CCM = **analytique** (identifier) · échange d’ions = **préparative** (récupérer) · Rf entre **0 et 1**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biotechnologies/separer-par-chromatographie-ccm-et-echange-d-ions.webp",
+    "prompt": "a glossy violet glass tank holding a plate with golden and violet colored spots at different heights, sparkles"
+  },
+  "marcel": "Les retenues traînent,\nles autres filent !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le principe commun",
+          "items": [
+            {
+              "terme": "Phase fixe",
+              "definition": "elle **retient** les molécules (force de rétention)"
+            },
+            {
+              "terme": "Phase mobile",
+              "definition": "elle les **entraîne** (force d’entraînement)"
+            },
+            {
+              "terme": "Éluant",
+              "definition": "la phase mobile de la CCM"
+            },
+            {
+              "terme": "Élution",
+              "definition": "on **détache** les molécules retenues"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le rapport frontal",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "Rf = {d tache/d front}"
+          ],
+          "regle": "Entre **0 et 1**. Même Rf qu’un **étalon** (même hauteur)&nbsp;: même molécule.",
+          "note": "mesure du dépôt"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "À retenir",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "CCM",
+              "texte": "**analytique** : elle sert à **identifier** par comparaison aux étalons."
+            },
+            {
+              "titre": "Échange d’ions",
+              "texte": "**préparative** : liaisons **ioniques**, on récupère les fractions."
+            },
+            {
+              "titre": "Charge et pH",
+              "texte": "la lysine est (+) à pH 7, l’acide glutamique (−)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La CCM",
+          "etapes": [
+            {
+              "titre": "Déposer",
+              "texte": "de **petites** taches (mélange + étalons) sur la ligne à 1&nbsp;cm du bas"
+            },
+            {
+              "titre": "Éluer",
+              "texte": "cuve **fermée**, éluant **sous** la ligne de dépôt, jusqu’à 1&nbsp;cm du haut"
+            },
+            {
+              "titre": "Révéler",
+              "texte": "ninhydrine, UV… puis mesurer et calculer **Rf**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Front à 8,0&nbsp;cm, tache à 3,2&nbsp;cm. __Rf__&nbsp;?",
+          "calcul": "Rf = 3,2 / 8,0",
+          "aparte": "sans unité",
+          "resultat": "Rf = [[0,40]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Échange d’ions : fixer, laver, éluer",
+          "entetes": [
+            "Étape",
+            "Ce qui se passe"
+          ],
+          "lignes": [
+            [
+              "**Fixation**",
+              "les molécules de charge **opposée** à la résine s’accrochent"
+            ],
+            [
+              "**Lavage**",
+              "on élimine ce qui ne s’est pas fixé"
+            ],
+            [
+              "**Élution**",
+              "on change le **pH** ou le **sel** pour détacher, par **fractions**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Rf = 3,2 / 8,0 = 0,40, comparé à celui de l’étalon.",
+              "quoi": "calculer"
+            },
+            {
+              "texte": "Même Rf que l’étalon&nbsp;: la molécule est identifiée.",
+              "quoi": "identifier"
+            },
+            {
+              "texte": "À pH 7, la lysine (+) est retenue sur résine (−).",
+              "quoi": "justifier"
+            }
+          ],
+          "pied": "Pas de tache ≠ pas de molécule&nbsp;: ==limite de détection==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dépôts **trop gros**&nbsp;: taches qui se chevauchent.",
+            "Ligne de dépôt **sous** l’éluant&nbsp;: dépôts dissous.",
+            "Cuve **non saturée** ou couvercle ouvert.",
+            "Conclure à l’absence d’une molécule faute de tache."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle phase **retient** les molécules&nbsp;?",
+            "Quel est l’intervalle de **Rf**&nbsp;?",
+            "Quelle chromatographie est **préparative**&nbsp;?"
+          ],
+          "reponses": "1) la phase fixe · 2) entre 0 et 1 · 3) l’échange d’ions"
+        }
+      ]
+    }
+  ]
+}

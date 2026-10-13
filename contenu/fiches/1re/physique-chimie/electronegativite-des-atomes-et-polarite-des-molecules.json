@@ -1,0 +1,113 @@
+{
+  "titre": "Polarité des molécules",
+  "titreSurligne": "Polarité",
+  "accroche": "Qui attire les électrons&nbsp;?",
+  "epreuve": "bac",
+  "bonus": "Électronégativité : **augmente** vers la droite, **diminue** vers le bas · F > O > N > Cl",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/electronegativite-des-atomes-et-polarite-des-molecules.webp",
+    "prompt": "a glossy violet water molecule with a bent shape, small golden plus and minus charges on its ends, sparkles"
+  },
+  "marcel": "La forme compte\nautant que l’atome !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les notions",
+          "items": [
+            { "terme": "Électronégativité", "definition": "tendance d’un atome à **attirer** les électrons d’une liaison" },
+            { "terme": "Liaison polarisée", "definition": "atomes **différents**&nbsp;: le doublet est déplacé" },
+            { "terme": "δ+ et δ−", "definition": "**charges partielles**, pas des ions" },
+            { "terme": "Molécule polaire", "definition": "liaisons polarisées **et** charges non compensées" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux molécules à connaître",
+          "entetes": ["Molécule", "Géométrie", "Verdict"],
+          "lignes": [
+            ["H₂O", "coudée", "polaire"],
+            ["CO₂", "linéaire", "apolaire"],
+            ["H₂, O₂, Cl₂", "atomes identiques", "apolaire"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Décider si une molécule est polaire",
+          "etapes": [
+            { "titre": "Comparer", "texte": "les électronégativités&nbsp;: la liaison est-elle **polarisée** ?" },
+            { "titre": "Géométrie", "texte": "déduire la forme du schéma de **Lewis**" },
+            { "titre": "Compenser", "texte": "les charges partielles s’**annulent-elles** ?" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "CO₂ est-elle polaire&nbsp;? O est plus électronégatif que C.",
+          "calcul": "2 liaisons C=O polarisées, molécule linéaire",
+          "aparte": "effets opposés",
+          "resultat": "les effets s’annulent : [[apolaire]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Même liaison, autre verdict",
+          "oui": { "titre": "H₂O polaire", "texte": "Liaisons polarisées et molécule **coudée**&nbsp;: rien ne se compense." },
+          "non": { "titre": "CO₂ apolaire", "texte": "Liaisons très polarisées mais molécule **linéaire** et symétrique." },
+          "essai": { "texte": "La polarité commande la <i>solubilité</i>, les <i>températures de changement d’état</i> et le rôle de solvant de l’eau." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "O est plus électronégatif que H&nbsp;: les liaisons O–H sont polarisées.", "quoi": "la liaison" },
+            { "texte": "La molécule est coudée&nbsp;: les charges ne se compensent pas.", "quoi": "la géométrie" },
+            { "texte": "H₂O est donc polaire.", "quoi": "conclure" }
+          ],
+          "pied": "Rappelle ==semblable dissout semblable== pour la solubilité."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Conclure «&nbsp;polaire&nbsp;» sans regarder la **géométrie**.",
+            "Prendre δ+ et δ− pour des **ions**.",
+            "Inverser le sens de variation dans le **tableau périodique**.",
+            "Oublier que H₂, O₂, Cl₂ sont **apolaires**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel atome est le **plus électronégatif**&nbsp;?",
+            "Pourquoi CO₂ est-elle **apolaire**&nbsp;?",
+            "Une molécule polaire se dissout dans quel type de solvant&nbsp;?"
+          ],
+          "reponses": "1) le fluor · 2) linéaire, effets annulés · 3) un solvant polaire"
+        }
+      ]
+    }
+  ]
+}

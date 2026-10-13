@@ -1,0 +1,110 @@
+{
+  "titre": "Indicateurs de santé",
+  "titreSurligne": "Indicateurs",
+  "accroche": "Des chiffres pour comparer.",
+  "bonus": "**Incidence** = nouveaux cas · **prévalence** = cas existants",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/sciences-sanitaires-sociales/mesurer-l-etat-de-sante-les-indicateurs.webp",
+    "prompt": "a glossy violet bar chart with a golden heartbeat line rising above it and a small golden magnifying glass, sparkles, same art style as the reference icons, on magenta background, no text"
+  },
+  "marcel": "Mesurer pour\nmieux comprendre !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les mots clés",
+          "items": [
+            { "terme": "Indicateur", "definition": "donnée chiffrée, à méthode stable, pour **comparer** dans le temps et l’espace" },
+            { "terme": "Épidémiologie", "definition": "étude de la **fréquence** et de la répartition des problèmes de santé" },
+            { "terme": "Morbidité", "definition": "les **maladies** présentes dans une population" },
+            { "terme": "Taux standardisé", "definition": "calculé comme si les populations avaient la **même structure par âge**" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Mortalité et natalité",
+          "entetes": ["Indicateur", "Calcul"],
+          "lignes": [
+            ["**Natalité**", "naissances vivantes / population × 1 000"],
+            ["**Mortalité**", "décès / population moyenne × 1 000"],
+            ["**Mortalité infantile**", "décès < 1 an / naissances vivantes × 1 000"],
+            ["**Espérance de vie**", "années moyennes vécues à la naissance"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce qu’il faut savoir expliquer",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Incidence", "texte": "**Nouveaux cas** sur une période donnée." },
+            { "titre": "Prévalence", "texte": "Cas **existants** à un moment donné, anciens et nouveaux." },
+            { "titre": "Composites", "texte": "**EVSI** (années sans incapacité) et **IDH** (santé, éducation, niveau de vie)." },
+            { "titre": "Âge", "texte": "Le taux **brut** de mortalité dépend de la structure par âge." },
+            { "titre": "Producteurs", "texte": "**INSEE**, **DREES**, Santé publique France, Inserm, OMS." },
+            { "titre": "Regard critique", "texte": "**Croiser** les indicateurs, connaître la source et ce qu’ils ne mesurent pas." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Comparer deux populations",
+          "etapes": [
+            { "titre": "Choisir", "texte": "un indicateur adapté au phénomène" },
+            { "titre": "Standardiser", "texte": "neutraliser la structure par âge" },
+            { "titre": "Croiser", "texte": "source, méthode, limites" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Un indicateur est une donnée chiffrée qui permet de comparer dans le temps et l’espace.", "quoi": "définir" },
+            { "texte": "L’incidence compte les nouveaux cas, la prévalence les cas existants.", "quoi": "distinguer" },
+            { "texte": "Le diabète voit sa prévalence augmenter car on vit plus longtemps avec la maladie.", "quoi": "l’exemple" }
+          ],
+          "pied": "Un indicateur ne dit ==jamais tout== : on en croise plusieurs."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **incidence** et **prévalence**.",
+            "Comparer deux taux **bruts** d’âges différents.",
+            "Oublier le « **pour 1 000** » d’un taux.",
+            "Conclure d’**un seul** indicateur."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que mesure la **prévalence** ?",
+            "Pourquoi **standardiser** un taux ?",
+            "Quel organisme produit les données **démographiques** ?"
+          ],
+          "reponses": "1) les cas existants · 2) neutraliser l’effet de l’âge · 3) l’INSEE"
+        }
+      ]
+    }
+  ]
+}

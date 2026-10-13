@@ -1,0 +1,174 @@
+{
+  "titre": "RH et coût du travail",
+  "titreSurligne": "coût du travail",
+  "accroche": "Un salarié coûte plus que son net.",
+  "bonus": "**Coût global** = brut + cotisations patronales · **Productivité** = production ÷ travail",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/sciences-gestion-numerique/ressources-humaines-et-cout-du-travail.webp",
+    "prompt": "a glossy violet pay slip sheet with a golden coin stack and a small golden person icon, tiny golden sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Du brut au coût\nglobal&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Qualification ou compétence&nbsp;?",
+          "entetes": [
+            "",
+            "Idée"
+          ],
+          "lignes": [
+            [
+              "**Qualification**",
+              "ce qu’on **peut** faire (diplôme), liée au **poste**"
+            ],
+            [
+              "**Compétence**",
+              "ce qu’on **sait faire en situation**, liée à l’**individu**"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Du brut au coût global",
+          "entetes": [
+            "Élément",
+            "Contenu"
+          ],
+          "lignes": [
+            [
+              "**Brut**",
+              "salaire du contrat"
+            ],
+            [
+              "− salariales",
+              "→ **salaire net**"
+            ],
+            [
+              "+ patronales",
+              "payées par l’employeur"
+            ],
+            [
+              "**Coût global**",
+              "brut + patronales"
+            ],
+            [
+              "Cotisations",
+              "financent la protection sociale"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "Les indicateurs sociaux",
+          "lignes": [
+            "Productivité = production ÷ travail"
+          ],
+          "regle": "Absentéisme = heures d’absence ÷ heures théoriques × 100",
+          "note": "rotation = ((entrées + sorties) ÷ 2) ÷ effectif × 100",
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Calculer le coût",
+          "etapes": [
+            {
+              "titre": "Net",
+              "texte": "brut × (1 − taux salarial)"
+            },
+            {
+              "titre": "Coût",
+              "texte": "brut × (1 + taux patronal)"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Brut 2 200 €, patronales 40 %. Coût mensuel&nbsp;?",
+          "calcul": "2 200 × 1,40",
+          "resultat": "[[3 080 €]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Choix d’organisation",
+          "items": [
+            {
+              "titre": "Internaliser",
+              "texte": "salariés propres&nbsp;: maîtrise"
+            },
+            {
+              "titre": "Externaliser",
+              "texte": "prestataire&nbsp;: souplesse, dépendance"
+            },
+            {
+              "titre": "Nouveaux liens",
+              "texte": "micro-entrepreneur, plateformes, freelances"
+            },
+            {
+              "titre": "Conditions",
+              "texte": "elles pèsent sur l’absentéisme"
+            }
+          ],
+          "deux": true
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **net** et **coût global**.",
+            "Oublier les cotisations **patronales**.",
+            "Comparer un coût sans la **productivité**.",
+            "Confondre **qualification** et compétence."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "À retenir",
+          "paragraphes": [
+            "Le coût du travail n’a de sens que **rapporté à ce que le travail produit** : un salarié mieux payé mais plus productif peut coûter moins cher par unité produite."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Qui paie les cotisations **patronales** ?",
+            "Que mesure la **productivité** ?",
+            "Que fait-on en **externalisant** ?"
+          ],
+          "reponses": "1) l’employeur · 2) la production par quantité de travail · 3) on confie l’activité à un prestataire"
+        }
+      ]
+    }
+  ]
+}

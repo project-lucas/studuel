@@ -1,0 +1,162 @@
+{
+  "titre": "Vecteurs et repères",
+  "titreSurligne": "Vecteurs",
+  "accroche": "Projeter, additionner, multiplier.",
+  "bonus": "F<sub>axe</sub> = F cos α · F<sub>perp</sub> = F sin α · ‖u‖ = √(x² + y²) · **N** pour une force",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/calcul-vectoriel-et-reperes.webp",
+    "prompt": "a glossy violet coordinate axes with a golden arrow vector and its dotted projections, same art style as the reference icons, sparkles"
+  },
+  "marcel": "Cosinus le long,\nsinus en travers !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Un vecteur : quatre caractéristiques",
+          "items": [
+            {
+              "terme": "Point d’application",
+              "definition": "où la force s’exerce"
+            },
+            {
+              "terme": "Direction",
+              "definition": "la droite qui la porte"
+            },
+            {
+              "terme": "Sens",
+              "definition": "vers où elle pousse"
+            },
+            {
+              "terme": "Norme",
+              "definition": "l’intensité, en newtons"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La projection",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "F<sub>axe</sub> = F × cos α",
+            "F<sub>perp</sub> = F × sin α"
+          ],
+          "regle": "α est l’angle avec l’==axe== : **le long** de l’axe, le **cosinus**&nbsp;; en travers, le sinus. Deux vecteurs ne sont égaux que si direction, sens et norme coïncident.",
+          "note": "cos le long&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Projeter une force",
+          "etapes": [
+            {
+              "titre": "Repère",
+              "texte": "choisir celui qui simplifie le calcul : souvent un axe le long du plan incliné"
+            },
+            {
+              "titre": "Angle",
+              "texte": "repérer α entre la force et l’axe visé (et non avec l’autre axe)"
+            },
+            {
+              "titre": "Composantes",
+              "texte": "F cos α le long de l’axe, F sin α perpendiculairement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Force de __100 N__ faisant un angle de __30°__ avec l’axe. Composante le long de l’axe&nbsp;?",
+          "calcul": "100 × cos 30° = 100 × 0,866",
+          "aparte": "le long : cosinus",
+          "resultat": "F<sub>axe</sub> ≈ [[87 N]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Les deux produits",
+          "entetes": [
+            "Produit",
+            "Donne",
+            "Sert à"
+          ],
+          "lignes": [
+            [
+              "**Scalaire**",
+              "un nombre : ‖u‖‖v‖ cos α",
+              "le travail"
+            ],
+            [
+              "**Vectoriel**",
+              "un vecteur : ‖u‖‖v‖ sin α",
+              "les moments"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Repère orthonormé direct choisi, axes nommés",
+              "quoi": "le repère"
+            },
+            {
+              "texte": "Somme : composante par composante",
+              "quoi": "l’addition"
+            },
+            {
+              "texte": "F<sub>axe</sub> = F cos α, avec l’unité N",
+              "quoi": "la projection"
+            },
+            {
+              "texte": "‖u‖ = √(x² + y²) dans le plan",
+              "quoi": "la norme"
+            }
+          ],
+          "pied": "Changer de repère change les ==coordonnées==, jamais le vecteur."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "**Intervertir** sinus et cosinus.",
+            "Égaler deux vecteurs de même **norme** seulement.",
+            "Croire que changer de repère change la **physique**.",
+            "Oublier le **signe** d’un produit par un réel négatif."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Produit scalaire de deux vecteurs **perpendiculaires**&nbsp;?",
+            "Norme du vecteur **(3 ; 4)**&nbsp;?",
+            "Quel produit donne un **moment**&nbsp;?"
+          ],
+          "reponses": "1) nul · 2) √(9 + 16) = 5 · 3) le produit vectoriel"
+        }
+      ]
+    }
+  ]
+}

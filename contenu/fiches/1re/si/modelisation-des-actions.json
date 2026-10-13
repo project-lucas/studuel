@@ -1,0 +1,166 @@
+{
+  "titre": "Modéliser les actions",
+  "titreSurligne": "actions",
+  "accroche": "Force, moment, liaison&nbsp;: on modélise.",
+  "bonus": "**M = F × d** en **N·m** · droite d’action par le point ⇒ **M = 0** · 6 degrés de liberté au plus",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/modelisation-des-actions.webp",
+    "prompt": "a glossy violet wrench tightening a golden bolt with a curved arrow showing rotation, a small force arrow, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Plus le bras est long,\nplus ça tourne !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le moment d’une force",
+          "petite": true,
+          "lignes": [
+            "M = F × d"
+          ],
+          "regle": "**F** en newtons, **d** en mètres&nbsp;: la distance **perpendiculaire** entre la droite d’action et le point, le ==bras de levier==. Résultat en **N·m**.",
+          "note": "droite d’action par le point&nbsp;: M = 0&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les liaisons",
+          "entetes": [
+            "Liaison",
+            "Mouvements libres"
+          ],
+          "lignes": [
+            [
+              "**Encastrement**",
+              "aucun (0 ddl)"
+            ],
+            [
+              "**Pivot**",
+              "1 rotation"
+            ],
+            [
+              "**Glissière**",
+              "1 translation"
+            ],
+            [
+              "**Ponctuelle**",
+              "5 ddl, force normale au contact"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Modéliser une action en trois temps",
+          "etapes": [
+            {
+              "titre": "Classer",
+              "texte": "à distance (le poids, en G) ou de contact (appui, liaison, frottement)"
+            },
+            {
+              "titre": "Placer",
+              "texte": "point d’application, direction, sens et intensité de la force"
+            },
+            {
+              "titre": "Mesurer",
+              "texte": "le bras de levier d perpendiculaire, puis M = F × d, signe compris"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une clé de 0,40 m, __perpendiculaire__ à la force F = 50 N. Le moment sur l’écrou&nbsp;?",
+          "calcul": "M = F × d = 50 × 0,40",
+          "aparte": "d = longueur de la clé",
+          "resultat": "M = [[20 N·m]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le signe du moment",
+          "oui": {
+            "titre": "Sens direct",
+            "texte": "Rotation dans le sens direct&nbsp;: moment **positif**."
+          },
+          "non": {
+            "titre": "Sens inverse",
+            "texte": "Rotation dans l’autre sens&nbsp;: moment **négatif**."
+          },
+          "essai": {
+            "texte": "Même force, bras **doublé**&nbsp;: le moment est <i>doublé</i>. C’est le principe de la clé et du levier."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Poids&nbsp;: action à distance, en G, P = m × g",
+              "quoi": "nommer"
+            },
+            {
+              "texte": "Liaison pivot&nbsp;: 1 rotation autorisée",
+              "quoi": "les ddl"
+            },
+            {
+              "texte": "Liaison supposée **parfaite**",
+              "quoi": "l’hypothèse"
+            }
+          ],
+          "pied": "Une liaison parfaite est **sans jeu et sans frottement**&nbsp;: c’est une ==hypothèse== à écrire."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Prendre pour d la distance **au point d’application** et non la perpendiculaire.",
+            "Oublier que M est **nul** si la droite passe par le point.",
+            "Écrire des **N** au lieu de **N·m**.",
+            "Oublier d’**annoncer** la liaison parfaite."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "Pour aller plus loin",
+          "paragraphes": [
+            "Une action **répartie** sur une surface se remplace par une force unique équivalente, appliquée au point où la répartition s’équilibre. Le **poids** s’applique au centre de gravité."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Moment d’une force de **30 N** à **0,5 m**&nbsp;?",
+            "Combien de degrés de liberté pour un **encastrement**&nbsp;?",
+            "Quel est le moment si la droite d’action **passe par le point**&nbsp;?"
+          ],
+          "reponses": "1) 15 N·m · 2) aucun, 0 · 3) nul, quelle que soit la force"
+        }
+      ]
+    }
+  ]
+}

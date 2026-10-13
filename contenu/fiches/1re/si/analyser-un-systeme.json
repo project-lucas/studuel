@@ -1,0 +1,113 @@
+{
+  "titre": "Analyser un système",
+  "titreSurligne": "système",
+  "accroche": "Besoin, critères, écarts, deux chaînes.",
+  "bonus": "**Fonction · critère · niveau · flexibilité** · l’information **commande** l’énergie, l’énergie **renvoie** de l’information",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/analyser-un-systeme.webp",
+    "prompt": "a glossy violet robotic arm with a golden sensor and a small gear, a glowing clipboard with a checklist beside it, same art style as the reference icons, sparkles"
+  },
+  "marcel": "Un besoin chiffré,\nou rien du tout !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Une fonction de service",
+          "entetes": ["Élément", "Exemple"],
+          "lignes": [
+            ["**Fonction**", "permettre le déplacement"],
+            ["**Critère**", "l’autonomie"],
+            ["**Niveau**", "40 km"],
+            ["**Flexibilité**", "± 5 km"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois écarts",
+          "entetes": ["Écart", "Entre…", "Question"],
+          "lignes": [
+            ["**1**", "cahier des charges / modèle", "l’hypothèse est-elle valable&nbsp;?"],
+            ["**2**", "modèle / réel", "la simulation prédit-elle bien&nbsp;?"],
+            ["**3**", "réel / cahier des charges", "le produit répond-il au besoin&nbsp;?"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Analyser un système en trois temps",
+          "etapes": [
+            { "titre": "Besoin", "texte": "écrire chaque fonction avec son critère, son niveau et sa flexibilité" },
+            { "titre": "Chaînes", "texte": "repérer la chaîne d’information et la chaîne d’énergie, maillon par maillon" },
+            { "titre": "Écarts", "texte": "comparer cahier des charges, modèle et réel : où est l’écart&nbsp;?" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Autonomie exigée : __40 km__, flexibilité __± 5 km__. Mesure : 37 km. Conforme&nbsp;?",
+          "calcul": "plage admise : 40 − 5 à 40 + 5",
+          "aparte": "35 à 45 km",
+          "resultat": "37 km ∈ plage : [[conforme]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Information ou énergie&nbsp;?",
+          "oui": { "titre": "Chaîne d’information", "texte": "Elle **décide** : acquérir (capteur), traiter, communiquer." },
+          "non": { "titre": "Chaîne d’énergie", "texte": "Elle **exécute** : alimenter, distribuer, convertir, transmettre, agir." },
+          "essai": { "texte": "Le microcontrôleur <i>décide</i>&nbsp;; le variateur <i>distribue</i> l’énergie au moteur." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Fonction, critère, niveau, flexibilité", "quoi": "l’exigence complète" },
+            { "texte": "Acquérir → traiter → communiquer", "quoi": "l’information" },
+            { "texte": "Alimenter → distribuer → convertir → transmettre", "quoi": "l’énergie" }
+          ],
+          "pied": "Une fonction sans ==critère chiffré== n’est qu’une intention."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire « être solide » : **aucun critère**, rien à valider.",
+            "Confondre **convertir** et **transmettre**.",
+            "Mélanger les **trois écarts**.",
+            "Oublier la **boucle** : le capteur renvoie l’information."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quels sont les **quatre éléments** d’une fonction vérifiable&nbsp;?",
+            "Quel écart compare le **réel** au cahier des charges&nbsp;?",
+            "Quelle chaîne **décide**&nbsp;?"
+          ],
+          "reponses": "1) fonction, critère, niveau, flexibilité · 2) l’écart 3 · 3) l’information"
+        }
+      ]
+    }
+  ]
+}

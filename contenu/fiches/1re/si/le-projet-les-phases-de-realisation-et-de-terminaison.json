@@ -1,0 +1,113 @@
+{
+  "titre": "Réaliser et terminer",
+  "titreSurligne": "terminer",
+  "accroche": "Fabriquer, vérifier, valider, clore.",
+  "bonus": "**Vérifier** = bien construit (spécifications) · **Valider** = bon produit (besoin réel)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/le-projet-les-phases-de-realisation-et-de-terminaison.webp",
+    "prompt": "a glossy violet gift box with a golden ribbon and a checkmark badge, a small clipboard beside it, same art style as the reference icons, sparkles"
+  },
+  "marcel": "Bien construit,\net bon produit !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Réaliser",
+          "entetes": ["Exigence", "Impose"],
+          "lignes": [
+            ["**Suivi d’avancement**", "réel contre prévisionnel"],
+            ["**Gestion des modifications**", "tracer, chiffrer, valider"],
+            ["**Traçabilité**", "versions, pièces, essais"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Terminer",
+          "entetes": ["Étape", "Comprend"],
+          "lignes": [
+            ["**Livraison**", "recette avec le client"],
+            ["**Documentation**", "notice, maintenance"],
+            ["**Bilan**", "écarts, retour d’expérience"],
+            ["**Clôture**", "équipe dissoute, archivage"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Analyser un écart d’essai",
+          "etapes": [
+            { "titre": "Mesurer", "texte": "la performance réelle et la comparer au niveau du cahier des charges" },
+            { "titre": "Chercher", "texte": "l’origine : produit, protocole de mesure ou hypothèse du modèle" },
+            { "titre": "Conclure", "texte": "corriger le produit, la mesure ou le modèle" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Produit __conforme__ aux spécifications, mais l’utilisateur ne s’en sert pas. Vérifié&nbsp;? Validé&nbsp;?",
+          "calcul": "conforme aux spécifications ⇒ vérifié",
+          "aparte": "mais le besoin&nbsp;?",
+          "resultat": "[[vérifié, non validé]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Vérifier ou valider&nbsp;?",
+          "oui": { "titre": "Vérifier", "texte": "A-t-on **bien construit** ? Référence : les **spécifications**." },
+          "non": { "titre": "Valider", "texte": "A-t-on construit **le bon** produit ? Référence : le **besoin réel**." },
+          "essai": { "texte": "Une spécification qui traduisait mal le besoin donne un produit <i>vérifié</i> mais <i>invalide</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Écart = valeur mesurée − niveau attendu", "quoi": "le calcul" },
+            { "texte": "Produit, protocole de mesure ou modèle&nbsp;?", "quoi": "l’origine" },
+            { "texte": "Retour d’expérience pour les projets suivants", "quoi": "la clôture" }
+          ],
+          "pied": "Toute modification du besoin est ==tracée, chiffrée, validée==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **vérifier** et **valider**.",
+            "Accuser le produit sans questionner la **mesure**.",
+            "Modifier le besoin **sans trace**.",
+            "**Bâcler** la terminaison et le retour d’expérience."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**Valider** se réfère à quoi&nbsp;?",
+            "Trois origines possibles d’un **écart** d’essai&nbsp;?",
+            "À qui profite le **retour d’expérience**&nbsp;?"
+          ],
+          "reponses": "1) au besoin réel · 2) produit, mesure, modèle · 3) aux projets suivants"
+        }
+      ]
+    }
+  ]
+}

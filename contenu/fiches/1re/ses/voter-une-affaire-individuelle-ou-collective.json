@@ -1,0 +1,111 @@
+{
+  "titre": "Voter",
+  "titreSurligne": "Voter",
+  "accroche": "Un acte individuel aux régularités sociales.",
+  "bonus": "**Lazarsfeld, 1944** : le vote se prédit mieux par les variables lourdes que par la campagne",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/ses/voter-une-affaire-individuelle-ou-collective.webp",
+    "prompt": "a glossy violet ballot box with a golden envelope slipping in, a small group of golden figures behind it, sparkles, same art style as the reference icons, on magenta background, no text"
+  },
+  "marcel": "Mon vote est à moi,\nmais pas que !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Les variables lourdes",
+          "deux": false,
+          "items": [
+            { "titre": "Classe", "texte": "profession, diplôme, patrimoine" },
+            { "titre": "Religion", "texte": "la pratique régulière reste très prédictive" },
+            { "titre": "Lieu de résidence", "texte": "effet renforcé par la géographie sociale" },
+            { "titre": "Et aussi", "texte": "âge, genre, socialisation familiale" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Leur affaiblissement",
+          "entetes": ["Cause", "Conséquence"],
+          "lignes": [
+            ["recul de la **pratique religieuse**", "variable qui pèse moins"],
+            ["brouillage des **classes**", "blocs électoraux moins nets"],
+            ["recul des **partis de masse**", "moins d’encadrement du vote"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce qu’il faut savoir expliquer",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Volatilité", "texte": "L’électeur **change de vote** d’une élection à l’autre." },
+            { "titre": "Vote sur enjeux", "texte": "Il privilégie un **problème du moment**." },
+            { "titre": "Vote sur bilan", "texte": "Il **sanctionne ou récompense** les sortants." },
+            { "titre": "Hors du jeu", "texte": "Abstention des plus **éloignés** du système : faible diplôme, précarité." },
+            { "titre": "Dans le jeu", "texte": "Abstention d’électeurs **politisés** : protestation, absence d’offre." },
+            { "titre": "Selon le scrutin", "texte": "Forte aux **européennes** et locales, plus faible à la **présidentielle**." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Expliquer un comportement électoral",
+          "etapes": [
+            { "titre": "Variables lourdes", "texte": "classe, religion, lieu de résidence" },
+            { "titre": "Logiques récentes", "texte": "vote sur enjeux, sur bilan" },
+            { "titre": "Contexte", "texte": "type de scrutin, âge, sociabilité" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Le vote est individuel et secret, mais il obéit à des régularités sociales.", "quoi": "le paradoxe" },
+            { "texte": "Ces variables lourdes pèsent moins : l’électeur est devenu volatil.", "quoi": "l’évolution" },
+            { "texte": "La sociabilité et la mobilisation de l’entourage augmentent la participation.", "quoi": "le collectif" },
+            { "texte": "Lazarsfeld montrait dès 1944 que ces variables prédisent mieux le vote que les campagnes.", "quoi": "l’auteur" }
+          ],
+          "pied": "Le vote reste un acte ==socialement encouragé==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Opposer vote **individuel** et déterminants sociaux.",
+            "Dire que les variables lourdes ont **disparu**.",
+            "Confondre abstention **hors du jeu** et **dans le jeu**.",
+            "Croire l’abstention **identique** à tous les scrutins."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Citez deux **variables lourdes** du vote.",
+            "Que signifie « électeur **volatil** » ?",
+            "Quel scrutin a la plus **faible** abstention ?"
+          ],
+          "reponses": "1) classe, religion · 2) il change de vote · 3) la présidentielle"
+        }
+      ]
+    }
+  ]
+}

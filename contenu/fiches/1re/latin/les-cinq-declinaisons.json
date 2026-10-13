@@ -1,0 +1,173 @@
+{
+  "titre": "Les cinq déclinaisons",
+  "titreSurligne": "déclinaisons",
+  "accroche": "La terminaison dit la fonction.",
+  "bonus": "**Neutre**&nbsp;: nominatif = accusatif, pluriel en **-a** · travaille la **3e** en priorité",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/latin/les-cinq-declinaisons.webp",
+    "prompt": "a glossy violet Roman stone tablet with golden endings carved in and a tiny golden laurel wreath, sparkles, same art style as the reference icons, on a magenta background, no text, no numbers"
+  },
+  "marcel": "La finale décide,\npas l’ordre&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "titre": "Les six cas",
+          "entetes": [
+            "Cas",
+            "Fonction",
+            "En français"
+          ],
+          "lignes": [
+            [
+              "**Nominatif**",
+              "sujet, attribut",
+              "<i>le maître</i> parle"
+            ],
+            [
+              "**Vocatif**",
+              "interpellation",
+              "ô <i>maître</i>&nbsp;!"
+            ],
+            [
+              "**Accusatif**",
+              "COD, but du mouvement",
+              "je vois <i>le maître</i>"
+            ],
+            [
+              "**Génitif**",
+              "complément du nom",
+              "le livre <i>du maître</i>"
+            ],
+            [
+              "**Datif**",
+              "COI, attribution",
+              "je donne <i>au maître</i>"
+            ],
+            [
+              "**Ablatif**",
+              "moyen, manière, origine",
+              "<i>par le maître</i>"
+            ]
+          ],
+          "numero": 1
+        },
+        {
+          "type": "tableau",
+          "titre": "Les cinq déclinaisons",
+          "entetes": [
+            "Décl.",
+            "Marque",
+            "Exemple",
+            "Genre"
+          ],
+          "lignes": [
+            [
+              "**1re**",
+              "-a, -ae",
+              "<i>rosa, rosae</i>",
+              "féminin"
+            ],
+            [
+              "**2e**",
+              "-us / -um, -i",
+              "<i>dominus, domini</i>",
+              "masc., neutre"
+            ],
+            [
+              "**3e**",
+              "-is au génitif",
+              "<i>consul, consulis</i>",
+              "les trois"
+            ],
+            [
+              "**4e**",
+              "-us, -us",
+              "<i>manus, manus</i>",
+              "fém., masc."
+            ],
+            [
+              "**5e**",
+              "-es, -ei",
+              "<i>res, rei</i>",
+              "féminin"
+            ]
+          ],
+          "numero": 2
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "titre": "La règle du neutre",
+          "lignes": [
+            "nominatif = accusatif",
+            "pluriel en __-a__"
+          ],
+          "regle": "toujours, sans exception",
+          "note": "un mot en -a&nbsp;: fém. sing. ou neutre pluriel&nbsp;?",
+          "teinte": "jaune",
+          "numero": 3
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Traduire **dans l’ordre** des mots français.",
+            "Chercher le sujet **avant** le verbe.",
+            "Oublier qu’un mot en **-a** peut être un neutre pluriel.",
+            "Négliger la **3e** déclinaison, la plus vaste."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "titre": "Traduire une phrase",
+          "etapes": [
+            {
+              "titre": "Verbe",
+              "texte": "le verbe conjugué, souvent en fin de proposition"
+            },
+            {
+              "titre": "Nominatif",
+              "texte": "le sujet, accordé au verbe"
+            },
+            {
+              "titre": "Accusatif",
+              "texte": "le COD&nbsp;; puis génitif, datif, ablatif autour"
+            }
+          ],
+          "numero": 4
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple",
+          "donnees": "<i>Dominus templum videt.</i>",
+          "calcul": "verbe <i>videt</i> · sujet <i>dominus</i> · COD <i>templum</i> (neutre&nbsp;: le verbe tranche)",
+          "resultat": "[[le maître voit le temple]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel cas note le **COD**&nbsp;?",
+            "Comment finit le **pluriel** d’un neutre&nbsp;?",
+            "Quelle déclinaison a un génitif en **-is**&nbsp;?"
+          ],
+          "reponses": "1) l’accusatif · 2) en -a · 3) la 3e déclinaison"
+        }
+      ]
+    }
+  ]
+}

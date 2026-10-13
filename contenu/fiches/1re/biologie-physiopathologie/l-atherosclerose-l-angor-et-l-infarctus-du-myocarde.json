@@ -1,0 +1,117 @@
+{
+  "titre": "Angor et infarctus",
+  "titreSurligne": "infarctus",
+  "accroche": "Quand les artères se bouchent.",
+  "bonus": "Sténose → **angor** (cède au repos) · occlusion → **infarctus** (nécrose, troponine ↑) · appeler le **15**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biologie-physiopathologie/l-atherosclerose-l-angor-et-l-infarctus-du-myocarde.webp",
+    "prompt": "a glossy violet artery cross-section with a golden fatty plaque narrowing the opening and a small violet heart above it, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Le caillot bouche,\nle muscle meurt !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "L’athérosclérose",
+          "etapes": [
+            { "date": "1", "texte": "**LDL** en excès dans l’**intima** ; macrophages = **cellules spumeuses**." },
+            { "date": "2", "texte": "**Plaque d’athérome** sous une chape fibreuse : **sténose**." },
+            { "date": "3", "texte": "Rupture : **thrombus**, **thrombose** ou **embolie**." }
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Ischémie", "definition": "manque de dioxygène dans un organe" },
+            { "terme": "Nécrose", "definition": "mort des cellules, si l’ischémie dure" },
+            { "terme": "Stent", "definition": "petit ressort qui garde l’artère ouverte" },
+            { "terme": "Angioplastie", "definition": "ballonnet qui écrase la plaque" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Angor ou infarctus&nbsp;?",
+          "entetes": ["Critère", "Angor", "Infarctus"],
+          "lignes": [
+            ["**Mécanisme**", "sténose, ischémie transitoire", "occlusion, **nécrose**"],
+            ["**Douleur**", "à l’effort", "intense, plus de 20 min, au repos"],
+            ["**Trinitrine**", "la douleur cède", "ne cède pas"],
+            ["**Troponine**", "normale", "**élevée**"],
+            ["**ECG**", "normal au repos", "sus-décalage de ST"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Poser le diagnostic",
+          "etapes": [
+            { "titre": "Douleur", "texte": "durée, effort ou repos, trinitrine" },
+            { "titre": "Examens", "texte": "ECG et troponine" },
+            { "titre": "Conclure", "texte": "sténose ou occlusion" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Douleur de 40 min au repos, troponine élevée.",
+          "calcul": "Longue + troponine ↑ → nécrose",
+          "resultat": "[[infarctus]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Facteurs de risque",
+          "deux": false,
+          "items": [
+            { "titre": "Fixes", "texte": "âge, sexe masculin, hérédité" },
+            { "titre": "Modifiables", "texte": "**tabac**, **HTA**, LDL, diabète" },
+            { "titre": "Mode de vie", "texte": "sédentarité, graisses saturées" },
+            { "titre": "Prévenir", "texte": "30 min de sport par jour" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **thrombose** (sur place) et **embolie** (qui voyage).",
+            "Croire que l’angor **nécrose** le muscle : il est transitoire.",
+            "Oublier que le muscle nécrosé **ne se régénère pas**.",
+            "Penser que le **HDL** forme la plaque : c’est le LDL oxydé."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel mécanisme provoque un **angor**&nbsp;?",
+            "Quel marqueur sanguin signe l’**infarctus**&nbsp;?",
+            "Comment rouvre-t-on l’artère&nbsp;?"
+          ],
+          "reponses": "1) une sténose des coronaires · 2) la troponine élevée · 3) angioplastie + stent ou thrombolyse"
+        }
+      ]
+    }
+  ]
+}

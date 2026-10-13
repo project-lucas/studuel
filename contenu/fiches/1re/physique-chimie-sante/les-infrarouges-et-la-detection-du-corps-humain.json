@@ -1,0 +1,178 @@
+{
+  "titre": "Les infrarouges",
+  "titreSurligne": "infrarouges",
+  "accroche": "Tout corps chaud rayonne, même le tien.",
+  "bonus": "UV < 400 nm · visible 400–800 nm · IR > 800 nm · 1 nm = 10⁻⁹ m · 1 µm = 1 000 nm · T (K) = θ (°C) + 273",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-sante/les-infrarouges-et-la-detection-du-corps-humain.webp",
+    "prompt": "a glossy violet thermal camera showing a golden warm silhouette of a person, soft glowing waves around it, sparkles"
+  },
+  "marcel": "Plus c’est chaud,\nplus λ est petit !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La loi de Wien",
+          "petite": true,
+          "lignes": [
+            "λ<sub>max</sub> × T = 2,90 × 10⁻³"
+          ],
+          "regle": "**λ<sub>max</sub>** en mètres, **T** en kelvins, constante en m·K. Plus T est grand, plus λ<sub>max</sub> est **petite**.",
+          "note": "T = θ + 273"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les domaines",
+          "entetes": [
+            "Domaine",
+            "λ dans le vide",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "Ultraviolets",
+              "< 400 nm",
+              "coup de soleil"
+            ],
+            [
+              "Visible",
+              "400 à 800 nm",
+              "les couleurs"
+            ],
+            [
+              "Infrarouges",
+              "> 800 nm",
+              "chaleur, télécommande"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "Des détecteurs qui s’en servent",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Thermomètre IR",
+              "texte": "mesure les IR du front ou du tympan, en déduit la température"
+            },
+            {
+              "titre": "Caméra thermique",
+              "texte": "colore chaque zone selon son émission IR&nbsp;: victimes, fièvre, fuites"
+            },
+            {
+              "titre": "Détecteur de présence",
+              "texte": "réagit à la variation d’IR quand un corps chaud passe"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Appliquer la loi de Wien",
+          "etapes": [
+            {
+              "titre": "Convertir",
+              "texte": "la température en kelvins&nbsp;: T = θ + 273"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "λ<sub>max</sub> = 2,90 × 10⁻³ ÷ T"
+            },
+            {
+              "titre": "Situer",
+              "texte": "dans UV, visible ou IR, et conclure"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Le corps humain est à 37 °C. Sa __longueur d’onde__ d’émission maximale&nbsp;?",
+          "calcul": "T = 37 + 273 = 310 K",
+          "aparte": "λ<sub>max</sub> = 2,90 × 10⁻³ ÷ T",
+          "resultat": "λ<sub>max</sub> ≈ [[9,4 µm]], infrarouge"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "IR du corps ou UV du soleil",
+          "oui": {
+            "titre": "Infrarouges du corps",
+            "texte": "Invisibles à l’œil nu et **sans danger** pour l’homme."
+          },
+          "non": {
+            "titre": "Ultraviolets du Soleil",
+            "texte": "**Dangereux** pour la peau et les yeux."
+          },
+          "essai": {
+            "texte": "Le Soleil (≈ 5 800 K) a son maximum vers 500 nm, dans le **visible**. Un thermomètre IR, une caméra thermique, un détecteur de présence captent les IR émis par un corps chaud."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "T = 37 + 273 = 310 K",
+              "quoi": "convertir"
+            },
+            {
+              "texte": "λ<sub>max</sub> = 2,90 × 10⁻³ ÷ 310 ≈ 9,4 × 10⁻⁶ m",
+              "quoi": "formule, nombres"
+            },
+            {
+              "texte": "9,4 µm > 800 nm&nbsp;: c’est un infrarouge.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Une longueur d’onde se donne ==avec son unité==&nbsp;: m, µm ou nm."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Garder la température en **°C** dans la loi de Wien.",
+            "Confondre **µm** et **nm** (1 µm = 1 000 nm).",
+            "Croire que le corps humain émet du **visible**.",
+            "Mélanger **IR du corps** et **UV du Soleil**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**T** en kelvins pour 27 °C&nbsp;?",
+            "Une onde de 1 200 nm est-elle UV, visible ou **IR**&nbsp;?",
+            "Plus T augmente, λ<sub>max</sub> **monte** ou **baisse**&nbsp;?"
+          ],
+          "reponses": "1) 300 K · 2) infrarouge · 3) elle baisse"
+        }
+      ]
+    }
+  ]
+}

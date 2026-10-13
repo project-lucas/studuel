@@ -1,0 +1,159 @@
+{
+  "titre": "Chaîne de mesure",
+  "titreSurligne": "mesure",
+  "accroche": "Du phénomène physique au nombre affiché.",
+  "bonus": "q = {plage/2ⁿ} · U = k × T + U₀ · tolérance ± Δ → **u = {Δ/√3}**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/spcl/instruments-et-chaines-de-mesure.webp",
+    "prompt": "a glossy violet digital thermometer connected by golden wires to a small microcontroller board, sparkles"
+  },
+  "marcel": "Capteur, CAN,\nl’affichage !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les maillons",
+          "entetes": [
+            "Maillon",
+            "Rôle"
+          ],
+          "lignes": [
+            [
+              "**Capteur**",
+              "grandeur physique → grandeur électrique"
+            ],
+            [
+              "**Conditionneur**",
+              "signal → **tension** exploitable"
+            ],
+            [
+              "**CAN**",
+              "tension → **nombre binaire**"
+            ],
+            [
+              "Traitement",
+              "calcul puis affichage"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Quantum du CAN",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "q = {plage de tension/2<sup>n</sup>}"
+          ],
+          "regle": "Un CAN de **n bits** découpe sa plage en 2<sup>n</sup> niveaux. **Sensibilité**&nbsp;: coefficient k de U = k × T + U₀.",
+          "note": "q = plus petit écart vu"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Mesurer par étalonnage",
+          "etapes": [
+            {
+              "titre": "Étalons",
+              "texte": "mesurer des valeurs **connues** (thermomètre de référence)"
+            },
+            {
+              "titre": "Courbe",
+              "texte": "tracer la **caractéristique de transfert**"
+            },
+            {
+              "titre": "Exploiter",
+              "texte": "retrouver la grandeur à partir de la tension"
+            },
+            {
+              "titre": "Incertitude",
+              "texte": "tolérance du constructeur ou écart-type, plus le **quantum**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "CAN de 10 bits sur 0 – 5 V. Son __quantum__&nbsp;?",
+          "calcul": "2<sup>10</sup> = 1 024 niveaux",
+          "aparte": "q = plage ÷ 2ⁿ",
+          "resultat": "q = 5 ÷ 1 024 ≈ [[4,9 mV]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Choisir un instrument",
+          "oui": {
+            "titre": "Cahier des charges",
+            "texte": "**Étendue**, **résolution**, exactitude, temps de réponse, coût."
+          },
+          "non": {
+            "titre": "Lecture au hasard",
+            "texte": "Un instrument non adapté donne une mesure **hors étendue** ou trop grossière."
+          },
+          "essai": {
+            "texte": "Capteur de <i>10 mV·°C⁻¹</i> lu par un CAN de quantum 4,9 mV&nbsp;: on distingue environ 0,5 °C. La documentation du constructeur donne ces données."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "q = {5/2<sup>10</sup>} ≈ 4,9 mV",
+              "quoi": "formule puis nombres"
+            },
+            {
+              "texte": "résolution en T = q ÷ k = 4,9 ÷ 10 ≈ 0,5 °C",
+              "quoi": "à l’échelle de la mesure"
+            },
+            {
+              "texte": "u = Δ ÷ √3 pour une tolérance ± Δ",
+              "quoi": "l’incertitude-type"
+            }
+          ],
+          "pied": "La résolution de la chaîne dépend du ==maillon le plus grossier==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire 2 × n au lieu de **2<sup>n</sup>** niveaux.",
+            "Oublier la **sensibilité** pour passer de V à °C.",
+            "Prendre Δ comme incertitude-type sans diviser par **√3**.",
+            "Confondre **capteur** et **conditionneur**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que fait le **CAN**&nbsp;?",
+            "**Niveaux** d’un CAN de 8 bits&nbsp;?",
+            "Que représente **k** dans U = k × T + U₀&nbsp;?"
+          ],
+          "reponses": "1) tension → nombre · 2) 256 · 3) la sensibilité"
+        }
+      ]
+    }
+  ]
+}

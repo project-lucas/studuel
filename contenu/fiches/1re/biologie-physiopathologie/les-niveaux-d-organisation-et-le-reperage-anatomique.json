@@ -1,0 +1,186 @@
+{
+  "titre": "Niveaux et repérage",
+  "titreSurligne": "repérage",
+  "accroche": "De l’appareil à la molécule.",
+  "bonus": "**Appareil** → **organe** → **tissu** → **cellule** → **ultrastructure** → **molécule** · sagittale | frontale | transversale",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biologie-physiopathologie/les-niveaux-d-organisation-et-le-reperage-anatomique.webp",
+    "prompt": "a glossy violet human torso silhouette with golden nested circles zooming from organ to cell to molecule, sparkles"
+  },
+  "marcel": "Du corps entier\nà la molécule !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Six niveaux emboîtés",
+          "entetes": [
+            "Niveau",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "**Appareil**",
+              "appareil digestif"
+            ],
+            [
+              "**Organe**",
+              "estomac"
+            ],
+            [
+              "**Tissu**",
+              "épithélium gastrique"
+            ],
+            [
+              "**Cellule**",
+              "cellule de la muqueuse"
+            ],
+            [
+              "**Ultrastructure**",
+              "mitochondrie, noyau"
+            ],
+            [
+              "**Molécule**",
+              "protéine, ADN"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Une technique par niveau",
+          "entetes": [
+            "Technique",
+            "Niveau"
+          ],
+          "lignes": [
+            [
+              "**Imagerie** (radio, scanner, IRM, écho)",
+              "appareil, organe"
+            ],
+            [
+              "**Microscope optique**",
+              "tissu, cellule"
+            ],
+            [
+              "**Microscope électronique**",
+              "ultrastructure"
+            ],
+            [
+              "**Bilan sanguin**",
+              "molécule"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les plans de coupe et les cavités",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Sagittale",
+              "texte": "Plan **vertical**, d’avant en arrière&nbsp;: sépare **droite et gauche**."
+            },
+            {
+              "titre": "Frontale",
+              "texte": "Plan **vertical**, parallèle au front&nbsp;: sépare **avant et arrière**."
+            },
+            {
+              "titre": "Transversale",
+              "texte": "Plan **horizontal**&nbsp;: sépare **haut et bas**."
+            },
+            {
+              "titre": "Crânienne et rachidienne",
+              "texte": "**Encéphale** dans le crâne, **moelle épinière** dans le canal vertébral."
+            },
+            {
+              "titre": "Thoracique",
+              "texte": "**Cœur**, poumons, trachée, œsophage."
+            },
+            {
+              "titre": "Abdominale et pelvienne",
+              "texte": "Estomac, foie, intestins&nbsp;; **vessie**, rectum, utérus."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Lire une image médicale",
+          "etapes": [
+            {
+              "titre": "Orienter",
+              "texte": "position anatomique&nbsp;: la droite du patient est à gauche de l’image"
+            },
+            {
+              "titre": "Nommer",
+              "texte": "le plan de coupe et la cavité visible"
+            },
+            {
+              "titre": "Situer",
+              "texte": "l’organe et le niveau d’organisation atteint"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Le diaphragme sépare la cavité thoracique de la cavité abdominale.",
+              "quoi": "situer"
+            },
+            {
+              "texte": "Aucun appareil ne fonctionne seul&nbsp;: ils sont interdépendants.",
+              "quoi": "relier"
+            },
+            {
+              "texte": "L’information est transmise par les systèmes nerveux et hormonal.",
+              "quoi": "coordonner"
+            }
+          ],
+          "pied": "Une atteinte d’un appareil ==retentit sur tous les autres==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **tissu** (cellules semblables) et **organe** (plusieurs tissus).",
+            "Oublier que la **droite du patient** est à gauche de l’image.",
+            "Mélanger coupe **sagittale** (droite/gauche) et **frontale** (avant/arrière).",
+            "Placer les **reins** dans l’abdomen avant&nbsp;: ils sont en arrière.",
+            "Croire qu’une maladie ne touche qu’un **niveau**&nbsp;: elle se lit du tissu à la molécule."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel plan sépare **le haut du bas**&nbsp;?",
+            "Quel niveau observe-t-on au **microscope électronique**&nbsp;?",
+            "Quel muscle sépare **thorax et abdomen**&nbsp;?"
+          ],
+          "reponses": "1) la coupe transversale · 2) l’ultrastructure · 3) le diaphragme"
+        }
+      ]
+    }
+  ]
+}

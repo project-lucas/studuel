@@ -1,0 +1,115 @@
+{
+  "titre": "Ingénierie système",
+  "titreSurligne": "système",
+  "accroche": "Décrire avant de concevoir.",
+  "bonus": "**uc, req** = besoin · **bdd, ibd** = structure · **stm, sd** = comportement",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/ingenierie-dd/l-ingenierie-systeme-et-le-sysml.webp",
+    "prompt": "a glossy violet V-shaped diagram made of golden blocks connected by arrows, a small automatic gate beside it, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Le besoin d’abord,\nle V ensuite !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les diagrammes SysML",
+          "entetes": ["Diagramme", "Il répond à"],
+          "lignes": [
+            ["**uc** cas d’utilisation", "à quoi sert-il&nbsp;?"],
+            ["**req** exigences", "que doit-il respecter&nbsp;?"],
+            ["**bdd** blocs", "de quoi est-il fait&nbsp;?"],
+            ["**ibd** blocs internes", "comment sont reliées les parties&nbsp;?"],
+            ["**stm** états", "comment réagit-il dans le temps&nbsp;?"],
+            ["**sd** séquence", "qui dialogue avec qui&nbsp;?"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Système", "definition": "éléments en interaction pour une **mission**" },
+            { "terme": "Frontière", "definition": "sépare le système de son **environnement**" },
+            { "terme": "Sous-système", "definition": "une **partie** du système" },
+            { "terme": "Parties prenantes", "definition": "tous les **concernés** : usager, client, mainteneur" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le cycle en V",
+          "etapes": [
+            { "titre": "Descendre", "texte": "besoin → spécifications → conception : on **définit**" },
+            { "titre": "Réaliser", "texte": "on fabrique puis on intègre les sous-ensembles" },
+            { "titre": "Remonter", "texte": "**vérifier** les spécifications, **valider** le besoin" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un portail doit s’ouvrir en moins de __20 s__. Quelle est l’exigence&nbsp;?",
+          "calcul": "id + texte vérifiable",
+          "aparte": "chiffrée",
+          "resultat": "[[1.2]] : ouverture < 20 s"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Une exigence bien écrite",
+          "oui": { "titre": "Vérifiable", "texte": "Un **identifiant**, un texte et un niveau **chiffré**." },
+          "non": { "titre": "Vague", "texte": "Un souhait qu’on ne peut **pas mesurer**." },
+          "essai": { "texte": "<i>Le portail doit s’arrêter si un obstacle est détecté</i> est vérifiable&nbsp;; « être rapide » non." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "uc : ouvrir, fermer, détecter un obstacle", "quoi": "le besoin" },
+            { "texte": "bdd : moteur + réducteur + vantaux + carte", "quoi": "la structure" },
+            { "texte": "stm : Fermé → Ouverture → Ouvert → Fermeture", "quoi": "le comportement" }
+          ],
+          "pied": "On **nomme le diagramme** puis on décrit ==ce qu’il montre==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **vérifier** (spécifications) et **valider** (besoin).",
+            "Prendre le **bdd** pour l’ibd : les flux sont dans l’ibd.",
+            "Croire que le V est **strictement** séquentiel.",
+            "Oublier l’**environnement** hors frontière."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel diagramme montre les **flux** entre constituants&nbsp;?",
+            "On **valide** le produit par rapport à quoi&nbsp;?",
+            "Que décrit un diagramme **stm**&nbsp;?"
+          ],
+          "reponses": "1) l’ibd (blocs internes) · 2) le besoin initial · 3) les états et les transitions"
+        }
+      ]
+    }
+  ]
+}

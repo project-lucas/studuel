@@ -1,0 +1,117 @@
+{
+  "titre": "Détecter une molécule",
+  "titreSurligne": "Détecter",
+  "accroche": "Présente ou absente&nbsp;? Les réactifs répondent.",
+  "bonus": "Témoin **positif** = ça réagit · témoin **négatif** = ça ne réagit pas · sinon, essai **non interprétable**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biotechnologies/detecter-une-biomolecule-reactifs-spectres-et-enzymes.webp",
+    "prompt": "a glossy violet test tube rack with golden and violet colored liquids, a small golden magnifying glass, sparkles"
+  },
+  "marcel": "Un réactif, un témoin,\nun verdict !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les réactifs à connaître",
+          "entetes": ["Molécule", "Réactif", "Positif"],
+          "lignes": [
+            ["**Amidon**", "eau iodée", "bleu-noir"],
+            ["**Glucose**", "liqueur de Fehling, à chaud", "rouge brique"],
+            ["**Protéines**", "**biuret**", "violet"],
+            ["**Acides aminés**", "**ninhydrine**, à chaud", "violet"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Qualitatif", "definition": "on cherche si la molécule est **présente**" },
+            { "terme": "Spécifique", "definition": "le réactif ne réagit qu’avec **sa** cible" },
+            { "terme": "Chromophore", "definition": "molécule qui **absorbe** la lumière visible" },
+            { "terme": "λ<sub>max</sub>", "definition": "longueur d’onde du **maximum** d’absorbance" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Tracer un spectre d’absorption",
+          "etapes": [
+            { "titre": "Le blanc", "texte": "faire le **zéro** avec une cuve de solvant seul" },
+            { "titre": "Mesurer", "texte": "l’absorbance A à **plusieurs longueurs d’onde**" },
+            { "titre": "Repérer", "texte": "tracer A = f(λ) et lire **λ<sub>max</sub>**" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À retenir",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Couleur perçue", "texte": "la **complémentaire** de la couleur absorbée : 600&nbsp;nm (orange) → bleu." },
+            { "titre": "Cuve", "texte": "plastique ou verre : visible ; **quartz** : UV (ADN à 260&nbsp;nm)." },
+            { "titre": "Enzyme", "texte": "détectée par son **activité** sur son **substrat spécifique**." },
+            { "titre": "Lait", "texte": "phosphatase alcaline **négative** = lait bien pasteurisé." }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Conclure **sans témoin** positif et négatif.",
+            "Dire que le biuret détecte les **acides aminés** libres.",
+            "Prendre une cuve en verre pour l’**UV**.",
+            "Toucher les **faces transparentes** de la cuve."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Le témoin positif réagit, le témoin négatif non : l’essai est valide.", "quoi": "valider" },
+            { "texte": "L’essai prend une coloration violette avec le biuret.", "quoi": "observer" },
+            { "texte": "L’échantillon contient donc des protéines.", "quoi": "conclure" }
+          ],
+          "pied": "Test PAL **positif** dans un lait pasteurisé&nbsp;: ==pasteurisation insuffisante==."
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une solution absorbe vers 600&nbsp;nm. __Sa couleur__&nbsp;?",
+          "calcul": "600 nm = orange absorbé",
+          "aparte": "complémentaire",
+          "resultat": "elle paraît [[bleue]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel réactif colore l’**amidon**&nbsp;?",
+            "À quoi sert le **témoin négatif**&nbsp;?",
+            "Quelle cuve pour l’**ADN à 260&nbsp;nm**&nbsp;?"
+          ],
+          "reponses": "1) l’eau iodée · 2) prouver que le milieu ne réagit pas · 3) une cuve en quartz"
+        }
+      ]
+    }
+  ]
+}

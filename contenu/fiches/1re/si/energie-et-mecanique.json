@@ -1,0 +1,165 @@
+{
+  "titre": "Énergie et mécanique",
+  "titreSurligne": "mécanique",
+  "accroche": "Puissance, rendement : suivre les pertes.",
+  "bonus": "P = U × I · P = C × ω · E = P × t · **η** = P<sub>utile</sub> / P<sub>absorbée</sub> · **W**, **N·m**, **rad/s**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/energie-et-mecanique.webp",
+    "prompt": "a glossy violet electric motor with a golden gear and a small lightning bolt, a glowing arrow showing heat loss, same art style as the reference icons, sparkles"
+  },
+  "marcel": "L’énergie se convertit,\nelle ne se crée pas !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Puissance et rendement",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "P = C × ω",
+            "η = {P utile/P absorbée}"
+          ],
+          "regle": "Électrique **P = U × I**. Énergie **E = P × t**. Le rendement est ==toujours inférieur à 1==.",
+          "note": "en cascade, on multiplie&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Transmission de mouvement",
+          "entetes": [
+            "Système",
+            "Transforme"
+          ],
+          "lignes": [
+            [
+              "**Engrenages**",
+              "rotation → rotation"
+            ],
+            [
+              "**Poulies-courroie**",
+              "rotation à distance"
+            ],
+            [
+              "**Vis-écrou**",
+              "rotation → translation"
+            ],
+            [
+              "**Bielle-manivelle**",
+              "rotation → translation alternée"
+            ],
+            [
+              "**Réducteur**",
+              "↓ vitesse, ↑ couple"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Chiffrer une chaîne d’énergie",
+          "etapes": [
+            {
+              "titre": "Lister",
+              "texte": "les éléments de la chaîne (moteur, réducteur, courroie…) et le rendement de chacun"
+            },
+            {
+              "titre": "Multiplier",
+              "texte": "les rendements : η global = η₁ × η₂ × η₃"
+            },
+            {
+              "titre": "Déduire",
+              "texte": "P utile = η × P absorbée ; les pertes (chaleur, frottement, bruit) = la différence"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Trois éléments à __0,9__ chacun, __100 W__ absorbés. Puissance utile&nbsp;?",
+          "calcul": "η = 0,9 × 0,9 × 0,9 = 0,73",
+          "aparte": "pas 0,9&nbsp;!",
+          "resultat": "P = 0,73 × 100 ≈ [[73 W]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Statique ou dynamique&nbsp;?",
+          "oui": {
+            "titre": "Statique",
+            "texte": "Somme des forces **nulle** et somme des moments **nulle** : l’équilibre."
+          },
+          "non": {
+            "titre": "Dynamique",
+            "texte": "Somme des forces **= m × a** : le solide accélère."
+          },
+          "essai": {
+            "texte": "Résultante nulle <i>mais</i> moments non nuls&nbsp;: le solide tourne, il n’est pas à l’équilibre."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "η = P<sub>utile</sub> / P<sub>absorbée</sub> &lt; 1",
+              "quoi": "le rendement"
+            },
+            {
+              "texte": "η global = η₁ × η₂ × η₃",
+              "quoi": "en cascade"
+            },
+            {
+              "texte": "Réduire ω augmente C : P = C × ω",
+              "quoi": "le réducteur"
+            },
+            {
+              "texte": "E = P × t, en joules (W × s)",
+              "quoi": "l’énergie"
+            }
+          ],
+          "pied": "Un réducteur ==échange== vitesse contre couple, il ne crée pas de force."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "**Additionner** les rendements au lieu de les multiplier.",
+            "Un rendement **supérieur à 1**.",
+            "Oublier l’unité : **rad/s**, pas tr/min.",
+            "Ne vérifier que les **forces**, pas les moments.",
+            "Croire qu’un système **crée** de l’énergie."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**P** d’un moteur à 20 N·m et 10 rad/s&nbsp;?",
+            "Rendement de **deux** éléments à 0,9&nbsp;?",
+            "Que devient le **couple** si la vitesse baisse&nbsp;?"
+          ],
+          "reponses": "1) 200 W · 2) 0,81 · 3) il augmente (P = C × ω se conserve)"
+        }
+      ]
+    }
+  ]
+}

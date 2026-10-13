@@ -1,0 +1,184 @@
+{
+  "titre": "Milieu intérieur",
+  "titreSurligne": "intérieur",
+  "accroche": "Un océan intérieur à entretenir.",
+  "bonus": "**Milieu intérieur** = plasma + liquide interstitiel + lymphe · **homéostasie** = le garder constant",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biochimie-biologie/le-milieu-interieur-et-l-homeostasie.webp",
+    "prompt": "a glossy violet balance scale holding a golden drop of liquid in a perfectly level position, tiny golden bubbles, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Je garde le cap,\nmême en pleine houle&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les compartiments",
+          "entetes": [
+            "Liquide",
+            "Part de l’eau",
+            "Riche en"
+          ],
+          "lignes": [
+            [
+              "**Intracellulaire**",
+              "≈ 2/3",
+              "K⁺"
+            ],
+            [
+              "**Interstitiel**",
+              "≈ 1/4",
+              "Na⁺"
+            ],
+            [
+              "**Plasma**",
+              "≈ 1/12",
+              "Na⁺, protéines"
+            ],
+            [
+              "**Lymphe**",
+              "faible",
+              "vaisseaux lymphatiques"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les compositions",
+          "entetes": [
+            "",
+            "Plasma",
+            "Interst.",
+            "Intracell."
+          ],
+          "lignes": [
+            [
+              "Na⁺",
+              "élevé",
+              "élevé",
+              "faible"
+            ],
+            [
+              "K⁺",
+              "faible",
+              "faible",
+              "élevé"
+            ],
+            [
+              "Protéines",
+              "élevées",
+              "faibles",
+              "élevées"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La boucle de régulation",
+          "etapes": [
+            {
+              "titre": "Détecter",
+              "texte": "des capteurs comparent la grandeur à sa consigne"
+            },
+            {
+              "titre": "Commander",
+              "texte": "un centre active des effecteurs (messager)"
+            },
+            {
+              "titre": "Corriger",
+              "texte": "la réponse ramène à la consigne&nbsp;: rétroaction négative"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": 5,
+          "titre": "Échanges et osmose",
+          "paragraphes": [
+            "Le plasma filtre vers l’interstitiel, la **lymphe** ramène l’excédent. La membrane trie&nbsp;: **diffusion** (O₂, CO₂), **transporteur** (glucose, ions).",
+            "**Osmose**&nbsp;: l’eau va vers le compartiment le plus concentré. Dans l’eau pure, un globule rouge gonfle et éclate."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Deux régulations",
+          "entetes": [
+            "Élément",
+            "Glycémie",
+            "Volémie"
+          ],
+          "lignes": [
+            [
+              "Capteurs",
+              "cellules du pancréas",
+              "hypothalamus"
+            ],
+            [
+              "Messager",
+              "insuline, glucagon",
+              "ADH"
+            ],
+            [
+              "Effecteurs",
+              "foie, muscles, tissu adipeux",
+              "rein (tube collecteur)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Après ingestion de glucose, la glycémie monte. Comment revient-elle à la normale&nbsp;?",
+          "calcul": "glycémie ↑ → insuline libérée",
+          "aparte": "foie et muscles stockent",
+          "resultat": "glycémie [[↓]]&nbsp;: consigne retrouvée",
+          "numero": 5
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **plasma** (dans le sang) et liquide **interstitiel**.",
+            "Dire que le **liquide intracellulaire** est le milieu intérieur.",
+            "Oublier que sans **insuline**, la perturbation n’est plus corrigée&nbsp;: pathologie.",
+            "Penser que l’eau va vers le compartiment le **moins** concentré en solutés."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel liquide est riche en **K⁺**&nbsp;?",
+            "Que fait l’**osmose** de l’eau&nbsp;?",
+            "Comment s’appelle la boucle qui **corrige**&nbsp;?"
+          ],
+          "reponses": "1) l’intracellulaire · 2) elle va vers le plus concentré · 3) rétroaction négative"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "titre": "Les modaux qui jugent",
+  "titreSurligne": "jugent",
+  "accroche": "Dire à quel point on est sûr.",
+  "bonus": "**muss** presque sûr · **dürfte** probable · **könnte** possible · **mag** concession",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/allemand/nuancer-son-propos-avec-les-verbes-de-modalite.webp",
+    "prompt": "a glossy violet scale-shaped gauge with a golden needle between a check mark and a question mark, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Sûr à 90&nbsp;%&nbsp;?\nDas muss sein&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Au passé",
+          "lignes": [
+            "modal + **participe + haben / sein**"
+          ],
+          "petite": true,
+          "regle": "Le modal reste au **présent**, l’infinitif passe au **passé**&nbsp;: <i>Er muss krank gewesen sein.</i>",
+          "note": "il a dû être malade"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "L’échelle de certitude",
+          "entetes": [
+            "Modal",
+            "Degré",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "<i>muss</i>",
+              "presque certain",
+              "<i>Das muss ein Fehler sein.</i>"
+            ],
+            [
+              "<i>dürfte</i>",
+              "très probable",
+              "<i>Er dürfte jetzt zu Hause sein.</i>"
+            ],
+            [
+              "<i>kann / könnte</i>",
+              "possible",
+              "<i>Das könnte stimmen.</i>"
+            ],
+            [
+              "<i>kann nicht</i>",
+              "impossible",
+              "<i>Das kann nicht sein!</i>"
+            ],
+            [
+              "<i>mag</i>",
+              "concession",
+              "<i>Das mag sein, aber …</i>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Objectif ou subjectif&nbsp;?",
+          "oui": {
+            "titre": "Objectif",
+            "texte": "<i>Er muss arbeiten.</i> — il est **obligé** de travailler."
+          },
+          "non": {
+            "titre": "Subjectif",
+            "texte": "<i>Er muss krank sein.</i> — je pense qu’il est **sûrement** malade."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« Elle a pu rater le bus » → <i>Sie kann den Bus verpasst **haben**.</i>"
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Obligé ou probable&nbsp;?",
+              "texte": "Le sujet doit-il agir (objectif) ou **je** juge-t-il (subjectif)&nbsp;?"
+            },
+            {
+              "titre": "Choisis le degré",
+              "texte": "<i>muss</i> > <i>dürfte</i> > <i>kann / könnte</i> ; <i>kann nicht</i> = impossible."
+            },
+            {
+              "titre": "Le temps",
+              "texte": "Fait passé → modal au présent + infinitif **passé**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "Juger le passé",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Certitude",
+              "texte": "<i>Er muss krank gewesen sein.</i> — Il a dû être malade."
+            },
+            {
+              "titre": "Possibilité",
+              "texte": "<i>Sie kann den Bus verpasst haben.</i> — Elle a pu rater le bus."
+            },
+            {
+              "titre": "Probabilité",
+              "texte": "<i>Das dürfte schwierig gewesen sein.</i> — Ça a dû être difficile."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les adverbes équivalents",
+          "deux": true,
+          "items": [
+            {
+              "titre": "bestimmt, sicher",
+              "texte": "certain&nbsp;: <i>Er ist sicher krank.</i>"
+            },
+            {
+              "titre": "wahrscheinlich",
+              "texte": "probable"
+            },
+            {
+              "titre": "vielleicht",
+              "texte": "peut-être"
+            },
+            {
+              "titre": "kaum",
+              "texte": "à peine, peu probable"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Er muss nicht kommen</i> = il n’est **pas obligé** de venir (pas « il ne doit pas »).",
+            "L’interdiction se dit <i>Er **darf nicht** kommen</i>.",
+            "<i>Er muss krank sein</i> ≠ « il a l’obligation d’être malade ».",
+            "Varie modal et adverbe pour éviter les répétitions."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Traduis&nbsp;: « Il a dû avoir peur ».",
+            "Que signifie <i>Du musst nicht rauchen</i> ?",
+            "Quelle formule concède un argument avant de le réfuter ?"
+          ],
+          "reponses": "1) Er muss Angst gehabt haben 2) tu n’es pas obligé 3) Das mag sein, aber"
+        }
+      ]
+    }
+  ]
+}

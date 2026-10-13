@@ -1,0 +1,182 @@
+{
+  "titre": "TCP et bit alterné",
+  "titreSurligne": "bit alterné",
+  "accroche": "Rendre fiable un canal qui ne l’est pas.",
+  "bonus": "**numéroter et acquitter** · ACK perdu → doublon **jeté** et réacquitté · TCP fiable, UDP rapide",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/nsi/tcp-et-le-bit-alterne.webp",
+    "prompt": "a glossy violet envelope alternating with a golden envelope on a path and a golden check mark returning, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "0, 1, 0, 1…\nça alterne !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "ACK",
+              "definition": "**accusé de réception** du message reçu"
+            },
+            {
+              "terme": "Délai de garde",
+              "definition": "sans ACK avant la fin, on **retransmet**"
+            },
+            {
+              "terme": "Doublon",
+              "definition": "message reçu **deux fois** si l’ACK s’est perdu"
+            },
+            {
+              "terme": "Bit alterné",
+              "definition": "numéro de message **0, 1, 0, 1…**"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Que fait le récepteur&nbsp;?",
+          "entetes": [
+            "Numéro reçu",
+            "Réaction"
+          ],
+          "lignes": [
+            [
+              "celui **attendu**",
+              "garde, bascule son bit, acquitte"
+            ],
+            [
+              "le **précédent**",
+              "ACK perdu&nbsp;: jette le doublon, réacquitte"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Un échange fiable",
+          "etapes": [
+            {
+              "titre": "Envoyer",
+              "texte": "message numéroté 0 ou 1, puis attendre"
+            },
+            {
+              "titre": "Acquitter",
+              "texte": "le récepteur renvoie le numéro reçu"
+            },
+            {
+              "titre": "Retransmettre",
+              "texte": "sans ACK à temps, on renvoie le **même** numéro"
+            },
+            {
+              "titre": "Basculer",
+              "texte": "le bit **alterne** pour le message suivant"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Le message 0 arrive, l’ACK __se perd__. Le message 0 est renvoyé&nbsp;: que fait le récepteur&nbsp;?",
+          "calcul": "il attend 1, reçoit 0 : c’est le précédent",
+          "aparte": "doublon",
+          "resultat": "= [[jette et réacquitte]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "TCP ou UDP",
+          "entetes": [
+            "",
+            "TCP",
+            "UDP"
+          ],
+          "lignes": [
+            [
+              "Connexion",
+              "oui",
+              "non"
+            ],
+            [
+              "Retransmission",
+              "oui",
+              "non"
+            ],
+            [
+              "Ordre garanti",
+              "oui",
+              "non"
+            ],
+            [
+              "Usage",
+              "fichier, web",
+              "voix, vidéo en direct"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Un seul bit suffit.",
+              "quoi": "l’affirmation"
+            },
+            {
+              "texte": "On n’envoie qu’un message à la fois.",
+              "quoi": "la raison"
+            },
+            {
+              "texte": "Deux messages en jeu au plus.",
+              "quoi": "la conclusion"
+            },
+            {
+              "texte": "Le récepteur jette le doublon et réacquitte.",
+              "quoi": "ACK perdu"
+            }
+          ],
+          "pied": "TCP ajoute ==fenêtre==, connexion en 3 temps, contrôle de flux et de congestion."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que **IP** garantit l’arrivée.",
+            "Oublier que l’**accusé** peut aussi se perdre.",
+            "Compter le **doublon** comme un nouveau message.",
+            "Dire que **UDP** retransmet."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que fait l’émetteur **sans ACK**&nbsp;?",
+            "Pourquoi **un bit** suffit-il&nbsp;?",
+            "Quel protocole pour la **voix en direct**&nbsp;?"
+          ],
+          "reponses": "1) il retransmet · 2) un seul message en vol à la fois · 3) UDP"
+        }
+      ]
+    }
+  ]
+}

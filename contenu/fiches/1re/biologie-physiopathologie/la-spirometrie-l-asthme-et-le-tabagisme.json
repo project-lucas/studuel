@@ -1,0 +1,123 @@
+{
+  "titre": "Spirométrie et asthme",
+  "titreSurligne": "asthme",
+  "accroche": "Mesurer l’air, comprendre la crise.",
+  "bonus": "**Tiffeneau = VEMS / CV** · < 70 % : trouble **obstructif** · asthme **réversible**, BPCO **non réversible**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biologie-physiopathologie/la-spirometrie-l-asthme-et-le-tabagisme.webp",
+    "prompt": "a glossy violet inhaler puffing golden spray next to a small violet spirometer with a wavy golden curve, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Les bronches se serrent,\nl’air sort mal !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le spirogramme",
+          "entetes": ["Volume", "Définition"],
+          "lignes": [
+            ["**VC** (0,5 L)", "respiration calme"],
+            ["**VRI**, **VRE**", "inspiré / expiré en plus, en forçant"],
+            ["**CV** (4-5 L)", "VC + VRI + VRE"],
+            ["**VEMS**", "volume expiré en 1 s, forcé"],
+            ["**Résiduel**", "reste toujours dans les poumons"]
+          ]
+        },
+        {
+          "type": "frise",
+          "numero": 2,
+          "titre": "Une crise d’asthme",
+          "etapes": [
+            { "date": "Contraction", "texte": "du **muscle lisse** des bronchioles." },
+            { "date": "Œdème", "texte": "de la muqueuse enflammée." },
+            { "date": "Mucus", "texte": "en excès : **hypersécrétion**." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Asthme et tabac",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Signes", "texte": "Gêne **expiratoire**, sifflements, toux, nuit ; **cyanose** si grave." },
+            { "titre": "Traitements", "texte": "**Bronchodilatateur** (crise), **corticoïde** inhalé (fond)." },
+            { "titre": "Déclencheurs", "texte": "Acariens, pollens, tabac, froid, effort." },
+            { "titre": "Nicotine", "texte": "Crée la **dépendance**, accélère le cœur." },
+            { "titre": "Goudrons", "texte": "**Cancérigènes**, paralysent les cils." },
+            { "titre": "Monoxyde CO", "texte": "Se fixe sur l’Hb **200 fois** plus fort que l’O₂." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Interpréter un spirogramme",
+          "etapes": [
+            { "titre": "Lire", "texte": "VEMS et CV, avec unités" },
+            { "titre": "Calculer", "texte": "rapport VEMS / CV" },
+            { "titre": "Conclure", "texte": "obstructif si < 70 %, réversible ou non" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "VEMS = 2,4 L, CV = 4,0 L.",
+          "calcul": "2,4 / 4,0 = 0,60",
+          "aparte": "60 % < 70 %",
+          "resultat": "[[trouble obstructif]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": false,
+          "items": [
+            { "titre": "Asthme", "texte": "inflammation chronique, bronches **hyperréactives**" },
+            { "titre": "Test", "texte": "réversible après bronchodilatateur" },
+            { "titre": "Tabac", "texte": "BPCO, cancer, infarctus, AVC" },
+            { "titre": "Sevrage", "texte": "bénéfique à tout âge" },
+            { "titre": "Autres examens", "texte": "radio, scanner, fibroscopie bronchique" },
+            { "titre": "Vocabulaire", "texte": "**expectorations**, **hémoptysie**" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **crise** (bronchodilatateur) et **fond** (corticoïde).",
+            "Croire la **BPCO** réversible : elle ne l’est pas.",
+            "Oublier le **tabagisme passif**, facteur d’asthme.",
+            "Prendre le volume **résiduel** pour mesurable au spiromètre."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que vaut la **CV**&nbsp;?",
+            "Que signifie un Tiffeneau inférieur à **70 %**&nbsp;?",
+            "Quel gaz du tabac prive le sang d’O₂&nbsp;?"
+          ],
+          "reponses": "1) VC + VRI + VRE · 2) un trouble ventilatoire obstructif · 3) le monoxyde de carbone"
+        }
+      ]
+    }
+  ]
+}

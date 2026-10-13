@@ -1,0 +1,163 @@
+{
+  "titre": "Associer des portes",
+  "titreSurligne": "portes",
+  "accroche": "Table, équation, logigramme.",
+  "bonus": "Priorités&nbsp;: **complément** → **ET** → **OU** · somme de produits&nbsp;: lignes à **1**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/association-de-portes-logiques.webp",
+    "prompt": "a glossy violet circuit of three connected logic gates with golden wires and glowing nodes, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Trois façons\nde dire la même chose !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Somme de produits",
+          "petite": true,
+          "lignes": [
+            "lignes à 1",
+            "produit, puis somme"
+          ],
+          "regle": "Pour chaque ligne où la sortie vaut **1**, on écrit le ==produit== des entrées, **complémentées** si elles valent 0. Puis on additionne.",
+          "note": "la méthode la plus employée&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois représentations",
+          "entetes": [
+            "Forme",
+            "Intérêt"
+          ],
+          "lignes": [
+            [
+              "**Table de vérité**",
+              "exhaustive, elle ne ment pas"
+            ],
+            [
+              "**Équation**",
+              "elle se simplifie"
+            ],
+            [
+              "**Logigramme**",
+              "il se câble"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Analyser un montage existant",
+          "etapes": [
+            {
+              "titre": "Nommer",
+              "texte": "les sorties intermédiaires, porte par porte"
+            },
+            {
+              "titre": "Écrire",
+              "texte": "l’équation de chacune, en remontant vers la sortie finale"
+            },
+            {
+              "titre": "Vérifier",
+              "texte": "en dressant la table de vérité complète"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "S vaut 1 seulement pour (a, b) = (0, 1) et (1, 0). Son équation&nbsp;?",
+          "calcul": "S = <span style=\"text-decoration:overline\">a</span> · b + a · <span style=\"text-decoration:overline\">b</span>",
+          "aparte": "a et b complémentés quand ils valent 0",
+          "resultat": "c’est un [[XOR]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Un seul logigramme&nbsp;?",
+          "oui": {
+            "titre": "Même comportement",
+            "texte": "Plusieurs logigrammes peuvent avoir la **même** table de vérité."
+          },
+          "non": {
+            "titre": "Pas d’unicité",
+            "texte": "Le plus simple n’est pas toujours le plus lisible, ni le moins coûteux."
+          },
+          "essai": {
+            "texte": "Équation mal parenthésée&nbsp;: montage <i>faux</i>, même si l’algèbre était juste."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Lignes à 1&nbsp;: (0, 1) et (1, 0)",
+              "quoi": "le repérage"
+            },
+            {
+              "texte": "S = <span style=\"text-decoration:overline\">a</span> · b + a · <span style=\"text-decoration:overline\">b</span>",
+              "quoi": "l’équation"
+            },
+            {
+              "texte": "Un ET par produit, un OU pour la somme",
+              "quoi": "le logigramme"
+            }
+          ],
+          "pied": "Passer d’une forme à l’autre ==dans les deux sens== est la compétence centrale."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier de **complémenter** une entrée à 0.",
+            "Ignorer les **priorités** ET avant OU.",
+            "Partir des lignes à **0** sans le dire.",
+            "Se passer de la **vérification** par la table."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "À retenir",
+          "paragraphes": [
+            "Un logigramme se lit toujours pareil&nbsp;: **entrées à gauche, portes au centre, sortie à droite**, chaque porte ayant son symbole normalisé. Le produit de sommes est la construction **duale**, sur les lignes à 0."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Sens de lecture d’un **logigramme**&nbsp;?",
+            "Dans la somme de produits, on part des lignes à&nbsp;?",
+            "Quel opérateur passe en **premier**&nbsp;?"
+          ],
+          "reponses": "1) entrées à gauche, sortie à droite · 2) 1 · 3) le complément"
+        }
+      ]
+    }
+  ]
+}

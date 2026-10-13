@@ -1,0 +1,111 @@
+{
+  "titre": "Chaîne d’information",
+  "titreSurligne": "information",
+  "accroche": "Acquérir, traiter, communiquer.",
+  "bonus": "**Acquérir → Traiter → Communiquer** · le CAN : **q = pleine échelle / 2<sup>n</sup>**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/ingenierie-dd/la-chaine-d-information.webp",
+    "prompt": "a glossy violet thermostat with a golden temperature sensor, a small microcontroller chip and a glowing signal wave, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Le cerveau décide,\nla puissance obéit !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois fonctions",
+          "entetes": ["Fonction", "Composants"],
+          "lignes": [
+            ["**Acquérir**", "capteurs, boutons, IHM"],
+            ["**Traiter**", "microcontrôleur, automate"],
+            ["**Communiquer**", "relais, écran, voyant, réseau"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le capteur",
+          "items": [
+            { "terme": "Étendue", "definition": "plage des valeurs **mesurables**" },
+            { "terme": "Sensibilité", "definition": "variation du signal par unité (**10 mV/°C**)" },
+            { "terme": "Résolution", "definition": "plus petite variation **détectable**" },
+            { "terme": "Détecteur", "definition": "signal **binaire** : présent / absent" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "Le convertisseur CAN",
+          "teinte": "jaune",
+          "lignes": ["N = 2<sup>n</sup> valeurs", "q = {pleine échelle/2<sup>n</sup>}"],
+          "regle": "Le **quantum q** est la plus petite variation de tension que le CAN distingue.",
+          "note": "un bit de plus divise q par 2&nbsp;!"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Capteur __10 mV/°C__, CAN __10 bits__, 5 V. Résolution en °C&nbsp;?",
+          "calcul": "q = 5 / 1 024 ≈ 4,9 mV",
+          "aparte": "÷ 10 mV/°C",
+          "resultat": "≈ [[0,5 °C]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Capteur ou détecteur&nbsp;?",
+          "oui": { "titre": "Capteur", "texte": "Un **signal** proportionnel à la grandeur." },
+          "non": { "titre": "Détecteur", "texte": "Une information **binaire** (TOR)." },
+          "essai": { "texte": "Un thermomètre est un <i>capteur</i>&nbsp;; une cellule de portail est un <i>détecteur</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Chaîne du thermostat",
+          "etapes": [
+            { "titre": "Mesurer", "texte": "capteur → CAN" },
+            { "titre": "Comparer", "texte": "au seuil, dans le microcontrôleur" },
+            { "titre": "Ordonner", "texte": "relais « chauffer » + affichage" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **résolution** et précision.",
+            "Écrire 2 × n au lieu de **2<sup>n</sup>**.",
+            "Oublier que le signal brut est **bruité** : filtre passe-bas.",
+            "Prendre le capteur pour la chaîne de **puissance**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de valeurs donne un CAN **8 bits**&nbsp;?",
+            "Quel filtre atténue le **bruit rapide**&nbsp;?",
+            "Que reçoit la chaîne de puissance de la chaîne d’information&nbsp;?"
+          ],
+          "reponses": "1) 2<sup>8</sup> = 256 · 2) le passe-bas · 3) des ordres"
+        }
+      ]
+    }
+  ]
+}

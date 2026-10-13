@@ -1,0 +1,129 @@
+{
+  "titre": "Le pluriel des noms",
+  "titreSurligne": "pluriel",
+  "accroche": "Cinq schémas, jamais un simple -s.",
+  "bonus": "**-e** · **-er** · **-(e)n** · **aucune** terminaison · **-s** · datif pluriel en **-n**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/allemand/le-pluriel-des-noms.webp",
+    "prompt": "a glossy violet cube multiplied into five small golden cubes in a row, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Un pluriel&nbsp;?\nOn l’apprend&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le réflexe",
+          "lignes": ["nom + **die** + pluriel"],
+          "petite": true,
+          "regle": "Le pluriel s’apprend **avec le mot**, comme le genre. Au pluriel, l’article est **die** pour les trois genres.",
+          "note": "der Tag, die Tage"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les cinq schémas",
+          "entetes": ["Schéma", "Surtout", "Exemples"],
+          "lignes": [
+            ["**-e** (+ Umlaut)", "masculins", "<i>der Tag → die Tage, der Sohn → die Söhne</i>"],
+            ["**-er** (+ Umlaut)", "neutres", "<i>das Kind → die Kinder, das Buch → die Bücher</i>"],
+            ["**-(e)n**", "féminins", "<i>die Frau → die Frauen</i>"],
+            ["**aucune**", "-er, -el, -en", "<i>der Lehrer → die Lehrer, der Vater → die Väter</i>"],
+            ["**-s**", "emprunts", "<i>das Auto → die Autos</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Trois détails qui comptent",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "-in → -innen", "texte": "le n **double**&nbsp;: <i>die Lehrerin → die Lehrer**inn**en</i>." },
+            { "titre": "Datif pluriel", "texte": "un **-n** de plus&nbsp;: <i>mit den Kinder**n**, aus den Städte**n**</i>." },
+            { "titre": "Sauf après -s", "texte": "pas de -n&nbsp;: <i>mit den Autos</i>." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le -s, c’est rare",
+          "oui": {
+            "titre": "Emprunts, sigles",
+            "texte": "<i>die Autos, die Parks</i> — des mots venus d’ailleurs."
+          },
+          "non": {
+            "titre": "-s sur un mot allemand",
+            "texte": "<i>die Kinders, die Frauens</i> — faute de calque du français."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>das Buch</i> au pluriel&nbsp;? → <i>die **Bücher**</i> (-er et Umlaut)."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            { "titre": "Le genre&nbsp;?", "texte": "Féminin → souvent **-(e)n** ; neutre → souvent **-er**." },
+            { "titre": "Le suffixe&nbsp;?", "texte": "En <i>-er, -el, -en</i> → rien, parfois un Umlaut." },
+            { "titre": "Le cas&nbsp;?", "texte": "Datif pluriel → ajoute **-n** (sauf -s)." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Un seul nombre",
+          "deux": true,
+          "items": [
+            { "titre": "Seulement pluriel", "texte": "<i>die Leute</i> — les gens." },
+            { "titre": "Seulement singulier", "texte": "<i>die Polizei, das Obst, die Milch</i>." },
+            { "titre": "Singulier allemand", "texte": "<i>eine Brille</i> — des lunettes." },
+            { "titre": "Article au pluriel", "texte": "**die** au nominatif et à l’accusatif, pour tous les genres." }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Ajouter <i>-s</i> partout&nbsp;: <i>die Kinders</i> → <i>die **Kinder**</i>.",
+            "Oublier le <b>-n</b> du datif&nbsp;: <i>mit den Kinder</i> → <i>mit den Kinder**n**</i>.",
+            "<i>die Lehrerin</i> → <i>die Lehrer**inn**en</i>, pas <i>Lehrerinen</i>.",
+            "<i>Väter</i>&nbsp;: oublier l’Umlaut, <i>die Vater</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Pluriel de <i>die Zeitung</i> et de <i>das Auto</i>&nbsp;?",
+            "<i>mit den Kinder___</i> : quelle lettre manque&nbsp;?",
+            "Pluriel de <i>die Lehrerin</i>&nbsp;?"
+          ],
+          "reponses": "1) die Zeitungen, die Autos 2) n 3) die Lehrerinnen"
+        }
+      ]
+    }
+  ]
+}

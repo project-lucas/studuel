@@ -1,0 +1,174 @@
+{
+  "titre": "Consommer et épargner",
+  "titreSurligne": "épargner",
+  "accroche": "Dépenser aujourd’hui ou demain ?",
+  "bonus": "**RD** = C + S · taux d’épargne ≈ **17-18 %** · loi d’**Engel** · pouvoir d’achat = revenu **et** prix",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/droit-economie/consommation-epargne-et-pouvoir-d-achat.webp",
+    "prompt": "a glossy violet piggy bank next to a small violet shopping bag and a golden coin, tiny golden sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Je dépense ou\nj’épargne ?",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les mots clés",
+          "items": [
+            {
+              "terme": "Revenu disponible",
+              "definition": "revenu après prélèvements et prestations : **C + S**"
+            },
+            {
+              "terme": "Pouvoir d’achat",
+              "definition": "biens et services qu’un revenu permet d’**acheter**"
+            },
+            {
+              "terme": "IPC",
+              "definition": "indice des prix calculé sur un **panier** représentatif"
+            },
+            {
+              "terme": "Patrimoine",
+              "definition": "épargne accumulée : **immobilier** et **financier**"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les indicateurs",
+          "entetes": [
+            "Indicateur",
+            "Formule"
+          ],
+          "lignes": [
+            [
+              "**Taux d’épargne**",
+              "épargne ÷ revenu disponible × 100"
+            ],
+            [
+              "**Propension moyenne à consommer**",
+              "consommation ÷ revenu disponible"
+            ],
+            [
+              "**Propension marginale**",
+              "Δ consommation ÷ Δ revenu"
+            ],
+            [
+              "**Coefficient budgétaire**",
+              "dépense du poste ÷ dépense totale × 100"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce qui pousse à épargner",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Économiques",
+              "texte": "**Revenu** élevé, **taux d’intérêt** haut, inflation, crédit."
+            },
+            {
+              "titre": "Sociaux",
+              "texte": "Catégorie sociale, **imitation**, **distinction**, publicité."
+            },
+            {
+              "titre": "Démographiques",
+              "texte": "L’**âge** (retraite) et la taille du ménage."
+            },
+            {
+              "titre": "Incertitude",
+              "texte": "Risque de chômage : épargne de **précaution**."
+            },
+            {
+              "titre": "Loi d’Engel",
+              "texte": "Le revenu monte, la part de l’**alimentation** baisse."
+            },
+            {
+              "titre": "Prix relatifs",
+              "texte": "L’électronique, **moins chère**, pèse plus au budget."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Évaluer le pouvoir d’achat",
+          "etapes": [
+            {
+              "titre": "Revenu",
+              "texte": "calculer son évolution en %"
+            },
+            {
+              "titre": "Prix",
+              "texte": "relever l’évolution de l’IPC"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "revenu plus vite que les prix = pouvoir d’achat en hausse"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "RD 3 000 €, consommation 2 550 €. Revenu + 2 %, prix + 5 %.",
+          "calcul": "Épargne = 450 €. Taux = 450 ÷ 3 000.\nPouvoir d’achat : 1,02 ÷ 1,05 − 1",
+          "resultat": "Taux : [[15 %]] · PA ≈ − 2,9 %"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le pouvoir d’achat ne dépend que du **revenu**.",
+            "Oublier que **C + S** égale le revenu **disponible**.",
+            "Confondre propension **moyenne** et **marginale**.",
+            "Dire que l’alimentation **augmente** avec le revenu (Engel)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "À retenir",
+          "paragraphes": [
+            "Le revenu disponible se partage entre **consommation** et **épargne** ; le pouvoir d’achat suit le revenu **moins** les prix."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que vaut le **revenu disponible** en fonction de C et S ?",
+            "Revenu + 2 %, prix + 5 % : le pouvoir d’achat **monte-t-il** ?",
+            "Que dit la loi d’**Engel** ?"
+          ],
+          "reponses": "1) C + S · 2) non, il baisse · 3) la part des besoins de base diminue quand le revenu monte"
+        }
+      ]
+    }
+  ]
+}

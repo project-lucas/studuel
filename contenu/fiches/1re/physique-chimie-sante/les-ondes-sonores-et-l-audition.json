@@ -1,0 +1,124 @@
+{
+  "titre": "Ondes sonores",
+  "titreSurligne": "sonores",
+  "accroche": "Du son au diagnostic auditif.",
+  "bonus": "f = 1 ÷ T · audible&nbsp;: **20 Hz à 20 000 Hz** · dans l’air&nbsp;: **340 m/s** · risque dès **80–85 dB**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-sante/les-ondes-sonores-et-l-audition.webp",
+    "prompt": "a glossy violet ear with golden sound waves entering it, a small golden hearing aid beside it, sparkles"
+  },
+  "marcel": "Le son voyage\npar les ondes !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Fréquence et période",
+          "petite": true,
+          "lignes": ["f = {1/T}"],
+          "regle": "**f** en hertz (Hz), **T** en secondes. Basse fréquence = son **grave**, haute fréquence = son **aigu**.",
+          "note": "pas de son dans le vide"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les fréquences",
+          "entetes": ["Domaine", "Fréquences", "Exemple"],
+          "lignes": [
+            ["Infrasons", "< 20 Hz", "inaudibles"],
+            ["Sons audibles", "20 Hz à 20 kHz", "voix, musique"],
+            ["Ultrasons", "> 20 000 Hz", "échographie"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 3,
+          "titre": "Le trajet du son",
+          "etapes": [
+            { "date": "1", "texte": "pavillon et conduit canalisent vers le **tympan**, qui vibre" },
+            { "date": "2", "texte": "les **osselets** transmettent et amplifient" },
+            { "date": "3", "texte": "la **cochlée** et ses cellules ciliées créent le message nerveux" },
+            { "date": "4", "texte": "le **nerf auditif** l’envoie au cerveau" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Les niveaux sonores",
+          "entetes": ["Niveau", "L’effet"],
+          "lignes": [
+            ["≈ 0 dB", "seuil d’audibilité"],
+            ["≈ 60 dB", "conversation"],
+            ["80–85 dB", "risque si exposition longue"],
+            ["≈ 120 dB", "seuil de douleur"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un enregistrement a une période de 2,5 ms. Sa __fréquence__, grave ou aiguë&nbsp;?",
+          "calcul": "T = 2,5 ms = 0,0025 s",
+          "aparte": "f = 1 ÷ T",
+          "resultat": "f = 1 ÷ 0,0025 = [[400 Hz]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Protéger son audition",
+          "oui": { "titre": "Se protéger", "texte": "**Bouchons**, pauses, distance aux enceintes&nbsp;: on réduit niveau et durée." },
+          "non": { "titre": "S’exposer", "texte": "Les **cellules ciliées** ne se régénèrent pas&nbsp;: la perte est définitive." },
+          "essai": { "texte": "L’**audiogramme** donne le niveau minimal entendu à chaque fréquence&nbsp;; une courbe sous 0–20 dB signale une perte. La **prothèse** amplifie surtout les fréquences atteintes." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "T = 2,5 ms = 2,5 × 10⁻³ s", "quoi": "convertir" },
+            { "texte": "f = 1 ÷ T = 1 ÷ 2,5 × 10⁻³ = 400 Hz", "quoi": "formule, nombres" },
+            { "texte": "400 Hz est entre 20 Hz et 20 kHz&nbsp;: audible.", "quoi": "conclure" }
+          ],
+          "pied": "Le niveau sonore se mesure ==au sonomètre==, en décibels."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Laisser **T en ms** dans f = 1 ÷ T.",
+            "Dire que le son se propage **dans le vide**.",
+            "Confondre **fréquence** (Hz) et **niveau** (dB).",
+            "Croire qu’un son aigu est **plus fort**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**f** pour T = 0,010 s&nbsp;?",
+            "Un son de 30 000 Hz est-il audible&nbsp;?",
+            "Quelles cellules **ne se régénèrent pas**&nbsp;?"
+          ],
+          "reponses": "1) 100 Hz · 2) non, c’est un ultrason · 3) les cellules ciliées"
+        }
+      ]
+    }
+  ]
+}

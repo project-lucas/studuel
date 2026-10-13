@@ -1,0 +1,194 @@
+{
+  "titre": "Le rayonnement solaire",
+  "titreSurligne": "solaire",
+  "accroche": "Une étoile qui perd de la masse.",
+  "bonus": "Soleil : **3,8 × 10<sup>26</sup> W** · **15 millions de °C** au cœur · constante solaire **1 360 W/m²**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/enseignement-scientifique/le-rayonnement-solaire.webp",
+    "prompt": "a glossy golden sun with violet outlines radiating shiny rays and tiny sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Le Soleil maigrit\npour nous éclairer !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La masse devient énergie",
+          "petite": true,
+          "lignes": [
+            "E = m × c²"
+          ],
+          "regle": "À 15 millions de degrés, **4 noyaux H** fusionnent en **1 noyau He**, plus léger : la masse manquante devient énergie. c = 3,0 × 10<sup>8</sup> m/s.",
+          "note": "~4 millions de t par seconde"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les deux lois",
+          "entetes": [
+            "Loi",
+            "Formule",
+            "Dit"
+          ],
+          "lignes": [
+            [
+              "**Wien**",
+              "λ<sub>max</sub> × T = 2,9 × 10<sup>-3</sup> m·K",
+              "couleur ↔ température"
+            ],
+            [
+              "**Stefan**",
+              "P/S = σ × T<sup>4</sup>",
+              "puissance par m²"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Température et couleur",
+          "entetes": [
+            "Surface",
+            "Maximum d’émission"
+          ],
+          "lignes": [
+            [
+              "**3 000 K**",
+              "rouge et infrarouge"
+            ],
+            [
+              "**5 800 K** (Soleil)",
+              "λ<sub>max</sub> ≈ **500 nm**, visible"
+            ],
+            [
+              "**10 000 K**",
+              "bleu"
+            ]
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Ce qui arrive jusqu’à nous",
+          "deux": false,
+          "items": [
+            {
+              "titre": "Constante solaire",
+              "texte": "**1 360 W/m²**, face au Soleil à 150 millions de km"
+            },
+            {
+              "titre": "Distance",
+              "texte": "elle décroît comme **1/d²**"
+            },
+            {
+              "titre": "Latitude",
+              "texte": "rayons plus **inclinés**, énergie étalée : cosinus de l’incidence"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "Trois idées à savoir expliquer",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Pas de combustion",
+              "texte": "Une combustion ne tiendrait que quelques **milliers d’années** : le Soleil rayonne depuis **4,6 milliards**."
+            },
+            {
+              "titre": "Couleur = température",
+              "texte": "Plus la surface est chaude, plus le maximum d’émission va vers le **bleu**."
+            },
+            {
+              "titre": "Les saisons",
+              "texte": "L’inclinaison des rayons crée les **zones climatiques**, et elle seule."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "!",
+          "titre": "Stefan, une puissance quatrième",
+          "paragraphes": [
+            "Doubler la température multiplie la puissance émise par **16**. Aucune combustion ne tiendrait plus de quelques milliers d’années : la fusion fait rayonner le Soleil depuis **4,6 milliards**."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Trouver la température d’une étoile",
+          "etapes": [
+            {
+              "titre": "Lire",
+              "texte": "la longueur d’onde du maximum d’émission λ<sub>max</sub>"
+            },
+            {
+              "titre": "Convertir",
+              "texte": "en mètres : 500 nm = 5,0 × 10<sup>-7</sup> m"
+            },
+            {
+              "titre": "Appliquer Wien",
+              "texte": "T = 2,9 × 10<sup>-3</sup> ÷ λ<sub>max</sub>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une étoile émet au maximum à λ = 580 nm. Sa __température__ de surface&nbsp;?",
+          "calcul": "T = 2,9 × 10<sup>-3</sup> ÷ 5,8 × 10<sup>-7</sup>",
+          "aparte": "≈ 5 000",
+          "resultat": "T ≈ [[5 000 K]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le Soleil **brûle** : c’est de la **fusion**.",
+            "Oublier de convertir les **nm en mètres** dans Wien.",
+            "Penser que doubler T **double** la puissance : elle est ×**16**.",
+            "Dire que l’équateur est plus chaud car plus **proche** du Soleil."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de noyaux d’**hydrogène** pour un noyau d’hélium&nbsp;?",
+            "De combien la puissance est-elle multipliée si T **double**&nbsp;?",
+            "Pourquoi fait-il plus chaud à l’**équateur**&nbsp;?"
+          ],
+          "reponses": "1) 4 noyaux · 2) par 16 (T<sup>4</sup>) · 3) rayons moins inclinés, énergie moins étalée"
+        }
+      ]
+    }
+  ]
+}

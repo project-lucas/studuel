@@ -1,0 +1,128 @@
+{
+  "titre": "Traduire « on »",
+  "titreSurligne": "on",
+  "accroche": "Se, uno, ellos, nosotros : le bon visage.",
+  "bonus": "**se** + 3<sup>e</sup> pers. · **ellos** · **nosotros** · **uno** · **ser** + participe",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/espagnol/traduire-on-et-la-voix-passive.webp",
+    "prompt": "a glossy violet group of three simple faceless figures with a golden speech bubble above them, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "« On » n’existe\npas en espagnol&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le se passif",
+          "lignes": ["**se** + verbe accordé"],
+          "petite": true,
+          "regle": "Chose au **pluriel** → verbe au pluriel. Personne précise avec **a** → verbe au **singulier**&nbsp;: <i>se detuvo **a** los ladrones</i>.",
+          "note": "<i>se venden pisos</i>"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les quatre « on »",
+          "entetes": ["Tournure", "Quand", "Exemple"],
+          "lignes": [
+            ["se + 3<sup>e</sup> pers.", "général", "<i>Aquí **se vive** bien.</i>"],
+            ["3<sup>e</sup> pers. plur.", "les autres, sans moi", "<i>**Dicen** que va a llover.</i>"],
+            ["nosotros", "un groupe qui m’inclut", "<i>**Comemos** a las dos.</i>"],
+            ["uno / una", "verbe pronominal", "<i>**Uno** se acostumbra a todo.</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Accorder le <i>se</i>",
+          "oui": {
+            "titre": "Accord avec la chose",
+            "texte": "<i>**Se venden** pisos.</i> · <i>**Se hablan** varias lenguas.</i>"
+          },
+          "non": {
+            "titre": "Verbe resté singulier",
+            "texte": "<i>Se vende pisos.</i> : la chose est au pluriel, le verbe aussi."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Aquí se ___ (vender) casas antiguas.</i> → **venden**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Passif : ser ou estar&nbsp;?",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Ser + participe", "texte": "L’**action subie**, avec <i>por</i> : <i>La ley **fue aprobada por** el Parlamento.</i> Surtout à l’écrit." },
+            { "titre": "Estar + participe", "texte": "Le **résultat**, l’état : <i>La puerta **está abierta**.</i>" },
+            { "titre": "À l’oral", "texte": "On préfère l’actif ou le <i>se</i> : <i>**Se aprobó** la ley.</i> Ou <i>tú</i> générique : <i>Cuando estudias, aprendes.</i>" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Traduire « on »",
+          "etapes": [
+            { "titre": "Qui est inclus&nbsp;?", "texte": "Moi compris → **nosotros** ; les autres → **3<sup>e</sup> plur.**" },
+            { "titre": "Sens général&nbsp;?", "texte": "**Se** + verbe ; si le verbe est déjà pronominal → **uno**." },
+            { "titre": "Accorde", "texte": "Avec la chose au pluriel ; singulier devant <i>a</i> + personne." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Exemples à retenir",
+          "deux": true,
+          "items": [
+            { "titre": "Se vende piso", "texte": "appartement à vendre" },
+            { "titre": "Se habla español", "texte": "ici on parle espagnol" },
+            { "titre": "Llaman a la puerta", "texte": "on frappe à la porte" },
+            { "titre": "Uno se acuesta tarde", "texte": "on se couche tard" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Deux <i>se</i> de suite&nbsp;: <i>se se acuesta</i> → <i>**uno** se acuesta</i>.",
+            "<i>Se vende pisos</i> → <i>se **venden** pisos</i>.",
+            "<i>La puerta fue abierta</i> pour un état&nbsp;: <i>la puerta **está** abierta</i>.",
+            "Traduire « on » par un pronom <i>on</i>, qui n’existe pas."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "« On dit que… » (les gens)&nbsp;: <i>___ que va a llover.</i>",
+            "<i>Se ___ (hablar) varias lenguas.</i>",
+            "« La porte est ouverte » → <i>La puerta ___ abierta.</i>"
+          ],
+          "reponses": "1) Dicen 2) hablan 3) está"
+        }
+      ]
+    }
+  ]
+}

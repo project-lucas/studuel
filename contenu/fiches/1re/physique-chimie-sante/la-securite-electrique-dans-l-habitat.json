@@ -1,0 +1,110 @@
+{
+  "titre": "Sécurité électrique",
+  "titreSurligne": "électrique",
+  "accroche": "Le courant traverse le corps&nbsp;: protégeons-le.",
+  "bonus": "f = 1 ÷ T · U<sub>eff</sub> = U<sub>max</sub> ÷ √2 · secteur&nbsp;: **230 V**, **50 Hz**, T = **20 ms** · différentiel **30 mA**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-sante/la-securite-electrique-dans-l-habitat.webp",
+    "prompt": "a glossy violet wall socket with a golden plug, a small circuit breaker switch beside it, tiny golden sparks, sparkles"
+  },
+  "marcel": "Mains mouillées ?\nJamais de prise !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La tension du secteur",
+          "petite": true,
+          "lignes": ["f = {1/T}", "U<sub>eff</sub> = {U<sub>max</sub>/√2}"],
+          "regle": "Alternative sinusoïdale&nbsp;: **T** = 20 ms, **f** = 50 Hz, **U<sub>max</sub>** ≈ 325 V, **U<sub>eff</sub>** = 230 V.",
+          "note": "T lue sur l’oscillogramme"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les protections",
+          "entetes": ["Dispositif", "Rôle", "Protège"],
+          "lignes": [
+            ["Disjoncteur", "coupe en cas de surintensité", "l’installation"],
+            ["Différentiel 30 mA", "coupe si un courant fuit", "les personnes"],
+            ["Prise de terre", "fil vert et jaune, évacue la fuite", "l’utilisateur"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire une période à l’oscillogramme",
+          "etapes": [
+            { "titre": "Compter", "texte": "les divisions d’un motif complet sur l’axe horizontal" },
+            { "titre": "Multiplier", "texte": "par la sensibilité horizontale (ms/div)" },
+            { "titre": "Inverser", "texte": "f = 1 ÷ T, avec T en secondes" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un motif occupe 4 divisions à 5 ms/div. Sa __fréquence__&nbsp;?",
+          "calcul": "T = 4 × 5 = 20 ms = 0,020 s",
+          "aparte": "f = 1 ÷ T",
+          "resultat": "f = 1 ÷ 0,020 = [[50 Hz]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Électrisation ou électrocution",
+          "oui": { "titre": "Électrisation", "texte": "Un courant traverse le corps&nbsp;: brûlure, contraction, **blocage** de la respiration." },
+          "non": { "titre": "Électrocution", "texte": "Une électrisation qui entraîne la **mort**." },
+          "essai": { "texte": "Vers **10 mA** on ne lâche plus le fil, vers **30 mA** la respiration se bloque, au-delà de **75 mA** le cœur peut fibriller. La gravité dépend aussi de la durée et de l’humidité de la peau." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "T = 4 × 5 = 20 ms = 0,020 s", "quoi": "la période" },
+            { "texte": "f = 1 ÷ T = 1 ÷ 0,020 = 50 Hz", "quoi": "formule, nombres" },
+            { "texte": "Le différentiel de 30 mA protège les personnes.", "quoi": "le rôle" }
+          ],
+          "pied": "L’ampèremètre se branche ==en série==, l’intensité s’exprime en ampères."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Laisser **T en ms** dans f = 1 ÷ T.",
+            "Confondre **U<sub>max</sub>** (325 V) et **U<sub>eff</sub>** (230 V).",
+            "Dire que le **disjoncteur** protège les personnes.",
+            "Toucher une victime **encore sous tension**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**U<sub>eff</sub>** si U<sub>max</sub> = 325 V et √2 ≈ 1,41&nbsp;?",
+            "**f** pour T = 0,010 s&nbsp;?",
+            "Quel dispositif protège **les personnes**&nbsp;?"
+          ],
+          "reponses": "1) ≈ 230 V · 2) 100 Hz · 3) le différentiel 30 mA"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "titre": "Le bilan thermique",
+  "titreSurligne": "thermique",
+  "accroche": "Tenir 37 °C quoi qu’il arrive.",
+  "bonus": "Repos : **~100 W** · **2 000 kcal** ≈ 8 400 kJ (**1 kcal = 4,18 kJ**) · sueur : **2 400 kJ** par litre",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/enseignement-scientifique/le-bilan-thermique-du-corps-humain.webp",
+    "prompt": "a glossy violet thermometer at 37 degrees shape with a golden mercury line and small glowing drops of sweat and snowflake, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "37 °C, toujours,\nmême dehors !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Quatre voies de perte",
+          "entetes": [
+            "Voie",
+            "Particularité"
+          ],
+          "lignes": [
+            [
+              "**Rayonnement**",
+              "infrarouge de la peau, permanent"
+            ],
+            [
+              "**Convection**",
+              "échange avec l’air, amplifié par le vent"
+            ],
+            [
+              "**Conduction**",
+              "contact ; l’eau froide est dangereuse"
+            ],
+            [
+              "**Évaporation**",
+              "seule voie si l’air est plus chaud que la peau"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "La régulation",
+          "entetes": [
+            "Contre le froid",
+            "Contre le chaud"
+          ],
+          "lignes": [
+            [
+              "**Vasoconstriction**",
+              "**Vasodilatation**"
+            ],
+            [
+              "**Frissons** (chaleur)",
+              "**Sudation**"
+            ],
+            [
+              "Horripilation",
+              "—"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": "★",
+          "titre": "Les ordres de grandeur",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Au repos",
+              "texte": "environ **100 watts**, comme une vieille ampoule"
+            },
+            {
+              "titre": "À l’effort",
+              "texte": "jusqu’à **dix fois** plus"
+            },
+            {
+              "titre": "Sur un jour",
+              "texte": "environ **2 000 kcal**, soit près de 8 400 kJ"
+            },
+            {
+              "titre": "Évaporation",
+              "texte": "la sueur prélève environ **2 400 kJ** par litre"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 3,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Homéotherme",
+              "definition": "température interne voisine de **37 °C**"
+            },
+            {
+              "terme": "Hypothalamus",
+              "definition": "compare les thermorécepteurs à la **consigne**"
+            },
+            {
+              "terme": "Hypothermie",
+              "definition": "en dessous de **35 °C**"
+            },
+            {
+              "terme": "Hyperthermie",
+              "definition": "coup de chaleur : évacuation insuffisante"
+            }
+          ]
+        },
+        {
+          "type": "texte",
+          "numero": "!",
+          "titre": "La fièvre",
+          "paragraphes": [
+            "Ce n’est **pas une panne** : l’organisme relève **volontairement** sa valeur de consigne. La chaleur du corps vient de la **respiration cellulaire** ; ce qui ne sert pas aux muscles finit en **chaleur**."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Raisonner sur la régulation",
+          "etapes": [
+            {
+              "titre": "Détecter",
+              "texte": "les thermorécepteurs signalent un écart"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "l’hypothalamus confronte à la valeur de consigne"
+            },
+            {
+              "titre": "Corriger",
+              "texte": "frissons ou vasoconstriction, sueur ou vasodilatation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un corps dissipe 2 000 kcal par jour. En __kJ__ (1 kcal = 4,18 kJ)&nbsp;?",
+          "calcul": "2 000 × 4,18",
+          "aparte": "= 8 360",
+          "resultat": "≈ [[8 400 kJ]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le corps **dépense** peu d’énergie au repos.",
+            "Oublier que l’eau froide **conduit** bien plus que l’air.",
+            "Dire que la **fièvre** est une panne du thermostat.",
+            "Confondre **vasoconstriction** (froid) et **vasodilatation**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle zone du cerveau **régule** la température&nbsp;?",
+            "Quelle voie marche si l’air est **plus chaud** que la peau&nbsp;?",
+            "Que fait le corps de l’énergie qui ne sert pas aux muscles&nbsp;?"
+          ],
+          "reponses": "1) l’hypothalamus · 2) l’évaporation de la sueur · 3) il la dissipe en chaleur"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "titre": "Grandeurs et mesure",
+  "titreSurligne": "mesure",
+  "accroche": "Mesurer juste, et dire à quel point.",
+  "bonus": "Fiole jaugée = **in** (contient) · pipette jaugée = **ex** (délivre) · vérifier l’**unité**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biotechnologies/grandeurs-unites-et-instruments-de-mesure.webp",
+    "prompt": "a glossy violet volumetric flask and a golden pipette with a tiny golden ruler, sparkles"
+  },
+  "marcel": "Le bon instrument,\nla bonne unité !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Mesurande", "definition": "la grandeur qu’on veut **mesurer**" },
+            { "terme": "Mesurage", "definition": "l’ensemble des opérations pour obtenir la valeur" },
+            { "terme": "Indication", "definition": "ce qu’affiche l’**instrument**" },
+            { "terme": "Valeur mesurée", "definition": "la valeur attribuée au mesurande" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Grandeurs dérivées",
+          "entetes": ["Grandeur", "Relation", "Unité"],
+          "lignes": [
+            ["**Conc. en masse**", "m / V", "g·L<sup>−1</sup>"],
+            ["**Conc. en quantité**", "n / V", "mol·L<sup>−1</sup>"],
+            ["**Masse volumique**", "m / V", "kg·m<sup>−3</sup>"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Choisir la verrerie",
+          "entetes": ["Verrerie", "Usage"],
+          "lignes": [
+            ["**Fiole jaugée** (in)", "préparer une solution"],
+            ["**Pipette jaugée** (ex)", "prélever un volume précis"],
+            ["**Pipette graduée**", "volumes variés"],
+            ["**Éprouvette**", "volumes approximatifs"],
+            ["**Bécher, erlenmeyer**", "contenir, jamais mesurer"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 4,
+          "titre": "Les indices",
+          "petite": true,
+          "lignes": ["ρ(glucose, sérum)"],
+          "regle": "Les **indices** précisent l’**entité** mesurée et la **matrice** : « concentration en masse du glucose dans le sérum ». Sans indices, deux valeurs ne se comparent pas.",
+          "note": "un symbole seul est ambigu !"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Prélever 5,0 mL de sérum&nbsp;: pipette jaugée (± 0,015 mL) ou éprouvette de 10 mL (± 0,2 mL)&nbsp;?",
+          "calcul": "0,2 ÷ 0,015 ≈ 13",
+          "aparte": "comparer les tolérances",
+          "resultat": "[[pipette jaugée]] : erreur 13 fois plus faible"
+        },
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Choisir l’instrument",
+          "etapes": [
+            { "titre": "Exactitude", "texte": "quelle **tolérance** accepte-t-on&nbsp;?" },
+            { "titre": "Fiche technique", "texte": "lire l’**intervalle de confiance** (± 0,02 mL)" },
+            { "titre": "Comparer", "texte": "retenir le moins incertain" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Je choisis une pipette jaugée de classe A.", "quoi": "l’instrument" },
+            { "texte": "Sa tolérance (± 0,015 mL) est la plus faible.", "quoi": "justifier" },
+            { "texte": "ρ = m ÷ V s’exprime en g·L<sup>−1</sup>.", "quoi": "l’unité" }
+          ],
+          "pied": "Vérifier l’==unité==, c’est vérifier la formule."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mesurer avec un **bécher** gradué : indicatif seulement.",
+            "Souffler la **dernière goutte** d’une pipette jaugée.",
+            "Écrire une concentration en g·mL au lieu de **g·L<sup>−1</sup>**.",
+            "Oublier les **indices** (entité, matrice)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que signifie « **in** » sur la verrerie&nbsp;?",
+            "Quelle est l’unité d’une **concentration en quantité**&nbsp;?",
+            "Quelle verrerie sert à **préparer** une solution&nbsp;?"
+          ],
+          "reponses": "1) elle contient son volume · 2) mol·L⁻¹ · 3) la fiole jaugée"
+        }
+      ]
+    }
+  ]
+}

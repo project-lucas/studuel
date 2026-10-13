@@ -1,0 +1,120 @@
+{
+  "titre": "Tableaux et matrices",
+  "titreSurligne": "matrices",
+  "accroche": "Des valeurs rangées, chacune son indice.",
+  "bonus": "indices de 0 à n − 1 · accès immédiat · m[ligne][colonne] · tranche = nouvelle liste",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/nsi/tableaux-et-matrices.webp",
+    "prompt": "a glossy violet grid of square cells with a few golden cells lit up, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "On compte\nà partir de zéro !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Indice", "definition": "position : **0** pour le premier, **n − 1** pour le dernier" },
+            { "terme": "Matrice", "definition": "liste de **listes** : deux indices, ligne puis colonne" },
+            { "terme": "Compréhension", "definition": "construire une liste **en une ligne**" },
+            { "terme": "Tranche", "definition": "portion extraite : **nouvelle** liste" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Python",
+          "entetes": ["Code", "Effet"],
+          "lignes": [
+            ["t = [0] * 3", "[0, 0, 0]"],
+            ["[i * i for i in range(4)]", "[0, 1, 4, 9]"],
+            ["t[1:3]", "copie des cases 1 et 2"],
+            ["m[1][2]", "ligne 1, colonne 2"],
+            ["len(t)", "nombre d’éléments"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Parcourir un tableau",
+          "etapes": [
+            { "titre": "Par élément", "texte": "quand la position ne sert pas" },
+            { "titre": "Par indice", "texte": "pour **modifier**, ou comparer à un voisin" },
+            { "titre": "Matrice", "texte": "deux boucles imbriquées : coût quadratique" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "<b>m = &#91;[0] * 2] * 2</b> puis <b>m[0][0] = 5</b>. __Que vaut m__&nbsp;?",
+          "calcul": "les deux lignes sont la même liste",
+          "aparte": "une seule ligne",
+          "resultat": "= <em>&#91;[5, 0], [5, 0]&#93;</em>"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À savoir",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Accès", "texte": "par indice : coût **constant**." },
+            { "titre": "Bornes", "texte": "sortir de 0 à n − 1 : **erreur**." },
+            { "titre": "Copie", "texte": "<b>b = a</b> ne copie rien ; <b>a[:]</b> si." },
+            { "titre": "Bonne matrice", "texte": "chaque ligne construite **séparément**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "<b>for i in range(len(t)):</b>", "quoi": "parcours par indice" },
+            { "texte": "<b>m = &#91;[0] * 3 for _ in range(3)]</b>", "quoi": "matrice correcte" },
+            { "texte": "<b>m[i][j]</b>", "quoi": "ligne i, colonne j" }
+          ],
+          "pied": "La dernière case d’un tableau de n éléments est ==t[n − 1]==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Une boucle qui va « jusqu’à **n** » au lieu de n − 1.",
+            "Créer une matrice avec <b>&#91;[0] * n] * n</b>&nbsp;: lignes identiques.",
+            "Croire que **b = a** fait une copie.",
+            "Inverser **ligne** et **colonne**.",
+            "Modifier un tableau en le parcourant **par élément**.",
+            "Parcourir une matrice avec **une seule** boucle."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel est l’indice du **dernier** élément&nbsp;?",
+            "Que produit une **tranche**&nbsp;?",
+            "Quel coût pour parcourir une matrice **carrée**&nbsp;?"
+          ],
+          "reponses": "1) n − 1 · 2) une nouvelle liste, indépendante · 3) quadratique (deux boucles imbriquées)"
+        }
+      ]
+    }
+  ]
+}

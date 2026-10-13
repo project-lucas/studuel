@@ -1,0 +1,164 @@
+{
+  "titre": "Tangente, optimisation",
+  "titreSurligne": "optimisation",
+  "accroche": "La dérivée trouve le meilleur.",
+  "epreuve": "bac-1re",
+  "bonus": "tangente&nbsp;: y = f′(a)(x − a) + f(a) · horizontale&nbsp;: f′(a) = 0 · extremum&nbsp;: f′ **change de signe**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/tangente-et-optimisation-la-derivee-au-travail.webp",
+    "prompt": "a glossy violet hill-shaped curve with a golden horizontal tangent line touching its summit at one sparkling point, a tiny golden star above, same art style as the reference icons, on a flat magenta background, no text, no numbers"
+  },
+  "marcel": "Le sommet ?\nf′ s’annule !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La tangente en a",
+          "petite": true,
+          "lignes": [
+            "y = f′(a)(x − a) + f(a)",
+            "f′(a) = 0 ⇒ y = f(a)"
+          ],
+          "regle": "Il faut **deux valeurs**&nbsp;: le nombre dérivé f′(a) et l’image f(a).",
+          "note": "pente = f′(a)"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les questions inverses",
+          "entetes": [
+            "On cherche",
+            "On résout"
+          ],
+          "lignes": [
+            [
+              "tangente **horizontale**",
+              "f′(a) = 0"
+            ],
+            [
+              "parallèle à y = 5x + 2",
+              "f′(a) = 5"
+            ],
+            [
+              "pente 6 pour x²",
+              "2a = 6, a = 3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Optimiser en quatre temps",
+          "etapes": [
+            {
+              "titre": "Variable",
+              "texte": "la choisir, avec son intervalle"
+            },
+            {
+              "titre": "Exprimer",
+              "texte": "la grandeur selon cette seule variable"
+            },
+            {
+              "titre": "Étudier",
+              "texte": "dérivée, signe, tableau de variations"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "répondre à la question, avec l’unité"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "40 m de grillage, un côté contre le mur. __Aire maximale__&nbsp;?",
+          "calcul": "x ∈ ]0 ; 20[ · A(x) = x(40 − 2x)\nA′(x) = 40 − 4x, nulle en 10",
+          "aparte": "+ puis −",
+          "resultat": "x = [[10 m]] · aire max [[200 m²]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "x² en 1",
+              "texte": "tangente **y = 2x − 1**."
+            },
+            {
+              "titre": "eˣ en 0",
+              "texte": "tangente **y = x + 1**."
+            },
+            {
+              "titre": "Bornes",
+              "texte": "sur [a ; b], le maximum peut être **à une borne**&nbsp;: on compare."
+            },
+            {
+              "titre": "Bénéfice",
+              "texte": "B′(q) = −4q + 120 s’annule en **q = 30**&nbsp;: maximum."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "f(x) = x² − 3x + 1&nbsp;: f(2) = −1 et f′(x) = 2x − 3",
+              "quoi": "les valeurs"
+            },
+            {
+              "texte": "f′(2) = 1",
+              "quoi": "la pente"
+            },
+            {
+              "texte": "T&nbsp;: y = 1(x − 2) − 1 = x − 3",
+              "quoi": "la tangente"
+            }
+          ],
+          "pied": "Contrôle&nbsp;: la tangente passe par (2 ; −1), car 2 − 3 = ==−1==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier **f(a)** dans l’équation.",
+            "Conclure sans **l’unité** ni la valeur de l’optimum.",
+            "Donner x au lieu de **l’aire** demandée.",
+            "Croire que f′(a) = 0 donne **toujours** un extremum."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Tangente à **x²** en a = 1&nbsp;?",
+            "Tangente à **eˣ** en a = 0&nbsp;?",
+            "B(q) = −2q² + 120q − 1 000&nbsp;: **q** du maximum&nbsp;?"
+          ],
+          "reponses": "1) y = 2x − 1 · 2) y = x + 1 · 3) q = 30 (B(30) = 800)"
+        }
+      ]
+    }
+  ]
+}

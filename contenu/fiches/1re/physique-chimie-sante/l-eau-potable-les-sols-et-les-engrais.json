@@ -1,0 +1,114 @@
+{
+  "titre": "Eau, sols et engrais",
+  "titreSurligne": "engrais",
+  "accroche": "Nourrir sans polluer.",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-sante/l-eau-potable-les-sols-et-les-engrais.webp",
+    "prompt": "a glossy violet glass of clear water next to a golden sprouting seedling in a small pot of soil, tiny golden droplets, sparkles, same art style as the reference icons, on a magenta background, no text, no numbers"
+  },
+  "marcel": "Une eau saine,\nun sol bien nourri !",
+  "bonus": "Nitrates **50 mg/L** · pesticides **0,1 µg/L** par substance · plomb **10 µg/L** · engrais **N · P · K**",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Eau potable, limites",
+          "entetes": ["Paramètre", "Limite"],
+          "lignes": [
+            ["Nitrates NO₃⁻", "50 mg/L"],
+            ["Pesticide (chacun)", "0,1 µg/L"],
+            ["Plomb", "10 µg/L"],
+            ["Germes pathogènes", "absence"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les engrais",
+          "entetes": ["Élément", "Rôle pour la plante"],
+          "lignes": [
+            ["N (nitrate)", "tiges et feuilles"],
+            ["P (phosphate)", "racines, floraison"],
+            ["K (potassium)", "fruits, résistance"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Interpréter une analyse d’eau",
+          "etapes": [
+            { "titre": "Relever", "texte": "la concentration de l’ion dans l’analyse ou sur l’étiquette" },
+            { "titre": "Comparer", "texte": "à la limite de qualité, avec la même unité" },
+            { "titre": "Conclure", "texte": "conforme si en dessous, non conforme si au-dessus" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une eau contient 62 mg/L de __nitrates__. Est-elle potable&nbsp;?",
+          "calcul": "limite : 50 mg/L",
+          "aparte": "62 > 50",
+          "resultat": "[[non conforme]] pour les nitrates"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Cations et anions du sol",
+          "oui": { "titre": "Cations retenus", "texte": "Le complexe argilo-humique, **chargé négativement**, retient K⁺, Ca²⁺, Mg²⁺, NH₄⁺ pour la plante." },
+          "non": { "titre": "Nitrates lessivés", "texte": "Les **anions**, comme NO₃⁻, ne sont pas retenus&nbsp;: la pluie les emporte vers les nappes." },
+          "essai": { "texte": "Trop de nitrates et de phosphates dans une rivière&nbsp;: **eutrophisation**, algues, puis manque de dioxygène pour les poissons." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "D’après le document, [NO₃⁻] = 62 mg/L.", "quoi": "prélever" },
+            { "texte": "La limite de qualité est 50 mg/L.", "quoi": "comparer" },
+            { "texte": "L’eau n’est pas potable pour ce paramètre.", "quoi": "conclure" },
+            { "texte": "Un excès de nitrates cause l’eutrophisation.", "quoi": "prévenir" }
+          ],
+          "pied": "Bon usage&nbsp;: la ==juste dose==, au bon moment, avec protection."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Comparer des **mg/L** à des **µg/L**.",
+            "Croire que les nitrates **restent** dans le sol.",
+            "Confondre **fongicide** et **herbicide**.",
+            "Oublier la **compétition** biocarburant-alimentation."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel engrais favorise les **racines**&nbsp;?",
+            "Quel pesticide vise les **champignons**&nbsp;?",
+            "Pourquoi les nitrates sont-ils **lessivés**&nbsp;?"
+          ],
+          "reponses": "1) P, le phosphate · 2) le fongicide · 3) anions non retenus par le sol"
+        }
+      ]
+    }
+  ]
+}

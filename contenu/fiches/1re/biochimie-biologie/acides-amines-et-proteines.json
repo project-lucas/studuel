@@ -1,0 +1,183 @@
+{
+  "titre": "Aminés et protéines",
+  "titreSurligne": "protéines",
+  "accroche": "Vingt briques et une forme.",
+  "bonus": "**Séquence** → **forme** → **fonction** · chaîne écrite de **N-ter** (–NH₂) vers **C-ter** (–COOH)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biochimie-biologie/acides-amines-et-proteines.webp",
+    "prompt": "a glossy violet folded ribbon-like protein chain made of golden beads, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Une forme,\nune fonction&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "L’acide α-aminé",
+          "items": [
+            {
+              "terme": "Carbone α",
+              "definition": "porte –NH₂, –COOH, H et un **radical R**."
+            },
+            {
+              "terme": "Asymétrique",
+              "definition": "4 groupes différents (sauf la glycine, R = H)."
+            },
+            {
+              "terme": "Série L",
+              "definition": "la seule des protéines&nbsp;: –NH₂ à gauche en Fischer."
+            },
+            {
+              "terme": "Liaison peptidique",
+              "definition": "–CO–NH–, une fonction amide, avec perte d’eau."
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Cinq à reconnaître",
+          "entetes": [
+            "Acide aminé",
+            "Radical",
+            "Propriété"
+          ],
+          "lignes": [
+            [
+              "**Valine**",
+              "ramifié",
+              "hydrophobe"
+            ],
+            [
+              "**Sérine**",
+              "–CH₂–OH",
+              "polaire"
+            ],
+            [
+              "**Cystéine**",
+              "–CH₂–SH",
+              "pont disulfure"
+            ],
+            [
+              "**Lysine**",
+              "se finit par –NH₂",
+              "chargée **+**"
+            ],
+            [
+              "**Ac. glutamique**",
+              "se finit par –COOH",
+              "chargé **−**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Ce qui replie la chaîne",
+          "entetes": [
+            "Liaison",
+            "Entre",
+            "Force"
+          ],
+          "lignes": [
+            [
+              "**Pont disulfure**",
+              "deux cystéines",
+              "covalente, solide"
+            ],
+            [
+              "**Liaison ionique**",
+              "radicaux de charges opposées (Lys⁺ / Glu⁻)",
+              "faible"
+            ],
+            [
+              "**Liaison hydrogène**",
+              "groupes polaires",
+              "faible"
+            ],
+            [
+              "**Interactions hydrophobes**",
+              "radicaux apolaires regroupés au cœur",
+              "faible"
+            ]
+          ]
+        },
+        {
+          "type": "texte",
+          "numero": "!",
+          "titre": "Dénaturation",
+          "teinte": "corail",
+          "paragraphes": [
+            "Chaleur ou pH extrême&nbsp;: les **liaisons faibles** cèdent.",
+            "La protéine perd sa forme, donc sa **fonction**."
+          ]
+        }
+      ],
+      "colonnes": "1fr 250px"
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Expliquer l’effet d’une substitution",
+          "etapes": [
+            {
+              "titre": "Comparer",
+              "texte": "les deux acides aminés&nbsp;: charge, polarité du radical"
+            },
+            {
+              "titre": "Prévoir",
+              "texte": "quelles liaisons faibles sont créées ou perdues"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "forme modifiée, donc fonction modifiée"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Drépanocytose&nbsp;: à la surface de l’hémoglobine, un acide glutamique est remplacé par une valine.",
+          "calcul": "chargé, hydrophile → hydrophobe",
+          "aparte": "valines « collantes »",
+          "resultat": "[[fibres]] d’hémoglobine S"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que la forme tient à des liaisons **fortes**&nbsp;: surtout des liaisons faibles.",
+            "Penser que la **dénaturation** casse la séquence&nbsp;: la séquence reste intacte.",
+            "Oublier le **sens** de la chaîne&nbsp;: N-terminal vers C-terminal.",
+            "Confondre **structure primaire** (l’ordre) et forme repliée."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel **pont** relie deux cystéines&nbsp;?",
+            "Que perd une protéine **dénaturée**&nbsp;?",
+            "Quelle est la **structure primaire**&nbsp;?"
+          ],
+          "reponses": "1) un pont disulfure · 2) sa forme et sa fonction · 3) l’ordre des acides aminés"
+        }
+      ]
+    }
+  ]
+}

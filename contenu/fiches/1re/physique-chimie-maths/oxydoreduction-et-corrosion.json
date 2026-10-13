@@ -1,0 +1,195 @@
+{
+  "titre": "Redox et corrosion",
+  "titreSurligne": "corrosion",
+  "accroche": "Des électrons cédés, des électrons pris.",
+  "bonus": "Réducteur **cède** · oxydant **capte** · oxydation = **perte** d’e⁻ · réduction = **gain** d’e⁻",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-maths/oxydoreduction-et-corrosion.webp",
+    "prompt": "a glossy violet iron nail half covered with golden rust flakes and a small shield, tiny golden electrons flying off, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Le fer cède,\nle cuivre prend !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Qui donne, qui prend",
+          "items": [
+            {
+              "terme": "Réducteur",
+              "definition": "espèce qui **cède** des électrons"
+            },
+            {
+              "terme": "Oxydant",
+              "definition": "espèce qui **capte** des électrons"
+            },
+            {
+              "terme": "Oxydation",
+              "definition": "**perte** d’électrons, subie par le réducteur"
+            },
+            {
+              "terme": "Réduction",
+              "definition": "**gain** d’électrons, subi par l’oxydant"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Demi-équations",
+          "petite": true,
+          "lignes": [
+            "Fe²⁺ + 2 e⁻ = Fe",
+            "Cu²⁺ + 2 e⁻ = Cu"
+          ],
+          "regle": "Un couple s’écrit **Ox/Red** : Fe²⁺/Fe, Cu²⁺/Cu, O<sub>2</sub>/H<sub>2</sub>O. On combine deux demi-équations pour que les **électrons s’éliminent**.",
+          "note": "oxydant + e⁻ = réducteur"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Écrire une réaction d’oxydoréduction",
+          "etapes": [
+            {
+              "titre": "Écrire",
+              "texte": "les deux demi-équations, dans le **bon sens**"
+            },
+            {
+              "titre": "Égaliser",
+              "texte": "le nombre d’**électrons** échangés"
+            },
+            {
+              "titre": "Additionner",
+              "texte": "et simplifier : les e⁻ **disparaissent**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un clou de fer dans du sulfate de cuivre se couvre de cuivre. __Bilan__&nbsp;?",
+          "calcul": "Fe → Fe²⁺ + 2 e⁻\nCu²⁺ + 2 e⁻ → Cu",
+          "aparte": "2 e⁻ de chaque côté",
+          "resultat": "[[Fe + Cu²⁺ → Fe²⁺ + Cu]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Se protéger de la corrosion",
+          "entetes": [
+            "Méthode",
+            "Principe"
+          ],
+          "lignes": [
+            [
+              "Revêtement",
+              "isoler le métal du milieu (peinture, vernis)"
+            ],
+            [
+              "Galvanisation",
+              "couche de zinc, qui s’oxyde à la place de l’acier"
+            ],
+            [
+              "Anode sacrificielle",
+              "bloc de zinc ou magnésium, **plus réducteur** que le fer"
+            ],
+            [
+              "Alliage",
+              "inox (chrome) : couche passivante"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "Comment se comportent les métaux",
+          "colonnes": 4,
+          "cartes": [
+            {
+              "titre": "Fer, acier",
+              "texte": "rouille **poreuse** : la corrosion continue"
+            },
+            {
+              "titre": "Aluminium, zinc",
+              "texte": "couche d’oxyde **protectrice**"
+            },
+            {
+              "titre": "Inox",
+              "texte": "le **chrome** forme une couche passivante"
+            },
+            {
+              "titre": "Or, platine",
+              "texte": "métaux **nobles**, très difficiles à oxyder"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À savoir",
+          "deux": false,
+          "items": [
+            {
+              "titre": "Corrosion",
+              "texte": "oxydation d’un métal par son milieu (O<sub>2</sub>, eau, sels)"
+            },
+            {
+              "titre": "Eau salée",
+              "texte": "elle **accélère** la corrosion"
+            },
+            {
+              "titre": "Pile",
+              "texte": "anode : **oxydation** · cathode : **réduction**"
+            },
+            {
+              "titre": "Pile Daniell",
+              "texte": "zinc et cuivre, environ **1,1 V**"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **oxydant** (qui capte) et **réducteur** (qui cède).",
+            "Laisser des **électrons** dans l’équation-bilan.",
+            "Écrire la demi-équation **à l’envers**.",
+            "Croire que toute rouille **protège** : celle du fer est poreuse."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que fait un **réducteur** ?",
+            "Où a lieu la **réduction** dans une pile ?",
+            "Pourquoi relier un bloc de **zinc** à une coque d’acier ?"
+          ],
+          "reponses": "1) il cède des e⁻ · 2) à la cathode · 3) le zinc, plus réducteur, s’oxyde à la place du fer"
+        }
+      ]
+    }
+  ]
+}

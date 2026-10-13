@@ -1,0 +1,112 @@
+{
+  "titre": "Le circuit électrique",
+  "titreSurligne": "circuit",
+  "accroche": "Deux lois pour tout analyser.",
+  "bonus": "**I** en A, ampèremètre en **série** · **U** en V, voltmètre en **dérivation**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/le-circuit-electrique.webp",
+    "prompt": "a glossy violet battery connected by golden wires to a small light bulb and a resistor in a closed loop, tiny golden sparkles, same art style as the reference icons, on magenta background, no text"
+  },
+  "marcel": "Le courant boucle,\nla somme aussi !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les deux lois",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": ["Nœud : ΣI<sub>entrants</sub> = ΣI<sub>sortants</sub>", "Maille : ΣU = 0"],
+          "regle": "**Nœuds** = conservation de la ==charge==. **Mailles** = conservation de l’==énergie== (somme algébrique le long d’une boucle).",
+          "note": "flèche U entre deux points, I sur le fil&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Série ou dérivation",
+          "entetes": ["Point", "Série", "Dérivation"],
+          "lignes": [
+            ["**Intensité**", "la même", "s’additionne"],
+            ["**Tension**", "s’additionne", "la même"],
+            ["**R**", "R = R1 + R2", "inverses ajoutés"],
+            ["**Coupure**", "arrête tout", "une branche"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Analyser un circuit",
+          "etapes": [
+            { "titre": "Orienter", "texte": "flèches de tension et d’intensité sur le schéma" },
+            { "titre": "Écrire", "texte": "une loi des nœuds ou des mailles par inconnue" },
+            { "titre": "Résoudre", "texte": "avec U = R × I, puis vérifier l’unité" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Pont diviseur&nbsp;: E = 12 V, R1 = 1 kΩ, R2 = 3 kΩ. Tension __U<sub>s</sub>__ aux bornes de R2&nbsp;?",
+          "calcul": "U<sub>s</sub> = E × {R2/(R1+R2)} = 12 × {3/4}",
+          "aparte": "adapte un capteur à un microcontrôleur",
+          "resultat": "U<sub>s</sub> = [[9 V]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Brancher l’ampèremètre",
+          "oui": { "titre": "En série", "texte": "Il est **inséré dans la branche**&nbsp;: il mesure le courant qui le traverse." },
+          "non": { "titre": "En dérivation", "texte": "Sa résistance est presque nulle&nbsp;: il **court-circuite** le dipôle." },
+          "essai": { "texte": "Le voltmètre, lui, se place <i>en dérivation</i> entre les deux points mesurés." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Loi des mailles : E − U<sub>1</sub> − U<sub>2</sub> = 0", "quoi": "la loi nommée" },
+            { "texte": "U<sub>2</sub> = E × R2 ÷ (R1 + R2)", "quoi": "le calcul" },
+            { "texte": "U<sub>2</sub> = 9 V", "quoi": "avec l’unité" }
+          ],
+          "pied": "Le domestique est câblé en ==dérivation==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Ampèremètre en **dérivation**&nbsp;: court-circuit.",
+            "Additionner les **intensités** en série.",
+            "Oublier le **signe** des tensions dans une maille.",
+            "Croire que R<sub>éq</sub> en dérivation vaut R1 + R2."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle grandeur est **la même** en série&nbsp;?",
+            "Que traduit la **loi des nœuds**&nbsp;?",
+            "Un voltmètre se branche comment&nbsp;?"
+          ],
+          "reponses": "1) l’intensité · 2) la conservation de la charge · 3) en dérivation"
+        }
+      ]
+    }
+  ]
+}

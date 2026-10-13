@@ -1,0 +1,115 @@
+{
+  "titre": "Probas conditionnelles",
+  "titreSurligne": "conditionnelles",
+  "accroche": "Un arbre : on multiplie, puis on ajoute.",
+  "bonus": "P_A(B) = {P(A ∩ B)/P(A)} · P(B) = P(A ∩ B) + P(Ā ∩ B) · indépendants ⇔ P(A ∩ B) = P(A) × P(B)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths-techno/probabilites-conditionnelles-et-independance.webp",
+    "prompt": "a glossy violet probability tree with two golden branches splitting twice and small golden nodes, tiny sparkles"
+  },
+  "marcel": "Sachant A,\nl’univers rétrécit !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Conditionnelle",
+          "petite": true,
+          "lignes": ["P_A(B) = {P(A ∩ B)/P(A)}", "P(A ∩ B) = P(A) × P_A(B)"],
+          "regle": "P_A(B) se lit « probabilité de B ==sachant== A ». Les probabilités totales&nbsp;: P(B) = P(A ∩ B) + P(Ā ∩ B).",
+          "note": "P(A) ≠ 0&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les règles de l’arbre",
+          "entetes": ["Où", "Règle"],
+          "lignes": [
+            ["Branches d’un nœud", "somme = **1**"],
+            ["Second niveau", "probabilités **conditionnelles**"],
+            ["Un chemin", "on **multiplie**"],
+            ["Plusieurs chemins", "on **additionne**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre avec un arbre en trois temps",
+          "etapes": [
+            { "titre": "Construire", "texte": "placer P(A), P(Ā) puis les probabilités conditionnelles" },
+            { "titre": "Multiplier", "texte": "chaque chemin : produit de ses branches" },
+            { "titre": "Additionner", "texte": "les chemins qui mènent à B : probabilités totales" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "P(C) = 0,6 ; P_C(L) = 0,3 ; P_C̄(L) = 0,1. __P(L)__&nbsp;?",
+          "calcul": "P(C ∩ L) = 0,6 × 0,3 = 0,18\nP(C̄ ∩ L) = 0,4 × 0,1 = 0,04",
+          "aparte": "deux chemins",
+          "resultat": "P(L) = 0,18 + 0,04 = [[0,22]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Sens inverse", "texte": "P_L(C) = 0,18 ÷ 0,22 = **{9/11}** ≈ 0,82." },
+            { "titre": "Indépendance", "texte": "P_C(L) = 0,3 ≠ P(L) = 0,22&nbsp;: **pas indépendants**." },
+            { "titre": "Incompatibles", "texte": "P(A ∩ B) = 0&nbsp;: jamais indépendants si P(A), P(B) > 0." },
+            { "titre": "Dépistage", "texte": "**Faux positif**&nbsp;: test positif, personne saine. **Faux négatif**&nbsp;: l’inverse." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "P(C ∩ L) = 0,6 × 0,3 = 0,18", "quoi": "premier chemin" },
+            { "texte": "P(C̄ ∩ L) = 0,4 × 0,1 = 0,04", "quoi": "second chemin" },
+            { "texte": "D’après la formule des probabilités totales, P(L) = 0,22", "quoi": "la formule" }
+          ],
+          "pied": "Contrôle&nbsp;: 0,18 + 0,04 + 0,42 + 0,36 = ==1==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **P_A(B)** et P(A ∩ B).",
+            "Dire « indépendants » pour **incompatibles**.",
+            "**Additionner** le long d’un chemin.",
+            "Oublier le chemin du contraire **Ā**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "P(A) = 0,5 et P_A(B) = 0,4&nbsp;: **P(A ∩ B)**&nbsp;?",
+            "P(A ∩ B) = 0,12 et P(A) = 0,3&nbsp;: **P_A(B)**&nbsp;?",
+            "P(A) = 0,5, P(B) = 0,4, P(A ∩ B) = 0,2&nbsp;: **indépendants**&nbsp;?"
+          ],
+          "reponses": "1) 0,2 · 2) 0,12 ÷ 0,3 = 0,4 · 3) oui, 0,5 × 0,4 = 0,2"
+        }
+      ]
+    }
+  ]
+}

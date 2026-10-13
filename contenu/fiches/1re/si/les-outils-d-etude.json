@@ -1,0 +1,180 @@
+{
+  "titre": "Les outils d’étude",
+  "titreSurligne": "étude",
+  "accroche": "Calculer, simuler, mesurer, comparer.",
+  "bonus": "T = nombre de div × **s/div** · U = nombre de div × **V/div** · f = 1 ÷ T",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/les-outils-d-etude.webp",
+    "prompt": "a glossy violet oscilloscope screen showing a golden sine wave, a small multimeter beside it, tiny golden sparkles, same art style as the reference icons, on magenta background, no text no digits"
+  },
+  "marcel": "Un écart ?\nC’est une info !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les appareils",
+          "entetes": [
+            "Appareil",
+            "Il donne"
+          ],
+          "lignes": [
+            [
+              "**Multimètre**",
+              "U (dérivation), I (série), R (hors tension)"
+            ],
+            [
+              "**Oscilloscope**",
+              "la **forme** du signal dans le temps"
+            ],
+            [
+              "**GBF**",
+              "signaux d’essai calibrés"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Lire un oscillogramme",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "T = div × base de temps",
+            "U = div × sensibilité"
+          ],
+          "regle": "Base de temps en <b>s/div</b>, sensibilité en <b>V/div</b>. Puis ==f = 1 ÷ T==.",
+          "note": "on compte les divisions&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Confronter les trois sources",
+          "etapes": [
+            {
+              "titre": "Calculer",
+              "texte": "le modèle donne une valeur attendue"
+            },
+            {
+              "titre": "Simuler",
+              "texte": "essayer sans risque, faire varier un paramètre"
+            },
+            {
+              "titre": "Mesurer",
+              "texte": "puis analyser chaque écart"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": "★",
+          "titre": "Ce que la simulation oublie",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Contacts",
+              "texte": "résistances de contact"
+            },
+            {
+              "titre": "Parasites",
+              "texte": "capacités parasites"
+            },
+            {
+              "titre": "Chaleur",
+              "texte": "échauffement"
+            },
+            {
+              "titre": "Fabrication",
+              "texte": "tolérances et perturbations"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une période occupe __4 divisions__, base de temps 2 ms/div. Fréquence&nbsp;?",
+          "calcul": "T = 4 × 2 ms = 8 ms",
+          "aparte": "f = 1 ÷ T",
+          "resultat": "f = 1 ÷ 0,008 = [[125 Hz]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Que révèle l’écart&nbsp;?",
+          "oui": {
+            "titre": "Calcul ≠ simulation",
+            "texte": "Une erreur de **modèle** ou d’hypothèse."
+          },
+          "non": {
+            "titre": "Simulation ≠ mesure",
+            "texte": "Un phénomène **réel non modélisé** ou un composant hors tolérance."
+          },
+          "essai": {
+            "texte": "Mesure ≠ cahier des charges&nbsp;: le produit ne répond pas au besoin, il faut <i>décider quoi corriger</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "T = 4 × 2 ms = 8 ms",
+              "quoi": "la lecture"
+            },
+            {
+              "texte": "f = 1 ÷ T = 125 Hz",
+              "quoi": "avec l’unité"
+            },
+            {
+              "texte": "Écart de 5&nbsp;% : tolérance des composants",
+              "quoi": "l’analyse"
+            }
+          ],
+          "pied": "Un écart n’est pas un échec&nbsp;: c’est une ==information==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **calibre** en lisant les divisions.",
+            "Penser que la simulation voit **tout** (parasites, échauffement).",
+            "Mesurer R **sous tension**.",
+            "Ne pas **expliquer** l’écart observé."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel appareil montre l’**allure** d’un signal&nbsp;?",
+            "Amplitude de 3 div à 5 V/div&nbsp;?",
+            "Que révèle un écart **simulation / mesure**&nbsp;?"
+          ],
+          "reponses": "1) l’oscilloscope · 2) 15 V · 3) un phénomène réel non modélisé"
+        }
+      ]
+    }
+  ]
+}

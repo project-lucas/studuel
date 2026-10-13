@@ -1,0 +1,179 @@
+{
+  "titre": "Dénombrer les microbes",
+  "titreSurligne": "Dénombrer",
+  "accroche": "Combien de germes par gramme&nbsp;?",
+  "bonus": "Boîtes exploitables : **15 à 300** colonies · résultat en **UFC** · 2 chiffres significatifs",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biotechnologies/denombrer-les-micro-organismes.webp",
+    "prompt": "a glossy violet petri dish covered with countable golden colonies beside a row of golden test tubes of decreasing color, sparkles"
+  },
+  "marcel": "Une colonie,\nune cellule comptée !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Deux méthodes",
+          "entetes": [
+            "",
+            "Directe",
+            "Après culture"
+          ],
+          "lignes": [
+            [
+              "**Outil**",
+              "hématimètre",
+              "boîtes de gélose"
+            ],
+            [
+              "**Compte**",
+              "cellules **totales**",
+              "cellules **viables** (UFC)"
+            ],
+            [
+              "**Durée**",
+              "rapide",
+              "plus long (incubation)"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le calcul",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "N = {n/V × d}"
+          ],
+          "regle": "**n** colonies comptées, **V** volume ensemencé (mL), **d** dilution (10<sup>−3</sup>). N en **UFC/mL** ou par g.",
+          "note": "divise par d !"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "À retenir",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Hématimètre",
+              "texte": "lame à **volume connu** : on compte dans plusieurs rectangles, on fait la moyenne."
+            },
+            {
+              "titre": "Critère",
+              "texte": "une **valeur de référence** réglementaire : au-delà, le produit est non conforme."
+            },
+            {
+              "titre": "Dilution décimale",
+              "texte": "1&nbsp;mL + 9&nbsp;mL de diluant divise par **10** à chaque tube."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le dénombrement après culture",
+          "etapes": [
+            {
+              "titre": "Diluer",
+              "texte": "suspension mère (10&nbsp;g + 90&nbsp;mL), puis dilutions **décimales** en série"
+            },
+            {
+              "titre": "Ensemencer",
+              "texte": "un **volume exact** (1&nbsp;mL en profondeur) de plusieurs dilutions"
+            },
+            {
+              "titre": "Compter",
+              "texte": "les boîtes à **15-300** colonies, après incubation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "1&nbsp;mL de la dilution 10<sup>−3</sup> donne 150 colonies. __N__&nbsp;?",
+          "calcul": "N = n / (V × d)",
+          "aparte": "V = 1 mL",
+          "resultat": "N = 150 / (1 × 10<sup>−3</sup>) = [[1,5 × 10<sup>5</sup> UFC/mL]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quelle boîte compter",
+          "oui": {
+            "titre": "Boîte exploitable",
+            "texte": "Entre **15 et 300** colonies bien séparées&nbsp;: elle est **représentative**."
+          },
+          "non": {
+            "titre": "Boîte à écarter",
+            "texte": "Trop pauvre ou **confluente**&nbsp;: on ne peut pas compter juste."
+          },
+          "essai": {
+            "texte": "Chaque colonie vient d’<i>une cellule viable</i>&nbsp;: d’où le résultat en <b>UFC</b>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "N = n / (V × d) = 150 / (1 × 10<sup>−3</sup>)",
+              "quoi": "formule puis nombres"
+            },
+            {
+              "texte": "N = 1,5 × 10<sup>5</sup> UFC par mL",
+              "quoi": "avec l’unité"
+            },
+            {
+              "texte": "Comparé au critère microbiologique : conforme ou non.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Méthode **normalisée**&nbsp;: mêmes milieu, température et durée."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier de diviser par la **dilution** (multiplier par son inverse).",
+            "Compter une boîte **trop chargée** ou trop pauvre.",
+            "Garder la **même pipette** entre les dilutions.",
+            "Confondre cellules **totales** et cellules **viables**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que mesure l’**hématimètre**&nbsp;?",
+            "Que veut dire **UFC**&nbsp;?",
+            "80 colonies, V = 1&nbsp;mL, d = 10<sup>−2</sup>&nbsp;: **N**&nbsp;?"
+          ],
+          "reponses": "1) les cellules totales · 2) unité formant colonie · 3) 8 × 10<sup>3</sup> UFC/mL"
+        }
+      ]
+    }
+  ]
+}

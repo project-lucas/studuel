@@ -1,0 +1,190 @@
+{
+  "titre": "Triptyque MEI et DD",
+  "titreSurligne": "MEI",
+  "accroche": "Matière, énergie, information, durable.",
+  "bonus": "**3 piliers** : environnemental · économique · social · **l’information** est le levier le moins cher pour économiser l’énergie",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/ingenierie-dd/developpement-durable-et-triptyque-matiere-energie-informati.webp",
+    "prompt": "a glossy violet globe with a golden leaf, a golden light bulb and a small violet chip around it, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Trois piliers,\nzéro compromis !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois piliers",
+          "entetes": [
+            "Pilier",
+            "Question pour un produit"
+          ],
+          "lignes": [
+            [
+              "**Environnemental**",
+              "ressources consommées, rejets"
+            ],
+            [
+              "**Économique**",
+              "viable pour l’entreprise, abordable"
+            ],
+            [
+              "**Social**",
+              "utile, sûr, bien fabriqué"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le triptyque MEI",
+          "entetes": [
+            "Champ",
+            "Vélo électrique"
+          ],
+          "lignes": [
+            [
+              "**Matière**",
+              "cadre en aluminium, pneus"
+            ],
+            [
+              "**Énergie**",
+              "batterie, moteur, chaîne"
+            ],
+            [
+              "**Information**",
+              "capteur de pédalage, écran, carte"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Améliorer l’efficacité énergétique",
+          "etapes": [
+            {
+              "titre": "Réduire les pertes",
+              "texte": "frottements, effet Joule, fuites thermiques"
+            },
+            {
+              "titre": "Bon rendement",
+              "texte": "choisir des composants à haut rendement"
+            },
+            {
+              "titre": "Commander",
+              "texte": "une chaîne d’information : n’allumer que si utile"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "10 lampes de __60 W__ allumées 12 h. En LED de __8 W__ avec détecteur, 3 h. Gain&nbsp;?",
+          "calcul": "7,2 kWh → 10 × 8 × 3 = 240 Wh",
+          "aparte": "0,24 kWh",
+          "resultat": "énergie ÷ [[30]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Un produit durable&nbsp;?",
+          "oui": {
+            "titre": "Durable",
+            "texte": "Il tient les **trois piliers** à la fois."
+          },
+          "non": {
+            "titre": "Pas durable",
+            "texte": "Il n’en tient qu’**un ou deux**."
+          },
+          "essai": {
+            "texte": "Un produit écologique mais <i>invendable</i> n’est pas durable : l’économique manque."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Les enjeux énergétiques",
+          "deux": true,
+          "items": [
+            {
+              "titre": "80 %",
+              "texte": "de l’énergie primaire est fossile"
+            },
+            {
+              "titre": "Extraction",
+              "texte": "de plus en plus complexe et chère"
+            },
+            {
+              "titre": "Centralisée",
+              "texte": "grandes centrales, pertes de transport"
+            },
+            {
+              "titre": "Locale",
+              "texte": "proche du client mais intermittente"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Environnemental, économique, social",
+              "quoi": "les 3 piliers"
+            },
+            {
+              "texte": "Énergie consommée avant / après",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "Meilleur composant + commande",
+              "quoi": "la cause du gain"
+            }
+          ],
+          "pied": "On compare ==avant et après== avec la même unité."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier un **pilier** : l’économique ou le social.",
+            "Confondre **énergie** (batterie) et **information** (capteur).",
+            "Croire que l’énergie fossile est **renouvelable**.",
+            "Oublier que transporter l’énergie fait des **pertes**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quels sont les **trois piliers** du développement durable&nbsp;?",
+            "Que désigne le triptyque **MEI**&nbsp;?",
+            "Quel levier économise l’énergie à moindre coût&nbsp;?"
+          ],
+          "reponses": "1) environnemental, économique, social · 2) matière, énergie, information · 3) l’information"
+        }
+      ]
+    }
+  ]
+}

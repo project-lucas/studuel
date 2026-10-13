@@ -1,0 +1,110 @@
+{
+  "titre": "L’énergie lumineuse",
+  "titreSurligne": "lumineuse",
+  "accroche": "Irradiance, laser, photovoltaïque.",
+  "bonus": "E = P ÷ S (W/m²) · Soleil ≈ 1 000 W/m² · η = P élec ÷ (E × S)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-maths/energie-transportee-par-la-lumiere.webp",
+    "prompt": "a glossy violet solar panel under a golden sun with a thin laser beam, sparkles"
+  },
+  "marcel": "Le Soleil envoie\nde l’énergie !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Irradiance et rendement",
+          "petite": true,
+          "lignes": ["E = {P/S}", "η = {P élec/E × S}"],
+          "regle": "**E** irradiance en W/m², **P** puissance lumineuse en W, **S** surface en m². Maximale quand le panneau est ==perpendiculaire== aux rayons.",
+          "note": "S en m², pas en cm²&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le laser",
+          "entetes": ["Propriété", "Conséquence"],
+          "lignes": [
+            ["Monochromatique", "une seule longueur d’onde"],
+            ["Directif", "énergie sur une petite surface"],
+            ["Intense", "irradiance énorme"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Lumineuse", "texte": "puissance reçue = irradiance E × surface S" },
+            { "titre": "Électrique", "texte": "puissance fournie = U × I" },
+            { "titre": "Rendement", "texte": "η = P électrique ÷ P lumineuse, sans unité" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Panneau de 1,7 m² sous 800 W/m², il délivre 36 V et 7,5 A. Son __rendement__&nbsp;?",
+          "calcul": "P lum = 800 × 1,7 = 1 360 W",
+          "aparte": "P élec = 36 × 7,5 = 270 W",
+          "resultat": "η = 270 ÷ 1 360 ≈ [[0,20 = 20 %]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Se protéger d’un laser",
+          "oui": { "titre": "Les bons gestes", "texte": "Lunettes **adaptées** à la longueur d’onde, zone signalée, machine capotée." },
+          "non": { "titre": "Les interdits", "texte": "Regarder le faisceau ou ses **réflexions** sur une surface brillante. L’œil **concentre** encore la lumière." },
+          "essai": { "texte": "Les lasers vont de la classe <i>1</i> (sans danger) à la classe <i>4</i> (très dangereux)." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "P lum = E × S = 800 × 1,7 = 1 360 W", "quoi": "puissance reçue" },
+            { "texte": "P élec = U × I = 36 × 7,5 = 270 W", "quoi": "puissance fournie" },
+            { "texte": "η = 270 ÷ 1 360 ≈ 0,20", "quoi": "le rendement" }
+          ],
+          "pied": "Les 80 % restants sont surtout ==convertis en chaleur==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **irradiance** (W/m²) et **puissance** (W).",
+            "Oublier la **surface** dans le rendement.",
+            "Un rendement donné **sans unité** ni % cohérent.",
+            "Croire un pointeur **sans danger** pour l’œil."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**E** pour P = 500 W sur S = 0,5 m²&nbsp;?",
+            "**η** pour 100 W produits sur 500 W reçus&nbsp;?",
+            "Pourquoi un laser est-il **dangereux**&nbsp;?"
+          ],
+          "reponses": "1) 1 000 W/m² · 2) 0,20 (20 %) · 3) directif et intense"
+        }
+      ]
+    }
+  ]
+}

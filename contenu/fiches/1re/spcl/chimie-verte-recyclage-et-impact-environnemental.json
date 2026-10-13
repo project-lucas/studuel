@@ -1,0 +1,167 @@
+{
+  "titre": "Chimie verte",
+  "titreSurligne": "verte",
+  "accroche": "Produire sans abîmer.",
+  "bonus": "Anastas et Warner, **1998** · **12 principes** · impact **environnemental, économique, social**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/spcl/chimie-verte-recyclage-et-impact-environnemental.webp",
+    "prompt": "a glossy violet flask with a golden leaf inside and a recycling arrow loop around it, sparkles"
+  },
+  "marcel": "Moins de déchets,\nplus de malin&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Les idées clés",
+          "items": [
+            {
+              "titre": "Prévenir",
+              "texte": "mieux vaut ne pas produire de déchet"
+            },
+            {
+              "titre": "Économiser les atomes",
+              "texte": "tout dans le produit"
+            },
+            {
+              "titre": "Solvants sûrs",
+              "texte": "eau, éthanol"
+            },
+            {
+              "titre": "Catalyse",
+              "texte": "plutôt qu’un réactif en excès"
+            },
+            {
+              "titre": "Renouvelable",
+              "texte": "biomasse plutôt que pétrole"
+            },
+            {
+              "titre": "Énergie",
+              "texte": "température ambiante si possible"
+            },
+            {
+              "titre": "Dégradable",
+              "texte": "des produits qui ne persistent pas"
+            },
+            {
+              "titre": "Analyse",
+              "texte": "suivre la réaction en temps réel"
+            }
+          ],
+          "deux": true
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Économie d’atomes",
+          "petite": true,
+          "lignes": [
+            "EA = {M(produit)/ΣM(réactifs)}"
+          ],
+          "regle": "Une **addition** vaut **100 %**&nbsp;; une **substitution** qui libère un sous-produit est moins économe.",
+          "note": "≠ rendement&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Juger un procédé",
+          "etapes": [
+            {
+              "titre": "Environnement",
+              "texte": "rejets, eau, énergie, **CO₂**"
+            },
+            {
+              "titre": "Économie",
+              "texte": "réactifs, énergie, **traitement** des déchets"
+            },
+            {
+              "titre": "Social",
+              "texte": "**sécurité** des salariés et des riverains"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Ibuprofène&nbsp;: 1<sup>re</sup> synthèse 6 étapes, EA ≈ 40 %. Nouveau procédé 3 étapes catalytiques. __Gain__&nbsp;?",
+          "calcul": "6 étapes → 3 étapes",
+          "aparte": "catalyse",
+          "resultat": "EA ≈ 40 % → [[77 %]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Rendement ou pas",
+          "oui": {
+            "titre": "Procédé vert",
+            "texte": "Forte **économie d’atomes**, solvant sûr, peu d’énergie, déchets triés."
+          },
+          "non": {
+            "titre": "Rendement trompeur",
+            "texte": "95 % de rendement avec un solvant **toxique** et beaucoup de déchets."
+          },
+          "essai": {
+            "texte": "Un bon rendement ne suffit pas&nbsp;: compte aussi l’<i>économie d’atomes</i>, la toxicité et l’énergie."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "EA = M(produit) ÷ ΣM(réactifs)",
+              "quoi": "la définition"
+            },
+            {
+              "texte": "Solvants récupérés par distillation, métaux par précipitation.",
+              "quoi": "le recyclage"
+            },
+            {
+              "texte": "Impact environnemental, économique et social.",
+              "quoi": "les trois plans"
+            }
+          ],
+          "pied": "Rien à l’évier&nbsp;: déchets ==triés== dans des bidons étiquetés."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **économie d’atomes** et **rendement**.",
+            "Juger un procédé sur le **seul** rendement.",
+            "Jeter un solvant à l’**évier**.",
+            "Oublier l’impact **social**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle est l’**EA** d’une addition&nbsp;?",
+            "Comment récupérer un **solvant**&nbsp;?",
+            "Citez les **trois plans** d’impact."
+          ],
+          "reponses": "1) 100 % · 2) par distillation · 3) environnemental, économique, social"
+        }
+      ]
+    }
+  ]
+}

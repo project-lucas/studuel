@@ -1,0 +1,172 @@
+{
+  "titre": "Sécurité au labo",
+  "titreSurligne": "labo",
+  "accroche": "Lire l’étiquette avant d’ouvrir.",
+  "bonus": "**Danger** (grave) ou **Attention** · **H** = nature du danger · **P** = quoi faire · **FDS** = 16 rubriques",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/spcl/securite-au-laboratoire-pictogrammes-phrases-h-et-p-fds.webp",
+    "prompt": "a glossy violet safety goggles pair next to a golden warning diamond sign and a small flask, sparkles"
+  },
+  "marcel": "Lunettes, gants,\net on lit&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les pictogrammes CLP",
+          "entetes": [
+            "Dessin",
+            "Sens",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "Flamme",
+              "inflammable",
+              "éthanol"
+            ],
+            [
+              "Corrosion",
+              "corrosif",
+              "soude"
+            ],
+            [
+              "Tête de mort",
+              "toxique",
+              "méthanol"
+            ],
+            [
+              "Point d’exclamation",
+              "nocif, irritant",
+              "réactifs dilués"
+            ],
+            [
+              "Santé (étoile)",
+              "cancérogène",
+              "dichlorométhane"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Phrases et fiche",
+          "items": [
+            {
+              "terme": "Phrases H",
+              "definition": "mentions de **danger**&nbsp;: H225 inflammable, H314 brûlures"
+            },
+            {
+              "terme": "Phrases P",
+              "definition": "conseils de **prudence**&nbsp;: P280 gants et lunettes"
+            },
+            {
+              "terme": "FDS",
+              "definition": "fiche du fabricant, **16 rubriques**, lue **avant** la manipulation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Avant de manipuler",
+          "etapes": [
+            {
+              "titre": "Lire",
+              "texte": "l’**étiquette** et la **FDS** du produit"
+            },
+            {
+              "titre": "S’équiper",
+              "texte": "blouse, **lunettes**, **gants**, **hotte** si volatil"
+            },
+            {
+              "titre": "Stocker",
+              "texte": "par **familles compatibles**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "HCl à 37 %&nbsp;: corrosion + point d’exclamation, « Danger », H290, H314, H335. __Précautions__&nbsp;?",
+          "calcul": "corrosif + irritant les voies respiratoires",
+          "aparte": "donc protection + hotte",
+          "resultat": "[[lunettes, gants, blouse, hotte]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Stockage",
+          "oui": {
+            "titre": "Familles compatibles",
+            "texte": "Inflammables en **armoire ventilée**, toxiques en **armoire fermée**, acides ensemble."
+          },
+          "non": {
+            "titre": "Incompatibles",
+            "texte": "Acide près d’une **base**, oxydant près d’un **inflammable**, eau de Javel près d’un acide (dichlore)."
+          },
+          "essai": {
+            "texte": "La FDS se lit <i>avant</i> la manipulation&nbsp;: rubrique **stockage** et **protections individuelles**."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Pictogrammes&nbsp;: corrosion, point d’exclamation. Mention&nbsp;: Danger.",
+              "quoi": "lire l’étiquette"
+            },
+            {
+              "texte": "Phrases H314 et H335&nbsp;: brûlures, voies respiratoires.",
+              "quoi": "le danger"
+            },
+            {
+              "texte": "Lunettes, gants, blouse, travail sous hotte.",
+              "quoi": "les précautions"
+            }
+          ],
+          "pied": "Relie ==chaque danger== à ==une protection== précise."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre phrase **H** (danger) et phrase **P** (conseil).",
+            "Lire la FDS **après** l’accident.",
+            "Ranger acide et **base** sur la même étagère.",
+            "Croire que « Attention » est plus grave que « **Danger** »."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que signifie le pictogramme **flamme**&nbsp;?",
+            "La phrase **P280** est-elle un danger ou un conseil&nbsp;?",
+            "Quelle mention est la plus grave&nbsp;?"
+          ],
+          "reponses": "1) inflammable · 2) un conseil de prudence · 3) « Danger »"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "titre": "Appareil digestif",
+  "titreSurligne": "digestif",
+  "accroche": "Broyer, découper, rendre absorbable.",
+  "bonus": "Amidon → **oses** · protéines → **acides aminés** · triglycérides → **acides gras** + monoglycérides",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biologie-physiopathologie/l-appareil-digestif-et-la-digestion.webp",
+    "prompt": "a glossy violet stomach and winding intestine with golden enzyme sparkles scissors-like shapes cutting a small golden bread crumb, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Les enzymes\ndécoupent tout !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "Le tube digestif",
+          "etapes": [
+            { "date": "Entrée", "texte": "**Bouche** → pharynx → **œsophage** → **estomac**." },
+            { "date": "Digestion", "texte": "**Intestin grêle** : duodénum, jéjunum, iléon." },
+            { "date": "Sortie", "texte": "**Gros intestin** (côlon, rectum) → anus." }
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Glandes annexes", "definition": "salivaires, **foie**, **pancréas** : elles déversent leurs sucs sans être traversées" },
+            { "terme": "Péristaltisme", "definition": "contractions en vague qui font avancer le bol alimentaire" },
+            { "terme": "Enzyme", "definition": "protéine qui **hydrolyse** un seul substrat (**spécificité**)" },
+            { "terme": "Microbiote", "definition": "bactéries du côlon qui fermentent les fibres" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Qui digère quoi, et où",
+          "entetes": ["Lieu", "Enzyme", "Action"],
+          "lignes": [
+            ["**Bouche**", "amylase salivaire", "amidon → maltose"],
+            ["**Estomac** (pH ≈ 2)", "pepsine", "protéines → peptides"],
+            ["**Grêle** (suc pancréatique)", "amylase, trypsine, **lipase**", "amidon, peptides, triglycérides"],
+            ["**Grêle** (entérocytes)", "maltase, lactase, peptidases", "dimères → monomères"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Expliquer une digestion",
+          "etapes": [
+            { "titre": "Situer", "texte": "l’organe et le phénomène : mécanique ou chimique" },
+            { "titre": "Nommer", "texte": "l’enzyme, son substrat, son produit" },
+            { "titre": "Conclure", "texte": "le nutriment obtenu, prêt à être absorbé" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple : le pain",
+          "donnees": "Amidon mâché, puis avalé.",
+          "calcul": "Bouche : amylase salivaire → maltose\nGrêle : maltase → glucose",
+          "resultat": "[[glucose]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": false,
+          "items": [
+            { "titre": "Paroi", "texte": "muqueuse, sous-muqueuse, musculeuse, séreuse" },
+            { "titre": "Enzymes", "texte": "37 °C et un **pH optimal**" },
+            { "titre": "Bile", "texte": "**émulsionne** les graisses : pas une enzyme" },
+            { "titre": "Grêle", "texte": "**villosités** pour absorber" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que la **bile** digère les graisses : elle les émulsionne.",
+            "Dire que les aliments traversent le **foie** ou le pancréas.",
+            "Oublier que le **pH** optimal change selon l’enzyme.",
+            "Confondre phénomène **mécanique** et **chimique**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle enzyme agit dans l’**estomac**&nbsp;?",
+            "Quel est le rôle de la **bile**&nbsp;?",
+            "Que devient une protéine à la fin de la digestion&nbsp;?"
+          ],
+          "reponses": "1) la pepsine · 2) émulsionner les graisses · 3) des acides aminés"
+        }
+      ]
+    }
+  ]
+}

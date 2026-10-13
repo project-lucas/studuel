@@ -1,0 +1,112 @@
+{
+  "titre": "Solubilité, extraction",
+  "titreSurligne": "extraction",
+  "accroche": "Semblable dissout semblable.",
+  "epreuve": "bac",
+  "bonus": "Solide : solubilité **augmente** avec T · gaz : elle **diminue** · la phase la moins **dense** surnage",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/solubilite-et-extraction-par-solvant.webp",
+    "prompt": "a glossy violet separating funnel with two layers of liquid, golden on top and violet below, a tap at the bottom, sparkles"
+  },
+  "marcel": "Deux phases,\nune ampoule !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les notions",
+          "items": [
+            { "terme": "Solubilité", "definition": "masse **maximale** dissoute par litre de solvant, à une température donnée" },
+            { "terme": "Solution saturée", "definition": "au-delà de cette masse, le soluté ne se dissout plus" },
+            { "terme": "Extraction", "definition": "faire passer une espèce d’un solvant à un autre" },
+            { "terme": "Non miscibles", "definition": "les deux phases restent **séparées**" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Qui dissout quoi",
+          "entetes": ["Espèce", "Solvant"],
+          "lignes": [
+            ["Ionique ou polaire (sel, sucre, éthanol)", "**polaire** (eau)"],
+            ["Apolaire (huile, diiode)", "**apolaire** (cyclohexane, éther)"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "L’extraction liquide-liquide",
+          "etapes": [
+            { "titre": "Verser", "texte": "mélange et solvant extracteur dans l’**ampoule à décanter**" },
+            { "titre": "Agiter", "texte": "en **dégazant** régulièrement, puis laisser **décanter**" },
+            { "titre": "Récupérer", "texte": "chaque phase&nbsp;; **évaporer** le solvant extracteur" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Extraire le diiode de l’eau avec du dichlorométhane (1,33 g/mL). Quelle phase est en bas&nbsp;?",
+          "calcul": "1,33 &gt; 1,00 g/mL de l’eau",
+          "aparte": "le plus dense coule",
+          "resultat": "[[phase organique dessous]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le bon solvant extracteur",
+          "oui": { "titre": "Il faut", "texte": "Qu’il **dissolve mieux** l’espèce que le solvant de départ, et soit **non miscible** avec lui." },
+          "non": { "titre": "Il ne faut pas", "texte": "Un solvant miscible&nbsp;: les phases ne se sépareraient pas." },
+          "essai": { "texte": "L’éther (0,71 g/mL) surnage <i>au-dessus</i> de l’eau&nbsp;; le dichlorométhane (1,33 g/mL) reste <i>dessous</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Le diiode est apolaire&nbsp;: il est plus soluble dans le dichlorométhane.", "quoi": "justifier" },
+            { "texte": "Ce solvant est non miscible avec l’eau.", "quoi": "2<sup>e</sup> condition" },
+            { "texte": "Sa densité 1,33 &gt; 1&nbsp;: il est en bas de l’ampoule.", "quoi": "position" }
+          ],
+          "pied": "Pense à ==dégazer== l’ampoule&nbsp;: l’agitation fait monter la pression."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Choisir un solvant **miscible** avec le premier.",
+            "Placer la phase **dense** en haut.",
+            "Oublier de **dégazer** pendant l’agitation.",
+            "Croire qu’un **gaz** se dissout mieux à chaud."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle règle résume la **solubilité**&nbsp;?",
+            "Que devient la solubilité d’un **gaz** quand T monte&nbsp;?",
+            "Quelle phase **surnage**&nbsp;?"
+          ],
+          "reponses": "1) semblable dissout semblable · 2) elle diminue · 3) la moins dense"
+        }
+      ]
+    }
+  ]
+}

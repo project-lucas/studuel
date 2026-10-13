@@ -1,0 +1,181 @@
+{
+  "titre": "Danger et risque",
+  "titreSurligne": "risque",
+  "accroche": "Un danger n’est pas encore un risque.",
+  "bonus": "**Risque** = probabilité × gravité · pas d’exposition, pas de risque",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biotechnologies/danger-risque-et-analyse-des-risques.webp",
+    "prompt": "a glossy violet warning diamond sign with a golden spark symbol, a small golden petri dish and safety goggles, sparkles"
+  },
+  "marcel": "Repère, estime,\nprévient !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "La chaîne du dommage",
+          "items": [
+            {
+              "terme": "Danger",
+              "definition": "propriété capable de causer un dommage (la soude est **corrosive**)"
+            },
+            {
+              "terme": "Situation exposante",
+              "definition": "contact d’une personne avec le danger"
+            },
+            {
+              "terme": "Événement dangereux",
+              "definition": "ce qui déclenche le dommage (une **projection**)"
+            },
+            {
+              "terme": "Dommage",
+              "definition": "la lésion subie (brûlure de l’œil)"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le risque",
+          "petite": true,
+          "lignes": [
+            "Risque = probabilité × gravité"
+          ],
+          "regle": "Le **risque** combine la **probabilité** du dommage et sa **gravité**. Il faut une **exposition** : un flacon fermé est un danger, presque pas un risque.",
+          "note": "pense aussi au risque pour le produit !"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 3,
+          "titre": "Les classes de danger",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Biologique",
+              "texte": "groupes de risque **1 à 4**."
+            },
+            {
+              "titre": "Chimique",
+              "texte": "pictogrammes CLP, phrases **H** et **P**."
+            },
+            {
+              "titre": "Électrique",
+              "texte": "appareils près des liquides."
+            },
+            {
+              "titre": "Physique",
+              "texte": "flamme, verre, autoclave."
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Les voies d’exposition",
+          "entetes": [
+            "Voie",
+            "Exemple"
+          ],
+          "lignes": [
+            [
+              "**Contact**",
+              "projection, coupure"
+            ],
+            [
+              "**Inhalation**",
+              "aérosol, vapeurs"
+            ],
+            [
+              "**Ingestion**",
+              "mains portées à la bouche"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Analyser les risques",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "les **situations exposantes** de la procédure"
+            },
+            {
+              "titre": "Identifier",
+              "texte": "les **événements dangereux** probables"
+            },
+            {
+              "titre": "Estimer et prévenir",
+              "texte": "probabilité × gravité, puis **mesures**"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Ensemencer <i>E. coli</i> K12&nbsp;: quel risque&nbsp;?",
+          "calcul": "groupe 1 × aérosol à l’ouverture",
+          "resultat": "risque [[faible mais à prévenir]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Danger biologique&nbsp;: <i>E. coli</i> K12, groupe 1.",
+              "quoi": "le danger"
+            },
+            {
+              "texte": "Ouverture du tube&nbsp;: aérosol, contact avec les mains.",
+              "quoi": "exposition"
+            },
+            {
+              "texte": "Blouse fermée, lavage des mains, paillasse désinfectée.",
+              "quoi": "prévention"
+            }
+          ],
+          "pied": "Une culture contaminée donne un ==résultat faux== : l’asepsie protège aussi l’échantillon."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **danger** et **risque**.",
+            "Oublier la **probabilité** : seule la gravité est comptée.",
+            "Croire qu’un produit d’origine humaine est **sans danger**.",
+            "Pipeter à la bouche : voie d’**ingestion** interdite."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "De quoi dépend le **risque**&nbsp;?",
+            "Quels groupes de risque manipule-t-on au **lycée**&nbsp;?",
+            "Cite une **voie d’exposition**."
+          ],
+          "reponses": "1) probabilité et gravité · 2) groupe 1 (parfois 2) · 3) contact, inhalation, ingestion"
+        }
+      ]
+    }
+  ]
+}

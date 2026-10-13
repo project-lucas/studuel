@@ -1,0 +1,116 @@
+{
+  "titre": "Molécules organiques",
+  "titreSurligne": "organiques",
+  "accroche": "Lire une molécule et sa fonction.",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-sante/les-molecules-organiques.webp",
+    "prompt": "a glossy violet ball-and-stick molecule with golden carbon atoms linked in a short chain and a small beaker beside it, sparkles, same art style as the reference icons, on a magenta background, no text, no numbers"
+  },
+  "marcel": "Repère l’oxygène,\nlis la fonction !",
+  "bonus": "Liaisons&nbsp;: **H 1 · O 2 · N 3 · C 4** · isomères&nbsp;: même formule brute, formules développées différentes",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les fonctions",
+          "entetes": ["Fonction", "Groupe"],
+          "lignes": [
+            ["Alcool", "C–OH"],
+            ["Aldéhyde", "–CHO (bout de chaîne)"],
+            ["Cétone", "C=O (milieu)"],
+            ["Acide carboxylique", "–COOH"],
+            ["Ester", "–COO–"],
+            ["Amine", "C–N"],
+            ["Amide", "–CO–N–"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Quatre écritures",
+          "items": [
+            { "terme": "Brute", "definition": "le nombre d’atomes&nbsp;: C₂H₆O" },
+            { "terme": "Développée", "definition": "**toutes** les liaisons" },
+            { "terme": "Semi-développée", "definition": "sans les liaisons avec H&nbsp;: CH₃–CH₂–OH" },
+            { "terme": "Topologique", "definition": "ligne brisée, **sommet = carbone**, H sous-entendus" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Nommer la fonction",
+          "etapes": [
+            { "titre": "Repérer", "texte": "l’atome d’oxygène ou d’azote dans la molécule" },
+            { "titre": "Regarder", "texte": "ses voisins&nbsp;: H, C, O ou N, et les doubles liaisons" },
+            { "titre": "Nommer", "texte": "la fonction, puis le nom (méth-, éth-, prop-, but-… et -ol, -al, -one)" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "CH₃–CH₂–OH et CH₃–O–CH₃&nbsp;: même formule brute. Quel lien&nbsp;?",
+          "calcul": "C₂H₆O pour les deux",
+          "aparte": "mais –OH ≠ C–O–C",
+          "resultat": "ce sont des [[isomères]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Glucose et fructose",
+          "oui": { "titre": "Isomères", "texte": "Même formule brute **C₆H₁₂O₆**, mais le glucose est un aldéhyde et le fructose une cétone." },
+          "non": { "titre": "Même molécule", "texte": "Une même formule brute ne suffit pas&nbsp;: les propriétés dépendent de la formule développée." },
+          "essai": { "texte": "Éthanol (alcool, liquide) et méthoxyméthane (étheroxyde, gazeux)&nbsp;: deux isomères de **C₂H₆O** aux propriétés différentes." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "La molécule porte le groupe –COOH.", "quoi": "repérer" },
+            { "texte": "C’est donc un acide carboxylique.", "quoi": "nommer" },
+            { "texte": "Propan-2-ol&nbsp;: le groupe –OH est sur le carbone 2.", "quoi": "positionner" }
+          ],
+          "pied": "On entoure le ==groupe caractéristique== sur la formule avant de répondre."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **aldéhyde** (bout de chaîne) et **cétone** (milieu).",
+            "Oublier que **C** forme 4 liaisons, **O** 2.",
+            "Compter un carbone par **trait** en topologique&nbsp;: c’est par sommet.",
+            "Croire que deux isomères ont les **mêmes** propriétés."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle fonction pour **–COOH**&nbsp;?",
+            "Combien de liaisons forme l’**azote**&nbsp;?",
+            "Que partagent deux **isomères**&nbsp;?"
+          ],
+          "reponses": "1) acide carboxylique · 2) trois · 3) la formule brute"
+        }
+      ]
+    }
+  ]
+}

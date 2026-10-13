@@ -1,0 +1,172 @@
+{
+  "titre": "Taux d’intérêt, risque",
+  "titreSurligne": "Taux",
+  "accroche": "Le prix du temps et du risque.",
+  "bonus": "**Taux réel ≈ nominal − inflation** · **primaire** = on lève des fonds · **secondaire** = on revend",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/ses/le-taux-d-interet-le-risque-et-les-marches-de-capitaux.webp",
+    "prompt": "a glossy violet hourglass with golden coins falling and a golden percent sign, small shield, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Le temps coûte cher,\nle risque aussi !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Ce qui fait varier le taux",
+          "entetes": [
+            "Facteur",
+            "Effet"
+          ],
+          "lignes": [
+            [
+              "**Durée**",
+              "plus long, plus incertain, taux plus **élevé**"
+            ],
+            [
+              "**Risque de crédit**",
+              "**prime de risque** pour l’emprunteur fragile"
+            ],
+            [
+              "**Taux directeur**",
+              "se répercute sur tous les taux"
+            ],
+            [
+              "**Inflation**",
+              "réduit le coût réel d’un taux fixe"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux marchés",
+          "entetes": [
+            "",
+            "Primaire",
+            "Secondaire"
+          ],
+          "lignes": [
+            [
+              "Ce qui s’y passe",
+              "**émission**",
+              "**revente**"
+            ],
+            [
+              "L’émetteur",
+              "**lève** des fonds",
+              "ne reçoit **rien**"
+            ],
+            [
+              "Fonction",
+              "financer",
+              "rendre **liquide**"
+            ],
+            [
+              "Lien",
+              "sans revente, pas d’achat au primaire"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "Taux réel",
+          "teinte": "jaune",
+          "lignes": [
+            "taux réel ≈ taux nominal − taux d’inflation"
+          ],
+          "regle": "Une forte inflation **réduit** le coût réel d’un emprunt à taux fixe&nbsp;: elle avantage l’**emprunteur**.",
+          "note": "3 % − 5 % = −2 %"
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple",
+          "donnees": "Emprunt à **3 %**, inflation à **5 %**",
+          "calcul": "3 % − 5 %",
+          "resultat": "[[−2 % réel]]"
+        }
+      ],
+      "colonnes": "1fr 262px"
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Analyser un taux",
+          "etapes": [
+            {
+              "titre": "Identifier",
+              "texte": "durée, risque, taux directeur"
+            },
+            {
+              "titre": "Corriger",
+              "texte": "retirer l’inflation pour le taux réel"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "qui gagne&nbsp;: l’emprunteur ou le prêteur"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "Le taux d’intérêt est le prix du temps et du risque.",
+              "quoi": "définir"
+            },
+            {
+              "texte": "Sans revente possible, personne n’achèterait sur le primaire.",
+              "quoi": "relier"
+            },
+            {
+              "texte": "Les banques collectent, transforment les échéances et évaluent le risque.",
+              "quoi": "expliquer"
+            },
+            {
+              "texte": "Un taux réel négatif avantage l’emprunteur, pas le prêteur.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Le marché seul évalue mal le risque d’une ==PME==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre taux **nominal** et réel.",
+            "Croire que l’émetteur est payé sur le **secondaire**.",
+            "Oublier la **prime de risque**.",
+            "Dire que l’inflation pénalise toujours l’**emprunteur**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que fait une **forte inflation** à un emprunt à taux fixe&nbsp;?",
+            "Sur quel marché l’émetteur **lève-t-il** des fonds&nbsp;?",
+            "Que transforme la **banque**&nbsp;?"
+          ],
+          "reponses": "1) elle réduit son coût réel · 2) le primaire · 3) dépôts courts en prêts longs"
+        }
+      ]
+    }
+  ]
+}

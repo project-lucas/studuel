@@ -1,0 +1,114 @@
+{
+  "titre": "Choisir un matériau",
+  "titreSurligne": "matériau",
+  "accroche": "Le bon matériau pour la bonne fonction.",
+  "bonus": "**E** = rigidité (GPa) · **Re** = résistance (MPa) · **ρ** = masse volumique · indice de légèreté : **E / ρ**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/ingenierie-dd/les-materiaux-et-leur-choix.webp",
+    "prompt": "a glossy violet bicycle frame with golden samples of metal, wood and fibre beside it, a small golden leaf, sparkles, magenta background, same art style as the reference icons, no text"
+  },
+  "marcel": "Un compromis,\npas un champion !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les cinq familles",
+          "entetes": ["Famille", "Atout", "Défaut"],
+          "lignes": [
+            ["**Métaux**", "résistants, recyclables", "corrosion, masse"],
+            ["**Polymères**", "légers, formables", "chaleur, fossiles"],
+            ["**Céramiques**", "durs, résistent à la chaleur", "fragiles"],
+            ["**Composites**", "résistance / masse", "chers, peu recyclables"],
+            ["**Naturels**", "renouvelables", "humidité, variables"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les propriétés",
+          "entetes": ["Propriété", "Acier", "Alu", "Bois"],
+          "lignes": [
+            ["ρ (kg/m³)", "7 850", "2 700", "500"],
+            ["E (GPa)", "210", "70", "10"],
+            ["λ (W/(m·K))", "50", "—", "0,15"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Choisir un matériau",
+          "etapes": [
+            { "titre": "Traduire", "texte": "la fonction en **exigences** : léger, rigide, isolant" },
+            { "titre": "Comparer", "texte": "les familles restantes avec un **indice** comme E / ρ" },
+            { "titre": "Intégrer", "texte": "procédé, **coût** et impact environnemental" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Cadre de vélo de ville __durable et bon marché__. Quel choix&nbsp;?",
+          "calcul": "carbone : cher, difficile à recycler",
+          "aparte": "E / ρ presque égal acier / alu",
+          "resultat": "[[acier]] ou alu recyclé"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Rigide ou résistant&nbsp;?",
+          "oui": { "titre": "Rigidité", "texte": "Se déformer **peu** : module d’Young **E**." },
+          "non": { "titre": "Résistance", "texte": "Ne pas **céder** : limite élastique **Re**." },
+          "essai": { "texte": "Le verre est <i>rigide</i> mais fragile&nbsp;: il casse sans prévenir." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Exigences : léger, rigide, recyclable", "quoi": "le besoin" },
+            { "texte": "Comparaison par E / ρ, coût et recyclage", "quoi": "les critères" },
+            { "texte": "Choix argumenté sur tout le cycle de vie", "quoi": "la décision" }
+          ],
+          "pied": "On ==compare plusieurs candidats== avant de conclure."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **rigidité** (E) et **résistance** (Re).",
+            "Choisir sans regarder le **coût** ni la mise en forme.",
+            "Oublier la **corrosion**, les UV, l’humidité.",
+            "Penser que le **plus performant** est toujours le meilleur choix."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle grandeur mesure la **rigidité**&nbsp;?",
+            "Quel rapport cherche-t-on pour une pièce **légère et rigide**&nbsp;?",
+            "Pourquoi le **carbone** est-il limité&nbsp;?"
+          ],
+          "reponses": "1) le module d’Young E · 2) un grand E / ρ · 3) cher et difficile à recycler"
+        }
+      ]
+    }
+  ]
+}

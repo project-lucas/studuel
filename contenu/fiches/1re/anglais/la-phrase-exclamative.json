@@ -1,0 +1,157 @@
+{
+  "titre": "La phrase exclamative",
+  "titreSurligne": "exclamative",
+  "accroche": "What + nom, how + adjectif.",
+  "bonus": "**What (a)** + nom · **How** + adjectif / adverbe · ordre des mots **normal**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/anglais/la-phrase-exclamative.webp",
+    "prompt": "a glossy violet exclamation mark with a golden dot, small golden sparkles and stars bursting around it, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Quelle surprise&nbsp;!\nWhat a day&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le choix",
+          "lignes": ["**What** + nom · **How** + adjectif"],
+          "petite": true,
+          "regle": "Deux mots seulement. Sujet et verbe restent dans l’**ordre normal** : ce n’est **pas** une question.",
+          "note": "nom → what"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "What ou how&nbsp;?",
+          "entetes": ["Mot", "Il introduit", "Exemple"],
+          "lignes": [
+            ["**What**", "Un **nom**", "<i>What a beautiful day!</i>"],
+            ["**How**", "Un **adjectif**", "<i>How strange!</i>"],
+            ["**How**", "Un **adverbe**", "<i>How beautifully she sings!</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "L’article après WHAT",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Singulier dénombrable",
+              "texte": "**a / an** obligatoire&nbsp;: <i>What **a** mess!</i>"
+            },
+            {
+              "titre": "Pluriel",
+              "texte": "Aucun article&nbsp;: <i>What lovely flowers!</i>"
+            },
+            {
+              "titre": "Indénombrable",
+              "texte": "Aucun article&nbsp;: <i>What terrible weather!</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "L’ordre des mots",
+          "oui": {
+            "titre": "Ordre normal",
+            "texte": "<i>What a mess **this is**!</i> — sujet puis verbe."
+          },
+          "non": {
+            "titre": "Ordre de la question",
+            "texte": "<i>What a mess **is this**!</i> — l’erreur qui trahit une interrogation."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>___ clever boy he is!</i> → **What a**&nbsp;: un nom, singulier."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "La méthode",
+          "etapes": [
+            {
+              "titre": "Un nom&nbsp;?",
+              "texte": "**What** (+ <i>a / an</i> si singulier dénombrable)."
+            },
+            {
+              "titre": "Un adjectif&nbsp;?",
+              "texte": "**How** + adjectif ou adverbe."
+            },
+            {
+              "titre": "Ordre normal",
+              "texte": "Sujet + verbe, ou **verbe sous-entendu**&nbsp;: <i>What a pity!</i> · <i>How kind of you!</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Les autres tournures",
+          "deux": true,
+          "items": [
+            {
+              "titre": "so + adjectif",
+              "texte": "même emploi que <i>how</i>&nbsp;: <i>It’s so cold!</i>"
+            },
+            {
+              "titre": "such + groupe nominal",
+              "texte": "même emploi que <i>what</i>&nbsp;: <i>It’s such a mess!</i>"
+            },
+            {
+              "titre": "Négation rhétorique",
+              "texte": "<i>Isn’t it beautiful!</i>"
+            },
+            {
+              "titre": "Verbe sous-entendu",
+              "texte": "<i>How kind of you to come!</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>What beautiful day!</i> → <i>What **a** beautiful day!</i>",
+            "<i>What a lovely flowers!</i> → <i>What lovely flowers!</i> (pluriel)",
+            "<i>How a strange!</i> → <i>How strange!</i> (pas d’article)",
+            "<i>What a mess is this!</i> → <i>What a mess **this is**!</i> L’ordre reste celui de l’affirmation."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>___ lovely flowers!</i> (what / how&nbsp;?)",
+            "<i>___ strange!</i> (what / how&nbsp;?)",
+            "Remets dans l’ordre&nbsp;: <i>What a mess is this</i>."
+          ],
+          "reponses": "1) What 2) How 3) What a mess this is!"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "titre": "Générateur, R et C",
+  "titreSurligne": "R et C",
+  "accroche": "Trois dipôles, trois comportements.",
+  "bonus": "**τ = R × C** · régime établi à 99&nbsp;% au bout de **5 τ**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/les-composants-electriques-generateur-resistance-et-condensa.webp",
+    "prompt": "a glossy violet capacitor, a golden resistor with colored bands and a small battery side by side, tiny golden sparkles, same art style as the reference icons, on magenta background, no text"
+  },
+  "marcel": "Chacun son rôle,\nchacun sa loi !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Trois lois",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "U = E − r × I",
+            "U = R × I",
+            "Q = C × U"
+          ],
+          "regle": "Générateur ==réel== (E et r en série), résistance en <b>Ω</b>, condensateur en <b>farads</b>. Énergie stockée&nbsp;: E = {1/2} × C × U².",
+          "note": "le courant monte, la tension chute&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Que fait chaque dipôle",
+          "entetes": [
+            "Dipôle",
+            "Rôle"
+          ],
+          "lignes": [
+            [
+              "**Générateur**",
+              "chute de tension avec I (r interne)"
+            ],
+            [
+              "**Résistance**",
+              "limite I, fixe U, convertit un signal"
+            ],
+            [
+              "**Thermistance**",
+              "R varie avec la T : un capteur"
+            ],
+            [
+              "**Condensateur**",
+              "stocke des charges ; U jamais brusque"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Étudier une charge RC",
+          "etapes": [
+            {
+              "titre": "Calculer τ",
+              "texte": "τ = R × C, en secondes (Ω × F)"
+            },
+            {
+              "titre": "Placer 5 τ",
+              "texte": "à 5 τ, régime établi à 99&nbsp;%"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "le condensateur bloque le continu une fois chargé"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "R = 10 kΩ et C = 100 µF. Durée pour atteindre le __régime établi__&nbsp;?",
+          "calcul": "τ = 10 000 × 0,0001 = 1 s",
+          "aparte": "5 τ = 99&nbsp;%",
+          "resultat": "durée ≈ [[5 s]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Idéal ou réel&nbsp;?",
+          "oui": {
+            "titre": "Générateur idéal",
+            "texte": "Maintient **U** (ou **I**) constant, quelle que soit la charge."
+          },
+          "non": {
+            "titre": "Générateur réel",
+            "texte": "**U chute** quand I augmente&nbsp;: les phares faiblissent au démarrage."
+          },
+          "essai": {
+            "texte": "Une LED sans <i>résistance en série</i> grille&nbsp;: R limite le courant."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "τ = R × C = 10 000 × 100·10<sup>−6</sup> = 1 s",
+              "quoi": "le calcul"
+            }
+          ],
+          "pied": "Toujours convertir en ==unités SI== avant de calculer."
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Usages du condensateur",
+          "items": [
+            {
+              "titre": "Filtrer",
+              "texte": "lisser une tension redressée"
+            },
+            {
+              "titre": "Temporiser",
+              "texte": "délai calibré par τ"
+            },
+            {
+              "titre": "Découpler",
+              "texte": "absorber les appels brefs"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que la résistance **stocke** de l’énergie&nbsp;: elle la dissipe.",
+            "Oublier la **résistance interne** d’un générateur.",
+            "Laisser **C en µF** dans τ&nbsp;: convertir en F.",
+            "Penser que U de C varie **brusquement**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que vaut **τ** pour R et C&nbsp;?",
+            "Un condensateur chargé laisse-t-il passer le **continu**&nbsp;?",
+            "Expression de la **puissance** dans R&nbsp;?"
+          ],
+          "reponses": "1) τ = R × C · 2) non, il le bloque · 3) P = U × I = R × I²"
+        }
+      ]
+    }
+  ]
+}

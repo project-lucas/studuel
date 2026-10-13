@@ -1,0 +1,114 @@
+{
+  "titre": "Second degré",
+  "titreSurligne": "degré",
+  "accroche": "Une parabole, des racines, un signe.",
+  "bonus": "f(x) = ax² + bx + c · a > 0 : **minimum** · a < 0 : **maximum** · axe : x = {x₁ + x₂/2}",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths-techno/les-fonctions-polynomes-du-second-degre.webp",
+    "prompt": "a glossy violet parabola curve opening upward with a golden dot at its lowest point and a dashed golden vertical axis, tiny sparkles"
+  },
+  "marcel": "Racines au milieu,\nl’axe est là !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Forme factorisée",
+          "petite": true,
+          "lignes": ["f(x) = a(x − x₁)(x − x₂)", "axe : x = {x₁ + x₂/2}"],
+          "regle": "Les **racines** x₁ et x₂ annulent f. L’axe de symétrie passe ==au milieu== des racines, et le sommet est sur cet axe.",
+          "note": "a ≠ 0&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le signe de a",
+          "entetes": ["a", "Parabole", "Sommet"],
+          "lignes": [
+            ["a > 0", "vers le haut", "**minimum**"],
+            ["a < 0", "vers le bas", "**maximum**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Étudier f en trois temps",
+          "etapes": [
+            { "titre": "Racines", "texte": "lire x₁ et x₂ dans la forme factorisée, ou tester une racine évidente" },
+            { "titre": "Axe et sommet", "texte": "axe au milieu des racines, puis on calcule f à cette abscisse" },
+            { "titre": "Signe", "texte": "signe de a à l’extérieur des racines, contraire entre elles" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = 2(x − 1)(x − 5). __Sommet__&nbsp;?",
+          "calcul": "Racines 1 et 5, axe x = 3\nf(3) = 2 × 2 × (−2) = −8",
+          "aparte": "a = 2 > 0",
+          "resultat": "minimum [[−8]] en x = 3"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Racine évidente", "texte": "x² − x − 6 en x = 3&nbsp;: 9 − 3 − 6 = 0, donc **(x − 3)(x + 2)**." },
+            { "titre": "Même ordonnée", "texte": "Deux points de même image&nbsp;: l’axe passe **au milieu** de leurs abscisses." },
+            { "titre": "Signe", "texte": "Entre les racines, f a le signe **contraire** de a." },
+            { "titre": "Programme", "texte": "Pas de discriminant&nbsp;: on factorise ou on lit le graphique." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "f(x) = 2(x − 1)(x − 5), racines 1 et 5", "quoi": "les racines" },
+            { "texte": "axe&nbsp;: x = (1 + 5) ÷ 2 = 3", "quoi": "l’axe" },
+            { "texte": "f(3) = −8 et a > 0&nbsp;: minimum −8", "quoi": "l’extremum" },
+            { "texte": "f(x) < 0 sur ]1 ; 5[, f(x) > 0 ailleurs", "quoi": "le signe" }
+          ],
+          "pied": "Contrôle&nbsp;: f(0) = 2 × (−1) × (−5) = ==10== > 0, hors des racines. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **minimum** et maximum selon le signe de a.",
+            "Oublier le **a** devant le produit pour f(3).",
+            "Dire f > 0 **entre** les racines quand a > 0.",
+            "Donner l’abscisse du sommet à la place de **f(x)**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Racines de f(x) = 3(x − 2)(x + 4)&nbsp;?",
+            "Racines **1 et 7**&nbsp;: axe de symétrie&nbsp;?",
+            "a < 0&nbsp;: le sommet est un **minimum** ou un maximum&nbsp;?"
+          ],
+          "reponses": "1) 2 et −4 · 2) x = 4 · 3) un maximum"
+        }
+      ]
+    }
+  ]
+}

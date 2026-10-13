@@ -1,0 +1,171 @@
+{
+  "titre": "Cultiver les microbes",
+  "titreSurligne": "microbes",
+  "accroche": "Nourrir, semer, puis observer les colonies.",
+  "bonus": "Boîte **retournée** · nom et date sur le **fond** · culture **pure** = colonies toutes identiques",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biotechnologies/milieux-de-culture-ensemencement-et-colonies.webp",
+    "prompt": "a glossy violet petri dish with golden round colonies and a streak pattern, a small golden inoculating loop beside it, sparkles"
+  },
+  "marcel": "Une cellule semée,\nune colonie née !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les types de milieux",
+          "entetes": [
+            "Milieu",
+            "Rôle",
+            "Indice"
+          ],
+          "lignes": [
+            [
+              "**Ordinaire**",
+              "la plupart des bactéries",
+              "peptones"
+            ],
+            [
+              "**D’isolement**",
+              "obtenir des colonies séparées",
+              "milieu **solide** (gélose)"
+            ],
+            [
+              "**Sélectif**",
+              "ne laisser pousser qu’un groupe",
+              "**inhibiteur**"
+            ],
+            [
+              "**D’orientation**",
+              "distinguer des groupes",
+              "**lactose** + indicateur de pH"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Chimio-organotrophe",
+              "definition": "énergie et carbone tirés de **molécules organiques** (<i>E. coli</i>)"
+            },
+            {
+              "terme": "Photolithotrophe",
+              "definition": "énergie de la **lumière**, carbone minéral (CO<sub>2</sub>)"
+            },
+            {
+              "terme": "Colonie",
+              "definition": "amas visible issu d’**une seule cellule**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Isoler par la méthode des quadrants",
+          "etapes": [
+            {
+              "titre": "Strier",
+              "texte": "l’anse **dilue** peu à peu l’inoculum, quadrant après quadrant"
+            },
+            {
+              "titre": "Étiqueter",
+              "texte": "nom, date, milieu, souche sur le **fond** : la traçabilité"
+            },
+            {
+              "titre": "Incuber",
+              "texte": "boîte **retournée**, à 37&nbsp;°C (25-30&nbsp;°C pour les levures)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Les conditions de culture",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Température",
+              "texte": "37&nbsp;°C ou 30&nbsp;°C pour les bactéries"
+            },
+            {
+              "titre": "pH",
+              "texte": "proche de 7 ; plus acide pour levures et moisissures"
+            },
+            {
+              "titre": "NaCl",
+              "texte": "les staphylocoques tolèrent le sel"
+            },
+            {
+              "titre": "Dioxygène",
+              "texte": "aérobie stricte, anaérobie stricte ou facultative"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un lait est semé sur gélose sélective lactosée. Quelques colonies sont entourées d’un virage de couleur.",
+          "calcul": "lactose fermenté → milieu acide → indicateur change",
+          "aparte": "orientation",
+          "resultat": "Gram négatif [[lactose positif]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Je décris chaque colonie : taille, forme, contour, relief, couleur.",
+              "quoi": "décrire"
+            },
+            {
+              "texte": "Toutes les colonies sont identiques : la culture est pure.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Un milieu **sélectif** inhibe, un milieu d’**orientation** distingue."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire sur le **couvercle** : il se sépare de la boîte.",
+            "Incuber la boîte **à l’endroit** : la condensation coule sur la gélose.",
+            "Confondre milieu **sélectif** et milieu d’**orientation**.",
+            "Croire qu’une colonie vient de plusieurs espèces."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel milieu **inhibe** certains microbes&nbsp;?",
+            "Pourquoi incuber la boîte **retournée**&nbsp;?",
+            "À quoi voit-on une **culture pure**&nbsp;?"
+          ],
+          "reponses": "1) le sélectif · 2) la condensation ne tombe pas · 3) colonies toutes semblables"
+        }
+      ]
+    }
+  ]
+}

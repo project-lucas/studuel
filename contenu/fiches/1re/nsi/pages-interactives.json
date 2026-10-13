@@ -1,0 +1,114 @@
+{
+  "titre": "Pages interactives",
+  "titreSurligne": "interactives",
+  "accroche": "HTML, CSS, JavaScript, et la confiance.",
+  "bonus": "HTML = **structure** · CSS = **présentation** · JS = **comportement** · client = confort, serveur = **sécurité**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/nsi/pages-interactives.webp",
+    "prompt": "a glossy violet web page window with a golden button being clicked and a small golden shield, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Un clic,\nun événement !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Trois langages, trois rôles",
+          "entetes": ["Langage", "Décrit"],
+          "lignes": [
+            ["**HTML**", "structure et sens&nbsp;: titres, listes, liens"],
+            ["**CSS**", "présentation&nbsp;: couleurs, marges"],
+            ["**JavaScript**", "comportement&nbsp;: clic, validation"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "DOM", "definition": "**arbre d’objets** construit par le navigateur" },
+            { "terme": "Événement", "definition": "action détectable&nbsp;: clic, saisie, envoi" },
+            { "terme": "Gestionnaire", "definition": "**fonction** associée à un événement" },
+            { "terme": "Champ", "definition": "son **nom** sert de clé côté serveur" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Où s’exécute le code&nbsp;?",
+          "oui": { "titre": "Côté serveur", "texte": "un aller-retour, mais le **seul lieu sûr**, qui accède aux données." },
+          "non": { "titre": "Côté client", "texte": "immédiat, mais **sous le contrôle du visiteur**&nbsp;: modifiable, désactivable." },
+          "essai": { "titre": "Règle", "texte": "toute donnée reçue est **revérifiée** côté serveur." }
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un champ vérifié en JavaScript suffit-il à __protéger__ le serveur&nbsp;?",
+          "calcul": "on peut envoyer la requête sans passer par la page",
+          "aparte": "contournable",
+          "resultat": "= [[non]], revérifier"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À retenir",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Séparation", "texte": "changer l’apparence **sans toucher** au contenu." },
+            { "titre": "Accessibilité", "texte": "les lecteurs d’écran lisent la **structure** HTML." },
+            { "titre": "Formulaire", "texte": "envoi par **GET** ou **POST**." },
+            { "titre": "Type de champ", "texte": "aide à la saisie, **aucune** garantie." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "La validation client est un confort.", "quoi": "son rôle" },
+            { "texte": "Elle évite un aller-retour inutile.", "quoi": "son intérêt" },
+            { "texte": "Le serveur revérifie toute donnée reçue.", "quoi": "la sécurité" }
+          ],
+          "pied": "Une validation côté client n’est ==jamais une sécurité==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Compter sur le **JavaScript** pour protéger.",
+            "Mélanger **structure** (HTML) et **style** (CSS).",
+            "Croire qu’un **type de champ** garantit la valeur.",
+            "Oublier que le client peut tout **modifier**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel langage décrit la **présentation**&nbsp;?",
+            "Qu’est-ce que le **DOM**&nbsp;?",
+            "Où vérifier **vraiment** une donnée&nbsp;?"
+          ],
+          "reponses": "1) CSS · 2) l’arbre d’objets de la page · 3) côté serveur"
+        }
+      ]
+    }
+  ]
+}

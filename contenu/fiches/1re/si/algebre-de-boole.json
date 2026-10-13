@@ -1,0 +1,128 @@
+{
+  "titre": "Algèbre de Boole",
+  "titreSurligne": "Boole",
+  "accroche": "Deux valeurs, des règles sûres.",
+  "bonus": "De Morgan&nbsp;: on **complémente chaque terme** et on **échange** ET ↔ OU",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/algebre-de-boole.webp",
+    "prompt": "a glossy violet logic gate symbol with a golden 0 and 1 switch beside it, a tiny golden check mark, sparkles, same art style as the reference icons, on magenta background, no text"
+  },
+  "marcel": "Deux valeurs,\nzéro erreur !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les propriétés de base",
+          "entetes": ["Propriété", "ET (.)", "OU (+)"],
+          "lignes": [
+            ["**Neutre**", "a . 1 = a", "a + 0 = a"],
+            ["**Absorbant**", "a . 0 = 0", "a + 1 = 1"],
+            ["**Idempotence**", "a . a = a", "a + a = a"],
+            ["**Complément**", "a . <span style=\"text-decoration:overline\">a</span> = 0", "a + <span style=\"text-decoration:overline\">a</span> = **1**"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Lois de De Morgan",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": ["<span style=\"text-decoration:overline\">a . b</span> = <span style=\"text-decoration:overline\">a</span> + <span style=\"text-decoration:overline\">b</span>", "<span style=\"text-decoration:overline\">a + b</span> = <span style=\"text-decoration:overline\">a</span> . <span style=\"text-decoration:overline\">b</span>"],
+          "regle": "On **complémente chaque terme** et on ==échange les opérateurs==. Elles permettent un montage en un seul type de porte (tout NON-ET).",
+          "note": "la barre se casse, le signe change&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": "★",
+          "titre": "Les règles de structure",
+          "deux": true,
+          "items": [
+            { "titre": "Commutativité", "texte": "a . b = b . a et a + b = b + a" },
+            { "titre": "Associativité", "texte": "(a . b) . c = a . (b . c)" },
+            { "titre": "Distributivité du ET", "texte": "a . (b + c) = a . b + a . c" },
+            { "titre": "Involution", "texte": "le complément du complément de a vaut a" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Transformer une équation",
+          "etapes": [
+            { "titre": "Repérer", "texte": "un terme commun, un complément, une grande barre" },
+            { "titre": "Appliquer", "texte": "la règle adaptée&nbsp;: De Morgan, absorption, distributivité" },
+            { "titre": "Vérifier", "texte": "chaque ligne reste équivalente à la précédente" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Simplifier __S = a + a . b__ avec le théorème d’absorption.",
+          "calcul": "a . 1 + a . b = a . (1 + b)",
+          "aparte": "1 + b = 1",
+          "resultat": "S = [[a]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Distributivité du OU",
+          "oui": { "titre": "Vrai en Boole", "texte": "a + (b . c) = **(a + b) . (a + c)**&nbsp;: le OU se distribue sur le ET." },
+          "non": { "titre": "Faux en algèbre", "texte": "Avec des nombres, cette égalité serait **fausse**&nbsp;: ne pas confondre les deux mondes." },
+          "essai": { "texte": "Absorption&nbsp;: <i>a + a . b = a</i> et <i>a . (a + b) = a</i>. Un terme entier disparaît." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "On applique De Morgan", "quoi": "la règle nommée" },
+            { "texte": "<span style=\"text-decoration:overline\">a . b</span> = <span style=\"text-decoration:overline\">a</span> + <span style=\"text-decoration:overline\">b</span>", "quoi": "le résultat" },
+            { "texte": "Donc le montage tient en portes NON-ET", "quoi": "la conclusion" }
+          ],
+          "pied": "Une ligne = une règle ==nommée==. On ne saute pas d’étape."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier d’**échanger** ET et OU avec De Morgan.",
+            "Compléter **seulement un terme** de la parenthèse.",
+            "Croire que a + a = 2a&nbsp;: c’est **a**.",
+            "Utiliser la distributivité du OU comme en arithmétique."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que vaut **a + 1**&nbsp;?",
+            "Que vaut **a . <span style=\"text-decoration:overline\">a</span>**&nbsp;?",
+            "Simplifier **a . (a + b)**&nbsp;."
+          ],
+          "reponses": "1) 1 (absorbant) · 2) 0 (complémentarité) · 3) a (absorption)"
+        }
+      ]
+    }
+  ]
+}

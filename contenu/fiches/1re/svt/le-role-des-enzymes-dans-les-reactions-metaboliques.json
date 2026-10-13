@@ -1,0 +1,119 @@
+{
+  "titre": "Les enzymes",
+  "titreSurligne": "enzymes",
+  "accroche": "Des protéines qui accélèrent les réactions.",
+  "epreuve": "bac",
+  "bonus": "Enzyme = **protéine catalytique** · **double spécificité** (substrat, action) · activité selon **température**, **pH**, **substrat**, **inhibiteurs**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/svt/le-role-des-enzymes-dans-les-reactions-metaboliques.webp",
+    "prompt": "a glossy violet enzyme with a notch fitting a small golden key-shaped molecule, tiny golden sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Une clé,\nune serrure !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les mots à connaître",
+          "items": [
+            { "terme": "Enzyme", "definition": "**protéine catalytique**&nbsp;: elle accélère une réaction sans être consommée ni changer son bilan." },
+            { "terme": "Site actif", "definition": "zone de l’enzyme **complémentaire** du substrat." },
+            { "terme": "Substrat", "definition": "molécule transformée par l’enzyme en **produits**." },
+            { "terme": "Dénaturation", "definition": "perte de la forme de la protéine à haute température." }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Ce qui fait varier l’activité",
+          "entetes": ["Facteur", "Effet"],
+          "lignes": [
+            ["**Température**", "monte, puis chute&nbsp;: **dénaturation**"],
+            ["**pH**", "un **optimum** propre à chaque enzyme"],
+            ["**Substrat**", "croît, puis **plateau** de saturation"],
+            ["**Inhibiteurs**", "bloquent le site actif ou déforment l’enzyme"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Ce qu’il faut savoir expliquer",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Spécificité de substrat", "texte": "Le **site actif** s’ajuste au substrat&nbsp;: clé-serrure, ajustement induit." },
+            { "titre": "Spécificité d’action", "texte": "Un **seul type** de réaction est catalysé." },
+            { "titre": "Complexe E-S", "texte": "Le substrat se fixe, la réaction a lieu, les produits partent." },
+            { "titre": "Enzyme intacte", "texte": "Elle **recommence**&nbsp;: des milliers de substrats par seconde." },
+            { "titre": "Gène muté", "texte": "Enzyme inefficace&nbsp;: une **voie métabolique** bloquée." },
+            { "titre": "Exemple", "texte": "**Phénylcétonurie**&nbsp;: enzyme déficiente, un acide aminé non dégradé." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Analyser une courbe d’activité",
+          "etapes": [
+            { "titre": "Lire", "texte": "le facteur étudié et l’activité mesurée" },
+            { "titre": "Repérer", "texte": "l’optimum, le plateau ou la chute" },
+            { "titre": "Expliquer", "texte": "par le site actif ou la dénaturation" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple",
+          "donnees": "Pepsine : optimum en milieu très acide. Amylase salivaire : pH neutre.",
+          "calcul": "Chaque enzyme a son pH optimum, lié à sa forme.",
+          "resultat": "[[optimum propre à chaque enzyme]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Au-delà de la température optimale, l’activité chute brutalement.", "quoi": "constater" },
+            { "texte": "L’enzyme est une protéine&nbsp;: elle se dénature, son site actif se déforme.", "quoi": "expliquer" },
+            { "texte": "Le substrat ne s’y fixe plus.", "quoi": "conclure" }
+          ],
+          "pied": "L’enzyme ==ne change pas le bilan== de la réaction : elle l’accélère."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que l’enzyme est **consommée** par la réaction.",
+            "Croire qu’une enzyme agit sur **tous** les substrats.",
+            "Confondre **dénaturation** (irréversible) et simple ralentissement.",
+            "Oublier le **plateau** de saturation."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle zone de l’enzyme fixe le **substrat**&nbsp;?",
+            "Que provoque une température trop **élevée**&nbsp;?",
+            "Pourquoi l’activité atteint-elle un **plateau**&nbsp;?"
+          ],
+          "reponses": "1) le site actif · 2) la dénaturation · 3) tous les sites actifs sont occupés"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "titre": "Développer, factoriser",
+  "titreSurligne": "factoriser",
+  "accroche": "Les gestes du calcul littéral.",
+  "bonus": "(a + b)² = a² + 2ab + b² · (a − b)² = a² − 2ab + b² · (a − b)(a + b) = a² − b²",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths-techno/automatismes-developper-factoriser-resoudre.webp",
+    "prompt": "a glossy violet toolbox open with a golden wrench shaped like the letter x and tiny golden brackets, sparkles"
+  },
+  "marcel": "Un produit nul,\nun facteur nul !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les identités",
+          "petite": true,
+          "lignes": ["(a + b)² = a² + 2ab + b²", "(a − b)² = a² − 2ab + b²", "(a − b)(a + b) = a² − b²"],
+          "regle": "**Factoriser**, c’est écrire une somme en ==produit== : facteur commun, ou différence de deux carrés.",
+          "note": "n’oublie pas le 2ab&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Résoudre x² = a",
+          "entetes": ["Si…", "Solutions"],
+          "lignes": [
+            ["a > 0", "x = √a ou x = −√a"],
+            ["a = 0", "x = 0"],
+            ["a < 0", "aucune solution"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Tout à gauche", "texte": "ramener l’équation à « expression = 0 »" },
+            { "titre": "Factoriser", "texte": "facteur commun ou identité remarquable" },
+            { "titre": "Produit nul", "texte": "un facteur est nul : une solution par facteur" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": "★",
+          "titre": "Le signe d’un produit : (x − 1)(x − 5)",
+          "entetes": ["x", "avant 1", "entre 1 et 5", "après 5"],
+          "lignes": [
+            ["x − 1", "−", "+", "+"],
+            ["x − 5", "−", "−", "+"],
+            ["**produit**", "**+**", "**−**", "**+**"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Résoudre __x² − 9 = 0__.",
+          "calcul": "(x − 3)(x + 3) = 0\nx − 3 = 0 ou x + 3 = 0",
+          "aparte": "a² − b²",
+          "resultat": "x = [[3]] ou x = [[−3]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Facteur commun", "texte": "5x² + 10x = **5x(x + 2)**." },
+            { "titre": "Inéquation", "texte": "−3x > 12 ⇒ **x < −4**." },
+            { "titre": "Signe de ax + b", "texte": "−2x + 6 : **positif** si x < 3." },
+            { "titre": "Isoler", "texte": "U = R × I donne **R = {U/I}**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "x² − 9 = (x − 3)(x + 3)", "quoi": "la factorisation" },
+            { "texte": "Produit nul : un facteur est nul.", "quoi": "la règle" },
+            { "texte": "S = {−3 ; 3}", "quoi": "la conclusion" }
+          ],
+          "pied": "Contrôle&nbsp;: 3² − 9 = ==0== et (−3)² − 9 = 0. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire **(a + b)² = a² + b²**.",
+            "Garder le sens après × ou ÷ par un **négatif**.",
+            "Résoudre x² = 9 et ne garder que **x = 3**.",
+            "Diviser par x : on perd la solution **x = 0**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Développer **(x + 3)²**&nbsp;?",
+            "Résoudre **(x − 4)(2x + 6) = 0**&nbsp;?",
+            "Résoudre **x² = −4**&nbsp;?"
+          ],
+          "reponses": "1) x² + 6x + 9 · 2) x = 4 ou x = −3 · 3) aucune solution"
+        }
+      ]
+    }
+  ]
+}

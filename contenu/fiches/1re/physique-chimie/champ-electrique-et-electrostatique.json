@@ -1,0 +1,160 @@
+{
+  "titre": "Champ électrique",
+  "titreSurligne": "électrique",
+  "accroche": "Charges qui s’attirent ou se repoussent.",
+  "bonus": "k ≈ 9 × 10⁹ SI · e ≈ 1,6 × 10⁻¹⁹ C · F = q × E · E = U ÷ d · **V/m**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/champ-electrique-et-electrostatique.webp",
+    "prompt": "a glossy violet parallel plate capacitor with golden electric field lines and glowing charges between the plates, sparkles"
+  },
+  "marcel": "Les opposés\ns’attirent !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Coulomb et champ",
+          "petite": true,
+          "lignes": [
+            "F = k {|q<sub>A</sub> q<sub>B</sub>|/d²}",
+            "F = q × E"
+          ],
+          "regle": "**q** en coulombs (C), **d** en m, **E** en V/m. Condensateur plan&nbsp;: champ ==uniforme==, **E = U ÷ d**.",
+          "note": "même forme que Newton&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Sens de la force",
+          "entetes": [
+            "Cas",
+            "Effet",
+            "Sens"
+          ],
+          "lignes": [
+            [
+              "Charges de **même** signe",
+              "répulsion",
+              "elles s’écartent"
+            ],
+            [
+              "Signes **contraires**",
+              "attraction",
+              "elles se rapprochent"
+            ],
+            [
+              "q > 0 dans E",
+              "force",
+              "dans le sens de E"
+            ],
+            [
+              "q < 0 dans E",
+              "force",
+              "sens **opposé** à E"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Champ",
+              "texte": "calculer **E = U ÷ d** entre les plaques (d en mètres)"
+            },
+            {
+              "titre": "Force",
+              "texte": "appliquer **F = q × E** avec la charge de la particule"
+            },
+            {
+              "titre": "Sens",
+              "texte": "dans le sens de E si q > 0, **opposé** si q < 0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un condensateur plan&nbsp;: U = 100 V, d = 2,0 cm. Le __champ__ entre les plaques&nbsp;?",
+          "calcul": "d = 2,0 cm = 0,020 m",
+          "aparte": "convertir en mètres",
+          "resultat": "E = 100 ÷ 0,020 = [[5 000 V/m]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Lignes de champ",
+          "oui": {
+            "titre": "Charge positive",
+            "texte": "Lignes radiales **sortantes**&nbsp;; dans un condensateur, parallèles, du **+** vers le **−**."
+          },
+          "non": {
+            "titre": "Charge négative",
+            "texte": "Lignes radiales **entrantes** vers la charge."
+          },
+          "essai": {
+            "texte": "Une ligne de champ est <i>tangente</i> au vecteur champ en chacun de ses points."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "E = U ÷ d, avec d = 0,020 m",
+              "quoi": "le champ"
+            },
+            {
+              "texte": "E = 100 ÷ 0,020",
+              "quoi": "les nombres"
+            },
+            {
+              "texte": "E = 5 000 V/m, uniforme entre les plaques",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "L’électrique est ==bien plus intense== que la gravitation&nbsp;: environ 10³⁶ fois entre deux protons."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Laisser **d en cm** dans E = U ÷ d.",
+            "Oublier que la force sur **q < 0** est opposée à E.",
+            "Confondre attraction et **répulsion**.",
+            "Prendre le champ pour **non uniforme** entre les plaques."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Deux charges de même signe&nbsp;: attirées ou repoussées&nbsp;?",
+            "**E** pour U = 200 V et d = 0,10 m&nbsp;?",
+            "Sens de la force sur une charge **négative**&nbsp;?"
+          ],
+          "reponses": "1) repoussées · 2) 2 000 V/m · 3) sens opposé au champ"
+        }
+      ]
+    }
+  ]
+}

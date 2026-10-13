@@ -1,0 +1,175 @@
+{
+  "titre": "Nombres complexes",
+  "titreSurligne": "complexes",
+  "accroche": "Un nombre, deux coordonnées.",
+  "bonus": "**i² = −1** · z = a + i b · **|z| = √(a² + b²)** · z = r (cos θ + i sin θ)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-maths/nombres-complexes.webp",
+    "prompt": "a glossy violet complex plane with a golden point and a golden arrow from the origin, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "i au carré,\nc’est −1 !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Forme algébrique",
+          "taille": "mini",
+          "lignes": [
+            "z = a + i b",
+            "z × z̄ = a² + b²"
+          ],
+          "regle": "**a = Re(z)** partie réelle, **b = Im(z)** partie imaginaire. Le **conjugué** z̄ = a − i b est le symétrique de M par rapport à l’axe des réels.",
+          "note": "i² = −1"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Module et argument",
+          "items": [
+            {
+              "terme": "Module",
+              "definition": "|z| = √(a² + b²), la **distance** OM"
+            },
+            {
+              "terme": "Argument",
+              "definition": "θ, angle orienté (axe des réels, OM), à **2π près**"
+            },
+            {
+              "terme": "Affixe",
+              "definition": "z est l’affixe du point **M(a ; b)**"
+            },
+            {
+              "terme": "Imaginaire pur",
+              "definition": "a = 0 ; **réel** si b = 0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Passer à la forme trigonométrique",
+          "etapes": [
+            {
+              "titre": "Module",
+              "texte": "r = √(a² + b²)"
+            },
+            {
+              "titre": "Angle",
+              "texte": "cos θ = a ÷ r et sin θ = b ÷ r"
+            },
+            {
+              "titre": "Écrire",
+              "texte": "z = r (cos θ + i sin θ)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Forme trigonométrique de __z = 1 + i__ ?",
+          "calcul": "|z| = √2 · cos θ = sin θ = √2/2",
+          "aparte": "θ = π/4",
+          "resultat": "z = [[√2 (cos π/4 + i sin π/4)]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Diviser",
+          "oui": {
+            "titre": "Avec le conjugué",
+            "texte": "On multiplie en haut et en bas par le **conjugué** du dénominateur."
+          },
+          "non": {
+            "titre": "Sans",
+            "texte": "Laisser un **i au dénominateur** : la division n’est pas finie."
+          },
+          "essai": {
+            "texte": "(1 + 2i) ÷ (1 − i) = (1 + 2i)(1 + i) ÷ 2 = <i>−0,5 + 1,5i</i>"
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "Représentation géométrique",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Le point M(a ; b)",
+              "texte": "z a pour **affixe** le point M, ou le vecteur OM"
+            },
+            {
+              "titre": "Le conjugué",
+              "texte": "z̄ est le **symétrique** de M par rapport à l’axe des réels"
+            },
+            {
+              "titre": "Passer d’une forme à l’autre",
+              "texte": "a = r cos θ et b = r sin θ ; 4 (cos π/3 + i sin π/3) = **2 + 2√3 i**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Opérations",
+          "lignes": [
+            {
+              "texte": "(2 + 3i) + (1 − i) = 3 + 2i",
+              "quoi": "somme"
+            },
+            {
+              "texte": "(2 + 3i)(1 − i) = 2 − 2i + 3i − 3i²",
+              "quoi": "on développe"
+            },
+            {
+              "texte": "= 2 + i + 3 = 5 + i",
+              "quoi": "i² remplacé par −1"
+            }
+          ],
+          "pied": "En physique, additionner deux tensions de même fréquence = ==additionner deux complexes==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier que **i² = −1** en développant.",
+            "Confondre **z̄** (a − i b) et −z.",
+            "Donner θ par son **seul cosinus** sans regarder le signe de b.",
+            "Laisser un **i** au dénominateur."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "(2 + 3i)(1 − i) ?",
+            "Module de **z = 3 + 4i** ?",
+            "Écris 4 (cos π/3 + i sin π/3) en forme **algébrique**."
+          ],
+          "reponses": "1) 5 + i · 2) √(9 + 16) = 5 · 3) 2 + 2√3 i"
+        }
+      ]
+    }
+  ]
+}

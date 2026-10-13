@@ -1,0 +1,161 @@
+{
+  "titre": "Le temps en gestion",
+  "titreSurligne": "temps",
+  "accroche": "Décider aujourd’hui pour demain.",
+  "bonus": "**Valeur acquise = capital × (1 + taux)<sup>n</sup>** · **veille** informationnelle · trésorerie = encaissements − décaissements",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/sciences-gestion-numerique/le-temps-dans-la-gestion.webp",
+    "prompt": "a glossy violet hourglass with golden sand and a small golden coin falling through, tiny golden sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Un euro demain\nvaut moins&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le seuil de rentabilité",
+          "lignes": [
+            "Seuil = {charges fixes/taux de MCV}"
+          ],
+          "regle": "MCV = chiffre d’affaires − charges variables ; taux = MCV ÷ CA",
+          "note": "le CA où le résultat est nul",
+          "teinte": "jaune"
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Food-truck&nbsp;: fixes 30 000 €, burger 10 €, variable 6 €.",
+          "calcul": "taux = 4 ÷ 10 = 40 %\n30 000 ÷ 0,40",
+          "resultat": "[[75 000 €]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Prévoir et anticiper",
+          "items": [
+            {
+              "terme": "Horizon",
+              "definition": "court, moyen, long terme&nbsp;: plus il est loin, plus c’est **incertain**"
+            },
+            {
+              "terme": "Période",
+              "definition": "découpage du temps (exercice d’un an, saison)"
+            },
+            {
+              "terme": "Veille",
+              "definition": "surveiller les sources utiles pour une information **à jour**"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Les deux charges",
+          "entetes": [
+            "Charges",
+            "Exemples"
+          ],
+          "lignes": [
+            [
+              "**Variables**",
+              "suivent l’activité&nbsp;: matières, commissions"
+            ],
+            [
+              "**Fixes**",
+              "loyer, assurance, salaires fixes"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Prévoir la trésorerie",
+          "etapes": [
+            {
+              "titre": "Encaisser",
+              "texte": "prévoir les entrées mois par mois"
+            },
+            {
+              "titre": "Décaisser",
+              "texte": "prévoir les sorties du mois"
+            },
+            {
+              "titre": "Anticiper",
+              "texte": "un solde négatif&nbsp;: négocier un découvert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Le seuil de rentabilité est le chiffre d’affaires où le résultat est nul.",
+              "quoi": "définir"
+            },
+            {
+              "texte": "1 000 € à 3&nbsp;% pendant 2 ans deviennent 1 060,90 €.",
+              "quoi": "calculer"
+            },
+            {
+              "texte": "Un euro aujourd’hui vaut plus qu’un euro demain&nbsp;: il porte des intérêts.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "==Actualiser== = calculer la valeur d’aujourd’hui."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **MCV** et résultat.",
+            "Oublier le **taux** de MCV.",
+            "Ignorer le **solde négatif** d’un mois.",
+            "Oublier la **puissance** n du taux."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "À retenir",
+          "paragraphes": [
+            "Gérer, c’est **décider aujourd’hui pour demain**. Des outils de **planification** (calendrier, diagramme de Gantt) et de **simulation** (tableur) transforment l’incertitude en décisions."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que sont les **charges fixes** ?",
+            "Seuil si fixes 12 000 et taux 40 % ?",
+            "Qu’est-ce que la **veille** ?"
+          ],
+          "reponses": "1) celles qui ne suivent pas l’activité · 2) 30 000 € · 3) surveiller les sources d’information"
+        }
+      ]
+    }
+  ]
+}

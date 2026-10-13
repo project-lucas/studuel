@@ -1,0 +1,144 @@
+{
+  "titre": "Trigonométrie",
+  "titreSurligne": "Trigonométrie",
+  "accroche": "Le cercle donne cos et sin.",
+  "epreuve": "bac-1re",
+  "bonus": "cos² x + sin² x = 1 · (sin x)′ = cos x · (cos x)′ = −sin x · période 2π · π rad = 180°",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/fonctions-trigonometriques.webp",
+    "prompt": "a glossy violet circle with a golden point on it, a golden radius and two thin lines dropped to the axes, a tiny sparkling wave beside it, same art style as the reference icons, on a flat magenta background, no text, no numbers"
+  },
+  "marcel": "Je tourne,\nje lis x et y !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le cercle trigonométrique",
+          "petite": true,
+          "lignes": [
+            "M(cos x ; sin x)",
+            "cos² x + sin² x = 1",
+            "−1 ≤ cos x ≤ 1"
+          ],
+          "regle": "M est sur le cercle de **rayon 1**&nbsp;: cos x est son **abscisse**, sin x son **ordonnée**.",
+          "note": "Pythagore dans le cercle&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Valeurs remarquables",
+          "entetes": [
+            "x",
+            "cos x",
+            "sin x"
+          ],
+          "lignes": [
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "{π/6}",
+              "{√3/2}",
+              "{1/2}"
+            ],
+            [
+              "{π/4}",
+              "{√2/2}",
+              "{√2/2}"
+            ],
+            [
+              "{π/3}",
+              "{1/2}",
+              "{√3/2}"
+            ],
+            [
+              "{π/2}",
+              "0",
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "cos et sin de __{5π/6}__&nbsp;?",
+          "calcul": "{5π/6} = π − {π/6}",
+          "aparte": "symétrie d’axe vertical",
+          "resultat": "cos = [[−{√3/2}]], sin = [[{1/2}]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Parité",
+              "texte": "cos **paire**&nbsp;: cos(−x) = cos x · sin **impaire**&nbsp;: sin(−x) = −sin x."
+            },
+            {
+              "titre": "Radians",
+              "texte": "π = 180°, {π/2} = 90°, {π/3} = 60°, {π/4} = 45°, {π/6} = 30°."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "cos² x = 1 − {9/25} = {16/25}",
+              "quoi": "relation (sin x = {3/5})"
+            },
+            {
+              "texte": "x ∈ [0 ; {π/2}]&nbsp;: cos x ≥ 0",
+              "quoi": "le signe"
+            },
+            {
+              "texte": "donc cos x = {4/5}",
+              "quoi": "la conclusion"
+            }
+          ],
+          "pied": "Contrôle&nbsp;: {16/25} + {9/25} = ==1==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mettre **degrés** et radians dans le même calcul.",
+            "Oublier le **signe** en prenant la racine de cos² x.",
+            "Confondre cos(−x) = cos x et sin(−x) = **−sin x**.",
+            "Écrire (cos x)′ = **sin x** (c’est −sin x)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**cos {π/3}**&nbsp;?",
+            "**sin(−{π/6})**&nbsp;?",
+            "{2π/3} rad en **degrés**&nbsp;?"
+          ],
+          "reponses": "1) 1/2 · 2) −1/2 · 3) 120°"
+        }
+      ]
+    }
+  ]
+}

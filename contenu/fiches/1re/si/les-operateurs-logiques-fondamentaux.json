@@ -1,0 +1,187 @@
+{
+  "titre": "Opérateurs logiques",
+  "titreSurligne": "logiques",
+  "accroche": "NON, ET, OU&nbsp;: trois suffisent.",
+  "bonus": "NAND et NOR sont **universels** · XOR = 1 si entrées **différentes** · n entrées ⇒ **2<sup>n</sup>** lignes",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/les-operateurs-logiques-fondamentaux.webp",
+    "prompt": "a glossy violet logic gate chip with two input wires and one golden output wire, small glowing 0 and 1 lights, sparkles, same art style as the reference icons"
+  },
+  "marcel": "ET exige tout,\nOU se contente d’un !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les trois opérateurs",
+          "petite": true,
+          "lignes": [
+            "a ET b = a · b",
+            "a OU b = a + b"
+          ],
+          "regle": "**ET**&nbsp;: 1 si **toutes** les entrées valent 1. **OU**&nbsp;: 1 dès qu’**au moins une** vaut 1. **NON**&nbsp;: l’==inverse== de l’entrée.",
+          "note": "le OU est inclusif&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Table de vérité",
+          "entetes": [
+            "a",
+            "b",
+            "ET",
+            "OU",
+            "XOR"
+          ],
+          "lignes": [
+            [
+              "0",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0",
+              "1",
+              "1"
+            ],
+            [
+              "1",
+              "0",
+              "0",
+              "1",
+              "1"
+            ],
+            [
+              "1",
+              "1",
+              "**1**",
+              "1",
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Construire une table de vérité",
+          "etapes": [
+            {
+              "titre": "Compter",
+              "texte": "n entrées donnent 2<sup>n</sup> lignes"
+            },
+            {
+              "titre": "Lister",
+              "texte": "toutes les combinaisons, dans l’ordre binaire croissant"
+            },
+            {
+              "titre": "Remplir",
+              "texte": "la sortie ligne par ligne avec la définition de l’opérateur"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une presse ne démarre que si __les deux mains__ sont sur les boutons a et b. Quel opérateur&nbsp;?",
+          "calcul": "démarrage : a = 1 et b = 1",
+          "aparte": "plusieurs conditions simultanées",
+          "resultat": "S = a · b : [[ET]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le OU est inclusif",
+          "oui": {
+            "titre": "1 OU 1 = 1",
+            "texte": "Le OU vaut 1 dès qu’**une** entrée au moins vaut 1."
+          },
+          "non": {
+            "titre": "Pas fromage ou dessert",
+            "texte": "Le « ou » exclusif du langage courant est le **XOR**."
+          },
+          "essai": {
+            "texte": "Une alarme avec trois capteurs en OU&nbsp;: <i>un seul</i> capteur actif suffit à la déclencher."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Les opérateurs dérivés",
+          "deux": true,
+          "items": [
+            {
+              "titre": "NAND",
+              "texte": "ET inversé, **universel**"
+            },
+            {
+              "titre": "NOR",
+              "texte": "OU inversé, universel aussi"
+            },
+            {
+              "titre": "XOR",
+              "texte": "1 si entrées différentes"
+            },
+            {
+              "titre": "NON",
+              "texte": "une seule entrée, l’inverse"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que « 1 OU 1 » vaut **0**.",
+            "Oublier des lignes&nbsp;: 3 entrées font **8** lignes.",
+            "Confondre **NAND** et NON puis ET dans le mauvais ordre.",
+            "Ranger les lignes **sans ordre** binaire."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "À retenir",
+          "paragraphes": [
+            "Trois opérateurs suffisent à construire toute fonction logique. Le **NAND** seul permet de reconstruire NON, ET et OU&nbsp;: c’est pourquoi l’industrie le fabrique en masse."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**1 ET 0** vaut&nbsp;?",
+            "Combien de lignes pour **4 entrées**&nbsp;?",
+            "Quel opérateur est **universel**&nbsp;?"
+          ],
+          "reponses": "1) 0 · 2) 16 · 3) le NAND (ou le NOR)"
+        }
+      ]
+    }
+  ]
+}

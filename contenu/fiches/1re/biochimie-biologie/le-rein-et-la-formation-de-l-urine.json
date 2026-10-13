@@ -1,0 +1,177 @@
+{
+  "titre": "Rein et urine",
+  "titreSurligne": "urine",
+  "accroche": "180 litres filtrés, 1,5 litre rejeté.",
+  "bonus": "Filtration → **réabsorption** → sécrétion · seuil du glucose ≈ **1,8 g·L⁻¹** · **ADH** → aquaporines → urine concentrée",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biochimie-biologie/le-rein-et-la-formation-de-l-urine.webp",
+    "prompt": "a glossy violet bean-shaped kidney with a golden filter coil inside and a golden droplet falling from it, tiny sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Je filtre tout,\nje garde l’utile !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Le néphron, dans l’ordre",
+          "items": [
+            {
+              "titre": "Corpuscule rénal",
+              "texte": "**glomérule** dans la capsule de Bowman."
+            },
+            {
+              "titre": "Tube proximal",
+              "texte": "puis l’**anse de Henlé**."
+            },
+            {
+              "titre": "Tube distal",
+              "texte": "puis le **tube collecteur**."
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois étapes",
+          "entetes": [
+            "Étape",
+            "Lieu",
+            "Ce qui se passe"
+          ],
+          "lignes": [
+            [
+              "**Filtration**",
+              "glomérule",
+              "plasma sans cellules ni grosses protéines = **urine primitive**"
+            ],
+            [
+              "**Réabsorption**",
+              "tubes",
+              "eau, glucose, ions retournent au sang"
+            ],
+            [
+              "**Sécrétion**",
+              "tubes",
+              "H⁺, médicaments : sang → tube"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Comparer les liquides (g·L⁻¹)",
+          "entetes": [
+            "Molécule",
+            "Plasma",
+            "Urine primitive",
+            "Urine définitive"
+          ],
+          "lignes": [
+            [
+              "**Protéines**",
+              "70",
+              "≈ 0",
+              "0"
+            ],
+            [
+              "**Glucose**",
+              "1",
+              "1",
+              "0"
+            ],
+            [
+              "**Urée**",
+              "0,3",
+              "0,3",
+              "≈ 20"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Interpréter un tableau de concentrations",
+          "etapes": [
+            {
+              "titre": "Plasma → primitive",
+              "texte": "ce qui reste pareil a été filtré"
+            },
+            {
+              "titre": "Primitive → définitive",
+              "texte": "ce qui disparaît a été réabsorbé"
+            },
+            {
+              "titre": "Concentration",
+              "texte": "ce qui augmente est concentré par réabsorption d’eau"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Glucose&nbsp;: 1 g·L⁻¹ dans le plasma, 1 dans l’urine primitive, 0 dans l’urine définitive.",
+          "calcul": "filtré librement",
+          "aparte": "puis plus rien dans l’urine",
+          "resultat": "[[réabsorbé]] en totalité"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Le glucose passe librement le glomérule&nbsp;: sa concentration est la même.",
+              "quoi": "filtration"
+            },
+            {
+              "texte": "Il est absent de l’urine définitive.",
+              "quoi": "constat"
+            },
+            {
+              "texte": "Il est donc réabsorbé dans le tube proximal (co-transport avec Na⁺).",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Au-delà de ==1,8 g·L⁻¹== les transporteurs sont saturés&nbsp;: le glucose passe dans l’urine (glycosurie)."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **uretère** (rein → vessie) et **urètre**.",
+            "Croire que l’**albumine** passe dans l’urine primitive.",
+            "Oublier que l’**ADH** diminue la diurèse.",
+            "Dire que la **sécrétion** est un retour au sang."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Où se fait la **filtration**&nbsp;?",
+            "Que provoque l’**ADH** dans le tube collecteur&nbsp;?",
+            "Que signale du **glucose** dans l’urine&nbsp;?"
+          ],
+          "reponses": "1) dans le glomérule · 2) des aquaporines : plus d’eau réabsorbée · 3) glycémie > 1,8 g·L⁻¹ (diabète)"
+        }
+      ]
+    }
+  ]
+}

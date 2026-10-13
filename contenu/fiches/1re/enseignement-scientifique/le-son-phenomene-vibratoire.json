@@ -1,0 +1,163 @@
+{
+  "titre": "Le son, une vibration",
+  "titreSurligne": "son",
+  "accroche": "Une onde qui a besoin de matière.",
+  "bonus": "**f = 1/T** · **λ = v × T** · air **340 m/s** · eau 1 500 · acier 5 000 · **×10 → +10 dB**, **×2 → +3 dB**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/enseignement-scientifique/le-son-phenomene-vibratoire.webp",
+    "prompt": "a glossy violet tuning fork with golden sound waves spreading out as concentric rings, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Sans matière,\npas de son !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Période et longueur d’onde",
+          "petite": true,
+          "lignes": [
+            "f = {1/T}",
+            "λ = v × T = {v/f}"
+          ],
+          "regle": "**T** en s, **f** en Hz, **λ** en m, **v** la célérité dans le milieu.",
+          "note": "l’énergie voyage, pas la matière"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Ce que l’oreille entend",
+          "entetes": [
+            "Domaine",
+            "Fréquences"
+          ],
+          "lignes": [
+            [
+              "**Infrasons**",
+              "sous 20 Hz"
+            ],
+            [
+              "**Audible**",
+              "20 Hz à 20 000 Hz"
+            ],
+            [
+              "**Ultrasons**",
+              "au-dessus de 20 kHz"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "!",
+          "titre": "Une onde longitudinale",
+          "paragraphes": [
+            "Les particules du milieu oscillent **dans la direction de propagation** : compressions, puis dilatations. Elles ne voyagent pas, c’est l’**énergie** qui se déplace. **Sans matière, pas de son** : dans le vide, la cloche sonne pour personne."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Un son musical",
+          "entetes": [
+            "Caractéristique",
+            "Déterminée par"
+          ],
+          "lignes": [
+            [
+              "**Hauteur**",
+              "fréquence **fondamentale**"
+            ],
+            [
+              "**Timbre**",
+              "les **harmoniques**"
+            ],
+            [
+              "**Intensité**",
+              "l’**amplitude**"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 4,
+          "titre": "Le niveau sonore",
+          "petite": true,
+          "lignes": [
+            "L = 10 × log({I/I<sub>0</sub>})"
+          ],
+          "regle": "I<sub>0</sub> = 10<sup>-12</sup> W/m², seuil d’audibilité. Risque dès **85 dB**, douleur vers **120 dB**.",
+          "note": "deux fois 80 dB = 83 dB"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Trouver une longueur d’onde",
+          "etapes": [
+            {
+              "titre": "Lire",
+              "texte": "la fréquence f, ou la période T"
+            },
+            {
+              "titre": "Choisir",
+              "texte": "la célérité v selon le milieu : 340 m/s dans l’air"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "λ = v ÷ f, en mètres"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un la<sub>3</sub> à 440 Hz dans l’air (340 m/s). Sa __longueur d’onde__&nbsp;?",
+          "calcul": "λ = 340 ÷ 440",
+          "aparte": "= 0,77",
+          "resultat": "λ ≈ [[0,77 m]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le son se propage dans le **vide**.",
+            "Penser que les particules **voyagent** avec l’onde.",
+            "Additionner les décibels : 80 + 80 = **83 dB**, pas 160.",
+            "Confondre **hauteur** (fréquence) et **intensité**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle est la **fréquence** d’un son de période 0,010 s&nbsp;?",
+            "Dans quel milieu le son va-t-il le **plus vite** : air, eau, acier&nbsp;?",
+            "Que fait **doubler** l’intensité sur le niveau sonore&nbsp;?"
+          ],
+          "reponses": "1) 100 Hz · 2) l’acier (≈ 5 000 m/s) · 3) +3 dB seulement"
+        }
+      ]
+    }
+  ]
+}

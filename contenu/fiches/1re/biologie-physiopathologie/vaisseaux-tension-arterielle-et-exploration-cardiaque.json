@@ -1,0 +1,122 @@
+{
+  "titre": "Tension et exploration",
+  "titreSurligne": "Tension",
+  "accroche": "Réguler la pression, explorer le cœur.",
+  "bonus": "Normale **12/8 cmHg** · hypertension dès **14/9** · ECG : **P** oreillettes, **QRS** ventricules, **T** repolarisation",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biologie-physiopathologie/vaisseaux-tension-arterielle-et-exploration-cardiaque.webp",
+    "prompt": "a glossy violet blood pressure gauge dial with a golden needle connected to a violet cuff and a small golden heartbeat line, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "La pression chute ?\nLe cœur accélère !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Trois vaisseaux",
+          "entetes": ["Vaisseau", "Paroi", "Rôle"],
+          "lignes": [
+            ["**Artère**", "média épaisse, élastique", "sang sous forte pression"],
+            ["**Veine**", "paroi mince, **valvules**", "retour à basse pression"],
+            ["**Capillaire**", "un seul endothélium", "**échanges**"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Lire une tension",
+          "entetes": ["Mesure", "Verdict"],
+          "lignes": [
+            ["≈ 12/8 cmHg", "normale"],
+            ["≥ 14/9 répété", "**hypertension**"],
+            ["systolique < 9", "**hypotension**"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "L’arc réflexe après une hémorragie",
+          "etapes": [
+            { "titre": "Récepteurs", "texte": "barorécepteurs moins étirés : moins de messages" },
+            { "titre": "Centre", "texte": "bulbe : moins de parasympathique, plus de sympathique" },
+            { "titre": "Effecteurs", "texte": "tachycardie et vasoconstriction : la pression remonte" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les examens",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "ECG", "texte": "Activité **électrique** par électrodes : rythme, infarctus." },
+            { "titre": "Échographie", "texte": "**Ultrasons** : voir le cœur battre, mesurer le VES." },
+            { "titre": "Doppler", "texte": "Mesure la **vitesse du sang**, repère un rétrécissement." },
+            { "titre": "Angiographie", "texte": "**Produit de contraste** et rayons X : artère bouchée." },
+            { "titre": "Scintigraphie", "texte": "**Traceur radioactif** : zone mal irriguée." },
+            { "titre": "Tensiomètre", "texte": "Systolique (max) et diastolique (min)." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre voies **afférentes** (vers le centre) et **efférentes** (vers l’effecteur).",
+            "Dire que le parasympathique **accélère** le cœur : il le ralentit.",
+            "Croire que l’ECG voit le sang : il enregistre l’**électricité**.",
+            "Oublier l’unité : cmHg ou mmHg."
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Deux pics R séparés de 0,75 s. fC&nbsp;?",
+          "calcul": "fC = 60 / 0,75",
+          "resultat": "fC = [[80 bat/min]]"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": false,
+          "items": [
+            { "titre": "Barorécepteurs", "texte": "sinus carotidien et crosse de l’aorte" },
+            { "titre": "Centre nerveux", "texte": "bulbe rachidien" },
+            { "titre": "Fréquence", "texte": "fC = 60 / durée d’un cycle (s)" },
+            { "titre": "Capillaire", "texte": "lieu des échanges sang-tissus" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle onde de l’ECG traduit les **ventricules**&nbsp;?",
+            "Quel nerf **ralentit** le cœur&nbsp;?",
+            "Quel réflexe suit une **hémorragie**&nbsp;?"
+          ],
+          "reponses": "1) le complexe QRS · 2) le nerf parasympathique (vague) · 3) tachycardie + vasoconstriction"
+        }
+      ]
+    }
+  ]
+}

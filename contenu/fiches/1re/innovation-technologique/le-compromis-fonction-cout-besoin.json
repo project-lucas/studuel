@@ -1,0 +1,116 @@
+{
+  "titre": "Fonction, coût, besoin",
+  "titreSurligne": "coût",
+  "accroche": "Payer le juste prix du juste service.",
+  "bonus": "**Besoin réel** ≠ **besoin induit** · **intégrer des fonctions** réduit coût et complexité",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/innovation-technologique/le-compromis-fonction-cout-besoin.webp",
+    "prompt": "a glossy violet balance scale with a golden coin on one side and a golden gear on the other, sparkles, same art style as the reference icons, no text, magenta background"
+  },
+  "marcel": "Le bon service\nau bon prix !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Deux sortes de besoin",
+          "entetes": ["Besoin", "Exemple"],
+          "lignes": [
+            ["**Réel**", "se déplacer 5 km par jour"],
+            ["**Induit**", "changer de modèle chaque année"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "L’analyse de la valeur",
+          "lignes": ["Valeur = {satisfaction du besoin/coût}"],
+          "regle": "On l’augmente en **mieux servant** le besoin, ou en **coûtant moins**.",
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Conduire l’analyse",
+          "etapes": [
+            { "titre": "Lister", "texte": "les fonctions du produit" },
+            { "titre": "Chiffrer", "texte": "le coût et l’importance de chaque fonction" },
+            { "titre": "Retravailler", "texte": "celles qui coûtent trop pour ce qu’elles apportent" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Lampe à 40 € : « plaire » coûte __30 %__ du prix pour __10 %__ d’importance.",
+          "calcul": "30 % de coût > 10 % d’importance",
+          "aparte": "fonction trop chère",
+          "resultat": "[[économiser sur « plaire »]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Où agir&nbsp;?",
+          "oui": {
+            "titre": "Fonction trop chère",
+            "texte": "Coût **supérieur** à l’importance : finition plus simple, moins de pièces."
+          },
+          "non": {
+            "titre": "Fonction sous-dotée",
+            "texte": "Importance **supérieure** au coût : une meilleure LED ajoute de la valeur."
+          },
+          "essai": {
+            "texte": "Une seule pièce qui en fait deux <i>intègre</i> des fonctions et réduit la complexité."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Cette fonction coûte X % pour Y % d’importance.", "quoi": "comparer" },
+            { "texte": "Je compare solutions et coûts entre elles.", "quoi": "choisir" },
+            { "texte": "J’examine aussi l’impact environnemental.", "quoi": "élargir" }
+          ],
+          "pied": "Trois relations : ==fonction/coût/besoin==, ==/réalisation==, ==/environnement==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre besoin **réel** et besoin induit.",
+            "Ajouter des fonctions : la **complexité** monte.",
+            "Raisonner sur le coût **sans** l’importance.",
+            "Oublier l’**impact environnemental**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Comment calcule-t-on la **valeur**&nbsp;?",
+            "Qu’est-ce qu’un besoin **induit**&nbsp;?",
+            "Que fait l’**intégration** de fonctions&nbsp;?"
+          ],
+          "reponses": "1) satisfaction du besoin / coût · 2) créé par la pub ou la mode · 3) réduit coût et complexité"
+        }
+      ]
+    }
+  ]
+}

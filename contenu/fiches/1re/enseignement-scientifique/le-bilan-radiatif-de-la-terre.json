@@ -1,0 +1,179 @@
+{
+  "titre": "Le bilan radiatif",
+  "titreSurligne": "bilan",
+  "accroche": "Ce que la Terre reçoit et renvoie.",
+  "bonus": "**340** W/m² reçus · **100** réfléchis · **240** absorbés · effet de serre naturel : **33 °C**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/enseignement-scientifique/le-bilan-radiatif-de-la-terre.webp",
+    "prompt": "a glossy violet Earth globe wrapped in a golden glowing atmosphere layer with arrows of light in and out, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Reçu égal renvoyé,\nl’équilibre !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Du disque à la sphère",
+          "petite": true,
+          "lignes": [
+            "{1 360/4} = 340 W/m²"
+          ],
+          "regle": "La Terre intercepte sur un **disque** (π R²) mais répartit sur une **sphère** (4 π R²), quatre fois plus grande.",
+          "note": "l’albédo : ≈ 30 %"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le bilan en trois nombres",
+          "entetes": [
+            "Flux",
+            "Valeur",
+            "Devenir"
+          ],
+          "lignes": [
+            [
+              "Reçu en moyenne",
+              "**340 W/m²**",
+              "—"
+            ],
+            [
+              "Réfléchi (albédo)",
+              "**100 W/m²**",
+              "renvoyé"
+            ],
+            [
+              "**Absorbé**",
+              "**240 W/m²**",
+              "chauffe la Terre"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 3,
+          "titre": "L’effet de serre",
+          "deux": false,
+          "items": [
+            {
+              "titre": "Émission",
+              "texte": "à 288 K la Terre rayonne dans l’**infrarouge** (≈ 10 µm)"
+            },
+            {
+              "titre": "Absorption",
+              "texte": "vapeur d’eau, **CO<sub>2</sub>**, méthane, N<sub>2</sub>O l’absorbent"
+            },
+            {
+              "titre": "Réémission",
+              "texte": "dans toutes les directions, donc **vers le sol**"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Chiffres à connaître",
+          "entetes": [
+            "Grandeur",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Sans / avec effet de serre",
+              "**−18 °C** / **+15 °C**"
+            ],
+            [
+              "CO<sub>2</sub> préindustriel",
+              "environ **280 ppm**"
+            ],
+            [
+              "CO<sub>2</sub> actuel",
+              "plus de **420 ppm**"
+            ],
+            [
+              "Excédent d’énergie",
+              "environ **1 W/m²**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Faire un bilan d’énergie",
+          "etapes": [
+            {
+              "titre": "Reçu",
+              "texte": "puissance moyenne : constante solaire ÷ 4"
+            },
+            {
+              "titre": "Réfléchi",
+              "texte": "reçu × albédo : cette part n’est pas absorbée"
+            },
+            {
+              "titre": "Absorbé",
+              "texte": "reçu − réfléchi, à comparer à l’énergie renvoyée"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "!",
+          "titre": "Une rétroaction positive",
+          "paragraphes": [
+            "Fondre la banquise (albédo proche de **0,9**) laisse l’océan (environ **0,1**) : la Terre **absorbe davantage**, donc se réchauffe encore. L’effet de serre naturel vaut **33 °C** et rend possible l’**eau liquide**."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Reçu : 340 W/m², albédo 0,30. Puissance __absorbée__&nbsp;?",
+          "calcul": "réfléchi = 340 × 0,30 = 102",
+          "aparte": "≈ 100",
+          "resultat": "340 − 100 ≈ [[240 W/m²]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Garder **1 360** au lieu de 340 : oublier de diviser par **4**.",
+            "Croire que l’effet de serre est **mauvais en soi** : il rend la vie possible.",
+            "Penser que la banquise qui fond **refroidit** : l’albédo baisse.",
+            "Dire que **1 W/m²** est négligeable : il s’accumule."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle puissance moyenne **reçoit** la Terre par m²&nbsp;?",
+            "Quel est l’**albédo** de la Terre&nbsp;?",
+            "Quel gaz a augmenté de 280 à plus de 420 **ppm**&nbsp;?"
+          ],
+          "reponses": "1) 340 W/m² · 2) environ 30 % · 3) le dioxyde de carbone (CO<sub>2</sub>)"
+        }
+      ]
+    }
+  ]
+}

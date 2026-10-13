@@ -1,0 +1,113 @@
+{
+  "titre": "Algorithmes gloutons",
+  "titreSurligne": "gloutons",
+  "accroche": "Le meilleur choix, sans jamais revenir.",
+  "bonus": "glouton = rapide, simple · une solution, pas toujours la meilleure",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/nsi/algorithmes-gloutons.webp",
+    "prompt": "a glossy violet hand grabbing the largest golden coin from a pile, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Toujours la plus grosse,\nsans regret !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 1,
+          "titre": "Le schéma glouton",
+          "etapes": [
+            { "titre": "Critère", "texte": "trier les candidats" },
+            { "titre": "Choisir", "texte": "le meilleur encore admissible" },
+            { "titre": "Ajouter", "texte": "définitivement, puis recommencer" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois problèmes",
+          "entetes": ["Problème", "Critère", "Résultat"],
+          "lignes": [
+            ["Sac à dos", "valeur / poids", "souvent non optimal"],
+            ["Activités", "finit le plus tôt", "**optimal**"],
+            ["Dijkstra", "sommet le plus proche", "optimal si poids positifs"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Rendre 6 avec des pièces 1, 3, 4",
+          "oui": { "titre": "Optimal", "texte": "3 + 3 : **2** pièces" },
+          "non": { "titre": "Glouton", "texte": "4 + 1 + 1 : **3** pièces" },
+          "essai": { "titre": "À toi", "texte": "Rendre 8 avec 1, 3, 4&nbsp;: le glouton donne combien&nbsp;?" }
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Rendre 13 € avec 1, 2, 5, 10. __Glouton__&nbsp;?",
+          "calcul": "10 → reste 3 ; 2 → reste 1 ; 1",
+          "aparte": "plus grosse d’abord",
+          "resultat": "= [[10 + 2 + 1]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Quand l’employer",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Oui", "texte": "une solution **approchée** suffit." },
+            { "titre": "Oui", "texte": "le temps de calcul compte." },
+            { "titre": "Oui", "texte": "l’optimalité est **démontrable**." },
+            { "titre": "Non", "texte": "l’optimum est exigé : méthode exacte." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "à chaque étape, on prend la plus grosse pièce ≤ reste", "quoi": "le critère" },
+            { "texte": "le choix n’est jamais défait", "quoi": "la règle" },
+            { "texte": "contre-exemple : pièces 1, 3, 4 pour rendre 6", "quoi": "non optimal" }
+          ],
+          "pied": "Le glouton donne ==une== solution, pas forcément la meilleure."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le glouton est **toujours optimal**.",
+            "Généraliser depuis les **euros**&nbsp;: c’est une propriété du système de pièces.",
+            "Oublier de vérifier que le candidat est **admissible**.",
+            "Revenir sur un choix&nbsp;: c’est le contraire du glouton."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Un choix glouton peut-il être **annulé**&nbsp;?",
+            "Quel critère pour le **choix d’activités**&nbsp;?",
+            "Glouton sur 1, 3, 4 pour rendre 6&nbsp;: combien de pièces&nbsp;?"
+          ],
+          "reponses": "1) non, il est définitif · 2) celle qui finit le plus tôt · 3) 3 pièces (4 + 1 + 1), alors que 3 + 3 en suffit 2"
+        }
+      ]
+    }
+  ]
+}

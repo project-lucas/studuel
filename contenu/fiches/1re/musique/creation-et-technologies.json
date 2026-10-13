@@ -1,0 +1,171 @@
+{
+  "titre": "Création, technologies",
+  "titreSurligne": "technologies",
+  "accroche": "Quand la machine compose.",
+  "bonus": "**MIDI**&nbsp;: des instructions, pas du son · **1948** Schaeffer&nbsp;: la musique concrète",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/musique/creation-et-technologies.webp",
+    "prompt": "a glossy violet synthesizer keyboard with golden keys and a tiny golden sound wave, sparkles, same art style as the reference icons, on a magenta background, no text, no numbers"
+  },
+  "marcel": "MIDI ne joue pas&nbsp;:\nil commande&nbsp;!",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "frise",
+          "titre": "Un siècle en cinq étapes",
+          "horizontale": true,
+          "etapes": [
+            {
+              "date": "Années 1900",
+              "texte": "Microphone et disque&nbsp;: l’œuvre devient un objet."
+            },
+            {
+              "date": "1948",
+              "texte": "Musique concrète (Schaeffer)."
+            },
+            {
+              "date": "Années 1950",
+              "texte": "Multipiste&nbsp;: le studio devient instrument."
+            },
+            {
+              "date": "1983",
+              "texte": "Norme MIDI&nbsp;: les machines dialoguent."
+            },
+            {
+              "date": "Aujourd’hui",
+              "texte": "Échantillonnage, IA générative."
+            }
+          ],
+          "numero": 1
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "titre": "Le MIDI",
+          "lignes": [
+            "**instructions** ≠ **son**"
+          ],
+          "regle": "quelle note, quelle intensité, quelle durée",
+          "note": "un même fichier sonne autrement d’une machine à l’autre",
+          "petite": true,
+          "teinte": "jaune",
+          "numero": 2
+        },
+        {
+          "type": "cartes",
+          "titre": "Trois voies du synthétiseur",
+          "cartes": [
+            {
+              "titre": "Additive",
+              "texte": "on empile des harmoniques"
+            },
+            {
+              "titre": "Soustractive",
+              "texte": "on filtre un son riche"
+            },
+            {
+              "titre": "FM",
+              "texte": "une fréquence en module une autre"
+            }
+          ],
+          "colonnes": 1,
+          "numero": 3
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "titre": "Deux mots clés",
+          "items": [
+            {
+              "terme": "Musique concrète",
+              "definition": "composer à partir de sons enregistrés du réel (une porte, un train) — Pierre Schaeffer, 1948"
+            },
+            {
+              "terme": "Électroacoustique",
+              "definition": "le matériau s’élargit à tout son possible, même entièrement synthétique"
+            }
+          ],
+          "numero": 4
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le **MIDI** transporte du son.",
+            "Prendre l’enregistrement pour **l’œuvre**&nbsp;: c’était une trace parmi d’autres.",
+            "Confondre **additive** et **soustractive**.",
+            "Oublier la question de l’**auteur** avec l’IA."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "titre": "Aujourd’hui",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Séquenceurs",
+              "texte": "la composition devient un montage sur écran"
+            },
+            {
+              "titre": "Échantillonnage",
+              "texte": "un son enregistré devient matériau"
+            },
+            {
+              "titre": "Auto-tune",
+              "texte": "la voix est corrigée, ou transformée"
+            },
+            {
+              "titre": "IA générative",
+              "texte": "la question de l’auteur se rouvre"
+            }
+          ],
+          "numero": 5
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Le multipiste fait du studio un instrument&nbsp;: la version enregistrée devient la référence.",
+              "quoi": "décrire"
+            },
+            {
+              "texte": "L’échantillonnage et l’IA rouvrent la question de l’auteur.",
+              "quoi": "questionner"
+            }
+          ],
+          "pied": "Chaque outil déplace la frontière entre ==jouer== et ==fabriquer==."
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que transporte le **MIDI**&nbsp;?",
+            "Qui invente la **musique concrète**&nbsp;?",
+            "Quelle synthèse **filtre** un son riche&nbsp;?"
+          ],
+          "reponses": "1) des instructions 2) Pierre Schaeffer, 1948 3) la soustractive"
+        }
+      ]
+    }
+  ]
+}

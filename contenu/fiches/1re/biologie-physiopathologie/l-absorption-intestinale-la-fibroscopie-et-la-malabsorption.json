@@ -1,0 +1,119 @@
+{
+  "titre": "Absorption intestinale",
+  "titreSurligne": "Absorption",
+  "accroche": "Du tube digestif jusqu’au sang.",
+  "bonus": "Voie **sanguine** : veine porte · voie **lymphatique** : chylifère, chylomicrons · cœliaque = **atrophie villositaire**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biologie-physiopathologie/l-absorption-intestinale-la-fibroscopie-et-la-malabsorption.webp",
+    "prompt": "a glossy violet intestinal villus like a finger-shaped fold with golden droplets entering a tiny red capillary, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Plus de villosités,\nplus de surface !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Une surface immense",
+          "items": [
+            { "terme": "Valvules conniventes", "definition": "replis visibles à l’œil nu" },
+            { "terme": "Villosités", "definition": "replis d’environ 1 mm, avec **capillaires** et **chylifère**" },
+            { "terme": "Microvillosités", "definition": "replis des entérocytes (bordure en brosse), portent des enzymes" },
+            { "terme": "Absorption", "definition": "passage des nutriments vers le sang ou la lymphe" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux voies",
+          "entetes": ["Voie", "Nutriments"],
+          "lignes": [
+            ["**Sanguine** (veine porte → foie)", "oses, acides aminés, eau, ions, vitamines B et C"],
+            ["**Lymphatique** (chylifère)", "triglycérides en **chylomicrons**, vitamines A, D, E, K"],
+            ["**Pourquoi**", "hydrophile : plasma ; hydrophobe : lymphe"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Fibroscopie et maladie cœliaque",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Fibroscopie", "texte": "Tube souple avec **caméra** : voir la muqueuse, faire des **biopsies**." },
+            { "titre": "Coloscopie", "texte": "Par l’anus, pour le **côlon** : repérer et retirer un **polype**." },
+            { "titre": "Risques", "texte": "Rares : perforation, saignement, infection." },
+            { "titre": "Cœliaque : cause", "texte": "Le **gluten** déclenche une réaction immunitaire qui détruit les villosités." },
+            { "titre": "Cœliaque : signes", "texte": "**Diarrhée**, amaigrissement, fatigue ; anticorps et **biopsie** du duodénum." },
+            { "titre": "Traitement", "texte": "Régime **sans gluten** à vie : les villosités repoussent." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Expliquer une malabsorption",
+          "etapes": [
+            { "titre": "Cause", "texte": "gluten, réaction immunitaire" },
+            { "titre": "Lésion", "texte": "villosités détruites" },
+            { "titre": "Effet", "texte": "surface réduite, carences, diarrhée" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Anémie chez un patient cœliaque. Pourquoi&nbsp;?",
+          "calcul": "Moins de villosités → moins de fer absorbé",
+          "resultat": "[[carence en fer]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": false,
+          "items": [
+            { "titre": "Paroi", "texte": "un seul épithélium, très **vascularisée**" },
+            { "titre": "Eau", "texte": "absorbée par **osmose**" },
+            { "titre": "Côlon", "texte": "concentre les selles" },
+            { "titre": "Vocabulaire", "texte": "**rectorragie**, **hématémèse**, **ulcère**" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que **toutes** les graisses passent dans le sang.",
+            "Confondre **digestion** (découper) et **absorption** (franchir la paroi).",
+            "Oublier la **biopsie** : c’est elle qui montre l’atrophie.",
+            "Croire le régime sans gluten **temporaire**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle voie emprunte le **glucose**&nbsp;?",
+            "Que détruit le **gluten** chez un patient cœliaque&nbsp;?",
+            "Quel examen examine le **côlon**&nbsp;?"
+          ],
+          "reponses": "1) la voie sanguine · 2) les villosités · 3) la coloscopie"
+        }
+      ]
+    }
+  ]
+}

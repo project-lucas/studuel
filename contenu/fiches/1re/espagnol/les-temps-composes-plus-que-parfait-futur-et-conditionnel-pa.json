@@ -1,0 +1,128 @@
+{
+  "titre": "Les temps composés",
+  "titreSurligne": "composés",
+  "accroche": "Un seul auxiliaire : haber.",
+  "bonus": "**haber** + participe **invariable** · jamais **ser** · jamais séparés",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/espagnol/les-temps-composes-plus-que-parfait-futur-et-conditionnel-pa.webp",
+    "prompt": "a glossy violet key and a golden key linked together over a small golden clock, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Haber, toujours\nhaber&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La forme",
+          "lignes": ["**haber** + participe"],
+          "petite": true,
+          "regle": "L’auxiliaire est **toujours haber** (<i>me he levantado</i>), le participe est **invariable** (<i>las cartas que he escrito</i>). Pronoms **devant** haber&nbsp;: <i>se lo había dicho</i>.",
+          "note": "jamais <i>ser</i>"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les temps composés",
+          "entetes": ["Temps", "Haber", "Exemple"],
+          "lignes": [
+            ["Passé composé", "he, has, ha…", "<i>he hablado</i>"],
+            ["Plus-que-parfait", "había, habías…", "<i>había hablado</i>"],
+            ["Futur antérieur", "habré, habrás…", "<i>habré hablado</i>"],
+            ["Conditionnel passé", "habría, habrías…", "<i>habría hablado</i>"],
+            ["Subj. passé", "haya, hayas…", "<i>haya hablado</i>"],
+            ["Subj. plus-que-parf.", "hubiera…", "<i>hubiera hablado</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les emplois",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Plus-que-parfait", "texte": "Antériorité dans le passé&nbsp;: <i>Cuando llegué, el tren **ya había salido**.</i>" },
+            { "titre": "Futur antérieur", "texte": "Achevé avant un moment futur&nbsp;: <i>En junio **habré terminado**.</i> Ou **probabilité**&nbsp;: <i>No contesta: **habrá salido**.</i>" },
+            { "titre": "Conditionnel passé", "texte": "Irréel du passé&nbsp;: <i>**Habría venido**, pero estaba enfermo.</i>" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quel auxiliaire&nbsp;?",
+          "oui": {
+            "titre": "Toujours haber",
+            "texte": "<i>**He ido**, **me he levantado**.</i> (je suis allé, je me suis levé)"
+          },
+          "non": {
+            "titre": "Ser comme en français",
+            "texte": "<i>Soy ido</i>, <i>me soy levantado</i> : l’espagnol n’a **pas** d’auxiliaire être aux temps composés."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "« Elle est arrivée » → <i>Ella ___ llegado.</i> → **ha**."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Les participes irréguliers",
+          "deux": true,
+          "items": [
+            { "titre": "abrir · cubrir · descubrir", "texte": "<i>abierto, cubierto, descubierto</i>" },
+            { "titre": "decir · hacer · poner", "texte": "<i>dicho, hecho, puesto</i>" },
+            { "titre": "escribir · ver · volver", "texte": "<i>escrito, visto, vuelto</i>" },
+            { "titre": "morir · romper · resolver", "texte": "<i>muerto, roto, resuelto</i>" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "<i>Cuando llegué, ya se habían ido.</i>", "quoi": "antériorité" },
+            { "texte": "<i>Me habrían esperado si hubiera llamado.</i>", "quoi": "irréel du passé" }
+          ],
+          "pied": "Passé antérieur (<i>hube hablado</i>) : littéraire, à éviter."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Había **hablada**</i> → <i>había **hablado**</i> (invariable).",
+            "<i>Había **decido**</i> → <i>había **dicho**</i>.",
+            "Séparer haber du participe&nbsp;: <i>había ya hablado</i> → <i>**ya** había hablado</i>."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Cuando llegué, ellos ya ___ (salir).</i>",
+            "Participe de <i>escribir</i> et de <i>romper</i>&nbsp;?",
+            "<i>Si (yo) lo ___ sabido, habría venido.</i> (hubiera / había)"
+          ],
+          "reponses": "1) habían salido 2) escrito, roto 3) hubiera"
+        }
+      ]
+    }
+  ]
+}

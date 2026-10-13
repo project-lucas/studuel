@@ -1,0 +1,157 @@
+{
+  "titre": "Les questions",
+  "titreSurligne": "questions",
+  "accroche": "L’auxiliaire passe devant le sujet.",
+  "bonus": "(mot interrogatif) + **auxiliaire** + sujet + verbe à la **base** · sans auxiliaire → **do**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/anglais/les-questions.webp",
+    "prompt": "a glossy violet question mark with a golden dot and a small golden magnifying glass, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Une question&nbsp;?\nL’auxiliaire d’abord&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "L’ordre des mots",
+          "lignes": ["**auxiliaire** + sujet + verbe"],
+          "petite": true,
+          "regle": "S’il n’y a pas d’auxiliaire dans la phrase, on le fabrique avec **do / does / did**. Le verbe reste à la **base**.",
+          "note": "une seule marque"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois exemples",
+          "entetes": ["Question", "Auxiliaire", "Sujet", "Verbe"],
+          "lignes": [
+            ["<i>Where **does** she live?</i>", "<i>does</i>", "<i>she</i>", "<i>live</i>"],
+            ["<i>**Have** you finished?</i>", "<i>Have</i>", "<i>you</i>", "<i>finished</i>"],
+            ["<i>**Can** he swim?</i>", "<i>Can</i>", "<i>he</i>", "<i>swim</i>"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les mots interrogatifs",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "who · what · which",
+              "texte": "Qui · quoi · lequel (choix limité)."
+            },
+            {
+              "titre": "where · when · why · how",
+              "texte": "Lieu · moment · raison · manière."
+            },
+            {
+              "titre": "how + mot",
+              "texte": "<i>how long</i> durée · <i>how far</i> distance · <i>how often</i> fréquence · <i>how much / many</i> quantité."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Qui est le sujet&nbsp;?",
+          "oui": {
+            "titre": "Sujet : pas de did",
+            "texte": "<i>**Who** broke the window?</i> — le mot interrogatif **est** le sujet."
+          },
+          "non": {
+            "titre": "Complément : did",
+            "texte": "<i>**Who** did you see?</i> — <i>did</i> obligatoire, verbe à la base."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Where ___ she ___ (live)?</i> → **does … live** : une seule marque."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Les question tags",
+          "etapes": [
+            {
+              "titre": "Repère l’auxiliaire",
+              "texte": "Sinon, <i>do / does / did</i>&nbsp;: <i>She likes it…</i>"
+            },
+            {
+              "titre": "Inverse la polarité",
+              "texte": "Phrase **positive** → tag **négatif**, et l’inverse."
+            },
+            {
+              "titre": "Reprends le sujet",
+              "texte": "<i>…**doesn’t she**?</i> · <i>He can’t swim, **can he**?</i> · <i>You’re French, **aren’t you**?</i>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "What is he like?",
+              "texte": "Comment est-il&nbsp;? (son caractère)"
+            },
+            {
+              "titre": "How is he?",
+              "texte": "Comment va-t-il&nbsp;? (santé, humeur)"
+            },
+            {
+              "titre": "which",
+              "texte": "lequel, dans un choix limité&nbsp;: <i>Which do you prefer?</i>"
+            },
+            {
+              "titre": "Réponse courte",
+              "texte": "avec l’auxiliaire&nbsp;: <i>Yes, he does.</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Where does she lives?</i> → <i>Where does she **live**?</i>",
+            "<i>You like tea?</i> (sans <i>do</i>) → <i>**Do** you like tea?</i>",
+            "<i>Who did break the window?</i> → <i>Who **broke** the window?</i>",
+            "<i>She likes it, **likes she**?</i> → <i>…**doesn’t she**?</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>___ you finished?</i> (Complète l’auxiliaire)",
+            "<i>Who ___ the window?</i> (break, prétérit)",
+            "<i>He can’t swim, ___ ?</i> (le tag)"
+          ],
+          "reponses": "1) Have 2) broke (pas de did) 3) can he"
+        }
+      ]
+    }
+  ]
+}

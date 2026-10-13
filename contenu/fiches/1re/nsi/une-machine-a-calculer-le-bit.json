@@ -1,0 +1,127 @@
+{
+  "titre": "Le bit et le binaire",
+  "titreSurligne": "binaire",
+  "accroche": "Deux états, et tout le reste.",
+  "bonus": "n bits = **2<sup>n</sup>** valeurs · poids 8 4 2 1 · restes lus **de bas en haut**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/nsi/une-machine-a-calculer-le-bit.webp",
+    "prompt": "a glossy violet switch showing 0 and 1 as two golden lamps, one lit one dark, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Deux états,\nc’est fiable !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Bit", "definition": "un chiffre binaire&nbsp;: **0** ou **1**" },
+            { "terme": "Poids", "definition": "puissance de 2, **croissante** de droite à gauche" },
+            { "terme": "Pourquoi 2&nbsp;?", "definition": "un signal bruité reste lisible avec **deux** niveaux" },
+            { "terme": "Information", "definition": "le même mot de bits se lit selon une **convention**" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "1101 en base 2",
+          "entetes": ["Le bit", "1", "1", "0", "1"],
+          "lignes": [
+            ["Son poids", "8", "4", "2", "1"],
+            ["Contribution", "8", "4", "0", "1"],
+            ["Total", "", "", "", "**13**"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "Combien de valeurs&nbsp;?",
+          "lignes": ["2<sup>n</sup> valeurs"],
+          "regle": "n bits codent **2<sup>n</sup>** valeurs, de 0 à 2<sup>n</sup> − 1.",
+          "note": "un bit de plus, deux fois plus !",
+          "teinte": "jaune"
+        },
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Du décimal au binaire",
+          "etapes": [
+            { "titre": "Diviser", "texte": "par 2, noter le **reste**" },
+            { "titre": "Répéter", "texte": "sur le quotient, jusqu’à **0**" },
+            { "titre": "Lire", "texte": "les restes **de bas en haut**" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Écrire __13__ en binaire.",
+          "calcul": "13÷2 = 6 r **1** · 6÷2 = 3 r **0** · 3÷2 = 1 r **1** · 1÷2 = 0 r **1**",
+          "aparte": "de bas en haut",
+          "resultat": "13 = [[1101]]<sub>2</sub>"
+        },
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "Les opérations",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Addition", "texte": "avec **retenue** : 1 + 1 = 10 en binaire." },
+            { "titre": "ET, OU, XOR, NON", "texte": "bit à bit, **sans** retenue." },
+            { "titre": "01000001", "texte": "entier **65**, lettre **A** ou pixel gris." },
+            { "titre": "300 valeurs", "texte": "8 bits ne suffisent pas&nbsp;: il en faut **9**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Avec n bits, 2<sup>n</sup> valeurs.", "quoi": "la règle" },
+            { "texte": "2<sup>8</sup> = 256 &lt; 300 &lt; 2<sup>9</sup> = 512", "quoi": "l’encadrement" },
+            { "texte": "Il faut donc **9 bits**.", "quoi": "la conclusion" },
+            { "texte": "Vérifier&nbsp;: 1101 = 8 + 4 + 1 = 13.", "quoi": "le contrôle" }
+          ],
+          "pied": "Ajouter un bit ==double== le nombre de valeurs."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Lire les restes **de haut en bas**&nbsp;: nombre inversé.",
+            "Croire que 8 bits codent **8** valeurs.",
+            "Oublier la **retenue** : 1 + 1 = 10, pas 2.",
+            "Penser qu’un mot de bits porte **son sens** seul."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que vaut **1011** en décimal&nbsp;?",
+            "Combien de valeurs avec **10 bits**&nbsp;?",
+            "Combien de bits pour coder **100 valeurs**&nbsp;?"
+          ],
+          "reponses": "1) 11 · 2) 1 024 · 3) 7 bits (2^6 = 64 &lt; 100 ≤ 128)"
+        }
+      ]
+    }
+  ]
+}

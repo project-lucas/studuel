@@ -1,0 +1,174 @@
+{
+  "titre": "Python : les bases",
+  "titreSurligne": "Python",
+  "accroche": "Variables, tests, boucles, fonctions.",
+  "epreuve": "bac-1re",
+  "bonus": "<b>==</b> teste · = range · range(5) = 0 à 4 · return renvoie, print affiche · le retrait compte",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/python-variables-tests-boucles-et-fonctions.webp",
+    "prompt": "a glossy violet laptop showing a golden loop arrow and a small golden check mark on its screen, sparkles, same art style as the reference icons, on a flat magenta background, no text, no numbers"
+  },
+  "marcel": "Quatre briques,\ntous les programmes !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les quatre briques",
+          "petite": true,
+          "lignes": [
+            "x = x + 2",
+            "if … : / elif … : / else :",
+            "for i in range(n) :",
+            "def f(n) : … return …"
+          ],
+          "regle": "Le **retrait** de quatre espaces dit ce qui appartient au bloc.",
+          "note": "x = x + 2 : pas une égalité&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Symboles et boucles",
+          "entetes": [
+            "Écriture",
+            "Sens"
+          ],
+          "lignes": [
+            [
+              "x = 3",
+              "**range** 3 dans x"
+            ],
+            [
+              "<b>==</b>   !=",
+              "tests d’égalité, de différence"
+            ],
+            [
+              "7 % 2",
+              "reste de la division&nbsp;: **1**"
+            ],
+            [
+              "for",
+              "on connaît le **nombre** de tours"
+            ],
+            [
+              "while",
+              "on répète **tant que** c’est vrai"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire un programme à la main",
+          "etapes": [
+            {
+              "titre": "Départ",
+              "texte": "noter la valeur de chaque variable avant la boucle"
+            },
+            {
+              "titre": "Tour par tour",
+              "texte": "dérouler la boucle, un tableau de valeurs"
+            },
+            {
+              "titre": "Résultat",
+              "texte": "lire la valeur de return, ou de la variable finale"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "s = 0, puis for i in range(4) : s = s + i. __Valeur de s__&nbsp;?",
+          "calcul": "i = 0, 1, 2, 3\ns = 0 + 0 + 1 + 2 + 3",
+          "aparte": "range(4) s’arrête à 3",
+          "resultat": "s = [[6]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "range",
+              "texte": "range(5) donne 0, 1, 2, 3, 4&nbsp;: **cinq** valeurs, sans 5."
+            },
+            {
+              "titre": "Flottant",
+              "texte": "2.5 s’écrit avec un **point**, pas une virgule."
+            },
+            {
+              "titre": "return",
+              "texte": "**renvoie** une valeur réutilisable&nbsp;; print l’affiche seulement."
+            },
+            {
+              "titre": "Terme de suite",
+              "texte": "u = 5 puis u = 2*u + 1 deux fois&nbsp;: **23**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "def terme(n) :",
+              "quoi": "la fonction"
+            },
+            {
+              "texte": "····u = 5 puis for i in range(n) : u = 2*u + 1",
+              "quoi": "la boucle"
+            },
+            {
+              "texte": "····return u",
+              "quoi": "le résultat"
+            },
+            {
+              "texte": "terme(2) renvoie 23, que l’on peut réutiliser",
+              "quoi": "l’appel"
+            }
+          ],
+          "pied": "Contrôle&nbsp;: terme(2) donne 11, puis ==23==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire <b>=</b> pour **tester** l’égalité.",
+            "Oublier les **deux-points** ou le retrait.",
+            "Croire que range(n) **contient** n.",
+            "Confondre **return** et print."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que parcourt **range(3)**&nbsp;?",
+            "Que vaut **7 % 2**&nbsp;?",
+            "u = 5, puis u = 2*u + 1&nbsp;: **u**&nbsp;?"
+          ],
+          "reponses": "1) 0, 1, 2 · 2) 1 · 3) 11"
+        }
+      ]
+    }
+  ]
+}

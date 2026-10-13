@@ -1,0 +1,121 @@
+{
+  "titre": "Nommer un microbe",
+  "titreSurligne": "microbe",
+  "accroche": "Un nom, une forme, un groupement.",
+  "bonus": "Genre **majuscule** + espèce **minuscule**, en italique · Gram **+** = violet, Gram **−** = rose",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biotechnologies/nommer-et-identifier-les-micro-organismes-par-leur-morpholog.webp",
+    "prompt": "a glossy violet microscope with a golden eyepiece, tiny golden round and rod-shaped cells in a chain and a cluster, sparkles"
+  },
+  "marcel": "Rond, bâton ou virgule&nbsp;?\nOn regarde la forme !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les caractères morphologiques",
+          "entetes": ["Critère", "Possibilités"],
+          "lignes": [
+            ["**Forme**", "coques, bacilles, coccobacilles, spirilles, vibrions"],
+            ["**Groupement**", "isolés, diplocoques, **chaînettes**, **amas**"],
+            ["**Gram**", "positif (violet) ou négatif (rose)"],
+            ["**Mobilité**", "observée à l’état frais"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Nomenclature",
+          "items": [
+            { "terme": "Nom binomial", "definition": "**genre** (majuscule) + **espèce** (minuscule) : <i>Escherichia coli</i>" },
+            { "terme": "Abréviation", "definition": "<i>E. coli</i> après la première mention ; « sp. » = espèce non déterminée" },
+            { "terme": "Taxon", "definition": "un niveau : domaine → … → **famille** → **genre** → **espèce**" },
+            { "terme": "Souche pure", "definition": "culture de départ de toute identification" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "À retenir",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Chaînettes", "texte": "coques qui se divisent **toujours dans le même plan** : streptocoques." },
+            { "titre": "Amas", "texte": "division dans **plusieurs plans** : staphylocoques, en grappe." },
+            { "titre": "Levure", "texte": "5 à 10&nbsp;µm, ovale, **bourgeon**, noyau." },
+            { "titre": "Bactérie", "texte": "environ 1&nbsp;µm, **jamais** de bourgeon, pas de noyau." },
+            { "titre": "Familles", "texte": "se terminent en <b>-aceae</b> : Enterobacteriaceae." },
+            { "titre": "Dendrogramme", "texte": "lit la proximité génétique : plus de **97&nbsp;%** de similitude, souvent même espèce." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Gram&nbsp;: coques violets en grappes, environ 1&nbsp;µm.",
+          "calcul": "violet = Gram + · grappes = amas",
+          "aparte": "morphologie seule",
+          "resultat": "[[coques Gram + en amas]]"
+        },
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Coques Gram positif en amas, d’environ 1 µm.", "quoi": "décrire" },
+            { "texte": "Orientation vers le genre <i>Staphylococcus</i>.", "quoi": "orienter" },
+            { "texte": "Il faut des tests complémentaires pour l’espèce.", "quoi": "nuancer" }
+          ],
+          "pied": "La forme **oriente**, elle ne suffit pas à **identifier**."
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Pour aller plus loin",
+          "deux": true,
+          "items": [
+            { "titre": "Culturaux", "texte": "aspect des colonies, croissance sélective" },
+            { "titre": "Métaboliques", "texte": "fermentation des sucres, enzymes" },
+            { "titre": "Terminale", "texte": "deux bacilles Gram négatif peuvent différer" },
+            { "titre": "État frais", "texte": "kéfir : levures et bactéries ensemble" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire <i>escherichia Coli</i> : majuscule au **genre** seulement.",
+            "Confondre **chaînette** et **amas**.",
+            "Conclure à l’**espèce** sur la seule forme.",
+            "Prendre une levure pour une grosse bactérie."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que désigne **sp.** après un genre&nbsp;?",
+            "Quels coques forment des **amas**&nbsp;?",
+            "Une cellule qui **bourgeonne** est-elle bactérie&nbsp;?"
+          ],
+          "reponses": "1) espèce non déterminée · 2) les staphylocoques · 3) non, c’est une levure"
+        }
+      ]
+    }
+  ]
+}

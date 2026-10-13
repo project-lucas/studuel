@@ -1,0 +1,157 @@
+{
+  "titre": "Avancement et limitant",
+  "titreSurligne": "limitant",
+  "accroche": "Le tableau qui structure tout exercice.",
+  "epreuve": "bac",
+  "bonus": "**Réactif** : n₀ − coef × x · **produit** : n₀ + coef × x · limitant : le **plus petit** n₀ ÷ coef",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/modelisation-de-l-evolution-d-une-reaction-chimique.webp",
+    "prompt": "a glossy violet flask pouring into a golden flask with a small three-row table of beads between them, sparkles"
+  },
+  "marcel": "Divise par le\ncoefficient !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les mots clés",
+          "items": [
+            {
+              "terme": "Avancement x",
+              "definition": "progression de la réaction, en **mol**, de 0 à x<sub>max</sub>"
+            },
+            {
+              "terme": "Réactif limitant",
+              "definition": "le premier réactif **épuisé**"
+            },
+            {
+              "terme": "Stœchiométrique",
+              "definition": "tous les réactifs s’épuisent **ensemble**"
+            },
+            {
+              "terme": "Rendement",
+              "definition": "comparaison à la **mesure** expérimentale"
+            },
+            {
+              "terme": "Bilan de matière",
+              "definition": "on remplace **x** par **x<sub>max</sub>** pour les quantités finales"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Quantités à l’instant x",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "n = n₀ − a × x",
+            "n = n₀ + b × x"
+          ],
+          "regle": "Réactif (coefficient **a**) : il diminue. Produit (coefficient **b**) : il augmente. Les **coefficients** entrent dans le calcul.",
+          "note": "équation équilibrée d’abord"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Trouver le réactif limitant",
+          "etapes": [
+            {
+              "titre": "Diviser",
+              "texte": "pour chaque réactif, **n₀ ÷ coefficient**"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "le **plus petit rapport** désigne le limitant"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "**x<sub>max</sub>** vaut ce rapport&nbsp;; on remplace x par x<sub>max</sub>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "2 H₂ + O₂ → 2 H₂O avec 3,0 mol de H₂ et 2,0 mol de O₂. __Limitant__&nbsp;?",
+          "calcul": "H₂ : 3,0 ÷ 2 = 1,5 · O₂ : 2,0 ÷ 1 = 2,0",
+          "aparte": "le plus petit gagne",
+          "resultat": "[[H₂ limitant]], x<sub>max</sub> = 1,5 mol"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Qui est limitant&nbsp;?",
+          "oui": {
+            "titre": "Bonne méthode",
+            "texte": "Comparer **n₀ ÷ coefficient** pour chaque réactif."
+          },
+          "non": {
+            "titre": "Fausse méthode",
+            "texte": "Prendre la plus petite quantité initiale&nbsp;: faux dès que les coefficients **diffèrent**."
+          },
+          "essai": {
+            "texte": "Si tous les rapports sont égaux, le mélange est <i>stœchiométrique</i>&nbsp;: aucun réactif n’est gaspillé."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "Tableau d’avancement&nbsp;: état initial, intermédiaire, final.",
+              "quoi": "le tableau"
+            },
+            {
+              "texte": "n(H₂) = 3,0 − 2x<sub>max</sub> = 0 donc x<sub>max</sub> = 1,5 mol",
+              "quoi": "le limitant"
+            },
+            {
+              "texte": "n(H₂O) = 2 × 1,5 = 3,0 mol, m = n × M",
+              "quoi": "convertir"
+            }
+          ],
+          "pied": "Pour un gaz, ==V = n × V<sub>m</sub>==&nbsp;; pour une masse, ==m = n × M==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier de **diviser** par le coefficient.",
+            "Équation **non équilibrée** au départ.",
+            "Ajouter au lieu de **retrancher** pour un réactif.",
+            "Calculer une masse sans passer par **M**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que vaut l’avancement à l’**état initial**&nbsp;?",
+            "Comment trouve-t-on le **réactif limitant**&nbsp;?",
+            "Quelle formule donne une **masse** à partir de n&nbsp;?"
+          ],
+          "reponses": "1) 0 · 2) plus petit n₀ ÷ coefficient · 3) m = n × M"
+        }
+      ]
+    }
+  ]
+}

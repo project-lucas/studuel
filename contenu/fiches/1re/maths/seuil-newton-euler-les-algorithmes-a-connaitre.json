@@ -1,0 +1,115 @@
+{
+  "titre": "Seuil, Newton, Euler",
+  "titreSurligne": "Newton",
+  "accroche": "Quatre algorithmes du programme.",
+  "epreuve": "bac-1re",
+  "bonus": "seuil&nbsp;: while pour **continuer** · Newton&nbsp;: f′(x) ≠ 0 · Euler&nbsp;: y(k+1) = (1 + h) y(k)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/seuil-newton-euler-les-algorithmes-a-connaitre.webp",
+    "prompt": "a glossy violet curve with a golden tangent line meeting the horizontal axis at a sparkling golden point, a tiny golden staircase of arrows, same art style as the reference icons, on a flat magenta background, no text, no numbers"
+  },
+  "marcel": "Un algorithme,\nune question !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Newton et Euler",
+          "petite": true,
+          "lignes": ["x<sub>n+1</sub> = x<sub>n</sub> − {f(x<sub>n</sub>)/f′(x<sub>n</sub>)}", "y<sub>k+1</sub> = (1 + h) y<sub>k</sub>"],
+          "regle": "Newton remplace la courbe par sa **tangente** pour approcher une solution de f(x) = 0. Euler construit f telle que f′ = f.",
+          "note": "pas de division par 0&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Quelle question ?",
+          "entetes": ["Algorithme", "Il répond à"],
+          "lignes": [
+            ["**Seuil**", "à partir de quel rang u<sub>n</sub> dépasse-t-elle une valeur&nbsp;?"],
+            ["**Newton**", "une solution approchée de f(x) = 0"],
+            ["**Euler**", "construire l’exponentielle pas à pas"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Écrire un algorithme de seuil",
+          "etapes": [
+            { "titre": "Initialiser", "texte": "n = 0 et le premier terme u" },
+            { "titre": "while", "texte": "tant que u est sous le seuil (condition pour continuer)" },
+            { "titre": "Avancer", "texte": "n = n + 1, u = terme suivant, puis return n" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Newton pour √2&nbsp;: f(x) = x² − 2, x₀ = 1. __x₁ et x₂__&nbsp;?",
+          "calcul": "f′(x) = 2x\nx₁ = 1 − {−1/2} = 1,5\nx₂ = 1,5 − {0,25/3}",
+          "aparte": "√2 ≈ 1,41421",
+          "resultat": "x₁ = [[1,5]] · x₂ ≈ [[1,4167]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "À retenir",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Capital à 5 %", "texte": "de 1 000 € à plus de 2 000 €&nbsp;: seuil **n = 15**." },
+            { "titre": "Euler", "texte": "h = 0,1, dix pas&nbsp;: y(10) = 1,1<sup>10</sup> ≈ **2,59** (e ≈ 2,718)." },
+            { "titre": "Sécantes", "texte": "{f(a + h) − f(a)/h} se rapproche de **f′(a)** quand h diminue." },
+            { "titre": "Archimède", "texte": "on encadre **π** par des polygones de plus en plus de côtés." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "n = 0 et u = 1000", "quoi": "le départ" },
+            { "texte": "while u < 2000 : n = n + 1, u = 1.05 * u", "quoi": "la boucle" },
+            { "texte": "return n&nbsp;; la fonction renvoie 15", "quoi": "le résultat" }
+          ],
+          "pied": "Contrôle&nbsp;: 1,05<sup>14</sup> ≈ 1,98 < 2 et 1,05<sup>15</sup> ≈ ==2,08==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire la condition **inverse** (u > 2000) dans while.",
+            "Diviser par **f′(x) = 0** dans Newton.",
+            "Oublier d’**incrémenter** n dans la boucle.",
+            "Prendre un point de départ **trop loin** en Newton."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Condition du **while** pour dépasser 2 000&nbsp;?",
+            "Newton, f(x) = x² − 2, x₀ = 1&nbsp;: **x₁**&nbsp;?",
+            "Euler, h = 0,1, 10 pas&nbsp;: **y(10)**&nbsp;?"
+          ],
+          "reponses": "1) while u < 2000 · 2) x₁ = 1,5 · 3) environ 2,59"
+        }
+      ]
+    }
+  ]
+}

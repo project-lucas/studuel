@@ -1,0 +1,110 @@
+{
+  "titre": "L’immunité innée",
+  "titreSurligne": "innée",
+  "accroche": "La première ligne de défense.",
+  "bonus": "**Innée**&nbsp;: immédiate, non spécifique, sans mémoire · l’inné **déclenche** l’adaptatif",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/svt/l-immunite-innee.webp",
+    "prompt": "a glossy violet shield with a golden macrophage cell engulfing a small dark germ, sparkles"
+  },
+  "marcel": "Immédiate pour tous\nles intrus !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "L’inflammation aiguë",
+          "entetes": ["Signe", "Cause"],
+          "lignes": [
+            ["**Rougeur**, **chaleur**", "vasodilatation locale"],
+            ["**Gonflement** (œdème)", "perméabilité des vaisseaux accrue"],
+            ["**Douleur**", "médiateurs sur les terminaisons nerveuses"]
+          ]
+        },
+        {
+          "type": "frise",
+          "numero": 2,
+          "titre": "La phagocytose",
+          "etapes": [
+            { "date": "Adhésion", "texte": "Le phagocyte se lie au microbe." },
+            { "date": "Ingestion", "texte": "Il l’englobe dans une vésicule." },
+            { "date": "Digestion", "texte": "Les enzymes du **phagolysosome** le détruisent." },
+            { "date": "Élimination", "texte": "Les débris sont rejetés." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les acteurs",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Barrières", "texte": "Peau, muqueuses, mucus, cils, acidité gastrique, **microbiote**." },
+            { "titre": "Cellules sentinelles", "texte": "**Macrophages**, cellules dendritiques, mastocytes, dans les tissus." },
+            { "titre": "Récepteurs", "texte": "Ils détectent des motifs **communs** à des familles d’agents infectieux." },
+            { "titre": "Médiateurs", "texte": "**Histamine**, prostaglandines, cytokines&nbsp;: vasodilatation, appel de phagocytes." },
+            { "titre": "Présentation", "texte": "La cellule dendritique migre vers le **ganglion** et présente l’antigène." },
+            { "titre": "Anti-inflammatoires", "texte": "Aspirine, ibuprofène, corticoïdes&nbsp;: utiles, mais ils **affaiblissent** une défense." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Expliquer une réaction inflammatoire",
+          "etapes": [
+            { "titre": "Détecter", "texte": "les sentinelles repèrent l’intrus par leurs récepteurs" },
+            { "titre": "Signaler", "texte": "les médiateurs dilatent les vaisseaux et attirent les phagocytes" },
+            { "titre": "Détruire", "texte": "phagocytose, puis relais vers l’immunité adaptative" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "La vasodilatation explique la rougeur et la chaleur.", "quoi": "relier" },
+            { "texte": "La réponse est non spécifique&nbsp;: les récepteurs reconnaissent des motifs communs.", "quoi": "justifier" },
+            { "texte": "La cellule dendritique présente l’antigène au ganglion.", "quoi": "enchaîner" },
+            { "texte": "Les phagocytes détruisent le microbe&nbsp;: la défense est immédiate.", "quoi": "conclure" }
+          ],
+          "pied": "L’==inné== commande l’==adaptatif==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que l’immunité innée a une **mémoire**.",
+            "La croire **spécifique** d’un seul microbe.",
+            "Confondre **œdème** et rougeur.",
+            "Oublier le **lien** avec l’immunité adaptative."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle cause explique la **rougeur**&nbsp;?",
+            "Quelle étape suit l’**ingestion** du microbe&nbsp;?",
+            "Où la cellule dendritique **présente**-t-elle l’antigène&nbsp;?"
+          ],
+          "reponses": "1) la vasodilatation · 2) la digestion · 3) dans un ganglion lymphatique"
+        }
+      ]
+    }
+  ]
+}

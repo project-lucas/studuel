@@ -1,0 +1,193 @@
+{
+  "titre": "Suites arithmétiques",
+  "titreSurligne": "arithmétiques",
+  "accroche": "Ajouter toujours la même chose.",
+  "bonus": "**u(n+1) = u(n) + r** · **u(n) = u(0) + n r** · points **alignés** · 1 + 2 + … + n = **n(n+1)/2**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/enseignement-scientifique/croissance-lineaire-et-suites-arithmetiques.webp",
+    "prompt": "a glossy violet staircase of equal golden steps rising in a straight line, small golden dots on each step, sparkles"
+  },
+  "marcel": "Toujours +r,\nça forme une droite !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Suite arithmétique",
+          "petite": true,
+          "lignes": [
+            "u(n+1) = u(n) + r",
+            "u(n) = u(0) + n × r"
+          ],
+          "regle": "**r** = u(n+1) − u(n) : ce qu’on **ajoute** à chaque pas. r négatif&nbsp;: la suite **décroît**. Sur un tableur : cellule = la précédente + r.",
+          "note": "départ au rang 1 : (n − 1) × r"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Reconnaître",
+          "entetes": [
+            "Suite",
+            "Différences",
+            "Nature"
+          ],
+          "lignes": [
+            [
+              "3, 7, 11, 15",
+              "4, 4, 4",
+              "**arithmétique** (r = 4)"
+            ],
+            [
+              "3, 6, 12, 24",
+              "3, 6, 12",
+              "pas arithmétique"
+            ],
+            [
+              "Points d’un graphique",
+              "**alignés**",
+              "croissance **linéaire**"
+            ],
+            [
+              "5, 3, 1, −1",
+              "−2, −2, −2",
+              "r = −2 : **décroît**"
+            ],
+            [
+              "2, 4, 8, 16",
+              "2, 4, 8",
+              "pas arithmétique"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Modéliser une évolution linéaire",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "u(0) (départ) et r (ce qu’on ajoute par pas)"
+            },
+            {
+              "titre": "Écrire",
+              "texte": "u(n) = u(0) + n × r"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "u au rang demandé, avec l’unité"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Abonnement 15 € par mois, 40 € de frais d’inscription. Coût après 24 mois&nbsp;?",
+          "calcul": "u(n) = 40 + 15 n",
+          "aparte": "n = 24",
+          "resultat": "u(24) = 40 + 360 = [[400 €]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Arithmétique ou non ?",
+          "oui": {
+            "titre": "Différences",
+            "texte": "Constantes entre termes consécutifs&nbsp;: **arithmétique**."
+          },
+          "non": {
+            "titre": "Quotients",
+            "texte": "Constants (3, 6, 12, 24)&nbsp;: **géométrique**."
+          },
+          "essai": {
+            "texte": "Somme de 1 à 100&nbsp;: <b>cinquante paires valant 101</b>, soit 5 050 (Gauss). n(n+1)/2 se retrouve."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Les trois repères",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Le test",
+              "texte": "calculer les **différences** entre termes consécutifs."
+            },
+            {
+              "titre": "Le graphique",
+              "texte": "les points sont **alignés** : signature de la croissance linéaire."
+            },
+            {
+              "titre": "Le tableur",
+              "texte": "formule d’une cellule = la précédente **+ r**."
+            },
+            {
+              "titre": "Le signe de r",
+              "texte": "**r > 0** croît, **r < 0** décroît, r = 0 constante."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "u(1) − u(0) = u(2) − u(1) = 4 : r = 4",
+              "quoi": "justifier"
+            },
+            {
+              "texte": "u(n) = u(0) + 4 n",
+              "quoi": "la forme explicite"
+            },
+            {
+              "texte": "u(24) = 40 + 15 × 24 = 400 €",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Sur un tableur : cellule = la précédente ==+ r==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Utiliser **n − 1** quand la suite commence au rang **0**.",
+            "Calculer r par **division** (c’est la géométrique).",
+            "Oublier le **signe** : r < 0 décroît.",
+            "Conclure sur **un seul** écart au lieu de tous."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Raison de 3, 7, 11, 15&nbsp;?",
+            "u(0) = 2, r = 5&nbsp;: u(4)&nbsp;?",
+            "Somme de 1 à 100&nbsp;?"
+          ],
+          "reponses": "1) 4 · 2) 22 · 3) 5 050"
+        }
+      ]
+    }
+  ]
+}

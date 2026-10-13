@@ -1,0 +1,178 @@
+{
+  "titre": "Aliments et besoins",
+  "titreSurligne": "besoins",
+  "accroche": "Ce qu’on mange, ce qu’il faut vraiment.",
+  "bonus": "**1 g** glucide ou protide ≈ **4 kcal** · **1 g** lipide ≈ **9 kcal** · essentiel = **non synthétisé**, apporté par l’alimentation",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biochimie-biologie/les-aliments-et-les-besoins-nutritionnels.webp",
+    "prompt": "a glossy violet plate holding a golden apple, a bread slice and a small golden fish, tiny golden sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Variété à table,\nbesoins couverts !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les constituants des aliments",
+          "entetes": [
+            "Famille",
+            "Rôle principal"
+          ],
+          "lignes": [
+            [
+              "**Glucides**",
+              "énergie rapide"
+            ],
+            [
+              "**Lipides**",
+              "réserve, membranes"
+            ],
+            [
+              "**Protides**",
+              "construction, enzymes"
+            ],
+            [
+              "**Eau, sels minéraux**",
+              "milieu intérieur, os"
+            ],
+            [
+              "**Vitamines**",
+              "cofacteurs, très faible dose"
+            ],
+            [
+              "**Fibres**",
+              "non digestibles, transit"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "À savoir définir",
+          "items": [
+            {
+              "terme": "Macronutriments",
+              "definition": "glucides, lipides, protides&nbsp;: des dizaines de grammes par jour."
+            },
+            {
+              "terme": "Micronutriments",
+              "definition": "vitamines, oligo-éléments&nbsp;: quelques mg ou µg."
+            },
+            {
+              "terme": "Nutriment essentiel",
+              "definition": "que l’organisme ne sait **pas synthétiser**&nbsp;: il doit être apporté."
+            },
+            {
+              "terme": "Allégation",
+              "definition": "affirmation sur l’emballage&nbsp;; la **recommandation**, elle, vient des autorités de santé."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer l’énergie d’un aliment",
+          "etapes": [
+            {
+              "titre": "Convertir",
+              "texte": "les masses de la valeur pour 100 g à la masse du produit"
+            },
+            {
+              "titre": "Multiplier",
+              "texte": "chaque masse par 4 (glucides, protides) ou 9 (lipides)"
+            },
+            {
+              "titre": "Additionner",
+              "texte": "et conclure en kcal, avec l’unité"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Pour 100 g d’un yaourt&nbsp;: 3,5 g de protéines, 4,7 g de glucides, 3,2 g de lipides. Énergie pour 100 g&nbsp;?",
+          "calcul": "3,5 × 4 + 4,7 × 4 + 3,2 × 9",
+          "aparte": "= 14 + 18,8 + 28,8",
+          "resultat": "≈ [[61,6 kcal]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Les besoins d’un adolescent",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Quantitatifs",
+              "texte": "environ **2 000 à 2 800 kcal** par jour selon le sexe et l’activité."
+            },
+            {
+              "titre": "Qualitatifs",
+              "texte": "**9 acides aminés essentiels** (lysine, tryptophane, valine…)."
+            },
+            {
+              "titre": "Acides gras",
+              "texte": "**2 essentiels**&nbsp;: oméga-6 (linoléique) et oméga-3 (alpha-linolénique)."
+            },
+            {
+              "titre": "Déséquilibres",
+              "texte": "excès gras et sucres&nbsp;: obésité, diabète 2&nbsp;; manque de fer&nbsp;: anémie."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Un nutriment essentiel ne peut pas être synthétisé par l’organisme.",
+              "quoi": "définir"
+            },
+            {
+              "texte": "Il doit donc être apporté par l’alimentation.",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Ration variée = ==besoins quantitatifs et qualitatifs== couverts, sans excès de gras ni de sucres rapides."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **recommandation** et **allégation**.",
+            "Compter 4 kcal par gramme de **lipide**&nbsp;: c’est 9.",
+            "Croire que les **fibres** sont digérées.",
+            "Oublier l’unité **kcal** au résultat."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Énergie de **1 g** de lipide&nbsp;?",
+            "Que veut dire **nutriment essentiel**&nbsp;?",
+            "Citez un **acide gras essentiel**."
+          ],
+          "reponses": "1) ≈ 9 kcal · 2) non synthétisé, apporté par l’aliment · 3) acide linoléique (oméga-6)"
+        }
+      ]
+    }
+  ]
+}

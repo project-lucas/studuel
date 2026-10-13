@@ -1,0 +1,163 @@
+{
+  "titre": "Coder l’information",
+  "titreSurligne": "Coder",
+  "accroche": "Tout est une suite de bits.",
+  "bonus": "1 octet = **8 bits** = **256** valeurs · n bits = **2<sup>n</sup>** valeurs · 1 chiffre hexa = **4 bits**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/codage-de-l-information.webp",
+    "prompt": "a glossy violet row of binary digit tiles 0 and 1 glowing gold, sparkles, same art style as the reference icons, no readable text"
+  },
+  "marcel": "Un octet, huit bits,\n256 possibilités !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les valeurs d’un mot",
+          "petite": true,
+          "lignes": [
+            "2<sup>n</sup> valeurs",
+            "octet : 2<sup>8</sup> = 256"
+          ],
+          "regle": "Un mot de **n bits** code ==2<sup>n</sup>== valeurs, de 0 à 2<sup>n</sup> − 1. Un octet va donc de **0 à 255**.",
+          "note": "à savoir dans les deux sens&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois bases",
+          "entetes": [
+            "Base",
+            "Chiffres"
+          ],
+          "lignes": [
+            [
+              "**Binaire** (2)",
+              "0 et 1"
+            ],
+            [
+              "**Décimal** (10)",
+              "0 à 9"
+            ],
+            [
+              "**Hexadécimal** (16)",
+              "0 à 9 puis A à F"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Décimal vers binaire",
+          "etapes": [
+            {
+              "titre": "Diviser",
+              "texte": "le nombre par 2, puis chaque quotient par 2, jusqu’à 0"
+            },
+            {
+              "titre": "Noter",
+              "texte": "le reste de chaque division, 0 ou 1"
+            },
+            {
+              "titre": "Lire",
+              "texte": "les restes de bas en haut, puis regrouper par 4 pour l’hexadécimal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Écrire __13__ en binaire.",
+          "calcul": "13 = 6×2 + 1 ; 6 = 3×2 + 0 ; 3 = 1×2 + 1 ; 1 = 0×2 + 1",
+          "aparte": "restes lus de bas en haut",
+          "resultat": "13 = [[1101]]<sub>2</sub> = D en hexa"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le bit de parité",
+          "oui": {
+            "titre": "Il détecte",
+            "texte": "Un nombre **impair** d’erreurs est repéré."
+          },
+          "non": {
+            "titre": "Il ne corrige pas",
+            "texte": "Il ne dit pas **où** est l’erreur&nbsp;: les codes correcteurs, eux, la retrouvent."
+          },
+          "essai": {
+            "texte": "Le mot 01000001 vaut <i>65</i> en entier, <i>A</i> en ASCII, et 41 en hexadécimal."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "1011<sub>2</sub> = 8 + 0 + 2 + 1",
+              "quoi": "les poids"
+            },
+            {
+              "texte": "= 11 en décimal",
+              "quoi": "le résultat"
+            },
+            {
+              "texte": "2<sup>8</sup> = 256 valeurs sur un octet",
+              "quoi": "la capacité"
+            }
+          ],
+          "pied": "**Rien dans le mot** ne dit ce qu’il représente&nbsp;: c’est la ==convention== de codage qui l’interprète."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Lire les restes **de haut en bas**.",
+            "Croire que l’octet code **255** valeurs et non 256.",
+            "Confondre **ASCII** (7 bits) et Unicode.",
+            "Penser que la parité **corrige** l’erreur."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "À retenir",
+          "paragraphes": [
+            "Les **caractères** se codent en ASCII (7 bits) ou en Unicode, encodé en UTF-8, de longueur variable. Une **image** est un tableau de pixels, chacun défini par ses composantes rouge, verte et bleue."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**1010** en décimal&nbsp;?",
+            "Combien de valeurs avec **10 bits**&nbsp;?",
+            "Combien de bits par chiffre **hexadécimal**&nbsp;?"
+          ],
+          "reponses": "1) 10 · 2) 1024 · 3) quatre"
+        }
+      ]
+    }
+  ]
+}

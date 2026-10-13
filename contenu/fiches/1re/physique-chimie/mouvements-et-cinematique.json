@@ -1,0 +1,155 @@
+{
+  "titre": "Mouvements et lois",
+  "titreSurligne": "lois",
+  "accroche": "Décrire, puis expliquer un mouvement.",
+  "bonus": "ΣF = m × a · v = d ÷ t · **N**, **kg**, **m/s²** · chute libre&nbsp;: a = g",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/mouvements-et-cinematique.webp",
+    "prompt": "a glossy violet sports car speeding on a golden track with motion streaks and arrows, sparkles"
+  },
+  "marcel": "Pas de force,\npas d’accélération !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La deuxième loi",
+          "petite": true,
+          "lignes": [
+            "ΣF = m × a",
+            "v = {d/t}"
+          ],
+          "regle": "**ΣF** somme des forces (N), **m** masse (kg), **a** accélération (m/s²). Dans un ==référentiel galiléen==. v = d ÷ t pour un mouvement uniforme.",
+          "note": "a est un vecteur&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois lois",
+          "entetes": [
+            "Loi",
+            "Énoncé",
+            "À retenir"
+          ],
+          "lignes": [
+            [
+              "1<sup>re</sup> (inertie)",
+              "ΣF = 0",
+              "immobile ou rectiligne uniforme"
+            ],
+            [
+              "2<sup>e</sup>",
+              "ΣF = m × a",
+              "a ∥ ΣF"
+            ],
+            [
+              "3<sup>e</sup> (actions)",
+              "F<sub>A/B</sub> = −F<sub>B/A</sub>",
+              "2 corps différents"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Système",
+              "texte": "choisir le **système** et le **référentiel** (galiléen)"
+            },
+            {
+              "titre": "Bilan",
+              "texte": "lister et représenter toutes les **forces** extérieures"
+            },
+            {
+              "titre": "Newton",
+              "texte": "appliquer ΣF = m × a pour trouver l’**accélération**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une voiture de 1 000 kg démarre à l’arrêt, force résultante 2 000 N. Sa __vitesse__ après 5 s&nbsp;?",
+          "calcul": "a = ΣF ÷ m = 2 000 ÷ 1 000 = 2 m/s²",
+          "aparte": "a constante, v = a × t",
+          "resultat": "v = 2 × 5 = [[10 m/s]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Mouvement circulaire",
+          "oui": {
+            "titre": "a non nulle",
+            "texte": "Vitesse de valeur constante, mais la **direction change**&nbsp;: l’accélération est dirigée vers le **centre**."
+          },
+          "non": {
+            "titre": "v constante donc a = 0",
+            "texte": "Faux&nbsp;: le vecteur vitesse change de direction, donc l’accélération n’est pas nulle."
+          },
+          "essai": {
+            "texte": "Une voiture qui <i>prend un virage</i> à 50 km/h constants accélère quand même."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Système&nbsp;: la voiture&nbsp;; référentiel terrestre galiléen",
+              "quoi": "cadrer"
+            },
+            {
+              "texte": "2<sup>e</sup> loi&nbsp;: ΣF = m × a, donc a = ΣF ÷ m",
+              "quoi": "la loi"
+            },
+            {
+              "texte": "a = 2 m/s², puis v = 10 m/s",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Les deux forces de la 3<sup>e</sup> loi ==ne se compensent jamais==&nbsp;: elles agissent sur deux corps."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier de préciser le **référentiel** galiléen.",
+            "Croire que « vitesse constante » veut dire **a = 0**.",
+            "Compenser les deux forces de la **3<sup>e</sup> loi**.",
+            "Penser que la **masse** change la chute libre."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Si ΣF = 0, que fait le centre de masse&nbsp;?",
+            "**a** pour m = 2 kg et ΣF = 6 N&nbsp;?",
+            "Les forces de la 3<sup>e</sup> loi se compensent-elles&nbsp;?"
+          ],
+          "reponses": "1) immobile ou rectiligne uniforme · 2) 3 m/s² · 3) non, deux corps différents"
+        }
+      ]
+    }
+  ]
+}

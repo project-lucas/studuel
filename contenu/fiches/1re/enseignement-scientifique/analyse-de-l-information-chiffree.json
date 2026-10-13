@@ -1,0 +1,187 @@
+{
+  "titre": "Information chiffrée",
+  "titreSurligne": "chiffrée",
+  "accroche": "Un chiffre seul ne dit rien.",
+  "bonus": "**CM = 1 + t** · évolutions successives : on **multiplie** · réciproque : **1/CM** · **points** ≠ **%**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/enseignement-scientifique/analyse-de-l-information-chiffree.webp",
+    "prompt": "a glossy violet bar chart with a golden percent sign and an upward arrow, small golden coins, sparkles"
+  },
+  "marcel": "Les pourcentages\nse multiplient !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Évolution",
+          "petite": true,
+          "lignes": [
+            "t = {V<sub>2</sub> − V<sub>1</sub>/V<sub>1</sub>}",
+            "CM = 1 + t"
+          ],
+          "regle": "**V<sub>2</sub> = V<sub>1</sub> × CM**. Hausse de 20 % → CM = **1,20**&nbsp;; baisse de 20 % → CM = **0,80**.",
+          "note": "successives : CM<sub>1</sub> × CM<sub>2</sub>"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Quel outil ?",
+          "entetes": [
+            "Situation",
+            "Calcul"
+          ],
+          "lignes": [
+            [
+              "Proportions emboîtées",
+              "on **multiplie**"
+            ],
+            [
+              "Évolutions successives",
+              "CM global = CM<sub>1</sub> × CM<sub>2</sub>"
+            ],
+            [
+              "Annuler une évolution",
+              "coefficient **inverse** 1/CM"
+            ],
+            [
+              "De 8 % à 10 %",
+              "**+2 points**, soit **+25 %**"
+            ],
+            [
+              "Indice base 100",
+              "100 × V / V<sub>réf</sub>"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre une évolution",
+          "etapes": [
+            {
+              "titre": "Traduire",
+              "texte": "chaque pourcentage en coefficient multiplicateur"
+            },
+            {
+              "titre": "Multiplier",
+              "texte": "les CM entre eux (jamais additionner)"
+            },
+            {
+              "titre": "Reconvertir",
+              "texte": "t = CM − 1, puis conclure avec le signe"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un prix monte de 20 % puis baisse de 20 %. Bilan&nbsp;?",
+          "calcul": "CM = 1,20 × 0,80",
+          "aparte": "pas un retour au départ",
+          "resultat": "CM = [[0,96]] : baisse de 4 %"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Points ou pourcentage ?",
+          "oui": {
+            "titre": "Relatif",
+            "texte": "De 8 % à 10 %&nbsp;: **+25 %** (taux d’évolution)."
+          },
+          "non": {
+            "titre": "Absolu",
+            "texte": "Écrire « +2 % » pour une différence de **points**."
+          },
+          "essai": {
+            "texte": "Les deux formulations sont <b>justes</b>&nbsp;: +2 points (absolu) ou +25 % (relatif). Elles ne disent pas la même chose."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Proportion",
+              "texte": "effectif(A) / effectif(E), entre **0** et **1** ; ×100 = pourcentage."
+            },
+            {
+              "titre": "Emboîtées",
+              "texte": "40 % × 25 % = **10 %** : on multiplie, jamais on n’additionne."
+            },
+            {
+              "titre": "Indice",
+              "texte": "112 signifie **+12 %** depuis l’année de base."
+            },
+            {
+              "titre": "Réciproque",
+              "texte": "annuler +25 % : multiplier par **0,80**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "CM<sub>1</sub> = 1,20 et CM<sub>2</sub> = 0,80",
+              "quoi": "traduire"
+            },
+            {
+              "texte": "CM = 1,20 × 0,80 = 0,96",
+              "quoi": "multiplier"
+            },
+            {
+              "texte": "t = 0,96 − 1 = −0,04, soit −4 %",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "Après +25 %, il faut **−20 %** (1/1,25 = 0,80), ==pas −25 %==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "**Additionner** les pourcentages successifs.",
+            "Croire que +20 % puis −20 % **revient** au départ.",
+            "Annuler une hausse de 25 % par une baisse de **25 %**.",
+            "Confondre **points de pourcentage** et **pourcentage**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "CM d’une baisse de **30 %**&nbsp;?",
+            "CM global de +10 % puis +10 %&nbsp;?",
+            "Un indice de **112** signifie quoi&nbsp;?"
+          ],
+          "reponses": "1) 0,70 · 2) 1,21 (+21 %) · 3) +12 % depuis l’année de base"
+        }
+      ]
+    }
+  ]
+}

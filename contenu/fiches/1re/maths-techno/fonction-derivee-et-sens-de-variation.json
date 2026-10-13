@@ -1,0 +1,121 @@
+{
+  "titre": "Dérivée et variations",
+  "titreSurligne": "variations",
+  "accroche": "Le signe de f′ dit si f monte.",
+  "bonus": "(k)′ = 0 · (x)′ = 1 · (x²)′ = 2x · (x³)′ = 3x² · f′ > 0 ⇒ f **croissante** · f′ < 0 ⇒ f **décroissante**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths-techno/fonction-derivee-et-sens-de-variation.webp",
+    "prompt": "a glossy violet curve rising then falling with a golden dot at its peak and a small golden up arrow and down arrow, tiny sparkles"
+  },
+  "marcel": "f′ positive,\nf monte !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les dérivées à connaître",
+          "entetes": ["f(x)", "f′(x)"],
+          "lignes": [
+            ["constante k", "**0**"],
+            ["x", "**1**"],
+            ["x²", "**2x**"],
+            ["x³", "**3x²**"],
+            ["k × u(x)", "k × u′(x)"],
+            ["u(x) + v(x)", "u′(x) + v′(x)"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Du signe de f′ à f",
+          "entetes": ["Sur I", "f est…"],
+          "lignes": [
+            ["f′ > 0", "**croissante**"],
+            ["f′ < 0", "**décroissante**"],
+            ["f′ = 0", "constante"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Étudier les variations en quatre temps",
+          "etapes": [
+            { "titre": "Dériver", "texte": "calculer f′(x), la factoriser si possible" },
+            { "titre": "Signe de f′", "texte": "tableau de signes de f′(x)" },
+            { "titre": "Variations", "texte": "dresser le tableau de variations de f" },
+            { "titre": "Extremums", "texte": "calculer les valeurs dans f, pas dans f′" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = x³ − 3x. __Extremums__&nbsp;?",
+          "calcul": "f′(x) = 3x² − 3 = 3(x − 1)(x + 1)\nf′ : + sur ]−∞ ; −1[, − sur ]−1 ; 1[, + ensuite",
+          "aparte": "on factorise",
+          "resultat": "max f(−1) = [[2]] · min f(1) = [[−2]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Polynôme", "texte": "f(x) = x³ − 4x + 7&nbsp;: **f′(x) = 3x² − 4**." },
+            { "titre": "Maximum", "texte": "f′ s’annule en passant de **+ à −**&nbsp;: maximum local." },
+            { "titre": "Minimum", "texte": "f′ s’annule en passant de **− à +**&nbsp;: minimum local." },
+            { "titre": "Économie", "texte": "B(x) = −2x² + 8x, B′(x) = −4x + 8&nbsp;: bénéfice **maximal en x = 2**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "f est dérivable sur ℝ, f′(x) = 3(x − 1)(x + 1)", "quoi": "la dérivée" },
+            { "texte": "f′(x) > 0 si x < −1 ou x > 1", "quoi": "le signe" },
+            { "texte": "f croît, décroît puis croît", "quoi": "les variations" },
+            { "texte": "f(−1) = 2 et f(1) = −2", "quoi": "les extremums" }
+          ],
+          "pied": "Contrôle&nbsp;: f(−1) = −1 + 3 = ==2== et f(1) = 1 − 3 = ==−2==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Calculer l’extremum dans **f′** au lieu de f.",
+            "Croire que f′(a) = 0 donne **toujours** un extremum (x³ en 0).",
+            "Confondre le signe de f′ et celui de **f**.",
+            "Oublier de **factoriser** avant le tableau de signes."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dérivée de f(x) = x³ − 4x + 7&nbsp;?",
+            "f′(x) < 0 sur un intervalle&nbsp;: f est&nbsp;?",
+            "f′(x) = −4x + 8&nbsp;: **extremum** en quel x, de quel type&nbsp;?"
+          ],
+          "reponses": "1) 3x² − 4 · 2) décroissante · 3) x = 2, maximum"
+        }
+      ]
+    }
+  ]
+}

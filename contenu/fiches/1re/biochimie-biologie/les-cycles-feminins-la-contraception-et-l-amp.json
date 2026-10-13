@@ -1,0 +1,185 @@
+{
+  "titre": "Cycles, contraception",
+  "titreSurligne": "contraception",
+  "accroche": "Vingt-huit jours de dialogue hormonal.",
+  "bonus": "Pic d’œstrogènes → rétrocontrôle **positif** → **pic de LH** → ovulation ≈ **36 h** après · pilule = rétrocontrôle **négatif** permanent",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biochimie-biologie/les-cycles-feminins-la-contraception-et-l-amp.webp",
+    "prompt": "a glossy violet circular calendar wheel with a golden egg-shaped bead at its top and small golden wave curves around, tiny sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Un cycle, des hormones,\nun seul ovocyte !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le cycle ovarien",
+          "entetes": [
+            "Phase",
+            "Jours",
+            "Ovaire",
+            "Hormone"
+          ],
+          "lignes": [
+            [
+              "**Folliculaire**",
+              "1 à 14",
+              "un follicule mûrit",
+              "œstrogènes ↑"
+            ],
+            [
+              "**Ovulation**",
+              "≈ 14",
+              "ovocyte libéré",
+              "pic d’œstrogènes"
+            ],
+            [
+              "**Lutéale**",
+              "15 à 28",
+              "**corps jaune**",
+              "progestérone + œstrogènes"
+            ]
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 2,
+          "titre": "Le cycle utérin",
+          "items": [
+            {
+              "titre": "Œstrogènes",
+              "texte": "l’**endomètre** prolifère."
+            },
+            {
+              "titre": "Progestérone",
+              "texte": "il devient apte à la **nidation**."
+            },
+            {
+              "titre": "Chute des deux",
+              "texte": "**menstruations**&nbsp;; si embryon, l’**hCG** maintient le corps jaune."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Expliquer l’ovulation",
+          "etapes": [
+            {
+              "titre": "Croissance",
+              "texte": "les follicules produisent des œstrogènes, rétrocontrôle négatif"
+            },
+            {
+              "titre": "Seuil",
+              "texte": "œstrogènes élevés en fin de phase folliculaire&nbsp;: rétrocontrôle positif"
+            },
+            {
+              "titre": "Pic de LH",
+              "texte": "il déclenche l’ovulation environ 36 h plus tard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Contraception",
+          "colonnes": 1,
+          "cartes": [
+            {
+              "titre": "Pilule combinée",
+              "texte": "œstrogènes + progestatif&nbsp;: **pas de pic de LH**, donc pas d’ovulation&nbsp;; **glaire** épaissie."
+            },
+            {
+              "titre": "Pilule progestative",
+              "texte": "agit surtout sur la **glaire cervicale**."
+            },
+            {
+              "titre": "Urgence",
+              "texte": "retarde ou bloque l’**ovulation**."
+            }
+          ]
+        },
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "AMP : la stimulation en 4 temps",
+          "items": [
+            {
+              "titre": "1",
+              "texte": "**bloquer** le cycle naturel."
+            },
+            {
+              "titre": "2",
+              "texte": "**FSH** : plusieurs follicules mûrissent."
+            },
+            {
+              "titre": "3",
+              "texte": "injection qui **imite le pic de LH**."
+            },
+            {
+              "titre": "4",
+              "texte": "**ponction**, fécondation au laboratoire."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "La pilule exerce un rétrocontrôle négatif permanent sur l’axe hypothalamo-hypophysaire.",
+              "quoi": "mécanisme"
+            },
+            {
+              "texte": "Il n’y a pas de pic de LH, donc pas d’ovulation.",
+              "quoi": "conclure"
+            },
+            {
+              "texte": "Le progestatif épaissit aussi la glaire cervicale.",
+              "quoi": "en plus"
+            }
+          ],
+          "pied": "==Rétrocontrôle positif== = seulement au seuil d’œstrogènes de fin de phase folliculaire."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que le rétrocontrôle des œstrogènes est **toujours négatif**.",
+            "Placer l’ovulation **après** la phase lutéale.",
+            "Oublier que la **chute de progestérone** cause les règles.",
+            "Confondre **FSH** (follicules) et **LH** (ovulation)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que devient le follicule vide après l’ovulation&nbsp;?",
+            "Quel événement déclenche l’ovulation&nbsp;?",
+            "Pourquoi la pilule empêche-t-elle l’ovulation&nbsp;?"
+          ],
+          "reponses": "1) un corps jaune · 2) le pic de LH · 3) rétrocontrôle négatif : pas de pic de LH"
+        }
+      ]
+    }
+  ]
+}

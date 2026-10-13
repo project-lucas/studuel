@@ -1,0 +1,184 @@
+{
+  "titre": "ADN et ARN",
+  "titreSurligne": "ARN",
+  "accroche": "Quatre lettres et deux brins.",
+  "bonus": "**A–T**&nbsp;: 2 liaisons H · **G–C**&nbsp;: 3 liaisons H · séquence écrite de **5’ vers 3’**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biochimie-biologie/les-acides-nucleiques-adn-et-arn.webp",
+    "prompt": "a glossy violet double helix with golden rungs, a single golden strand floating beside it, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "A–T, G–C,\nle bon couple&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 1,
+          "titre": "Le nucléotide",
+          "items": [
+            {
+              "titre": "Phosphate",
+              "texte": "un groupement phosphate"
+            },
+            {
+              "titre": "Ose",
+              "texte": "désoxyribose (ADN) ou ribose (ARN)"
+            },
+            {
+              "titre": "Base azotée",
+              "texte": "A, G, C et T (ADN) ou U (ARN)"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "ADN et ARN",
+          "entetes": [
+            "",
+            "ADN",
+            "ARN"
+          ],
+          "lignes": [
+            [
+              "Ose",
+              "désoxyribose",
+              "**ribose**"
+            ],
+            [
+              "Bases",
+              "A, T, G, C",
+              "A, **U**, G, C"
+            ],
+            [
+              "Brins",
+              "deux",
+              "**un** seul"
+            ],
+            [
+              "Taille",
+              "très long",
+              "court"
+            ],
+            [
+              "Rôle",
+              "**stocker**",
+              "**transmettre**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 3,
+          "titre": "La double hélice",
+          "items": [
+            {
+              "terme": "Liaison phosphodiester",
+              "definition": "relie le phosphate d’un nucléotide à l’ose du suivant."
+            },
+            {
+              "terme": "Complémentaires",
+              "definition": "A face à T, G face à C."
+            },
+            {
+              "terme": "Antiparallèles",
+              "definition": "un brin en 5’→3’, l’autre en 3’→5’."
+            }
+          ]
+        },
+        {
+          "type": "texte",
+          "numero": 4,
+          "titre": "Hybridation moléculaire",
+          "paragraphes": [
+            "Vers 90 °C, les liaisons H cèdent&nbsp;: **dénaturation**. En refroidissant, les brins complémentaires se réassocient.",
+            "Une **sonde** repère une séquence précise. Plus de **G–C**, plus la chaleur est tolérée."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Écrire le brin complémentaire",
+          "etapes": [
+            {
+              "titre": "Compléter",
+              "texte": "A→T, T→A, G→C, C→G, base par base"
+            },
+            {
+              "titre": "Orienter",
+              "texte": "le nouveau brin va de 3’ vers 5’"
+            },
+            {
+              "titre": "Retourner",
+              "texte": "pour l’écrire dans le sens 5’→3’"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un ADN de 100 paires de bases contient 30&nbsp;% d’adénine. Et la guanine&nbsp;?",
+          "calcul": "A = T = 30&nbsp;%, reste 40&nbsp;%",
+          "aparte": "G = C, donc 40 ÷ 2",
+          "resultat": "G = [[20&nbsp;%]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Mettre **T** dans l’ARN&nbsp;: c’est **U**.",
+            "Oublier que les brins sont **antiparallèles**.",
+            "Dire que A–T a **trois** liaisons H&nbsp;: elle en a deux.",
+            "Oublier de retourner&nbsp;: le complément de 5’-ATGC-3’ s’écrit **5’-GCAT-3’**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "A = T et G = C, car les brins sont complémentaires.",
+              "quoi": "justifier"
+            },
+            {
+              "texte": "%A + %T + %G + %C = 100 %, donc %G = (100 − 2×%A) ÷ 2.",
+              "quoi": "calculer"
+            }
+          ],
+          "pied": "Les paires **G–C** (3 liaisons H) rendent l’ADN ==plus stable à la chaleur==."
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel ose dans l’**ARN**&nbsp;?",
+            "Combien de liaisons H entre **G et C**&nbsp;?",
+            "Complément de 5’-ATGC-3’ (sens 5’→3’)&nbsp;?"
+          ],
+          "reponses": "1) le ribose · 2) trois · 3) 5’-GCAT-3’"
+        }
+      ]
+    }
+  ]
+}

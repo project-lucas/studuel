@@ -1,0 +1,205 @@
+{
+  "titre": "Entendre la musique",
+  "titreSurligne": "musique",
+  "accroche": "De l’air au message nerveux.",
+  "bonus": "Au-delà de **85 dB** le risque croît vite · chaque **+3 dB** divise par **2** la durée tolérable · cellules ciliées **jamais régénérées**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/enseignement-scientifique/entendre-la-musique.webp",
+    "prompt": "a glossy violet cochlea spiral shell with golden sound waves entering it, tiny golden notes, sparkles"
+  },
+  "marcel": "L’oreille code\nle son&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Trois étages",
+          "entetes": [
+            "Étage",
+            "Éléments",
+            "Rôle"
+          ],
+          "lignes": [
+            [
+              "**Externe**",
+              "pavillon, **tympan**",
+              "capter"
+            ],
+            [
+              "**Moyenne**",
+              "3 **osselets**",
+              "amplifier"
+            ],
+            [
+              "**Interne**",
+              "**cochlée**, cellules ciliées",
+              "coder"
+            ],
+            [
+              "**Nerf auditif**",
+              "fibres vers le cortex",
+              "transmettre"
+            ],
+            [
+              "**Cortex**",
+              "aires auditives (temporal)",
+              "percevoir"
+            ],
+            [
+              "**Étrier**",
+              "plus petit os du corps",
+              "amplifier"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le codage (cochlée)",
+          "entetes": [
+            "Information",
+            "Comment"
+          ],
+          "lignes": [
+            [
+              "**Aigus**",
+              "résonance à l’**entrée**"
+            ],
+            [
+              "**Graves**",
+              "résonance au **fond**"
+            ],
+            [
+              "**Hauteur**",
+              "**position** des cellules stimulées"
+            ],
+            [
+              "**Intensité**",
+              "**fréquence** des potentiels d’action"
+            ],
+            [
+              "**Alerte**",
+              "**acouphènes**, oreilles cotonneuses"
+            ],
+            [
+              "**Risque**",
+              "niveau (> 85 dB) et durée"
+            ],
+            [
+              "**Illusions**",
+              "le cerveau comble et se trompe"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le trajet du son",
+          "etapes": [
+            {
+              "titre": "Vibrer",
+              "texte": "le tympan et les osselets transmettent, l’étrier amplifie"
+            },
+            {
+              "titre": "Coder",
+              "texte": "la membrane basilaire résonne, les cellules ciliées émettent"
+            },
+            {
+              "titre": "Percevoir",
+              "texte": "nerf auditif, puis aires auditives du cortex temporal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Tonotopie",
+              "texte": "chaque fréquence a **son endroit**."
+            },
+            {
+              "titre": "Amplification",
+              "texte": "grand tympan vers petite **fenêtre ovale**."
+            },
+            {
+              "titre": "Perception",
+              "texte": "le cerveau **reconstruit**&nbsp;: illusions possibles."
+            },
+            {
+              "titre": "Lésions",
+              "texte": "cellules ciliées **irréversibles**."
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "On suppose 8 h tolérables à 85 dB. Et à 100 dB&nbsp;?",
+          "calcul": "100 − 85 = 15 dB = 5 × 3 dB",
+          "aparte": "durée ÷ 2 cinq fois",
+          "resultat": "8 h ÷ 32 = [[15 min]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Les aigus font résonner l’entrée de la cochlée, les graves le fond.",
+              "quoi": "la tonotopie"
+            },
+            {
+              "texte": "La hauteur est codée par la position des cellules ciliées stimulées.",
+              "quoi": "le codage"
+            },
+            {
+              "texte": "Ces cellules ne se régénèrent pas.",
+              "quoi": "la conséquence"
+            }
+          ],
+          "pied": "Acouphènes et oreilles cotonneuses&nbsp;: ==alerte== à ne pas ignorer."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Inverser **aigus** (entrée) et **graves** (fond).",
+            "Dire que la perception est une **mesure** fidèle.",
+            "Croire que les cellules ciliées **repoussent**.",
+            "Oublier que **+3 dB** divise la durée par **2**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel est le **plus petit os** du corps&nbsp;?",
+            "Où résonnent les **aigus** dans la cochlée&nbsp;?",
+            "Que fait +3 dB à la durée tolérable&nbsp;?"
+          ],
+          "reponses": "1) l’étrier · 2) à l’entrée · 3) elle est divisée par 2"
+        }
+      ]
+    }
+  ]
+}

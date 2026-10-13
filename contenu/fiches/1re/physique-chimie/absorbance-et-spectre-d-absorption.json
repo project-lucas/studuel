@@ -1,0 +1,156 @@
+{
+  "titre": "Absorbance et spectre",
+  "titreSurligne": "Absorbance",
+  "accroche": "Doser une espèce colorée sans la toucher.",
+  "epreuve": "bac",
+  "bonus": "**A** sans unité · travailler à **λ<sub>max</sub>** · loi valable pour une solution **diluée**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/absorbance-et-spectre-d-absorption.webp",
+    "prompt": "a glossy violet cuvette with golden light beam passing through a colored solution toward a small detector, sparkles"
+  },
+  "marcel": "Plus c’est coloré,\nplus ça absorbe !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Absorbance A",
+              "definition": "grandeur **sans unité**, mesurée au spectrophotomètre"
+            },
+            {
+              "terme": "Spectre",
+              "definition": "courbe de A en fonction de la **longueur d’onde**"
+            },
+            {
+              "terme": "λ<sub>max</sub>",
+              "definition": "longueur d’onde la **plus absorbée**"
+            },
+            {
+              "terme": "Blanc",
+              "definition": "réglage avec le **solvant seul**"
+            },
+            {
+              "terme": "Droite d’étalonnage",
+              "definition": "**A = f(C)** tracée avec des étalons connus"
+            }
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Beer-Lambert",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "A = k × C"
+          ],
+          "regle": "A est **proportionnelle** à C pour une solution **diluée**, à une longueur d’onde donnée. k dépend de l’espèce, de λ et de la cuve.",
+          "note": "droite par l’origine&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le dosage par étalonnage",
+          "etapes": [
+            {
+              "titre": "Gamme",
+              "texte": "préparer des étalons par **dilutions** d’une solution mère"
+            },
+            {
+              "titre": "Mesurer",
+              "texte": "régler à **λ<sub>max</sub>**, faire le blanc, tracer **A = f(C)**"
+            },
+            {
+              "titre": "Lire",
+              "texte": "mesurer l’inconnue et lire **C sur la droite**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "La droite d’étalonnage donne A = 120 × C (C en mol/L). On mesure A = 0,60. __C__&nbsp;?",
+          "calcul": "C = A ÷ k",
+          "aparte": "k = 120 L/mol",
+          "resultat": "C = 0,60 ÷ 120 = [[5,0 × 10⁻³ mol/L]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Pourquoi λ max",
+          "oui": {
+            "titre": "À λ max",
+            "texte": "**Sensibilité** maximale et **précision**&nbsp;: un petit écart de réglage change peu A."
+          },
+          "non": {
+            "titre": "Hors λ max",
+            "texte": "La variation de A est **faible** et le résultat plus incertain."
+          },
+          "essai": {
+            "texte": "λ<sub>max</sub> est la couleur <i>complémentaire</i> de la solution&nbsp;: une solution bleue absorbe vers 600 nm (jaune-orangé)."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            {
+              "texte": "On travaille à λ<sub>max</sub> pour la sensibilité.",
+              "quoi": "justifier"
+            },
+            {
+              "texte": "La droite A = f(C) passe par l’origine&nbsp;: A = k × C.",
+              "quoi": "loi"
+            },
+            {
+              "texte": "Par lecture graphique, C = 5,0 × 10⁻³ mol/L.",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Cite la ==limite==&nbsp;: solution trop concentrée, la droite s’incurve."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Donner une **unité** à l’absorbance.",
+            "Oublier le **blanc** avec le solvant seul.",
+            "Utiliser la loi pour une solution **trop concentrée**.",
+            "Confondre la couleur de la solution et la couleur **absorbée**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle est l’**unité** de l’absorbance&nbsp;?",
+            "À quelle longueur d’onde règle-t-on le spectrophotomètre&nbsp;?",
+            "Que dit la loi de **Beer-Lambert**&nbsp;?"
+          ],
+          "reponses": "1) aucune · 2) λ max · 3) A proportionnelle à C (solution diluée)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "titre": "Sécuriser un transfert",
+  "titreSurligne": "Sécuriser",
+  "accroche": "Intégrité, confidentialité, disponibilité.",
+  "bonus": "Chiffrement = protège le **contenu** · Signature = garantit l’**origine**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/securite-du-transfert-d-information.webp",
+    "prompt": "a glossy violet padlock with a golden key beside it and a small envelope, tiny golden sparkles, same art style as the reference icons, on magenta background, no text"
+  },
+  "marcel": "Contenu protégé,\norigine garantie !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les exigences",
+          "items": [
+            { "terme": "Intégrité", "definition": "le message reçu est identique à l’émis" },
+            { "terme": "Confidentialité", "definition": "seul le destinataire le lit" },
+            { "terme": "Disponibilité", "definition": "le service reste accessible" },
+            { "terme": "Authentification", "definition": "l’identité de l’émetteur est sûre" },
+            { "terme": "Non-répudiation", "definition": "l’émetteur ne peut nier l’envoi" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Protéger l’intégrité",
+          "entetes": ["Procédé", "Ce qu’il fait"],
+          "lignes": [
+            ["**Bit de parité**", "détecte un nombre impair d’erreurs"],
+            ["**Somme de contrôle, CRC**", "détectent des altérations complexes"],
+            ["**Code correcteur**", "**retrouve** la valeur exacte"],
+            ["**Hachage**", "empreinte de taille fixe"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Protéger la confidentialité",
+          "entetes": ["Chiffrement", "Clés", "Vitesse", "Difficulté"],
+          "lignes": [
+            ["**Symétrique**", "la **même** clé", "rapide", "transmettre la clé"],
+            ["**Asymétrique**", "publique (chiffrer), privée (déchiffrer)", "lent", "aucune : résout l’échange"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Comment __HTTPS__ allie les deux chiffrements&nbsp;?",
+          "calcul": "asymétrique → clé de session",
+          "aparte": "puis symétrique, plus rapide",
+          "resultat": "clé de [[session]] symétrique"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Chiffrer ou signer&nbsp;?",
+          "oui": { "titre": "Chiffrer", "texte": "Protège le **contenu**&nbsp;: seul le destinataire peut lire." },
+          "non": { "titre": "Signer", "texte": "Garantit l’**origine** (authentification, non-répudiation), pas la confidentialité." },
+          "essai": { "texte": "Signature&nbsp;: l’émetteur chiffre l’<i>empreinte</i> avec sa clé <i>privée</i>, chacun vérifie avec la clé <i>publique</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À savoir citer",
+          "deux": true,
+          "items": [
+            { "titre": "Retransmission", "texte": "impossible pour une sonde spatiale" },
+            { "titre": "Code correcteur", "texte": "utile pour un disque rayé" },
+            { "titre": "Clé privée", "texte": "jamais transmise" },
+            { "titre": "Empreinte", "texte": "un bit change, tout change" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que la **parité** corrige les erreurs.",
+            "Confondre **chiffrement** et **signature**.",
+            "Penser qu’une signature rend le message **confidentiel**.",
+            "Transmettre sa **clé privée**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle clé **chiffre** en asymétrique&nbsp;?",
+            "Que garantit une **signature**&nbsp;?",
+            "Que fait un **code correcteur** de plus qu’un bit de parité&nbsp;?"
+          ],
+          "reponses": "1) la clé publique · 2) l’origine · 3) il retrouve la valeur exacte"
+        }
+      ]
+    }
+  ]
+}

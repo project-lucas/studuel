@@ -1,0 +1,193 @@
+{
+  "titre": "Réplication et mitose",
+  "titreSurligne": "mitose",
+  "accroche": "Copier avant de partager.",
+  "bonus": "**Interphase** = G1 + S + G2 · **S**&nbsp;: l’ADN passe de q à 2q · **mitose**&nbsp;: 2q → q",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biochimie-biologie/replication-de-l-adn-mitose-et-cycle-cellulaire.webp",
+    "prompt": "a glossy violet round cell dividing into two golden daughter cells, with tiny chromosomes between them, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Une cellule devient\ndeux, à l’identique&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le cycle cellulaire",
+          "entetes": [
+            "Phase",
+            "Ce qui se passe"
+          ],
+          "lignes": [
+            [
+              "**G1**",
+              "croissance, 1 chromatide par chromosome"
+            ],
+            [
+              "**S**",
+              "**réplication**&nbsp;: 2 chromatides"
+            ],
+            [
+              "**G2**",
+              "préparation, courte"
+            ],
+            [
+              "**M**",
+              "mitose, environ 1 h"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "La réplication",
+          "items": [
+            {
+              "terme": "Hélicase",
+              "definition": "sépare les deux brins."
+            },
+            {
+              "terme": "ADN polymérase",
+              "definition": "fabrique le brin complémentaire de chaque brin."
+            },
+            {
+              "terme": "Semi-conservative",
+              "definition": "chaque molécule fille a un brin ancien et un brin neuf."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 3,
+          "titre": "Les phases de la mitose",
+          "horizontale": true,
+          "etapes": [
+            {
+              "date": "Prophase",
+              "texte": "chromosomes condensés, fuseau"
+            },
+            {
+              "date": "Métaphase",
+              "texte": "alignés au centre"
+            },
+            {
+              "date": "Anaphase",
+              "texte": "chromatides vers les pôles"
+            },
+            {
+              "date": "Télophase",
+              "texte": "deux noyaux, deux cellules"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "L’ADN est répliqué en phase S&nbsp;: la quantité passe de q à 2q.",
+              "quoi": "situer"
+            },
+            {
+              "texte": "Les chromatides se séparent en anaphase&nbsp;: 2q revient à q.",
+              "quoi": "expliquer"
+            }
+          ],
+          "pied": "Chaque cellule fille reçoit la ==même information==&nbsp;: la réplication est très fidèle."
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Quantité d’ADN (q en G1)",
+          "entetes": [
+            "Moment",
+            "Mitose",
+            "Méiose"
+          ],
+          "lignes": [
+            [
+              "G1",
+              "q",
+              "q"
+            ],
+            [
+              "Après S",
+              "2q",
+              "2q"
+            ],
+            [
+              "1re division",
+              "q",
+              "q"
+            ],
+            [
+              "2e division",
+              "—",
+              "q/2"
+            ]
+          ]
+        },
+        {
+          "type": "texte",
+          "numero": 5,
+          "titre": "Mitose ou méiose&nbsp;?",
+          "paragraphes": [
+            "Mitose&nbsp;: se séparent les **chromatides sœurs**.",
+            "Méiose I&nbsp;: se séparent les **chromosomes homologues**.",
+            "Courbe de la mitose&nbsp;: montée en S, chute d’un coup. Méiose&nbsp;: **deux marches**."
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Cellule humaine&nbsp;: 46 chromosomes à deux chromatides alignés au centre.",
+          "calcul": "46 chromosomes, alignés",
+          "aparte": "pas 23, pas d’appariement",
+          "resultat": "[[métaphase]] de mitose"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Placer la **réplication** en mitose&nbsp;: elle a lieu en phase S.",
+            "Confondre **chromatide** et **chromosome**.",
+            "Dire que la réplication ne fait **jamais** d’erreur&nbsp;: c’est rare, pas nul.",
+            "Mélanger les divisions&nbsp;: homologues en méiose I, chromatides en mitose."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dans quelle phase l’ADN est-il **répliqué**&nbsp;?",
+            "Que sépare l’**anaphase** de mitose&nbsp;?",
+            "Pourquoi dit-on **semi-conservative**&nbsp;?"
+          ],
+          "reponses": "1) la phase S · 2) les chromatides sœurs · 3) un brin ancien, un brin neuf"
+        }
+      ]
+    }
+  ]
+}

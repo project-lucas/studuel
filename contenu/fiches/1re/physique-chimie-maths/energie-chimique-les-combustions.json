@@ -1,0 +1,110 @@
+{
+  "titre": "Les combustions",
+  "titreSurligne": "combustions",
+  "accroche": "Brûler, c’est libérer l’énergie chimique.",
+  "bonus": "Q = m × PC · CH<sub>4</sub> + 2 O<sub>2</sub> → CO<sub>2</sub> + 2 H<sub>2</sub>O · **CO** = gaz mortel",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-maths/energie-chimique-les-combustions.webp",
+    "prompt": "a glossy violet gas burner with a golden flame, small molecules floating above, sparkles"
+  },
+  "marcel": "Du feu, et un peu\nde dioxygène !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Combustion complète",
+          "petite": true,
+          "lignes": ["CH<sub>4</sub> + 2 O<sub>2</sub> → CO<sub>2</sub> + 2 H<sub>2</sub>O", "Q = m × PC"],
+          "regle": "Combustible + **dioxygène** → **CO<sub>2</sub>** + **eau**. **PC** = énergie libérée par 1 kg (MJ/kg).",
+          "note": "équilibrer C, puis H, puis O&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les combustibles",
+          "entetes": ["Famille", "Formule", "Exemple"],
+          "lignes": [
+            ["Alcanes", "C<sub>n</sub>H<sub>2n+2</sub>", "CH<sub>4</sub>, C<sub>3</sub>H<sub>8</sub>"],
+            ["Alcènes", "C<sub>n</sub>H<sub>2n</sub> (C=C)", "C<sub>2</sub>H<sub>4</sub>"],
+            ["Alcools", "groupe –OH", "C<sub>2</sub>H<sub>5</sub>OH"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Équilibrer une combustion",
+          "etapes": [
+            { "titre": "Carbone", "texte": "autant de CO<sub>2</sub> que d’atomes de C dans le combustible" },
+            { "titre": "Hydrogène", "texte": "un H<sub>2</sub>O pour deux atomes de H" },
+            { "titre": "Oxygène", "texte": "ajuster O<sub>2</sub> en dernier, puis recompter" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Bouteille de butane, 13 kg, PC ≈ 46 MJ/kg. L’__énergie__ libérée&nbsp;?",
+          "calcul": "Q = m × PC = 13 × 46",
+          "aparte": "÷ 3,6 pour passer en kWh",
+          "resultat": "Q = [[598 MJ ≈ 166 kWh]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Complète ou incomplète",
+          "oui": { "titre": "Dioxygène en excès", "texte": "Seulement **CO<sub>2</sub>** et **H<sub>2</sub>O**&nbsp;: la combustion est **complète**." },
+          "non": { "titre": "Dioxygène qui manque", "texte": "Du **CO** et des suies se forment&nbsp;: le CO est **incolore, inodore et mortel**." },
+          "essai": { "texte": "Un chauffage mal ventilé produit du CO&nbsp;: d’où les <i>détecteurs</i> et l’entretien annuel des chaudières." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "C<sub>3</sub>H<sub>8</sub> + 5 O<sub>2</sub> → 3 CO<sub>2</sub> + 4 H<sub>2</sub>O", "quoi": "équation équilibrée" },
+            { "texte": "Q = m × PC = 13 × 46 = 598 MJ", "quoi": "formule puis nombres" },
+            { "texte": "Combustion exothermique", "quoi": "le système libère de l’énergie" }
+          ],
+          "pied": "Triangle du feu&nbsp;: ==combustible, comburant, énergie d’activation==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Équilibrer O<sub>2</sub> **avant** C et H.",
+            "Confondre **exothermique** et **endothermique**.",
+            "Oublier le **CO** d’une combustion incomplète.",
+            "Mélanger **MJ** et **kWh** (1 kWh = 3,6 MJ)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**Q** pour 2 kg d’essence (45 MJ/kg)&nbsp;?",
+            "Quel gaz toxique naît d’une combustion **incomplète**&nbsp;?",
+            "**O<sub>2</sub>** dans C<sub>2</sub>H<sub>4</sub> + ? O<sub>2</sub> → 2 CO<sub>2</sub> + 2 H<sub>2</sub>O&nbsp;?"
+          ],
+          "reponses": "1) 90 MJ · 2) le monoxyde de carbone CO · 3) 3 O<sub>2</sub>"
+        }
+      ]
+    }
+  ]
+}

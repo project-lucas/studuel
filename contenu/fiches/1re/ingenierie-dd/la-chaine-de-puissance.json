@@ -1,0 +1,198 @@
+{
+  "titre": "La chaîne de puissance",
+  "titreSurligne": "puissance",
+  "accroche": "De la source d’énergie à l’action.",
+  "bonus": "**Alimenter → Moduler → Convertir → Adapter → Agir** · la chaîne de puissance **obéit** aux ordres de la chaîne d’information",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/ingenierie-dd/la-chaine-de-puissance.webp",
+    "prompt": "a glossy violet roller shutter with a golden electric motor and a gearbox, a battery and a glowing power line, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "L’énergie obéit,\nl’action suit !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les fonctions",
+          "entetes": [
+            "Fonction",
+            "Composants"
+          ],
+          "lignes": [
+            [
+              "**Alimenter, stocker**",
+              "réseau, batterie, panneau"
+            ],
+            [
+              "**Distribuer, moduler**",
+              "relais, variateur, hacheur"
+            ],
+            [
+              "**Convertir**",
+              "moteur, vérin, LED"
+            ],
+            [
+              "**Adapter, transmettre**",
+              "réducteur, courroie, pignon"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Moduler l’électrique",
+          "entetes": [
+            "Type",
+            "Du → vers"
+          ],
+          "lignes": [
+            [
+              "**AC/DC** redresseur",
+              "alternatif → continu"
+            ],
+            [
+              "**DC/AC** onduleur",
+              "continu → alternatif"
+            ],
+            [
+              "**DC/DC** hacheur",
+              "continu → continu réglable"
+            ],
+            [
+              "**AC/AC** gradateur",
+              "alternatif → alternatif réglable"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Analyser une chaîne de puissance",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "l’action finale sur la matière d’œuvre"
+            },
+            {
+              "titre": "Nommer",
+              "texte": "chaque fonction, de la source vers l’action"
+            },
+            {
+              "titre": "Qualifier",
+              "texte": "la modulation : tout ou rien (relais) ou progressive (variateur)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un __volet roulant__ : réseau → relais → moteur → réducteur. Quelle modulation&nbsp;?",
+          "calcul": "vitesse fixe, deux sens",
+          "aparte": "le relais",
+          "resultat": "modulation [[TOR]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Modulation TOR ou progressive&nbsp;?",
+          "oui": {
+            "titre": "TOR",
+            "texte": "**Marche ou arrêt** : un relais, vitesse fixe."
+          },
+          "non": {
+            "titre": "Progressive",
+            "texte": "**Vitesse réglable** : un variateur ou un hacheur."
+          },
+          "essai": {
+            "texte": "La trottinette règle sa vitesse avec un <i>hacheur</i> DC/DC&nbsp;: modulation progressive."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Conversions à connaître",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Moteur",
+              "texte": "électrique → mécanique, réversible"
+            },
+            {
+              "titre": "Batterie",
+              "texte": "chimique → électrique, rechargeable"
+            },
+            {
+              "titre": "Résistance",
+              "texte": "électrique → thermique"
+            },
+            {
+              "titre": "Photovoltaïque",
+              "texte": "lumineuse → électrique"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Alimenter : la batterie · Moduler : le relais",
+              "quoi": "la source"
+            },
+            {
+              "texte": "Convertir : le moteur",
+              "quoi": "la conversion"
+            },
+            {
+              "texte": "Adapter : le réducteur, puis l’action",
+              "quoi": "jusqu’à l’action"
+            }
+          ],
+          "pied": "On cite ==la fonction== puis ==le composant==, dans l’ordre."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **convertir** (moteur) et **adapter** (réducteur).",
+            "Oublier que le moteur peut être **génératrice**.",
+            "Croire que la chaîne de puissance **décide**.",
+            "Mélanger **onduleur** (DC/AC) et redresseur (AC/DC)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel convertisseur passe de l’**alternatif au continu**&nbsp;?",
+            "Que fait un **réducteur**&nbsp;?",
+            "Citez une forme de **stockage mécanique**."
+          ],
+          "reponses": "1) le redresseur (AC/DC) · 2) baisse la vitesse, monte le couple · 3) ressort, volant d’inertie"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "titre": "Suites géométriques",
+  "titreSurligne": "géométriques",
+  "accroche": "On multiplie toujours par le même nombre.",
+  "bonus": "u(n+1) = q × u(n) · u(n) = u(0) × q<sup>n</sup> · + t % ⇒ q = 1 + t/100",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths-techno/les-suites-geometriques.webp",
+    "prompt": "a glossy golden staircase whose steps grow taller and taller, a tiny violet ball rolling up, small sparkles"
+  },
+  "marcel": "Un quotient constant,\nc’est géométrique !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le terme de rang n",
+          "petite": true,
+          "lignes": ["u(n+1) = q × u(n)", "u(n) = u(0) × q<sup>n</sup>", "u(n) = u(1) × q<sup>n−1</sup>"],
+          "regle": "**q** est la ==raison== (q > 0). Pour démontrer qu’une suite est géométrique, on montre que **u(n+1) ÷ u(n)** est constant.",
+          "note": "n est un exposant&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Du % à la raison",
+          "entetes": ["Évolution", "Raison q"],
+          "lignes": [
+            ["+ 3 %", "1,03"],
+            ["+ 10 %", "1,1"],
+            ["− 5 %", "0,95"],
+            ["− 20 %", "0,8"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            { "titre": "Reconnaître", "texte": "même % à chaque étape : q = 1 ± t/100" },
+            { "titre": "Écrire u(n)", "texte": "u(n) = u(0) × q<sup>n</sup>" },
+            { "titre": "Calculer", "texte": "remplacer n, ou avancer terme à terme pour un seuil" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": "★",
+          "titre": "Arithmétique ou géométrique&nbsp;?",
+          "entetes": ["Suite", "Arithmétique", "Géométrique"],
+          "lignes": [["Évolution", "**absolue** (+ r)", "**relative** (× q)"]]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "1 000 € à __10 % par an__. Après 2 ans&nbsp;?",
+          "calcul": "u(n) = 1 000 × 1,1<sup>n</sup>\nu(2) = 1 000 × 1,21",
+          "aparte": "1,1² = 1,21",
+          "resultat": "u(2) = [[1 210 €]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Variation", "texte": "q > 1&nbsp;: **croissante** · 0 < q < 1&nbsp;: **décroissante**." },
+            { "titre": "Seuil", "texte": "1 000 × 2<sup>n</sup> > 10 000&nbsp;: u(4) = 16 000, donc **n = 4**." },
+            { "titre": "Exponentielle", "texte": "Si q > 1, elle dépasse **toute** arithmétique." },
+            { "titre": "Intérêts composés", "texte": "Les intérêts **des intérêts** : 110 € contre 100 €." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "u(n+1) = 1,1 × u(n) pour tout n", "quoi": "la relation" },
+            { "texte": "(u(n)) est géométrique de raison 1,1", "quoi": "la nature" },
+            { "texte": "u(2) = 1 000 × 1,1² = 1 210", "quoi": "le calcul" }
+          ],
+          "pied": "Contrôle&nbsp;: 1 000 → 1 100 → ==1 210==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire q = **0,10** pour + 10 % : c’est 1,1.",
+            "Confondre « + 3 % » et « **+ 3 €** ».",
+            "Calculer **u(0) × n × q** au lieu de u(0) × q<sup>n</sup>.",
+            "Multiplier par u(0) **avant** la puissance."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "u(0) = 3 et q = 2 : **u(4)**&nbsp;?",
+            "Une baisse de **5 %** par an : la raison&nbsp;?",
+            "**2 ; 6 ; 18 ; 54** : quelle suite&nbsp;?"
+          ],
+          "reponses": "1) 3 × 16 = 48 · 2) q = 0,95 · 3) géométrique, q = 3"
+        }
+      ]
+    }
+  ]
+}

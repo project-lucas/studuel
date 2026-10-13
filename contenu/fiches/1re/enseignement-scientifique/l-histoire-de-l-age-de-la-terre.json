@@ -1,0 +1,167 @@
+{
+  "titre": "L’âge de la Terre",
+  "titreSurligne": "âge",
+  "accroche": "Du millier d’années aux milliards.",
+  "bonus": "**4,54 milliards d’années** · Patterson, **1953** · plus vieux zircons : **4,4 Ga** · Becquerel, **1896**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/enseignement-scientifique/l-histoire-de-l-age-de-la-terre.webp",
+    "prompt": "a glossy violet meteorite with golden sparkles next to a golden hourglass and layered rock strata, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "4,54 milliards,\nça fait un bail !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 1,
+          "titre": "Quatre siècles d’estimations",
+          "etapes": [
+            {
+              "date": "1650",
+              "texte": "**Ussher** : générations bibliques, quelques **milliers** d’années."
+            },
+            {
+              "date": "1778",
+              "texte": "**Buffon** : refroidissement de boulets de fer, **75 000 ans**."
+            },
+            {
+              "date": "XIXe s.",
+              "texte": "**Hutton, Lyell** : sédiments et érosion lente, des **centaines de millions**."
+            },
+            {
+              "date": "1862",
+              "texte": "**Kelvin** : thermodynamique, **20 à 100 millions** d’années."
+            }
+          ],
+          "horizontale": true
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "La radiochronologie",
+          "entetes": [
+            "Couple",
+            "Domaine"
+          ],
+          "lignes": [
+            [
+              "**Carbone 14** (5 730 ans)",
+              "archéologie"
+            ],
+            [
+              "Potassium-argon",
+              "temps géologiques"
+            ],
+            [
+              "Rubidium-strontium",
+              "temps géologiques"
+            ],
+            [
+              "**Uranium-plomb**",
+              "les plus vieux objets"
+            ]
+          ]
+        },
+        {
+          "type": "texte",
+          "numero": "!",
+          "titre": "Pourquoi Kelvin se trompe",
+          "paragraphes": [
+            "Son modèle suppose une Terre qui refroidit **sans source de chaleur interne** ni convection. Or la **radioactivité** (Becquerel, 1896) chauffe l’intérieur : une **hypothèse manquante** fausse un raisonnement rigoureux."
+          ],
+          "teinte": "jaune"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Dater un objet",
+          "etapes": [
+            {
+              "titre": "Mesurer",
+              "texte": "le rapport isotope père restant / isotope fils"
+            },
+            {
+              "titre": "Compter",
+              "texte": "les demi-vies nécessaires pour obtenir ce rapport"
+            },
+            {
+              "titre": "Multiplier",
+              "texte": "par la demi-vie : on obtient l’âge de fermeture"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": "★",
+          "titre": "Pourquoi aller chercher des météorites",
+          "entetes": [
+            "Sur Terre",
+            "Dans les météorites"
+          ],
+          "lignes": [
+            [
+              "La **tectonique** recycle sans cesse la croûte",
+              "Elles n’ont **pas bougé** depuis la formation du système solaire"
+            ],
+            [
+              "Plus vieilles roches : ≈ **4 Ga** (gneiss d’Acasta)",
+              "Patterson, 1953, uranium-plomb : **4,55 Ga**"
+            ],
+            [
+              "Plus vieux **zircons** : 4,4 Ga",
+              "Valeur admise : **4,54 Ga**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Il reste le {1/4} du carbone 14 d’un os (T = 5 730 ans). Son __âge__&nbsp;?",
+          "calcul": "{1/4} = (½)<sup>2</sup>",
+          "aparte": "2 demi-vies",
+          "resultat": "2 × 5 730 = [[11 460 ans]]"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dater la Terre avec les **roches terrestres** : elles sont recyclées.",
+            "Dire que Kelvin raisonnait **mal** : il manquait une donnée.",
+            "Utiliser le **carbone 14** pour des milliards d’années.",
+            "Oublier que Patterson date des **météorites**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle découverte invalide le calcul de **Kelvin**&nbsp;?",
+            "Quels objets Patterson date-t-il en **1953**&nbsp;?",
+            "Pourquoi les roches terrestres sont-elles si **jeunes**&nbsp;?"
+          ],
+          "reponses": "1) la radioactivité · 2) des météorites · 3) la tectonique recycle la croûte"
+        }
+      ]
+    }
+  ]
+}

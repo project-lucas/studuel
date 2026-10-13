@@ -1,0 +1,191 @@
+{
+  "titre": "Dérivation",
+  "titreSurligne": "Dérivation",
+  "accroche": "La vitesse à laquelle tout varie.",
+  "bonus": "**(uv)’ = u’v + uv’** · **(u/v)’ = (u’v − uv’)/v²** · tangente : y = f’(a)(x − a) + f(a)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-maths/derivation.webp",
+    "prompt": "a glossy violet smooth curve with a golden tangent line touching it at one point, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Dérive, et la\ntangente apparaît !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Nombre dérivé",
+          "taille": "mini",
+          "lignes": [
+            "y = f’(x₀)(x − x₀) + f(x₀)",
+            "f(x₀ + h) ≈ f(x₀) + f’(x₀) × h"
+          ],
+          "regle": "f’(x₀) est la limite du **taux de variation** quand h tend vers 0 : le **coefficient directeur de la tangente** en x₀.",
+          "note": "tangente, puis approximation affine"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Dérivées usuelles",
+          "entetes": [
+            "f(x)",
+            "f’(x)"
+          ],
+          "lignes": [
+            [
+              "xⁿ",
+              "n xⁿ⁻¹"
+            ],
+            [
+              "√x",
+              "1/(2√x)"
+            ],
+            [
+              "cos x",
+              "−sin x"
+            ],
+            [
+              "sin x",
+              "cos x"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Les opérations",
+          "entetes": [
+            "Fonction",
+            "Dérivée"
+          ],
+          "lignes": [
+            [
+              "u + v",
+              "u’ + v’"
+            ],
+            [
+              "u × v",
+              "u’v + uv’"
+            ],
+            [
+              "f(ax + b)",
+              "a f’(ax + b)"
+            ],
+            [
+              "A cos(ωt + φ)",
+              "−Aω sin(ωt + φ)"
+            ]
+          ]
+        },
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Étudier les variations",
+          "etapes": [
+            {
+              "titre": "Dériver",
+              "texte": "et **factoriser** f’(x)"
+            },
+            {
+              "titre": "Signe",
+              "texte": "de f’ : f’ > 0 ⇒ **croissante**"
+            },
+            {
+              "titre": "Tableau",
+              "texte": "extremum là où f’ **change de signe**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = x³ − 3x² + 1 sur [−1 ; 3]. __Extremums__&nbsp;?",
+          "calcul": "f’(x) = 3x² − 6x = 3x(x − 2)",
+          "aparte": "f’ s’annule en 0 et 2",
+          "resultat": "max f(0) = [[1]] · min f(2) = [[−3]]"
+        },
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Lien avec la physique",
+          "deux": false,
+          "items": [
+            {
+              "titre": "Vitesse",
+              "texte": "v(t) = x’(t)"
+            },
+            {
+              "titre": "Accélération",
+              "texte": "a(t) = v’(t)"
+            },
+            {
+              "titre": "Puissance",
+              "texte": "P(t) = E’(t)"
+            },
+            {
+              "titre": "Exemple",
+              "texte": "x(t) = 2t² + 3t : v(2) = 4×2 + 3 = **11 m/s**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Approximation affine",
+          "lignes": [
+            {
+              "texte": "f(x) = √x, x₀ = 100, f’(100) = 1/20",
+              "quoi": "les données"
+            },
+            {
+              "texte": "√101 ≈ 10 + 1/20",
+              "quoi": "f(x₀) + f’(x₀) h"
+            },
+            {
+              "texte": "√101 ≈ 10,05",
+              "quoi": "exact : 10,0499…"
+            }
+          ],
+          "pied": "Écris toujours ==f’(x)== avant d’étudier son signe."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dériver un **produit** terme à terme (u’ × v’).",
+            "Oublier le facteur **a** dans f(ax + b).",
+            "Oublier le **−** dans la dérivée de cos.",
+            "Confondre f’(x₀) et f(x₀)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dérive **x³ + 5x**.",
+            "Dérive **x² × cos x**.",
+            "f’ < 0 sur un intervalle : que dit-on de **f** ?"
+          ],
+          "reponses": "1) 3x² + 5 · 2) 2x cos x − x² sin x · 3) f est décroissante"
+        }
+      ]
+    }
+  ]
+}

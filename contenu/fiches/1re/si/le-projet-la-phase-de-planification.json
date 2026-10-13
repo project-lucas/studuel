@@ -1,0 +1,167 @@
+{
+  "titre": "Phase de planification",
+  "titreSurligne": "planification",
+  "accroche": "Tâches, ordre, ressources, chemin critique.",
+  "bonus": "**Marge** = date au plus tard − date au plus tôt · **chemin critique** = marge nulle = durée minimale",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/le-projet-la-phase-de-planification.webp",
+    "prompt": "a glossy violet calendar with golden horizontal bars like a Gantt chart and a small clock, same art style as the reference icons, sparkles"
+  },
+  "marcel": "Le chemin critique,\nc’est lui qui compte !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Gantt ou PERT&nbsp;?",
+          "entetes": [
+            "Outil",
+            "Sert à"
+          ],
+          "lignes": [
+            [
+              "**Gantt**",
+              "**suivre** : tâches simultanées"
+            ],
+            [
+              "**PERT**",
+              "**calculer** : dates et marges"
+            ],
+            [
+              "**Lissage**",
+              "décaler les tâches à marge"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Une tâche",
+          "items": [
+            {
+              "terme": "Durée",
+              "definition": "le temps nécessaire"
+            },
+            {
+              "terme": "Ressources",
+              "definition": "machines, opérateurs, matière"
+            },
+            {
+              "terme": "Antériorités",
+              "definition": "tâches à finir avant elle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Trouver le chemin critique",
+          "etapes": [
+            {
+              "titre": "Au plus tôt",
+              "texte": "parcourir le réseau du début vers la fin, tâche après tâche"
+            },
+            {
+              "titre": "Au plus tard",
+              "texte": "le parcourir de la fin vers le début"
+            },
+            {
+              "titre": "Marge",
+              "texte": "au plus tard − au plus tôt : marge nulle = tâche critique"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une tâche : au plus tôt __jour 6__, au plus tard __jour 9__. Sa marge&nbsp;?",
+          "calcul": "9 − 6 = 3",
+          "aparte": "marge non nulle",
+          "resultat": "marge [[3 jours]] : tâche non critique"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Accélérer une tâche&nbsp;?",
+          "oui": {
+            "titre": "Tâche critique",
+            "texte": "Accélérée, elle fait **gagner du temps** au projet entier."
+          },
+          "non": {
+            "titre": "Tâche à marge",
+            "texte": "L’accélérer ne fait gagner **aucun jour** au projet."
+          },
+          "essai": {
+            "texte": "Un retard sur une tâche <i>critique</i> impose un arbitrage&nbsp;: moyens, périmètre ou décalage."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Marge = au plus tard − au plus tôt",
+              "quoi": "le calcul"
+            },
+            {
+              "texte": "Chemin critique : suite de tâches de marge nulle",
+              "quoi": "le repérage"
+            },
+            {
+              "texte": "Durée minimale = longueur du chemin critique",
+              "quoi": "la conclusion"
+            },
+            {
+              "texte": "Retard critique : moyens, périmètre ou décalage",
+              "quoi": "l’arbitrage"
+            },
+            {
+              "texte": "Tâche à marge : le retard se résorbe",
+              "quoi": "le suivi"
+            }
+          ],
+          "pied": "Le lissage évite les ==pics de charge== sur une machine ou un opérateur."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Renforcer une tâche **hors** chemin critique.",
+            "Confondre **Gantt** (suivre) et **PERT** (calculer).",
+            "Oublier les **antériorités**.",
+            "Ignorer la **disponibilité** d’une machine.",
+            "Croire qu’un retard à marge **décale** le projet."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Marge d’une tâche **critique**&nbsp;?",
+            "Que donne la **longueur** du chemin critique&nbsp;?",
+            "Un retard sur une tâche **à marge** se&nbsp;?"
+          ],
+          "reponses": "1) nulle · 2) la durée minimale du projet · 3) résorbe"
+        }
+      ]
+    }
+  ]
+}

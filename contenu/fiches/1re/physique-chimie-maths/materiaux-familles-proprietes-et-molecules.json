@@ -1,0 +1,111 @@
+{
+  "titre": "Familles de matériaux",
+  "titreSurligne": "matériaux",
+  "accroche": "La structure fait les propriétés.",
+  "bonus": "n = m ÷ M · C = n ÷ V · C<sub>m</sub> = m ÷ V · M(H<sub>2</sub>O) = 18,0 g/mol",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-maths/materiaux-familles-proprietes-et-molecules.webp",
+    "prompt": "a glossy violet water molecule model with golden atoms, a small metal ingot and a glass beaker, sparkles"
+  },
+  "marcel": "Atomes liés,\nmatière définie !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les familles",
+          "entetes": ["Famille", "Structure", "Propriétés"],
+          "lignes": [
+            ["Métalliques", "électrons mobiles", "conducteurs, ductiles"],
+            ["Organiques", "chaînes de carbone", "légers, isolants"],
+            ["Minéraux", "réseaux d’atomes", "durs, fragiles"],
+            ["Composites", "fibres + matrice", "légers, résistants"]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Quantité de matière",
+          "petite": true,
+          "lignes": ["n = {m/M}", "C = {n/V}"],
+          "regle": "**n** en mol, **M** masse molaire (g/mol), **C** concentration (mol/L), **C<sub>m</sub>** = m ÷ V en g/L.",
+          "note": "V en litres&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Écrire un schéma de Lewis",
+          "etapes": [
+            { "titre": "Compter", "texte": "les liaisons de chaque atome&nbsp;: H 1, C 4, N 3, O 2" },
+            { "titre": "Lier", "texte": "les atomes par des tirets (simples ou doubles)" },
+            { "titre": "Compléter", "texte": "par les doublets non liants&nbsp;: N 1, O 2, H et C aucun" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "9,0 g de glucose (M = 180 g/mol) dans 0,50 L. La __concentration__ molaire&nbsp;?",
+          "calcul": "n = 9,0 ÷ 180 = 0,050 mol",
+          "aparte": "C = n ÷ V",
+          "resultat": "C = 0,050 ÷ 0,50 = [[0,10 mol/L]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Lire un pictogramme",
+          "oui": { "titre": "Avant de manipuler", "texte": "Le règlement **CLP** impose des pictogrammes&nbsp;: flamme, toxicité, corrosion, santé, environnement. On les lit **d’abord**." },
+          "non": { "titre": "Après coup", "texte": "Manipuler un produit sans avoir lu son étiquette expose à un danger inconnu." },
+          "essai": { "texte": "Exemples de Lewis&nbsp;: H–O–H (O porte <i>2 doublets</i>), CH<sub>4</sub> (<i>4 liaisons</i> sur C), O=C=O." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "M(H<sub>2</sub>O) = 2 × 1,0 + 16,0 = 18,0 g/mol", "quoi": "la masse molaire" },
+            { "texte": "C = n ÷ V = 0,050 ÷ 0,50 = 0,10 mol/L", "quoi": "formule puis nombres" },
+            { "texte": "C<sub>m</sub> = m ÷ V = 9,0 ÷ 0,50 = 18 g/L", "quoi": "avec l’unité" }
+          ],
+          "pied": "Un polymère répète ==un même motif== (monomère), comme –CH<sub>2</sub>–CH<sub>2</sub>–."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **C** (mol/L) et **C<sub>m</sub>** (g/L).",
+            "Oublier les **doublets non liants**.",
+            "Laisser le volume en **mL**.",
+            "Croire qu’un composite est **un seul** matériau."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**M** de CO<sub>2</sub> (C = 12, O = 16)&nbsp;?",
+            "**n** pour 36 g d’eau (18 g/mol)&nbsp;?",
+            "Liaisons et doublets non liants de **N**&nbsp;?"
+          ],
+          "reponses": "1) 44 g/mol · 2) 2 mol · 3) 3 liaisons, 1 doublet"
+        }
+      ]
+    }
+  ]
+}

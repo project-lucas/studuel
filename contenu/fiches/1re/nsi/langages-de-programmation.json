@@ -1,0 +1,123 @@
+{
+  "titre": "Langages et types",
+  "titreSurligne": "types",
+  "accroche": "Type, valeur, paradigme : le socle.",
+  "bonus": "<b>=</b> affecte · <b>==</b> compare · liste modifiable, tuple et chaîne non",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/nsi/langages-de-programmation.webp",
+    "prompt": "a glossy violet code window with golden curly braces and a small golden snake, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Un type,\nune valeur !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les types de base",
+          "entetes": ["Type", "Particularité"],
+          "lignes": [
+            ["int", "entier **exact**, sans limite en Python"],
+            ["float", "nombre à virgule, **approché**"],
+            ["bool", "vrai ou faux"],
+            ["str", "suite de caractères, **non modifiable**"],
+            ["list, tuple, dict", "types construits"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Syntaxe", "definition": "ce qui est **bien écrit**" },
+            { "terme": "Sémantique", "definition": "ce que ça **signifie**" },
+            { "terme": "Typage dynamique", "definition": "une variable peut **changer de type**" },
+            { "terme": "Typage fort", "definition": "int + str = **erreur**, pas de conversion silencieuse" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les trois paradigmes",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Impératif", "texte": "une suite d’instructions qui **modifient un état**." },
+            { "titre": "Fonctionnel", "texte": "des fonctions **sans effet de bord** : le résultat ne dépend que des arguments." },
+            { "titre": "Objet", "texte": "des objets qui **réunissent** données et traitements." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "<b>a = [1, 2]</b> puis <b>b = a</b> et <b>b.append(3)</b>. __Que vaut a__&nbsp;?",
+          "calcul": "b et a désignent la même liste",
+          "aparte": "pas de copie",
+          "resultat": "a = [[[1, 2, 3]]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Choisir un langage",
+          "entetes": ["Langage", "Sa force"],
+          "lignes": [
+            ["Python", "lisible, riche en bibliothèques scientifiques"],
+            ["C", "rapide, proche de la machine"],
+            ["JavaScript", "s’exécute dans tout navigateur"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": false,
+          "items": [
+            { "titre": "Mutable", "texte": "la liste se modifie en place." },
+            { "titre": "Non mutable", "texte": "tuple et chaîne : on en crée un nouveau." },
+            { "titre": "Critères", "texte": "bibliothèques, lisibilité, performance." },
+            { "titre": "Mélange", "texte": "Python combine plusieurs paradigmes." },
+            { "titre": "Float", "texte": "0.1 + 0.2 n’est pas exactement 0.3." }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire **=** pour comparer&nbsp;: c’est une affectation.",
+            "Croire que **b = a** copie une liste&nbsp;: les deux noms désignent le même objet.",
+            "Compter sur un **float** pour un résultat exact.",
+            "Modifier une **chaîne** en place&nbsp;: impossible.",
+            "Confondre **syntaxe** (bien écrit) et **sémantique** (ce que ça fait).",
+            "Choisir un langage par goût&nbsp;: ce sont les contraintes qui décident."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel opérateur **compare** deux valeurs&nbsp;?",
+            "Une **liste** est-elle modifiable en place&nbsp;?",
+            "Que provoque <b>3 + \"a\"</b> en Python&nbsp;?"
+          ],
+          "reponses": "1) == · 2) oui, contrairement au tuple et à la chaîne · 3) une erreur (typage fort)"
+        }
+      ]
+    }
+  ]
+}

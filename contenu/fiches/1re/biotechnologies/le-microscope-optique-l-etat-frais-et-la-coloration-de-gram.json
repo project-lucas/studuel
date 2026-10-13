@@ -1,0 +1,174 @@
+{
+  "titre": "Microscope et Gram",
+  "titreSurligne": "Gram",
+  "accroche": "Voir l’invisible, bien réglé et coloré.",
+  "bonus": "Gram **positif** = violet (paroi épaisse) · Gram **négatif** = rose · étape critique : l’**alcool**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biotechnologies/le-microscope-optique-l-etat-frais-et-la-coloration-de-gram.webp",
+    "prompt": "a glossy violet optical microscope with a golden eyepiece and tiny golden and pink bacteria rods, sparkles"
+  },
+  "marcel": "Violet ou rose,\nà toi de voir !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le grossissement",
+          "petite": true,
+          "lignes": [
+            "G = G<sub>oculaire</sub> × G<sub>objectif</sub>"
+          ],
+          "regle": "Oculaire × 10 et objectif × 40 donnent **× 400**. L’objectif × 100 demande de l’**huile à immersion**. Le champ **rétrécit** quand G augmente.",
+          "note": "× 100 → × 1 000 !"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "État frais",
+              "definition": "cellules **vivantes**, sans coloration, on voit la **mobilité**"
+            },
+            {
+              "terme": "Coloration différentielle",
+              "definition": "sépare deux groupes selon la **paroi**"
+            },
+            {
+              "terme": "Frottis",
+              "definition": "étalé, séché, **fixé à la chaleur**"
+            },
+            {
+              "terme": "Mordant",
+              "definition": "le **Lugol** fixe le violet"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La coloration de Gram",
+          "etapes": [
+            {
+              "titre": "Violet puis Lugol",
+              "texte": "tout est **violet**, le mordant fixe"
+            },
+            {
+              "titre": "Alcool",
+              "texte": "**décoloration** : l’étape critique"
+            },
+            {
+              "titre": "Fuchsine",
+              "texte": "**contre-coloration** rose"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "Quel objectif ?",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "× 10 (G × 100)",
+              "texte": "repérer la préparation, cellules **végétales**."
+            },
+            {
+              "titre": "× 40 (G × 400)",
+              "texte": "**levures**, cellules sanguines, état frais."
+            },
+            {
+              "titre": "× 100 (G × 1 000)",
+              "texte": "**bactéries** sur frottis coloré, avec huile."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "À × 400, une graduation vaut 2,5 µm. Une levure couvre 3 graduations. <b>Taille</b>&nbsp;?",
+          "calcul": "3 × 2,5",
+          "aparte": "oculaire micrométrique",
+          "resultat": "taille ≈ [[7,5 µm]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Lire un Gram",
+          "oui": {
+            "titre": "Gram positif",
+            "texte": "Paroi **épaisse** de peptidoglycane : retient le violet, cellules **violettes**."
+          },
+          "non": {
+            "titre": "Gram négatif",
+            "texte": "Peptidoglycane **fin** et membrane externe : décoloré, cellules **roses**."
+          },
+          "essai": {
+            "texte": "Alcool trop long&nbsp;: des Gram+ deviennent roses&nbsp;; trop court&nbsp;: des Gram− restent violettes."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Dessin fidèle, au crayon, avec un titre.",
+              "quoi": "le dessin"
+            },
+            {
+              "texte": "Ajouter l’échelle ou le grossissement (× 1 000).",
+              "quoi": "l’échelle"
+            },
+            {
+              "texte": "Annotations reliées par des traits horizontaux.",
+              "quoi": "annoter"
+            }
+          ],
+          "pied": "On dessine ce qu’on ==voit==, pas ce qu’on sait."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Changer d’objectif avec la vis **macrométrique**.",
+            "Oublier l’**huile** à l’objectif × 100.",
+            "Confondre **mouvement brownien** et vraie mobilité.",
+            "Confondre **dessin** fidèle et **schéma** simplifié."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle couleur pour un **Gram négatif**&nbsp;?",
+            "Grossissement de l’oculaire × 10 avec l’objectif × 40&nbsp;?",
+            "Quelle est l’étape **critique** du Gram&nbsp;?"
+          ],
+          "reponses": "1) rose · 2) × 400 · 3) la décoloration à l’alcool"
+        }
+      ]
+    }
+  ]
+}

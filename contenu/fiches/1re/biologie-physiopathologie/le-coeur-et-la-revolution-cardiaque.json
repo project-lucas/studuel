@@ -1,0 +1,120 @@
+{
+  "titre": "Cœur et révolution",
+  "titreSurligne": "Cœur",
+  "accroche": "Une double pompe automatique.",
+  "bonus": "**DC = fC × VES** · VES = volume fin de diastole − volume fin de systole · cycle ≈ **0,8 s**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biologie-physiopathologie/le-coeur-et-la-revolution-cardiaque.webp",
+    "prompt": "a glossy violet heart with golden valves and a small golden lightning spark on top, tiny golden pulse waves around it, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Il bat tout seul,\nsans jamais s’arrêter !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les quatre cavités",
+          "entetes": ["Cavité", "Reçoit", "Envoie"],
+          "lignes": [
+            ["**Oreillette droite**", "veines caves (pauvre en O₂)", "ventricule droit"],
+            ["**Ventricule droit**", "—", "artère pulmonaire"],
+            ["**Oreillette gauche**", "veines pulmonaires (riche en O₂)", "ventricule gauche"],
+            ["**Ventricule gauche**", "—", "aorte, tout le corps"]
+          ]
+        },
+        {
+          "type": "frise",
+          "numero": 2,
+          "titre": "Le cycle cardiaque",
+          "etapes": [
+            { "date": "Systole auriculaire", "texte": "Les oreillettes finissent de remplir les ventricules." },
+            { "date": "Systole ventriculaire", "texte": "**Éjection** du sang dans l’artère." },
+            { "date": "Diastole", "texte": "Relâchement et remplissage." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les repères",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Valves", "texte": "**Mitrale** et tricuspide, puis **sigmoïdes** : le sang va dans un seul sens." },
+            { "titre": "Circulations", "texte": "**Pulmonaire** (cœur droit) et **systémique** (cœur gauche)." },
+            { "titre": "Paroi", "texte": "Le **ventricule gauche** est le plus épais." },
+            { "titre": "Nœud sinusal", "texte": "**Pacemaker** dans l’oreillette droite : 70 à 80 par minute." },
+            { "titre": "Nœud AV", "texte": "Retarde l’influx le temps du remplissage." },
+            { "titre": "His et Purkinje", "texte": "Distribuent l’excitation aux ventricules." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Calculer un débit",
+          "etapes": [
+            { "titre": "VES", "texte": "fin de diastole − fin de systole" },
+            { "titre": "fC", "texte": "battements par minute" },
+            { "titre": "DC", "texte": "fC × VES, converti en L/min" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "130 mL en fin de diastole, 60 mL en fin de systole, 70 battements/min.",
+          "calcul": "VES = 130 − 60 = 70 mL",
+          "aparte": "70 × 70 = 4 900 mL/min",
+          "resultat": "DC ≈ [[4,9 L/min]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": false,
+          "items": [
+            { "titre": "Automatisme", "texte": "un cœur isolé continue de battre" },
+            { "titre": "Séparation", "texte": "cœur droit et gauche ne communiquent pas" },
+            { "titre": "Péricarde", "texte": "enveloppe ; myocarde = muscle" },
+            { "titre": "Racine", "texte": "**cardi(o)** : cœur" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que le sang des **veines pulmonaires** est pauvre en O₂.",
+            "Mélanger **systole** (contraction) et **diastole** (relâchement).",
+            "Oublier de convertir les **mL** en **L**.",
+            "Croire que les nerfs créent le battement : le **tissu nodal** le fait."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel est le **pacemaker** du cœur&nbsp;?",
+            "Où part le sang du **ventricule gauche**&nbsp;?",
+            "Calcule **DC** pour fC = 80 et VES = 60 mL."
+          ],
+          "reponses": "1) le nœud sinusal · 2) dans l’aorte · 3) 80 × 60 = 4 800 mL/min = 4,8 L/min"
+        }
+      ]
+    }
+  ]
+}

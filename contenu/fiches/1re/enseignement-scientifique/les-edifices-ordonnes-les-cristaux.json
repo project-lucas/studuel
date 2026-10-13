@@ -1,0 +1,189 @@
+{
+  "titre": "Les cristaux",
+  "titreSurligne": "cristaux",
+  "accroche": "Un ordre qui se répète partout.",
+  "bonus": "**Maille** CS : **1** atome, 0,52 · CFC : **4** atomes, 0,74 · **ρ** = masse de la maille ÷ volume de la maille",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/enseignement-scientifique/les-edifices-ordonnes-les-cristaux.webp",
+    "prompt": "a glossy violet crystal made of a regular lattice of golden spheres, a small cube cut out showing the repeating pattern, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Le même motif,\ntoujours le même !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Cristallin ou amorphe",
+          "entetes": [
+            "",
+            "Cristallin",
+            "Amorphe"
+          ],
+          "lignes": [
+            [
+              "Ordre",
+              "**longue distance**, motif répété",
+              "**désordre** figé"
+            ],
+            [
+              "Image",
+              "empilement périodique",
+              "liquide arrêté net"
+            ],
+            [
+              "Exemple",
+              "**quartz**",
+              "**verre**, obsidienne"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "La masse volumique",
+          "petite": true,
+          "lignes": [
+            "ρ = {m maille/V maille}"
+          ],
+          "regle": "**Maille** : plus petit volume qui, répété par translation, reconstruit le cristal.",
+          "note": "même espèce, deux états&nbsp;!"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": "★",
+          "titre": "Deux mailles à comparer",
+          "entetes": [
+            "Maille",
+            "Atomes par maille",
+            "Compacité"
+          ],
+          "lignes": [
+            [
+              "**Cubique simple**",
+              "8 × ⅛ = **1**",
+              "environ **0,52**"
+            ],
+            [
+              "**Cubique à faces centrées**",
+              "8 × ⅛ + 6 × ½ = **4**",
+              "environ **0,74**, le plus dense"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Compter les atomes d’une maille",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "les sommets (⅛ chacun), les faces (½ chacune)"
+            },
+            {
+              "titre": "Additionner",
+              "texte": "les parts d’atomes qui appartiennent à la maille"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "nombre d’atomes, puis masse et masse volumique"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Maille cubique à faces centrées&nbsp;: 8 sommets, 6 faces. Combien d’__atomes__&nbsp;?",
+          "calcul": "8 × {1/8} + 6 × {1/2}",
+          "aparte": "= 1 + 3",
+          "resultat": "[[4 atomes]], compacité 0,74"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Roches et vivant",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Granite",
+              "texte": "refroidi **lentement** : gros cristaux"
+            },
+            {
+              "titre": "Basalte",
+              "texte": "refroidi **vite** : petits cristaux et verre"
+            },
+            {
+              "titre": "CaCO<sub>3</sub>",
+              "texte": "coquilles ; la **nacre** résiste mieux"
+            },
+            {
+              "titre": "Phosphate de calcium",
+              "texte": "l’**os** et l’émail dentaire"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À savoir expliquer",
+          "deux": false,
+          "items": [
+            {
+              "titre": "Quartz ou verre",
+              "texte": "le même SiO<sub>2</sub> selon la **vitesse de refroidissement**"
+            },
+            {
+              "titre": "Biominéral",
+              "texte": "cristal déposé sur une **trame organique**"
+            },
+            {
+              "titre": "Roche",
+              "texte": "assemblage de cristaux dont la **taille** raconte l’histoire"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’un cristal est forcément une **pierre précieuse**.",
+            "Compter un atome de sommet **en entier** dans la maille.",
+            "Penser que granite et basalte ont des **magmas** différents.",
+            "Confondre **amorphe** et **liquide** : il est solide."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien d’atomes dans une maille **cubique simple**&nbsp;?",
+            "Quelle roche refroidit **lentement** en profondeur&nbsp;?",
+            "Que forme le SiO<sub>2</sub> s’il refroidit **très vite**&nbsp;?"
+          ],
+          "reponses": "1) 1 atome (8 × ⅛) · 2) le granite · 3) du verre, une structure amorphe"
+        }
+      ]
+    }
+  ]
+}

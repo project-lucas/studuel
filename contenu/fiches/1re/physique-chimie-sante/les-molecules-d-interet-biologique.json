@@ -1,0 +1,116 @@
+{
+  "titre": "Molécules biologiques",
+  "titreSurligne": "biologiques",
+  "accroche": "Glucides, lipides, protéines, urée.",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-sante/les-molecules-d-interet-biologique.webp",
+    "prompt": "a glossy violet blood test tube with a golden label, next to a glossy sugar cube, a golden oil droplet and a small chain of violet beads, sparkles, same art style as the reference icons, on a magenta background, no text, no numbers"
+  },
+  "marcel": "Derrière le bilan,\ndes molécules !",
+  "bonus": "Triglycéride = **glycérol + 3 acides gras** · liaison peptidique **–CO–NH–** · urée **CO(NH₂)₂**",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les familles",
+          "entetes": ["Famille", "Ce qu’on reconnaît"],
+          "lignes": [
+            ["Glucides", "plusieurs –OH + aldéhyde ou cétone"],
+            ["Acides gras", "–COOH + longue chaîne"],
+            ["Triglycéride", "triester du glycérol"],
+            ["Acide α-aminé", "–NH₂ et –COOH sur le même C"],
+            ["Protéine", "enchaînement d’acides aminés"],
+            ["Vitamine C", "réducteur, antioxydant, fragile"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "À distinguer",
+          "items": [
+            { "terme": "Glucose", "definition": "**aldéhyde** (aldose), C₆H₁₂O₆" },
+            { "terme": "Fructose", "definition": "**cétone** (cétose), isomère du glucose" },
+            { "terme": "Saturé", "definition": "que des liaisons simples C–C" },
+            { "terme": "Insaturé", "definition": "au moins une double liaison C=C" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Retrouver les acides aminés d’un polypeptide",
+          "etapes": [
+            { "titre": "Repérer", "texte": "chaque liaison peptidique –CO–NH–" },
+            { "titre": "Couper", "texte": "entre le C et le N de chaque liaison" },
+            { "titre": "Rendre", "texte": "–OH au carbone, –H à l’azote&nbsp;: l’eau est restituée" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Deux acides aminés s’unissent par une __liaison peptidique__. Que libère-t-on&nbsp;?",
+          "calcul": "–COOH + H₂N– → –CO–NH–",
+          "aparte": "les atomes en trop partent",
+          "resultat": "une molécule d’[[eau]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Acide gras et santé",
+          "oui": { "titre": "Insaturé", "texte": "Au moins une **double liaison C=C**&nbsp;: acide oléique (une), α-linolénique (trois). Typique des huiles." },
+          "non": { "titre": "Saturé", "texte": "Aucune double liaison&nbsp;: acides palmitique (16 C) et stéarique (18 C), riches dans les graisses animales." },
+          "essai": { "texte": "Test de Fehling chauffé&nbsp;: précipité **rouge brique** avec le glucose, qui est un sucre réducteur (fonction aldéhyde)." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "La molécule porte –NH₂ et –COOH sur le même carbone.", "quoi": "repérer" },
+            { "texte": "C’est donc un acide α-aminé.", "quoi": "conclure" },
+            { "texte": "L’urée, issue des protéines, est éliminée par le rein.", "quoi": "relier" },
+            { "texte": "Un triglycéride est un triester du glycérol.", "quoi": "définir" }
+          ],
+          "pied": "Le dosage de l’==urée== sanguine renseigne sur la fonction rénale."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **saturé** (simples) et **insaturé** (double).",
+            "Oublier que le triglycéride a **trois** acides gras.",
+            "Prendre le **fructose** pour un aldéhyde.",
+            "Croire la vitamine C **stable** à l’air."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle fonction dans la **liaison peptidique**&nbsp;?",
+            "Que forment **glycérol** et trois acides gras&nbsp;?",
+            "Quelle molécule résulte de la dégradation des **protéines**&nbsp;?"
+          ],
+          "reponses": "1) amide (–CO–NH–) · 2) un triglycéride · 3) l’urée"
+        }
+      ]
+    }
+  ]
+}

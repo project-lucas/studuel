@@ -1,0 +1,163 @@
+{
+  "titre": "Cinématique du point",
+  "titreSurligne": "point",
+  "accroche": "Position, vitesse, accélération.",
+  "bonus": "**v = ω × R** · **ω = 2π × N ÷ 60** · circulaire uniforme&nbsp;: a = v² ÷ R vers le centre",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/cinematique-du-point.webp",
+    "prompt": "a glossy violet wind turbine blade spinning with a golden curved motion arrow and a small speed vector at its tip, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Plus on est loin\ndu centre, plus ça va vite !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La rotation",
+          "petite": true,
+          "lignes": [
+            "v = ω × R",
+            "ω = 2π × N ÷ 60"
+          ],
+          "regle": "**R** en m, **ω** en rad/s, **N** en tr/min. Tous les points d’un solide ont la même ==vitesse angulaire== ω, mais pas la même vitesse v.",
+          "note": "l’extrémité d’une pale va plus vite&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois mouvements",
+          "entetes": [
+            "Mouvement",
+            "Accélération"
+          ],
+          "lignes": [
+            [
+              "**Rectiligne uniforme**",
+              "nulle"
+            ],
+            [
+              "**Rectiligne varié**",
+              "constante"
+            ],
+            [
+              "**Circulaire uniforme**",
+              "a = v² ÷ R, vers le centre"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre un exercice en trois temps",
+          "etapes": [
+            {
+              "titre": "Identifier",
+              "texte": "le mouvement&nbsp;: rectiligne ou circulaire, uniforme ou varié"
+            },
+            {
+              "titre": "Convertir",
+              "texte": "tr/min en rad/s, cm en m, avant tout calcul"
+            },
+            {
+              "titre": "Appliquer",
+              "texte": "la formule qui convient et conclure avec l’unité"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Pale de R = 0,5 m qui tourne à __120 tr/min__. Vitesse de son extrémité&nbsp;?",
+          "calcul": "ω = 2π × 120 ÷ 60 ≈ 12,6 rad/s ; v = ω × R",
+          "aparte": "12,6 × 0,5",
+          "resultat": "v ≈ [[6,3 m/s]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "L’accélération est-elle nulle&nbsp;?",
+          "oui": {
+            "titre": "Rectiligne uniforme",
+            "texte": "Vitesse constante en valeur **et** en direction&nbsp;: accélération nulle."
+          },
+          "non": {
+            "titre": "Circulaire uniforme",
+            "texte": "La direction de v change&nbsp;: accélération **centripète**, non nulle."
+          },
+          "essai": {
+            "texte": "Réducteur d’entrée R = 20 et de sortie R = 60&nbsp;: ω<sub>s</sub> = ω<sub>e</sub> × 20 ÷ 60, donc <i>trois fois plus lent</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "ω = 2π × N ÷ 60 ≈ 12,6 rad/s",
+              "quoi": "la conversion"
+            },
+            {
+              "texte": "v = ω × R = 12,6 × 0,5",
+              "quoi": "la formule"
+            },
+            {
+              "texte": "v ≈ 6,3 m/s",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Un réducteur **diminue** la vitesse, **augmente** le couple, et conserve la ==puissance== aux pertes près."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier que l’accélération d’un mouvement circulaire est **non nulle**.",
+            "Utiliser **N en tr/min** dans v = ω × R.",
+            "Inverser le rapport des **rayons** d’un réducteur.",
+            "Confondre vitesse **angulaire** et vitesse linéaire."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "À retenir",
+          "paragraphes": [
+            "Le vecteur vitesse est **tangent** à la trajectoire. Il peut changer par sa valeur **ou** par sa direction&nbsp;: un mobile qui tourne à vitesse constante **accélère**, au sens de la mécanique."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**v** pour ω = 10 rad/s et R = 0,2 m&nbsp;?",
+            "Unité de l’**accélération**&nbsp;?",
+            "Un réducteur augmente quelle grandeur&nbsp;?"
+          ],
+          "reponses": "1) 2 m/s · 2) m/s² · 3) le couple"
+        }
+      ]
+    }
+  ]
+}

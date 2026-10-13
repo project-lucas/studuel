@@ -1,0 +1,128 @@
+{
+  "titre": "Recherches et tris",
+  "titreSurligne": "tris",
+  "accroche": "Chercher, trier, et prouver que ça marche.",
+  "bonus": "séquentielle : linéaire · dichotomie : logarithmique, tableau trié · tris simples : quadratiques",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/nsi/algorithmes-sur-les-tableaux.webp",
+    "prompt": "a glossy violet row of bars of increasing height with a golden magnifying glass above, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Je coupe en deux,\net j’élimine !",
+  "rangs": [
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les deux recherches",
+          "entetes": ["Recherche", "Condition", "Coût (pire cas)", "Sur 1 000 000"],
+          "lignes": [
+            ["**Séquentielle**", "aucune", "linéaire : n", "un million"],
+            ["**Dichotomique**", "tableau **trié**", "logarithmique", "une vingtaine"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 2,
+          "titre": "Extremum en un parcours",
+          "etapes": [
+            { "titre": "Candidat", "texte": "le premier élément" },
+            { "titre": "Parcours", "texte": "remplacer dès qu’on trouve mieux" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Les tris",
+          "entetes": ["Tri", "Principe"],
+          "lignes": [
+            ["**Sélection**", "placer le plus petit du reste, n fois"],
+            ["**Insertion**", "insérer chaque élément dans la partie triée"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "La dichotomie, tour par tour",
+          "etapes": [
+            { "titre": "Milieu", "texte": "comparer la cible à l’élément du milieu" },
+            { "titre": "Moitié", "texte": "garder la moitié où elle peut se trouver" },
+            { "titre": "Répéter", "texte": "jusqu’à trouver, ou intervalle vide" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Dichotomie de 7 dans [1, 3, 5, 7, 9]. __Étapes__&nbsp;?",
+          "calcul": "milieu 5 : 7 &gt; 5 → on garde [7, 9] ; milieu 7",
+          "aparte": "intervalle ÷ 2",
+          "resultat": "= [[trouvé en 2 tours]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "Preuves et coûts",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Variant", "texte": "la taille de l’intervalle, divisée par 2." },
+            { "titre": "Invariant", "texte": "après i tours, le candidat est le max des i premiers." },
+            { "titre": "Insertion", "texte": "quasi **linéaire** sur un tableau presque trié." },
+            { "titre": "n log n", "texte": "un million d’éléments : **une seconde** contre des jours en n²." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "le tableau est trié", "quoi": "condition de la dichotomie" },
+            { "texte": "l’intervalle est divisé par 2", "quoi": "variant" },
+            { "texte": "tris simples : n² dans le pire cas", "quoi": "le coût" }
+          ],
+          "pied": "Connaître la ==complexité== avant d’écrire le code."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dichotomie sur un tableau **non trié**&nbsp;: résultat faux, sans erreur.",
+            "Chercher max puis min en **deux** parcours.",
+            "Croire les tris simples **rapides** sur un grand tableau.",
+            "Oublier d’initialiser le **candidat**.",
+            "Oublier de réduire l’intervalle&nbsp;: boucle **infinie**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle condition pour la **dichotomie**&nbsp;?",
+            "Quel est le **variant** de la dichotomie&nbsp;?",
+            "Quel tri est quasi linéaire sur un tableau **presque trié**&nbsp;?"
+          ],
+          "reponses": "1) tableau trié · 2) la taille de l’intervalle de recherche · 3) le tri par insertion"
+        }
+      ]
+    }
+  ]
+}

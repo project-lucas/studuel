@@ -1,0 +1,164 @@
+{
+  "titre": "Flux et stocks",
+  "titreSurligne": "Flux",
+  "accroche": "Ce qui circule, ce qui s’accumule.",
+  "bonus": "**Énergie entrante = énergie utile + pertes** · 1 W = 1 J par seconde",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/ingenierie-dd/flux-de-matiere-d-energie-et-d-information.webp",
+    "prompt": "a glossy violet Sankey-style diagram with wide golden arrows narrowing into thin ones, a small battery and an electric scooter, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Ce qui entre sort,\nrien ne se perd !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Flux et stock",
+          "items": [
+            {
+              "terme": "Flux",
+              "definition": "un **transfert** par unité de temps (eau qui circule, chaleur)"
+            },
+            {
+              "terme": "Stock",
+              "definition": "une **accumulation** à un instant (ballon d’eau chaude, batterie)"
+            },
+            {
+              "terme": "Sankey",
+              "definition": "flèches dont la **largeur** est proportionnelle à la quantité"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Caractériser un flux",
+          "entetes": [
+            "Flux",
+            "Grandeur · unité"
+          ],
+          "lignes": [
+            [
+              "**Fluide**",
+              "débit : m³/s, L/min, kg/s"
+            ],
+            [
+              "**Électrique**",
+              "puissance W · intensité A"
+            ],
+            [
+              "**Thermique**",
+              "flux thermique W"
+            ],
+            [
+              "**Lumière**",
+              "flux lumineux lm"
+            ],
+            [
+              "**Information**",
+              "débit binaire bit/s"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "Le bilan d’énergie",
+          "teinte": "jaune",
+          "lignes": [
+            "E<sub>entrante</sub> = E<sub>utile</sub> + pertes",
+            "η = {P utile/P entrante}"
+          ],
+          "regle": "Un stock **varie** selon la différence entre les flux qui entrent et ceux qui sortent.",
+          "note": "le rendement global est le produit des rendements&nbsp;!"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Batterie __500 W__, variateur η = 0,95, moteur η = 0,80. Rendement global&nbsp;?",
+          "calcul": "500 → 475 → 380 W",
+          "aparte": "pertes 25 + 95 W",
+          "resultat": "η = 380/500 = [[0,76]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 5,
+          "titre": "Flux ou stock&nbsp;?",
+          "oui": {
+            "titre": "Flux",
+            "texte": "Il **circule** : on le mesure par unité de temps."
+          },
+          "non": {
+            "titre": "Stock",
+            "texte": "Il **s’accumule** : on le mesure à un instant."
+          },
+          "essai": {
+            "texte": "L’eau qui passe dans un tuyau est un <i>flux</i>&nbsp;; l’eau dans le ballon est un <i>stock</i>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "Lire un ibd",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Connecteur",
+              "texte": "porte un flux entre deux blocs"
+            },
+            {
+              "titre": "Nature",
+              "texte": "« énergie électrique », « eau froide »"
+            },
+            {
+              "titre": "Information",
+              "texte": "ex. une consigne de température"
+            },
+            {
+              "titre": "En 1re",
+              "texte": "lire et modifier en partie"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Additionner les **rendements** au lieu de les multiplier.",
+            "Oublier d’écrire l’**unité** (W, bit/s…).",
+            "Confondre **flux** (W) et **stock** (J).",
+            "Croire qu’un Sankey montre des **tailles** égales."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle unité mesure un **débit binaire**&nbsp;?",
+            "Un rendement de 0,9 puis 0,8 donne quel **global**&nbsp;?",
+            "Que représente la **largeur** d’une flèche de Sankey&nbsp;?"
+          ],
+          "reponses": "1) bit/s · 2) 0,9 × 0,8 = 0,72 · 3) la quantité transportée"
+        }
+      ]
+    }
+  ]
+}

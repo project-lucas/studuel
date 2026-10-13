@@ -1,0 +1,175 @@
+{
+  "titre": "Doser par titrage",
+  "titreSurligne": "titrage",
+  "accroche": "Verser jusqu’au changement.",
+  "bonus": "Réaction **rapide, totale, unique** · à l’équivalence&nbsp;: **C<sub>1</sub>V<sub>1</sub> = C<sub>2</sub>V<sub>E</sub>** (mole à mole)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biotechnologies/doser-par-volumetrie-titrage-et-equivalence.webp",
+    "prompt": "a glossy violet burette dripping a golden drop into a flask on a magnetic stirrer, the liquid turning pink, sparkles"
+  },
+  "marcel": "Une goutte de trop,\net tout change !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les acteurs du titrage",
+          "entetes": [
+            "Rôle",
+            "Où"
+          ],
+          "lignes": [
+            [
+              "**Solution titrée** (à doser)",
+              "bécher, volume prélevé exactement"
+            ],
+            [
+              "**Solution titrante** (étalon)",
+              "**burette** graduée"
+            ],
+            [
+              "**Indicateur coloré**",
+              "quelques gouttes dans le bécher"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "À l’équivalence",
+          "petite": true,
+          "teinte": "jaune",
+          "lignes": [
+            "C<sub>1</sub> × V<sub>1</sub> = C<sub>2</sub> × V<sub>E</sub>"
+          ],
+          "regle": "Réactifs introduits dans les **proportions de l’équation** : le réactif titré est **entièrement consommé**. Si mole à mole, n(titré) = n(titrant versé).",
+          "note": "V<sub>E</sub> = volume équivalent"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "À retenir",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Solution étalon",
+              "texte": "concentration **connue** exactement : poudre étalon pesée ou solution commerciale."
+            },
+            {
+              "titre": "Schéma",
+              "texte": "burette, bécher, **agitateur** magnétique, avec concentrations et volumes."
+            },
+            {
+              "titre": "Fiabilité",
+              "texte": "**répétabilité** par plusieurs titrages, **étalon de contrôle** pour l’exactitude."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Bien titrer",
+          "etapes": [
+            {
+              "titre": "Préparer",
+              "texte": "rincer la burette, **chasser la bulle**, ajuster le zéro"
+            },
+            {
+              "titre": "Encadrer",
+              "texte": "un premier titrage **rapide** pour situer V<sub>E</sub>"
+            },
+            {
+              "titre": "Affiner",
+              "texte": "goutte à goutte près de V<sub>E</sub>, puis **répéter**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "10,0&nbsp;mL de vinaigre dilué, soude à 0,100&nbsp;mol/L, V<sub>E</sub> = 12,0&nbsp;mL. __C<sub>1</sub>__&nbsp;?",
+          "calcul": "C<sub>1</sub> = 0,100 × 12,0 / 10,0",
+          "aparte": "mole à mole",
+          "resultat": "C<sub>1</sub> = [[0,120 mol/L]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Deux réactions de dosage",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Acido-basique",
+              "texte": "échange de **H<sup>+</sup>** : acide éthanoïque + HO<sup>−</sup>, phénolphtaléine **rose**."
+            },
+            {
+              "titre": "Oxydo-réduction",
+              "texte": "échange d’**électrons** : vitamine C + DCPIP, **bleu qui disparaît**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "À l’équivalence, n(titré) = n(titrant versé) (mole à mole).",
+              "quoi": "l’égalité"
+            },
+            {
+              "texte": "C<sub>1</sub> = C<sub>2</sub> × V<sub>E</sub> / V<sub>1</sub> = 0,100 × 12,0 / 10,0",
+              "quoi": "formule puis nombres"
+            },
+            {
+              "texte": "Vinaigre dilué 10 fois&nbsp;: 1,20 mol/L dans le vinaigre pur.",
+              "quoi": "remonter"
+            }
+          ],
+          "pied": "Je dis comment V<sub>E</sub> est repéré&nbsp;: ==couleur persistante==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **facteur de dilution** du produit.",
+            "Confondre solution **titrante** (burette) et **titrée**.",
+            "Prendre un virage **non persistant** pour V<sub>E</sub>.",
+            "Utiliser la formule si ce n’est **pas mole à mole**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Où verse-t-on la solution **titrante**&nbsp;?",
+            "Comment repère-t-on **V<sub>E</sub>** avec un indicateur&nbsp;?",
+            "C<sub>2</sub> = 0,10, V<sub>E</sub> = 10, V<sub>1</sub> = 20&nbsp;mL&nbsp;: **C<sub>1</sub>**&nbsp;?"
+          ],
+          "reponses": "1) dans la burette · 2) changement de couleur persistant · 3) 0,050 mol/L"
+        }
+      ]
+    }
+  ]
+}

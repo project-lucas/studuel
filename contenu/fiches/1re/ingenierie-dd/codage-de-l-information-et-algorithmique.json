@@ -1,0 +1,194 @@
+{
+  "titre": "Codage, algorithmique",
+  "titreSurligne": "Codage",
+  "accroche": "Des bits aux programmes.",
+  "bonus": "**1 octet = 8 bits = 256 valeurs** (0 à 255) · taux de compression = taille compressée / taille initiale",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/ingenierie-dd/codage-de-l-information-et-algorithmique.webp",
+    "prompt": "a glossy violet microchip with golden binary digits 0 and 1 floating around and a small flowchart, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Tout est 0 ou 1,\nmême un A !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les bases",
+          "entetes": [
+            "Base",
+            "Chiffres"
+          ],
+          "lignes": [
+            [
+              "**Décimale** (10)",
+              "0 à 9"
+            ],
+            [
+              "**Binaire** (2)",
+              "0 et 1"
+            ],
+            [
+              "**Hexadécimale** (16)",
+              "0 à 9 puis A à F"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les structures d’un algorithme",
+          "entetes": [
+            "Structure",
+            "Rôle"
+          ],
+          "lignes": [
+            [
+              "**Séquence**",
+              "instructions l’une après l’autre"
+            ],
+            [
+              "**Condition**",
+              "si… alors… sinon"
+            ],
+            [
+              "**Boucle**",
+              "répéter : tant que, pour"
+            ],
+            [
+              "**Sous-programme**",
+              "traitement réutilisable"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Convertir un nombre",
+          "etapes": [
+            {
+              "titre": "Binaire → décimal",
+              "texte": "additionner les puissances de 2 des bits à 1"
+            },
+            {
+              "titre": "Décimal → binaire",
+              "texte": "diviser par 2, lire les restes de bas en haut"
+            },
+            {
+              "titre": "Binaire → hexa",
+              "texte": "grouper par 4 bits : 1010 1111 = AF"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Écrire __13__ en binaire.",
+          "calcul": "13 = 2×6+1 · 6 = 2×3+0 · 3 = 2×1+1 · 1 = 2×0+1",
+          "aparte": "restes de bas en haut",
+          "resultat": "[[1101]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Compression&nbsp;?",
+          "oui": {
+            "titre": "Sans perte",
+            "texte": "**Tout est restitué** : zip."
+          },
+          "non": {
+            "titre": "Avec perte",
+            "texte": "Des détails **disparaissent** : jpeg, mp3."
+          },
+          "essai": {
+            "texte": "10 Mo compressés en 2 Mo : taux de <i>0,2</i> (20 %)."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "ASCII",
+              "texte": "« A » = 65, « a » = 97, « 0 » = 48"
+            },
+            {
+              "titre": "Unicode",
+              "texte": "étend le codage aux accents"
+            },
+            {
+              "titre": "Variable",
+              "texte": "un nom, un type, une taille"
+            },
+            {
+              "titre": "Boucle infinie",
+              "texte": "typique d’un système embarqué"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "1011 = 8 + 0 + 2 + 1 = 11",
+              "quoi": "binaire → décimal"
+            },
+            {
+              "texte": "13 → 1101 (restes de bas en haut)",
+              "quoi": "décimal → binaire"
+            },
+            {
+              "texte": "1010 1111 → AF",
+              "quoi": "binaire → hexa"
+            }
+          ],
+          "pied": "On **détaille** les puissances de 2 ou ==les divisions successives==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Lire les restes de haut en bas : il faut **de bas en haut**.",
+            "Un entier de 8 bits **déborde** : 255 + 1 donne 0.",
+            "Confondre **bit** (0 ou 1) et octet (8 bits).",
+            "Oublier le **sinon** d’une condition."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que vaut **1011** en décimal&nbsp;?",
+            "Combien de valeurs tiennent dans un **octet**&nbsp;?",
+            "Citez une compression **avec perte**."
+          ],
+          "reponses": "1) 8 + 2 + 1 = 11 · 2) 256 · 3) jpeg ou mp3"
+        }
+      ]
+    }
+  ]
+}

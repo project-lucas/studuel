@@ -1,0 +1,160 @@
+{
+  "titre": "Statique des fluides",
+  "titreSurligne": "fluides",
+  "accroche": "Pression, Archimède et Mariotte.",
+  "bonus": "p = F ÷ S · **Pa** = N/m² · 1 bar = 10⁵ Pa · p × V = constante (T fixée)",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/la-statique-des-fluides.webp",
+    "prompt": "a glossy violet submarine floating in a golden-water tank with tiny golden bubbles rising, sparkles"
+  },
+  "marcel": "Plus on descend,\nplus ça presse !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les trois lois",
+          "petite": true,
+          "lignes": [
+            "p = {F/S}",
+            "F<sub>A</sub> = ρ × V × g"
+          ],
+          "regle": "**p** en Pa, **F** perpendiculaire à la surface **S** (m²). Archimède&nbsp;: ρ du ==fluide==, V ==immergé==. Mariotte&nbsp;: p × V = constante.",
+          "note": "ρ est celle du fluide&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Quelle loi&nbsp;?",
+          "entetes": [
+            "Situation",
+            "Loi",
+            "Résultat"
+          ],
+          "lignes": [
+            [
+              "Force sur une surface",
+              "p = F ÷ S",
+              "en pascals"
+            ],
+            [
+              "Deux points d’un liquide",
+              "Δp = ρ g Δz",
+              "p croît avec la profondeur"
+            ],
+            [
+              "Corps dans un fluide",
+              "poussée d’Archimède",
+              "verticale, vers le haut"
+            ],
+            [
+              "Gaz à T constante",
+              "p × V = constante",
+              "V ÷ 2 ⇒ p × 2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "La méthode en trois temps",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "la situation&nbsp;: surface pressée, liquide, corps immergé ou gaz"
+            },
+            {
+              "titre": "Choisir",
+              "texte": "la loi qui correspond, avec ses unités (Pa, kg/m³, m³)"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "puis conclure&nbsp;: flotte si la masse volumique du corps est **inférieure**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un cube de 1,0 L est entièrement immergé dans l’eau (ρ = 1 000 kg/m³, g = 10 N/kg). La __poussée__&nbsp;?",
+          "calcul": "V = 1,0 L = 1,0 × 10⁻³ m³",
+          "aparte": "convertir en m³ d’abord",
+          "resultat": "F = 1 000 × 1,0 × 10⁻³ × 10 = [[10 N]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Flotte ou coule&nbsp;?",
+          "oui": {
+            "titre": "ρ du corps plus petite",
+            "texte": "Sa masse volumique est **inférieure** à celle du fluide&nbsp;: il **flotte**."
+          },
+          "non": {
+            "titre": "ρ du corps plus grande",
+            "texte": "Sa masse volumique est **supérieure**&nbsp;: il **coule**."
+          },
+          "essai": {
+            "texte": "Un bouchon (<i>moins dense</i> que l’eau) flotte&nbsp;; une pierre (<i>plus dense</i>) coule."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "F<sub>A</sub> = ρ<sub>fluide</sub> × V<sub>immergé</sub> × g",
+              "quoi": "la formule"
+            },
+            {
+              "texte": "F<sub>A</sub> = 1 000 × 1,0 × 10⁻³ × 10",
+              "quoi": "les nombres"
+            },
+            {
+              "texte": "F<sub>A</sub> = 10 N, verticale vers le haut",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Un liquide est ==incompressible==&nbsp;: Mariotte ne vaut que pour un gaz."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Laisser le volume en **L** au lieu de **m³**.",
+            "Prendre la masse volumique du **corps** au lieu du **fluide**.",
+            "Appliquer Mariotte à un **liquide**.",
+            "Oublier que la pression augmente avec la **profondeur**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "**p** pour F = 200 N sur S = 0,50 m²&nbsp;?",
+            "Gaz comprimé de moitié (T fixée)&nbsp;: p est&nbsp;?",
+            "Quand un corps **flotte**-t-il&nbsp;?"
+          ],
+          "reponses": "1) 400 Pa · 2) multipliée par 2 · 3) si sa masse volumique est inférieure"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "titre": "Synthèse organique",
+  "titreSurligne": "Synthèse",
+  "accroche": "Fabriquer, isoler, purifier, identifier.",
+  "epreuve": "bac",
+  "bonus": "**η = n obtenu ÷ n théorique** · toujours inférieur à 1 · calcul via le **réactif limitant**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/synthese-organique.webp",
+    "prompt": "a glossy violet round-bottom flask with a vertical condenser on top, a golden heating mantle below, sparkles"
+  },
+  "marcel": "Quatre étapes,\ntoujours les mêmes !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le montage à reflux",
+          "items": [
+            { "terme": "Reflux", "definition": "chauffer **sans rien perdre**" },
+            { "terme": "Réfrigérant", "definition": "**condense** les vapeurs, qui retombent dans le ballon" },
+            { "terme": "Pierre ponce", "definition": "**régule** l’ébullition" },
+            { "terme": "Catalyseur", "definition": "accélère, **non consommé**, sans changer l’état final" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Isoler et purifier",
+          "entetes": ["Produit", "Technique"],
+          "lignes": [
+            ["Plus soluble ailleurs", "extraction liquide-liquide"],
+            ["Solide", "filtration Büchner, **recristallisation**"],
+            ["Liquide", "distillation (fractionnée)"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Les quatre étapes",
+          "etapes": [
+            { "titre": "Transformer", "texte": "mélanger les réactifs, souvent **à reflux**" },
+            { "titre": "Isoler et purifier", "texte": "séparer le produit, éliminer les **impuretés**" },
+            { "titre": "Identifier", "texte": "fusion, **CCM**, infrarouge, RMN" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "On attend 0,050 mol de produit et on en obtient 0,040 mol. __Rendement__&nbsp;?",
+          "calcul": "η = n obtenu ÷ n théorique",
+          "aparte": "toujours &lt; 1",
+          "resultat": "η = 0,040 ÷ 0,050 = [[0,80 soit 80 %]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Lire une CCM",
+          "oui": { "titre": "Produit pur", "texte": "Brut, purifié et référence ont la **même hauteur** de tache&nbsp;: même espèce." },
+          "non": { "titre": "Impuretés", "texte": "Le brut montre **plusieurs taches**&nbsp;: il reste des impuretés." },
+          "essai": { "texte": "Facteurs cinétiques&nbsp;: la <i>température</i> et la <i>concentration</i> accélèrent la réaction&nbsp;; le <i>catalyseur</i> aussi." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Le chauffage à reflux accélère la réaction sans perte de matière.", "quoi": "justifier" },
+            { "texte": "Le produit solide est purifié par recristallisation.", "quoi": "purifier" },
+            { "texte": "La CCM montre une tache à la hauteur de la référence.", "quoi": "identifier" }
+          ],
+          "pied": "Le rendement suppose d’avoir trouvé le ==réactif limitant==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que le catalyseur **modifie l’état final**.",
+            "Oublier le **réactif limitant** dans η.",
+            "Confondre **isolement** et **purification**.",
+            "Annoncer un rendement **supérieur à 1**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelles sont les **quatre étapes** d’une synthèse&nbsp;?",
+            "À quoi sert le **réfrigérant**&nbsp;?",
+            "Comment purifier un **solide**&nbsp;?"
+          ],
+          "reponses": "1) transformer, isoler, purifier, identifier · 2) condenser · 3) recristallisation"
+        }
+      ]
+    }
+  ]
+}

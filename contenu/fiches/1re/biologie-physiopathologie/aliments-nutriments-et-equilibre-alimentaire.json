@@ -1,0 +1,185 @@
+{
+  "titre": "Aliments et nutriments",
+  "titreSurligne": "nutriments",
+  "accroche": "Couvrir ses besoins, ni plus ni moins.",
+  "bonus": "**IMC** = masse (kg) ÷ taille² (m²) · normal **18,5 à 25** · glucides 40-55 % · lipides 35-40 % · protéines 10-20 %",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biologie-physiopathologie/aliments-nutriments-et-equilibre-alimentaire.webp",
+    "prompt": "a glossy violet plate with golden food shapes and a small golden measuring scale, sparkles"
+  },
+  "marcel": "Bien manger,\nc’est équilibrer !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Aliment",
+              "definition": "denrée consommée (pain, lait)"
+            },
+            {
+              "terme": "Nutriment",
+              "definition": "molécule **utilisable** par l’organisme (glucose)"
+            },
+            {
+              "terme": "Macronutriments",
+              "definition": "glucides, lipides, protides"
+            },
+            {
+              "terme": "Micronutriments",
+              "definition": "vitamines, minéraux, oligo-éléments"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Trois rôles",
+          "entetes": [
+            "Rôle",
+            "Nutriments"
+          ],
+          "lignes": [
+            [
+              "**Énergétique**",
+              "glucides, lipides"
+            ],
+            [
+              "**Structural**",
+              "protéines, calcium, phosphore"
+            ],
+            [
+              "**Fonctionnel**",
+              "vitamines, fer, iode, zinc"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 280px",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "L’indice de masse corporelle",
+          "teinte": "jaune",
+          "lignes": [
+            "IMC = {masse (kg)/taille² (m²)}"
+          ],
+          "regle": "< 18,5 maigreur · 18,5 à 25 normal · 25 à 30 surpoids · ≥ 30 obésité"
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple",
+          "donnees": "81 kg pour 1,80 m",
+          "calcul": "81 ÷ (1,80 × 1,80) = 81 ÷ 3,24",
+          "resultat": "IMC = [[25]] : surpoids"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Évaluer un équilibre alimentaire",
+          "etapes": [
+            {
+              "titre": "Mesurer",
+              "texte": "apports et dépenses (bilan énergétique)"
+            },
+            {
+              "titre": "Comparer",
+              "texte": "aux besoins&nbsp;: âge, sexe, activité, grossesse"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "positif&nbsp;: prise de poids&nbsp;; négatif&nbsp;: amaigrissement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "Les besoins varient",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Qualitatifs",
+              "texte": "Acides aminés et acides gras **indispensables**, vitamines."
+            },
+            {
+              "titre": "Quantitatifs",
+              "texte": "Selon l’**âge**, le sexe, l’**activité** physique."
+            },
+            {
+              "titre": "Situations",
+              "texte": "Croissance, **grossesse**, allaitement, climat."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Monomère",
+              "texte": "glucose, acide aminé"
+            },
+            {
+              "titre": "Dimère",
+              "texte": "saccharose, lactose"
+            },
+            {
+              "titre": "Polymère",
+              "texte": "amidon, protéines"
+            },
+            {
+              "titre": "Eau",
+              "texte": "60 % de la masse du corps"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **aliment** et **nutriment**.",
+            "Croire qu’un **polymère** est absorbé tel quel&nbsp;: il est digéré.",
+            "Appliquer les seuils d’IMC de l’adulte à un **enfant**.",
+            "Oublier qu’un besoin est aussi **qualitatif**.",
+            "Confondre **macro-** et **micronutriments** (grammes ou milligrammes)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que vaut l’**IMC** de 81 kg pour 1,80 m&nbsp;?",
+            "Quelles formes de nutriments traversent l’intestin&nbsp;?",
+            "Quel rôle ont les **vitamines**&nbsp;?"
+          ],
+          "reponses": "1) 25, surpoids · 2) les monomères, l’eau, les ions · 3) fonctionnel"
+        }
+      ]
+    }
+  ]
+}

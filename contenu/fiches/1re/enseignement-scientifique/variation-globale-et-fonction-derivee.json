@@ -1,0 +1,159 @@
+{
+  "titre": "Fonction dérivée",
+  "titreSurligne": "dérivée",
+  "accroche": "Le signe de f’ dit les variations.",
+  "bonus": "**f’ > 0 ⇒ f croît** · **f’ < 0 ⇒ f décroît** · (u + v)’ = u’ + v’ · (k u)’ = k u’",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/enseignement-scientifique/variation-globale-et-fonction-derivee.webp",
+    "prompt": "a glossy violet curve with up and down arrows below it as a variation table, a golden peak marked, sparkles"
+  },
+  "marcel": "f’ positive,\nf monte !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Dérivées usuelles",
+          "entetes": [
+            "f(x)",
+            "f’(x)"
+          ],
+          "lignes": [
+            [
+              "k (constante)",
+              "**0**"
+            ],
+            [
+              "a x + b",
+              "**a**"
+            ],
+            [
+              "x²",
+              "**2 x**"
+            ],
+            [
+              "x³",
+              "**3 x²**"
+            ],
+            [
+              "1/x",
+              "**−1/x²**"
+            ]
+          ]
+        },
+        {
+          "type": "formule",
+          "numero": 2,
+          "titre": "Le théorème central",
+          "petite": true,
+          "lignes": [
+            "f’ > 0 ⇒ f croît",
+            "f’ < 0 ⇒ f décroît"
+          ],
+          "regle": "**f’ = 0** partout&nbsp;: f constante. Étudier les variations, c’est étudier le **signe de f’**.",
+          "note": "3x² − 5x + 2 → 6x − 5"
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Dresser un tableau de variation",
+          "etapes": [
+            {
+              "titre": "Dériver",
+              "texte": "calculer f’(x), puis résoudre f’(x) = 0"
+            },
+            {
+              "titre": "Signe",
+              "texte": "étudier le signe de f’ sur l’intervalle"
+            },
+            {
+              "titre": "Tableau",
+              "texte": "flèches de f, puis valeurs aux bornes et aux extremums"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = −2x² + 8x + 3. Variations et extremum&nbsp;?",
+          "calcul": "f’(x) = −4x + 8 = 0 en x = 2",
+          "aparte": "f’ passe de + à −",
+          "resultat": "maximum en x = 2, f(2) = [[11]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Extremum ou pas ?",
+          "oui": {
+            "titre": "Le signe change",
+            "texte": "f’ passe de **+ à −** : **maximum**. De **− à +** : **minimum**."
+          },
+          "non": {
+            "titre": "Annulation seule",
+            "texte": "f(x) = x³ : f’(0) = 0 mais **pas d’extremum**, f croît toujours."
+          },
+          "essai": {
+            "texte": "Optimisation&nbsp;: boîte de volume maximal, bénéfice le plus élevé… on étudie <b>le signe de f’</b>."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "f est dérivable et f’(x) = −4x + 8",
+              "quoi": "la dérivée"
+            },
+            {
+              "texte": "f’(x) > 0 sur ]−∞ ; 2[ et f’(x) < 0 sur ]2 ; +∞[",
+              "quoi": "le signe"
+            },
+            {
+              "texte": "f croît puis décroît : maximum f(2) = 11",
+              "quoi": "conclure"
+            }
+          ],
+          "pied": "L’annulation de f’ ne suffit pas&nbsp;: il faut un ==changement de signe==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Conclure à un extremum dès que **f’ = 0**.",
+            "Oublier de calculer f aux **bornes** et en l’extremum.",
+            "Dériver **x²** en **x** (c’est 2x).",
+            "Confondre le signe de **f’** et celui de **f**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dérivée de f(x) = 3x² − 5x + 2&nbsp;?",
+            "Si f’ passe de **+ à −**, f a un…&nbsp;?",
+            "f(x) = x³&nbsp;: extremum en 0&nbsp;?"
+          ],
+          "reponses": "1) 6x − 5 · 2) maximum · 3) non, f’ ne change pas de signe"
+        }
+      ]
+    }
+  ]
+}

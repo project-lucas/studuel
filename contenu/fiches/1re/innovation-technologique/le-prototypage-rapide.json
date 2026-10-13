@@ -1,0 +1,125 @@
+{
+  "titre": "Prototypage rapide",
+  "titreSurligne": "rapide",
+  "accroche": "Fabriquer vite pour tester tôt.",
+  "bonus": "**Additif** = ajoute de la matière · **soustractif** = en enlève · **STL → G-code**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/innovation-technologique/le-prototypage-rapide.webp",
+    "prompt": "a glossy violet 3D printer nozzle building a small golden cube layer by layer, tiny sparkles, same art style as the reference icons, no text, magenta background"
+  },
+  "marcel": "Se tromper tôt,\nça coûte moins !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les procédés",
+          "entetes": ["Procédé", "Principe"],
+          "lignes": [
+            ["**Impression FDM**", "additif : fil fondu"],
+            ["**Impression résine**", "additif : lumière"],
+            ["**Découpe laser**", "soustractif : plaque"],
+            ["**Fraisage CN**", "soustractif : outil"],
+            ["**Moule silicone**", "petite série en résine"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les mots à connaître",
+          "items": [
+            { "terme": "Maquette d’aspect", "definition": "formes, couleurs, **prise en main**" },
+            { "terme": "Maquette fonctionnelle", "definition": "un **principe** de fonctionnement" },
+            { "terme": "Prototype", "definition": "produit presque complet, **testé**" },
+            { "terme": "STL / G-code", "definition": "maillage / **parcours** de la buse" },
+            { "terme": "Supports", "definition": "soutiennent les **surplombs**, à retirer" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Du fichier à la pièce",
+          "etapes": [
+            { "titre": "Exporter", "texte": "la maquette au format maillé STL" },
+            { "titre": "Trancher", "texte": "en couches : le logiciel génère le G-code" },
+            { "titre": "Régler et imprimer", "texte": "hauteur de couche, remplissage, supports" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Pièce de __15 g__ de PLA, fil à __25 € le kilo__ : coût matière&nbsp;?",
+          "calcul": "0,015 kg × 25 € = 0,375 €",
+          "aparte": "arrondi",
+          "resultat": "environ [[0,40 €]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quel procédé&nbsp;?",
+          "oui": {
+            "titre": "Additif",
+            "texte": "L’impression 3D **ajoute** la matière couche par couche."
+          },
+          "non": {
+            "titre": "Soustractif",
+            "texte": "La découpe et le fraisage **enlèvent** de la matière."
+          },
+          "essai": {
+            "texte": "Pour une pièce plane en bois à assembler, la <i>découpe laser</i> est rapide et précise."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Protocole : conditions, mesures, nombre d’essais.", "quoi": "préparer" },
+            { "texte": "Je compare les mesures au cahier des charges.", "quoi": "comparer" },
+            { "texte": "Conforme, ou à modifier.", "quoi": "conclure" },
+            { "texte": "Remplissage 15 à 30 % : suffisant souvent.", "quoi": "économiser" }
+          ],
+          "pied": "Sécurité&nbsp;: ==lunettes==, ==capot fermé== sur la découpeuse laser, ==ventilation==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **maquette** et prototype.",
+            "Tout imprimer en remplissage **plein**.",
+            "**Tester** sans protocole ni mesure.",
+            "Négliger la **sécurité** à la découpeuse.",
+            "Oublier les **supports** des parties en surplomb."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel procédé est **additif**&nbsp;?",
+            "Que génère le **tranchage**&nbsp;?",
+            "À quoi sert un **protocole** d’essai&nbsp;?"
+          ],
+          "reponses": "1) l’impression 3D · 2) le G-code, le parcours de la buse · 3) cadrer les mesures et conclure"
+        }
+      ]
+    }
+  ]
+}

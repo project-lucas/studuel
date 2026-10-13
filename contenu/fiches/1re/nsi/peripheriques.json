@@ -1,0 +1,114 @@
+{
+  "titre": "Périphériques",
+  "titreSurligne": "Périphériques",
+  "accroche": "Entrées, sorties et stockage.",
+  "bonus": "**interruption** = le périphérique prévient · **scrutation** = le processeur vérifie · débit réel &lt; théorique",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/nsi/peripheriques.webp",
+    "prompt": "a glossy violet computer mouse, a golden keyboard key and a small usb stick connected by golden cables, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Je t’entends,\nclavier !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Trois familles",
+          "entetes": ["Famille", "Exemples"],
+          "lignes": [
+            ["**Entrée**", "clavier, souris, micro, scanner, capteur"],
+            ["**Sortie**", "écran, imprimante, haut-parleur"],
+            ["**Entrée-sortie**", "écran tactile, disque, carte réseau, clé USB"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le stockage",
+          "entetes": ["Support", "Atout", "Limite"],
+          "lignes": [
+            ["**HDD**", "capacité, coût", "lent, fragile"],
+            ["**SSD**", "rapide, silencieux", "plus cher, écritures limitées"],
+            ["**Optique, bandes**", "archivage", "accès lent"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 3,
+          "titre": "Interruption ou scrutation",
+          "oui": { "titre": "Interruption", "texte": "le périphérique **prévient** le processeur&nbsp;: efficace, c’est le mécanisme normal." },
+          "non": { "titre": "Scrutation", "texte": "le processeur **va vérifier** périodiquement&nbsp;: simple mais coûteux." },
+          "essai": { "titre": "Clavier", "texte": "réagit **instantanément** grâce aux interruptions." }
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une imprimante est-elle d’__entrée__, de __sortie__ ou des deux&nbsp;?",
+          "calcul": "elle reçoit des données et les imprime",
+          "aparte": "sens de l’information",
+          "resultat": "= [[sortie]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Interfaces et pilotes",
+          "colonnes": 2,
+          "cartes": [
+            { "titre": "Bus", "texte": "USB, HDMI, Bluetooth, Wi-Fi&nbsp;: un **débit** et un **protocole**." },
+            { "titre": "Débit réel", "texte": "toujours **inférieur** au théorique." },
+            { "titre": "Pilote", "texte": "chargé par le noyau, un par périphérique." },
+            { "titre": "Persistance", "texte": "tous les supports de stockage la **gardent**." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "On classe selon le sens de l’information.", "quoi": "le critère" },
+            { "texte": "Le noyau charge un pilote par périphérique.", "quoi": "le système" },
+            { "texte": "Le périphérique prévient par interruption.", "quoi": "le mécanisme" }
+          ],
+          "pied": "Le stockage est ==persistant==, la mémoire vive non."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Classer un disque en **sortie** seulement.",
+            "Croire que le débit annoncé est le débit **réel**.",
+            "Confondre **interruption** et scrutation.",
+            "Dire qu’un SSD a des **pièces mobiles**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Un **écran tactile** est de quelle famille&nbsp;?",
+            "Quel stockage n’a **aucune pièce mobile**&nbsp;?",
+            "Quel mécanisme **évite de surveiller** un clavier&nbsp;?"
+          ],
+          "reponses": "1) entrée-sortie · 2) le SSD · 3) l’interruption"
+        }
+      ]
+    }
+  ]
+}

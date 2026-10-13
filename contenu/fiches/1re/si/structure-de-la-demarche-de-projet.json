@@ -1,0 +1,166 @@
+{
+  "titre": "Démarche de projet",
+  "titreSurligne": "projet",
+  "accroche": "Coût, délai, qualité : on n’a pas tout.",
+  "bonus": "**Conception → Planification → Réalisation → Terminaison** · chaque phase se clôt par un **jalon**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/structure-de-la-demarche-de-projet.webp",
+    "prompt": "a glossy violet triangle with three golden corners, a small flag on top and a calendar, same art style as the reference icons, sparkles"
+  },
+  "marcel": "Trois contraintes,\nun seul projet !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le triangle du projet",
+          "items": [
+            {
+              "terme": "Coût",
+              "definition": "le budget engagé"
+            },
+            {
+              "terme": "Délai",
+              "definition": "le temps disponible"
+            },
+            {
+              "terme": "Qualité",
+              "definition": "ce que le produit doit faire (périmètre)"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le cycle de vie",
+          "entetes": [
+            "Phase",
+            "Elle produit"
+          ],
+          "lignes": [
+            [
+              "**Conception**",
+              "des solutions comparées"
+            ],
+            [
+              "**Planification**",
+              "un ordonnancement"
+            ],
+            [
+              "**Réalisation**",
+              "le produit"
+            ],
+            [
+              "**Terminaison**",
+              "livraison, retour d’expérience"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Exprimer le besoin en trois questions",
+          "etapes": [
+            {
+              "titre": "À qui",
+              "texte": "le produit rend-il service&nbsp;?"
+            },
+            {
+              "titre": "Sur quoi",
+              "texte": "agit-il&nbsp;?"
+            },
+            {
+              "titre": "Dans quel but",
+              "texte": "&nbsp;? Puis on écrit le cahier des charges fonctionnel"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "On veut __réduire le délai__ sans changer le périmètre. Que se passe-t-il&nbsp;?",
+          "calcul": "délai ↓ ⇒ plus de monde, plus d’heures",
+          "aparte": "le triangle est lié",
+          "resultat": "le [[coût augmente]] (ou la qualité baisse)"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Une exigence exploitable&nbsp;?",
+          "oui": {
+            "titre": "Oui",
+            "texte": "« Résister à une charge de 150 kg, tolérance ±10 % » : **critère, niveau, flexibilité**."
+          },
+          "non": {
+            "titre": "Non",
+            "texte": "« Être solide » : aucun critère, **rien à vérifier**."
+          },
+          "essai": {
+            "texte": "Écrire <i>« utiliser un moteur pas à pas »</i> est une faute&nbsp;: c’est une solution, pas un besoin."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Fonction principale : ce qui justifie le produit",
+              "quoi": "l’essentiel"
+            },
+            {
+              "texte": "Fonction contrainte : normes, encombrement, coût",
+              "quoi": "les limites"
+            },
+            {
+              "texte": "Chaque fonction : critère, niveau, flexibilité",
+              "quoi": "la précision"
+            },
+            {
+              "texte": "Jalon : poursuivre, corriger ou arrêter",
+              "quoi": "fin de phase"
+            }
+          ],
+          "pied": "Le cahier des charges dit ==ce qu’il faut faire==, jamais comment."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Proposer une **solution** dans le cahier des charges.",
+            "Croire qu’on améliore **un seul** côté du triangle.",
+            "Confondre **projet** (unique) et **production** (répétée).",
+            "Oublier le **jalon** de fin de phase."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelles sont les **trois contraintes** du triangle&nbsp;?",
+            "Que décide un **jalon**&nbsp;?",
+            "Un cahier des charges dit-il **comment**&nbsp;?"
+          ],
+          "reponses": "1) coût, délai, qualité · 2) poursuivre, corriger ou arrêter · 3) non, seulement quoi"
+        }
+      ]
+    }
+  ]
+}

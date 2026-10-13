@@ -1,0 +1,111 @@
+{
+  "titre": "Énergie et puissance",
+  "titreSurligne": "puissance",
+  "accroche": "Le rendement, c’est utile ÷ absorbé.",
+  "bonus": "E = P × Δt · **η = P<sub>utile</sub> ÷ P<sub>absorbée</sub> < 1** · 1 kWh = 3,6 × 10⁶ J",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/energie-et-puissance.webp",
+    "prompt": "a glossy violet electric motor with a golden shaft and a glowing energy bolt, small heat waves rising, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Chaque maillon\nperd un peu !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Rendement",
+          "petite": true,
+          "lignes": ["η = {P utile/P absorbée}", "η total = η₁ × η₂ × η₃"],
+          "regle": "Toujours **inférieur à 1**. Les rendements des maillons d’une chaîne se ==multiplient==. Puissance&nbsp;: **P = E ÷ Δt**.",
+          "note": "la différence part en pertes&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les expressions de P",
+          "entetes": ["Domaine", "Formule"],
+          "lignes": [
+            ["Électrique", "P = U × I"],
+            ["Dissipation", "P = R × I²"],
+            ["Translation", "P = F × v"],
+            ["Rotation", "P = C × ω"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Calculer un rendement en trois temps",
+          "etapes": [
+            { "titre": "Convertir", "texte": "ω = 2π × N ÷ 60, avec N en tours par minute" },
+            { "titre": "Calculer", "texte": "la puissance utile, puis la puissance absorbée" },
+            { "titre": "Diviser", "texte": "η = P utile ÷ P absorbée, sans unité, inférieur à 1" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Moteur à __3000 tr/min__, couple utile 2 N·m, puissance absorbée 800 W. Son rendement&nbsp;?",
+          "calcul": "ω = 2π × 3000 ÷ 60 ≈ 314 rad/s ; P = C × ω ≈ 628 W",
+          "aparte": "628 ÷ 800",
+          "resultat": "η ≈ [[0,79]], soit 79 %"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Une chaîne de trois maillons",
+          "oui": { "titre": "Les rendements se multiplient", "texte": "3 maillons à 90 %&nbsp;: 0,90³ ≈ **73 %**." },
+          "non": { "titre": "Pas de moyenne", "texte": "Ni addition ni moyenne&nbsp;: on **multiplie** les rendements." },
+          "essai": { "texte": "Trois maillons à 80 %&nbsp;: 0,8 × 0,8 × 0,8 ≈ <i>51 %</i>, et non 80 %." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "η = P<sub>utile</sub> ÷ P<sub>absorbée</sub>", "quoi": "la formule" },
+            { "texte": "ω = 2π × 3000 ÷ 60 ≈ 314 rad/s", "quoi": "la conversion" },
+            { "texte": "η ≈ 0,79 soit 79 %", "quoi": "avec la conclusion" }
+          ],
+          "pied": "Réduire le nombre de ==conversions== et corriger le **maillon le plus faible**."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Laisser N en **tr/min** dans P = C × ω.",
+            "**Additionner** les rendements de la chaîne.",
+            "Trouver un rendement **supérieur à 1**.",
+            "Confondre **joule** et **watt**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Énergie d’un appareil de **100 W** pendant **10 s**&nbsp;?",
+            "Rendement de **deux** maillons à **50 %**&nbsp;?",
+            "Unité de la **puissance**&nbsp;?"
+          ],
+          "reponses": "1) 1000 J · 2) 25 % · 3) le watt (W)"
+        }
+      ]
+    }
+  ]
+}

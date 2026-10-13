@@ -1,0 +1,176 @@
+{
+  "titre": "Puissance et rendement",
+  "titreSurligne": "rendement",
+  "accroche": "Suivre l’énergie et ses pertes.",
+  "bonus": "**E = P × t** · **η = P utile / P absorbée** · **η global = η1 × η2 × …**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/ingenierie-dd/comportement-energetique-puissance-rendement-bilan.webp",
+    "prompt": "a glossy violet electric bicycle with a golden battery and a golden lightning bolt, small flowing arrows showing energy and heat losses, sparkles, magenta background, same art style as the reference icons, no text"
+  },
+  "marcel": "L’énergie se conserve,\nles pertes aussi !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Énergie et rendement",
+          "taille": "mini",
+          "lignes": [
+            "E = P × t",
+            "η = {P utile/P absorbée}"
+          ],
+          "regle": "E en J si P en W et t en s. Le rendement est ==toujours inférieur à 1==. Pertes = absorbée − utile.",
+          "note": "1 Wh = 3 600 J&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Puissance selon le domaine",
+          "entetes": [
+            "Domaine",
+            "Puissance"
+          ],
+          "lignes": [
+            [
+              "Électrique",
+              "P = U × I"
+            ],
+            [
+              "Translation",
+              "P = F × v"
+            ],
+            [
+              "Rotation",
+              "P = C × ω"
+            ],
+            [
+              "Hydraulique",
+              "P = p × Qv"
+            ],
+            [
+              "Thermique",
+              "flux thermique (W)"
+            ],
+            [
+              "Batterie",
+              "E = U × Q (Wh)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Faire un bilan énergétique",
+          "etapes": [
+            {
+              "titre": "Identifier",
+              "texte": "l’énergie **entrante** et sa source"
+            },
+            {
+              "titre": "Chiffrer",
+              "texte": "chaque conversion : rendement, **utile**, pertes"
+            },
+            {
+              "titre": "Agir",
+              "texte": "Sankey : l’étage le plus coûteux est celui à améliorer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Variateur __0,95__, moteur __0,85__, réducteur __0,90__. Rendement global&nbsp;?",
+          "calcul": "0,95 × 0,85 × 0,90",
+          "aparte": "inférieur au plus faible",
+          "resultat": "η global ≈ [[0,73]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Réduire les pertes",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Effet Joule",
+              "texte": "réduire le courant, câbles plus gros"
+            },
+            {
+              "titre": "Frottements",
+              "texte": "lubrifier, bons roulements"
+            },
+            {
+              "titre": "Chaleur",
+              "texte": "isoler"
+            },
+            {
+              "titre": "Récupérer",
+              "texte": "freinage récupératif"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Énergie stockée : 36 × 10 = 360 Wh",
+              "quoi": "la batterie"
+            },
+            {
+              "texte": "Puissance tirée : 150 / 0,73 ≈ 205 W",
+              "quoi": "la puissance"
+            },
+            {
+              "texte": "Autonomie : 360 / 205 ≈ 1,75 h",
+              "quoi": "le résultat"
+            },
+            {
+              "texte": "À 20 km/h : environ 35 km",
+              "quoi": "la distance"
+            }
+          ],
+          "pied": "On écrit ==la formule==, ==le calcul==, puis ==l’unité==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire un rendement **supérieur à 1**.",
+            "**Additionner** les rendements au lieu de les multiplier.",
+            "Confondre **puissance** (W) et **énergie** (J ou Wh).",
+            "Oublier ω en **rad/s** : ω = 2π × N / 60.",
+            "Oublier les **pertes** : P absorbée − P utile."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que vaut **1 kWh** en mégajoules&nbsp;?",
+            "Comment trouver le rendement d’une **chaîne**&nbsp;?",
+            "Quel schéma montre un **bilan** d’énergie&nbsp;?"
+          ],
+          "reponses": "1) 3,6 MJ · 2) multiplier les rendements · 3) le diagramme de Sankey"
+        }
+      ]
+    }
+  ]
+}

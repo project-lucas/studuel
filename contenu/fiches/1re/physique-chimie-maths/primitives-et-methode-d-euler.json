@@ -1,0 +1,199 @@
+{
+  "titre": "Primitives et Euler",
+  "titreSurligne": "Euler",
+  "accroche": "Remonter de la dérivée à la fonction.",
+  "bonus": "**F’ = f** · primitives : F + C · Euler : **y(n+1) = y(n) + h × f(x(n))**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-maths/primitives-et-methode-d-euler.webp",
+    "prompt": "a glossy violet curve rebuilt from a staircase of small golden tangent segments, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Pas après pas,\nla courbe revient !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Primitive",
+          "taille": "mini",
+          "lignes": [
+            "F’(x) = f(x)",
+            "F(x) + C"
+          ],
+          "regle": "Deux primitives d’une même fonction **diffèrent d’une constante** : les courbes se décalent verticalement. Une **condition initiale** choisit C.",
+          "note": "vérifie en dérivant !"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Primitives usuelles",
+          "entetes": [
+            "f(x)",
+            "F(x)"
+          ],
+          "lignes": [
+            [
+              "k",
+              "k x"
+            ],
+            [
+              "x",
+              "x²/2"
+            ],
+            [
+              "xⁿ",
+              "xⁿ⁺¹/(n + 1)"
+            ],
+            [
+              "cos(ωt + φ)",
+              "(1/ω) sin(ωt + φ)"
+            ],
+            [
+              "sin(ωt + φ)",
+              "−(1/ω) cos(ωt + φ)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Retrouver la fonction",
+          "etapes": [
+            {
+              "titre": "Primitiver",
+              "texte": "terme à terme, sans oublier **+ C**"
+            },
+            {
+              "titre": "Condition",
+              "texte": "remplacer par la **valeur initiale** : C"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "écrire la **fonction** et calculer la valeur"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "v(t) = 3t² + 2 et x(0) = 5 m. __x(2)__&nbsp;?",
+          "calcul": "x(t) = t³ + 2t + C · C = 5",
+          "aparte": "x(0) = C",
+          "resultat": "x(2) = 8 + 4 + 5 = [[17 m]]"
+        },
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Euler : F’ = 1/x, F(1) = 0, h = 0,5",
+          "entetes": [
+            "x",
+            "y",
+            "f(x) = 1/x"
+          ],
+          "lignes": [
+            [
+              "1",
+              "0",
+              "1"
+            ],
+            [
+              "1,5",
+              "0,5",
+              "0,667"
+            ],
+            [
+              "2",
+              "0,833",
+              "0,5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": "★",
+          "titre": "Un signal sinusoïdal",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Primitive de 6 cos(3t)",
+              "texte": "6 × (1/3) sin(3t) = **2 sin(3t)** (+ C), avec ω = 3"
+            },
+            {
+              "titre": "Vérification",
+              "texte": "(2 sin 3t)’ = 2 × 3 cos 3t = **6 cos 3t**"
+            },
+            {
+              "titre": "Sans condition initiale",
+              "texte": "on ne connaît la primitive qu’**à une constante près** : il faut une valeur de départ, par exemple x(0)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "La méthode d’Euler",
+          "deux": false,
+          "items": [
+            {
+              "titre": "Principe",
+              "texte": "avancer d’un **pas h** en suivant la tangente"
+            },
+            {
+              "titre": "Formules",
+              "texte": "x(n+1) = x(n) + h et y(n+1) = y(n) + h × f(x(n))"
+            },
+            {
+              "titre": "Précision",
+              "texte": "plus h est **petit**, meilleure est l’approximation"
+            },
+            {
+              "titre": "Résultat",
+              "texte": "F(2) ≈ **0,83** (exact 0,69 : elle surestime ici)"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier la **constante C**.",
+            "Oublier de diviser par **ω** (ou n + 1).",
+            "Ne pas **vérifier** en dérivant.",
+            "Prendre f(x(n+1)) au lieu de **f(x(n))** dans Euler."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Une primitive de **2x + 1** ?",
+            "Primitive de **6 cos(3t)** ?",
+            "Dans Euler, que vaut **y(n+1)** ?"
+          ],
+          "reponses": "1) x² + x + C · 2) 2 sin(3t) + C · 3) y(n) + h × f(x(n))"
+        }
+      ]
+    }
+  ]
+}

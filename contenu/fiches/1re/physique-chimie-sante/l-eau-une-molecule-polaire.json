@@ -1,0 +1,113 @@
+{
+  "titre": "L’eau polaire",
+  "titreSurligne": "polaire",
+  "accroche": "Pourquoi l’eau dissout… ou pas.",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-sante/l-eau-une-molecule-polaire.webp",
+    "prompt": "a glossy violet water droplet showing a bent molecule with golden dotted bonds, a floating ice cube and a small oil droplet, sparkles, same art style as the reference icons, on a magenta background, no text, no numbers"
+  },
+  "marcel": "Qui se ressemble\ns’assemble !",
+  "bonus": "Fusion **0 °C** · vaporisation **100 °C** · l’huile (d ≈ 0,9) **flotte** sur l’eau",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "La molécule d’eau",
+          "items": [
+            { "terme": "Polaire", "definition": "O plus **électronégatif** que H&nbsp;: charges δ⁻ sur O, δ⁺ sur H" },
+            { "terme": "Coudée", "definition": "les charges ne se compensent pas" },
+            { "terme": "Liaison H", "definition": "H δ⁺ attiré par O δ⁻ d’une voisine, notée O–H···O" },
+            { "terme": "Palier", "definition": "température **constante** pendant un changement d’état" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Dans l’eau&nbsp;?",
+          "entetes": ["Espèce", "Comportement"],
+          "lignes": [
+            ["Glucides, sel", "**hydrophiles**, solubles"],
+            ["Huiles, graisses", "**hydrophobes**, insolubles"],
+            ["Éthanol", "**miscible** à l’eau"],
+            ["Savon", "tête hydrophile, queue hydrophobe"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Prévoir la solubilité",
+          "etapes": [
+            { "titre": "Observer", "texte": "la molécule&nbsp;: groupes –OH, charges, ou longue chaîne carbonée" },
+            { "titre": "Comparer", "texte": "avec l’eau&nbsp;: polaire ou ionique contre apolaire" },
+            { "titre": "Conclure", "texte": "soluble si elle forme des liaisons hydrogène avec l’eau" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Le glucose se dissout dans l’eau, pas l’__huile__. Pourquoi&nbsp;?",
+          "calcul": "glucose : nombreux –OH",
+          "aparte": "liaisons H avec l’eau",
+          "resultat": "huile : chaînes [[apolaires]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "La glace flotte",
+          "oui": { "titre": "Structure ouverte", "texte": "Chaque molécule est liée à **quatre voisines**&nbsp;: la glace occupe plus de volume et **flotte**." },
+          "non": { "titre": "Plus dense", "texte": "La glace n’est pas plus dense que l’eau liquide&nbsp;: sinon elle coulerait." },
+          "essai": { "texte": "Les sels biliaires, comme le savon, forment des **micelles** autour des graisses&nbsp;: queues hydrophobes à l’intérieur, têtes vers l’eau." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "O est plus électronégatif que H&nbsp;: la liaison O–H est polaire.", "quoi": "expliquer" },
+            { "texte": "La molécule est coudée&nbsp;: elle est polaire.", "quoi": "conclure" },
+            { "texte": "On extrait avec un solvant dans une ampoule à décanter.", "quoi": "méthode" }
+          ],
+          "pied": "La phase la moins ==dense== est au-dessus."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre liaison **covalente** et liaison **hydrogène**.",
+            "Croire que la température **monte** pendant le palier.",
+            "Dire qu’une huile est **miscible** à l’eau.",
+            "Oublier que la **phase dense** est en bas."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Pourquoi la molécule d’eau est-elle **polaire**&nbsp;?",
+            "Vaporisation de l’eau&nbsp;: à quelle **température**&nbsp;?",
+            "Qu’appelle-t-on **hydrophobe**&nbsp;?"
+          ],
+          "reponses": "1) coudée, O plus électronégatif · 2) 100 °C · 3) qui ne se dissout pas dans l’eau"
+        }
+      ]
+    }
+  ]
+}

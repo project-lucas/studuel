@@ -1,0 +1,158 @@
+{
+  "titre": "L’interrogative",
+  "titreSurligne": "interrogative",
+  "accroche": "Trois questions, trois places du verbe.",
+  "bonus": "fermée = verbe **1<sup>er</sup>** · ouverte = verbe **2<sup>e</sup>** · indirecte = verbe **à la fin**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/allemand/la-phrase-interrogative.webp",
+    "prompt": "a glossy violet question mark with a golden dot, three small golden speech bubbles around it, sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Où va le verbe&nbsp;?\nTout dépend&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La place du verbe",
+          "lignes": ["**1<sup>er</sup>** · **2<sup>e</sup>** · **fin**"],
+          "petite": true,
+          "regle": "Question **fermée**&nbsp;: le verbe ouvre. **Ouverte**&nbsp;: il suit le mot en w-. **Indirecte**&nbsp;: il part à la fin.",
+          "note": "et le «&nbsp;?&nbsp;» disparaît"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les trois questions",
+          "entetes": ["Type", "L’exemple", "En français"],
+          "lignes": [
+            ["Fermée", "<i>**Kommst** du morgen?</i>", "Viens-tu demain&nbsp;?"],
+            ["Ouverte", "<i>Wann **kommst** du?</i>", "Quand viens-tu&nbsp;?"],
+            ["Indirecte", "<i>Ich weiß nicht, wann er **kommt**.</i>", "Je ne sais pas quand il vient."],
+            ["Sans mot en w-", "<i>Ich frage mich, **ob** er **kommt**.</i>", "Je me demande s’il vient."]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les mots interrogatifs",
+          "colonnes": 3,
+          "cartes": [
+            {
+              "titre": "Qui · quoi · lequel",
+              "texte": "<i>wer</i> (se décline&nbsp;: <i>wen, wem, wessen</i>), <i>was</i>, <i>welcher / welche / welches</i>."
+            },
+            {
+              "titre": "Où · d’où",
+              "texte": "<i>wo</i> (sans mouvement), <i>wohin</i> (avec mouvement), <i>woher</i> (d’où)."
+            },
+            {
+              "titre": "Pourquoi · comment",
+              "texte": "<i>warum, wieso, weshalb</i> (interchangeables) · <i>wie</i> · <i>was für ein</i> (quelle sorte de)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Ja ou doch&nbsp;?",
+          "oui": {
+            "titre": "Doch = si&nbsp;!",
+            "texte": "<i>Du kommst nicht mit?</i> — <i>**Doch!**</i> (Si, je viens&nbsp;!)"
+          },
+          "non": {
+            "titre": "Ja impossible",
+            "texte": "Face à une question **négative**, <i>Ja</i> ne contredit pas&nbsp;: on dit <i>Doch</i>."
+          },
+          "essai": {
+            "titre": "Essai",
+            "texte": "<i>Hast du keinen Hunger?</i> — « Si, j’ai faim&nbsp;! » → <i>**Doch**, ich habe Hunger.</i>"
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Poser la bonne question",
+          "etapes": [
+            {
+              "titre": "Oui ou non&nbsp;?",
+              "texte": "Pas de mot en w- → verbe en **1<sup>re</sup>** place."
+            },
+            {
+              "titre": "Un mot en w-&nbsp;?",
+              "texte": "Il ouvre, le verbe suit en **2<sup>e</sup>** place."
+            },
+            {
+              "titre": "Dans une phrase&nbsp;?",
+              "texte": "Question **indirecte**&nbsp;: verbe à la **fin**, <i>ob</i> sans mot en w-."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "wo + préposition",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Une chose",
+              "texte": "<i>wo(r)-</i> + préposition&nbsp;: <i>Worauf wartest du?</i>"
+            },
+            {
+              "titre": "Une personne",
+              "texte": "préposition + cas&nbsp;: <i>Auf wen wartest du?</i>"
+            },
+            {
+              "titre": "Avec quoi&nbsp;?",
+              "texte": "<i>Womit schreibst du?</i> — mais <i>Mit wem sprichst du?</i>"
+            },
+            {
+              "titre": "À quoi&nbsp;?",
+              "texte": "<i>Woran denkst du?</i> — mais <i>An wen denkst du?</i>"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "<i>Ich weiß nicht, wenn er kommt</i> → <i>wann</i>. Pour « si » indirect&nbsp;: <i>**ob**</i>, jamais <i>wenn</i>.",
+            "<i>Ich frage, wann kommt er</i> → <i>wann er **kommt**</i> (verbe à la fin).",
+            "Répondre <i>Ja</i> à une question négative → <i>**Doch**</i>.",
+            "<i>Auf was wartest du?</i> (famil.) → <i>**Worauf** wartest du?</i>"
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Mets en question indirecte&nbsp;: <i>Ich frage mich: Kommt er?</i>",
+            "<i>___ wartest du?</i> (sur une chose, auf)",
+            "<i>Du isst nicht?</i> — « Si&nbsp;! »"
+          ],
+          "reponses": "1) ob er kommt 2) Worauf 3) Doch!"
+        }
+      ]
+    }
+  ]
+}

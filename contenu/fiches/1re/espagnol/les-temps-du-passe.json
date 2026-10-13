@@ -1,0 +1,118 @@
+{
+  "titre": "Les temps du passé",
+  "titreSurligne": "passé",
+  "accroche": "Trois passés, trois manières de voir.",
+  "bonus": "**indefinido** = achevé · **imperfecto** = décor · **perfecto** = relié à aujourd’hui",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/espagnol/les-temps-du-passe.webp",
+    "prompt": "a glossy violet pocket watch with golden hands turning backwards and three small golden arrows behind it, tiny golden sparkles, same art style as the reference icons, magenta background"
+  },
+  "marcel": "Ayer comí,\nhoy he comido&nbsp;!",
+  "rangs": [
+    {
+      "colonnes": "300px 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le choix",
+          "lignes": ["**indefinido · imperfecto · perfecto**"],
+          "petite": true,
+          "regle": "Le choix ne dépend pas du moment mais de la **manière de voir** l’action&nbsp;: achevée, en cours, ou reliée à aujourd’hui.",
+          "note": "décor = imperfecto, événement = indefinido"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les terminaisons",
+          "entetes": ["Temps", "-ar", "-er / -ir"],
+          "lignes": [
+            ["Indefinido", "-é, -aste, -ó, -amos, -asteis, -aron", "-í, -iste, -ió, -imos, -isteis, -ieron"],
+            ["Imperfecto", "-aba, -abas, -aba, -ábamos, -abais, -aban", "-ía, -ías, -ía, -íamos, -íais, -ían"],
+            ["Perfecto", "haber au présent", "+ participe passé"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "Les trois passés",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Indefinido", "texte": "Action **achevée**, coupée du présent (<i>ayer, en 1998, el año pasado</i>)&nbsp;: <i>Ayer **comí** paella.</i>" },
+            { "titre": "Imperfecto", "texte": "Description, habitude, action en cours (<i>siempre, mientras</i>)&nbsp;: <i>Cuando era pequeño, **jugaba** al fútbol.</i>" },
+            { "titre": "Perfecto", "texte": "Passé **relié au présent** (<i>hoy, esta semana, ya</i>)&nbsp;: <i>Hoy **he estudiado** mucho.</i>" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Le perfecto avec une date&nbsp;?",
+          "oui": { "titre": "Coupé du présent", "texte": "<i>Ayer **comí** paella.</i> — ayer coupe du présent : indefinido." },
+          "non": { "titre": "Passé composé à la française", "texte": "<i>Ayer **he comido**.</i> — faute : le perfecto exige un lien avec aujourd’hui." },
+          "essai": { "titre": "Essai", "texte": "<i>Esta mañana ___ (llegar) tarde.</i> → **he llegado**&nbsp;: la matinée n’est pas finie." }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 5,
+          "titre": "Dans un récit",
+          "etapes": [
+            { "titre": "Le décor", "texte": "Ce qui durait, était en cours → **imperfecto**." },
+            { "titre": "L’événement", "texte": "Ce qui survient et fait avancer l’action → **indefinido**." },
+            { "titre": "Les deux ensemble", "texte": "<i>**Llovía** cuando **salí** de casa.</i> (il pleuvait, je suis sorti)" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 6,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            { "titre": "3 irréguliers seulement", "texte": "à l’imparfait&nbsp;: <i>ser → era</i>, <i>ir → iba</i>, <i>ver → veía</i>" },
+            { "titre": "Marqueurs de l’indefinido", "texte": "<i>ayer, anoche, en 1998, el año pasado</i>" },
+            { "titre": "Marqueurs du perfecto", "texte": "<i>hoy, esta semana, ya, todavía no</i>" },
+            { "titre": "Marqueurs de l’imperfecto", "texte": "<i>siempre, todos los días, mientras</i>" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Employer le passé composé partout comme en français&nbsp;: <i>Ayer he comido</i> → <i>Ayer **comí**.</i>",
+            "Inverser décor et événement&nbsp;: la phrase est correcte mais raconte **autre chose**.",
+            "Croire l’imparfait difficile&nbsp;: il n’a que **trois** irréguliers.",
+            "Oublier l’accent final&nbsp;: <i>habló</i> (passé) ≠ <i>hablo</i> (présent)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "<i>Ayer ___ (comer, yo) paella.</i>",
+            "<i>Cuando ___ (ser, yo) pequeño, jugaba al fútbol.</i>",
+            "<i>Hoy ___ (estudiar, yo) mucho.</i>"
+          ],
+          "reponses": "1) comí 2) era 3) he estudiado"
+        }
+      ]
+    }
+  ]
+}

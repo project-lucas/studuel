@@ -1,0 +1,159 @@
+{
+  "titre": "Isoler et inventorier",
+  "titreSurligne": "Isoler",
+  "accroche": "On isole d’abord, on calcule ensuite.",
+  "bonus": "Plan&nbsp;: **3** composantes · Espace&nbsp;: **6** · jamais d’action **intérieure** dans le bilan",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/si/representation-complete-des-actions.webp",
+    "prompt": "a glossy violet mechanical part inside a golden dashed bubble with several arrows pointing at it, sparkles, same art style as the reference icons"
+  },
+  "marcel": "Isole d’abord,\ncalcule après !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Le torseur d’une action",
+          "petite": true,
+          "lignes": [
+            "Résultante",
+            "+ moment résultant"
+          ],
+          "regle": "Deux vecteurs en un point&nbsp;: **plan 3** composantes, **espace 6**. Transporté ailleurs, la ==résultante== ne change pas, le moment si.",
+          "note": "le bras de levier a changé&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Équilibre particulier",
+          "entetes": [
+            "Le solide",
+            "La propriété"
+          ],
+          "lignes": [
+            [
+              "**2 forces**",
+              "même droite, sens opposés, même intensité"
+            ],
+            [
+              "**3 forces** non parallèles",
+              "droites concourantes, le triangle des forces se ferme"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le bilan des actions en trois temps",
+          "etapes": [
+            {
+              "titre": "Isoler",
+              "texte": "séparer le solide de ce qui l’entoure, par la pensée"
+            },
+            {
+              "titre": "Inventorier",
+              "texte": "chaque action qui traverse la frontière&nbsp;: point, direction, sens, intensité"
+            },
+            {
+              "titre": "Représenter",
+              "texte": "flèche à l’échelle, inconnues tracées avec un sens supposé"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une bielle de __poids négligeable__, articulée en A et B, ne subit que ces deux actions. Direction de l’action en A&nbsp;?",
+          "calcul": "2 forces ⇒ même droite d’action",
+          "aparte": "sens opposés, même intensité",
+          "resultat": "la droite [[(AB)]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Dans le bilan&nbsp;?",
+          "oui": {
+            "titre": "Action extérieure",
+            "texte": "Elle **traverse la frontière** du solide isolé&nbsp;: on la compte."
+          },
+          "non": {
+            "titre": "Action intérieure",
+            "texte": "Elle reste **dans** le solide isolé&nbsp;: on ne la compte **jamais**."
+          },
+          "essai": {
+            "texte": "Une valeur négative trouvée pour une inconnue ne rend rien faux&nbsp;: le sens réel est <i>l’inverse</i> du sens supposé."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "On isole le solide **S**",
+              "quoi": "la phrase d’ouverture"
+            },
+            {
+              "texte": "Bilan&nbsp;: poids, action en A, action en B",
+              "quoi": "la liste"
+            },
+            {
+              "texte": "Échelle&nbsp;: 1 cm pour 100 N",
+              "quoi": "obligatoire"
+            }
+          ],
+          "pied": "Sans ==isolement== propre, aucun calcul n’a de sens."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Compter une action **intérieure** au solide isolé.",
+            "Tracer les flèches **sans échelle** indiquée.",
+            "Croire une valeur négative **fausse**.",
+            "Oublier que le moment **change** quand on transporte un torseur."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "texte",
+          "numero": "★",
+          "titre": "À retenir",
+          "paragraphes": [
+            "Dans le plan, un torseur a **trois** composantes&nbsp;: deux de force, un de moment. Dans l’espace, il en a **six**. Ces deux propriétés d’équilibre (2 ou 3 forces) résolvent souvent un problème **sans équation**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de composantes pour un torseur **plan**&nbsp;?",
+            "Trois forces non parallèles en équilibre&nbsp;: leurs droites sont&nbsp;?",
+            "Une action intérieure figure-t-elle au **bilan**&nbsp;?"
+          ],
+          "reponses": "1) trois · 2) concourantes · 3) non, jamais"
+        }
+      ]
+    }
+  ]
+}

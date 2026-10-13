@@ -1,0 +1,112 @@
+{
+  "titre": "Glucides transformés",
+  "titreSurligne": "transformés",
+  "accroche": "Hydrolyse, stockage et combustion.",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-sante/les-transformations-des-glucides-dans-l-organisme.webp",
+    "prompt": "a glossy violet sugar cube splitting into two golden glucose molecules with a tiny flame below, sparkles, same art style as the reference icons, on a magenta background, no text, no numbers"
+  },
+  "marcel": "Le glucose, c’est\nle carburant !",
+  "bonus": "Glycémie ≈ **1 g/L** · insuline **baisse** · glucagon **remonte** · eau iodée **bleue** = amidon",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les glucides",
+          "items": [
+            { "terme": "Oses", "definition": "glucides simples, non hydrolysables&nbsp;: glucose, fructose" },
+            { "terme": "Diholosides", "definition": "deux oses&nbsp;: saccharose, lactose" },
+            { "terme": "Polyosides", "definition": "longues chaînes&nbsp;: **amidon** (végétal), **glycogène** (animal)" },
+            { "terme": "Hydrolyse", "definition": "coupure d’une molécule par l’**eau**" }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Brûler le glucose",
+          "entetes": ["Filière", "Équation"],
+          "lignes": [
+            ["Aérobie", "C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O"],
+            ["Anaérobie", "C₆H₁₂O₆ → 2 C₃H₆O₃ (acide lactique)"],
+            ["Rendement", "élevé / faible mais rapide"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le devenir du glucose",
+          "etapes": [
+            { "titre": "Digérer", "texte": "l’amidon est hydrolysé en glucose (amylase)" },
+            { "titre": "Stocker", "texte": "l’excès est condensé en glycogène, dans le foie et les muscles" },
+            { "titre": "Brûler", "texte": "avec O₂ pour libérer l’énergie, sans O₂ en acide lactique" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "__Hydrolyse__ du lactose C₁₂H₂₂O₁₁ par l’eau. Les produits&nbsp;?",
+          "calcul": "C₁₂H₂₂O₁₁ + H₂O →",
+          "aparte": "atomes conservés",
+          "resultat": "[[glucose + galactose]], C₆H₁₂O₆"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "À l’effort",
+          "oui": { "titre": "Avec O₂", "texte": "La respiration cellulaire libère **toute** l’énergie&nbsp;; la consommation de dioxygène augmente à l’effort." },
+          "non": { "titre": "Sans O₂ suffisant", "texte": "La filière **anaérobie** prend le relais&nbsp;: peu d’énergie, et l’**acide lactique** s’accumule." },
+          "essai": { "texte": "Sans **lactase**, le lait est mal digéré&nbsp;: c’est l’intolérance au lactose. Mieux vaut des glucides **complexes** que des sucres ajoutés." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "(C₆H₁₀O₅)ₙ + n H₂O → n C₆H₁₂O₆", "quoi": "hydrolyse de l’amidon" },
+            { "texte": "L’eau iodée ne bleuit plus&nbsp;: l’amidon a disparu.", "quoi": "le test" },
+            { "texte": "La glycémie reste proche de 1 g/L.", "quoi": "la régulation" }
+          ],
+          "pied": "Toujours ==équilibrer== l’équation&nbsp;: autant d’atomes de chaque côté."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **insuline** (baisse) et **glucagon** (hausse).",
+            "Oublier l’**eau** dans une hydrolyse.",
+            "Dire que l’amidon est **animal**&nbsp;: c’est le glycogène.",
+            "Écrire une équation **non équilibrée**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Où le **glycogène** est-il stocké&nbsp;?",
+            "Que bleuit l’**eau iodée**&nbsp;?",
+            "Quelle hormone **fait baisser** la glycémie&nbsp;?"
+          ],
+          "reponses": "1) foie et muscles · 2) l’amidon · 3) l’insuline"
+        }
+      ]
+    }
+  ]
+}

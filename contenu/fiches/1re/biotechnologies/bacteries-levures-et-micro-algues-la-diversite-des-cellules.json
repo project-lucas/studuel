@@ -1,0 +1,116 @@
+{
+  "titre": "Diversité des cellules",
+  "titreSurligne": "cellules",
+  "accroche": "Procaryote ou eucaryote : repère le noyau.",
+  "bonus": "3 domaines : **Bactéries**, **Archées**, **Eucaryotes** · bourgeon = **levure**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biotechnologies/bacteries-levures-et-micro-algues-la-diversite-des-cellules.webp",
+    "prompt": "a glossy violet budding yeast cell, a tiny golden rod bacterium and a round green-gold microalga side by side, sparkles"
+  },
+  "marcel": "Noyau ou pas noyau,\nvoilà la question !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Procaryote / eucaryote",
+          "entetes": ["", "Procaryote", "Eucaryote"],
+          "lignes": [
+            ["**Noyau**", "**absent**", "**présent**"],
+            ["**Taille**", "1 à 5 µm", "5 à 100 µm"],
+            ["**Organites**", "aucun", "mitochondries…"],
+            ["**Exemple**", "bactérie", "levure, algue"]
+          ]
+        },
+        {
+          "type": "cartes",
+          "numero": 2,
+          "titre": "À reconnaître",
+          "colonnes": 1,
+          "cartes": [
+            { "titre": "Bactérie", "texte": "≈ 1 µm, coques ou bacilles, <i>E. coli</i>." },
+            { "titre": "Levure", "texte": "5 à 10 µm, ovale, **bourgeonnement**." },
+            { "titre": "Micro-algue", "texte": "5 à 50 µm, **chloroplastes** verts." }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 3,
+          "titre": "Optique ou électronique ?",
+          "entetes": ["", "Microscope optique", "Microscope électronique"],
+          "lignes": [
+            ["**Rayonnement**", "lumière", "électrons"],
+            ["**Grossissement utile**", "jusqu’à × 1 000", "jusqu’à × 1 000 000"],
+            ["**On voit**", "cellules, forme des bactéries", "organites, virus, membranes"]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un cliché montre la <b>double membrane</b> d’une mitochondrie. Quel microscope&nbsp;?",
+          "calcul": "détail d’un organite",
+          "aparte": "invisible en optique",
+          "resultat": "microscope [[électronique]]"
+        },
+        {
+          "type": "liste",
+          "numero": 4,
+          "titre": "Arbre du vivant",
+          "items": [
+            { "titre": "Trois domaines", "texte": "Bactéries, Archées (procaryotes) et **Eucaryotes**." },
+            { "titre": "Parenté", "texte": "une levure est plus proche de l’**humain** que d’une bactérie." },
+            { "titre": "Moisissures", "texte": "champignons **filamenteux** à appareil sporifère." }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Cellules de 8 µm avec un bourgeon&nbsp;: levures.", "quoi": "identifier" },
+            { "texte": "Noyau visible&nbsp;: cellules eucaryotes.", "quoi": "critère" },
+            { "texte": "L’échelle (barre de 1 µm) confirme la taille.", "quoi": "échelle" }
+          ],
+          "pied": "Cite toujours le ==critère cytologique== choisi."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire qu’une levure est une **bactérie**.",
+            "Ranger les **Archées** parmi les eucaryotes.",
+            "Oublier l’**échelle** pour juger d’une taille.",
+            "Penser que les virus se voient au microscope **optique**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel signe distingue une **levure**&nbsp;?",
+            "Une bactérie a-t-elle un **noyau**&nbsp;?",
+            "Quel microscope montre les **ribosomes**&nbsp;?"
+          ],
+          "reponses": "1) le bourgeonnement · 2) non, ADN libre · 3) le microscope électronique"
+        }
+      ]
+    }
+  ]
+}

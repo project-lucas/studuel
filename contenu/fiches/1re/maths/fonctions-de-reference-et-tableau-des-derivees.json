@@ -1,0 +1,172 @@
+{
+  "titre": "Tableau des dérivées",
+  "titreSurligne": "dérivées",
+  "accroche": "À savoir comme les tables.",
+  "epreuve": "bac-1re",
+  "bonus": "(xⁿ)′ = nxⁿ⁻¹ · (√x)′ = {1/2√x} · (eˣ)′ = eˣ · (cos x)′ = −sin x · (sin x)′ = cos x",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/fonctions-de-reference-et-tableau-des-derivees.webp",
+    "prompt": "a glossy violet notebook page with a golden small curve and a golden prime mark, a tiny sparkling pencil, same art style as the reference icons, on a flat magenta background, no text, no numbers"
+  },
+  "marcel": "Repère la forme,\nla formule suit !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "La composée affine",
+          "petite": true,
+          "lignes": [
+            "(g(ax + b))′ = a × g′(ax + b)",
+            "({1/v})′ = −{v′/v²}"
+          ],
+          "regle": "On dérive g comme d’habitude, puis on **multiplie par a**. Au dénominateur, v reste au **carré**.",
+          "note": "n’oublie pas le a&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les dérivées de référence",
+          "entetes": [
+            "f(x)",
+            "f′(x)"
+          ],
+          "lignes": [
+            [
+              "xⁿ",
+              "**n**xⁿ⁻¹"
+            ],
+            [
+              "{1/x}",
+              "−{1/x²}"
+            ],
+            [
+              "√x (sur ]0 ; +∞[)",
+              "{1/2√x}"
+            ],
+            [
+              "eˣ",
+              "**eˣ**"
+            ],
+            [
+              "cos x",
+              "−sin x"
+            ],
+            [
+              "sin x",
+              "cos x"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Dériver sans se tromper",
+          "etapes": [
+            {
+              "titre": "La forme",
+              "texte": "somme, produit, quotient ou composée affine&nbsp;?"
+            },
+            {
+              "titre": "La formule",
+              "texte": "l’appliquer terme à terme, avec le bon domaine"
+            },
+            {
+              "titre": "Simplifier",
+              "texte": "développer ou factoriser pour lire le signe"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "f(x) = (2x + 1)³. __Dérivée__&nbsp;?",
+          "calcul": "forme g(ax + b), g(X) = X³, a = 2\ng′(X) = 3X²",
+          "aparte": "on multiplie par a",
+          "resultat": "f′(x) = 3 × 2 × (2x + 1)² = [[6(2x + 1)²]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les réflexes",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "Sinus",
+              "texte": "(sin 2x)′ = **2 cos 2x**."
+            },
+            {
+              "titre": "Exponentielle",
+              "texte": "(e<sup>−2x</sup>)′ = **−2 e<sup>−2x</sup>**."
+            },
+            {
+              "titre": "Racine",
+              "texte": "√x est définie en 0 mais **pas dérivable** en 0."
+            },
+            {
+              "titre": "Inverse",
+              "texte": "décroissante sur ]−∞ ; 0[ **et** sur ]0 ; +∞[, séparément."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "f est dérivable sur ℝ, de la forme u × v",
+              "quoi": "la forme"
+            },
+            {
+              "texte": "f(x) = x eˣ&nbsp;: u = x, v = eˣ, u′ = 1, v′ = eˣ",
+              "quoi": "les morceaux"
+            },
+            {
+              "texte": "f′(x) = eˣ + x eˣ = (x + 1) eˣ",
+              "quoi": "la dérivée"
+            }
+          ],
+          "pied": "Contrôle&nbsp;: f′(0) = ==1==, la pente de x eˣ à l’origine. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire (uv)′ = **u′v′**.",
+            "Oublier le facteur **a** d’une composée affine.",
+            "Dériver √x en **0**.",
+            "Dire que 1/x est décroissante sur **ℝ privé de 0**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Dérivée de **x³ − x + 7**&nbsp;?",
+            "Dérivée de **e<sup>−2x</sup>**&nbsp;?",
+            "Dérivée de **{1/3x + 1}**&nbsp;?"
+          ],
+          "reponses": "1) 3x² − 1 · 2) −2e<sup>−2x</sup> · 3) −3/(3x + 1)²"
+        }
+      ]
+    }
+  ]
+}

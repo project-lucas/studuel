@@ -1,0 +1,117 @@
+{
+  "titre": "Réseaux, transmission",
+  "titreSurligne": "Réseaux",
+  "accroche": "Comment l’information voyage.",
+  "bonus": "**MAC** = couche 2 (gravée) · **IP** = couche 3 (attribuée) · **DHCP** donne l’adresse, **DNS** traduit le nom",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/ingenierie-dd/reseaux-et-transmission-de-l-information.webp",
+    "prompt": "a glossy violet network switch with golden cables linking a smartphone, a laptop and a server in a star shape, tiny golden data packets, sparkles, magenta background, same art style as the reference icons, no text"
+  },
+  "marcel": "Chaque couche ajoute\nson enveloppe !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Le modèle OSI",
+          "entetes": ["N°", "Couche", "Rôle"],
+          "lignes": [
+            ["7", "**Application**", "web, messagerie"],
+            ["6", "**Présentation**", "codage, chiffrement"],
+            ["5", "**Session**", "ouvre et ferme le dialogue"],
+            ["4", "**Transport**", "segments, TCP / UDP"],
+            ["3", "**Réseau**", "adresse IP, routage"],
+            ["2", "**Liaison**", "voisins, adresse MAC"],
+            ["1", "**Physique**", "bits : tension, onde, lumière"]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les mots à connaître",
+          "items": [
+            { "terme": "Étoile", "definition": "tous reliés à un **commutateur** central" },
+            { "terme": "Client / serveur", "definition": "le client **demande**, le serveur **répond**" },
+            { "terme": "DHCP", "definition": "attribue **automatiquement** une adresse IP" },
+            { "terme": "DNS", "definition": "traduit un **nom** en adresse IP" },
+            { "terme": "Routeur", "definition": "relie **deux réseaux** différents" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Faire voyager un message",
+          "etapes": [
+            { "titre": "Encapsuler", "texte": "à l’envoi, chaque couche ajoute son **en-tête**" },
+            { "titre": "Acheminer", "texte": "commutateur et routeur dirigent les trames" },
+            { "titre": "Décapsuler", "texte": "à l’arrivée, chaque couche retire le sien" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "IP __192.168.1.20__, masque __255.255.255.0__. Quel est le réseau&nbsp;?",
+          "calcul": "3 octets à 255 → réseau",
+          "aparte": "le dernier octet = la machine",
+          "resultat": "réseau [[192.168.1]], machine 20"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Quelle adresse&nbsp;?",
+          "oui": { "titre": "Adresse MAC", "texte": "6 octets en hexadécimal, **gravée** dans la carte réseau (couche 2)." },
+          "non": { "titre": "Adresse IP", "texte": "4 octets en décimal, **attribuée** selon le réseau (couche 3)." },
+          "essai": { "texte": "<i>3C:52:82:1A:0F:7B</i> est une MAC&nbsp;; <i>192.168.1.20</i> est une IP." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "Liaison filaire (fibre) ou sans fil (Wi-Fi)", "quoi": "le support" },
+            { "texte": "Topologie en étoile autour du commutateur", "quoi": "le réseau" },
+            { "texte": "Le DHCP donne l’IP, le DNS trouve le serveur", "quoi": "les services" }
+          ],
+          "pied": "On cite ==la couche== puis ==son rôle==, du haut vers le bas."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **MAC** (couche 2) et **IP** (couche 3).",
+            "Oublier que si le **centre** de l’étoile tombe, tout tombe.",
+            "Mélanger **DHCP** (donne l’IP) et **DNS** (traduit le nom).",
+            "Croire que deux réseaux différents communiquent sans **routeur**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de **couches** compte le modèle OSI&nbsp;?",
+            "Quel serveur traduit un **nom** en adresse IP&nbsp;?",
+            "Que fait chaque couche à l’**envoi**&nbsp;?"
+          ],
+          "reponses": "1) sept · 2) le serveur DNS · 3) elle ajoute son en-tête (encapsulation)"
+        }
+      ]
+    }
+  ]
+}

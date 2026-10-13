@@ -1,0 +1,129 @@
+{
+  "titre": "Somme de termes",
+  "titreSurligne": "Somme",
+  "accroche": "D’abord, compter les termes.",
+  "epreuve": "bac-1re",
+  "bonus": "de u(p) à u(n)&nbsp;: **n − p + 1** termes · 1 + 2 + … + n = {n(n + 1)/2} · q = 1&nbsp;: S = N × premier terme",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/calculer-une-somme-de-termes-consecutifs.webp",
+    "prompt": "a glossy violet row of stacked coins growing from small to large with a golden sigma-like sparkle above them, same art style as the reference icons, on a flat magenta background, no text, no numbers"
+  },
+  "marcel": "Compte bien\ntes termes !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les deux sommes",
+          "petite": true,
+          "lignes": [
+            "S = N × {premier + dernier/2}",
+            "S = premier × {1 − q<sup>N</sup>/1 − q}"
+          ],
+          "regle": "En haut&nbsp;: suite **arithmétique**. En bas&nbsp;: suite **géométrique** de raison q ≠ 1. N est le **nombre de termes**.",
+          "note": "N = n − p + 1&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Compter les termes",
+          "entetes": [
+            "La somme",
+            "N"
+          ],
+          "lignes": [
+            [
+              "u(0) + … + u(9)",
+              "**10**"
+            ],
+            [
+              "u(1) + … + u(20)",
+              "**20**"
+            ],
+            [
+              "u(3) + … + u(20)",
+              "**18**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "S = 3 + 7 + 11 + … + 43",
+          "calcul": "raison 4 · N = {43 − 3/4} + 1 = 11\nS = 11 × {3 + 43/2}",
+          "aparte": "arithmétique",
+          "resultat": "S = 11 × 23 = [[253]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Les sommes à connaître",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "1 + 2 + … + n",
+              "texte": "vaut {n(n + 1)/2}&nbsp;: pour n = 100, **5 050**."
+            },
+            {
+              "titre": "Géométrique",
+              "texte": "1 + 2 + 4 + … + 1 024&nbsp;: 11 termes, S = **2 047**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Suite arithmétique de premier terme 3, de raison 4",
+              "quoi": "la nature"
+            },
+            {
+              "texte": "Nombre de termes&nbsp;: {43 − 3/4} + 1 = 11",
+              "quoi": "le comptage"
+            },
+            {
+              "texte": "S = 11 × {3 + 43/2} = 253",
+              "quoi": "la somme"
+            }
+          ],
+          "pied": "Contrôle&nbsp;: 11 termes autour de 23 donnent ==253==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier le **« + 1 »** dans le nombre de termes.",
+            "Utiliser la formule géométrique avec **q = 1**.",
+            "Mettre **n** à la place de N dans q<sup>N</sup>.",
+            "Prendre le rang du dernier terme pour **N**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de termes dans **u(2) + … + u(15)**&nbsp;?",
+            "**1 + 2 + … + 10**&nbsp;?",
+            "**1 + 2 + 4 + 8 + 16**&nbsp;?"
+          ],
+          "reponses": "1) 14 termes · 2) 55 · 3) 31"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "titre": "Mesure et incertitudes",
+  "titreSurligne": "incertitudes",
+  "accroche": "Écrire un résultat, réussir l’exercice.",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-sante/mesure-incertitudes-et-methode-d-evaluation.webp",
+    "prompt": "a glossy violet ruler and a golden measuring pipette crossing, a small bar-chart histogram beside them, sparkles, same art style as the reference icons, on a magenta background, no text, no numbers"
+  },
+  "marcel": "Une mesure,\nune marge d’erreur !",
+  "bonus": "Résultat = **valeur ± incertitude + unité** · u = **σ ÷ √n** · T (K) = θ (°C) + **273**",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Incertitude-type",
+          "petite": true,
+          "lignes": ["u = {σ/√n}", "x = m ± u"],
+          "regle": "**σ** écart-type de la série, **n** nombre de mesures, **m** moyenne. On arrondit u à 1 ou 2 chiffres significatifs, la valeur au même rang.",
+          "note": "avec l’unité&nbsp;!"
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Le vocabulaire",
+          "items": [
+            { "terme": "Moyenne", "definition": "la meilleure estimation de la valeur" },
+            { "terme": "Écart-type σ", "definition": "la dispersion autour de la moyenne" },
+            { "terme": "Incertitude u", "definition": "la marge associée au résultat" },
+            { "terme": "Histogramme", "definition": "la répartition des mesures" }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Réussir une question de calcul",
+          "etapes": [
+            { "titre": "Écrire", "texte": "la relation littérale avant tout nombre" },
+            { "titre": "Convertir", "texte": "et remplacer&nbsp;: mL en L, cm en m, °C en K" },
+            { "titre": "Conclure", "texte": "arrondir, mettre l’unité, vérifier l’ordre de grandeur" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Un pH mesuré a pour moyenne 7,32 et pour incertitude 0,05. Le __résultat__&nbsp;?",
+          "calcul": "u à un chiffre : 0,05",
+          "aparte": "valeur au même rang",
+          "resultat": "pH = [[7,32 ± 0,05]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Un document à analyser",
+          "oui": { "titre": "Citer, puis relier", "texte": "« D’après le document 2, … » puis une **connaissance du cours**, et une conclusion qui répond à la question." },
+          "non": { "titre": "Recopier le document", "texte": "Sans le **verbe** de la question (citer, justifier, comparer), on répond à côté." },
+          "essai": { "texte": "Un débit cardiaque de **480 L/min** est absurde&nbsp;: toujours vérifier l’**ordre de grandeur** (≈ 5 L/min)." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "DC = f<sub>C</sub> × VES", "quoi": "la relation" },
+            { "texte": "DC = 70 × 0,070 = 4,9 L/min", "quoi": "le calcul" },
+            { "texte": "Le débit est plausible au repos.", "quoi": "la vérification" },
+            { "texte": "Sécurité&nbsp;: blouse, gants, lunettes.", "quoi": "protéger" },
+            { "texte": "Bilan de chaque exercice : unité vérifiée.", "quoi": "relire" }
+          ],
+          "pied": "En sécurité&nbsp;: ==pictogramme==, équipement, geste adapté."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Oublier **T = θ + 273** avec la loi de Wien.",
+            "Confondre concentration **massique** et **molaire**.",
+            "Écrire une équation **non équilibrée**.",
+            "Résultat **sans unité** ni incertitude."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Comment s’écrit un **résultat** de mesure&nbsp;?",
+            "Que vaut **u** pour σ = 0,2 et n = 4&nbsp;?",
+            "Convertir **25 °C** en kelvins&nbsp;?"
+          ],
+          "reponses": "1) valeur ± incertitude, avec l’unité · 2) 0,1 · 3) 298 K"
+        }
+      ]
+    }
+  ]
+}

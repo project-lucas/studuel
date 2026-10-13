@@ -1,0 +1,118 @@
+{
+  "titre": "Image et couleurs",
+  "titreSurligne": "couleurs",
+  "accroche": "De l’œil à l’écran, la lumière fait l’image.",
+  "bonus": "Additive&nbsp;: **R+V+B = blanc** · Soustractive&nbsp;: **C+M+J = noir** · cônes vers **420, 530, 560 nm**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/spcl/l-image-histoire-droits-et-vision-des-couleurs.webp",
+    "prompt": "a glossy violet eye with a golden iris and three tiny red green blue light beams converging into it, sparkles"
+  },
+  "marcel": "Trois cônes,\ntoutes les couleurs !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "L’œil, modèle optique",
+          "entetes": ["Œil", "Modèle"],
+          "lignes": [
+            ["Iris et pupille", "**diaphragme**"],
+            ["Cristallin + cornée", "**lentille convergente**"],
+            ["Rétine", "**écran**"],
+            ["Myopie", "image **avant** la rétine → lentille **divergente**"],
+            ["Hypermétropie", "image **après** la rétine → lentille **convergente**"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les deux synthèses",
+          "entetes": ["", "Additive", "Soustractive"],
+          "lignes": [
+            ["Principe", "on **ajoute** des lumières", "on **retire** des lumières"],
+            ["Primaires", "rouge, vert, bleu", "cyan, magenta, jaune"],
+            ["Les trois", "**blanc**", "**noir**"],
+            ["Usage", "écrans", "impression"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 3,
+          "titre": "À savoir",
+          "colonnes": 3,
+          "cartes": [
+            { "titre": "Bâtonnets", "texte": "~120 millions, très sensibles, **pas de couleurs**" },
+            { "titre": "Cônes", "texte": "~6 millions, **trois types** (bleu, vert, rouge), vision des couleurs" },
+            { "titre": "Droits", "texte": "**auteur** protège le photographe, **image** protège la personne photographiée" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Une tomate est éclairée en lumière __bleue__. Quelle couleur&nbsp;?",
+          "calcul": "la tomate diffuse le rouge",
+          "aparte": "or il n’y a pas de rouge",
+          "resultat": "elle paraît [[noire]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Filtre jaune",
+          "oui": { "titre": "Il transmet", "texte": "Le **rouge** et le **vert**, dont la somme donne le jaune." },
+          "non": { "titre": "Il absorbe", "texte": "Le **bleu**, couleur complémentaire." },
+          "essai": { "texte": "Synthèse additive&nbsp;: <i>rouge + vert = jaune</i>, <i>rouge + bleu = magenta</i>, <i>vert + bleu = cyan</i>." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Repères",
+          "deux": true,
+          "items": [
+            { "titre": "1826", "texte": "Niépce, première image durable" },
+            { "titre": "1839", "texte": "daguerréotype de Daguerre" },
+            { "titre": "1907", "texte": "autochrome des Lumière" },
+            { "titre": "1969", "texte": "capteur CCD" }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **additive** (écrans) et **soustractive** (encres).",
+            "Dire que le bâtonnet voit les **couleurs**.",
+            "Mélanger **myopie** (divergente) et **hypermétropie** (convergente).",
+            "Croire qu’un objet « a » une couleur **indépendante** de l’éclairage."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel élément de l’œil joue le rôle de **lentille**&nbsp;?",
+            "Que donne **rouge + bleu** en synthèse additive&nbsp;?",
+            "Quelle lentille corrige la **myopie**&nbsp;?"
+          ],
+          "reponses": "1) le cristallin · 2) du magenta · 3) une lentille divergente"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "titre": "Valider un prototype",
+  "titreSurligne": "prototype",
+  "accroche": "Mesurer pour prouver.",
+  "bonus": "**Grandeur = valeur ± incertitude (unité)** · écart 1 : CdC / modèle · écart 2 : modèle / réel · écart 3 : réel / CdC",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/ingenierie-dd/experimenter-et-valider-un-prototype.webp",
+    "prompt": "a glossy violet small cart prototype on a ramp with a golden stopwatch and a measuring probe, tiny golden check mark, sparkles, magenta background, same art style as the reference icons, no text"
+  },
+  "marcel": "Je mesure, je compare,\nje conclus !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Les trois écarts",
+          "entetes": [
+            "Écart",
+            "Entre"
+          ],
+          "lignes": [
+            [
+              "**Écart 1**",
+              "cahier des charges et modèle"
+            ],
+            [
+              "**Écart 2**",
+              "modèle et réel mesuré"
+            ],
+            [
+              "**Écart 3**",
+              "réel mesuré et cahier des charges"
+            ],
+            [
+              "**Piège**",
+              "écart 2 fort ≠ produit mauvais"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les mots à connaître",
+          "items": [
+            {
+              "terme": "Vérifier",
+              "definition": "un élément est **conforme** à sa spécification"
+            },
+            {
+              "terme": "Valider",
+              "definition": "le produit répond au **besoin** de l’utilisateur"
+            },
+            {
+              "terme": "Qualifier",
+              "definition": "mesurer les performances **réelles** du produit fini"
+            },
+            {
+              "terme": "Incertitude",
+              "definition": "toute mesure en a une : v = 2,45 ± 0,05"
+            },
+            {
+              "terme": "Protocole",
+              "definition": "objectif, montage, conditions, **mode opératoire**, sécurité"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Mener un essai",
+          "etapes": [
+            {
+              "titre": "Préparer",
+              "texte": "objectif, montage, conditions, **sécurité**"
+            },
+            {
+              "titre": "Mesurer",
+              "texte": "plusieurs essais, puis la **moyenne**"
+            },
+            {
+              "titre": "Conclure",
+              "texte": "chiffrer l’écart, **expliquer**, améliorer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Exigence __moins de 8 s__. Simulé __6,5 s__, mesuré en moyenne __7,5 s__.",
+          "calcul": "écart 2 : (7,5 − 6,5) / 6,5",
+          "aparte": "7,5 s &lt; 8 s : conforme",
+          "resultat": "écart 2 ≈ [[15 %]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Que révèle l’écart&nbsp;?",
+          "oui": {
+            "titre": "Écart 3 faible",
+            "texte": "Le produit est **conforme** au cahier des charges."
+          },
+          "non": {
+            "titre": "Écart 2 fort",
+            "texte": "Le **modèle** est à corriger, pas forcément le produit."
+          },
+          "essai": {
+            "texte": "Le chariot est conforme, mais le modèle ignorait les <i>frottements</i> des roues."
+          }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Moyenne de cinq essais : 7,5 s",
+              "quoi": "la mesure"
+            },
+            {
+              "texte": "7,5 s &lt; 8 s : le chariot est conforme",
+              "quoi": "le verdict"
+            },
+            {
+              "texte": "Frottements sous-estimés : on recale le modèle",
+              "quoi": "l’amélioration"
+            },
+            {
+              "texte": "Écart 3 : 7,5 s < 8 s, conforme",
+              "quoi": "le verdict"
+            }
+          ],
+          "pied": "Une bonne conclusion ==chiffre l’écart== et ==propose une cause=="
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire « ça marche » **sans mesure** ni comparaison.",
+            "Prendre un **écart 2** fort pour un produit raté.",
+            "Confondre **vérifier** et **valider**.",
+            "Câbler **sous tension** ou monter les grandeurs d’un coup.",
+            "Ne faire **qu’un seul essai** : répéter réduit les erreurs aléatoires."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Comment écrit-on un **résultat** de mesure&nbsp;?",
+            "Quel écart compare le **modèle** au réel&nbsp;?",
+            "Que fait-on avant de **câbler**&nbsp;?"
+          ],
+          "reponses": "1) valeur ± incertitude (unité) · 2) l’écart 2 · 3) couper l’alimentation"
+        }
+      ]
+    }
+  ]
+}

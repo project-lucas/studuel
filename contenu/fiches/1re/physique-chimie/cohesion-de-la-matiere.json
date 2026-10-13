@@ -1,0 +1,111 @@
+{
+  "titre": "Cohésion de la matière",
+  "titreSurligne": "Cohésion",
+  "accroche": "Ce qui tient, et ce qui se rompt.",
+  "epreuve": "bac",
+  "bonus": "Interactions faibles : **10 à 100 fois** moins énergétiques que les liaisons covalentes",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie/cohesion-de-la-matiere.webp",
+    "prompt": "glossy violet water molecules linked by golden dotted hydrogen bonds into a small lattice, sparkles"
+  },
+  "marcel": "Fondre ne casse\naucune liaison !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Dans l’entité&nbsp;: liaisons fortes",
+          "entetes": ["Liaison", "Principe"],
+          "lignes": [
+            ["Covalente", "doublet **partagé** entre deux atomes"],
+            ["Ionique", "attraction entre ions de charges **opposées**"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Entre entités&nbsp;: interactions faibles",
+          "entetes": ["Interaction", "Quand"],
+          "lignes": [
+            ["Van der Waals", "entre **toutes** les molécules"],
+            ["Liaison H", "H lié à O, N ou F, vers un doublet non liant"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Dissoudre un solide ionique",
+          "etapes": [
+            { "titre": "Dissociation", "texte": "les **ions se séparent**" },
+            { "titre": "Solvatation", "texte": "l’eau oriente son pôle **opposé** vers chaque ion" },
+            { "titre": "Dispersion", "texte": "les ions solvatés se **répartissent** dans le solvant" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Vaporiser l’eau casse-t-il des liaisons O–H&nbsp;? Que rompt-on&nbsp;?",
+          "calcul": "changement d’état d’un corps moléculaire",
+          "aparte": "interactions faibles",
+          "resultat": "[[aucune liaison covalente]], seulement les liaisons H"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Qu’est-ce qu’on rompt&nbsp;?",
+          "oui": { "titre": "Changement d’état", "texte": "On rompt des **interactions entre molécules**, jamais les liaisons covalentes." },
+          "non": { "titre": "Réaction chimique", "texte": "On rompt des **liaisons covalentes** des réactifs." },
+          "essai": { "texte": "Anomalie de l’eau&nbsp;: à masse comparable à H₂S, elle est <i>liquide</i> grâce à la liaison hydrogène, et sa glace flotte." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie du bac",
+          "lignes": [
+            { "texte": "Les alcanes sont des molécules&nbsp;: leur ébullition rompt des interactions de Van der Waals.", "quoi": "nature" },
+            { "texte": "Ces interactions augmentent avec la taille de la chaîne.", "quoi": "cause" },
+            { "texte": "T<sub>éb</sub> croît donc avec le nombre de carbones.", "quoi": "conclure" }
+          ],
+          "pied": "Distingue toujours ==dans la molécule== et ==entre les molécules==."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire qu’**ébullir** rompt les liaisons covalentes.",
+            "Confondre **liaison hydrogène** et liaison covalente.",
+            "Oublier que Van der Waals existe entre **toutes** les molécules.",
+            "Croire que l’eau dissout par **réaction chimique**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quelle liaison tient les atomes **dans** une molécule&nbsp;?",
+            "Que rompt-on quand on **fond** un corps moléculaire&nbsp;?",
+            "Pourquoi l’eau dissout-elle un solide **ionique**&nbsp;?"
+          ],
+          "reponses": "1) covalente · 2) des interactions entre molécules · 3) elle est polaire"
+        }
+      ]
+    }
+  ]
+}

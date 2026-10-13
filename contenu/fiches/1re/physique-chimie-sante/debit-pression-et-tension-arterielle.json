@@ -1,0 +1,112 @@
+{
+  "titre": "Débit et pression",
+  "titreSurligne": "pression",
+  "accroche": "Du débit cardiaque à la tension.",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/physique-chimie-sante/debit-pression-et-tension-arterielle.webp",
+    "prompt": "a glossy violet blood pressure cuff with a golden gauge dial and a small glossy heart, tiny golden droplets, sparkles, same art style as the reference icons, on a magenta background, no text, no numbers"
+  },
+  "marcel": "Le cœur pompe,\nla pression monte !",
+  "bonus": "1 cmHg ≈ 1 333 Pa · tension **12/8** = 120/80 mmHg · hypertension dès **14/9**",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Les relations",
+          "petite": true,
+          "lignes": ["D = v × S", "P = {F/S}"],
+          "regle": "**D** débit (m³/s), **v** vitesse, **S** section. Débit cardiaque&nbsp;: DC = f<sub>C</sub> × VES. Statique&nbsp;: P₂ − P₁ = ρ × g × (z₁ − z₂).",
+          "note": "P en pascals, S en m²&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les unités de pression",
+          "entetes": ["L’unité", "En pascals"],
+          "lignes": [
+            ["1 hPa", "100 Pa"],
+            ["1 bar", "10⁵ Pa"],
+            ["1 mmHg", "≈ 133 Pa"],
+            ["1 cmHg", "≈ 1 333 Pa"],
+            ["Atmosphère", "≈ 1 013 hPa"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Résoudre un exercice de fluides",
+          "etapes": [
+            { "titre": "Repérer", "texte": "la grandeur cherchée&nbsp;: débit, pression ou différence de pression" },
+            { "titre": "Convertir", "texte": "mL en L, cm² en m², cmHg en Pa avant tout calcul" },
+            { "titre": "Calculer", "texte": "puis conclure avec l’unité et un ordre de grandeur plausible" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Au repos, f<sub>C</sub> = 70 battements/min et VES = 70 mL. Le __débit cardiaque__&nbsp;?",
+          "calcul": "DC = f<sub>C</sub> × VES",
+          "aparte": "70 × 70 = 4 900 mL/min",
+          "resultat": "DC ≈ [[4,9 L/min]]"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Une artère rétrécie",
+          "oui": { "titre": "Débit constant", "texte": "La section **diminue**, donc la vitesse **augmente**&nbsp;: D = v × S reste le même." },
+          "non": { "titre": "Vitesse constante", "texte": "Impossible si S change&nbsp;: à débit fixé, v et S varient en sens inverse." },
+          "essai": { "texte": "Une perfusion se place **au-dessus** du patient&nbsp;: plus haut, la pression en bas est plus grande (loi de la statique). La tension se mesure au bras, **à hauteur du cœur**." }
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "La tension est la différence P<sub>artérielle</sub> − P<sub>atm</sub>.", "quoi": "définir" },
+            { "texte": "Systolique 14 cmHg, diastolique 9 cmHg&nbsp;: 14/9.", "quoi": "lire" },
+            { "texte": "Tension ≥ 14/9 durablement&nbsp;: hypertension.", "quoi": "conclure" }
+          ],
+          "pied": "La tension systolique est la valeur ==maximale==, pendant la contraction du cœur."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **pression** artérielle et **tension** artérielle.",
+            "Garder la pression en **cmHg** dans P = F ÷ S.",
+            "Inverser **systolique** (max) et diastolique (min).",
+            "Oublier l’**unité** du débit (L/min ou m³/s)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que vaut **1 bar** en pascals&nbsp;?",
+            "Section ÷ 2 à débit constant&nbsp;: la vitesse est…&nbsp;?",
+            "Que signifie une tension de **12/8**&nbsp;?"
+          ],
+          "reponses": "1) 10⁵ Pa · 2) multipliée par 2 · 3) 12 cmHg systolique, 8 diastolique"
+        }
+      ]
+    }
+  ]
+}

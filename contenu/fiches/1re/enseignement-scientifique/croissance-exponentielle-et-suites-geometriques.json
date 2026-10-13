@@ -1,0 +1,191 @@
+{
+  "titre": "Suites géométriques",
+  "titreSurligne": "géométriques",
+  "accroche": "Multiplier toujours par le même nombre.",
+  "bonus": "**u(n+1) = q u(n)** · **u(n) = u(0) × q<sup>n</sup>** · **q = 1 + t** · doublement ≈ **70 / t** années",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/enseignement-scientifique/croissance-exponentielle-et-suites-geometriques.webp",
+    "prompt": "a glossy violet snowball of golden coins growing bigger step by step along a curve, sparkles"
+  },
+  "marcel": "Ça multiplie,\nça s’envole !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Suite géométrique",
+          "petite": true,
+          "lignes": [
+            "u(n+1) = q × u(n)",
+            "u(n) = u(0) × q<sup>n</sup>"
+          ],
+          "regle": "**q = u(n+1) / u(n)** (par **division**) et **q = 1 + t** : c’est le coefficient multiplicateur.",
+          "note": "q > 0"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Selon la raison q",
+          "entetes": [
+            "Raison",
+            "Comportement"
+          ],
+          "lignes": [
+            [
+              "**q > 1**",
+              "croît, de plus en plus vite"
+            ],
+            [
+              "**0 < q < 1**",
+              "décroît vers 0, sans l’atteindre"
+            ],
+            [
+              "**q = 1**",
+              "constante"
+            ],
+            [
+              "Perte de 15 % par an",
+              "q = **0,85**"
+            ],
+            [
+              "Constant : différences",
+              "modèle **arithmétique**"
+            ],
+            [
+              "Constant : quotients",
+              "modèle **géométrique**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Modéliser une évolution exponentielle",
+          "etapes": [
+            {
+              "titre": "Trouver q",
+              "texte": "q = 1 + t, ou un quotient u(n+1) / u(n)"
+            },
+            {
+              "titre": "Écrire",
+              "texte": "u(n) = u(0) × q<sup>n</sup>"
+            },
+            {
+              "titre": "Calculer",
+              "texte": "au rang n voulu, puis conclure avec l’unité"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "1 000 € placés à 4 % par an. Capital après 10 ans&nbsp;?",
+          "calcul": "u(n) = 1 000 × 1,04<sup>n</sup>",
+          "aparte": "n = 10",
+          "resultat": "u(10) ≈ [[1 480 €]] (pas 1 400)"
+        },
+        {
+          "type": "verdicts",
+          "numero": 4,
+          "titre": "Temps de doublement",
+          "oui": {
+            "titre": "Constante",
+            "texte": "Croissante&nbsp;: **temps de doublement** constant. Décroissante&nbsp;: **demi-vie** constante."
+          },
+          "non": {
+            "titre": "Pas linéaire",
+            "texte": "La durée pour multiplier par 2 est la même **au début qu’à la fin**."
+          },
+          "essai": {
+            "texte": "Règle utile&nbsp;: à t % par an, doublement en <b>70 / t</b> années. À 4 %&nbsp;: <b>17,5 ans</b> environ."
+          }
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "À retenir",
+          "deux": true,
+          "items": [
+            {
+              "titre": "Intérêts composés",
+              "texte": "les intérêts produisent eux-mêmes des intérêts."
+            },
+            {
+              "titre": "Demi-vie",
+              "texte": "durée constante pour diviser par 2 : sert à **dater les roches**."
+            },
+            {
+              "titre": "Différences",
+              "texte": "constantes ⇒ modèle **arithmétique**."
+            },
+            {
+              "titre": "Quotients",
+              "texte": "constants ⇒ modèle **géométrique**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "q = 1 + 0,04 = 1,04",
+              "quoi": "la raison"
+            },
+            {
+              "texte": "u(n) = 1 000 × 1,04<sup>n</sup>",
+              "quoi": "la forme explicite"
+            },
+            {
+              "texte": "u(10) ≈ 1 480 €",
+              "quoi": "avec l’unité"
+            }
+          ],
+          "pied": "Une exponentielle finit **toujours** par ==dépasser== toute croissance linéaire."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Écrire 1 000 × 1,04 × 10 (confondre avec le **linéaire**).",
+            "Prendre q = **4** au lieu de 1,04.",
+            "Chercher q par **soustraction**.",
+            "Croire qu’une décroissance géométrique **atteint 0**."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Raison pour une hausse de **5 %** par an&nbsp;?",
+            "u(0) = 3, q = 2&nbsp;: **u(3)**&nbsp;?",
+            "Doublement à 7 % par an (règle des 70)&nbsp;?"
+          ],
+          "reponses": "1) 1,05 · 2) 24 · 3) environ 10 ans"
+        }
+      ]
+    }
+  ]
+}

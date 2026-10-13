@@ -1,0 +1,117 @@
+{
+  "titre": "Méiose et fécondation",
+  "titreSurligne": "Méiose",
+  "accroche": "De 46 à 23, puis de 23 + 23 à 46.",
+  "bonus": "**2n = 46** (diploïde) → **n = 23** (haploïde) · ovocyte II **bloqué en métaphase II** jusqu’à la fécondation · mitochondries : **mère** seule",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biochimie-biologie/meiose-gametogenese-et-fecondation.webp",
+    "prompt": "a glossy violet cell dividing into two then four small golden cells, with a tiny sperm meeting a round egg beside it, sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "Je divise par deux,\nla fécondation rend !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Mitose et méiose",
+          "entetes": ["", "Mitose", "Méiose"],
+          "lignes": [
+            ["Rôle", "multiplier les cellules", "produire les gamètes"],
+            ["Divisions", "une", "deux successives"],
+            ["Cellules", "2 diploïdes identiques", "4 haploïdes différentes"],
+            ["Type", "équationnelle", "réductionnelle puis équationnelle"]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Gamétogenèse",
+          "entetes": ["", "Spermatogenèse", "Ovogenèse"],
+          "lignes": [
+            ["Lieu", "tubes séminifères", "ovaire"],
+            ["Durée", "≈ 74 jours, continue", "avant la naissance → fécondation"],
+            ["Produits", "4 spermatozoïdes", "1 ovocyte + globules polaires"]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "frise",
+          "numero": 3,
+          "titre": "Méiose et fécondation, dans l’ordre",
+          "horizontale": true,
+          "etapes": [
+            { "date": "Méiose I", "texte": "les **homologues** se séparent&nbsp;: réductionnelle" },
+            { "date": "Méiose II", "texte": "les **chromatides** se séparent&nbsp;: équationnelle" },
+            { "date": "Pénétration", "texte": "le spermatozoïde **débloque** l’ovocyte II" },
+            { "date": "Zygote", "texte": "noyaux réunis&nbsp;: retour à **46** chromosomes" }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 4,
+          "titre": "Interpréter un caryotype",
+          "etapes": [
+            { "titre": "Compter", "texte": "les chromosomes (46 attendus)" },
+            { "titre": "Repérer", "texte": "la paire en excès ou manquante" },
+            { "titre": "Expliquer", "texte": "une non-disjonction en méiose" }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Les chromosomes 21 ne se séparent pas en méiose I, le gamète fécondé donne 3 chromosomes 21.",
+          "calcul": "46 + 1 = 47 chromosomes",
+          "aparte": "visible sur le caryotype",
+          "resultat": "[[trisomie 21]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            { "texte": "La méiose produit des gamètes haploïdes (n = 23).", "quoi": "méiose" },
+            { "texte": "La fécondation associe deux noyaux haploïdes.", "quoi": "fécondation" },
+            { "texte": "La cellule-œuf est diploïde (2n = 46).", "quoi": "conclure" }
+          ],
+          "pied": "ADN **mitochondrial** transmis par la ==mère== à tous ses enfants, jamais par le père."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Dire que la méiose est une **mitose** en plus.",
+            "Confondre **homologues** (méiose I) et **chromatides** (méiose II).",
+            "Croire que l’ovocyte achève sa méiose à l’**ovulation**.",
+            "Oublier que 1 cellule donne **4** spermatozoïdes, mais **1** ovocyte."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Combien de chromosomes dans un **gamète** humain&nbsp;?",
+            "Quelle division est **réductionnelle**&nbsp;?",
+            "Quand l’ovocyte II termine-t-il sa méiose&nbsp;?"
+          ],
+          "reponses": "1) 23 (haploïde) · 2) la méiose I · 3) seulement si un spermatozoïde le pénètre"
+        }
+      ]
+    }
+  ]
+}

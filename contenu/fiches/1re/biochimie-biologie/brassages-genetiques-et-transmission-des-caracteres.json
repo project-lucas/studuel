@@ -1,0 +1,171 @@
+{
+  "titre": "Brassages génétiques",
+  "titreSurligne": "Brassages",
+  "accroche": "Pourquoi frères et sœurs diffèrent.",
+  "bonus": "**Crossing-over** (prophase I) · **ségrégation aléatoire** (anaphase I) · 2²³ ≈ **8 millions** de gamètes · aa : **1/4**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/biochimie-biologie/brassages-genetiques-et-transmission-des-caracteres.webp",
+    "prompt": "two glossy chromosomes, one violet and one golden, crossing and swapping pieces in an X shape, tiny golden sparkles, same art style as the reference icons, magenta background, no text"
+  },
+  "marcel": "On mélange tout,\nrésultat unique !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Le vocabulaire",
+          "items": [
+            {
+              "terme": "Gène",
+              "definition": "portion d’ADN qui code une protéine."
+            },
+            {
+              "terme": "Allèle",
+              "definition": "une version d’un gène&nbsp;: **deux** par cellule diploïde."
+            },
+            {
+              "terme": "Génotype",
+              "definition": "combinaison des allèles&nbsp;; **phénotype** = ce qu’on observe."
+            },
+            {
+              "terme": "Récessif",
+              "definition": "ne s’exprime que chez l’**homozygote** a//a."
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Deux brassages",
+          "entetes": [
+            "Brassage",
+            "Moment",
+            "Mécanisme"
+          ],
+          "lignes": [
+            [
+              "**Intrachromosomique**",
+              "prophase I",
+              "**crossing-over** entre homologues"
+            ],
+            [
+              "**Interchromosomique**",
+              "anaphase I",
+              "**ségrégation aléatoire** des homologues"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Lire un arbre généalogique",
+          "etapes": [
+            {
+              "titre": "Repérer",
+              "texte": "deux parents sains, un enfant atteint&nbsp;: allèle récessif"
+            },
+            {
+              "titre": "Déduire",
+              "texte": "les parents sont hétérozygotes A//a"
+            },
+            {
+              "titre": "Localiser",
+              "texte": "fille atteinte, père sain&nbsp;: gène non porté par X"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Échiquier A//a × A//a",
+          "entetes": [
+            "",
+            "A",
+            "a"
+          ],
+          "lignes": [
+            [
+              "**A**",
+              "A//A",
+              "A//a"
+            ],
+            [
+              "**a**",
+              "A//a",
+              "a//a"
+            ]
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "Deux parents hétérozygotes A//a. Probabilité d’un enfant atteint a//a&nbsp;?",
+          "calcul": "½ × ½",
+          "aparte": "un seul carré sur quatre",
+          "resultat": "[[1/4]] soit 25&nbsp;%"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "Deux parents sains ont un enfant atteint&nbsp;: l’allèle responsable est récessif.",
+              "quoi": "déduire"
+            },
+            {
+              "texte": "Les deux parents sont donc hétérozygotes.",
+              "quoi": "conclure"
+            },
+            {
+              "texte": "Chaque parent forme 50 % de gamètes A et 50 % de gamètes a.",
+              "quoi": "gamètes"
+            },
+            {
+              "texte": "La probabilité d’un enfant a//a est 1/4.",
+              "quoi": "résultat"
+            }
+          ],
+          "pied": "Drépanocytose&nbsp;: ==GAG → GTG==, glutamate remplacé par valine, atteinte chez les homozygotes seulement."
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Confondre **gène** et **allèle**.",
+            "Croire un récessif **exprimé** chez l’hétérozygote.",
+            "Placer le **crossing-over** en anaphase I.",
+            "Oublier que la **fécondation** ajoute encore de la diversité."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quel brassage se produit en **prophase I**&nbsp;?",
+            "Un **homozygote** a quels allèles&nbsp;?",
+            "Parents **A//a** × **A//a** : risque d’un enfant **a//a**&nbsp;?"
+          ],
+          "reponses": "1) le crossing-over (intrachromosomique) · 2) deux allèles identiques · 3) 1/4"
+        }
+      ]
+    }
+  ]
+}

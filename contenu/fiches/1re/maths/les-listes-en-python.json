@@ -1,0 +1,173 @@
+{
+  "titre": "Les listes en Python",
+  "titreSurligne": "listes",
+  "accroche": "Plusieurs valeurs, un seul nom.",
+  "epreuve": "bac-1re",
+  "bonus": "L[0] premier · L[-1] dernier · len(L) taille · L.append(x) ajoute · indices de 0 à len(L) − 1",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/1re/maths/les-listes-en-python.webp",
+    "prompt": "a glossy violet row of four square boxes with golden small marks inside, a golden arrow pointing at the first box, sparkles, same art style as the reference icons, on a flat magenta background, no text, no numbers"
+  },
+  "marcel": "Le premier ?\nL[0] !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 1,
+          "titre": "Lire et modifier",
+          "petite": true,
+          "lignes": [
+            "L[0] … L[len(L) − 1]",
+            "L[1] = 8",
+            "L.append(5)"
+          ],
+          "regle": "Les indices commencent à **0**. L[-1] est le **dernier** élément.",
+          "note": "L[len(L)] : erreur&nbsp;!"
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Avec L = [4, 7, 1, 9]",
+          "entetes": [
+            "Instruction",
+            "Résultat"
+          ],
+          "lignes": [
+            [
+              "L[0]",
+              "**4**"
+            ],
+            [
+              "L[2]",
+              "**1**"
+            ],
+            [
+              "L[-1]",
+              "**9**"
+            ],
+            [
+              "len(L)",
+              "**4**"
+            ],
+            [
+              "L.append(5)",
+              "[4, 7, 1, 9, 5]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Les termes d’une suite dans une liste",
+          "etapes": [
+            {
+              "titre": "Départ",
+              "texte": "u = 1000 puis L = [u]"
+            },
+            {
+              "titre": "Boucle",
+              "texte": "u = 1.05 * u puis L.append(u)"
+            },
+            {
+              "titre": "Renvoyer",
+              "texte": "return L, après la boucle"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple résolu",
+          "donnees": "[k for k in range(10) if k % 3 == 0]&nbsp;: __liste obtenue__&nbsp;?",
+          "calcul": "k de 0 à 9\nsi k % 3 == 0 : multiples de 3",
+          "aparte": "compréhension filtrée",
+          "resultat": "liste [[0, 3, 6, 9]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Trois façons de créer",
+          "colonnes": 2,
+          "cartes": [
+            {
+              "titre": "En extension",
+              "texte": "L = [4, 7, 1, 9]."
+            },
+            {
+              "titre": "Par ajouts",
+              "texte": "L = [] puis **L.append(x)** dans une boucle."
+            },
+            {
+              "titre": "En compréhension",
+              "texte": "[i * i for i in range(5)] donne **[0, 1, 4, 9, 16]**."
+            },
+            {
+              "titre": "Parcourir",
+              "texte": "**for x in L** (valeurs) ou **for i in range(len(L))** (positions)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 296px",
+      "blocs": [
+        {
+          "type": "copie",
+          "titre": "Sur ta copie",
+          "lignes": [
+            {
+              "texte": "s = 0",
+              "quoi": "le départ"
+            },
+            {
+              "texte": "for x in L : s = s + x",
+              "quoi": "l’accumulation"
+            },
+            {
+              "texte": "Pour L = [4, 7, 1, 9], s = 21",
+              "quoi": "le résultat"
+            },
+            {
+              "texte": "for i in range(len(L)) : on lit ou change L[i]",
+              "quoi": "par les indices"
+            }
+          ],
+          "pied": "Contrôle&nbsp;: 4 + 7 + 1 + 9 = ==21==. ✔"
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le premier élément est **L[1]**.",
+            "Demander **L[len(L)]**&nbsp;: il n’existe pas.",
+            "Mettre le **return** dans la boucle.",
+            "Oublier que l’append est **dans** la boucle."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "L = [4, 7, 1, 9]&nbsp;: **L[1]**&nbsp;?",
+            "<b>[i * i for i in range(4)]</b>&nbsp;?",
+            "Dernier indice d’une liste de **6** éléments&nbsp;?"
+          ],
+          "reponses": "1) 7 · 2) [0, 1, 4, 9] · 3) 5"
+        }
+      ]
+    }
+  ]
+}

@@ -1,7 +1,6 @@
 // @vitest-environment jsdom
 import { render, screen } from '@testing-library/react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import { rankFor } from '@/lib/rank'
 import { cleEtatCompte } from '@/lib/defi/classement-arene'
 import CompteTropheesArene, {
   formatTrophees,
@@ -16,18 +15,14 @@ describe('formatTrophees', () => {
 })
 
 describe('libelleCompteTrophees', () => {
-  it('dit le total, la bande, le rang et la place dans la division', () => {
-    expect(libelleCompteTrophees(30, 90)).toBe(
-      '30 trophées, top 90 % de tous les élèves, rang Bronze IV (30 sur 500 dans la division)',
-    )
+  it('dit le total et la bande — plus de rang : le rang est la division de ligue (13/10/2026)', () => {
+    expect(libelleCompteTrophees(30, 90)).toBe('30 trophées, top 90 % de tous les élèves')
   })
 
-  it('se passe de bande quand la base ne la donne pas, et de division au sommet', () => {
-    expect(libelleCompteTrophees(30, null)).toBe(
-      '30 trophées, rang Bronze IV (30 sur 500 dans la division)',
-    )
+  it('se passe de bande quand la base ne la donne pas', () => {
+    expect(libelleCompteTrophees(30, null)).toBe('30 trophées')
     const sommet = libelleCompteTrophees(12_000, 5)
-    expect(sommet).toContain('rang Maître')
+    expect(sommet).not.toContain('rang')
     expect(sommet).not.toContain('division')
   })
 })
@@ -63,9 +58,11 @@ describe('CompteTropheesArene', () => {
     expect(screen.queryByRole('button')).toBeNull()
   })
 
-  it('retombe sur le rang quand la base ne donne pas de bande', () => {
+  it('retombe sur le mot « trophées » quand la base ne donne pas de bande — jamais un rang', () => {
     render(<CompteTropheesArene trophees={1240} top={null} cle={null} />)
-    expect(screen.getByRole('img').textContent).toContain(rankFor(1240).label)
+    const compte = screen.getByRole('img')
+    expect(compte.textContent).toContain('trophées')
+    expect(compte.textContent).not.toMatch(/Bronze|Argent|Or |Platine|Diamant|Maître/)
   })
 
   it('mémorise ce qu’il a montré, sous la clé de l’élève', () => {

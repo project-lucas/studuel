@@ -4,7 +4,6 @@ import { useEffect, useMemo, useState, useSyncExternalStore } from 'react'
 import Image from 'next/image'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { cn } from '@/lib/utils'
-import { DIVISION_SPAN, rankFor } from '@/lib/rank'
 import { quandLaScenePrete } from '@/lib/scene-prete'
 import {
   libelleTop,
@@ -19,17 +18,13 @@ export function formatTrophees(n: number): string {
 }
 
 /**
- * Ce que le lecteur d'écran lit à la place du chiffre : le total, la bande
- * parmi tous les élèves, le rang et la position dans la division.
+ * Ce que le lecteur d'écran lit à la place du chiffre : le total et la bande
+ * parmi tous les élèves. Plus de rang ici (13/10/2026) : le rang est la
+ * division de ligue, les trophées ne sont qu'un score.
  */
 export function libelleCompteTrophees(trophees: number, top: number | null): string {
-  const rank = rankFor(trophees)
-  const division =
-    rank.ceiling !== null
-      ? ` (${rank.inDivision} sur ${DIVISION_SPAN} dans la division)`
-      : ''
   const bande = top !== null ? `, top ${top} % de tous les élèves` : ''
-  return `${trophees} trophées${bande}, rang ${rank.label}${division}`
+  return `${trophees} trophées${bande}`
 }
 
 // ------------------------------------------------------- la mémoire du compte
@@ -136,7 +131,6 @@ export default function CompteTropheesArene({
   className?: string
 }) {
   const reduce = useReducedMotion()
-  const rank = rankFor(trophees)
 
   const brut = useSyncExternalStore(
     abonner,
@@ -293,7 +287,8 @@ export default function CompteTropheesArene({
       >
         {/* La bande est une PASTILLE jaune (l'or du gain) à encre marine : sur
             la plaque blanche, le jaune seul ne se lisait plus. Sans bande, le
-            rang, en gris. */}
+            mot « trophées », en gris — plus de rang ici (13/10/2026 : le rang
+            est la division de ligue). */}
         <motion.span
           key={phase === 'top' ? 'nouvelle' : 'ancienne'}
           className={cn(
@@ -306,7 +301,7 @@ export default function CompteTropheesArene({
           animate={{ y: 0, opacity: 1, scale: 1 }}
           transition={{ duration: 0.4, ease: 'easeOut' }}
         >
-          {topAffiche === null ? rank.label : libelleTop(topAffiche)}
+          {topAffiche === null ? 'trophées' : libelleTop(topAffiche)}
         </motion.span>
       </span>
     </div>

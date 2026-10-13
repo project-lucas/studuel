@@ -9,6 +9,8 @@ import ArenaActionBar from '@/components/defi/ArenaActionBar'
 import ClassementSheet from '@/components/defi/ClassementSheet'
 import CompteTropheesArene from '@/components/defi/CompteTropheesArene'
 import { cleEtatCompte, topPourcent } from '@/lib/defi/classement-arene'
+import { lireMaPlace } from '@/lib/ligue-server'
+import type { MaPlaceLigue } from '@/lib/ligue-place'
 import DuelSubjectProvider from '@/components/defi/DuelSubjectProvider'
 import { buildDuelBoard } from '@/lib/defi/duel-board'
 import {
@@ -161,6 +163,8 @@ export default async function OngletDefi() {
   // « Top 90 % » du compte de trophées et de l'écran Classement. Null pour un
   // visiteur ou tant que la base n'a rien dit.
   let classementNational: { rank: number | null; total: number } | null = null
+  // Ma division de ligue et ma place (562) : la plaque « Mon rang » du Classement.
+  let maPlace: MaPlaceLigue | null = null
   let hasSchool = true
   let duelEntries: ReturnType<typeof normalizeRankedHistory> = []
   let reviewCount = 0
@@ -282,6 +286,7 @@ export default async function OngletDefi() {
       subjectLevels,
       palmaresRes,
       [schoolRes, tournamentRes, chapterRes, quizCounts, gradeChapters],
+      placeLigue,
     ] = await Promise.all([
       vague1P,
       getSubjectsCached(),
@@ -296,7 +301,12 @@ export default async function OngletDefi() {
       // porte ma place de la semaine. Vide tant que la migration dort.
       fetchMyPalmares(supabase),
       selonClasseP,
+      // Ma division de ligue et ma place dans mon groupe (562), en une lecture
+      // légère : depuis le 13/10/2026 c'est LE rang de l'arène, les trophées
+      // n'étant plus qu'un score. Null tant que la migration dort.
+      lireMaPlace(supabase),
     ])
+    maPlace = placeLigue
 
     const {
       profile,
@@ -690,6 +700,7 @@ export default async function OngletDefi() {
                 key="classement"
                 trophees={user ? trophies : undefined}
                 classement={classementNational}
+                ligue={maPlace}
               />
             }
           >

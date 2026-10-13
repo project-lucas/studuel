@@ -132,3 +132,14 @@ describe('estChromeMasque', () => {
     expect(estChromeMasque(null as unknown as string)).toBe(false)
   })
 })
+
+describe('estPleinEcran — l’aperçu de la fin de duel', () => {
+  it('ouvre /dev/duel en plein écran, comme la vraie course', () => {
+    expect(estPleinEcran('/dev/duel')).toBe(true)
+    expect(estPleinEcran('/dev/duel?m=Anglais&e=victoire')).toBe(true)
+  })
+  it('ne prend pas une autre page de /dev pour la course', () => {
+    expect(estPleinEcran('/dev/duel-pokemon')).toBe(false)
+    expect(estPleinEcran('/dev')).toBe(false)
+  })
+})

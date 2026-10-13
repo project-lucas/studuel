@@ -110,7 +110,7 @@ export default function DuelCourse({
           >
             {courseClock(view.msLeft)}
           </span>
-        ) : (
+        ) : view.phase === 'result' ? null : (
           <span className="course-chrono course-chrono--muet" aria-hidden="true">
             1:30
           </span>
@@ -153,11 +153,7 @@ export default function DuelCourse({
             goalAtMs: null,
             isBot: rival.isBot,
           }}
-          bestCombo={view.me.bestCombo}
-          correct={view.me.correct}
-          answered={view.me.answered}
           hrefs={hrefs}
-          vignette={vignette}
         />
       ) : (
         <div className="course-corps">

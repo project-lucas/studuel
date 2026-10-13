@@ -58,6 +58,11 @@ const PREFIXES_PLEIN_ECRAN = [
   // duel. Il n'y a pas de liste `/defi/programme` à protéger : le contrôle de
   // longueur ci-dessous la laisse de toute façon avec son chrome.
   '/defi/programme/',
+  // L'APERÇU de l'écran de fin (`/dev/duel`, développement seulement) : rendu
+  // avec le chrome, il héritait des marges du gabarit (pt-16, pb-24) et de la
+  // barre d'onglets, et la carte du bilan paraissait dépasser alors que la
+  // vraie course, plein écran, la loge entière (13/10/2026).
+  '/dev/duel',
 ] as const
 
 /**
@@ -86,7 +91,8 @@ export function estPleinEcran(pathname: string): boolean {
     (prefixe) =>
       // `startsWith(prefixe)` suffit — les préfixes portent déjà leur barre
       // finale, ce qui empêche « /tests-blancs » de passer pour « /test/ ».
-      chemin.startsWith(prefixe) && chemin.length > prefixe.length,
+      // Un préfixe SANS barre finale désigne une page EXACTE (`/dev/duel`).
+      prefixe.endsWith('/') ? chemin.startsWith(prefixe) && chemin.length > prefixe.length : chemin === prefixe,
   )
 }
 

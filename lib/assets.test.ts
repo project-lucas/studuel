@@ -15,6 +15,7 @@ import { BADGES_ILLUSTRES, OBJETS_ILLUSTRES, imageBadge, imageObjet } from '@/li
 import { PROFILE_BANNERS } from '@/lib/profile-banners'
 import { PERSONNAGES_HISTORIQUES, imagePersonnage } from '@/lib/personnages-historiques'
 import { CADRES, imageCadre } from '@/lib/moi/cadre-profil'
+import { TITRE_DEFAITE, TITRE_VICTOIRE } from '@/lib/duel/titres'
 import { FENETRES_CADRES } from '@/lib/moi/cadres-geometrie'
 
 // Garde des ASSETS DÉCLARÉS.
@@ -303,6 +304,16 @@ describe('cadres de profil', () => {
   })
   it('le bouclier « Défier » de l’onglet Amis existe', () => {
     expect(assetExists('/images/amis/defier.webp')).toBe(true)
+  })
+})
+
+describe('lettrages de la fin de duel', () => {
+  // « VICTOIRE ! » et « DÉFAITE » dessinés (13/10/2026), détourés par
+  // scripts/duel-titres.mjs : l'écran de fin ne porte plus de titre en texte.
+  it('victoire et défaite existent', () => {
+    for (const titre of [TITRE_VICTOIRE, TITRE_DEFAITE]) {
+      expect(assetExists(titre), `${titre} manquant — node scripts/duel-titres.mjs`).toBe(true)
+    }
   })
 })
 

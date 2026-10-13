@@ -2,15 +2,19 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { RefreshCw, RotateCcw, Shuffle, Users } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { RefreshCw, Shuffle, Swords } from 'lucide-react'
+import ArenaBackdrop from '@/components/ArenaBackdrop'
 import AvatarRender from '@/components/avatar/AvatarRender'
-import TropheeIcone from '@/components/ui/TropheeIcone'
+import XpIcon from '@/components/ui/XpIcon'
 import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
+import { Button } from '@/components/ui/button'
 import type { AvatarConfig } from '@/lib/avatar'
 import { cn } from '@/lib/utils'
 import { outcomeCaption, outcomeTitle, type CourseOutcome } from '@/lib/duel/course'
 import type { DuelCourseOutcome } from '@/lib/duel/fin-course'
+import { enjeuLigue, ordinal, type LigueApresCourse } from '@/lib/duel/ligue-course'
+import { TITRE_DEFAITE, TITRE_VICTOIRE } from '@/lib/duel/titres'
+import { echelon } from '@/lib/ligue'
 import styles from './Course.module.css'
 
 export type ResultCamp = {
@@ -21,15 +25,27 @@ export type ResultCamp = {
   isBot?: boolean
 }
 
+
 /**
- * L'ÉCRAN DE FIN de la course. Quatre choses, dans cet ordre : le verdict, le
- * face-à-face final, ce que ça rapporte, et REVANCHE en gros — la fin d'un
- * duel est le meilleur moment pour en lancer un autre, contre la même personne.
+ * L'ÉCRAN DE FIN de la course — le « K.O. » de la planche Pokémon, choisi par
+ * Lucas le 13/10/2026 (`assets-sources/maquettes/duel-pokemon.html`, colonne
+ * D, « sans le cercle placé en dessous des avatars »), sur la cour d'honneur
+ * vivante de l'arène et non plus sur l'aplat violet (« le fond violet du duel
+ * me pose toujours souci »). De haut en bas : le VERDICT (bientôt une
+ * illustration, cf. `assets-sources/duel-titres/`), les DEUX COMBATTANTS — le
+ * gagnant cerclé d'or, le perdant basculé et grisé, et sous chacun sa
+ * BANNIÈRE DE RANG (« Bronze 1 », la division de ligue) —, puis la carte du
+ * bilan, ÉPURÉE (Lucas : « gain d'XP et gain de rang dans la division, et
+ * c'est tout ») : MA PLACE DANS LA LIGUE avant → après (la seule échelle
+ * depuis le 13/10 : « une défaite ne retire jamais rien »), l'XP versée, et
+ * REVANCHE en or — la fin d'un duel est le meilleur moment d'en relancer un.
+ * Ni trophées, ni combo, ni clan, ni quête ici : les trophées se lisent dans
+ * le Classement de l'arène, le reste dans ses feuilles.
  *
  * ON N'AFFICHE QUE CE QUE LE SERVEUR A VERSÉ. Le verdict se calcule des deux
- * côtés avec les mêmes fonctions, donc il s'affiche tout de suite ; les
- * trophées et les gains attendent la réponse — un « +8 » posé avant que la
- * base ne l'ait écrit est le défaut maison n°1, et il n'entre pas ici.
+ * côtés avec les mêmes fonctions, donc il s'affiche tout de suite ; la ligue,
+ * les trophées, l'XP et les rangs attendent la réponse — un « +8 » posé avant
+ * que la base ne l'ait écrit est le défaut maison n°1, et il n'entre pas ici.
  */
 export default function DuelResult({
   outcome,
@@ -39,11 +55,7 @@ export default function DuelResult({
   onReessayer,
   me,
   rival,
-  bestCombo,
-  correct,
-  answered,
   hrefs,
-  vignette = null,
 }: {
   outcome: CourseOutcome
   server: DuelCourseOutcome | null
@@ -54,12 +66,7 @@ export default function DuelResult({
   onReessayer?: () => void
   me: ResultCamp
   rival: ResultCamp
-  bestCombo: number
-  correct: number
-  answered: number
   hrefs: { revanche: string; nouveau: string; arene: string }
-  /** L'illustration de la matière, en médaillon sur la carte. */
-  vignette?: string | null
 }) {
   // Le verdict du SERVEUR ne remplace celui de l'écran que s'il l'a VÉRIFIÉ.
   // Un rival introuvable, une session expirée : le serveur n'en sait pas plus
@@ -67,85 +74,67 @@ export default function DuelResult({
   const verifie = server?.statut === 'verifie'
   const verdict = verifie && server ? server.outcome : outcome
   const won = verdict !== 'loss'
-  const trophies = server?.trophies ?? null
+  const ligue = server?.ligue ?? null
   const rivalFinal = (verifie ? server?.rival : null) ?? { score: rival.score, goalAtMs: rival.goalAtMs }
+  // Les rangs : le mien vient de la ligue relue après la course ; un robot
+  // est réglé sur moi et porte le mien ; un élève rejoué le sien (562).
+  const monEchelon = ligue?.echelon ?? null
+  const rivalEchelon = server?.rivalEchelon ?? (rival.isBot ? monEchelon : null)
 
   return (
-    // La carte au MILIEU de l'écran, sur le fond opaque de la course — plus
-    // collée sous l'en-tête avec l'arène qui transparaissait autour.
-    <div className={styles.finCentre}>
-      <div
-        className={cn(
-          'course-fin',
-          won ? 'course-fin--gagnee' : 'course-fin--perdue',
-          vignette && styles.avecMedaillon,
-        )}
-      >
+    <section className={styles.fin} aria-label="Résultat du duel">
+      {/* La cour d'honneur, VIVANTE, repeinte sous l'écran (même geste que le
+          rideau de recherche d'adversaire) ; `defi-arena-bg` fait socle le
+          temps que l'illustration se décode. */}
+      <div aria-hidden="true" className={cn('defi-arena-bg', styles.finCour)}>
+        <ArenaBackdrop />
+      </div>
+      <div aria-hidden="true" className={styles.finVoile} />
+
+      <div className={styles.verdict}>
         {won ? <Confettis /> : null}
-
-        {/* La matière, en médaillon à cheval sur la carte : la même vignette
-            que dans son dossier de Réviser. */}
-        {vignette ? (
-          <span className={cn(styles.pastille, styles.medaillon)} aria-hidden="true">
-            <Image src={vignette} alt="" width={120} height={120} className="size-full object-contain" />
-          </span>
-        ) : null}
-
-        <h1 className="course-fin-titre">
-          <span className="course-tampon">{outcomeTitle(verdict)}</span>
+        {/* LE VERDICT EST UNE ILLUSTRATION (13/10/2026, Lucas : « de belles
+            illustrations pour victoire, défaite ») : les lettrages dessinés
+            dans la famille nav, détourés par `scripts/duel-titres.mjs`. Le mot
+            reste dans le DOM pour les lecteurs d'écran. */}
+        <h1 className={styles.titre}>
+          <Image
+            src={won ? TITRE_VICTOIRE : TITRE_DEFAITE}
+            alt=""
+            width={720}
+            height={360}
+            priority
+            unoptimized
+            className={cn('course-tampon', styles.titreImage)}
+          />
+          <span className="sr-only">{outcomeTitle(verdict)}</span>
         </h1>
-        <p className="course-fin-legende">
+        <p className={styles.legende}>
           {outcomeCaption(verdict, rival.name, { score: me.score, goalAtMs: me.goalAtMs }, rivalFinal)}
         </p>
+      </div>
 
-        {/* Le face-à-face final : les deux barres figées, côte à côte. */}
-        <div className="course-fin-face">
-          <Camp camp={me} label="Toi" tone="moi" gagnant={won} />
-          <span className="course-fin-vs" aria-hidden="true">
-            VS
-          </span>
-          <Camp camp={{ ...rival, score: rivalFinal.score }} label={rival.name} tone="rival" gagnant={!won} />
-        </div>
+      {/* Les deux combattants, sans plateau : le gagnant cerclé d'or, le
+          perdant basculé — et sous chacun sa division de ligue. */}
+      <div className={styles.combattants}>
+        <Combattant camp={me} label="Toi" gagnant={won} echelon={monEchelon} />
+        <Combattant camp={{ ...rival, score: rivalFinal.score }} label={rival.name} gagnant={!won} echelon={rivalEchelon} />
+      </div>
 
-        {/* Les chiffres de la course, en pastilles plutôt qu'en phrase. */}
-        <p className={styles.stats}>
-          <span className={styles.stat}>
-            <strong>
-              {correct}/{answered}
-            </strong>
-            bonnes réponses
-          </span>
-          <span className={styles.stat}>
-            <strong>×{bestCombo}</strong>
-            meilleure série
-          </span>
-        </p>
-
-        {/* LES TROPHÉES — la seule chose qui monte ET descend. */}
-        <div className="course-fin-trophees" aria-live="polite">
+      <div className={styles.bilan}>
+        {/* LA LIGNE DU HAUT : ma place dans la ligue, avant et après. */}
+        <div className={styles.ligne} aria-live="polite">
           {!recorded ? (
             <span className={styles.attente}>
-              <TropheeIcone className="size-6" />
-              Le serveur compte les trophées…
+              <XpIcon className="size-6" />
+              Le serveur compte…
             </span>
-          ) : trophies ? (
-            <>
-              <span className={cn('course-fin-delta', trophies.delta >= 0 ? 'course-fin-delta--plus' : 'course-fin-delta--moins')}>
-                <TropheeIcone className="size-6" />
-                {trophies.delta >= 0 ? '+' : ''}
-                {trophies.delta}
-              </span>
-              <span className="course-fin-compteur">
-                {trophies.before} → <strong>{trophies.after}</strong>
-                {trophies.after > trophies.before && trophies.after >= trophies.best ? (
-                  <em> · record</em>
-                ) : null}
-              </span>
-            </>
+          ) : ligue && server ? (
+            <LigneLigue ligue={ligue} gains={server.gains} />
           ) : envoiEchoue ? (
             // Rien n'est écrit : on le dit, et on propose de renvoyer. La course
             // porte son identifiant — la renvoyer ne la paie jamais deux fois.
-            <span className="course-fin-attente">
+            <span className={styles.note}>
               Connexion perdue : ta course n’est pas encore enregistrée.
               {onReessayer ? (
                 <Button type="button" variant="secondary" size="sm" className="mt-2 font-bold" onClick={onReessayer}>
@@ -153,89 +142,115 @@ export default function DuelResult({
                 </Button>
               ) : null}
             </span>
+          ) : server && server.gains.length > 0 ? (
+            // Pas de ligue (migration absente, ou course rejouée) : l'XP seule.
+            <PanneauRecompenses compact gains={server.gains} />
           ) : (
-            <span className="course-fin-attente">{messageSansTrophees(server)}</span>
+            <span className={styles.note}>{messageSansLigue(server)}</span>
           )}
         </div>
 
-        {server ? <PanneauRecompenses gains={server.gains} className="w-full" /> : null}
-
-        <div className="course-fin-lignes">
-          {server && server.clanPoints > 0 ? (
-            <span className="course-fin-pilule">
-              <Users className="size-4" aria-hidden="true" /> +{server.clanPoints} pour ton clan
-            </span>
-          ) : null}
-          {server && server.questsCompleted.length > 0 ? (
-            <span className="course-fin-pilule course-fin-pilule--or">
-              {server.questDayDone
-                ? '🎉 Les 3 quêtes du jour sont bouclées !'
-                : `✅ ${server.questsCompleted.length} quête${server.questsCompleted.length > 1 ? 's' : ''} terminée${server.questsCompleted.length > 1 ? 's' : ''}`}
-            </span>
-          ) : null}
-          {server?.replaySaved ? (
-            <span className="course-fin-note">
-              Ta course est enregistrée : elle deviendra l’adversaire d’un autre élève.
-            </span>
-          ) : null}
-        </div>
-
-        <div className="course-fin-boutons">
-          <Button asChild size="lg" className="h-14 w-full text-lg font-extrabold">
+        <div className={styles.boutons}>
+          <Button asChild size="xl" className={cn('w-full', styles.btnOr)}>
             <Link href={hrefs.revanche}>
-              <RotateCcw className="mr-2 size-5" aria-hidden="true" /> Revanche contre {rival.name}
+              <Swords className="size-5" aria-hidden="true" /> Revanche contre {rival.name}
             </Link>
           </Button>
-          <Button asChild variant="secondary" size="lg" className="h-12 w-full font-bold">
-            <Link href={hrefs.nouveau}>
-              <Shuffle className="mr-2 size-4" aria-hidden="true" /> Nouvel adversaire
-            </Link>
-          </Button>
-          <Button asChild variant="ghost" className="w-full text-muted-foreground">
-            <Link href={hrefs.arene}>Retour à l’arène</Link>
-          </Button>
+          <div className={styles.deux}>
+            <Button asChild variant="outline" size="lg" className="flex-1 font-extrabold">
+              <Link href={hrefs.nouveau}>
+                <Shuffle className="size-4" aria-hidden="true" /> Nouveau duel
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="flex-1 font-extrabold">
+              <Link href={hrefs.arene}>Retour à l’arène</Link>
+            </Button>
+          </div>
         </div>
       </div>
+    </section>
+  )
+}
+
+/**
+ * « Ligue Bronze 1 · 14e → 11e » et l'enjeu, avec l'XP versée en pastille —
+ * la seule échelle qui monte (13/10/2026). Les XP volent d'ici vers le bandeau.
+ */
+function LigneLigue({ ligue, gains }: { ligue: LigueApresCourse; gains: DuelCourseOutcome['gains'] }) {
+  const division = echelon(ligue.echelon)
+  const monte = ligue.rangAvant > ligue.rang
+  return (
+    <div className={styles.ligue}>
+      <Image src={division.rang.image} alt="" width={224} height={224} className={styles.ligueBlason} aria-hidden="true" />
+      <div className={styles.ligueTexte}>
+        <span className={styles.ligueLib}>Ligue {division.nom}</span>
+        <span className={styles.liguePlace}>
+          {ligue.entree ? (
+            <>
+              Tu entres <strong>{ordinal(ligue.rang)}</strong>
+            </>
+          ) : monte ? (
+            <>
+              <s>{ordinal(ligue.rangAvant)}</s>
+              <span aria-hidden="true"> → </span>
+              <span className="sr-only">, puis </span>
+              <strong>{ordinal(ligue.rang)}</strong>
+            </>
+          ) : (
+            <strong>{ordinal(ligue.rang)}</strong>
+          )}
+          <small> sur {ligue.taille}</small>
+        </span>
+        <span className={styles.ligueEnjeu}>{enjeuLigue(ligue)}</span>
+      </div>
+      <PanneauRecompenses compact gains={gains} className={styles.ligueGains} />
     </div>
   )
 }
 
-/** Pourquoi les trophées n'ont pas bougé — ce que le serveur a vraiment établi. */
-function messageSansTrophees(server: DuelCourseOutcome | null): string {
+/** Pourquoi il n'y a ni ligue ni gain — ce que le serveur a vraiment établi. */
+function messageSansLigue(server: DuelCourseOutcome | null): string {
   if (!server) return 'Résultat non confirmé : réessaie depuis l’arène.'
   switch (server.statut) {
     case 'non_verifie':
-      return 'Adversaire non vérifié : course comptée, trophées inchangés.'
+      return 'Adversaire non vérifié : course comptée, rien de plus.'
     case 'deja_compte':
-      return 'Course déjà enregistrée : tes trophées sont à jour dans l’arène.'
+      return 'Course déjà enregistrée : ta ligue est à jour dans l’onglet Amis.'
     case 'non_connecte':
       return 'Session expirée : reconnecte-toi pour que tes courses comptent.'
     default:
-      return server.trophiesPause
-        ? 'Pause trophées : trop de courses classées en une heure. Reviens un peu plus tard.'
-        : 'Trophées non enregistrés cette fois : la course, elle, est comptée.'
+      return 'Course comptée.'
   }
 }
 
-function Camp({
+function Combattant({
   camp,
   label,
-  tone,
   gagnant,
+  echelon: index,
 }: {
   camp: ResultCamp
   label: string
-  tone: 'moi' | 'rival'
   gagnant: boolean
+  /** Sa division de ligue (null : inconnue, pas d'étiquette). */
+  echelon: number | null
 }) {
+  const division = index === null ? null : echelon(index)
   return (
-    <div className={cn('course-fin-camp', `course-fin-camp--${tone}`, gagnant && 'course-fin-camp--gagnant')}>
-      <div className="course-fin-avatar">
+    <div className={styles.combattant}>
+      <div className={cn(styles.sprite, gagnant ? styles.spriteTouche : styles.spriteKo)}>
         <AvatarRender config={camp.avatar} className="size-full" />
         {camp.isBot ? <span className="course-robot">IA</span> : null}
       </div>
-      <p className="course-fin-nom">{label}</p>
-      <p className="course-fin-score">{camp.score}</p>
+      <p className={styles.nom}>{label}</p>
+      <p className={cn(styles.score, gagnant && styles.scoreOr)}>{camp.score}</p>
+      {division ? (
+        <p className={styles.rang}>
+          <Image src={division.rang.image} alt="" width={224} height={224} aria-hidden="true" />
+          {division.nom}
+          <span className="sr-only"> — division de ligue</span>
+        </p>
+      ) : null}
     </div>
   )
 }
@@ -267,6 +282,10 @@ export function Confettis() {
               '--ty': p.ty,
               '--rot': p.rot,
               animationDelay: p.delay,
+              // `both` : la salve finie, chaque pièce reste à son dernier état
+              // (évanouie) — avec le `backwards` de la classe, les vingt-huit
+              // retombaient au point de départ en un petit carré visible.
+              animationFillMode: 'both',
               background: p.color,
             } as React.CSSProperties
           }

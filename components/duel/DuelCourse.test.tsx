@@ -133,8 +133,22 @@ describe('la course — l’écran ne ment pas', () => {
       clanPoints: 0,
       questsCompleted: [],
       questDayDone: false,
-      gains: [],
+      gains: [{ unite: 'xp', montant: 20 }],
       replaySaved: true,
+      // La ligue relue après le versement (13/10/2026) : 14e → 11e.
+      ligue: {
+        echelon: 3,
+        nom: 'Bronze 1',
+        rang: 11,
+        rangAvant: 14,
+        taille: 30,
+        promus: 7,
+        relegues: 5,
+        xpSemaine: 732,
+        xpAjoutee: 20,
+        entree: false,
+      },
+      rivalEchelon: null,
     }))
     setVisibility('visible')
   })
@@ -177,13 +191,18 @@ describe('la course — l’écran ne ment pas', () => {
     expect(envoye.steps).toHaveLength(clics)
     expect(envoye.answers).toHaveLength(clics)
 
-    // L'écran de fin affiche le score envoyé, et les trophées du SERVEUR.
+    // L'écran de fin affiche le score envoyé, et ce que le SERVEUR a établi :
+    // ma place dans la ligue (14e → 11e) et l'XP versée — plus de trophées ici
+    // (13/10/2026 : « gain d'XP et gain de rang dans la division, c'est tout »).
     await act(async () => {
       vi.advanceTimersByTime(FINISH_FREEZE_MS + 50)
     })
     expect(screen.getByText('Victoire !')).toBeInTheDocument()
     expect(screen.getByText(String(envoye.stats.score))).toBeInTheDocument()
-    expect(screen.getByText('+10')).toBeInTheDocument()
+    expect(screen.getByText('11e')).toBeInTheDocument()
+    expect(screen.getByText('14e')).toBeInTheDocument()
+    expect(screen.getByText('+20')).toBeInTheDocument()
+    expect(screen.queryByText('+10')).toBeNull()
   })
 
   it('la course s’arrête quand le RIVAL remplit sa barre, même si je ne réponds pas', async () => {

@@ -10,6 +10,7 @@ import type { GameTrophyOutcome } from '@/app/defi/actions'
 import type { Gain } from '@/lib/gains'
 import type { ReviewAnswer } from '@/lib/srs'
 import type { CourseOutcome, CourseStats } from '@/lib/duel/course'
+import type { LigueApresCourse } from '@/lib/duel/ligue-course'
 import type { ReplayStep } from '@/lib/duel/replay'
 
 /** L'adversaire tel que le client le renvoie — jamais avec des points. */
@@ -68,4 +69,15 @@ export type DuelCourseOutcome = {
   gains: Gain[]
   /** La trace a été déposée : cette course peut devenir le rival de quelqu'un. */
   replaySaved: boolean
+  /**
+   * Ma ligue après la course — la ligne du milieu de l'écran de fin depuis le
+   * 13/10/2026 (« Ligue Bronze 1 · 14e → 11e »). Null : ligue absente, ou
+   * course rejouée sans XP.
+   */
+  ligue: LigueApresCourse | null
+  /**
+   * L'échelon de ligue du rival, pour son étiquette sous l'avatar (null :
+   * inconnu — `ligue_echelon_de`, migration 562, pas encore passée).
+   */
+  rivalEchelon: number | null
 }

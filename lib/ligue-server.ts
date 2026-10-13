@@ -1,5 +1,6 @@
 import type { SupabaseClient } from '@supabase/supabase-js'
 import { lireEtatLigue, type EtatLigue } from '@/lib/ligue'
+import { lireMaPlaceLigue, type MaPlaceLigue } from '@/lib/ligue-place'
 import { isMissingSchemaObject } from '@/lib/schema-fallback'
 
 // -----------------------------------------------------------------------------
@@ -35,4 +36,19 @@ export async function lireLigue(supabase: SupabaseClient): Promise<EtatLigue | n
     return null
   }
   return lireEtatLigue(data)
+}
+
+/**
+ * Ma division et ma place, en UNE lecture légère (`ligue_ma_place`, migration
+ * 562) — pour les écrans qui n'ont besoin que du rang : le Classement de
+ * l'arène, la fiche de profil, la page de garde de Moi. Null tant que la 562
+ * dort : ces écrans montrent alors « Bronze 4 », sans place.
+ */
+export async function lireMaPlace(supabase: SupabaseClient): Promise<MaPlaceLigue | null> {
+  const { data, error } = await supabase.rpc('ligue_ma_place')
+  if (error) {
+    if (!isMissingSchemaObject(error)) console.error('[ligue] place illisible :', error.message)
+    return null
+  }
+  return lireMaPlaceLigue(data)
 }

@@ -24,6 +24,8 @@ import type {
   OpponentClaim,
 } from '@/lib/duel/fin-course'
 import { botOpponent, opponentTimeline } from '@/lib/duel/opponent'
+import { ligueApresCourse } from '@/lib/duel/ligue-course'
+import { lireLigue } from '@/lib/ligue-server'
 import { rivalFinal, rivalScoreAtEnd, timelineFromSteps } from '@/lib/duel/rival'
 import { sanitizeSteps, type ReplayStep } from '@/lib/duel/replay'
 import { fetchReplaySteps, saveReplay } from '@/lib/duel/opponent-server'
@@ -86,6 +88,8 @@ export async function enregistrerFinCourse(input: DuelCourseInput): Promise<Duel
     questDayDone: false,
     gains: [],
     replaySaved: false,
+    ligue: null,
+    rivalEchelon: null,
   })
 
   const [supabase, user] = await Promise.all([createClient(), getCurrentUser()])
@@ -127,8 +131,14 @@ export async function enregistrerFinCourse(input: DuelCourseInput): Promise<Duel
     : null
 
   if (coeur?.dejaCompte) {
-    // Un renvoi : la course est déjà payée. On rend ce qui avait été écrit.
-    return { ...resultatStocke(base, coeur.resultat), statut: 'deja_compte' }
+    // Un renvoi : la course est déjà payée. On rend ce qui avait été écrit —
+    // et la ligue telle qu'elle est (rien de plus n'a été versé : la place
+    // d'avant est la place d'aujourd'hui).
+    const [ligue, rivalEchelon] = await Promise.all([
+      lireLigue(supabase).then((etat) => ligueApresCourse(etat, 0)),
+      echelonDuRival(supabase, input.opponent),
+    ])
+    return { ...resultatStocke(base, coeur.resultat), statut: 'deja_compte', ligue, rivalEchelon }
   }
 
   const coeurPaye =
@@ -157,12 +167,17 @@ export async function enregistrerFinCourse(input: DuelCourseInput): Promise<Duel
   // condition, chaque course suivante le repayait (50 points de clan et 50
   // couronnes, jusqu'aux plafonds).
   const bonusJour = quests.allDone && quests.justCompleted.length > 0
-  const [clanJour, couronnesJour] = bonusJour
-    ? await Promise.all([
-        contributeToClan(supabase, 'quest_day'),
-        addCrowns(supabase, 'quest_day'),
-      ])
-    : [0, 0]
+  // LA LIGUE, relue APRÈS le versement (13/10/2026) : `ligue_etat` m'inscrit
+  // dans mon groupe si cette XP est ma première de la semaine, et rend la
+  // liste classée ; ma place d'avant se recompte sans seconde lecture
+  // (lib/duel/ligue-course). L'échelon du rival vient de la 562 (tolérant).
+  const [[clanJour], ligue, rivalEchelon] = await Promise.all([
+    bonusJour
+      ? Promise.all([contributeToClan(supabase, 'quest_day'), addCrowns(supabase, 'quest_day')])
+      : Promise.resolve([0]),
+    lireLigue(supabase).then((etat) => ligueApresCourse(etat, xpCourse?.awarded ?? 0)),
+    echelonDuRival(supabase, input.opponent),
+  ])
 
   return {
     ...base,
@@ -172,12 +187,37 @@ export async function enregistrerFinCourse(input: DuelCourseInput): Promise<Duel
     clanPoints: coeurPaye.clanPoints + clanJour,
     questsCompleted: quests.justCompleted,
     questDayDone: quests.allDone,
-    gains: gainsVerses(coeurPaye.award, {
-      xp: xpCourse?.awarded ?? 0,
-      couronnes: coeurPaye.couronnes + couronnesJour,
-    }),
+    // Les COURONNES DE SAISON (`season_add_crowns`, 207) ne sont plus montrées :
+    // le Pass de saison n'a plus de porte depuis le 17/09/2026, et pour
+    // l'élève « couronne » veut dire la maîtrise d'un chapitre — un « +10
+    // couronnes » en fin de duel annonçait une monnaie qui n'existe nulle
+    // part (Lucas, 13/10/2026). La transaction (374) et le bonus du jour les
+    // versent encore, sans effet visible.
+    gains: gainsVerses(coeurPaye.award, { xp: xpCourse?.awarded ?? 0 }),
     replaySaved: coeurPaye.replaySaved,
+    ligue,
+    rivalEchelon,
   }
+}
+
+/**
+ * L'échelon de ligue du rival, pour l'étiquette sous son avatar. Un robot n'en
+ * a pas : il est réglé sur l'élève, l'écran lui prête le mien. Un élève rejoué
+ * se lit par `ligue_echelon_du_rival` (562, depuis l'identifiant de sa trace :
+ * `duel_replays` ne se lit qu'en propre) ; tant qu'elle dort, null —
+ * l'étiquette ne s'affiche pas, rien ne casse.
+ */
+async function echelonDuRival(supabase: Supabase, claim: OpponentClaim): Promise<number | null> {
+  if (!claim || typeof claim !== 'object' || claim.kind !== 'replay') return null
+  const replayId = String(claim.replayId ?? '')
+  if (!UUID_RE.test(replayId)) return null
+  const { data, error } = await supabase.rpc('ligue_echelon_du_rival', { p_replay: replayId })
+  if (error) {
+    if (!isMissingSchemaObject(error)) console.error('[duel] échelon du rival illisible:', error.message)
+    return null
+  }
+  const n = Number(data)
+  return data !== null && Number.isFinite(n) ? Math.max(0, Math.trunc(n)) : null
 }
 
 // -----------------------------------------------------------------------------
@@ -260,8 +300,10 @@ function resultatStocke(
     clanPoints: c.clanPoints,
     questsCompleted: [],
     questDayDone: false,
-    gains: gainsVerses(c.award, { couronnes: c.couronnes }),
+    gains: gainsVerses(c.award),
     replaySaved: c.replaySaved,
+    ligue: null,
+    rivalEchelon: null,
   }
 }
 

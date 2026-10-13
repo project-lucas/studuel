@@ -8,7 +8,7 @@ import type { AmiClasse } from '@/lib/moi/classement-amis'
 import { recordSemaine } from '@/lib/moi/record'
 import { phraseRythme, rythmeHebdo, type JourTravail } from '@/lib/moi/temps'
 import { standingFor } from '@/lib/percentile'
-import { RANK_TIERS } from '@/lib/rank'
+import { blasonDeLigue } from '@/lib/ligue-place'
 import { computeBacTrajectory, type TermPoint } from '@/lib/trajectoire-bac'
 
 export const dynamic = 'force-dynamic'
@@ -173,7 +173,7 @@ export default async function ApercuMoi({
             avatar: { ...DEFAULT_AVATAR, portrait: '7' },
             profileBanner: null,
             availableBanners: [],
-            rank: { tier: RANK_TIERS[0], roman: 'II', label: 'Bronze II' },
+            rank: blasonDeLigue(2),
             level: neuf ? 1 : 7,
             badges,
             equippedBadgeIds: neuf ? [] : ['serie-7', 'sans-faute'],

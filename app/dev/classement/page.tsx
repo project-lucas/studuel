@@ -35,7 +35,12 @@ export default function ApercuClassementPage() {
   )
   return (
     <DuelSubjectProvider board={board} initialSlug="espagnol">
-      <ClassementSheet trophees={96} classement={{ rank: 1, total: 9 }} ouvertAuDepart />
+      <ClassementSheet
+        trophees={96}
+        classement={{ rank: 1, total: 9 }}
+        ligue={{ echelon: 3, inscrit: true, rang: 9, taille: 30 }}
+        ouvertAuDepart
+      />
     </DuelSubjectProvider>
   )
 }

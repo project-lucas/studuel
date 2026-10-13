@@ -11,6 +11,7 @@ import { lireFicheJoueurAction } from '@/app/amis/defi-actions'
 import { tauxVictoire, type FicheJoueur as Fiche } from '@/lib/amis/fiche-joueur'
 import { idAvatarIa, srcAvatarIa } from '@/lib/avatar-ia'
 import { libelleTop } from '@/lib/defi/classement-arene'
+import { blasonDeLigue } from '@/lib/ligue-place'
 import { cadreDuNiveau, libelleCadre } from '@/lib/moi/cadre-profil'
 import { formatDuree } from '@/lib/moi/temps'
 import { epreuve, formatScore } from '@/lib/palmares/epreuves'
@@ -107,6 +108,8 @@ function ContenuFiche({ fiche: f, onDefier }: { fiche: Fiche; onDefier?: (id: st
             Niveau {f.niveau} · {libelleCadre(cadreDuNiveau(f.niveau))}
             {f.classe ? ` · ${f.classe}` : ''}
           </p>
+          {/* Sa division de ligue — le rang, depuis le 13/10/2026. */}
+          <p className="mt-0.5 text-xs font-extrabold text-primary">Ligue {blasonDeLigue(f.echelon).label}</p>
         </div>
       </div>
 

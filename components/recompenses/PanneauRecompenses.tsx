@@ -44,11 +44,18 @@ export default function PanneauRecompenses({
    * depuis un point qui a bougé depuis.
    */
   delai = 520,
+  /**
+   * Les pastilles seules, sans titre ni cadre : pour les poser dans une ligne
+   * qui a déjà son contexte (la carte de fin de duel, 13/10/2026). Le vol vers
+   * le bandeau ne change pas.
+   */
+  compact = false,
 }: {
   gains: readonly Gain[]
   titre?: string
   className?: string
   delai?: number
+  compact?: boolean
 }) {
   const propres = agregerGains(gains)
   const { celebrer } = useRecompenses()
@@ -89,13 +96,15 @@ export default function PanneauRecompenses({
   return (
     <div
       className={cn(
-        'rounded-2xl bg-highlight/15 px-3 py-2.5 ring-1 ring-highlight/25',
+        !compact && 'rounded-2xl bg-highlight/15 px-3 py-2.5 ring-1 ring-highlight/25',
         className,
       )}
     >
-      <p className="titre-section text-center text-[color-mix(in_oklch,var(--highlight),black_38%)]">
-        {titre}
-      </p>
+      {compact ? null : (
+        <p className="titre-section text-center text-[color-mix(in_oklch,var(--highlight),black_38%)]">
+          {titre}
+        </p>
+      )}
 
       {/* La phrase que le lecteur d'écran entend. Les pastilles sont muettes
           (`aria-hidden`) : lues une à une, elles donnent « plus cent XP plus
@@ -105,7 +114,7 @@ export default function PanneauRecompenses({
       </p>
 
       <ul
-        className="mt-1.5 flex flex-wrap items-center justify-center gap-2"
+        className={cn('flex flex-wrap items-center justify-center gap-2', !compact && 'mt-1.5')}
         aria-hidden="true"
       >
         {propres.map((gain, i) => (

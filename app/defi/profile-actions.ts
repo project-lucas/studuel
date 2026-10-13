@@ -2,6 +2,7 @@
 
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
+import { lireMaPlace } from '@/lib/ligue-server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import {
   normalizeAvatarConfig,
@@ -120,6 +121,7 @@ export async function getProfileData(): Promise<ProfileData | null> {
     freeBanners,
     { data: ownedBanners },
     schoolName,
+    maPlace,
   ] = await Promise.all([
     // Attribution serveur des badges mérités (renvoie les slugs neufs).
     supabase.rpc('award_earned_badges'),
@@ -146,6 +148,8 @@ export async function getProfileData(): Promise<ProfileData | null> {
       .select('avatar_items(asset_key, category)')
       .eq('user_id', user.id),
     schoolNameP,
+    // Ma division de ligue (562) : LE rang du profil depuis le 13/10/2026.
+    lireMaPlace(supabase),
   ])
   const newlyUnlocked = Array.isArray(awarded)
     ? awarded.map((s) => str(s)).filter(Boolean)
@@ -231,6 +235,7 @@ export async function getProfileData(): Promise<ProfileData | null> {
     level: num(stats.level, 1),
     trophies: num(stats.trophies),
     bestTrophies: num(stats.best_trophies),
+    ligueEchelon: maPlace?.echelon ?? null,
     studyMinutes: num(stats.study_minutes),
     subjectCounts,
   }

@@ -4,11 +4,12 @@
 // bruts (parties, victoires, minutes, séries, XP, trophées, parties par
 // matière) et les passe ici. On calcule les valeurs dérivées (taux de
 // victoire, matière préférée) et on formate ce qui doit l'être, en réutilisant
-// `formatDuration` (lib/time) et `rankFor` (lib/rank) pour rester cohérent
-// avec le reste de l'app.
+// `formatDuration` (lib/time) et `blasonDeLigue` (lib/ligue-place) pour rester
+// cohérent avec le reste de l'app : depuis le 13/10/2026 le RANG est la
+// division de ligue (« Bronze 1 »), plus une tranche de trophées.
 
 import { formatDuration } from './time'
-import { rankFor, type Rank } from './rank'
+import { blasonDeLigue, type BlasonLigue } from './ligue-place'
 
 // Les compteurs bruts tels que fournis par le serveur.
 export type ProfileStatInputs = {
@@ -27,6 +28,8 @@ export type ProfileStatInputs = {
   /** Trophées courants et record. */
   trophies: number
   bestTrophies: number
+  /** L'échelon de ligue (0 = Bronze 4 … 20 = Maître) ; absent = Bronze 4. */
+  ligueEchelon?: number | null
   /** Minutes de travail cumulées. */
   studyMinutes: number
   /** Parties jouées par matière (matière -> nombre). */
@@ -75,7 +78,8 @@ export type ProfileSummary = {
   level: number
   trophies: number
   bestTrophies: number
-  rank: Rank
+  /** Le blason de ma division de ligue — le rang, depuis le 13/10/2026. */
+  rank: BlasonLigue
   studyMinutes: number
   studyTimeLabel: string
   preferredSubject: string | null
@@ -96,7 +100,7 @@ export function buildProfileSummary(input: ProfileStatInputs): ProfileSummary {
     level: input.level,
     trophies: input.trophies,
     bestTrophies: Math.max(input.trophies, input.bestTrophies),
-    rank: rankFor(input.trophies),
+    rank: blasonDeLigue(input.ligueEchelon ?? 0),
     studyMinutes: input.studyMinutes,
     studyTimeLabel: formatDuration(input.studyMinutes),
     preferredSubject: preferredSubject(input.subjectCounts),

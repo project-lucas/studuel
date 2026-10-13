@@ -8,6 +8,7 @@
 // -----------------------------------------------------------------------------
 
 import { topPourcent } from '@/lib/defi/classement-arene'
+import { echelon } from '@/lib/ligue'
 import { isEpreuveId, type EpreuveId } from '@/lib/palmares/epreuves'
 import { levelFromXp } from '@/lib/wallet'
 
@@ -30,6 +31,8 @@ export type FicheJoueur = {
   secondes: number
   badges: string[]
   records: RecordFiche[]
+  /** Sa division de ligue (0 = Bronze 4 … 20 = Maître ; 562, 0 avant). */
+  echelon: number
 }
 
 const entier = (v: unknown): number => {
@@ -66,6 +69,7 @@ export function lireFicheJoueur(brut: unknown): FicheJoueur | null {
     secondes: entier(r.secondes),
     badges: (Array.isArray(r.badges) ? r.badges : []).filter((b): b is string => typeof b === 'string'),
     records,
+    echelon: echelon(entier(r.echelon)).index,
   }
 }
 

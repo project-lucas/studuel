@@ -22,7 +22,8 @@ import {
   type DuelSubject,
 } from '@/lib/defi/duel-board'
 import { subjectRankFor, SUBJECT_DIVISION_SPAN } from '@/lib/subject-rank'
-import { DIVISION_SPAN, rankFor, type Rank } from '@/lib/rank'
+import { nbPromus } from '@/lib/ligue'
+import { blasonDeLigue, libellePlace, type MaPlaceLigue } from '@/lib/ligue-place'
 import { libelleTop, topPourcent } from '@/lib/defi/classement-arene'
 import { ordinal } from '@/lib/percentile'
 import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
@@ -42,8 +43,10 @@ import s from './ClassementSheet.module.css'
  *
  *   · un écran CLAIR — le crème de l'app, des cartes blanches, le violet pour
  *     les progressions de rang, l'or pour ce qui se gagne ;
- *   · MOI d'abord : le blason, le rang, le total, la bande parmi tous les
- *     élèves (« Top 90 % ») et la marche vers la division suivante ;
+ *   · MOI d'abord : le blason de ma DIVISION DE LIGUE et ma place dans mon
+ *     groupe (13/10/2026 : le rang est gagné à l'XP de la semaine, plus aux
+ *     trophées), le total de trophées, la bande parmi tous les élèves
+ *     (« Top 90 % ») et la marche vers la zone de promotion ;
  *   · puis MES MATIÈRES, les unes sous les autres, dans l'ordre du plateau —
  *     chacune avec son blason, son compteur, ce que vaut sa prochaine
  *     victoire, et ses jeux dépliés d'un tap (dépliés d'office pour la
@@ -57,6 +60,7 @@ import s from './ClassementSheet.module.css'
 export default function ClassementSheet({
   trophees,
   classement = null,
+  ligue = null,
   ouvertAuDepart = false,
 }: {
   /**
@@ -66,6 +70,8 @@ export default function ClassementSheet({
   trophees?: number
   /** Mon rang parmi tous les élèves (`national_ranking`), ou null. */
   classement?: { rank: number | null; total: number } | null
+  /** Ma division et ma place dans la ligue (`ligue_ma_place`, 562), ou null. */
+  ligue?: MaPlaceLigue | null
   /** Ouvert dès le montage (aperçu /dev/classement). */
   ouvertAuDepart?: boolean
 }) {
@@ -94,14 +100,15 @@ export default function ClassementSheet({
 
   const total = board.reduce((sum, entry) => sum + entry.trophies, 0)
   const compte = trophees ?? total
-  const rank = rankFor(compte)
+  const division = blasonDeLigue(ligue?.echelon ?? 0)
+  const place = ligue ? libellePlace(ligue) : null
   const top = topPourcent(classement?.rank, classement?.total)
   const conseil = bestNextGame(board)
   // Le jeu que lance DUEL sur la matière courante : il marque « toi » dans le barème.
   const cible = active ? duelTarget(active) : null
   const jeuCible = active?.games.find((g) => g.name === cible?.label) ?? null
 
-  const libelle = `Classement — ${compte} trophées, rang ${rank.label}${
+  const libelle = `Classement — ligue ${division.label}${place ? `, ${place}` : ''}, ${compte} trophées${
     top !== null ? `, top ${top} % de tous les élèves` : ''
   } — tes matières et le barème`
 
@@ -166,7 +173,7 @@ export default function ClassementSheet({
                     <div className="mx-auto flex w-full max-w-md flex-col gap-3 px-4 pt-1 pb-[calc(env(safe-area-inset-bottom)+1.5rem)]">
                       <CarteMoi
                         compte={compte}
-                        rank={rank}
+                        ligue={ligue}
                         top={top}
                         classement={classement}
                         reduce={!!reduce}
@@ -258,37 +265,55 @@ function useCompteur(cible: number, reduce: boolean): number {
 }
 
 /**
- * MOI : la plaque héros (03/10/2026, façon Brawl Stars). Le blason sur ses
- * rayons, le rang en blanc cerné, le total de trophées en grand, la bande
- * parmi tous les élèves, et la barre d'OR épaisse qui mène au blason suivant.
+ * MOI : la plaque héros (03/10/2026, façon Brawl Stars). Le blason de ma
+ * DIVISION DE LIGUE sur ses rayons, la division en blanc cerné, ma place dans
+ * mon groupe, le total de trophées en grand, la bande parmi tous les élèves,
+ * et la barre d'OR épaisse qui mène à la zone de promotion — les 7 premiers
+ * montent dimanche soir (lib/ligue). Depuis le 13/10/2026 : le rang se gagne à
+ * l'XP de la semaine, les trophées ne sont plus qu'un score.
  */
 function CarteMoi({
   compte,
-  rank,
+  ligue,
   top,
   classement,
   reduce,
 }: {
   compte: number
-  rank: Rank
+  ligue: MaPlaceLigue | null
   top: number | null
   classement: { rank: number | null; total: number } | null
   reduce: boolean
 }) {
   const affiche = useCompteur(compte, reduce)
-  const suivant = rank.ceiling !== null ? rankFor(rank.ceiling) : null
-  const pct = Math.round(rank.progress * 100)
+  const division = blasonDeLigue(ligue?.echelon ?? 0)
+  const place = ligue ? libellePlace(ligue) : null
+  const suivant = ligue && ligue.echelon < 20 ? blasonDeLigue(ligue.echelon + 1) : null
+  // La marche : ma place rapportée à la zone de promotion. Dedans = pleine.
+  const promus = ligue?.inscrit && ligue.taille ? nbPromus(ligue.taille, ligue.echelon) : 0
+  const rang = ligue?.rang ?? null
+  const taille = ligue?.taille ?? null
+  const dedans = rang !== null && promus > 0 && rang <= promus
+  const pct =
+    rang === null || taille === null
+      ? 0
+      : dedans
+        ? 100
+        : Math.round(((taille - rang) / Math.max(1, taille - 1 - promus)) * 100)
+  const manque = rang === null ? null : Math.max(0, rang - promus)
 
   return (
     <section aria-label="Mon classement" className={s.plaqueMoi}>
       <span aria-hidden="true" className={s.rayons} />
       <div className="relative flex items-center gap-3">
-        <RankBadge rank={rank} size={84} className="drop-shadow-[0_4px_8px_rgba(20,10,40,0.45)]" />
+        <RankBadge rank={division} size={84} className="drop-shadow-[0_4px_8px_rgba(20,10,40,0.45)]" />
 
         <div className="min-w-0 flex-1">
-          <p className="text-[0.68rem] font-extrabold tracking-wide text-white/75 uppercase">Mon rang</p>
-          <p className={cn(s.chiffre, 'text-[1.6rem]')}>{rank.label}</p>
-          {classement?.rank ? (
+          <p className="text-[0.68rem] font-extrabold tracking-wide text-white/75 uppercase">Ma ligue</p>
+          <p className={cn(s.chiffre, 'text-[1.6rem]')}>{division.label}</p>
+          {place ? (
+            <p className="mt-1 text-[0.7rem] font-bold text-white/80 tabular-nums">{place} cette semaine</p>
+          ) : classement?.rank ? (
             <p className="mt-1 text-[0.7rem] font-bold text-white/80 tabular-nums">
               {ordinal(classement.rank)} sur {classement.total} élèves
             </p>
@@ -311,7 +336,13 @@ function CarteMoi({
       ) : null}
 
       <div className="relative mt-3">
-        {suivant ? (
+        {!ligue || !ligue.inscrit || rang === null ? (
+          <p className="text-xs font-bold text-white/85">
+            {suivant
+              ? 'Gagne ta première XP de la semaine pour entrer dans ta ligue de 30.'
+              : 'Rang maximal — reste Maître 👑'}
+          </p>
+        ) : suivant ? (
           <>
             <div className="flex items-center gap-2">
               <div
@@ -327,11 +358,18 @@ function CarteMoi({
               <RankBadge rank={suivant} size={34} hideDivision />
             </div>
             <p className="mt-1.5 text-xs font-bold text-white/85">
-              Encore <strong className="text-white">{rank.toNext}</strong> pour {suivant.label}
-              <span className="text-white/60 tabular-nums">
-                {' '}
-                · {rank.inDivision}/{DIVISION_SPAN}
-              </span>
+              {dedans ? (
+                <>
+                  <strong className="text-white">En zone de promotion</strong> — les {promus} premiers montent en{' '}
+                  {suivant.label}
+                </>
+              ) : (
+                <>
+                  Encore <strong className="text-white">{manque}</strong> place{manque !== null && manque > 1 ? 's' : ''}{' '}
+                  pour la zone de promotion
+                  <span className="text-white/60 tabular-nums"> · les {promus} premiers montent</span>
+                </>
+              )}
             </p>
           </>
         ) : (

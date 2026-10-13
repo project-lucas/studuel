@@ -5,8 +5,10 @@ import {
   BadgeCheck,
   Compass,
   HeartHandshake,
+  Users,
   Wrench,
 } from 'lucide-react'
+import { basculerStuduelPlusTest } from './abonnement-actions'
 import { Button } from '@/components/ui/button'
 import SoundToggle from '@/components/ui/SoundToggle'
 import EnTetePage from '@/components/reviser/EnTetePage'
@@ -52,9 +54,14 @@ export default async function ComptePage() {
       grade_level: string | null
       daily_goal: number | null
       is_admin?: boolean
+      profile_type?: string | null
     }>()
 
   const tier = profile?.subscription_tier ?? 'free'
+  // Un coach (560) ou un admin : l'espace coach, et la bascule Studuel+ pour
+  // vérifier les deux faces de l'app avec un seul compte (561). Miroir de
+  // `est_coach()`.
+  const coach = profile?.is_admin === true || profile?.profile_type === 'coach'
   // Classe courante validée contre la liste fermée (null si non renseignée).
   const gradeLevel: GradeLevel | null = GRADE_LEVELS.includes(
     profile?.grade_level as GradeLevel,
@@ -95,6 +102,14 @@ export default async function ComptePage() {
               Passe à Studuel+ pour débloquer tous les tests premium.
             </p>
           ) : null}
+          {coach ? (
+            <form action={basculerStuduelPlusTest} className="pt-1">
+              <Button variant="outline" type="submit">
+                <BadgeCheck className="size-4" />
+                {tier === 'free' ? 'Activer Studuel+ (compte coach)' : 'Repasser en gratuit (compte coach)'}
+              </Button>
+            </form>
+          ) : null}
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
           <form action={signOut}>
@@ -107,6 +122,13 @@ export default async function ComptePage() {
               <HeartHandshake className="size-4" /> Espace parents
             </Link>
           </Button>
+          {coach ? (
+            <Button asChild variant="outline">
+              <Link href="/coach">
+                <Users className="size-4" /> Espace coach
+              </Link>
+            </Button>
+          ) : null}
           {/* Relance le tour guidé des onglets (chemin forcé ?tour=1). */}
           <Button asChild variant="outline">
             <Link href="/reviser?tour=1">

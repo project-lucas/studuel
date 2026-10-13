@@ -4315,6 +4315,17 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
       '« J’ai un code » répond « code inconnu », /coach dit que la migration manque, Mon compte ne montre pas de coach. Rien ne casse pour le grand public ; l’espace parents garde le `child_dashboard` de la 319.',
     sonde: { type: 'table', table: 'coach_groupes' },
   },
+  {
+    id: '561',
+    fichier: '561_bascule_studuel_plus_test.sql',
+    feature:
+      'LA BASCULE STUDUEL+ D’UN COMPTE COACH — `basculer_studuel_plus_test()` : un coach ou un admin bascule SON abonnement entre gratuit et Studuel+ (journalisé dans subscription_grants, source test), pour vérifier les deux faces de l’app avec un seul compte (le bouton de Mon compte).',
+    siAbsente:
+      'Le bouton « Activer Studuel+ (compte coach) » de Mon compte ne fait rien. Rien d’autre ne change.',
+    // Appelée sans session elle lève « connexion_requise » : tout retour autre
+    // que PGRST202 vaut « présente ».
+    sonde: { type: 'rpc', fn: 'basculer_studuel_plus_test', args: {} },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

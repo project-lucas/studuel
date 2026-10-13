@@ -12,9 +12,18 @@ import { mindMapFromLessons, type LessonForMap } from '@/lib/mind-map-auto'
 import { chapterHasMindMap, fetchMindMap } from '@/lib/mind-map-access'
 import SubjectIcon from '@/components/SubjectIcon'
 import GemIcon from '@/components/ui/GemIcon'
+import { Download } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 import FichePdfCarte from '@/components/fiches/FichePdfCarte'
-import { fichePdfDe } from '@/lib/fiches/pdf'
+import LecteurPdf from '@/components/annales/LecteurPdf'
+import { fichePdfDe, hrefFichePdf } from '@/lib/fiches/pdf'
 import { urlApercuFiche } from '@/lib/fiches/pdf-server'
+
+/** Les phrases du lecteur PDF, au féminin de la fiche. */
+const TEXTES_FICHE = { ouverture: 'Ouverture de la fiche…', erreur: 'La fiche ne s’affiche pas ici', fin: 'fin de la fiche' }
+
+/** Une seule page A4 : la loupe peut monter jusqu'à 3× (le texte de la fiche à sa taille d'impression). */
+const CRANS_FICHE = [1, 1.6, 2.2, 3]
 import { CHAPTER_COLUMNS, type Subject, type Chapter, type MindMapData } from '@/lib/types'
 
 export const dynamic = 'force-dynamic'
@@ -105,6 +114,15 @@ export default async function MindMapPage({
             {subject.name} · {chapter.level} · {chapter.title}
           </span>
         }
+        droite={
+          fichePdf && unlocked ? (
+            <Button asChild size="icon" variant="outline" aria-label="Télécharger la fiche en PDF">
+              <a href={hrefFichePdf(chapterId, { telecharger: true })}>
+                <Download aria-hidden="true" />
+              </a>
+            </Button>
+          ) : undefined
+        }
       >
         {access === 'unlocked' ? (
           // Badge réservé au déblocage à la gemme : il rappelle que CE
@@ -119,12 +137,20 @@ export default async function MindMapPage({
       <div className="mt-6">
         {fichePdf ? (
           unlocked ? (
-            <FichePdfCarte fiche={fichePdf} chapitreId={chapterId} apercu={urlApercuFiche(supabase, chapterId)} ouverte />
+            // La fiche se lit ICI, dans l'app, avec la loupe (Lucas, 13/10/2026 :
+            // « il faut pouvoir la voir, dans l'app, zoomer ») — pas dans le
+            // lecteur du téléphone, qui sortait de l'app installée.
+            <LecteurPdf
+              src={hrefFichePdf(chapterId)}
+              titre={`Fiche de révision ${fichePdf.titreAffiche}`}
+              textes={TEXTES_FICHE}
+              crans={CRANS_FICHE}
+            />
           ) : (
             <UnlockChapterCard chapterId={chapterId} gems={gems}>
               {/* L'aperçu dit ce qu'on achète (titre, accroche, illustration) ;
                   le PDF, lui, n'est ni chargé ni signé. */}
-              <FichePdfCarte fiche={fichePdf} chapitreId={chapterId} apercu={urlApercuFiche(supabase, chapterId)} ouverte={false} />
+              <FichePdfCarte fiche={fichePdf} apercu={urlApercuFiche(supabase, chapterId)} />
             </UnlockChapterCard>
           )
         ) : !carteExiste ? (

@@ -22,6 +22,23 @@ import { listerFiches } from './fiches-rendre.mjs'
 const RACINE = path.resolve(import.meta.dirname, '..')
 const SORTIE = path.join(RACINE, 'lib', 'fiches', 'registre.ts')
 
+/**
+ * Le texte d'une fiche, en texte BRUT : les chaînes du JSON parlent le
+ * mini-langage du rendu (`**gras**`, `&nbsp;`, `<i>`), que React afficherait
+ * tel quel dans l'app (« libre&nbsp;? » s'est vu à l'écran).
+ */
+export function texteBrut(s) {
+  return String(s ?? '')
+    .replace(/<[^>]+>/g, '')
+    .replace(/\*\*|==|__|~~|\[\[|\]\]/g, '')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .trim()
+}
+
 /** Le registre, trié par chapitre : un ordre stable, pour que la sortie ne bouge qu'avec le contenu. */
 export function registre() {
   return listerFiches()
@@ -31,8 +48,8 @@ export function registre() {
       matiere,
       slug: index.slug,
       titre: index.titre,
-      titreAffiche: fiche.titre ?? index.titre,
-      accroche: fiche.accroche ?? '',
+      titreAffiche: texteBrut(fiche.titre ?? index.titre),
+      accroche: texteBrut(fiche.accroche),
     }))
     .sort((a, b) => a.chapitre.localeCompare(b.chapitre))
 }

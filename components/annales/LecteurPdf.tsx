@@ -6,10 +6,18 @@ import { Button } from '@/components/ui/button'
 import { sfx } from '@/lib/sounds'
 
 /** Les crans de la loupe : la page à la largeur de l'écran, puis deux agrandissements. */
-const ZOOMS = [1, 1.6, 2.2] as const
+const ZOOMS: readonly number[] = [1, 1.6, 2.2]
+
+/** Les phrases du lecteur, au masculin du sujet d'annale par défaut. */
+const TEXTES_SUJET = {
+  ouverture: 'Ouverture du sujet…',
+  erreur: 'Le sujet ne s’affiche pas ici',
+  fin: 'fin du sujet',
+}
 
 /**
- * Le sujet habillé, lu DANS l'app, page après page.
+ * Un PDF lu DANS l'app, page après page — le sujet habillé d'une annale, ou
+ * depuis le 13/10/2026 une fiche de révision (`textes` et `crans` changent).
  *
  * Pourquoi pas une <iframe> sur le PDF : Chrome sur Android ne sait pas en
  * afficher une (il propose de télécharger), et Safari sur iPhone n'en montre
@@ -26,12 +34,24 @@ const ZOOMS = [1, 1.6, 2.2] as const
  *
  * pdf.js n'est chargé qu'ici (import dynamique) : il ne pèse rien ailleurs.
  */
-export default function LecteurPdf({ src, titre }: { src: string; titre: string }) {
+export default function LecteurPdf({
+  src,
+  titre,
+  textes = TEXTES_SUJET,
+  crans = ZOOMS,
+}: {
+  src: string
+  titre: string
+  /** Les phrases d'attente, d'erreur et de fin, accordées à ce qu'on lit. */
+  textes?: { ouverture: string; erreur: string; fin: string }
+  /** Les crans de la loupe (une fiche d'une page peut monter plus haut qu'un sujet de quinze). */
+  crans?: readonly number[]
+}) {
   const boite = useRef<HTMLDivElement>(null)
   const [etat, setEtat] = useState<'charge' | 'pret' | 'erreur'>('charge')
   const [pages, setPages] = useState(0)
   const [cran, setCran] = useState(0)
-  const zoom = ZOOMS[cran]
+  const zoom = crans[cran] ?? 1
 
   useEffect(() => {
     let annule = false
@@ -85,7 +105,7 @@ export default function LecteurPdf({ src, titre }: { src: string; titre: string 
   }, [src, titre, zoom])
 
   function changer(sens: 1 | -1) {
-    const suivant = Math.min(Math.max(cran + sens, 0), ZOOMS.length - 1)
+    const suivant = Math.min(Math.max(cran + sens, 0), crans.length - 1)
     if (suivant === cran) return
     sfx.tap()
     setCran(suivant)
@@ -96,12 +116,12 @@ export default function LecteurPdf({ src, titre }: { src: string; titre: string 
       {etat === 'charge' ? (
         <p className="flex items-center justify-center gap-2 py-16 text-sm font-semibold text-muted-foreground">
           <Loader2 className="size-4 animate-spin" aria-hidden="true" />
-          Ouverture du sujet…
+          {textes.ouverture}
         </p>
       ) : null}
       {etat === 'erreur' ? (
         <div className="carte flex flex-col items-center gap-3 px-4 py-8 text-center">
-          <p className="font-heading font-extrabold">Le sujet ne s’affiche pas ici</p>
+          <p className="font-heading font-extrabold">{textes.erreur}</p>
           <p className="max-w-xs text-sm text-muted-foreground">
             Ton navigateur n’a pas pu l’ouvrir. Tu peux le télécharger et le lire à côté.
           </p>
@@ -119,7 +139,7 @@ export default function LecteurPdf({ src, titre }: { src: string; titre: string 
 
       {etat === 'pret' && pages > 0 ? (
         <p className="mt-3 text-center text-xs font-semibold text-muted-foreground">
-          {pages} pages · fin du sujet
+          {pages} page{pages > 1 ? 's' : ''} · {textes.fin}
         </p>
       ) : null}
 
@@ -143,7 +163,7 @@ export default function LecteurPdf({ src, titre }: { src: string; titre: string 
               size="icon-sm"
               variant="ghost"
               aria-label="Agrandir les pages"
-              disabled={cran === ZOOMS.length - 1}
+              disabled={cran === crans.length - 1}
               onClick={() => changer(1)}
             >
               <ZoomIn aria-hidden="true" />

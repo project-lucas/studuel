@@ -1,0 +1,389 @@
+{
+  "niveau": "3e",
+  "matiere": "sport",
+  "exercices": [
+    {
+      "chapitre": "bd49a667-d14a-5a45-affc-39f3164d15ad",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La semaine d’Inès",
+      "competence": "lire-tableau",
+      "situation": "Inès, 14 ans, joue au hand en club et veut gagner en force pour ses tirs. Son entraîneur lui a écrit une semaine type, au poids du corps. Lis-la bien : chaque ligne a sa raison d’être.",
+      "documents": [
+        {
+          "id": "semaine",
+          "type": "tableau",
+          "titre": "La semaine type d’Inès",
+          "source": "Programme écrit pour l’exercice.",
+          "colonnes": [
+            "Jour",
+            "Séance",
+            "Séries × répétitions"
+          ],
+          "lignes": [
+            [
+              "Lundi",
+              "Pompes et tractions à l’élastique",
+              "3 × 10"
+            ],
+            [
+              "Mardi",
+              "Repos",
+              "—"
+            ],
+            [
+              "Mercredi",
+              "Squats et fentes",
+              "3 × 12"
+            ],
+            [
+              "Jeudi",
+              "Gainage",
+              "3 × 40 s"
+            ],
+            [
+              "Vendredi",
+              "Pompes et tractions à l’élastique",
+              "3 × 10"
+            ],
+            [
+              "Samedi",
+              "Repos",
+              "—"
+            ],
+            [
+              "Dimanche",
+              "Sortie vélo tranquille",
+              "1 h"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "semaine",
+          "enonce": "Touche la case qui dit combien de **séries et de répétitions** de squats Inès fait le mercredi.",
+          "reponse": [
+            "r2c2"
+          ],
+          "aide": "Cherche la ligne « Mercredi », puis va jusqu’à la dernière colonne.",
+          "explication": "Mercredi, Inès fait **3 × 12** : trois séries de douze squats (et de fentes). Douze répétitions, c’est dans la fourchette qui fait grossir un muscle."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de **squats** Inès fait-elle en tout le mercredi ?",
+          "reponse": 36,
+          "aide": "3 séries de 12 répétitions : multiplie.",
+          "explication": "3 × 12 = **36 squats**. Ce qui compte pour le muscle, ce n’est pas le total, c’est que chaque série aille jusqu’à la fatigue."
+        },
+        {
+          "type": "choix",
+          "enonce": "Lundi et vendredi, Inès fait les mêmes exercices (pompes, tractions). Pourquoi l’entraîneur a-t-il laissé **trois jours** entre les deux ?",
+          "options": [
+            "Pour que ses muscles aient le temps de se réparer : il faut au moins 48 h entre deux séances du même muscle",
+            "Parce qu’elle n’a pas le temps le mardi",
+            "Pour que ses muscles oublient le mouvement et le réapprennent",
+            "Parce que les pompes ne font travailler aucun muscle"
+          ],
+          "reponse": 0,
+          "aide": "Relis le tableau : entre deux séances des mêmes muscles, il y a toujours au moins deux jours. Que fait le muscle pendant ce temps ?",
+          "explication": "Après une séance, le muscle se **répare pendant 24 à 48 h** et se reconstruit un peu plus fort. Le retravailler avant, c’est casser ce qu’il n’a pas fini de remonter : c’est pour cela que l’entraîneur espace les séances des mêmes muscles."
+        }
+      ]
+    },
+    {
+      "chapitre": "bd49a667-d14a-5a45-affc-39f3164d15ad",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Deux copains, deux méthodes",
+      "competence": "lire-graphique",
+      "situation": "Sami et Yanis se lancent un défi : faire le plus de pompes d’affilée en huit semaines. Sami s’entraîne deux fois par semaine avec deux jours de repos entre les séances. Yanis, lui, fait des pompes tous les jours, « pour aller plus vite ». Chaque dimanche, ils notent leur record.",
+      "documents": [
+        {
+          "id": "records",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Record de pompes d’affilée, semaine après semaine",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "categories": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6",
+            "S7",
+            "S8"
+          ],
+          "series": [
+            {
+              "nom": "Sami (2 séances par semaine)",
+              "valeurs": [
+                12,
+                14,
+                16,
+                18,
+                21,
+                24,
+                27,
+                30
+              ],
+              "teinte": "violet"
+            },
+            {
+              "nom": "Yanis (tous les jours)",
+              "valeurs": [
+                12,
+                15,
+                18,
+                17,
+                16,
+                15,
+                14,
+                13
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Pompes d’affilée",
+            "min": 0,
+            "max": 35,
+            "pas": 5
+          },
+          "axeX": {
+            "titre": "Semaine"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de pompes d’affilée **Sami** réussit-il à la semaine 8 ?",
+          "reponse": 30,
+          "aide": "Suis la courbe violette jusqu’à S8, puis lis la valeur sur l’axe vertical.",
+          "explication": "À la semaine 8, la courbe de Sami atteint **30 pompes**. Il a plus que doublé son record en deux mois."
+        },
+        {
+          "type": "zone",
+          "document": "records",
+          "enonce": "Touche la **semaine** où Yanis atteint son meilleur record.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche le point le plus haut de la courbe corail, puis touche la semaine juste en dessous.",
+          "explication": "Le record de Yanis est à la **semaine 3** (18 pompes). Ensuite, sa courbe descend : son corps n’a plus le temps de récupérer."
+        },
+        {
+          "type": "choix",
+          "enonce": "Yanis s’entraîne tous les jours, sans repos. Que montre sa courbe à partir de la semaine 4 ?",
+          "options": [
+            "Il régresse : ses muscles n’ont plus le temps de se reconstruire entre deux séances",
+            "Il progresse plus vite que Sami",
+            "Il stagne parce qu’il ne mange pas assez de sucre",
+            "Il a arrêté de s’entraîner"
+          ],
+          "reponse": 0,
+          "aide": "Compare les deux courbes après S3 : laquelle monte, laquelle descend ? Et qui laisse du repos à ses muscles ?",
+          "explication": "Sans 48 h de repos, le muscle n’a pas le temps de se réparer : Yanis **s’épuise au lieu de progresser**, et sa courbe redescend. Sami, qui espace ses séances, continue de monter."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de pompes **Sami** a-t-il progressé entre la semaine 1 et la semaine 8 ?",
+          "reponse": 18,
+          "aide": "Lis sa valeur en S1 et en S8, puis fais la différence.",
+          "explication": "30 − 12 = **18 pompes** de plus. Deux séances par semaine, du repos entre les deux, et la régularité sur deux mois : c’est la recette."
+        }
+      ]
+    },
+    {
+      "chapitre": "bd49a667-d14a-5a45-affc-39f3164d15ad",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le programme « ultime » de Léo",
+      "competence": "raisonner",
+      "situation": "Léo, 14 ans, a trouvé sur internet un programme qui promet « des muscles en 30 jours ». Avant de le suivre, il le montre à son professeur d’EPS, qui lui tend la fiche des conseils aux jeunes sportifs. À toi de croiser les deux.",
+      "documents": [
+        {
+          "id": "programme",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "PROGRAMME ULTIME 30 JOURS",
+          "sousTitre": "Trouvé sur internet par Léo",
+          "emoji": "💪",
+          "lignes": [
+            {
+              "texte": "Échauffement de 10 minutes avant chaque séance",
+              "id": "echauffement"
+            },
+            {
+              "texte": "Pompes, squats, gainage au poids du corps",
+              "id": "poids-du-corps"
+            },
+            {
+              "texte": "5 séries de 3 répétitions à la charge maximale",
+              "id": "charge-max"
+            },
+            {
+              "texte": "Le même circuit six jours sur sept",
+              "id": "six-jours"
+            },
+            {
+              "texte": "3 shakers de protéines en poudre par jour",
+              "id": "shakers"
+            },
+            {
+              "texte": "8 heures de sommeil minimum",
+              "id": "sommeil"
+            }
+          ],
+          "pied": "Résultats garantis ou remboursés !",
+          "teinte": "corail"
+        },
+        {
+          "id": "conseils",
+          "type": "tableau",
+          "titre": "Les conseils aux jeunes sportifs",
+          "source": "Fiche remise par le professeur d’EPS, rédigée pour l’exercice.",
+          "colonnes": [
+            "Réglage",
+            "Ce qui est conseillé avant la fin de la croissance"
+          ],
+          "lignes": [
+            [
+              "Répétitions par série",
+              "8 à 12, charge légère ou poids du corps"
+            ],
+            [
+              "Séries",
+              "3 ou 4"
+            ],
+            [
+              "Repos entre deux séances du même muscle",
+              "48 h au moins"
+            ],
+            [
+              "Charge",
+              "jamais maximale : les cartilages de croissance sont fragiles"
+            ],
+            [
+              "Protéines",
+              "celles de l’assiette suffisent (1,2 à 1,6 g par kilo et par jour)"
+            ],
+            [
+              "Échauffement",
+              "10 minutes, à chaque séance"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "programme",
+          "enonce": "Touche la ligne du programme qui contredit la règle des **48 heures de repos**.",
+          "reponse": [
+            "six-jours"
+          ],
+          "aide": "Combien de jours de repos le programme laisse-t-il entre deux circuits identiques ? Compare avec la ligne « Repos » des conseils.",
+          "explication": "« Le même circuit **six jours sur sept** » : les mêmes muscles sont retravaillés chaque jour, sans les 48 h qu’il leur faut pour se reconstruire."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque ligne du programme : bonne pour Léo, ou à corriger ?",
+          "categories": [
+            "Bonne pour Léo",
+            "À corriger"
+          ],
+          "items": [
+            [
+              "Échauffement de 10 minutes",
+              0
+            ],
+            [
+              "5 séries de 3 répétitions à la charge maximale",
+              1
+            ],
+            [
+              "3 shakers de protéines par jour",
+              1
+            ],
+            [
+              "Pompes, squats, gainage au poids du corps",
+              0
+            ],
+            [
+              "Le même circuit six jours sur sept",
+              1
+            ],
+            [
+              "8 heures de sommeil minimum",
+              0
+            ]
+          ],
+          "aide": "Passe chaque ligne du programme au crible du tableau des conseils : répétitions, charge, repos, protéines, échauffement.",
+          "explication": "Trois lignes sont à corriger : la **charge maximale** (interdite avant la fin de la croissance), les **shakers** (l’assiette suffit) et les **six jours sur sept** (pas de récupération). L’échauffement, le poids du corps et le sommeil sont justes."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque ligne à corriger à la raison qui la rend mauvaise.",
+          "paires": [
+            [
+              "Le même circuit six jours sur sept",
+              "Les muscles n’ont pas 48 h pour se reconstruire"
+            ],
+            [
+              "5 séries de 3 répétitions à la charge maximale",
+              "Les cartilages de croissance sont fragiles"
+            ],
+            [
+              "3 shakers de protéines par jour",
+              "Les protéines de l’assiette suffisent"
+            ]
+          ],
+          "aide": "Cherche dans le tableau des conseils la ligne qui parle de repos, celle qui parle de charge, celle qui parle de protéines.",
+          "explication": "**Six jours sur sept** → pas de récupération ; **charge maximale** → danger pour les cartilages de croissance ; **shakers** → inutiles, l’assiette apporte déjà 1,2 à 1,6 g de protéines par kilo."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la règle que Léo doit retenir.",
+          "texte": "Pour qu’un muscle grossisse, on vise des séries de ___ répétitions et on attend au moins ___ heures avant de le retravailler.",
+          "reponses": [
+            [
+              "8 à 12"
+            ],
+            [
+              "48"
+            ]
+          ],
+          "banque": [
+            "8 à 12",
+            "1 à 3",
+            "48",
+            "6",
+            "24"
+          ],
+          "aide": "Les deux nombres sont dans le tableau des conseils : la ligne « Répétitions par série » et la ligne « Repos ».",
+          "explication": "**8 à 12** répétitions par série, et **48 heures** de repos avant de retravailler le même muscle : c’est le temps que prend la réparation des fibres."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le programme promet que « la charge maximale fait grossir plus vite ». Quel est le vrai risque pour Léo, à 14 ans ?",
+          "options": [
+            "Abîmer ses cartilages de croissance : son squelette n’a pas fini de grandir",
+            "Aucun : à 14 ans, on récupère de tout",
+            "Grossir trop vite et perdre en vitesse",
+            "Oublier la technique des pompes"
+          ],
+          "reponse": 0,
+          "aide": "Relis la ligne « Charge » du tableau des conseils : pourquoi dit-elle « jamais maximale » ?",
+          "explication": "Avant la fin de la croissance, les **cartilages de croissance** aux extrémités des os sont fragiles : une charge maximale peut les abîmer. À 14 ans, on apprend le geste avec le poids du corps, et on ajoute la charge plus tard."
+        }
+      ]
+    }
+  ]
+}

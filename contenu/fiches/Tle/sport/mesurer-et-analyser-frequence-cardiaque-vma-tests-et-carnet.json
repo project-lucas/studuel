@@ -1,0 +1,165 @@
+{
+  "titre": "Mesurer et analyser",
+  "titreSurligne": "analyser",
+  "accroche": "Un chiffre seul ne dit rien : interprète-le.",
+  "bonus": "**FC cible** = repos + % × réserve · **RPE × durée** = charge",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/Tle/sport/mesurer-et-analyser-frequence-cardiaque-vma-tests-et-carnet.webp",
+    "prompt": "a glossy violet heart with a golden heartbeat line and a small golden stopwatch, sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Mesurer, c’est facile,\ninterpréter, non !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les repères du cœur",
+          "items": [
+            {
+              "terme": "FC de repos",
+              "definition": "les battements au calme, au réveil : elle **baisse** avec l’entraînement"
+            },
+            {
+              "terme": "FC max",
+              "definition": "le maximum que le cœur atteint à l’effort"
+            },
+            {
+              "terme": "FC de réserve",
+              "definition": "**FC max − FC de repos** : la marge de travail"
+            },
+            {
+              "terme": "VMA",
+              "definition": "la vitesse où l’organisme consomme **le plus d’oxygène**"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Les tests de terrain",
+          "entetes": [
+            "Test",
+            "Il mesure"
+          ],
+          "lignes": [
+            [
+              "**Navette de Léger**",
+              "l’endurance, allers-retours de plus en plus vite"
+            ],
+            [
+              "**VAMEVAL**",
+              "la VMA, sur piste"
+            ],
+            [
+              "**Léger-Boucher**",
+              "la VMA, par paliers"
+            ],
+            [
+              "**Cooper (12 min)**",
+              "la distance en 12 minutes"
+            ],
+            [
+              "**30-15 IFT**",
+              "les courses avec changements de direction"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "formule",
+          "numero": 3,
+          "titre": "Viser une intensité : Karvonen",
+          "lignes": [
+            "FC cible = FC repos + % × (FC max − FC repos)"
+          ],
+          "regle": "On range l’effort en **5 zones** : de 1 (récupération) à 5 (maximal).",
+          "note": "ni toujours « au milieu »"
+        }
+      ]
+    },
+    {
+      "colonnes": "262px 1fr",
+      "blocs": [
+        {
+          "type": "postit",
+          "titre": "Exemple",
+          "donnees": "FC repos 60, FC max 200, cible 70 %.",
+          "calcul": "60 + 0,7 × 140",
+          "aparte": "0,7 × 140 = 98",
+          "resultat": "[[158 battements]]"
+        },
+        {
+          "type": "cartes",
+          "numero": 4,
+          "titre": "Mesurer le ressenti",
+          "colonnes": 1,
+          "cartes": [
+            {
+              "titre": "Échelle de Borg (RPE)",
+              "texte": "De **1 à 10** : « à quel point c’était dur ? »"
+            },
+            {
+              "titre": "Charge de séance (Foster)",
+              "texte": "**RPE × durée** : 60 min à 7 = **420**."
+            },
+            {
+              "titre": "Ratio aigu/chronique",
+              "texte": "Semaine en cours ÷ semaines d’avant : repère les **hausses brutales**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "liste",
+          "numero": 5,
+          "titre": "Le carnet d’entraînement",
+          "items": [
+            {
+              "titre": "On y note",
+              "texte": "date, séance, durée, **RPE**, sommeil, humeur"
+            },
+            {
+              "titre": "À chaque ligne",
+              "texte": "ce qu’on **change** la prochaine fois"
+            },
+            {
+              "titre": "Au bac",
+              "texte": "c’est ce que l’**AFL2** évalue"
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "**Mesurer** sans **interpréter**.",
+            "S’entraîner toujours « au milieu » des zones.",
+            "Croire la **montre** plutôt que ses sensations.",
+            "Une variabilité basse au réveil = **fatigue** possible."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Que vaut la FC de réserve&nbsp;?",
+            "Comment calcule-t-on la charge d’une séance&nbsp;?",
+            "Que signifie VMA&nbsp;?"
+          ],
+          "reponses": "1) FC max − FC de repos · 2) RPE × durée en minutes · 3) vitesse maximale aérobie"
+        }
+      ]
+    }
+  ]
+}

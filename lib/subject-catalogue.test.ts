@@ -172,16 +172,8 @@ describe('chaque classe a un programme complet', () => {
         if (slug === 'francais' && (grade === 'Tle' || grade === 'Tle techno')) continue
         // La voie techno n'a pas les spécialités scientifiques de la générale.
         if (slug === 'svt' && isTechno(grade)) continue
-        // L'EPS N'EST PAS DANS LES DOSSIERS DE 1re GÉNÉRALE (migration 278).
-        // Ce n'est PAS une erreur de catalogue et ce n'est pas non plus une
-        // correction de programme : l'EPS reste obligatoire en première, 2 h par
-        // semaine. C'est une décision de produit (Lucas, 21/08/2026) — on ne
-        // révise pas l'EPS, et sa carte n'a jamais porté que 3 fiches
-        // passe-partout identiques du CP à la Terminale. La 1re TECHNO la garde :
-        // son programme dans l'app n'est fait que du tronc commun, et sans elle
-        // la classe tomberait sous les dix matières exigées plus haut.
-        // Remettre « 1re » dans `subjects.levels` suffit à revenir en arrière.
-        if (slug === 'sport' && grade === '1re') continue
+        // Le Sport est de retour en 1re générale depuis la 567 (14/10/2026,
+        // la culture sportive se lit à tout âge) : plus d'exception ici.
         expect(
           catalogue.get(slug)?.levels,
           `« ${slug} » absent de la classe ${grade}`,

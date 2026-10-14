@@ -1,0 +1,3323 @@
+{
+  "niveau": "5e",
+  "matiere": "sport",
+  "exercices": [
+    {
+      "chapitre": "3e84550e-8d4a-5762-a4e2-fb380209bf7f",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le but refusé de Malik",
+      "competence": "observer-schema",
+      "situation": "Samedi, Malik pense avoir marqué, mais l’arbitre refuse le but pour hors-jeu. Sur le schéma, on voit la scène au moment précis où Léo lui envoie la passe. L’équipe violette attaque vers la droite.",
+      "documents": [
+        {
+          "id": "terrain",
+          "type": "schema",
+          "titre": "La passe de Léo, vue de dessus",
+          "source": "Schéma écrit pour l’exercice.",
+          "largeur": 340,
+          "hauteur": 230,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 30,
+              "l": 300,
+              "h": 170,
+              "teinte": "vert",
+              "motif": "clair"
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 18,
+              "texte": "Sens de l’attaque →",
+              "taille": "petit",
+              "italique": true,
+              "ancre": "milieu"
+            },
+            {
+              "forme": "texte",
+              "x": 320,
+              "y": 218,
+              "texte": "Ligne de but",
+              "taille": "petit",
+              "ancre": "fin"
+            },
+            {
+              "forme": "cercle",
+              "cx": 298,
+              "cy": 115,
+              "r": 12,
+              "teinte": "jaune",
+              "motif": "plein",
+              "texte": "G",
+              "id": "gardien",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 240,
+              "cy": 75,
+              "r": 12,
+              "teinte": "corail",
+              "motif": "plein",
+              "texte": "B",
+              "id": "def-b",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 185,
+              "cy": 155,
+              "r": 12,
+              "teinte": "corail",
+              "motif": "plein",
+              "texte": "C",
+              "id": "def-c",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 268,
+              "cy": 160,
+              "r": 12,
+              "teinte": "violet",
+              "motif": "plein",
+              "texte": "M",
+              "id": "malik",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 100,
+              "cy": 105,
+              "r": 12,
+              "teinte": "violet",
+              "motif": "plein",
+              "texte": "L",
+              "id": "leo",
+              "zone": true
+            },
+            {
+              "forme": "emoji",
+              "x": 128,
+              "y": 112,
+              "emoji": "⚽",
+              "taille": 18
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                118,
+                112
+              ],
+              "a": [
+                254,
+                156
+              ],
+              "fleche": "fin",
+              "style": "pointilles",
+              "teinte": "violet"
+            },
+            {
+              "forme": "texte",
+              "x": 24,
+              "y": 218,
+              "texte": "G gardien · B, C défenseurs",
+              "taille": "petit",
+              "ancre": "debut"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "terrain",
+          "enonce": "Touche l’**avant-dernier défenseur** de l’équipe qui défend (le gardien est le dernier).",
+          "reponse": [
+            "def-b"
+          ],
+          "aide": "Pars de la ligne de but : le gardien est le premier joueur rencontré, l’avant-dernier défenseur est le suivant.",
+          "explication": "Le gardien est le dernier défenseur, donc l’avant-dernier est le joueur **B**. C’est lui qui fixe la ligne du hors-jeu."
+        },
+        {
+          "type": "choix",
+          "enonce": "Au moment où Léo passe, Malik est-il en **position de hors-jeu** ?",
+          "options": [
+            "Oui : il est plus près de la ligne de but que le ballon et que l’avant-dernier défenseur",
+            "Non : il est trop loin du ballon",
+            "Non : le gardien ne compte pas comme défenseur",
+            "Oui : mais seulement parce qu’il porte un maillot violet"
+          ],
+          "reponse": 0,
+          "aide": "Compare la place de Malik avec celle du ballon, puis avec celle du défenseur B, en regardant vers la ligne de but.",
+          "explication": "Malik est devant le ballon **et** devant B : il est en **position de hors-jeu**. Comme il reçoit ensuite la balle et marque, il participe au jeu : le but est refusé."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’adversaires (gardien compris) se trouvent entre Malik et la ligne de but ?",
+          "reponse": 1,
+          "aide": "Compte les joueurs rouges et jaunes qui sont plus près de la ligne de but que Malik.",
+          "explication": "Seul le **gardien** est plus près du but que Malik. Il en faudrait au moins deux pour que Malik ne soit pas en position de hors-jeu."
+        }
+      ]
+    },
+    {
+      "chapitre": "3e84550e-8d4a-5762-a4e2-fb380209bf7f",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le compte rendu du match",
+      "competence": "analyser-document",
+      "situation": "Après le match U12 entre Sablons et Bellevue, l’entraîneur colle le compte rendu dans le vestiaire. Retrouve ce qui s’est passé grâce à la règle du jeu.",
+      "documents": [
+        {
+          "id": "compte-rendu",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "Sablons 2 – 1 Bellevue",
+          "sousTitre": "Compte rendu du match U12",
+          "emoji": "⚽",
+          "lignes": [
+            {
+              "texte": "But de Lina refusé : hors-jeu",
+              "valeur": "12’",
+              "id": "but-refuse"
+            },
+            {
+              "texte": "But de Tom sur corner : accordé",
+              "valeur": "27’",
+              "id": "but-corner"
+            },
+            {
+              "texte": "Carton jaune pour Yanis (Bellevue)",
+              "valeur": "41’",
+              "id": "jaune-1"
+            },
+            {
+              "texte": "Penalty pour Sablons, faute dans la surface",
+              "valeur": "55’",
+              "id": "penalty"
+            },
+            {
+              "texte": "Second carton jaune pour Yanis",
+              "valeur": "68’",
+              "id": "jaune-2"
+            },
+            {
+              "texte": "But de Nour : accordé",
+              "valeur": "80’",
+              "id": "but-nour"
+            }
+          ],
+          "pied": "Chaque équipe avait 11 joueurs au coup d’envoi.",
+          "teinte": "vert"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "compte-rendu",
+          "enonce": "Touche la ligne qui explique pourquoi **Bellevue finit le match à dix**.",
+          "reponse": [
+            "jaune-2"
+          ],
+          "aide": "Que se passe-t-il quand un joueur reçoit deux cartons jaunes dans le même match ?",
+          "explication": "À la 68e minute, Yanis reçoit un **second carton jaune** : il est expulsé, comme avec un carton rouge. Son équipe finit à dix, sans pouvoir le remplacer."
+        },
+        {
+          "type": "choix",
+          "enonce": "À quelle distance du but se tire le penalty de la 55e minute ?",
+          "options": [
+            "À 11 mètres",
+            "À 6 mètres",
+            "À 16 mètres",
+            "Depuis le point central"
+          ],
+          "reponse": 0,
+          "aide": "Le penalty se tire face au seul gardien, depuis un point marqué dans la surface de réparation.",
+          "explication": "Le penalty se tire à **11 mètres** du but, face au seul gardien."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le but de Tom (27’) est marqué sur un corner. Pourquoi ne peut-il pas être refusé pour hors-jeu ?",
+          "options": [
+            "Parce qu’il n’y a jamais de hors-jeu sur un corner",
+            "Parce que Tom jouait dans sa moitié de terrain",
+            "Parce que l’arbitre a oublié de siffler",
+            "Parce que le gardien a touché le ballon"
+          ],
+          "reponse": 0,
+          "aide": "Relis la liste des situations où le hors-jeu n’existe pas : touche, corner, coup de pied de but…",
+          "explication": "Sur un **corner**, comme sur une touche ou un coup de pied de but, **il n’y a pas de hors-jeu**. Le but de Tom est donc valable."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de joueurs Bellevue compte-t-il sur le terrain à la fin du match ?",
+          "reponse": 10,
+          "aide": "Ils étaient 11 au départ. Combien d’expulsions, et un joueur expulsé est-il remplacé ?",
+          "explication": "Bellevue commence à 11 et perd Yanis, qui n’est pas remplaçable : **10 joueurs** à la fin."
+        }
+      ]
+    },
+    {
+      "chapitre": "3e84550e-8d4a-5762-a4e2-fb380209bf7f",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Hors-jeu : la dispute de la récré",
+      "competence": "raisonner",
+      "situation": "Inès et Noah débattent d’un but refusé pendant un match de la récré. Noah a les règles en tête, Inès un peu moins. Le tableau résume cinq actions de la semaine : à vous de les juger.",
+      "documents": [
+        {
+          "id": "dispute",
+          "type": "dialogue",
+          "modele": "sms",
+          "participants": [
+            {
+              "nom": "Inès",
+              "emoji": "👧",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Noah",
+              "emoji": "👦",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Inès",
+              "texte": "Ton but était refusé, c’est logique : tu étais devant le dernier défenseur, donc [[e|c’est]] [[e|toujours]] [[e|une]] [[e|faute]]."
+            },
+            {
+              "qui": "Noah",
+              "texte": "Non ! Être devant, c’est juste une position. C’est puni seulement si je joue le ballon ou si je gêne quelqu’un."
+            },
+            {
+              "qui": "Inès",
+              "texte": "Et sur un corner alors ?"
+            },
+            {
+              "qui": "Noah",
+              "texte": "Là, jamais de hors-jeu. Regarde le tableau."
+            }
+          ]
+        },
+        {
+          "id": "actions",
+          "type": "tableau",
+          "titre": "Cinq actions de la semaine",
+          "source": "Situations imaginées pour l’exercice.",
+          "colonnes": [
+            "Action",
+            "Position de l’attaquant",
+            "Origine du ballon",
+            "Ce qu’il fait"
+          ],
+          "lignes": [
+            [
+              "A",
+              "Devant l’avant-dernier défenseur",
+              "Passe d’un coéquipier",
+              "Prend le ballon et marque"
+            ],
+            [
+              "B",
+              "Devant l’avant-dernier défenseur",
+              "Corner",
+              "Marque de la tête"
+            ],
+            [
+              "C",
+              "Dans sa propre moitié de terrain",
+              "Longue passe",
+              "Contrôle et file au but"
+            ],
+            [
+              "D",
+              "Devant l’avant-dernier défenseur",
+              "Passe d’un coéquipier",
+              "Reste loin de l’action, ne gêne personne"
+            ],
+            [
+              "E",
+              "À la hauteur de l’avant-dernier défenseur",
+              "Passe d’un coéquipier",
+              "Prend le ballon et marque"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "dispute",
+          "enonce": "Touche les mots de l’**erreur** d’Inès dans la conversation.",
+          "reponse": [
+            "e"
+          ],
+          "aide": "Selon Noah, que faut-il en plus d’être devant le dernier défenseur pour être sanctionné ?",
+          "explication": "Être en position de hors-jeu **n’est pas une faute en soi**. Il faut en plus participer au jeu : toucher le ballon, gêner un adversaire ou profiter de la situation."
+        },
+        {
+          "type": "categories",
+          "enonce": "Pour chacune des cinq actions, dis si le hors-jeu est **sanctionné** ou non.",
+          "categories": [
+            "But refusé : hors-jeu",
+            "Pas de sanction"
+          ],
+          "items": [
+            [
+              "Action A",
+              0
+            ],
+            [
+              "Action B",
+              1
+            ],
+            [
+              "Action C",
+              1
+            ],
+            [
+              "Action D",
+              1
+            ],
+            [
+              "Action E",
+              1
+            ]
+          ],
+          "aide": "Pour être sanctionné, il faut être en position de hors-jeu ET participer au jeu, et l’action ne doit pas être dans une situation « sans hors-jeu ».",
+          "explication": "Seule l’action **A** est sanctionnée. B : corner. C : propre moitié de terrain. D : en position mais sans participer. E : à la hauteur du défenseur, donc pas devant."
+        },
+        {
+          "type": "zone",
+          "document": "actions",
+          "enonce": "Touche la case qui explique pourquoi l’action B ne peut **jamais** être un hors-jeu.",
+          "reponse": [
+            "r1c2"
+          ],
+          "aide": "Cherche, dans la ligne B, la colonne qui dit d’où vient le ballon.",
+          "explication": "Le ballon vient d’un **corner** : sur un corner, il n’y a pas de hors-jeu, quelle que soit la position de l’attaquant."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la règle de base du hors-jeu.",
+          "texte": "On est en position de hors-jeu quand on est plus près de la ligne de but que le ___ et que l’___ défenseur.",
+          "reponses": [
+            [
+              "ballon"
+            ],
+            [
+              "avant-dernier"
+            ]
+          ],
+          "banque": [
+            "ballon",
+            "avant-dernier",
+            "gardien",
+            "arbitre",
+            "dernier"
+          ],
+          "aide": "Relis la scène : on compare la place de l’attaquant avec celle du ballon, puis avec celle d’un défenseur qui n’est pas le gardien.",
+          "explication": "On est en position de hors-jeu devant le **ballon** et devant l’**avant-dernier** défenseur (le gardien compte comme dernier)."
+        }
+      ]
+    },
+    {
+      "chapitre": "2da68c26-319d-5a85-82d4-f2d035729437",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le bilan de Camille",
+      "competence": "lire-tableau",
+      "situation": "Camille joue au basket au collège. Après le match de samedi, son entraîneur note ce qu’elle a réussi. À toi de lire ses statistiques.",
+      "documents": [
+        {
+          "id": "stats",
+          "type": "tableau",
+          "titre": "Les tirs réussis par Camille",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "colonnes": [
+            "Type de tir",
+            "Points par tir",
+            "Tirs réussis"
+          ],
+          "lignes": [
+            [
+              "Lancer franc",
+              1,
+              4
+            ],
+            [
+              "Tir à l’intérieur de la ligne",
+              2,
+              3
+            ],
+            [
+              "Tir derrière la ligne à trois points",
+              3,
+              2
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "stats",
+          "enonce": "Touche la case qui dit combien **rapporte** un tir réussi derrière la ligne.",
+          "reponse": [
+            "r2c1"
+          ],
+          "aide": "Va à la ligne « Tir derrière la ligne à trois points », puis à la colonne « Points par tir ».",
+          "explication": "Un tir réussi derrière la ligne vaut **3 points**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de points Camille a-t-elle marqués en tout ?",
+          "reponse": 16,
+          "aide": "Multiplie, ligne par ligne, les points par tir et le nombre de tirs réussis, puis additionne.",
+          "explication": "4 × 1 + 3 × 2 + 2 × 3 = 4 + 6 + 6 = **16 points**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi un tir derrière la ligne rapporte-t-il **3 points** plutôt que 2 ?",
+          "options": [
+            "Parce qu’il est tiré de plus loin du panier, donc plus difficile",
+            "Parce que le panier est plus haut de ce côté",
+            "Parce qu’il est tiré sans défenseur",
+            "Parce que le ballon est plus lourd"
+          ],
+          "reponse": 0,
+          "aide": "La ligne est à 6,75 m du panier en règles internationales. Que récompense-t-on ?",
+          "explication": "La ligne est à **6,75 m** du panier (7,24 m en NBA) : plus le tir est loin, plus il est difficile, donc mieux récompensé."
+        }
+      ]
+    },
+    {
+      "chapitre": "2da68c26-319d-5a85-82d4-f2d035729437",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Les chronos du maître de jeu",
+      "competence": "se-reperer-temps",
+      "situation": "Les Rouges et les Bleus s’affrontent. Pour chaque attaque, le chronométreur note à quel moment l’équipe récupère le ballon, franchit la ligne médiane et tire. Une des deux équipes a enfreint une règle de temps.",
+      "documents": [
+        {
+          "id": "chronos",
+          "type": "tableau",
+          "titre": "Le chronomètre des attaques (en secondes)",
+          "source": "Relevés imaginés pour l’exercice.",
+          "colonnes": [
+            "Équipe",
+            "Récupère le ballon",
+            "Passe la ligne médiane",
+            "Tire"
+          ],
+          "lignes": [
+            [
+              "Rouges",
+              0,
+              6,
+              20
+            ],
+            [
+              "Bleus",
+              0,
+              9,
+              22
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "chronos",
+          "enonce": "Touche la case qui montre qu’une équipe a **enfreint** une règle de temps.",
+          "reponse": [
+            "r1c2"
+          ],
+          "aide": "Une équipe a droit à 8 secondes pour franchir la ligne médiane. Qui a pris plus de temps ?",
+          "explication": "Les Bleus passent la ligne médiane à **9 s**, au-delà des 8 secondes autorisées : le ballon revient à l’adversaire."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quand les Rouges franchissent la ligne médiane, combien de secondes **restent-elles** sur les 24 secondes pour tirer ?",
+          "unite": "s",
+          "reponse": 18,
+          "aide": "Les 24 secondes démarrent quand l’équipe récupère le ballon.",
+          "explication": "24 − 6 = **18 secondes** restent aux Rouges."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Les Rouges tirent à 20 s. De combien de secondes **restait-il** avant la fin des 24 secondes ?",
+          "unite": "s",
+          "reponse": 4,
+          "aide": "Calcule la différence entre 24 et le moment du tir.",
+          "explication": "24 − 20 = **4 secondes** de marge : le tir est dans les temps."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que se passe-t-il pour les Bleus ?",
+          "options": [
+            "Ils perdent le ballon, remis à l’adversaire",
+            "Ils gagnent un lancer franc",
+            "Rien : les 8 secondes ne comptent qu’en NBA",
+            "L’arbitre arrête le match"
+          ],
+          "reponse": 0,
+          "aide": "Dépasser un délai donne le ballon à l’adversaire, sans qu’il y ait eu de faute de contact.",
+          "explication": "Dépasser les 8 secondes donne **le ballon à l’adversaire**, même sans contact."
+        }
+      ]
+    },
+    {
+      "chapitre": "2da68c26-319d-5a85-82d4-f2d035729437",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "FIBA contre NBA",
+      "competence": "analyser-document",
+      "situation": "Le club de basket organise un match amical avec les règles internationales (FIBA). Léa et Sam, les deux anciens, jurent que « c’est pareil qu’à la télé ». Vérifie avec les deux documents.",
+      "documents": [
+        {
+          "id": "regles",
+          "type": "tableau",
+          "titre": "Deux règlements",
+          "source": "Règles résumées pour l’exercice.",
+          "colonnes": [
+            "Règle",
+            "FIBA",
+            "NBA"
+          ],
+          "lignes": [
+            [
+              "Durée d’un quart-temps",
+              "10 min",
+              "12 min"
+            ],
+            [
+              "Nombre de quarts-temps",
+              4,
+              4
+            ],
+            [
+              "Distance de la ligne à 3 points",
+              "6,75 m",
+              "7,24 m"
+            ],
+            [
+              "Hauteur du panier",
+              "3,05 m",
+              "3,05 m"
+            ],
+            [
+              "Fautes pour être exclu",
+              5,
+              6
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "feuille",
+          "type": "fiche",
+          "modele": "ticket",
+          "entete": "Feuille de marque · Match amical",
+          "sousTitre": "Règles FIBA — fautes personnelles en fin de match",
+          "emoji": "🏀",
+          "lignes": [
+            {
+              "texte": "Léa",
+              "valeur": "5 fautes",
+              "id": "lea"
+            },
+            {
+              "texte": "Tom",
+              "valeur": "4 fautes",
+              "id": "tom"
+            },
+            {
+              "texte": "Sam",
+              "valeur": "5 fautes",
+              "id": "sam"
+            },
+            {
+              "texte": "Nina",
+              "valeur": "3 fautes",
+              "id": "nina"
+            }
+          ],
+          "pied": "Chiffres imaginés pour l’exercice.",
+          "teinte": "ambre"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "feuille",
+          "enonce": "Touche les joueurs **exclus** du match amical, qui se joue avec les règles FIBA.",
+          "reponse": [
+            "lea",
+            "sam"
+          ],
+          "multiple": true,
+          "aide": "Relis, dans le tableau, le nombre de fautes qui entraîne l’exclusion en FIBA.",
+          "explication": "En FIBA, **5 fautes** personnelles = exclu : Léa et Sam sortent. Tom (4) et Nina (3) peuvent encore jouer."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de minutes de jeu dure un match FIBA (4 quarts-temps) ?",
+          "unite": "min",
+          "reponse": 40,
+          "aide": "Multiplie le nombre de quarts-temps par la durée d’un quart en FIBA.",
+          "explication": "4 × 10 = **40 minutes** en FIBA (contre 48 en NBA)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de minutes de plus dure un match NBA ?",
+          "unite": "min",
+          "reponse": 8,
+          "aide": "Calcule la durée d’un match NBA (4 × 12) et retire la durée d’un match FIBA.",
+          "explication": "4 × 12 = 48 minutes en NBA, contre 40 en FIBA : **8 minutes de plus**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de mètres la ligne à trois points est-elle plus **éloignée** en NBA qu’en FIBA ?",
+          "unite": "m",
+          "reponse": 0.49,
+          "tolerance": 0.01,
+          "aide": "Soustrais 6,75 m à 7,24 m.",
+          "explication": "7,24 − 6,75 = **0,49 m** : un peu moins d’un demi-mètre de plus pour viser les 3 points."
+        },
+        {
+          "type": "choix",
+          "enonce": "Si Léa et Sam avaient joué avec les règles NBA, qui serait exclu ?",
+          "options": [
+            "Personne : il faut 6 fautes en NBA",
+            "Léa et Sam, comme en FIBA",
+            "Seulement Léa",
+            "Tom, Léa et Sam"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la dernière ligne du tableau, colonne NBA.",
+          "explication": "En NBA, on est exclu à **6 fautes**. Avec 5 fautes, Léa et Sam seraient encore en jeu."
+        }
+      ]
+    },
+    {
+      "chapitre": "b975db96-553e-5835-b76d-2f6dfeb1ff47",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La zone du gardien",
+      "competence": "observer-schema",
+      "situation": "Au handball, le gardien règne sur une zone que personne d’autre n’a le droit de toucher. Voici la moitié de terrain vue de dessus, avec le but en bas.",
+      "documents": [
+        {
+          "id": "terrain",
+          "type": "schema",
+          "titre": "Un demi-terrain de handball",
+          "source": "Schéma écrit pour l’exercice.",
+          "largeur": 340,
+          "hauteur": 230,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 20,
+              "l": 300,
+              "h": 190,
+              "teinte": "bleu",
+              "motif": "clair"
+            },
+            {
+              "forme": "chemin",
+              "d": "M 80 210 A 90 90 0 0 1 260 210 Z",
+              "teinte": "jaune",
+              "motif": "clair",
+              "id": "zone-6m",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 150,
+              "y": 206,
+              "l": 40,
+              "h": 8,
+              "teinte": "encre",
+              "motif": "plein"
+            },
+            {
+              "forme": "cercle",
+              "cx": 170,
+              "cy": 190,
+              "r": 12,
+              "teinte": "jaune",
+              "motif": "plein",
+              "texte": "G",
+              "id": "gardien",
+              "zone": true
+            },
+            {
+              "forme": "rect",
+              "x": 155,
+              "y": 96,
+              "l": 30,
+              "h": 6,
+              "teinte": "corail",
+              "motif": "plein",
+              "id": "jet-7m",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 118,
+              "texte": "Marque du jet de 7 m",
+              "taille": "petit",
+              "ancre": "milieu"
+            },
+            {
+              "forme": "cercle",
+              "cx": 70,
+              "cy": 50,
+              "r": 12,
+              "teinte": "violet",
+              "motif": "plein",
+              "texte": "A",
+              "id": "att-1",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 270,
+              "cy": 50,
+              "r": 12,
+              "teinte": "violet",
+              "motif": "plein",
+              "texte": "B",
+              "id": "att-2",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 228,
+              "texte": "But",
+              "taille": "petit",
+              "ancre": "milieu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "terrain",
+          "enonce": "Touche la **zone des 6 mètres**, réservée au gardien.",
+          "reponse": [
+            "zone-6m"
+          ],
+          "aide": "C’est la zone en jaune, un demi-disque autour du but.",
+          "explication": "La zone des 6 m, en jaune, est **réservée au gardien** : un joueur de champ n’a pas le droit d’y poser le pied (il peut seulement la survoler en tirant)."
+        },
+        {
+          "type": "zone",
+          "document": "terrain",
+          "enonce": "Touche la marque d’où l’on tire un **jet de 7 mètres**.",
+          "reponse": [
+            "jet-7m"
+          ],
+          "aide": "Cherche le petit trait rouge, juste à l’extérieur de la zone du gardien.",
+          "explication": "Le **jet de 7 m** est accordé quand une occasion de but nette a été empêchée : on le tire depuis ce trait, face au gardien."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de joueurs une équipe de handball aligne-t-elle sur le terrain, gardien compris ?",
+          "reponse": 7,
+          "aide": "Il y a 6 joueurs de champ, plus un autre joueur bien particulier.",
+          "explication": "Une équipe compte **7 joueurs** : 6 joueurs de champ et 1 gardien."
+        }
+      ]
+    },
+    {
+      "chapitre": "b975db96-553e-5835-b76d-2f6dfeb1ff47",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le tournoi de volley",
+      "competence": "lire-graphique",
+      "situation": "Les Bleues et les Rouges se sont affrontées en cinq sets lors du tournoi du collège. Voici le score de chaque set.",
+      "documents": [
+        {
+          "id": "sets",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Les points marqués dans chaque set",
+          "source": "Scores imaginés pour l’exercice.",
+          "categories": [
+            "Set 1",
+            "Set 2",
+            "Set 3",
+            "Set 4",
+            "Set 5"
+          ],
+          "series": [
+            {
+              "nom": "Bleues",
+              "valeurs": [
+                25,
+                24,
+                25,
+                19,
+                15
+              ],
+              "teinte": "bleu"
+            },
+            {
+              "nom": "Rouges",
+              "valeurs": [
+                21,
+                26,
+                23,
+                25,
+                13
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Points",
+            "min": 0,
+            "max": 30,
+            "pas": 5
+          },
+          "axeX": {
+            "titre": "Set"
+          },
+          "valeurs": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sets",
+          "enonce": "Touche le set qui a **dépassé 25 points**.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Cherche la barre qui monte au-dessus de 25.",
+          "explication": "Le **set 2** se termine sur 26-24 : à 25-24, il n’y a qu’un point d’écart, alors qu’il en faut deux."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de sets les **Bleues** ont-elles gagnés ?",
+          "reponse": 3,
+          "aide": "Pour chaque set, compare la barre bleue et la barre rouge.",
+          "explication": "Les Bleues gagnent les sets 1, 3 et 5 : **3 sets** contre 2 pour les Rouges."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le 5e set s’arrête-t-il à 15 points ?",
+          "options": [
+            "Parce que le set décisif est plus court : il se joue en 15 points",
+            "Parce que les joueuses sont fatiguées",
+            "Parce qu’il n’y a plus de balle",
+            "Parce que c’est la règle du tie-break de tennis"
+          ],
+          "reponse": 0,
+          "aide": "Le 5e set est « décisif » : sa règle n’est pas celle des quatre premiers.",
+          "explication": "Le **5e set**, décisif, se joue en **15 points** (toujours avec 2 points d’écart : 15-13)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est l’écart de points au set 4 ?",
+          "reponse": 6,
+          "aide": "Soustrais le plus petit score au plus grand.",
+          "explication": "25 − 19 = **6 points** d’écart : les Rouges gagnent le set 4 nettement."
+        }
+      ]
+    },
+    {
+      "chapitre": "b975db96-553e-5835-b76d-2f6dfeb1ff47",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Planning de la matinée sportive",
+      "competence": "resoudre",
+      "situation": "Le collège organise une matinée handball et volley. Les professeurs ont affiché les règles du tournoi et l’équipe de chaque classe. À toi de vérifier que tout le monde peut jouer.",
+      "documents": [
+        {
+          "id": "panneau",
+          "type": "fiche",
+          "modele": "panneau",
+          "entete": "RÈGLES DU TOURNOI",
+          "sousTitre": "Gymnase du collège",
+          "emoji": "🤾",
+          "lignes": [
+            {
+              "texte": "Handball : 7 joueurs, dont un gardien"
+            },
+            {
+              "texte": "Handball : 2 mi-temps de 30 minutes"
+            },
+            {
+              "texte": "Volley : 6 joueurs par équipe"
+            },
+            {
+              "texte": "Volley : set à 25 points, 2 points d’écart"
+            }
+          ],
+          "pied": "Règlement écrit pour l’exercice.",
+          "teinte": "bleu"
+        },
+        {
+          "id": "equipes",
+          "type": "tableau",
+          "titre": "Les équipes inscrites",
+          "source": "Effectifs imaginés pour l’exercice.",
+          "colonnes": [
+            "Équipe",
+            "Sport",
+            "Joueurs présents"
+          ],
+          "lignes": [
+            [
+              "Les Mouettes",
+              "Handball",
+              6
+            ],
+            [
+              "Les Cigales",
+              "Volley",
+              5
+            ],
+            [
+              "Les Lynx",
+              "Handball",
+              8
+            ],
+            [
+              "Les Faucons",
+              "Volley",
+              7
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "equipes",
+          "enonce": "Touche les effectifs des équipes qui ont **assez de joueurs** pour jouer.",
+          "reponse": [
+            "r2c2",
+            "r3c2"
+          ],
+          "multiple": true,
+          "aide": "Compare le nombre de joueurs présents avec le nombre exigé par le sport de l’équipe.",
+          "explication": "Les **Lynx** (8 ≥ 7) et les **Faucons** (7 ≥ 6) peuvent jouer. Il manque un joueur aux Mouettes et aux Cigales."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de joueurs manquent aux Mouettes pour aligner une équipe de handball ?",
+          "reponse": 1,
+          "aide": "Soustrais le nombre de joueurs présents au nombre exigé en handball.",
+          "explication": "7 − 6 = **1 joueur** manque aux Mouettes."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de remplaçants les Lynx auront-ils ?",
+          "reponse": 1,
+          "aide": "Ils sont 8 présents ; combien de joueurs sont sur le terrain ?",
+          "explication": "8 − 7 = **1 remplaçant**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de minutes de jeu dure un match de handball ?",
+          "unite": "min",
+          "reponse": 60,
+          "aide": "Deux mi-temps : multiplie leur nombre par leur durée.",
+          "explication": "2 × 30 = **60 minutes** de jeu."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la règle du volley.",
+          "texte": "Un set de volley se joue en ___ points, avec ___ points d’écart.",
+          "reponses": [
+            [
+              "25"
+            ],
+            [
+              "2"
+            ]
+          ],
+          "banque": [
+            "25",
+            "2",
+            "15",
+            "3",
+            "21"
+          ],
+          "aide": "La réponse est dans le panneau du gymnase.",
+          "explication": "Un set se gagne à **25 points** avec **2 points d’écart** (15 points pour le 5e set)."
+        }
+      ]
+    },
+    {
+      "chapitre": "7d9c0bac-d82a-5b67-b90a-eec223abe3a6",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La feuille de match du XV",
+      "competence": "lire-tableau",
+      "situation": "Samedi, l’équipe de rugby des Cadets a gagné. Le délégué a noté, minute après minute, tout ce qui a rapporté des points.",
+      "documents": [
+        {
+          "id": "feuille",
+          "type": "fiche",
+          "modele": "ticket",
+          "entete": "Feuille de match · Cadets",
+          "sousTitre": "Actions qui rapportent des points",
+          "emoji": "🏉",
+          "lignes": [
+            {
+              "texte": "Essai",
+              "valeur": "12’",
+              "id": "essai-1"
+            },
+            {
+              "texte": "Transformation",
+              "valeur": "13’",
+              "id": "transfo"
+            },
+            {
+              "texte": "Pénalité",
+              "valeur": "30’",
+              "id": "penalite-1"
+            },
+            {
+              "texte": "Essai",
+              "valeur": "47’",
+              "id": "essai-2"
+            },
+            {
+              "texte": "Pénalité",
+              "valeur": "60’",
+              "id": "penalite-2"
+            },
+            {
+              "texte": "Drop",
+              "valeur": "72’",
+              "id": "drop"
+            }
+          ],
+          "pied": "Un seul essai a été transformé.",
+          "teinte": "ambre"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "feuille",
+          "enonce": "Touche l’action qui est un **coup de pied tombé** tenté en plein jeu.",
+          "reponse": [
+            "drop"
+          ],
+          "aide": "Ce n’est ni un essai, ni un tir de réparation après une faute.",
+          "explication": "Le **drop** est un coup de pied tombé, tenté en plein jeu. Il rapporte 3 points."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de points les Cadets ont-ils marqués en tout ?",
+          "reponse": 21,
+          "aide": "Essai : 5 · transformation : 2 · pénalité : 3 · drop : 3. Additionne tout ce qui est sur la feuille.",
+          "explication": "2 essais (10) + 1 transformation (2) + 2 pénalités (6) + 1 drop (3) = **21 points**."
+        },
+        {
+          "type": "choix",
+          "enonce": "À quoi sert la transformation de la 13e minute ?",
+          "options": [
+            "Elle ajoute 2 points après un essai",
+            "Elle remplace l’essai",
+            "Elle sanctionne un en-avant",
+            "Elle ouvre une mêlée"
+          ],
+          "reponse": 0,
+          "aide": "Elle arrive toujours juste après un essai.",
+          "explication": "La **transformation** est un tir de réparation après un essai : elle rapporte 2 points de plus."
+        }
+      ]
+    },
+    {
+      "chapitre": "7d9c0bac-d82a-5b67-b90a-eec223abe3a6",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Trois passes sur le terrain",
+      "competence": "observer-schema",
+      "situation": "Au rugby, le ballon ne se passe qu’en arrière ou sur le côté. Sur le schéma, la joueuse P1 porte le ballon et l’équipe attaque vers la droite. Elle a trois partenaires possibles.",
+      "documents": [
+        {
+          "id": "passes",
+          "type": "schema",
+          "titre": "Où passer le ballon ?",
+          "source": "Schéma écrit pour l’exercice.",
+          "largeur": 340,
+          "hauteur": 220,
+          "elements": [
+            {
+              "forme": "rect",
+              "x": 20,
+              "y": 30,
+              "l": 300,
+              "h": 170,
+              "teinte": "vert",
+              "motif": "clair"
+            },
+            {
+              "forme": "texte",
+              "x": 170,
+              "y": 18,
+              "texte": "Sens de l’attaque →",
+              "taille": "petit",
+              "italique": true,
+              "ancre": "milieu"
+            },
+            {
+              "forme": "cercle",
+              "cx": 170,
+              "cy": 115,
+              "r": 12,
+              "teinte": "violet",
+              "motif": "plein",
+              "texte": "P1",
+              "id": "p1",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 100,
+              "cy": 65,
+              "r": 12,
+              "teinte": "violet",
+              "motif": "plein",
+              "texte": "P2",
+              "id": "p2",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 170,
+              "cy": 170,
+              "r": 12,
+              "teinte": "violet",
+              "motif": "plein",
+              "texte": "P3",
+              "id": "p3",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 255,
+              "cy": 115,
+              "r": 12,
+              "teinte": "violet",
+              "motif": "plein",
+              "texte": "P4",
+              "id": "p4",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                158,
+                108
+              ],
+              "a": [
+                112,
+                72
+              ],
+              "fleche": "fin",
+              "teinte": "bleu",
+              "id": "passe-a",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                170,
+                129
+              ],
+              "a": [
+                170,
+                156
+              ],
+              "fleche": "fin",
+              "teinte": "bleu",
+              "id": "passe-b",
+              "zone": true
+            },
+            {
+              "forme": "ligne",
+              "de": [
+                184,
+                115
+              ],
+              "a": [
+                241,
+                115
+              ],
+              "fleche": "fin",
+              "teinte": "corail",
+              "id": "passe-c",
+              "zone": true
+            },
+            {
+              "forme": "texte",
+              "x": 130,
+              "y": 95,
+              "texte": "a",
+              "taille": "grand",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 182,
+              "y": 150,
+              "texte": "b",
+              "taille": "grand",
+              "gras": true
+            },
+            {
+              "forme": "texte",
+              "x": 212,
+              "y": 106,
+              "texte": "c",
+              "taille": "grand",
+              "gras": true
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "passes",
+          "enonce": "Touche la passe qui provoque un **en-avant**.",
+          "reponse": [
+            "passe-c"
+          ],
+          "aide": "L’équipe attaque vers la droite. Quelle flèche envoie le ballon dans cette direction ?",
+          "explication": "La passe **c** part vers l’avant : c’est un en-avant. L’arbitre siffle et l’adversaire obtient une mêlée."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de ces trois passes sont **autorisées** ?",
+          "reponse": 2,
+          "aide": "Une passe est autorisée si elle va vers l’arrière ou sur le côté.",
+          "explication": "Les passes **a** (vers l’arrière) et **b** (sur le côté) sont autorisées : **2 passes**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que se passe-t-il après la passe c ?",
+          "options": [
+            "Mêlée pour l’équipe adverse",
+            "Essai pour l’équipe de P1",
+            "Exclusion de P1 pour 2 minutes",
+            "Touche pour l’équipe de P1"
+          ],
+          "reponse": 0,
+          "aide": "C’est la conséquence d’un en-avant, au rugby.",
+          "explication": "Un en-avant donne une **mêlée à l’adversaire** : huit joueurs de chaque camp se lient et le ballon est lancé entre eux."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la règle d’or de la passe.",
+          "texte": "Au rugby, le ballon ne se passe qu’en ___ ou sur le ___.",
+          "reponses": [
+            [
+              "arrière"
+            ],
+            [
+              "côté"
+            ]
+          ],
+          "banque": [
+            "arrière",
+            "côté",
+            "avant",
+            "sol",
+            "haut"
+          ],
+          "aide": "Pense aux flèches a et b du schéma.",
+          "explication": "Le ballon ne se passe qu’**en arrière** ou **sur le côté**, jamais vers l’avant."
+        }
+      ]
+    },
+    {
+      "chapitre": "7d9c0bac-d82a-5b67-b90a-eec223abe3a6",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Qui a gagné le match-test ?",
+      "competence": "raisonner",
+      "situation": "Deux équipes, A et B, se sont affrontées. Voici le récit du match écrit par le journaliste du club, ainsi que le barème du rugby. Retrouve le score final.",
+      "documents": [
+        {
+          "id": "bareme",
+          "type": "tableau",
+          "titre": "Les points au rugby à XV",
+          "source": "Barème du cours.",
+          "colonnes": [
+            "Action",
+            "Points"
+          ],
+          "lignes": [
+            [
+              "Essai",
+              5
+            ],
+            [
+              "Transformation (après un essai)",
+              2
+            ],
+            [
+              "Pénalité",
+              3
+            ],
+            [
+              "Drop",
+              3
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "recit",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Le résumé du match-test",
+          "auteur": "Récit écrit pour l’exercice",
+          "blocs": [
+            "Essai de l’équipe A, transformé.",
+            "Pénalité de l’équipe B, puis essai de B, non transformé.",
+            "Un [[d|drop]] de l’équipe A, tenté en pleine action.",
+            "Essai de l’équipe B, transformé.",
+            "Deux pénalités de l’équipe A."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quel est le score final de l’équipe **A** ?",
+          "reponse": 16,
+          "aide": "Additionne : essai + transformation, drop, deux pénalités.",
+          "explication": "(5 + 2) + 3 + (3 + 3) = **16 points**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le score final de l’équipe **B** ?",
+          "reponse": 15,
+          "aide": "Additionne : pénalité, essai non transformé, essai transformé.",
+          "explication": "3 + 5 + (5 + 2) = **15 points**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Qui a gagné, et de combien de points ?",
+          "options": [
+            "A, d’un point",
+            "B, d’un point",
+            "A, de deux points",
+            "Match nul"
+          ],
+          "reponse": 0,
+          "aide": "Compare les deux totaux que tu viens de calculer.",
+          "explication": "A gagne **16 à 15**, d’un seul point."
+        },
+        {
+          "type": "zone",
+          "document": "recit",
+          "enonce": "Touche le mot qui désigne le coup de pied tombé tenté **en plein jeu**.",
+          "reponse": [
+            "d"
+          ],
+          "aide": "Ce n’est pas un tir de réparation : il se tente au milieu de l’action.",
+          "explication": "Le **drop** est tenté en plein jeu. Il rapporte 3 points, comme une pénalité."
+        },
+        {
+          "type": "choix",
+          "enonce": "Si le premier essai de B avait été transformé, que serait le résultat ?",
+          "options": [
+            "B gagnerait 17 à 16",
+            "Match nul",
+            "A gagnerait toujours",
+            "B gagnerait 18 à 16"
+          ],
+          "reponse": 0,
+          "aide": "Ajoute 2 points au total de B et compare avec celui de A.",
+          "explication": "B aurait 15 + 2 = 17 points contre 16 : **B gagnerait d’un point**."
+        }
+      ]
+    },
+    {
+      "chapitre": "f6f509fc-abbe-5abb-9bd8-cbf225905093",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Lire le tableau d’affichage",
+      "competence": "lire-tableau",
+      "situation": "Inès et Sofia viennent de finir un match de tennis. Le tableau affiche le nombre de jeux gagnés par chacune à chaque set.",
+      "documents": [
+        {
+          "id": "score",
+          "type": "tableau",
+          "titre": "Le score du match",
+          "source": "Score imaginé pour l’exercice.",
+          "colonnes": [
+            "Joueuse",
+            "Set 1",
+            "Set 2",
+            "Set 3"
+          ],
+          "lignes": [
+            [
+              "Inès",
+              6,
+              3,
+              7
+            ],
+            [
+              "Sofia",
+              4,
+              6,
+              6
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de sets Inès a-t-elle gagnés ?",
+          "reponse": 2,
+          "aide": "Pour chaque set, regarde laquelle des deux a le plus grand nombre.",
+          "explication": "Inès gagne les sets 1 et 3 : **2 sets**, contre 1 pour Sofia. Elle remporte le match."
+        },
+        {
+          "type": "zone",
+          "document": "score",
+          "enonce": "Touche le score d’Inès au **set décisif**.",
+          "reponse": [
+            "r0c3"
+          ],
+          "aide": "Le set décisif est le dernier de la ligne.",
+          "explication": "Au set 3, Inès l’emporte **7-6**, en gagnant le tie-break."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le set 3 s’est-il terminé sur 7-6 ?",
+          "options": [
+            "Les joueuses étaient à 6-6, donc un tie-break a désigné la gagnante",
+            "Inès a eu droit à un jeu bonus",
+            "Sofia a fait une double faute à chaque service",
+            "Un set se joue toujours en 7 jeux"
+          ],
+          "reponse": 0,
+          "aide": "Que fait-on quand les deux joueuses sont à 6-6 ?",
+          "explication": "À **6-6**, on joue un **tie-break** : le gagnant remporte le set 7-6."
+        }
+      ]
+    },
+    {
+      "chapitre": "f6f509fc-abbe-5abb-9bd8-cbf225905093",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Un jeu qui bascule",
+      "competence": "se-reperer-temps",
+      "situation": "Tom sert contre Lou. Le jeu est long et plein de rebondissements. Le tableau donne le vainqueur de chaque point ; le score de certains points est caché.",
+      "documents": [
+        {
+          "id": "jeu",
+          "type": "tableau",
+          "titre": "Les points d’un jeu",
+          "source": "Jeu imaginé pour l’exercice.",
+          "colonnes": [
+            "Point",
+            "Gagné par",
+            "Score après le point"
+          ],
+          "lignes": [
+            [
+              1,
+              "Tom",
+              "15-0"
+            ],
+            [
+              2,
+              "Tom",
+              "30-0"
+            ],
+            [
+              3,
+              "Lou",
+              "30-15"
+            ],
+            [
+              4,
+              "Lou",
+              "30-30"
+            ],
+            [
+              5,
+              "Tom",
+              "40-30"
+            ],
+            [
+              6,
+              "Lou",
+              "?"
+            ],
+            [
+              7,
+              "Lou",
+              "?"
+            ],
+            [
+              8,
+              "Tom",
+              "?"
+            ],
+            [
+              9,
+              "Tom",
+              "?"
+            ],
+            [
+              10,
+              "Tom",
+              "Jeu Tom"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Quel est le score après le point 6 ?",
+          "options": [
+            "Égalité (40-40)",
+            "Avantage Lou",
+            "Jeu Lou",
+            "30-40"
+          ],
+          "reponse": 0,
+          "aide": "Tom avait 40 et Lou 30. Que se passe-t-il quand Lou marque ?",
+          "explication": "Lou rattrape Tom : **40-40**, c’est l’**égalité**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel est le score après le point 7 ?",
+          "options": [
+            "Avantage Lou",
+            "Jeu Lou",
+            "Égalité",
+            "Avantage Tom"
+          ],
+          "reponse": 0,
+          "aide": "À l’égalité, le point suivant donne l’avantage à celui qui le gagne.",
+          "explication": "Lou gagne le point juste après l’égalité : **avantage Lou**. Il lui faut un point de plus pour gagner le jeu."
+        },
+        {
+          "type": "zone",
+          "document": "jeu",
+          "enonce": "Touche le point qui ramène le jeu à l’**égalité** après l’avantage de Lou.",
+          "reponse": [
+            "r7c2"
+          ],
+          "aide": "Quand celui qui n’a pas l’avantage gagne le point, on revient à l’égalité.",
+          "explication": "Au point 8, Tom gagne alors que Lou avait l’avantage : retour à l’**égalité**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de points Lou a-t-il gagnés dans ce jeu ?",
+          "reponse": 4,
+          "aide": "Compte les lignes où la colonne « Gagné par » indique Lou.",
+          "explication": "Lou gagne les points 3, 4, 6 et 7 : **4 points**. Il perd pourtant le jeu, car on gagne avec 2 points d’écart."
+        }
+      ]
+    },
+    {
+      "chapitre": "f6f509fc-abbe-5abb-9bd8-cbf225905093",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Roland-Garros et badminton",
+      "competence": "analyser-document",
+      "situation": "Au club de raquettes, on joue au badminton le mercredi et au tennis le samedi. Le panneau et le score affiché te permettent de comparer les deux sports.",
+      "documents": [
+        {
+          "id": "badminton",
+          "type": "tableau",
+          "titre": "Un match de badminton : Ava contre Lou",
+          "source": "Scores imaginés pour l’exercice.",
+          "colonnes": [
+            "Joueuse",
+            "Set 1",
+            "Set 2",
+            "Set 3"
+          ],
+          "lignes": [
+            [
+              "Ava",
+              21,
+              20,
+              21
+            ],
+            [
+              "Lou",
+              19,
+              22,
+              17
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "comparaison",
+          "type": "tableau",
+          "titre": "Deux sports de raquette",
+          "source": "Règles résumées pour l’exercice.",
+          "colonnes": [
+            "Règle",
+            "Tennis",
+            "Badminton"
+          ],
+          "lignes": [
+            [
+              "Comptage",
+              "15, 30, 40",
+              "Point par point"
+            ],
+            [
+              "Un set se gagne à",
+              "6 jeux, 2 d’écart",
+              "21 points, 2 d’écart"
+            ],
+            [
+              "Cas particulier",
+              "Tie-break à 6-6",
+              "Plafond à 30 points"
+            ],
+            [
+              "Sets gagnants",
+              2,
+              2
+            ],
+            [
+              "Service",
+              "Deux balles",
+              "Par en dessous"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de sets la gagnante du match de badminton a-t-elle remportés ?",
+          "reponse": 2,
+          "aide": "Compare les scores set par set : Ava a-t-elle le plus de points ?",
+          "explication": "Ava gagne les sets 1 et 3, Lou le set 2 : Ava l’emporte avec **2 sets** gagnants."
+        },
+        {
+          "type": "choix",
+          "enonce": "Au set 2, Lou gagne 22-20 et non 21-20. Pourquoi ?",
+          "options": [
+            "Il faut 2 points d’écart pour gagner un set",
+            "Le set se joue toujours en 22 points",
+            "Le volant a changé de couleur",
+            "Lou a eu droit à un point bonus"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la ligne « Un set se gagne à » du tableau de comparaison.",
+          "explication": "À 21-20, il n’y a qu’un point d’écart : le jeu continue jusqu’à **22-20**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le score maximum d’un set de badminton ?",
+          "reponse": 30,
+          "aide": "Cherche la ligne « Cas particulier » dans le tableau de comparaison.",
+          "explication": "À 29-29, le point suivant décide : un set s’arrête au plus tard à **30 points**."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque règle dans le bon sport.",
+          "categories": [
+            "Tennis",
+            "Badminton"
+          ],
+          "items": [
+            [
+              "Tie-break à 6-6",
+              0
+            ],
+            [
+              "Plafond à 30 points",
+              1
+            ],
+            [
+              "Comptage 15, 30, 40",
+              0
+            ],
+            [
+              "Service par en dessous",
+              1
+            ],
+            [
+              "Deux balles de service",
+              0
+            ]
+          ],
+          "aide": "Utilise le tableau de comparaison, ligne par ligne.",
+          "explication": "Tennis : tie-break, 15-30-40 et deux balles de service. Badminton : plafond à 30 et service par en dessous."
+        },
+        {
+          "type": "zone",
+          "document": "comparaison",
+          "enonce": "Touche la case qui montre une règle **identique** dans les deux sports.",
+          "reponse": [
+            "r3c1",
+            "r3c2"
+          ],
+          "multiple": true,
+          "aide": "Cherche la ligne où les deux colonnes affichent le même nombre.",
+          "explication": "Dans les deux sports, il faut gagner **2 sets** pour remporter le match."
+        }
+      ]
+    },
+    {
+      "chapitre": "d56e5a26-bc3f-5df3-bb98-8d824104bc83",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Où va l’énergie du muscle ?",
+      "competence": "lire-graphique",
+      "situation": "Quand tu cours, tes muscles dépensent de l’énergie. Mais tout ne sert pas à te faire avancer. Le graphique montre où va cette énergie.",
+      "documents": [
+        {
+          "id": "energie",
+          "type": "graphique",
+          "forme": "secteurs",
+          "titre": "Le devenir de l’énergie dépensée par un muscle",
+          "source": "Ordres de grandeur du cours.",
+          "categories": [
+            "Chaleur",
+            "Mouvement"
+          ],
+          "series": [
+            {
+              "nom": "Part de l’énergie (en %)",
+              "valeurs": [
+                75,
+                25
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "valeurs": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "energie",
+          "enonce": "Touche la part de l’énergie qui sert à **faire bouger** le corps.",
+          "reponse": [
+            "k1"
+          ],
+          "aide": "Le mouvement est la plus petite des deux parts.",
+          "explication": "Seul **un quart** de l’énergie sert au mouvement. Le reste part en chaleur."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel pourcentage de l’énergie se transforme en **chaleur** ?",
+          "unite": "%",
+          "reponse": 75,
+          "aide": "Lis la valeur de la grande part du graphique.",
+          "explication": "**75 %**, soit les trois quarts : un muscle est un moteur qui chauffe beaucoup."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi transpire-t-on à l’effort ?",
+          "options": [
+            "Pour évacuer la chaleur produite par les muscles",
+            "Pour nettoyer la peau",
+            "Pour perdre du poids définitivement",
+            "Parce que les muscles fabriquent de l’eau en trop"
+          ],
+          "reponse": 0,
+          "aide": "Trois quarts de l’énergie partent en chaleur : que doit faire le corps pour rester à 37 °C ?",
+          "explication": "Le corps doit rester à **37 °C**. La sueur, en s’évaporant, retire de la chaleur à la peau."
+        }
+      ]
+    },
+    {
+      "chapitre": "d56e5a26-bc3f-5df3-bb98-8d824104bc83",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La gourde oubliée de Nadia",
+      "competence": "comprendre-langue",
+      "situation": "Nadia a joué un tournoi de handball sous un gymnase très chaud, sans sa gourde. Elle raconte sa journée à son entraîneur par messages.",
+      "documents": [
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "participants": [
+            {
+              "nom": "Nadia",
+              "emoji": "👧",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Coach",
+              "emoji": "🧑‍🏫",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Nadia",
+              "texte": "J’ai joué 2 heures sans boire. Je transpirais énormément, environ 1,5 litre par heure !"
+            },
+            {
+              "qui": "Nadia",
+              "texte": "Mais je ne comprends pas : plus ça [[c|coule]], plus je devrais être au frais, non ?"
+            },
+            {
+              "qui": "Coach",
+              "texte": "Pas du tout. Ce qui refroidit, c’est la sueur qui s’évapore, pas celle qui coule."
+            },
+            {
+              "qui": "Nadia",
+              "texte": "Et dans un gymnase fermé, avec l’air humide ?"
+            },
+            {
+              "qui": "Coach",
+              "texte": "L’évaporation est lente : la sueur coule « pour rien ». Bois avant d’avoir soif !"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sms",
+          "enonce": "Touche le mot qui montre l’**idée fausse** de Nadia sur la sueur.",
+          "reponse": [
+            "c"
+          ],
+          "aide": "Nadia croit que la sueur refroidit en tombant de la peau. Quel mot le montre ?",
+          "explication": "Nadia croit que la sueur qui **coule** refroidit. En réalité, seule celle qui **s’évapore** enlève de la chaleur."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de litres d’eau Nadia a-t-elle perdus pendant son tournoi ?",
+          "unite": "L",
+          "reponse": 3,
+          "aide": "Multiplie la quantité perdue par heure par le nombre d’heures jouées.",
+          "explication": "1,5 L × 2 h = **3 litres** : sans boire, la déshydratation guette."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque situation à la vitesse d’évaporation de la sueur.",
+          "paires": [
+            [
+              "Air sec et ventilé",
+              "Évaporation rapide"
+            ],
+            [
+              "Air humide, sans vent",
+              "Évaporation lente"
+            ],
+            [
+              "Vêtement imperméable",
+              "Évaporation bloquée"
+            ]
+          ],
+          "aide": "Pense à ce que fait l’air : il emporte l’eau de la peau, ou non.",
+          "explication": "Air sec et ventilé : on se refroidit bien. Air humide : la sueur coule pour rien. Imperméable : la chaleur reste piégée."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel conseil le coach donne-t-il à Nadia pour le prochain tournoi ?",
+          "options": [
+            "Boire avant d’avoir soif",
+            "Boire seulement quand la soif apparaît",
+            "Ne pas boire pour ne pas avoir mal au ventre",
+            "Remplacer l’eau par du coton"
+          ],
+          "reponse": 0,
+          "aide": "Relis la dernière réplique du coach.",
+          "explication": "Quand la soif apparaît, le manque d’eau a déjà commencé : on boit **avant d’avoir soif**, par petites gorgées."
+        }
+      ]
+    },
+    {
+      "chapitre": "d56e5a26-bc3f-5df3-bb98-8d824104bc83",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Deux sportifs sous le soleil",
+      "competence": "raisonner",
+      "situation": "Pendant un entraînement d’été, Sam court en short léger avec sa gourde, tandis qu’Eliott court en imperméable sans boire. Un capteur a relevé leur température au fil de l’effort.",
+      "documents": [
+        {
+          "id": "temperatures",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "La température du corps pendant l’effort",
+          "source": "Mesures imaginées pour l’exercice.",
+          "categories": [
+            "0",
+            "10",
+            "20",
+            "30",
+            "40",
+            "50"
+          ],
+          "series": [
+            {
+              "nom": "Sam (short léger, boit)",
+              "valeurs": [
+                37,
+                37.4,
+                37.7,
+                37.9,
+                38,
+                38
+              ],
+              "teinte": "bleu"
+            },
+            {
+              "nom": "Eliott (imperméable, ne boit pas)",
+              "valeurs": [
+                37,
+                37.5,
+                38.1,
+                38.7,
+                39.3,
+                39.9
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Température",
+            "unite": "°C",
+            "min": 36,
+            "max": 41,
+            "pas": 1
+          },
+          "axeX": {
+            "titre": "Minutes d’effort"
+          },
+          "valeurs": false
+        },
+        {
+          "id": "alerte",
+          "type": "fiche",
+          "modele": "panneau",
+          "entete": "COUP DE CHALEUR : LES SIGNES",
+          "sousTitre": "À connaître avant l’été",
+          "emoji": "🌡️",
+          "lignes": [
+            {
+              "texte": "Peau très rouge et chaude",
+              "id": "peau"
+            },
+            {
+              "texte": "Mal de tête, vertiges",
+              "id": "tete"
+            },
+            {
+              "texte": "Nausées, confusion",
+              "id": "nausees"
+            },
+            {
+              "texte": "Grosse envie de dormir au calme",
+              "id": "sieste"
+            }
+          ],
+          "pied": "Fiche écrite pour l’exercice.",
+          "teinte": "corail"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "temperatures",
+          "enonce": "Touche la **minute** à laquelle Eliott dépasse 39 °C.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Suis la courbe corail jusqu’à ce qu’elle passe au-dessus de la graduation 39.",
+          "explication": "À **40 minutes**, Eliott est à 39,3 °C : sa température monte dangereusement."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est l’écart de température entre Eliott et Sam à la 50e minute ?",
+          "unite": "°C",
+          "reponse": 1.9,
+          "tolerance": 0.05,
+          "aide": "Lis les deux valeurs à 50 minutes, puis soustrais.",
+          "explication": "39,9 − 38 = **1,9 °C** d’écart : l’imperméable et l’absence d’eau ont empêché Eliott de se refroidir."
+        },
+        {
+          "type": "zone",
+          "document": "alerte",
+          "enonce": "Touche les **vrais signes** d’alerte du coup de chaleur.",
+          "reponse": [
+            "peau",
+            "tete",
+            "nausees"
+          ],
+          "multiple": true,
+          "aide": "Un seul des quatre éléments ne fait pas partie des signes d’alerte.",
+          "explication": "Peau rouge et chaude, mal de tête, nausées sont des signes d’alerte. Une envie de dormir n’en fait pas partie."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Eliott présente ces signes. Remets les gestes dans l’ordre.",
+          "items": [
+            "Arrêter l’effort",
+            "Se mettre à l’ombre et s’allonger",
+            "Se refroidir à l’eau fraîche et boire par petites gorgées",
+            "Appeler le 15 ou le 112 si ça ne s’améliore pas"
+          ],
+          "aide": "D’abord on arrête de produire de la chaleur, ensuite on refroidit, enfin on appelle.",
+          "explication": "On arrête l’effort, on se met à l’ombre, on se refroidit en buvant, et on **appelle les secours (15 ou 112)** si l’état ne s’améliore pas."
+        }
+      ]
+    },
+    {
+      "chapitre": "fe7df268-bf85-5927-9618-6d0401550d3c",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le pouls de Kenzo",
+      "competence": "lire-tableau",
+      "situation": "En cours d’EPS, Kenzo compte son pouls pendant 15 secondes, au repos puis juste après une course de deux minutes.",
+      "documents": [
+        {
+          "id": "pouls",
+          "type": "tableau",
+          "titre": "Les battements comptés en 15 secondes",
+          "source": "Mesures imaginées pour l’exercice.",
+          "colonnes": [
+            "Moment",
+            "Battements en 15 s"
+          ],
+          "lignes": [
+            [
+              "Au repos",
+              18
+            ],
+            [
+              "Après la course",
+              40
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Combien de battements par **minute** Kenzo a-t-il au repos ?",
+          "unite": "battements/min",
+          "reponse": 72,
+          "aide": "Une minute = 4 fois 15 secondes.",
+          "explication": "18 × 4 = **72 battements par minute** : c’est dans la plage normale (60 à 80)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de battements par minute après la course ?",
+          "unite": "battements/min",
+          "reponse": 160,
+          "aide": "Multiplie par 4 le nombre compté en 15 secondes.",
+          "explication": "40 × 4 = **160 battements par minute** : le cœur a accéléré pour envoyer plus de sang aux muscles."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le cœur de Kenzo bat-il plus vite après la course ?",
+          "options": [
+            "Pour apporter plus d’oxygène aux muscles qui travaillent",
+            "Parce qu’il a peur",
+            "Parce qu’il est cassé",
+            "Pour refroidir le sang"
+          ],
+          "reponse": 0,
+          "aide": "Les muscles réclament quelque chose que le sang transporte.",
+          "explication": "Le cœur accélère pour envoyer **plus de sang, donc plus d’oxygène**, aux muscles."
+        }
+      ]
+    },
+    {
+      "chapitre": "fe7df268-bf85-5927-9618-6d0401550d3c",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La séance de Mélissa",
+      "competence": "lire-graphique",
+      "situation": "Mélissa, 12 ans, porte une montre qui mesure sa fréquence cardiaque pendant sa séance d’entraînement de trente minutes.",
+      "documents": [
+        {
+          "id": "fc",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "La fréquence cardiaque de Mélissa",
+          "source": "Mesures imaginées pour l’exercice.",
+          "categories": [
+            "0",
+            "5",
+            "10",
+            "15",
+            "20",
+            "25",
+            "30"
+          ],
+          "series": [
+            {
+              "nom": "Battements par minute",
+              "valeurs": [
+                78,
+                120,
+                160,
+                185,
+                150,
+                110,
+                90
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Fréquence cardiaque",
+            "unite": "battements/min",
+            "min": 40,
+            "max": 220,
+            "pas": 20
+          },
+          "axeX": {
+            "titre": "Minutes depuis le début"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "fc",
+          "enonce": "Touche le moment où le cœur de Mélissa bat **le plus vite**.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche le point le plus haut de la courbe.",
+          "explication": "Le maximum est atteint à **15 minutes**, au pic de l’effort."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la fréquence cardiaque maximale **estimée** de Mélissa avec la formule 220 − âge ?",
+          "unite": "battements/min",
+          "reponse": 208,
+          "aide": "Mélissa a 12 ans.",
+          "explication": "220 − 12 = **208 battements par minute** : c’est une approximation, pas une mesure."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle marge lui restait-il entre son pic mesuré et cette estimation ?",
+          "unite": "battements/min",
+          "reponse": 23,
+          "aide": "Soustrais son pic (185) à 208.",
+          "explication": "208 − 185 = **23 battements** de marge : elle n’a pas atteint son maximum."
+        },
+        {
+          "type": "choix",
+          "enonce": "À 30 minutes, son cœur bat à 90. Qu’est-ce que cela montre ?",
+          "options": [
+            "Qu’il se calme progressivement après l’effort",
+            "Qu’il s’est arrêté",
+            "Que la montre est en panne",
+            "Qu’elle est en danger"
+          ],
+          "reponse": 0,
+          "aide": "Compare avec la valeur de départ (78) et avec le pic.",
+          "explication": "Après l’effort, le cœur **redescend progressivement** vers sa valeur de repos."
+        }
+      ]
+    },
+    {
+      "chapitre": "fe7df268-bf85-5927-9618-6d0401550d3c",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le cœur d’athlète et le point de côté",
+      "competence": "argumenter",
+      "situation": "Camille a eu un point de côté en courant juste après son goûter. Son professeur lui montre un graphique sur le cœur des sportifs et discute avec elle.",
+      "documents": [
+        {
+          "id": "repos",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Le pouls au repos de quatre personnes",
+          "source": "Valeurs imaginées pour l’exercice, d’après les ordres de grandeur du cours.",
+          "categories": [
+            "Élève sédentaire",
+            "Élève sportive",
+            "Coureur amateur",
+            "Champion d’endurance"
+          ],
+          "series": [
+            {
+              "nom": "Pouls au repos",
+              "valeurs": [
+                75,
+                65,
+                55,
+                40
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Battements par minute",
+            "min": 0,
+            "max": 80,
+            "pas": 10
+          },
+          "valeurs": false
+        },
+        {
+          "id": "dialogue",
+          "type": "dialogue",
+          "modele": "sms",
+          "participants": [
+            {
+              "nom": "Camille",
+              "emoji": "👧",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Prof",
+              "emoji": "🧑‍🏫",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Camille",
+              "texte": "J’ai eu un point de côté dès les premiers tours, juste après avoir mangé."
+            },
+            {
+              "qui": "Prof",
+              "texte": "Pas de panique. Ralentis, respire profondément en soufflant longtemps, et presse l’endroit douloureux."
+            },
+            {
+              "qui": "Camille",
+              "texte": "Mon cœur envoie 5 litres de sang par minute au repos, mais là j’avais l’impression d’avoir plus."
+            },
+            {
+              "qui": "Prof",
+              "texte": "À l’effort, il peut en envoyer 20 à 25 litres par minute."
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "repos",
+          "enonce": "Touche la personne dont le cœur bat **le plus lentement** au repos.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche la barre la plus basse.",
+          "explication": "Le champion d’endurance, à environ **40 battements par minute** : son cœur, plus fort, pompe plus de sang à chaque battement."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle différence de pouls au repos y a-t-il entre l’élève sédentaire et le champion ?",
+          "unite": "battements/min",
+          "reponse": 35,
+          "aide": "Soustrais la plus petite valeur à la plus grande.",
+          "explication": "75 − 40 = **35 battements par minute** d’écart : l’endurance renforce le cœur."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Au repos, combien de litres de sang le cœur de Camille envoie-t-il en **10 minutes** ?",
+          "unite": "L",
+          "reponse": 50,
+          "aide": "Le dialogue donne le débit par minute.",
+          "explication": "5 L × 10 = **50 litres** en 10 minutes de repos."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets dans l’ordre les gestes conseillés par le professeur.",
+          "items": [
+            "Ralentir, voire marcher",
+            "Respirer profondément en soufflant longtemps",
+            "Presser avec la main à l’endroit de la douleur"
+          ],
+          "aide": "On commence par réduire l’effort.",
+          "explication": "On **ralentit**, on **respire profondément** et on presse l’endroit douloureux."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque habitude : aide-t-elle à éviter le point de côté ou l’aggrave-t-elle ?",
+          "categories": [
+            "Aide à l’éviter",
+            "À éviter"
+          ],
+          "items": [
+            [
+              "S’échauffer doucement",
+              0
+            ],
+            [
+              "Courir juste après avoir mangé",
+              1
+            ],
+            [
+              "Ne pas manger juste avant",
+              0
+            ],
+            [
+              "Partir en sprint à froid",
+              1
+            ]
+          ],
+          "aide": "Le point de côté est favorisé par une digestion en cours et un effort brutal.",
+          "explication": "Pour l’éviter : **s’échauffer doucement** et **ne pas manger juste avant**. Courir après un repas ou sprinter à froid l’aggrave."
+        }
+      ]
+    },
+    {
+      "chapitre": "07a060b5-dc4e-5908-9253-9a5d14bcca38",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les bobos de Basile",
+      "competence": "analyser-texte",
+      "situation": "Basile a enchaîné trois jours sportifs. Il raconte ce qu’il a ressenti : à toi d’identifier chaque bobo.",
+      "documents": [
+        {
+          "id": "journal",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Le journal de Basile",
+          "auteur": "Récit écrit pour l’exercice",
+          "blocs": [
+            "Mardi, en plein entraînement, le mollet de Basile se contracte [[c|brutalement]] sans qu’il le décide.",
+            "Mercredi matin, ses cuisses sont [[b|raides]] : descendre l’escalier est une épreuve.",
+            "Jeudi, le frottement de sa chaussure a laissé une [[a|cloque]] sur son talon."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "journal",
+          "enonce": "Touche le mot qui montre que la **crampe** est soudaine et involontaire.",
+          "reponse": [
+            "c"
+          ],
+          "aide": "Cherche le mot qui dit comment le muscle se contracte.",
+          "explication": "Une crampe est une contraction **brutale** et involontaire du muscle."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque bobo à son origine.",
+          "paires": [
+            [
+              "Crampe",
+              "Fatigue du muscle, parfois manque d’eau"
+            ],
+            [
+              "Courbature",
+              "Micro-lésions dans les fibres du muscle"
+            ],
+            [
+              "Ampoule",
+              "Frottement répété sur la peau"
+            ]
+          ],
+          "aide": "Relis les trois paragraphes du récit.",
+          "explication": "Crampe : fatigue et déshydratation. Courbature : **micro-lésions** 24 à 48 h après l’effort. Ampoule : **frottement**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que doit faire Basile avec son ampoule ?",
+          "options": [
+            "Ne pas la percer et la protéger avec un pansement",
+            "La percer tout de suite avec les doigts",
+            "La frotter pour qu’elle disparaisse",
+            "Courir pour la faire éclater"
+          ],
+          "reponse": 0,
+          "aide": "La peau protège la plaie des microbes.",
+          "explication": "Mieux vaut **ne pas la percer** : la peau protège la plaie. On la couvre d’un pansement adapté."
+        }
+      ]
+    },
+    {
+      "chapitre": "07a060b5-dc4e-5908-9253-9a5d14bcca38",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Faut-il aller chez le médecin ?",
+      "competence": "analyser-document",
+      "situation": "À la fin de la semaine de sport, cinq élèves se plaignent. L’infirmière du collège note ce qu’ils décrivent. À toi de décider qui doit consulter.",
+      "documents": [
+        {
+          "id": "infirmerie",
+          "type": "tableau",
+          "titre": "Le cahier de l’infirmerie",
+          "source": "Situations imaginées pour l’exercice.",
+          "colonnes": [
+            "Élève",
+            "Ce qu’il ou elle décrit"
+          ],
+          "lignes": [
+            [
+              "Anna",
+              "Mollet douloureux depuis 2 jours après un cross, aucun autre signe"
+            ],
+            [
+              "Ben",
+              "Cheville gonflée et instable depuis hier"
+            ],
+            [
+              "Cléo",
+              "Petite ampoule propre au talon, sans douleur forte"
+            ],
+            [
+              "Dan",
+              "Ne peut plus poser le pied après une chute"
+            ],
+            [
+              "Éli",
+              "Douleur au genou qui le réveille la nuit"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "infirmerie",
+          "enonce": "Touche la description qui montre un signe d’alerte **nocturne**.",
+          "reponse": [
+            "r4c1"
+          ],
+          "aide": "Quelle douleur empêche de dormir ?",
+          "explication": "Une douleur qui **réveille la nuit** est un signe pour consulter."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range chaque élève.",
+          "categories": [
+            "Consulter un médecin",
+            "Soigner à l’infirmerie"
+          ],
+          "items": [
+            [
+              "Anna",
+              1
+            ],
+            [
+              "Ben",
+              0
+            ],
+            [
+              "Cléo",
+              1
+            ],
+            [
+              "Dan",
+              0
+            ],
+            [
+              "Éli",
+              0
+            ]
+          ],
+          "aide": "On consulte si on ne peut pas poser le pied, si l’articulation est gonflée, déformée ou instable, ou si la douleur réveille la nuit.",
+          "explication": "Ben, Dan et Éli ont un signe d’alerte. Anna a une **courbature** et Cléo une petite ampoule : on peut les soigner sans médecin."
+        },
+        {
+          "type": "association",
+          "enonce": "Ben a une entorse. Relie chaque lettre du **GREC** au bon geste.",
+          "paires": [
+            [
+              "G",
+              "Glace (enveloppée)"
+            ],
+            [
+              "R",
+              "Repos"
+            ],
+            [
+              "E",
+              "Élévation de la jambe"
+            ],
+            [
+              "C",
+              "Compression avec une bande"
+            ]
+          ],
+          "aide": "GREC est un moyen mnémotechnique : une lettre, un geste.",
+          "explication": "**G**lace, **R**epos, **É**lévation, **C**ompression : le réflexe en cas d’entorse."
+        },
+        {
+          "type": "choix",
+          "enonce": "Anna s’inquiète de ses courbatures. Que lui dis-tu ?",
+          "options": [
+            "Elles disparaîtront en 2 à 3 jours, et bouger doucement aide",
+            "Il faut arrêter le sport un mois",
+            "Elles prouvent que tu as beaucoup progressé",
+            "Il faut les masser avec de la glace directement"
+          ],
+          "reponse": 0,
+          "aide": "Une courbature n’est pas une preuve de progrès, mais elle n’est pas grave non plus.",
+          "explication": "Les courbatures durent **2 à 3 jours** ; marcher ou pédaler doucement aide. Ce n’est pas une preuve de progrès."
+        }
+      ]
+    },
+    {
+      "chapitre": "07a060b5-dc4e-5908-9253-9a5d14bcca38",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le kit et la douleur",
+      "competence": "raisonner",
+      "situation": "Mélodie a fait une longue randonnée hier, son premier gros effort depuis des mois. Aujourd’hui, elle a mal aux jambes, et elle prépare son sac de sport pour la semaine prochaine.",
+      "documents": [
+        {
+          "id": "douleur",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "L’intensité des courbatures de Mélodie",
+          "source": "Échelle imaginée pour l’exercice : de 0 (aucune douleur) à 10.",
+          "categories": [
+            "Jour 0 (effort)",
+            "Jour 1",
+            "Jour 2",
+            "Jour 3",
+            "Jour 4",
+            "Jour 5"
+          ],
+          "series": [
+            {
+              "nom": "Douleur",
+              "valeurs": [
+                0,
+                4,
+                7,
+                4,
+                1,
+                0
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Intensité",
+            "min": 0,
+            "max": 10,
+            "pas": 2
+          },
+          "valeurs": false
+        },
+        {
+          "id": "sac",
+          "type": "fiche",
+          "modele": "etiquette",
+          "entete": "Dans le sac de Mélodie",
+          "sousTitre": "Que garder pour le sport ?",
+          "emoji": "🎒",
+          "lignes": [
+            {
+              "texte": "Gourde pleine",
+              "id": "gourde"
+            },
+            {
+              "texte": "Pansements anti-ampoules",
+              "id": "pansements"
+            },
+            {
+              "texte": "Chaussettes de rechange",
+              "id": "chaussettes"
+            },
+            {
+              "texte": "Serviette ou vêtement chaud",
+              "id": "serviette"
+            },
+            {
+              "texte": "Paquet de bonbons",
+              "id": "bonbons"
+            },
+            {
+              "texte": "Console de jeux",
+              "id": "console"
+            }
+          ],
+          "teinte": "bleu"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "douleur",
+          "enonce": "Touche le jour où les courbatures sont les **plus fortes**.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche la barre la plus haute.",
+          "explication": "Le pic est au **jour 2**, soit 48 h après l’effort."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pendant combien de jours la douleur est-elle de 4 ou plus ?",
+          "reponse": 3,
+          "aide": "Compte les barres qui atteignent ou dépassent 4.",
+          "explication": "Les jours 1, 2 et 3 : **3 jours**, ce qui colle avec les « 2 à 3 jours » du cours."
+        },
+        {
+          "type": "choix",
+          "enonce": "Ces courbatures prouvent-elles que Mélodie a progressé ?",
+          "options": [
+            "Non : elles viennent de micro-lésions, pas d’un progrès",
+            "Oui : plus on a mal, plus on progresse",
+            "Oui : c’est la crampe qui fait grossir le muscle",
+            "On ne peut pas savoir"
+          ],
+          "reponse": 0,
+          "aide": "On peut progresser sans courbature et avoir des courbatures sans progresser.",
+          "explication": "Les courbatures sont des **micro-lésions** : elles ne prouvent pas un progrès."
+        },
+        {
+          "type": "zone",
+          "document": "sac",
+          "enonce": "Touche les quatre objets qui font partie du **kit de l’élève sportif**.",
+          "reponse": [
+            "gourde",
+            "pansements",
+            "chaussettes",
+            "serviette"
+          ],
+          "multiple": true,
+          "aide": "Pense à boire, aux ampoules, aux pieds et au froid après l’effort.",
+          "explication": "Gourde, pansements, chaussettes de rechange et serviette : le kit évite bien des bobos. Bonbons et console n’en font pas partie."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que peut faire Mélodie au jour 2 pour atténuer ses courbatures ?",
+          "options": [
+            "Marcher ou pédaler doucement",
+            "Rester allongée pendant trois jours",
+            "Refaire la même randonnée en courant",
+            "Prendre un bain de glace directement sur la jambe"
+          ],
+          "reponse": 0,
+          "aide": "Bouger doucement aide, mais pas en forçant.",
+          "explication": "Bouger **doucement** (marche, vélo tranquille) aide les courbatures à passer plus vite."
+        }
+      ]
+    },
+    {
+      "chapitre": "b34dd811-8ab5-5cd0-9684-26c2793a2f0c",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Presque 2 800 ans de Jeux",
+      "competence": "se-reperer-temps",
+      "situation": "De l’Antiquité à nos jours, les Jeux olympiques ont connu bien des étapes. La frise en retrace quelques-unes.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Les grandes dates des Jeux",
+          "debut": -800,
+          "fin": 2200,
+          "pas": 200,
+          "evenements": [
+            {
+              "id": "olympie",
+              "date": -776,
+              "nom": "Olympie"
+            },
+            {
+              "id": "interdits",
+              "date": 393,
+              "nom": "Jeux interdits"
+            },
+            {
+              "id": "athenes",
+              "date": 1896,
+              "nom": "Athènes"
+            },
+            {
+              "id": "chamonix",
+              "date": 1924,
+              "nom": "Chamonix"
+            },
+            {
+              "id": "stoke",
+              "date": 1948,
+              "nom": "Stoke Mandeville"
+            },
+            {
+              "id": "rome",
+              "date": 1960,
+              "nom": "Rome"
+            },
+            {
+              "id": "paris",
+              "date": 2024,
+              "nom": "Paris"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche l’événement qui correspond aux **premiers Jeux d’hiver**, en France.",
+          "reponse": [
+            "chamonix"
+          ],
+          "aide": "Cherche la ville des Alpes françaises.",
+          "explication": "Les premiers Jeux d’hiver ont lieu à **Chamonix en 1924**."
+        },
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche les **premiers Jeux de l’époque moderne**.",
+          "reponse": [
+            "athenes"
+          ],
+          "aide": "Ils renaissent grâce à Pierre de Coubertin, dans la capitale de la Grèce.",
+          "explication": "Les premiers Jeux modernes ont lieu à **Athènes en 1896**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent les débuts du mouvement paralympique à Stoke Mandeville (1948) des premiers Jeux paralympiques à Rome (1960) ?",
+          "unite": "ans",
+          "reponse": 12,
+          "aide": "Soustrais 1948 à 1960.",
+          "explication": "1960 − 1948 = **12 ans**."
+        }
+      ]
+    },
+    {
+      "chapitre": "b34dd811-8ab5-5cd0-9684-26c2793a2f0c",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Paris 2024 en chiffres",
+      "competence": "analyser-document",
+      "situation": "Léo prépare un exposé sur les Jeux de Paris. Il a recopié les chiffres clés sur une affiche. Vérifie ce qu’il peut en tirer.",
+      "documents": [
+        {
+          "id": "affiche",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "PARIS 2024",
+          "sousTitre": "Les Jeux en chiffres",
+          "emoji": "🥇",
+          "lignes": [
+            {
+              "texte": "Du 26 juillet au 11 août 2024",
+              "id": "dates"
+            },
+            {
+              "texte": "Cérémonie d’ouverture sur la Seine",
+              "valeur": "une première",
+              "id": "seine"
+            },
+            {
+              "texte": "32 sports · 329 épreuves",
+              "id": "sports"
+            },
+            {
+              "texte": "Environ 10 500 athlètes",
+              "id": "athletes"
+            },
+            {
+              "texte": "Parité entre hommes et femmes parmi les athlètes",
+              "valeur": "une première",
+              "id": "parite"
+            }
+          ],
+          "pied": "Chiffres de l’exposé de Léo.",
+          "teinte": "ambre"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "affiche",
+          "enonce": "Touche la ligne qui dit où s’est déroulée la **cérémonie d’ouverture**.",
+          "reponse": [
+            "seine"
+          ],
+          "aide": "Cherche le nom du fleuve de Paris.",
+          "explication": "La cérémonie a eu lieu **sur la Seine**, ce qui n’avait jamais été fait."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de jours durent les Jeux, du 26 juillet au 11 août inclus ?",
+          "unite": "jours",
+          "reponse": 17,
+          "aide": "Il reste 6 jours de juillet (du 26 au 31) à compter, puis 11 jours d’août.",
+          "explication": "6 jours en juillet + 11 jours en août = **17 jours**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel est le nombre d’athlètes environ ?",
+          "options": [
+            "10 500",
+            "1 050",
+            "105 000",
+            "241"
+          ],
+          "reponse": 0,
+          "aide": "Relis la ligne « athlètes » de l’affiche.",
+          "explication": "Environ **10 500 athlètes** : bien plus que les 241 athlètes des premiers Jeux modernes de 1896."
+        }
+      ]
+    },
+    {
+      "chapitre": "b34dd811-8ab5-5cd0-9684-26c2793a2f0c",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Du stade d’Olympie à la flamme",
+      "competence": "se-reperer-temps",
+      "situation": "Camille compare les Jeux de l’Antiquité et ceux d’aujourd’hui. Elle a trouvé un récit sur Olympie et une frise des symboles modernes.",
+      "documents": [
+        {
+          "id": "recit",
+          "type": "texte",
+          "genre": "source",
+          "titre": "Un spectateur arrive à Olympie",
+          "auteur": "Récit écrit pour l’exercice",
+          "blocs": [
+            "Tous les quatre ans, les cités grecques envoient leurs athlètes à Olympie pour honorer Zeus.",
+            "Pendant les Jeux, une trêve sacrée suspend les guerres entre les cités.",
+            "La première épreuve est la course du stade, longue de 192 mètres.",
+            "Le vainqueur reçoit une couronne de branches d’[[o|olivier]]."
+          ]
+        },
+        {
+          "id": "symboles",
+          "type": "frise",
+          "titre": "Les symboles des Jeux modernes",
+          "debut": 1880,
+          "fin": 2040,
+          "pas": 20,
+          "evenements": [
+            {
+              "id": "athenes",
+              "date": 1896,
+              "nom": "Athènes"
+            },
+            {
+              "id": "anneaux",
+              "date": 1913,
+              "nom": "Les anneaux"
+            },
+            {
+              "id": "chamonix",
+              "date": 1924,
+              "nom": "Chamonix"
+            },
+            {
+              "id": "flamme",
+              "date": 1928,
+              "nom": "La flamme"
+            },
+            {
+              "id": "relais",
+              "date": 1936,
+              "nom": "Le relais"
+            },
+            {
+              "id": "paris",
+              "date": 2024,
+              "nom": "Paris"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "recit",
+          "enonce": "Touche ce que reçoit le **vainqueur** de la course du stade.",
+          "reponse": [
+            "o"
+          ],
+          "aide": "Cherche le mot qui désigne l’arbre dont on tresse la couronne.",
+          "explication": "Il reçoit une couronne d’**olivier**, pas de médaille."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que fait la trêve sacrée, selon le récit ?",
+          "options": [
+            "Elle suspend les guerres entre les cités pendant les Jeux",
+            "Elle interdit aux femmes de regarder",
+            "Elle oblige les athlètes à courir",
+            "Elle punit les tricheurs"
+          ],
+          "reponse": 0,
+          "aide": "Relis le deuxième paragraphe du récit.",
+          "explication": "La **trêve sacrée** suspend les guerres : l’esprit olympique est de réunir les peuples."
+        },
+        {
+          "type": "zone",
+          "document": "symboles",
+          "enonce": "Touche le moment où apparaît la **flamme olympique**.",
+          "reponse": [
+            "flamme"
+          ],
+          "aide": "Elle apparaît à Amsterdam, avant le relais.",
+          "explication": "La flamme apparaît en **1928** à Amsterdam. Le relais depuis Olympie commence en 1936 à Berlin."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces événements de la frise du plus ancien au plus récent.",
+          "items": [
+            "Les anneaux olympiques",
+            "Premiers Jeux d’hiver, Chamonix",
+            "Apparition de la flamme",
+            "Début du relais de la flamme"
+          ],
+          "aide": "Lis les dates sous chaque événement de la frise.",
+          "explication": "Anneaux (1913), Chamonix (1924), flamme (1928), relais (1936)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent les premiers Jeux d’Athènes des premiers Jeux d’hiver ?",
+          "unite": "ans",
+          "reponse": 28,
+          "aide": "Soustrais 1896 à 1924.",
+          "explication": "1924 − 1896 = **28 ans**."
+        }
+      ]
+    },
+    {
+      "chapitre": "b3176eeb-5a61-548a-890c-b3f099788130",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le mur des champions",
+      "competence": "lire-tableau",
+      "situation": "Au gymnase, un grand mur présente quelques champions français. À toi de lire ce qui est écrit dessus.",
+      "documents": [
+        {
+          "id": "mur",
+          "type": "tableau",
+          "titre": "Le mur des champions",
+          "source": "Faits du cours.",
+          "colonnes": [
+            "Champion",
+            "Discipline",
+            "Exploit",
+            "Année"
+          ],
+          "lignes": [
+            [
+              "Marie-José Pérec",
+              "Athlétisme",
+              "Or du 400 m aux Jeux de Barcelone",
+              1992
+            ],
+            [
+              "Zinédine Zidane",
+              "Football",
+              "Deux buts de la tête en finale de la Coupe du monde",
+              1998
+            ],
+            [
+              "Laure Manaudou",
+              "Natation",
+              "Or du 400 m nage libre aux Jeux d’Athènes",
+              2004
+            ],
+            [
+              "Tony Parker",
+              "Basket",
+              "4 titres NBA avec San Antonio",
+              2014
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "mur",
+          "enonce": "Touche l’année où Zidane marque ses deux buts en finale.",
+          "reponse": [
+            "r1c3"
+          ],
+          "aide": "Cherche la ligne de Zidane, puis la colonne « Année ».",
+          "explication": "En **1998**, Zidane marque deux buts de la tête en finale (3-0 contre le Brésil)."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque champion à sa discipline.",
+          "paires": [
+            [
+              "Marie-José Pérec",
+              "Athlétisme"
+            ],
+            [
+              "Zinédine Zidane",
+              "Football"
+            ],
+            [
+              "Laure Manaudou",
+              "Natation"
+            ],
+            [
+              "Tony Parker",
+              "Basket"
+            ]
+          ],
+          "aide": "Utilise la colonne « Discipline » du mur.",
+          "explication": "Pérec : athlétisme. Zidane : football. Manaudou : natation. Parker : basket."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de titres NBA Tony Parker a-t-il gagnés avec San Antonio ?",
+          "reponse": 4,
+          "aide": "Lis la ligne de Tony Parker.",
+          "explication": "**4 titres** : 2003, 2005, 2007 et 2014."
+        }
+      ]
+    },
+    {
+      "chapitre": "b3176eeb-5a61-548a-890c-b3f099788130",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Les ors des champions",
+      "competence": "lire-graphique",
+      "situation": "Le club a compté les ors olympiques de quatre champions français et d’une championne. Le graphique distingue les épreuves individuelles et par équipes.",
+      "documents": [
+        {
+          "id": "ors",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Les ors olympiques de quelques champions",
+          "source": "D’après les palmarès du cours.",
+          "categories": [
+            "Killy",
+            "Pérec",
+            "Marchand",
+            "Riner",
+            "Manaudou"
+          ],
+          "series": [
+            {
+              "nom": "Ors individuels",
+              "valeurs": [
+                3,
+                3,
+                4,
+                3,
+                1
+              ],
+              "teinte": "violet"
+            },
+            {
+              "nom": "Ors par équipes",
+              "valeurs": [
+                0,
+                0,
+                0,
+                2,
+                0
+              ],
+              "teinte": "jaune"
+            }
+          ],
+          "axeY": {
+            "titre": "Ors olympiques",
+            "min": 0,
+            "max": 5,
+            "pas": 1
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "ors",
+          "enonce": "Touche le champion qui a le plus de titres **individuels**.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Compare les barres violettes.",
+          "explication": "Léon **Marchand** a 4 ors individuels à Paris 2024."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’ors olympiques Teddy Riner a-t-il en tout (individuels et par équipes) ?",
+          "reponse": 5,
+          "aide": "Additionne les deux barres de Riner.",
+          "explication": "3 + 2 = **5 ors** au total."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’ors individuels de plus Marchand a-t-il que Manaudou ?",
+          "reponse": 3,
+          "aide": "Soustrais les ors individuels de Manaudou à ceux de Marchand.",
+          "explication": "4 − 1 = **3 ors** de plus."
+        }
+      ]
+    },
+    {
+      "chapitre": "b3176eeb-5a61-548a-890c-b3f099788130",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Devinettes de champions",
+      "competence": "raisonner",
+      "situation": "Jade et Amir jouent aux devinettes pour réviser. Ils ont aussi sous les yeux un tableau avec les dates et lieux des exploits. À toi de trouver les noms.",
+      "documents": [
+        {
+          "id": "devinettes",
+          "type": "dialogue",
+          "modele": "sms",
+          "participants": [
+            {
+              "nom": "Jade",
+              "emoji": "👧",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Amir",
+              "emoji": "👦",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Jade",
+              "texte": "Devinette 1 : j’ai gagné les trois épreuves de ski alpin aux Jeux de [[g|Grenoble]]."
+            },
+            {
+              "qui": "Amir",
+              "texte": "Devinette 2 : je suis nageuse, j’ai gagné le 400 m nage libre à 17 ans."
+            },
+            {
+              "qui": "Jade",
+              "texte": "Devinette 3 : deux buts de la tête en finale, 3-0 contre le Brésil."
+            },
+            {
+              "qui": "Amir",
+              "texte": "Devinette 4 : judoka, or en moins de 63 kg à Tokyo."
+            }
+          ]
+        },
+        {
+          "id": "tableau",
+          "type": "tableau",
+          "titre": "Les exploits et leur date",
+          "source": "Faits du cours.",
+          "colonnes": [
+            "Champion",
+            "Discipline",
+            "Année"
+          ],
+          "lignes": [
+            [
+              "Jean-Claude Killy",
+              "Ski alpin",
+              1968
+            ],
+            [
+              "Zinédine Zidane",
+              "Football",
+              1998
+            ],
+            [
+              "Laure Manaudou",
+              "Natation",
+              2004
+            ],
+            [
+              "Clarisse Agbegnenou",
+              "Judo",
+              2021
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "devinettes",
+          "enonce": "Touche la ville des Jeux évoquée dans la devinette 1.",
+          "reponse": [
+            "g"
+          ],
+          "aide": "Cherche le nom de la ville des Alpes où se déroulaient ces Jeux.",
+          "explication": "Il s’agit de **Grenoble**, en 1968."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque devinette au bon champion.",
+          "paires": [
+            [
+              "Devinette 1 : trois épreuves de ski alpin",
+              "Jean-Claude Killy"
+            ],
+            [
+              "Devinette 2 : 400 m nage libre à 17 ans",
+              "Laure Manaudou"
+            ],
+            [
+              "Devinette 3 : deux buts de la tête en finale",
+              "Zinédine Zidane"
+            ],
+            [
+              "Devinette 4 : or en −63 kg à Tokyo",
+              "Clarisse Agbegnenou"
+            ]
+          ],
+          "aide": "Associe chaque indice à la discipline, puis au nom.",
+          "explication": "Killy, Manaudou, Zidane et Agbegnenou : chaque indice correspond à une seule discipline."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces champions selon la date de leur exploit, du plus ancien au plus récent.",
+          "items": [
+            "Jean-Claude Killy",
+            "Zinédine Zidane",
+            "Laure Manaudou",
+            "Clarisse Agbegnenou"
+          ],
+          "aide": "La colonne « Année » du tableau donne tout.",
+          "explication": "Killy (1968), Zidane (1998), Manaudou (2004), Agbegnenou (2021)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent l’exploit de Killy de celui d’Agbegnenou ?",
+          "unite": "ans",
+          "reponse": 53,
+          "aide": "Soustrais 1968 à 2021.",
+          "explication": "2021 − 1968 = **53 ans**."
+        }
+      ]
+    }
+  ]
+}

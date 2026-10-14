@@ -1,0 +1,191 @@
+{
+  "titre": "Tennis, badminton",
+  "titreSurligne": "badminton",
+  "accroche": "On gagne avec deux unités d’écart.",
+  "bonus": "**15-30-40** · set à **6** jeux · badminton **21** points",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/sport/tennis-et-badminton-jeu-set-tie-break.webp",
+    "prompt": "a glossy tennis racket with a yellow ball and a white shuttlecock, golden sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Deux points d’écart,\ntoujours !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Gagner au tennis",
+          "entetes": [
+            "Étape",
+            "Règle"
+          ],
+          "lignes": [
+            [
+              "Un **jeu**",
+              "points **15, 30, 40**, puis jeu"
+            ],
+            [
+              "**40 partout**",
+              "égalité : **2 points** d’écart"
+            ],
+            [
+              "Un **set**",
+              "**6 jeux**, 2 d’écart"
+            ],
+            [
+              "À **6-6**",
+              "**tie-break**"
+            ],
+            [
+              "Un **match**",
+              "**2 sets** gagnants"
+            ]
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Le badminton",
+          "entetes": [
+            "Règle",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Un set",
+              "**21** points, 2 d’écart"
+            ],
+            [
+              "Plafond",
+              "**30** points"
+            ],
+            [
+              "Match",
+              "**2 sets** gagnants"
+            ],
+            [
+              "Service",
+              "par **en dessous**"
+            ],
+            [
+              "Le volant",
+              "environ **5 g**"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le service au tennis",
+          "etapes": [
+            {
+              "titre": "1<sup>re</sup> balle",
+              "texte": "si elle est faute, on a une seconde chance"
+            },
+            {
+              "titre": "2<sup>e</sup> balle",
+              "texte": "si elle est faute aussi : **double faute**"
+            },
+            {
+              "titre": "Let",
+              "texte": "le filet touche, la balle tombe bon : on **rejoue**"
+            },
+            {
+              "titre": "Tie-break",
+              "texte": "premier à **7** points, avec **2** d’écart"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 4,
+          "titre": "Les mots",
+          "items": [
+            {
+              "terme": "Égalité",
+              "definition": "**40 partout** : il faut gagner deux points de suite"
+            },
+            {
+              "terme": "Avantage",
+              "definition": "le point **après** l’égalité"
+            },
+            {
+              "terme": "Tie-break",
+              "definition": "le jeu décisif quand on est à **6 jeux partout**"
+            }
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple",
+          "donnees": "Score affiché : 6-4, 3-6, 7-6.",
+          "calcul": "6-4 ✓ · 3-6 ✗ · 7-6 ✓",
+          "aparte": "3 sets joués",
+          "resultat": "[[2 sets à 1 : gagné]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "Roland-Garros",
+          "colonnes": 1,
+          "cartes": [
+            {
+              "titre": "Terre battue",
+              "texte": "Un tournoi de **Paris**, stade construit en **1928**."
+            },
+            {
+              "titre": "Rafael Nadal",
+              "texte": "Le recordman : **14** victoires."
+            },
+            {
+              "titre": "Le smash",
+              "texte": "Au badminton, plus de **400 km/h** mesurés en match."
+            },
+            {
+              "titre": "Le volant",
+              "texte": "Il ne pèse que **5 g** environ."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Compter **10, 20, 30** : c’est 15, 30, 40.",
+            "Gagner un set à **6-5** : il faut 2 jeux d’écart.",
+            "Oublier que **6-6** déclenche un tie-break.",
+            "Croire qu’un **let** est une faute : on rejoue.",
+            "Mélanger **21 points** (badminton) et **6 jeux** (tennis)."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quels sont les points d’un jeu au tennis&nbsp;?",
+            "Que joue-t-on à 6 jeux partout&nbsp;?",
+            "À combien de points se gagne un set de badminton&nbsp;?"
+          ],
+          "reponses": "1) 15, 30, 40 · 2) un tie-break · 3) 21 points, avec 2 d’écart"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2072 @@
+{
+  "niveau": "Tle",
+  "matiere": "sport",
+  "exercices": [
+    {
+      "chapitre": "eb6d3920-c666-56aa-8d95-3c40ddf8b34f",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La saison d’Anaïs",
+      "competence": "lire-tableau",
+      "situation": "Anaïs, 17 ans, nage en club et vise les championnats de France. Son entraîneur a découpé sa saison en quatre périodes et lui a remis ce tableau. Lis-le ligne par ligne.",
+      "documents": [
+        {
+          "id": "saison",
+          "type": "tableau",
+          "titre": "La saison d’Anaïs, période par période",
+          "source": "Programme écrit pour l’exercice.",
+          "colonnes": ["Période", "Durée", "Volume par semaine", "Intensité"],
+          "lignes": [
+            ["Préparation générale", "10 semaines", "45 km", "faible à moyenne"],
+            ["Préparation spécifique", "10 semaines", "38 km", "moyenne à élevée"],
+            ["Compétition", "8 semaines", "30 km", "élevée"],
+            ["Transition", "4 semaines", "10 km", "très faible"]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "saison",
+          "enonce": "Touche la case qui donne la **durée** de la préparation spécifique.",
+          "reponse": ["r1c1"],
+          "aide": "Repère la ligne « Préparation spécifique », puis la colonne « Durée ».",
+          "explication": "La préparation spécifique dure **10 semaines** : le travail se rapproche du sport pratiqué et l’intensité monte."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de semaines dure la saison d’Anaïs en tout ?",
+          "reponse": 32,
+          "unite": "semaines",
+          "aide": "Additionne les durées des quatre périodes.",
+          "explication": "10 + 10 + 8 + 4 = **32 semaines**. C’est le macrocycle : la saison entière, dessinée autour de la compétition."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la période de transition affiche-t-elle un volume de seulement 10 km et une intensité très faible ?",
+          "options": [
+            "Pour souffler et se refaire une santé après la saison avant de repartir",
+            "Parce qu’Anaïs ne sait plus nager",
+            "Pour préparer son pic de forme de la semaine suivante",
+            "Parce que le club n’a plus de piscine disponible"
+          ],
+          "reponse": 0,
+          "aide": "Regarde où se place la transition : après la compétition, avant la nouvelle saison.",
+          "explication": "La transition est un **repos actif** : on récupère du corps et de la tête avant de reconstruire. Sans elle, la saison suivante démarre sur de la fatigue."
+        }
+      ]
+    },
+    {
+      "chapitre": "eb6d3920-c666-56aa-8d95-3c40ddf8b34f",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Trois semaines dures, une légère",
+      "competence": "lire-graphique",
+      "situation": "Tom prépare un marathon. Son entraîneur applique la règle « trois semaines dures pour une semaine légère ». Voici ses heures d’entraînement, semaine après semaine, sur trois mésocycles.",
+      "documents": [
+        {
+          "id": "charge",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Heures d’entraînement par semaine",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "categories": ["S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S10", "S11", "S12"],
+          "series": [{ "nom": "Heures par semaine", "valeurs": [6, 7, 8, 4, 7, 8, 9, 5, 8, 9, 10, 5], "teinte": "violet" }],
+          "axeY": { "titre": "Heures", "min": 0, "max": 12, "pas": 2 },
+          "axeX": { "titre": "Semaine" },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "charge",
+          "enonce": "Touche les **trois semaines de décharge** du plan.",
+          "reponse": ["k3", "k7", "k11"],
+          "multiple": true,
+          "aide": "Une décharge est une semaine nettement plus légère que celles qui l’entourent : cherche les creux.",
+          "explication": "Les semaines **S4, S8 et S12** sont les décharges : 4, 5 et 5 heures. Elles laissent le corps transformer la fatigue en progrès."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’heures Tom s’entraîne-t-il pendant le **premier mésocycle** (S1 à S4) ?",
+          "reponse": 25,
+          "unite": "h",
+          "aide": "Additionne les quatre premières barres : 6, 7, 8 et la dernière.",
+          "explication": "6 + 7 + 8 + 4 = **25 heures**. Le mésocycle dure quatre semaines, dont trois dures et une légère."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de pour cent le volume baisse-t-il entre S3 et S4 ?",
+          "reponse": 50,
+          "unite": "%",
+          "aide": "Calcule la baisse (S3 − S4), puis rapporte-la à S3.",
+          "explication": "De 8 h à 4 h, c’est une baisse de 4 h sur 8 h : **50 %**. Une vraie décharge est franche, pas une petite pause."
+        },
+        {
+          "type": "choix",
+          "enonce": "Tom saute la décharge de S8 « pour gagner du temps » et s’entraîne 9 heures. Que risque-t-il ?",
+          "options": [
+            "D’empiler de la fatigue sans la transformer en progrès",
+            "De progresser deux fois plus vite",
+            "De perdre toute sa condition physique en une semaine",
+            "Rien : la décharge n’a aucun effet"
+          ],
+          "reponse": 0,
+          "aide": "Pense à ce que fait le corps pendant une semaine légère : il encaisse ou il se reconstruit ?",
+          "explication": "Le corps progresse quand il encaisse une charge **puis récupère**. Sans décharge, la fatigue s’accumule : c’est le chemin vers le surentraînement."
+        }
+      ]
+    },
+    {
+      "chapitre": "eb6d3920-c666-56aa-8d95-3c40ddf8b34f",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Deux affûtages, un seul bon",
+      "competence": "raisonner",
+      "situation": "Chloé et Mehdi, deux nageurs du même club, préparent les championnats de France. Leur entraîneur a gardé la règle de l’affûtage : réduire le volume de 40 à 60 % en gardant l’intensité. Un seul des deux plans la respecte.",
+      "documents": [
+        {
+          "id": "plan-chloe",
+          "type": "tableau",
+          "titre": "Plan de Chloé",
+          "source": "Programmes écrits pour l’exercice.",
+          "colonnes": ["Semaine", "Volume", "Intensité des séries rapides"],
+          "lignes": [
+            ["Avant l’affûtage", "60 km", "100 % de l’allure course"],
+            ["Semaine −3", "42 km", "100 % de l’allure course"],
+            ["Semaine −2", "30 km", "100 % de l’allure course"],
+            ["Semaine −1", "24 km", "100 % de l’allure course"]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "plan-mehdi",
+          "type": "tableau",
+          "titre": "Plan de Mehdi",
+          "source": "Programmes écrits pour l’exercice.",
+          "colonnes": ["Semaine", "Volume", "Intensité des séries rapides"],
+          "lignes": [
+            ["Avant l’affûtage", "60 km", "100 % de l’allure course"],
+            ["Semaine −3", "30 km", "80 % de l’allure course"],
+            ["Semaine −2", "15 km", "60 % de l’allure course"],
+            ["Semaine −1", "6 km", "40 % de l’allure course"]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "De combien de pour cent le volume de **Chloé** baisse-t-il entre « avant l’affûtage » et la semaine −1 ?",
+          "reponse": 60,
+          "unite": "%",
+          "aide": "La baisse est 60 − 24 ; rapporte-la au volume de départ, 60 km.",
+          "explication": "60 − 24 = 36 km de moins, soit 36 sur 60 = **60 %**. C’est le haut de la fourchette de 40 à 60 %."
+        },
+        {
+          "type": "zone",
+          "document": "plan-mehdi",
+          "enonce": "Touche, dans le plan de Mehdi, la case qui montre l’**intensité la plus basse**.",
+          "reponse": ["r3c2"],
+          "aide": "Parcours la dernière colonne : l’intensité diminue à chaque ligne.",
+          "explication": "À la semaine −1, Mehdi ne nage plus qu’à **40 %** de l’allure course. Il a tout baissé : volume ET intensité."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel plan respecte la règle de l’affûtage, et pourquoi ?",
+          "options": [
+            "Celui de Chloé : le volume baisse mais l’intensité reste à 100 %",
+            "Celui de Mehdi : plus on se repose, meilleur on est",
+            "Les deux : seul le volume compte",
+            "Aucun : un affûtage ne peut pas durer trois semaines"
+          ],
+          "reponse": 0,
+          "aide": "La règle a deux volets. Vérifie-les un par un dans chaque tableau.",
+          "explication": "Chloé baisse le **volume** et garde l’**intensité** : son corps efface la fatigue mais garde les gestes rapides. Mehdi perd sa fraîcheur de vitesse en baissant tout."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la règle de l’affûtage.",
+          "texte": "On ___ le volume d’environ 40 à 60 % mais on garde l’___.",
+          "reponses": [["réduit", "diminue", "baisse"], ["intensité"]],
+          "banque": ["réduit", "augmente", "intensité", "durée", "repos"],
+          "aide": "Reprends ce que fait Chloé : que devient le volume ? et la vitesse des séries ?",
+          "explication": "On **réduit** le volume et on garde l’**intensité**. Baisser tout, c’est se désentraîner : le jour J, les jambes sont fraîches mais lentes."
+        }
+      ]
+    },
+    {
+      "chapitre": "c8ffe450-41cc-5f3c-860d-ee330d92b067",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La fiche de Sofiane",
+      "competence": "lire-tableau",
+      "situation": "Sofiane, 17 ans, court le 5 000 m. Son entraîneur veut régler ses allures avec la formule de Karvonen. Il a noté deux mesures sur sa fiche.",
+      "documents": [
+        {
+          "id": "fiche-sofiane",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "FICHE DE SOFIANE",
+          "sousTitre": "Mesures de la saison — chiffres imaginés pour l’exercice",
+          "emoji": "🫀",
+          "lignes": [
+            { "texte": "FC de repos (au réveil) : 55 battements par minute", "id": "repos" },
+            { "texte": "FC max (test de terrain) : 195 battements par minute", "id": "max" },
+            { "texte": "Test de Cooper (12 min) : 3 100 m", "id": "cooper" }
+          ],
+          "pied": "Formule : FC cible = FC repos + % × (FC max − FC repos)",
+          "teinte": "violet"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "fiche-sofiane",
+          "enonce": "Touche la ligne qui donne la **FC de repos** de Sofiane.",
+          "reponse": ["repos"],
+          "aide": "La FC de repos se mesure au calme, au réveil.",
+          "explication": "La FC de repos de Sofiane est de **55 battements par minute**, relevée au réveil. Elle baisse avec l’entraînement."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la **FC de réserve** de Sofiane (FC max − FC de repos).",
+          "reponse": 140,
+          "unite": "bpm",
+          "aide": "Soustrais la FC de repos à la FC max.",
+          "explication": "195 − 55 = **140 bpm**. C’est la marge dont dispose son cœur entre le calme et l’effort maximal."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est sa **FC cible** pour une intensité de 70 % ? Utilise la formule du pied de la fiche.",
+          "reponse": 153,
+          "unite": "bpm",
+          "aide": "55 + 0,7 × 140 : commence par la multiplication.",
+          "explication": "0,7 × 140 = 98, puis 55 + 98 = **153 bpm**. Sans la FC de repos, on se tromperait de plusieurs battements."
+        }
+      ]
+    },
+    {
+      "chapitre": "c8ffe450-41cc-5f3c-860d-ee330d92b067",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Une séance de fractionné",
+      "competence": "lire-graphique",
+      "situation": "Lina, handballeuse de 17 ans, fait une séance de fractionné : des efforts courts suivis de récupérations. Sa montre a enregistré sa fréquence cardiaque. Sa FC max est de 190 bpm.",
+      "documents": [
+        {
+          "id": "fc",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Fréquence cardiaque de Lina pendant la séance",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "categories": ["0", "5", "10", "15", "20", "25", "30"],
+          "series": [{ "nom": "FC (bpm)", "valeurs": [95, 140, 175, 120, 178, 125, 100], "teinte": "corail" }],
+          "axeY": { "titre": "Battements par minute", "min": 80, "max": 200, "pas": 20 },
+          "axeX": { "titre": "Minutes" },
+          "valeurs": false
+        },
+        {
+          "id": "zones",
+          "type": "tableau",
+          "titre": "Les zones d’intensité du carnet",
+          "source": "Repères écrits pour l’exercice, en pourcentage de la FC max.",
+          "colonnes": ["Zone", "Pourcentage de la FC max", "Effort"],
+          "lignes": [
+            ["1", "moins de 60 %", "très facile, récupération"],
+            ["2", "60 % à 70 %", "facile, endurance"],
+            ["3", "70 % à 80 %", "soutenu"],
+            ["4", "80 % à 90 %", "dur"],
+            ["5", "plus de 90 %", "maximal, quelques minutes au plus"]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "fc",
+          "enonce": "Touche la **minute** où la FC de Lina est la plus haute.",
+          "reponse": ["k4"],
+          "aide": "Compare les deux sommets de la courbe : lequel monte un peu plus haut ?",
+          "explication": "À la minute **20**, Lina atteint 178 bpm : c’est son maximum de la séance, un peu au-dessus des 175 bpm de la minute 10."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À quel pourcentage de sa FC max Lina est-elle à son sommet (178 bpm) ? Arrondis à l’unité.",
+          "reponse": 94,
+          "unite": "%",
+          "aide": "Divise 178 par 190, puis multiplie par 100.",
+          "explication": "178 ÷ 190 ≈ 0,937, soit **94 %** de la FC max : c’est la zone 5, celle des efforts maximaux de courte durée."
+        },
+        {
+          "type": "choix",
+          "enonce": "À la minute 5, Lina est à 140 bpm. Dans quelle zone se trouve-t-elle ?",
+          "options": ["Zone 1", "Zone 2", "Zone 3", "Zone 4"],
+          "reponse": 2,
+          "ordreFixe": true,
+          "aide": "Calcule 140 ÷ 190, puis cherche la ligne du tableau qui contient ce pourcentage.",
+          "explication": "140 ÷ 190 ≈ 74 % : c’est la **zone 3**, entre 70 % et 80 % de la FC max, un effort soutenu."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Entre la minute 10 et la minute 15, de combien de battements par minute la FC de Lina **baisse-t-elle** ?",
+          "reponse": 55,
+          "unite": "bpm",
+          "aide": "Lis la FC à ces deux minutes sur la courbe, puis soustrais.",
+          "explication": "175 − 120 = **55 bpm** perdus en cinq minutes : une bonne récupération entre deux efforts est le signe d’un cœur en forme."
+        }
+      ]
+    },
+    {
+      "chapitre": "c8ffe450-41cc-5f3c-860d-ee330d92b067",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une semaine de carnet commentée",
+      "competence": "analyser-document",
+      "situation": "Maëlys, 17 ans, tient son carnet d’entraînement. Elle note la durée de chaque séance et son ressenti sur l’échelle de Borg (RPE, de 1 à 10). Son préparateur compare ensuite cette semaine aux précédentes.",
+      "documents": [
+        {
+          "id": "carnet",
+          "type": "tableau",
+          "titre": "Le carnet de Maëlys, semaine 4",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "colonnes": ["Jour", "Séance", "Durée (min)", "RPE"],
+          "lignes": [
+            ["Lundi", "Footing", 60, 4],
+            ["Mardi", "Fractionné", 50, 8],
+            ["Jeudi", "Renforcement", 45, 6],
+            ["Samedi", "Sortie longue", 90, 5],
+            ["Dimanche", "Repos", "—", "—"]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "historique",
+          "type": "tableau",
+          "titre": "Les charges des semaines précédentes",
+          "source": "Repère du préparateur, écrit pour l’exercice : au-delà de 1,3 fois la moyenne des trois semaines précédentes, la hausse est trop brutale.",
+          "colonnes": ["Semaine", "Charge (unités)"],
+          "lignes": [
+            ["Semaine 1", 900],
+            ["Semaine 2", 1000],
+            ["Semaine 3", 1100]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carnet",
+          "enonce": "Touche la **séance** dont la charge (RPE × durée) est la plus élevée.",
+          "reponse": ["r3c1"],
+          "aide": "Calcule la charge de chaque séance. Attention : la plus longue n’est pas forcément la plus lourde.",
+          "explication": "Footing 240, fractionné 400, renforcement 270, sortie longue 5 × 90 = **450** : la sortie longue est la séance la plus lourde de la semaine."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule la **charge totale** de la semaine 4 (somme des RPE × durée).",
+          "reponse": 1360,
+          "unite": "unités",
+          "aide": "4 × 60 ; 8 × 50 ; 6 × 45 ; 5 × 90. Additionne ensuite les quatre résultats.",
+          "explication": "240 + 400 + 270 + 450 = **1 360 unités**. Le dimanche de repos ne compte pas : charge nulle."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Calcule le **ratio** entre la charge de la semaine 4 et la moyenne des trois semaines précédentes.",
+          "reponse": 1.36,
+          "tolerance": 0.01,
+          "aide": "La moyenne des semaines 1 à 3 est (900 + 1 000 + 1 100) ÷ 3. Puis divise 1 360 par cette moyenne.",
+          "explication": "La moyenne vaut 1 000, donc 1 360 ÷ 1 000 = **1,36**. C’est le ratio aigu/chronique : la semaine en cours rapportée aux semaines habituelles."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que doit conclure le préparateur, et que propose-t-il ?",
+          "options": [
+            "La hausse dépasse 1,3 : il vaut mieux alléger la semaine suivante pour éviter la blessure",
+            "Tout va bien : plus la charge monte, plus on progresse",
+            "La séance de fractionné est inutile et doit disparaître",
+            "Maëlys doit supprimer son jour de repos"
+          ],
+          "reponse": 0,
+          "aide": "Compare ton ratio au repère de 1,3 donné sous le deuxième tableau.",
+          "explication": "Avec **1,36**, la charge a grimpé trop vite : c’est le profil de risque de blessure. Mesurer ne suffit pas, il faut **interpréter** : ici, alléger."
+        }
+      ]
+    },
+    {
+      "chapitre": "58518308-9b83-5a9a-9ea1-7dd3909ab86b",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La courbe du stress",
+      "competence": "lire-graphique",
+      "situation": "Un psychologue du sport présente aux lycéens la courbe de Yerkes-Dodson. Elle relie le niveau d’activation (stress, excitation) à la qualité de la performance.",
+      "documents": [
+        {
+          "id": "courbe",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Performance selon le niveau d’activation",
+          "source": "Courbe schématique, chiffres imaginés pour l’exercice.",
+          "categories": ["1", "2", "3", "4", "5", "6"],
+          "series": [{ "nom": "Performance (sur 100)", "valeurs": [25, 55, 85, 95, 70, 30], "teinte": "violet" }],
+          "axeY": { "titre": "Performance (sur 100)", "min": 0, "max": 100, "pas": 20 },
+          "axeX": { "titre": "Niveau d’activation (1 = très bas, 6 = très haut)" },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "courbe",
+          "enonce": "Touche le **niveau d’activation** où la performance est la meilleure.",
+          "reponse": ["k3"],
+          "aide": "Cherche le sommet de la courbe.",
+          "explication": "Le sommet est au niveau **4** (95 sur 100) : c’est l’activation optimale, ni trop basse ni trop haute."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la performance quand l’activation est au niveau 6 ?",
+          "reponse": 30,
+          "aide": "Lis la valeur de la courbe tout à droite.",
+          "explication": "Au niveau 6, la performance tombe à **30 sur 100** : trop de stress crispe les gestes et fait commettre des erreurs."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre la forme de cette courbe, dite « en U inversé » ?",
+          "options": [
+            "La performance est meilleure à un niveau d’activation intermédiaire, et baisse s’il est trop bas ou trop haut",
+            "Plus on est stressé, mieux on performe",
+            "Le stress n’a aucun effet sur la performance",
+            "Il faut supprimer complètement le stress"
+          ],
+          "reponse": 0,
+          "aide": "Compare les deux extrémités de la courbe avec son sommet.",
+          "explication": "Le stress n’est pas l’ennemi : il faut trouver son niveau d’activation **optimal**. Trop bas, on est mou ; trop haut, on se crispe."
+        }
+      ]
+    },
+    {
+      "chapitre": "58518308-9b83-5a9a-9ea1-7dd3909ab86b",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Avant le service de Lola",
+      "competence": "analyser-document",
+      "situation": "Lola, 17 ans, est joueuse de volley. Elle perdait ses moyens sur le service quand le score était serré. Elle en parle avec son entraîneur dans une conversation écrite pour l’exercice.",
+      "documents": [
+        {
+          "id": "echange",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Conversation avec l’entraîneur",
+          "source": "Dialogue écrit pour l’exercice.",
+          "participants": [
+            { "nom": "Entraîneur", "emoji": "🧑‍🏫", "cote": "gauche" },
+            { "nom": "Lola", "emoji": "🏐", "cote": "droite" }
+          ],
+          "repliques": [
+            { "qui": "Entraîneur", "texte": "Avant ton service, qu’est-ce que tu fais maintenant ?" },
+            { "qui": "Lola", "texte": "Je [[geste|rebondis]] trois fois la balle, je [[geste|respire]] lentement, puis je [[geste|regarde]] ma cible. Toujours dans cet ordre." },
+            { "qui": "Entraîneur", "texte": "Et dans ta tête ?" },
+            { "qui": "Lola", "texte": "Avant, je me disais « Tout le monde me regarde, je vais rater ». Maintenant je me dis « Une action à la fois »." },
+            { "qui": "Entraîneur", "texte": "Bien. Dans le vestiaire, fais cinq minutes de cohérence cardiaque : inspire cinq secondes, expire cinq secondes." }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "echange",
+          "enonce": "Touche les trois mots qui désignent les **gestes de la routine** de Lola.",
+          "reponse": ["geste"],
+          "aide": "Cherche les verbes que Lola enchaîne toujours dans le même ordre avant de servir.",
+          "explication": "Lola **rebondit**, **respire**, **regarde** : trois gestes répétés à l’identique. La routine ancre l’attention et empêche les pensées de vagabonder."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces phrases de dialogue interne : aident-elles ou nuisent-elles ?",
+          "categories": ["Aide à rester concentré", "Nuit à la performance"],
+          "items": [
+            ["Une action à la fois", 0],
+            ["Je vais rater", 1],
+            ["Regarde ta cible", 0],
+            ["Tout le monde me regarde", 1],
+            ["Respire, puis sers", 0],
+            ["Si je perds ce point, c’est fini", 1]
+          ],
+          "aide": "Une phrase aide quand elle ramène à l’action présente. Elle nuit quand elle annonce l’échec ou grossit l’enjeu.",
+          "explication": "Le dialogue interne compte. « Une action à la fois » ramène au geste ; « Je vais rater » installe l’échec."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Cinq minutes de cohérence cardiaque, à six respirations par minute : combien de respirations complètes Lola fait-elle ?",
+          "reponse": 30,
+          "aide": "Une respiration complète = une inspiration et une expiration de cinq secondes chacune. Combien en une minute ?",
+          "explication": "5 s + 5 s = 10 s par respiration, soit 6 par minute. En 5 minutes : 6 × 5 = **30 respirations**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la routine d’avant-service aide-t-elle Lola sous pression ?",
+          "options": [
+            "Elle ancre son attention sur des gestes qu’elle maîtrise, au lieu de ses craintes",
+            "Elle fait gagner du temps au match",
+            "Elle trompe l’adversaire sur l’endroit du service",
+            "Elle supprime complètement le stress"
+          ],
+          "reponse": 0,
+          "aide": "Qu’est-ce qui occupe l’esprit de Lola pendant sa routine ?",
+          "explication": "La routine donne à l’attention un **point d’appui contrôlable**. Elle ne supprime pas le stress : elle empêche les pensées de s’emballer."
+        }
+      ]
+    },
+    {
+      "chapitre": "58518308-9b83-5a9a-9ea1-7dd3909ab86b",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Trois athlètes, une courbe",
+      "competence": "observer-schema",
+      "situation": "Avant une compétition, trois athlètes décrivent leurs sensations. Le psychologue du sport place chacun sur la courbe de Yerkes-Dodson (points A, B et C) pour comprendre ce qui se passe.",
+      "documents": [
+        {
+          "id": "yd",
+          "type": "schema",
+          "titre": "Performance et activation",
+          "source": "Schéma simplifié écrit pour l’exercice.",
+          "largeur": 320,
+          "hauteur": 230,
+          "elements": [
+            { "forme": "ligne", "de": [40, 190], "a": [300, 190], "fleche": "fin", "teinte": "encre" },
+            { "forme": "ligne", "de": [40, 190], "a": [40, 25], "fleche": "fin", "teinte": "encre" },
+            { "forme": "chemin", "d": "M 50 180 Q 170 -40 290 180", "teinte": "violet" },
+            { "forme": "cercle", "cx": 86, "cy": 124, "r": 13, "teinte": "jaune", "motif": "plein", "texte": "A", "id": "pt-a", "zone": true },
+            { "forme": "cercle", "cx": 170, "cy": 70, "r": 13, "teinte": "jaune", "motif": "plein", "texte": "B", "id": "pt-b", "zone": true },
+            { "forme": "cercle", "cx": 254, "cy": 124, "r": 13, "teinte": "jaune", "motif": "plein", "texte": "C", "id": "pt-c", "zone": true },
+            { "forme": "texte", "x": 170, "y": 218, "texte": "Niveau d’activation", "taille": "petit", "ancre": "milieu" },
+            { "forme": "texte", "x": 40, "y": 16, "texte": "Performance", "taille": "petit", "ancre": "milieu" }
+          ]
+        },
+        {
+          "id": "athletes",
+          "type": "tableau",
+          "titre": "Ce que ressentent les trois athlètes",
+          "source": "Situations imaginées pour l’exercice.",
+          "colonnes": ["Athlète", "Ce qu’il ressent juste avant le départ"],
+          "lignes": [
+            ["Hugo, sprinter", "Jambes molles, bâille, aucune envie de se battre"],
+            ["Inès, tir à l’arc", "Mains qui tremblent, pensées qui s’emballent, n’arrive plus à viser"],
+            ["Maya, judo", "Concentrée, pleine d’énergie, gestes précis"]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "yd",
+          "enonce": "Touche le point de la courbe qui correspond à **Hugo**.",
+          "reponse": ["pt-a"],
+          "aide": "Hugo manque d’activation. Où se trouvent les niveaux trop bas sur la courbe ?",
+          "explication": "Hugo est trop peu activé : il est au point **A**, à gauche. Mou, sans envie, il performera en dessous de son niveau."
+        },
+        {
+          "type": "zone",
+          "document": "yd",
+          "enonce": "Touche le point qui correspond à **Inès**.",
+          "reponse": ["pt-c"],
+          "aide": "Les tremblements et les pensées qui s’emballent signalent un excès d’activation.",
+          "explication": "Inès est trop activée : elle est au point **C**, à droite. Tension et gestes crispés font commettre des erreurs."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel conseil convient le mieux à Inès, juste avant son tir ?",
+          "options": [
+            "Respirer lentement (cohérence cardiaque) et se fixer une consigne simple",
+            "Se faire peur avec le pire scénario pour se motiver",
+            "Surveiller chaque détail de son geste en pensée",
+            "Courir pour s’exciter encore plus"
+          ],
+          "reponse": 0,
+          "aide": "Inès doit redescendre vers le sommet de la courbe. Quel outil agit directement sur le stress ?",
+          "explication": "La respiration est un levier direct sur le stress, et une consigne simple évite le « choke », quand on surveille son propre geste au lieu de lui faire confiance."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète l’idée centrale de la courbe de Yerkes-Dodson.",
+          "texte": "La performance est maximale à une activation ___, ni ___ de stress, ni trop.",
+          "reponses": [["optimale", "intermédiaire"], ["pas assez", "trop peu"]],
+          "banque": ["optimale", "maximale", "pas assez", "trop", "nulle"],
+          "aide": "Maya, au point B, est le modèle : ni molle, ni crispée.",
+          "explication": "Maya est au point B, au sommet : l’activation est **optimale**. Hugo n’a **pas assez** de stress, Inès en a trop."
+        }
+      ]
+    },
+    {
+      "chapitre": "3e6141f6-e362-5765-a122-b8532787e93a",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le carnet de Léo",
+      "competence": "lire-tableau",
+      "situation": "Léo, 17 ans, s’entraîne six fois par semaine. Depuis février, ses chronos stagnent. Il a noté dans son carnet trois chiffres chaque semaine.",
+      "documents": [
+        {
+          "id": "carnet-leo",
+          "type": "tableau",
+          "titre": "Le carnet de Léo",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "colonnes": ["Semaine", "FC de repos (bpm)", "Sommeil moyen", "RPE d’une séance type"],
+          "lignes": [
+            ["Semaine 1", 55, "8 h 30", 6],
+            ["Semaine 2", 58, "7 h 45", 7],
+            ["Semaine 3", 62, "7 h", 8],
+            ["Semaine 4", 65, "6 h", 9]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carnet-leo",
+          "enonce": "Touche la **FC de repos** de la semaine 4.",
+          "reponse": ["r3c1"],
+          "aide": "Cherche la ligne « Semaine 4 », puis la colonne de la FC de repos.",
+          "explication": "En semaine 4, la FC de repos de Léo est de **65 bpm**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de battements par minute la FC de repos de Léo a-t-elle augmenté entre la semaine 1 et la semaine 4 ?",
+          "reponse": 10,
+          "unite": "bpm",
+          "aide": "Soustrais la valeur de la semaine 1 à celle de la semaine 4.",
+          "explication": "65 − 55 = **10 bpm** de plus. Une FC de repos qui grimpe au réveil est un signe d’alerte."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que racontent ensemble ces trois colonnes ?",
+          "options": [
+            "Les signes d’un surentraînement qui s’installe : FC de repos en hausse, sommeil en baisse, effort ressenti plus dur",
+            "Une progression normale : Léo devient plus fort",
+            "Un excès de repos : Léo ne s’entraîne pas assez",
+            "Rien : trois chiffres ne prouvent jamais rien"
+          ],
+          "reponse": 0,
+          "aide": "Regarde le sens de variation de chaque colonne, de la semaine 1 à la semaine 4.",
+          "explication": "Plusieurs signes concordants : le carnet **lance l’alerte** avant que Léo ne sente la fatigue. Il faut alléger et en parler à un médecin ou à un entraîneur."
+        }
+      ]
+    },
+    {
+      "chapitre": "3e6141f6-e362-5765-a122-b8532787e93a",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Quand les chronos reculent",
+      "competence": "lire-graphique",
+      "situation": "Chaque mois, Noémie, 17 ans, passe le test de Cooper (la distance parcourue en 12 minutes). Elle s’entraîne six fois par semaine depuis septembre, sans jamais lever le pied.",
+      "documents": [
+        {
+          "id": "cooper",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Distance au test de Cooper, mois après mois",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "categories": ["Oct.", "Nov.", "Déc.", "Janv.", "Févr.", "Mars", "Avr."],
+          "series": [{ "nom": "Distance en 12 min", "valeurs": [2800, 2900, 3000, 3050, 3000, 2900, 2800], "teinte": "turquoise" }],
+          "axeY": { "titre": "Distance (m)", "min": 2600, "max": 3200, "pas": 100 },
+          "axeX": { "titre": "Mois" },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "cooper",
+          "enonce": "Touche le **mois** du meilleur résultat de Noémie.",
+          "reponse": ["k3"],
+          "aide": "Cherche le point le plus haut de la courbe.",
+          "explication": "Son meilleur test est en **janvier** : 3 050 m."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de mètres la distance a-t-elle diminué entre janvier et avril ?",
+          "reponse": 250,
+          "unite": "m",
+          "aide": "Lis les deux valeurs sur la courbe, puis soustrais.",
+          "explication": "3 050 − 2 800 = **250 m** perdus en trois mois, alors que l’entraînement n’a pas diminué."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque situation à l’état qui lui correspond.",
+          "paires": [
+            ["Courbatures après un gros match, disparues en une journée", "Fatigue normale"],
+            ["Jambes lourdes depuis cinq jours", "Surmenage"],
+            ["Chronos en baisse depuis deux mois malgré six séances par semaine", "Surentraînement"]
+          ],
+          "aide": "La durée de la fatigue décide de l’état : quelques heures, quelques jours ou des semaines.",
+          "explication": "**Quelques heures à un jour** : fatigue normale. **Quelques jours** : surmenage. **Des semaines, voire des mois** : surentraînement, comme la courbe de Noémie."
+        },
+        {
+          "type": "choix",
+          "enonce": "Noémie pense : « Ma courbe baisse, donc je n’en fais pas assez. » Que lui répondre ?",
+          "options": [
+            "Au contraire : une performance qui baisse malgré le travail est un signe d’alerte, il faut alléger",
+            "Elle a raison : il faut ajouter une séance",
+            "Ce n’est pas grave, la courbe remontera toute seule sans rien changer",
+            "Il faut arrêter de tenir le carnet"
+          ],
+          "reponse": 0,
+          "aide": "La baisse s’observe alors que la charge n’a pas bougé. Qu’est-ce qui manque dans son plan ?",
+          "explication": "On progresse **pendant la récupération**, pas pendant l’effort. Ajouter une séance aggraverait le déséquilibre ; c’est une décharge et un avis médical qu’il lui faut."
+        }
+      ]
+    },
+    {
+      "chapitre": "3e6141f6-e362-5765-a122-b8532787e93a",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le journal de Camille",
+      "competence": "analyser-texte",
+      "situation": "Camille, 17 ans, joue au volley et passe le bac en juin. Elle tient un journal et un carnet. À toi de croiser les deux pour comprendre ce qui lui arrive.",
+      "documents": [
+        {
+          "id": "journal",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "Le journal de Camille",
+          "auteur": "Texte écrit pour l’exercice",
+          "blocs": [
+            "Février. Je m’entraîne six fois par semaine depuis septembre, sans jamais lever le pied : je veux tout donner avant le bac.",
+            "Mars. Mes temps [[signe|reculent]] alors que je m’entraîne davantage. Je suis [[signe|irritable]] et j’ai enchaîné trois [[signe|rhumes]].",
+            "Avril. Je révise jusqu’à minuit, le téléphone sous l’oreiller. Je dors six heures par nuit."
+          ]
+        },
+        {
+          "id": "carnet-camille",
+          "type": "tableau",
+          "titre": "Le carnet de Camille",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "colonnes": ["Mois", "FC de repos (bpm)", "Sommeil moyen", "RPE d’une séance type"],
+          "lignes": [
+            ["Septembre", 52, "9 h", 6],
+            ["Décembre", 55, "8 h", 6],
+            ["Mars", 62, "6 h 30", 8],
+            ["Avril", 66, "6 h", 9]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "journal",
+          "enonce": "Touche les trois mots du journal qui désignent des **signes d’alerte**.",
+          "reponse": ["signe"],
+          "aide": "Cherche ce qui montre que son corps et sa tête ne suivent plus : performance, humeur, santé.",
+          "explication": "Des temps qui **reculent**, de l’**irritabilité**, des **rhumes** à répétition : trois signes classiques du surentraînement."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de battements par minute sa FC de repos a-t-elle augmenté entre septembre et avril ?",
+          "reponse": 14,
+          "unite": "bpm",
+          "aide": "Lis les deux valeurs dans le carnet et soustrais.",
+          "explication": "66 − 52 = **14 bpm**. Sa FC de repos a grimpé en même temps que son sommeil s’effondrait."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces éléments : causes du problème, ou signes d’alerte ?",
+          "categories": ["Cause", "Signe d’alerte"],
+          "items": [
+            ["Pas de semaine de décharge", 0],
+            ["Chronos qui reculent", 1],
+            ["Sommeil de six heures", 0],
+            ["Rhumes à répétition", 1],
+            ["Stress du bac qui s’ajoute au sport", 0],
+            ["FC de repos qui monte", 1]
+          ],
+          "aide": "Une cause explique pourquoi le déséquilibre arrive ; un signe est la conséquence qu’on observe.",
+          "explication": "Les **causes** : pas de décharge, peu de sommeil, stress scolaire. Les **signes** : performance en baisse, infections, FC de repos élevée."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle première mesure aura le plus d’effet pour Camille ?",
+          "options": [
+            "Alléger fortement sa charge et retrouver au moins 9 heures de sommeil",
+            "Prendre un bain froid après chaque séance",
+            "Ajouter une séance de récupération active par jour",
+            "Se faire masser une fois par semaine"
+          ],
+          "reponse": 0,
+          "aide": "Quel levier est « le plus puissant » selon le cours ?",
+          "explication": "Le **sommeil** est le premier outil de récupération, devant massages et bains froids (effet modeste). Avec une charge allégée, il traite les deux causes principales."
+        }
+      ]
+    },
+    {
+      "chapitre": "475d747d-a507-5860-ad09-00a4423612c4",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les repères de l’OMS",
+      "competence": "lire-tableau",
+      "situation": "Au CDI, un affichage rappelle les recommandations de l’Organisation mondiale de la santé. Tom, 16 ans, vient de noter qu’il bouge environ 35 minutes par jour.",
+      "documents": [
+        {
+          "id": "oms",
+          "type": "tableau",
+          "titre": "Les recommandations d’activité physique",
+          "source": "D’après les repères de l’OMS.",
+          "colonnes": ["Public", "Quantité recommandée", "Intensité"],
+          "lignes": [
+            ["Enfants et jeunes de 5 à 17 ans", "60 minutes par jour", "modérée à soutenue"],
+            ["Adultes", "150 à 300 minutes par semaine", "modérée"]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "oms",
+          "enonce": "Touche la case qui donne la quantité recommandée pour **Tom**, 16 ans.",
+          "reponse": ["r0c1"],
+          "aide": "Tom a entre 5 et 17 ans : quelle ligne du tableau le concerne ?",
+          "explication": "Pour les 5-17 ans, l’OMS recommande **60 minutes par jour**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de minutes d’activité par **semaine** cela représente-t-il pour un jeune ?",
+          "reponse": 420,
+          "unite": "min",
+          "aide": "60 minutes par jour, pendant sept jours.",
+          "explication": "60 × 7 = **420 minutes** par semaine, soit 7 heures."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de minutes par jour **manque-t-il** à Tom pour atteindre la recommandation ?",
+          "reponse": 25,
+          "unite": "min",
+          "aide": "Soustrais ce qu’il fait déjà de ce qui est recommandé.",
+          "explication": "60 − 35 = **25 minutes** par jour. Bouger un peu vaut mieux que ne pas bouger, mais bouger plus apporte davantage."
+        }
+      ]
+    },
+    {
+      "chapitre": "475d747d-a507-5860-ad09-00a4423612c4",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Une journée assise",
+      "competence": "lire-graphique",
+      "situation": "Nour, 16 ans, fait une heure de sport tous les jours. Elle se croit donc « active ». Elle a pourtant relevé l’emploi du temps de sa journée de 24 heures.",
+      "documents": [
+        {
+          "id": "journee",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Les 24 heures de Nour",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "categories": ["Sommeil", "Cours (assise)", "Écrans (assise)", "Trajets en bus (assise)", "Devoirs (assise)", "Repas, temps libre debout", "Sport", "Marche"],
+          "series": [{ "nom": "Heures", "valeurs": [9, 6, 3, 1, 1, 2, 1, 1], "teinte": "ambre" }],
+          "axeY": { "titre": "Heures", "min": 0, "max": 10, "pas": 2 },
+          "valeurs": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "journee",
+          "enonce": "Touche la barre du temps que Nour consacre au **sport**.",
+          "reponse": ["k6"],
+          "aide": "Cherche le libellé « Sport » dans la liste.",
+          "explication": "Nour fait **1 heure** de sport par jour : elle atteint tout juste le repère de 60 minutes."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’heures Nour passe-t-elle **assise, éveillée** (cours, écrans, trajets, devoirs) ?",
+          "reponse": 11,
+          "unite": "h",
+          "aide": "Additionne les quatre barres marquées « assise ».",
+          "explication": "6 + 3 + 1 + 1 = **11 heures** assise. C’est de la sédentarité, même si Nour fait du sport."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que peut-on dire de la situation de Nour ?",
+          "options": [
+            "Elle atteint le repère d’activité mais reste très sédentaire : les deux risques comptent",
+            "Elle est en parfaite santé : une heure de sport efface tout",
+            "Elle est inactive, puisqu’elle passe plus de temps assise que debout",
+            "Elle n’a aucun risque, la sédentarité n’existe pas à son âge"
+          ],
+          "reponse": 0,
+          "aide": "Distingue deux notions : atteindre l’activité recommandée, et passer son temps assis.",
+          "explication": "L’**inactivité** et la **sédentarité** sont deux problèmes distincts. Nour échappe à la première mais pas à la seconde."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la différence entre les deux notions.",
+          "texte": "La ___ désigne le temps passé assis ou allongé en étant éveillé ; l’___ physique, c’est ne pas atteindre les niveaux d’activité recommandés.",
+          "reponses": [["sédentarité"], ["inactivité"]],
+          "banque": ["sédentarité", "inactivité", "fatigue", "endurance"],
+          "aide": "Les deux mots se ressemblent : l’un parle du temps assis, l’autre du manque d’activité.",
+          "explication": "**Sédentarité** = temps assis ; **inactivité** = activité insuffisante. On peut faire une heure de sport et rester sédentaire."
+        }
+      ]
+    },
+    {
+      "chapitre": "475d747d-a507-5860-ad09-00a4423612c4",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une ordonnance pas comme les autres",
+      "competence": "se-reperer-temps",
+      "situation": "M. Garnier, 58 ans, est atteint d’un diabète de type 2. Son médecin ne lui prescrit pas seulement des médicaments : il lui prescrit du sport. Pour comprendre comment c’est possible, remonte le temps.",
+      "documents": [
+        {
+          "id": "frise-sante",
+          "type": "frise",
+          "titre": "Le sport au service de la santé",
+          "source": "Repères historiques.",
+          "debut": 2015,
+          "fin": 2025,
+          "pas": 1,
+          "evenements": [
+            { "id": "loi", "date": 2016, "nom": "Loi" },
+            { "id": "vigueur", "date": 2017, "nom": "Entrée en vigueur" },
+            { "id": "maisons", "date": 2019, "nom": "Maisons Sport-Santé" },
+            { "id": "anses", "date": 2020, "nom": "Rapport ANSES" },
+            { "id": "ecole", "date": 2022, "nom": "30 min à l’école" },
+            { "id": "cause", "date": 2024, "nom": "Grande cause" }
+          ]
+        },
+        {
+          "id": "ordonnance",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "ORDONNANCE",
+          "sousTitre": "Document imaginé pour l’exercice",
+          "emoji": "🩺",
+          "lignes": [
+            { "texte": "Patient : M. Garnier, 58 ans", "id": "patient" },
+            { "texte": "Maladie de longue durée : diabète de type 2", "id": "maladie" },
+            { "texte": "Prescription : activité physique adaptée", "id": "prescription" },
+            { "texte": "3 séances de 45 minutes par semaine, en Maison Sport-Santé", "id": "seances" }
+          ],
+          "pied": "Cabinet du Dr Lefèvre",
+          "teinte": "turquoise"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise-sante",
+          "enonce": "Touche l’événement de **2019**.",
+          "reponse": ["maisons"],
+          "aide": "Place-toi sur la graduation 2019 de la frise et regarde ce qui y est rattaché.",
+          "explication": "En 2019 sont créées les **Maisons Sport-Santé**, qui accueillent ceux qui veulent se remettre au sport avec un accompagnement."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Remets ces mesures dans l’ordre chronologique.",
+          "items": [
+            "La loi sur l’activité physique prescrite par le médecin",
+            "La création des Maisons Sport-Santé",
+            "Les 30 minutes d’activité quotidienne à l’école",
+            "L’activité physique grande cause nationale"
+          ],
+          "aide": "Sers-toi des dates de la frise : 2016, 2019, 2022, 2024.",
+          "explication": "Loi de **2016**, Maisons Sport-Santé en **2019**, 30 minutes à l’école en **2022**, grande cause nationale en **2024**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent la loi de 2016 de la déclaration « grande cause nationale » ?",
+          "reponse": 8,
+          "unite": "ans",
+          "aide": "Lis les deux dates sur la frise, puis soustrais.",
+          "explication": "2024 − 2016 = **8 ans**. Le sport santé a pris sa place progressivement dans les politiques publiques."
+        },
+        {
+          "type": "zone",
+          "document": "ordonnance",
+          "enonce": "Touche la ligne de l’ordonnance qui **justifie** que le médecin ait le droit de prescrire du sport à M. Garnier.",
+          "reponse": ["maladie"],
+          "aide": "La loi vise les personnes atteintes d’un certain type de maladie.",
+          "explication": "La loi permet de prescrire l’activité physique adaptée aux personnes atteintes d’une **maladie de longue durée**, comme le diabète de type 2."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que veut dire « activité physique **adaptée** » pour M. Garnier ?",
+          "options": [
+            "Une activité dosée selon son état de santé, encadrée par des professionnels, pour qu’il progresse sans danger",
+            "Une activité si légère qu’elle ne sert à rien",
+            "Une activité identique à celle d’un sportif de haut niveau",
+            "Une activité qu’il choisit seul, sans suivi"
+          ],
+          "reponse": 0,
+          "aide": "Relis les mots « séances » et « Maison Sport-Santé » dans l’ordonnance.",
+          "explication": "« Adaptée » ne veut pas dire « allégée pour rien » : la séance est **dosée** pour que la personne progresse sans se mettre en danger."
+        }
+      ]
+    },
+    {
+      "chapitre": "3a645063-6988-5233-bf5f-1c89d6ccd46d",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le match du dimanche",
+      "competence": "analyser-texte",
+      "situation": "Un sociologue explique pourquoi un match de rugby, pourtant très physique, ne finit pas en bagarre générale. Lis son raisonnement, écrit pour l’exercice.",
+      "documents": [
+        {
+          "id": "rugby",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Un jeu violent… mais encadré",
+          "auteur": "Texte écrit pour l’exercice",
+          "blocs": [
+            "Dimanche, les joueurs se plaquent de toutes leurs forces. Pourtant, personne ne se bat vraiment : un [[cadre|arbitre]] siffle chaque faute, et les [[cadre|règles]] interdisent les coups dangereux.",
+            "Pour le sociologue Norbert Elias, c’est un exemple du « processus de civilisation » : au fil des siècles, la violence a été peu à peu contrôlée, et le sport permet de s’affronter sans se blesser gravement."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "rugby",
+          "enonce": "Touche les deux mots qui montrent que la violence est **encadrée**.",
+          "reponse": ["cadre"],
+          "aide": "Qui fait respecter le jeu, et qu’est-ce qui dit ce qui est permis ?",
+          "explication": "L’**arbitre** et les **règles** encadrent la violence : on s’affronte, mais dans des limites."
+        },
+        {
+          "type": "texte",
+          "enonce": "Quel sociologue a décrit ce « processus de civilisation » ?",
+          "reponse": ["Elias", "Norbert Elias"],
+          "placeholder": "Son nom",
+          "aide": "Son nom est dans le second paragraphe.",
+          "explication": "C’est **Norbert Elias** : pour lui, le sport canalise la violence."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que veut dire « le sport canalise la violence » ?",
+          "options": [
+            "Il donne à la violence un cadre de règles où l’on s’affronte sans se blesser gravement",
+            "Il supprime toute forme de contact entre joueurs",
+            "Il rend la violence plus forte",
+            "Il interdit aux joueurs de se toucher"
+          ],
+          "reponse": 0,
+          "aide": "Pense à ce que font l’arbitre et les règles dans le texte.",
+          "explication": "Canaliser, c’est **guider** : le sport ne fait pas disparaître l’énergie violente, il l’enferme dans un jeu réglementé."
+        }
+      ]
+    },
+    {
+      "chapitre": "3a645063-6988-5233-bf5f-1c89d6ccd46d",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Qui joue à quoi ?",
+      "competence": "lire-tableau",
+      "situation": "Un lycée imaginaire a interrogé les licenciés de quatre sports sur la profession de leurs parents. Les résultats donnent envie de relire l’analyse de Pierre Bourdieu (1978).",
+      "documents": [
+        {
+          "id": "enquete",
+          "type": "tableau",
+          "titre": "Licenciés selon la profession des parents",
+          "source": "Enquête imaginée pour l’exercice.",
+          "colonnes": ["Sport", "Parents cadres (%)", "Parents ouvriers (%)"],
+          "lignes": [
+            ["Golf", 62, 8],
+            ["Tennis", 48, 14],
+            ["Football", 18, 36],
+            ["Boxe", 9, 44]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "enquete",
+          "enonce": "Touche la case du sport où la part de licenciés **de parents ouvriers** est la plus forte.",
+          "reponse": ["r3c2"],
+          "aide": "Parcours la dernière colonne et repère le plus grand nombre.",
+          "explication": "C’est la **boxe** : 44 % de licenciés ont des parents ouvriers."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Au tennis, de combien de points la part des enfants de cadres dépasse-t-elle celle des enfants d’ouvriers ?",
+          "reponse": 34,
+          "unite": "points",
+          "aide": "Soustrais la part des parents ouvriers à celle des parents cadres, sur la ligne Tennis.",
+          "explication": "48 − 14 = **34 points** d’écart : le tennis recrute nettement plus dans les milieux aisés."
+        },
+        {
+          "type": "categories",
+          "enonce": "Selon l’analyse de Bourdieu (1978), range ces sports : plutôt liés aux classes aisées, ou aux classes populaires ?",
+          "categories": ["Plutôt classes aisées", "Plutôt classes populaires"],
+          "items": [
+            ["Golf", 0],
+            ["Boxe", 1],
+            ["Tennis", 0],
+            ["Football", 1],
+            ["Équitation", 0]
+          ],
+          "aide": "Le tableau t’aide pour quatre sports. Pour l’équitation, pense au coût et aux lieux de pratique.",
+          "explication": "Golf, tennis, équitation sont plutôt liés aux classes aisées ; boxe et football aux classes populaires. C’est une grille de lecture **ancienne et discutée**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que peut-on conclure de ce tableau, avec prudence ?",
+          "options": [
+            "Le choix d’un sport est lié au milieu social (coût, lieux, codes), mais ce n’est pas une règle absolue",
+            "On ne peut pratiquer que le sport de son milieu",
+            "Le milieu social n’a aucun lien avec le sport",
+            "Les cadres sont meilleurs au tennis que les ouvriers"
+          ],
+          "reponse": 0,
+          "aide": "Une tendance n’est pas une loi. Écarte les réponses qui disent « toujours » ou « jamais ».",
+          "explication": "Le tableau montre une **tendance**, pas un destin : les pratiques ont évolué depuis 1978, mais la grille de Bourdieu aide à comprendre."
+        }
+      ]
+    },
+    {
+      "chapitre": "3a645063-6988-5233-bf5f-1c89d6ccd46d",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le stade, miroir de la société",
+      "competence": "argumenter",
+      "situation": "Anaïs et Karim débattent. Karim pense que le sport est « un monde à part ». Anaïs lui répond avec des repères de l’histoire du sport.",
+      "documents": [
+        {
+          "id": "frise-stade",
+          "type": "frise",
+          "titre": "Quelques dates du sport et de la société",
+          "source": "Repères historiques.",
+          "debut": 1945,
+          "fin": 2020,
+          "pas": 5,
+          "evenements": [
+            { "id": "stoke", "date": 1948, "nom": "Stoke Mandeville" },
+            { "id": "rome", "date": 1960, "nom": "Jeux de Rome" },
+            { "id": "heysel", "date": 1985, "nom": "Heysel" },
+            { "id": "hillsborough", "date": 1989, "nom": "Hillsborough" },
+            { "id": "etoile-1", "date": 1998, "nom": "Première étoile" },
+            { "id": "etoile-2", "date": 2018, "nom": "Deuxième étoile" }
+          ]
+        },
+        {
+          "id": "debat",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Le débat",
+          "source": "Dialogue écrit pour l’exercice.",
+          "participants": [
+            { "nom": "Karim", "emoji": "👦", "cote": "gauche" },
+            { "nom": "Anaïs", "emoji": "👧", "cote": "droite" }
+          ],
+          "repliques": [
+            { "qui": "Karim", "texte": "Pour moi, le sport est un monde à part. Ça n’a rien à voir avec la société." },
+            { "qui": "Anaïs", "texte": "Alors pourquoi chante-t-on l’[[ex|hymne]] avant chaque match ? Pourquoi les Jeux [[ex|paralympiques]] existent ? Pourquoi [[ex|Heysel]] a changé la sécurité des stades ?" }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "debat",
+          "enonce": "Touche les trois **exemples** qu’Anaïs oppose à Karim.",
+          "reponse": ["ex"],
+          "aide": "Cherche les mots qui renvoient à un symbole, à une institution, à un drame.",
+          "explication": "L’**hymne**, les Jeux **paralympiques** et **Heysel** : identité, inclusion, violence des supporters. Trois façons dont la société entre dans le stade."
+        },
+        {
+          "type": "zone",
+          "document": "frise-stade",
+          "enonce": "Touche l’événement, né en **1948** pour des blessés de guerre, à l’origine des Jeux paralympiques.",
+          "reponse": ["stoke"],
+          "aide": "Place-toi sur 1948 : c’est le premier événement de la frise.",
+          "explication": "La compétition de **Stoke Mandeville** (1948) est à l’origine du mouvement paralympique ; la première édition officielle a lieu à Rome en 1960."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent le drame du Heysel de celui de Hillsborough ?",
+          "reponse": 4,
+          "unite": "ans",
+          "aide": "Lis les dates sur la frise.",
+          "explication": "1989 − 1985 = **4 ans**. Ces deux drames ont conduit à renforcer la sécurité dans les stades."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque repère de la frise à l’idée qu’il illustre.",
+          "paires": [
+            ["Stoke Mandeville (1948)", "L’inclusion par le sport"],
+            ["Heysel (1985)", "La violence de supporters et la sécurité"],
+            ["Les deux étoiles (1998, 2018)", "L’identité et l’appartenance à une nation"]
+          ],
+          "aide": "Pense à ce que chacun montre de la société : qui joue, qui se bat, qui se rassemble.",
+          "explication": "Le sport est un **miroir** : il montre l’inclusion, les tensions et les fiertés collectives. Karim a tort de le croire coupé de la société."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle idée du cours Anaïs défend-elle ?",
+          "options": [
+            "Le sport est un miroir de la société, avec ses fiertés, ses inégalités et ses tensions",
+            "Le sport est uniquement un jeu sans conséquence",
+            "Le sport n’a qu’une dimension économique",
+            "Le sport doit être interdit aux supporters"
+          ],
+          "reponse": 0,
+          "aide": "Reprends la dernière réplique d’Anaïs : que montrent ses trois exemples ?",
+          "explication": "Le sport est une **institution**, une **économie** et un **discours** : il reflète la société qui le pratique."
+        }
+      ]
+    },
+    {
+      "chapitre": "0c7e3352-9d7e-5927-9560-c4de48d50b67",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Paris 2024 en bref",
+      "competence": "lire-tableau",
+      "situation": "Pour son exposé sur l’olympisme, Yanis a recopié les chiffres clés de Paris 2024 et les trois valeurs de la Charte olympique.",
+      "documents": [
+        {
+          "id": "chiffres",
+          "type": "tableau",
+          "titre": "Paris 2024 en chiffres",
+          "source": "Chiffres arrondis.",
+          "colonnes": ["Donnée", "Valeur"],
+          "lignes": [
+            ["Sites existants ou temporaires", "environ 95 %"],
+            ["Athlètes", "environ 10 500"],
+            ["Places pour les femmes et pour les hommes", "autant des unes que des autres (parité)"],
+            ["Billetterie paralympique", "un record de ventes"]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "valeurs",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "LES TROIS VALEURS OLYMPIQUES",
+          "emoji": "🏅",
+          "lignes": [
+            { "texte": "Excellence : donner le meilleur de soi, pas seulement gagner", "id": "excellence" },
+            { "texte": "Amitié : rapprocher des peuples par le sport", "id": "amitie" },
+            { "texte": "Respect : respecter les règles, les adversaires, soi-même", "id": "respect" }
+          ],
+          "pied": "D’après la Charte olympique",
+          "teinte": "jaune"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "chiffres",
+          "enonce": "Touche la case qui donne la part de **sites existants ou temporaires**.",
+          "reponse": ["r0c1"],
+          "aide": "Cherche la première ligne du tableau.",
+          "explication": "Environ **95 %** des sites de Paris 2024 étaient existants ou temporaires : c’est l’esprit de l’Agenda 2020."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Imagine des Jeux avec 20 sites dont 95 % existants ou temporaires. Combien de sites sont dans ce cas ?",
+          "reponse": 19,
+          "unite": "sites",
+          "aide": "Calcule 95 % de 20.",
+          "explication": "0,95 × 20 = **19 sites** : un seul site est à construire."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque valeur olympique à sa définition.",
+          "paires": [
+            ["Excellence", "Donner le meilleur de soi, pas seulement gagner"],
+            ["Amitié", "Rapprocher des peuples par le sport"],
+            ["Respect", "Respecter les règles, les adversaires, soi-même"]
+          ],
+          "aide": "Relis la fiche des trois valeurs.",
+          "explication": "Excellence, amitié et respect forment le cœur de la **Charte olympique**."
+        }
+      ]
+    },
+    {
+      "chapitre": "0c7e3352-9d7e-5927-9560-c4de48d50b67",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Un an après les Jeux",
+      "competence": "analyser-texte",
+      "situation": "Un an après la fin des Jeux de Paris, un journal de quartier imaginé fait le point. Lis l’article en gardant un œil sur ce qui reste et sur ce qui fâche.",
+      "documents": [
+        {
+          "id": "article",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Que reste-t-il de la fête ?",
+          "auteur": "Article imaginé pour l’exercice",
+          "blocs": [
+            "Le CIO avait promis, avec l’Agenda 2020, des Jeux moins chers qui réutilisent des sites existants. À Paris, environ 95 % des sites étaient existants ou temporaires.",
+            "Le village olympique, à Saint-Denis, Saint-Ouen et L’Île-Saint-Denis, est devenu un quartier de [[her|logements]]. Le centre [[her|aquatique]] de Saint-Denis accueille habitants et clubs. Depuis 2025, on peut de nouveau se [[her|baigner]] dans la Seine.",
+            "Mais des associations rappellent le [[crit|coût]] de l’événement, la lourdeur des mesures de [[crit|sécurité]] et les [[crit|délogements]] de personnes en précarité avant l’été 2024."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "article",
+          "enonce": "Touche les trois mots qui désignent un **héritage concret** des Jeux.",
+          "reponse": ["her"],
+          "aide": "Cherche ce qui reste utile aux habitants après la fête : un lieu de vie, un équipement, un loisir.",
+          "explication": "Des **logements**, un centre **aquatique**, la **baignade** dans la Seine : trois héritages concrets, pour les habitants."
+        },
+        {
+          "type": "zone",
+          "document": "article",
+          "enonce": "Touche les trois mots qui désignent des **critiques** adressées aux Jeux.",
+          "reponse": ["crit"],
+          "aide": "Dans le dernier paragraphe, repère ce que reprochent les associations.",
+          "explication": "Le **coût**, la **sécurité** et les **délogements** : les controverses. Un bon bilan cite les bénéfices ET les critiques."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces éléments : héritage ou controverse ?",
+          "categories": ["Héritage", "Controverse"],
+          "items": [
+            ["Seine rendue à la baignade", 0],
+            ["Coût de l’événement", 1],
+            ["Piscines rénovées", 0],
+            ["Délogements avant les Jeux", 1],
+            ["Logements au village olympique", 0],
+            ["Mesures de sécurité très lourdes", 1]
+          ],
+          "aide": "Un héritage profite aux habitants après les Jeux ; une controverse est une critique ou un problème.",
+          "explication": "Seine, piscines, logements : l’**héritage**. Coût, délogements, sécurité : les **controverses**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel principe de l’Agenda 2020 l’article illustre-t-il avec le chiffre de 95 % ?",
+          "options": [
+            "Des Jeux moins chers qui réutilisent des sites existants",
+            "Une trêve olympique sur tous les conflits",
+            "La parité entre athlètes",
+            "Des Jeux entièrement construits à neuf"
+          ],
+          "reponse": 0,
+          "aide": "Relis le premier paragraphe : qu’a promis le CIO ?",
+          "explication": "L’**Agenda 2020** demande des Jeux moins chers qui réutilisent des sites. Un bon héritage se prépare avant les Jeux : on ne construit que ce dont on se servira ensuite."
+        }
+      ]
+    },
+    {
+      "chapitre": "0c7e3352-9d7e-5927-9560-c4de48d50b67",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Deux villes, un seul héritage",
+      "competence": "argumenter",
+      "situation": "Deux villes imaginées, A et B, se portent candidates pour des Jeux d’été. Le comité de sélection compare leurs dossiers avec les principes de l’Agenda 2020 du CIO.",
+      "documents": [
+        {
+          "id": "dossiers",
+          "type": "tableau",
+          "titre": "Les deux dossiers de candidature",
+          "source": "Villes et chiffres imaginés pour l’exercice.",
+          "colonnes": ["Critère", "Ville A", "Ville B"],
+          "lignes": [
+            ["Sites à construire", 12, 2],
+            ["Sites existants ou temporaires", 3, 38],
+            ["Quartier de logements après les Jeux", "non prévu", "prévu"],
+            ["Piscines ouvertes aux habitants ensuite", "aucune", "quatre"]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "agenda",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "AGENDA 2020 DU CIO",
+          "emoji": "📜",
+          "lignes": [
+            { "texte": "Des Jeux moins chers", "id": "moins-chers" },
+            { "texte": "Réutiliser les sites existants", "id": "reutiliser" },
+            { "texte": "Ne construire que ce dont on se servira ensuite", "id": "usage" }
+          ],
+          "pied": "Principes résumés pour l’exercice",
+          "teinte": "violet"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "dossiers",
+          "enonce": "Touche, dans le dossier, la case qui **contredit le plus** l’Agenda 2020 pour la ville A.",
+          "reponse": ["r0c1"],
+          "aide": "L’Agenda 2020 dit de ne pas tout construire. Quelle case montre le contraire ?",
+          "explication": "**12 sites à construire** : la ville A prévoit beaucoup de chantiers neufs, à l’opposé de « réutiliser les sites existants »."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la part de sites **existants ou temporaires** dans le dossier de la ville B, sur l’ensemble de ses sites ? Réponds en pourcentage.",
+          "reponse": 95,
+          "unite": "%",
+          "aide": "Total de sites de B : 2 + 38. Puis divise 38 par ce total.",
+          "explication": "38 ÷ 40 = 0,95 : **95 %**, exactement le niveau de Paris 2024."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la part de sites existants ou temporaires dans le dossier de la ville A ?",
+          "reponse": 20,
+          "unite": "%",
+          "aide": "Total de sites de A : 12 + 3. Puis divise 3 par ce total.",
+          "explication": "3 ÷ 15 = 0,20 : **20 %** seulement. L’écart avec B est considérable."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel dossier est le plus proche de l’esprit de l’Agenda 2020 ?",
+          "options": [
+            "La ville B : peu de constructions, un quartier et des piscines qui serviront ensuite",
+            "La ville A : plus de chantiers veut dire plus d’emplois",
+            "Aucun : l’Agenda 2020 ne parle pas des sites",
+            "Les deux, car elles parlent d’héritage"
+          ],
+          "reponse": 0,
+          "aide": "Confronte chaque ligne de la fiche de l’Agenda aux deux colonnes du tableau.",
+          "explication": "La ville B coche les trois lignes : des Jeux **moins chers**, des sites **réutilisés**, des équipements à **usage prévu après la fête**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Même si B est un meilleur dossier, quelle question un esprit critique doit-il encore poser ?",
+          "options": [
+            "Combien cela coûtera-t-il, qui paiera, et que deviennent les habitants concernés par les travaux ?",
+            "Quelle ville a le plus beau logo ?",
+            "Quel est le sport le plus regardé à la télévision ?",
+            "Aucune : un bon dossier n’appelle pas de critique"
+          ],
+          "reponse": 0,
+          "aide": "Pense aux trois critiques faites à Paris 2024 : coût, sécurité, délogements.",
+          "explication": "Savoir citer les **bénéfices ET les critiques** est la marque d’une réflexion solide, au bac comme au Grand oral."
+        }
+      ]
+    },
+    {
+      "chapitre": "7f3a9119-5afb-5151-889c-23f358b712dd",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les cinq mentions de STAPS",
+      "competence": "lire-tableau",
+      "situation": "Au forum de l’orientation, trois lycéens découvrent la licence STAPS. Ils veulent savoir à quelle mention chacun doit s’intéresser.",
+      "documents": [
+        {
+          "id": "mentions",
+          "type": "tableau",
+          "titre": "Les cinq mentions de la licence STAPS",
+          "source": "Panneau du forum, résumé pour l’exercice.",
+          "colonnes": ["Mention", "Pour quoi faire"],
+          "lignes": [
+            ["Entraînement sportif", "devenir entraîneur, préparateur physique"],
+            ["Activité physique adaptée et santé", "accompagner des personnes malades, âgées, handicapées"],
+            ["Éducation et motricité", "enseigner, former"],
+            ["Management du sport", "gérer clubs, événements, structures"],
+            ["Ergonomie du sport et performance motrice", "analyser le geste, concevoir le matériel"]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "mentions",
+          "enonce": "Touche la mention qui prépare au métier de **préparateur physique**.",
+          "reponse": ["r0c0"],
+          "aide": "Cherche « préparateur physique » dans la colonne « Pour quoi faire ».",
+          "explication": "C’est la mention **Entraînement sportif**, qui mène aux métiers d’entraîneur et de préparateur physique."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque lycéen à la mention qui lui convient.",
+          "paires": [
+            ["Jade veut aider des personnes âgées à bouger", "Activité physique adaptée et santé"],
+            ["Malik veut organiser les événements d’un club", "Management du sport"],
+            ["Lina veut analyser le geste d’un lanceur et concevoir du matériel", "Ergonomie du sport et performance motrice"]
+          ],
+          "aide": "Pour chaque projet, cherche dans la colonne de droite la mission qui lui ressemble.",
+          "explication": "Chaque mention ouvre une porte : **santé**, **gestion**, **analyse du geste**. Commence par le projet, puis remonte vers la formation."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de mentions le tableau présente-t-il ?",
+          "reponse": 5,
+          "aide": "Compte les lignes, sans l’en-tête.",
+          "explication": "La licence STAPS compte **cinq mentions**. Sur Parcoursup, elle attend des sciences, de l’expression et de la pratique."
+        }
+      ]
+    },
+    {
+      "chapitre": "7f3a9119-5afb-5151-889c-23f358b712dd",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le chemin de Rayan",
+      "competence": "analyser-document",
+      "situation": "Rayan veut devenir professeur d’EPS. Il a dessiné son parcours et préparé son dossier pour la plateforme Parcoursup. Un conseiller l’aide à ranger ses atouts.",
+      "documents": [
+        {
+          "id": "parcours",
+          "type": "chaine",
+          "disposition": "ligne",
+          "titre": "Le parcours de professeur d’EPS",
+          "noeuds": [
+            { "id": "bac", "texte": "Bac", "emoji": "🎓" },
+            { "id": "licence", "texte": "Licence STAPS", "emoji": "📚" },
+            { "id": "master", "texte": "Master MEEF", "emoji": "📝" },
+            { "id": "concours", "texte": "?", "emoji": "🏆" }
+          ],
+          "liens": [
+            { "de": "bac", "a": "licence" },
+            { "de": "licence", "a": "master" },
+            { "de": "master", "a": "concours" }
+          ]
+        },
+        {
+          "id": "dossier",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "DOSSIER DE RAYAN",
+          "sousTitre": "Document imaginé pour l’exercice",
+          "emoji": "📂",
+          "lignes": [
+            { "texte": "Moyenne de 15 en SVT et en physique", "id": "svt" },
+            { "texte": "Lettre de motivation claire et soignée", "id": "lettre" },
+            { "texte": "Licencié en basket depuis six ans", "id": "basket" },
+            { "texte": "Exposé oral très remarqué en classe", "id": "expose" },
+            { "texte": "Capitaine de l’équipe de l’association sportive", "id": "capitaine" },
+            { "texte": "Bons résultats en mathématiques", "id": "maths" }
+          ],
+          "teinte": "bleu"
+        }
+      ],
+      "questions": [
+        {
+          "type": "texte",
+          "enonce": "Quel est le concours représenté par le point d’interrogation ?",
+          "reponse": ["CAPEPS", "le CAPEPS", "capeps"],
+          "placeholder": "Le sigle du concours",
+          "aide": "C’est le concours qui mène au métier de professeur d’EPS, après le master MEEF.",
+          "explication": "Le concours est le **CAPEPS**. Le métier de professeur d’EPS passe par un master MEEF, puis par ce concours."
+        },
+        {
+          "type": "zone",
+          "document": "parcours",
+          "enonce": "Touche l’étape que Rayan doit avoir validée **avant** de présenter le concours.",
+          "reponse": ["master"],
+          "aide": "Regarde l’étape juste avant le point d’interrogation.",
+          "explication": "Le **master MEEF** précède le concours : on prépare le CAPEPS pendant ces années de formation."
+        },
+        {
+          "type": "categories",
+          "enonce": "Sur Parcoursup, STAPS attend des sciences, de l’expression et de la pratique. Range chaque élément du dossier.",
+          "categories": ["Sciences", "Expression", "Pratique"],
+          "items": [
+            ["Moyenne de 15 en SVT et en physique", 0],
+            ["Lettre de motivation claire et soignée", 1],
+            ["Licencié en basket depuis six ans", 2],
+            ["Exposé oral très remarqué", 1],
+            ["Capitaine de l’équipe de l’association sportive", 2],
+            ["Bons résultats en mathématiques", 0]
+          ],
+          "aide": "Sciences : matières scientifiques. Expression : écrit et oral. Pratique : le sport lui-même.",
+          "explication": "SVT, physique, maths → **sciences** ; lettre et exposé → **expression** ; licence et capitanat → **pratique**. Il ne suffit pas d’être sportif."
+        }
+      ]
+    },
+    {
+      "chapitre": "7f3a9119-5afb-5151-889c-23f358b712dd",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Cinq portraits, trois lycéens",
+      "competence": "argumenter",
+      "situation": "Une conseillère d’orientation présente cinq métiers du sport à trois lycéens. À toi de croiser les portraits avec les projets de chacun, et de ne rien affirmer que les documents ne disent.",
+      "documents": [
+        {
+          "id": "metiers",
+          "type": "tableau",
+          "titre": "Cinq métiers du sport",
+          "source": "Tableau résumé pour l’exercice. Vérifie toujours les conditions d’accès sur le site officiel de la formation.",
+          "colonnes": ["Métier", "Ce qu’on fait", "Voie de formation"],
+          "lignes": [
+            ["Professeur d’EPS", "enseigner l’EPS", "master MEEF puis concours du CAPEPS"],
+            ["Entraîneur", "animer, entraîner, diriger", "BPJEPS, DEJEPS, DESJEPS (de plus en plus élevés)"],
+            ["Préparateur physique", "construire la condition physique", "licence STAPS, mention Entraînement sportif"],
+            ["Analyste de données", "exploiter GPS, capteurs, statistiques", "plusieurs voies possibles"],
+            ["Kinésithérapeute", "soigner et rééduquer", "PASS, LAS ou STAPS selon les universités"]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "projets",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Les projets des lycéens",
+          "auteur": "Textes écrits pour l’exercice",
+          "blocs": [
+            "Sacha adore expliquer les règles et faire progresser ses camarades en cours de sport. Il rêve de transmettre son goût du sport à des classes entières.",
+            "Noa aime les chiffres et les montres GPS. Il voudrait aider un entraîneur à décider grâce aux données.",
+            "Lila s’est blessée au genou l’an dernier. Elle veut soigner et rééduquer d’autres sportifs."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Relie chaque lycéen au métier qui correspond à son projet.",
+          "paires": [
+            ["Sacha", "Professeur d’EPS"],
+            ["Noa", "Analyste de données"],
+            ["Lila", "Kinésithérapeute"]
+          ],
+          "aide": "Cherche dans la colonne « Ce qu’on fait » le verbe qui ressemble à chaque projet.",
+          "explication": "**Enseigner** → professeur d’EPS ; **exploiter des données** → analyste ; **soigner et rééduquer** → kinésithérapeute."
+        },
+        {
+          "type": "zone",
+          "document": "metiers",
+          "enonce": "Touche la **voie de formation** du métier de Sacha.",
+          "reponse": ["r0c2"],
+          "aide": "La voie de formation est dans la dernière colonne, sur la ligne du métier de Sacha.",
+          "explication": "Pour enseigner l’EPS : **master MEEF puis concours du CAPEPS**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Lila veut devenir kinésithérapeute. Que lui dit honnêtement le tableau ?",
+          "options": [
+            "Le chemin dépend de l’université : PASS, LAS ou STAPS, donc à vérifier auprès de l’établissement visé",
+            "Il n’existe qu’une seule voie, la première année de STAPS partout en France",
+            "Aucune formation n’est nécessaire",
+            "Elle doit d’abord passer le CAPEPS"
+          ],
+          "reponse": 0,
+          "aide": "Relis la dernière ligne du tableau et la note sous le titre.",
+          "explication": "Pour la kinésithérapie, l’accès passe par **différentes voies selon les universités** : il faut vérifier auprès de l’établissement visé."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Parmi ces cinq métiers, combien exigent un **concours** d’après le tableau ?",
+          "reponse": 1,
+          "aide": "Cherche le mot « concours » dans la colonne « Voie de formation ».",
+          "explication": "Un seul : **professeur d’EPS** (concours du CAPEPS). Les autres métiers passent par des diplômes ou d’autres voies."
+        }
+      ]
+    },
+    {
+      "chapitre": "8561efa6-7303-530e-a51d-a4b84b1ef822",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les points d’une épreuve",
+      "competence": "lire-tableau",
+      "situation": "En Terminale, l’EPS se joue en contrôle en cours de formation (CCF). Dans chaque épreuve, la note sur 20 se répartit entre trois attendus, les AFL. Voici la grille avec la répartition équilibrée.",
+      "documents": [
+        {
+          "id": "grille",
+          "type": "tableau",
+          "titre": "Les trois attendus d’une épreuve, répartition équilibrée",
+          "source": "Barème résumé pour l’exercice.",
+          "colonnes": ["Attendu", "Ce qu’on évalue", "Points", "Quand"],
+          "lignes": [
+            ["AFL1", "agir, performer, être efficace", 12, "le jour de l’épreuve"],
+            ["AFL2", "s’entraîner, se préparer, analyser", 4, "au fil de la séquence"],
+            ["AFL3", "tenir des rôles", 4, "au fil de la séquence"]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "grille",
+          "enonce": "Touche la case qui donne les **points** de l’AFL1.",
+          "reponse": ["r0c2"],
+          "aide": "Ligne AFL1, colonne « Points ».",
+          "explication": "L’AFL1 vaut **12 points** sur 20 : c’est l’essentiel de la note, joué le jour de l’épreuve."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de points restent à répartir entre l’AFL2 et l’AFL3 ?",
+          "reponse": 8,
+          "unite": "points",
+          "aide": "Une épreuve est notée sur 20 ; retire les points de l’AFL1.",
+          "explication": "20 − 12 = **8 points**, partagés entre l’AFL2 et l’AFL3 selon le choix du candidat."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre la colonne « Quand » pour l’AFL2 et l’AFL3 ?",
+          "options": [
+            "Ces points se gagnent pendant toute la séquence, pas seulement le jour de l’épreuve",
+            "Ces points ne sont évalués que le jour de l’épreuve",
+            "Ces points ne comptent pas dans la note",
+            "Ces points sont donnés automatiquement"
+          ],
+          "reponse": 0,
+          "aide": "Relis la dernière colonne : que disent les deux dernières lignes ?",
+          "explication": "Un carnet tenu régulièrement et un rôle assumé à chaque séance valent des points : l’AFL2 et l’AFL3 se gagnent **au fil de la séquence**."
+        }
+      ]
+    },
+    {
+      "chapitre": "8561efa6-7303-530e-a51d-a4b84b1ef822",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le bulletin de Noé",
+      "competence": "calculer",
+      "situation": "Noé passe le CCF d’EPS sur trois activités de trois champs d’apprentissage différents. Il a choisi de privilégier les rôles en badminton. Voici ses résultats et le détail de son épreuve de badminton.",
+      "documents": [
+        {
+          "id": "notes",
+          "type": "tableau",
+          "titre": "Les trois épreuves de Noé",
+          "source": "Résultats imaginés pour l’exercice.",
+          "colonnes": ["Activité", "Champ d’apprentissage", "Note sur 20"],
+          "lignes": [
+            ["Demi-fond", "CA1", 14],
+            ["Acrosport", "CA3", 17],
+            ["Badminton", "CA4", 12]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "badminton",
+          "type": "tableau",
+          "titre": "Détail de l’épreuve de badminton",
+          "source": "Résultats imaginés pour l’exercice.",
+          "colonnes": ["Attendu", "Points possibles", "Points obtenus"],
+          "lignes": [
+            ["AFL1", 12, 7],
+            ["AFL2", 2, 1],
+            ["AFL3", 6, 4]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la **note finale** d’EPS de Noé (moyenne des trois épreuves, arrondie au point entier) ?",
+          "reponse": 14,
+          "unite": "/20",
+          "aide": "(14 + 17 + 12) ÷ 3, puis arrondis à l’entier.",
+          "explication": "43 ÷ 3 ≈ 14,33, soit **14/20** une fois arrondi. Avec le coefficient 6, c’est un solide apport pour le bac."
+        },
+        {
+          "type": "zone",
+          "document": "notes",
+          "enonce": "Touche l’épreuve qui tire sa moyenne vers le bas, la **note la plus basse**.",
+          "reponse": ["r2c2"],
+          "aide": "Parcours la colonne « Note sur 20 ».",
+          "explication": "Le badminton est à **12/20**, la note la plus basse des trois."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de points Noé a-t-il **perdus** en AFL1 au badminton ?",
+          "reponse": 5,
+          "unite": "points",
+          "aide": "Compare les points possibles et obtenus de la ligne AFL1.",
+          "explication": "12 − 7 = **5 points** perdus. Son arbitrage régulier (AFL3) a limité l’effet d’une rencontre ratée le jour de l’épreuve."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle répartition AFL2 / AFL3 Noé a-t-il choisie au badminton ?",
+          "options": [
+            "Priorité aux rôles : 2 points pour l’AFL2 et 6 pour l’AFL3",
+            "Équilibrée : 4 points chacun",
+            "Priorité à l’entraînement : 6 points pour l’AFL2 et 2 pour l’AFL3",
+            "8 points pour l’AFL3 et aucun pour l’AFL2"
+          ],
+          "reponse": 0,
+          "aide": "Regarde la colonne « Points possibles » du second tableau.",
+          "explication": "Les trois choix possibles sont 4/4, 6/2 et 2/6. Noé a pris **2/6** : l’AFL3 vaut 6 points."
+        }
+      ]
+    },
+    {
+      "chapitre": "8561efa6-7303-530e-a51d-a4b84b1ef822",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Trois situations, trois règles",
+      "competence": "argumenter",
+      "situation": "Le professeur d’EPS de Terminale doit traiter trois cas particuliers pendant la session. À toi de trouver la règle qui s’applique à chacun.",
+      "documents": [
+        {
+          "id": "regles",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "RÈGLES DU CCF D’EPS",
+          "emoji": "📋",
+          "lignes": [
+            { "texte": "Trois épreuves, notées sur 20, sur trois champs d’apprentissage différents", "id": "trois" },
+            { "texte": "Note finale : moyenne des trois épreuves, arrondie au point entier", "id": "moyenne" },
+            { "texte": "Absence non justifiée à une épreuve : 0 à cette épreuve", "id": "absence" },
+            { "texte": "Blessure temporaire attestée : épreuve adaptée ou différée", "id": "blessure" },
+            { "texte": "Candidat individuel ou Cned : examen ponctuel sur deux activités", "id": "ponctuel" },
+            { "texte": "Coefficient au baccalauréat : 6", "id": "coef" }
+          ],
+          "pied": "Règles résumées pour l’exercice",
+          "teinte": "violet"
+        },
+        {
+          "id": "cas",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Les trois situations",
+          "auteur": "Textes écrits pour l’exercice",
+          "blocs": [
+            "Camille obtient 15 et 13 à deux épreuves, puis ne se présente pas à la troisième, sans justificatif.",
+            "Léa s’est foulé la cheville, un certificat médical l’atteste, le jour de sa troisième épreuve.",
+            "Théo prépare son bac seul, chez lui, avec une inscription en candidat individuel."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle est la **note finale** de Camille ? Arrondis au point entier.",
+          "reponse": 9,
+          "unite": "/20",
+          "aide": "L’absence non justifiée vaut 0 à la troisième épreuve. Calcule (15 + 13 + 0) ÷ 3.",
+          "explication": "28 ÷ 3 ≈ 9,33, soit **9/20**. Le 0 n’est pas éliminatoire mais fait chuter la moyenne."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque candidat à ce que prévoit le règlement.",
+          "paires": [
+            ["Camille, absente sans justificatif", "0 à cette épreuve"],
+            ["Léa, blessée avec certificat", "Épreuve adaptée ou différée"],
+            ["Théo, candidat individuel", "Examen ponctuel sur deux activités"]
+          ],
+          "aide": "Pour chaque situation, trouve la ligne correspondante sur l’affiche des règles.",
+          "explication": "Trois cas, trois règles : **0**, **épreuve adaptée ou différée**, **examen ponctuel**."
+        },
+        {
+          "type": "zone",
+          "document": "regles",
+          "enonce": "Touche la ligne de l’affiche qui s’applique à **Léa**.",
+          "reponse": ["blessure"],
+          "aide": "Léa a un certificat médical qui atteste sa blessure temporaire.",
+          "explication": "La règle **blessure temporaire attestée** lui ouvre une épreuve adaptée ou différée : elle ne perd pas son bac pour une cheville."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète deux règles de l’affiche.",
+          "texte": "L’EPS a un coefficient de ___ au baccalauréat, et la note finale est la ___ des trois épreuves.",
+          "reponses": [["6"], ["moyenne"]],
+          "banque": ["6", "2", "16", "moyenne", "somme"],
+          "aide": "Cherche les lignes « Coefficient » et « Note finale » sur l’affiche.",
+          "explication": "Coefficient **6**, note finale = **moyenne** arrondie au point entier. Aucune épreuve ne peut donc être négligée."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi l’absence de Camille est-elle si coûteuse, alors qu’elle n’est pas éliminatoire ?",
+          "options": [
+            "Le 0 compte dans la moyenne des trois épreuves et entraîne un fort recul de la note finale",
+            "Elle est automatiquement exclue de l’examen",
+            "Le règlement double sa note moyenne",
+            "Elle repasse les trois épreuves en septembre"
+          ],
+          "reponse": 0,
+          "aide": "Compare sa note finale avec la moyenne de ses deux bonnes épreuves.",
+          "explication": "Avec 15 et 13, elle aurait eu 14 de moyenne : le 0 la fait **tomber à 9**. Une absence injustifiée fait chuter la moyenne."
+        }
+      ]
+    },
+    {
+      "chapitre": "f16056b9-301c-5bcd-8db0-72e8c31a1dbb",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Option ou spécialité ?",
+      "competence": "lire-tableau",
+      "situation": "Au lycée, deux choix existent pour aller plus loin que l’EPS commune : l’option EPS et la spécialité EPPCS. Un tableau les compare.",
+      "documents": [
+        {
+          "id": "comparatif",
+          "type": "tableau",
+          "titre": "Option EPS et spécialité EPPCS",
+          "source": "Tableau résumé pour l’exercice.",
+          "colonnes": ["Critère", "Option EPS", "Spécialité EPPCS"],
+          "lignes": [
+            ["Horaire", "3 heures par semaine, de la 2de à la Tle", "4 heures en 1re, 6 heures en Tle"],
+            ["Origine", "programme de 2019", "créée en 2021"],
+            ["Évaluation", "contrôle continu", "un écrit et une partie pratique"]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "comparatif",
+          "enonce": "Touche la case qui donne le **mode d’évaluation** de l’option EPS.",
+          "reponse": ["r2c1"],
+          "aide": "Ligne « Évaluation », colonne « Option EPS ».",
+          "explication": "L’option EPS compte en **contrôle continu**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "En Terminale, combien d’heures **de plus** par semaine l’EPPCS représente-t-elle par rapport à l’option ?",
+          "reponse": 3,
+          "unite": "h",
+          "aide": "6 heures pour l’EPPCS, 3 pour l’option : soustrais.",
+          "explication": "6 − 3 = **3 heures de plus** : l’EPPCS est une vraie spécialité, pas un cours de sport en plus."
+        },
+        {
+          "type": "choix",
+          "enonce": "Laquelle des deux comprend un écrit en fin de parcours ?",
+          "options": ["La spécialité EPPCS", "L’option EPS", "Les deux, à l’identique", "Aucune des deux"],
+          "reponse": 0,
+          "aide": "Regarde la ligne « Évaluation ».",
+          "explication": "L’**EPPCS** prévoit un écrit et une partie pratique : on y travaille comme dans une matière théorique."
+        }
+      ]
+    },
+    {
+      "chapitre": "f16056b9-301c-5bcd-8db0-72e8c31a1dbb",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le conseil du prof d’EPS",
+      "competence": "analyser-document",
+      "situation": "Zélie, élève de 2de, hésite entre l’option EPS et la future spécialité EPPCS. Elle demande conseil à son professeur d’EPS, dans un échange écrit pour l’exercice.",
+      "documents": [
+        {
+          "id": "conseil",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Le conseil du professeur",
+          "source": "Dialogue écrit pour l’exercice.",
+          "participants": [
+            { "nom": "Zélie", "emoji": "👧", "cote": "gauche" },
+            { "nom": "Professeur", "emoji": "🧑‍🏫", "cote": "droite" }
+          ],
+          "repliques": [
+            { "qui": "Zélie", "texte": "Quelle est la différence entre l’option et la spécialité ?" },
+            { "qui": "Professeur", "texte": "L’option, c’est trois heures par semaine de la 2de à la Tle pour approfondir ta pratique et réfléchir sur le sport. Elle compte en contrôle continu." },
+            { "qui": "Professeur", "texte": "L’EPPCS est une spécialité de culture sportive : les [[spe|sciences]] du sport, l’[[spe|histoire]], la [[spe|sociologie]], un projet collectif, avec un écrit et une partie pratique." }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "conseil",
+          "enonce": "Touche les trois **domaines** qu’on étudie en EPPCS.",
+          "reponse": ["spe"],
+          "aide": "Dans la dernière réplique, cherche les domaines de la culture sportive.",
+          "explication": "L’EPPCS associe **sciences du sport**, **histoire** et **sociologie**, plus un projet collectif."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces caractéristiques : option EPS ou spécialité EPPCS ?",
+          "categories": ["Option EPS", "Spécialité EPPCS"],
+          "items": [
+            ["Approfondir sa pratique", 0],
+            ["Étudier la sociologie du sport", 1],
+            ["Compter en contrôle continu", 0],
+            ["Faire un projet collectif mêlant pratique et réflexion", 1],
+            ["Passer un écrit", 1],
+            ["Trois heures par semaine de la 2de à la Tle", 0]
+          ],
+          "aide": "Relis les deux dernières répliques du professeur.",
+          "explication": "L’**option** : pratique, réflexion, contrôle continu, trois heures. L’**EPPCS** : sciences, histoire, sociologie, projet, écrit."
+        },
+        {
+          "type": "choix",
+          "enonce": "Zélie adore jouer mais déteste écrire. Que lui conseiller ?",
+          "options": [
+            "L’option EPS, qui approfondit la pratique sans écrit terminal",
+            "L’EPPCS, car elle ne comporte aucun écrit",
+            "Aucune des deux : elle doit abandonner le sport",
+            "L’EPPCS, parce que c’est le seul moyen de jouer plus"
+          ],
+          "reponse": 0,
+          "aide": "Choisir l’EPPCS, c’est accepter de travailler comme dans une matière théorique.",
+          "explication": "L’EPPCS comporte de l’**écrit**. Pour qui aime surtout pratiquer, l’option approfondit la pratique, avec de la réflexion."
+        }
+      ]
+    },
+    {
+      "chapitre": "f16056b9-301c-5bcd-8db0-72e8c31a1dbb",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Est-ce pour moi ?",
+      "competence": "argumenter",
+      "situation": "Trois jeunes sportifs ont des projets très différents. Leur conseiller doit leur indiquer la structure scolaire adaptée et dire si l’EPPCS peut les intéresser.",
+      "documents": [
+        {
+          "id": "structures",
+          "type": "tableau",
+          "titre": "Les structures autour du sport au lycée",
+          "source": "Tableau résumé pour l’exercice.",
+          "colonnes": ["Structure", "Ce qu’elle permet"],
+          "lignes": [
+            ["Section sportive scolaire", "s’entraîner davantage pendant les heures de classe"],
+            ["Pôle espoirs", "accueille des jeunes à fort potentiel"],
+            ["Sport-études", "scolarité adaptée aux entraînements"],
+            ["Aménagements de sportif de haut niveau", "horaires et examens adaptés"]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "profils",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Les trois profils",
+          "auteur": "Textes écrits pour l’exercice",
+          "blocs": [
+            "Lina joue au handball. Elle voudrait s’entraîner davantage, mais sur le temps de classe.",
+            "Maël, nageur, a été repéré pour son fort potentiel. Il vise aussi des études de STAPS et aime écrire autant que nager.",
+            "Yanis participe à des compétitions internationales. Ses dates tombent parfois pendant les examens."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Relie chaque jeune à la structure la plus adaptée.",
+          "paires": [
+            ["Lina, plus d’entraînement sur le temps de classe", "Section sportive scolaire"],
+            ["Maël, repéré pour son fort potentiel", "Pôle espoirs"],
+            ["Yanis, compétitions pendant les examens", "Aménagements de sportif de haut niveau"]
+          ],
+          "aide": "Compare le besoin de chaque jeune avec la colonne « Ce qu’elle permet ».",
+          "explication": "Section sportive pour **s’entraîner plus en classe**, pôle espoirs pour le **fort potentiel**, aménagements pour **concilier examens et compétitions**."
+        },
+        {
+          "type": "zone",
+          "document": "structures",
+          "enonce": "Touche la structure qui organise **toute une scolarité** autour des entraînements.",
+          "reponse": ["r2c0"],
+          "aide": "Cherche la ligne qui parle d’une scolarité « adaptée ».",
+          "explication": "Le **sport-études** organise une scolarité adaptée aux entraînements."
+        },
+        {
+          "type": "choix",
+          "enonce": "Maël vise STAPS et aime écrire autant que nager. Que lui dire de la spécialité EPPCS ?",
+          "options": [
+            "Elle peut lui convenir : pratique, sciences, histoire, sociologie, et un écrit, avec STAPS pour horizon",
+            "Elle ne lui servira à rien, puisqu’elle ne mène à aucune étude",
+            "Elle est faite pour ceux qui détestent écrire",
+            "Elle remplace le sport par des cours de maths"
+          ],
+          "reponse": 0,
+          "aide": "Qui s’intéresse à l’EPPCS selon le cours ? Croise avec le profil de Maël.",
+          "explication": "L’EPPCS s’adresse à celles et ceux qui aiment **à la fois pratiquer et réfléchir**, et qui visent souvent STAPS, kinésithérapie, éducation ou management du sport."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel piège doit connaître un élève avant de choisir l’EPPCS ?",
+          "options": [
+            "Ce n’est pas un cours de sport en plus : il y a de l’écrit et des notions à maîtriser",
+            "Elle ne compte jamais pour le bac",
+            "Elle se passe uniquement en salle de classe, sans pratique",
+            "Elle est réservée aux sportifs de haut niveau"
+          ],
+          "reponse": 0,
+          "aide": "Pense à ce qui change entre jouer au sport et l’étudier.",
+          "explication": "Choisir l’EPPCS, c’est accepter de **travailler comme dans une matière théorique** : consulte le programme officiel et demande conseil à tes professeurs d’EPS."
+        }
+      ]
+    }
+  ]
+}

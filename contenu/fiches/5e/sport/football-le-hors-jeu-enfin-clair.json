@@ -1,0 +1,187 @@
+{
+  "titre": "Le hors-jeu",
+  "titreSurligne": "hors-jeu",
+  "accroche": "Tout se joue au moment de la passe.",
+  "bonus": "**11** joueurs · **2 × 45** min · penalty à **11 m**",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/sport/football-le-hors-jeu-enfin-clair.webp",
+    "prompt": "a glossy football with a small red offside flag and a golden whistle, sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Hors-jeu : regarde\nla passe !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "definitions",
+          "numero": 1,
+          "titre": "Les mots",
+          "items": [
+            {
+              "terme": "Position de hors-jeu",
+              "definition": "plus près du but que le **ballon** et que l’**avant-dernier défenseur**"
+            },
+            {
+              "terme": "Hors-jeu sanctionné",
+              "definition": "en position de hors-jeu **et** tu participes au jeu"
+            },
+            {
+              "terme": "Avant-dernier défenseur",
+              "definition": "le gardien compte comme un **défenseur**"
+            },
+            {
+              "terme": "VAR",
+              "definition": "l’assistance **vidéo** : elle conseille, l’arbitre décide"
+            }
+          ]
+        },
+        {
+          "type": "tableau",
+          "numero": 2,
+          "titre": "Jamais de hors-jeu",
+          "entetes": [
+            "Situation",
+            "Hors-jeu ?"
+          ],
+          "lignes": [
+            [
+              "Dans **ta moitié** de terrain",
+              "Non"
+            ],
+            [
+              "Sur une **touche**",
+              "Non"
+            ],
+            [
+              "Sur un **corner**",
+              "Non"
+            ],
+            [
+              "Sur un **coup de pied de but**",
+              "Non"
+            ],
+            [
+              "Passe d’un **adversaire**",
+              "Non"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Le hors-jeu en quatre temps",
+          "etapes": [
+            {
+              "titre": "La passe part",
+              "texte": "on regarde **à ce moment-là**"
+            },
+            {
+              "titre": "Ta position",
+              "texte": "plus près du but que le ballon **et** l’avant-dernier défenseur ?"
+            },
+            {
+              "titre": "Tu participes",
+              "texte": "tu touches le ballon, gênes un adversaire ou en profites"
+            },
+            {
+              "titre": "Sifflet",
+              "texte": "but refusé, coup franc pour l’adversaire"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Cartons et penalty",
+          "entetes": [
+            "Sanction",
+            "Ce que c’est"
+          ],
+          "lignes": [
+            [
+              "Carton **jaune**",
+              "un avertissement"
+            ],
+            [
+              "**2 jaunes**",
+              "= un carton rouge"
+            ],
+            [
+              "Carton **rouge**",
+              "expulsé : son équipe joue à **dix**"
+            ],
+            [
+              "**Penalty**",
+              "faute dans la surface, tir à **11 m**"
+            ]
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple",
+          "donnees": "Ton attaquant reçoit une longue passe, devant l’avant-dernier défenseur, puis il marque.",
+          "calcul": "position de hors-jeu + il touche le ballon",
+          "aparte": "il participe au jeu",
+          "resultat": "[[but refusé]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "À savoir",
+          "colonnes": 1,
+          "cartes": [
+            {
+              "titre": "Le match",
+              "texte": "**11** joueurs, **2 mi-temps de 45 min**, jusqu’à **5 remplacements**."
+            },
+            {
+              "titre": "La VAR",
+              "texte": "Utilisée à la Coupe du monde pour la 1<sup>re</sup> fois en **2018**."
+            },
+            {
+              "titre": "Un rouge ne se remplace pas",
+              "texte": "L’équipe finit le match en **infériorité numérique**."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que la **position** de hors-jeu est déjà une faute.",
+            "Juger la position **après** la passe : c’est quand elle part.",
+            "Oublier que le **gardien** compte comme défenseur.",
+            "Réclamer hors-jeu sur une **touche** ou un **corner**.",
+            "Croire que la **VAR** remplace l’arbitre."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "Quand regarde-t-on la position d’un attaquant&nbsp;?",
+            "Peut-il y avoir hors-jeu sur un corner&nbsp;?",
+            "À quelle distance se tire un penalty&nbsp;?"
+          ],
+          "reponses": "1) au moment de la passe · 2) non, jamais · 3) 11 mètres"
+        }
+      ]
+    }
+  ]
+}

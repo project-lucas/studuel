@@ -4360,6 +4360,132 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     //   select * from quest_catalog() where id = 'reponses10';
     sonde: null,
   },
+  {
+    id: '565',
+    fichier: '565_sport_6e_5e.sql',
+    feature:
+      'SPORT, LA CULTURE SPORTIVE — bloc 6e · 5e « Découvrir » (14/10/2026, docs/CADRAGE-SPORT.md) : 10 fiches × 2 niveaux (règles des grands sports, le corps qui étonne, les légendes), 224 questions ; le ménage retire les anciens chapitres d’EPS de la 6e et de la 5e (cascade : leçons, quiz, questions, cahier, contrôles, déblocages).',
+    siAbsente:
+      'Le dossier Sport de 6e et de 5e garde les 8 fiches du programme officiel (champs d’apprentissage, rôles sociaux…) ; les fiches PDF, le cahier et les contrôles de la nouvelle matière ne trouvent pas leurs chapitres (569, 570 sautent leurs lignes).',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'e5bbb0ea-b126-5c6c-9af6-b681ac7487a9',
+    },
+  },
+  {
+    id: '566',
+    fichier: '566_sport_4e_3e.sql',
+    feature:
+      'SPORT, LA CULTURE SPORTIVE — bloc 4e · 3e « Comprendre » : 10 fiches × 2 niveaux (les fondamentaux de l’entraînement — force, hypertrophie, endurance, récupération, blessures —, l’histoire du sport en France — Coubertin, le Tour, les Bleus, Paris olympique —, l’arbitre et le fair-play), 240 questions ; ménage des anciens chapitres de 4e et de 3e.',
+    siAbsente:
+      'Le dossier Sport de 4e et de 3e garde les 8 fiches du programme officiel ; 571 et 572 sautent leurs lignes.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '3ccd9d5a-5b68-522f-8e8c-ca671bf86ead',
+    },
+  },
+  {
+    id: '567',
+    fichier: '567_sport_2de_1re.sql',
+    feature:
+      'SPORT, LA CULTURE SPORTIVE — bloc 2de · 1re « S’entraîner » : 10 fiches × 2 niveaux (la science de l’effort — filières, programme, musculation, nutrition, blessures —, le sport une histoire — l’invention anglaise, la politique, les femmes, le business, le dopage), 240 questions ; ménage des anciens chapitres de 2de et de 1re, et LA 1re GÉNÉRALE EST ROUVERTE (`subjects.levels` reçoit `1re`, que la 278 avait retirée).',
+    siAbsente:
+      'La 2de garde ses 3 anciennes fiches, la 1re générale n’a pas de dossier Sport (le test du catalogue, qui n’a plus l’exception, échoue) ; 573 et 574 sautent leurs lignes.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: '3fd26c43-30b4-5268-8f9a-7652df6d5fea',
+    },
+  },
+  {
+    id: '568',
+    fichier: '568_sport_tle.sql',
+    feature:
+      'SPORT, LA CULTURE SPORTIVE — bloc Tle « Performer » : 10 fiches (périodisation, mesurer et analyser, le mental, surentraînement, santé publique, le sport fait social, l’olympisme, les métiers et STAPS, le bac d’EPS gardé tel quel, l’option et la spécialité EPPCS), 119 questions ; ménage des anciens chapitres de Tle (le bac d’EPS garde son identifiant).',
+    siAbsente:
+      'La Tle garde ses 13 anciennes fiches (CA1 → CA5, AFL) ; 575 saute ses lignes.',
+    sonde: {
+      type: 'ligne',
+      table: 'chapters',
+      colonne: 'id',
+      valeur: 'eb6d3920-c666-56aa-8d95-3c40ddf8b34f',
+    },
+  },
+  {
+    id: '569',
+    fichier: '569_sport_cahier_controles_6e.sql',
+    feature:
+      'SPORT 6e — le cahier d’exercices (30 exercices ★ / ★★ / ★★★, trois par fiche) et les contrôles blancs (30 sujets, trois niveaux par fiche) de la culture sportive.',
+    siAbsente:
+      'La tuile Exercice des fiches de Sport de 6e reste sur le contrôle blanc rédigé par l’IA, le manuel numérique n’a pas de pages. Rien ne casse. À exécuter APRÈS la 565.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '570',
+    fichier: '570_sport_cahier_controles_5e.sql',
+    feature:
+      'SPORT 5e — cahier (30 exercices) et contrôles (30 sujets), jumeaux de la 6e sur les chapitres de 5e.',
+    siAbsente:
+      'Même effet qu’une 569 absente, pour la 5e. À exécuter APRÈS la 565.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '571',
+    fichier: '571_sport_cahier_controles_4e.sql',
+    feature:
+      'SPORT 4e — cahier (30 exercices, dont les 3 du modèle « L’hypertrophie ») et contrôles (30 sujets).',
+    siAbsente:
+      'Même effet qu’une 569 absente, pour la 4e. À exécuter APRÈS la 566.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '572',
+    fichier: '572_sport_cahier_controles_3e.sql',
+    feature:
+      'SPORT 3e — cahier (30 exercices) et contrôles (30 sujets), jumeaux de la 4e sur les chapitres de 3e.',
+    siAbsente:
+      'Même effet qu’une 569 absente, pour la 3e. À exécuter APRÈS la 566.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '573',
+    fichier: '573_sport_cahier_controles_2de.sql',
+    feature:
+      'SPORT 2de — cahier (30 exercices) et contrôles (30 sujets).',
+    siAbsente:
+      'Même effet qu’une 569 absente, pour la 2de. À exécuter APRÈS la 567.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '574',
+    fichier: '574_sport_cahier_controles_1re.sql',
+    feature:
+      'SPORT 1re — cahier (30 exercices) et contrôles (30 sujets), jumeaux de la 2de sur les chapitres de 1re.',
+    siAbsente:
+      'Même effet qu’une 569 absente, pour la 1re. À exécuter APRÈS la 567.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
+  {
+    id: '575',
+    fichier: '575_sport_cahier_controles_tle.sql',
+    feature:
+      'SPORT Tle — cahier (30 exercices) et contrôles (30 sujets).',
+    siAbsente:
+      'Même effet qu’une 569 absente, pour la Tle. À exécuter APRÈS la 568.',
+    // Des lignes de contenu que la clé anon ne distingue pas.
+    sonde: null,
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

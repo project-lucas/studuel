@@ -43,7 +43,7 @@ export const MATIERES = {
   'maths-complementaires': 'Maths compl.', 'maths-expertes': 'Maths expertes',
   // Le reste du catalogue (chantier « toutes les fiches », 13/10/2026) : le nom court qui tient dans le coin de la page.
   anglais: 'Anglais', espagnol: 'Espagnol', allemand: 'Allemand', latin: 'Latin', grec: 'Grec', 'llcer-anglais': 'LLCER anglais',
-  snt: 'SNT', 'enseignement-scientifique': 'Ens. scientifique', 'arts-plastiques': 'Arts plastiques', musique: 'Musique', sport: 'EPS',
+  snt: 'SNT', 'enseignement-scientifique': 'Ens. scientifique', 'arts-plastiques': 'Arts plastiques', musique: 'Musique', sport: 'Sport',
   'histoire-geo-techno': 'Histoire-géo', 'philosophie-techno': 'Philosophie', 'maths-techno': 'Maths',
   si: 'Sciences de l’ingénieur', i2d: 'I2D', 'ingenierie-dd': 'I2D', 'innovation-technologique': 'Innovation techno.',
   'physique-chimie-maths': 'Physique-chimie', 'physique-chimie-sante': 'Physique-chimie', spcl: 'SPCL',

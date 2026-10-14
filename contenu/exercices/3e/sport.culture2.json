@@ -1,0 +1,3006 @@
+{
+  "niveau": "3e",
+  "matiere": "sport",
+  "exercices": [
+    {
+      "chapitre": "d44a829c-4be5-53e3-a96c-a5d6d98a7b55",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois sportives, trois moteurs",
+      "competence": "lire-tableau",
+      "situation": "Au club d’athlétisme, Léa, Karim et Chloé ne s’entraînent pas du tout de la même façon. Leur entraîneur a résumé leurs trois portraits dans un tableau. Lis-le bien : chaque ligne raconte un moteur différent.",
+      "documents": [
+        {
+          "id": "portraits",
+          "type": "tableau",
+          "titre": "Trois portraits d’athlètes",
+          "source": "Portraits écrits pour l’exercice.",
+          "colonnes": [
+            "Sportif",
+            "Épreuve",
+            "Durée de l’effort",
+            "Entraînement typique"
+          ],
+          "lignes": [
+            [
+              "Léa",
+              "100 m",
+              "environ 12 secondes",
+              "sprints courts, récupération complète"
+            ],
+            [
+              "Karim",
+              "Lancer du poids",
+              "moins d’une seconde",
+              "charges lourdes, technique parfaite"
+            ],
+            [
+              "Chloé",
+              "Marathon",
+              "plus de 3 heures",
+              "longues sorties à allure modérée"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "portraits",
+          "enonce": "Touche la case qui donne la **durée de l’effort** de Chloé, la marathonienne.",
+          "reponse": [
+            "r2c2"
+          ],
+          "aide": "Cherche la ligne de Chloé, puis la colonne « Durée de l’effort ».",
+          "explication": "Chloé court **plus de 3 heures** : c’est un effort très long, typique de l’endurance."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque sportif au moteur qu’il entraîne surtout.",
+          "paires": [
+            [
+              "Léa (100 m)",
+              "La vitesse"
+            ],
+            [
+              "Karim (lancer du poids)",
+              "La force"
+            ],
+            [
+              "Chloé (marathon)",
+              "L’endurance"
+            ]
+          ],
+          "aide": "Regarde la durée de l’effort et l’entraînement typique : un effort très court et explosif, un effort lourd, un effort très long.",
+          "explication": "**Léa → vitesse** (sprints courts bien récupérés), **Karim → force** (charges lourdes), **Chloé → endurance** (efforts longs à allure modérée). Chaque moteur a sa méthode."
+        },
+        {
+          "type": "choix",
+          "enonce": "Chloé court plusieurs heures de suite. Quelles fibres musculaires lui sont les plus utiles ?",
+          "options": [
+            "Les fibres lentes (type I), qui tiennent longtemps sans se fatiguer",
+            "Les fibres rapides (type II), qui produisent beaucoup de puissance",
+            "Aucune : l’endurance ne dépend pas des muscles",
+            "Seulement les fibres du cœur"
+          ],
+          "reponse": 0,
+          "aide": "Pour durer longtemps, il faut des fibres qui se fatiguent peu.",
+          "explication": "Les **fibres lentes** durent longtemps sans s’épuiser : le coureur de fond en a beaucoup. Les fibres rapides, elles, servent le sprinteur et le lanceur."
+        }
+      ]
+    },
+    {
+      "chapitre": "d44a829c-4be5-53e3-a96c-a5d6d98a7b55",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le carnet de tests de Mathis",
+      "competence": "lire-tableau",
+      "situation": "Mathis a passé quatre tests physiques en septembre, puis les a refaits en décembre, dans les mêmes conditions. Il veut savoir si son entraînement a servi. Attention : pour certains tests, c’est le plus petit chiffre qui est le meilleur.",
+      "documents": [
+        {
+          "id": "tests",
+          "type": "tableau",
+          "titre": "Les résultats de Mathis",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "colonnes": [
+            "Test",
+            "Septembre",
+            "Décembre"
+          ],
+          "lignes": [
+            [
+              "Saut en longueur sans élan (cm)",
+              165,
+              178
+            ],
+            [
+              "Sprint sur 30 m (secondes)",
+              "5,6",
+              "5,3"
+            ],
+            [
+              "Test navette (dernier palier atteint)",
+              5,
+              7
+            ],
+            [
+              "Flexion du tronc (cm au-delà des pieds)",
+              0,
+              4
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Relie chaque test à la qualité physique qu’il mesure.",
+          "paires": [
+            [
+              "Saut en longueur sans élan",
+              "La détente des jambes"
+            ],
+            [
+              "Sprint sur 30 m",
+              "La vitesse de départ"
+            ],
+            [
+              "Test navette",
+              "L’endurance"
+            ],
+            [
+              "Flexion du tronc",
+              "La souplesse"
+            ]
+          ],
+          "aide": "Pense à ce que chaque test demande : sauter loin, courir vite, tenir des allers-retours, aller toucher plus loin.",
+          "explication": "Le saut mesure la **détente**, le sprint de 30 m la **vitesse de départ**, la navette l’**endurance** et la flexion du tronc la **souplesse**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de centimètres Mathis a-t-il amélioré son **saut en longueur** entre septembre et décembre ?",
+          "reponse": 13,
+          "unite": "cm",
+          "aide": "Soustrais le résultat de septembre à celui de décembre.",
+          "explication": "178 − 165 = **13 cm** de plus. Refaire le même test trois mois plus tard, c’est se comparer à soi-même."
+        },
+        {
+          "type": "choix",
+          "enonce": "Au sprint sur 30 m, Mathis passe de 5,6 s à 5,3 s. Que peut-on dire ?",
+          "options": [
+            "Il a progressé : il met moins de temps pour parcourir la même distance",
+            "Il a régressé : le chiffre a diminué",
+            "Rien n’a changé, c’est seulement 0,3 s",
+            "On ne peut pas comparer deux résultats de sprint"
+          ],
+          "reponse": 0,
+          "aide": "Au sprint, on mesure un temps : mieux vaut en mettre peu.",
+          "explication": "Il court les 30 m en **0,3 s de moins** : c’est un vrai progrès. Au sprint, un chiffre plus petit est un meilleur résultat."
+        },
+        {
+          "type": "zone",
+          "document": "tests",
+          "enonce": "Touche la case qui donne le **palier atteint à la navette en décembre**.",
+          "reponse": [
+            "r2c2"
+          ],
+          "aide": "Cherche la ligne « Test navette », puis la colonne « Décembre ».",
+          "explication": "En décembre, Mathis atteint le **palier 7**, contre le palier 5 en septembre : son endurance a progressé de deux paliers."
+        }
+      ]
+    },
+    {
+      "chapitre": "d44a829c-4be5-53e3-a96c-a5d6d98a7b55",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le stage du club d’athlé",
+      "competence": "raisonner",
+      "situation": "Le club d’athlétisme propose un samedi de stage aux jeunes de 14 ans. Quatre ateliers sont prévus, mais l’un d’eux n’est pas adapté. Croise le programme avec les conseils pour les 13-15 ans.",
+      "documents": [
+        {
+          "id": "programme",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "STAGE D’ATHLÉ — 4 ATELIERS",
+          "sousTitre": "Programme du samedi, élèves de 14 ans",
+          "emoji": "🏃",
+          "lignes": [
+            {
+              "texte": "Atelier A : 6 sprints de 20 m, 2 minutes de récupération entre chaque",
+              "id": "atA"
+            },
+            {
+              "texte": "Atelier B : 40 minutes de footing, on doit pouvoir parler",
+              "id": "atB"
+            },
+            {
+              "texte": "Atelier C : squat à la charge maximale, 1 répétition",
+              "id": "atC"
+            },
+            {
+              "texte": "Atelier D : lancers de ballon lesté léger, 3 séries de 10",
+              "id": "atD"
+            }
+          ],
+          "pied": "Programme écrit pour l’exercice.",
+          "teinte": "ambre"
+        },
+        {
+          "id": "conseils",
+          "type": "tableau",
+          "titre": "Les conseils à 13-15 ans",
+          "source": "Fiche écrite pour l’exercice.",
+          "colonnes": [
+            "Moteur",
+            "Méthode adaptée",
+            "À 13-15 ans"
+          ],
+          "lignes": [
+            [
+              "Vitesse",
+              "sprints courts, récupération complète",
+              "à travailler beaucoup"
+            ],
+            [
+              "Endurance",
+              "efforts longs à allure modérée",
+              "à travailler"
+            ],
+            [
+              "Force",
+              "charges légères ou poids du corps, technique d’abord",
+              "jamais de charge maximale"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "programme",
+          "enonce": "Touche l’atelier qui **ne convient pas** à des jeunes de 14 ans.",
+          "reponse": [
+            "atC"
+          ],
+          "aide": "Regarde la ligne « Force » du tableau des conseils : que dit-elle de la charge maximale ?",
+          "explication": "L’**atelier C** demande la charge maximale. À 14 ans, les os grandissent encore : on prépare la force avec le poids du corps et des charges légères, jamais à la limite."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range les trois ateliers qui restent selon le moteur qu’ils entraînent.",
+          "categories": [
+            "Vitesse",
+            "Endurance",
+            "Force"
+          ],
+          "items": [
+            [
+              "Atelier A : 6 sprints de 20 m, récupération complète",
+              0
+            ],
+            [
+              "Atelier B : 40 minutes de footing",
+              1
+            ],
+            [
+              "Atelier D : lancers de ballon lesté léger",
+              2
+            ]
+          ],
+          "aide": "Sprints très courts, effort long à allure modérée, lancer d’une charge : un moteur pour chacun.",
+          "explication": "**A → vitesse** (sprints courts bien récupérés), **B → endurance** (effort long, allure modérée), **D → force** (une charge légère lancée, sans aller à la limite)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Au total, quelle distance parcourent les sprints de l’**atelier A** ?",
+          "reponse": 120,
+          "unite": "m",
+          "aide": "6 sprints de 20 m : multiplie.",
+          "explication": "6 × 20 = **120 m** de sprint en tout. C’est peu : l’intérêt est d’aller vite à chaque fois, pas d’en faire beaucoup."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi laisse-t-on **2 minutes de récupération** entre deux sprints de l’atelier A ?",
+          "options": [
+            "Pour repartir frais et rester vraiment vite à chaque sprint",
+            "Pour s’échauffer entre deux sprints",
+            "Parce que l’endurance se travaille en se reposant",
+            "Pour que les fibres lentes prennent le relais"
+          ],
+          "reponse": 0,
+          "aide": "Le tableau dit : « sprints courts, récupération complète ». À quoi sert une récupération complète ?",
+          "explication": "Sans récupération complète, le sprinteur repart fatigué et ralentit : on ne travaille plus la vitesse. **Récupérer, c’est rester vite.**"
+        }
+      ]
+    },
+    {
+      "chapitre": "2cd14700-c807-55c4-a500-c07adf0d5253",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les allures d’Aya",
+      "competence": "lire-tableau",
+      "situation": "Après le test navette, Aya, 14 ans, connaît sa VMA : 10 km/h. Son entraîneur lui a préparé un tableau pour calculer ses allures d’entraînement.",
+      "documents": [
+        {
+          "id": "allures",
+          "type": "tableau",
+          "titre": "Les allures d’Aya (VMA : 10 km/h)",
+          "source": "Tableau écrit pour l’exercice.",
+          "colonnes": [
+            "Allure",
+            "% de la VMA",
+            "Vitesse d’Aya"
+          ],
+          "lignes": [
+            [
+              "Endurance fondamentale",
+              "60 à 70 %",
+              "6 à 7 km/h"
+            ],
+            [
+              "Seuil",
+              "80 à 85 %",
+              "8 à 8,5 km/h"
+            ],
+            [
+              "Fractionné",
+              "100 à 110 %",
+              "10 à 11 km/h"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "allures",
+          "enonce": "Touche la case qui donne le **pourcentage de la VMA** de l’allure « seuil ».",
+          "reponse": [
+            "r1c1"
+          ],
+          "aide": "Cherche la ligne « Seuil », puis la colonne « % de la VMA ».",
+          "explication": "Le seuil se court à **80 à 85 % de la VMA** : une allure soutenue, où l’on ne tient plus une conversation."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À 10 km/h, en combien de **minutes** Aya parcourt-elle 1 kilomètre ?",
+          "reponse": 6,
+          "unite": "min",
+          "aide": "Pour passer d’une vitesse à un temps au kilomètre, divise 60 par la vitesse.",
+          "explication": "60 ÷ 10 = **6 minutes** par kilomètre."
+        },
+        {
+          "type": "choix",
+          "enonce": "Aya court à 6,5 km/h. Quelle allure est-ce ?",
+          "options": [
+            "L’endurance fondamentale (6 à 7 km/h)",
+            "Le seuil (8 à 8,5 km/h)",
+            "Le fractionné (10 à 11 km/h)",
+            "Une allure plus rapide que sa VMA"
+          ],
+          "reponse": 0,
+          "aide": "Compare 6,5 km/h aux vitesses de la dernière colonne.",
+          "explication": "6,5 km/h est entre 6 et 7 km/h : c’est de l’**endurance fondamentale**, l’allure où l’on construit sa base."
+        }
+      ]
+    },
+    {
+      "chapitre": "2cd14700-c807-55c4-a500-c07adf0d5253",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le test navette de Noé",
+      "competence": "calculer",
+      "situation": "Noé a passé le test navette de 20 mètres : il a tenu jusqu’au palier 9. Pour en déduire sa VMA, il lit le tableau des paliers, puis calcule ses allures d’entraînement.",
+      "documents": [
+        {
+          "id": "paliers",
+          "type": "tableau",
+          "titre": "Les paliers de la navette",
+          "source": "D’après le principe du test de Luc Léger : départ à 8,5 km/h, puis +0,5 km/h à chaque palier.",
+          "colonnes": [
+            "Palier",
+            "Vitesse à courir (km/h)"
+          ],
+          "lignes": [
+            [
+              7,
+              "11,5"
+            ],
+            [
+              8,
+              "12"
+            ],
+            [
+              9,
+              "12,5"
+            ],
+            [
+              10,
+              "13"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "paliers",
+          "enonce": "Touche la case qui donne la **vitesse du palier 9**, le dernier tenu par Noé.",
+          "reponse": [
+            "r2c1"
+          ],
+          "aide": "Cherche la ligne du palier 9, puis la colonne de la vitesse.",
+          "explication": "Au palier 9, il fallait courir à **12,5 km/h**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le dernier palier tenu donne la VMA. Quelle est la **VMA de Noé** ?",
+          "reponse": 12.5,
+          "unite": "km/h",
+          "aide": "La VMA, c’est la vitesse du dernier palier tenu.",
+          "explication": "La VMA de Noé est de **12,5 km/h**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "L’endurance fondamentale se court à 70 % de la VMA au plus. À quelle vitesse, en km/h, est-ce pour Noé ?",
+          "reponse": 8.75,
+          "unite": "km/h",
+          "tolerance": 0.01,
+          "aide": "Calcule 70 % de 12,5 : 12,5 × 0,7.",
+          "explication": "12,5 × 0,7 = **8,75 km/h**. Au-dessus, ce n’est plus de l’endurance fondamentale."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À la VMA de 12,5 km/h, combien de **secondes** Noé met-il pour parcourir 1 km ?",
+          "reponse": 288,
+          "unite": "s",
+          "aide": "60 ÷ 12,5 donne des minutes. Convertis ensuite en secondes (1 min = 60 s).",
+          "explication": "60 ÷ 12,5 = 4,8 minutes, soit 4 min 48 s = **288 secondes** par kilomètre."
+        },
+        {
+          "type": "choix",
+          "enonce": "Noé court tous ses footings à 12,5 km/h, « pour progresser plus vite ». Qu’en penser ?",
+          "options": [
+            "Il court à 100 % de sa VMA : il s’épuise sans bâtir sa base",
+            "C’est parfait : plus on va vite, plus on progresse",
+            "C’est de l’endurance fondamentale, comme il faut",
+            "Il ne peut pas courir aussi vite"
+          ],
+          "reponse": 0,
+          "aide": "Compare 12,5 km/h à sa VMA : quel pourcentage est-ce ?",
+          "explication": "12,5 km/h, c’est **100 % de sa VMA** : une allure de fractionné, pas d’endurance fondamentale. Pour progresser, il faut beaucoup de volume lent et un peu de rapide."
+        }
+      ]
+    },
+    {
+      "chapitre": "2cd14700-c807-55c4-a500-c07adf0d5253",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le plan de Lina pour le cross",
+      "competence": "modeliser",
+      "situation": "Lina, 14 ans, prépare le cross du collège. Sa VMA est de 14 km/h. Son entraîneur lui a donné une règle : « beaucoup de lent, un peu de rapide ». Elle a noté ce qu’elle a fait cette semaine. À toi de vérifier.",
+      "documents": [
+        {
+          "id": "semaine",
+          "type": "graphique",
+          "forme": "barres-h",
+          "titre": "Minutes d’entraînement de Lina cette semaine",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "categories": [
+            "Endurance fondamentale",
+            "Seuil",
+            "Fractionné"
+          ],
+          "series": [
+            {
+              "nom": "Minutes",
+              "valeurs": [
+                180,
+                30,
+                20
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Minutes",
+            "min": 0,
+            "max": 200,
+            "pas": 20
+          },
+          "valeurs": false
+        },
+        {
+          "id": "fiche",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "FICHE DE LINA",
+          "sousTitre": "VMA : 14 km/h",
+          "emoji": "👟",
+          "lignes": [
+            {
+              "texte": "Endurance fondamentale : 65 % de la VMA",
+              "id": "ef"
+            },
+            {
+              "texte": "Seuil : 85 % de la VMA",
+              "id": "seuil"
+            },
+            {
+              "texte": "Fractionné : 105 % de la VMA",
+              "id": "frac"
+            }
+          ],
+          "pied": "Fiche écrite pour l’exercice.",
+          "teinte": "violet"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "semaine",
+          "enonce": "Touche l’allure que Lina a **le plus travaillée** cette semaine.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Cherche la barre la plus longue.",
+          "explication": "C’est l’**endurance fondamentale**, avec 180 minutes : la base de l’endurance se construit surtout en allure lente."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de **minutes** Lina s’est-elle entraînée en tout cette semaine ?",
+          "reponse": 230,
+          "unite": "min",
+          "aide": "Additionne les trois barres : 180 + 30 + 20.",
+          "explication": "180 + 30 + 20 = **230 minutes**, soit un peu moins de 4 heures."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À quelle vitesse, en km/h, Lina court-elle son **endurance fondamentale** ?",
+          "reponse": 9.1,
+          "unite": "km/h",
+          "tolerance": 0.01,
+          "aide": "Lis le pourcentage sur la fiche, puis calcule ce pourcentage de 14 km/h.",
+          "explication": "65 % de 14 = 14 × 0,65 = **9,1 km/h**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le plan de Lina respecte-t-il la règle « beaucoup de lent, un peu de rapide » ?",
+          "options": [
+            "Oui : 180 minutes sur 230 sont de l’endurance fondamentale, et peu de fractionné",
+            "Non : elle ne fait pas assez de fractionné",
+            "Non : elle devrait faire autant de seuil que d’endurance",
+            "On ne peut pas savoir sans connaître sa FC max"
+          ],
+          "reponse": 0,
+          "aide": "Compare la longueur de la première barre à celle des deux autres.",
+          "explication": "Plus des trois quarts de son temps est lent, et le fractionné ne prend que **20 minutes** : c’est exactement la recette. Trop de fractionné épuiserait Lina."
+        }
+      ]
+    },
+    {
+      "chapitre": "f4a2075f-7175-5eef-a4ec-665a227c23fc",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Le cycle de Jade",
+      "competence": "observer-schema",
+      "situation": "Après chaque séance, le corps de Jade suit toujours le même cycle en trois temps. Le schéma ci-dessous a perdu un maillon : retrouve-le.",
+      "documents": [
+        {
+          "id": "cycle",
+          "type": "chaine",
+          "disposition": "ligne",
+          "titre": "Le cycle de la progression",
+          "noeuds": [
+            {
+              "id": "fatigue",
+              "texte": "Fatigue",
+              "emoji": "😮"
+            },
+            {
+              "id": "manque",
+              "texte": "?"
+            },
+            {
+              "id": "sur",
+              "texte": "Surcompensation",
+              "emoji": "📈"
+            }
+          ],
+          "liens": [
+            {
+              "de": "fatigue",
+              "a": "manque",
+              "texte": "puis"
+            },
+            {
+              "de": "manque",
+              "a": "sur",
+              "texte": "puis"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "choix",
+          "enonce": "Quel est le **temps manquant** du cycle ?",
+          "options": [
+            "La réparation",
+            "La compétition",
+            "L’échauffement",
+            "L’étirement"
+          ],
+          "reponse": 0,
+          "ordreFixe": false,
+          "aide": "Après l’effort, que fait le corps avant de reconstruire un peu plus fort ?",
+          "explication": "Entre la fatigue et la surcompensation, il y a la **réparation** : le corps reconstruit et recharge ses réserves."
+        },
+        {
+          "type": "zone",
+          "document": "cycle",
+          "enonce": "Touche le temps où le corps a reconstruit **un peu au-dessus de son niveau de départ**.",
+          "reponse": [
+            "sur"
+          ],
+          "aide": "C’est la marche gagnée qui fait progresser.",
+          "explication": "C’est la **surcompensation** : le corps repart d’un niveau un peu plus haut qu’avant la séance."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase.",
+          "texte": "Si Jade s’entraîne avant la fin de la ___, elle part d’un niveau plus ___ et ne gagne rien.",
+          "reponses": [
+            [
+              "réparation"
+            ],
+            [
+              "bas"
+            ]
+          ],
+          "banque": [
+            "réparation",
+            "bas",
+            "haut",
+            "fatigue"
+          ],
+          "aide": "Quel temps du cycle n’est pas fini ? Et que devient le niveau de départ ?",
+          "explication": "S’entraîner trop tôt, c’est repartir d’un niveau plus **bas** avant la fin de la **réparation** : rien n’est gagné."
+        }
+      ]
+    },
+    {
+      "chapitre": "f4a2075f-7175-5eef-a4ec-665a227c23fc",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La semaine de Nolan",
+      "competence": "lire-tableau",
+      "situation": "Nolan, 14 ans, joue au foot en club. Il a noté ses activités de la semaine et ses heures de sommeil. Entre 14 et 17 ans, on conseille 8 à 10 heures par nuit.",
+      "documents": [
+        {
+          "id": "semaine",
+          "type": "tableau",
+          "titre": "La semaine de Nolan",
+          "source": "Semaine écrite pour l’exercice.",
+          "colonnes": [
+            "Jour",
+            "Activité",
+            "Sommeil la nuit d’avant (h)",
+            "Remarque"
+          ],
+          "lignes": [
+            [
+              "Lundi",
+              "EPS",
+              9,
+              "—"
+            ],
+            [
+              "Mardi",
+              "Entraînement au club",
+              8,
+              "—"
+            ],
+            [
+              "Mercredi",
+              "Promenade",
+              9,
+              "—"
+            ],
+            [
+              "Jeudi",
+              "Entraînement au club",
+              7,
+              "Écran jusqu’à 23 h 30"
+            ],
+            [
+              "Vendredi",
+              "EPS",
+              7,
+              "Se lève fatigué"
+            ],
+            [
+              "Samedi",
+              "Match",
+              8,
+              "—"
+            ],
+            [
+              "Dimanche",
+              "Repos",
+              8,
+              "—"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "semaine",
+          "enonce": "Touche la case qui **explique** la nuit courte du jeudi.",
+          "reponse": [
+            "r3c3"
+          ],
+          "aide": "Cherche la ligne « Jeudi » et la colonne « Remarque ».",
+          "explication": "« **Écran jusqu’à 23 h 30** » : la lumière des écrans bloque la mélatonine, l’hormone du sommeil, et retarde l’endormissement."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Sur la semaine, combien de nuits Nolan dort-il **moins de 8 heures** ?",
+          "reponse": 2,
+          "aide": "Compte les nuits dont le chiffre est inférieur à 8.",
+          "explication": "Il dort 7 heures le jeudi et le vendredi : **2 nuits** sous le minimum conseillé. Et le vendredi, il se lève fatigué."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi les écrans retardent-ils l’endormissement ?",
+          "options": [
+            "Leur lumière bloque la mélatonine, l’hormone qui donne le signal de dormir",
+            "Ils fatiguent les muscles des yeux",
+            "Ils chauffent la pièce",
+            "Ils fabriquent de l’hormone de croissance"
+          ],
+          "reponse": 0,
+          "aide": "Pense à l’hormone du sommeil.",
+          "explication": "La lumière des écrans empêche la sécrétion de **mélatonine**. Éteindre les écrans une heure avant de dormir, c’est un entraînement comme un autre."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces jours de la semaine de Nolan : jour d’effort ou jour de récupération ?",
+          "categories": [
+            "Jour d’effort",
+            "Jour de récupération"
+          ],
+          "items": [
+            [
+              "Lundi (EPS)",
+              0
+            ],
+            [
+              "Mardi (entraînement)",
+              0
+            ],
+            [
+              "Mercredi (promenade)",
+              1
+            ],
+            [
+              "Jeudi (entraînement)",
+              0
+            ],
+            [
+              "Samedi (match)",
+              0
+            ],
+            [
+              "Dimanche (repos)",
+              1
+            ]
+          ],
+          "aide": "Relis la colonne « Activité » : une promenade ou un repos ne réentraînent pas les muscles.",
+          "explication": "Le **mercredi** (promenade, récupération active) et le **dimanche** (vrai repos) sont les jours de récupération. Un jour sans sport n’est pas un jour perdu : la surcompensation s’y construit."
+        }
+      ]
+    },
+    {
+      "chapitre": "f4a2075f-7175-5eef-a4ec-665a227c23fc",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Kenza est-elle surentraînée ?",
+      "competence": "raisonner",
+      "situation": "Kenza, 14 ans, court le 800 m. Depuis deux semaines, elle se sent mal, et elle envisage d’ajouter une séance par semaine. Elle écrit à son entraîneur Yann, qui lui demande de regarder son pouls du matin.",
+      "documents": [
+        {
+          "id": "pouls",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Pouls de repos de Kenza, au réveil",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "categories": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6"
+          ],
+          "series": [
+            {
+              "nom": "Pouls au repos",
+              "valeurs": [
+                58,
+                58,
+                60,
+                63,
+                66,
+                69
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Battements par minute",
+            "min": 50,
+            "max": 75,
+            "pas": 5
+          },
+          "axeX": {
+            "titre": "Semaine"
+          },
+          "valeurs": false
+        },
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "participants": [
+            {
+              "nom": "Kenza",
+              "emoji": "👧",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Yann (coach)",
+              "emoji": "🧑",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Kenza",
+              "texte": "Salut Yann. Je suis crevée depuis deux semaines, même après le week-end."
+            },
+            {
+              "qui": "Yann (coach)",
+              "texte": "Et ton sommeil ?"
+            },
+            {
+              "qui": "Kenza",
+              "texte": "Je me réveille la nuit. Et mes chronos au 800 m sont moins bons, donc je vais ajouter une séance par semaine."
+            },
+            {
+              "qui": "Yann (coach)",
+              "texte": "Attends. Regarde d’abord ton pouls du matin avant de décider."
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "pouls",
+          "enonce": "Touche la **première semaine** où le pouls de repos de Kenza dépasse 65 battements par minute.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Cherche le premier point de la courbe qui passe au-dessus de la graduation 65.",
+          "explication": "À la **semaine 5**, le pouls atteint 66 battements par minute : il monte depuis la semaine 3."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de battements par minute le pouls de repos a-t-il **augmenté** entre S1 et S6 ?",
+          "reponse": 11,
+          "unite": "bpm",
+          "aide": "Lis la valeur en S1 et en S6, puis fais la différence.",
+          "explication": "69 − 58 = **11 battements par minute** de plus. Un cœur qui s’emballe au repos est un signal d’alerte."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces éléments : signe d’alerte du surentraînement, ou normal ?",
+          "categories": [
+            "Signe d’alerte",
+            "Normal"
+          ],
+          "items": [
+            [
+              "Fatigue qui dure malgré le week-end",
+              0
+            ],
+            [
+              "Pouls de repos qui monte",
+              0
+            ],
+            [
+              "Réveils la nuit",
+              0
+            ],
+            [
+              "Chronos qui baissent alors qu’on s’entraîne plus",
+              0
+            ],
+            [
+              "Quelques courbatures après un effort nouveau",
+              1
+            ],
+            [
+              "Envie de bouger après une bonne nuit",
+              1
+            ]
+          ],
+          "aide": "Les signaux d’alerte durent, ou s’aggravent, malgré le repos.",
+          "explication": "Fatigue persistante, pouls de repos qui monte, sommeil cassé, performances en baisse : ce sont les signaux d’un **surentraînement**. Des courbatures légères ou l’envie de bouger sont normales."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la **bonne décision** pour Kenza ?",
+          "options": [
+            "Récupérer : alléger les séances, bien dormir, et en parler à un adulte",
+            "Ajouter une séance pour retrouver ses chronos",
+            "Ne rien changer et attendre que ça passe tout seul",
+            "Arrêter définitivement le sport"
+          ],
+          "reponse": 0,
+          "aide": "Face à un surentraînement, la réponse n’est pas d’en faire plus.",
+          "explication": "Les deux documents disent la même chose : fatigue, mauvais sommeil, pouls qui monte, chronos en baisse. La réponse est de **récupérer**, pas d’en faire plus."
+        }
+      ]
+    },
+    {
+      "chapitre": "0ee6bfe0-d940-505f-84a4-f7e8ece03dba",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La routine de Paul",
+      "competence": "analyser-document",
+      "situation": "Paul, 13 ans, joue au foot en club. Avant chaque match, son entraîneur lui fait suivre la même routine de dix minutes. Lis-la attentivement.",
+      "documents": [
+        {
+          "id": "routine",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "ROUTINE D’AVANT-MATCH",
+          "sousTitre": "10 minutes avant le coup d’envoi",
+          "emoji": "⚽",
+          "lignes": [
+            {
+              "texte": "Trot léger",
+              "valeur": "3 min",
+              "id": "trot"
+            },
+            {
+              "texte": "Mobilité : chevilles, hanches, épaules",
+              "valeur": "3 min",
+              "id": "mobilite"
+            },
+            {
+              "texte": "Équilibre sur un pied",
+              "valeur": "2 min",
+              "id": "equilibre"
+            },
+            {
+              "texte": "Gestes du jeu qui accélèrent",
+              "valeur": "2 min",
+              "id": "gestes"
+            }
+          ],
+          "pied": "Routine écrite pour l’exercice.",
+          "teinte": "vert"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "routine",
+          "enonce": "Touche l’étape qui entraîne la **proprioception** de la cheville.",
+          "reponse": [
+            "equilibre"
+          ],
+          "aide": "La proprioception, c’est savoir où sont ses articulations sans les regarder. Quel exercice la travaille ?",
+          "explication": "L’**équilibre sur un pied** entraîne la cheville à corriger un déséquilibre avant de se tordre."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de minutes dure la routine en tout ?",
+          "reponse": 10,
+          "unite": "min",
+          "aide": "Additionne les quatre durées : 3 + 3 + 2 + 2.",
+          "explication": "3 + 3 + 2 + 2 = **10 minutes** : c’est le temps d’un bon échauffement."
+        },
+        {
+          "type": "choix",
+          "enonce": "Il n’y a aucun étirement statique long dans cette routine. Pourquoi ?",
+          "options": [
+            "Avant l’effort, ils diminuent la force un moment et ne préviennent pas les blessures",
+            "Parce qu’ils sont dangereux à tout moment",
+            "Parce que Paul est trop jeune pour s’étirer",
+            "Parce qu’il n’y a plus de place dans les dix minutes"
+          ],
+          "reponse": 0,
+          "aide": "Les étirements statiques longs ont leur place, mais pas à ce moment-là.",
+          "explication": "Les étirements **statiques longs** se gardent pour la fin de séance. Avant l’effort, on prépare le corps avec du mouvement."
+        }
+      ]
+    },
+    {
+      "chapitre": "0ee6bfe0-d940-505f-84a4-f7e8ece03dba",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Les kilomètres de Hugo",
+      "competence": "calculer",
+      "situation": "Hugo, 13 ans, prépare un cross. Il augmente ses kilomètres chaque semaine, mais sa coach lui rappelle la règle : pas plus de 10 % de charge en plus d’une semaine à l’autre.",
+      "documents": [
+        {
+          "id": "km",
+          "type": "tableau",
+          "titre": "Les kilomètres courus par Hugo",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "colonnes": [
+            "Semaine",
+            "Distance courue (km)"
+          ],
+          "lignes": [
+            [
+              "S1",
+              20
+            ],
+            [
+              "S2",
+              22
+            ],
+            [
+              "S3",
+              26
+            ],
+            [
+              "S4",
+              28
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "En S3, quelle est la **distance maximale** que Hugo pouvait courir en respectant la règle des 10 % ? (en km)",
+          "reponse": 24.2,
+          "unite": "km",
+          "tolerance": 0.05,
+          "aide": "Augmente la distance de S2 de 10 % : multiplie par 1,1.",
+          "explication": "22 × 1,1 = **24,2 km**. Au-delà, la charge augmente trop vite pour les tendons et les os."
+        },
+        {
+          "type": "zone",
+          "document": "km",
+          "enonce": "Touche la **distance** où Hugo a dépassé la règle des 10 %.",
+          "reponse": [
+            "r2c1"
+          ],
+          "aide": "Compare chaque semaine à la précédente : S2 est à +10 % exactement.",
+          "explication": "En **S3**, il court 26 km, alors que la limite était 24,2 km. S2 (22 km, soit +10 %) et S4 (28 km, soit environ +8 %) respectent la règle."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de **pour cent** la distance a-t-elle augmenté entre S2 et S3 ? (arrondi à l’unité)",
+          "reponse": 18,
+          "unite": "%",
+          "tolerance": 0.5,
+          "aide": "Calcule 26 ÷ 22, puis retire 1 et passe en pourcentage.",
+          "explication": "26 ÷ 22 ≈ 1,18 : la distance augmente d’environ **18 %**, presque le double de ce qui est conseillé."
+        },
+        {
+          "type": "choix",
+          "enonce": "Hugo ressent une douleur sous le genou, surtout en descendant les escaliers. Que doit-il faire ?",
+          "options": [
+            "Adapter son activité (moins de sauts et de côtes) et ne pas forcer, puis consulter si cela dure",
+            "L’ignorer et courir davantage pour « l’user »",
+            "Doubler ses kilomètres pour passer le cap",
+            "S’étirer dix minutes juste avant de courir et repartir"
+          ],
+          "reponse": 0,
+          "aide": "Pense aux douleurs de croissance de l’adolescent : on les respecte.",
+          "explication": "Une douleur sous le genou à cet âge peut être la maladie d’**Osgood-Schlatter**. On adapte l’activité, on ne force pas, et on voit un médecin si la douleur dure ou augmente."
+        }
+      ]
+    },
+    {
+      "chapitre": "0ee6bfe0-d940-505f-84a4-f7e8ece03dba",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Qui protège quoi ?",
+      "competence": "observer-schema",
+      "situation": "Le professeur d’EPS affiche le schéma d’un joueur vu de profil. Quatre points du corps sont signalés ; le tableau dit ce qui les menace et comment les protéger. À toi de relier les deux.",
+      "documents": [
+        {
+          "id": "corps",
+          "type": "schema",
+          "titre": "Quatre points fragiles",
+          "source": "Schéma simplifié, écrit pour l’exercice.",
+          "largeur": 320,
+          "hauteur": 350,
+          "elements": [
+            {
+              "forme": "cercle",
+              "cx": 130,
+              "cy": 40,
+              "r": 20,
+              "teinte": "gris",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 105,
+              "y": 65,
+              "l": 50,
+              "h": 100,
+              "arrondi": 14,
+              "teinte": "violet",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 119,
+              "y": 165,
+              "l": 26,
+              "h": 75,
+              "arrondi": 10,
+              "teinte": "violet",
+              "motif": "clair"
+            },
+            {
+              "forme": "rect",
+              "x": 124,
+              "y": 240,
+              "l": 20,
+              "h": 58,
+              "arrondi": 8,
+              "teinte": "violet",
+              "motif": "clair"
+            },
+            {
+              "forme": "ellipse",
+              "cx": 152,
+              "cy": 322,
+              "rx": 38,
+              "ry": 10,
+              "teinte": "violet",
+              "motif": "clair"
+            },
+            {
+              "forme": "cercle",
+              "cx": 105,
+              "cy": 115,
+              "r": 11,
+              "teinte": "corail",
+              "motif": "plein",
+              "id": "dos",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 132,
+              "cy": 240,
+              "r": 11,
+              "teinte": "corail",
+              "motif": "plein",
+              "id": "genou",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 134,
+              "cy": 298,
+              "r": 10,
+              "teinte": "corail",
+              "motif": "plein",
+              "id": "cheville",
+              "zone": true
+            },
+            {
+              "forme": "cercle",
+              "cx": 118,
+              "cy": 322,
+              "r": 9,
+              "teinte": "corail",
+              "motif": "plein",
+              "id": "talon",
+              "zone": true
+            }
+          ]
+        },
+        {
+          "id": "tableau",
+          "type": "tableau",
+          "titre": "Menaces et protections",
+          "source": "Tableau écrit pour l’exercice.",
+          "colonnes": [
+            "Blessure ou risque",
+            "Zone",
+            "Réponse"
+          ],
+          "lignes": [
+            [
+              "Osgood-Schlatter (10 à 15 ans)",
+              "Genou",
+              "moins de sauts, on adapte"
+            ],
+            [
+              "Sever (8 à 13 ans)",
+              "Talon",
+              "moins de course sur sol dur"
+            ],
+            [
+              "Mal de dos",
+              "Dos",
+              "gainage : planche, gainage latéral"
+            ],
+            [
+              "Entorse de cheville",
+              "Cheville",
+              "équilibre sur un pied"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "corps",
+          "enonce": "Touche sur le schéma la zone touchée par la maladie d’**Osgood-Schlatter**.",
+          "reponse": [
+            "genou"
+          ],
+          "aide": "Cherche cette maladie dans le tableau : quelle zone indique-t-il ?",
+          "explication": "Osgood-Schlatter est une douleur de croissance **sous le genou**, fréquente entre 10 et 15 ans."
+        },
+        {
+          "type": "zone",
+          "document": "corps",
+          "enonce": "Touche sur le schéma la zone touchée par la maladie de **Sever**.",
+          "reponse": [
+            "talon"
+          ],
+          "aide": "Le tableau donne la zone : le point est à l’arrière du pied.",
+          "explication": "La maladie de Sever est une douleur de croissance au **talon**, typique entre 8 et 13 ans."
+        },
+        {
+          "type": "choix",
+          "enonce": "Sami, 9 ans, a mal au talon après chaque match. Laquelle de ces blessures est la plus probable ?",
+          "options": [
+            "La maladie de Sever",
+            "La maladie d’Osgood-Schlatter",
+            "Une entorse de la cheville",
+            "Un mal de dos"
+          ],
+          "reponse": 0,
+          "aide": "Croise la zone (talon) et l’âge typique de chaque maladie dans le tableau.",
+          "explication": "Talon et 9 ans : c’est la **maladie de Sever** (8 à 13 ans). On adapte l’activité, on ne force pas."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque moyen de prévention à la zone qu’il protège.",
+          "paires": [
+            [
+              "Planche et gainage latéral",
+              "Le dos"
+            ],
+            [
+              "Équilibre sur un pied",
+              "La cheville"
+            ],
+            [
+              "Moins de sauts",
+              "Le genou"
+            ],
+            [
+              "Moins de course sur sol dur",
+              "Le talon"
+            ]
+          ],
+          "aide": "Reprends la dernière colonne du tableau, ligne par ligne.",
+          "explication": "**Gainage → dos**, **équilibre → cheville**, **moins de sauts → genou**, **moins de sol dur → talon**. Chaque zone fragile a sa réponse."
+        },
+        {
+          "type": "choix",
+          "enonce": "Avant un match, Paul fait un étirement statique de deux minutes pour « protéger » ses muscles. Qu’en penser ?",
+          "options": [
+            "Ça diminue la force un moment et ne prévient pas les blessures : mieux vaut s’échauffer en mouvement",
+            "C’est la meilleure protection qui existe",
+            "C’est dangereux pour le dos",
+            "Cela remplace l’échauffement"
+          ],
+          "reponse": 0,
+          "aide": "Les étirements statiques longs ont une place, mais laquelle ?",
+          "explication": "Avant l’effort, un étirement **statique long** n’empêche pas les blessures et diminue la force. On le garde pour après, et on s’échauffe en mouvement."
+        }
+      ]
+    },
+    {
+      "chapitre": "ae015207-9a1c-5548-8302-1d79a431baee",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les dates du sport moderne",
+      "competence": "se-reperer-temps",
+      "situation": "Pour son exposé, Nina a placé sur une frise six dates qui ont fait naître le sport moderne en France. Lis-la, puis réponds.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Les débuts du sport moderne",
+          "source": "Dates à retenir du cours.",
+          "debut": 1870,
+          "fin": 1940,
+          "pas": 10,
+          "evenements": [
+            {
+              "id": "havre",
+              "date": 1872,
+              "nom": "Havre AC"
+            },
+            {
+              "id": "usfsa",
+              "date": 1887,
+              "nom": "USFSA"
+            },
+            {
+              "id": "cio",
+              "date": 1894,
+              "nom": "Création du CIO"
+            },
+            {
+              "id": "athenes",
+              "date": 1896,
+              "nom": "Jeux d’Athènes"
+            },
+            {
+              "id": "milliat",
+              "date": 1922,
+              "nom": "Jeux féminins"
+            },
+            {
+              "id": "rimet",
+              "date": 1930,
+              "nom": "Coupe du monde"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche l’événement qui correspond à la **création du CIO**, au congrès de la Sorbonne.",
+          "reponse": [
+            "cio"
+          ],
+          "aide": "Le congrès de la Sorbonne a eu lieu en 1894.",
+          "explication": "Le **23 juin 1894**, Pierre de Coubertin convainc les délégués de créer le Comité international olympique."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’**années** séparent la création du CIO des premiers Jeux modernes d’Athènes ?",
+          "reponse": 2,
+          "unite": "ans",
+          "aide": "Soustrais l’année du CIO à celle d’Athènes.",
+          "explication": "1896 − 1894 = **2 ans** : Coubertin n’a pas attendu longtemps pour passer de l’idée aux Jeux."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces événements du plus ancien au plus récent.",
+          "items": [
+            "Fondation du Havre Athletic Club",
+            "Création du CIO",
+            "Jeux mondiaux féminins à Paris",
+            "Première Coupe du monde de football"
+          ],
+          "aide": "Repère les dates sur la frise : 1872, 1894, 1922, 1930.",
+          "explication": "Le **Havre AC (1872)**, puis le **CIO (1894)**, les **Jeux mondiaux féminins (1922)** et la **Coupe du monde (1930)**."
+        }
+      ]
+    },
+    {
+      "chapitre": "ae015207-9a1c-5548-8302-1d79a431baee",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La phrase de Coubertin",
+      "competence": "analyser-texte",
+      "situation": "Au CDI, Inès et Malo préparent un exposé sur Pierre de Coubertin. Ils s’aperçoivent que bien des choses qu’on croit savoir sont plus nuancées. Lis leur échange.",
+      "documents": [
+        {
+          "id": "echange",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Au CDI",
+          "source": "Dialogue écrit pour l’exercice.",
+          "participants": [
+            {
+              "nom": "Inès",
+              "emoji": "👧",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Malo",
+              "emoji": "👦",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Inès",
+              "texte": "J’ai lu : « L’important dans la vie n’est pas le triomphe mais le combat. » C’est de Coubertin, non ?"
+            },
+            {
+              "qui": "Malo",
+              "texte": "Il l’a citée en 1908, mais il reprenait l’évêque américain [[t|Talbot]]."
+            },
+            {
+              "qui": "Inès",
+              "texte": "Et la devise des Jeux, « plus vite, plus haut, plus fort » ?"
+            },
+            {
+              "qui": "Malo",
+              "texte": "En latin : Citius, Altius, Fortius. Elle vient du dominicain Henri Didon, qui l’a lancée en 1891."
+            },
+            {
+              "qui": "Inès",
+              "texte": "Donc Coubertin était favorable à tout le monde ?"
+            },
+            {
+              "qui": "Malo",
+              "texte": "Non : il était opposé au sport féminin de compétition. C’est Alice Milliat qui a organisé les Jeux mondiaux féminins à Paris, en 1922."
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "echange",
+          "enonce": "Touche le nom de celui dont **Coubertin reprend la phrase** sur le combat.",
+          "reponse": [
+            "t"
+          ],
+          "aide": "Cherche la réponse de Malo à propos de la phrase de 1908.",
+          "explication": "Coubertin cite en 1908 un propos de l’évêque américain **Ethelbert Talbot**. La phrase est souvent résumée en « l’important, c’est de participer »."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque personnage à ce qu’on lui doit.",
+          "paires": [
+            [
+              "Pierre de Coubertin",
+              "Les Jeux olympiques modernes (1896)"
+            ],
+            [
+              "Henri Didon",
+              "La devise Citius, Altius, Fortius"
+            ],
+            [
+              "Alice Milliat",
+              "Les Jeux mondiaux féminins (Paris, 1922)"
+            ],
+            [
+              "Ethelbert Talbot",
+              "La phrase sur le combat, reprise en 1908"
+            ]
+          ],
+          "aide": "Relis ce que Malo explique pour chaque nom.",
+          "explication": "Chacun a sa place : **Coubertin** les Jeux, **Didon** la devise, **Milliat** les Jeux féminins, **Talbot** la phrase sur le combat."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre l’échange à propos de Coubertin ?",
+          "options": [
+            "On peut admirer ce qu’il a construit et reconnaître ses limites",
+            "Il a tout inventé seul, sans personne avant lui",
+            "Il a toujours soutenu le sport féminin",
+            "Il s’est opposé à la création des Jeux"
+          ],
+          "reponse": 0,
+          "aide": "Malo dit à la fois ce que Coubertin a fait et ce qu’il refusait.",
+          "explication": "Coubertin a bâti les Jeux modernes, mais il était **opposé au sport féminin de compétition** : c’est ce qui a poussé Alice Milliat à organiser ses propres Jeux."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la traduction de la devise olympique.",
+          "texte": "« Citius, Altius, Fortius » signifie : plus ___, plus haut, plus ___.",
+          "reponses": [
+            [
+              "vite"
+            ],
+            [
+              "fort"
+            ]
+          ],
+          "banque": [
+            "vite",
+            "fort",
+            "loin",
+            "grand"
+          ],
+          "aide": "Citius = rapide, Fortius = puissant. Il manque deux adjectifs.",
+          "explication": "La devise lancée par Henri Didon en 1891 veut dire « plus **vite**, plus haut, plus **fort** »."
+        }
+      ]
+    },
+    {
+      "chapitre": "ae015207-9a1c-5548-8302-1d79a431baee",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Quatre dates, trois continents",
+      "competence": "lire-carte",
+      "situation": "Zoé a relevé quatre grands rendez-vous du sport moderne : le tableau donne la date et la ville, la carte les situe. Croise-les pour répondre.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Où ça s’est passé",
+          "fond": "monde",
+          "cadrage": [
+            -70,
+            -42,
+            40,
+            58
+          ],
+          "lieux": [
+            {
+              "id": "a",
+              "lieu": "athenes",
+              "symbole": "lettre",
+              "lettre": "A",
+              "teinte": "corail"
+            },
+            {
+              "id": "b",
+              "lieu": "paris",
+              "symbole": "lettre",
+              "lettre": "B",
+              "teinte": "violet"
+            },
+            {
+              "id": "c",
+              "lon": -56.19,
+              "lat": -34.9,
+              "symbole": "lettre",
+              "lettre": "C",
+              "teinte": "jaune"
+            }
+          ]
+        },
+        {
+          "id": "tableau",
+          "type": "tableau",
+          "titre": "Les rendez-vous du sport moderne",
+          "source": "Dates et villes du cours.",
+          "colonnes": [
+            "Événement",
+            "Année",
+            "Ville"
+          ],
+          "lignes": [
+            [
+              "Premiers Jeux modernes",
+              "1896",
+              "Athènes"
+            ],
+            [
+              "Naissance du CIO (Sorbonne)",
+              "1894",
+              "Paris"
+            ],
+            [
+              "Jeux mondiaux féminins",
+              "1922",
+              "Paris"
+            ],
+            [
+              "Première Coupe du monde de football",
+              "1930",
+              "Montevideo"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche sur la carte la **ville des premiers Jeux olympiques modernes**.",
+          "reponse": [
+            "a"
+          ],
+          "aide": "Lis la ville dans le tableau, puis cherche-la sur la carte : en Grèce.",
+          "explication": "Les premiers Jeux modernes se jouent à **Athènes** en 1896, berceau des Jeux antiques."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche sur la carte la ville de la **première Coupe du monde de football**.",
+          "reponse": [
+            "c"
+          ],
+          "aide": "Cherche son nom dans le tableau : le pays est en Amérique du Sud.",
+          "explication": "La première Coupe du monde, imaginée par Jules Rimet, se joue en 1930 en Uruguay, à **Montevideo**."
+        },
+        {
+          "type": "texte",
+          "enonce": "Quelle ville apparaît **deux fois** dans le tableau ?",
+          "reponse": [
+            "Paris"
+          ],
+          "placeholder": "Le nom de la ville",
+          "aide": "Compare la dernière colonne ligne par ligne.",
+          "explication": "**Paris** : le CIO y naît en 1894 et les Jeux mondiaux féminins y sont organisés en 1922."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’**années** séparent la naissance du CIO de la première Coupe du monde ?",
+          "reponse": 36,
+          "unite": "ans",
+          "aide": "Soustrais 1894 à 1930.",
+          "explication": "1930 − 1894 = **36 ans**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Qui a organisé les Jeux mondiaux féminins de 1922 à Paris ?",
+          "options": [
+            "Alice Milliat",
+            "Pierre de Coubertin",
+            "Jules Rimet",
+            "Henri Didon"
+          ],
+          "reponse": 0,
+          "aide": "Coubertin était opposé au sport féminin de compétition.",
+          "explication": "C’est **Alice Milliat** qui organise ces Jeux, alors que Coubertin refusait le sport féminin de compétition."
+        }
+      ]
+    },
+    {
+      "chapitre": "84752704-fff1-5648-a919-69f0c4b57396",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les quatre maillots du Tour",
+      "competence": "analyser-document",
+      "situation": "Devant la télé, Sofiane ne comprend pas pourquoi les coureurs portent des maillots de couleurs différentes. Son grand-père lui montre cette affiche.",
+      "documents": [
+        {
+          "id": "affiche",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "LES QUATRE MAILLOTS DU TOUR",
+          "sousTitre": "Un maillot, une qualité",
+          "emoji": "🚴",
+          "lignes": [
+            {
+              "texte": "Maillot jaune : le leader du classement général",
+              "id": "jaune"
+            },
+            {
+              "texte": "Maillot vert : le meilleur sprinteur",
+              "id": "vert"
+            },
+            {
+              "texte": "Maillot à pois : le meilleur grimpeur",
+              "id": "pois"
+            },
+            {
+              "texte": "Maillot blanc : le meilleur jeune",
+              "id": "blanc"
+            }
+          ],
+          "pied": "Le jaune rappelle le papier du journal L’Auto, créateur du Tour.",
+          "teinte": "ambre"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "affiche",
+          "enonce": "Touche le maillot que porte le **meilleur grimpeur**.",
+          "reponse": [
+            "pois"
+          ],
+          "aide": "Cherche le mot « grimpeur » sur l’affiche.",
+          "explication": "Le **maillot à pois** récompense le meilleur grimpeur."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le maillot du leader est-il **jaune** ?",
+          "options": [
+            "Parce que le journal L’Auto, créateur du Tour, était imprimé sur du papier jaune",
+            "Parce que c’est la couleur du soleil de juillet",
+            "Parce que c’est la couleur du drapeau français",
+            "Parce que le jaune se voit mieux dans la montagne"
+          ],
+          "reponse": 0,
+          "aide": "Relis le bas de l’affiche.",
+          "explication": "Le maillot jaune apparaît en **1919** : la couleur vient du papier du journal **L’Auto**, qui a créé la course."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque maillot à ce qu’il récompense.",
+          "paires": [
+            [
+              "Maillot jaune",
+              "Le leader du classement général"
+            ],
+            [
+              "Maillot vert",
+              "Le meilleur sprinteur"
+            ],
+            [
+              "Maillot à pois",
+              "Le meilleur grimpeur"
+            ],
+            [
+              "Maillot blanc",
+              "Le meilleur jeune"
+            ]
+          ],
+          "aide": "Chaque ligne de l’affiche donne la réponse.",
+          "explication": "Quatre maillots, quatre qualités : **jaune** général, **vert** sprint, **à pois** montagne, **blanc** jeunes."
+        }
+      ]
+    },
+    {
+      "chapitre": "84752704-fff1-5648-a919-69f0c4b57396",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le premier Tour, en 1903",
+      "competence": "lire-carte",
+      "situation": "En 1903, le premier Tour de France fait le tour du pays en six étapes : Paris, Lyon, Marseille, Toulouse, Bordeaux, Nantes, puis retour à Paris. Compare-le avec le Tour d’aujourd’hui.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Le parcours de 1903",
+          "fond": "france",
+          "lieux": [
+            {
+              "id": "paris",
+              "lieu": "paris",
+              "symbole": "point",
+              "nom": "Paris"
+            },
+            {
+              "id": "lyon",
+              "lieu": "lyon",
+              "symbole": "point",
+              "nom": "Lyon"
+            },
+            {
+              "id": "marseille",
+              "lieu": "marseille",
+              "symbole": "point",
+              "nom": "Marseille"
+            },
+            {
+              "id": "toulouse",
+              "lieu": "toulouse",
+              "symbole": "point",
+              "nom": "Toulouse"
+            },
+            {
+              "id": "bordeaux",
+              "lieu": "bordeaux",
+              "symbole": "point",
+              "nom": "Bordeaux"
+            },
+            {
+              "id": "nantes",
+              "lieu": "nantes",
+              "symbole": "point",
+              "nom": "Nantes"
+            }
+          ],
+          "traits": [
+            {
+              "points": [
+                "paris",
+                "lyon",
+                "marseille",
+                "toulouse",
+                "bordeaux",
+                "nantes",
+                "paris"
+              ],
+              "style": "fleche",
+              "teinte": "corail"
+            }
+          ]
+        },
+        {
+          "id": "comparaison",
+          "type": "tableau",
+          "titre": "Le Tour d’hier et d’aujourd’hui",
+          "source": "Chiffres du cours (distance actuelle approximative).",
+          "colonnes": [
+            "",
+            "1903",
+            "Aujourd’hui"
+          ],
+          "lignes": [
+            [
+              "Nombre d’étapes",
+              6,
+              21
+            ],
+            [
+              "Distance totale (km)",
+              "2 428",
+              "environ 3 400"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche la ville étape la plus à l’**ouest** du parcours de 1903.",
+          "reponse": [
+            "nantes"
+          ],
+          "aide": "L’ouest est à gauche de la carte, du côté de l’océan.",
+          "explication": "**Nantes** est la ville la plus à l’ouest ; Bordeaux, sur la même côte atlantique, est un peu plus à l’est."
+        },
+        {
+          "type": "nombre",
+          "enonce": "En 1903, quelle était la **longueur moyenne d’une étape** ? (en km, arrondi à l’unité)",
+          "reponse": 405,
+          "unite": "km",
+          "tolerance": 1,
+          "aide": "Divise la distance totale par le nombre d’étapes.",
+          "explication": "2 428 ÷ 6 ≈ **405 km** par étape : des journées interminables pour les premiers coureurs."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Aujourd’hui, avec environ 3 400 km en 21 étapes, quelle est la longueur moyenne d’une étape ? (en km, arrondi à l’unité)",
+          "reponse": 162,
+          "unite": "km",
+          "tolerance": 1,
+          "aide": "Même calcul : distance totale ÷ nombre d’étapes.",
+          "explication": "3 400 ÷ 21 ≈ **162 km** par étape."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que montre la comparaison des deux moyennes ?",
+          "options": [
+            "Les étapes d’aujourd’hui sont bien plus courtes qu’en 1903",
+            "Les étapes d’aujourd’hui sont plus longues qu’en 1903",
+            "Les étapes n’ont pas changé",
+            "Le Tour d’aujourd’hui compte moins d’étapes qu’en 1903"
+          ],
+          "reponse": 0,
+          "aide": "Compare 405 et 162.",
+          "explication": "Le Tour est plus long en tout, mais découpé en **21 étapes** : chaque journée est environ deux fois et demie plus courte qu’en 1903."
+        }
+      ]
+    },
+    {
+      "chapitre": "84752704-fff1-5648-a919-69f0c4b57396",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Les légendes du Tour",
+      "competence": "se-reperer-temps",
+      "situation": "Pour un exposé sur l’histoire du Tour de France, Lucie rassemble une frise de grandes dates et un tableau des grands vainqueurs. Croise-les.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "De 1903 à aujourd’hui",
+          "source": "Dates du cours.",
+          "debut": 1900,
+          "fin": 2030,
+          "pas": 10,
+          "evenements": [
+            {
+              "id": "t1903",
+              "date": 1903,
+              "nom": "Premier Tour"
+            },
+            {
+              "id": "t1910",
+              "date": 1910,
+              "nom": "Tourmalet"
+            },
+            {
+              "id": "t1919",
+              "date": 1919,
+              "nom": "Maillot jaune"
+            },
+            {
+              "id": "t1952",
+              "date": 1952,
+              "nom": "Alpe d’Huez"
+            },
+            {
+              "id": "t1985",
+              "date": 1985,
+              "nom": "Hinault gagne"
+            },
+            {
+              "id": "t2012",
+              "date": 2012,
+              "nom": "Armstrong déchu"
+            },
+            {
+              "id": "t2022",
+              "date": 2022,
+              "nom": "Tour Femmes"
+            }
+          ]
+        },
+        {
+          "id": "palmares",
+          "type": "tableau",
+          "titre": "Les grands vainqueurs",
+          "source": "Palmarès du cours (Pogačar : 2020, 2021, 2024 et 2025).",
+          "colonnes": [
+            "Coureur",
+            "Pays",
+            "Victoires"
+          ],
+          "lignes": [
+            [
+              "Jacques Anquetil",
+              "France",
+              5
+            ],
+            [
+              "Eddy Merckx",
+              "Belgique",
+              5
+            ],
+            [
+              "Bernard Hinault",
+              "France",
+              5
+            ],
+            [
+              "Miguel Indurain",
+              "Espagne",
+              5
+            ],
+            [
+              "Tadej Pogačar",
+              "Slovénie",
+              4
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche l’événement qui marque l’apparition du **maillot jaune**.",
+          "reponse": [
+            "t1919"
+          ],
+          "aide": "Le premier porteur du maillot jaune est Eugène Christophe.",
+          "explication": "Le **maillot jaune** apparaît en 1919, porté par Eugène Christophe."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’**années** séparent le premier Tour du premier maillot jaune ?",
+          "reponse": 16,
+          "unite": "ans",
+          "aide": "Soustrais 1903 à 1919.",
+          "explication": "1919 − 1903 = **16 ans** : le Tour a d’abord existé sans maillot jaune."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces événements du plus ancien au plus récent.",
+          "items": [
+            "Octave Lapize franchit le Tourmalet",
+            "Apparition du maillot jaune",
+            "Fausto Coppi gagne à l’Alpe d’Huez",
+            "Hinault, dernier Français vainqueur"
+          ],
+          "aide": "Place chaque événement sur la frise : 1910, 1919, 1952, 1985.",
+          "explication": "**Tourmalet (1910)**, **maillot jaune (1919)**, **Alpe d’Huez (1952)**, puis **Hinault (1985)**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de coureurs **français** ont gagné cinq Tours, d’après le tableau ?",
+          "reponse": 2,
+          "aide": "Compte les lignes dont le pays est la France.",
+          "explication": "**Jacques Anquetil** et **Bernard Hinault** : deux Français, sur quatre coureurs aux cinq victoires."
+        },
+        {
+          "type": "choix",
+          "enonce": "Lucie veut illustrer l’idée que le cyclisme a renforcé ses contrôles après une affaire. Quel événement de la frise choisit-elle ?",
+          "options": [
+            "2012 : Armstrong déchu de ses sept Tours pour dopage",
+            "1919 : l’apparition du maillot jaune",
+            "1952 : l’arrivée à l’Alpe d’Huez",
+            "2022 : le premier Tour de France Femmes"
+          ],
+          "reponse": 0,
+          "aide": "Cherche l’événement lié au dopage.",
+          "explication": "En **2012**, Lance Armstrong est déchu de ses sept Tours pour dopage : l’affaire a poussé le cyclisme à renforcer ses contrôles antidopage."
+        }
+      ]
+    },
+    {
+      "chapitre": "8a082fe0-449c-5930-813c-759132eb9612",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les finales des Bleus",
+      "competence": "lire-tableau",
+      "situation": "Hugo collectionne les résultats de l’équipe de France de football. Il a rassemblé dans un tableau les finales qu’elle a disputées en Euro et en Coupe du monde.",
+      "documents": [
+        {
+          "id": "finales",
+          "type": "tableau",
+          "titre": "Les finales des Bleus",
+          "source": "Résultats des finales de l’équipe de France.",
+          "colonnes": [
+            "Année",
+            "Compétition",
+            "Adversaire",
+            "Score",
+            "Résultat"
+          ],
+          "lignes": [
+            [
+              1984,
+              "Euro",
+              "Espagne",
+              "2-0",
+              "Gagnée"
+            ],
+            [
+              1998,
+              "Coupe du monde",
+              "Brésil",
+              "3-0",
+              "Gagnée"
+            ],
+            [
+              2000,
+              "Euro",
+              "Italie",
+              "2-1",
+              "Gagnée"
+            ],
+            [
+              2006,
+              "Coupe du monde",
+              "Italie",
+              "1-1, puis 3-5 aux tirs au but",
+              "Perdue"
+            ],
+            [
+              2018,
+              "Coupe du monde",
+              "Croatie",
+              "4-2",
+              "Gagnée"
+            ],
+            [
+              2022,
+              "Coupe du monde",
+              "Argentine",
+              "3-3, puis 2-4 aux tirs au but",
+              "Perdue"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "finales",
+          "enonce": "Touche la case qui donne le **score de la finale 2018**.",
+          "reponse": [
+            "r4c3"
+          ],
+          "aide": "Cherche la ligne 2018, puis la colonne « Score ».",
+          "explication": "Le 15 juillet 2018, la France bat la Croatie **4-2** et gagne sa deuxième étoile."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de finales les Bleus ont-ils **gagnées** dans ce tableau ?",
+          "reponse": 4,
+          "aide": "Compte les lignes marquées « Gagnée ».",
+          "explication": "**4 finales gagnées** (1984, 1998, 2000, 2018) et 2 perdues."
+        },
+        {
+          "type": "choix",
+          "enonce": "Comment se sont terminées les deux finales perdues ?",
+          "options": [
+            "Aux tirs au but, après une égalité",
+            "Par un but en prolongation, sans tirs au but",
+            "Par forfait de la France",
+            "Sur un score large, sans suspense"
+          ],
+          "reponse": 0,
+          "aide": "Relis la colonne « Score » des lignes « Perdue ».",
+          "explication": "En 2006 et en 2022, les Bleus ont perdu **aux tirs au but** : le sport garde sa part d’incertitude."
+        }
+      ]
+    },
+    {
+      "chapitre": "8a082fe0-449c-5930-813c-759132eb9612",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Moscou, 15 juillet 2018",
+      "competence": "analyser-texte",
+      "situation": "Dans le journal du collège, un élève raconte la finale de la Coupe du monde 2018. Lis l’article, puis réponds.",
+      "documents": [
+        {
+          "id": "article",
+          "type": "texte",
+          "genre": "article",
+          "titre": "La deuxième étoile",
+          "auteur": "Article imaginé pour l’exercice.",
+          "blocs": [
+            "Moscou, dimanche 15 juillet 2018. La France bat la Croatie 4-2 en finale de la Coupe du monde et ajoute une deuxième étoile à son maillot.",
+            "À la tête des Bleus, le sélectionneur [[d|Deschamps]] réalise un exploit rare : il avait déjà été champion du monde comme joueur, en 1998. Il l’est maintenant comme sélectionneur.",
+            "Dans l’équipe, [[m|Mbappé]] n’a que 19 ans."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "article",
+          "enonce": "Touche le nom du **sélectionneur** des Bleus.",
+          "reponse": [
+            "d"
+          ],
+          "aide": "Cherche le mot « sélectionneur » dans le deuxième paragraphe.",
+          "explication": "Le sélectionneur est **Didier Deschamps**, champion du monde en 1998 comme joueur et en 2018 comme sélectionneur."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’**années** séparent les deux titres de champion du monde de Deschamps ?",
+          "reponse": 20,
+          "unite": "ans",
+          "aide": "Il a gagné en 1998 puis en 2018.",
+          "explication": "2018 − 1998 = **20 ans**."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase.",
+          "texte": "Didier Deschamps est champion du monde comme ___ en 1998 et comme ___ en 2018.",
+          "reponses": [
+            [
+              "joueur"
+            ],
+            [
+              "sélectionneur",
+              "selectionneur"
+            ]
+          ],
+          "banque": [
+            "joueur",
+            "sélectionneur",
+            "arbitre",
+            "gardien"
+          ],
+          "aide": "Il a d’abord joué sur le terrain, puis dirigé l’équipe.",
+          "explication": "Deschamps est champion du monde comme **joueur** en 1998 et comme **sélectionneur** en 2018."
+        },
+        {
+          "type": "choix",
+          "enonce": "Combien d’étoiles les Bleus ont-ils sur le maillot après ce match ?",
+          "options": [
+            "Deux",
+            "Une",
+            "Trois",
+            "Quatre"
+          ],
+          "reponse": 0,
+          "ordreFixe": false,
+          "aide": "Relis la première phrase de l’article.",
+          "explication": "**Deux étoiles** : une pour 1998, une pour 2018. Le football français a connu les sommets… et les larmes."
+        }
+      ]
+    },
+    {
+      "chapitre": "8a082fe0-449c-5930-813c-759132eb9612",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Qui a gagné quoi, et quand ?",
+      "competence": "se-reperer-temps",
+      "situation": "Lina et Adam se disputent sur l’histoire du football français. Pour les départager, ils ont tracé une frise des grandes dates et ont gardé la trace de leur échange.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Quarante ans de football français",
+          "source": "Dates du cours.",
+          "debut": 1980,
+          "fin": 2030,
+          "pas": 5,
+          "evenements": [
+            {
+              "id": "e1984",
+              "date": 1984,
+              "nom": "Euro à domicile"
+            },
+            {
+              "id": "e1988",
+              "date": 1988,
+              "nom": "Clairefontaine"
+            },
+            {
+              "id": "e1993",
+              "date": 1993,
+              "nom": "OM champion"
+            },
+            {
+              "id": "e1998",
+              "date": 1998,
+              "nom": "1re étoile"
+            },
+            {
+              "id": "e2006",
+              "date": 2006,
+              "nom": "Tirs au but"
+            },
+            {
+              "id": "e2018",
+              "date": 2018,
+              "nom": "2e étoile"
+            },
+            {
+              "id": "e2022",
+              "date": 2022,
+              "nom": "Finale 2022"
+            },
+            {
+              "id": "e2025",
+              "date": 2025,
+              "nom": "PSG champion"
+            }
+          ]
+        },
+        {
+          "id": "dispute",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "La dispute",
+          "source": "Dialogue écrit pour l’exercice.",
+          "participants": [
+            {
+              "nom": "Lina",
+              "emoji": "👧",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Adam",
+              "emoji": "👦",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Lina",
+              "texte": "Le PSG a été champion d’Europe en 2025 : c’est le tout premier club français à le faire !"
+            },
+            {
+              "qui": "Adam",
+              "texte": "Pas du tout, l’Olympique de Marseille l’avait fait en 1993."
+            },
+            {
+              "qui": "Lina",
+              "texte": "Ah ! Alors le PSG, c’est le premier depuis l’OM ?"
+            },
+            {
+              "qui": "Adam",
+              "texte": "Oui. Et il a battu l’Inter 5-0 à Munich, le 31 mai 2025."
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche l’événement qui prouve qu’un club français avait déjà gagné en Europe **avant** le PSG.",
+          "reponse": [
+            "e1993"
+          ],
+          "aide": "Cherche le club de Marseille sur la frise.",
+          "explication": "L’**OM** est champion d’Europe en 1993 : le PSG n’est donc pas le premier."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que faut-il corriger dans la première phrase de Lina ?",
+          "options": [
+            "Le PSG n’est pas le premier club français champion d’Europe : l’OM l’a été en 1993",
+            "Le PSG n’a jamais gagné l’Inter",
+            "Le PSG a gagné en 1998, pas en 2025",
+            "Il n’y a rien à corriger"
+          ],
+          "reponse": 0,
+          "aide": "Compare la phrase de Lina à la réponse d’Adam et à la frise.",
+          "explication": "Le PSG est le premier club français champion d’Europe **depuis l’OM de 1993**, pas le tout premier."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’**années** séparent le titre de l’OM de celui du PSG ?",
+          "reponse": 32,
+          "unite": "ans",
+          "aide": "Soustrais 1993 à 2025.",
+          "explication": "2025 − 1993 = **32 ans** entre les deux sacres."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le centre de Clairefontaine ouvre avant la première étoile des Bleus. Combien d’**années avant** ?",
+          "reponse": 10,
+          "unite": "ans",
+          "aide": "Compare 1988 et 1998 sur la frise.",
+          "explication": "1998 − 1988 = **10 ans** : c’est la vitrine de la formation à la française."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces événements du plus ancien au plus récent.",
+          "items": [
+            "Ouverture du centre de Clairefontaine",
+            "L’OM champion d’Europe",
+            "Première étoile des Bleus",
+            "Le PSG champion d’Europe"
+          ],
+          "aide": "Place chaque événement sur la frise : 1988, 1993, 1998, 2025.",
+          "explication": "**Clairefontaine (1988)**, **OM (1993)**, **première étoile (1998)**, **PSG (2025)**."
+        }
+      ]
+    },
+    {
+      "chapitre": "2dcb8b9d-be39-554c-8947-cfd8a7b3ceff",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois fois Paris",
+      "competence": "se-reperer-temps",
+      "situation": "Paris a accueilli les Jeux olympiques d’été trois fois. Cette frise place ces trois rendez-vous. Regarde-la bien.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Les trois Jeux de Paris",
+          "source": "Dates du cours.",
+          "debut": 1890,
+          "fin": 2030,
+          "pas": 10,
+          "evenements": [
+            {
+              "id": "p1900",
+              "date": 1900,
+              "nom": "Paris 1900"
+            },
+            {
+              "id": "p1924",
+              "date": 1924,
+              "nom": "Paris 1924"
+            },
+            {
+              "id": "p2024",
+              "date": 2024,
+              "nom": "Paris 2024"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche les Jeux de Paris où, pour la première fois, des **femmes** ont participé (22 athlètes).",
+          "reponse": [
+            "p1900"
+          ],
+          "aide": "C’est les plus anciens, noyés dans l’Exposition universelle.",
+          "explication": "En **1900**, 22 femmes participent pour la première fois. Charlotte Cooper, au tennis, devient la première championne olympique."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’**années** séparent les Jeux de 1924 de ceux de 2024 ?",
+          "reponse": 100,
+          "unite": "ans",
+          "aide": "Soustrais 1924 à 2024.",
+          "explication": "2024 − 1924 = **100 ans** : un siècle exactement."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la grande nouveauté de la **cérémonie d’ouverture de 2024** ?",
+          "options": [
+            "Elle se déroule sur la Seine, hors d’un stade, une première",
+            "Elle se déroule dans un stade, comme toujours",
+            "Elle n’a pas lieu à Paris",
+            "Elle dure cinq mois"
+          ],
+          "reponse": 0,
+          "aide": "Pense au fleuve qui traverse Paris.",
+          "explication": "En 2024, la cérémonie est organisée **sur la Seine** : c’est la première fois qu’elle a lieu hors d’un stade."
+        }
+      ]
+    },
+    {
+      "chapitre": "2dcb8b9d-be39-554c-8947-cfd8a7b3ceff",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Trois Paris côte à côte",
+      "competence": "lire-tableau",
+      "situation": "Marwa compare les trois Jeux de Paris dans un tableau. Chaque colonne raconte une époque. Lis-le avec attention, puis réponds.",
+      "documents": [
+        {
+          "id": "paris",
+          "type": "tableau",
+          "titre": "1900, 1924, 2024",
+          "source": "Faits du cours.",
+          "colonnes": [
+            "",
+            "1900",
+            "1924",
+            "2024"
+          ],
+          "lignes": [
+            [
+              "Cadre",
+              "Exposition universelle",
+              "Colombes (et Chamonix en hiver)",
+              "Dans toute la ville, sur la Seine"
+            ],
+            [
+              "Nouveauté",
+              "Premières femmes (22)",
+              "Premier village olympique",
+              "Cérémonie hors d’un stade"
+            ],
+            [
+              "Un nom à retenir",
+              "Charlotte Cooper",
+              "Paavo Nurmi, Johnny Weissmuller",
+              "Léon Marchand"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "paris",
+          "enonce": "Touche la case qui donne la **nouveauté de 1900**.",
+          "reponse": [
+            "r1c1"
+          ],
+          "aide": "Cherche la ligne « Nouveauté », puis la colonne 1900.",
+          "explication": "En 1900, la nouveauté est la présence des **premières femmes** : 22 athlètes au total."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Les Jeux de 2024 se tiennent du 26 juillet au 11 août, en comptant les deux jours. Combien de **jours** durent-ils ?",
+          "reponse": 17,
+          "unite": "jours",
+          "aide": "Du 26 au 31 juillet, il y a 6 jours. Ajoute ceux d’août.",
+          "explication": "6 jours en juillet (du 26 au 31) + 11 jours en août = **17 jours**. En 1900, ils s’étalaient sur cinq mois."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pour 2024, 95 % des sites étaient existants ou temporaires. Sur **40 sites**, combien étaient dans ce cas ?",
+          "reponse": 38,
+          "aide": "Calcule 95 % de 40 : 40 × 0,95.",
+          "explication": "40 × 0,95 = **38 sites** : seuls 2 sites étaient à construire."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque sportif à son exploit.",
+          "paires": [
+            [
+              "Charlotte Cooper",
+              "Première championne olympique (1900)"
+            ],
+            [
+              "Paavo Nurmi",
+              "5 médailles d’or (1924)"
+            ],
+            [
+              "Johnny Weissmuller",
+              "3 ors en natation, futur Tarzan (1924)"
+            ],
+            [
+              "Léon Marchand",
+              "Un des héros français de 2024, en natation"
+            ]
+          ],
+          "aide": "Chacun est associé à une époque dans le tableau.",
+          "explication": "**Cooper** (tennis, 1900), **Nurmi** (cinq ors, 1924), **Weissmuller** (trois ors, puis Tarzan) et **Marchand** (natation, 2024)."
+        }
+      ]
+    },
+    {
+      "chapitre": "2dcb8b9d-be39-554c-8947-cfd8a7b3ceff",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Une carte postale de 1924",
+      "competence": "lire-carte",
+      "situation": "En 1924, Margaux envoie une carte postale à sa grand-mère depuis les Jeux de Paris. Sur la carte de France, repère les deux lieux dont elle parle, puis croise avec son message.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Deux lieux, deux saisons",
+          "fond": "france",
+          "lieux": [
+            {
+              "id": "a",
+              "lieu": "paris",
+              "symbole": "lettre",
+              "lettre": "A",
+              "teinte": "violet"
+            },
+            {
+              "id": "b",
+              "lieu": "chamonix",
+              "symbole": "lettre",
+              "lettre": "B",
+              "teinte": "bleu"
+            }
+          ]
+        },
+        {
+          "id": "postale",
+          "type": "fiche",
+          "modele": "carte-postale",
+          "entete": "Colombes, été 1924",
+          "emoji": "💌",
+          "lignes": [
+            {
+              "texte": "Chère Mamie, me voici à Paris pour les Jeux !"
+            },
+            {
+              "texte": "Nous dormons dans un village fait exprès pour les athlètes : c’est la première fois.",
+              "id": "village"
+            },
+            {
+              "texte": "Hier, j’ai vu un Finlandais gagner cinq médailles d’or."
+            },
+            {
+              "texte": "Plus tôt cette année, les épreuves d’hiver se sont tenues dans les Alpes, à Chamonix."
+            }
+          ],
+          "pied": "Carte imaginée pour l’exercice.",
+          "teinte": "ambre"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Touche sur la carte le lieu où se sont tenus les épreuves d’**hiver de 1924**.",
+          "reponse": [
+            "b"
+          ],
+          "aide": "Lis la dernière phrase de la carte postale : « dans les Alpes ».",
+          "explication": "Les épreuves d’hiver de 1924 se tiennent à **Chamonix**, dans les Alpes. On les reconnaîtra plus tard comme les premiers Jeux d’hiver."
+        },
+        {
+          "type": "zone",
+          "document": "postale",
+          "enonce": "Touche la phrase qui annonce une **nouveauté** de 1924.",
+          "reponse": [
+            "village"
+          ],
+          "aide": "Cherche « c’est la première fois ».",
+          "explication": "Le **premier village olympique** est une nouveauté de 1924 : les athlètes dorment sur place."
+        },
+        {
+          "type": "categories",
+          "enonce": "Range ces faits selon l’année des Jeux de Paris.",
+          "categories": [
+            "1900",
+            "1924",
+            "2024"
+          ],
+          "items": [
+            [
+              "Jeux noyés dans l’Exposition universelle",
+              0
+            ],
+            [
+              "Charlotte Cooper, première championne olympique",
+              0
+            ],
+            [
+              "Premier village olympique",
+              1
+            ],
+            [
+              "Paavo Nurmi, cinq médailles d’or",
+              1
+            ],
+            [
+              "Cérémonie sur la Seine",
+              2
+            ],
+            [
+              "Parité entre athlètes femmes et hommes",
+              2
+            ]
+          ],
+          "aide": "Pense à l’époque : une exposition, un village, la Seine.",
+          "explication": "**1900** : Exposition universelle et premières femmes ; **1924** : village et Nurmi ; **2024** : Seine et parité."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’**années** séparent les premiers Jeux de Paris (1900) des derniers (2024) ?",
+          "reponse": 124,
+          "unite": "ans",
+          "aide": "Soustrais 1900 à 2024.",
+          "explication": "2024 − 1900 = **124 ans**. Paris est l’une des rares villes à avoir reçu les Jeux trois fois."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi dit-on que les épreuves de Chamonix en 1924 sont devenues les « premiers Jeux d’hiver » ?",
+          "options": [
+            "Parce qu’on les a reconnues comme telles plus tard",
+            "Parce qu’elles se déroulaient en même temps que Paris",
+            "Parce qu’elles réunissaient les mêmes athlètes qu’à Colombes",
+            "Parce qu’elles n’avaient aucune épreuve de neige"
+          ],
+          "reponse": 0,
+          "aide": "Relis la carte postale : l’hiver vient avant l’été.",
+          "explication": "Les épreuves de Chamonix ont eu lieu **avant** les Jeux d’été de Paris, et ont été **reconnues plus tard** comme les premiers Jeux d’hiver."
+        }
+      ]
+    },
+    {
+      "chapitre": "d9792515-7fa7-5d26-a447-b42538ad91fc",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Les yeux de l’arbitre",
+      "competence": "lire-tableau",
+      "situation": "Les arbitres ne sont plus seuls pour décider : la technologie les aide. Ce tableau dit quel outil existe, dans quel sport, et depuis quand.",
+      "documents": [
+        {
+          "id": "outils",
+          "type": "tableau",
+          "titre": "Trois aides technologiques",
+          "source": "Repères du cours.",
+          "colonnes": [
+            "Technologie",
+            "Sport",
+            "Depuis"
+          ],
+          "lignes": [
+            [
+              "Hawk-Eye",
+              "Tennis",
+              "2006"
+            ],
+            [
+              "Goal-line technology",
+              "Football",
+              "Coupe du monde 2014"
+            ],
+            [
+              "VAR (arbitrage vidéo)",
+              "Football",
+              "Coupe du monde 2018"
+            ]
+          ],
+          "enteteLignes": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "outils",
+          "enonce": "Touche la case qui dit **depuis quand** le Hawk-Eye existe au tennis.",
+          "reponse": [
+            "r0c2"
+          ],
+          "aide": "Cherche la ligne Hawk-Eye, puis la colonne « Depuis ».",
+          "explication": "Le **Hawk-Eye** est utilisé au tennis depuis **2006**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’**années** séparent la goal-line technology du VAR en Coupe du monde ?",
+          "reponse": 4,
+          "unite": "ans",
+          "aide": "Soustrais 2014 à 2018.",
+          "explication": "2018 − 2014 = **4 ans**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle est la technologie la **plus ancienne** du tableau ?",
+          "options": [
+            "Le Hawk-Eye",
+            "La goal-line technology",
+            "Le VAR",
+            "Elles datent de la même année"
+          ],
+          "reponse": 0,
+          "ordreFixe": false,
+          "aide": "Compare les dates de la dernière colonne.",
+          "explication": "Le **Hawk-Eye** (2006) précède la goal-line technology (2014) et le VAR (2018)."
+        }
+      ]
+    },
+    {
+      "chapitre": "d9792515-7fa7-5d26-a447-b42538ad91fc",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Un match, six incidents",
+      "competence": "analyser-document",
+      "situation": "Après un match de foot, Sacha raconte six incidents à Maëlle, qui arbitre en EPS. Lis leur échange, puis aide-les à voir clair.",
+      "documents": [
+        {
+          "id": "recit",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Après le match",
+          "source": "Dialogue écrit pour l’exercice.",
+          "participants": [
+            {
+              "nom": "Sacha",
+              "emoji": "👦",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Maëlle",
+              "emoji": "👧",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Sacha",
+              "texte": "Dimanche, l’arbitre a vu six incidents : un but après une main possible, un penalty sifflé, un carton jaune pour protestation, une touche donnée du mauvais côté, un carton rouge direct pour un tacle dangereux, et un joueur averti à la place d’un autre."
+            },
+            {
+              "qui": "Maëlle",
+              "texte": "Beaucoup d’actions ! L’arbitre sur le terrain reste le patron, même avec la vidéo."
+            },
+            {
+              "qui": "Sacha",
+              "texte": "Et au rugby, ça se passe comment ?"
+            },
+            {
+              "qui": "Maëlle",
+              "texte": "L’arbitre explique ses décisions au micro, et un seul joueur a le droit de lui parler."
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Pour chaque incident raconté par Sacha, le **VAR** peut-il intervenir ?",
+          "categories": [
+            "Le VAR peut intervenir",
+            "Le VAR n’intervient pas"
+          ],
+          "items": [
+            [
+              "Un but après une main possible",
+              0
+            ],
+            [
+              "Un penalty sifflé",
+              0
+            ],
+            [
+              "Un carton jaune pour protestation",
+              1
+            ],
+            [
+              "Une touche donnée du mauvais côté",
+              1
+            ],
+            [
+              "Un carton rouge direct pour un tacle dangereux",
+              0
+            ],
+            [
+              "Un joueur averti à la place d’un autre",
+              0
+            ]
+          ],
+          "aide": "Le VAR n’intervient que dans quatre cas : un but, un penalty, un carton rouge direct, une erreur d’identité.",
+          "explication": "Le VAR ne regarde que **but, penalty, carton rouge direct et erreur d’identité**. Un carton jaune ou une touche mal donnée restent à la décision de l’arbitre."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque outil à ce qu’il fait.",
+          "paires": [
+            [
+              "Hawk-Eye",
+              "Le ballon est-il sur la ligne ? (tennis)"
+            ],
+            [
+              "Goal-line technology",
+              "Le ballon a-t-il franchi la ligne de but ? (football)"
+            ],
+            [
+              "VAR",
+              "Quatre cas : but, penalty, carton rouge direct, erreur d’identité"
+            ]
+          ],
+          "aide": "Pense au sport et à la question que chaque outil tranche.",
+          "explication": "Le **Hawk-Eye** tranche au tennis, la **goal-line** dit si le ballon est dans le but, le **VAR** relit quatre types de décisions."
+        },
+        {
+          "type": "choix",
+          "enonce": "Qui prend la **décision finale** quand la vidéo est utilisée ?",
+          "options": [
+            "L’arbitre sur le terrain : la vidéo l’aide, elle ne le remplace pas",
+            "L’arbitre vidéo, qui remplace l’arbitre du terrain",
+            "Le capitaine de l’équipe qui a le ballon",
+            "Le public, par vote"
+          ],
+          "reponse": 0,
+          "aide": "Relis la première réponse de Maëlle.",
+          "explication": "L’**arbitre sur le terrain** reste le patron : la technologie corrige les erreurs de fait, elle ne le remplace pas."
+        },
+        {
+          "type": "trous",
+          "enonce": "Complète la phrase sur le rugby.",
+          "texte": "Au rugby, seul le ___ de l’équipe a le droit de parler à l’arbitre.",
+          "reponses": [
+            [
+              "capitaine"
+            ]
+          ],
+          "banque": [
+            "capitaine",
+            "gardien",
+            "entraîneur",
+            "remplaçant"
+          ],
+          "aide": "C’est le joueur qui représente toute son équipe.",
+          "explication": "Seul le **capitaine** peut parler à l’arbitre : moins de contestations, plus de respect."
+        }
+      ]
+    },
+    {
+      "chapitre": "d9792515-7fa7-5d26-a447-b42538ad91fc",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Trois gestes de fair-play",
+      "competence": "argumenter",
+      "situation": "La classe de Chloé rédige une charte du fair-play. Elle s’inspire de trois gestes célèbres du sport. À toi de relier ces gestes aux règles de la charte.",
+      "documents": [
+        {
+          "id": "gestes",
+          "type": "tableau",
+          "titre": "Trois gestes célèbres",
+          "source": "Faits du cours.",
+          "colonnes": [
+            "Année",
+            "Qui",
+            "Sport",
+            "Le geste"
+          ],
+          "lignes": [
+            [
+              1936,
+              "Lutz Long",
+              "Saut en longueur",
+              "Conseille son rival Jesse Owens"
+            ],
+            [
+              2000,
+              "Paolo Di Canio",
+              "Football",
+              "Refuse de marquer devant un gardien blessé"
+            ],
+            [
+              2012,
+              "Iván Fernández",
+              "Cross",
+              "Laisse gagner Abel Mutai, qui s’est trompé de ligne d’arrivée"
+            ]
+          ],
+          "enteteLignes": true
+        },
+        {
+          "id": "charte",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "CHARTE DU FAIR-PLAY",
+          "sousTitre": "Quatre lignes proposées à la classe",
+          "emoji": "🤝",
+          "lignes": [
+            {
+              "texte": "J’aide un rival en difficulté, même s’il peut me battre",
+              "id": "c1"
+            },
+            {
+              "texte": "Je ne profite pas d’un adversaire blessé",
+              "id": "c2"
+            },
+            {
+              "texte": "Je préfère perdre que gagner à cause de l’erreur de l’autre",
+              "id": "c3"
+            },
+            {
+              "texte": "Je proteste à chaque décision de l’arbitre",
+              "id": "c4"
+            }
+          ],
+          "pied": "Charte écrite pour l’exercice.",
+          "teinte": "vert"
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Relie chaque geste célèbre à la ligne de la charte qu’il illustre.",
+          "paires": [
+            [
+              "Lutz Long conseille Jesse Owens",
+              "J’aide un rival en difficulté, même s’il peut me battre"
+            ],
+            [
+              "Paolo Di Canio refuse de marquer",
+              "Je ne profite pas d’un adversaire blessé"
+            ],
+            [
+              "Iván Fernández laisse gagner Abel Mutai",
+              "Je préfère perdre que gagner à cause de l’erreur de l’autre"
+            ]
+          ],
+          "aide": "Pour chaque geste, demande-toi ce qu’il montre : aider, épargner, ou refuser un gain injuste.",
+          "explication": "**Long** aide son rival, **Di Canio** n’exploite pas la blessure, **Fernández** refuse de gagner sur l’erreur de l’autre : trois gestes, trois règles."
+        },
+        {
+          "type": "zone",
+          "document": "charte",
+          "enonce": "Touche la ligne de la charte qui **ne respecte pas** le fair-play.",
+          "reponse": [
+            "c4"
+          ],
+          "aide": "Quelle ligne abîme le jeu pour tout le monde ?",
+          "explication": "« **Je proteste à chaque décision de l’arbitre** » abîme le jeu : le respect de l’arbitre est la règle numéro un."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’**années** séparent le geste de Lutz Long de celui d’Iván Fernández ?",
+          "reponse": 76,
+          "unite": "ans",
+          "aide": "Soustrais 1936 à 2012.",
+          "explication": "2012 − 1936 = **76 ans**. Le fair-play traverse les époques."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces trois gestes du plus ancien au plus récent.",
+          "items": [
+            "Lutz Long conseille Jesse Owens",
+            "Paolo Di Canio refuse de marquer",
+            "Iván Fernández laisse gagner Abel Mutai"
+          ],
+          "aide": "Regarde la colonne « Année » du tableau.",
+          "explication": "**Long (1936)**, puis **Di Canio (2000)**, puis **Fernández (2012)**."
+        }
+      ]
+    }
+  ]
+}

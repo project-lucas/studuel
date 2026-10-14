@@ -1,0 +1,191 @@
+{
+  "titre": "Le basket",
+  "titreSurligne": "basket",
+  "accroche": "Des règles courtes pour jouer vite.",
+  "bonus": "panier à **3,05 m** · **24** secondes · **3** points",
+  "illustration": {
+    "fichier": "assets-sources/fiches/illustrations/5e/sport/basket-marcher-24-secondes-3-points.webp",
+    "prompt": "a glossy orange basketball going through a hoop with a small golden stopwatch, sparkles, same art style as the reference icons, on a magenta background, no text"
+  },
+  "marcel": "Dribble ou passe,\npas de pas !",
+  "rangs": [
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 1,
+          "titre": "Combien vaut un panier ?",
+          "entetes": [
+            "Tir",
+            "Points"
+          ],
+          "lignes": [
+            [
+              "**Lancer franc** (sans défenseur)",
+              "1"
+            ],
+            [
+              "Tir **dans** la ligne",
+              "2"
+            ],
+            [
+              "Tir **derrière** la ligne",
+              "3"
+            ],
+            [
+              "Ligne à 3 points",
+              "**6,75 m** (FIBA)<br>**7,24 m** (NBA)"
+            ]
+          ]
+        },
+        {
+          "type": "definitions",
+          "numero": 2,
+          "titre": "Les mots",
+          "items": [
+            {
+              "terme": "Dribbler",
+              "definition": "faire **rebondir** le ballon pour avancer"
+            },
+            {
+              "terme": "Marcher",
+              "definition": "plus de **deux appuis** sans dribbler : balle perdue"
+            },
+            {
+              "terme": "Reprise de dribble",
+              "definition": "redribbler après s’être arrêté : **interdit**"
+            },
+            {
+              "terme": "Raquette",
+              "definition": "le rectangle sous le panier"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "etapes",
+          "numero": 3,
+          "titre": "Les trois horloges",
+          "etapes": [
+            {
+              "titre": "24 secondes",
+              "texte": "pour **tirer** et toucher l’anneau"
+            },
+            {
+              "titre": "8 secondes",
+              "texte": "pour passer la **ligne médiane**"
+            },
+            {
+              "titre": "3 secondes",
+              "texte": "au maximum dans la **raquette**"
+            },
+            {
+              "titre": "Dépassé ?",
+              "texte": "le ballon va à l’**adversaire**"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 262px",
+      "blocs": [
+        {
+          "type": "tableau",
+          "numero": 4,
+          "titre": "Les bases",
+          "entetes": [
+            "Règle",
+            "Valeur"
+          ],
+          "lignes": [
+            [
+              "Joueurs par équipe",
+              "**5**"
+            ],
+            [
+              "Match FIBA",
+              "**4 × 10** min"
+            ],
+            [
+              "Match NBA",
+              "**4 × 12** min"
+            ],
+            [
+              "Hauteur du panier",
+              "**3,05 m**"
+            ],
+            [
+              "Exclu au bout de",
+              "**5** fautes (6 en NBA)"
+            ]
+          ]
+        },
+        {
+          "type": "postit",
+          "titre": "Exemple",
+          "donnees": "Ton meneur recule derrière la ligne à 3 points et réussit son tir.",
+          "calcul": "tir derrière la ligne = 3 points",
+          "aparte": "et sans marcher",
+          "resultat": "[[+3 d’un coup]]"
+        }
+      ]
+    },
+    {
+      "colonnes": "1fr 1fr",
+      "blocs": [
+        {
+          "type": "cartes",
+          "numero": 5,
+          "titre": "Marcher ou pas ?",
+          "colonnes": 1,
+          "cartes": [
+            {
+              "titre": "Tu dribbles",
+              "texte": "Tu as le **droit de bouger** avec le ballon."
+            },
+            {
+              "titre": "Tu tiens le ballon",
+              "texte": "Tu n’as droit qu’à **deux appuis**."
+            },
+            {
+              "titre": "Tu as arrêté de dribbler",
+              "texte": "Il faut **passer ou tirer**."
+            },
+            {
+              "titre": "Faute sur un tireur",
+              "texte": "Il tire des **lancers francs**."
+            }
+          ]
+        },
+        {
+          "type": "pieges",
+          "items": [
+            "Croire que le panier est à **2,50 m** : il est à **3,05 m**.",
+            "Redribbler après un arrêt : **reprise de dribble**.",
+            "Confondre **FIBA** et **NBA** : 10 ou 12 minutes.",
+            "Rester **3 minutes** dans la raquette : c’est **3 secondes**.",
+            "Oublier que la **faute** sur un tireur donne des lancers francs."
+          ]
+        }
+      ]
+    },
+    {
+      "blocs": [
+        {
+          "type": "test",
+          "questions": [
+            "À quelle hauteur est le panier&nbsp;?",
+            "Combien de secondes pour tirer&nbsp;?",
+            "Combien vaut un tir derrière la ligne&nbsp;?"
+          ],
+          "reponses": "1) 3,05 mètres · 2) 24 secondes · 3) 3 points"
+        }
+      ]
+    }
+  ]
+}

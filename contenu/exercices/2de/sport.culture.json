@@ -1,0 +1,3042 @@
+{
+  "niveau": "2de",
+  "matiere": "sport",
+  "exercices": [
+    {
+      "chapitre": "3fd26c43-30b4-5268-8f9a-7652df6d5fea",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois épreuves, trois moteurs",
+      "competence": "lire-tableau",
+      "situation": "Au meeting du lycée, Sofia assiste à trois courses : un sprint, un tour de piste et un fond. Le tableau donne la durée approximative des records masculins : on ne court pas ces épreuves avec le même « moteur ».",
+      "documents": [
+        {
+          "id": "records",
+          "type": "tableau",
+          "titre": "Trois épreuves d’athlétisme",
+          "source": "Durées arrondies (ordres de grandeur) des records du monde masculins.",
+          "colonnes": [
+            "Épreuve",
+            "Durée du record"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "100 m",
+              "10 s"
+            ],
+            [
+              "400 m",
+              "43 s"
+            ],
+            [
+              "10 000 m",
+              "26 min"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "records",
+          "enonce": "Touche la **durée du record du 400 m**.",
+          "reponse": [
+            "r1c1"
+          ],
+          "aide": "Cherche la ligne « 400 m », puis la colonne des durées.",
+          "explication": "Le record du 400 m dure environ **43 secondes** : on est entre 10 s et 2 min, la zone où la filière lactique domine."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque épreuve à la filière énergétique qui domine.",
+          "paires": [
+            [
+              "100 m",
+              "Anaérobie alactique"
+            ],
+            [
+              "400 m",
+              "Anaérobie lactique"
+            ],
+            [
+              "10 000 m",
+              "Aérobie"
+            ]
+          ],
+          "aide": "Compare la durée de chaque épreuve aux seuils du cours : 10 secondes et 2 minutes.",
+          "explication": "**100 m** (≈ 10 s) : phosphocréatine, filière alactique. **400 m** (≈ 43 s) : glycolyse sans oxygène, filière lactique. **10 000 m** (≈ 26 min) : oxygène, filière aérobie."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi un sprinteur ne peut-il pas tenir sa vitesse maximale pendant 2 minutes ?",
+          "options": [
+            "Parce que la filière très puissante qu’il utilise s’épuise en une dizaine de secondes",
+            "Parce qu’il oublie de respirer",
+            "Parce que ses muscles n’ont plus d’ATP du tout",
+            "Parce que le lactate est un poison"
+          ],
+          "reponse": 0,
+          "aide": "Plus un effort est intense, plus il est court : quelle filière est puissante mais à stock limité ?",
+          "explication": "La filière alactique est **très puissante, mais son stock de phosphocréatine tient une dizaine de secondes**. Puissance et durée ne vont jamais ensemble."
+        }
+      ]
+    },
+    {
+      "chapitre": "3fd26c43-30b4-5268-8f9a-7652df6d5fea",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La part de l’oxygène",
+      "competence": "lire-graphique",
+      "situation": "Un physiologiste mesure, pour des efforts de plus en plus longs, la part de l’énergie fournie par la filière aérobie. Le reste vient des deux filières anaérobies. À toi de lire la courbe.",
+      "documents": [
+        {
+          "id": "aerobie",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Part de l’énergie fournie par la filière aérobie",
+          "source": "Valeurs arrondies, ordres de grandeur écrits pour l’exercice.",
+          "categories": [
+            "10 s",
+            "30 s",
+            "1 min",
+            "2 min",
+            "4 min",
+            "10 min",
+            "30 min"
+          ],
+          "series": [
+            {
+              "nom": "Filière aérobie",
+              "valeurs": [
+                10,
+                30,
+                50,
+                65,
+                80,
+                90,
+                98
+              ],
+              "teinte": "turquoise"
+            }
+          ],
+          "axeY": {
+            "titre": "Part de l’énergie",
+            "unite": "%",
+            "min": 0,
+            "max": 100,
+            "pas": 20
+          },
+          "axeX": {
+            "titre": "Durée de l’effort"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle part de l’énergie vient de la filière aérobie pour un effort de **2 minutes** ?",
+          "reponse": 65,
+          "unite": "%",
+          "tolerance": 3,
+          "aide": "Repère « 2 min » sur l’axe horizontal, monte jusqu’à la courbe, lis à gauche.",
+          "explication": "À 2 minutes, la filière aérobie fournit environ **65 %** de l’énergie : elle a déjà pris le relais, sans que les autres s’éteignent."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Pour un effort de **30 secondes**, quelle part de l’énergie fournissent les deux filières anaérobies réunies ?",
+          "reponse": 70,
+          "unite": "%",
+          "tolerance": 3,
+          "aide": "L’aérobie et les deux anaérobies font 100 % à elles trois.",
+          "explication": "L’aérobie fournit 30 % : il reste 100 − 30 = **70 %** pour les filières alactique et lactique."
+        },
+        {
+          "type": "zone",
+          "document": "aerobie",
+          "enonce": "Touche la durée pour laquelle l’énergie est **moitié aérobie, moitié anaérobie**.",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "Cherche le point de la courbe à 50 %.",
+          "explication": "À **1 minute**, la courbe atteint 50 % : c’est le moment où les deux familles de filières pèsent autant."
+        },
+        {
+          "type": "choix",
+          "enonce": "À 10 secondes, la filière aérobie fournit déjà environ 10 % de l’énergie. Que montre ce point ?",
+          "options": [
+            "Les filières ne s’allument pas comme des interrupteurs : elles tournent toujours ensemble",
+            "La filière aérobie est la plus puissante",
+            "Le sprinteur n’utilise jamais la phosphocréatine",
+            "Le lactate est un poison"
+          ],
+          "reponse": 0,
+          "aide": "Même sur un effort très court, la courbe n’est pas à zéro.",
+          "explication": "Aucune filière n’est jamais à 0 : elles **se chevauchent en permanence**, et c’est l’intensité et la durée qui décident de celle qui domine."
+        }
+      ]
+    },
+    {
+      "chapitre": "3fd26c43-30b4-5268-8f9a-7652df6d5fea",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La semaine de Nora, spécialiste du 400 m",
+      "competence": "analyser-document",
+      "situation": "Nora prépare le 400 m. Son entraîneur lui propose trois séances types. Croise le programme de la semaine avec les règles d’entraînement de chaque filière.",
+      "documents": [
+        {
+          "id": "semaine",
+          "type": "tableau",
+          "titre": "Les trois séances de la semaine",
+          "source": "Programme écrit pour l’exercice.",
+          "colonnes": [
+            "Jour",
+            "Contenu de la séance"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Lundi",
+              "6 × 60 m départ arrêté, 3 min de récupération entre chaque course"
+            ],
+            [
+              "Mercredi",
+              "50 min de footing à allure facile"
+            ],
+            [
+              "Vendredi",
+              "6 × 1 min très rapide, 1 min de marche entre chaque"
+            ]
+          ]
+        },
+        {
+          "id": "regles",
+          "type": "tableau",
+          "titre": "Comment entraîner chaque filière",
+          "source": "Fiche écrite pour l’exercice.",
+          "colonnes": [
+            "Filière",
+            "Principe"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Alactique",
+              "Efforts très courts et maximaux, récupération complète"
+            ],
+            [
+              "Lactique",
+              "Séries de 30 s à 2 min à forte intensité, récupération incomplète"
+            ],
+            [
+              "Aérobie",
+              "Du volume : longues séances à allure modérée"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "semaine",
+          "enonce": "Touche la séance qui construit surtout le **moteur aérobie** de Nora.",
+          "reponse": [
+            "r1c1"
+          ],
+          "aide": "Cherche la séance longue, à allure facile.",
+          "explication": "Le **footing de 50 minutes** à allure facile est du volume : c’est exactement le travail de la filière aérobie."
+        },
+        {
+          "type": "categories",
+          "enonce": "Classe chaque séance selon la filière qu’elle sollicite surtout.",
+          "categories": [
+            "Alactique",
+            "Lactique",
+            "Aérobie"
+          ],
+          "items": [
+            [
+              "Lundi : 6 × 60 m, 3 min de récupération",
+              0
+            ],
+            [
+              "Mercredi : 50 min de footing facile",
+              2
+            ],
+            [
+              "Vendredi : 6 × 1 min rapide, 1 min de marche",
+              1
+            ]
+          ],
+          "aide": "Compare la durée de l’effort et la récupération avec les principes du deuxième tableau.",
+          "explication": "Lundi : efforts très courts et récupération longue → **alactique**. Vendredi : efforts de 1 min, récupération incomplète → **lactique**. Mercredi : volume → **aérobie**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Lundi, Nora court 6 fois 60 m avec 3 min de récupération **entre** chaque course. Combien de minutes de récupération au total ?",
+          "reponse": 15,
+          "unite": "min",
+          "aide": "Entre 6 courses, il y a combien de pauses ?",
+          "explication": "Il y a **5 pauses** entre 6 courses : 5 × 3 = **15 minutes**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la récupération est-elle longue entre deux sprints du lundi ?",
+          "options": [
+            "Pour reconstituer le stock de phosphocréatine et rester explosive",
+            "Pour que le lactate disparaisse complètement",
+            "Pour s’habituer à courir lentement",
+            "Parce que l’aérobie met 3 minutes à démarrer"
+          ],
+          "reponse": 0,
+          "aide": "Quelle filière a un petit stock qui ne se refait qu’au repos ?",
+          "explication": "Le stock de phosphocréatine ne se reconstitue qu’au repos : **une récupération complète** permet de rester explosive à chaque départ."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle séance est la plus proche de l’effort d’un 400 m (environ 50 s) ?",
+          "options": [
+            "Le vendredi : séries d’une minute à forte intensité",
+            "Le mercredi : footing de 50 min",
+            "Aucune des trois",
+            "Le lundi : sprints de 60 m"
+          ],
+          "reponse": 0,
+          "aide": "Un 400 m dure entre 10 s et 2 min : quelle filière ? quelle séance la travaille ?",
+          "explication": "Le 400 m est un effort **lactique** : les séries d’environ une minute du vendredi le reproduisent le mieux."
+        }
+      ]
+    },
+    {
+      "chapitre": "f8bb8322-6305-59ad-bd54-ca88fcf7bb7c",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "La semaine de Malik",
+      "competence": "lire-tableau",
+      "situation": "Malik, 15 ans, débute la course à pied. Son entraîneur lui a écrit une semaine type de trois séances. Lis son programme.",
+      "documents": [
+        {
+          "id": "semaine",
+          "type": "tableau",
+          "titre": "La semaine type de Malik",
+          "source": "Programme écrit pour l’exercice.",
+          "colonnes": [
+            "Jour",
+            "Séance",
+            "Durée"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Lundi",
+              "Endurance fondamentale, allure facile",
+              "40 min"
+            ],
+            [
+              "Mardi",
+              "Repos",
+              "—"
+            ],
+            [
+              "Mercredi",
+              "Fractionné : répétitions rapides et récupérations",
+              "35 min"
+            ],
+            [
+              "Jeudi",
+              "Repos",
+              "—"
+            ],
+            [
+              "Vendredi",
+              "Repos",
+              "—"
+            ],
+            [
+              "Samedi",
+              "Renforcement : gainage et squats",
+              "30 min"
+            ],
+            [
+              "Dimanche",
+              "Repos",
+              "—"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "semaine",
+          "enonce": "Touche la séance de **fractionné**.",
+          "reponse": [
+            "r2c1"
+          ],
+          "aide": "Cherche le mot « Fractionné » dans la colonne des séances.",
+          "explication": "Le fractionné a lieu le **mercredi** : des répétitions rapides entrecoupées de récupération, pour gagner en vitesse."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de jours de **repos** compte la semaine de Malik ?",
+          "reponse": 4,
+          "aide": "Compte les lignes « Repos ».",
+          "explication": "Mardi, jeudi, vendredi et dimanche : **4 jours de repos**. Ils ne sont pas perdus : c’est là que le corps progresse."
+        },
+        {
+          "type": "choix",
+          "enonce": "En choisissant trois séances par semaine, quel réglage de la charge Malik fixe-t-il ?",
+          "options": [
+            "La fréquence",
+            "Le volume",
+            "L’intensité",
+            "La densité"
+          ],
+          "reponse": 0,
+          "ordreFixe": true,
+          "aide": "Quel réglage compte le nombre de séances ?",
+          "explication": "Le nombre de séances par semaine est la **fréquence**. Le volume mesure la quantité de travail, l’intensité sa difficulté, la densité le rapport effort/repos."
+        }
+      ]
+    },
+    {
+      "chapitre": "f8bb8322-6305-59ad-bd54-ca88fcf7bb7c",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Léna et Tom, six semaines de course",
+      "competence": "calculer",
+      "situation": "Léna et Tom préparent la même course. Léna ajoute 2 km par semaine. Tom, pressé, fait grimper son kilométrage beaucoup plus vite, puis se blesse au genou à la semaine 5 et doit réduire. Le graphique donne leur volume hebdomadaire.",
+      "documents": [
+        {
+          "id": "volume",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Kilomètres courus par semaine",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "categories": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6"
+          ],
+          "series": [
+            {
+              "nom": "Léna",
+              "valeurs": [
+                20,
+                22,
+                24,
+                26,
+                28,
+                30
+              ],
+              "teinte": "violet"
+            },
+            {
+              "nom": "Tom",
+              "valeurs": [
+                20,
+                30,
+                40,
+                50,
+                35,
+                20
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Volume",
+            "unite": "km",
+            "min": 0,
+            "max": 60,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Semaine"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "De quel pourcentage Tom a-t-il augmenté son volume entre S1 et S2 ?",
+          "reponse": 50,
+          "unite": "%",
+          "aide": "Il passe de 20 à 30 km. Calcule la hausse (10 km) puis rapporte-la à 20 km.",
+          "explication": "La hausse est de 10 km sur 20 km, soit **50 %**. Le cours recommande environ 10 % par semaine : Tom a multiplié la dose par cinq."
+        },
+        {
+          "type": "zone",
+          "document": "volume",
+          "enonce": "Touche la **première semaine** où le volume de Tom diminue.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Cherche la semaine où la barre corail est plus basse que la précédente.",
+          "explication": "À la **semaine 5**, Tom passe de 50 à 35 km : c’est la blessure au genou qui le force à lever le pied."
+        },
+        {
+          "type": "nombre",
+          "enonce": "À la semaine 6, Léna court 30 km. En appliquant +10 %, combien de kilomètres peut-elle courir à la semaine 7 ?",
+          "reponse": 33,
+          "unite": "km",
+          "aide": "10 % de 30 km, c’est 3 km.",
+          "explication": "30 × 1,10 = **33 km**. Une surcharge de 10 % par semaine suffit à progresser sans se blesser."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel principe d’entraînement Tom n’a-t-il pas respecté ?",
+          "options": [
+            "La surcharge progressive (environ 10 % par semaine)",
+            "La spécificité",
+            "La réversibilité",
+            "La variété"
+          ],
+          "reponse": 0,
+          "aide": "Regarde l’ampleur des hausses de Tom de S1 à S4.",
+          "explication": "Tom a ajouté **10 km par semaine** au lieu d’environ 10 % : son corps n’a pas eu le temps de s’adapter, d’où la blessure."
+        }
+      ]
+    },
+    {
+      "chapitre": "f8bb8322-6305-59ad-bd54-ca88fcf7bb7c",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le carnet de Camille",
+      "competence": "raisonner",
+      "situation": "Camille, 16 ans, a décidé de « tout donner » avant les championnats scolaires. Elle note chaque semaine ses séances, sa forme et sa fréquence cardiaque au repos (FC). Son entraîneur lui a remis une fiche sur le surentraînement.",
+      "documents": [
+        {
+          "id": "carnet",
+          "type": "tableau",
+          "titre": "Le carnet de Camille",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "colonnes": [
+            "Semaine",
+            "Séances",
+            "Forme ressentie (/10)",
+            "FC au repos (bpm)",
+            "Sommeil"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "S1",
+              3,
+              8,
+              54,
+              "bon"
+            ],
+            [
+              "S2",
+              4,
+              7,
+              55,
+              "bon"
+            ],
+            [
+              "S3",
+              5,
+              5,
+              59,
+              "haché"
+            ],
+            [
+              "S4",
+              6,
+              3,
+              63,
+              "mauvais"
+            ]
+          ]
+        },
+        {
+          "id": "signes",
+          "type": "texte",
+          "genre": "consigne",
+          "titre": "Les signes du surentraînement",
+          "auteur": "Fiche d’entraînement écrite pour l’exercice",
+          "blocs": [
+            "Tu en fais trop si tu es fatigué en permanence, si tes performances stagnent ou baissent, si ton sommeil se dégrade, si tu es irritable ou si ton cœur bat plus vite au repos.",
+            "La réponse n’est pas de forcer : c’est de lever le pied quelques jours."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carnet",
+          "enonce": "Touche la **fréquence cardiaque au repos** de Camille à la semaine 4.",
+          "reponse": [
+            "r3c3"
+          ],
+          "aide": "Ligne S4, colonne « FC au repos ».",
+          "explication": "À la semaine 4, sa FC au repos est de **63 bpm**, contre 54 en S1 : son cœur bat plus vite au repos, un signe d’alerte."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de battements par minute sa FC au repos a-t-elle augmenté entre S1 et S4 ?",
+          "reponse": 9,
+          "unite": "bpm",
+          "aide": "Fais la différence entre les valeurs de S4 et de S1.",
+          "explication": "63 − 54 = **9 bpm** de plus au repos : une hausse nette qui s’ajoute à la forme qui chute et au sommeil dégradé."
+        },
+        {
+          "type": "categories",
+          "enonce": "Trie ces éléments du carnet : signe d’alerte ou cause possible ?",
+          "categories": [
+            "Signe d’alerte",
+            "Cause possible"
+          ],
+          "items": [
+            [
+              "FC au repos qui monte",
+              0
+            ],
+            [
+              "Sommeil qui se dégrade",
+              0
+            ],
+            [
+              "Forme ressentie qui chute",
+              0
+            ],
+            [
+              "Séances qui passent de 3 à 6",
+              1
+            ],
+            [
+              "Volume doublé en trois semaines",
+              1
+            ]
+          ],
+          "aide": "Les signes sont ce que le corps répond ; la cause est ce que Camille a changé.",
+          "explication": "FC, sommeil et forme sont des **signes** de surentraînement. Doubler les séances en trois semaines est la **cause** : elle a dépassé la surcharge d’environ 10 % par semaine."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que doit faire Camille ?",
+          "options": [
+            "Lever le pied quelques jours, puis reprendre progressivement",
+            "Ajouter une septième séance pour compenser",
+            "Ne rien changer : la fatigue passera",
+            "S’arrêter complètement pendant trois mois"
+          ],
+          "reponse": 0,
+          "aide": "Relis la dernière phrase de la fiche.",
+          "explication": "La fiche est claire : face au surentraînement, on **lève le pied quelques jours**. Forcer aggraverait tout ; s’arrêter trois mois ferait perdre ses acquis (réversibilité)."
+        }
+      ]
+    },
+    {
+      "chapitre": "24ef300f-6be9-51b1-8338-b65cf583c982",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Trois programmes à la salle",
+      "competence": "lire-tableau",
+      "situation": "À la salle du lycée, Nadia, Bastien et Camille s’entraînent côte à côte, mais ils ne font pas du tout la même chose. Voici leurs programmes du jour.",
+      "documents": [
+        {
+          "id": "programmes",
+          "type": "tableau",
+          "titre": "Les trois programmes",
+          "source": "Programmes écrits pour l’exercice.",
+          "colonnes": [
+            "Prénom",
+            "Séries × répétitions",
+            "Charge",
+            "Repos entre séries"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Nadia",
+              "4 × 3",
+              "90 % du max",
+              "4 min"
+            ],
+            [
+              "Bastien",
+              "3 × 10",
+              "75 % du max",
+              "75 s"
+            ],
+            [
+              "Camille",
+              "3 × 20",
+              "50 % du max",
+              "30 s"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "programmes",
+          "enonce": "Touche la **charge la plus lourde** du tableau.",
+          "reponse": [
+            "r0c2"
+          ],
+          "aide": "Compare les pourcentages du max : le plus élevé est le plus lourd.",
+          "explication": "Nadia soulève à **90 % de son max** : c’est la charge la plus lourde, et c’est aussi elle qui fait le moins de répétitions."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque élève à son objectif.",
+          "paires": [
+            [
+              "Nadia",
+              "Force maximale"
+            ],
+            [
+              "Bastien",
+              "Hypertrophie"
+            ],
+            [
+              "Camille",
+              "Endurance de force"
+            ]
+          ],
+          "aide": "Compare répétitions, charge et repos avec les trois zones du cours.",
+          "explication": "**Nadia** : 3 répétitions lourdes → force maximale. **Bastien** : 10 répétitions à 75 % → hypertrophie. **Camille** : 20 répétitions légères → endurance de force."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Nadia se repose-t-elle 4 minutes entre ses séries ?",
+          "options": [
+            "Pour reconstituer ses forces et garder une charge très lourde à chaque série",
+            "Parce que ses muscles grossissent pendant le repos",
+            "Parce qu’elle manque de motivation",
+            "Pour refroidir ses muscles"
+          ],
+          "reponse": 0,
+          "aide": "À 90 % du max, que faut-il pour que la série suivante soit aussi bonne ?",
+          "explication": "Pour la force maximale, on reste sur des **charges très lourdes** : un repos de **2 à 5 minutes** est nécessaire pour retrouver sa force avant la série suivante."
+        }
+      ]
+    },
+    {
+      "chapitre": "24ef300f-6be9-51b1-8338-b65cf583c982",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le carnet de Hugo et la formule d’Epley",
+      "competence": "calculer",
+      "situation": "Hugo, 17 ans, n’a jamais testé son maximum : son entraîneur le lui interdit. Il a noté ses meilleures séries du mois. Avec la formule d’Epley (charge × (1 + répétitions / 30)), il peut estimer son max sans risque.",
+      "documents": [
+        {
+          "id": "carnet",
+          "type": "tableau",
+          "titre": "Les meilleures séries de Hugo",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "colonnes": [
+            "Exercice",
+            "Charge (kg)",
+            "Répétitions"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Squat",
+              70,
+              9
+            ],
+            [
+              "Développé couché",
+              50,
+              6
+            ],
+            [
+              "Tirage",
+              45,
+              12
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Estime le **max au squat** de Hugo avec la formule d’Epley.",
+          "reponse": 91,
+          "unite": "kg",
+          "aide": "70 × (1 + 9 / 30) : calcule d’abord 9 / 30.",
+          "explication": "70 × (1 + 9/30) = 70 × 1,3 = **91 kg**. C’est une estimation : elle sert à choisir ses charges, pas à aller au bout de soi."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Estime le **max au développé couché**.",
+          "reponse": 60,
+          "unite": "kg",
+          "aide": "50 × (1 + 6 / 30) : 6 / 30 = 0,2.",
+          "explication": "50 × (1 + 6/30) = 50 × 1,2 = **60 kg**."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Hugo veut travailler l’hypertrophie au squat à **75 % de son max**. Quelle charge doit-il charger sur la barre, arrondie au kilo ?",
+          "reponse": 68,
+          "unite": "kg",
+          "tolerance": 1,
+          "aide": "Reprends son max estimé au squat et multiplie par 0,75.",
+          "explication": "91 × 0,75 ≈ 68,25, soit environ **68 kg**. À 75 %, il peut viser 6 à 12 répétitions : la zone de l’hypertrophie."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi estimer son max plutôt que de le tester sur une seule répétition ?",
+          "options": [
+            "Pour éviter le risque d’une répétition maximale, surtout sans pareur",
+            "Parce que le max n’existe pas",
+            "Parce que la formule est plus exacte qu’un test",
+            "Pour soulever plus lourd"
+          ],
+          "reponse": 0,
+          "aide": "Pense à ce qui peut arriver si la barre reste coincée.",
+          "explication": "Un test de maximum expose aux blessures, surtout sans pareur et avant la maturité du squelette : **la formule donne un repère sûr**."
+        }
+      ]
+    },
+    {
+      "chapitre": "24ef300f-6be9-51b1-8338-b65cf583c982",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "La séance de Yanis, et le message qui change tout",
+      "competence": "analyser-document",
+      "situation": "Yanis, 16 ans, a fait sa séance « corps entier » seul et en parle à son coach par message. Croise le programme de la séance avec ce qu’il raconte.",
+      "documents": [
+        {
+          "id": "seance",
+          "type": "tableau",
+          "titre": "La séance du jour",
+          "source": "Programme écrit pour l’exercice.",
+          "colonnes": [
+            "Geste",
+            "Séries × répétitions"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Squat",
+              "4 × 8"
+            ],
+            [
+              "Développé couché",
+              "3 × 8"
+            ],
+            [
+              "Tirage",
+              "3 × 10"
+            ],
+            [
+              "Soulevé de terre léger",
+              "3 × 6"
+            ]
+          ]
+        },
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Le message de Yanis",
+          "participants": [
+            {
+              "nom": "Yanis",
+              "emoji": "👦",
+              "cote": "droite"
+            },
+            {
+              "nom": "Coach",
+              "emoji": "🧑‍🏫",
+              "cote": "gauche"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Yanis",
+              "texte": "Séance finie ! Au squat, à la dernière série, mon dos s’[[a|arrondit]] un peu, mais j’ai tenu."
+            },
+            {
+              "qui": "Coach",
+              "texte": "Tu as continué jusqu’au bout ?"
+            },
+            {
+              "qui": "Yanis",
+              "texte": "Oui, je voulais finir. Et j’ai une douleur au genou qui ne passe pas depuis hier."
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sms",
+          "enonce": "Touche le mot qui montre que la **technique de Yanis se dégrade** sous la charge.",
+          "reponse": [
+            "a"
+          ],
+          "aide": "Cherche ce que fait son dos au squat.",
+          "explication": "Le dos qui **s’arrondit** sous la charge est un signal d’alerte : on pose la barre au lieu de finir la série."
+        },
+        {
+          "type": "categories",
+          "enonce": "Fatigue musculaire normale, ou signal d’alerte ? Trie ces sensations.",
+          "categories": [
+            "Fatigue normale",
+            "Signal d’alerte"
+          ],
+          "items": [
+            [
+              "Brûlure dans les cuisses en fin de série",
+              0
+            ],
+            [
+              "Dos qui s’arrondit sous la barre",
+              1
+            ],
+            [
+              "Souffle court après le dernier squat",
+              0
+            ],
+            [
+              "Douleur vive dans le genou",
+              1
+            ],
+            [
+              "Jambes lourdes le lendemain",
+              0
+            ],
+            [
+              "Épaule qui pince au développé",
+              1
+            ]
+          ],
+          "aide": "La fatigue se ressent dans le muscle ; la douleur d’une blessure, dans l’articulation.",
+          "explication": "La fatigue est dans le **muscle** (brûlure, souffle, jambes lourdes). Un **dos rond** ou une **douleur articulaire** vive (genou, épaule) sont des signaux d’alerte."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de **répétitions** Yanis a-t-il prévu au total dans cette séance (hors gainage) ?",
+          "reponse": 104,
+          "aide": "Pour chaque geste : séries × répétitions, puis additionne les quatre résultats.",
+          "explication": "4 × 8 = 32 ; 3 × 8 = 24 ; 3 × 10 = 30 ; 3 × 6 = 18. Total : 32 + 24 + 30 + 18 = **104 répétitions**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que devait faire Yanis dès que son dos s’est arrondi ?",
+          "options": [
+            "Poser la barre et corriger sa technique, avec un adulte compétent",
+            "Ajouter du poids pour finir plus vite",
+            "Continuer en serrant les dents",
+            "Remplacer le squat par un max sur une répétition"
+          ],
+          "reponse": 0,
+          "aide": "Relis le message : que dit-il à la dernière série ?",
+          "explication": "Face à un dos rond ou une douleur articulaire, **on s’arrête**, on repose la barre et on fait corriger le geste. Son genou douloureux mérite un avis si la douleur persiste."
+        }
+      ]
+    },
+    {
+      "chapitre": "db5e6c16-ebc7-5ea3-9e5a-de5972475cca",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "L’étiquette de la barre de céréales",
+      "competence": "analyser-document",
+      "situation": "Avant l’entraînement, Ilyès hésite devant une barre de céréales du distributeur. Il regarde l’étiquette nutritionnelle pour 100 g de produit.",
+      "documents": [
+        {
+          "id": "etiquette",
+          "type": "fiche",
+          "modele": "etiquette",
+          "entete": "Barre céréales-miel",
+          "sousTitre": "Valeurs pour 100 g",
+          "emoji": "🍫",
+          "lignes": [
+            {
+              "texte": "Énergie",
+              "valeur": "410 kcal"
+            },
+            {
+              "texte": "Matières grasses",
+              "valeur": "12 g"
+            },
+            {
+              "texte": "Glucides",
+              "valeur": "62 g",
+              "id": "glucides"
+            },
+            {
+              "texte": "Fibres",
+              "valeur": "5 g"
+            },
+            {
+              "texte": "Protéines",
+              "valeur": "8 g",
+              "id": "proteines"
+            },
+            {
+              "texte": "Sel",
+              "valeur": "0,4 g"
+            }
+          ],
+          "pied": "Étiquette imaginée pour l’exercice.",
+          "teinte": "ambre"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "etiquette",
+          "enonce": "Touche la ligne des **protéines**.",
+          "reponse": [
+            "proteines"
+          ],
+          "aide": "Les protéines servent à réparer les muscles : cherche ce mot sur l’étiquette.",
+          "explication": "Cette barre contient **8 g de protéines pour 100 g** : peu. C’est surtout un produit riche en glucides."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Ilyès mange une barre de **40 g**. Combien de grammes de glucides cela représente-t-il ?",
+          "reponse": 24.8,
+          "unite": "g",
+          "tolerance": 0.2,
+          "aide": "40 g, c’est 0,4 fois 100 g : multiplie les glucides pour 100 g par 0,4.",
+          "explication": "62 × 0,4 = **24,8 g** de glucides : de quoi fournir du carburant pour un effort d’intensité."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi une barre riche en glucides est-elle utile avant un effort intense ?",
+          "options": [
+            "Les glucides sont le carburant de l’intensité",
+            "Les glucides réparent les muscles",
+            "Elle remplace l’eau",
+            "Elle supprime la fatigue"
+          ],
+          "reponse": 0,
+          "aide": "Quel nutriment est brûlé le plus vite par le muscle ?",
+          "explication": "Les **glucides** sont le carburant de l’intensité. Les protéines servent à réparer, et rien ne remplace l’eau."
+        }
+      ]
+    },
+    {
+      "chapitre": "db5e6c16-ebc7-5ea3-9e5a-de5972475cca",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Les besoins de Sara",
+      "competence": "calculer",
+      "situation": "Sara, 16 ans, pèse 55 kg et joue au basket quatre fois par semaine. Sa diététicienne lui donne des repères par kilo de poids du corps. À toi de calculer ce qu’il lui faut.",
+      "documents": [
+        {
+          "id": "reperes",
+          "type": "tableau",
+          "titre": "Repères pour un sportif régulier",
+          "source": "Repères du cours, présentés pour l’exercice.",
+          "colonnes": [
+            "Nutriment",
+            "Repère"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Glucides",
+              "5 à 7 g par kilo et par jour"
+            ],
+            [
+              "Protéines",
+              "1,2 à 2 g par kilo et par jour"
+            ],
+            [
+              "Eau",
+              "Ne pas perdre plus de 2 % de son poids pendant l’effort"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle quantité **minimale** de glucides Sara doit-elle viser chaque jour ?",
+          "reponse": 275,
+          "unite": "g",
+          "aide": "Multiplie 5 g par son poids en kilos.",
+          "explication": "5 × 55 = **275 g** de glucides par jour au minimum."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Et la quantité **maximale** de glucides ?",
+          "reponse": 385,
+          "unite": "g",
+          "aide": "Cette fois, multiplie 7 g par 55.",
+          "explication": "7 × 55 = **385 g** par jour. Sara vise donc entre 275 et 385 g de glucides."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle quantité **maximale** de protéines par jour correspond au repère ?",
+          "reponse": 110,
+          "unite": "g",
+          "aide": "Prends le haut de la fourchette : 2 g par kilo.",
+          "explication": "2 × 55 = **110 g** de protéines par jour au maximum. Un repas normal en apporte déjà beaucoup : l’assiette suffit."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Sara ne doit pas perdre plus de 2 % de son poids en sueur. Cela fait combien de kilos d’eau, soit environ combien de litres ?",
+          "reponse": 1.1,
+          "unite": "L",
+          "tolerance": 0.05,
+          "aide": "2 % de 55 kg : 55 × 0,02.",
+          "explication": "55 × 0,02 = **1,1 kg**, soit environ **1,1 litre** de sueur. Au-delà, la performance baisse : on boit avant, pendant et après, sans attendre la soif."
+        }
+      ]
+    },
+    {
+      "chapitre": "db5e6c16-ebc7-5ea3-9e5a-de5972475cca",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le plateau de la veille de match",
+      "competence": "analyser-document",
+      "situation": "Veille de match pour Léo, 16 ans. À la cantine, il a le choix entre plusieurs plats. Son voisin lui souffle des « conseils » qu’il a lus en ligne. Croise le menu avec la fiche du vrai et du faux.",
+      "documents": [
+        {
+          "id": "menu",
+          "type": "fiche",
+          "modele": "menu",
+          "entete": "Cantine du lycée",
+          "sousTitre": "Mardi soir",
+          "emoji": "🍽️",
+          "lignes": [
+            {
+              "texte": "Pâtes au poulet",
+              "id": "pates"
+            },
+            {
+              "texte": "Haricots verts",
+              "id": "haricots"
+            },
+            {
+              "texte": "Yaourt nature",
+              "id": "yaourt"
+            },
+            {
+              "separateur": true
+            },
+            {
+              "texte": "Canette « énergie » du distributeur",
+              "id": "canette"
+            },
+            {
+              "texte": "Barre « booster » à la composition floue",
+              "id": "barre"
+            },
+            {
+              "texte": "Plat du jour exotique, jamais goûté",
+              "id": "exotique"
+            }
+          ],
+          "pied": "Menu imaginé pour l’exercice.",
+          "teinte": "vert"
+        },
+        {
+          "id": "faux",
+          "type": "tableau",
+          "titre": "Idées reçues et réalité",
+          "source": "Tableau écrit pour l’exercice.",
+          "colonnes": [
+            "Idée reçue",
+            "Ce qu’on sait"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Il faut des protéines dans les 30 minutes",
+              "Moins strict qu’on le dit : le total de la journée compte davantage"
+            ],
+            [
+              "La créatine est un produit miracle",
+              "Pas conseillée avant 18 ans sans avis médical"
+            ],
+            [
+              "Les boissons énergisantes donnent des ailes",
+              "Déconseillées aux adolescents par l’ANSES"
+            ],
+            [
+              "Un complément ne peut pas poser de problème",
+              "Certains contiennent des substances dopantes non indiquées"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "menu",
+          "enonce": "Touche le plat qui apporte à la fois des **féculents** et des **protéines**.",
+          "reponse": [
+            "pates"
+          ],
+          "aide": "Cherche le plat qui associe une source de glucides et de la viande.",
+          "explication": "Les **pâtes au poulet** apportent des féculents (carburant) et des protéines (réparation) : c’est le plat idéal la veille d’un match."
+        },
+        {
+          "type": "categories",
+          "enonce": "Que garde Léo pour son plateau, et que doit-il écarter la veille du match ?",
+          "categories": [
+            "Je le garde",
+            "Je l’écarte"
+          ],
+          "items": [
+            [
+              "Pâtes au poulet",
+              0
+            ],
+            [
+              "Haricots verts",
+              0
+            ],
+            [
+              "Yaourt nature",
+              0
+            ],
+            [
+              "Canette « énergie »",
+              1
+            ],
+            [
+              "Barre « booster » floue",
+              1
+            ],
+            [
+              "Plat exotique jamais goûté",
+              1
+            ]
+          ],
+          "aide": "Trois pièges : un produit déconseillé aux ados, un produit à la composition inconnue, une nouveauté.",
+          "explication": "On écarte la **canette** (déconseillée aux adolescents), la **barre floue** (risque de substances dopantes) et le **plat jamais goûté** (jamais de nouveauté le jour J)."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque idée reçue à la bonne réponse.",
+          "paires": [
+            [
+              "Protéines dans les 30 minutes",
+              "Le total de la journée compte davantage"
+            ],
+            [
+              "Créatine miracle",
+              "Pas conseillée avant 18 ans sans avis médical"
+            ],
+            [
+              "Boissons énergisantes",
+              "Déconseillées aux adolescents"
+            ],
+            [
+              "Complément sans problème",
+              "Peut contenir des substances dopantes"
+            ]
+          ],
+          "aide": "Chaque ligne du deuxième tableau dit la vérité sur une idée reçue.",
+          "explication": "Les quatre idées reçues sont corrigées par le tableau : fenêtre anabolique moins stricte, créatine déconseillée avant 18 ans, boissons énergisantes déconseillées par l’ANSES, compléments parfois dopants."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi la barre « booster » à la composition floue peut-elle poser problème à un athlète ?",
+          "options": [
+            "Elle peut contenir une substance dopante non indiquée : un contrôle positif « involontaire » reste positif",
+            "Elle contient forcément trop de sel",
+            "Elle est interdite à la vente",
+            "Elle remplace les protéines de l’assiette"
+          ],
+          "reponse": 0,
+          "aide": "Pense à ce que l’athlète est toujours responsable d’avaler.",
+          "explication": "Certains compléments contiennent des **substances interdites non étiquetées**. Dire « je ne savais pas » ne protège pas : l’athlète est responsable de ce qu’il avale."
+        }
+      ]
+    },
+    {
+      "chapitre": "96a267e1-92e6-5f1a-84da-8dd64adbbf2a",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Du plus léger au plus grave",
+      "competence": "lire-tableau",
+      "situation": "Le kiné du club affiche dans le vestiaire un tableau des lésions musculaires, pour que les joueurs comprennent pourquoi un « petit claquage » n’est pas un petit bobo.",
+      "documents": [
+        {
+          "id": "lesions",
+          "type": "tableau",
+          "titre": "Les lésions musculaires",
+          "source": "Délais indicatifs : seul un avis médical précise la durée du repos.",
+          "colonnes": [
+            "Lésion",
+            "Ce qui se passe",
+            "Délai indicatif"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Contracture",
+              "Muscle durci et douloureux",
+              "Environ 1 semaine"
+            ],
+            [
+              "Élongation",
+              "Fibres étirées",
+              "Quelques semaines"
+            ],
+            [
+              "Claquage",
+              "Rupture de quelques fibres",
+              "Plusieurs semaines"
+            ],
+            [
+              "Déchirure",
+              "Rupture plus étendue",
+              "6 semaines et plus"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "lesions",
+          "enonce": "Touche le **délai indicatif d’un claquage**.",
+          "reponse": [
+            "r2c2"
+          ],
+          "aide": "Ligne « Claquage », dernière colonne.",
+          "explication": "Un claquage demande **plusieurs semaines** : ce n’est pas une petite douleur qu’on soigne en deux jours."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces lésions de la **moins grave à la plus grave**.",
+          "items": [
+            "Contracture",
+            "Élongation",
+            "Claquage",
+            "Déchirure"
+          ],
+          "aide": "Le délai de guérison indique la gravité : du plus court au plus long.",
+          "explication": "Contracture (≈ 1 semaine), élongation (quelques semaines), claquage (plusieurs semaines), **déchirure** (6 semaines et plus)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Au minimum, combien de semaines de repos faut-il compter pour une **déchirure** ?",
+          "reponse": 6,
+          "unite": "semaines",
+          "aide": "Lis le délai de la dernière ligne du tableau.",
+          "explication": "Le tableau indique **6 semaines et plus**. Seul un avis médical précise la durée exacte."
+        }
+      ]
+    },
+    {
+      "chapitre": "96a267e1-92e6-5f1a-84da-8dd64adbbf2a",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Trois scènes de vestiaire",
+      "competence": "analyser-texte",
+      "situation": "Samedi, match de handball du lycée. À la mi-temps, trois scènes se jouent dans les vestiaires. À toi de reconnaître chaque blessure et de choisir la bonne conduite.",
+      "documents": [
+        {
+          "id": "recit",
+          "type": "texte",
+          "genre": "recit",
+          "titre": "À la mi-temps",
+          "source": "Texte écrit pour l’exercice.",
+          "blocs": [
+            "Scène 1. Eliott a atterri sur le pied d’un adversaire. Sa cheville a doublé de volume et il n’arrive plus à poser le pied par terre.",
+            "Scène 2. Maëlys court depuis la rentrée. Depuis trois semaines, son tendon d’Achille la tire chaque matin. Elle a doublé ses kilomètres en un mois.",
+            "Scène 3. Karim a pris un coude dans la tête. Il répète trois fois la même question, il est [[c|confus]], il a une forte [[c|nausée]] et il voit [[c|double]]. Il jure que « ça va » et veut retourner jouer."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Relie chaque joueur à sa blessure.",
+          "paires": [
+            [
+              "Eliott",
+              "Entorse de la cheville"
+            ],
+            [
+              "Maëlys",
+              "Tendinopathie de surcharge"
+            ],
+            [
+              "Karim",
+              "Commotion cérébrale"
+            ]
+          ],
+          "aide": "Ligament, tendon, cerveau : cherche l’organe touché dans chaque scène.",
+          "explication": "Eliott : cheville gonflée après une torsion → **entorse** (ligament). Maëlys : trop de kilomètres trop vite → **tendinopathie de surcharge**. Karim : choc à la tête avec signes → **commotion**."
+        },
+        {
+          "type": "zone",
+          "document": "recit",
+          "enonce": "Touche les **trois mots** qui trahissent une commotion chez Karim.",
+          "reponse": [
+            "c"
+          ],
+          "aide": "Cherche les signes décrits dans la scène 3 : confusion, nausée, trouble de la vue.",
+          "explication": "**Confus**, **nausée** et **double** (vision double) sont des signes de commotion. Karim ne finira pas le match, même s’il dit aller bien."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que faut-il faire pour Karim ?",
+          "options": [
+            "Le sortir : au moindre doute, il ne rejoue pas, repos puis reprise progressive par paliers",
+            "Le laisser jouer s’il dit que ça va",
+            "Lui donner une boisson énergisante",
+            "Le remettre en jeu après dix minutes de pause"
+          ],
+          "reponse": 0,
+          "aide": "Retiens la phrase du cours : « Au moindre doute, … ».",
+          "explication": "**Au moindre doute, on sort.** Un second choc sur un cerveau fragilisé peut être grave, et le retour prend plusieurs semaines pour un mineur."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle erreur de Maëlys explique son tendon douloureux ?",
+          "options": [
+            "Elle a augmenté sa charge trop vite : le tendon n’a pas eu le temps de s’adapter",
+            "Elle s’est entraînée sans chaussures",
+            "Elle a trop dormi",
+            "Elle n’a pas bu assez de lait"
+          ],
+          "reponse": 0,
+          "aide": "Relis ce que Maëlys a fait de ses kilomètres en un mois.",
+          "explication": "La plupart des « tendinites » sont des surcharges : **trop d’effort, trop vite**. La solution est d’adapter la charge et de renforcer progressivement."
+        }
+      ]
+    },
+    {
+      "chapitre": "96a267e1-92e6-5f1a-84da-8dd64adbbf2a",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le tendon de Mina",
+      "competence": "raisonner",
+      "situation": "Mina, 16 ans, prépare un 10 km. Depuis la semaine 5, son tendon d’Achille la fait souffrir. Elle consulte un kinésithérapeute, qui lui répond par message. Croise son carnet avec le message.",
+      "documents": [
+        {
+          "id": "volume",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Kilomètres courus par semaine",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "categories": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6"
+          ],
+          "series": [
+            {
+              "nom": "Mina",
+              "valeurs": [
+                20,
+                22,
+                26,
+                32,
+                40,
+                50
+              ],
+              "teinte": "violet"
+            }
+          ],
+          "axeY": {
+            "titre": "Volume",
+            "unite": "km",
+            "min": 0,
+            "max": 60,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Semaine"
+          },
+          "valeurs": false
+        },
+        {
+          "id": "message",
+          "type": "texte",
+          "genre": "lettre",
+          "titre": "Le message du kinésithérapeute",
+          "source": "Message écrit pour l’exercice.",
+          "blocs": [
+            "Bonjour Mina, je ne trouve ni rupture ni lésion grave : c’est une tendinopathie de surcharge. Ton tendon n’a pas eu le temps de s’adapter à ta progression.",
+            "On ne s’arrête pas complètement : on ramène la charge à un niveau supportable, puis on la remonte progressivement, avec du renforcement des mollets.",
+            "Reviens me voir si la douleur te réveille la nuit ou si elle persiste."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "volume",
+          "enonce": "Touche la **première semaine** où la hausse du volume dépasse nettement 10 % (de 20 à 22 km, c’était exactement 10 %).",
+          "reponse": [
+            "k2"
+          ],
+          "aide": "S2 : +2 km sur 20 km = 10 %. Cherche la semaine suivante où la hausse est plus forte.",
+          "explication": "De S2 à S3, Mina passe de 22 à 26 km : **+18 %**. C’est le début de l’emballement, bien au-delà des 10 % par semaine conseillés."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De quel pourcentage Mina a-t-elle augmenté son volume entre S4 et S5 ?",
+          "reponse": 25,
+          "unite": "%",
+          "aide": "De 32 à 40 km : la hausse est de 8 km. Rapporte-la à 32.",
+          "explication": "8 / 32 = 0,25, soit **+25 %** en une semaine : plus de deux fois et demie la hausse recommandée."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quel lien le kiné fait-il entre le graphique et la douleur de Mina ?",
+          "options": [
+            "Son tendon a reçu trop d’effort, trop vite : c’est une tendinopathie de surcharge",
+            "Elle n’a pas assez couru",
+            "Elle s’est fait une entorse à la cheville",
+            "Son tendon s’est rompu net"
+          ],
+          "reponse": 0,
+          "aide": "Compare la courbe de ses kilomètres avec la phrase « trop, trop vite ».",
+          "explication": "La courbe montre une progression **bien trop rapide** : ce que le kiné appelle une tendinopathie de surcharge. Pas de rupture, donc pas d’arrêt total."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle conduite le kiné recommande-t-il ?",
+          "options": [
+            "Ramener la charge à un niveau supportable, puis la remonter progressivement en renforçant les mollets",
+            "Arrêter tout mouvement pendant trois mois",
+            "Doubler les séances pour « muscler » le tendon",
+            "Courir malgré la douleur, elle passera"
+          ],
+          "reponse": 0,
+          "aide": "Relis le deuxième paragraphe du message.",
+          "explication": "On **adapte la charge** puis on la remonte peu à peu, avec du **renforcement** : l’arrêt total n’est pas la solution, et forcer aggraverait la surcharge."
+        }
+      ]
+    },
+    {
+      "chapitre": "f0fd1e51-d70d-5438-b121-dac451dc654f",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Quand le sport s’écrit",
+      "competence": "se-reperer-temps",
+      "situation": "À la fin du XIXe siècle, des clubs naissent des deux côtés de la Manche. La frise place quelques repères du sport moderne, de l’Angleterre à la France.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Les débuts du sport moderne",
+          "debut": 1860,
+          "fin": 1885,
+          "pas": 5,
+          "evenements": [
+            {
+              "id": "fa",
+              "date": 1863,
+              "nom": "Football Association"
+            },
+            {
+              "id": "rfu",
+              "date": 1871,
+              "nom": "Rugby Football Union"
+            },
+            {
+              "id": "tennis",
+              "date": 1874,
+              "nom": "Brevet du tennis"
+            },
+            {
+              "id": "racing",
+              "date": 1882,
+              "nom": "Racing Club"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche la **création de la Football Association**.",
+          "reponse": [
+            "fa"
+          ],
+          "aide": "Cherche l’événement le plus à gauche de la frise.",
+          "explication": "La Football Association est créée en **1863**, en Angleterre : le football a désormais des règles écrites communes."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces événements du plus ancien au plus récent.",
+          "items": [
+            "Création de la Football Association (1863)",
+            "Création de la Rugby Football Union (1871)",
+            "Brevet du lawn-tennis (1874)",
+            "Création du Racing Club de France (1882)"
+          ],
+          "aide": "Lis les dates sur la frise, de gauche à droite.",
+          "explication": "FA (1863), RFU (1871), brevet du tennis (1874), Racing Club de France (1882)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent la création de la Football Association de celle de la Rugby Football Union ?",
+          "reponse": 8,
+          "unite": "ans",
+          "aide": "Soustrais les deux dates lues sur la frise.",
+          "explication": "1871 − 1863 = **8 ans**. Les deux sports codifiés suivent la même logique : écrire des règles communes."
+        }
+      ]
+    },
+    {
+      "chapitre": "f0fd1e51-d70d-5438-b121-dac451dc654f",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Gymnastique contre sport anglais",
+      "competence": "analyser-document",
+      "situation": "Vers 1880, deux façons de faire bouger la jeunesse française s’opposent : la gymnastique, venue du modèle allemand, et le sport apporté par des Anglais installés en France. Un élève a résumé leurs différences.",
+      "documents": [
+        {
+          "id": "comparatif",
+          "type": "tableau",
+          "titre": "Deux manières de s’entraîner",
+          "source": "Tableau écrit pour l’exercice.",
+          "colonnes": [
+            "",
+            "Gymnastique (modèle allemand)",
+            "Sport anglais"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "But",
+              "Former des corps forts pour la patrie",
+              "Jouer, se mesurer, gagner"
+            ],
+            [
+              "Où",
+              "Écoles et bataillons scolaires",
+              "Clubs"
+            ],
+            [
+              "Façon de faire",
+              "Exercices imposés, discipline",
+              "Règles de jeu codifiées, plus libre et ludique"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "categories",
+          "enonce": "Gymnastique ou sport anglais ? Trie ces éléments.",
+          "categories": [
+            "Gymnastique",
+            "Sport anglais"
+          ],
+          "items": [
+            [
+              "Bataillons scolaires",
+              0
+            ],
+            [
+              "Clubs comme le Havre Athletic Club",
+              1
+            ],
+            [
+              "Exercices imposés",
+              0
+            ],
+            [
+              "Match avec règles écrites",
+              1
+            ],
+            [
+              "Former des corps forts pour la patrie",
+              0
+            ],
+            [
+              "Se mesurer pour gagner",
+              1
+            ]
+          ],
+          "aide": "Reprends les colonnes du tableau : chaque élément s’y trouve, ou presque.",
+          "explication": "La gymnastique va avec **bataillons scolaires, exercices imposés, corps forts pour la patrie**. Le sport anglais va avec **clubs, matchs à règles écrites, compétition**."
+        },
+        {
+          "type": "zone",
+          "document": "comparatif",
+          "enonce": "Touche la case qui dit **où se pratique le sport anglais**.",
+          "reponse": [
+            "r1c2"
+          ],
+          "aide": "Ligne « Où », colonne « Sport anglais ».",
+          "explication": "Le sport anglais se pratique en **clubs**, comme le Havre Athletic Club fondé en 1872, tandis que la gymnastique se fait à l’école."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le Havre Athletic Club est fondé en 1872 et le Stade français en 1883. Combien d’années séparent ces deux fondations ?",
+          "reponse": 11,
+          "unite": "ans",
+          "aide": "Soustrais 1872 à 1883.",
+          "explication": "1883 − 1872 = **11 ans** : en une décennie, les clubs fondés par des Anglais et leurs imitateurs se multiplient."
+        },
+        {
+          "type": "choix",
+          "enonce": "Qui a apporté les premiers jeux anglais en France ?",
+          "options": [
+            "Des Anglais installés en France",
+            "Des militaires allemands",
+            "Le ministère des Sports",
+            "Les congés payés de 1936"
+          ],
+          "reponse": 0,
+          "aide": "Le Havre Athletic Club, c’est un nom bien français, mais qui l’a fondé ?",
+          "explication": "Ce sont des **Anglais installés en France** qui apportent leurs jeux et fondent les premiers clubs, d’abord réservés à une élite."
+        }
+      ]
+    },
+    {
+      "chapitre": "f0fd1e51-d70d-5438-b121-dac451dc654f",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le dossier de Nina",
+      "competence": "raisonner",
+      "situation": "Nina prépare un exposé sur « Comment le sport est devenu l’affaire de tous ». Elle a posé quatre dates sur une frise et rédigé trois idées. À toi de les relier.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Quatre dates de Nina",
+          "debut": 1860,
+          "fin": 1940,
+          "pas": 20,
+          "evenements": [
+            {
+              "id": "fa",
+              "date": 1863,
+              "nom": "Football Association"
+            },
+            {
+              "id": "havre",
+              "date": 1872,
+              "nom": "Le Havre AC"
+            },
+            {
+              "id": "loi",
+              "date": 1901,
+              "nom": "Loi sur les associations"
+            },
+            {
+              "id": "fp",
+              "date": 1936,
+              "nom": "Front populaire"
+            }
+          ]
+        },
+        {
+          "id": "dossier",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Les trois idées de Nina",
+          "source": "Texte écrit pour l’exercice.",
+          "blocs": [
+            "Première idée : le sport moderne vient d’Angleterre, où des élèves de public schools ont écrit des règles communes pour que des équipes de lieux différents puissent s’affronter.",
+            "Deuxième idée : en France, on a longtemps fait de la gymnastique. Puis une loi a permis à n’importe qui de créer une association, et les clubs se sont multipliés partout.",
+            "Troisième idée : en 1936, avec les [[c|congés]] payés, le sport et les loisirs sont devenus accessibles au plus grand nombre."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche sur la frise l’événement qui correspond à la **deuxième idée** de Nina (la loi qui permet de créer une association).",
+          "reponse": [
+            "loi"
+          ],
+          "aide": "Cherche la date de la loi sur les associations.",
+          "explication": "C’est la **loi de 1901** : n’importe qui peut créer une association, et des milliers de clubs sportifs apparaissent."
+        },
+        {
+          "type": "zone",
+          "document": "dossier",
+          "enonce": "Touche le mot de la troisième idée qui désigne les vacances **payées**.",
+          "reponse": [
+            "c"
+          ],
+          "aide": "Cherche le mot juste avant « payés ».",
+          "explication": "Les **congés** payés de 1936 laissent enfin du temps libre pour les loisirs et le sport : c’est une conquête du Front populaire."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent la fondation du Havre AC de la loi sur les associations ?",
+          "reponse": 29,
+          "unite": "ans",
+          "aide": "Soustrais 1872 à 1901.",
+          "explication": "1901 − 1872 = **29 ans**. Les premiers clubs existaient avant la loi, mais elle leur donne un cadre simple pour se multiplier."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque date à ce qu’elle change pour le sport.",
+          "paires": [
+            [
+              "1863",
+              "Des règles écrites et communes pour le football"
+            ],
+            [
+              "1901",
+              "N’importe qui peut créer un club"
+            ],
+            [
+              "1936",
+              "Congés payés et sport pour tous"
+            ]
+          ],
+          "aide": "Chaque idée du dossier correspond à l’une des trois dates.",
+          "explication": "**1863** : règles écrites, début du sport moderne. **1901** : liberté de créer une association. **1936** : congés payés et sport pour le plus grand nombre."
+        }
+      ]
+    },
+    {
+      "chapitre": "4b4249c7-8dce-55af-8e34-a21014e69f53",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Cinq Jeux, cinq messages",
+      "competence": "lire-tableau",
+      "situation": "Mexico, Munich, Moscou… Les Jeux olympiques n’ont jamais été seulement une fête sportive. Voici cinq éditions et ce qui les a marquées.",
+      "documents": [
+        {
+          "id": "jeux",
+          "type": "tableau",
+          "titre": "Cinq éditions des Jeux d’été",
+          "source": "Tableau écrit pour l’exercice.",
+          "colonnes": [
+            "Année",
+            "Ville",
+            "Ce qui se passe"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              1936,
+              "Berlin",
+              "Jeux dans l’Allemagne d’Hitler, vitrine de la propagande nazie ; Jesse Owens gagne quatre médailles d’or"
+            ],
+            [
+              1968,
+              "Mexico",
+              "Tommie Smith et John Carlos lèvent le poing sur le podium du 200 m"
+            ],
+            [
+              1972,
+              "Munich",
+              "Attentat contre la délégation d’Israël : onze morts"
+            ],
+            [
+              1980,
+              "Moscou",
+              "Boycott d’une soixantaine de pays après l’invasion de l’Afghanistan par l’URSS"
+            ],
+            [
+              1984,
+              "Los Angeles",
+              "Boycott de l’URSS et de ses alliés"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "jeux",
+          "enonce": "Touche l’**année** où deux Américains lèvent le poing sur le podium.",
+          "reponse": [
+            "r1c0"
+          ],
+          "aide": "Cherche la ligne qui parle de poing levé.",
+          "explication": "C’est en **1968**, à Mexico, que Tommie Smith et John Carlos lèvent le poing pour dénoncer le sort des Noirs américains."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de médailles d’or Jesse Owens gagne-t-il à Berlin ?",
+          "reponse": 4,
+          "aide": "La réponse est dans la première ligne.",
+          "explication": "Owens gagne **quatre médailles d’or** : un athlète noir ruine, dans le stade même d’Hitler, le discours sur la supériorité d’une prétendue race."
+        },
+        {
+          "type": "association",
+          "enonce": "Relie chaque édition à ce qui l’a marquée.",
+          "paires": [
+            [
+              "Berlin 1936",
+              "Propagande nazie"
+            ],
+            [
+              "Mexico 1968",
+              "Poing levé"
+            ],
+            [
+              "Munich 1972",
+              "Attentat"
+            ],
+            [
+              "Moscou 1980",
+              "Boycott après l’invasion de l’Afghanistan"
+            ]
+          ],
+          "aide": "Reprends chaque ligne du tableau.",
+          "explication": "Berlin : **propagande**. Mexico : **poing levé**. Munich : **attentat**. Moscou : **boycott** après l’invasion de l’Afghanistan."
+        }
+      ]
+    },
+    {
+      "chapitre": "4b4249c7-8dce-55af-8e34-a21014e69f53",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Sur la carte des Jeux",
+      "competence": "lire-carte",
+      "situation": "Quatre éditions des Jeux d’été sont repérées par une lettre sur le planisphère : A, B, C et D. À toi de retrouver où elles se sont tenues et pourquoi elles ont fait la une.",
+      "documents": [
+        {
+          "id": "carte",
+          "type": "carte",
+          "titre": "Quatre Jeux d’été",
+          "fond": "monde",
+          "cadrage": [
+            -130,
+            12,
+            65,
+            65
+          ],
+          "lieux": [
+            {
+              "id": "a",
+              "lieu": "berlin",
+              "symbole": "lettre",
+              "lettre": "A",
+              "teinte": "corail"
+            },
+            {
+              "id": "b",
+              "lieu": "mexico",
+              "symbole": "lettre",
+              "lettre": "B",
+              "teinte": "violet"
+            },
+            {
+              "id": "c",
+              "lieu": "moscou",
+              "symbole": "lettre",
+              "lettre": "C",
+              "teinte": "bleu"
+            },
+            {
+              "id": "d",
+              "lieu": "los-angeles",
+              "symbole": "lettre",
+              "lettre": "D",
+              "teinte": "vert"
+            }
+          ],
+          "source": "Fond de carte : Natural Earth."
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "Jesse Owens gagne quatre médailles d’or en 1936. Touche la **ville des Jeux de 1936**.",
+          "reponse": [
+            "a"
+          ],
+          "aide": "Les Jeux de 1936 se tiennent dans l’Allemagne d’Hitler.",
+          "explication": "C’est **Berlin** (A), capitale de l’Allemagne nazie, qui accueille les Jeux de 1936."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent les Jeux de Berlin (1936) de ceux de Mexico (1968) ?",
+          "reponse": 32,
+          "unite": "ans",
+          "aide": "Soustrais 1936 à 1968.",
+          "explication": "1968 − 1936 = **32 ans** entre la propagande de Berlin et le poing levé de Mexico."
+        },
+        {
+          "type": "zone",
+          "document": "carte",
+          "enonce": "En 1980, une soixantaine de pays boycottent les Jeux. Touche la **ville hôte**.",
+          "reponse": [
+            "c"
+          ],
+          "aide": "Ce sont les Jeux de l’URSS, après l’invasion de l’Afghanistan.",
+          "explication": "Les Jeux de 1980 ont lieu à **Moscou** (C) : une soixantaine de pays boycottent après l’invasion de l’Afghanistan par l’URSS."
+        },
+        {
+          "type": "choix",
+          "enonce": "En 1984, l’URSS et ses alliés boycottent à leur tour les Jeux de Los Angeles (D). Que montre cette succession de boycotts ?",
+          "options": [
+            "Les Jeux sont une scène de la guerre froide entre l’Est et l’Ouest",
+            "Que les Jeux n’ont plus aucun intérêt sportif",
+            "Que seuls les Américains peuvent organiser des Jeux",
+            "Que les boycotts sont obligatoires"
+          ],
+          "reponse": 0,
+          "aide": "Pense aux deux camps qui s’opposent à l’époque.",
+          "explication": "En 1980 puis 1984, chaque camp boycotte les Jeux de l’autre : la **guerre froide** se joue aussi dans les stades."
+        }
+      ]
+    },
+    {
+      "chapitre": "4b4249c7-8dce-55af-8e34-a21014e69f53",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Exclus, boycottés, suspendus",
+      "competence": "raisonner",
+      "situation": "Élodie prépare un débat intitulé « Le sport est-il neutre ? ». Elle a posé une frise et noté trois affirmations. À toi de les confronter.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Le sport et la politique, 1960-2030",
+          "debut": 1960,
+          "fin": 2030,
+          "pas": 10,
+          "periodes": [
+            {
+              "id": "apartheid",
+              "debut": 1964,
+              "fin": 1992,
+              "nom": "Afrique du Sud exclue",
+              "teinte": "corail"
+            }
+          ],
+          "evenements": [
+            {
+              "id": "mexico",
+              "date": 1968,
+              "nom": "Mexico"
+            },
+            {
+              "id": "munich",
+              "date": 1972,
+              "nom": "Munich"
+            },
+            {
+              "id": "moscou",
+              "date": 1980,
+              "nom": "Moscou"
+            },
+            {
+              "id": "la",
+              "date": 1984,
+              "nom": "Los Angeles"
+            },
+            {
+              "id": "russie",
+              "date": 2022,
+              "nom": "Russie suspendue"
+            }
+          ]
+        },
+        {
+          "id": "notes",
+          "type": "texte",
+          "genre": "article",
+          "titre": "Les notes d’Élodie",
+          "source": "Texte écrit pour l’exercice.",
+          "blocs": [
+            "A. Les Jeux de 1980 et de 1984 ont été boycottés : la guerre froide s’est invitée dans le stade.",
+            "B. Pendant près de trente ans, l’Afrique du Sud, pays de l’apartheid, n’a pas pu participer aux Jeux.",
+            "C. Depuis 2022, la Russie est suspendue ; à Paris en 2024, ses athlètes ont concouru sous bannière « neutre »."
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche les **quatre éditions des Jeux** de la frise qui se sont tenues pendant l’exclusion de l’Afrique du Sud.",
+          "reponse": [
+            "mexico",
+            "munich",
+            "moscou",
+            "la"
+          ],
+          "multiple": true,
+          "aide": "L’exclusion dure de 1964 à 1992 : garde les événements situés dans cette période.",
+          "explication": "Mexico (1968), Munich (1972), Moscou (1980) et Los Angeles (1984) tombent **entre 1964 et 1992**. La Russie, elle, est suspendue en 2022."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années dure l’exclusion de l’Afrique du Sud des Jeux ?",
+          "reponse": 28,
+          "unite": "ans",
+          "aide": "La période va de 1964 à 1992.",
+          "explication": "1992 − 1964 = **28 ans** : « près de trente ans », comme l’écrit Élodie."
+        },
+        {
+          "type": "categories",
+          "enonce": "Boycott volontaire ou exclusion/suspension imposée ? Trie ces situations.",
+          "categories": [
+            "Boycott",
+            "Exclusion ou suspension"
+          ],
+          "items": [
+            [
+              "Moscou 1980",
+              0
+            ],
+            [
+              "Los Angeles 1984",
+              0
+            ],
+            [
+              "Afrique du Sud, 1964-1992",
+              1
+            ],
+            [
+              "Russie, depuis 2022",
+              1
+            ]
+          ],
+          "aide": "Un boycott est décidé par les pays qui refusent de venir ; une exclusion est décidée contre un pays.",
+          "explication": "À Moscou et à Los Angeles, des pays **ont choisi de ne pas venir** (boycott). L’Afrique du Sud et la Russie ont été **écartées** par les instances sportives."
+        },
+        {
+          "type": "choix",
+          "enonce": "Quelle conclusion Élodie peut-elle tirer de ses trois notes pour son débat ?",
+          "options": [
+            "Un grand événement sportif est aussi un message politique : le sport n’est jamais neutre",
+            "Le sport est toujours à l’écart de la politique",
+            "Seul le football est concerné",
+            "Les boycotts n’ont jamais eu lieu"
+          ],
+          "reponse": 0,
+          "aide": "Boycotts, exclusions, suspensions : qu’est-ce qui les motive ?",
+          "explication": "Boycotts, exclusions, suspensions : **le sport est une scène politique**. On le prépare, on le critique, on le célèbre."
+        }
+      ]
+    },
+    {
+      "chapitre": "0a3dff2e-cda9-5ebe-b307-828abcd08f02",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Une frise de conquêtes",
+      "competence": "se-reperer-temps",
+      "situation": "Il y a plus d’un siècle, quelques femmes seulement concouraient aux Jeux. La frise retrace les grandes étapes de leur conquête du sport.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Les femmes et le sport",
+          "debut": 1900,
+          "fin": 2030,
+          "pas": 10,
+          "evenements": [
+            {
+              "id": "paris1900",
+              "date": 1900,
+              "nom": "22 femmes à Paris"
+            },
+            {
+              "id": "fsfi",
+              "date": 1921,
+              "nom": "Alice Milliat : FSFI"
+            },
+            {
+              "id": "athle",
+              "date": 1928,
+              "nom": "Athlétisme féminin"
+            },
+            {
+              "id": "boston",
+              "date": 1967,
+              "nom": "Switzer à Boston"
+            },
+            {
+              "id": "marathon",
+              "date": 1984,
+              "nom": "Marathon olympique"
+            },
+            {
+              "id": "paris2024",
+              "date": 2024,
+              "nom": "Parité à Paris"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche la création de la **FSFI** par Alice Milliat.",
+          "reponse": [
+            "fsfi"
+          ],
+          "aide": "Cherche le nom d’Alice Milliat sur la frise.",
+          "explication": "Alice Milliat fonde la FSFI en **1921**, quand Coubertin refuse la place des femmes aux Jeux."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces événements du plus ancien au plus récent.",
+          "items": [
+            "22 femmes aux Jeux de Paris (1900)",
+            "L’athlétisme féminin entre aux Jeux (1928)",
+            "Le premier marathon olympique féminin (1984)",
+            "Les premiers Jeux à parité (2024)"
+          ],
+          "aide": "Lis les dates sur la frise, de gauche à droite.",
+          "explication": "1900, 1928, 1984, puis **2024** : plus de cent ans séparent la présence de 22 femmes et la parité."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent les premiers Jeux de Paris (1900) des Jeux de Paris à parité (2024) ?",
+          "reponse": 124,
+          "unite": "ans",
+          "aide": "Soustrais 1900 à 2024.",
+          "explication": "2024 − 1900 = **124 ans** pour passer de 22 femmes à la parité."
+        }
+      ]
+    },
+    {
+      "chapitre": "0a3dff2e-cda9-5ebe-b307-828abcd08f02",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "La part des femmes aux Jeux d’été",
+      "competence": "lire-graphique",
+      "situation": "Le Comité international olympique publie la part des athlètes féminines à chaque édition des Jeux d’été. Le graphique en donne quelques repères, d’un siècle à l’autre.",
+      "documents": [
+        {
+          "id": "part",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Part des femmes parmi les athlètes des Jeux d’été",
+          "source": "Pourcentages arrondis.",
+          "categories": [
+            "1900",
+            "1960",
+            "1984",
+            "2000",
+            "2012",
+            "2024"
+          ],
+          "series": [
+            {
+              "nom": "Part des femmes",
+              "valeurs": [
+                2,
+                11,
+                23,
+                38,
+                44,
+                50
+              ],
+              "teinte": "rose"
+            }
+          ],
+          "axeY": {
+            "titre": "Part des athlètes",
+            "unite": "%",
+            "min": 0,
+            "max": 60,
+            "pas": 10
+          },
+          "axeX": {
+            "titre": "Année"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "nombre",
+          "enonce": "Quelle part des athlètes sont des femmes aux Jeux de **1984** ?",
+          "reponse": 23,
+          "unite": "%",
+          "tolerance": 2,
+          "aide": "Repère 1984 sur l’axe horizontal, lis la hauteur de la barre.",
+          "explication": "En 1984, les femmes représentent environ **23 %** des athlètes. C’est l’année du premier marathon olympique féminin."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de points de pourcentage la part des femmes a-t-elle augmenté entre **2000** et **2024** ?",
+          "reponse": 12,
+          "unite": "points",
+          "aide": "Fais la différence entre la valeur de 2024 et celle de 2000.",
+          "explication": "50 − 38 = **12 points**. La progression continue, mais elle se rapproche de la parité."
+        },
+        {
+          "type": "zone",
+          "document": "part",
+          "enonce": "Touche l’édition où la **parité** est atteinte.",
+          "reponse": [
+            "k5"
+          ],
+          "aide": "La parité, c’est autant de femmes que d’hommes : combien de pour cent ?",
+          "explication": "En **2024**, à Paris, la part des femmes atteint 50 % : ce sont les premiers Jeux à parité."
+        },
+        {
+          "type": "choix",
+          "enonce": "Que peut-on conclure de ce graphique ?",
+          "options": [
+            "La place des femmes aux Jeux a progressé de façon continue, mais en plus d’un siècle",
+            "Les femmes ont toujours été aussi nombreuses que les hommes",
+            "La parité était atteinte dès 1900",
+            "La part des femmes a baissé depuis 1960"
+          ],
+          "reponse": 0,
+          "aide": "Compare la première et la dernière barre, puis regarde le sens de la progression.",
+          "explication": "On passe d’environ 2 % à 50 % : une **conquête continue**, qui a pris 124 ans."
+        }
+      ]
+    },
+    {
+      "chapitre": "0a3dff2e-cda9-5ebe-b307-828abcd08f02",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Ouvrir la porte, et après ?",
+      "competence": "analyser-document",
+      "situation": "Louane prépare un dossier sur les femmes dans le sport. Elle a réuni deux tableaux : celui des gestes qui ont ouvert des portes, et celui de ce qui reste inégal aujourd’hui. À toi de les croiser.",
+      "documents": [
+        {
+          "id": "portes",
+          "type": "tableau",
+          "titre": "Ceux et celles qui ont ouvert la porte",
+          "source": "Tableau écrit pour l’exercice.",
+          "colonnes": [
+            "Année",
+            "Qui",
+            "Geste"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              1921,
+              "Alice Milliat",
+              "Fonde la FSFI"
+            ],
+            [
+              1928,
+              "Les athlètes féminines",
+              "Entrent aux Jeux, mais le 800 m est retiré jusqu’en 1960"
+            ],
+            [
+              1967,
+              "Kathrine Switzer",
+              "Court le marathon de Boston avec un dossard"
+            ],
+            [
+              1973,
+              "Billie Jean King",
+              "Bat Bobby Riggs, la « bataille des sexes »"
+            ],
+            [
+              1984,
+              "Joan Benoit",
+              "Gagne le premier marathon olympique féminin"
+            ]
+          ]
+        },
+        {
+          "id": "inegal",
+          "type": "tableau",
+          "titre": "Ce qui reste inégal",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "colonnes": [
+            "Domaine",
+            "Femmes",
+            "Hommes"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Part des heures de sport à la télévision",
+              "20 %",
+              "80 %"
+            ],
+            [
+              "Prime de victoire (compétition imaginée)",
+              "100 000 €",
+              "400 000 €"
+            ],
+            [
+              "Présidences de fédérations (sur 100)",
+              20,
+              80
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "association",
+          "enonce": "Relie chaque personne à son geste.",
+          "paires": [
+            [
+              "Alice Milliat",
+              "Fonde la FSFI"
+            ],
+            [
+              "Kathrine Switzer",
+              "Court le marathon de Boston avec un dossard"
+            ],
+            [
+              "Billie Jean King",
+              "Bat Bobby Riggs"
+            ],
+            [
+              "Joan Benoit",
+              "Gagne le premier marathon olympique féminin"
+            ]
+          ],
+          "aide": "Chaque nom est dans la deuxième colonne du premier tableau.",
+          "explication": "Milliat → FSFI (1921) ; Switzer → Boston (1967) ; King → « bataille des sexes » (1973) ; Benoit → premier marathon olympique féminin (1984)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le 800 m féminin est retiré des Jeux en 1928 et n’y revient qu’en 1960. Combien d’années d’absence ?",
+          "reponse": 32,
+          "unite": "ans",
+          "aide": "Soustrais 1928 à 1960.",
+          "explication": "1960 − 1928 = **32 ans** d’absence, sous prétexte que l’épreuve était « trop dure » pour les femmes."
+        },
+        {
+          "type": "zone",
+          "document": "inegal",
+          "enonce": "Touche la case qui donne la **part des heures de sport à la télévision** consacrée aux femmes.",
+          "reponse": [
+            "r0c1"
+          ],
+          "aide": "Ligne « Part des heures de sport à la télévision », colonne « Femmes ».",
+          "explication": "Dans cet exemple, les femmes ne représentent que **20 %** des heures : la médiatisation reste inégale."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Dans la compétition imaginée, combien de fois la prime des hommes est-elle plus élevée que celle des femmes ?",
+          "reponse": 4,
+          "unite": "fois",
+          "aide": "Divise 400 000 € par 100 000 €.",
+          "explication": "400 000 / 100 000 = **4 fois** : la parité des Jeux ne veut pas dire l’égalité des primes."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi Paris 2024, premiers Jeux à parité, ne règle-t-il pas tout ?",
+          "options": [
+            "Médiatisation, primes et dirigeantes restent plus faibles chez les femmes",
+            "Parce que les femmes ont renoncé au sport",
+            "Parce que la parité est impossible",
+            "Parce que tous les écarts ont disparu"
+          ],
+          "reponse": 0,
+          "aide": "Regarde les trois lignes du deuxième tableau.",
+          "explication": "La parité des athlètes n’est pas l’égalité partout : **médiatisation, primes, présence de dirigeantes** restent plus faibles."
+        }
+      ]
+    },
+    {
+      "chapitre": "9946fe0d-e446-5b88-80d6-ecfbc9f3a94c",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "D’où vient l’argent d’un club ?",
+      "competence": "lire-graphique",
+      "situation": "Un club de football a publié la répartition de ses recettes sur une saison. Le diagramme montre d’où vient chaque euro.",
+      "documents": [
+        {
+          "id": "recettes",
+          "type": "graphique",
+          "forme": "secteurs",
+          "titre": "Les recettes du club",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "categories": [
+            "Droits TV",
+            "Sponsors",
+            "Billetterie",
+            "Transferts",
+            "Autres"
+          ],
+          "series": [
+            {
+              "nom": "Recettes",
+              "valeurs": [
+                40,
+                25,
+                15,
+                15,
+                5
+              ]
+            }
+          ],
+          "valeurs": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "recettes",
+          "enonce": "Touche la **première source de revenus** du club.",
+          "reponse": [
+            "k0"
+          ],
+          "aide": "Cherche la plus grande part du diagramme.",
+          "explication": "Les **droits TV** pèsent 40 % : la télévision est la première source d’argent du club."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quelle part des recettes viennent des **sponsors et de la billetterie** réunis ?",
+          "reponse": 40,
+          "unite": "%",
+          "aide": "Additionne les deux parts.",
+          "explication": "25 + 15 = **40 %**, autant que les seuls droits TV."
+        },
+        {
+          "type": "choix",
+          "enonce": "La chaîne qui diffuse les matchs fait faillite, comme Mediapro en 2020. Quelle conséquence pour ce club ?",
+          "options": [
+            "Il perd sa première source de revenus : l’équilibre financier est menacé",
+            "Aucune : les droits TV ne comptent pas",
+            "Ses sponsors doublent automatiquement leur contribution",
+            "Il gagne plus de billetterie"
+          ],
+          "reponse": 0,
+          "aide": "Quelle part du diagramme disparaît ?",
+          "explication": "Les droits TV représentent **40 %** des recettes : leur disparition fragilise tout le club."
+        }
+      ]
+    },
+    {
+      "chapitre": "9946fe0d-e446-5b88-80d6-ecfbc9f3a94c",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Quatre championnats, quatre budgets TV",
+      "competence": "lire-graphique",
+      "situation": "Quatre championnats de football imaginés négocient leurs droits TV avec les chaînes. Le graphique donne ce que chacun reçoit chaque année.",
+      "documents": [
+        {
+          "id": "droits",
+          "type": "graphique",
+          "forme": "barres",
+          "titre": "Droits TV annuels",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "categories": [
+            "A",
+            "B",
+            "C",
+            "D"
+          ],
+          "series": [
+            {
+              "nom": "Droits TV",
+              "valeurs": [
+                1500,
+                1000,
+                700,
+                300
+              ],
+              "teinte": "bleu"
+            }
+          ],
+          "axeY": {
+            "titre": "Droits TV annuels",
+            "unite": "millions d’euros",
+            "min": 0,
+            "max": 1600,
+            "pas": 400
+          },
+          "axeX": {
+            "titre": "Championnat"
+          },
+          "valeurs": true
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "droits",
+          "enonce": "Touche le championnat qui reçoit **le moins** d’argent de la télévision.",
+          "reponse": [
+            "k3"
+          ],
+          "aide": "Cherche la plus petite barre.",
+          "explication": "Le championnat **D** reçoit 300 millions d’euros : c’est le plus pauvre des quatre."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien de fois le championnat A reçoit-il plus que le championnat D ?",
+          "reponse": 5,
+          "unite": "fois",
+          "aide": "Divise 1 500 par 300.",
+          "explication": "1 500 / 300 = **5 fois**. Cet écart se retrouve entre la Premier League et la plupart des championnats européens."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel est le total des droits TV des quatre championnats ?",
+          "reponse": 3500,
+          "unite": "millions d’euros",
+          "aide": "Additionne les quatre valeurs.",
+          "explication": "1 500 + 1 000 + 700 + 300 = **3 500 millions d’euros**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Le championnat D reste sans diffuseur, comme la Ligue 1 après la faillite de Mediapro. Que risque-t-il ?",
+          "options": [
+            "De perdre sa principale recette et de devoir réduire ses dépenses",
+            "Rien : un championnat vit sans argent",
+            "De gagner plus que A",
+            "De ne plus avoir de joueurs étrangers par obligation"
+          ],
+          "reponse": 0,
+          "aide": "Pense à ce que représentent les 300 millions pour ce championnat.",
+          "explication": "Sans diffuseur, **plus de droits TV** : la recette principale s’effondre, et les clubs doivent réduire leurs dépenses."
+        }
+      ]
+    },
+    {
+      "chapitre": "9946fe0d-e446-5b88-80d6-ecfbc9f3a94c",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Où va le prix d’un maillot ?",
+      "competence": "raisonner",
+      "situation": "Un maillot de supporter coûte 80 €. Où va cet argent ? Et que dit la règle de « durabilité financière » de l’UEFA sur les comptes d’un club ? Croise le ticket de caisse et les comptes.",
+      "documents": [
+        {
+          "id": "ticket",
+          "type": "fiche",
+          "modele": "ticket",
+          "entete": "Boutique du club",
+          "sousTitre": "Maillot réplique, 80 €",
+          "emoji": "👕",
+          "lignes": [
+            {
+              "texte": "Équipementier (fabrication, marque)",
+              "valeur": "32 €",
+              "id": "equip"
+            },
+            {
+              "texte": "Distributeur",
+              "valeur": "24 €",
+              "id": "distrib"
+            },
+            {
+              "texte": "Club et joueurs",
+              "valeur": "16 €",
+              "id": "club"
+            },
+            {
+              "texte": "Autres coûts (transport, taxes)",
+              "valeur": "8 €",
+              "id": "autres"
+            },
+            {
+              "separateur": true
+            },
+            {
+              "texte": "TOTAL",
+              "valeur": "80 €",
+              "gras": true,
+              "id": "total"
+            }
+          ],
+          "pied": "Répartition imaginée pour l’exercice.",
+          "teinte": "violet"
+        },
+        {
+          "id": "comptes",
+          "type": "tableau",
+          "titre": "Les comptes du club sur une saison",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "colonnes": [
+            "Poste",
+            "Montant (millions d’euros)"
+          ],
+          "enteteLignes": true,
+          "lignes": [
+            [
+              "Recettes : droits TV",
+              40
+            ],
+            [
+              "Recettes : billetterie",
+              15
+            ],
+            [
+              "Recettes : sponsors",
+              25
+            ],
+            [
+              "Recettes : transferts",
+              10
+            ],
+            [
+              "Dépenses : salaires",
+              70
+            ],
+            [
+              "Dépenses : transferts",
+              30
+            ],
+            [
+              "Dépenses : autres",
+              20
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "ticket",
+          "enonce": "Touche la ligne qui reçoit la **plus grosse part** du prix du maillot.",
+          "reponse": [
+            "equip"
+          ],
+          "aide": "Compare les montants de chaque ligne.",
+          "explication": "L’**équipementier** reçoit 32 € sur 80 € : le maillot est un produit de marque autant qu’un souvenir de supporter."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Quel pourcentage du prix du maillot revient au club et à ses joueurs ?",
+          "reponse": 20,
+          "unite": "%",
+          "aide": "Divise 16 par 80, puis multiplie par 100.",
+          "explication": "16 / 80 = 0,2, soit **20 %** du prix."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Le club vend 50 000 maillots. Quelle somme revient au club et à ses joueurs, en euros ?",
+          "reponse": 800000,
+          "unite": "€",
+          "aide": "Multiplie 16 € par 50 000.",
+          "explication": "16 × 50 000 = **800 000 €**. Les maillots ne suffisent pas à financer des salaires de 70 millions."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Dans les comptes, quel est le **déficit** du club (dépenses moins recettes), en millions d’euros ?",
+          "reponse": 30,
+          "unite": "M€",
+          "aide": "Additionne les recettes (4 lignes), puis les dépenses (3 lignes), et fais la différence.",
+          "explication": "Recettes : 40 + 15 + 25 + 10 = 90. Dépenses : 70 + 30 + 20 = 120. Déficit : 120 − 90 = **30 millions d’euros**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Ce club respecte-t-il la règle de durabilité financière de l’UEFA ?",
+          "options": [
+            "Non : il dépense durablement plus qu’il ne gagne",
+            "Oui : il a beaucoup de sponsors",
+            "Oui : les maillots couvrent le déficit",
+            "On ne peut pas savoir"
+          ],
+          "reponse": 0,
+          "aide": "Quelle est la règle ? Relis le sens de « durabilité ».",
+          "explication": "La règle impose de **ne pas dépenser durablement plus qu’on ne gagne**. Avec 30 M€ de déficit, le club est hors des clous."
+        }
+      ]
+    },
+    {
+      "chapitre": "31cb6e93-7356-57bc-9be7-628a7d17c933",
+      "position": 1,
+      "etoiles": 1,
+      "titre": "Quarante ans d’affaires",
+      "competence": "se-reperer-temps",
+      "situation": "Du Tour de France aux Jeux, le dopage a fait la une à chaque génération. La frise place quelques affaires célèbres et deux créations d’agences antidopage.",
+      "documents": [
+        {
+          "id": "frise",
+          "type": "frise",
+          "titre": "Dopage : affaires et réponses",
+          "debut": 1960,
+          "fin": 2020,
+          "pas": 10,
+          "evenements": [
+            {
+              "id": "simpson",
+              "date": 1967,
+              "nom": "Tom Simpson"
+            },
+            {
+              "id": "johnson",
+              "date": 1988,
+              "nom": "Ben Johnson"
+            },
+            {
+              "id": "festina",
+              "date": 1998,
+              "nom": "Festina"
+            },
+            {
+              "id": "afld",
+              "date": 2006,
+              "nom": "AFLD en France"
+            },
+            {
+              "id": "armstrong",
+              "date": 2012,
+              "nom": "Armstrong déchu"
+            }
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "frise",
+          "enonce": "Touche l’**affaire Festina**, qui secoue le Tour de France.",
+          "reponse": [
+            "festina"
+          ],
+          "aide": "Cherche l’événement de 1998.",
+          "explication": "En **1998**, la police trouve des centaines de produits dopants dans la voiture d’un soigneur de l’équipe Festina : le Tour plonge dans la crise."
+        },
+        {
+          "type": "ordre",
+          "enonce": "Range ces affaires de la plus ancienne à la plus récente.",
+          "items": [
+            "Mort de Tom Simpson (1967)",
+            "Ben Johnson déclassé (1988)",
+            "Affaire Festina (1998)",
+            "Lance Armstrong déchu (2012)"
+          ],
+          "aide": "Lis les dates sur la frise.",
+          "explication": "Simpson (1967), Johnson (1988), Festina (1998), Armstrong (2012)."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Combien d’années séparent la disqualification de Ben Johnson de la chute d’Armstrong ?",
+          "reponse": 24,
+          "unite": "ans",
+          "aide": "Soustrais 1988 à 2012.",
+          "explication": "2012 − 1988 = **24 ans** : en un quart de siècle, les affaires se suivent malgré les contrôles."
+        }
+      ]
+    },
+    {
+      "chapitre": "31cb6e93-7356-57bc-9be7-628a7d17c933",
+      "position": 2,
+      "etoiles": 2,
+      "titre": "Le passeport biologique de Rémi",
+      "competence": "lire-graphique",
+      "situation": "Rémi, cycliste professionnel, est suivi par un passeport biologique : ses analyses de sang sont comparées dans le temps. Voici son taux d’hémoglobine à six contrôles.",
+      "documents": [
+        {
+          "id": "hemo",
+          "type": "graphique",
+          "forme": "courbe",
+          "titre": "Taux d’hémoglobine de Rémi",
+          "source": "Chiffres imaginés pour l’exercice.",
+          "categories": [
+            "Janv.",
+            "Mars",
+            "Mai",
+            "Juil.",
+            "Sept.",
+            "Nov."
+          ],
+          "series": [
+            {
+              "nom": "Hémoglobine",
+              "valeurs": [
+                14.8,
+                15,
+                14.9,
+                15.1,
+                17.9,
+                15
+              ],
+              "teinte": "corail"
+            }
+          ],
+          "axeY": {
+            "titre": "Hémoglobine",
+            "unite": "g/dL",
+            "min": 12,
+            "max": 20,
+            "pas": 2
+          },
+          "axeX": {
+            "titre": "Contrôle"
+          },
+          "valeurs": false
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "hemo",
+          "enonce": "Touche le contrôle qui a **déclenché une alerte**.",
+          "reponse": [
+            "k4"
+          ],
+          "aide": "Cherche le point qui s’écarte nettement des autres.",
+          "explication": "En **septembre**, le taux saute à 17,9 g/dL alors qu’il restait autour de 15 : une anomalie que le passeport signale."
+        },
+        {
+          "type": "nombre",
+          "enonce": "De combien de g/dL le taux a-t-il grimpé entre juillet et septembre ?",
+          "reponse": 2.8,
+          "unite": "g/dL",
+          "tolerance": 0.1,
+          "aide": "Soustrais la valeur de juillet à celle de septembre.",
+          "explication": "17,9 − 15,1 = **2,8 g/dL** en deux mois, alors que le taux variait de quelques dixièmes seulement."
+        },
+        {
+          "type": "choix",
+          "enonce": "Pourquoi le passeport biologique repère-t-il ce genre d’anomalie ?",
+          "options": [
+            "Il suit les valeurs sanguines dans la durée, au lieu de chercher un produit précis",
+            "Il cherche uniquement la caféine",
+            "Il remplace le contrôle inopiné",
+            "Il ne sert qu’aux cyclistes retraités"
+          ],
+          "reponse": 0,
+          "aide": "Relis la phrase : « Le contrôle ne se contente pas de chercher un produit… ».",
+          "explication": "Le passeport **suit le corps dans la durée** : une valeur qui s’écarte brutalement de l’habituel attire l’attention."
+        },
+        {
+          "type": "choix",
+          "enonce": "L’EPO épaissit le sang. Quel est le principal risque pour la santé d’un sportif dopé ?",
+          "options": [
+            "Un risque cardiaque",
+            "Une meilleure santé à long terme",
+            "Une perte de cheveux uniquement",
+            "Aucun risque connu"
+          ],
+          "reponse": 0,
+          "aide": "Un sang plus épais circule plus difficilement.",
+          "explication": "L’EPO rend le sang plus épais : le cœur doit travailler plus, d’où un **risque cardiaque**. Des sportifs en sont morts."
+        }
+      ]
+    },
+    {
+      "chapitre": "31cb6e93-7356-57bc-9be7-628a7d17c933",
+      "position": 3,
+      "etoiles": 3,
+      "titre": "Le complément « BOOST MAX »",
+      "competence": "argumenter",
+      "situation": "Inès, 17 ans, sprinteuse, prépare les championnats de France. Elle a commandé un complément en ligne et en parle à Sacha, son coéquipier. Croise la conversation et la fiche du produit.",
+      "documents": [
+        {
+          "id": "sms",
+          "type": "dialogue",
+          "modele": "sms",
+          "titre": "Le message d’Inès",
+          "participants": [
+            {
+              "nom": "Inès",
+              "emoji": "👧",
+              "cote": "gauche"
+            },
+            {
+              "nom": "Sacha",
+              "emoji": "👦",
+              "cote": "droite"
+            }
+          ],
+          "repliques": [
+            {
+              "qui": "Inès",
+              "texte": "Regarde ce que j’ai commandé pour mes finales : « BOOST MAX »."
+            },
+            {
+              "qui": "Sacha",
+              "texte": "Il y a quoi dedans ?"
+            },
+            {
+              "qui": "Inès",
+              "texte": "Une formule [[a|secrète]] à base de plantes. C’est 100 % naturel, donc sans risque, non ?"
+            },
+            {
+              "qui": "Sacha",
+              "texte": "Moi, pour mon asthme, j’ai un médicament sur ordonnance. Mon médecin a fait une demande spéciale."
+            }
+          ]
+        },
+        {
+          "id": "produit",
+          "type": "fiche",
+          "modele": "affiche",
+          "entete": "BOOST MAX",
+          "sousTitre": "Le complément des champions",
+          "emoji": "⚡",
+          "lignes": [
+            {
+              "texte": "Résultats garantis en 10 jours",
+              "id": "garantis"
+            },
+            {
+              "texte": "100 % naturel, sans danger",
+              "id": "naturel"
+            },
+            {
+              "texte": "Composition : complexe de plantes (détail non communiqué)",
+              "id": "compo"
+            },
+            {
+              "texte": "Livraison en 24 h",
+              "id": "livraison"
+            }
+          ],
+          "pied": "Produit imaginé pour l’exercice.",
+          "teinte": "ambre"
+        }
+      ],
+      "questions": [
+        {
+          "type": "zone",
+          "document": "sms",
+          "enonce": "Touche le mot de la conversation qui devrait **inquiéter Inès**.",
+          "reponse": [
+            "a"
+          ],
+          "aide": "Que cache le fabricant ?",
+          "explication": "Une formule **secrète**, c’est une composition qu’on ne peut pas vérifier : impossible de savoir si elle contient une substance interdite."
+        },
+        {
+          "type": "zone",
+          "document": "produit",
+          "enonce": "Touche la ligne de la fiche qui est **la plus inquiétante** pour une athlète contrôlée.",
+          "reponse": [
+            "compo"
+          ],
+          "aide": "Cherche l’information que le fabricant refuse de donner.",
+          "explication": "« Détail non communiqué » : on ne sait pas ce que contient le produit. Il peut renfermer une **substance dopante non étiquetée**."
+        },
+        {
+          "type": "choix",
+          "enonce": "Si le contrôle antidopage d’Inès est positif à cause de ce complément, qui est responsable ?",
+          "options": [
+            "Inès : l’athlète est toujours responsable de ce qu’elle avale",
+            "Le fabricant uniquement",
+            "Sacha",
+            "Personne : le dopage « involontaire » est toléré"
+          ],
+          "reponse": 0,
+          "aide": "Relis la règle sur le dopage « involontaire ».",
+          "explication": "Un contrôle positif « involontaire » reste un contrôle positif : **l’athlète est responsable** de ce qu’elle avale."
+        },
+        {
+          "type": "texte",
+          "enonce": "Sacha prend un médicament interdit mais autorisé légalement par son médecin. Comment s’appelle cette autorisation (donne le sigle) ?",
+          "reponse": [
+            "AUT",
+            "une AUT",
+            "l AUT",
+            "autorisation a usage therapeutique",
+            "autorisation à usage thérapeutique"
+          ],
+          "aide": "Trois lettres : « autorisation à usage … ».",
+          "explication": "C’est l’**AUT**, autorisation à usage thérapeutique : elle permet à un sportif malade de prendre légalement un médicament sinon interdit, après examen par un médecin."
+        },
+        {
+          "type": "nombre",
+          "enonce": "Inès a 17 ans. Elle est suspendue 4 ans (la sanction habituelle). Quel âge aura-t-elle à son retour possible ?",
+          "reponse": 21,
+          "unite": "ans",
+          "aide": "Ajoute la durée de la suspension à son âge.",
+          "explication": "17 + 4 = **21 ans** : quatre années de carrière perdues pour un complément « 100 % naturel »."
+        }
+      ]
+    }
+  ]
+}

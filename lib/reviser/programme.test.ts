@@ -273,7 +273,7 @@ describe('resumeDuMonde — la ligne grise sous le titre d’un thème', () => {
 
   test('un thème neuf dit ses fiches et le temps à y passer', () => {
     expect(resume([fiche({ id: 'a', minutes: 8 }), fiche({ id: 'b', minutes: 30 })])).toBe(
-      '2 fiches · ~38 min',
+      '2 fiches',
     )
   })
 
@@ -284,7 +284,7 @@ describe('resumeDuMonde — la ligne grise sous le titre d’un thème', () => {
         { ...entamee('b', 'T'), minutes: 9 },
         fiche({ id: 'c', theme: 'T', minutes: 6 }),
       ]),
-    ).toBe('1/3 fiches · ~15 min')
+    ).toBe('1/3 fiches')
   })
 
   test('le contrôle annoncé prend la place de la durée', () => {

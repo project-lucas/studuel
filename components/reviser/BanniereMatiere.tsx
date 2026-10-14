@@ -13,7 +13,7 @@ import { sfx } from '@/lib/sounds'
 import { subjectVignette } from '@/lib/subject-style'
 import { teinteMatiere } from '@/lib/reviser/teinte'
 import type { Reprise } from '@/lib/reviser/programme'
-import { minutesLabel, type SubjectProgress } from '@/lib/subject-template'
+import type { SubjectProgress } from '@/lib/subject-template'
 import s from './BanniereMatiere.module.css'
 
 /** Au-delà, le nom ne tient plus sur une ligne à côté de l'objet. */
@@ -140,7 +140,6 @@ export default function BanniereMatiere({
               {[
                 reprise.libelle,
                 reprise.rang !== null ? `Fiche ${reprise.rang}` : null,
-                reprise.fiche.minutes !== null ? minutesLabel(reprise.fiche.minutes) : null,
               ]
                 .filter(Boolean)
                 .join(' · ')}

@@ -148,7 +148,7 @@ export function afficheEnMondes(chapters: readonly { theme: string | null }[]): 
   return themes.size >= 2
 }
 
-/** « ~38 min », « ~1 h 10 » : ce qu'il reste à passer sur un thème. */
+/** « ~38 min », « ~1 h 10 » (plus affiché dans le sommaire depuis le 14/10/2026). */
 export function dureeLisible(minutes: number): string {
   const total = Math.max(0, Math.round(minutes))
   if (total < 60) return `~${total} min`
@@ -158,23 +158,18 @@ export function dureeLisible(minutes: number): string {
 
 /**
  * LA LIGNE GRISE SOUS LE TITRE D'UN THÈME, dans le sommaire : le compte EXACT
- * de ses fiches, puis ce qui presse — le contrôle annoncé — ou, à défaut, le
- * temps qu'il reste à y passer (les fiches terminées ne comptent plus).
+ * de ses fiches, puis ce qui presse — le contrôle annoncé. Plus de durée
+ * depuis le 14/10/2026 (Lucas : « ne précise plus le temps ») : « ~38 min »
+ * sous chaque fiche et dans cette ligne encombrait sans rien promettre de sûr.
  *
- *   « 5 fiches · ~38 min »   « 1/4 fiches · Contrôle dans 3 jours »
- *   « 5/5 fiches · Terminé »
+ *   « 5 fiches »   « 1/4 fiches · Contrôle dans 3 jours »   « 5/5 fiches · Terminé »
  */
 export function resumeDuMonde(monde: Monde): string {
   const { done, total } = monde.avancement
   const fiches = `${total} fiche${total > 1 ? 's' : ''}`
   if (monde.etat === 'termine') return `${total}/${fiches} · Terminé`
   const compte = monde.etat === 'entame' ? `${done}/${fiches}` : fiches
-  if (monde.controle) return `${compte} · ${monde.controle.label}`
-  const minutes = monde.fiches.reduce(
-    (somme, f) => somme + (f.status === 'complete' ? 0 : (f.minutes ?? 0)),
-    0,
-  )
-  return minutes > 0 ? `${compte} · ${dureeLisible(minutes)}` : compte
+  return monde.controle ? `${compte} · ${monde.controle.label}` : compte
 }
 
 /**

@@ -34,7 +34,6 @@ import {
   fichesNumerotees,
   hasChapterQuiz,
   matchChapters,
-  minutesLabel,
   phraseAccesQuiz,
   type ChapterRow,
   type ResumeCta,
@@ -491,11 +490,8 @@ function FicheLigne({
                   ))}
                 </span>
               ) : null}
-              {commencee ? (
-                <span>{STATUS_LABELS[chapter.status]}</span>
-              ) : chapter.minutes !== null ? (
-                <span>{minutesLabel(chapter.minutes)}</span>
-              ) : null}
+              {/* Plus de « ~3 min » (14/10/2026, Lucas : « ne précise plus le temps »). */}
+              {commencee ? <span>{STATUS_LABELS[chapter.status]}</span> : null}
               {estSuite && chapter.xpRestant > 0 ? (
                 <span className="inline-flex items-center gap-0.5">
                   <XpIcon className="size-3" />+{chapter.xpRestant} XP

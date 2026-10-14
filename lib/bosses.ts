@@ -189,7 +189,10 @@ const CATALOG: BossEntry[] = [
     name: 'Coach Turbo',
     epithet: 'le Sergent du Chrono',
     emoji: '🏋️',
-    image: '/images/boss/coach-turbo.webp',
+    // -v2 : le buste a changé le 14/10/2026 (le vrai coach, celui de la scène) ;
+    // une NOUVELLE adresse, parce que l'optimiseur d'images ressert l'ancien
+    // dessin sous l'ancienne (le piège des portraits de profil, cf. profil/v2).
+    image: '/images/boss/coach-turbo-v2.webp',
     scene: '/images/boss/coach-turbo-scene.webp',
     intro: 'Échauffement terminé ? Le chrono tourne déjà.',
     defeat: 'Battu sur le fil… joli sprint, champion.',
@@ -254,13 +257,14 @@ export const ALL_BOSSES: Boss[] = [...CATALOG.map(stripMatch), FALLBACK_BOSS]
 // que le buste (`bigben.webp` → `bigben-pied.webp`), fabriqués par
 // `node scripts/boss-pied.mjs` ; lib/assets.test.ts vérifie qu'ils existent.
 const PORTRAITS_PIED: ReadonlySet<string> = new Set([
-  'astro', 'atlas', 'bigben', 'coach-turbo', 'delta', 'eltoro', 'fiscus', 'glitch', 'grammatork',
+  'astro', 'atlas', 'bigben', 'coach-turbo-v2', 'delta', 'eltoro', 'fiscus', 'glitch', 'grammatork',
   'imperator', 'kaiser-fang', 'krach', 'mecatron', 'nox', 'plasma', 'socratus', 'sylvarok',
 ])
 
 /** Le portrait en pied d'un boss (9:16), ou `null` s'il n'en a pas encore. */
 export function portraitBoss(boss: Boss): string | null {
-  const base = boss.image?.match(/\/images\/boss\/([a-z-]+)\.webp$/)?.[1]
+  // `[a-z0-9-]` : une base peut porter un numéro de version (coach-turbo-v2).
+  const base = boss.image?.match(/\/images\/boss\/([a-z0-9-]+)\.webp$/)?.[1]
   return base && PORTRAITS_PIED.has(base) ? `/images/boss/${base}-pied.webp` : null
 }
 

@@ -35,7 +35,7 @@ const DE_LUCAS = {
   'hf_20260721_205012_a57fd702': 'socratus',
   'hf_20260721_205331_94acbfc2': 'astro',
   'hf_20260721_205533_4a0cb638': 'nox',
-  'hf_20260721_213043_fb6367ed': 'coach-turbo',
+  'hf_20260721_213043_fb6367ed': 'coach-turbo-v2',
   'hf_20260721_213253_324d32f5': 'kaiser-fang',
 }
 

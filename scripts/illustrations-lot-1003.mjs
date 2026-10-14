@@ -89,7 +89,9 @@ async function paire(srcA, srcB, destA, destB, cote, marge = 0.04) {
 
 fs.mkdirSync('public/images/niveau', { recursive: true })
 for (const id of ['nox', 'mecatron', 'coach-turbo']) {
-  await detoure(`assets-sources/boss/${id}.png`, `public/images/boss/${id}.webp`, 1024, 0.02)
+  // coach-turbo : nouveau buste le 14/10/2026, servi sous -v2 (cache de l'optimiseur).
+  const dest = id === 'coach-turbo' ? 'coach-turbo-v2' : id
+  await detoure(`assets-sources/boss/${id}.png`, `public/images/boss/${dest}.webp`, 1024, 0.02)
 }
 await scene('assets-sources/boss/mecatron-scene.png', 'public/images/boss/mecatron-scene.webp', 1024, 576)
 await detoure('assets-sources/modes/coop.png', 'public/images/defi/modes/coop.webp', 512)

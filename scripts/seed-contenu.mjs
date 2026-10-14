@@ -41,9 +41,9 @@
 //   }
 
 import { createHash } from 'node:crypto'
-import { readdirSync } from 'node:fs'
+import { existsSync, readdirSync } from 'node:fs'
 import { pathToFileURL } from 'node:url'
-import { join, dirname } from 'node:path'
+import { join, dirname, basename } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const ICI = dirname(fileURLToPath(import.meta.url))
@@ -164,10 +164,23 @@ const fichiers = readdirSync(DOSSIER)
   .filter((f) => f.endsWith('.mjs'))
   .sort()
 
+// Un module ARCHIVÉ (scripts/contenu/_obsolete/, matière refaite depuis) n'est
+// jamais pris par défaut, mais il reste lisible quand `--modules` le nomme :
+// c'est ce qui permet de régénérer une migration d'origine à l'identique
+// (`npm run contenu` rejoue la 216 avec `emc,sport` — le Sport d'août 2026).
+const OBSOLETE = join(DOSSIER, '_obsolete')
+const chemins = fichiers.map((f) => join(DOSSIER, f))
+for (const nom of FILTRE_FICHIERS) {
+  if (fichiers.includes(`${nom}.mjs`)) continue
+  const archive = join(OBSOLETE, `${nom}.mjs`)
+  if (existsSync(archive)) chemins.push(archive)
+}
+
 const modules = []
-for (const f of fichiers) {
-  if (FILTRE_FICHIERS.length && !FILTRE_FICHIERS.includes(f.replace(/\.mjs$/, ''))) continue
-  const mod = await import(pathToFileURL(join(DOSSIER, f)).href)
+for (const chemin of chemins) {
+  const nom = basename(chemin, '.mjs')
+  if (FILTRE_FICHIERS.length && !FILTRE_FICHIERS.includes(nom)) continue
+  const mod = await import(pathToFileURL(chemin).href)
   if (FILTRE.length === 0 || FILTRE.includes(mod.default.slug)) modules.push(mod.default)
 }
 if (modules.length === 0) {

@@ -1,35 +1,6 @@
-/* LES BOUTONS D'UNE QUÊTE (03/10/2026) — « Y aller » et « Encaisser ».
+/* LE BOUTON D'UNE QUÊTE (03/10/2026) — « Encaisser » (« Y aller » est parti le 14/10/2026).
    Animations en transform et opacité seulement, valeurs littérales (règle du
    projet : rien d'autre ne tourne en continu). */
-
-/* --- Y aller : un rond violet, une flèche qui pousse vers la droite --------- */
-.aller {
-  display: grid;
-  place-items: center;
-  width: 2.75rem;
-  height: 2.75rem;
-  flex-shrink: 0;
-  border-radius: 9999px;
-  background: var(--primary);
-  color: var(--primary-foreground);
-  box-shadow: 0 4px 0 color-mix(in oklch, var(--primary), black 35%);
-}
-.aller:active {
-  transform: translateY(3px);
-  box-shadow: 0 1px 0 color-mix(in oklch, var(--primary), black 35%);
-}
-.aller:focus-visible {
-  outline: 3px solid color-mix(in oklch, var(--primary), white 40%);
-  outline-offset: 2px;
-}
-.allerFleche {
-  animation: pousse 1.8s ease-in-out infinite;
-}
-@keyframes pousse {
-  0%, 60%, 100% { transform: translateX(0); }
-  75% { transform: translateX(3px); }
-  90% { transform: translateX(-1px); }
-}
 
 /* --- Encaisser : le cristal qui saute ----------------------------------------- */
 .cristal {
@@ -114,7 +85,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .allerFleche,
   .cristalRayons,
   .cristalDisque,
   .annonce,

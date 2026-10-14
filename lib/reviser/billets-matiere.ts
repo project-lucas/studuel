@@ -79,7 +79,9 @@ export function billetGardien(
         ? debusque
           ? `Disparaît dans ${gardien.detail}`
           : boss.epithet
-        : `${gardien.percent} % · ${gardien.phrase}`,
+        // Le pourcentage SEUL (14/10/2026, Lucas : « trop de texte, laisse que le
+        // pourcentage ») : la phrase de la traque reste dans l'aria-label du billet.
+        : `${gardien.percent} %`,
     },
   }
 }

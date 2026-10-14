@@ -1,0 +1,103 @@
+/* LA FEUILLE DES QUÊTES, « LE COFFRE D'ABORD » (14/10/2026, direction validée
+   par Lucas) : le coffre en tête, puis le SENTIER de trois médaillons reliés par
+   un pointillé qui se dore à mesure, puis une carte à trois lignes.
+   Animations en transform et opacité seulement, valeurs littérales (règle du
+   projet : rien d'autre ne tourne en continu). */
+
+/* --- Le sentier : trois médaillons, deux segments -------------------------- */
+.medaillon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  background: var(--secondary);
+  box-shadow: inset 0 0 0 2px transparent;
+  transition: box-shadow 0.3s ease;
+}
+.medaillon[data-done='true'] {
+  box-shadow:
+    inset 0 0 0 2px var(--highlight),
+    0 0 0 4px color-mix(in oklch, var(--highlight), transparent 72%);
+  /* La bascule en or : elle part quand la quête se boucle (le sélecteur se
+     met à correspondre), et une fois à l'ouverture pour une quête déjà faite. */
+  animation: pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+.coche {
+  position: absolute;
+  right: -0.25rem;
+  bottom: -0.25rem;
+  display: grid;
+  place-items: center;
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 9999px;
+  background: var(--highlight);
+  color: var(--foreground);
+  box-shadow: 0 0 0 2px var(--card);
+}
+.segment {
+  width: 2.25rem;
+  height: 0;
+  margin: 0 0.3rem;
+  border-top: 3px dotted var(--border);
+  transition: border-color 0.3s ease;
+}
+.segment[data-done='true'] {
+  border-top-color: var(--highlight);
+}
+
+/* --- Le coffre : il frémit quand les trois quêtes sont bouclées ------------ */
+.coffreTremble {
+  transform-origin: 50% 90%;
+  animation: tremble 1.8s ease-in-out infinite;
+}
+
+/* --- La jauge d'une quête comptable ---------------------------------------- */
+.jauge {
+  transform-origin: left center;
+  transition: transform 0.4s ease;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.72);
+  }
+  60% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes tremble {
+  0%,
+  62%,
+  100% {
+    transform: rotate(0deg);
+  }
+  68% {
+    transform: rotate(-4deg);
+  }
+  74% {
+    transform: rotate(4deg);
+  }
+  80% {
+    transform: rotate(-3deg);
+  }
+  86% {
+    transform: rotate(3deg);
+  }
+  92% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .medaillon[data-done='true'],
+  .coffreTremble {
+    animation: none;
+  }
+}

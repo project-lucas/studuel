@@ -34,12 +34,13 @@ function carte(
     percent,
     rank: 1,
     attempts: 0,
-    enChasse: false,
-    backOn: 'mercredi',
+    enChasse: true,
+    backOn: null,
     remainingMs: 0,
     endsAt: null,
     hint: '',
     xp: 30,
+    gemmes: 5,
     ...extra,
   }
 }
@@ -59,10 +60,24 @@ export function cartesDemo(): TraqueCard[] {
     carte('plasma', 'Physique-Chimie', 'physique-chimie', 20, {
       enChasse: true,
       backOn: null,
-      xp: 90,
     }),
-    carte('nox', "l'Ombre du Bulletin", '', 52, { backOn: 'samedi', xp: 90 }),
-    carte('chronos', 'HGGSP', 'hggsp', 50),
+    // INDISPONIBLES aujourd'hui (576) : le ruban sur la scène, pas de jauge.
+    carte('nox', "l'Ombre du Bulletin", '', 0, {
+      status: 'indisponible',
+      backOn: 'dimanche',
+      hint: 'Revient dimanche',
+      xp: 90,
+      gemmes: 20,
+    }),
+    carte('chronos', 'HGGSP', 'hggsp', 50, { enChasse: true, backOn: null }),
+    carte('mitochondrix', 'SVT', 'svt', 0, {
+      status: 'indisponible',
+      backOn: 'jeudi',
+      hint: 'Revient jeudi',
+      rank: 3,
+      xp: 60,
+      gemmes: 10,
+    }),
     carte('bigben', 'Anglais', 'anglais', 100, {
       status: 'debusque',
       remainingMs: 0,

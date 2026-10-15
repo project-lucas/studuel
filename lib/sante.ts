@@ -73,6 +73,16 @@ export type MigrationSante = {
   sonde: Sonde | null
   /** Présente = une décision de Lucas est requise AVANT de l'exécuter. */
   decision?: string
+  /**
+   * Présente = la migration est REMPLACÉE : une plus récente a RETIRÉ à dessein
+   * ce qu'elle écrivait (le ménage du Sport, 565 → 568, sur la 339). Sa sonde
+   * ne veut plus rien dire — elle dirait « absente » pour toujours et la
+   * réclamerait à coller —, et la REJOUER serait une erreur : un `ON CONFLICT
+   * (id) DO NOTHING` sur un id absent est une insertion, l'ancien contenu
+   * reviendrait à côté du neuf. Elle reste au catalogue (chaque fichier du dépôt
+   * est surveillé), avec `sonde: null`, et `restantes` l'écarte TOUJOURS.
+   */
+  remplaceePar?: string
 }
 
 /**
@@ -315,9 +325,14 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     fichier: '216_contenu_emc_sport.sql',
     feature: 'Contenu EMC + Sport (42 chapitres, 336 questions)',
     siAbsente:
-      'EMC et Sport restent des coquilles cliquables : l’élève ouvre la matière et voit un programme vide, à tous les niveaux.',
-// SONDE CORRIGÉE (31/08/2026) — voir le commentaire de la sonde CLI.
-    sonde: { type: 'ligne', table: 'chapters', colonne: 'id', valeur: '0c717a05-a7e7-58a0-8224-5a96565ad8fd' },
+      'EMC reste une coquille cliquable : l’élève ouvre la matière et voit un programme vide, à tous les niveaux. (Sa part Sport n’existe plus : les 565 → 568 l’ont remplacée par la culture sportive.)',
+    // SONDE RECIBLÉE (14/10/2026) sur un chapitre d'EMC — « La justice en
+    // France », 5e. Depuis le 31/08 elle visait le Sport de lycée, « la seule
+    // part du seed que rien ne réécrit » : le ménage des 565 → 568 l'a retirée,
+    // et la sonde réclamait la 216 à coller. ⚠️ NE PAS REJOUER la 216 telle
+    // quelle : ses 21 chapitres de Sport reviendraient (ON CONFLICT DO NOTHING
+    // sur un id absent = insertion) à côté de la culture sportive.
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'id', valeur: 'ec2defd4-5347-5a9a-8544-ed19d556b2c1' },
   },
   {
     id: '217',
@@ -2067,15 +2082,13 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     feature:
       'EPS collège : 8 fiches × 4 niveaux (6e à 3e), 256 questions',
     siAbsente:
-      'L’EPS n’a que TROIS chapitres au collège, pour quatre années. Champs d’apprentissage, échauffement, corps à l’effort, hygiène de vie, rôles sociaux, règles et premiers secours sont absents.',
-    sonde: {
-      type: 'ligne',
-      table: 'chapters',
-      colonne: 'id',
-      valeur: '66d97fde-f6ce-5200-9dd5-c10705d91966',
-    },
-    decision:
-      'À EXÉCUTER en dernier du lot : c’est la matière dont le manque pèse le moins sur la semaine d’un élève. UN SEUL MODULE POUR QUATRE NIVEAUX, seule exception du dépôt — et c’est le BO qui l’autorise : les quatre champs d’apprentissage sont identiques de la 6e à la 3e, ce qui varie étant le niveau d’exigence dans la PRATIQUE, donc ce qui ne se révise pas sur écran. Le module ne couvre volontairement que ce qui est évaluable à l’écrit.',
+      'Rien : ce qu’elle écrivait (32 chapitres d’EPS, 6e → 3e) a été retiré à dessein par les 565 et 566, la culture sportive a pris sa place. La rejouer recréerait les anciens chapitres à côté des nouveaux.',
+    // REMPLACÉE (14/10/2026) : les 565 et 566 ont retiré ses 32 chapitres à
+    // dessein — le Sport est devenu une culture sportive (docs/CADRAGE-SPORT.md).
+    // Sa sonde par id disait « absente » et la réclamait à coller : le rejeu
+    // les aurait tous recréés à côté des nouveaux.
+    sonde: null,
+    remplaceePar: 'les 565 et 566',
   },
   {
     id: '340',
@@ -4486,10 +4499,58 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     // Des lignes de contenu que la clé anon ne distingue pas.
     sonde: null,
   },
+  {
+    id: '576',
+    fichier: '576_traque_rarete_gemmes.sql',
+    feature:
+      'LA RARETÉ DES GARDIENS ET LEURS GEMMES (14/10/2026, Lucas : « comme Genshin Impact ») — `traque_en_chasse` devient la DISPONIBILITÉ (un jour de semaine par gardien, les seize du catalogue ; le week-end tous ; Nox le dimanche) ; `traque_credit` ne crédite la jauge QUE ce jour-là et la remet à zéro chaque nuit (« pas de boss rempli à l’avance ») ; `traque_victoire` verse une XP fixe (30 · 45 · 60, Nox 90, plus de ×2) ET des gemmes (5 · 8 · 10, Nox 20) dans un plafond de 40 par semaine (`traque_gems_week_cap`).',
+    siAbsente:
+      'La base crédite encore la jauge tous les jours et la garde d’un jour à l’autre, alors que l’app affiche « Indisponible aujourd’hui » et des points remis à zéro : un gardien peut sortir en base un jour où l’écran le dit au repos (le combat reste jouable par la tuile de l’arène). La victoire paie l’XP doublée du jour de chasse et aucune gemme, alors que la feuille Boss annonce des gemmes.',
+    // Non sondable : les quatre fonctions existent depuis la 212, seul leur corps
+    // change (CREATE OR REPLACE). Contrôle à la main :
+    //   select public.traque_en_chasse('coach-turbo', date '2026-10-16'), public.traque_gems_week_cap();
+    //   → true, 40 (avant la 576 : false, 90)
+    sonde: null,
+  },
+  {
+    id: '577',
+    fichier: '577_quete_connexion.sql',
+    feature:
+      'LA MISSION « SE CONNECTER » (14/10/2026, Lucas : « autre mission journalière : se connecter, facile, rapide et gain de récompenses ») — `quest_catalog()` gagne `connexion1` (1, 10 XP) en tête des quatre quêtes du jour, et `quest_claim` accepte QUATRE identifiants et n’ouvre le coffre du jour qu’au bout des quatre. La route GET /api/quetes fait avancer la quête au premier passage du jour.',
+    siAbsente:
+      'La quête « Se connecter » s’affiche mais reste à 0/1 (quest_save_progress ignore un id absent du catalogue) et LE COFFRE DU JOUR NE S’OUVRE PLUS : l’app envoie quatre identifiants, la quest_claim de la 557 en refuse plus de trois. La 577, elle, peut passer AVANT le déploiement (le coffre s’ouvre quand toutes les quêtes demandées sont finies, trois ou quatre).',
+    // Non sondable : les deux fonctions existent depuis la 205, seul leur corps
+    // change. Contrôle à la main :
+    //   select * from public.quest_catalog() where id = 'connexion1';  → connexion1 1 10 0
+    sonde: null,
+  },
+  {
+    id: '578',
+    fichier: '578_jeux_musique_sport.sql',
+    feature:
+      'LES JEUX DE MUSIQUE ET DE SPORT (14/10/2026, Lucas : « trouve-moi des modes de jeu pour le sport, la musique ») — `game_catalog` (238, la liste blanche des trophées) et `mode_catalog` (355, le palmarès) connaissent `classe-instrument`, `qui-a-compose`, `muscles-express` et le « programme » de Musique et de Sport.',
+    siAbsente:
+      'Les trois jeux se jouent, mais `apply_game_trophies` refuse leurs trophées et leurs scores ne se classent pas au palmarès (ni record de la semaine, ni Top %).',
+    // game_catalog n’est lisible que connecté, mode_catalog aussi : non sondable
+    // avec la clé anonyme. Contrôle à la main :
+    //   select * from public.game_catalog where subject_slug in ('musique', 'sport');  → 5 lignes
+    sonde: null,
+  },
+  {
+    id: '579',
+    fichier: '579_jeu_le_musee.sql',
+    feature:
+      'LE MUSÉE, LE JEU DES ARTS PLASTIQUES (14/10/2026, Lucas : « faire comme l’histoire de l’art […] un mode de jeu avec plusieurs paliers, complet et addictif ») — `game_catalog` (238) et `mode_catalog` (355) connaissent `le-musee` et le « programme » des arts plastiques.',
+    siAbsente:
+      'Le Musée se joue, mais `apply_game_trophies` refuse ses trophées et ses scores ne se classent pas au palmarès.',
+    // Non sondable à la clé anonyme. Contrôle à la main :
+    //   select * from public.game_catalog where subject_slug = 'arts-plastiques';  → 2 lignes
+    sonde: null,
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */
-export type Verdict = 'vivante' | 'eteinte' | 'non-sondable'
+export type Verdict = 'vivante' | 'eteinte' | 'non-sondable' | 'remplacee'
 
 /**
  * « permission denied for table … » — la relation EXISTE, la clé anon n'y a
@@ -4576,9 +4637,12 @@ export function restantes(
   verdicts: ReadonlyMap<string, Verdict>,
 ): MigrationSante[] {
   return MIGRATIONS_SANTE.filter((m) => {
+    // Remplacée = son contenu a été retiré à dessein : ne se rejoue JAMAIS,
+    // quel que soit le verdict qu'on lui prête.
+    if (m.remplaceePar) return false
     const v = verdicts.get(m.id)
     // Non sondable = à rejouer par sécurité (idempotent) tant qu'une voisine
     // est éteinte ; sondée vivante = rien à faire.
-    return v !== 'vivante'
+    return v !== 'vivante' && v !== 'remplacee'
   })
 }

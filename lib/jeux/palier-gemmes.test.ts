@@ -11,7 +11,7 @@ import {
   xpParEtoile,
   lirePalierGemmes,
   lireReclamation,
-  resteAReclamer,
+  resteAReclamer, recompenseDuPalier,
 } from './palier-gemmes'
 import { cheminMigration } from '@/lib/migrations-lecture'
 
@@ -107,5 +107,14 @@ describe('avecXpPalier', () => {
     const gains = [{ unite: 'xp' as const, montant: 5 }]
     expect(avecXpPalier(gains, null)).toEqual(gains)
     expect(avecXpPalier(gains, 0)).toEqual(gains)
+  })
+})
+
+describe('la récompense promise par le bouton d’un palier (14/10/2026)', () => {
+  it('promet l’XP des étoiles qui restent, rien une fois tout décroché', () => {
+    expect(recompenseDuPalier(2, 0)).toEqual({ xp: 30, gemmes: 0 })
+    expect(recompenseDuPalier(2, 2)).toEqual({ xp: 10, gemmes: 0 })
+    expect(recompenseDuPalier(5, 3)).toEqual({ xp: 0, gemmes: 0 })
+    expect(recompenseDuPalier(3, -4)).toEqual({ xp: 45, gemmes: 0 })
   })
 })

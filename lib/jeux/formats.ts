@@ -159,6 +159,12 @@ export type GameTheme =
   | 'jungle'
   | 'labo'
   | 'regle'
+  /** Musique et Sport (14/10/2026). */
+  | 'partition'
+  | 'orchestre'
+  | 'muscle'
+  /** Arts plastiques (14/10/2026) : Le Musée. */
+  | 'musee'
   /** Le jeu « Programme » (lib/jeux/programme.ts) — hors catalogue des salons. */
   | 'programme'
 
@@ -531,6 +537,93 @@ export const GAME_FORMATS: Record<SalonGameId, GameFormat> = {
       lose: 'Fin du calibrage',
     },
     params: { mechanic: 'sprint', sprint: { seconds: 30, fastMs: 2000 } },
+  },
+
+  // --- Musique (14/10/2026) -------------------------------------------------
+  // « Chaque mode commence doucement, puis vient un palier de référence qui
+  // lui donne un temps record » (Lucas) : les banques sont GRADUÉES (les tubes
+  // et les instruments connus d'abord, les pièges ensuite), le palier 3 est le
+  // réglage de référence, et le temps de bouclage se classe sur tous les
+  // paliers (hasTimeRecord : vies, expédition).
+  'classe-instrument': {
+    id: 'classe-instrument',
+    theme: 'partition',
+    timbre: 'bois',
+    layout: 'grille',
+    rule: 'Un instrument s’affiche : à quelle famille appartient-il ? 14 instruments à ranger, 3 vies, 9 secondes chacun.',
+    emoji: '🎻',
+    lexicon: {
+      verb: 'Range-le dans sa famille',
+      step: 'instrument',
+      steps: 'instruments',
+      hit: 'instrument rangé',
+      win: 'Orchestre au complet !',
+      lose: 'Fausse note',
+    },
+    params: {
+      mechanic: 'vies',
+      vies: { lives: 3, questionSeconds: 9, target: 14 },
+    },
+  },
+  'qui-a-compose': {
+    id: 'qui-a-compose',
+    theme: 'orchestre',
+    timbre: 'velours',
+    layout: 'grille',
+    rule: 'Une œuvre, quatre compositeurs : 8 chefs-d’œuvre à attribuer, 10 secondes chacun — personne ne t’élimine.',
+    emoji: '🎼',
+    lexicon: {
+      verb: 'Qui l’a composée ?',
+      step: 'œuvre',
+      steps: 'œuvres',
+      hit: 'œuvre attribuée',
+      win: 'Standing ovation !',
+      lose: 'Le rideau tombe',
+    },
+    params: { mechanic: 'expedition', expedition: { stops: 8, questionSeconds: 10 } },
+  },
+
+  // --- Arts plastiques (14/10/2026) ------------------------------------------
+  // L'histoire de l'art par les œuvres (lib/jeux/le-musee) : la question monte
+  // avec le palier — l'artiste titre donné, puis l'image seule, puis le titre,
+  // le mouvement, le siècle.
+  'le-musee': {
+    id: 'le-musee',
+    theme: 'musee',
+    timbre: 'velours',
+    layout: 'liste',
+    rule: '10 œuvres à reconnaître, 12 secondes chacune — personne ne t’élimine.',
+    emoji: '🖼️',
+    lexicon: {
+      verb: 'Regarde bien',
+      step: 'œuvre',
+      steps: 'œuvres',
+      hit: 'œuvre reconnue',
+      win: 'Conservateur du musée !',
+      lose: 'Retour à la visite guidée',
+    },
+    params: { mechanic: 'expedition', expedition: { stops: 10, questionSeconds: 12 } },
+  },
+
+  // --- Sport (14/10/2026) ---------------------------------------------------
+  // « Un mode proche de l'anatomie, notamment sur les muscles » : la planche
+  // des muscles (lib/jeux/muscles), le même geste qu'Anatomie express.
+  'muscles-express': {
+    id: 'muscles-express',
+    theme: 'muscle',
+    timbre: 'cuivre',
+    layout: 'grille',
+    rule: '8 muscles à trouver sur l’écorché, de face et de dos. 14 secondes chacun, et rien ne t’élimine.',
+    emoji: '💪',
+    lexicon: {
+      verb: 'Touche-le sur la planche',
+      step: 'muscle',
+      steps: 'muscles',
+      hit: 'muscle localisé',
+      win: 'Écorché complet !',
+      lose: 'Séance d’anatomie conseillée',
+    },
+    params: { mechanic: 'expedition', expedition: { stops: 8, questionSeconds: 14 } },
   },
 }
 

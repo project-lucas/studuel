@@ -18,17 +18,22 @@ const SQL = readFileSync(
   cheminMigration('238_route_des_trophees.sql'),
   'utf8',
 )
+// Les jeux de Musique et de Sport (14/10/2026) entrent dans la liste blanche
+// par la 578 : le miroir relit les deux.
+const SQL_578 = readFileSync(cheminMigration('578_jeux_musique_sport.sql'), 'utf8')
+// Le Musée (arts plastiques, 14/10/2026) par la 579.
+const SQL_579 = readFileSync(cheminMigration('579_jeu_le_musee.sql'), 'utf8')
 
-/** Les couples (slug de matière, id de jeu) réellement insérés par la migration. */
-function seededPairs(): Set<string> {
-  const insert = SQL.split('INSERT INTO public.game_catalog')[1]
-  if (!insert) throw new Error('INSERT game_catalog introuvable dans la 238')
+function pairsOf(sql: string, nom: string): string[] {
+  const insert = sql.split('INSERT INTO public.game_catalog')[1]
+  if (!insert) throw new Error(`INSERT game_catalog introuvable dans la ${nom}`)
   const body = insert.split('ON CONFLICT')[0]
-  const pairs = new Set<string>()
-  for (const match of body.matchAll(/\(\s*'([^']+)'\s*,\s*'([^']+)'\s*\)/g)) {
-    pairs.add(`${match[1]}:${match[2]}`)
-  }
-  return pairs
+  return [...body.matchAll(/\(\s*'([^']+)'\s*,\s*'([^']+)'\s*\)/g)].map((m) => `${m[1]}:${m[2]}`)
+}
+
+/** Les couples (slug de matière, id de jeu) réellement insérés : la 238, puis la 578. */
+function seededPairs(): Set<string> {
+  return new Set([...pairsOf(SQL, '238'), ...pairsOf(SQL_578, '578'), ...pairsOf(SQL_579, '579')])
 }
 
 /** Ce que le code attend : les jeux jouables + le Programme dans chaque matière. */
@@ -79,8 +84,15 @@ describe('la liste blanche du serveur suit le catalogue du code', () => {
       const slug = pair.split(':')[0]
       counts.set(slug, (counts.get(slug) ?? 0) + 1)
     }
+    // Sport n'a qu'un jeu de salon, Muscles express : Lucas a retiré le second
+    // le 14/10/2026 (« le classement de sport tu peux l'oublier »). Avec le
+    // Programme, deux jeux porteurs de trophées — l'exception est assumée.
+    // Sport et arts plastiques n'ont qu'un jeu de salon (Muscles express, Le Musée) en plus du Programme.
+    const DEUX_SUFFISENT = new Set(['sport', 'arts-plastiques'])
     for (const [slug, count] of counts) {
-      expect(count, `${slug} n’a que ${count} jeu(x)`).toBeGreaterThanOrEqual(3)
+      expect(count, `${slug} n’a que ${count} jeu(x)`).toBeGreaterThanOrEqual(
+        DEUX_SUFFISENT.has(slug) ? 2 : 3,
+      )
     }
   })
 })

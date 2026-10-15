@@ -64,6 +64,10 @@ export type ModeTicket = {
   chip?: string
   /** Ruban en coin (« Mode du jour », « Bientôt »). */
   badge?: string
+  /** Ton du ruban : `muet` (sombre, « Bientôt »), `or` (la vedette) — déduit du texte sinon. */
+  badgeTon?: 'muet' | 'or'
+  /** Le billet est ÉTEINT (gardien indisponible aujourd'hui, 576) : corps et talon grisés. */
+  eteint?: boolean
   /**
    * Clé du RECORD personnel de ce défi dans le stockage local, quand il en
    * garde un. Absente pour ce qui n'a pas de record à battre — un duel ou un
@@ -87,6 +91,11 @@ export const TEINTE_MATIERE: Record<string, TeinteBillet> = {
   Espagnol: 'corail',
   SVT: 'vert',
   'Physique-Chimie': 'turquoise',
+  // Musique et Sport (14/10/2026) : des identités, comme les autres.
+  Musique: 'indigo',
+  Sport: 'corail',
+  // Arts plastiques (14/10/2026) : le rose que la matière porte déjà en base.
+  'Arts plastiques': 'rose',
 }
 
 /** La teinte de chaque mode de l'Arène. */
@@ -145,6 +154,13 @@ const GAME_SCENE_IDS = [
   // Le duel classé de chaque matière (« Ton programme »), 03/10/2026
   // (scripts/illustrations-lot-1003.mjs).
   'programme',
+  // Musique et Sport, 14/10/2026 (Nano Banana 2.1, la scène d'Anatomie express
+  // en référence ; originaux dans assets-sources/bannieres-jeux/<id>.png).
+  'classe-instrument',
+  'qui-a-compose',
+  'muscles-express',
+  // Arts plastiques, 14/10/2026 : la galerie du Musée, un cadre doré au talon.
+  'le-musee',
 ]
 
 export function gameScene(id: string): string | undefined {
@@ -175,6 +191,13 @@ const GAME_TALON_IDS = [
   'classe-moi-ca',
   'chasse-elements',
   'bonne-unite',
+  // Musique et Sport, 14/10/2026 : un violon, une clé de sol, un bras fléchi —
+  // même prompt maître, même trame.
+  'classe-instrument',
+  'qui-a-compose',
+  'muscles-express',
+  // Arts plastiques, 14/10/2026 : la galerie du Musée, un cadre doré au talon.
+  'le-musee',
 ]
 
 /** L'objet du talon d'un jeu de salon, quand il est dessiné. */
@@ -184,6 +207,8 @@ export function gameTalon(id: string): string | undefined {
 
 /** Le talon de la dictée du français (lib/reviser/billets-matiere) : un casque. */
 export const TALON_DICTEE = '/images/defi/jeux/dictee-talon.webp'
+/** La scène du billet de la dictée : Marcel en nage sur sa copie (14/10/2026, Nano Banana 2.1). */
+export const SCENE_DICTEE = '/images/defi/jeux/dictee-scene.webp'
 
 /** Le cadenas des billets réservés à Studuel+ (ModeTicket) — le même partout. */
 export const TALON_CADENAS = '/images/defi/jeux/cadenas-talon.webp'

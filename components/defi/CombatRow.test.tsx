@@ -293,19 +293,20 @@ describe('la plaque Matière', () => {
     }
   })
 
-  it('porte le dé qui roule, et non un pictogramme de trait', () => {
+  it('porte le dé fixe (le dessin modes-v4), et non un pictogramme de trait', () => {
     // `renderRow` ne monte pas le flanc gauche : on rend ModesSheet lui-même,
     // sinon le test chercherait une plaque absente de l'arbre.
     render(<ModesSheet todayKey="2026-08-23" />)
 
     const plaque = screen.getByRole('button', { name: /^Modes de jeu/ })
-    // Le dé animé de Lucas (23/09/2026) a remplacé l'image fixe `modes-v4` :
-    // un cube CSS — six faces peintes et six faces du noyau d'encre, chacune
-    // placée par son repère —, décoratif, le bouton disant ce qu'il fait.
-    expect(plaque.querySelector('img')).toBeNull()
-    const de = plaque.firstElementChild
+    // Le dé FIXE est revenu le 14/10/2026 (Lucas : « mets à la place de
+    // l'animation le dé ici ») : le dessin `modes-v4`, décoratif, le bouton
+    // disant ce qu'il fait. Le cube CSS qui roulait (23/09) n'est plus monté.
+    const de = plaque.querySelector('img')
+    expect(de).not.toBeNull()
+    expect(de?.getAttribute('src')).toContain('modes-v4')
     expect(de?.getAttribute('aria-hidden')).toBe('true')
-    expect(de?.querySelectorAll('[style*="matrix3d"]')).toHaveLength(12)
+    expect(plaque.querySelectorAll('[style*="matrix3d"]')).toHaveLength(0)
     // UN SEUL FOND, ET LE DESSIN DESSUS. Trois états successifs ont été
     // essayés : posée sur la plaque violette l'icône disparaissait (violet sur
     // violet) ; sur un médaillon crème elle se lisait, mais l'œil comptait
@@ -366,11 +367,14 @@ describe('la plaque Matière', () => {
 
     expect(board.map((e) => e.subject)).toEqual([
       'Anglais',
+      'Arts plastiques',
       'Espagnol',
       'Français',
       'Histoire-Géo',
       'Maths',
+      'Musique',
       'Physique-Chimie',
+      'Sport',
       'SVT',
     ])
   })

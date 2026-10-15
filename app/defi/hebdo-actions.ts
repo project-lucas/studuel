@@ -108,3 +108,57 @@ export async function claimDailyQuests(): Promise<QuestClaimOutcome> {
     allDone: r.all_done === true,
   }
 }
+
+// --- Une quête à la fois, puis le coffre (14/10/2026) --------------------------
+// Lucas : « les validations des missions journalières doivent se faire une à
+// une pour le côté dopamine ». Chaque pièce de la feuille encaisse SA quête ;
+// le coffre s'ouvre ensuite. Aucune migration : `quest_claim` (577) paie les
+// quêtes finies parmi celles qu'on lui passe, et le coffre quand TOUTES celles
+// qu'on lui passe sont finies — une seule quête ne l'ouvre jamais, les quatre
+// (déjà payées, sans double versement grâce à la clé primaire) l'ouvrent.
+//
+// Pas de `revalidatePath` ici : on encaisse quatre fois de suite, et chaque
+// revalidation jetterait tous les onglets préchargés. Le vol des éclairs
+// relit la page une fois la vague rentrée (RecompensesProvider).
+
+async function reclamer(ids: string[]): Promise<QuestClaimOutcome> {
+  const supabase = await createClient()
+  const { data, error } = await supabase.rpc('quest_claim', { p_quest_ids: ids })
+  if (error || !data) {
+    if (error) console.error('[quetes] réclamation refusée:', error.message)
+    return { claimed: false, gems: 0, xp: 0, allDone: false }
+  }
+  const r = data as { claimed?: boolean; gems?: number; xp?: number; all_done?: boolean }
+  if (r.all_done === true) await contributeToClan(supabase, 'quest_day')
+  return {
+    claimed: r.claimed === true,
+    gems: Math.max(0, Number(r.gems) || 0),
+    xp: Math.max(0, Number(r.xp) || 0),
+    allDone: r.all_done === true,
+  }
+}
+
+/**
+ * Encaisse UNE quête du jour. L'identifiant vient du client : on vérifie qu'il
+ * fait partie du tirage du jour de CET élève (refait côté serveur), sinon on
+ * refuse — le client ne peut pas réclamer une quête qu'il n'a pas.
+ */
+export async function claimDailyQuest(questId: string): Promise<QuestClaimOutcome> {
+  const user = await getCurrentUser()
+  if (!user || typeof questId !== 'string') return { claimed: false, gems: 0, xp: 0, allDone: false }
+  const ids = dailyQuests(toDayKey(new Date()), user.id).map((q) => q.id)
+  if (!ids.includes(questId)) return { claimed: false, gems: 0, xp: 0, allDone: false }
+  return reclamer([questId])
+}
+
+/**
+ * Ouvre le coffre du jour : on repasse TOUTES les quêtes du tirage. Celles déjà
+ * encaissées ne repaient rien (clé primaire) ; s'il en restait une à payer,
+ * elle l'est au passage ; le coffre (100 XP) ne tombe que si toutes sont finies.
+ */
+export async function openDailyChest(): Promise<QuestClaimOutcome> {
+  const user = await getCurrentUser()
+  if (!user) return { claimed: false, gems: 0, xp: 0, allDone: false }
+  const ids = dailyQuests(toDayKey(new Date()), user.id).map((q) => q.id)
+  return reclamer(ids)
+}

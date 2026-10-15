@@ -64,6 +64,27 @@ describe('MIGRATIONS_SANTE — le catalogue colle au dépôt', () => {
     }
   })
 
+  it('une migration REMPLACÉE n’a plus ni sonde ni décision : rien à mesurer, rien à exécuter', () => {
+    // La 339 (EPS collège) : les 565 et 566 ont retiré ses 32 chapitres à
+    // dessein. Sa sonde par id la disait « absente » et la réclamait à coller —
+    // le rejeu aurait recréé les anciens chapitres à côté de la culture sportive.
+    const remplacees = MIGRATIONS_SANTE.filter((m) => m.remplaceePar)
+    expect(remplacees.map((m) => m.id)).toContain('339')
+    for (const m of remplacees) {
+      expect(m.sonde, `${m.id} : une remplacée ne se sonde pas`).toBeNull()
+      expect(m.decision, `${m.id} : une remplacée n'attend aucune décision`).toBeUndefined()
+    }
+  })
+
+  it.skipIf(!existsSync(sondeCli))('la sonde CLI marque « remplacee » les mêmes migrations', () => {
+    const cli = readFileSync(sondeCli, 'utf8')
+    for (const m of MIGRATIONS_SANTE.filter((m) => m.remplaceePar)) {
+      expect(cli, `${m.id} doit porter ['remplacee', …] dans la sonde CLI`).toMatch(
+        new RegExp(`\\['${m.id}', '[^']*', \\['remplacee'`),
+      )
+    }
+  })
+
   it('une décision est bien posée sur la 193 (coquilles vides)', () => {
     const m193 = MIGRATIONS_SANTE.find((m) => m.id === '193')
     expect(m193?.decision).toBeTruthy()
@@ -229,6 +250,15 @@ describe('restantes', () => {
     // …les vivantes sortent.
     expect(ids).not.toContain('188')
     expect(ids).not.toContain('192')
+  })
+
+  it('écarte TOUJOURS une migration remplacée, quel que soit le verdict qu’on lui prête', () => {
+    // C'est le filet : si quelqu'un lui redonne une sonde 'ligne' un jour, elle
+    // dirait « éteinte » — et le rejeu recréerait l'ancien contenu.
+    for (const v of ['eteinte', 'non-sondable', 'remplacee'] as const) {
+      const verdicts = new Map<string, Verdict>([['339', v]])
+      expect(restantes(verdicts).map((m) => m.id)).not.toContain('339')
+    }
   })
 })
 

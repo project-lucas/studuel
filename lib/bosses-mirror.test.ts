@@ -7,7 +7,8 @@ import { ALL_BOSSES, weeklyBoss, weeklyTrophyId } from '@/lib/bosses'
 import { DAILY_GOAL_OPTIONS } from '@/lib/daily-goal'
 import {
   chasseOfDay,
-  CHASSE_MULTIPLIER,
+  NOX_GEMMES,
+  TRAQUE_GEMMES,
   NOX_XP,
   TRAQUE_APRES_DEFAITE,
   TRAQUE_FENETRE_MINUTES,
@@ -183,10 +184,22 @@ describe('La Traque : lib/traque.ts ↔ migrations SQL', () => {
       'montant de Nox',
     )
     expect(Number(nox[1])).toBe(NOX_XP)
-    effective(
-      new RegExp(`v_amount \\* ${CHASSE_MULTIPLIER}`),
-      'bonus du boss en chasse',
+    // Plus de ×2 depuis la 576 : on ne combat un gardien que ses jours.
+    // Les GEMMES, rang par rang, et celles de Nox.
+    const g = effective(
+      /CASE WHEN v_rank = 1 THEN (\d+) WHEN v_rank = 2 THEN (\d+) ELSE (\d+) END/,
+      'barème des gemmes',
     )
+    expect([1, 2, 3].map((r) => TRAQUE_GEMMES[r as 1 | 2 | 3])).toEqual([
+      Number(g[1]),
+      Number(g[2]),
+      Number(g[3]),
+    ])
+    const noxGemmes = effective(
+      /v_boss = 'nox' THEN\s*\n\s*v_amount := \d+;\s*\n\s*v_gemmes := (\d+)/,
+      'gemmes de Nox',
+    )
+    expect(Number(noxGemmes[1])).toBe(NOX_GEMMES)
   })
 
   it('déclare bien la source d’XP de la victoire', () => {

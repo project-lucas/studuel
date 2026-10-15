@@ -21,7 +21,7 @@ import {
   starsMissingFor,
   totalStars,
   unlockedThrough,
-  type PalierProgress,
+  type PalierProgress, paliersVisibles,
 } from './paliers'
 
 /** Une partie fabriquée : `n` réponses dont `good` justes, gagnée ou perdue. */
@@ -298,5 +298,22 @@ describe('formatDuration', () => {
   it('ne dépend pas de la locale de l’appareil (virgule française toujours)', () => {
     expect(formatDuration(12_340)).toContain(',')
     expect(formatDuration(12_340)).not.toContain('.')
+  })
+})
+
+describe('l’échelle façon donjon — un palier à la fois (14/10/2026)', () => {
+  it('ne montre que les paliers ouverts, le plus haut en tête, et annonce le suivant', () => {
+    expect(paliersVisibles({}, 1)).toEqual({ visibles: [1], suivant: 2 })
+    // Deux étoiles au palier 1 : le 2 apparaît AU-DESSUS.
+    expect(paliersVisibles({ 1: { stars: 2, best: 100 } }, 1)).toEqual({ visibles: [2, 1], suivant: 3 })
+    // Une seule étoile n'ouvre rien.
+    expect(paliersVisibles({ 1: { stars: 1, best: 100 } }, 1)).toEqual({ visibles: [1], suivant: 2 })
+  })
+
+  it('le plancher de classe ouvre d’office, et le sommet n’annonce plus rien', () => {
+    expect(paliersVisibles({}, 4)).toEqual({ visibles: [4, 3, 2, 1], suivant: 5 })
+    expect(
+      paliersVisibles({ 4: { stars: 3, best: 100 } }, 4),
+    ).toEqual({ visibles: [5, 4, 3, 2, 1], suivant: null })
   })
 })

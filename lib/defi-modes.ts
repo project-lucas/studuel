@@ -176,6 +176,12 @@ export type ModeQuestion = {
    * qui fait aller plus vite à la partie suivante.
    */
   astuce?: string
+  /**
+   * L'IMAGE de la question (Le Musée, 14/10/2026 : l'œuvre à reconnaître),
+   * posée au-dessus de l'énoncé. `imageAlt` ne dit jamais la réponse.
+   */
+  image?: string
+  imageAlt?: string
 }
 
 // ------------------------------------------------------------------- duel BO3

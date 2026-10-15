@@ -13,7 +13,7 @@
 // Pur et testé : le composant ne fait que poser ces billets.
 // -----------------------------------------------------------------------------
 
-import { TALON_DICTEE, type ModeTicket } from '@/lib/defi/modes-catalog'
+import { SCENE_DICTEE, TALON_DICTEE, type ModeTicket } from '@/lib/defi/modes-catalog'
 import type { Boss } from '@/lib/bosses'
 import { peutAffronter, type GardienVue } from '@/lib/reviser/gardien'
 import { subjectVignette } from '@/lib/subject-style'
@@ -30,6 +30,10 @@ export function billetDictee(): ModeTicket {
     emoji: '✍️',
     // Le casque : « écoute » — le talon de la série du 13/10/2026.
     image: TALON_DICTEE,
+    // La scène : Marcel en nage sur sa dictée (14/10/2026, Lucas : « une
+    // illustration cohérente pour la dictée, drôle, avec Marcel qui a des
+    // difficultés ») — la vignette du dossier n'est plus que le repli.
+    scene: SCENE_DICTEE,
     vignette: subjectVignette('francais'),
     href: LIEN_DICTEE,
     chip: 'Écoute · écris · corrige',
@@ -54,12 +58,17 @@ export function billetGardien(
 ): BilletGardien {
   const ouvert = gardien.etat === 'absent' || peutAffronter(gardien)
   const debusque = gardien.etat === 'debusque'
+  const repos = gardien.etat === 'indisponible'
   return {
     ouvert,
     billet: {
       id: `${subject.slug}:gardien`,
       teinte: 'violet',
-      name: ouvert ? `Affronter ${boss.name}` : `${boss.name} rôde`,
+      name: ouvert
+        ? `Affronter ${boss.name}`
+        : repos
+          ? `${boss.name} se repose`
+          : `${boss.name} rôde`,
       tagline: ouvert
         ? debusque
           ? `Il disparaît dans ${gardien.detail}`
@@ -73,6 +82,9 @@ export function billetGardien(
       // d'un boss sans scène.
       scene: boss.scene ?? null,
       vignette: subjectVignette(subject.slug),
+      // PAS SON JOUR (576) : un ruban le dit par-dessus la scène, le billet
+      // s'éteint — on ne traque un gardien que le jour où il sort.
+      ...(repos ? { badge: 'Indisponible aujourd’hui', badgeTon: 'muet' as const, eteint: true } : {}),
       // Un billet sans lien : c'est le composant qui ouvre le combat (onClick).
       href: null,
       chip: ouvert
@@ -81,7 +93,10 @@ export function billetGardien(
           : boss.epithet
         // Le pourcentage SEUL (14/10/2026, Lucas : « trop de texte, laisse que le
         // pourcentage ») : la phrase de la traque reste dans l'aria-label du billet.
-        : `${gardien.percent} %`,
+        // Pas son jour : « Revient mardi » (la rareté, 576).
+        : repos
+          ? gardien.detail
+          : `${gardien.percent} %`,
     },
   }
 }

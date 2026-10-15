@@ -15,8 +15,10 @@ import {
 } from './gardien'
 
 const BOSS = bossForSubject('Français')
-const JOUR = '2026-08-24'
-const MAINTENANT = Date.parse('2026-08-24T10:00:00.000Z')
+// Un MARDI : le jour de Grammatork (576 — les autres jours, il se repose).
+const JOUR = '2026-08-25'
+const LUNDI = '2026-08-24'
+const MAINTENANT = Date.parse('2026-08-25T10:00:00.000Z')
 
 /** Une carte de traque à `points`, éventuellement sortie depuis `sortiIlYaMs`. */
 function carte(points: number, sortiIlYaMs: number | null = null): TraqueCard {
@@ -32,6 +34,26 @@ function carte(points: number, sortiIlYaMs: number | null = null): TraqueCard {
 }
 
 describe('les quatre états du gardien', () => {
+  it('indisponible : pas son jour — il se repose et dit quand il revient (576)', () => {
+    const carteLundi = traqueCard(
+      { ...emptyGauge(BOSS.id), points: 40 },
+      BOSS,
+      'Français',
+      LUNDI,
+      Date.parse('2026-08-24T10:00:00.000Z'),
+      'francais',
+    )
+    const vue = gardienVue(carteLundi)
+    expect(vue.etat).toBe('indisponible')
+    expect(vue.titre).toBe(`${BOSS.name} se repose`)
+    expect(vue.detail).toBe('Revient mardi')
+    expect(vue.percent).toBe(0)
+    expect(vue.revele).toBe(false)
+    expect(vue.bulle).toBeNull()
+    expect(peutAffronter(vue)).toBe(false)
+    expect(afficheEcusson(vue)).toBe(true)
+  })
+
   it('n’affiche RIEN sans jauge lisible (migration 212 absente, visiteur)', () => {
     const vue = gardienVue(null)
     expect(vue.etat).toBe('absent')

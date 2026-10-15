@@ -231,7 +231,9 @@ export const FALLBACK_BOSS: Boss = {
   name: 'Nox',
   epithet: "l'Ombre du Bulletin",
   emoji: '🌑',
-  image: '/images/boss/nox.webp',
+  // -v2 : la miniature de Lucas (14/10/2026), détourée par le service d'images ;
+  // nouvelle adresse, l'optimiseur ressert l'ancien dessin sous l'ancienne.
+  image: '/images/boss/nox-v2.webp',
   scene: '/images/boss/nox-scene.webp',
   intro: 'Toutes les matières m’appartiennent.',
   defeat: 'La lumière… non !',
@@ -263,9 +265,14 @@ const PORTRAITS_PIED: ReadonlySet<string> = new Set([
 
 /** Le portrait en pied d'un boss (9:16), ou `null` s'il n'en a pas encore. */
 export function portraitBoss(boss: Boss): string | null {
-  // `[a-z0-9-]` : une base peut porter un numéro de version (coach-turbo-v2).
+  // `[a-z0-9-]` : une base peut porter un numéro de version (coach-turbo-v2,
+  // nox-v2). Le portrait en pied est cherché sous la base exacte, puis sans le
+  // suffixe de version : un buste refait ne fait pas disparaître le portrait.
   const base = boss.image?.match(/\/images\/boss\/([a-z0-9-]+)\.webp$/)?.[1]
-  return base && PORTRAITS_PIED.has(base) ? `/images/boss/${base}-pied.webp` : null
+  if (!base) return null
+  const racine = base.replace(/-v\d+$/, '')
+  if (PORTRAITS_PIED.has(base)) return `/images/boss/${base}-pied.webp`
+  return PORTRAITS_PIED.has(racine) ? `/images/boss/${racine}-pied.webp` : null
 }
 
 /** Un boss par son id — `undefined` si l'id ne désigne rien (lien trafiqué). */

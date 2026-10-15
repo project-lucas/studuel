@@ -1,13 +1,13 @@
 // -----------------------------------------------------------------------------
-// « Quêtes du jour » — trois objectifs courts, renouvelés chaque jour à minuit.
+// « Quêtes du jour » — quatre objectifs courts, renouvelés chaque jour à minuit.
 //
-// Pourquoi trois, et pourquoi courts : la quête quotidienne est le rendez-vous.
+// Pourquoi peu, et pourquoi courts : la quête quotidienne est le rendez-vous.
 // Elle répond à « qu'est-ce que je fais maintenant ? » en moins d'une seconde,
 // et elle se termine en une session — une quête qu'on ne peut pas finir
 // aujourd'hui ne ramène personne demain. Toutes sont atteignables en ~10 min.
 //
 // Le tirage est DÉTERMINISTE (clé du jour + identité de l'élève) : le serveur
-// et le client voient les mêmes trois quêtes sans les stocker, et deux élèves
+// et le client voient les mêmes quêtes sans les stocker, et deux élèves
 // n'ont pas forcément les mêmes. Seule la PROGRESSION est en base (205).
 //
 // Pur et testable (convention projet).
@@ -31,6 +31,20 @@ import { seededRng } from '@/lib/defi-modes'
 // qu'au bouton du bas du cours, que personne ne pressait : zéro quête avancée
 // sur toute l'app pendant dix jours.
 //
+// LA MISSION « SE CONNECTER » (14/10/2026, Lucas : « autre mission
+// journalière : se connecter, facile, rapide et gain de récompenses » ;
+// migration 577) : un quatrième geste, REVENIR, bouclé dès que l'élève ouvre
+// l'app — la route GET /api/quetes, relue par le bandeau au lancement, le
+// compte au premier passage du jour. Dix XP, et le coffre du jour reste au bout
+// de TOUTES les quêtes : celle-ci est acquise d'office pour qui est là.
+//
+// LA MISSION « SE CONNECTER » (14/10/2026, Lucas : « autre mission
+// journalière : se connecter, facile, rapide et gain de récompenses » ;
+// migration 577) : un quatrième geste, REVENIR, bouclé dès que l'élève ouvre
+// l'app — la route GET /api/quetes, relue par le bandeau au lancement, le
+// compte au premier passage du jour. Dix XP, et le coffre du jour reste au bout
+// de TOUTES les quêtes : celle-ci est acquise d'office pour qui est là.
+//
 // RÈGLE D'OR : une quête n'entre au catalogue que si son type est alimenté par
 // un appel réel à advanceQuests (lib/quests-server) — le geste compte TOUT
 // SEUL, jamais par un bouton —, et qu'un élève gratuit de n'importe quelle
@@ -39,16 +53,18 @@ import { seededRng } from '@/lib/defi-modes'
 /** Ce qu'une quête compte. Chaque type est incrémenté depuis UN endroit du
  *  code : ajouter un type sans brancher son compteur = quête infinissable. */
 export type QuestKind =
+  | 'connexion' // passages dans l'app (la route GET /api/quetes, au premier passage du jour)
   | 'lecon' // cours lus jusqu'en bas (completeLesson, déclenché par la lecture)
   | 'reponse' // questions répondues, justes ou non : quiz, révisions, jeux, duels, cahier
   | 'partie' // parties jouées : jeux de salon, modes de l'arène, duels
 
 /** Le geste de la journée auquel une quête appartient — un par jour. */
-export type QuestPilier = 'apprendre' | 'tester' | 'jouer'
+export type QuestPilier = 'revenir' | 'apprendre' | 'tester' | 'jouer'
 
-export const PILIERS: readonly QuestPilier[] = ['apprendre', 'tester', 'jouer']
+export const PILIERS: readonly QuestPilier[] = ['revenir', 'apprendre', 'tester', 'jouer']
 
 export const PILIER_LIBELLE: Record<QuestPilier, string> = {
+  revenir: 'Revenir',
   apprendre: 'Apprendre',
   tester: 'Se tester',
   jouer: 'Jouer',
@@ -69,8 +85,9 @@ export type QuestDef = {
   gems: number
 }
 
-/** Le trio minimal — MIROIR de `quest_catalog()` (migration 564). */
+/** Les quatre quêtes du jour — MIROIR de `quest_catalog()` (migration 577). */
 export const QUEST_CATALOG: readonly QuestDef[] = [
+  { id: 'connexion1', kind: 'connexion', pilier: 'revenir', goal: 1, label: 'Se connecter', detail: 'Fait dès que tu ouvres Studuel', href: '/defi', xp: 10, gems: 0 },
   { id: 'lecon1', kind: 'lecon', pilier: 'apprendre', goal: 1, label: 'Lire 1 cours', detail: 'Jusqu’en bas — ça compte tout seul', href: '/reviser', xp: 30, gems: 0 },
   { id: 'reponses10', kind: 'reponse', pilier: 'tester', goal: 10, label: 'Répondre à 10 questions', detail: 'Quiz, révisions, jeux ou duels — justes ou non', href: '/reviser', xp: 30, gems: 0 },
   { id: 'partie1', kind: 'partie', pilier: 'jouer', goal: 1, label: 'Faire 1 partie', detail: 'Un jeu, un mode de l’arène ou un duel', href: '/defi', xp: 30, gems: 0 },
@@ -102,10 +119,10 @@ export const QUETES_RETIREES: readonly string[] = [
   'correct50',
 ]
 
-export const QUESTS_PER_DAY = 3
+export const QUESTS_PER_DAY = 4
 
-/** Bonus versé quand les trois quêtes du jour sont bouclées (le coffre du
- *  jour). Il doit valoir plus que la somme des trois : c'est LUI qu'on vient
+/** Bonus versé quand TOUTES les quêtes du jour sont bouclées (le coffre du
+ *  jour). Il doit valoir plus que la somme des quêtes : c'est LUI qu'on vient
  *  chercher. De l'XP seulement depuis la 557 : la gemme est réservée aux épreuves. */
 export const ALL_DONE_XP = 100
 export const ALL_DONE_GEMS = 0
@@ -116,7 +133,7 @@ function pick<T>(list: readonly T[], rng: () => number): T {
 }
 
 /**
- * Les trois quêtes du jour : une par geste (apprendre, se tester, jouer),
+ * Les quêtes du jour : une par geste (revenir, apprendre, se tester, jouer),
  * tirées de façon déterministe depuis (jour + élève). Mêmes entrées = mêmes
  * quêtes, à chaque rendu, sur chaque appareil. Avec le trio minimal, chaque
  * geste n'a qu'une quête : le tirage ne change rien, il reste là pour le jour
@@ -185,7 +202,7 @@ export function questsHeadline(views: readonly QuestView[]): string {
 }
 
 /** L'identité du coffre de bonus, partagée avec la table des réclamations :
- *  il récompense les trois quêtes du jour, pas une seule. */
+ *  il récompense toutes les quêtes du jour, pas une seule. */
 export const BONUS_STEP_ID = '__jour__'
 
 // --- Ce que le navigateur reçoit ------------------------------------------------
@@ -235,9 +252,24 @@ export function aEncaisser(etat: QuetesDuJour): QueteServie[] {
   return etat.quetes.filter((q) => q.done && !payees.has(q.id))
 }
 
-/** Le coffre du jour : les trois quêtes finies, et pas encore ouvert. */
+/** Le coffre du jour : toutes les quêtes finies, et pas encore ouvert. */
 export function coffreDuJourPret(etat: QuetesDuJour): boolean {
   return etat.quetes.length > 0 && etat.quetes.every((q) => q.done) && !etat.encaissees.includes(BONUS_STEP_ID)
+}
+
+/**
+ * LES QUÊTES S'ENCAISSENT UNE À UNE (14/10/2026, Lucas : « les validations des
+ * missions journalières doivent se faire une à une pour le côté dopamine »).
+ * Chaque quête finie porte sa pièce ; le coffre ne s'ouvre qu'une fois TOUTES
+ * les quêtes encaissées — c'est la cinquième et dernière volée de la journée.
+ */
+export function coffreOuvrable(etat: QuetesDuJour): boolean {
+  return coffreDuJourPret(etat) && aEncaisser(etat).length === 0
+}
+
+/** La prochaine pièce à toucher, celle qui bat pour appeler le doigt. */
+export function prochaineAEncaisser(etat: QuetesDuJour): QueteServie | null {
+  return aEncaisser(etat)[0] ?? null
 }
 
 /**
@@ -257,6 +289,8 @@ export function quetesAAnnoncer(etat: QuetesDuJour, annoncees: readonly string[]
 
 /** Ce qu'une partie ou une activité vient de produire. */
 export type QuestEvent = {
+  /** Passages dans l'app (un par jour suffit : la route des quêtes le compte). */
+  connexions?: number
   /** Cours lus jusqu'en bas. */
   lecons?: number
   /** Questions répondues, justes ou non. */
@@ -272,6 +306,7 @@ export function deltaFor(event: QuestEvent): QuestDelta {
   const n = (v: number | undefined) =>
     Number.isFinite(v) ? Math.max(0, Math.floor(v as number)) : 0
   return {
+    connexion: n(event.connexions),
     lecon: n(event.lecons),
     reponse: n(event.reponses),
     partie: n(event.parties),

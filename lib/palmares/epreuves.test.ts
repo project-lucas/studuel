@@ -186,7 +186,8 @@ describe('les jeux de salon, épreuves eux aussi', () => {
 })
 
 describe('le miroir SQL des jeux (migration 355)', () => {
-  const sql = migrationSql('355_palmares_jeux_salon.sql')
+  // Les jeux de Musique et de Sport (14/10/2026) entrent à mode_catalog par la 578.
+  const sql = migrationSql('355_palmares_jeux_salon.sql') + migrationSql('578_jeux_musique_sport.sql') + migrationSql('579_jeu_le_musee.sql')
 
   it('chaque jeu jouable figure dans mode_catalog avec les bornes communes', () => {
     for (const e of EPREUVES_JEUX) {

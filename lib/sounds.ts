@@ -265,6 +265,17 @@ export const sfx = {
       note(1567.98, 0.06, 0.12, 'triangle', 0.045) // sol aigu
     })
   },
+  // UN ÉCLAIR QUI ATTERRIT sur la barre de niveau, dans une vague : une perle
+  // de son, chaque fois un cran plus haut (gamme pentatonique de do, qui ne
+  // sonne jamais faux quelle que soit la longueur de la vague). C'est la
+  // pluie de pièces de Clash Royale : la récompense s'ENTEND rentrer.
+  perle(rang: number) {
+    if (!isSoundOn()) return
+    const GAMME = [0, 2, 4, 7, 9]
+    const r = Math.max(0, Math.min(14, Math.floor(rang)))
+    const demiTons = Math.floor(r / 5) * 12 + GAMME[r % 5]
+    note(880 * Math.pow(2, demiTons / 12), 0, 0.09, 'triangle', 0.035)
+  },
   // Déblocage (badge, chapitre, mode) : notification satisfaisante.
   unlock() {
     if (!isSoundOn()) return

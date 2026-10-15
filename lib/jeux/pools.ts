@@ -23,6 +23,11 @@ import { buildFrisePool } from '@/lib/jeux/frise-folle'
 import { buildPhrasePool } from '@/lib/jeux/phrase-en-vrac'
 import type { OrderBoard } from '@/lib/jeux/ordering'
 import { buildAnatomiePool, type OrganRound } from '@/lib/jeux/anatomie'
+import { buildMusclesPool } from '@/lib/jeux/muscles'
+import type { PlancheId } from '@/lib/jeux/planches'
+import { buildClasseInstrumentPool } from '@/lib/jeux/classe-instrument'
+import { buildQuiAComposePool } from '@/lib/jeux/qui-a-compose'
+import { buildMuseePool } from '@/lib/jeux/le-musee'
 
 // Chaque id marqué `implemented: true` au catalogue doit figurer dans EXACTEMENT
 // un des quatre registres de ce fichier : QCM (ici), ordre, compte, zones. La
@@ -51,6 +56,10 @@ export const POOL_BUILDERS: Record<
   'classe-moi-ca': (seed, count) => buildClasseMoiCaPool(seed, count),
   'chasse-elements': (seed, count) => buildChasseElementsPool(seed, count),
   'bonne-unite': (seed, count) => buildBonneUnitePool(seed, count),
+  // Musique et Sport (14/10/2026) : des banques GRADUÉES, le palier passe.
+  'classe-instrument': (seed, count, tier) => buildClasseInstrumentPool(seed, count, tier),
+  'qui-a-compose': (seed, count, tier) => buildQuiAComposePool(seed, count, tier),
+  'le-musee': (seed, count, tier) => buildMuseePool(seed, count, tier),
 }
 
 /** Le pool d'un jeu par id, ou null si aucune banque n'est enregistrée. */
@@ -132,6 +141,22 @@ export const ZONE_BUILDERS: Record<
   (seed: string, count: number, tier: number) => OrganRound[]
 > = {
   'anatomie-express': (seed, count, tier) => buildAnatomiePool(seed, count, tier),
+  'muscles-express': (seed, count, tier) => buildMusclesPool(seed, count, tier),
+}
+
+/**
+ * LA PLANCHE d'un jeu de désignation : le dessin sur lequel la table de jeu
+ * fait toucher — par IDENTIFIANT (lib/jeux/planches), parce que la page
+ * serveur le transmet à un composant client, qui résout l'objet lui-même. Les
+ * organes pour « Anatomie express », les muscles pour « Muscles express ».
+ */
+export const ZONE_PLANCHES: Record<string, PlancheId> = {
+  'anatomie-express': 'organes',
+  'muscles-express': 'muscles',
+}
+
+export function zonePlanche(id: string): PlancheId | null {
+  return ZONE_PLANCHES[id] ?? null
 }
 
 /** Les manches d'un jeu de désignation, ou null si aucune banque enregistrée. */

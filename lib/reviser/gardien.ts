@@ -30,6 +30,8 @@ export type GardienEtat =
   | 'traque'
   /** Il est sorti — et il ne reste qu'une heure. */
   | 'debusque'
+  /** Pas son jour (576) : la jauge ne bouge pas, il revient tel jour. */
+  | 'indisponible'
 
 export type GardienVue = {
   etat: GardienEtat
@@ -89,18 +91,25 @@ export function gardienVue(card: TraqueCard | null): GardienVue {
   if (!card) return ABSENT
 
   const sorti = card.status === 'debusque'
+  const repos = card.status === 'indisponible'
   const etat: GardienEtat = sorti
     ? 'debusque'
-    : card.points <= 0
-      ? 'taniere'
-      : 'traque'
+    : repos
+      ? 'indisponible'
+      : card.points <= 0
+        ? 'taniere'
+        : 'traque'
 
   const titre = sorti
     ? `${card.boss.name} est sorti !`
-    : `${card.boss.name} rôde`
+    : repos
+      ? `${card.boss.name} se repose`
+      : `${card.boss.name} rôde`
   const detail = sorti
     ? countdownLabel(card.remainingMs)
-    : restantLabel(card.points)
+    : repos
+      ? `Revient ${card.backOn ?? 'bientôt'}`
+      : restantLabel(card.points)
 
   return {
     etat,
@@ -117,7 +126,9 @@ export function gardienVue(card: TraqueCard | null): GardienVue {
     xp: card.xp,
     aria: sorti
       ? `${card.boss.name}, ${card.boss.epithet}, est sorti de sa tanière — il disparaît dans ${countdownLabel(card.remainingMs)}`
-      : `${card.boss.name} rôde — jauge à ${card.percent} %, ${restantLabel(card.points)}`,
+      : repos
+        ? `${card.boss.name} est indisponible aujourd’hui — il revient ${card.backOn ?? 'bientôt'}`
+        : `${card.boss.name} rôde — jauge à ${card.percent} %, ${restantLabel(card.points)}`,
   }
 }
 
@@ -130,6 +141,18 @@ export function peutAffronter(vue: GardienVue): boolean {
  * L'écusson doit-il s'afficher ? Non quand la traque est illisible : mieux vaut
  * pas d'écusson qu'un anneau vide qui ne bougera jamais.
  */
+/**
+ * LES MATIÈRES SANS GARDIEN (14/10/2026, Lucas : « retire Nox » des arts
+ * plastiques). Une matière sans boss à elle tombait sur Nox, le gardien de
+ * repli : en arts plastiques, ni billet de gardien, ni écusson, ni bulle — la
+ * porte Jeux ne montre que Le Musée.
+ */
+const MATIERES_SANS_GARDIEN: ReadonlySet<string> = new Set(['arts-plastiques'])
+
+export function matiereSansGardien(slug: string): boolean {
+  return MATIERES_SANS_GARDIEN.has(slug)
+}
+
 export function afficheEcusson(vue: GardienVue): boolean {
   return vue.etat !== 'absent'
 }

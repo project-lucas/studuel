@@ -133,6 +133,7 @@ export default function ModeTicket({
       data-format={grand ? 'grand' : 'compact'}
       data-verrou={verrou ? '' : undefined}
       data-repli={!verrou && !ticket.scene ? '' : undefined}
+      data-eteint={ticket.eteint ? '' : undefined}
     >
       <span className={styles.corps}>{corps}</span>
       <span className={styles.talon}>{talon}</span>
@@ -142,7 +143,7 @@ export default function ModeTicket({
   const ruban = ticket.badge ? (
     <span
       className={cn(styles.ruban, styles.encre, 'font-heading font-extrabold')}
-      data-ton={ticket.badge === 'Bientôt' ? 'muet' : ticket.vedette ? 'or' : undefined}
+      data-ton={ticket.badgeTon ?? (ticket.badge === 'Bientôt' ? 'muet' : ticket.vedette ? 'or' : undefined)}
     >
       {ticket.badge}
     </span>

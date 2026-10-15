@@ -11,7 +11,9 @@ import type { TraqueCard } from '@/lib/traque'
 //      de « ??? » : l'étiquette le disait déjà) ;
 //   2. le gardien débusqué se cercle d'or, compte ses minutes et propose
 //      « Défier » ; les autres renvoient RÉVISER, filtré sur la matière ;
-//   3. celui qui rôde est une ombre, celui du jour (gemmes ×2) reste en lumière ;
+//   3. celui du jour reste en lumière ; depuis la 576, un gardien INDISPONIBLE
+//      (pas son jour) est une ombre barrée d'un ruban, sans jauge, et dit quand
+//      il revient ;
 //   4. le premier bloc est le gardien le plus proche d'être défié (le débusqué,
 //      sinon le pourcentage le plus haut) — « pour éviter le scrolling » ;
 //   5. sans gardien, l'invitation à réviser.
@@ -71,13 +73,22 @@ function carte(
     endsAt: null,
     hint: '',
     xp: 30,
+    gemmes: 5,
     ...extra,
   }
 }
 
-const nox = () => carte('nox', "l'Ombre du Bulletin", '', 52, { backOn: 'samedi', xp: 90 })
-const atlas = () => carte('chronos', 'HGGSP', 'hggsp', 50)
-const plasma = () => carte('plasma', 'Physique-Chimie', 'physique-chimie', 20, { enChasse: true, backOn: null, xp: 90 })
+const nox = () =>
+  carte('nox', "l'Ombre du Bulletin", '', 0, {
+    status: 'indisponible',
+    enChasse: false,
+    backOn: 'dimanche',
+    hint: 'Revient dimanche',
+    xp: 90,
+    gemmes: 20,
+  })
+const atlas = () => carte('chronos', 'HGGSP', 'hggsp', 50, { enChasse: true, backOn: null })
+const plasma = () => carte('plasma', 'Physique-Chimie', 'physique-chimie', 20, { enChasse: true, backOn: null })
 const grammatork = () =>
   carte('grammatork', 'Français', 'francais', 100, {
     status: 'debusque',
@@ -100,13 +111,13 @@ describe('BossSheet — les tanières', () => {
     expect(scene(article).getAttribute('src')).toBe('/images/boss/atlas-scene.webp')
     expect(within(article).getByText(/13 cartes de plus · Rang I/)).toBeTruthy()
     expect(within(article).getByRole('progressbar').getAttribute('aria-valuenow')).toBe('50')
-    // Il rôde : une ombre.
-    expect(article.hasAttribute('data-ombre')).toBe(true)
+    // Il rôde, et c'est son jour : en pleine lumière, pas encore défiable.
+    expect(article.hasAttribute('data-ombre')).toBe(false)
     expect(article.hasAttribute('data-libre')).toBe(false)
     expect(within(article).getByRole('link', { name: 'Réviser HGGSP →' }).getAttribute('href')).toBe(
       '/reviser/hggsp',
     )
-    expect(within(article).getByText(/XP ×2 mercredi/)).toBeTruthy()
+    expect(within(article).queryByText(/Indisponible/)).toBeNull()
     // La bannière ne porte que le nom : ni épithète ni matière sur la scène.
     expect(within(article).queryByText(/Cartographe Fantôme/)).toBeNull()
   })
@@ -120,18 +131,44 @@ describe('BossSheet — les tanières', () => {
     expect(
       within(article).getByRole('link', { name: 'Défier Grammatork' }).getAttribute('href'),
     ).toBe('/defi/traque/grammatork')
-    expect(within(article).getByLabelText('60 XP en cas de victoire')).toBeTruthy()
+    expect(within(article).getByLabelText('60 XP et 5 gemmes en cas de victoire')).toBeTruthy()
   })
 
-  it('le gardien du jour reste en pleine lumière, avec son étiquette ×2', () => {
+  it('un gardien INDISPONIBLE (pas son jour) : ruban sur la scène, ombre, pas de jauge, revient tel jour', () => {
+    render(
+      <BossSheet
+        cards={[
+          carte('grammatork', 'Français', 'francais', 0, {
+            status: 'indisponible',
+            enChasse: false,
+            backOn: 'mardi',
+            hint: 'Revient mardi',
+          }),
+        ]}
+      />,
+    )
+    const article = screen.getByRole('article')
+    expect(article.hasAttribute('data-libre')).toBe(false)
+    expect(article.hasAttribute('data-ombre')).toBe(true)
+    expect(article.hasAttribute('data-repos')).toBe(true)
+    expect(within(article).getByText('Indisponible aujourd’hui')).toBeTruthy()
+    expect(within(article).getByText(/Revient mardi/)).toBeTruthy()
+    expect(within(article).queryByRole('progressbar')).toBeNull()
+    expect(within(article).queryByRole('link', { name: /Défier/ })).toBeNull()
+    expect(within(article).getByRole('link', { name: 'Réviser Français →' })).toBeTruthy()
+    // Le gain s'éteint avec lui.
+    expect(within(article).getByLabelText('30 XP et 5 gemmes en cas de victoire').hasAttribute('data-or')).toBe(false)
+  })
+
+  it('le gardien du jour reste en pleine lumière, son gain en or', () => {
     render(<BossSheet cards={[plasma()]} />)
     const article = screen.getByRole('article')
     expect(article.hasAttribute('data-ombre')).toBe(false)
-    expect(within(article).getByText(/En chasse aujourd’hui · XP ×2/)).toBeTruthy()
-    expect(within(article).queryByText(/XP ×2 mercredi/)).toBeNull()
+    expect(article.hasAttribute('data-repos')).toBe(false)
+    expect(within(article).queryByText(/Indisponible/)).toBeNull()
     // Le gain est doré ce jour-là.
     expect(
-      within(article).getByLabelText('90 XP en cas de victoire, doublée aujourd’hui').hasAttribute('data-or'),
+      within(article).getByLabelText('30 XP et 5 gemmes en cas de victoire').hasAttribute('data-or'),
     ).toBe(true)
   })
 
@@ -158,7 +195,8 @@ describe('BossSheet — les tanières', () => {
     const noms = screen
       .getAllByRole('article')
       .map((a) => within(a).getByRole('heading', { level: 3 }).textContent)
-    expect(noms).toEqual(['Grammatork', 'Nox', 'Atlas', 'Dr Plasma'])
+    // Le sorti, puis les gardiens du jour par jauge, puis l'indisponible en queue.
+    expect(noms).toEqual(['Grammatork', 'Atlas', 'Dr Plasma', 'Nox'])
   })
 
   it('sans gardien, invite à réviser', () => {

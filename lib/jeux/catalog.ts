@@ -23,6 +23,13 @@ export type SalonGameId =
   | 'anatomie-express'
   | 'frise-folle'
   | 'phrase-en-vrac'
+  // Musique et Sport (14/10/2026, Lucas : « trouve-moi des modes de jeu pour
+  // le sport, la musique »).
+  | 'classe-instrument'
+  | 'qui-a-compose'
+  // Arts plastiques (14/10/2026) : l'histoire de l'art par les œuvres.
+  | 'le-musee'
+  | 'muscles-express'
 
 export type SalonGame = {
   id: string
@@ -170,6 +177,65 @@ export const SALONS: Salon[] = [
         name: 'La bonne unité',
         emoji: '📏',
         tagline: 'Associe grandeur et unité à toute vitesse',
+        implemented: true,
+      },
+    ],
+  },
+  // --- Musique et Sport (14/10/2026) ---------------------------------------
+  // Lucas : « trouve-moi des modes de jeu pour le sport, la musique », puis
+  // « pour la musique oui un mode sur les instruments, un mode qui a composé ;
+  // chaque mode commence doucement puis vient un palier de référence qui lui
+  // donne un temps record » et « pour le sport il doit y avoir un mode proche
+  // de l'anatomie, notamment sur les muscles ». Le premier de chaque matière
+  // est le jeu libre ; le second va avec Studuel+ (lib/jeux/acces). Sport n'a
+  // QU'UN jeu : « Classe-moi le sport » a été retiré le même jour (Lucas : « le
+  // classement de sport tu peux l'oublier »).
+  {
+    subject: 'Musique',
+    emoji: '🎵',
+    games: [
+      {
+        id: 'classe-instrument',
+        name: 'Classe-moi l’instrument',
+        emoji: '🎻',
+        tagline: 'Cordes, bois, cuivres, percussions ou claviers ? Range-le dans sa famille',
+        implemented: true,
+      },
+      {
+        id: 'qui-a-compose',
+        name: 'Qui a composé ?',
+        emoji: '🎼',
+        tagline: 'Boléro, Carmen, Star Wars — une œuvre, quatre compositeurs',
+        implemented: true,
+      },
+    ],
+  },
+  // --- Arts plastiques (14/10/2026) -----------------------------------------
+  // Lucas : « je pense qu'on doit faire comme l'histoire de l'art […] crée un
+  // mode de jeu avec plusieurs paliers de difficulté, mais complet et
+  // addictif ». Un seul jeu, libre : Le Musée (lib/jeux/le-musee).
+  {
+    subject: 'Arts plastiques',
+    emoji: '🎨',
+    games: [
+      {
+        id: 'le-musee',
+        name: 'Le Musée',
+        emoji: '🖼️',
+        tagline: 'Une œuvre sous tes yeux : qui, quoi, quand ?',
+        implemented: true,
+      },
+    ],
+  },
+  {
+    subject: 'Sport',
+    emoji: '🏃',
+    games: [
+      {
+        id: 'muscles-express',
+        name: 'Muscles express',
+        emoji: '💪',
+        tagline: 'Touche le muscle demandé sur l’écorché',
         implemented: true,
       },
     ],

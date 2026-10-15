@@ -116,12 +116,20 @@ export function xpEtoilePalier(palier: number): number {
   const p = entier(palier)
   return p >= 1 && p <= 5 ? 5 * p : 0
 }
-/** La victoire contre un gardien de la Traque (ex-gemmes ×3). */
-export function xpTraque(rang: number, nox: boolean, enChasse: boolean): number {
+/** La victoire contre un gardien de la Traque : XP fixe (plus de ×2 depuis la 576 : on ne le combat que ses jours). */
+export function xpTraque(rang: number, nox: boolean): number {
   if (nox) return 90
-  const base = rang <= 1 ? 30 : rang === 2 ? 45 : 60
-  return enChasse ? base * 2 : base
+  return rang <= 1 ? 30 : rang === 2 ? 45 : 60
 }
+/**
+ * Les gemmes de la victoire (576, Lucas : « les boss permettent de gagner des
+ * gemmes ») : 5 · 8 · 10 par rang, Nox 20, dans un plafond de 40 par semaine.
+ */
+export function gemmesTraque(rang: number, nox: boolean): number {
+  if (nox) return 20
+  return rang <= 1 ? 5 : rang === 2 ? 8 : 10
+}
+export const GEMMES_TRAQUE_SEMAINE_MAX = 40
 
 // ----------------------------------------------------------------- les gemmes
 

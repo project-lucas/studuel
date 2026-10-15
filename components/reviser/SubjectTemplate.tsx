@@ -28,7 +28,7 @@ import {
 } from '@/lib/subject-template'
 import { examYearFor } from '@/lib/annales'
 import { hrefEncyclopedie } from '@/lib/encyclopedie/matieres'
-import { afficheEcusson, gardienVue } from '@/lib/reviser/gardien'
+import { afficheEcusson, gardienVue, matiereSansGardien } from '@/lib/reviser/gardien'
 import { jaugeDesFiches, repriseDuProgramme } from '@/lib/reviser/programme'
 
 /** Écrit un paramètre de l'adresse sans empiler d'entrée d'historique. */
@@ -138,7 +138,8 @@ export default function SubjectTemplate({
   // celui de la barre collante, par la bulle de la porte et par le billet :
   // quatre lectures indépendantes de la même jauge finiraient par se contredire.
   const gardien = gardienVue(data.gardien)
-  const aEcusson = afficheEcusson(gardien)
+  const sansGardien = matiereSansGardien(data.subject.slug)
+  const aEcusson = afficheEcusson(gardien) && !sansGardien
   // Toucher l'écusson mène là où le gardien se combat.
   const versLeGardien = () => changerOnglet('jeu')
 
@@ -149,7 +150,7 @@ export default function SubjectTemplate({
     ...p,
     // L'exercice est de l'offre Studuel+ : la couronne nomme l'offre.
     couronne: p.key === 'exercices' && !data.premium,
-    bulle: p.key === 'jeu' ? gardien.bulle : null,
+    bulle: p.key === 'jeu' && !sansGardien ? gardien.bulle : null,
   }))
 
   return (

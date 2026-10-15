@@ -14,6 +14,11 @@ import {
   libelleGain,
   repartir,
   volJeton,
+  VAGUE_MAX,
+  VAGUE_MIN,
+  dureeVague,
+  jetonsVague,
+  volVague,
   type Gain,
 } from './gains'
 
@@ -216,5 +221,45 @@ describe('le trajet d’un jeton', () => {
       const v = volJeton(i, n)
       expect(v.retard + v.duree).toBeLessThanOrEqual(fin)
     }
+  })
+})
+
+describe('la vague, façon Clash Royale', () => {
+  it('compte des éclairs généreux mais lisibles', () => {
+    expect(jetonsVague(0)).toBe(0)
+    expect(jetonsVague(10)).toBe(VAGUE_MIN)
+    expect(jetonsVague(30)).toBe(10)
+    expect(jetonsVague(100)).toBe(VAGUE_MAX)
+    expect(jetonsVague(5000)).toBe(VAGUE_MAX)
+  })
+
+  it('fait jaillir TOUS les éclairs ensemble, puis les décroche en file', () => {
+    const n = 10
+    const vols = Array.from({ length: n }, (_, i) => volVague(i, n))
+    // Tous partent au même instant : la gerbe éclate d'un coup.
+    for (const v of vols) expect(v.retard).toBe(0)
+    // L'instant de la gerbe est le même pour tous…
+    const jaillis = vols.map((v) => Math.round(v.reperes[0] * v.duree))
+    expect(new Set(jaillis).size).toBe(1)
+    // …puis chacun se décroche APRÈS le précédent, à intervalle régulier.
+    const decroches = vols.map((v) => v.reperes[1] * v.duree)
+    for (let i = 1; i < n; i += 1) expect(decroches[i]).toBeGreaterThan(decroches[i - 1])
+    // Ses repères avancent toujours dans le temps.
+    for (const v of vols) {
+      expect(0 < v.reperes[0] && v.reperes[0] < v.reperes[1] && v.reperes[1] < v.reperes[2] && v.reperes[2] < 1).toBe(true)
+    }
+  })
+
+  it('éparpille la gerbe sans que deux éclairs se posent au même endroit', () => {
+    const n = 16
+    const points = new Set(Array.from({ length: n }, (_, i) => `${volVague(i, n).sautX},${volVague(i, n).sautY}`))
+    expect(points.size).toBe(n)
+  })
+
+  it('dit quand la vague entière est rentrée', () => {
+    expect(dureeVague(0)).toBe(0)
+    expect(dureeVague(10)).toBe(Math.max(...Array.from({ length: 10 }, (_, i) => volVague(i, 10).duree)))
+    // Une vague de seize reste sous trois secondes : satisfaisant, pas interminable.
+    expect(dureeVague(16)).toBeLessThan(3000)
   })
 })

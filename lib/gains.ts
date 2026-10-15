@@ -223,6 +223,66 @@ export function volJeton(i: number, n: number): VolJeton {
   }
 }
 
+/**
+ * LA VAGUE, FAÇON CLASH ROYALE (14/10/2026, Lucas : « une belle animation des
+ * éclairs qui s'ajoutent en vague vers la barre de niveau, il faut que ce soit
+ * satisfaisant »). Une volée ordinaire fait partir ses jetons l'un après
+ * l'autre, du jaillissement à l'arrivée. La vague, elle, les fait JAILLIR TOUS
+ * ENSEMBLE en gerbe autour du point de départ, les laisse flotter un instant,
+ * puis les décroche un par un, à intervalle régulier, en file vers la barre :
+ * on voit la récompense entière, puis on la regarde rentrer — et chaque
+ * atterrissage tinte une note plus haute que la précédente.
+ */
+export type VolVague = VolJeton & {
+  /** Les repères du trajet, en fractions de la durée : jailli, décroché, au sommet. */
+  reperes: readonly [number, number, number]
+}
+
+/** Combien d'éclairs pour une vague : généreux, mais lisible (6 à 16). */
+export function jetonsVague(montant: number): number {
+  const m = Number(montant)
+  if (!Number.isFinite(m) || m <= 0) return 0
+  return Math.min(VAGUE_MAX, Math.max(VAGUE_MIN, Math.round(m / 3)))
+}
+
+export const VAGUE_MIN = 6
+export const VAGUE_MAX = 16
+/** Le temps de la gerbe (ms) : tous les éclairs jaillissent ensemble. */
+export const VAGUE_JAILLI = 280
+/** Le temps où la gerbe flotte avant que le premier éclair ne se décroche (ms). */
+export const VAGUE_FLOTTE = 260
+/** L'intervalle entre deux départs (ms) : le rythme de la file. */
+export const VAGUE_CADENCE = 85
+/** La traversée d'un éclair jusqu'à la barre (ms). */
+export const VAGUE_TRAJET = 620
+
+export function volVague(i: number, n: number): VolVague {
+  const total = Math.max(1, Math.floor(n))
+  const index = Math.min(Math.max(0, Math.floor(i)), total - 1)
+  const decroche = VAGUE_JAILLI + VAGUE_FLOTTE + index * VAGUE_CADENCE
+  const trajet = VAGUE_TRAJET + (index % 3) * 40
+  const duree = decroche + trajet
+  // Une gerbe plus large qu'une volée : deux couronnes, l'angle d'or dedans.
+  const rayon = 52 + (index % 2) * 34
+  return {
+    retard: 0,
+    duree,
+    ecartX: 0,
+    arc: 40 + (index % 4) * 14,
+    sautX: Math.round(Math.cos(index * ANGLE_OR) * rayon),
+    sautY: Math.round(Math.sin(index * ANGLE_OR) * rayon * 0.8 - 26),
+    reperes: [VAGUE_JAILLI / duree, decroche / duree, (decroche + trajet * 0.5) / duree],
+  }
+}
+
+/** Quand la vague entière est rentrée (ms). */
+export function dureeVague(n: number): number {
+  if (n <= 0) return 0
+  let fin = 0
+  for (let i = 0; i < n; i += 1) fin = Math.max(fin, volVague(i, n).duree)
+  return fin
+}
+
 /** Quand la volée entière est arrivée (ms) — le moment de resynchroniser. */
 export function dureeVolee(n: number): number {
   if (n <= 0) return 0

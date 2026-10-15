@@ -384,3 +384,11 @@
   color: var(--contour);
   filter: drop-shadow(0 0.08em 0 var(--contour));
 }
+
+/* Le billet ÉTEINT (576) : le gardien n'est pas disponible aujourd'hui — sa
+   scène et son talon se grisent sous le ruban « Indisponible aujourd'hui ».
+   Un filtre POSÉ, jamais animé. */
+.billet[data-eteint] .corps,
+.billet[data-eteint] .talon {
+  filter: grayscale(0.55) brightness(0.8);
+}

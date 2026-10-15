@@ -9,6 +9,7 @@ import {
   buildSalonPool,
   buildZonePool,
   poolKind,
+  zonePlanche,
 } from '@/lib/jeux/pools'
 import { gameFormat, poolSizeFor } from '@/lib/jeux/formats'
 import { scaleFormat } from '@/lib/jeux/palier-format'
@@ -118,11 +119,14 @@ export default async function SalonPalierPage({
 
   if (kind === 'zones') {
     const zoneRounds = buildZonePool(jeu, seed, size, level)
-    if (!zoneRounds || zoneRounds.length === 0) redirect('/defi')
+    // La planche sur laquelle on touche : les organes, ou les muscles (Sport).
+    const planche = zonePlanche(jeu)
+    if (!zoneRounds || zoneRounds.length === 0 || !planche) redirect('/defi')
     return (
       <AnatomyTable
         format={format}
         palier={paliers}
+        planche={planche}
         rounds={zoneRounds}
         name={found.game.name}
         subject={found.salon.subject}

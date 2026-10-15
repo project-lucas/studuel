@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { bossById, bossForSubject } from '@/lib/bosses'
+import { ALL_BOSSES, bossById, bossForSubject } from '@/lib/bosses'
 import {
   chaptersBySubject,
   apparitionAlive,
@@ -15,6 +15,7 @@ import {
   gaugeRatio,
   gaugeStatus,
   xpForVictory,
+  gemsForVictory,
   isEnChasse,
   isRattrapage,
   nextChasseDay,
@@ -33,6 +34,8 @@ import {
   weekdayIndex,
   windowEndMs,
   NOX_XP,
+  NOX_GEMMES,
+  TRAQUE_GEMMES,
   TRAQUE_APRES_DEFAITE,
   TRAQUE_CHAPTERS_KEPT,
   TRAQUE_FENETRE_MS,
@@ -199,7 +202,7 @@ describe('calendrier de la chasse', () => {
 
   it('mêle chaque jour une scientifique et une littéraire ou une langue', () => {
     const mercredi = chasseOfDay(MERCREDI).map((b) => b.id)
-    expect(mercredi).toEqual(['chronos', 'bigben'])
+    expect(mercredi).toEqual(['chronos', 'bigben', 'sphinx'])
     // Le week-end, la liste est vide : c'est « tout le monde », pas « personne ».
     expect(chasseOfDay(SAMEDI)).toEqual([])
   })
@@ -225,17 +228,20 @@ describe('Nox — le boss du dimanche', () => {
 })
 
 describe('récompenses', () => {
-  it('paie plus cher les rangs élevés', () => {
-    expect(xpForVictory(1, false)).toBe(TRAQUE_XP[1])
-    expect(xpForVictory(3, false)).toBe(TRAQUE_XP[3])
+  it('paie plus cher les rangs élevés, en XP et en gemmes', () => {
+    expect(xpForVictory(1)).toBe(TRAQUE_XP[1])
+    expect(xpForVictory(3)).toBe(TRAQUE_XP[3])
+    expect(gemsForVictory(1)).toBe(TRAQUE_GEMMES[1])
+    expect(gemsForVictory(3)).toBe(TRAQUE_GEMMES[3])
   })
 
-  it('double la mise pour le boss en chasse du jour', () => {
-    expect(xpForVictory(2, true)).toBe(TRAQUE_XP[2] * 2)
+  it('ne double plus rien : on ne combat un gardien que ses jours (576)', () => {
+    expect(xpForVictory(2)).toBe(TRAQUE_XP[2])
   })
 
-  it('verse le gros lot pour Nox, sans doubler', () => {
-    expect(xpForVictory(1, true, true)).toBe(NOX_XP)
+  it('verse le gros lot pour Nox', () => {
+    expect(xpForVictory(1, true)).toBe(NOX_XP)
+    expect(gemsForVictory(1, true)).toBe(NOX_GEMMES)
   })
 })
 
@@ -275,10 +281,47 @@ describe('cartes de la feuille Boss', () => {
     expect(card({ victories: 9 }).rank).toBe(3)
   })
 
-  it('annonce l’XP en jeu, bonus du jour compris', () => {
-    expect(card({}).xp).toBe(TRAQUE_XP[1] * 2) // Delta chasse le lundi
+  it('annonce l’XP et les gemmes en jeu, sans bonus du jour', () => {
+    expect(card({}).xp).toBe(TRAQUE_XP[1])
+    expect(card({}).gemmes).toBe(TRAQUE_GEMMES[1])
     expect(card({}, GRAMMATORK).xp).toBe(TRAQUE_XP[1])
     expect(card({}, GRAMMATORK).backOn).toBe('mardi')
+  })
+
+  it('un gardien ne se traque que SON jour : les autres, il est indisponible, sans jauge (576)', () => {
+    // Delta : le lundi. Grammatork : le mardi — un lundi, il se repose.
+    expect(card({ points: 50 }).status).toBe('traque')
+    const grammatork = card({ points: 50 }, GRAMMATORK)
+    expect(grammatork.status).toBe('indisponible')
+    expect(grammatork.hint).toBe('Revient mardi')
+    expect(grammatork.points).toBe(0)
+    expect(grammatork.percent).toBe(0)
+    // Le week-end, tout le monde se traque.
+    expect(card({ points: 50 }, GRAMMATORK, SAMEDI).status).toBe('traque')
+    // Sans jour connu, pas d'indisponibilité : le statut ne dit que la fenêtre.
+    expect(gaugeStatus({ ...emptyGauge('grammatork'), points: TRAQUE_SEUIL }, T0)).toBe('traque')
+  })
+
+  it('la jauge repart de zéro chaque nuit : seuls les points DU JOUR comptent (576)', () => {
+    const HIER = '2026-07-26'
+    // Crédité aujourd'hui : les points sont bons. Crédité hier : la nuit les a effacés.
+    expect(card({ points: 80, dayKey: LUNDI }).points).toBe(80)
+    expect(card({ points: 80, dayKey: HIER }).points).toBe(0)
+    expect(card({ points: 80, dayKey: HIER }).status).toBe('traque')
+    // Jour inconnu (ligne jamais créditée) : on fait confiance aux points lus.
+    expect(card({ points: 80 }).points).toBe(80)
+    // Sorti hier soir, fenêtre encore ouverte : le combat ne connaît pas la nuit.
+    const tard = card({ points: TRAQUE_SEUIL, dayKey: HIER, debusqueAt: '2026-07-27T17:30:00.000Z' })
+    expect(tard.status).toBe('debusque')
+    expect(tard.percent).toBe(100)
+    // Fenêtre passée HIER : pas « recouché à la moitié », la nuit a tout remis à zéro.
+    const passe = card({ points: TRAQUE_SEUIL, dayKey: HIER, debusqueAt: '2026-07-26T10:00:00.000Z' })
+    expect(passe.status).toBe('traque')
+    expect(passe.points).toBe(0)
+    // Fenêtre passée AUJOURD'HUI : recouché, la jauge repart de la moitié.
+    const recouche = card({ points: TRAQUE_SEUIL, dayKey: LUNDI, debusqueAt: '2026-07-27T10:00:00.000Z' })
+    expect(recouche.status).toBe('expire')
+    expect(recouche.points).toBe(TRAQUE_APRES_DEFAITE)
   })
 })
 
@@ -307,14 +350,14 @@ describe('tri et mise en avant', () => {
     expect(sorted[1].points).toBe(90)
   })
 
-  it('la jauge la plus pleine passe avant le boss en chasse du jour', () => {
-    // Lucas, 13/10/2026 : « le plus proche de défier, en pourcentage » — le
-    // ×2 du jour ne fait que départager deux jauges égales.
-    const sorted = sortCards([
-      { ...make(DELTA, 20), enChasse: true },
-      make(GRAMMATORK, 52),
-    ])
-    expect(sorted.map((c) => c.points)).toEqual([52, 20])
+  it('entre deux gardiens du jour, la jauge la plus pleine passe devant', () => {
+    // Lucas, 13/10/2026 : « le plus proche de défier, en pourcentage ». Delta et
+    // Imperator sortent tous deux le lundi ; Grammatork, lui, se repose — en
+    // queue, quelle que soit sa jauge (la nuit l'a remise à zéro).
+    const IMPERATOR = bossById('imperator')!
+    const sorted = sortCards([make(DELTA, 20), make(GRAMMATORK, 52), make(IMPERATOR, 52)])
+    expect(sorted.map((c) => c.boss.id)).toEqual(['imperator', 'delta', 'grammatork'])
+    expect(sorted.map((c) => c.points)).toEqual([52, 20, 0])
   })
 
   it('entre deux boss sortis, le plus pressé d’abord ; recouché depuis, il redescend', () => {
@@ -331,6 +374,18 @@ describe('tri et mise en avant', () => {
       sortCards([presse, make(DELTA, 40), tranquille], plusTard).map((c) => c.boss.id),
     ).toEqual(['grammatork', 'delta', 'delta'])
     expect(sortCards([presse, make(DELTA, 40)], plusTard)[0].points).toBe(TRAQUE_SEUIL)
+  })
+
+  it('range les gardiens INDISPONIBLES en queue, derrière ceux du jour (576)', () => {
+    const sorted = sortCards([
+      make(GRAMMATORK, 0), // lundi : Grammatork se repose
+      make(DELTA, 40),
+      make(DELTA, TRAQUE_SEUIL, '2026-07-27T17:30:00.000Z'),
+    ])
+    expect(sorted.map((c) => c.status)).toEqual(['debusque', 'traque', 'indisponible'])
+    expect(readyCount(sorted)).toBe(1)
+    // Personne dehors : pas de mise en avant, même avec une jauge pleine.
+    expect(featuredCard([make(DELTA, 90)])).toBeNull()
   })
 
   it('compte les boss sortis pour la pastille de la tuile', () => {
@@ -399,6 +454,7 @@ describe('normalisation des lignes de base', () => {
         victories: 2,
         attempts: 1,
         debusque_at: '2026-07-27T18:00:00.000Z',
+        day_key: '2026-07-27',
       }),
     ).toEqual({
       bossId: 'delta',
@@ -407,6 +463,7 @@ describe('normalisation des lignes de base', () => {
       victories: 2,
       attempts: 1,
       debusqueAt: '2026-07-27T18:00:00.000Z',
+      dayKey: '2026-07-27',
     })
   })
 
@@ -439,6 +496,7 @@ describe('normalisation des lignes de base', () => {
       victories: 0,
       attempts: 0,
       debusqueAt: null,
+      dayKey: null,
     })
   })
 })
@@ -492,12 +550,23 @@ describe("rideau d'apparition", () => {
 })
 
 describe('accord avec le catalogue des boss', () => {
-  it('fait chasser des boss qui existent vraiment', () => {
-    for (const day of [LUNDI, MARDI, MERCREDI, '2026-07-30', '2026-07-31']) {
-      const bosses = chasseOfDay(day)
-      expect(bosses).toHaveLength(2)
-      for (const b of bosses) expect(bossById(b.id)).toBeDefined()
-    }
+  it('fait sortir des boss qui existent vraiment — chacun UN jour de semaine, Nox le dimanche (576)', () => {
+    const semaine = [LUNDI, MARDI, MERCREDI, '2026-07-30', '2026-07-31'].map((day) =>
+      chasseOfDay(day).map((b) => b.id),
+    )
+    // Trois gardiens par jour, quatre le vendredi : les seize du catalogue.
+    expect(semaine.map((ids) => ids.length)).toEqual([3, 3, 3, 3, 4])
+    const tous = semaine.flat()
+    expect(new Set(tous).size).toBe(tous.length)
+    for (const id of tous) expect(bossById(id)).toBeDefined()
+    // Chaque gardien du catalogue a son jour — sauf Nox, qui n'a que le dimanche.
+    const catalogue = ALL_BOSSES.map((b) => b.id).filter((id) => bossById(id) !== undefined && id !== 'nox')
+    expect([...tous].sort()).toEqual([...catalogue].sort())
+    expect(isEnChasse('nox', SAMEDI)).toBe(false)
+    expect(isEnChasse('nox', DIMANCHE)).toBe(true)
+    expect(isEnChasse('nox', LUNDI)).toBe(false)
+    // Le week-end, tout le monde (sauf Nox le samedi) est disponible.
+    for (const id of tous) expect(isEnChasse(id, SAMEDI)).toBe(true)
   })
 
   it('chasse bien le gardien de la matière annoncée', () => {

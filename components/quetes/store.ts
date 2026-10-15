@@ -85,3 +85,21 @@ export function marquerEncaissees(ids: readonly string[], coffre: boolean): void
 export function semerQuetes(quetes: QuetesDuJour | null, feuilleOuverte = false): void {
   publier({ quetes, feuilleOuverte })
 }
+
+// --- L'encaisseur de démonstration (aperçu /dev/quetes, développement seulement) ---
+// Sans compte, les actions serveur refusent : l'aperçu pose ici un encaisseur
+// qui répond comme le serveur (après un temps de réponse simulé), pour qu'on
+// puisse jouer la vague d'éclairs quête après quête.
+
+export type ReponseEncaissement = { claimed: boolean; gems: number; xp: number; allDone: boolean }
+type EncaisseurDemo = (cible: string) => Promise<ReponseEncaissement>
+
+let encaisseurDemo: EncaisseurDemo | null = null
+
+export function poserEncaisseurDemo(f: EncaisseurDemo | null): void {
+  encaisseurDemo = f
+}
+
+export function lireEncaisseurDemo(): EncaisseurDemo | null {
+  return encaisseurDemo
+}

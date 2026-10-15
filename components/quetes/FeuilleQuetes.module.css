@@ -95,7 +95,87 @@
   }
 }
 
+
+/* --- L'encaissement, une quête à la fois (14/10/2026) ---------------------- */
+/* La ligne qu'on vient d'encaisser : un éclat d'or la balaie, puis s'efface. */
+.ligneEclate {
+  overflow: hidden;
+}
+.eclatOr {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    color-mix(in oklch, var(--highlight), transparent 40%) 45%,
+    color-mix(in oklch, var(--highlight), white 30%) 50%,
+    color-mix(in oklch, var(--highlight), transparent 40%) 55%,
+    transparent 100%
+  );
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: balaie 0.75s cubic-bezier(0.3, 0.6, 0.3, 1) both;
+}
+/* La coche qui remplace la pièce : elle claque, cerclée d'une onde. */
+.cocheEclate {
+  animation: pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+/* Le « +30 » qui monte de la pièce et s'évanouit. */
+.plusFlottant {
+  position: absolute;
+  left: 50%;
+  top: -0.25rem;
+  pointer-events: none;
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--foreground);
+  white-space: nowrap;
+  text-shadow:
+    0 0 6px var(--card),
+    0 0 2px var(--card);
+  animation: monte 1.1s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}
+.plusCoffre {
+  top: 0;
+  font-size: 1.6rem;
+}
+/* Le disque du coffre bat quand il n'attend plus que d'être ouvert. */
+.disqueAppel {
+  animation: respire 1.4s ease-in-out infinite;
+}
+/* Le coffre ouvert bondit, une fois. */
+.coffreSaute {
+  transform-origin: 50% 90%;
+  animation: bondit 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+@keyframes balaie {
+  0% { opacity: 0; transform: translateX(-100%); }
+  15% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(100%); }
+}
+@keyframes monte {
+  0% { opacity: 0; transform: translate(-50%, 8px) scale(0.6); }
+  20% { opacity: 1; transform: translate(-50%, -6px) scale(1.15); }
+  100% { opacity: 0; transform: translate(-50%, -38px) scale(1); }
+}
+@keyframes respire {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+@keyframes bondit {
+  0% { transform: scale(1); }
+  35% { transform: scale(1.18) translateY(-6px); }
+  100% { transform: scale(1); }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .eclatOr,
+  .cocheEclate,
+  .plusFlottant,
+  .disqueAppel,
+  .coffreSaute,
   .medaillon[data-done='true'],
   .coffreTremble {
     animation: none;

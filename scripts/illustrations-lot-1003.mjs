@@ -88,7 +88,9 @@ async function paire(srcA, srcB, destA, destB, cote, marge = 0.04) {
 }
 
 fs.mkdirSync('public/images/niveau', { recursive: true })
-for (const id of ['nox', 'mecatron', 'coach-turbo']) {
+// nox : son buste est la miniature de Lucas détourée par le service d'images
+// (public/images/boss/nox-v2.webp, 14/10/2026) — il ne se refait plus ici.
+for (const id of ['mecatron', 'coach-turbo']) {
   // coach-turbo : nouveau buste le 14/10/2026, servi sous -v2 (cache de l'optimiseur).
   const dest = id === 'coach-turbo' ? 'coach-turbo-v2' : id
   await detoure(`assets-sources/boss/${id}.png`, `public/images/boss/${dest}.webp`, 1024, 0.02)

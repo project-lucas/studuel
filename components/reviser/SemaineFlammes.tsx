@@ -6,11 +6,8 @@ import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { quandLaScenePrete } from '@/lib/scene-prete'
 import {
-  PAS_ALLUMAGE_MS,
   enSerie,
   etatDuJour,
-  geometrieMeche,
-  mechesDeLaSemaine,
   phraseSemaine,
   retardAllumage,
   semaineParfaite,
@@ -72,7 +69,6 @@ export default function SemaineFlammes({
 }) {
   const parfaite = semaineParfaite(week)
   const feu = enSerie(week, streak)
-  const meches = mechesDeLaSemaine(week)
   const lundi = weekDates[0] ?? ''
 
   // L'ALLUMAGE ATTEND LA SCÈNE (lib/scene-prete) : rendu sous le rideau de
@@ -153,32 +149,8 @@ export default function SemaineFlammes({
       </div>
 
       <div className={s.piste}>
-        {meches.map((m) => {
-          const g = geometrieMeche(m)
-          const debut = retardAllumage(week, m.debut)
-          const duree = (m.fin - m.debut) * PAS_ALLUMAGE_MS
-          return (
-            <span
-              key={m.debut}
-              aria-hidden="true"
-              className={s.meche}
-              style={{ left: `${g.gauche}%`, width: `${g.largeur}%` }}
-            >
-              <span
-                className={s.mecheFeu}
-                style={{ animationDelay: `${debut}ms`, animationDuration: `${duree}ms` }}
-              />
-              {parfaite ? <span className={s.reflet} /> : null}
-              <span
-                className={s.course}
-                style={{ animationDelay: `${debut}ms`, animationDuration: `${duree}ms` }}
-              >
-                <span className={s.etincelle} />
-              </span>
-            </span>
-          )
-        })}
-
+        {/* Plus de mèche entre les flammes (14/10/2026, Lucas : « la bande entre
+            les flammes n’est pas nécessaire, retire-la ») : les flammes suffisent. */}
         <ul className={s.jetons}>
           {week.map((d, i) => {
             const etat = etatDuJour(d)

@@ -2,8 +2,9 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Flame, Hourglass, Swords, Star } from 'lucide-react'
+import { Hourglass, Moon, Swords } from 'lucide-react'
 import XpIcon from '@/components/ui/XpIcon'
+import GemIcon from '@/components/ui/GemIcon'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { CLOCK_STEP_MS, useClock } from '@/lib/use-clock'
@@ -40,9 +41,13 @@ import s from './BossSheet.module.css'
  * travail, pas un mode de jeu de plus. La feuille s'ouvre en grand pop-up
  * crème (SheetShell `format="popup"`), pas en page.
  *
- * Le gain est de l'XP (557 : la gemme est réservée aux épreuves notées),
- * doublée le jour de chasse du gardien — « gemmes doublées » était un reste
- * d'avant la 557.
+ * LA RARETÉ (576, 14/10/2026) : un gardien n'est disponible que SES jours
+ * (le week-end, tous ; Nox le dimanche), sa jauge ne monte que ces jours-là et
+ * repart de zéro chaque nuit — « pas de boss rempli à l'avance ». Un gardien
+ * indisponible porte un RUBAN par-dessus sa scène (Lucas : « une bannière
+ * par-dessus les bannières de boss pour signaler qu'il n'est pas disponible
+ * aujourd'hui »), sa scène s'éteint, sa jauge disparaît. Le gain est de l'XP
+ * fixe ET des gemmes (5 · 8 · 10 par rang, Nox 20, 40 par semaine).
  *
  * Les cartes arrivent résolues du serveur (lib/traque-server.fetchTraqueBoard) ;
  * ce composant ne recalcule QUE le compte à rebours, qui se périmerait sinon
@@ -83,8 +88,10 @@ export default function BossSheet({ cards }: { cards: TraqueCard[] }) {
       <p className="px-0.5 text-[0.8rem] leading-snug font-bold text-muted-foreground">
         Chaque matière a son gardien.{' '}
         <strong className="text-foreground">Il ne se choisit pas : il se débusque.</strong>{' '}
-        Révise (~{TRAQUE_MINUTES_EQUIV} min) pour remplir sa jauge — à 100 % il sort, et tu
-        as <strong className="text-foreground">une heure</strong> pour l&apos;abattre.
+        Le jour où il sort, révise (~{TRAQUE_MINUTES_EQUIV} min) pour remplir sa jauge — à
+        100 % il surgit, et tu as <strong className="text-foreground">une heure</strong> pour
+        l&apos;abattre.{' '}
+        <strong className="text-foreground">La jauge repart de zéro chaque nuit.</strong>
       </p>
 
       {/* LE PREMIER BLOC EST LE GARDIEN LE PLUS PROCHE D'ÊTRE DÉFIÉ (Lucas,
@@ -105,6 +112,8 @@ export default function BossSheet({ cards }: { cards: TraqueCard[] }) {
 
 function Taniere({ card, now }: { card: TraqueCard; now: number | null }) {
   const ready = card.status === 'debusque'
+  // LA RARETÉ (576) : pas son jour — un ruban sur la scène, pas de jauge.
+  const repos = card.status === 'indisponible'
   // Compte à rebours vivant : recalculé depuis la borne de fin. Tant que le
   // client n'a pas pris la main (SSR), on affiche la valeur du serveur.
   const remaining =
@@ -113,9 +122,8 @@ function Taniere({ card, now }: { card: TraqueCard; now: number | null }) {
   // un combat qui serait refusé par le serveur.
   const expired = ready && remaining <= 0
   const libre = ready && !expired
-  const chasse = !libre && !expired && card.enChasse
-  // Le gardien qui rôde n'est qu'une ombre ; celui du jour reste en lumière.
-  const ombre = !libre && !card.enChasse
+  // Le gardien indisponible n'est qu'une ombre ; ceux du jour restent en lumière.
+  const ombre = !libre && (repos || !card.enChasse)
   const { boss } = card
 
   return (
@@ -123,6 +131,7 @@ function Taniere({ card, now }: { card: TraqueCard; now: number | null }) {
       className={s.taniere}
       data-libre={libre ? '' : undefined}
       data-ombre={ombre ? '' : undefined}
+      data-repos={repos ? '' : undefined}
     >
       {/* LA SCÈNE : le nom, et rien d'autre. */}
       <div className={s.scene}>
@@ -148,6 +157,10 @@ function Taniere({ card, now }: { card: TraqueCard; now: number | null }) {
           />
         ) : null}
         <h3 className={cn(s.nom, 'font-heading font-extrabold')}>{boss.name}</h3>
+        {/* LE RUBAN (576) : barré par-dessus la scène quand ce n'est pas son jour. */}
+        {repos ? (
+          <span className={cn(s.ruban, 'font-heading font-extrabold')}>Indisponible aujourd’hui</span>
+        ) : null}
       </div>
 
       <div className={s.bas}>
@@ -156,7 +169,7 @@ function Taniere({ card, now }: { card: TraqueCard; now: number | null }) {
         <div className={s.legende}>
           <span
             className={cn(s.etat, 'font-heading font-extrabold')}
-            data-or={libre || chasse ? '' : undefined}
+            data-or={libre ? '' : undefined}
           >
             {libre ? (
               <>
@@ -165,10 +178,10 @@ function Taniere({ card, now }: { card: TraqueCard; now: number | null }) {
               </>
             ) : expired ? (
               <>Il s’est recouché — sa jauge repart de la moitié</>
-            ) : chasse ? (
+            ) : repos ? (
               <>
-                <Flame className="size-3.5 shrink-0" strokeWidth={2.6} aria-hidden="true" />
-                En chasse aujourd’hui · XP ×2
+                <Moon className="size-3.5 shrink-0" strokeWidth={2.6} aria-hidden="true" />
+                Revient {card.backOn ?? 'bientôt'} · à traquer ce jour-là
               </>
             ) : (
               <>
@@ -176,20 +189,25 @@ function Taniere({ card, now }: { card: TraqueCard; now: number | null }) {
               </>
             )}
           </span>
-          <span className={cn(s.pct, 'font-heading font-extrabold tabular-nums')}>
-            {card.percent} %
-          </span>
+          {repos ? null : (
+            <span className={cn(s.pct, 'font-heading font-extrabold tabular-nums')}>
+              {card.percent} %
+            </span>
+          )}
         </div>
-        <div
-          className={s.piste}
-          role="progressbar"
-          aria-label={`Traque de ${boss.name} : ${card.percent} %`}
-          aria-valuemin={0}
-          aria-valuemax={100}
-          aria-valuenow={card.percent}
-        >
-          <div className={s.remplissage} style={{ width: `${Math.max(4, card.percent)}%` }} />
-        </div>
+        {/* Pas de jauge pour un gardien indisponible : elle ne bougerait pas. */}
+        {repos ? null : (
+          <div
+            className={s.piste}
+            role="progressbar"
+            aria-label={`Traque de ${boss.name} : ${card.percent} %`}
+            aria-valuemin={0}
+            aria-valuemax={100}
+            aria-valuenow={card.percent}
+          >
+            <div className={s.remplissage} style={{ width: `${Math.max(4, card.percent)}%` }} />
+          </div>
+        )}
 
         <div className={s.actions}>
           {libre ? (
@@ -211,23 +229,24 @@ function Taniere({ card, now }: { card: TraqueCard; now: number | null }) {
             </Link>
           )}
 
-          {/* Ce qui est en jeu : de l'XP, DORÉE le jour de chasse (×2). */}
+          {/* Ce qui est en jeu : de l'XP et des GEMMES (576) — en or tant que le
+              gardien est à prendre aujourd'hui, éteint quand il se repose. */}
           <span
             className={cn(s.xp, 'font-heading font-extrabold tabular-nums')}
-            data-or={chasse ? '' : undefined}
-            aria-label={`${card.xp} XP en cas de victoire${chasse ? ', doublée aujourd’hui' : ''}`}
+            data-or={!repos && !expired ? '' : undefined}
+            aria-label={`${card.xp} XP et ${card.gemmes} gemmes en cas de victoire`}
           >
             <XpIcon className="size-4" />
             {card.xp}
+            <span aria-hidden="true" className="mx-1 opacity-50">·</span>
+            <GemIcon className="size-4" />
+            {card.gemmes}
           </span>
         </div>
 
-        {/* Le rituel hebdomadaire : « le mardi c'est Grammatork ». */}
-        {!card.enChasse && !expired && card.backOn ? (
-          <p className={s.note}>
-            <Star className="size-3 shrink-0" aria-hidden="true" />
-            XP ×2 {card.backOn} · rang max {RANK_LABELS[MAX_BOSS_RANK]}
-          </p>
+        {/* Le rituel hebdomadaire : « le mardi c'est Grammatork » — et jusqu'où il monte. */}
+        {repos ? (
+          <p className={s.note}>Rang max {RANK_LABELS[MAX_BOSS_RANK]} · le week-end, tous les gardiens sortent</p>
         ) : null}
       </div>
     </article>

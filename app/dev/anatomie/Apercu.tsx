@@ -4,35 +4,55 @@ import { useState } from 'react'
 import { HeartPulse } from 'lucide-react'
 import ModeStage from '@/components/defi/ModeStage'
 import AnatomyBoard, { AnatomyCorrection } from '@/components/jeux/AnatomyBoard'
-import {
-  ORGANS,
-  ZONES,
-  organsForPalier,
-  type Organ,
-  type ZonePlanche,
-} from '@/lib/jeux/anatomie'
+import { ORGANS, PLANCHE_ORGANES, organsForPalier } from '@/lib/jeux/anatomie'
+import { MUSCLES, PLANCHES_MUSCLES, musclesForPalier } from '@/lib/jeux/muscles'
+import { questionPour, type Cible as Organ, type Planche, type ZonePlanche } from '@/lib/jeux/planche'
 import { palierTitle, type PalierLevel } from '@/lib/jeux/paliers'
 import { cn } from '@/lib/utils'
 
-/** La planche jouable à vide : on choisit l'organe, on touche, on voit la correction. */
+/** Les deux planches à désigner : les organes (SVT) et les muscles (Sport, 14/10/2026). */
+const PLANCHES: Record<
+  'organes' | 'muscles',
+  {
+    titre: string
+    cibles: readonly Organ[]
+    /** La planche où chercher une cible (sa vue, pour l'écorché de face et de dos). */
+    plancheDe: (cible: Organ) => Planche
+    duPalier: (l: PalierLevel) => Organ[]
+  }
+> = {
+  organes: { titre: 'Anatomie express', cibles: ORGANS, plancheDe: () => PLANCHE_ORGANES, duPalier: organsForPalier },
+  muscles: {
+    titre: 'Muscles express',
+    cibles: MUSCLES,
+    plancheDe: (c) => (c.vue === 'dos' ? PLANCHES_MUSCLES.dos : PLANCHES_MUSCLES.face),
+    duPalier: musclesForPalier,
+  },
+}
+
+/** La planche jouable à vide : on choisit la cible, on touche, on voit la correction. */
 export default function ApercuPlanche({
+  planche: nomPlanche,
   palier,
   cible,
   touche,
   theme,
   scene,
 }: {
+  planche: 'organes' | 'muscles'
   palier: PalierLevel
   cible: string | null
   touche: string | null
   theme: string
   scene: string | null
 }) {
-  const organes = organsForPalier(palier)
-  const premier = ORGANS.find((o) => o.id === cible) ?? organes[0]
+  const { titre, cibles, plancheDe, duPalier } = PLANCHES[nomPlanche]
+  const organes = duPalier(palier)
+  const premier = cibles.find((o) => o.id === cible) ?? organes[0]
   const [target, setTarget] = useState<Organ>(premier)
+  const planche = plancheDe(target)
   const [picked, setPicked] = useState<ZonePlanche | null>(
-    () => ZONES.find((z) => z.id === touche) ?? null,
+    () => plancheDe(premier).zones.find((z) => z.id === touche) ?? null,
   )
   const [revealed, setRevealed] = useState(cible !== null)
 
@@ -44,7 +64,7 @@ export default function ApercuPlanche({
 
   return (
     <ModeStage
-      title="Anatomie express"
+      title={titre}
       Icon={HeartPulse}
       theme={theme}
       scene={scene}
@@ -75,10 +95,11 @@ export default function ApercuPlanche({
         </div>
 
         <h2 className="font-heading mb-3 text-2xl font-extrabold text-balance">
-          Où se trouve {target.name} ?
+          {questionPour(target)} {target.name} ?
         </h2>
 
         <AnatomyBoard
+          planche={planche}
           target={target}
           picked={picked}
           revealed={revealed}

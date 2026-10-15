@@ -6,10 +6,11 @@
    Chaque gardien est SA SCÈNE — la bannière 16:9 qui sert déjà le mode Boss de
    l'arène et le billet de la porte Jeux — et n'y porte que SON NOM, cerné. Tout
    le reste vit dans la bande blanche dessous : l'état en légende, la jauge
-   d'or, le bouton et le gain. Le gardien qui RÔDE n'est qu'une ombre : sa
-   scène s'assombrit (un filtre POSÉ, jamais animé) ; celui du jour (XP ×2)
-   reste en pleine lumière, c'est lui qu'on vient chercher ; le débusqué se
-   cercle d'or. */
+   d'or, le bouton et le gain. Le gardien INDISPONIBLE aujourd'hui (576 : un
+   jour de semaine chacun, le week-end tous) n'est qu'une ombre barrée d'un
+   RUBAN — sa scène s'éteint (un filtre POSÉ, jamais animé), sa jauge
+   disparaît ; ceux du jour restent en pleine lumière, c'est eux qu'on vient
+   chercher ; le débusqué se cercle d'or. */
 
 .taniere {
   --contour: color-mix(in oklch, var(--foreground), black 50%);
@@ -146,4 +147,31 @@
   font-size: 0.68rem;
   font-weight: 700;
   color: var(--muted-foreground);
+}
+
+/* LE RUBAN « Indisponible aujourd'hui » (576, Lucas : « une bannière par-dessus
+   les bannières de boss ») : une écharpe blanche cerclée de violet, en travers
+   de la scène, dans les capitales italiques du Défi. */
+.ruban {
+  position: absolute;
+  top: 50%;
+  right: -6%;
+  left: -6%;
+  z-index: 2;
+  padding: 0.4rem 0 0.45rem;
+  border-top: 3px solid var(--primary);
+  border-bottom: 3px solid var(--primary);
+  background: var(--card);
+  color: var(--primary);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.3);
+  font-size: 0.95rem;
+  font-style: italic;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateY(-50%) rotate(-5deg);
+}
+.taniere[data-repos] .scene img {
+  filter: brightness(0.55) saturate(0.3);
 }

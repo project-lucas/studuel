@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Lightbulb } from 'lucide-react'
@@ -436,7 +437,27 @@ export default function GameTable({
             <p className="mt-5 text-xs font-bold tracking-wide text-[color:var(--jeu-accent)] uppercase">
               {format.lexicon.verb}
             </p>
-            <h2 className="font-heading mt-1 mb-4 text-2xl font-extrabold text-balance">
+            {/* L'ŒUVRE À RECONNAÎTRE (Le Musée) : posée sur son mur, au-dessus
+                de l'énoncé ; la clé la remonte à chaque question (fondu). */}
+            {question.image ? (
+              <div key={question.id} className="animate-in fade-in zoom-in-95 mt-3 flex justify-center duration-300">
+                <Image
+                  src={question.image}
+                  alt={question.imageAlt ?? ''}
+                  width={640}
+                  height={640}
+                  priority
+                  sizes="(max-width: 640px) 80vw, 360px"
+                  className="h-auto max-h-[32dvh] w-auto max-w-full object-contain drop-shadow-[0_10px_18px_rgba(40,20,60,0.28)]"
+                />
+              </div>
+            ) : null}
+            <h2
+              className={cn(
+                'font-heading mt-1 mb-4 font-extrabold text-balance',
+                question.image ? 'mt-3 text-xl' : 'text-2xl',
+              )}
+            >
               {question.prompt}
             </h2>
 

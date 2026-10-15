@@ -33,6 +33,7 @@ export const dynamic = 'force-dynamic'
 //   /dev/programme?matiere=francais    français 1re : quatre rayons
 //   /dev/programme?matiere=histoire-geo  deux disciplines et l'encyclopédie
 //   /dev/programme?matiere=philosophie   une liste à plat, sans numéros
+//   /dev/programme?matiere=arts-plastiques&onglet=jeu   Le Musée, sans gardien
 //   /dev/programme?matiere=svt         (physique-chimie, enseignement-scientifique)
 //   /dev/programme?onglet=exercices    une porte ouverte (jeu, annales, programme:fiches)
 //   /dev/programme?premium=1           un abonné Studuel+ (plus de couronne)
@@ -124,6 +125,13 @@ const DOSSIERS: Record<string, { nom: string; color: string; classe: string; lig
   francais: { nom: 'Français', color: 'red', classe: '1re', lignes: FRANCAIS },
   'histoire-geo': { nom: 'Histoire-Géo', color: 'orange', classe: '3e', lignes: HISTOIRE_GEO },
   philosophie: { nom: 'Philosophie', color: 'purple', classe: 'Tle', lignes: PHILOSOPHIE },
+  // Arts plastiques (14/10/2026) : Le Musée seul dans la porte Jeux, sans gardien (Nox retiré).
+  'arts-plastiques': {
+    nom: 'Arts plastiques',
+    color: 'pink',
+    classe: '4e',
+    lignes: deuxParTheme(['La représentation', 'La matérialité de l’œuvre', 'L’œuvre, l’espace, l’auteur, le spectateur']),
+  },
   svt: {
     nom: 'SVT',
     color: 'green',
@@ -260,6 +268,7 @@ export default async function ApercuProgramme({
           endsAt: null,
           hint: '10 cartes de plus',
           xp: 30,
+          gemmes: 5,
         }
       : null,
     papers: [],

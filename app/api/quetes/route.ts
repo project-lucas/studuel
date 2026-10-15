@@ -1,7 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
-import { queteServie, type QuetesDuJour } from '@/lib/quests'
-import { fetchClaimedQuestIds, fetchQuestViews } from '@/lib/quests-server'
+import { queteServie, questViews, type QuetesDuJour } from '@/lib/quests'
+import { advanceQuests, fetchClaimedQuestIds, fetchQuestViews } from '@/lib/quests-server'
 import { toDayKey } from '@/lib/streak'
 
 // LES QUÊTES DU JOUR, POUR LE BANDEAU (03/10/2026). La pastille « 1/3 » vit
@@ -19,10 +19,19 @@ export async function GET(): Promise<Response> {
   if (!user) return new Response(null, { status: 401 })
 
   const jour = toDayKey(new Date())
-  const [vues, encaissees] = await Promise.all([
+  const [vuesLues, encaissees] = await Promise.all([
     fetchQuestViews(supabase, user.id, jour),
     fetchClaimedQuestIds(supabase, user.id, jour),
   ])
+  // LA MISSION « SE CONNECTER » (577, Lucas : « se connecter, facile, rapide »)
+  // compte ICI, au premier passage du jour : le bandeau relit les quêtes dès le
+  // lancement, sur tous les onglets. Une écriture par jour, jamais plus — la
+  // quête faite, rien ne bouge.
+  let vues = vuesLues
+  if (vues.some((v) => v.def.kind === 'connexion' && !v.done)) {
+    const avance = await advanceQuests(supabase, user.id, { connexions: 1 }, jour)
+    vues = questViews(jour, user.id, avance.progress)
+  }
   const corps: QuetesDuJour = { jour, quetes: vues.map(queteServie), encaissees }
   return Response.json(corps, { headers: { 'Cache-Control': 'no-store' } })
 }

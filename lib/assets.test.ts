@@ -5,7 +5,7 @@ import path from 'node:path'
 import { ALL_BOSSES, portraitBoss } from '@/lib/bosses'
 import { RANK_TIERS } from '@/lib/rank'
 import { subjectVignette } from '@/lib/subject-style'
-import { gameScene, gameTalon, TALON_CADENAS, TALON_DICTEE } from '@/lib/defi/modes-catalog'
+import { gameScene, gameTalon, SCENE_DICTEE, TALON_CADENAS, TALON_DICTEE } from '@/lib/defi/modes-catalog'
 import { GAME_FORMATS } from '@/lib/jeux/formats'
 import { modeImage, modeScene, GAME_MODES } from '@/lib/defi-modes'
 import { SALONS } from '@/lib/jeux/catalog'
@@ -155,8 +155,8 @@ describe('scènes des jeux de salon', () => {
     expect(gameTalon('jeu-fantome')).toBeUndefined()
   })
 
-  it('la dictée et le cadenas Studuel+ ont leur talon', () => {
-    for (const talon of [TALON_DICTEE, TALON_CADENAS]) {
+  it('la dictée et le cadenas Studuel+ ont leur talon, la dictée sa scène', () => {
+    for (const talon of [TALON_DICTEE, TALON_CADENAS, SCENE_DICTEE]) {
       expect(assetExists(talon), `${talon} absent du disque`).toBe(true)
     }
   })

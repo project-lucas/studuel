@@ -137,7 +137,9 @@ describe('salonSubjectFor', () => {
 
   it('rend null pour une matière sans salon — elle ne promet rien', () => {
     expect(salonSubjectFor({ slug: 'emc', name: 'EMC' })).toBeNull()
-    expect(salonSubjectFor({ slug: 'sport', name: 'Sport' })).toBeNull()
+    expect(salonSubjectFor({ slug: 'philosophie', name: 'Philosophie' })).toBeNull()
+    // Sport a son salon depuis le 14/10/2026 (Muscles express), retrouvé par son slug.
+    expect(salonSubjectFor({ slug: 'sport', name: 'EPS' })).toBe('Sport')
   })
 
   it('trouve un salon pour chaque matière du catalogue', () => {

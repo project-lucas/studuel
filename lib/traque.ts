@@ -43,7 +43,8 @@ export const TRAQUE_SEUIL = 100
 /**
  * Plafond de points par jour et par matière. Sans lui, on farme une seule
  * matière toute la journée et le calendrier des boss en chasse ne veut plus
- * rien dire. 150 = une jauge et demie : on peut prendre de l'avance, pas trois.
+ * rien dire. 150 = une jauge et demie : de quoi refaire la moitié perdue sur
+ * une fenêtre manquée — jamais d'avance, la jauge repart de zéro chaque nuit.
  */
 export const TRAQUE_PLAFOND_JOUR = 150
 
@@ -99,12 +100,23 @@ export type TraqueGauge = {
   attempts: number
   /** Instant du débusquage (ISO), null tant qu'il rôde. */
   debusqueAt: string | null
+  /**
+   * Le jour (clé UTC) du dernier crédit — `day_key`. LA JAUGE REPART DE ZÉRO
+   * CHAQUE NUIT (576, Lucas : « la barre de progression se réinitialise à
+   * 0h00, pas de boss rempli à l'avance ») : la base ne la remet à zéro qu'au
+   * prochain crédit, le client doit donc savoir si les points lus sont ceux
+   * d'aujourd'hui. Null : inconnu (ligne jamais créditée) — on fait confiance.
+   */
+  dayKey: string | null
 }
 
 export type TraqueStatus =
   | 'traque' // la jauge monte, le boss rôde
   | 'debusque' // il est sorti, la fenêtre court
   | 'expire' // il s'est recouché : la fenêtre est passée
+  // LA RARETÉ (14/10/2026, Lucas : « comme Genshin Impact ») — un gardien ne
+  // se traque que SES jours ; les autres, sa jauge ne bouge pas :
+  | 'indisponible' // pas son jour : « il revient mardi »
 
 export function emptyGauge(bossId: string): TraqueGauge {
   return {
@@ -114,6 +126,7 @@ export function emptyGauge(bossId: string): TraqueGauge {
     victories: 0,
     attempts: 0,
     debusqueAt: null,
+    dayKey: null,
   }
 }
 
@@ -124,10 +137,30 @@ export function windowEndMs(gauge: TraqueGauge): number | null {
   return Number.isFinite(start) ? start + TRAQUE_FENETRE_MS : null
 }
 
-export function gaugeStatus(gauge: TraqueGauge, nowMs: number): TraqueStatus {
+/**
+ * Les points QUI COMPTENT AUJOURD'HUI. La base remet la jauge à zéro au premier
+ * crédit du jour, pas à minuit : entre les deux, la ligne lue porte encore les
+ * points d'hier. Une fenêtre encore ouverte (sorti à 23 h 50) garde les siens :
+ * le combat, lui, ne connaît pas la nuit.
+ */
+export function pointsDuJour(gauge: TraqueGauge, dayKey: string, nowMs: number): number {
   const end = windowEndMs(gauge)
-  if (end === null) return 'traque'
-  return nowMs < end ? 'debusque' : 'expire'
+  if (end !== null && nowMs < end) return gauge.points
+  if (gauge.dayKey === null || gauge.dayKey === dayKey) return gauge.points
+  return 0
+}
+
+export function gaugeStatus(gauge: TraqueGauge, nowMs: number, dayKey?: string): TraqueStatus {
+  const end = windowEndMs(gauge)
+  if (end !== null && nowMs < end) return 'debusque'
+  // Pas son jour : rien ne bouge, il revient tel jour (576).
+  if (dayKey !== undefined && !isEnChasse(gauge.bossId, dayKey)) return 'indisponible'
+  // Fenêtre passée AUJOURD'HUI : il s'est recouché, la jauge repart de la
+  // moitié. Passée un autre jour, la nuit a déjà tout remis à zéro.
+  if (end !== null && (dayKey === undefined || gauge.dayKey === null || gauge.dayKey === dayKey)) {
+    return 'expire'
+  }
+  return 'traque'
 }
 
 /** Millisecondes restantes avant que le boss ne se recouche (0 si passé). */
@@ -345,11 +378,19 @@ export function feedChapters(
 
 // ------------------------------------------------- le calendrier de la chasse
 //
-// La jauge monte TOUS LES JOURS, dans TOUTES les matières : on ne punit jamais
-// un élève qui révise la matière de son contrôle hors du « bon » jour. Ce qui
-// tourne, c'est le BONUS de gemmes. Calendrier fixe et affiché : le rituel
-// (« le mardi c'est Grammatork ») vaut mieux qu'une rotation maligne et
-// illisible. Chaque jour mêle une scientifique et une littéraire ou une langue.
+// LA RARETÉ (14/10/2026, Lucas : « comme Genshin Impact, créer la rareté : tous
+// les boss ne sont pas disponibles chaque jour, certains le lundi, d'autres le
+// mardi, et le week-end chacun est disponible » ; puis « la barre de
+// progression se réinitialise à 0h00, pas de boss rempli à l'avance, il doit
+// travailler le jour J où le boss est dispo »). Un gardien a UN jour de
+// semaine ; le week-end, tous sortent ; Nox, le dimanche seulement. SA JAUGE NE
+// MONTE QUE CE JOUR-LÀ et repart de zéro chaque nuit (00:00 UTC) : on ne
+// prépare pas un gardien la veille, on le traque le jour même — réviser une
+// autre matière hors de son jour reste utile à tout le reste (XP, quêtes,
+// maîtrise), simplement pas à sa jauge. Jusqu'au 13/10 ce calendrier n'était
+// qu'un bonus ×2 d'XP. Fixe et affiché : le rituel (« le mardi c'est
+// Grammatork ») vaut mieux qu'une rotation maligne et illisible. Chaque jour
+// mêle des sciences et des lettres ou des langues. Miroir de `traque_en_chasse` (576).
 
 /** Lundi = 0 (convention du projet). */
 export function weekdayIndex(dayKey: string): number {
@@ -369,11 +410,11 @@ const WEEKDAY_NAMES = [
 
 /** Boss en chasse par jour de semaine (ids du catalogue lib/bosses). */
 const CHASSE_BY_WEEKDAY: readonly (readonly string[])[] = [
-  ['delta', 'imperator'], // lundi — Maths · Latin
-  ['grammatork', 'plasma'], // mardi — Français · Physique-Chimie
-  ['chronos', 'bigben'], // mercredi — Histoire-Géo (Atlas) · Anglais
-  ['mitochondrix', 'eltoro'], // jeudi — SVT (Sylvarok) · Espagnol
-  ['kaiser-fang', 'krach'], // vendredi — Allemand · SES
+  ['delta', 'imperator', 'nova'], // lundi — Maths · Latin · Enseignement scientifique
+  ['grammatork', 'plasma', 'fiscus'], // mardi — Français · Physique-Chimie · Gestion
+  ['chronos', 'bigben', 'sphinx'], // mercredi — Histoire-Géo (Atlas) · Anglais · Philosophie
+  ['mitochondrix', 'eltoro', 'mecatron'], // jeudi — SVT (Sylvarok) · Espagnol · Technologie
+  ['kaiser-fang', 'krach', 'coach-turbo', 'bugzilla'], // vendredi — Allemand · SES · Sport · NSI
   [], // samedi — rattrapage : TOUS (cf. isEnChasse)
   [], // dimanche — rattrapage : TOUS + Nox
 ]
@@ -383,8 +424,9 @@ export function isRattrapage(dayKey: string): boolean {
   return weekdayIndex(dayKey) >= 5
 }
 
-/** Ce boss porte-t-il le bonus ×2 aujourd'hui ? */
+/** Ce boss est-il DISPONIBLE aujourd'hui — son jour, ou le week-end (Nox : le dimanche) ? */
 export function isEnChasse(bossId: string, dayKey: string): boolean {
+  if (bossId === NOX_BOSS_ID) return weekdayIndex(dayKey) === 6
   if (isRattrapage(dayKey)) return true
   return CHASSE_BY_WEEKDAY[weekdayIndex(dayKey)].includes(bossId)
 }
@@ -398,7 +440,7 @@ export function chasseOfDay(dayKey: string): Boss[] {
   })
 }
 
-/** « mardi » — le jour où ce boss redevient en chasse. Null s'il l'est déjà. */
+/** « mardi » — le jour où ce boss redevient disponible. Null s'il l'est déjà. */
 export function nextChasseDay(bossId: string, dayKey: string): string | null {
   if (isEnChasse(bossId, dayKey)) return null
   const today = weekdayIndex(dayKey)
@@ -431,9 +473,12 @@ export function noxUnlocked(weekVictories: number, dayKey: string): boolean {
 // ------------------------------------------------------------ les récompenses
 
 /**
- * XP d'une victoire, par rang du boss. Miroir de `traque_victoire` (557) :
- * c'étaient des gemmes (10 / 15 / 20) jusqu'au 04/10/2026 — « le gain de
- * gemmes doit être très rare » —, c'est désormais de l'XP, trois fois plus.
+ * XP d'une victoire, par rang du boss. Miroir de `traque_victoire` (576) :
+ * c'étaient des gemmes (10 / 15 / 20) jusqu'au 04/10/2026, puis de l'XP doublée
+ * le jour de chasse (557). Depuis la rareté du 14/10/2026 on ne combat un
+ * gardien QUE ses jours : plus de ×2, l'XP est fixe — et la victoire rend des
+ * GEMMES (Lucas : « eux permettent de gagner des gemmes »), les gardiens étant
+ * la source de gemmes du jeu, dans un plafond hebdomadaire.
  */
 export const TRAQUE_XP: Readonly<Record<BossRank, number>> = {
   1: 30,
@@ -441,19 +486,28 @@ export const TRAQUE_XP: Readonly<Record<BossRank, number>> = {
   3: 60,
 }
 
-/** Nox, le boss de la semaine : 90 XP, jamais doublé. */
+/** Nox, le boss du dimanche : 90 XP. */
 export const NOX_XP = 90
 
-/** Bonus du boss en chasse du jour. */
-export const CHASSE_MULTIPLIER = 2
+/** Les gemmes d'une victoire, par rang — miroir de `traque_victoire` (576). */
+export const TRAQUE_GEMMES: Readonly<Record<BossRank, number>> = {
+  1: 5,
+  2: 8,
+  3: 10,
+}
 
-export function xpForVictory(
-  rank: BossRank,
-  enChasse: boolean,
-  isNox = false,
-): number {
-  const base = isNox ? NOX_XP : TRAQUE_XP[rank]
-  return enChasse && !isNox ? base * CHASSE_MULTIPLIER : base
+/** Nox : 20 gemmes. */
+export const NOX_GEMMES = 20
+
+/** Plafond hebdomadaire des gemmes de la Traque (lundi UTC) — miroir de `traque_gems_week_cap` (576). */
+export const TRAQUE_GEMMES_SEMAINE_MAX = 40
+
+export function xpForVictory(rank: BossRank, isNox = false): number {
+  return isNox ? NOX_XP : TRAQUE_XP[rank]
+}
+
+export function gemsForVictory(rank: BossRank, isNox = false): number {
+  return isNox ? NOX_GEMMES : TRAQUE_GEMMES[rank]
 }
 
 // ------------------------------------------------------------- vue d'une carte
@@ -473,7 +527,7 @@ export type TraqueCard = {
   rank: BossRank
   /** Combats perdus depuis qu'il est sorti — la fenêtre, elle, court toujours. */
   attempts: number
-  /** Le bonus ×2 du jour s'applique. */
+  /** Disponible aujourd'hui : son jour, ou le week-end. */
   enChasse: boolean
   /** Jour de retour en chasse (« mercredi ») — null s'il chasse aujourd'hui. */
   backOn: string | null
@@ -489,6 +543,8 @@ export type TraqueCard = {
   hint: string
   /** XP en jeu si on le bat maintenant (557). */
   xp: number
+  /** Gemmes en jeu si on le bat (576). */
+  gemmes: number
 }
 
 function rankOf(victories: number): BossRank {
@@ -503,12 +559,19 @@ export function traqueCard(
   nowMs: number,
   subjectSlug = '',
 ): TraqueCard {
-  const status = gaugeStatus(gauge, nowMs)
+  const status = gaugeStatus(gauge, nowMs, dayKey)
   const enChasse = isEnChasse(boss.id, dayKey)
   const rank = rankOf(gauge.victories)
   // Une fenêtre expirée laisse la jauge pleine à l'écran : le boss est reparti,
-  // la jauge repart de la moitié (la base l'écrit à la prochaine lecture).
-  const points = status === 'expire' ? TRAQUE_APRES_DEFAITE : gauge.points
+  // la jauge repart de la moitié (la base l'écrit à la prochaine lecture). Un
+  // gardien indisponible n'a pas de jauge aujourd'hui ; les autres jours, on
+  // ne montre que les points DU JOUR (la nuit remet à zéro).
+  const points =
+    status === 'expire'
+      ? TRAQUE_APRES_DEFAITE
+      : status === 'indisponible'
+        ? 0
+        : pointsDuJour(gauge, dayKey, nowMs)
   return {
     boss,
     subject,
@@ -526,8 +589,11 @@ export function traqueCard(
     hint:
       status === 'debusque'
         ? `Il disparaît dans ${countdownLabel(remainingMs(gauge, nowMs))}`
-        : teaseLabel(boss.name, points),
-    xp: xpForVictory(rank, enChasse, boss.id === NOX_BOSS_ID),
+        : status === 'indisponible'
+          ? `Revient ${nextChasseDay(boss.id, dayKey) ?? 'bientôt'}`
+          : teaseLabel(boss.name, points),
+    xp: xpForVictory(rank, boss.id === NOX_BOSS_ID),
+    gemmes: gemsForVictory(rank, boss.id === NOX_BOSS_ID),
   }
 }
 
@@ -546,7 +612,9 @@ export function traqueCard(
 export function sortCards(cards: readonly TraqueCard[], nowMs?: number): TraqueCard[] {
   const libre = (c: TraqueCard) =>
     c.status === 'debusque' && (nowMs === undefined || c.endsAt === null || c.endsAt > nowMs)
-  const weight = (c: TraqueCard) => (libre(c) ? 0 : 1)
+  // Sorti d'abord, puis les gardiens du jour (jauge la plus pleine en tête),
+  // et en queue ceux qui ne sont pas disponibles aujourd'hui (576).
+  const weight = (c: TraqueCard) => (libre(c) ? 0 : c.status === 'indisponible' ? 2 : 1)
   // Un gardien RECOUCHÉ (fenêtre passée) affiche encore 100 %, mais sa jauge
   // « repart de la moitié » : c'est à cette moitié qu'il se range, pas devant
   // une jauge à 52 % qui, elle, est vraiment proche de sortir.
@@ -593,5 +661,7 @@ export function normalizeGauge(raw: unknown): TraqueGauge | null {
     victories: clampInt(o.victories),
     attempts: clampInt(o.attempts),
     debusqueAt: typeof o.debusque_at === 'string' ? o.debusque_at : null,
+    // `day_key` arrive en DATE (« 2026-10-14 ») : la clé UTC du projet telle quelle.
+    dayKey: typeof o.day_key === 'string' && o.day_key.length >= 10 ? o.day_key.slice(0, 10) : null,
   }
 }

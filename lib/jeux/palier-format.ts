@@ -17,6 +17,9 @@ import { MIN_WAVE_SECONDS, type GameFormat } from '@/lib/jeux/formats'
 import { DEFAULT_PALIER, palierDef, type PalierLevel } from '@/lib/jeux/paliers'
 import { CALCUL_TIER_BRIEF } from '@/lib/jeux/calcul-mental'
 import { CONJUGAISON_TIER_BRIEF } from '@/lib/jeux/conjugaison-eclair'
+import { INSTRUMENT_TIER_BRIEF } from '@/lib/jeux/classe-instrument'
+import { COMPOSE_TIER_BRIEF } from '@/lib/jeux/qui-a-compose'
+import { MUSEE_TIER_BRIEF } from '@/lib/jeux/le-musee'
 
 /**
  * Les trois coefficients d'un palier :
@@ -271,4 +274,7 @@ export function hasGradedBank(gameId: string): boolean {
 const BANK_BRIEFS: Record<string, Record<PalierLevel, string>> = {
   'calcul-mental': CALCUL_TIER_BRIEF,
   'conjugaison-eclair': CONJUGAISON_TIER_BRIEF,
+  'classe-instrument': INSTRUMENT_TIER_BRIEF,
+  'qui-a-compose': COMPOSE_TIER_BRIEF,
+  'le-musee': MUSEE_TIER_BRIEF,
 }

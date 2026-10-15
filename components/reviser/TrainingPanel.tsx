@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ArrowLeft, Gamepad2 } from 'lucide-react'
+import { ArrowLeft, Gamepad2, Swords } from 'lucide-react'
 import ModeTicket from '@/components/defi/ModeTicket'
 import SubjectBossPanel from '@/components/reviser/SubjectBossPanel'
 import SubjectGames from '@/components/reviser/SubjectGames'
@@ -10,7 +10,7 @@ import NiveauOrthographeCarte from '@/components/francais/NiveauOrthographeCarte
 import { sfx } from '@/lib/sounds'
 import { bossForSubject } from '@/lib/bosses'
 import { billetDictee, billetGardien } from '@/lib/reviser/billets-matiere'
-import type { GardienVue } from '@/lib/reviser/gardien'
+import { matiereSansGardien, type GardienVue } from '@/lib/reviser/gardien'
 import type { ModeQuestion } from '@/lib/defi-modes'
 
 /**
@@ -99,6 +99,8 @@ export default function TrainingPanel({
   }
 
   const estFrancais = subject.slug === MATIERE_TEST_NIVEAU
+  // Nox retiré des arts plastiques (14/10/2026) : pas de section gardien.
+  const sansGardien = matiereSansGardien(subject.slug)
 
   return (
     <>
@@ -109,7 +111,36 @@ export default function TrainingPanel({
           le sien pour l'instant ; les autres matières prendront la même place. */}
       {estFrancais ? <NiveauOrthographeCarte onOpen={() => setTestNiveau(true)} /> : null}
 
-      <section aria-labelledby="jeux-matiere" className="mt-4">
+      {/* LE GARDIEN D'ABORD, DANS SA PROPRE SECTION (Lucas, 14/10/2026 : « les
+          boss doivent être au-dessus des modes de jeu pour dissocier ») : le
+          combat du gardien n'est pas un jeu de salon, c'est l'épreuve de la
+          matière — il a son titre, puis seulement les modes de jeu. */}
+      {sansGardien ? null : (
+      <section aria-labelledby="gardien-matiere" className="mt-4">
+        <p className="text-sm font-semibold text-muted-foreground">La Traque</p>
+        <h2 id="gardien-matiere" className="titre-section mt-0.5 flex items-center gap-2">
+          <Swords className="size-5 shrink-0 text-primary" aria-hidden="true" />
+          Le gardien · {subject.name}
+        </h2>
+        <div className="mt-3">
+          {/* LE GARDIEN EN BILLET : il ouvre le combat sur place quand il est
+              sorti ; tant qu'il rôde, le billet montre sa jauge et le geste
+              suivant, et ne mène nulle part (toucher ne fait rien de faux). */}
+          <ModeTicket
+            ticket={billetBoss}
+            onClick={
+              ouvert
+                ? () => setFighting(true)
+                : () => {
+                    // Il rôde, ou ce n'est pas son jour : rien à ouvrir. Le billet dit déjà quoi faire.
+                  }
+            }
+          />
+        </div>
+      </section>
+      )}
+
+      <section aria-labelledby="jeux-matiere" className="mt-5">
         <p className="text-sm font-semibold text-muted-foreground">Jeux de l’Arène</p>
         <h2 id="jeux-matiere" className="titre-section mt-0.5 flex items-center gap-2">
           <Gamepad2 className="size-5 shrink-0 text-primary" aria-hidden="true" />
@@ -121,20 +152,6 @@ export default function TrainingPanel({
               « c'est un mode important ») — une carte grisée « bientôt » dans
               les autres dossiers serait une porte qui ne s'ouvre pas. */}
           {estFrancais ? <ModeTicket ticket={billetDictee()} /> : null}
-
-          {/* LE GARDIEN EN BILLET : il ouvre le combat sur place quand il est
-              sorti ; tant qu'il rôde, le billet montre sa jauge et le geste
-              suivant, et ne mène nulle part (toucher ne fait rien de faux). */}
-          <ModeTicket
-            ticket={billetBoss}
-            onClick={
-              ouvert
-                ? () => setFighting(true)
-                : () => {
-                    // Il rôde : rien à ouvrir. Le billet dit déjà quoi faire.
-                  }
-            }
-          />
 
           <SubjectGames subject={subject} premium={premium} enTete={false} />
         </div>

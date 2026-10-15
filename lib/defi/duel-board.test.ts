@@ -51,11 +51,14 @@ describe('buildDuelBoard', () => {
 
     expect(board.map((e) => e.subject)).toEqual([
       'Anglais',
+      'Arts plastiques',
       'Espagnol',
       'Français',
       'Histoire-Géo',
       'Maths',
+      'Musique',
       'Physique-Chimie',
+      'Sport',
       'SVT',
     ])
   })

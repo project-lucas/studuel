@@ -243,7 +243,9 @@ export async function fetchGauges(
   supabase: SupabaseClient,
   userId: string,
 ): Promise<Map<string, TraqueGauge> | null> {
-  const BASE = 'boss_id, points, chapters, victories, debusque_at'
+  // `day_key` (212) : le jour du dernier crédit — la jauge repart de zéro
+  // chaque nuit (576), le client doit savoir si les points lus sont d'aujourd'hui.
+  const BASE = 'boss_id, points, chapters, victories, debusque_at, day_key'
   const read = (columns: string) =>
     supabase
       .from('boss_gauges')

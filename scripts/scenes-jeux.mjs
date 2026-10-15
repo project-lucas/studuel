@@ -46,6 +46,9 @@ const SCENES = {
   'frise-folle': 'frise folle.png',
   'traduccion-flash': 'traduccion flash.png',
   'traduction-flash': 'traduction flash.png',
+  // Arts plastiques, 14/10/2026 : la galerie du Musée (Nano Banana 2.1, la scène
+  // d'Anatomie express en référence).
+  'le-musee': 'le-musee.png',
 }
 
 const demandes = process.argv.slice(2)

@@ -205,6 +205,28 @@ export function isUnlocked(
 }
 
 /**
+ * L'ÉCHELLE FAÇON DONJON (14/10/2026, Lucas : « lorsque l'on clique sur le
+ * donjon on voit le palier 1, on le fait, puis le palier 2 apparaît au-dessus,
+ * puis le 3 au-dessus du 2, ainsi de suite jusqu'au niveau max — voir tous les
+ * paliers d'un coup donne envie de procrastiner ») : la carte ne dessine que
+ * les paliers OUVERTS, le plus haut en tête, et ne dit du suivant qu'une ligne
+ * — ce qu'il faut pour le faire apparaître. Le plancher de classe ouvre
+ * d'office les premiers (un Terminale voit quatre paliers dès l'arrivée).
+ */
+export function paliersVisibles(
+  progress: PalierProgress,
+  floor: PalierLevel = 1,
+): { visibles: PalierLevel[]; suivant: PalierLevel | null } {
+  const top = unlockedThrough(progress, floor)
+  const visibles: PalierLevel[] = []
+  for (let l = top; l >= 1; l--) visibles.push(l as PalierLevel)
+  return {
+    visibles,
+    suivant: top < PALIERS.length ? ((top + 1) as PalierLevel) : null,
+  }
+}
+
+/**
  * Le palier que l'écran met en avant (« Continuer ») : le premier palier ouvert
  * — à partir du plancher de classe — qui n'a pas encore ses deux étoiles. Tout
  * décroché, on pointe le sommet ouvert.

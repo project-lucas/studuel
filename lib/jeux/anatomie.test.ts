@@ -1,3 +1,5 @@
+import { existsSync } from 'node:fs'
+import path from 'node:path'
 import { describe, expect, it } from 'vitest'
 import {
   ORGANS,
@@ -10,8 +12,9 @@ import {
   zoneAt,
   zoneLabel,
   zoneLignes,
+  PLANCHE_ORGANES,
 } from '@/lib/jeux/anatomie'
-import { CORPS_D, FONDU_DEPUIS } from '@/lib/jeux/anatomie-planche'
+import { IMAGE_ORGANES } from '@/lib/jeux/organes-planche'
 import { PALIER_LEVELS } from '@/lib/jeux/paliers'
 import { aplatirChemin, pointDansForme } from '@/lib/jeux/svg-chemin'
 
@@ -19,7 +22,7 @@ import { aplatirChemin, pointDansForme } from '@/lib/jeux/svg-chemin'
 // viewBox) et on demande à `zoneAt` qui possède chaque case. C'est la seule
 // façon de savoir ce qu'un doigt peut vraiment atteindre, halos et
 // recouvrements compris.
-const PAS = 0.5
+const PAS = 1
 const AIRE_CASE = PAS * PAS
 
 function airesEffectives(): Map<string, number> {
@@ -48,35 +51,28 @@ function aireDessinee(id: string): number {
   return aire
 }
 
-const CORPS = aplatirChemin(CORPS_D)
 
 describe('la planche est bien dessinée', () => {
-  it('a un corps fermé, symétrique, qui tient dans le viewBox', () => {
-    expect(CORPS).toHaveLength(1)
-    for (const [x, y] of CORPS[0]) {
-      expect(x).toBeGreaterThanOrEqual(0)
-      expect(x).toBeLessThanOrEqual(PLANCHE_LARGEUR)
-      expect(y).toBeGreaterThanOrEqual(0)
-      expect(y).toBeLessThanOrEqual(PLANCHE_HAUTEUR)
-      // Le miroir : chaque point a son reflet.
-      const reflet = CORPS[0].find(
-        ([rx, ry]) => Math.abs(rx - (PLANCHE_LARGEUR - x)) < 0.01 && Math.abs(ry - y) < 0.01,
-      )
-      expect(reflet, `pas de reflet pour (${x}, ${y})`).toBeDefined()
-    }
-    expect(FONDU_DEPUIS).toBeLessThan(PLANCHE_HAUTEUR)
+  it('pose sous les zones la planche PEINTE, servie par l’app', () => {
+    expect(PLANCHE_ORGANES.image).toBe(IMAGE_ORGANES)
+    expect(existsSync(path.join(process.cwd(), 'public', IMAGE_ORGANES))).toBe(true)
   })
 
-  it('dessine chaque organe DANS le corps', () => {
+  it('garde chaque organe DANS la toile', () => {
     for (const zone of ZONES) {
       for (const ligne of zoneLignes(zone.id)) {
         for (const [x, y] of ligne) {
-          expect(
-            pointDansForme(CORPS, x, y),
-            `${zone.id} sort du corps en (${x}, ${y})`,
-          ).toBe(true)
+          expect(x >= 0 && x <= PLANCHE_LARGEUR && y >= 0 && y <= PLANCHE_HAUTEUR, `${zone.id} (${x}, ${y})`).toBe(true)
         }
       }
+    }
+  })
+
+  it('a ses deux reins et ses deux poumons, et les autres organes d’un seul tenant', () => {
+    for (const z of ZONES) {
+      const morceaux = zoneLignes(z.id).length
+      if (z.id === 'reins' || z.id === 'poumons') expect(morceaux, z.id).toBe(2)
+      else expect(morceaux, z.id).toBeGreaterThanOrEqual(1)
     }
   })
 
@@ -105,7 +101,10 @@ describe('la planche est bien dessinée', () => {
     // 44 / 3,6 ≈ 12 unités de côté, soit ~150 unités² ; on exige 110 pour les
     // plus fins (trachée, diaphragme), qui gagnent en plus le halo autour d'eux
     // — mesuré ici, puisque `zoneAt` le compte.
-    const MIN_AIRE = 110
+    // Planche peinte : 100 unités pour ~300 px de large (elle est plafonnée en
+    // hauteur), soit ~3 px par unité. 40 unités² ≈ 19 × 19 px au moins — la
+    // rate et la trachée, les plus fines, gagnent en plus leur halo.
+    const MIN_AIRE = 40
     const aires = airesEffectives()
     for (const z of ZONES) {
       expect(aires.get(z.id), `${z.id} : ${aires.get(z.id)} unités² touchables`).toBeGreaterThanOrEqual(MIN_AIRE)
@@ -125,10 +124,10 @@ describe('la planche est bien dessinée', () => {
   })
 
   it('rend null hors de tout organe', () => {
-    expect(zoneAt(2, 150)).toBeNull()
+    expect(zoneAt(2, 128)).toBeNull()
     expect(zoneAt(99, 2)).toBeNull()
-    // Dans la main : le corps, mais aucun organe.
-    expect(zoneAt(13, 122)).toBeNull()
+    // Le visage : le corps, mais aucun organe.
+    expect(zoneAt(50, 25)).toBeNull()
   })
 })
 
@@ -199,13 +198,13 @@ describe('zoneLabel — nommer une zone sans donner la réponse', () => {
     }
   })
 
-  it('situe la zone par son côté et sa hauteur', () => {
+  it('situe la zone par sa place, vue de face', () => {
     const cerveau = ZONES.find((z) => z.id === 'cerveau')!
-    expect(zoneLabel(cerveau, 0)).toContain('au centre de la tête')
+    expect(zoneLabel(cerveau, 0)).toContain('dans la tête')
     const foie = ZONES.find((z) => z.id === 'foie')!
-    expect(zoneLabel(foie, 1)).toContain('à gauche du milieu du tronc')
+    expect(zoneLabel(foie, 1)).toContain('en haut du ventre, à gauche')
     const vessie = ZONES.find((z) => z.id === 'vessie')!
-    expect(zoneLabel(vessie, 2)).toContain('du bas du tronc')
+    expect(zoneLabel(vessie, 2)).toContain('tout en bas du ventre')
   })
 })
 

@@ -84,7 +84,58 @@
   to { transform: translateY(-140%); opacity: 0; }
 }
 
+
+/* --- Les trois humeurs de la pièce (14/10/2026 : une quête à la fois) -------- */
+/* L'onde d'or qui bat autour de la prochaine pièce à toucher. */
+.cristalOnde {
+  position: absolute;
+  inset: -0.2rem;
+  border-radius: 9999px;
+  border: 3px solid var(--highlight);
+  opacity: 0;
+  pointer-events: none;
+}
+.cristal[data-humeur='appel'] .cristalOnde {
+  animation: onde 1.4s ease-out infinite;
+}
+/* Les suivantes attendent leur tour : ni saut ni rayons qui tournent. */
+.cristal[data-humeur='repos'] .cristalDisque {
+  animation: none;
+}
+.cristal[data-humeur='repos'] .cristalRayons {
+  animation: none;
+  opacity: 0.45;
+}
+/* Le temps de la réponse : la pièce se ramasse, ses rayons s'emballent. */
+.cristal[data-humeur='charge'] .cristalDisque {
+  animation: charge 0.32s ease-in-out infinite alternate;
+}
+.cristal[data-humeur='charge'] .cristalRayons {
+  animation-duration: 0.7s;
+}
+.cristal[data-humeur='charge']:disabled {
+  opacity: 1;
+}
+/* La grande pièce du coffre. */
+.grande {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+.grande .cristalDisque {
+  width: 4.25rem;
+  height: 4.25rem;
+}
+@keyframes onde {
+  0% { transform: scale(0.85); opacity: 0.9; }
+  100% { transform: scale(1.55); opacity: 0; }
+}
+@keyframes charge {
+  from { transform: scale(0.9); }
+  to { transform: scale(1.08); }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .cristalOnde,
   .cristalRayons,
   .cristalDisque,
   .annonce,

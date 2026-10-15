@@ -19,6 +19,10 @@ import {
   definition,
   dureeVolee,
   jetonsPour,
+  jetonsVague,
+  type VolVague,
+  volVague,
+  dureeVague,
   repartir,
   volJeton,
   type Gain,
@@ -50,10 +54,18 @@ type Origine = { x: number; y: number }
 
 type Contexte = {
   /** Fait voler des gains vers le bandeau. Sans gain positif : ne fait rien. */
-  celebrer: (gains: readonly Gain[], origines?: OriginesParUnite) => void
+  celebrer: (gains: readonly Gain[], origines?: OriginesParUnite, options?: OptionsVolee) => void
 }
 
 export type OriginesParUnite = Partial<Record<UniteGain, Origine | null>>
+
+/**
+ * `vague` : la gerbe de Clash Royale — tous les éclairs jaillissent ensemble,
+ * flottent, puis rentrent en file vers la barre, chacun avec sa note
+ * (lib/gains → volVague). Pour les gains qu'on ENCAISSE d'un geste : une
+ * quête du jour, le coffre.
+ */
+export type OptionsVolee = { vague?: boolean }
 
 const RecompensesContext = createContext<Contexte | null>(null)
 
@@ -108,6 +120,10 @@ type Jeton = {
   duree: number
   arc: number
   saut: Origine
+  /** Les repères du trajet (vague) ; absents : ceux d'une volée ordinaire. */
+  reperes?: readonly [number, number, number]
+  /** Son rang dans la vague : la note qu'il tinte en atterrissant. */
+  rang?: number
 }
 
 let prochainId = 0
@@ -161,7 +177,8 @@ export default function RecompensesProvider({
   )
 
   const celebrer = useCallback(
-    (gains: readonly Gain[], origines?: OriginesParUnite) => {
+    (gains: readonly Gain[], origines?: OriginesParUnite, options?: OptionsVolee) => {
+      const vague = options?.vague === true
       const propres = agregerGains(gains)
       if (propres.length === 0) return
 
@@ -200,10 +217,10 @@ export default function RecompensesProvider({
           continue
         }
 
-        const n = jetonsPour(gain.montant)
+        const n = vague ? jetonsVague(gain.montant) : jetonsPour(gain.montant)
         const parts = repartir(gain.montant, n)
         for (let i = 0; i < n; i += 1) {
-          const v = volJeton(i, n)
+          const v = vague ? volVague(i, n) : volJeton(i, n)
           nouveaux.push({
             id: (prochainId += 1),
             unite: gain.unite,
@@ -214,9 +231,11 @@ export default function RecompensesProvider({
             duree: v.duree,
             arc: v.arc,
             saut: { x: v.sautX, y: v.sautY },
+            reperes: vague ? (v as VolVague).reperes : undefined,
+            rang: vague ? i : undefined,
           })
         }
-        finDeVolee = Math.max(finDeVolee, dureeVolee(n))
+        finDeVolee = Math.max(finDeVolee, vague ? dureeVague(n) : dureeVolee(n))
       }
 
       if (nouveaux.length > 0) {
@@ -226,16 +245,17 @@ export default function RecompensesProvider({
 
       if (finDeVolee === 0) return
 
-      // Le bandeau caché du plein écran descend le temps de la volée, puis
-      // remonte une fois la barre remplie : l'élève VOIT son XP arriver.
-      if (bandeauCache) {
-        document.documentElement.classList.add(CLASSE_VOLEE)
-        if (voleeRef.current) clearTimeout(voleeRef.current)
-        voleeRef.current = setTimeout(
-          () => document.documentElement.classList.remove(CLASSE_VOLEE),
-          finDeVolee + BANDEAU_TENU,
-        )
-      }
+      // Le temps de la volée, le bandeau passe DEVANT tout : caché en plein
+      // écran, il descend ; sous le voile d'une feuille (les quêtes, un
+      // coffre), il passe au-dessus — l'élève VOIT son XP arriver et la barre
+      // se remplir, puis tout reprend sa place.
+      void bandeauCache
+      document.documentElement.classList.add(CLASSE_VOLEE)
+      if (voleeRef.current) clearTimeout(voleeRef.current)
+      voleeRef.current = setTimeout(
+        () => document.documentElement.classList.remove(CLASSE_VOLEE),
+        finDeVolee + BANDEAU_TENU,
+      )
 
       // LE RECALAGE, UNE FOIS LA VOLÉE POSÉE. Les compteurs ont monté de façon
       // optimiste ; ce rafraîchissement va rechercher les vraies valeurs et
@@ -276,9 +296,11 @@ export default function RecompensesProvider({
       {jetons.length > 0
         ? createPortal(
             <div
-              // La couche passe AU-DESSUS du bandeau (z-50) : un jeton qui
-              // disparaît derrière sa cible n'arrive jamais, visuellement.
-              className="pointer-events-none fixed inset-0 z-[60]"
+              // La couche passe AU-DESSUS du bandeau (z-50, z-80 pendant la
+              // volée) ET des feuilles (z-70) : un jeton qui disparaît derrière
+              // sa cible, ou sous le voile de la feuille d'où il part, n'arrive
+              // jamais, visuellement.
+              className="pointer-events-none fixed inset-0 z-[90]"
               aria-hidden="true"
             >
               {jetons.map((jeton) => (
@@ -330,6 +352,8 @@ function JetonEnVol({
       // Le compteur monte À L'ATTERRISSAGE, jeton par jeton — c'est là qu'est
       // tout l'effet : le solde ne saute pas, il s'égrène.
       emettreGain({ unite: jeton.unite, montant: jeton.part })
+      // Dans une vague, chaque éclair tinte une note plus haute que le précédent.
+      if (jeton.rang !== undefined) sfx.perle(jeton.rang)
       // L'éclat à l'arrivée : un anneau qui s'ouvre sur la pastille.
       const eclat = eclatRef.current
       if (eclat && typeof eclat.animate === 'function') {
@@ -356,12 +380,15 @@ function JetonEnVol({
       }
     }
 
+    // Les repères du trajet : ceux de la vague (tous jaillissent ensemble,
+    // flottent, puis partent en file), sinon ceux d'une volée ordinaire.
+    const [jailli, decroche, auSommet] = jeton.reperes ?? [0.2, 0.36, 0.72]
     const animation = el.animate(
       [
         { transform: pose(depart, 0.2), opacity: 0, offset: 0, easing: 'cubic-bezier(0.2, 0.9, 0.3, 1.25)' },
-        { transform: pose(projete, 1.25), opacity: 1, offset: 0.2, easing: 'ease-out' },
-        { transform: pose(suspendu, 1.1), opacity: 1, offset: 0.36, easing: 'cubic-bezier(0.5, 0, 0.75, 0.3)' },
-        { transform: pose(sommet, 1), opacity: 1, offset: 0.72, easing: 'cubic-bezier(0.3, 0.2, 0.6, 1)' },
+        { transform: pose(projete, 1.25), opacity: 1, offset: jailli, easing: 'ease-out' },
+        { transform: pose(suspendu, 1.1), opacity: 1, offset: decroche, easing: 'cubic-bezier(0.5, 0, 0.75, 0.3)' },
+        { transform: pose(sommet, 1), opacity: 1, offset: auSommet, easing: 'cubic-bezier(0.3, 0.2, 0.6, 1)' },
         { transform: pose(arrivee, 0.5), opacity: 1, offset: 1 },
       ],
       {

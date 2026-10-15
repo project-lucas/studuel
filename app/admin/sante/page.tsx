@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { AlertTriangle, CheckCircle2, HelpCircle } from 'lucide-react'
+import { AlertTriangle, Archive, CheckCircle2, HelpCircle } from 'lucide-react'
 import { createClient } from '@/lib/supabase/server'
 import { cn } from '@/lib/utils'
 import {
@@ -37,6 +37,12 @@ export default async function SantePage() {
   const verdicts = new Map<string, Verdict>()
   await Promise.all(
     MIGRATIONS_SANTE.map(async (m) => {
+      // Remplacée : son contenu a été retiré à dessein par une migration plus
+      // récente. Rien à mesurer — et surtout rien à rejouer.
+      if (m.remplaceePar) {
+        verdicts.set(m.id, 'remplacee')
+        return
+      }
       if (m.sonde === null) {
         verdicts.set(m.id, 'non-sondable')
         return
@@ -172,12 +178,14 @@ const STYLE: Record<Verdict, string> = {
   vivante: 'text-primary',
   eteinte: 'text-destructive',
   'non-sondable': 'text-muted-foreground',
+  remplacee: 'text-muted-foreground',
 }
 
 const LIBELLE: Record<Verdict, string> = {
   vivante: 'vivante',
   eteinte: 'ÉTEINTE',
   'non-sondable': 'non sondable — rejouer',
+  remplacee: 'remplacée — ne pas rejouer',
 }
 
 function LigneSante({
@@ -206,13 +214,20 @@ function LigneSante({
             <CheckCircle2 className="size-3.5" />
           ) : verdict === 'eteinte' ? (
             <AlertTriangle className="size-3.5" />
+          ) : verdict === 'remplacee' ? (
+            <Archive className="size-3.5" />
           ) : (
             <HelpCircle className="size-3.5" />
           )}
           {LIBELLE[verdict]}
         </p>
       </div>
-      {verdict !== 'vivante' ? (
+      {verdict === 'remplacee' ? (
+        <p className="mt-1 text-xs text-muted-foreground">
+          Remplacée par {migration.remplaceePar} : ce qu’elle écrivait a été retiré à dessein.
+          La rejouer le recréerait à côté du contenu actuel.
+        </p>
+      ) : verdict !== 'vivante' ? (
         <p className="mt-1 text-xs text-muted-foreground">{migration.siAbsente}</p>
       ) : null}
       {migration.decision ? (

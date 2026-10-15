@@ -21,7 +21,13 @@ import type { PalierRun } from '@/lib/jeux/paliers'
 import { hasTimeRecord } from '@/lib/jeux/palier-format'
 import { useGameReport } from '@/lib/jeux/use-game-report'
 import type { GameGhost } from '@/lib/jeux/ghost-server'
-import { isGoodPick, type OrganRound, type ZonePlanche } from '@/lib/jeux/anatomie'
+import {
+  isGoodPick,
+  questionPour,
+  type Manche as OrganRound,
+  type ZonePlanche,
+} from '@/lib/jeux/planche'
+import { imagesDe, plancheDe, type PlancheId } from '@/lib/jeux/planches'
 import {
   answer as applyAnswer,
   questionSeconds,
@@ -48,6 +54,7 @@ const REVEAL_MS = 2200
 export default function AnatomyTable({
   format,
   palier,
+  planche: plancheId,
   rounds,
   name,
   subject,
@@ -64,6 +71,12 @@ export default function AnatomyTable({
    * programme et non un réglage.
    */
   palier: PalierRun | null
+  /**
+   * La planche à dessiner (lib/jeux/planches) : les organes, ou les muscles —
+   * son IDENTIFIANT, pas l'objet : une page serveur ne peut pas passer de
+   * fonctions à un composant client, la table résout la planche elle-même.
+   */
+  planche: PlancheId
   rounds: OrganRound[]
   name: string
   subject: string
@@ -117,6 +130,18 @@ export default function AnatomyTable({
   }, [format.id])
 
   const round = rounds.length > 0 ? rounds[index % rounds.length] : null
+  // La vue de la cible demandée : l'écorché se retourne pour un muscle du dos.
+  const planche = plancheDe(plancheId, round?.target)
+
+  // Les vues peintes se chargent pendant l'écran d'accueil : la première
+  // question qui demande le dos ne doit pas attendre son image.
+  useEffect(() => {
+    for (const src of imagesDe(plancheId)) {
+      const img = new Image()
+      img.decoding = 'async'
+      img.src = src
+    }
+  }, [plancheId])
   const perRound = questionSeconds(format, run)
 
   const finish = useCallback(
@@ -316,10 +341,11 @@ export default function AnatomyTable({
               {format.lexicon.verb}
             </p>
             <h2 className="font-heading mt-1 mb-3 text-2xl font-extrabold text-balance">
-              Où se trouve {round.target.name} ?
+              {questionPour(round.target)} {round.target.name} ?
             </h2>
 
             <AnatomyBoard
+              planche={planche}
               target={round.target}
               picked={picked}
               revealed={revealed}

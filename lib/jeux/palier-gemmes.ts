@@ -39,6 +39,31 @@ export function xpDuPalier(level: PalierLevel): number {
 /** Tout ce qu'un jeu peut rapporter en étoiles (225 XP). */
 export const XP_PAR_JEU = PALIER_LEVELS.reduce((s, l) => s + xpDuPalier(l), 0)
 
+/**
+ * Gemmes d'un palier : AUCUNE depuis la 557 (« le gain de gemmes doit être
+ * très rare »). Le bouton de palier sait les afficher à côté de l'éclair
+ * (Lucas, 14/10/2026 : « éclair + gemme par exemple ») — si Lucas en décide,
+ * c'est ici, et dans `palier_gemmes_reclamer`.
+ */
+export function gemmesDuPalier(level: PalierLevel): number {
+  void level
+  return 0
+}
+
+/**
+ * Ce que le BOUTON d'un palier promet (14/10/2026, Lucas : « le bouton pour
+ * commencer le palier doit donner plus envie en affichant la récompense, pour
+ * les paliers 2 3 4 5, pas pour le palier 1 ») : l'XP des étoiles qui restent
+ * à décrocher sur ce palier, et ses gemmes. Tout décroché : rien à promettre.
+ */
+export function recompenseDuPalier(
+  level: PalierLevel,
+  acquises: number,
+): { xp: number; gemmes: number } {
+  const restantes = Math.max(0, MAX_STARS - borne(acquises))
+  return { xp: restantes * xpParEtoile(level), gemmes: gemmesDuPalier(level) }
+}
+
 function borne(n: unknown): number {
   const v = Math.floor(Number(n))
   return Number.isFinite(v) ? Math.min(MAX_STARS, Math.max(0, v)) : 0

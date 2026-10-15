@@ -2,10 +2,10 @@
 
 import { useEffect, useId, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
+import Image from 'next/image'
 import { AnimatePresence, motion, useDragControls, useReducedMotion } from 'framer-motion'
 import { ChevronDown, LayoutGrid } from 'lucide-react'
 import ModeTicketCard from '@/components/defi/ModeTicket'
-import DeAnime from '@/components/defi/DeAnime'
 import { plaqueBlanche } from '@/lib/defi/plaque-claire'
 import { casesPalmares, type LignePalmares } from '@/lib/palmares/palmares'
 import { isEpreuveId } from '@/lib/palmares/epreuves'
@@ -165,12 +165,20 @@ export default function ModesSheet({
         className={`arena-plate arena-plate--clair arena-plate--press ${FLANK_CLASS} flex cursor-pointer flex-col items-center justify-center focus-visible:ring-4 focus-visible:ring-white/60 focus-visible:outline-none`}
         style={{ background: plaqueBlanche() }}
       >
-        {/* Le dé qui roule (Lucas, 23/09/2026) : il a remplacé l'image fixe
-            `modes-v4.webp`. Sa scène (le dé, son saut, son ombre au sol)
-            déborde de 4 % de chaque côté, centrée : le dé au repos y gagne
-            quatre pixels, et au plus haut d'un roulé il effleure le cerne
-            sans en sortir. */}
-        <DeAnime className="w-[108%] shrink-0" />
+        {/* LE DÉ FIXE (Lucas, 14/10/2026 : « mets à la place de l'animation le
+            dé ici ») : le dessin `modes-v4.webp`, tel qu'il était avant le dé
+            qui roulait (23/09/2026, `components/defi/DeAnime`, gardé mais plus
+            monté ici). Un objet posé sur sa plaque blanche, comme les autres
+            ronds du bord ; 64 px dans le rond de 72. */}
+        <Image
+          src="/images/defi/icones/modes-v4.webp"
+          alt=""
+          aria-hidden="true"
+          width={256}
+          height={256}
+          sizes="64px"
+          className="size-16 shrink-0 object-contain"
+        />
       </button>
 
       {typeof document !== 'undefined'

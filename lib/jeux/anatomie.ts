@@ -12,24 +12,23 @@
 // Le dessin (formes, ordre, halos) vit dans `anatomie-planche.ts` ; la
 // géométrie du clic dans `svg-chemin.ts`. Ici : les organes qu'on DEMANDE, par
 // palier, et le tirage des manches.
-import { seededRng } from '@/lib/defi-modes'
 import { DEFAULT_PALIER, type PalierLevel } from '@/lib/jeux/paliers'
-import { shuffleWith } from '@/lib/jeux/shuffle'
+import type { ZonePlanche } from '@/lib/jeux/anatomie-planche'
 import {
-  PLANCHE_HAUTEUR,
-  PLANCHE_LARGEUR,
-  ZONES,
-  type ZonePlanche,
-} from '@/lib/jeux/anatomie-planche'
-import {
-  aplatirChemin,
-  distanceALaLigne,
-  distanceAuPolygone,
-  pointDansForme,
-  type Polyligne,
-} from '@/lib/jeux/svg-chemin'
+  IMAGE_ORGANES,
+  ORGANES_HAUTEUR,
+  ORGANES_LARGEUR,
+  ZONES_PEINTES,
+} from '@/lib/jeux/organes-planche'
+import { creerPlanche, tirerManches } from '@/lib/jeux/planche'
 
-export { PLANCHE_HAUTEUR, PLANCHE_LARGEUR, ZONES }
+/**
+ * Depuis le 14/10/2026 la planche est PEINTE (lib/jeux/organes-planche) : ces
+ * trois exports gardent leur nom d'origine et désignent désormais elle.
+ */
+export const PLANCHE_LARGEUR = ORGANES_LARGEUR
+export const PLANCHE_HAUTEUR = ORGANES_HAUTEUR
+export const ZONES = ZONES_PEINTES
 export type { ZonePlanche }
 
 /** Ce qu'on demande de trouver. */
@@ -192,99 +191,31 @@ export function isGoodPick(target: Organ, zone: ZonePlanche | null): boolean {
   return zone !== null && target.zones.includes(zone.id)
 }
 
-// ------------------------------------------------------------- le clic
-
-/** Une zone aplatie, prête pour l'arithmétique. Calculé une fois. */
-type ZoneAplatie = {
-  zone: ZonePlanche
-  lignes: Polyligne[]
-  /** Distance du point au bord de la forme (0 dedans). */
-  distance: (x: number, y: number) => number
-  dedans: (x: number, y: number) => boolean
-}
-
-const APLATIES: readonly ZoneAplatie[] = ZONES.map((zone) => {
-  const lignes = aplatirChemin(zone.forme.d)
-  if (zone.forme.type === 'tube') {
-    const demi = zone.forme.largeur / 2
-    const distanceAxe = (x: number, y: number) =>
-      Math.min(...lignes.map((l) => distanceALaLigne(l, x, y)))
-    return {
-      zone,
-      lignes,
-      dedans: (x, y) => distanceAxe(x, y) <= demi,
-      distance: (x, y) => Math.max(0, distanceAxe(x, y) - demi),
-    }
-  }
-  return {
-    zone,
-    lignes,
-    dedans: (x, y) => pointDansForme(lignes, x, y),
-    distance: (x, y) =>
-      pointDansForme(lignes, x, y)
-        ? 0
-        : Math.min(...lignes.map((l) => distanceAuPolygone(l, x, y))),
-  }
+// ------------------------------------------------------------- la planche
+// Le calcul du clic et le nom des zones vivent dans le moteur commun des
+// planches (lib/jeux/planche, partagé depuis le 14/10/2026 avec la planche des
+// muscles de Sport) ; ces exports gardent l'API d'origine de la planche
+// d'anatomie — la table de jeu, elle, reçoit la planche entière.
+export const PLANCHE_ORGANES = creerPlanche({
+  largeur: PLANCHE_LARGEUR,
+  hauteur: PLANCHE_HAUTEUR,
+  corpsD: '',
+  fonduDepuis: PLANCHE_HAUTEUR,
+  image: IMAGE_ORGANES,
+  zones: ZONES,
 })
 
-/**
- * La zone touchée à ces coordonnées (unités du viewBox), ou null si le tap
- * tombe à côté de tout.
- *
- * Deux temps : d'abord la zone DESSINÉE la plus haute qui contient le point —
- * c'est ce que l'œil voit sous le doigt. Sinon, la zone la plus proche parmi
- * celles dont le halo atteint le point : un tube étroit reste touchable sans
- * être dessiné gros. Le halo ne mord jamais sur un organe dessiné.
- */
-export function zoneAt(x: number, y: number): ZonePlanche | null {
-  for (let i = APLATIES.length - 1; i >= 0; i--) {
-    if (APLATIES[i].dedans(x, y)) return APLATIES[i].zone
-  }
-  let meilleure: ZonePlanche | null = null
-  let meilleureDistance = Infinity
-  for (const a of APLATIES) {
-    if (a.zone.halo <= 0) continue
-    const d = a.distance(x, y)
-    if (d <= a.zone.halo && d < meilleureDistance) {
-      meilleureDistance = d
-      meilleure = a.zone
-    }
-  }
-  return meilleure
-}
+/** La zone touchée à ces coordonnées (unités du viewBox), ou null si le tap tombe à côté de tout. */
+export const zoneAt = PLANCHE_ORGANES.zoneAt
 
 /** Les lignes aplaties d'une zone — pour les tests, qui mesurent la planche. */
-export function zoneLignes(id: string): Polyligne[] {
-  return APLATIES.find((a) => a.zone.id === id)?.lignes ?? []
-}
+export const zoneLignes = PLANCHE_ORGANES.zoneLignes
 
 /**
  * Le nom d'une zone pour qui ne voit pas la planche — décrit sa POSITION,
- * jamais son contenu.
- *
- * Un jeu où l'on désigne un endroit est muet au clavier et au lecteur d'écran
- * si les zones n'ont pas de nom. Mais les nommer « le foie » reviendrait à
- * donner la réponse : il suffirait de tabuler jusqu'à l'organe demandé. On
- * décrit donc l'endroit (« à gauche du milieu du tronc »), exactement ce qu'un
- * élève voyant lit sur la planche — ni plus, ni moins.
- *
- * Le numéro n'est pas décoratif : deux organes voisins tombent dans la même
- * description, et deux zones homonymes seraient impossibles à distinguer à
- * l'oreille.
+ * jamais son contenu (« à gauche du milieu du tronc »).
  */
-export function zoneLabel(zone: ZonePlanche, index: number): string {
-  const [cx, cy] = zone.ancre
-  const side = cx < 44 ? 'à gauche' : cx > 56 ? 'à droite' : 'au centre'
-  const level =
-    cy <= 30
-      ? 'de la tête'
-      : cy <= 78.5
-        ? 'du haut du tronc'
-        : cy <= 112
-          ? 'du milieu du tronc'
-          : 'du bas du tronc'
-  return `Zone ${index + 1} sur ${ZONES.length}, ${zone.repere ?? `${side} ${level}`}`
-}
+export const zoneLabel = PLANCHE_ORGANES.zoneLabel
 
 /**
  * `count` organes à trouver au palier `tier`, sans répétition tant que le
@@ -295,10 +226,5 @@ export function buildAnatomiePool(
   count: number,
   tier: number = DEFAULT_PALIER,
 ): OrganRound[] {
-  const level = (Math.min(5, Math.max(1, Math.round(tier))) || DEFAULT_PALIER) as PalierLevel
-  const picked = shuffleWith(seededRng(seed), organsForPalier(level))
-  return Array.from({ length: count }, (_, i) => ({
-    id: `${picked[i % picked.length].id}#${i}`,
-    target: picked[i % picked.length],
-  }))
+  return tirerManches(ORGANS, seed, count, tier)
 }

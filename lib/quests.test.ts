@@ -8,6 +8,8 @@ import {
   BONUS_STEP_ID,
   aEncaisser,
   coffreDuJourPret,
+  coffreOuvrable,
+  prochaineAEncaisser,
   queteServie,
   quetesAAnnoncer,
   QUEST_CATALOG,
@@ -39,15 +41,19 @@ describe('catalogue', () => {
     expect(ids.filter((id) => QUETES_RETIREES.includes(id))).toEqual([])
   })
 
-  it('est le trio minimal : une quête par geste, la version la plus courte (13/10/2026)', () => {
+  it('est le trio minimal plus « Se connecter » : une quête par geste, la version la plus courte', () => {
     for (const pilier of PILIERS) {
       expect(QUEST_CATALOG.filter((q) => q.pilier === pilier)).toHaveLength(1)
     }
     expect(QUEST_CATALOG.map((q) => [q.id, q.goal])).toEqual([
+      ['connexion1', 1],
       ['lecon1', 1],
       ['reponses10', 10],
       ['partie1', 1],
     ])
+    // La connexion est la plus petite des récompenses : elle ne demande rien.
+    const connexion = QUEST_CATALOG.find((q) => q.id === 'connexion1')!
+    for (const q of QUEST_CATALOG) expect(q.xp).toBeGreaterThanOrEqual(connexion.xp)
   })
 
   // Garde-fou du 03/10/2026 : quatre quêtes comptaient des choses que rien
@@ -56,6 +62,7 @@ describe('catalogue', () => {
   // lecture (13/10/2026) avance DANS la réponse, pas en différé.
   it("ne tire que des quêtes qu'un compteur fait avancer", () => {
     const compteurs: Record<QuestKind, [fichier: string, champ: string][]> = {
+      connexion: [['app/api/quetes/route.ts', 'connexions:']],
       lecon: [['app/reviser/actions.ts', 'lecons:']],
       reponse: [
         ['app/test/actions.ts', 'reponses:'],
@@ -89,7 +96,7 @@ describe('catalogue', () => {
 })
 
 describe('dailyQuests', () => {
-  it('en tire exactement trois', () => {
+  it('en tire exactement quatre', () => {
     expect(dailyQuests(DAY, USER)).toHaveLength(QUESTS_PER_DAY)
   })
 
@@ -97,8 +104,8 @@ describe('dailyQuests', () => {
     expect(dailyQuests(DAY, USER)).toEqual(dailyQuests(DAY, USER))
   })
 
-  it('donne une quête par geste : apprendre, se tester, jouer', () => {
-    expect(dailyQuests(DAY, USER).map((q) => q.pilier)).toEqual(['apprendre', 'tester', 'jouer'])
+  it('donne une quête par geste : revenir, apprendre, se tester, jouer', () => {
+    expect(dailyQuests(DAY, USER).map((q) => q.pilier)).toEqual(['revenir', 'apprendre', 'tester', 'jouer'])
   })
 
   it('reste dans le catalogue sur de nombreux jours', () => {
@@ -175,6 +182,12 @@ describe('deltaFor', () => {
     expect(d.lecon).toBe(1)
     expect(d.reponse).toBe(7)
     expect(d.partie).toBe(1)
+    expect(d.connexion).toBe(0)
+  })
+
+  it('traduit un passage dans l’app (la mission « Se connecter », 577)', () => {
+    expect(deltaFor({ connexions: 1 }).connexion).toBe(1)
+    expect(applyEvent(DAY, USER, {}, { connexions: 1 }).connexion1).toBe(1)
   })
 
   it('ignore les valeurs absurdes', () => {
@@ -302,6 +315,23 @@ describe('ce que le navigateur reçoit', () => {
     expect(coffreDuJourPret(etat({ lecon1: 1 }))).toBe(false)
     expect(coffreDuJourPret(etat(toutes))).toBe(true)
     expect(coffreDuJourPret(etat(toutes, [BONUS_STEP_ID]))).toBe(false)
+  })
+
+  it('fait encaisser les quêtes UNE À UNE, puis seulement ouvrir le coffre', () => {
+    const toutes = { lecon1: 1, reponses10: 10, partie1: 1 }
+    // Toutes finies, aucune encaissée : la pièce appelle sur la première, le coffre attend.
+    expect(prochaineAEncaisser(etat(toutes))?.id).toBe('lecon1')
+    expect(coffreOuvrable(etat(toutes))).toBe(false)
+    // Une encaissée : la suivante appelle.
+    expect(prochaineAEncaisser(etat(toutes, ['lecon1']))?.id).toBe('reponses10')
+    expect(coffreOuvrable(etat(toutes, ['lecon1', 'reponses10']))).toBe(false)
+    // Les trois encaissées : plus de pièce, le coffre s'ouvre — une seule fois.
+    const payees = ['lecon1', 'reponses10', 'partie1']
+    expect(prochaineAEncaisser(etat(toutes, payees))).toBeNull()
+    expect(coffreOuvrable(etat(toutes, payees))).toBe(true)
+    expect(coffreOuvrable(etat(toutes, [...payees, BONUS_STEP_ID]))).toBe(false)
+    // Une quête pas finie : jamais de coffre, même si les autres sont payées.
+    expect(coffreOuvrable(etat({ lecon1: 1, reponses10: 10 }, ['lecon1', 'reponses10']))).toBe(false)
   })
 
   it('n’annonce une quête finie qu’une fois, et jamais une quête encaissée', () => {

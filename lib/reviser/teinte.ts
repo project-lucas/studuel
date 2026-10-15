@@ -38,6 +38,9 @@ const PAR_MATIERE: Record<string, TeinteMatiere> = {
   espagnol: 'corail',
   svt: 'vert',
   'physique-chimie': 'turquoise',
+  musique: 'indigo',
+  sport: 'corail',
+  'arts-plastiques': 'rose',
 }
 
 /** Les autres suivent la couleur que la base leur donne (`subjects.color`). */

@@ -12,6 +12,7 @@ import {
   xpDansLePlafond,
   xpEtoilePalier,
   xpTraque,
+  gemmesTraque,
   type Epreuve,
 } from '@/lib/economie'
 
@@ -60,9 +61,11 @@ describe('le barème d’XP', () => {
   it('paie les étoiles et la Traque en XP', () => {
     expect([1, 2, 3, 4, 5].map(xpEtoilePalier)).toEqual([5, 10, 15, 20, 25])
     expect(xpEtoilePalier(0)).toBe(0)
-    expect(xpTraque(1, false, false)).toBe(30)
-    expect(xpTraque(2, false, true)).toBe(90)
-    expect(xpTraque(3, true, true)).toBe(90)
+    expect(xpTraque(1, false)).toBe(30)
+    expect(xpTraque(2, false)).toBe(45)
+    expect(xpTraque(3, true)).toBe(90)
+    expect([1, 2, 3].map((r) => gemmesTraque(r, false))).toEqual([5, 8, 10])
+    expect(gemmesTraque(1, true)).toBe(20)
   })
 })
 

@@ -216,7 +216,10 @@ export default function TopHud({
       data-hud-dissimule={dissimule ? '' : undefined}
       aria-hidden={dissimule ? true : undefined}
       className={cn(
-        'pointer-events-none fixed inset-x-0 top-0 z-50 flex h-14 items-center gap-2 px-3 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none md:hidden [html.hud-replie_&]:-translate-y-full [html.hud-replie_&]:opacity-0',
+        // `[html.hud-volee_&]:z-[80]` : le temps d'une volée de récompenses,
+        // le bandeau passe DEVANT le voile d'une feuille (z-70) — la barre de
+        // niveau qu'on remplit doit se voir, pas s'assombrir.
+        'pointer-events-none fixed inset-x-0 top-0 z-50 flex h-14 items-center gap-2 px-3 transition-[transform,opacity] duration-200 ease-out motion-reduce:transition-none md:hidden [html.hud-replie_&]:-translate-y-full [html.hud-replie_&]:opacity-0 [html.hud-volee_&]:z-[80]',
         dissimule &&
           'invisible -translate-y-[130%] opacity-0 duration-300 [html.hud-volee_&]:visible [html.hud-volee_&]:translate-y-0 [html.hud-volee_&]:opacity-100 [&_*]:pointer-events-none!',
       )}

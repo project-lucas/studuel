@@ -1,10 +1,14 @@
 'use client'
 
-import { useState, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode, type UIEvent } from 'react'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { ICONE_ONGLET, LIBELLE_ONGLET, ONGLETS_MARCEL, type OngletMarcel } from '@/lib/coach/bureau'
+import { replier, verdictDefilement } from '../replie'
+
+/** Ce que la tête rend au contenu en se repliant (240 → 68 px). */
+const GAIN_TETE = 170
 
 /**
  * LE BUREAU DE MARCEL — sa barre « Aujourd’hui · Radar · Toi · Outils », plus
@@ -35,10 +39,25 @@ export default function Bureau({
   const onglets = ONGLETS_MARCEL.filter((o) => panneaux[o] !== undefined && panneaux[o] !== null)
   const [onglet, setOnglet] = useState<OngletMarcel>(onglets.includes(initial) ? initial : 'aujourdhui')
 
+  // La tête se replie quand on fait défiler un panneau (components/marcel/replie).
+  const replie = useRef(false)
+  useEffect(() => () => replier('defilement', false), [])
+  const surDefilement = (e: UIEvent<HTMLDivElement>) => {
+    const el = e.currentTarget
+    const suite = verdictDefilement(replie.current, { haut: el.scrollTop, depassement: el.scrollHeight - el.clientHeight }, GAIN_TETE)
+    if (suite !== replie.current) {
+      replie.current = suite
+      replier('defilement', suite)
+    }
+  }
+
   const choisir = (o: OngletMarcel) => {
     if (o === onglet) return
     sfx.tap()
     setOnglet(o)
+    // Un autre onglet repart de son haut : la tête revient.
+    replie.current = false
+    replier('defilement', false)
     const url = new URL(window.location.href)
     if (o === 'aujourdhui') url.searchParams.delete('onglet')
     else url.searchParams.set('onglet', o)
@@ -98,7 +117,10 @@ export default function Bureau({
           id={`marcel-panneau-${o}`}
           aria-labelledby={`marcel-onglet-${o}`}
           hidden={o !== onglet}
-          className="mt-2.5 min-h-0 flex-1 overflow-y-auto overscroll-contain px-0.5 pb-20 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          onScroll={surDefilement}
+          // Le contenu passe SOUS le champ, qui flotte (sa hauteur : --champ-marcel-h),
+          // et se fond en haut sous les onglets au lieu d'y être coupé net.
+          className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-0.5 pt-2.5 pb-[calc(var(--champ-marcel-h,4.5rem)+1.5rem)] [mask-image:linear-gradient(to_bottom,transparent_0,black_14px)] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {panneaux[o]}
         </div>

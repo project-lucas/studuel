@@ -44,7 +44,11 @@ export default function EnTeteBureau({
   avecHistorique?: boolean
 }) {
   return (
-    <header className="relative h-[calc(15rem+env(safe-area-inset-top))] shrink-0 overflow-hidden max-md:left-1/2 max-md:w-screen max-md:-translate-x-1/2 md:mt-2 md:h-[240px] md:rounded-[28px]">
+    // Repliée (components/marcel/replie : un panneau qu'on fait défiler, une
+    // conversation ouverte), la tête n'est plus qu'une bande de décor avec le
+    // retour et l'historique : ~170 px rendus au contenu. Une transition
+    // ponctuelle de hauteur, pas une animation continue.
+    <header className="relative h-[calc(15rem+env(safe-area-inset-top))] shrink-0 overflow-hidden transition-[height] duration-300 ease-out max-md:left-1/2 max-md:w-screen max-md:-translate-x-1/2 md:mt-2 md:h-[240px] md:rounded-[28px] [html.marcel-replie_&]:h-[calc(4.25rem+env(safe-area-inset-top))] md:[html.marcel-replie_&]:h-[72px]">
       <h1 className="sr-only">Coach Marcel</h1>
       <Image
         src={DECORS[decor]}
@@ -83,10 +87,10 @@ export default function EnTeteBureau({
         pose={pose}
         hauteur={160}
         priority
-        className="coach-entree absolute bottom-5 left-3 object-contain drop-shadow-[0_12px_14px_rgba(20,12,40,.35)]"
+        className="coach-entree absolute bottom-5 left-3 object-contain transition-opacity duration-200 [html.marcel-replie_&]:opacity-0 drop-shadow-[0_12px_14px_rgba(20,12,40,.35)]"
       />
 
-      <p className="bg-card/95 absolute right-4 bottom-12 left-[136px] rounded-2xl px-3 py-2 text-[13px] leading-snug font-bold shadow-[0_8px_20px_-10px_rgba(36,48,79,.55)] before:absolute before:bottom-4 before:-left-[7px] before:border-y-[7px] before:border-r-[8px] before:border-y-transparent before:border-r-[color-mix(in_oklch,var(--card),transparent_5%)] before:content-['']">
+      <p className="bg-card/95 absolute right-4 bottom-12 left-[136px] transition-opacity duration-200 [html.marcel-replie_&]:pointer-events-none [html.marcel-replie_&]:opacity-0 rounded-2xl px-3 py-2 text-[13px] leading-snug font-bold shadow-[0_8px_20px_-10px_rgba(36,48,79,.55)] before:absolute before:bottom-4 before:-left-[7px] before:border-y-[7px] before:border-r-[8px] before:border-y-transparent before:border-r-[color-mix(in_oklch,var(--card),transparent_5%)] before:content-['']">
         {bulle}
       </p>
     </header>

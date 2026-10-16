@@ -18,11 +18,9 @@ describe('refusFichier', () => {
     expect(refusFichier(fichier('notes.md', ''))).toBeNull()
   })
 
-  it('refuse le PDF en disant quoi faire à la place', () => {
-    // Un refus sec (« format non supporté ») laisse l'élève sans issue, alors
-    // que la photo de la même page marche parfaitement.
-    const refus = refusFichier(fichier('cours.pdf', 'application/pdf'))
-    expect(refus?.erreur).toContain('photo')
+  it('accepte le PDF (son texte est lu dans le navigateur)', () => {
+    expect(refusFichier(fichier('cours.pdf', 'application/pdf'))).toBeNull()
+    expect(refusFichier(fichier('cours.PDF', ''))).toBeNull()
   })
 
   it('refuse le reste', () => {

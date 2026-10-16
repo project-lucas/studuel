@@ -4,6 +4,8 @@ import { useCallback, useRef } from 'react'
 
 const CLASSE = 'champ-marcel'
 const VARIABLE = '--champ-marcel'
+/** La hauteur du champ lui-même : les panneaux du bureau défilent DESSOUS (16/10/2026). */
+const HAUTEUR = '--champ-marcel-h'
 /** L'air entre le haut du champ et le bouton flottant posé au-dessus. */
 const MARGE = 10
 
@@ -31,6 +33,7 @@ export function useHauteurChamp() {
     const mesurer = () => {
       const haut = el.getBoundingClientRect().top
       racine.style.setProperty(VARIABLE, `${Math.max(0, Math.round(window.innerHeight - haut + MARGE))}px`)
+      racine.style.setProperty(HAUTEUR, `${Math.round(el.offsetHeight)}px`)
     }
     racine.classList.add(CLASSE)
     mesurer()
@@ -43,6 +46,7 @@ export function useHauteurChamp() {
       window.removeEventListener('resize', mesurer)
       racine.classList.remove(CLASSE)
       racine.style.removeProperty(VARIABLE)
+      racine.style.removeProperty(HAUTEUR)
     }
   }, [])
 }

@@ -52,17 +52,15 @@ export function refusFichier(f: {
   const type = (f.type || '').toLowerCase()
   const nom = (f.name || '').toLowerCase()
 
-  if (type === 'application/pdf' || nom.endsWith('.pdf')) {
-    return {
-      erreur: 'Je ne lis pas les PDF. Prends la page en photo, ça marchera.',
-    }
-  }
-
-  const image = TYPES_IMAGE.includes(type)
+  // Le PDF est LU depuis le 16/10/2026 (Lucas : « le + doit pouvoir tout
+  // permettre ») : son texte est extrait dans le navigateur (`lirePdf`). Un PDF
+  // scanné, sans texte, est refusé à ce moment-là avec la consigne de la photo.
+  const pdf = estPdf(f)
+  const image = TYPES_IMAGE.includes(type) || type.startsWith('image/')
   const texte =
     TYPES_TEXTE.includes(type) || /\.(txt|md|csv)$/.test(nom)
-  if (!image && !texte) {
-    return { erreur: 'Je sais lire une photo ou un fichier texte, rien d’autre.' }
+  if (!image && !texte && !pdf) {
+    return { erreur: 'Je sais lire une photo, un PDF ou un fichier texte, rien d’autre.' }
   }
 
   if (f.size > MAX_FICHIER_OCTETS) {
@@ -70,6 +68,11 @@ export function refusFichier(f: {
   }
 
   return null
+}
+
+/** Un PDF, à son type ou à son extension (certains navigateurs n'annoncent rien). */
+export function estPdf(f: { name: string; type: string }): boolean {
+  return (f.type || '').toLowerCase() === 'application/pdf' || (f.name || '').toLowerCase().endsWith('.pdf')
 }
 
 /** Le poids réel d'une data URL base64, sans la décoder. */

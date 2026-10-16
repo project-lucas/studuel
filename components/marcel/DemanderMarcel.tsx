@@ -9,9 +9,11 @@ import {
   ArrowUp,
   BatteryCharging,
   BookMarked,
+  Camera,
   ChevronDown,
   Crown,
   FileText,
+  FileUp,
   ImagePlus,
   Mic,
   Square,
@@ -34,6 +36,7 @@ import type { DemandeResult } from '@/app/marcel/actions'
 import type { Remarque } from '@/lib/coach/remarques'
 import { MODES, MODE_PAR_DEFAUT } from '@/lib/coach/outils'
 import {
+  estPdf,
   lireTexte,
   reduireImage,
   refusFichier,
@@ -47,6 +50,8 @@ import ReponseMarcel from './ReponseMarcel'
 import PoseMarcel from './PoseMarcel'
 import { useDictee } from './useDictee'
 import { useHauteurChamp } from './useHauteurChamp'
+import { lirePdf } from '@/lib/coach/lire-pdf'
+import { replier } from './replie'
 
 // LE FIL ET LE CHAMP — la moitié basse de l'écran du coach.
 //
@@ -163,6 +168,7 @@ export default function DemanderMarcel({
   const refChamp = useHauteurChamp()
   // Dicter sa question : le texte s'ajoute au champ, l'élève relit et envoie.
   const dictee = useDictee((dit) => setTexte((avant) => (avant ? `${avant} ${dit}` : dit)))
+  const fichierPhoto = useRef<HTMLInputElement>(null)
   const fichierImage = useRef<HTMLInputElement>(null)
   const fichierTexte = useRef<HTMLInputElement>(null)
 
@@ -178,6 +184,13 @@ export default function DemanderMarcel({
   useEffect(() => {
     if (proposition) champ.current?.focus()
   }, [proposition])
+
+  // Une conversation ouverte replie la tête du bureau : le fil a la place.
+  const enConversation = messages.length > 0 || occupe
+  useEffect(() => {
+    replier('conversation', enConversation)
+    return () => replier('conversation', false)
+  }, [enConversation])
 
   // Le bureau ouvert, le champ se fait petit : les onglets ont besoin de la
   // place. Il reprend sa hauteur dès qu’on écrit ou qu’une conversation s’ouvre.
@@ -197,6 +210,17 @@ export default function DemanderMarcel({
   // réveil (le 1er du mois) et la recharge qui le réveille tout de suite.
   const sommeil = sommeilDe(etat, creditsMensuels(tier), new Date())
 
+  /** Une entrée du menu du « + » : l'appareil photo, la galerie, un fichier, ou les phrases. */
+  const ouvrirEntree = (cle: string) => {
+    if (cle === 'photo') fichierPhoto.current?.click()
+    else if (cle === 'image') fichierImage.current?.click()
+    else if (cle === 'fichier') fichierTexte.current?.click()
+    else {
+      setMenu(false)
+      setAmorces(true)
+    }
+  }
+
   const choisirFichier = (file: File | undefined) => {
     if (!file) return
     const refus = refusFichier(file)
@@ -213,10 +237,17 @@ export default function DemanderMarcel({
         setPiece(
           estImage
             ? { type: 'image', nom: file.name, data: await reduireImage(file) }
-            : { type: 'texte', nom: file.name, data: await lireTexte(file) },
+            : estPdf(file)
+              ? { type: 'texte', nom: file.name, data: await lirePdf(file) }
+              : { type: 'texte', nom: file.name, data: await lireTexte(file) },
         )
-      } catch {
-        toast('Ce fichier n’a pas pu être lu.', 'error')
+      } catch (e) {
+        toast(
+          e instanceof Error && e.message === 'pdf-sans-texte'
+            ? 'Ce PDF est une image : prends plutôt la page en photo.'
+            : 'Ce fichier n’a pas pu être lu.',
+          'error',
+        )
       }
     })
   }
@@ -231,6 +262,7 @@ export default function DemanderMarcel({
     const question = texte
     const jointe = piece
     setTexte('')
+    if (champ.current) champ.current.style.height = ''
     setPiece(null)
 
     void envoyer(question, matiere === '' ? null : matiere, jointe).then(
@@ -302,7 +334,7 @@ export default function DemanderMarcel({
   }
 
   return (
-    <section className="mt-3 flex min-h-0 flex-1 flex-col" data-teinte={spec.teinte}>
+    <section className="relative mt-3 flex min-h-0 flex-1 flex-col" data-teinte={spec.teinte}>
       <h2 className="sr-only">Demander à Marcel</h2>
 
       {/* LE FIL. `aria-live` annonce la réponse sans déplacer le focus —
@@ -368,7 +400,7 @@ export default function DemanderMarcel({
 
       {(messages.length > 0 || occupe) && (
         <div
-          className="mb-3 min-h-0 flex-1 space-y-2.5 overflow-y-auto overscroll-contain px-0.5 [scrollbar-width:thin]"
+          className="min-h-0 flex-1 space-y-2.5 overflow-y-auto overscroll-contain px-0.5 pb-[calc(var(--champ-marcel-h,4.5rem)+2.5rem)] [scrollbar-width:thin]"
           aria-live="polite"
         >
           {messages.map((message) =>
@@ -457,369 +489,349 @@ export default function DemanderMarcel({
         </div>
       )}
 
-      {etat.possible ? (
-        <>
-          {/* MARCEL ÉCOUTE (16/10/2026) : la pose dit que le micro est ouvert. */}
-          {dictee.ecoute ? (
-            <div className="mb-2 flex shrink-0 items-end gap-2" role="status">
-              <PoseMarcel pose="ecoute" hauteur={64} className="shrink-0 object-contain" />
-              <p className="bg-card mb-1.5 flex-1 rounded-2xl px-3 py-2 text-[12.5px] leading-snug font-bold">Je t’écoute… parle, puis touche Stop.</p>
-              <button
-                type="button"
-                onClick={dictee.arreter}
-                className="bg-destructive/10 text-destructive mb-1.5 inline-flex min-h-10 items-center gap-1.5 rounded-full px-3 text-[12px] font-extrabold"
-              >
-                <Square aria-hidden="true" className="size-3.5" fill="currentColor" strokeWidth={0} />
-                Stop
-              </button>
-            </div>
-          ) : null}
-          <div
-            ref={bureau ? refChamp : undefined}
-            className={cn(
-              'bg-card mt-auto shrink-0 rounded-[26px] p-3 shadow-[inset_0_0_0_1.5px_color-mix(in_oklch,var(--foreground),transparent_90%),0_14px_26px_-22px_rgba(36,48,79,.9)]',
-              // Compact : le « + », la saisie et l’envoi sur une seule ligne.
-              compact && 'flex flex-wrap items-center gap-x-2',
-            )}
-          >
-            <div className={cn('flex w-full items-center justify-between gap-2', compact && 'hidden')}>
-              {/* La matière n'est pas un réglage caché : Marcel ne répond pas en
-                  histoire comme en maths (cf. lib/coach/regimes), et c'est ce
-                  menu qui le lui dit. Prérempli sur la mission du jour. */}
-              {matieres.length > 0 ? (
-                <span className="relative inline-flex items-center">
-                  <select
-                    aria-label="Préciser une matière"
-                    value={matiere}
-                    onChange={(e) => setMatiere(e.target.value)}
-                    disabled={occupeOuPending}
-                    className="border-foreground/12 focus:border-primary appearance-none rounded-full border-[1.5px] bg-transparent py-1.5 pr-7 pl-3.5 text-xs font-extrabold outline-none disabled:opacity-50"
-                  >
-                    <option value="">Préciser une matière</option>
-                    {matieres.map((m) => (
-                      <option key={m.slug} value={m.slug}>
-                        {m.name}
-                      </option>
-                    ))}
-                  </select>
-                  <ChevronDown
-                    aria-hidden="true"
-                    className="text-muted-foreground pointer-events-none absolute right-2.5 size-3.5"
-                  />
-                </span>
-              ) : (
-                <span />
-              )}
-
-              <span className="text-primary bg-primary/10 rounded-full px-2.5 py-1 text-[11px] font-extrabold">
-                {etat.restants > 0
-                  ? `${etat.restants} crédits`
-                  : `${solde.jetons} en recharge`}
-              </span>
-            </div>
-
-            {sommeil.etat === 'fatigue' && (
-              <p className="bg-secondary mt-2 flex w-full items-center gap-2 rounded-2xl px-3 py-2 text-[11.5px] font-bold">
-                <Moon aria-hidden="true" className="text-primary size-4 shrink-0" />
-                <span className="min-w-0 flex-1">{sommeil.phrase}</span>
-                <Link href="/tresor#recharges" className="text-primary shrink-0 font-extrabold underline-offset-4 hover:underline">
-                  Recharger
-                </Link>
-              </p>
-            )}
-
-            {/* Ce que Marcel sait faire — dans le champ, là où l'on décide ce
-                qu'on demande. */}
-            {outils}
-
-            {/* Le mode armé se voit DANS le champ, à sa couleur : sinon on tape
-                une question ordinaire et on reçoit une fiche sans comprendre
-                pourquoi. La croix rend le champ à son usage normal. */}
-            {mode !== 'question' && (
-              <p className="outil-pastille mt-2 inline-flex items-center gap-1.5 rounded-full py-1 pr-1 pl-3 text-[11.5px] font-extrabold">
-                <WandSparkles aria-hidden="true" className="size-3.5" />
-                {spec.label}
-                <button
-                  type="button"
-                  onClick={() => choisirMode('question')}
-                  aria-label={`Quitter le mode « ${spec.label} »`}
-                  className="grid size-6 place-items-center rounded-full"
-                >
-                  <X aria-hidden="true" className="size-3.5" strokeWidth={3} />
-                </button>
-              </p>
-            )}
-
-            {piece && (
-              <p className="bg-background/70 mt-2 flex items-center gap-2 rounded-xl p-2 text-[12px] font-extrabold">
-                {piece.type === 'image' ? (
-                  // Aperçu réel : l'élève vérifie qu'il a joint la BONNE photo,
-                  // et qu'elle est lisible, avant de payer une question.
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={piece.data}
-                    alt=""
-                    className="size-10 shrink-0 rounded-lg object-cover"
-                  />
-                ) : (
-                  <FileText
-                    aria-hidden="true"
-                    className="text-primary size-5 shrink-0"
-                  />
-                )}
-                <span className="min-w-0 flex-1 truncate">{piece.nom}</span>
-                <button
-                  type="button"
-                  onClick={() => setPiece(null)}
-                  aria-label="Retirer la pièce jointe"
-                  className="text-muted-foreground grid size-8 shrink-0 place-items-center rounded-lg"
-                >
-                  <X aria-hidden="true" className="size-4" />
-                </button>
-              </p>
-            )}
-
-            <label className="sr-only" htmlFor="marcel-question">
-              Ta demande à Marcel
-            </label>
-            <textarea
-              id="marcel-question"
-              ref={champ}
-              value={texte}
-              onChange={(e) => setTexte(e.target.value)}
-              maxLength={400}
-              disabled={occupeOuPending}
-              placeholder={spec.placeholder}
-              rows={compact ? 1 : 2}
-              className={cn(
-                'placeholder:text-muted-foreground/70 mt-2 w-full resize-none bg-transparent px-1.5 text-[15px] font-semibold outline-none',
-                compact ? 'order-2 mt-0 min-h-[1.75rem] min-w-0 flex-1 basis-0' : 'min-h-[4.25rem]',
-              )}
-            />
-
-            {menu && (
-              <ul className="mb-1 flex flex-wrap gap-1.5">
-                {/* La photo n'est proposée que si un modèle sait la lire. */}
-                {vision ? (
-                  <li>
-                    <button
-                      type="button"
-                      onClick={() => fichierImage.current?.click()}
-                      className="bg-background/70 flex min-h-9 items-center gap-1.5 rounded-full px-3 text-xs font-extrabold shadow-[0_2px_0_rgba(36,48,79,.09)] transition active:translate-y-px"
-                    >
-                      <ImagePlus aria-hidden="true" className="size-3.5" />
-                      Une photo
-                    </button>
-                  </li>
-                ) : null}
-                <li>
+      {/* LE CHAMP FLOTTE (16/10/2026, Lucas : « cette barre peut prendre la
+          largeur », « il faut que ce soit la barre qui survole le reste ») :
+          il est posé PAR-DESSUS le bas du bureau ou du fil, sur toute la largeur
+          de l'écran ; ce qui défile passe derrière lui et se fond dans le mur.
+          Les panneaux et le fil gardent en bas la place de sa hauteur
+          (`--champ-marcel-h`, useHauteurChamp). */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 max-md:left-1/2 max-md:w-screen max-md:-translate-x-1/2">
+        <div aria-hidden="true" className="from-background/95 h-7 bg-gradient-to-t to-transparent" />
+        <div className="from-background/95 to-background/95 pointer-events-auto bg-gradient-to-b px-2 pb-2 md:px-0">
+          {etat.possible ? (
+            <>
+              {/* MARCEL ÉCOUTE (16/10/2026) : la pose dit que le micro est ouvert. */}
+              {dictee.ecoute ? (
+                <div className="mb-2 flex items-end gap-2 px-1" role="status">
+                  <PoseMarcel pose="ecoute" hauteur={64} className="shrink-0 object-contain" />
+                  <p className="bg-card mb-1.5 flex-1 rounded-2xl px-3 py-2 text-[12.5px] leading-snug font-bold">Je t’écoute… parle, puis touche Stop.</p>
                   <button
                     type="button"
-                    onClick={() => fichierTexte.current?.click()}
-                    className="bg-background/70 flex min-h-9 items-center gap-1.5 rounded-full px-3 text-xs font-extrabold shadow-[0_2px_0_rgba(36,48,79,.09)] transition active:translate-y-px"
+                    onClick={dictee.arreter}
+                    className="bg-destructive/10 text-destructive mb-1.5 inline-flex min-h-10 items-center gap-1.5 rounded-full px-3 text-[12px] font-extrabold"
                   >
-                    <FileText aria-hidden="true" className="size-3.5" />
-                    Un fichier texte
+                    <Square aria-hidden="true" className="size-3.5" fill="currentColor" strokeWidth={0} />
+                    Stop
                   </button>
-                </li>
-                <li>
+                </div>
+              ) : null}
+
+              <div
+                ref={refChamp}
+                className="bg-card relative rounded-[24px] p-1.5 shadow-[inset_0_0_0_1.5px_color-mix(in_oklch,var(--foreground),transparent_90%),0_-6px_24px_-14px_rgba(36,48,79,.55)]"
+              >
+                {/* LE « + » OUVRE TOUT (Lucas : « prendre en photo, importer un
+                    fichier, tout ») : une liste au-dessus du champ, et un voile
+                    pour la refermer d'un toucher ailleurs. */}
+                {menu || amorces ? (
+                  <button
+                    type="button"
+                    aria-label="Fermer"
+                    tabIndex={-1}
+                    onClick={() => {
+                      setMenu(false)
+                      setAmorces(false)
+                    }}
+                    className="fixed inset-0 z-0 cursor-default"
+                  />
+                ) : null}
+                {menu ? (
+                  <ul className="bg-card absolute bottom-full left-1 z-10 mb-2 w-[min(19rem,calc(100vw-1.5rem))] rounded-[20px] p-1.5 shadow-[0_18px_40px_-16px_rgba(36,48,79,.6),inset_0_0_0_1.5px_color-mix(in_oklch,var(--foreground),transparent_90%)]">
+                    {[
+                      // La photo n'est proposée que si un modèle sait la lire.
+                      ...(vision
+                        ? [
+                            { cle: 'photo', Icone: Camera, titre: 'Prendre une photo', detail: 'Ta copie, ton cahier, le tableau' },
+                            { cle: 'image', Icone: ImagePlus, titre: 'Choisir une image', detail: 'Dans ta galerie' },
+                          ]
+                        : []),
+                      { cle: 'fichier', Icone: FileUp, titre: 'Importer un fichier', detail: 'Un PDF, un texte' },
+                      {
+                        cle: 'phrases',
+                        Icone: Sparkles,
+                        titre: 'Phrases toutes prêtes',
+                        detail: 'Pour bien commencer ta demande',
+                      },
+                    ].map(({ cle, Icone, titre, detail }) => (
+                      <li key={cle}>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            sfx.tap()
+                            ouvrirEntree(cle)
+                          }}
+                          className="hover:bg-secondary/60 active:bg-secondary flex min-h-12 w-full items-center gap-3 rounded-2xl px-2.5 py-1.5 text-left"
+                        >
+                          <span className="bg-secondary text-primary grid size-9 shrink-0 place-items-center rounded-full">
+                            <Icone aria-hidden="true" className="size-[18px]" strokeWidth={2.4} />
+                          </span>
+                          <span className="min-w-0">
+                            <span className="block text-[13.5px] leading-tight font-extrabold">{titre}</span>
+                            <span className="text-muted-foreground block text-[11.5px] font-semibold">{detail}</span>
+                          </span>
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+                {amorces ? (
+                  <ul className="bg-card absolute bottom-full left-1 z-10 mb-2 flex w-[min(21rem,calc(100vw-1.5rem))] flex-wrap gap-1.5 rounded-[20px] p-2.5 shadow-[0_18px_40px_-16px_rgba(36,48,79,.6),inset_0_0_0_1.5px_color-mix(in_oklch,var(--foreground),transparent_90%)]">
+                    {INTENTIONS.map((intention) => (
+                      <li key={intention.key}>
+                        <button
+                          type="button"
+                          disabled={occupeOuPending}
+                          onClick={() => {
+                            setTexte(intention.amorce)
+                            setAmorces(false)
+                            champ.current?.focus()
+                          }}
+                          className="bg-secondary/70 min-h-10 rounded-full px-3 text-left text-xs font-extrabold transition active:translate-y-px disabled:opacity-50"
+                        >
+                          {intention.label}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+
+                {/* LA LIGNE DU HAUT, seulement quand on prépare une demande : le
+                    mode armé, la matière et les crédits sur UNE ligne (avant :
+                    trois lignes qui couvraient les outils). */}
+                {!compact ? (
+                  <div className="relative z-[1] flex items-center gap-1.5 px-1 pt-0.5 pb-1.5">
+                    {mode !== 'question' ? (
+                      <span className="outil-pastille inline-flex min-w-0 shrink items-center gap-1 rounded-full py-1 pr-0.5 pl-2.5 text-[11.5px] font-extrabold">
+                        <WandSparkles aria-hidden="true" className="size-3.5 shrink-0" />
+                        <span className="truncate">{spec.label}</span>
+                        <button
+                          type="button"
+                          onClick={() => choisirMode('question')}
+                          aria-label={`Quitter le mode « ${spec.label} »`}
+                          className="grid size-7 shrink-0 place-items-center rounded-full"
+                        >
+                          <X aria-hidden="true" className="size-3.5" strokeWidth={3} />
+                        </button>
+                      </span>
+                    ) : null}
+                    {matieres.length > 0 ? (
+                      // La matière n'est pas un réglage caché : Marcel ne répond pas
+                      // en histoire comme en maths (cf. lib/coach/regimes).
+                      <span className="relative inline-flex min-w-0 shrink items-center">
+                        <select
+                          aria-label="Préciser une matière"
+                          value={matiere}
+                          onChange={(e) => setMatiere(e.target.value)}
+                          disabled={occupeOuPending}
+                          className="border-foreground/12 focus:border-primary max-w-[9.5rem] appearance-none truncate rounded-full border-[1.5px] bg-transparent py-1 pr-6 pl-2.5 text-[11.5px] font-extrabold outline-none disabled:opacity-50"
+                        >
+                          <option value="">Matière ?</option>
+                          {matieres.map((m) => (
+                            <option key={m.slug} value={m.slug}>
+                              {m.name}
+                            </option>
+                          ))}
+                        </select>
+                        <ChevronDown aria-hidden="true" className="text-muted-foreground pointer-events-none absolute right-2 size-3.5" />
+                      </span>
+                    ) : null}
+                    <span className="text-primary bg-primary/10 ml-auto shrink-0 rounded-full px-2 py-1 text-[11px] font-extrabold">
+                      {etat.restants > 0 ? `${etat.restants} crédits` : `${solde.jetons} en recharge`}
+                    </span>
+                  </div>
+                ) : null}
+
+                {sommeil.etat === 'fatigue' && !compact ? (
+                  <p className="bg-secondary mx-1 mb-1.5 flex items-center gap-2 rounded-2xl px-3 py-2 text-[11.5px] font-bold">
+                    <Moon aria-hidden="true" className="text-primary size-4 shrink-0" />
+                    <span className="min-w-0 flex-1">{sommeil.phrase}</span>
+                    <Link href="/tresor#recharges" className="text-primary shrink-0 font-extrabold underline-offset-4 hover:underline">
+                      Recharger
+                    </Link>
+                  </p>
+                ) : null}
+
+                {outils}
+
+                {piece ? (
+                  <p className="bg-background/70 mx-1 mb-1.5 flex items-center gap-2 rounded-xl p-1.5 text-[12px] font-extrabold">
+                    {piece.type === 'image' ? (
+                      // Aperçu réel : l'élève vérifie qu'il a joint la BONNE photo.
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={piece.data} alt="" className="size-10 shrink-0 rounded-lg object-cover" />
+                    ) : (
+                      <FileText aria-hidden="true" className="text-primary size-5 shrink-0" />
+                    )}
+                    <span className="min-w-0 flex-1 truncate">{piece.nom}</span>
+                    <button
+                      type="button"
+                      onClick={() => setPiece(null)}
+                      aria-label="Retirer la pièce jointe"
+                      className="text-muted-foreground grid size-8 shrink-0 place-items-center rounded-lg"
+                    >
+                      <X aria-hidden="true" className="size-4" />
+                    </button>
+                  </p>
+                ) : null}
+
+                {/* LA LIGNE DU CHAMP : « + », la saisie qui grandit avec le texte
+                    (cinq lignes au plus), le micro, l'envoi. Toujours une ligne. */}
+                <div className="relative z-[1] flex items-end gap-1.5">
                   <button
                     type="button"
                     onClick={() => {
-                      setAmorces((v) => !v)
-                      setMenu(false)
+                      sfx.tap()
+                      setMenu((v) => !v)
+                      setAmorces(false)
                     }}
-                    className="bg-background/70 flex min-h-9 items-center gap-1.5 rounded-full px-3 text-xs font-extrabold shadow-[0_2px_0_rgba(36,48,79,.09)] transition active:translate-y-px"
+                    aria-expanded={menu}
+                    aria-label="Joindre une photo, un fichier, ou une phrase toute prête"
+                    className={cn(
+                      'grid size-11 shrink-0 place-items-center rounded-full border-[1.5px] transition active:translate-y-px',
+                      menu ? 'border-primary bg-primary/10 text-primary' : 'border-foreground/12 text-muted-foreground',
+                    )}
                   >
-                    <Sparkles aria-hidden="true" className="size-3.5" />
-                    Phrases toutes prêtes
+                    <Plus aria-hidden="true" className={cn('size-5 transition-transform', menu && 'rotate-45')} strokeWidth={2.4} />
                   </button>
-                </li>
-              </ul>
-            )}
 
-            {amorces && (
-              <ul className="mb-1 flex flex-wrap gap-1.5">
-                {INTENTIONS.map((intention) => (
-                  <li key={intention.key}>
+                  <label className="sr-only" htmlFor="marcel-question">
+                    Ta demande à Marcel
+                  </label>
+                  <textarea
+                    id="marcel-question"
+                    ref={champ}
+                    value={texte}
+                    onChange={(e) => {
+                      setTexte(e.target.value)
+                      // La saisie grandit avec le texte, jusqu'à cinq lignes.
+                      e.target.style.height = 'auto'
+                      e.target.style.height = `${Math.min(e.target.scrollHeight, 128)}px`
+                    }}
+                    maxLength={400}
+                    disabled={occupeOuPending}
+                    placeholder={spec.placeholder}
+                    rows={1}
+                    className="placeholder:text-muted-foreground/70 max-h-32 min-h-11 min-w-0 flex-1 resize-none bg-transparent px-1.5 py-[11px] text-[15px] leading-[1.35] font-semibold outline-none"
+                  />
+
+                  {dictee.possible ? (
                     <button
                       type="button"
+                      onClick={dictee.ecoute ? dictee.arreter : dictee.demarrer}
                       disabled={occupeOuPending}
-                      onClick={() => {
-                        setTexte(intention.amorce)
-                        setAmorces(false)
-                        champ.current?.focus()
-                      }}
-                      className="bg-background/70 min-h-9 rounded-full px-3 text-left text-xs font-extrabold shadow-[0_2px_0_rgba(36,48,79,.09)] transition active:translate-y-px disabled:opacity-50"
+                      aria-pressed={dictee.ecoute}
+                      aria-label={dictee.ecoute ? 'Arrêter la dictée' : 'Dicter ma question'}
+                      className={cn(
+                        'grid size-11 shrink-0 place-items-center rounded-full transition active:translate-y-px disabled:opacity-40',
+                        dictee.ecoute ? 'bg-destructive/10 text-destructive' : 'bg-secondary text-primary',
+                      )}
                     >
-                      {intention.label}
+                      <Mic aria-hidden="true" className="size-5" strokeWidth={2.4} />
                     </button>
-                  </li>
-                ))}
-              </ul>
-            )}
+                  ) : null}
+                  <button
+                    type="button"
+                    onClick={soumettre}
+                    disabled={occupeOuPending || (texte.trim().length === 0 && piece === null)}
+                    aria-label="Envoyer à Marcel"
+                    className="bg-primary text-primary-foreground grid size-11 shrink-0 place-items-center rounded-full shadow-[0_3px_0_color-mix(in_oklch,var(--primary),black_28%)] transition active:translate-y-px disabled:opacity-40 disabled:shadow-none"
+                  >
+                    <ArrowUp aria-hidden="true" className="size-5" strokeWidth={2.6} />
+                  </button>
+                </div>
 
-            <div className={compact ? 'contents' : 'flex items-center justify-between'}>
-              <button
-                type="button"
-                onClick={() => {
-                  sfx.tap()
-                  setMenu((v) => !v)
-                  setAmorces(false)
-                }}
-                aria-expanded={menu}
-                aria-label="Joindre une photo, un fichier, ou une phrase toute prête"
-                className={cn(
-                  'grid size-11 place-items-center rounded-full border-[1.5px] transition active:translate-y-px',
-                  compact && 'order-1',
-                  menu
-                    ? 'border-primary bg-primary/10 text-primary'
-                    : 'border-foreground/12 text-muted-foreground',
-                )}
-              >
-                <Plus
-                  aria-hidden="true"
-                  className={cn(
-                    'size-5 transition-transform',
-                    menu && 'rotate-45',
-                  )}
-                  strokeWidth={2.4}
+                {/* Trois entrées : l'appareil photo (`capture`), la galerie, et
+                    les fichiers (PDF et texte). */}
+                <input
+                  ref={fichierPhoto}
+                  type="file"
+                  accept="image/*"
+                  capture="environment"
+                  className="hidden"
+                  onChange={(e) => {
+                    choisirFichier(e.target.files?.[0])
+                    e.target.value = ''
+                  }}
                 />
-              </button>
-
-              {dictee.possible ? (
-                <button
-                  type="button"
-                  onClick={dictee.ecoute ? dictee.arreter : dictee.demarrer}
-                  disabled={occupeOuPending}
-                  aria-pressed={dictee.ecoute}
-                  aria-label={dictee.ecoute ? 'Arrêter la dictée' : 'Dicter ma question'}
-                  className={cn(
-                    'grid size-11 shrink-0 place-items-center rounded-full transition active:translate-y-px disabled:opacity-40',
-                    dictee.ecoute ? 'bg-destructive/10 text-destructive' : 'bg-secondary text-primary',
-                    compact ? 'order-3' : 'ml-auto mr-2',
-                  )}
-                >
-                  <Mic aria-hidden="true" className="size-5" strokeWidth={2.4} />
-                </button>
-              ) : null}
-              <button
-                type="button"
-                onClick={soumettre}
-                disabled={
-                  occupeOuPending ||
-                  (texte.trim().length === 0 && piece === null)
-                }
-                aria-label="Envoyer à Marcel"
-                className={cn(
-                  'bg-primary text-primary-foreground grid size-12 place-items-center rounded-full shadow-[0_3px_0_color-mix(in_oklch,var(--primary),black_28%)] transition active:translate-y-px disabled:opacity-40 disabled:shadow-none',
-                  compact && 'order-4 size-11',
-                )}
-              >
-                <ArrowUp
-                  aria-hidden="true"
-                  className="size-5"
-                  strokeWidth={2.6}
+                <input
+                  ref={fichierImage}
+                  type="file"
+                  accept="image/*"
+                  className="hidden"
+                  onChange={(e) => {
+                    choisirFichier(e.target.files?.[0])
+                    e.target.value = ''
+                  }}
                 />
-              </button>
-            </div>
+                <input
+                  ref={fichierTexte}
+                  type="file"
+                  accept=".pdf,.txt,.md,.csv,application/pdf,text/plain,text/markdown,text/csv"
+                  className="hidden"
+                  onChange={(e) => {
+                    choisirFichier(e.target.files?.[0])
+                    e.target.value = ''
+                  }}
+                />
+              </div>
 
-            {/* Deux entrées séparées : `capture` propose l'appareil photo sur
-                mobile, et l'accept d'un fichier texte n'a rien à faire dans la
-                même boîte de dialogue. */}
-            <input
-              ref={fichierImage}
-              type="file"
-              accept="image/*"
-              className="hidden"
-              onChange={(e) => {
-                choisirFichier(e.target.files?.[0])
-                e.target.value = ''
-              }}
-            />
-            <input
-              ref={fichierTexte}
-              type="file"
-              accept=".txt,.md,.csv,text/plain,text/markdown,text/csv"
-              className="hidden"
-              onChange={(e) => {
-                choisirFichier(e.target.files?.[0])
-                e.target.value = ''
-              }}
-            />
-          </div>
-
-          {/* La ligne de bas de page, comme partout où une IA répond : elle dit
-              ce qu'est Marcel, et ce qu'il faut en faire. Elle porte aussi le
-              compteur du jour en clair. */}
-          <p className={cn('text-muted-foreground mt-2.5 flex items-start justify-center gap-1.5 px-3 text-center text-[11px] leading-snug font-semibold', compact && 'sr-only')}>
-            <Sparkles aria-hidden="true" className="mt-px size-3.5 shrink-0" />
-            <span>
-              {etat.message} Marcel est un coach IA : il donne un indice, jamais
-              la réponse toute faite — vérifie ce qui compte.
-            </span>
-          </p>
-        </>
-      ) : sommeil.etat === 'abonnement' ? (
-        // LE GRATUIT (16/10/2026, Lucas : « le bouton de Marcel doit être
-        // visible pour le freemium, avec une ou deux fonctionnalités offertes ;
-        // on bloque les autres pour convaincre de passer au payant »). Le champ
-        // se voit, verrouillé, et un seul bouton d’or ouvre Studuel+. Aucune
-        // recharge n’est montrée : elles sont réservées aux abonnés.
-        <div ref={bureau ? refChamp : undefined} className="mt-auto shrink-0">
-          {/* Marcel TEND LA MAIN (16/10/2026) : on vend une rencontre, pas un cadenas. */}
-          <div className="mb-1.5 flex items-end gap-2" aria-hidden="true">
-            <PoseMarcel pose="invite" hauteur={56} className="shrink-0 object-contain" />
-            <p className="bg-card mb-1 rounded-2xl px-3 py-1.5 text-[12.5px] leading-snug font-bold">
-              Avec Studuel+, je te réponds pour de vrai — et je retiens ce que tu me dis.
-            </p>
-          </div>
-          {/* Plus de faux champ grisé : le bouton d’or dit déjà ce qui est fermé, et
-              la place revient aux onglets (16/10/2026). */}
-          <Button asChild size="xl" className="bg-highlight text-foreground hover:bg-highlight/90 mt-2 w-full font-extrabold">
-            <Link href="/plus">
-              <Crown aria-hidden="true" />
-              Débloquer Marcel
-            </Link>
-          </Button>
-          <p className="text-muted-foreground mt-1.5 text-center text-[11px] font-semibold">
-            Ta journée et ton radar restent offerts.
-          </p>
-        </div>
-      ) : (
-        // MARCEL DORT (15/10/2026, Lucas : « Marcel doit dormir, il se
-        // réveillera dans X jours, avec en boutique la possibilité de le
-        // recharger »). Jamais « quota » ni « interdit » : il a beaucoup
-        // travaillé. Le gratuit, lui, découvre Studuel+. L'ILLUSTRATION de
-        // Marcel endormi viendra plus tard : la tête de Marcel, un peu éteinte.
-        <div className="bg-card mt-auto rounded-[26px] p-4 text-center shadow-[inset_0_0_0_1.5px_color-mix(in_oklch,var(--foreground),transparent_90%),0_14px_26px_-22px_rgba(36,48,79,.9)]">
-          {sommeil.etat === 'endormi' || sommeil.etat === 'repos' ? (
-            <div className="relative mx-auto mb-1 w-fit" aria-hidden="true">
-              <PoseMarcel pose="dort" hauteur={104} className="object-contain" />
-              <span className="font-heading text-primary absolute top-0 -right-3 text-lg font-extrabold">
-                z<span className="text-sm">z</span>
-              </span>
-            </div>
-          ) : null}
-          <p className="font-heading text-[16px] font-extrabold">{sommeil.titre}</p>
-          <p className="text-muted-foreground mt-1 text-[12.5px] font-semibold text-balance">{sommeil.phrase}</p>
-
-
-          {sommeil.recharger && (
-            <div className="mt-3 space-y-1.5">
-              <Button asChild size="lg" className="w-full">
-                <Link href="/tresor#recharges">
-                  <BatteryCharging aria-hidden="true" />
-                  Recharger Marcel
+              {/* La ligne de bas de page, comme partout où une IA répond — une
+                  fois la conversation ouverte seulement : devant le bureau,
+                  elle mangeait une ligne pour rien. */}
+              <p className={cn('text-muted-foreground mt-1.5 px-3 text-center text-[10.5px] leading-snug font-semibold', messages.length === 0 && 'sr-only')}>
+                {etat.message} Marcel donne un indice, jamais la réponse toute faite.
+              </p>
+            </>
+          ) : sommeil.etat === 'abonnement' ? (
+            // LE GRATUIT : le champ se voit, verrouillé, et un seul bouton d’or
+            // ouvre Studuel+. Aucune recharge n’est montrée.
+            <div ref={refChamp} className="px-1">
+              {/* Marcel TEND LA MAIN (16/10/2026) : on vend une rencontre, pas un cadenas. */}
+              <div className="mb-1.5 flex items-end gap-2" aria-hidden="true">
+                <PoseMarcel pose="invite" hauteur={56} className="shrink-0 object-contain" />
+                <p className="bg-card mb-1 rounded-2xl px-3 py-1.5 text-[12.5px] leading-snug font-bold">
+                  Avec Studuel+, je te réponds pour de vrai — et je retiens ce que tu me dis.
+                </p>
+              </div>
+              <Button asChild size="xl" className="bg-highlight text-foreground hover:bg-highlight/90 w-full font-extrabold">
+                <Link href="/plus">
+                  <Crown aria-hidden="true" />
+                  Débloquer Marcel
                 </Link>
               </Button>
-              <p className="text-muted-foreground text-[11px] font-semibold">
-                Une recharge ne s’efface pas à la fin du mois.
-              </p>
+            </div>
+          ) : (
+            // MARCEL DORT (15/10/2026) : la limite atteinte se dit en sommeil,
+            // avec son réveil et la recharge qui le réveille tout de suite.
+            <div
+              ref={refChamp}
+              className="bg-card rounded-[24px] p-4 text-center shadow-[inset_0_0_0_1.5px_color-mix(in_oklch,var(--foreground),transparent_90%),0_-6px_24px_-14px_rgba(36,48,79,.55)]"
+            >
+              {sommeil.etat === 'endormi' || sommeil.etat === 'repos' ? (
+                <div className="relative mx-auto mb-1 w-fit" aria-hidden="true">
+                  <PoseMarcel pose="dort" hauteur={88} className="object-contain" />
+                  <span className="font-heading text-primary absolute top-0 -right-3 text-lg font-extrabold">
+                    z<span className="text-sm">z</span>
+                  </span>
+                </div>
+              ) : null}
+              <p className="font-heading text-[16px] font-extrabold">{sommeil.titre}</p>
+              <p className="text-muted-foreground mt-1 text-[12.5px] font-semibold text-balance">{sommeil.phrase}</p>
+              {sommeil.recharger && (
+                <div className="mt-3 space-y-1.5">
+                  <Button asChild size="lg" className="w-full">
+                    <Link href="/tresor#recharges">
+                      <BatteryCharging aria-hidden="true" />
+                      Recharger Marcel
+                    </Link>
+                  </Button>
+                  <p className="text-muted-foreground text-[11px] font-semibold">Une recharge ne s’efface pas à la fin du mois.</p>
+                </div>
+              )}
             </div>
           )}
         </div>
-      )}
+      </div>
     </section>
   )
 }

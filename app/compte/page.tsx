@@ -121,27 +121,30 @@ export default async function ComptePage() {
               <HeartHandshake className="size-4" /> Espace parents
             </Link>
           </Button>
-          {coach ? (
-            <Button asChild variant="outline">
-              <Link href="/coach">
-                <Users className="size-4" /> Espace coach
-              </Link>
-            </Button>
-          ) : null}
           {/* Relance le tour guidé des onglets (chemin forcé ?tour=1). */}
           <Button asChild variant="outline">
             <Link href="/reviser?tour=1">
               <Compass className="size-4" /> Revoir le tutoriel
             </Link>
           </Button>
-          {profile?.is_admin ? (
-            <Button asChild variant="outline">
-              <Link href="/admin">
-                <Wrench className="size-4" /> Studio de contenu
+        </div>
+        {/* LA CONSOLE (16/10/2026) : coach et admin y entrent d'ici, en grand. */}
+        {coach ? (
+          <div className="mt-4 flex flex-col gap-2 border-t pt-4">
+            {profile?.is_admin ? (
+              <Button asChild size="xl" className="w-full">
+                <Link href="/admin/insights">
+                  <Wrench className="size-5" /> Espace admin
+                </Link>
+              </Button>
+            ) : null}
+            <Button asChild size="xl" variant={profile?.is_admin ? 'secondary' : 'default'} className="w-full">
+              <Link href="/coach">
+                <Users className="size-5" /> Espace coach
               </Link>
             </Button>
-          ) : null}
-        </div>
+          </div>
+        ) : null}
       </section>
 
       {/* « Mon coach » (560) : le groupe de coach auquel l'élève est rattaché,

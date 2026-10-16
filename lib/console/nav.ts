@@ -31,6 +31,8 @@ export type IconeConsole =
   | 'abonnements'
   | 'parents'
   | 'studio'
+  | 'demandes'
+  | 'leads'
 
 export type LienConsole = {
   href: string
@@ -71,6 +73,8 @@ const L = {
   marcel: { href: '/admin/marcel', libelle: 'Coût de Marcel', icone: 'marcel', aide: 'L’usage et le coût de l’IA de Marcel.' },
   parents: { href: '/admin/parents', libelle: 'Vidéos parents', icone: 'parents', aide: 'Le programme de vidéos de l’espace parents.' },
   sante: { href: '/admin/sante', libelle: 'Santé', icone: 'sante', aide: 'Les migrations et la configuration.' },
+  demandes: { href: '/admin/demandes', libelle: 'Demandes de bilan', icone: 'demandes', aide: 'Les parents qui demandent un bilan sur le site Scolaria.' },
+  leads: { href: '/admin/leads', libelle: 'Fiches offertes', icone: 'leads', aide: 'Les visiteurs du site qui demandent leurs 10 fiches, et les inscrits au supérieur.' },
   erreurs: { href: '/admin/erreurs', libelle: 'Erreurs', icone: 'erreurs', aide: 'Les pannes remontées par l’app.' },
 } satisfies Record<string, LienConsole>
 
@@ -84,6 +88,8 @@ export function espacesConsole(roles: { coach: boolean; admin: boolean }): Espac
       role: 'Le coaching scolaire',
       accueil: '/coach',
       sections: [
+        // Les prospects du site scolaria.fr : l'admin seul (c'est lui qui rappelle).
+        ...(roles.admin ? [{ titre: 'Prospects', liens: [L.demandes] }] : []),
         { titre: 'Suivi', liens: [L.eleves, L.messages, L.assistant] },
         // Un coach (non admin) écrit à ses élèves d'ici ; l'admin le fait
         // depuis Studuel › Communication, avec tous les publics.
@@ -101,7 +107,7 @@ export function espacesConsole(roles: { coach: boolean; admin: boolean }): Espac
       sections: [
         { titre: 'Pilotage', liens: [L.insights, L.retention, L.usage] },
         { titre: 'Contenu', liens: [L.studio, L.contenu] },
-        { titre: 'Communication', liens: [L.diffusion] },
+        { titre: 'Communication', liens: [L.diffusion, L.leads] },
         { titre: 'Business', liens: [L.abonnements, L.marcel, L.parents] },
         { titre: 'Technique', liens: [L.sante, L.erreurs] },
       ],

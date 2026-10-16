@@ -240,6 +240,17 @@ export const CAPITALES_OPTIONS = 4
 // Le pool d'un duel : `count` questions, chacune avec 3 leurres piochés en
 // priorité sur le MÊME continent (les capitales voisines se confondent — le
 // piège est pédagogique), complétés au besoin par le reste du monde.
+/**
+ * « de » + le nom du pays, avec la contraction : « du Maroc », « des Pays-Bas »,
+ * « de la France », « de l'Italie ». Sans elle, 29 questions disaient « la
+ * capitale de le Maroc » (relevé le 16/10/2026).
+ */
+export function deNomPays(nom: string): string {
+  if (nom.startsWith('le ')) return `du ${nom.slice(3)}`
+  if (nom.startsWith('les ')) return `des ${nom.slice(4)}`
+  return `de ${nom}`
+}
+
 export function buildCapitalesPool(seed: string, count = 30): ModeQuestion[] {
   const rng = seededRng(`capitales:${seed}`)
   const picked = shuffleWith(rng, COUNTRIES).slice(
@@ -266,10 +277,10 @@ export function buildCapitalesPool(seed: string, count = 30): ModeQuestion[] {
     const options = shuffleWith(rng, [country.capital, ...decoys])
     return {
       id: `jx-cap-${country.flag}`,
-      prompt: `${country.flag} Quelle est la capitale de ${country.name} ?`,
+      prompt: `${country.flag} Quelle est la capitale ${deNomPays(country.name)} ?`,
       options,
       correctIndex: options.indexOf(country.capital),
-      explanation: `${country.capital} est la capitale de ${country.name}.`,
+      explanation: `${country.capital} est la capitale ${deNomPays(country.name)}.`,
       subject: 'Histoire-Géo',
     }
   })

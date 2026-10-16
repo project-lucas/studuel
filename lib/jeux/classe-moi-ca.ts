@@ -70,7 +70,8 @@ export function buildClasseMoiCaPool(seed: string, count = 30): ModeQuestion[] {
     const options = shuffleWith(rng, [c.klass, ...decoys])
     return {
       id: `jx-svt-${c.id}`,
-      prompt: `À quelle classe appartient ${c.emoji} le/la ${c.name} ?`,
+      // Le genre du nom n’est pas connu : jamais « le/la » (relevé le 16/10/2026).
+      prompt: `À quelle classe appartient cet animal : ${c.emoji} ${c.name} ?`,
       options,
       correctIndex: options.indexOf(c.klass),
       explanation: c.tip,

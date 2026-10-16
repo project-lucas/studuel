@@ -3,6 +3,7 @@ import {
   CAPITALES_OPTIONS,
   COUNTRIES,
   buildCapitalesPool,
+  deNomPays,
 } from './capitales'
 
 describe('dataset des capitales', () => {
@@ -66,5 +67,18 @@ describe('buildCapitalesPool', () => {
       // …et viennent du même continent (chaque continent a ≥ 4 pays).
       expect(new Set(continents).size).toBe(1)
     }
+  })
+})
+
+describe('deNomPays', () => {
+  it('contracte « de le » et « de les »', () => {
+    expect(deNomPays('le Maroc')).toBe('du Maroc')
+    expect(deNomPays('les Pays-Bas')).toBe('des Pays-Bas')
+    expect(deNomPays('la France')).toBe('de la France')
+    expect(deNomPays("l'Italie")).toBe("de l'Italie")
+  })
+  it('aucune question ne dit plus « de le » ni « de les »', () => {
+    const pool = buildCapitalesPool('verif', COUNTRIES.length)
+    expect(pool.some((q) => / de les? /.test(q.prompt) || / de les? /.test(q.explanation ?? ''))).toBe(false)
   })
 })

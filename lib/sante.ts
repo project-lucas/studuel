@@ -4658,6 +4658,26 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
       'La fiche d’un élève n’a ni point de départ, ni notes, ni objectif, ni assistant ; la page Coachs dit qu’elle n’est pas prête ; le tri du matin ne garde rien en cache.',
     sonde: { type: 'rpc', fn: 'mon_suivi_coach', args: {} },
   },
+  {
+    id: '592',
+    fichier: '592_scolaria_demandes.sql',
+    feature:
+      'LES DEMANDES DE BILAN DU SITE SCOLARIA (16/10/2026) : le formulaire de scolaria.fr (statique) appelle `scolaria_demande_enregistrer` avec la clé anonyme — validée, bornée (3 par e-mail par jour, 60 par heure) — et l’admin les lit et les fait avancer dans la console (Scolaria › Demandes de bilan, `scolaria_demande_statut`).',
+    siAbsente:
+      'Le formulaire du site Scolaria répond « envoi impossible » et propose l’e-mail ; la page « Demandes de bilan » dit qu’elle n’est pas prête.',
+    // Un nom vide : la fonction répond {ok:false} sans rien écrire.
+    sonde: { type: 'rpc', fn: 'scolaria_demande_enregistrer', args: { p_parent_nom: '', p_email: '' } },
+  },
+  {
+    id: '593',
+    fichier: '593_site_fiches_offertes.sql',
+    feature:
+      'LES FICHES OFFERTES DU SITE STUDUEL (16/10/2026) : le pop-up « 10 fiches sur la matière de ton choix » enregistre la demande par `site_lead_enregistrer` (anon, bornée : 5 par e-mail par jour, 400 par heure) puis la route `/api/fiches-offertes` du site signe dix liens de fiches PDF pour 7 jours ; l’admin lit les demandes dans la console (Studuel › Fiches offertes).',
+    siAbsente:
+      'Le pop-up du site répond « envoi impossible » ; la page « Fiches offertes » de la console dit qu’elle n’est pas prête.',
+    // Un e-mail vide : la fonction répond {ok:false} sans rien écrire.
+    sonde: { type: 'rpc', fn: 'site_lead_enregistrer', args: { p_email: '', p_profil: '', p_classe: '', p_matiere: '' } },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

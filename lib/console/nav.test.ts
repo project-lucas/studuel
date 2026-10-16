@@ -8,6 +8,7 @@ describe('espacesConsole', () => {
     const liens = e[0].sections.flatMap((s) => s.liens.map((l) => l.href))
     expect(liens).toContain('/coach/diffusion')
     expect(liens).not.toContain('/admin/coachs')
+    expect(liens).not.toContain('/admin/demandes')
   })
   it('l’admin voit Scolaria (coachs, supervision) puis Studuel', () => {
     const e = espacesConsole({ coach: false, admin: true })
@@ -15,6 +16,7 @@ describe('espacesConsole', () => {
     const scolaria = e[0].sections.flatMap((s) => s.liens.map((l) => l.href))
     expect(scolaria).toContain('/admin/coachs')
     expect(scolaria).toContain('/admin/supervision')
+    expect(scolaria).toContain('/admin/demandes')
     // La diffusion de l'admin vit dans Studuel › Communication, une seule fois.
     expect(scolaria).not.toContain('/coach/diffusion')
     expect(e[1].sections.map((s) => s.titre)).toEqual(['Pilotage', 'Contenu', 'Communication', 'Business', 'Technique'])

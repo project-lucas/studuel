@@ -9,15 +9,15 @@
 
 export default function MarcelLoading() {
   return (
-    <div className="px-4 pt-2" aria-busy="true" aria-live="polite">
+    <div className="px-4" aria-busy="true" aria-live="polite">
       <span className="sr-only">Marcel prépare ton bureau…</span>
-      <div className="flex h-[calc(100dvh-10.5rem)] min-h-[26rem] flex-col md:h-auto md:min-h-0">
-        {/* La bande du bureau, peinte : un aplat chaud le temps qu'elle arrive. */}
-        <div className="relative -mx-4 -mt-2 h-[184px] shrink-0 animate-pulse bg-[color-mix(in_oklch,var(--highlight),var(--background)_75%)] md:mx-0 md:rounded-[28px]">
-          <span className="bg-card/80 absolute top-3 left-4 size-10 rounded-full" />
-          <span className="bg-card/80 absolute top-3 right-4 size-10 rounded-full" />
-          <span className="bg-card/60 absolute bottom-3 left-5 h-[110px] w-[72px] rounded-[40%]" />
-          <span className="bg-card/90 absolute right-4 bottom-9 left-[112px] h-14 rounded-2xl" />
+      <div className="flex h-[calc(100dvh-4.5rem)] min-h-[26rem] flex-col md:h-auto md:min-h-0">
+        {/* La bande du bureau, peinte, bord à bord et sous l'encoche : un aplat chaud le temps qu'elle arrive. */}
+        <div className="relative h-[calc(15rem+env(safe-area-inset-top))] shrink-0 animate-pulse max-md:left-1/2 max-md:w-screen max-md:-translate-x-1/2 md:mt-2 md:h-[240px] bg-[color-mix(in_oklch,var(--highlight),var(--background)_75%)] md:mx-0 md:rounded-[28px]">
+          <span className="bg-card/80 absolute top-[calc(0.75rem+env(safe-area-inset-top))] left-4 size-10 rounded-full" />
+          <span className="bg-card/80 absolute top-[calc(0.75rem+env(safe-area-inset-top))] right-4 size-10 rounded-full" />
+          <span className="bg-card/60 absolute bottom-5 left-5 h-[140px] w-[88px] rounded-[40%]" />
+          <span className="bg-card/90 absolute right-4 bottom-12 left-[136px] h-14 rounded-2xl" />
         </div>
 
         <div className="bg-secondary mt-0 grid h-12 shrink-0 grid-cols-4 gap-1 rounded-2xl p-1">

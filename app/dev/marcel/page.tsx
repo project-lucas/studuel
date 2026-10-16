@@ -125,9 +125,9 @@ export default async function ApercuMarcel({
   const credits = ouvert ? CREDITS_MENSUELS - e.depenses + e.jetons : null
 
   return (
-    <div className="px-4 pt-2">
+    <div className="px-4">
       <CoachFilProvider>
-        <div className="flex h-[calc(100dvh-10.5rem)] min-h-[26rem] flex-col">
+        <div className="flex h-[calc(100dvh-4.5rem)] min-h-[26rem] flex-col">
           <EnTeteBureau bulle={bulleDuJour(heure, CONTROLES[0], AUJOURDHUI)} decor={decorDuMoment(heure)} pose={poseDuMoment(heure)} avecHistorique={false} />
           <DemanderMarcel
             tier={e.tier}

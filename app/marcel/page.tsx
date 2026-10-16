@@ -122,7 +122,9 @@ export default async function MarcelPage({
 
   return (
     <div className={vue === 'aujourdhui' ? 'pb-0' : 'pb-6'}>
-      <div className="px-4 pt-2">
+      {/* Pas de bandeau sur /marcel (lib/top-hud-routes) : l’accueil laisse son
+          décor monter jusqu’au bord, les autres vues gardent la marge de l’encoche. */}
+      <div className={vue === 'aujourdhui' ? 'px-4' : 'px-4 pt-[calc(0.75rem+env(safe-area-inset-top))]'}>
         {vue === 'aujourdhui' ? (
           // Le fil en cours est partagé par la pastille d'historique (en haut)
           // et par le champ (tout en bas) : le contexte les relie sans obliger
@@ -135,7 +137,7 @@ export default async function MarcelPage({
                 personnage en tête, le champ en bas, et le fil qui défile dans
                 sa propre boîte entre les deux. Sur grand écran, la page
                 reprend sa hauteur naturelle. */}
-            <div className="flex h-[calc(100dvh-10.5rem)] min-h-[26rem] flex-col md:h-auto md:min-h-0">
+            <div className="flex h-[calc(100dvh-4.5rem)] min-h-[26rem] flex-col md:h-auto md:min-h-0">
               {/* LA TÊTE DU BUREAU (16/10/2026) : le bureau de Marcel peint, au jour
                   ou à la lampe selon l'heure, Marcel devant sa table et sa phrase
                   sur le mur ; le retour et l'historique dans les coins. Une

@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react'
 import { usePathname } from 'next/navigation'
 import { estEspaceCoach, estEspaceParents, estPleinEcran } from '@/lib/quiz-chrome'
-import { estOngletMoi } from '@/lib/top-hud-routes'
+import { estBureauMarcel, estOngletMoi } from '@/lib/top-hud-routes'
 
 /**
  * LE GABARIT DE PAGE — marges de lecture, ou rien du tout.
@@ -36,6 +36,9 @@ export default function AppMain({ children }: { children: ReactNode }) {
   // L'onglet Moi n'a pas de bandeau (lib/top-hud-routes) : sa carte de
   // joueur prend la place du haut, sous la seule marge sûre de l'écran.
   const sansBandeau = estOngletMoi(pathname)
+  // Le bureau de Marcel non plus : son décor peint monte jusqu’au bord de
+  // l’écran (il gère lui-même la marge de l’encoche).
+  const bureau = estBureauMarcel(pathname)
 
   return (
     // min-w-0 : sans lui, l'item flex refuse de rétrécir sous la largeur
@@ -44,7 +47,9 @@ export default function AppMain({ children }: { children: ReactNode }) {
       className={
         pleinEcran
           ? 'min-w-0 flex-1'
-          : sansBandeau
+          : bureau
+            ? 'min-w-0 flex-1 px-4 pt-0 pb-24 md:px-8 md:py-10'
+            : sansBandeau
             ? 'min-w-0 flex-1 px-4 pt-[calc(0.75rem+env(safe-area-inset-top))] pb-24 md:px-8 md:py-10'
             : 'min-w-0 flex-1 px-4 pt-[5.5rem] pb-24 md:px-8 md:py-10'
       }

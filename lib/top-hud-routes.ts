@@ -30,6 +30,16 @@ export function estOngletMoi(pathname: string): boolean {
   return pathname === '/moi'
 }
 
+/**
+ * LE BUREAU DE MARCEL N’A PAS DE BANDEAU NON PLUS (16/10/2026, Lucas : « as-tu
+ * besoin de montrer la barre de niveau ici ? je ne pense pas — que le fond
+ * d’écran occupe plus de place et habille plus l’interface »). Son décor peint
+ * monte jusqu’en haut de l’écran à la place. `/dev/marcel` suit, pour que
+ * l’aperçu ressemble à l’écran.
+ */
+export function estBureauMarcel(pathname: string): boolean {
+  return pathname === '/marcel' || pathname === '/dev/marcel'
+}
 
 /** Le bandeau du haut doit-il être masqué sur ce chemin ? */
 export function isHudHidden(pathname: string): boolean {
@@ -37,7 +47,7 @@ export function isHudHidden(pathname: string): boolean {
     // L'ARÈNE A RETROUVÉ LE BANDEAU le 03/10/2026 (Lucas : la carte du joueur
     // sombre est remplacée « proprement » par la gélule lavande) : elle n'est
     // plus dans cette liste.
-    estChromeMasque(pathname) || estOngletMoi(pathname)
+    estChromeMasque(pathname) || estOngletMoi(pathname) || estBureauMarcel(pathname)
   )
 }
 

@@ -20,7 +20,10 @@ import { JOURS_FR } from '../time'
 
 // ------------------------------------------------------------------ onglets
 
-export const ONGLETS_MARCEL = ['aujourdhui', 'radar', 'toi', 'outils'] as const
+// « Examen » (16/10/2026) n’existe qu’en 3e, 1re et terminale : la page ne
+// lui donne un panneau que pour ces classes, et la barre ne montre que les
+// onglets qui en ont un.
+export const ONGLETS_MARCEL = ['aujourdhui', 'radar', 'toi', 'outils', 'examen'] as const
 export type OngletMarcel = (typeof ONGLETS_MARCEL)[number]
 
 export const LIBELLE_ONGLET: Record<OngletMarcel, string> = {
@@ -28,6 +31,21 @@ export const LIBELLE_ONGLET: Record<OngletMarcel, string> = {
   radar: 'Radar',
   toi: 'Toi',
   outils: 'Outils',
+  examen: 'Examen',
+}
+
+/**
+ * Le dessin de chaque onglet (Lucas, 16/10/2026 : « j’aime bien que tu
+ * ajoutes des icônes à la barre ») — la famille nav : le réveil de la
+ * journée, la courbe du radar, le carnet de ce que Marcel sait de toi,
+ * l’engrenage des outils, la toque de l’examen.
+ */
+export const ICONE_ONGLET: Record<OngletMarcel, string> = {
+  aujourdhui: '/images/marcel/outils/planning.webp',
+  radar: '/images/marcel/outils/schema.webp',
+  toi: '/images/supports/cahier.webp',
+  outils: '/images/defi/icones/reglages-v3.webp',
+  examen: '/images/marcel/outils/examen.webp',
 }
 
 /** L'onglet de l'adresse (`?onglet=`), sinon « Aujourd'hui ». */

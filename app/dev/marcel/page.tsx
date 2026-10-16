@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation'
 import DemanderMarcel from '@/components/marcel/DemanderMarcel'
 import { CoachFilProvider } from '@/components/marcel/CoachFil'
 import Bureau from '@/components/marcel/bureau/Bureau'
+import PanneauExamen from '@/components/examen/onglet/PanneauExamen'
+import { ongletExamenDemo } from './examen-demo'
 import EnTeteBureau from '@/components/marcel/bureau/EnTeteBureau'
 import PanneauAujourdhui from '@/components/marcel/bureau/PanneauAujourdhui'
 import PanneauRadar from '@/components/marcel/bureau/PanneauRadar'
@@ -94,10 +96,12 @@ const MATIERES = [
 export default async function ApercuMarcel({
   searchParams,
 }: {
-  searchParams: Promise<{ etat?: string; onglet?: string; heure?: string; toi?: string }>
+  searchParams: Promise<{ etat?: string; onglet?: string; heure?: string; toi?: string; classe?: string; jours?: string; dossier?: string }>
 }) {
   if (process.env.NODE_ENV === 'production') notFound()
-  const { etat = 'eveille', onglet, heure: heureRaw = '16', toi } = await searchParams
+  const { etat = 'eveille', onglet, heure: heureRaw = '16', toi, classe = '3e', jours, dossier } = await searchParams
+  // L'onglet Examen : ?classe=3e|1re|Tle (autre classe : pas d'onglet), ?jours=, ?dossier=0.
+  const examen = ongletExamenDemo(classe, jours, dossier === '0')
   const e = ETATS[etat] ?? ETATS.eveille
   const ouvert = e.tier !== 'free'
   const heure = Math.max(0, Math.min(23, Number(heureRaw) || 16))
@@ -161,6 +165,7 @@ export default async function ApercuMarcel({
                     />
                   ),
                   outils: <PanneauOutils ouvert={ouvert} credits={credits} />,
+                  examen: examen ? <PanneauExamen vue={examen} ouvert={ouvert} /> : undefined,
                 }}
               />
             }

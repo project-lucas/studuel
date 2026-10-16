@@ -1,21 +1,26 @@
 'use client'
 
 import { useState, type ReactNode } from 'react'
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
-import { LIBELLE_ONGLET, ONGLETS_MARCEL, type OngletMarcel } from '@/lib/coach/bureau'
+import { ICONE_ONGLET, LIBELLE_ONGLET, ONGLETS_MARCEL, type OngletMarcel } from '@/lib/coach/bureau'
 
 /**
- * LE BUREAU DE MARCEL — sa barre « Aujourd’hui · Radar · Toi · Outils »
- * (16/10/2026, maquette 2 de assets-sources/maquettes/marcel-bureau-plus.html,
- * choisie par Lucas : « trop de scrolling » avec tout empilé).
+ * LE BUREAU DE MARCEL — sa barre « Aujourd’hui · Radar · Toi · Outils », plus
+ * « Examen » à droite en 3e, 1re et terminale (16/10/2026, maquettes
+ * marcel-bureau-plus.html puis marcel-examen.html).
  *
- * Les quatre panneaux arrivent du serveur, déjà rendus ; ce composant ne fait
- * que montrer celui qu’on a touché. L’onglet vit dans l’adresse (`?onglet=`,
+ * Chaque onglet porte son DESSIN au-dessus de son nom (Lucas : « j’aime bien
+ * que tu ajoutes des icônes à la barre »). L’onglet Examen est doré : le mode
+ * examen est un pilier de Studuel+, et l’or en est l’identité.
+ *
+ * Les panneaux arrivent du serveur, déjà rendus ; ce composant ne fait que
+ * montrer celui qu’on a touché. L’onglet vit dans l’adresse (`?onglet=`,
  * écrit par `replaceState`, sans empiler d’historique) : revenir d’un cours
- * rouvre le même onglet. Les quatre restent montés, cachés : changer d’onglet
- * ne recalcule rien. Plus de pastille sur « Outils » : un nombre dans une
- * bulle se lisait comme une notification non lue.
+ * rouvre le même onglet. Les panneaux restent montés, cachés : changer
+ * d’onglet ne recalcule rien. Un onglet sans panneau (Examen hors classe à
+ * examen) n’est pas montré.
  *
  * Le bas de chaque panneau garde 5 rem de marge : le bouton des quêtes flotte
  * au-dessus du champ, et la dernière rangée doit pouvoir remonter au-dessus.
@@ -25,9 +30,10 @@ export default function Bureau({
   panneaux,
 }: {
   initial: OngletMarcel
-  panneaux: Record<OngletMarcel, ReactNode>
+  panneaux: Partial<Record<OngletMarcel, ReactNode>>
 }) {
-  const [onglet, setOnglet] = useState<OngletMarcel>(initial)
+  const onglets = ONGLETS_MARCEL.filter((o) => panneaux[o] !== undefined && panneaux[o] !== null)
+  const [onglet, setOnglet] = useState<OngletMarcel>(onglets.includes(initial) ? initial : 'aujourdhui')
 
   const choisir = (o: OngletMarcel) => {
     if (o === onglet) return
@@ -41,27 +47,51 @@ export default function Bureau({
 
   return (
     <div className="flex min-h-0 flex-1 flex-col">
-      <div role="tablist" aria-label="Le bureau de Marcel" className="bg-secondary grid shrink-0 grid-cols-4 gap-1 rounded-2xl p-1">
-        {ONGLETS_MARCEL.map((o) => (
-          <button
-            key={o}
-            type="button"
-            role="tab"
-            id={`marcel-onglet-${o}`}
-            aria-selected={o === onglet}
-            aria-controls={`marcel-panneau-${o}`}
-            onClick={() => choisir(o)}
-            className={cn(
-              'font-heading min-h-10 rounded-xl text-[13px] font-extrabold transition active:scale-[.97]',
-              o === onglet ? 'bg-card text-foreground shadow-[0_2px_0_color-mix(in_oklch,var(--primary),transparent_70%)]' : 'text-primary',
-            )}
-          >
-            {LIBELLE_ONGLET[o]}
-          </button>
-        ))}
+      <div
+        role="tablist"
+        aria-label="Le bureau de Marcel"
+        className="bg-secondary grid shrink-0 gap-1 rounded-2xl p-1"
+        style={{ gridTemplateColumns: `repeat(${onglets.length}, minmax(0, 1fr))` }}
+      >
+        {onglets.map((o) => {
+          const actif = o === onglet
+          const examen = o === 'examen'
+          return (
+            <button
+              key={o}
+              type="button"
+              role="tab"
+              id={`marcel-onglet-${o}`}
+              aria-selected={actif}
+              aria-controls={`marcel-panneau-${o}`}
+              onClick={() => choisir(o)}
+              className={cn(
+                'font-heading flex min-h-[52px] min-w-0 flex-col items-center justify-center gap-0.5 rounded-xl px-0 leading-none font-extrabold transition active:scale-[.97]',
+                // À cinq onglets, « Aujourd’hui » doit tenir en entier sur 390 px.
+                onglets.length > 4 ? 'text-[10.5px] tracking-[-0.01em]' : 'text-[11.5px]',
+                actif ? 'bg-card text-foreground shadow-[0_2px_0_color-mix(in_oklch,var(--primary),transparent_70%)]' : 'text-primary',
+                examen &&
+                  (actif
+                    ? 'text-foreground shadow-[inset_0_0_0_2px_var(--highlight),0_2px_0_color-mix(in_oklch,var(--highlight),black_25%)]'
+                    : 'bg-[color-mix(in_oklch,var(--highlight),white_78%)] text-[color-mix(in_oklch,var(--highlight),black_55%)] shadow-[inset_0_0_0_1.5px_color-mix(in_oklch,var(--highlight),white_30%)]'),
+              )}
+            >
+              <Image
+                src={ICONE_ONGLET[o]}
+                alt=""
+                aria-hidden="true"
+                width={26}
+                height={26}
+                unoptimized
+                className={cn('size-[26px] object-contain transition', !actif && !examen && 'opacity-75 saturate-[.8]')}
+              />
+              <span className="max-w-full truncate">{LIBELLE_ONGLET[o]}</span>
+            </button>
+          )
+        })}
       </div>
 
-      {ONGLETS_MARCEL.map((o) => (
+      {onglets.map((o) => (
         <div
           key={o}
           role="tabpanel"

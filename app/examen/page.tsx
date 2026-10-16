@@ -5,70 +5,25 @@ import { getCurrentUser } from '@/lib/supabase/user'
 import { getUserTierFor } from '@/lib/subscription'
 import { isPremiumTier } from '@/lib/gems'
 import { readRowTolerant } from '@/lib/profile-read'
-import { toDayKey } from '@/lib/streak'
-import { chapterState } from '@/lib/mastery'
-import { getChapterMastery } from '@/lib/mastery-server'
-import { getGradeChaptersCached, getSubjectsCached } from '@/lib/catalog'
-import { examsForProfile } from '@/lib/exams'
-import { examenDe, joursAvantExamen, objectifsDeLaSemaine, phaseDe } from '@/lib/examen/parcours'
-import { annalesDeLExamen } from '@/lib/examen/annales-examen'
-import { ANNALES_CORRIGEES } from '@/lib/annales-corrigees/registre'
+import { examenDe } from '@/lib/examen/parcours'
 
 export const metadata = { title: 'Mode examen — Studuel' }
 export const dynamic = 'force-dynamic'
 
-// LE MODE EXAMEN (écran : components/examen/EcranExamen). UNE vague : profil,
-// abonnement, catalogue (cache), maîtrise. Aperçu sans compte : /dev/examen.
+// LE MODE EXAMEN. Depuis le 16/10/2026, il vit dans le bureau de Marcel, onglet
+// « Examen » (components/examen/onglet, lib/examen/onglet-server) : en 3e, 1re
+// et terminale, cette adresse y mène. Elle ne garde que l'écran des classes
+// sans examen cette année (« chaque chapitre bien appris est déjà de l'avance »).
 export default async function PageExamen() {
   const user = await getCurrentUser()
   if (!user) redirect('/login')
   const supabase = await createClient()
 
-  const profilP = readRowTolerant<{ grade_level: string | null; selected_subjects: unknown }>(
-    supabase,
-    'profiles',
-    'id',
-    user.id,
-    ['grade_level', 'selected_subjects'],
-  )
-  const [profil, tier, matieres, chapitres, maitrise] = await Promise.all([
-    profilP,
+  const [profil, tier] = await Promise.all([
+    readRowTolerant<{ grade_level: string | null }>(supabase, 'profiles', 'id', user.id, ['grade_level']),
     getUserTierFor(supabase, user.id),
-    getSubjectsCached(),
-    profilP.then((p) => (p?.grade_level ? getGradeChaptersCached(p.grade_level) : [])),
-    getChapterMastery(supabase, user.id),
   ])
+  if (examenDe(profil?.grade_level ?? null)) redirect('/marcel?onglet=examen')
 
-  const classe = profil?.grade_level ?? null
-  const examen = examenDe(classe)
-  const premium = isPremiumTier(tier)
-  if (!examen) return <EcranExamen examen={null} jours={0} premium={premium} objectifs={[]} annales={[]} />
-
-  const jours = joursAvantExamen(examen, toDayKey(new Date()))
-
-  // Ses matières d'examen : celles des épreuves, plus les spécialités choisies.
-  const choisies = Array.isArray(profil?.selected_subjects) ? (profil.selected_subjects as string[]) : null
-  const slugsExamen = new Set<string>([
-    ...examen.epreuves.flatMap((e) => (e.matiere ? [e.matiere] : [])),
-    ...examsForProfile(classe ?? '', choisies, matieres).map((e) => e.subject.slug),
-  ])
-  const idsExamen = new Set(matieres.filter((m) => slugsExamen.has(m.slug)).map((m) => m.id))
-  let pointsFaibles = 0
-  let aCommencer = 0
-  for (const c of chapitres) {
-    if (!idsExamen.has(c.subject_id)) continue
-    const etat = chapterState(maitrise.get(c.id))
-    if (etat === 'fragile') pointsFaibles++
-    if (etat === 'a_commencer') aCommencer++
-  }
-
-  return (
-    <EcranExamen
-      examen={examen}
-      jours={jours}
-      premium={premium}
-      objectifs={objectifsDeLaSemaine(examen, phaseDe(jours), { pointsFaibles, aCommencer, matierePrincipale: null })}
-      annales={annalesDeLExamen(ANNALES_CORRIGEES, examen.id, slugsExamen)}
-    />
-  )
+  return <EcranExamen examen={null} jours={0} premium={isPremiumTier(tier)} objectifs={[]} annales={[]} />
 }

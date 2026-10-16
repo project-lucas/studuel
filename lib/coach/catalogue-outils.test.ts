@@ -4,6 +4,7 @@ import { describe, expect, it } from 'vitest'
 import { FAMILLES, OUTILS, outilsDe } from './catalogue-outils'
 import { MODES } from './outils'
 import { parseVue } from './marcel-vues'
+import { parseOnglet } from './bureau'
 
 describe('le catalogue des outils de Marcel', () => {
   it('compte vingt-quatre outils, six par famille', () => {
@@ -40,7 +41,10 @@ describe('le catalogue des outils de Marcel', () => {
     for (const o of OUTILS) {
       if (o.cible.type !== 'page') continue
       const url = new URL(o.cible.href, 'https://studuel.test')
-      if (url.pathname === '/marcel') {
+      if (url.pathname === '/marcel' && url.searchParams.has('onglet')) {
+        // Un onglet du bureau (« Mode examen » → l’onglet Examen).
+        expect(parseOnglet(url.searchParams.get('onglet')), o.id).toBe(url.searchParams.get('onglet'))
+      } else if (url.pathname === '/marcel') {
         expect(parseVue(url.searchParams.get('vue') ?? undefined), o.id).toBe(url.searchParams.get('vue'))
       } else {
         const dossier = path.join(process.cwd(), 'app', ...url.pathname.split('/').filter(Boolean))

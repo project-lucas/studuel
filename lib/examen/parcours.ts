@@ -38,6 +38,13 @@ export type Epreuve = {
   matiere: string | null
   /** Ce qui t'attend, en deux ou trois lignes. */
   format: string[]
+  /**
+   * Le découpage du temps, quand il est connu : officiel (la dictée du brevet,
+   * l'oral) ou CONSEILLÉ (`tempsConseil` : la répartition d'une épreuve de 4 h
+   * qu'on conseille à l'élève ; l'écran le dit).
+   */
+  temps?: { minutes: number; quoi: string }[]
+  tempsConseil?: boolean
   ressources: Ressource[]
 }
 
@@ -65,6 +72,11 @@ const BREVET: Examen = {
       coefficient: null,
       matiere: 'francais',
       format: ['Questions sur un texte et une image', 'Une dictée et un exercice de réécriture', 'Une rédaction : imagination ou réflexion'],
+      temps: [
+        { minutes: 70, quoi: 'questions, grammaire' },
+        { minutes: 20, quoi: 'dictée' },
+        { minutes: 90, quoi: 'rédaction' },
+      ],
       ressources: [{ type: 'annales', matiere: 'francais' }, { type: 'examen-blanc', matiere: 'francais' }],
     },
     {
@@ -95,6 +107,10 @@ const BREVET: Examen = {
       coefficient: null,
       matiere: null,
       format: ['Deux disciplines sur trois : SVT, physique-chimie, technologie', 'Trente minutes par discipline'],
+      temps: [
+        { minutes: 30, quoi: 'première discipline' },
+        { minutes: 30, quoi: 'seconde discipline' },
+      ],
       ressources: [{ type: 'annales', matiere: 'svt' }, { type: 'annales', matiere: 'physique-chimie' }],
     },
     {
@@ -105,6 +121,10 @@ const BREVET: Examen = {
       coefficient: null,
       matiere: null,
       format: ['Tu présentes un projet mené en classe', 'Un exposé, puis un entretien avec le jury'],
+      temps: [
+        { minutes: 5, quoi: 'exposé' },
+        { minutes: 10, quoi: 'entretien' },
+      ],
       ressources: [{ type: 'marcel' }],
     },
   ],
@@ -124,6 +144,12 @@ const BAC_FRANCAIS: Examen = {
       coefficient: '5',
       matiere: 'francais',
       format: ['Commentaire de texte ou dissertation sur une œuvre au programme', 'Voie technologique : commentaire, ou contraction de texte et essai'],
+      temps: [
+        { minutes: 60, quoi: 'brouillon : sujet, plan' },
+        { minutes: 150, quoi: 'rédaction' },
+        { minutes: 30, quoi: 'relecture' },
+      ],
+      tempsConseil: true,
       ressources: [{ type: 'annales', matiere: 'francais' }, { type: 'examen-blanc', matiere: 'francais' }],
     },
     {
@@ -134,6 +160,11 @@ const BAC_FRANCAIS: Examen = {
       coefficient: '5',
       matiere: 'francais',
       format: ['Explication d’un texte de ton descriptif et une question de grammaire', 'Puis la présentation d’une œuvre choisie et un entretien'],
+      temps: [
+        { minutes: 30, quoi: 'préparation' },
+        { minutes: 12, quoi: 'explication, grammaire' },
+        { minutes: 8, quoi: 'œuvre choisie, entretien' },
+      ],
       ressources: [{ type: 'oral-francais' }, { type: 'marcel' }],
     },
     {
@@ -163,6 +194,12 @@ const BAC: Examen = {
       coefficient: '8 (voie technologique : 4)',
       matiere: 'philosophie',
       format: ['Au choix : deux sujets de dissertation ou une explication de texte'],
+      temps: [
+        { minutes: 60, quoi: 'brouillon : sujet, plan' },
+        { minutes: 150, quoi: 'rédaction' },
+        { minutes: 30, quoi: 'relecture' },
+      ],
+      tempsConseil: true,
       ressources: [{ type: 'annales', matiere: 'philosophie' }, { type: 'examen-blanc', matiere: 'philosophie' }],
     },
     {
@@ -183,6 +220,11 @@ const BAC: Examen = {
       coefficient: '8 (voie technologique : 12)',
       matiere: null,
       format: ['Tu présentes une question préparée avec tes spécialités, debout, dix minutes', 'Puis dix minutes d’échange avec le jury'],
+      temps: [
+        { minutes: 20, quoi: 'préparation' },
+        { minutes: 10, quoi: 'présentation' },
+        { minutes: 10, quoi: 'échange' },
+      ],
       ressources: [{ type: 'marcel' }],
     },
   ],
@@ -276,7 +318,7 @@ export function objectifsDeLaSemaine(
   const oral = examen.epreuves.find((e) => e.nature === 'oral') ?? null
   const matiere = ctx.matierePrincipale ?? ecrit?.matiere ?? null
   const dossier = matiere ? `/reviser/${matiere}` : '/reviser'
-  const annales = matiere ? `/reviser/${matiere}?onglet=annales` : '/examen#annales'
+  const annales = matiere ? `/reviser/${matiere}?onglet=annales` : '/marcel?onglet=examen'
   const blanc = matiere ? `/reviser/examen-blanc?subject=${matiere}` : '/reviser/examen-blanc'
   const oralHref = oral && examen.id === 'bac-francais' ? '/marcel?vue=oral' : '/marcel'
 
@@ -311,8 +353,8 @@ export function objectifsDeLaSemaine(
     case 'derniers-jours':
       return [
         { texte: 'Relire tes fiches, une matière par jour', href: '/carnet?rayon=fiches' },
-        { texte: 'Préparer tes affaires et ta convocation', href: '/examen' },
-        { texte: 'Te coucher tôt : le sommeil fixe ce que tu as appris', href: '/examen' },
+        { texte: 'Préparer tes affaires et ta convocation', href: '/marcel?onglet=examen' },
+        { texte: 'Te coucher tôt : le sommeil fixe ce que tu as appris', href: '/marcel?onglet=examen' },
       ]
     default:
       return [

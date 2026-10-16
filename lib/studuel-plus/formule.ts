@@ -63,7 +63,7 @@ export const PILIERS: readonly Pilier[] = [
     promesse: 'Brevet, bac de français, bac : le chemin jusqu’au jour J',
     detail:
       'Le compte à rebours, la phase où tu en es, ce qu’il faut faire cette semaine, les épreuves blanches chronométrées et la préparation des oraux.',
-    href: '/examen',
+    href: '/marcel?onglet=examen',
     statut: 'ouvert',
     gratuit: 'Le calendrier et la liste des épreuves',
   },
@@ -72,7 +72,7 @@ export const PILIERS: readonly Pilier[] = [
     titre: 'Toutes les annales corrigées',
     promesse: 'Les vrais sujets, corrigés par Studuel',
     detail: 'Chaque sujet tombé, son corrigé partie par partie, les pièges et les points qui comptent.',
-    href: '/examen#annales',
+    href: '/marcel?onglet=examen',
     statut: 'ouvert',
     gratuit: `${ANNALES_GRATUITES_PAR_MATIERE} annales corrigées par matière`,
   },

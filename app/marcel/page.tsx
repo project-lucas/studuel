@@ -7,6 +7,7 @@ import PanneauAujourdhui from '@/components/marcel/bureau/PanneauAujourdhui'
 import PanneauRadar from '@/components/marcel/bureau/PanneauRadar'
 import PanneauToi from '@/components/marcel/bureau/PanneauToi'
 import PanneauOutils from '@/components/marcel/bureau/PanneauOutils'
+import PanneauExamen from '@/components/examen/onglet/PanneauExamen'
 import VueHeader from '@/components/marcel/VueHeader'
 import PointDuJourHero from '@/components/marcel/PointDuJourHero'
 import SeanceCard from '@/components/marcel/SeanceCard'
@@ -19,6 +20,7 @@ import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { getMarcelSnapshot } from '@/lib/coach/marcel-server'
 import { getOralSnapshot } from '@/lib/coach/oral-server'
+import { lireOngletExamen } from '@/lib/examen/onglet-server'
 import { entrainementsFor } from '@/lib/coach/entrainement'
 import { decorDuMoment, parseOnglet, poseDuMoment } from '@/lib/coach/bureau'
 import { creditsMensuels } from '@/lib/coach/credits'
@@ -78,6 +80,11 @@ export default async function MarcelPage({
   }
 
   const supabase = await createClient()
+  // L'onglet Examen (3e, 1re, Tle) se lit EN MÊME TEMPS que le bureau, et
+  // seulement sur l'accueil : `null` hors classe à examen.
+  const snapshotP = getMarcelSnapshot(supabase, user.id)
+  const examenP = vue === 'aujourdhui' ? lireOngletExamen(supabase, user.id) : Promise.resolve(null)
+  const [, ongletExamen] = await Promise.all([snapshotP, examenP])
   const {
     point,
     matieres,
@@ -90,7 +97,7 @@ export default async function MarcelPage({
     demande,
     remarques,
     bureau,
-  } = await getMarcelSnapshot(supabase, user.id)
+  } = await snapshotP
 
   // Marcel est ouvert à Studuel+ ; le gratuit voit tout le bureau, mais les
   // outils, les notes et le champ y sont couronnés.
@@ -163,7 +170,11 @@ export default async function MarcelPage({
                 // pire que pas de bouton.
                 vision={visionDisponible()}
                 bureau={
+                  // La clé suit l'onglet de l'adresse : un lien vers
+                  // `/marcel?onglet=examen` (Réviser, l'outil Mode examen)
+                  // rouvre le bureau sur le bon onglet.
                   <Bureau
+                    key={parseOnglet(ongletRaw)}
                     initial={parseOnglet(ongletRaw)}
                     panneaux={{
                       aujourdhui: (
@@ -195,6 +206,7 @@ export default async function MarcelPage({
                         />
                       ),
                       outils: <PanneauOutils ouvert={ouvert} credits={credits} />,
+                      examen: ongletExamen ? <PanneauExamen vue={ongletExamen} ouvert={ouvert} /> : undefined,
                     }}
                   />
                 }

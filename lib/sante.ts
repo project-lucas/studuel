@@ -4593,6 +4593,26 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
       'L’onglet « Toi » propose la première rencontre mais ne garde rien (« Je n’ai pas pu l’enregistrer ») ; aucune note n’est montrée. Le reste du bureau marche.',
     sonde: { type: 'rpc', fn: 'marcel_note_effacer', args: { p_id: '00000000-0000-0000-0000-000000000000' } },
   },
+  {
+    id: '585',
+    fichier: '585_examen_dossier.sql',
+    feature:
+      'LE MODE EXAMEN DANS LE BUREAU DE MARCEL (16/10/2026, Lucas : « il doit devenir à terme indispensable ») — `examen_oral` (le dossier d’oral : le projet du brevet, la liste de textes du bac de français, les deux questions du Grand oral, chacun avec ses étapes et ses oraux blancs) et `examen_notes` (les notes du simulateur « Ce qu’il te faut en juin »), écrites seulement par leurs fonctions ; reprise de l’ancien descriptif (`profiles.oral_texts`, 156).',
+    siAbsente:
+      'L’onglet Examen marche, mais le dossier d’oral dit « ouvre très bientôt » et le simulateur ne garde pas les notes tapées.',
+    sonde: { type: 'rpc', fn: 'examen_oral_retirer', args: { p_id: '00000000-0000-0000-0000-000000000000' } },
+  },
+  {
+    id: '586',
+    fichier: '586_examen_dossier_garde.sql',
+    feature:
+      'LE DOSSIER D’ORAL, RÉSERVÉ À STUDUEL+ JUSQU’EN BASE (16/10/2026, relecture de la 585) : ajouter, modifier, cocher et compter un oral blanc exigent l’abonnement (`rente_abonne`, 580) ; un oral blanc ne coche plus l’étape « oral blanc » à la place de l’élève.',
+    siAbsente:
+      'Un élève gratuit peut écrire son dossier d’oral en appelant les fonctions lui-même, et finir la préparation d’un oral blanc suffit à rendre une pièce « prête ».',
+    // Les fonctions existent déjà avec la 585 : la 586 ne se voit pas à la clé
+    // anonyme. Contrôle à la main : prosrc de examen_oral_passage sans « oral ».
+    sonde: null,
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

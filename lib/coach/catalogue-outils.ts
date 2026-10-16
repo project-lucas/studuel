@@ -70,7 +70,7 @@ export const OUTILS: Outil[] = [
   { id: 'interroge', label: 'Interroge-moi', mots: 'Une question à la fois', famille: 'entrainer', cible: mode('interroge'), image: support('quiz') },
   { id: 'exos', label: 'Exos sur mesure', mots: 'Du facile au difficile', famille: 'entrainer', cible: mode('exos'), image: support('exercice') },
   { id: 'controle', label: 'Contrôle blanc', mots: 'Un vrai sujet, noté', famille: 'entrainer', cible: page('/marcel?vue=entrainement'), image: support('cahier') },
-  { id: 'examen', label: 'Mode examen', mots: 'Brevet ou bac', famille: 'entrainer', cible: page('/examen'), image: dessin('examen') },
+  { id: 'examen', label: 'Mode examen', mots: 'Brevet ou bac', famille: 'entrainer', cible: page('/marcel?onglet=examen'), image: dessin('examen') },
   { id: 'oral', label: 'Oral blanc', mots: 'Présente, je t’écoute', famille: 'entrainer', cible: page('/marcel?vue=oral'), image: dessin('oral') },
   { id: 'methode', label: 'La méthode', mots: 'Comment travailler', famille: 'entrainer', cible: page('/marcel?vue=methode'), image: support('programme') },
   // Corriger

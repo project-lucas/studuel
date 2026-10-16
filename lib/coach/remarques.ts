@@ -80,7 +80,7 @@ export function remarquesDe(p: ProfilEleve, slugDe: (matiere: string) => string 
     sortie.push({
       id: 'examen',
       texte: `${p.examen.nom} est dans ${p.examen.jours} jours. Regarde où tu en es sur le chemin.`,
-      action: { label: 'Mode examen', href: '/examen' },
+      action: { label: 'Mode examen', href: '/marcel?onglet=examen' },
       urgence: p.examen.jours <= 45 ? 10 : 50,
     })
   }

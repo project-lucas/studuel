@@ -7,7 +7,7 @@ import { toDayKey } from '@/lib/streak'
  * LA PORTE DU MODE EXAMEN sur l'accueil Réviser (15/10/2026) : une seule ligne,
  * seulement en 3e, 1re et Terminale — « Le brevet · J-252 · Les fondations ».
  * Le compte à rebours et la phase disent à l'élève où il en est sans qu'il ait
- * à le demander ; le détail est sur /examen.
+ * à le demander ; le détail est dans l'onglet Examen du bureau de Marcel.
  */
 export default function LienModeExamen({ classe }: { classe: string | null }) {
   const examen = examenDe(classe)
@@ -17,7 +17,7 @@ export default function LienModeExamen({ classe }: { classe: string | null }) {
   const phase = phaseDe(jours)
   return (
     <Link
-      href="/examen"
+      href="/marcel?onglet=examen"
       className="carte flex min-h-14 items-center gap-3 px-3.5 py-2.5 transition active:translate-y-px"
       aria-label={`Mode examen : ${examen.nom}, ${compteARebours(jours)}, phase ${phase.titre}`}
     >

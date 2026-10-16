@@ -1,0 +1,30 @@
+/* Le cercle de respiration de « Une minute pour souffler » : il gonfle 4 s,
+   tient 4 s, dégonfle 4 s, tient 4 s. Transform et opacité seulement. */
+.bulle {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: color-mix(in oklch, var(--primary), white 70%);
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+.respire {
+  animation: respire 16s ease-in-out infinite;
+}
+
+@keyframes respire {
+  0% { opacity: 0.6; transform: scale(0.6); }
+  25% { opacity: 0.9; transform: scale(1.35); }
+  50% { opacity: 0.9; transform: scale(1.35); }
+  75% { opacity: 0.6; transform: scale(0.6); }
+  100% { opacity: 0.6; transform: scale(0.6); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .respire {
+    animation: none;
+    opacity: 0.8;
+    transform: scale(1);
+  }
+}

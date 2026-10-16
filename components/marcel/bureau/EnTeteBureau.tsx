@@ -1,0 +1,82 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import { ArrowLeft } from 'lucide-react'
+import BoutonHistorique from '../BoutonHistorique'
+import PoseMarcel, { type Pose } from '../PoseMarcel'
+import decorJour from '@/public/images/marcel/decor/jour.webp'
+import decorSoir from '@/public/images/marcel/decor/soir.webp'
+import type { Decor } from '@/lib/coach/bureau'
+
+const DECORS = { jour: decorJour, soir: decorSoir } as const
+
+/**
+ * LA TÊTE DU BUREAU (16/10/2026, Lucas : « une atmosphère, un fond d'écran avec
+ * une insertion de Marcel au bon endroit, comme un bureau de travail »).
+ *
+ * Le bureau de Marcel est PEINT (Nano Banana 2.1, dans le style de la cour de
+ * l'académie — scripts/marcel-illustrations.mjs) : au jour de 7 h à 18 h, à la
+ * lampe le reste du temps (`decorDuMoment`). Marcel se tient devant sa table,
+ * à gauche ; sa phrase se pose sur le mur calme, à droite. Le retour et
+ * l'historique flottent dans les coins : une seule bande au lieu de deux
+ * rangées (la ligne de la flèche mangeait 50 px, Lucas : « un problème
+ * d'optimisation de place »). Le bas du décor se fond dans le mur crème, où
+ * commencent les onglets — un décor là où l'on pose un héros, le mur là où le
+ * contenu défile (CLAUDE.md).
+ *
+ * Le titre de la page reste « Coach Marcel », lu par les lecteurs d'écran.
+ */
+export default function EnTeteBureau({
+  bulle,
+  decor,
+  pose = 'salut',
+  avecHistorique = true,
+}: {
+  bulle: string
+  decor: Decor
+  pose?: Pose
+  /** L'historique des conversations (absent de l'aperçu sans compte). */
+  avecHistorique?: boolean
+}) {
+  return (
+    <header className="relative -mx-4 -mt-2 h-[184px] shrink-0 overflow-hidden md:mx-0 md:rounded-[28px]">
+      <h1 className="sr-only">Coach Marcel</h1>
+      <Image
+        src={DECORS[decor]}
+        alt=""
+        aria-hidden="true"
+        fill
+        priority
+        placeholder="blur"
+        sizes="(min-width: 768px) 640px, 100vw"
+        className="object-cover object-[22%_58%]"
+      />
+      {/* Le bas se fond dans le mur : les onglets ne flottent pas sur la peinture. */}
+      <span
+        aria-hidden="true"
+        className="from-background pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t to-transparent"
+      />
+
+      <div className="absolute inset-x-4 top-3 flex items-center justify-between">
+        <Link
+          href="/reviser"
+          aria-label="Revenir à Réviser"
+          className="bg-card text-primary flex size-10 items-center justify-center rounded-full shadow-[0_3px_10px_-4px_rgba(36,48,79,.45)] transition active:scale-95"
+        >
+          <ArrowLeft aria-hidden="true" className="size-5" strokeWidth={2.6} />
+        </Link>
+        {avecHistorique ? <BoutonHistorique /> : null}
+      </div>
+
+      <PoseMarcel
+        pose={pose}
+        hauteur={128}
+        priority
+        className="coach-entree absolute bottom-3 left-3 object-contain drop-shadow-[0_12px_14px_rgba(20,12,40,.35)]"
+      />
+
+      <p className="bg-card/95 absolute right-4 bottom-9 left-[112px] rounded-2xl px-3 py-2 text-[13px] leading-snug font-bold shadow-[0_8px_20px_-10px_rgba(36,48,79,.55)] before:absolute before:bottom-4 before:-left-[7px] before:border-y-[7px] before:border-r-[8px] before:border-y-transparent before:border-r-[color-mix(in_oklch,var(--card),transparent_5%)] before:content-['']">
+        {bulle}
+      </p>
+    </header>
+  )
+}

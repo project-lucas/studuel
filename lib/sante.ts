@@ -4584,6 +4584,15 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     //   select tgname from pg_trigger where tgname = 'profiles_garde_coach';  → 1 ligne
     sonde: null,
   },
+  {
+    id: '584',
+    fichier: '584_marcel_carnet.sql',
+    feature:
+      'LE CARNET DE MARCEL (16/10/2026, Lucas : « Marcel doit connaître le user, très bien même ») — `marcel_carnet` (la carte d’identité de la première rencontre, valeurs de listes fermées) et `marcel_notes` (ce que l’élève a confié, 30 au plus), écrites seulement par `marcel_identite_enregistrer`, `marcel_notes_ajouter` et `marcel_note_effacer`. Lues par l’onglet « Toi » du bureau de Marcel.',
+    siAbsente:
+      'L’onglet « Toi » propose la première rencontre mais ne garde rien (« Je n’ai pas pu l’enregistrer ») ; aucune note n’est montrée. Le reste du bureau marche.',
+    sonde: { type: 'rpc', fn: 'marcel_note_effacer', args: { p_id: '00000000-0000-0000-0000-000000000000' } },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

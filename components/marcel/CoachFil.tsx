@@ -50,6 +50,13 @@ type FilContexte = Etat & {
   /** Ce que Marcel va faire de la prochaine demande. */
   mode: ModeCle
   choisirMode: (mode: ModeCle) => void
+  /**
+   * Ce qu’un outil du bureau propose d’écrire (« Interroge-moi sur Fractions »).
+   * Le champ le recopie et prend le focus ; c’est l’élève qui envoie. `n`
+   * change à chaque proposition, pour qu’une même phrase se repropose.
+   */
+  proposition: { texte: string; n: number } | null
+  proposer: (mode: ModeCle, texte?: string) => void
   envoyer: (
     texte: string,
     matiere: string | null,
@@ -74,6 +81,12 @@ const idLocal = () => `local-${++compteur}`
 export function CoachFilProvider({ children }: { children: ReactNode }) {
   const [etat, setEtat] = useState<Etat>(VIDE)
   const [mode, setMode] = useState<ModeCle>(MODE_PAR_DEFAUT)
+  const [proposition, setProposition] = useState<{ texte: string; n: number } | null>(null)
+
+  const proposer = useCallback((m: ModeCle, texte = '') => {
+    setMode(m)
+    setProposition((p) => ({ texte, n: (p?.n ?? 0) + 1 }))
+  }, [])
   const [occupe, start] = useTransition()
 
   const envoyer = useCallback(
@@ -178,6 +191,8 @@ export function CoachFilProvider({ children }: { children: ReactNode }) {
       occupe,
       mode,
       choisirMode: setMode,
+      proposition,
+      proposer,
       envoyer,
       ouvrir,
       nouveau,
@@ -185,7 +200,7 @@ export function CoachFilProvider({ children }: { children: ReactNode }) {
       rangeable:
         etat.id !== null && etat.messages.some((m) => m.role === 'marcel'),
     }),
-    [etat, occupe, mode, envoyer, ouvrir, nouveau, oublierCartes],
+    [etat, occupe, mode, proposition, proposer, envoyer, ouvrir, nouveau, oublierCartes],
   )
 
   return <Contexte.Provider value={valeur}>{children}</Contexte.Provider>

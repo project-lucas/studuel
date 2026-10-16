@@ -17,12 +17,15 @@ import { useQuetesDuJour } from './store'
  * qui portent le bandeau. Il s'efface quand la journée est bouclée (tout
  * encaissé, coffre ouvert : `journeeBouclee`) et revient le lendemain.
  *
- * Deux voisins à éviter :
+ * Trois voisins à éviter :
  *   · l'ARÈNE, dont la rangée de combat occupe le bas de l'écran jusqu'à
  *     ~11,5 rem : le bouton monte au-dessus ;
- *   · MARCEL (Studuel+), qui pose sa tête en bas à droite de Réviser et
- *     `html.marcel-fab` tant qu'elle est à l'écran : le bouton se pose
- *     au-dessus d'elle.
+ *   · la TÊTE DE MARCEL, en bas à droite de Réviser (visible pour tous depuis
+ *     le 16/10/2026), qui pose `html.marcel-fab` tant qu'elle est à l'écran :
+ *     le bouton se pose au-dessus d'elle ;
+ *   · le CHAMP du bureau de Marcel, qui pose `html.champ-marcel` et publie sa
+ *     hauteur dans `--champ-marcel` (components/marcel/useHauteurChamp) : le
+ *     bouton se pose juste au-dessus du champ et le suit quand il grandit.
  */
 export default function BoutonQuetesFlottant() {
   const pathname = usePathname()
@@ -32,7 +35,7 @@ export default function BoutonQuetesFlottant() {
     <div
       className={cn(
         'quetes-fab fixed right-4 z-40 md:bottom-8',
-        pathname === '/defi' ? 'bottom-[12.25rem]' : 'bottom-24 [html.marcel-fab_&]:bottom-[10.75rem]',
+        pathname === '/defi' ? 'bottom-[12.25rem]' : 'bottom-24 [html.marcel-fab_&]:bottom-[10.75rem] [html.champ-marcel_&]:bottom-[var(--champ-marcel)]',
       )}
     >
       <PastilleQuetes grand />

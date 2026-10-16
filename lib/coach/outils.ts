@@ -27,8 +27,32 @@ export type Teinte =
   | 'corail'
   | 'turquoise'
 
-/** Les modes du champ — ceux qui appellent le modèle. */
-export type ModeCle = 'question' | 'fiche' | 'exercice' | 'flashcards'
+/**
+ * Les modes du champ — ceux qui appellent le modèle. Les quatre premiers sont
+ * les historiques ; les suivants sont les OUTILS du bureau (16/10/2026,
+ * lib/coach/catalogue-outils) : chacun n'est qu'une consigne de plus, donc un
+ * outil coûte une demande, comme une question.
+ */
+export type ModeCle =
+  | 'question'
+  | 'fiche'
+  | 'exercice'
+  | 'flashcards'
+  | 'resume'
+  | 'explique'
+  | 'interroge'
+  | 'exos'
+  | 'copie'
+  | 'schema'
+  | 'traduis'
+  | 'definition'
+  | 'carte'
+  | 'plan'
+  | 'planning'
+  | 'calcul'
+  | 'redaction'
+  | 'langue'
+  | 'expose'
 
 export type Mode = {
   cle: ModeCle
@@ -135,6 +159,240 @@ export const MODES: Record<ModeCle, Mode> = {
     maxTokens: 1_200,
     piece: true,
     cartes: true,
+  },
+
+  // --- LES OUTILS DU BUREAU (16/10/2026) ------------------------------------
+  // Une teinte par FAMILLE du catalogue (Comprendre indigo, Réviser rose,
+  // S'entraîner ambre, Corriger corail) : à vingt outils, une teinte chacun ne
+  // se reconnaîtrait plus. La règle absolue du socle tient pour tous.
+
+  resume: {
+    cle: 'resume',
+    label: 'Résume mon cours',
+    hint: 'L’essentiel de ton cours en dix lignes',
+    teinte: 'indigo',
+    placeholder: 'Colle ton cours, ou prends-le en photo',
+    consigne: [
+      'L’élève te donne son cours. Tu en fais un RÉSUMÉ fidèle, à son niveau, en 10 lignes au plus.',
+      'Format : une phrase qui dit de quoi parle le cours, puis 4 à 6 puces « - » d’une phrase avec les idées clés, dans l’ordre du cours.',
+      'Tu n’ajoutes rien qui ne soit pas dans le cours. Si le texte est illisible ou trop court, tu le dis.',
+    ].join(' '),
+    maxTokens: 700,
+    piece: true,
+  },
+
+  explique: {
+    cle: 'explique',
+    label: 'Explique-moi',
+    hint: 'Une notion, à ton niveau, avec un exemple',
+    teinte: 'indigo',
+    placeholder: 'La notion que tu ne comprends pas',
+    consigne: [
+      'Tu expliques UNE notion à l’élève, à son niveau de classe, en 6 phrases au plus.',
+      'D’abord l’idée en une phrase simple, puis un exemple concret de la vie de tous les jours (tiré de ses passions si tu les connais), puis le piège classique.',
+      'Tu finis par une petite question pour vérifier qu’il a compris.',
+    ].join(' '),
+    maxTokens: 450,
+    piece: false,
+  },
+
+
+
+
+
+
+
+  interroge: {
+    cle: 'interroge',
+    label: 'Interroge-moi',
+    hint: 'Une question à la fois, corrigée',
+    teinte: 'ambre',
+    placeholder: 'Le chapitre sur lequel t’interroger',
+    consigne: [
+      'Tu INTERROGES l’élève comme un prof à l’oral, UNE question à la fois.',
+      'Si son message est une réponse à ta question précédente, tu dis d’abord si c’est juste (et pourquoi, en une phrase), puis tu poses la question suivante.',
+      'Sinon, tu poses la première question sur le chapitre demandé. Jamais plus d’une question par message.',
+    ].join(' '),
+    maxTokens: 300,
+    piece: false,
+  },
+
+  exos: {
+    cle: 'exos',
+    label: 'Exos sur mesure',
+    hint: 'Trois exercices, du plus facile au plus dur',
+    teinte: 'ambre',
+    placeholder: 'Le chapitre à travailler',
+    consigne: [
+      'Tu écris 3 exercices courts sur le chapitre, numérotés et gradués : facile, moyen, difficile.',
+      'Tu ne donnes PAS les solutions : tu finis par « Envoie-moi tes réponses, je corrige ».',
+    ].join(' '),
+    maxTokens: 800,
+    piece: false,
+  },
+
+  copie: {
+    cle: 'copie',
+    label: 'Corrige ma copie',
+    hint: 'Une photo de ta copie, relue avec toi',
+    teinte: 'corail',
+    placeholder: 'Prends ta copie en photo',
+    consigne: [
+      'L’élève t’envoie sa copie ou son devoir. Tu le CORRIGES sans jamais le réécrire.',
+      'En trois temps : « Ce qui est réussi » (2 points), « Ce qui coûte des points » (3 erreurs au plus, chacune avec la règle à appliquer), « À faire maintenant » (une correction qu’il fait lui-même).',
+      'Tu ne donnes pas de note chiffrée.',
+    ].join(' '),
+    maxTokens: 900,
+    piece: true,
+  },
+
+
+
+
+  schema: {
+    cle: 'schema',
+    label: 'Explique ce schéma',
+    hint: 'Une photo de schéma, lue avec toi',
+    teinte: 'indigo',
+    placeholder: 'Prends le schéma en photo',
+    consigne: [
+      'L’élève t’envoie un schéma, une carte, un graphique ou un document.',
+      'Tu dis d’abord ce que c’est en une phrase, puis tu le lis en 3 à 5 points numérotés (ce qu’on voit, ce que ça montre).',
+      'Tu finis par la question qu’un prof poserait sur ce document.',
+    ].join(' '),
+    maxTokens: 500,
+    piece: true,
+  },
+
+  traduis: {
+    cle: 'traduis',
+    label: 'Traduis et explique',
+    hint: 'Une phrase en langue, comprise mot à mot',
+    teinte: 'indigo',
+    placeholder: 'La phrase à comprendre',
+    consigne: [
+      'L’élève te donne une phrase en langue étrangère (ou en français à traduire).',
+      'Tu donnes le sens en français, puis tu expliques les 2 ou 3 points de grammaire ou de vocabulaire qui la rendent difficile.',
+      'Tu n’écris pas de devoir de traduction entier : au-delà de trois phrases, tu expliques la première et tu lui laisses la suite.',
+    ].join(' '),
+    maxTokens: 500,
+    piece: true,
+  },
+
+  definition: {
+    cle: 'definition',
+    label: 'Le mot juste',
+    hint: 'Une définition claire, à recopier',
+    teinte: 'indigo',
+    placeholder: 'Le mot ou l’expression',
+    consigne: [
+      'Tu donnes la définition du mot ou de l’expression, telle qu’on l’attend dans une copie, en 2 phrases.',
+      'Puis un exemple d’emploi, et le mot avec lequel on le confond souvent.',
+    ].join(' '),
+    maxTokens: 300,
+    piece: false,
+  },
+
+  carte: {
+    cle: 'carte',
+    label: 'Carte mentale',
+    hint: 'Ton chapitre en branches',
+    teinte: 'rose',
+    placeholder: 'Le chapitre à mettre en carte',
+    consigne: [
+      'Tu fais une CARTE MENTALE du chapitre, en texte, sans autre texte autour.',
+      'Format imposé : une ligne « # » avec le thème central, puis 3 à 5 lignes « ## » pour les branches, et sous chacune 2 à 4 puces « - » de quelques mots (pas des phrases).',
+    ].join(' '),
+    maxTokens: 700,
+    piece: true,
+  },
+
+  plan: {
+    cle: 'plan',
+    label: 'Plan pour mon contrôle',
+    hint: 'Jour par jour jusqu’au contrôle',
+    teinte: 'rose',
+    placeholder: 'Ton contrôle : matière, date, chapitres',
+    consigne: [
+      'L’élève prépare un contrôle. Tu fais un PLAN DE RÉVISION jour par jour jusqu’à la date.',
+      'Chaque jour : une ligne « - Jour : quoi faire (durée) », 15 minutes au plus par jour en semaine.',
+      'La veille : une révision courte, jamais du nouveau. Le jour J : 5 questions éclair le matin.',
+      'Si la date ou les chapitres manquent, tu les demandes avant de faire le plan.',
+    ].join(' '),
+    maxTokens: 700,
+    piece: false,
+  },
+
+  planning: {
+    cle: 'planning',
+    label: 'Planning de la semaine',
+    hint: 'Tes soirées organisées, sans y passer la nuit',
+    teinte: 'rose',
+    placeholder: 'Tes contrôles et devoirs de la semaine',
+    consigne: [
+      'Tu organises la semaine de l’élève : un jour par ligne « - Jour : … », du lundi au dimanche.',
+      'Au plus 30 minutes par soir en semaine, les tâches les plus urgentes d’abord, une soirée libre.',
+      'Tu finis par une phrase d’encouragement simple, sans emoji.',
+    ].join(' '),
+    maxTokens: 700,
+    piece: false,
+  },
+
+  calcul: {
+    cle: 'calcul',
+    label: 'Mon calcul pas à pas',
+    hint: 'Il trouve où ton calcul déraille',
+    teinte: 'corail',
+    placeholder: 'Ton calcul, ligne par ligne (ou en photo)',
+    consigne: [
+      'L’élève te donne SON calcul. Tu le relis ligne par ligne et tu trouves la PREMIÈRE erreur.',
+      'Tu dis à quelle ligne elle est et quelle règle n’a pas été respectée, sans écrire la suite du calcul.',
+      'Si tout est juste, tu le dis et tu félicites en une phrase.',
+    ].join(' '),
+    maxTokens: 500,
+    piece: true,
+  },
+
+  redaction: {
+    cle: 'redaction',
+    label: 'Ma rédaction',
+    hint: 'Ton texte relu : idées, plan, langue',
+    teinte: 'corail',
+    placeholder: 'Colle ta rédaction, ou prends-la en photo',
+    consigne: [
+      'L’élève te donne une rédaction, un paragraphe argumenté ou une dissertation. Tu ne la réécris JAMAIS.',
+      'Tu donnes un retour en trois points : les idées et le plan, la langue (2 erreurs récurrentes avec la règle), et la piste qui ferait gagner le plus de points.',
+    ].join(' '),
+    maxTokens: 900,
+    piece: true,
+  },
+
+  langue: {
+    cle: 'langue',
+    label: 'Mes langues',
+    hint: 'Tes phrases en langue, corrigées et expliquées',
+    teinte: 'corail',
+    placeholder: 'Tes phrases en anglais, espagnol, allemand…',
+    consigne: [
+      'L’élève écrit en langue étrangère. Tu repères ses erreurs (5 au plus), chacune avec la règle en une phrase en français.',
+      'Tu ne réécris pas tout le texte : tu montres la forme correcte seulement pour les erreurs relevées.',
+    ].join(' '),
+    maxTokens: 600,
+    piece: true,
+  },
+
+  expose: {
+    cle: 'expose',
+    label: 'Mon exposé',
+    hint: 'Ton plan d’exposé ou d’oral, relu',
+    teinte: 'corail',
+    placeholder: 'Le sujet et ton plan',
+    consigne: [
+      'L’élève prépare un exposé ou un oral. Tu relis son plan : ce qui tient, ce qui manque, ce qui est hors sujet.',
+      'Puis 3 conseils pour le dire à l’oral (accroche, transitions, conclusion). Tu n’écris pas l’exposé à sa place.',
+    ].join(' '),
+    maxTokens: 800,
+    piece: true,
   },
 }
 

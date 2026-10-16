@@ -1,59 +1,50 @@
-// Squelette de l'onglet Marcel.
+// Squelette du bureau de Marcel (16/10/2026).
 //
-// La page lit le profil, la maîtrise, les chapitres du niveau, les contrôles et
-// l'historique d'activité : c'est l'un des écrans les plus lourds de l'app.
-// Sans squelette, le hero apparaît vide puis saute — et c'est justement l'écran
-// qui doit inspirer le calme.
-//
-// Les blocs reprennent les hauteurs RÉELLES du rendu final (hero + séance), pour
-// qu'aucune ligne ne se déplace à l'arrivée des données.
+// La page lit le profil, la maîtrise, les chapitres du niveau, les contrôles,
+// l'historique d'activité et le carnet de Marcel : c'est l'un des écrans les
+// plus lourds de l'app. Le squelette reprend la FORME et les HAUTEURS du rendu
+// final — la bande peinte du bureau (184 px), la barre des quatre onglets, la
+// séance et son gros bouton, le champ en bas — pour qu'aucune ligne ne se
+// déplace à l'arrivée des données.
 
 export default function MarcelLoading() {
   return (
-    <div className="px-4 pt-2 pb-6" aria-busy="true" aria-live="polite">
-      <span className="sr-only">Marcel regarde ton travail…</span>
+    <div className="px-4 pt-2" aria-busy="true" aria-live="polite">
+      <span className="sr-only">Marcel prépare ton bureau…</span>
+      <div className="flex h-[calc(100dvh-10.5rem)] min-h-[26rem] flex-col md:h-auto md:min-h-0">
+        {/* La bande du bureau, peinte : un aplat chaud le temps qu'elle arrive. */}
+        <div className="relative -mx-4 -mt-2 h-[184px] shrink-0 animate-pulse bg-[color-mix(in_oklch,var(--highlight),var(--background)_75%)] md:mx-0 md:rounded-[28px]">
+          <span className="bg-card/80 absolute top-3 left-4 size-10 rounded-full" />
+          <span className="bg-card/80 absolute top-3 right-4 size-10 rounded-full" />
+          <span className="bg-card/60 absolute bottom-3 left-5 h-[110px] w-[72px] rounded-[40%]" />
+          <span className="bg-card/90 absolute right-4 bottom-9 left-[112px] h-14 rounded-2xl" />
+        </div>
 
-      <div className="mx-0.5 mt-1 mb-2 flex items-center justify-between">
-        <span className="bg-foreground/10 h-4 w-36 animate-pulse rounded-full" />
-        <span className="bg-foreground/10 h-6 w-20 animate-pulse rounded-full" />
-      </div>
+        <div className="bg-secondary mt-0 grid h-12 shrink-0 grid-cols-4 gap-1 rounded-2xl p-1">
+          <span className="bg-card rounded-xl" />
+        </div>
 
-      {/* Le filtre des fonctions */}
-      <div className="mb-3 flex gap-1.5">
-        <span className="bg-foreground/10 h-11 flex-1 animate-pulse rounded-xl" />
-        <span className="bg-foreground/6 h-11 flex-1 animate-pulse rounded-xl" />
-      </div>
-
-      {/* Le point du jour */}
-      <div className="bg-primary/85 relative h-[232px] animate-pulse overflow-hidden rounded-3xl p-4">
-        <div className="flex items-start gap-3">
-          <span className="size-[74px] shrink-0 rounded-full bg-white/20" />
-          <div className="flex-1 space-y-2 pt-1">
-            <span className="block h-2.5 w-32 rounded-full bg-white/30" />
-            <span className="block h-4 w-full rounded-full bg-white/25" />
-            <span className="block h-4 w-4/5 rounded-full bg-white/25" />
+        <div className="bg-card mt-2.5 rounded-[1.5rem] p-3.5">
+          <div className="flex items-center justify-between">
+            <span className="bg-foreground/10 h-4 w-36 animate-pulse rounded-full" />
+            <span className="bg-foreground/8 h-7 w-28 animate-pulse rounded-full" />
           </div>
-        </div>
-        <span className="mt-6 block h-12 w-full rounded-2xl bg-white/70" />
-      </div>
-
-      {/* La séance */}
-      <div className="mt-3">
-        <div className="mx-0.5 mb-1.5 flex items-center justify-between">
-          <span className="bg-foreground/10 h-4 w-40 animate-pulse rounded-full" />
-          <span className="bg-foreground/10 h-3 w-12 animate-pulse rounded-full" />
-        </div>
-        <div className="bg-card space-y-3 rounded-[20px] p-3">
-          {[0, 1, 2].map((i) => (
-            <div key={i} className="flex items-center gap-3">
-              <span className="bg-foreground/10 size-8 shrink-0 animate-pulse rounded-xl" />
+          <span className="bg-primary/70 mt-2.5 block h-16 animate-pulse rounded-[20px]" />
+          {[0, 1].map((i) => (
+            <div key={i} className="mt-3 flex items-center gap-2.5">
+              <span className="bg-foreground/10 size-7 shrink-0 animate-pulse rounded-full" />
               <span className="flex-1 space-y-1.5">
                 <span className="bg-foreground/10 block h-3.5 w-2/3 animate-pulse rounded-full" />
                 <span className="bg-foreground/6 block h-3 w-1/2 animate-pulse rounded-full" />
               </span>
-              <span className="bg-foreground/10 h-6 w-12 animate-pulse rounded-full" />
             </div>
           ))}
+        </div>
+
+        <div className="bg-card mt-auto flex h-[62px] shrink-0 items-center gap-2 rounded-[26px] px-3">
+          <span className="bg-foreground/8 size-11 rounded-full" />
+          <span className="bg-foreground/8 h-4 flex-1 rounded-full" />
+          <span className="bg-primary/40 size-11 rounded-full" />
         </div>
       </div>
     </div>

@@ -22,8 +22,6 @@ import ClasseChip from '@/components/reviser/ClasseChip'
 import { isGradeLevel } from '@/lib/grades'
 import SerieBar from '@/components/reviser/SerieBar'
 import MarcelFab from '@/components/reviser/MarcelFab'
-import { PREMIUM_TIERS } from '@/lib/gems'
-import type { Tier } from '@/lib/subscription'
 import SubjectMasteryCelebration from '@/components/SubjectMasteryCelebration'
 import { fetchGauges, gardiensSortis } from '@/lib/traque-server'
 import { createClient } from '@/lib/supabase/server'
@@ -619,9 +617,11 @@ export default async function OngletReviser() {
           mène. */}
       <div className="flex flex-col gap-4">
         {/* La tête de Marcel, flottante en bas à droite : depuis qu'il n'a
-                plus d'onglet, c'est LA porte du coach. Studuel+ seulement
-                (15/10/2026 : Marcel n'est ouvert qu'aux abonnés). */}
-        {PREMIUM_TIERS.includes((profile?.subscription_tier ?? 'free') as Tier) ? <MarcelFab /> : null}
+                plus d'onglet, c'est LA porte du coach. Visible pour TOUS depuis
+                le 16/10/2026 (Lucas : « le bouton de Marcel doit être visible
+                pour le freemium ») : le gratuit y trouve sa journée et son
+                radar offerts, et les outils couronnés. */}
+        <MarcelFab />
         {/* TROIS blocs, dans cet ordre : où j'en suis (la série), ce que je
                 reprends (deux sessions), où je vais (mes dossiers). */}
         <SubjectsHome

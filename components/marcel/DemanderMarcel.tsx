@@ -1,16 +1,20 @@
 'use client'
 
-import { useRef, useState, useTransition, type ReactNode } from 'react'
+import { useEffect, useRef, useState, useTransition, type ReactNode } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
+  ArrowLeft,
   ArrowRight,
   ArrowUp,
   BatteryCharging,
   BookMarked,
   ChevronDown,
+  Crown,
   FileText,
   ImagePlus,
+  Mic,
+  Square,
   Moon,
   Plus,
   Sparkles,
@@ -28,7 +32,7 @@ import { creditsMensuels } from '@/lib/coach/credits'
 import { sommeilDe } from '@/lib/coach/sommeil'
 import type { DemandeResult } from '@/app/marcel/actions'
 import type { Remarque } from '@/lib/coach/remarques'
-import { MODES } from '@/lib/coach/outils'
+import { MODES, MODE_PAR_DEFAUT } from '@/lib/coach/outils'
 import {
   lireTexte,
   reduireImage,
@@ -40,6 +44,9 @@ import type { Tier } from '@/lib/subscription'
 import { useCoachFil } from './CoachFil'
 import CartesProposees from './CartesProposees'
 import ReponseMarcel from './ReponseMarcel'
+import PoseMarcel from './PoseMarcel'
+import { useDictee } from './useDictee'
+import { useHauteurChamp } from './useHauteurChamp'
 
 // LE FIL ET LE CHAMP — la moitié basse de l'écran du coach.
 //
@@ -96,6 +103,7 @@ export default function DemanderMarcel({
   matiereParDefaut,
   vision,
   outils,
+  bureau,
 }: {
   tier: Tier
   utilisesAujourdhui: number
@@ -111,11 +119,17 @@ export default function DemanderMarcel({
   /** Un modèle capable de LIRE une photo est-il branché ? (lib/coach/ia-vision) */
   vision: boolean
   /**
-   * La rangée de ce que Marcel sait faire (CoachSuggestions), posée DANS la
+   * Une rangée posée DANS la
    * carte du champ, au-dessus de la saisie (22/09/2026 : elle vivait en rail
    * de cartes entre le personnage et le champ, et prenait un tiers de l'écran).
    */
   outils?: ReactNode
+  /**
+   * LE BUREAU (16/10/2026) : les onglets Aujourd’hui · Radar · Toi · Outils,
+   * montrés tant qu’aucune conversation n’est ouverte. Il prend la place de
+   * « Marcel a remarqué », qui vit désormais dans l’onglet Radar.
+   */
+  bureau?: ReactNode
 }) {
   const {
     id: filId,
@@ -128,6 +142,8 @@ export default function DemanderMarcel({
     choisirMode,
     lien,
     relance,
+    proposition,
+    nouveau,
   } = useCoachFil()
 
   const [texte, setTexte] = useState('')
@@ -143,8 +159,31 @@ export default function DemanderMarcel({
   })
   const [pending, start] = useTransition()
   const champ = useRef<HTMLTextAreaElement>(null)
+  // Le bouton des quêtes se pose AU-DESSUS du champ du bureau (useHauteurChamp).
+  const refChamp = useHauteurChamp()
+  // Dicter sa question : le texte s'ajoute au champ, l'élève relit et envoie.
+  const dictee = useDictee((dit) => setTexte((avant) => (avant ? `${avant} ${dit}` : dit)))
   const fichierImage = useRef<HTMLInputElement>(null)
   const fichierTexte = useRef<HTMLInputElement>(null)
+
+  // Un outil du bureau propose une phrase (ou rien, pour armer un mode) : le
+  // champ la recopie et prend le focus. C’est l’élève qui envoie.
+  // L’état suit la proposition PENDANT le rendu (pas dans un effet) : le
+  // focus, lui, est un effet de bord du DOM.
+  const [propositionVue, setPropositionVue] = useState(0)
+  if (proposition && proposition.n !== propositionVue) {
+    setPropositionVue(proposition.n)
+    setTexte(proposition.texte)
+  }
+  useEffect(() => {
+    if (proposition) champ.current?.focus()
+  }, [proposition])
+
+  // Le bureau ouvert, le champ se fait petit : les onglets ont besoin de la
+  // place. Il reprend sa hauteur dès qu’on écrit ou qu’une conversation s’ouvre.
+  // Un outil armé ou une pièce jointe : l’élève va écrire, le champ reprend sa taille.
+  const compact =
+    Boolean(bureau) && messages.length === 0 && !occupe && texte.length === 0 && mode === MODE_PAR_DEFAUT && piece === null
 
   const spec = MODES[mode]
   const etat = etatDemande({
@@ -275,7 +314,23 @@ export default function DemanderMarcel({
           travail de l'élève, chaque remarque avec son geste et, quand c'est
           utile, la question toute prête à lui poser (elle remplit le champ ;
           c'est l'élève qui l'envoie). Gratuit : rien n'a été demandé au modèle. */}
-      {messages.length === 0 && !occupe && remarques.length > 0 && (
+      {messages.length === 0 && !occupe && bureau ? bureau : null}
+
+      {(messages.length > 0 || occupe) && bureau ? (
+        <button
+          type="button"
+          onClick={() => {
+            sfx.tap()
+            nouveau()
+          }}
+          className="text-primary mb-1.5 inline-flex min-h-9 items-center gap-1 self-start px-1 text-[12.5px] font-extrabold"
+        >
+          <ArrowLeft aria-hidden="true" className="size-4" strokeWidth={2.6} />
+          Revenir au bureau
+        </button>
+      ) : null}
+
+      {!bureau && messages.length === 0 && !occupe && remarques.length > 0 && (
         <section aria-labelledby="marcel-remarque" className="mb-3 min-h-0 flex-1 overflow-y-auto overscroll-contain px-0.5">
           <h3 id="marcel-remarque" className="surtitre text-muted-foreground mb-1.5 px-1">
             Marcel a remarqué
@@ -344,10 +399,13 @@ export default function DemanderMarcel({
             ),
           )}
 
+          {/* Pendant qu’il répond, Marcel LIT (16/10/2026) : la pose rend
+              l’attente vivante, là où un texte gris se lisait comme une panne. */}
           {occupe && (
-            <p className="text-muted-foreground ml-10 text-[13px] font-bold">
-              Marcel réfléchit…
-            </p>
+            <div className="flex items-end gap-2">
+              <PoseMarcel pose="lit" hauteur={64} className="shrink-0 object-contain" />
+              <p className="text-muted-foreground mb-2 text-[13px] font-bold">Marcel lit ta demande…</p>
+            </div>
           )}
 
           {/* LA FICHE EXISTE DÉJÀ : Marcel l'a reconnue sans le modèle. Un
@@ -401,8 +459,30 @@ export default function DemanderMarcel({
 
       {etat.possible ? (
         <>
-          <div className="bg-card mt-auto shrink-0 rounded-[26px] p-3 shadow-[inset_0_0_0_1.5px_color-mix(in_oklch,var(--foreground),transparent_90%),0_14px_26px_-22px_rgba(36,48,79,.9)]">
-            <div className="flex items-center justify-between gap-2">
+          {/* MARCEL ÉCOUTE (16/10/2026) : la pose dit que le micro est ouvert. */}
+          {dictee.ecoute ? (
+            <div className="mb-2 flex shrink-0 items-end gap-2" role="status">
+              <PoseMarcel pose="ecoute" hauteur={64} className="shrink-0 object-contain" />
+              <p className="bg-card mb-1.5 flex-1 rounded-2xl px-3 py-2 text-[12.5px] leading-snug font-bold">Je t’écoute… parle, puis touche Stop.</p>
+              <button
+                type="button"
+                onClick={dictee.arreter}
+                className="bg-destructive/10 text-destructive mb-1.5 inline-flex min-h-10 items-center gap-1.5 rounded-full px-3 text-[12px] font-extrabold"
+              >
+                <Square aria-hidden="true" className="size-3.5" fill="currentColor" strokeWidth={0} />
+                Stop
+              </button>
+            </div>
+          ) : null}
+          <div
+            ref={bureau ? refChamp : undefined}
+            className={cn(
+              'bg-card mt-auto shrink-0 rounded-[26px] p-3 shadow-[inset_0_0_0_1.5px_color-mix(in_oklch,var(--foreground),transparent_90%),0_14px_26px_-22px_rgba(36,48,79,.9)]',
+              // Compact : le « + », la saisie et l’envoi sur une seule ligne.
+              compact && 'flex flex-wrap items-center gap-x-2',
+            )}
+          >
+            <div className={cn('flex w-full items-center justify-between gap-2', compact && 'hidden')}>
               {/* La matière n'est pas un réglage caché : Marcel ne répond pas en
                   histoire comme en maths (cf. lib/coach/regimes), et c'est ce
                   menu qui le lui dit. Prérempli sur la mission du jour. */}
@@ -439,7 +519,7 @@ export default function DemanderMarcel({
             </div>
 
             {sommeil.etat === 'fatigue' && (
-              <p className="bg-secondary mt-2 flex items-center gap-2 rounded-2xl px-3 py-2 text-[11.5px] font-bold">
+              <p className="bg-secondary mt-2 flex w-full items-center gap-2 rounded-2xl px-3 py-2 text-[11.5px] font-bold">
                 <Moon aria-hidden="true" className="text-primary size-4 shrink-0" />
                 <span className="min-w-0 flex-1">{sommeil.phrase}</span>
                 <Link href="/tresor#recharges" className="text-primary shrink-0 font-extrabold underline-offset-4 hover:underline">
@@ -510,7 +590,11 @@ export default function DemanderMarcel({
               maxLength={400}
               disabled={occupeOuPending}
               placeholder={spec.placeholder}
-              className="placeholder:text-muted-foreground/70 mt-2 min-h-[4.25rem] w-full resize-none bg-transparent px-1.5 text-[15px] font-semibold outline-none"
+              rows={compact ? 1 : 2}
+              className={cn(
+                'placeholder:text-muted-foreground/70 mt-2 w-full resize-none bg-transparent px-1.5 text-[15px] font-semibold outline-none',
+                compact ? 'order-2 mt-0 min-h-[1.75rem] min-w-0 flex-1 basis-0' : 'min-h-[4.25rem]',
+              )}
             />
 
             {menu && (
@@ -575,7 +659,7 @@ export default function DemanderMarcel({
               </ul>
             )}
 
-            <div className="flex items-center justify-between">
+            <div className={compact ? 'contents' : 'flex items-center justify-between'}>
               <button
                 type="button"
                 onClick={() => {
@@ -587,6 +671,7 @@ export default function DemanderMarcel({
                 aria-label="Joindre une photo, un fichier, ou une phrase toute prête"
                 className={cn(
                   'grid size-11 place-items-center rounded-full border-[1.5px] transition active:translate-y-px',
+                  compact && 'order-1',
                   menu
                     ? 'border-primary bg-primary/10 text-primary'
                     : 'border-foreground/12 text-muted-foreground',
@@ -602,6 +687,22 @@ export default function DemanderMarcel({
                 />
               </button>
 
+              {dictee.possible ? (
+                <button
+                  type="button"
+                  onClick={dictee.ecoute ? dictee.arreter : dictee.demarrer}
+                  disabled={occupeOuPending}
+                  aria-pressed={dictee.ecoute}
+                  aria-label={dictee.ecoute ? 'Arrêter la dictée' : 'Dicter ma question'}
+                  className={cn(
+                    'grid size-11 shrink-0 place-items-center rounded-full transition active:translate-y-px disabled:opacity-40',
+                    dictee.ecoute ? 'bg-destructive/10 text-destructive' : 'bg-secondary text-primary',
+                    compact ? 'order-3' : 'ml-auto mr-2',
+                  )}
+                >
+                  <Mic aria-hidden="true" className="size-5" strokeWidth={2.4} />
+                </button>
+              ) : null}
               <button
                 type="button"
                 onClick={soumettre}
@@ -610,7 +711,10 @@ export default function DemanderMarcel({
                   (texte.trim().length === 0 && piece === null)
                 }
                 aria-label="Envoyer à Marcel"
-                className="bg-primary text-primary-foreground grid size-12 place-items-center rounded-full shadow-[0_3px_0_color-mix(in_oklch,var(--primary),black_28%)] transition active:translate-y-px disabled:opacity-40 disabled:shadow-none"
+                className={cn(
+                  'bg-primary text-primary-foreground grid size-12 place-items-center rounded-full shadow-[0_3px_0_color-mix(in_oklch,var(--primary),black_28%)] transition active:translate-y-px disabled:opacity-40 disabled:shadow-none',
+                  compact && 'order-4 size-11',
+                )}
               >
                 <ArrowUp
                   aria-hidden="true"
@@ -648,7 +752,7 @@ export default function DemanderMarcel({
           {/* La ligne de bas de page, comme partout où une IA répond : elle dit
               ce qu'est Marcel, et ce qu'il faut en faire. Elle porte aussi le
               compteur du jour en clair. */}
-          <p className="text-muted-foreground mt-2.5 flex items-start justify-center gap-1.5 px-3 text-center text-[11px] leading-snug font-semibold">
+          <p className={cn('text-muted-foreground mt-2.5 flex items-start justify-center gap-1.5 px-3 text-center text-[11px] leading-snug font-semibold', compact && 'sr-only')}>
             <Sparkles aria-hidden="true" className="mt-px size-3.5 shrink-0" />
             <span>
               {etat.message} Marcel est un coach IA : il donne un indice, jamais
@@ -656,6 +760,32 @@ export default function DemanderMarcel({
             </span>
           </p>
         </>
+      ) : sommeil.etat === 'abonnement' ? (
+        // LE GRATUIT (16/10/2026, Lucas : « le bouton de Marcel doit être
+        // visible pour le freemium, avec une ou deux fonctionnalités offertes ;
+        // on bloque les autres pour convaincre de passer au payant »). Le champ
+        // se voit, verrouillé, et un seul bouton d’or ouvre Studuel+. Aucune
+        // recharge n’est montrée : elles sont réservées aux abonnés.
+        <div ref={bureau ? refChamp : undefined} className="mt-auto shrink-0">
+          {/* Marcel TEND LA MAIN (16/10/2026) : on vend une rencontre, pas un cadenas. */}
+          <div className="mb-1.5 flex items-end gap-2" aria-hidden="true">
+            <PoseMarcel pose="invite" hauteur={56} className="shrink-0 object-contain" />
+            <p className="bg-card mb-1 rounded-2xl px-3 py-1.5 text-[12.5px] leading-snug font-bold">
+              Avec Studuel+, je te réponds pour de vrai — et je retiens ce que tu me dis.
+            </p>
+          </div>
+          {/* Plus de faux champ grisé : le bouton d’or dit déjà ce qui est fermé, et
+              la place revient aux onglets (16/10/2026). */}
+          <Button asChild size="xl" className="bg-highlight text-foreground hover:bg-highlight/90 mt-2 w-full font-extrabold">
+            <Link href="/plus">
+              <Crown aria-hidden="true" />
+              Débloquer Marcel
+            </Link>
+          </Button>
+          <p className="text-muted-foreground mt-1.5 text-center text-[11px] font-semibold">
+            Ta journée et ton radar restent offerts.
+          </p>
+        </div>
       ) : (
         // MARCEL DORT (15/10/2026, Lucas : « Marcel doit dormir, il se
         // réveillera dans X jours, avec en boutique la possibilité de le
@@ -664,15 +794,9 @@ export default function DemanderMarcel({
         // Marcel endormi viendra plus tard : la tête de Marcel, un peu éteinte.
         <div className="bg-card mt-auto rounded-[26px] p-4 text-center shadow-[inset_0_0_0_1.5px_color-mix(in_oklch,var(--foreground),transparent_90%),0_14px_26px_-22px_rgba(36,48,79,.9)]">
           {sommeil.etat === 'endormi' || sommeil.etat === 'repos' ? (
-            <div className="relative mx-auto mb-2 size-16" aria-hidden="true">
-              <Image
-                src={marcelTete}
-                alt=""
-                width={128}
-                height={128}
-                className="size-16 rounded-full object-contain opacity-80 grayscale-[35%]"
-              />
-              <span className="font-heading text-primary absolute -top-1 -right-2 text-lg font-extrabold">
+            <div className="relative mx-auto mb-1 w-fit" aria-hidden="true">
+              <PoseMarcel pose="dort" hauteur={104} className="object-contain" />
+              <span className="font-heading text-primary absolute top-0 -right-3 text-lg font-extrabold">
                 z<span className="text-sm">z</span>
               </span>
             </div>
@@ -680,14 +804,6 @@ export default function DemanderMarcel({
           <p className="font-heading text-[16px] font-extrabold">{sommeil.titre}</p>
           <p className="text-muted-foreground mt-1 text-[12.5px] font-semibold text-balance">{sommeil.phrase}</p>
 
-          {sommeil.etat === 'abonnement' && (
-            <Button asChild size="lg" className="mt-3 w-full">
-              <Link href="/plus">
-                <Sparkles aria-hidden="true" />
-                Découvrir Studuel+
-              </Link>
-            </Button>
-          )}
 
           {sommeil.recharger && (
             <div className="mt-3 space-y-1.5">

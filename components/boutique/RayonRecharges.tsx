@@ -12,7 +12,7 @@ import { demanderRechargeMarcel } from '@/app/tresor/recharges-actions'
 import { libelleEuros } from '@/lib/capsules'
 import { enPeriodeExamens, prixParQuestion, rechargesDansLOrdre, type Recharge } from '@/lib/coach/recharges'
 import { sfx } from '@/lib/sounds'
-import marcelTete from '@/public/images/nav/marcel.webp'
+import marcelRecharge from '@/public/images/marcel/poses/recharge.webp'
 
 /**
  * LES RECHARGES DE MARCEL (15/10/2026, Lucas : « comme pour Claude, des
@@ -22,11 +22,10 @@ import marcelTete from '@/public/images/nav/marcel.webp'
  * se paie pas avec une monnaie gratuite), sur le même circuit qu'un pack :
  * une demande, un parent paie, les crédits arrivent.
  *
- * ILLUSTRATION PROVISOIRE : la tête de Marcel. Lucas veut une illustration
- * dédiée (Marcel et sa batterie, trois tailles) — prompt dans
- * docs/CADRAGE-STUDUEL-PLUS.md.
+ * L’ILLUSTRATION : Marcel qui brandit sa batterie (16/10/2026,
+ * scripts/marcel-illustrations.mjs).
  */
-const ILLUSTRATION: IllustrationMagasin = { image: marcelTete, largeur: 72 }
+const ILLUSTRATION: IllustrationMagasin = { image: marcelRecharge, largeur: 96 }
 
 /** Aucune recharge ouverte — une CONSTANTE : `useFermeAuMasquage` la veut stable. */
 const FERME: { id: string | null; open: boolean } = { id: null, open: false }

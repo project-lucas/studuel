@@ -1,10 +1,12 @@
 import Link from 'next/link'
-import { ArrowLeft, Flame } from 'lucide-react'
 import PageHeader from '@/components/PageHeader'
-import BoutonHistorique from '@/components/marcel/BoutonHistorique'
-import CoachEntete from '@/components/marcel/CoachEntete'
 import { CoachFilProvider } from '@/components/marcel/CoachFil'
-import CoachSuggestions from '@/components/marcel/CoachSuggestions'
+import Bureau from '@/components/marcel/bureau/Bureau'
+import EnTeteBureau from '@/components/marcel/bureau/EnTeteBureau'
+import PanneauAujourdhui from '@/components/marcel/bureau/PanneauAujourdhui'
+import PanneauRadar from '@/components/marcel/bureau/PanneauRadar'
+import PanneauToi from '@/components/marcel/bureau/PanneauToi'
+import PanneauOutils from '@/components/marcel/bureau/PanneauOutils'
 import VueHeader from '@/components/marcel/VueHeader'
 import PointDuJourHero from '@/components/marcel/PointDuJourHero'
 import SeanceCard from '@/components/marcel/SeanceCard'
@@ -17,8 +19,10 @@ import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { getMarcelSnapshot } from '@/lib/coach/marcel-server'
 import { getOralSnapshot } from '@/lib/coach/oral-server'
-import { countPretes, entrainementsFor } from '@/lib/coach/entrainement'
-import { couvertureGlobale } from '@/lib/coach/couverture'
+import { entrainementsFor } from '@/lib/coach/entrainement'
+import { decorDuMoment, parseOnglet, poseDuMoment } from '@/lib/coach/bureau'
+import { creditsMensuels } from '@/lib/coach/credits'
+import { PREMIUM_TIERS } from '@/lib/gems'
 import { parseVue, titreVue } from '@/lib/coach/marcel-vues'
 import { visionDisponible } from '@/lib/coach/ia-vision'
 import { JOURS_FR, MOIS_FR } from '@/lib/time'
@@ -48,9 +52,9 @@ function dateDuJour(): string {
 export default async function MarcelPage({
   searchParams,
 }: {
-  searchParams: Promise<{ vue?: string; matiere?: string }>
+  searchParams: Promise<{ vue?: string; matiere?: string; onglet?: string }>
 }) {
-  const { vue: vueRaw, matiere: matiereRaw } = await searchParams
+  const { vue: vueRaw, matiere: matiereRaw, onglet: ongletRaw } = await searchParams
   const vue = parseVue(vueRaw)
 
   const user = await getCurrentUser()
@@ -77,7 +81,6 @@ export default async function MarcelPage({
   const {
     point,
     matieres,
-    streak,
     catalogueVide,
     disponiblesBySlug,
     couverture,
@@ -86,7 +89,15 @@ export default async function MarcelPage({
     oral: oralDescriptif,
     demande,
     remarques,
+    bureau,
   } = await getMarcelSnapshot(supabase, user.id)
+
+  // Marcel est ouvert à Studuel+ ; le gratuit voit tout le bureau, mais les
+  // outils, les notes et le champ y sont couronnés.
+  const ouvert = PREMIUM_TIERS.includes(demande.tier)
+  const credits = ouvert
+    ? Math.max(0, creditsMensuels(demande.tier) - demande.depensesMois) + demande.jetons
+    : null
 
   // L'échelle de l'oral n'est chargée QUE sur sa vue : c'est deux requêtes de
   // plus, et l'écran d'accueil n'en a aucun besoin.
@@ -118,40 +129,16 @@ export default async function MarcelPage({
                 sa propre boîte entre les deux. Sur grand écran, la page
                 reprend sa hauteur naturelle. */}
             <div className="flex h-[calc(100dvh-10.5rem)] min-h-[26rem] flex-col md:h-auto md:min-h-0">
-              {/* LA SORTIE et L'HISTORIQUE, sur une seule ligne : la flèche
-                  renvoie d'où l'on vient (Réviser — vrai lien plutôt que
-                  `history.back()` : arrivé par une notification, un retour
-                  d'historique sortirait de l'app) ; l'historique des
-                  conversations tient l'angle DROIT (Lucas, 22/09/2026), avec
-                  la série à sa gauche. La colonne de deux pastilles empilées
-                  poussait tout l'écran vers le bas. */}
-              <div className="mx-0.5 flex shrink-0 items-center justify-between gap-2">
-                <Link
-                  href="/reviser"
-                  aria-label="Revenir à Réviser"
-                  className="bg-card text-primary flex size-10 shrink-0 items-center justify-center rounded-full shadow-sm ring-1 ring-black/5 transition active:translate-y-px active:scale-95"
-                >
-                  <ArrowLeft
-                    aria-hidden="true"
-                    className="size-5"
-                    strokeWidth={2.6}
-                  />
-                </Link>
-                <div className="flex items-center gap-2">
-                  {streak >= 2 && (
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#ffeed2] px-2.5 py-1 text-xs font-extrabold text-[#b4550c]">
-                      <Flame aria-hidden="true" className="size-3.5" />
-                      {streak} jours
-                    </span>
-                  )}
-                  <BoutonHistorique />
-                </div>
-              </div>
-
-              {/* La salutation est fixe, le diagnostic ne l'est pas : c'est
-                  `point.titre`, écrit par lib/coach/point-du-jour à partir du
-                  travail réel. Marcel n'ouvre jamais sur une question vide. */}
-              <CoachEntete salut="Salut !" bulle={point.titre} />
+              {/* LA TÊTE DU BUREAU (16/10/2026) : le bureau de Marcel peint, au jour
+                  ou à la lampe selon l'heure, Marcel devant sa table et sa phrase
+                  sur le mur ; le retour et l'historique dans les coins. Une
+                  seule bande au lieu de la rangée « retour · série · historique »
+                  puis du personnage. La série vit dans Réviser. */}
+              <EnTeteBureau
+                bulle={bureau.bulle}
+                decor={decorDuMoment(bureau.heure)}
+                pose={poseDuMoment(bureau.heure)}
+              />
 
               {catalogueVide && (
                 <p className="carte text-muted-foreground mt-3 shrink-0 p-4 text-center text-[13px] leading-relaxed font-semibold">
@@ -175,19 +162,39 @@ export default async function MarcelPage({
                 // propose pas la porte : un bouton qui échoue à tous les coups est
                 // pire que pas de bouton.
                 vision={visionDisponible()}
-                outils={
-                  <CoachSuggestions
-                    matiere={point.matiere?.slug ?? courante?.slug}
-                    stats={{
-                      mission: `${point.minutes} min`,
-                      entrainement:
-                        entrainements.length > 0
-                          ? `${countPretes(entrainements)}/${entrainements.length} prêtes`
-                          : undefined,
-                      progres:
-                        couverture.length > 0
-                          ? `${couvertureGlobale(couverture)} %`
-                          : undefined,
+                bureau={
+                  <Bureau
+                    initial={parseOnglet(ongletRaw)}
+                    panneaux={{
+                      aujourdhui: (
+                        <PanneauAujourdhui
+                          seance={bureau.seance}
+                          controle={bureau.controles[0] ?? null}
+                          aujourdhui={bureau.aujourdhui}
+                          ouvert={ouvert}
+                        />
+                      ),
+                      radar: (
+                        <PanneauRadar
+                          controles={bureau.controles}
+                          couverture={couverture}
+                          forts={bureau.pointsForts}
+                          faibles={bureau.pointsFaibles}
+                          remarques={remarques}
+                          aujourdhui={bureau.aujourdhui}
+                        />
+                      ),
+                      toi: (
+                        <PanneauToi
+                          identite={bureau.identite}
+                          notes={bureau.notes}
+                          matieres={matieres.map((m) => ({ slug: m.slug, name: m.name }))}
+                          ouvert={ouvert}
+                          carnetPret={bureau.carnetPret}
+                          maintenant={new Date().toISOString()}
+                        />
+                      ),
+                      outils: <PanneauOutils ouvert={ouvert} credits={credits} />,
                     }}
                   />
                 }

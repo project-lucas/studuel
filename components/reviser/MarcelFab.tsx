@@ -48,8 +48,9 @@ const CLASSE_MARCEL_FAB = 'marcel-fab'
  * (`/marcel?matiere=<slug>`) : ses modes fiche · exercice · flashcards
  * s'ouvrent alors sur le bon programme, sans que l'élève ait à le redire.
  *
- * RÉSERVÉ À STUDUEL+ (15/10/2026, Lucas : « Marcel n'est dispo que pour les
- * users Studuel+ ») : l'onglet ne le rend que pour un abonné. Tant qu'il est à
+ * VISIBLE POUR TOUS depuis le 16/10/2026 (il était réservé à Studuel+ le
+ * 15/10) : le gratuit trouve dans le bureau de Marcel sa journée et son radar
+ * offerts, et les outils couronnés (lib/coach/catalogue-outils). Tant qu'il est à
  * l'écran, il pose `html.marcel-fab` : le bouton flottant des quêtes
  * (components/quetes/BoutonQuetesFlottant) se range alors au-dessus de lui.
  * L'onglet caché (<Activity>) suspend l'effet, donc retire la classe.

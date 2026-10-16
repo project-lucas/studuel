@@ -30,6 +30,16 @@ import { lireGelsSerie } from '@/lib/boutique/boosts-server'
 import { construireProfil } from './profil-eleve'
 import { donneesProfil } from './profil-server'
 import { remarquesDe, type Remarque } from './remarques'
+import { daysBetween } from '@/lib/prep-plan'
+import { parisHourMinute } from '@/lib/time'
+import {
+  bulleDuJour,
+  preparation,
+  seanceDuJour,
+  type ControleBureau,
+  type Seance,
+} from './bureau'
+import { normaliserIdentite, type IdentiteMarcel, type NoteMarcel } from './carnet-marcel'
 
 // Résolution SERVEUR du point du jour de Marcel. La décision est PURE et testée
 // (./point-du-jour, ./regimes) ; ce module ne fait que rassembler les données.
@@ -99,6 +109,25 @@ export type MarcelSnapshot = {
    * Calculé avec les données déjà lues ici : zéro requête, zéro appel IA.
    */
   remarques: Remarque[]
+  /**
+   * LE BUREAU (16/10/2026) : ce que montrent les onglets Aujourd’hui, Radar et
+   * Toi — calculé avec ce qui est déjà lu ici, plus deux petites lectures du
+   * carnet (584). Aucun appel IA.
+   */
+  bureau: {
+    heure: number
+    aujourdhui: string
+    bulle: string
+    seance: Seance
+    /** Les contrôles des trois semaines qui viennent, du plus proche au plus loin. */
+    controles: ControleBureau[]
+    pointsForts: { titre: string; matiere: string }[]
+    pointsFaibles: { titre: string; matiere: string }[]
+    identite: IdentiteMarcel
+    notes: NoteMarcel[]
+    /** La 584 est-elle passée ? (sinon la première rencontre ne se garde pas) */
+    carnetPret: boolean
+  }
   /** De quoi afficher la porte de « Demander à Marcel » sans aller-retour. */
   demande: {
     tier: Tier
@@ -156,6 +185,8 @@ export async function getMarcelSnapshot(
     { data: coachCredits },
     chapitresVus,
     gelsSerie,
+    carnetRes,
+    notesRes,
   ] = await Promise.all([
     profileP,
     getSubjectsCached(),
@@ -219,6 +250,15 @@ export async function getMarcelSnapshot(
     // Les gels de série achetés en boutique (368) : Marcel voit la même flamme
     // que le bandeau du haut.
     lireGelsSerie(supabase, userId),
+    // Le carnet de Marcel (584) : la carte d’identité et les notes. Absentes
+    // (migration pas passée) : une erreur, lue comme un carnet vide.
+    supabase.from('marcel_carnet').select('identite').eq('user_id', userId).maybeSingle(),
+    supabase
+      .from('marcel_notes')
+      .select('id, texte, cree_le')
+      .eq('user_id', userId)
+      .order('cree_le', { ascending: false })
+      .limit(30),
   ])
 
   const grade = profile?.grade_level ?? null
@@ -350,7 +390,40 @@ export async function getMarcelSnapshot(
   const slugParNom = new Map(allSubjects.map((s) => [s.name, s.slug]))
   const remarques = remarquesDe(profil, (nom) => slugParNom.get(nom) ?? null)
 
+  // --- Le bureau ---------------------------------------------------------------
+  const heure = parisHourMinute(new Date()).hour
+  const valeurParChapitre = new Map(candidates.map((c) => [c.chapterId, c.value]))
+  const nomParSlug = new Map(allSubjects.map((s) => [s.slug, s.name]))
+  const controlesBureau: ControleBureau[] = controles
+    .filter((c) => c.date !== null && c.date >= today)
+    .map((c) => ({
+      matiere: nomParSlug.get(c.subject) ?? c.subject,
+      slug: c.subject,
+      chapitreId: c.chapters[0]?.id ?? null,
+      dans: daysBetween(today, c.date as string),
+      chapitres: c.chapters.map((ch) => ch.title),
+      pret: preparation(c.chapters.map((ch) => valeurParChapitre.get(ch.id) ?? 0)),
+    }))
+    .filter((c) => c.dans <= 21)
+    .sort((a, b) => a.dans - b.dans)
+    .slice(0, 3)
+  const notes: NoteMarcel[] = (notesRes.error ? [] : (notesRes.data ?? [])).map(
+    (n: { id: string; texte: string; cree_le: string }) => ({ id: n.id, texte: n.texte, creeLe: n.cree_le }),
+  )
+
   return {
+    bureau: {
+      heure,
+      aujourdhui: today,
+      bulle: bulleDuJour(heure, controlesBureau[0] ?? null, today),
+      seance: seanceDuJour(plan, heure),
+      controles: controlesBureau,
+      pointsForts: profil.pointsForts,
+      pointsFaibles: profil.pointsFaibles,
+      identite: normaliserIdentite(carnetRes.error ? null : carnetRes.data?.identite),
+      notes,
+      carnetPret: !carnetRes.error,
+    },
     remarques,
     point: pointDuJour({
       plan,

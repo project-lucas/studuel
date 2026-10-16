@@ -118,11 +118,11 @@ function note(
 
 // Jingles premium : joués via <audio>, fallback synthé si l'asset ne charge pas.
 const ASSETS = {
-  coin: '/sounds/coin.wav',
-  unlock: '/sounds/unlock.wav',
-  treasure: '/sounds/treasure.wav',
-  levelUp: '/sounds/level-up.wav',
-  sessionComplete: '/sounds/session-complete.wav',
+  coin: '/sounds/coin.mp3',
+  unlock: '/sounds/unlock.mp3',
+  treasure: '/sounds/treasure.mp3',
+  levelUp: '/sounds/level-up.mp3',
+  sessionComplete: '/sounds/session-complete.mp3',
 } as const
 
 type AssetName = keyof typeof ASSETS

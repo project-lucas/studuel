@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Bug, ChevronRight, CreditCard, LineChart, MonitorPlay } from 'lucide-react'
 import { createClient } from '@/lib/supabase/server'
+import { toutLire } from '@/lib/postgrest-pages'
 import type { Subject } from '@/lib/types'
 
 export const dynamic = 'force-dynamic'
@@ -10,12 +11,19 @@ export const dynamic = 'force-dynamic'
 export default async function AdminHomePage() {
   const supabase = await createClient()
 
+  // Les chapitres passent par `toutLire` : PostgREST rend au plus 1 000 lignes
+  // sans le dire, et le catalogue en compte ~3 000 — la page affichait
+  // « 0 chapitre » pour des matières pleines (16/10/2026).
   const [{ data: subjects }, { data: chapters }] = await Promise.all([
     supabase.from('subjects').select('*').order('name').returns<Subject[]>(),
-    supabase
-      .from('chapters')
-      .select('id, subject_id, lessons(id)')
-      .returns<{ id: string; subject_id: string; lessons: { id: string }[] }[]>(),
+    toutLire((from, to) =>
+      supabase
+        .from('chapters')
+        .select('id, subject_id, lessons(id)')
+        .order('id')
+        .range(from, to)
+        .returns<{ id: string; subject_id: string; lessons: { id: string }[] }[]>(),
+    ),
   ])
 
   const counts = new Map<string, { chapters: number; lessons: number }>()

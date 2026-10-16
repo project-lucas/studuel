@@ -13,7 +13,10 @@ import { useCoachFil } from '../CoachFil'
  * par rangée, chacun avec son dessin, son nom et quelques mots (Lucas, 16/10 :
  * « je préfère quand on mettait beaucoup d’outils à disposition, une
  * succession de blocs carrés avec quelques mots en description »). Rangés par
- * verbe (lib/coach/catalogue-outils).
+ * verbe (lib/coach/catalogue-outils). Le 16/10 au soir (« réduis la taille des
+ * blocs, je veux surtout voir le texte et les illustrations ») : plus de bloc
+ * carré à vide — le bloc épouse son contenu, le dessin passe à 48 px, le nom
+ * à 13 px, ses mots à 11 px.
  *
  * Le MÊME catalogue pour tous : ouvert pour Studuel+, couronné pour le gratuit
  * (chaque bloc mène alors à Studuel+) — l’élève voit tout ce qu’il pourrait
@@ -34,9 +37,9 @@ export default function PanneauOutils({ ouvert, credits }: { ouvert: boolean; cr
           <h2 id={`outils-${f.id}`} className="titre-section px-1 text-[15px]">
             {f.label}
           </h2>
-          <ul className="mt-1.5 grid grid-cols-3 gap-2">
+          <ul className="mt-1.5 grid grid-cols-3 gap-1.5">
             {outilsDe(f.id).map((o) => (
-              <li key={o.id} className="aspect-square">
+              <li key={o.id}>
                 <Bloc outil={o} ouvert={ouvert} />
               </li>
             ))}
@@ -50,7 +53,7 @@ export default function PanneauOutils({ ouvert, credits }: { ouvert: boolean; cr
 function Bloc({ outil, ouvert }: { outil: Outil; ouvert: boolean }) {
   const { proposer } = useCoachFil()
   const classe =
-    'carte relative flex size-full flex-col items-center justify-center gap-0.5 px-1 py-1.5 text-center transition active:scale-[.96]'
+    'carte relative flex size-full flex-col items-center rounded-2xl px-1 pt-1 pb-1.5 text-center transition active:scale-[.96]'
 
   const contenu = (
     <>
@@ -63,13 +66,13 @@ function Bloc({ outil, ouvert }: { outil: Outil; ouvert: boolean }) {
         src={outil.image}
         alt=""
         aria-hidden="true"
-        width={52}
-        height={52}
+        width={64}
+        height={64}
         unoptimized
-        className={cn('size-10 shrink-0 object-contain min-[400px]:size-12', !ouvert && 'opacity-60 grayscale-[30%]')}
+        className={cn('size-12 shrink-0 object-contain', !ouvert && 'opacity-60 grayscale-[30%]')}
       />
-      <span className={cn('mt-0.5 line-clamp-2 text-[11.5px] leading-[1.1] font-extrabold', !ouvert && 'text-muted-foreground')}>{outil.label}</span>
-      <span className="text-muted-foreground line-clamp-2 text-[10px] leading-[1.15] font-semibold">{outil.mots}</span>
+      <span className={cn('font-heading line-clamp-2 text-[13px] leading-[1.1] font-extrabold', !ouvert && 'text-muted-foreground')}>{outil.label}</span>
+      <span className="text-muted-foreground mt-0.5 line-clamp-2 text-[11px] leading-[1.15] font-semibold">{outil.mots}</span>
     </>
   )
 

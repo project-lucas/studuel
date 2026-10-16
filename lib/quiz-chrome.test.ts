@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import {
   estChromeMasque,
+  estEspaceAdmin,
   estEspaceCoach,
   estEspaceParents,
   estOnboarding,
@@ -113,6 +114,15 @@ describe('estChromeMasque', () => {
     expect(estEspaceCoach('/coaching')).toBe(false)
     expect(estChromeMasque('/coach')).toBe(true)
     expect(estChromeMasque('/coaching')).toBe(false)
+  })
+
+  it('masque le chrome élève sur la console admin', () => {
+    expect(estEspaceAdmin('/admin')).toBe(true)
+    expect(estEspaceAdmin('/admin/insights?j=30')).toBe(true)
+    expect(estEspaceAdmin('/administration')).toBe(false)
+    expect(estChromeMasque('/admin/coachs')).toBe(true)
+    expect(estChromeMasque('/messages?fil=x')).toBe(true)
+    expect(estChromeMasque('/messagerie')).toBe(false)
   })
 
   it('le garde partout ailleurs', () => {

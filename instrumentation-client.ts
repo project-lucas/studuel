@@ -8,6 +8,7 @@
 // pur). Next avertit en développement au-delà de 16 ms d'initialisation.
 
 import { noterNavigation, signalerErreur } from '@/lib/erreurs-client'
+import { demarrerJournal, noterPage } from '@/lib/evenements-client'
 
 try {
   window.addEventListener('error', (event) => {
@@ -22,7 +23,15 @@ try {
   // Un navigateur sans ces événements : on vit sans.
 }
 
-/** Le fil d'Ariane : la dernière navigation, jointe à chaque rapport. */
+// Le journal d'usage (migration 590) : la session, l'appareil, l'écran d'entrée.
+try {
+  demarrerJournal()
+} catch {
+  // Sans journal, l'app vit très bien.
+}
+
+/** Le fil d'Ariane : la dernière navigation, jointe à chaque rapport — et l'écran, au journal d'usage. */
 export function onRouterTransitionStart(url: string): void {
   noterNavigation(url)
+  noterPage(url)
 }

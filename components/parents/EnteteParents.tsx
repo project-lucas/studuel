@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { LogOut, Settings } from 'lucide-react'
+import { LogOut, MessageCircle, Settings } from 'lucide-react'
+import { createClient } from '@/lib/supabase/server'
 import { signOut } from '@/app/login/actions'
 import { GRID_PATTERN } from '@/lib/subject-style'
 
@@ -39,6 +40,7 @@ export default function EnteteParents({
             </span>
           </span>
           <span className="flex items-center gap-1">
+            <LienMessages />
             <Link
               href="/compte"
               className="flex min-h-11 items-center gap-1.5 rounded-full px-3 text-sm font-semibold text-primary-foreground/90 hover:bg-white/10"
@@ -66,5 +68,30 @@ export default function EnteteParents({
         </div>
       </div>
     </header>
+  )
+}
+
+/**
+ * « Messages » : n'apparaît que si un coach a ouvert un fil avec ce parent
+ * (migration 587/591), avec le nombre de messages non lus.
+ */
+async function LienMessages() {
+  const supabase = await createClient()
+  const { data, error } = await supabase.rpc('mon_suivi_coach')
+  if (error || !data || typeof data !== 'object') return null
+  const d = data as { fils?: number; non_lus?: number }
+  if (!d.fils) return null
+  const n = Number(d.non_lus ?? 0) || 0
+  return (
+    <Link
+      href="/messages"
+      className="relative flex min-h-11 items-center gap-1.5 rounded-full px-3 text-sm font-semibold text-primary-foreground/90 hover:bg-white/10"
+    >
+      <MessageCircle className="size-4" aria-hidden="true" />
+      <span className="sr-only sm:not-sr-only">Messages</span>
+      {n > 0 ? (
+        <span className="grid h-5 min-w-5 place-items-center rounded-full bg-white px-1 text-[11px] font-extrabold text-primary tabular-nums">{n}</span>
+      ) : null}
+    </Link>
   )
 }

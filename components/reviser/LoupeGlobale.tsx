@@ -8,6 +8,7 @@ import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 import { chercherFiches, type IndexFiches } from '@/lib/reviser/recherche-globale'
 import { subjectVignette } from '@/lib/subject-style'
 import { sfx } from '@/lib/sounds'
+import { noterRecherche } from '@/lib/evenements-client'
 
 /**
  * LA LOUPE GLOBALE (12/10/2026, Lucas : « oui d'accord avec une icône loupe
@@ -90,6 +91,14 @@ export default function LoupeGlobale({
 
   const cherche = query.trim().length > 0
   const resultats = index && cherche ? chercherFiches(index, query) : []
+
+  // Le journal d'usage (590) : une recherche est notée quand l'élève s'arrête
+  // de taper — c'est ce qui révèle, dans les insights, le contenu qui manque.
+  useEffect(() => {
+    if (!index || query.trim().length < 2) return
+    const t = setTimeout(() => noterRecherche(query, chercherFiches(index, query).length, '/reviser'), 1200)
+    return () => clearTimeout(t)
+  }, [index, query])
 
   return (
     <>

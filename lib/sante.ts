@@ -4613,6 +4613,51 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     // anonyme. Contrôle à la main : prosrc de examen_oral_passage sans « oral ».
     sonde: null,
   },
+  {
+    id: '587',
+    fichier: '587_messagerie.sql',
+    feature:
+      'LA MESSAGERIE DU COACH (16/10/2026) : fils coach ↔ élève, coach ↔ parent et élève + parent, ouverts par le coach (consentement : parent lié dans l’app, ou consentement écrit / majorité cochés et tracés), archivés sans effacement, lus en direct (Realtime), pièces jointes dans le bucket privé `messagerie`, signalements, supervision de tous les fils par l’admin, envoi groupé, notification push.',
+    siAbsente:
+      'La console dit « La messagerie n’est pas encore prête », la page /messages aussi ; les actions groupées « Écrire » du tableau échouent.',
+    sonde: { type: 'rpc', fn: 'messagerie_non_lus', args: {} },
+  },
+  {
+    id: '588',
+    fichier: '588_annonces_sondages.sql',
+    feature:
+      'LA DIFFUSION ET LES SONDAGES (16/10/2026) : un message ou un sondage (choix unique, multiple, note, réponse libre) envoyé à un public — mes coachés, un groupe (coach) ; gratuits, Studuel+, élèves, parents, tout le monde, par classe (admin) — montré en fenêtre au lancement de l’app, avec notification push ; portée mesurée (vus, fermés, clics, réponses), résultats agrégés.',
+    siAbsente:
+      'La page Diffusion et sondages de la console dit qu’elle n’est pas prête ; aucune annonce ne s’affiche dans l’app.',
+    sonde: { type: 'rpc', fn: 'annonces_pour_moi', args: {} },
+  },
+  {
+    id: '589',
+    fichier: '589_insights_admin.sql',
+    feature:
+      'LES INSIGHTS (16/10/2026) : `admin_insights` (audience, activité jour par jour, usage de chaque fonctionnalité, matières, jeux, Marcel, heures, achats) et `admin_contenu_a_traiter` (questions les plus ratées, quiz aux scores bas, chapitres jamais ouverts, erreurs) — admin seulement.',
+    siAbsente:
+      'Les pages Insights et « À traiter » de la console disent qu’elles ne sont pas prêtes.',
+    sonde: { type: 'rpc', fn: 'admin_insights', args: { p_jours: 7 } },
+  },
+  {
+    id: '590',
+    fichier: '590_evenements_app.sql',
+    feature:
+      'LE JOURNAL D’USAGE (16/10/2026) : écrans vus et temps passé, recherches sans résultat, appareils — envoyés par lots (`/api/evenements`, `evenements_signaler`, ouverte à anon), rien de personnel (pages normalisées), ménage à 90 jours ; lu par `admin_usage`.',
+    siAbsente:
+      'Le navigateur envoie les lots, la base les refuse sans bruit ; la page « Usage des écrans » dit qu’elle n’est pas prête.',
+    sonde: { type: 'rpc', fn: 'evenements_signaler', args: { p_session: 'sondesonde', p_lot: [] } },
+  },
+  {
+    id: '591',
+    fichier: '591_coach_suivi.sql',
+    feature:
+      'LE SUIVI DU COACH (16/10/2026) : la fiche d’entrée d’un élève (point de départ, moyennes, objectif, contraintes), les notes privées, l’objectif de la semaine (visible par l’élève dans Mon coach), le détail sur huit semaines, le cache de l’assistant IA, et la gestion des coachs par l’admin (`admin_coachs`, `admin_nommer_coach`, `admin_retirer_coach`).',
+    siAbsente:
+      'La fiche d’un élève n’a ni point de départ, ni notes, ni objectif, ni assistant ; la page Coachs dit qu’elle n’est pas prête ; le tri du matin ne garde rien en cache.',
+    sonde: { type: 'rpc', fn: 'mon_suivi_coach', args: {} },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

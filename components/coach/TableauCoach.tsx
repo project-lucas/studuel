@@ -18,8 +18,18 @@ import {
 } from '@/lib/coach/statut'
 import { cn } from '@/lib/utils'
 import PastilleStatut, { LIBELLE_STATUT } from './PastilleStatut'
+import BarreGroupee from './BarreGroupee'
 
 type Groupe = { id: string; nom: string; categorie: string | null }
+
+/** Le complément du tableau (591) : objectif, non-lus, fiche d'entrée, parent lié. */
+export type SuiviClient = {
+  objMinutes: number | null
+  minutesSemaine: number
+  nonLus: number
+  ficheEntree: boolean
+  parentLie: boolean
+}
 
 /**
  * LE TABLEAU DU COACH — par exception : les compteurs, « À surveiller », puis
@@ -31,11 +41,21 @@ export default function TableauCoach({
   lignes,
   groupes,
   aujourdhui,
+  suivi = {},
 }: {
   lignes: LigneJugee[]
   groupes: Groupe[]
   aujourdhui: string
+  suivi?: Record<string, SuiviClient>
 }) {
+  const [selection, setSelection] = useState<Set<string>>(new Set())
+  const basculer = (id: string) =>
+    setSelection((s) => {
+      const n = new Set(s)
+      if (n.has(id)) n.delete(id)
+      else n.add(id)
+      return n
+    })
   const [groupeId, setGroupeId] = useState<string | null>(null)
   const [classe, setClasse] = useState<string | null>(null)
   const [statut, setStatut] = useState<Statut | null>(null)
@@ -174,33 +194,69 @@ export default function TableauCoach({
         </div>
 
         <div className="-mx-4 mt-3 overflow-x-auto px-4">
-          <table className="w-full min-w-[640px] border-separate border-spacing-0 text-sm">
+          <table className="w-full min-w-[820px] border-separate border-spacing-0 text-sm">
             <thead>
               <tr className="text-left text-xs font-extrabold tracking-wide text-muted-foreground uppercase">
-                <Th cle="statut" tri={tri} onTri={changerTri} className="w-[32%]">Élève</Th>
+                <th scope="col" className="w-8 border-b pb-2">
+                  <input
+                    type="checkbox"
+                    aria-label="Tout sélectionner (cette page)"
+                    className="size-4 accent-primary"
+                    checked={visibles.length > 0 && visibles.every((l) => selection.has(l.eleveId))}
+                    onChange={(e) =>
+                      setSelection((s) => {
+                        const n = new Set(s)
+                        for (const l of visibles) {
+                          if (e.target.checked) n.add(l.eleveId)
+                          else n.delete(l.eleveId)
+                        }
+                        return n
+                      })
+                    }
+                  />
+                </th>
+                <Th cle="statut" tri={tri} onTri={changerTri} className="w-[28%]">Élève</Th>
                 <Th cle="derniereActivite" tri={tri} onTri={changerTri}>Dernière activité</Th>
                 <Th cle="secondes7" tri={tri} onTri={changerTri}>Temps · 7 j</Th>
                 <Th cle="joursActifs7" tri={tri} onTri={changerTri}>Régularité</Th>
                 <Th cle="matiereFaible" tri={tri} onTri={changerTri}>Matière la plus faible</Th>
+                <th scope="col" className="border-b pb-2">Objectif · semaine</th>
               </tr>
             </thead>
             <tbody>
               {visibles.length === 0 ? (
                 <tr>
-                  <td colSpan={5} className="py-8 text-center text-sm font-semibold text-muted-foreground">
+                  <td colSpan={7} className="py-8 text-center text-sm font-semibold text-muted-foreground">
                     Personne ne correspond.
                   </td>
                 </tr>
               ) : (
                 visibles.map((l) => (
-                  <tr key={l.eleveId} className="group">
+                  <tr key={l.eleveId} className={cn('group', selection.has(l.eleveId) && 'bg-secondary/50')}>
                     <Td premiere>
+                      <input
+                        type="checkbox"
+                        aria-label={`Sélectionner ${l.prenom}`}
+                        className="size-4 accent-primary"
+                        checked={selection.has(l.eleveId)}
+                        onChange={() => basculer(l.eleveId)}
+                      />
+                    </Td>
+                    <Td>
                       <Link href={`/coach/eleves/${l.eleveId}`} className="flex items-center gap-3">
                         <PastilleStatut statut={l.statut} />
                         <span className="min-w-0">
-                          <span className="font-heading block truncate font-extrabold group-hover:text-primary">
+                          <span className="font-heading flex items-center gap-1.5 truncate font-extrabold group-hover:text-primary">
                             {l.prenom}
-                            {l.pseudo ? <span className="ml-1.5 text-xs font-bold text-muted-foreground">@{l.pseudo}</span> : null}
+                            {l.pseudo ? <span className="text-xs font-bold text-muted-foreground">@{l.pseudo}</span> : null}
+                            {suivi[l.eleveId]?.nonLus ? (
+                              <span className="grid h-5 min-w-5 place-items-center rounded-full bg-primary px-1 text-[11px] text-primary-foreground" title="Messages non lus">
+                                {suivi[l.eleveId].nonLus}
+                              </span>
+                            ) : null}
+                            {suivi[l.eleveId] && !suivi[l.eleveId].ficheEntree ? (
+                              <span className="size-2 rounded-full bg-(--warning)" title="Fiche d’entrée à remplir" />
+                            ) : null}
                           </span>
                           <span className="block truncate text-xs font-semibold text-muted-foreground">
                             {[l.classe, l.groupe].filter(Boolean).join(' · ')}
@@ -237,6 +293,9 @@ export default function TableauCoach({
                         <span className="text-muted-foreground">—</span>
                       )}
                     </Td>
+                    <Td>
+                      <ObjectifCellule s={suivi[l.eleveId]} />
+                    </Td>
                   </tr>
                 ))
               )}
@@ -270,7 +329,28 @@ export default function TableauCoach({
           </div>
         ) : null}
       </section>
+
+      <BarreGroupee
+        selection={[...selection]}
+        prenoms={Object.fromEntries(lignes.map((l) => [l.eleveId, l.prenom]))}
+        sansParent={[...selection].filter((id) => suivi[id] && !suivi[id].parentLie).length}
+        onVider={() => setSelection(new Set())}
+      />
     </div>
+  )
+}
+
+/** L'avancée de l'objectif de la semaine (minutes), ou « — » sans objectif. */
+function ObjectifCellule({ s }: { s?: SuiviClient }) {
+  if (!s || !s.objMinutes) return <span className="text-muted-foreground">—</span>
+  const part = Math.min(1, s.minutesSemaine / s.objMinutes)
+  return (
+    <span className="flex items-center gap-2" title={`${s.minutesSemaine} min sur ${s.objMinutes}`}>
+      <span className="h-2 w-16 overflow-hidden rounded-full bg-secondary">
+        <span className={cn('block h-full rounded-full', part >= 1 ? 'bg-(--success)' : 'bg-primary')} style={{ width: `${Math.round(part * 100)}%` }} />
+      </span>
+      <span className="text-xs font-bold tabular-nums">{Math.round(part * 100)} %</span>
+    </span>
   )
 }
 

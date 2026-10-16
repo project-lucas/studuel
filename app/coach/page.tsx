@@ -2,13 +2,14 @@ import Link from 'next/link'
 import TableauCoach from '@/components/coach/TableauCoach'
 import { juger } from '@/lib/coach/statut'
 import { aujourdhuiUtc, lireGroupes, lireTableau } from '@/lib/coach/server'
+import { lireSuiviTableau } from '@/lib/coach/suivi-server'
 
 export const dynamic = 'force-dynamic'
 
 // LE TABLEAU — tous les élèves de tous mes groupes, en UNE lecture
 // (`coach_tableau`), jugés ici (lib/coach/statut) : les décrochés en tête.
 export default async function CoachPage() {
-  const [lignes, groupes] = await Promise.all([lireTableau(), lireGroupes()])
+  const [lignes, groupes, suiviBrut] = await Promise.all([lireTableau(), lireGroupes(), lireSuiviTableau()])
 
   if (lignes === null || groupes === null) {
     return (
@@ -49,6 +50,12 @@ export default async function CoachPage() {
       lignes={juger(lignes, aujourdhui)}
       groupes={actifs.map((g) => ({ id: g.id, nom: g.nom, categorie: g.categorie }))}
       aujourdhui={aujourdhui}
+      suivi={Object.fromEntries(
+        [...(suiviBrut?.values() ?? [])].map((x) => [
+          x.eleveId,
+          { objMinutes: x.objMinutes, minutesSemaine: x.minutesSemaine, nonLus: x.nonLus, ficheEntree: x.ficheEntree, parentLie: x.parentLie },
+        ]),
+      )}
     />
   )
 }

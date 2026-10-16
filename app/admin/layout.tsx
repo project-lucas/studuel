@@ -1,49 +1,22 @@
-import Link from 'next/link'
 import { notFound, redirect } from 'next/navigation'
-import { Wrench } from 'lucide-react'
-import { createClient } from '@/lib/supabase/server'
-import { getCurrentUser } from '@/lib/supabase/user'
+import ConsoleShell from '@/components/console/ConsoleShell'
+import { lireRolesConsole } from '@/lib/console/server'
 
-export const metadata = { title: 'Studio de contenu — Studuel' }
+export const metadata = { title: 'Console — Studuel' }
 export const dynamic = 'force-dynamic'
 
-// Espace admin : édition du catalogue (matières → chapitres → leçons → quiz).
-// Réservé aux comptes is_admin (migration 028) — pour les autres, la route
-// n'existe pas (notFound plutôt que redirect : on ne révèle rien).
-export default async function AdminLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  const supabase = await createClient()
-  const user = await getCurrentUser()
-  if (!user) redirect('/login')
-
-  const { data: profile } = await supabase
-    .from('profiles')
-    .select('is_admin')
-    .eq('id', user.id)
-    .maybeSingle<{ is_admin: boolean }>()
-  if (!profile?.is_admin) notFound()
+// L'ESPACE ADMIN, dans LA CONSOLE depuis le 16/10/2026 (barre latérale pour
+// l'ordinateur, sans le chrome de l'app : lib/quiz-chrome). Réservé aux comptes
+// is_admin (migration 028) — pour les autres, la route n'existe pas (notFound
+// plutôt que redirect : on ne révèle rien).
+export default async function AdminLayout({ children }: { children: React.ReactNode }) {
+  const roles = await lireRolesConsole()
+  if (!roles.userId) redirect('/login')
+  if (!roles.admin) notFound()
 
   return (
-    <div className="mx-auto w-full max-w-3xl">
-      <div className="mb-6 flex items-center justify-between gap-3 rounded-2xl border bg-card px-4 py-3 shadow-sm">
-        <Link
-          href="/admin"
-          className="font-heading flex items-center gap-2 text-sm font-extrabold"
-        >
-          <Wrench className="size-4 text-primary" aria-hidden="true" />
-          Studio de contenu
-        </Link>
-        <Link
-          href="/reviser"
-          className="text-sm text-muted-foreground underline underline-offset-4"
-        >
-          Retour à l’app
-        </Link>
-      </div>
+    <ConsoleShell roles={{ coach: roles.coach, admin: roles.admin }} prenom={roles.prenom}>
       {children}
-    </div>
+    </ConsoleShell>
   )
 }

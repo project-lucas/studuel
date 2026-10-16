@@ -147,6 +147,29 @@ export function estEspaceCoach(pathname: string): boolean {
 }
 
 /**
+ * LA CONSOLE ADMIN (`/admin`, 16/10/2026) : comme l'espace coach, elle porte sa
+ * propre barre latérale (components/console/ConsoleShell) et se lit sur un écran
+ * d'ordinateur — ni bandeau ni barre d'onglets de l'app.
+ */
+/**
+ * LA MESSAGERIE de l'élève et du parent (`/messages`, 16/10/2026) : un fil de
+ * discussion prend tout l'écran, avec son propre en-tête (retour), comme une
+ * application de messagerie.
+ */
+export function estEspaceMessages(pathname: string): boolean {
+  const p = typeof pathname === 'string' ? pathname : ''
+  const chemin = p.split('?')[0]
+  return chemin === '/messages' || chemin.startsWith('/messages/')
+}
+
+export function estEspaceAdmin(pathname: string): boolean {
+  const p = typeof pathname === 'string' ? pathname : ''
+  const chemin = p.split('?')[0]
+  // L'aperçu de la console (développement) porte la même coque.
+  return chemin === '/admin' || chemin.startsWith('/admin/') || chemin === '/dev/console'
+}
+
+/**
  * Tous réunis : les routes où le CHROME de l'app (bandeau du haut + barre
  * d'onglets) ne s'affiche pas. C'est le verdict que lisent `Navigation` et
  * `TopHud`, tous deux clients — donc réévalué à chaque navigation.
@@ -157,6 +180,8 @@ export function estChromeMasque(pathname: string): boolean {
     estOnboarding(pathname) ||
     estOnboardingCompte(pathname) ||
     estEspaceParents(pathname) ||
-    estEspaceCoach(pathname)
+    estEspaceCoach(pathname) ||
+    estEspaceAdmin(pathname) ||
+    estEspaceMessages(pathname)
   )
 }

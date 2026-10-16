@@ -31,6 +31,7 @@ import OngletsVivants from "@/components/OngletsVivants";
 // Écran de chargement au lancement, façon jeu mobile (illustration + barre).
 import SplashScreen from "@/components/SplashScreen";
 import LigueVeille from "@/components/LigueVeille";
+import AnnoncesVeille from "@/components/annonces/AnnoncesVeille";
 import QuetesGlobales from "@/components/quetes/QuetesGlobales";
 import BoutonQuetesFlottant from "@/components/quetes/BoutonQuetesFlottant";
 import NavAmisBadge from "@/components/amis/ligue/NavAmisBadge";
@@ -176,6 +177,8 @@ export default async function RootLayout({
               fait entrer l'élève dans son groupe et lui verse ses gains, même
               s'il n'ouvre pas l'onglet Amis (migration 376). Ne rend rien. */}
           {user ? <LigueVeille /> : null}
+          {/* Les annonces et sondages qui attendent, les messages du coach (587-588). */}
+          {user ? <AnnoncesVeille /> : null}
           {/* Les quêtes du jour en bouton flottant, en bas à droite (15/10/2026). */}
           {user ? <BoutonQuetesFlottant /> : null}
           {/* Bandeau du haut streamé : ne bloque pas le rendu de la page. Le

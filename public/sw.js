@@ -41,7 +41,7 @@ const MAX_PAGES = 120
 // En développement, les chunks de Next changent sous un nom fixe : un cache
 // « statique d'abord » servirait du code périmé à chaque modification.
 const DEV = self.location.hostname === 'localhost' || self.location.hostname === '127.0.0.1'
-const CHEMINS_SANS_CACHE = ['/api/', '/auth/', '/admin', '/login', '/reset-password']
+const CHEMINS_SANS_CACHE = ['/api/', '/auth/', '/admin', '/coach', '/messages', '/login', '/reset-password']
 
 // Prend le contrôle immédiatement, sans attendre un rechargement.
 self.addEventListener('install', (event) => {

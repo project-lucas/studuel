@@ -497,7 +497,7 @@ export default function DemanderMarcel({
           (`--champ-marcel-h`, useHauteurChamp). */}
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 max-md:left-1/2 max-md:w-screen max-md:-translate-x-1/2">
         <div aria-hidden="true" className="from-background/95 h-7 bg-gradient-to-t to-transparent" />
-        <div className="from-background/95 to-background/95 pointer-events-auto bg-gradient-to-b px-2 pb-2 md:px-0">
+        <div className="bg-background pointer-events-auto px-2 pb-2 md:px-0">
           {etat.possible ? (
             <>
               {/* MARCEL ÉCOUTE (16/10/2026) : la pose dit que le micro est ouvert. */}
@@ -711,7 +711,9 @@ export default function DemanderMarcel({
                     disabled={occupeOuPending}
                     placeholder={spec.placeholder}
                     rows={1}
-                    className="placeholder:text-muted-foreground/70 max-h-32 min-h-11 min-w-0 flex-1 resize-none bg-transparent px-1.5 py-[11px] text-[15px] leading-[1.35] font-semibold outline-none"
+                    // Une consigne longue tient sur UNE ligne, coupée en « … » : sur deux
+                    // lignes, la seconde disparaissait sous le bord du champ.
+                    className="placeholder:text-muted-foreground/70 placeholder-shown:overflow-hidden placeholder-shown:text-ellipsis placeholder-shown:whitespace-nowrap max-h-32 min-h-11 min-w-0 flex-1 resize-none bg-transparent px-1.5 py-[11px] text-[15px] leading-[1.35] font-semibold outline-none"
                   />
 
                   {dictee.possible ? (

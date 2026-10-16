@@ -44,7 +44,7 @@ describe('ligueApresCourse', () => {
     // Avant la course j'avais 70 : a (150), b (120) et c (90) étaient devant → 4e.
     const l = ligueApresCourse(etat(GROUPE), 30)
     expect(l).toMatchObject({ rang: 3, rangAvant: 4, xpSemaine: 100, xpAjoutee: 30, entree: false })
-    expect(l?.nom).toBe('Bronze 1')
+    expect(l?.nom).toBe('Bronze I')
     expect(l?.taille).toBe(6)
   })
 

@@ -267,6 +267,20 @@ export function coffreOuvrable(etat: QuetesDuJour): boolean {
   return coffreDuJourPret(etat) && aEncaisser(etat).length === 0
 }
 
+/**
+ * LA JOURNÉE EST BOUCLÉE : toutes les quêtes finies et encaissées, le coffre du
+ * jour ouvert. Le bouton flottant des quêtes s'en va alors (15/10/2026, Lucas :
+ * « une fois faites, le bouton disparaît ») — il revient le lendemain.
+ */
+export function journeeBouclee(etat: QuetesDuJour): boolean {
+  return (
+    etat.quetes.length > 0 &&
+    etat.quetes.every((q) => q.done) &&
+    aEncaisser(etat).length === 0 &&
+    etat.encaissees.includes(BONUS_STEP_ID)
+  )
+}
+
 /** La prochaine pièce à toucher, celle qui bat pour appeler le doigt. */
 export function prochaineAEncaisser(etat: QuetesDuJour): QueteServie | null {
   return aEncaisser(etat)[0] ?? null

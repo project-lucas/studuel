@@ -32,6 +32,7 @@ import OngletsVivants from "@/components/OngletsVivants";
 import SplashScreen from "@/components/SplashScreen";
 import LigueVeille from "@/components/LigueVeille";
 import QuetesGlobales from "@/components/quetes/QuetesGlobales";
+import BoutonQuetesFlottant from "@/components/quetes/BoutonQuetesFlottant";
 import NavAmisBadge from "@/components/amis/ligue/NavAmisBadge";
 // Capteur « le premier écran est peint » : autorise le rideau à lever.
 import AppReadyBeacon from "@/components/AppReadyBeacon";
@@ -178,6 +179,8 @@ export default async function RootLayout({
           {/* Les quêtes du jour, partout : relecture, annonce « Quête
               accomplie » et LA feuille des quêtes (bandeau, arène, Réviser). */}
           {user ? <QuetesGlobales /> : null}
+          {/* Les quêtes du jour en bouton flottant, en bas à droite (15/10/2026). */}
+          {user ? <BoutonQuetesFlottant /> : null}
           {/* Bandeau du haut streamé : ne bloque pas le rendu de la page. Le
               repli est une barre vide de même hauteur (aucun saut de mise en
               page). */}

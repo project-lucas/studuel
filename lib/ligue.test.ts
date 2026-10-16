@@ -50,10 +50,10 @@ import {
 describe('les échelons', () => {
   it('vont de Bronze 4 à Maître, 4 divisions par rang sauf le sommet', () => {
     expect(NB_ECHELONS).toBe(21)
-    expect(echelon(0).nom).toBe('Bronze 4')
-    expect(echelon(3).nom).toBe('Bronze 1')
-    expect(echelon(4).nom).toBe('Argent 4')
-    expect(echelon(19).nom).toBe('Diamant 1')
+    expect(echelon(0).nom).toBe('Bronze IV')
+    expect(echelon(3).nom).toBe('Bronze I')
+    expect(echelon(4).nom).toBe('Argent IV')
+    expect(echelon(19).nom).toBe('Diamant I')
     expect(echelon(ECHELON_MAX).nom).toBe('Maître')
     expect(echelon(ECHELON_MAX).division).toBeNull()
   })
@@ -186,8 +186,8 @@ describe('la lecture de ligue_etat', () => {
 
 describe('les textes et le rail', () => {
   it('dit la règle de la semaine', () => {
-    expect(regleDeLaSemaine(0)).toBe('Les 7 premiers montent en Bronze 3')
-    expect(regleDeLaSemaine(3)).toBe('Les 7 premiers montent en Argent 4')
+    expect(regleDeLaSemaine(0)).toBe('Les 7 premiers montent en Bronze III')
+    expect(regleDeLaSemaine(3)).toBe('Les 7 premiers montent en Argent IV')
     expect(regleDeLaSemaine(ECHELON_MAX)).toMatch(/sommet/)
   })
 
@@ -237,7 +237,7 @@ describe('les mots de l’UI', () => {
   it('raconte une montée de division, puis un nouveau rang', () => {
     const division = recitBilan(bilan(0, 1, 2))
     expect(division).toMatchObject({ mouvement: 'promu', nouveauRang: false, titre: 'Promotion\u00a0!' })
-    expect(division.phrase).toBe('2e sur 30 la semaine dernière\u00a0: tu montes en Bronze 3.')
+    expect(division.phrase).toBe('2e sur 30 la semaine dernière\u00a0: tu montes en Bronze III.')
     const rang = recitBilan(bilan(3, 4, 1))
     expect(rang).toMatchObject({ nouveauRang: true, titre: 'Bienvenue en Argent\u00a0!' })
     expect(rang.phrase).toContain('1re sur 30')
@@ -246,11 +246,11 @@ describe('les mots de l’UI', () => {
   it('raconte un maintien et une descente sans accabler', () => {
     expect(recitBilan(bilan(2, 2, 12))).toMatchObject({
       mouvement: 'maintenu',
-      titre: 'Tu restes en Bronze 2',
+      titre: 'Tu restes en Bronze II',
       phrase: '12e sur 30 la semaine dernière. Finis dans les 7 premiers pour monter.',
     })
     const descente = recitBilan(bilan(5, 4, 29))
-    expect(descente).toMatchObject({ mouvement: 'relegue', titre: 'Retour en Argent 4' })
+    expect(descente).toMatchObject({ mouvement: 'relegue', titre: 'Retour en Argent IV' })
     expect(descente.phrase).toContain('Une bonne semaine suffit pour remonter')
     expect(recitBilan(bilan(20, 20, 3)).phrase).toContain('au sommet')
   })

@@ -27,7 +27,7 @@ describe('etatDemande (crédits du mois, migration 378)', () => {
   it('bascule sur les jetons une fois les crédits épuisés', () => {
     const etat = etatDemande({ tier: 'tier1', utilisesAujourdhui: 0, depensesMois: 200, jetons: 1 })
     expect(etat).toMatchObject({ possible: true, source: 'jeton', restants: 0 })
-    expect(etat.message).toContain('1 jeton.')
+    expect(etat.message).toContain('1 crédit de recharge.')
   })
 
   it('ferme la porte quand il n’y a plus ni crédit ni jeton', () => {

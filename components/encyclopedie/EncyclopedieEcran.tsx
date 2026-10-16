@@ -159,7 +159,7 @@ export default function EncyclopedieEcran({
       {/* LA BARRE DE RECHERCHE. Collante, et OPAQUE : un fond flouté fixe se
           recalcule à chaque image du défilement — la Boutique l'a payé en
           saccades, on ne le refait pas. */}
-      <div className="sticky top-14 z-20 -mx-4 mt-3 bg-background px-4 pt-2 pb-2.5 md:top-0 md:-mx-8 md:px-8">
+      <div className="sticky top-[5.25rem] z-20 -mx-4 mt-3 bg-background px-4 pt-2 pb-2.5 md:top-0 md:-mx-8 md:px-8">
         <div className="relative">
           <Search
             className="pointer-events-none absolute top-1/2 left-3.5 size-4.5 -translate-y-1/2 text-muted-foreground"

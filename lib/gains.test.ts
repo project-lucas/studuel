@@ -225,10 +225,10 @@ describe('le trajet d’un jeton', () => {
 })
 
 describe('la vague, façon Clash Royale', () => {
-  it('compte des éclairs généreux mais lisibles', () => {
+  it('compte des éclairs généreux — une quête de 30 XP en lance 20', () => {
     expect(jetonsVague(0)).toBe(0)
     expect(jetonsVague(10)).toBe(VAGUE_MIN)
-    expect(jetonsVague(30)).toBe(10)
+    expect(jetonsVague(30)).toBe(20)
     expect(jetonsVague(100)).toBe(VAGUE_MAX)
     expect(jetonsVague(5000)).toBe(VAGUE_MAX)
   })
@@ -251,9 +251,13 @@ describe('la vague, façon Clash Royale', () => {
   })
 
   it('éparpille la gerbe sans que deux éclairs se posent au même endroit', () => {
-    const n = 16
+    const n = VAGUE_MAX
     const points = new Set(Array.from({ length: n }, (_, i) => `${volVague(i, n).sautX},${volVague(i, n).sautY}`))
     expect(points.size).toBe(n)
+  })
+
+  it('garde une vague pleine sous trois secondes, malgré le nombre', () => {
+    expect(dureeVague(VAGUE_MAX)).toBeLessThan(3000)
   })
 
   it('dit quand la vague entière est rentrée', () => {

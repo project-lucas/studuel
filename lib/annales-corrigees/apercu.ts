@@ -14,6 +14,8 @@ export type AnnaleApercu = {
   dureeMin: number
   /** Les parties, par leur titre court (« Sujet 1 », « Exercice 2 »). */
   parties: { titre: string; nature: NaturePartie }[]
+  /** Le corrigé est réservé à Studuel+ (./acces : deux annales offertes par matière). */
+  reservee?: boolean
 }
 
 export type AnneeAnnales = { annee: number; annales: AnnaleApercu[] }

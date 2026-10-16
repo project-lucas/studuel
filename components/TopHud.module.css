@@ -1,0 +1,262 @@
+/*
+ * LE BANDEAU DU HAUT, EN GÉLULE (15/10/2026). Lucas a choisi la « D · Gélule
+ * premium » de la première planche (assets-sources/maquettes/bandeau-haut.html),
+ * puis la version « sans série ni quêtes » de bandeau-haut-v5.html : une plaque
+ * blanche sur socle lavande — la matière du bord de l'arène —, l'avatar qui en
+ * DÉBORDE dans l'anneau de son rang (façon League of Legends : le métal dit le
+ * rang, la plaque du bas la division en chiffres romains), « Niveau 8 » et la
+ * barre d'XP avec « 152 / 800 XP » écrit dedans, le multiplicateur dans SA case
+ * (« il faut de la place pour le multiplicateur »), puis les gemmes et leur
+ * « + ». La série vit dans Réviser, les quêtes dans leur bouton flottant.
+ *
+ * Tokens seulement ; rien ne s'anime en continu.
+ */
+
+.gelule {
+  pointer-events: auto;
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 48px;
+  /* Le CENTRE de l'anneau tombe sur la colonne gauche de l'arène (tuile Boss,
+     pilule des trophées : left-3, 68 px) : 16 (marge) + 50 − 68 + 48 = 46 px. */
+  margin-left: 50px;
+  padding: 0 6px 0 22px;
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow:
+    0 0 0 2px color-mix(in oklch, var(--primary), white 62%),
+    0 4px 0 2px color-mix(in oklch, var(--primary), white 48%);
+}
+
+/* ---------- l'avatar dans l'anneau de son rang, qui déborde à gauche ---------- */
+.rang {
+  position: absolute;
+  left: -68px;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 2;
+  width: 96px;
+  height: 96px;
+  transition: transform 120ms ease-out;
+}
+.rang:active {
+  transform: scale(0.94);
+}
+.photo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--primary);
+}
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cadre {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+/* Sans rang connu : un simple anneau blanc cerclé de lavande. */
+.sansRang {
+  width: 62%;
+  height: 62%;
+  box-shadow:
+    0 0 0 3px var(--card),
+    0 0 0 5px color-mix(in oklch, var(--primary), white 55%);
+}
+.niveauSeul {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--primary-foreground);
+}
+/* La division, sur la plaque du bas de l'anneau : blanc cerné du métal. */
+.division {
+  position: absolute;
+  left: 50%;
+  translate: -50% -50%;
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--card);
+  -webkit-text-stroke: 2.5px color-mix(in oklch, var(--foreground), black 35%);
+  paint-order: stroke fill;
+  white-space: nowrap;
+}
+
+/* ---------- le niveau et sa barre ---------- */
+.niveau {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+.niveauBouton {
+  display: block;
+  width: 100%;
+  padding: 4px 0;
+  text-align: left;
+  cursor: pointer;
+}
+.titre {
+  display: block;
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  color: color-mix(in oklch, var(--primary), black 45%);
+  white-space: nowrap;
+}
+.barre {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 17px;
+  margin-top: 4px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: var(--secondary);
+  box-shadow: inset 0 1px 2px color-mix(in oklch, var(--primary), transparent 75%);
+}
+.remplissage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 99px;
+  background: linear-gradient(color-mix(in oklch, var(--primary), white 30%), var(--primary));
+  transition: width 300ms ease-out;
+}
+.chiffresBarre {
+  position: relative;
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  line-height: 1;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  color: var(--card);
+  -webkit-text-stroke: 2.5px color-mix(in oklch, var(--primary), black 30%);
+  paint-order: stroke fill;
+}
+.gain {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  z-index: 2;
+}
+
+/* un filet entre deux cases */
+.filet {
+  flex: none;
+  align-self: stretch;
+  width: 1.5px;
+  margin: 10px 0;
+  background: var(--secondary);
+}
+
+/* ---------- le multiplicateur, dans sa case ---------- */
+.mult {
+  position: relative;
+  flex: none;
+}
+.multBouton {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  cursor: pointer;
+  transition: transform 120ms ease-out;
+}
+.multBouton:active {
+  transform: scale(0.94);
+}
+.multCase {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  height: 28px;
+  padding: 0 7px 0 4px;
+  border-radius: 10px;
+  background: var(--secondary);
+  box-shadow: inset 0 0 0 1.5px color-mix(in oklch, var(--primary), white 70%);
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: color-mix(in oklch, var(--primary), black 20%);
+}
+.multCase[data-potion] {
+  background: var(--highlight);
+  box-shadow: inset 0 0 0 1.5px color-mix(in oklch, var(--highlight), black 15%);
+  color: var(--foreground);
+}
+
+/* ---------- les gemmes ---------- */
+.gemmes {
+  position: static;
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.gemmesBouton {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  min-height: 44px;
+  cursor: pointer;
+  transition: transform 120ms ease-out;
+}
+.gemmesBouton:active {
+  transform: scale(0.95);
+}
+.gemmesIcone {
+  width: 28px;
+  height: 28px;
+  margin: -6px -2px -6px -4px;
+  filter: drop-shadow(0 2px 0 color-mix(in oklch, var(--primary), transparent 70%));
+}
+.gemmesChiffre {
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 1;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  color: color-mix(in oklch, var(--primary), black 45%);
+}
+.plus {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 99px;
+  background: var(--primary);
+  box-shadow: inset 0 -2px 0 color-mix(in oklch, var(--primary), black 30%);
+  color: var(--primary-foreground);
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 120ms ease-out;
+}
+.plus:active {
+  transform: scale(0.9);
+}

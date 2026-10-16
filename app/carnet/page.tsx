@@ -78,8 +78,8 @@ export default async function CarnetPage({
     { rayon },
   ] = await Promise.all([
       // Les préférences du carnet (356) : colonne tardive, relue avec tolérance.
-      // L'abonnement dans la même lecture : un abonné a toutes les fiches, le
-      // rayon Fiches ne l'invite pas à en acheter.
+      // L'abonnement dans la même lecture : le rayon Fiches vide rappelle à un
+      // abonné que sa rente paie ses fiches (580).
       readRowTolerant<{ carnet_prefs: unknown; subscription_tier: string }>(
         supabase,
         'profiles',

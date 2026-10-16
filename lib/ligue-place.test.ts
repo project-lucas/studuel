@@ -3,16 +3,18 @@ import { blasonDeLigue, libellePlace, lireMaPlaceLigue } from './ligue-place'
 
 describe('blasonDeLigue', () => {
   it('dessine la division sur le bouclier de son rang', () => {
-    expect(blasonDeLigue(0)).toMatchObject({ roman: '4', label: 'Bronze 4' })
+    expect(blasonDeLigue(0)).toMatchObject({ roman: 'IV', label: 'Bronze IV' })
     expect(blasonDeLigue(0).tier.id).toBe('bronze')
-    expect(blasonDeLigue(3)).toMatchObject({ roman: '1', label: 'Bronze 1' })
+    expect(blasonDeLigue(3)).toMatchObject({ roman: 'I', label: 'Bronze I' })
     expect(blasonDeLigue(4).tier.id).toBe('argent')
+    expect(blasonDeLigue(4).tier.image).toBe('/images/rangs/blasons/argent-4.webp')
+    expect(blasonDeLigue(20).tier.image).toBe('/images/defi/ranks/maitre.webp')
   })
   it('n’a pas de division au sommet', () => {
     expect(blasonDeLigue(20)).toMatchObject({ roman: null, label: 'Maître' })
   })
   it('borne un échelon hors échelle', () => {
-    expect(blasonDeLigue(-3).label).toBe('Bronze 4')
+    expect(blasonDeLigue(-3).label).toBe('Bronze IV')
     expect(blasonDeLigue(99).label).toBe('Maître')
   })
 })

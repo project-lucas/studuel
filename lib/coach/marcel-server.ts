@@ -27,6 +27,9 @@ import { examsForProfile } from '@/lib/exams'
 import { normalizeOralList } from '@/lib/oral-texts'
 import { getChapitresVus } from '../chapitres-vus'
 import { lireGelsSerie } from '@/lib/boutique/boosts-server'
+import { construireProfil } from './profil-eleve'
+import { donneesProfil } from './profil-server'
+import { remarquesDe, type Remarque } from './remarques'
 
 // Résolution SERVEUR du point du jour de Marcel. La décision est PURE et testée
 // (./point-du-jour, ./regimes) ; ce module ne fait que rassembler les données.
@@ -90,14 +93,20 @@ export type MarcelSnapshot = {
    * savoir présenter. `null` quand l'épreuve ne le concerne pas.
    */
   oral: { total: number; maitrises: number } | null
+  /**
+   * « MARCEL A REMARQUÉ » (15/10/2026) : ce qu'il a vu avant que l'élève
+   * demande — un contrôle qui approche, une matière qui flanche, l'examen.
+   * Calculé avec les données déjà lues ici : zéro requête, zéro appel IA.
+   */
+  remarques: Remarque[]
   /** De quoi afficher la porte de « Demander à Marcel » sans aller-retour. */
   demande: {
     tier: Tier
     utilisesAujourdhui: number
     /** Crédits dépensés ce mois-ci (migration 378). */
     depensesMois: number
+    /** Crédits de RECHARGE (les anciens jetons de Prof, 215 → 581). */
     jetons: number
-    gemmes: number
   }
 }
 
@@ -325,7 +334,24 @@ export async function getMarcelSnapshot(
     // elles ne doivent pas occuper la première case du sélecteur.
     .sort((a, b) => Number(b.regime !== null) - Number(a.regime !== null))
 
+  // Le profil d'apprentissage, avec les MÊMES chapitres que la mission : ce
+  // que Marcel remarque et ce qu'il propose ne peuvent pas se contredire.
+  const profil = construireProfil(
+    donneesProfil({
+      classe: grade,
+      objectifMinutes: goalMinutes,
+      serie: streak,
+      controles: controles.filter((c) => c.date === null || c.date >= today),
+      chapitres: candidates.map((c) => ({ titre: c.chapterTitle, matiere: c.subjectName, etat: c.state, valeur: c.value })),
+      matieres: allSubjects,
+      aujourdhui: today,
+    }),
+  )
+  const slugParNom = new Map(allSubjects.map((s) => [s.name, s.slug]))
+  const remarques = remarquesDe(profil, (nom) => slugParNom.get(nom) ?? null)
+
   return {
+    remarques,
     point: pointDuJour({
       plan,
       // La file « À revoir » du carnet demande à elle seule une demi-douzaine de
@@ -351,7 +377,6 @@ export async function getMarcelSnapshot(
       utilisesAujourdhui: Number(coachCalls?.attempts ?? 0),
       depensesMois: Number(coachCredits?.depenses ?? 0),
       jetons: Number(coachTokens?.balance ?? 0),
-      gemmes: Number(profile?.gems ?? 0),
     },
   }
 }

@@ -65,16 +65,17 @@ function LigneFiche({ fiche }: { fiche: FicheAchetee }) {
 }
 
 /**
- * Le rayon vide. Un abonné n'a rien à acheter : ses fiches sont toutes
- * ouvertes, dans chaque chapitre — on le lui dit au lieu de l'inviter à payer.
+ * Le rayon vide. Depuis le 15/10/2026, l'abonné achète ses fiches comme tout le
+ * monde — avec les gemmes de sa RENTE (60 par semaine, soit 2 fiches) : on le
+ * lui rappelle, c'est ce qui rend la rente concrète.
  */
 function InvitationFiches({ premium }: { premium: boolean }) {
   return premium ? (
     <Invitation
       href="/reviser"
       icone={FileText}
-      titre="Toutes tes fiches sont ouvertes"
-      texte="Avec Studuel+, chaque chapitre te donne sa fiche : touche « Fiche » dans Réviser."
+      titre="Ta rente paie tes fiches"
+      texte="60 gemmes par semaine, soit 2 fiches : dans un chapitre de Réviser, touche « Fiche »."
     />
   ) : (
     <Invitation
@@ -119,7 +120,7 @@ export function RayonFiches({ fiches, premium }: { fiches: FicheAchetee[]; premi
           </ul>
         </section>
       ))}
-      {premium ? null : <LienSuite href="/reviser">Débloquer une autre fiche</LienSuite>}
+      <LienSuite href="/reviser">Débloquer une autre fiche</LienSuite>
     </div>
   )
 }

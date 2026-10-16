@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 import { Check, Crown, Users } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { declarerInteret } from '@/app/tresor/actions'
@@ -68,9 +69,12 @@ export default function CarteStudueLPlus({ tier }: { tier: Tier }) {
         </ul>
 
         {abonne ? (
-          <p className="mt-4 rounded-2xl bg-white/12 px-3 py-2.5 text-center text-sm font-bold">
-            Tout est débloqué pour toi. Merci !
-          </p>
+          <Link
+            href="/plus"
+            className="mt-4 flex min-h-11 items-center justify-center gap-1.5 rounded-2xl bg-white/12 px-3 py-2.5 text-center text-sm font-bold"
+          >
+            Ta rente, ton examen, Marcel : ouvrir mon Studuel+
+          </Link>
         ) : (
           <div className="mt-5 flex flex-col gap-2">
             <Button
@@ -99,6 +103,12 @@ export default function CarteStudueLPlus({ tier }: { tier: Tier }) {
                 mois
               </button>
             ) : null}
+            <Link
+              href="/plus"
+              className="flex min-h-9 items-center justify-center text-xs font-bold text-primary-foreground/85 underline-offset-2 hover:underline"
+            >
+              Tout ce que comprend Studuel+
+            </Link>
             {choix ? <DemandeAbonnement key={choix} planId={choix} /> : null}
           </div>
         )}

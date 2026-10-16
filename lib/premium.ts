@@ -7,6 +7,7 @@
 
 import type { Tier } from '@/lib/subscription'
 import type { PlanPayant } from '@/lib/abonnement'
+import { avantagesStudueLPlus } from '@/lib/studuel-plus/formule'
 
 export type PlanId = 'gratuit' | 'plus' | 'famille'
 
@@ -52,7 +53,7 @@ export const PLANS: readonly Plan[] = [
     features: [
       'Le Défi du jour',
       'Cours & quiz de base',
-      '3 gemmes offertes pour débloquer des chapitres',
+      '90 gemmes offertes pour tes trois premières fiches',
       'Gagne des gemmes en invitant tes amis',
     ],
     cta: 'Ton offre actuelle',
@@ -60,20 +61,15 @@ export const PLANS: readonly Plan[] = [
   {
     id: 'plus',
     name: 'Studuel+',
-    tagline: 'Tout Studuel, sans limite.',
+    tagline: 'Un guide qui pense pour toi, avant toi.',
     priceMonthly: 4.99,
     members: 1,
     recommended: true,
-    features: [
-      // Marcel et l'avatar dessiné : gatés par la migration 378 (crédits du mois).
-      'Marcel, ton coach IA : 200 crédits par mois',
-      'Ton avatar dessiné par Marcel, à ton idée',
-      'Toutes les fiches de chapitre, sans gemme',
-      'Toutes les fiches de révision',
-      'Tous les quiz premium',
-      'Les exercices de chapitre, corrigés et notés par l’IA',
-      'Tous les paquets de cartes du Studio',
-    ],
+    // LA FORMULE (15/10/2026) : les avantages viennent des piliers de
+    // lib/studuel-plus/formule — Marcel, le mode examen, les annales, la
+    // rente de gemmes. Les fiches de révision ne sont plus offertes d'office :
+    // l'abonné les achète avec sa rente (60 gemmes par semaine = 2 fiches).
+    features: avantagesStudueLPlus(),
     cta: 'Passer à Studuel+',
   },
   {

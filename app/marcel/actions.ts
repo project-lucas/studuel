@@ -1,6 +1,7 @@
 'use server'
 
 import { revalidatePath } from 'next/cache'
+import { after } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { REGIMES, regimeOf } from '@/lib/coach/regimes'
@@ -16,6 +17,10 @@ import {
 import { rangerEchange } from '@/lib/coach/carnet-pont'
 import { veutCarnet } from '@/lib/coach/vers-carnet'
 import { isMissingSchemaObject } from '@/lib/schema-fallback'
+import { reponsePrete } from '@/lib/coach/reponses-pretes'
+import { ficheDuCatalogue, reponseFicheExistante } from '@/lib/coach/fiche-catalogue'
+import { consigneAvecProfil } from '@/lib/coach/profil-eleve'
+import { lireProfilPourMarcel } from '@/lib/coach/profil-server'
 
 // Demander quelque chose à Marcel.
 //
@@ -31,6 +36,13 @@ import { isMissingSchemaObject } from '@/lib/schema-fallback'
 //      trente — un fil de 30 messages se repaierait 30 fois ;
 //   3. le TEXTE de l'élève est isolé entre balises, et ne part jamais dans les
 //      logs (l'objet d'erreur du SDK porte le corps de la requête).
+//
+// Et, depuis le 15/10/2026, ce qui n'a PAS BESOIN du modèle ne le paie pas :
+// les questions de méthode générales ont leur réponse écrite d'avance, une
+// fiche du catalogue est montrée au lieu d'être réécrite, et chaque appel note
+// ses jetons (`marcel_usage`, 581) pour qu'on MESURE la marge au lieu de la
+// deviner (lib/coach/cout, /admin/marcel). La consigne fixe passe avant le
+// profil de l'élève : le fournisseur la sert depuis son cache.
 //
 // Fournisseur configurable et compatible OpenAI, comme le carnet
 // (AI_BASE_URL / AI_MODEL / AI_API_KEY, repli OPENAI_API_KEY).
@@ -61,6 +73,13 @@ export type DemandeResult = {
   plafond?: boolean
   /** Aucune clé configurée, ou migration 215 pas encore exécutée. */
   unavailable?: boolean
+  /**
+   * Un écran de l'app qui répond mieux que le modèle (la fiche du catalogue) :
+   * le fil le montre en bouton sous la réponse.
+   */
+  lien?: { href: string; label: string }
+  /** La demande peut être renvoyée « quand même » au modèle (`forcer`). */
+  insister?: boolean
 }
 
 function aiKey(): string | null {
@@ -124,8 +143,12 @@ function etiquette(
 }
 
 /**
- * Pose une question à Marcel. `matiereSlug` sert uniquement à choisir la
- * méthode : aucune donnée de l'élève n'est envoyée au modèle.
+ * Pose une question à Marcel. `matiereSlug` choisit la méthode de la matière.
+ *
+ * DEPUIS LE 15/10/2026, MARCEL SAIT À QUI IL PARLE : la consigne reçoit le
+ * PROFIL d'apprentissage (lib/coach/profil-eleve) — classe, contrôles proches,
+ * points faibles, examen —, sans rien qui identifie l'élève (ni nom, ni
+ * pseudo, ni établissement) et en 700 caractères au plus.
  *
  * `conversationId` rattache la question à un fil existant. Deux choses en
  * découlent, et une seule coûte :
@@ -140,7 +163,7 @@ export async function demanderAMarcel(
   question: string,
   matiereSlug: string | null,
   conversationId: string | null = null,
-  options: { mode?: string; piece?: PieceJointe | null } = {},
+  options: { mode?: string; piece?: PieceJointe | null; forcer?: boolean } = {},
 ): Promise<DemandeResult> {
   const user = await getCurrentUser()
   if (!user) return { ok: false }
@@ -212,6 +235,59 @@ export async function demanderAMarcel(
     }
   }
 
+  // ------------------------------------------- LE TRAVAIL FAIT EN AMONT
+  // (15/10/2026, Lucas : « voir si un gros travail peut être fait en amont pour
+  // économiser ») — deux réponses qui ne passent par AUCUN modèle, donc ne se
+  // paient pas : les questions de méthode générales (écrites d'avance,
+  // lib/coach/reponses-pretes) et les fiches qui existent déjà au catalogue
+  // (lib/coach/fiche-catalogue). Le profil de l'élève part en même temps que
+  // la porte : il ne retarde rien (et une réponse toute prête ne le lit pas).
+  const prete = piece ? null : reponsePrete(propre, mode.cle)
+  if (prete) {
+    const garde = await enregistrerEchange(supabase, user.id, {
+      conversationId: fil,
+      question: propre,
+      reponse: prete.reponse,
+      matiereSlug,
+    })
+    return {
+      ok: true,
+      reponse: prete.reponse,
+      conversationId: garde?.conversationId ?? fil,
+      titre: garde?.titre,
+      gratuit: true,
+    }
+  }
+
+  // Le profil n'est lu que pour une demande qui va au modèle (après la porte),
+  // ou pour reconnaître une fiche du catalogue : un compte refusé qui insiste
+  // ne déclenche aucune lecture.
+  let profilP: ReturnType<typeof lireProfilPourMarcel> | null = null
+
+  if (mode.cle === 'fiche' && !piece && !options.forcer) {
+    profilP = lireProfilPourMarcel(supabase, user.id)
+    const lecture = await profilP
+    const trouvee = lecture?.index ? ficheDuCatalogue(propre, lecture.index) : null
+    if (trouvee) {
+      const reponse = reponseFicheExistante(trouvee)
+      const garde = await enregistrerEchange(supabase, user.id, {
+        conversationId: fil,
+        question: etiquette(propre, null, mode.label),
+        reponse,
+        matiereSlug: trouvee.matiere.slug,
+      })
+      return {
+        ok: true,
+        reponse,
+        conversationId: garde?.conversationId ?? fil,
+        titre: garde?.titre,
+        gratuit: true,
+        lien: { href: trouvee.href, label: `Ouvrir la fiche « ${trouvee.titre} »` },
+        insister: true,
+      }
+    }
+  }
+
   // La porte, côté serveur. Absente (migration 215 pas exécutée) → on REFUSE :
   // c'est une fonctionnalité neuve, personne ne perd rien, et le trou ne peut
   // jamais s'ouvrir. C'est la différence assumée avec la 198.
@@ -252,12 +328,19 @@ export async function demanderAMarcel(
     contenu.push({ type: 'image_url', image_url: { url: piece.data } })
   }
 
+  // Le profil : Marcel sait à qui il parle (déjà lu si c'était une fiche).
+  const lecture = await (profilP ?? lireProfilPourMarcel(supabase, user.id))
+  const modele = vision?.model ?? process.env.AI_MODEL ?? AI_DEFAULT_MODEL
+
   try {
     const completion = await client.chat.completions.create({
-      model: vision?.model ?? process.env.AI_MODEL ?? AI_DEFAULT_MODEL,
+      model: modele,
       max_tokens: mode.maxTokens,
       messages: [
-        { role: 'system', content: consigneFor(mode.cle, methodeDe(matiereSlug)) },
+        {
+          role: 'system',
+          content: consigneAvecProfil(consigneFor(mode.cle, methodeDe(matiereSlug)), lecture?.profil ?? null),
+        },
         // Le rappel du fil : deux tours, tronqués. Les tours de l’élève y sont
         // balisés comme la question courante — un « ignore les instructions
         // précédentes » écrit trois messages plus tôt ne doit pas revenir nu.
@@ -275,6 +358,23 @@ export async function demanderAMarcel(
       ],
     })
     const brut = completion.choices[0]?.message?.content?.trim()
+
+    // LA MESURE (581) : ce que l'appel a coûté, noté APRÈS la réponse — l'élève
+    // n'attend pas une écriture de statistiques. Lu par /admin/marcel.
+    const usage = jetonsDe(completion.usage)
+    after(async () => {
+      const { error: errUsage } = await supabase.rpc('marcel_usage_noter', {
+        p_mode: mode.cle,
+        p_modele: modele,
+        p_entree: usage.entree,
+        p_entree_cache: usage.cache,
+        p_sortie: usage.sortie,
+      })
+      if (errUsage && errUsage.code !== 'PGRST202' && !isMissingSchemaObject(errUsage)) {
+        console.error('[marcel] mesure impossible :', errUsage.message)
+      }
+    })
+
     if (!brut) return { ok: false }
 
     // Le mode « flashcards » ne rend pas du texte mais un tableau JSON. On le
@@ -313,9 +413,30 @@ export async function demanderAMarcel(
   }
 }
 
-export type AchatResult = { ok: boolean; noGems?: boolean; unavailable?: boolean }
+/**
+ * Les jetons d'un appel, quel que soit le fournisseur : OpenAI range le cache
+ * dans `prompt_tokens_details.cached_tokens`, DeepSeek dans
+ * `prompt_cache_hit_tokens`.
+ */
+function jetonsDe(usage: unknown): { entree: number; cache: number; sortie: number } {
+  const u = (usage ?? {}) as Record<string, unknown>
+  const details = (u.prompt_tokens_details ?? {}) as Record<string, unknown>
+  const n = (v: unknown) => (typeof v === 'number' && Number.isFinite(v) ? Math.max(0, Math.floor(v)) : 0)
+  return {
+    entree: n(u.prompt_tokens),
+    cache: n(details.cached_tokens) || n(u.prompt_cache_hit_tokens),
+    sortie: n(u.completion_tokens),
+  }
+}
 
-/** Convertit des gemmes en jetons de Prof (montants décidés en SQL). */
+export type AchatResult = { ok: boolean; noGems?: boolean; unavailable?: boolean; ferme?: boolean }
+
+/**
+ * Convertit des gemmes en jetons de Prof — FERMÉ depuis la 581 (15/10/2026) :
+ * les gemmes n'achètent plus de temps d'IA, Marcel se recharge en euros
+ * (lib/coach/recharges). Gardé pour une base où la 581 n'est pas passée ;
+ * l'écran ne le propose plus.
+ */
 export async function acheterJetons(packs: number): Promise<AchatResult> {
   const user = await getCurrentUser()
   if (!user) return { ok: false }
@@ -332,6 +453,7 @@ export async function acheterJetons(packs: number): Promise<AchatResult> {
     return { ok: false, unavailable: true }
   }
   if (data === 'no_gems') return { ok: false, noGems: true }
+  if (data === 'ferme') return { ok: false, ferme: true }
   return { ok: data === 'ok' }
 }
 

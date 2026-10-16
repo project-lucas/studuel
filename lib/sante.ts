@@ -4547,6 +4547,43 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     //   select * from public.game_catalog where subject_slug = 'arts-plastiques';  → 2 lignes
     sonde: null,
   },
+  {
+    id: '580',
+    fichier: '580_studuel_plus_rente_fiches.sql',
+    feature:
+      'LA RENTE DE GEMMES DE STUDUEL+, ET LES FICHES EN GEMMES POUR TOUT LE MONDE (15/10/2026, Lucas : « les users seront des rentiers de gemmes : 60 gemmes par semaine, soit 2 fiches de révision offertes ») — `rente_gemmes`, `rente_etat` et `rente_recolter` (une gemme toutes les 2 h 48, coffre plafonné à une semaine, plein au premier passage) ; `unlock_chapter_with_gem`, `lesson_revision_sheet`, `chapter_mind_map` et `fiche_pdf_acces` perdent la porte « abonnement » : un abonné achète ses fiches avec sa rente.',
+    siAbsente:
+      'Le coffre de rente de /plus répond « bientôt » et ne verse rien. Les fiches restent OUVERTES à tout abonné en base alors que l’app les montre verrouillées (elle n’ouvre plus que les chapitres débloqués) : un abonné qui touche « Débloquer » reçoit « premium » et aucune gemme n’est débitée.',
+    sonde: { type: 'rpc', fn: 'rente_etat', args: {} },
+  },
+  {
+    id: '581',
+    fichier: '581_marcel_recharges_usage.sql',
+    feature:
+      'LES RECHARGES DE MARCEL ET LA MESURE DE SON COÛT (15/10/2026, Lucas : « comme pour Claude, des recharges de crédit ; Marcel doit dormir »). `recharges_marcel` (catalogue en euros), `demander_recharge_marcel` / `accorder_recharge_marcel` (même circuit que les packs de gemmes ; le crédit va au solde de recharge `coach_tokens`), `coach_buy_tokens` fermée (les gemmes n’achètent plus de temps d’IA), `marcel_usage` + `marcel_usage_noter` + `marcel_usage_mois` (jetons par appel, lus par /admin/marcel).',
+    siAbsente:
+      'Les recharges de la Boutique répondent « bientôt », /admin/marcel est vide, et l’ancienne conversion de 5 gemmes en 10 jetons reste ouverte en base (l’app ne la propose plus).',
+    sonde: { type: 'table', table: 'recharges_marcel' },
+  },
+  {
+    id: '582',
+    fichier: '582_prepa_sup_interet.sql',
+    feature:
+      'LA PRÉPA DU SUPÉRIEUR — CE QUI INTÉRESSE LES ÉLÈVES (15/10/2026) : `prepa_sup_interet`, `prepa_sup_basculer` (l’élève coche les filières qui l’intéressent) et `prepa_sup_votes` (l’admin lit le décompte, qui ordonnera le remplissage).',
+    siAbsente: 'La page /prepa-sup s’affiche, mais « Ça m’intéresse » ne garde rien.',
+    sonde: { type: 'rpc', fn: 'prepa_sup_basculer', args: { p_piste: '' } },
+  },
+  {
+    id: '583',
+    fichier: '583_coach_verrou.sql',
+    feature:
+      'PERSONNE NE SE DÉCLARE COACH SOI-MÊME (15/10/2026, faille trouvée à la relecture du chantier Studuel+) : le déclencheur `profiles_garde_coach` refuse qu’un compte devienne `coach` par l’API (élève ou visiteur), sauf un administrateur ; le SQL Editor et la clé service restent libres. Sans lui, la 048 (`GRANT UPDATE (profile_type)`), la 560 (`est_coach()` = la colonne) et la 561 (`basculer_studuel_plus_test`) laissaient un élève s’offrir Studuel+ à vie.',
+    siAbsente:
+      'FAILLE OUVERTE : un élève qui écrit `profile_type = coach` sur sa ligne, puis appelle `basculer_studuel_plus_test()`, a Studuel+ gratuitement — crédits de Marcel, rente de gemmes (580), annales — et l’espace /coach. À EXÉCUTER EN PREMIER.',
+    // Un déclencheur ne se sonde pas à la clé anonyme. Contrôle à la main :
+    //   select tgname from pg_trigger where tgname = 'profiles_garde_coach';  → 1 ligne
+    sonde: null,
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

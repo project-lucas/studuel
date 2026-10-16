@@ -14,6 +14,7 @@
 
 import { echelon, type Echelon } from '@/lib/ligue'
 import type { RankTier } from '@/lib/rank'
+import { blasonDeRang, divisionRomaine } from '@/lib/rang-visuel'
 
 export type MaPlaceLigue = {
   /** 0 = Bronze 4 … 20 = Maître. */
@@ -29,8 +30,9 @@ export type MaPlaceLigue = {
 /**
  * Ce qu'un blason a besoin de savoir — la forme de `BadgeRank`
  * (components/defi/RankBadge) : le palier illustré, la division en pastille,
- * le libellé. La division de ligue s'écrit en chiffres arabes (« 1 »), comme
- * partout dans la ligue.
+ * le libellé. Depuis le 15/10/2026 la division s'écrit en chiffres ROMAINS
+ * (« I »), et le palier porte le blason DE SA DIVISION (lib/rang-visuel) : un
+ * Argent II n'a pas le même blason qu'un Argent IV.
  */
 export type BlasonLigue = {
   tier: RankTier
@@ -38,10 +40,14 @@ export type BlasonLigue = {
   label: string
 }
 
-/** Le blason d'un échelon : « Bronze 1 » sur le bouclier de bronze. */
+/** Le blason d'un échelon : « Bronze I » sur le bouclier de bronze de la division I. */
 export function blasonDeLigue(index: number): BlasonLigue {
   const e: Echelon = echelon(index)
-  return { tier: e.rang, roman: e.division === null ? null : String(e.division), label: e.nom }
+  return {
+    tier: { ...e.rang, image: blasonDeRang(e.rang.id, e.division) },
+    roman: e.division === null ? null : divisionRomaine(e.division),
+    label: e.nom,
+  }
 }
 
 const entier = (v: unknown): number | null => {

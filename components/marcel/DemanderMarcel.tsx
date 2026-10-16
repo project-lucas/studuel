@@ -4,12 +4,14 @@ import { useRef, useState, useTransition, type ReactNode } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
+  ArrowRight,
   ArrowUp,
+  BatteryCharging,
   BookMarked,
   ChevronDown,
   FileText,
-  Gem,
   ImagePlus,
+  Moon,
   Plus,
   Sparkles,
   WandSparkles,
@@ -20,15 +22,12 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { toast } from '@/lib/toast'
-import { acheterJetons } from '@/app/marcel/actions'
 import { rangerDansCarnet } from '@/app/marcel/conversations-actions'
-import {
-  GEMMES_PAR_PACK,
-  JETONS_PAR_PACK,
-  etatDemande,
-  manqueGemmes,
-  peutAcheter,
-} from '@/lib/coach/jetons'
+import { etatDemande } from '@/lib/coach/jetons'
+import { creditsMensuels } from '@/lib/coach/credits'
+import { sommeilDe } from '@/lib/coach/sommeil'
+import type { DemandeResult } from '@/app/marcel/actions'
+import type { Remarque } from '@/lib/coach/remarques'
 import { MODES } from '@/lib/coach/outils'
 import {
   lireTexte,
@@ -92,7 +91,7 @@ export default function DemanderMarcel({
   utilisesAujourdhui,
   depensesMois,
   jetons,
-  gemmes,
+  remarques = [],
   matieres,
   matiereParDefaut,
   vision,
@@ -103,7 +102,8 @@ export default function DemanderMarcel({
   /** Crédits dépensés ce mois-ci (migration 378). */
   depensesMois: number
   jetons: number
-  gemmes: number
+  /** « Marcel a remarqué » : montré tant que le fil est vide (lib/coach/remarques). */
+  remarques?: Remarque[]
   /** Les matières suivies — celles que Marcel sait coacher. */
   matieres: MatiereOption[]
   /** Celle de la mission du jour : l'élève n'a rien à choisir dans le cas normal. */
@@ -126,6 +126,8 @@ export default function DemanderMarcel({
     rangeable,
     mode,
     choisirMode,
+    lien,
+    relance,
   } = useCoachFil()
 
   const [texte, setTexte] = useState('')
@@ -136,7 +138,6 @@ export default function DemanderMarcel({
   const [range, setRange] = useState(false)
   const [solde, setSolde] = useState({
     jetons,
-    gemmes,
     utilises: utilisesAujourdhui,
     depenses: depensesMois,
   })
@@ -153,6 +154,9 @@ export default function DemanderMarcel({
     jetons: solde.jetons,
   })
   const occupeOuPending = occupe || pending
+  // MARCEL DORT (15/10/2026) : la limite atteinte se dit en sommeil, avec son
+  // réveil (le 1er du mois) et la recharge qui le réveille tout de suite.
+  const sommeil = sommeilDe(etat, creditsMensuels(tier), new Date())
 
   const choisirFichier = (file: File | undefined) => {
     if (!file) return
@@ -191,7 +195,18 @@ export default function DemanderMarcel({
     setPiece(null)
 
     void envoyer(question, matiere === '' ? null : matiere, jointe).then(
-      (res) => {
+      (res) => traiter(res, question, jointe),
+    )
+  }
+
+  /** L'élève insiste : la fiche du catalogue ne lui suffit pas, le modèle écrit la sienne. */
+  const insister = () => {
+    if (occupeOuPending || !relance) return
+    sfx.tap()
+    void envoyer(relance.texte, relance.matiere, null, true).then((res) => traiter(res, relance.texte, null))
+  }
+
+  const traiter = (res: DemandeResult, question: string, jointe: PieceJointe | null) => {
         if (res.ok) {
           // Un ordre « range ça dans mon carnet » ne passe par aucun modèle : le
           // serveur le dit (`gratuit`), et le compteur ne bouge pas.
@@ -222,15 +237,13 @@ export default function DemanderMarcel({
         } else if (res.abonnement) {
           toast('Marcel fait partie de Studuel+.', 'error')
         } else if (res.quota) {
-          toast('Tes crédits du mois sont passés.', 'error')
+          toast('Marcel s’est endormi : tes crédits sont passés.', 'error')
           setSolde((s) => ({ ...s, utilises: s.utilises + 1 }))
         } else if (res.unavailable) {
           toast('Marcel ne peut pas répondre pour le moment.', 'error')
         } else {
           toast('Marcel n’a pas réussi à répondre. Réessaie.', 'error')
         }
-      },
-    )
   }
 
   const ranger = () => {
@@ -249,25 +262,6 @@ export default function DemanderMarcel({
     })
   }
 
-  // Pas de `sfx.tap()` : le `Button` d'achat joue déjà le clic.
-  const acheter = () => {
-    start(async () => {
-      const res = await acheterJetons(1)
-      if (res.ok) {
-        setSolde((s) => ({
-          ...s,
-          jetons: s.jetons + JETONS_PAR_PACK,
-          gemmes: Math.max(0, s.gemmes - GEMMES_PAR_PACK),
-        }))
-        toast(`+${JETONS_PAR_PACK} jetons pour Marcel !`, 'success')
-      } else if (res.noGems) {
-        toast(manqueGemmes(solde.gemmes) ?? 'Pas assez de gemmes.', 'error')
-      } else {
-        toast('Achat impossible pour le moment.', 'error')
-      }
-    })
-  }
-
   return (
     <section className="mt-3 flex min-h-0 flex-1 flex-col" data-teinte={spec.teinte}>
       <h2 className="sr-only">Demander à Marcel</h2>
@@ -276,6 +270,47 @@ export default function DemanderMarcel({
           l'élève peut enchaîner sans revenir chercher le champ. Il défile
           dans SA boîte (la page, elle, ne bouge pas) : l'écran de Marcel tient
           en une vue, le champ toujours en bas. */}
+      {/* MARCEL A REMARQUÉ (15/10/2026, Lucas : « que l'on pense pour eux,
+          avant eux ») : avant la première question, ce qu'il a vu dans le
+          travail de l'élève, chaque remarque avec son geste et, quand c'est
+          utile, la question toute prête à lui poser (elle remplit le champ ;
+          c'est l'élève qui l'envoie). Gratuit : rien n'a été demandé au modèle. */}
+      {messages.length === 0 && !occupe && remarques.length > 0 && (
+        <section aria-labelledby="marcel-remarque" className="mb-3 min-h-0 flex-1 overflow-y-auto overscroll-contain px-0.5">
+          <h3 id="marcel-remarque" className="surtitre text-muted-foreground mb-1.5 px-1">
+            Marcel a remarqué
+          </h3>
+          <ul className="space-y-2">
+            {remarques.map((r) => (
+              <li key={r.id} className="carte p-3">
+                <p className="text-[13px] leading-snug font-bold">{r.texte}</p>
+                <div className="mt-2 flex flex-wrap items-center gap-2">
+                  <Button asChild size="sm" className="rounded-full">
+                    <Link href={r.action.href}>
+                      {r.action.label}
+                      <ArrowRight aria-hidden="true" />
+                    </Link>
+                  </Button>
+                  {r.question && etat.possible ? (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        sfx.tap()
+                        setTexte(r.question ?? '')
+                        champ.current?.focus()
+                      }}
+                      className="text-primary min-h-9 px-1.5 text-[11.5px] font-extrabold underline-offset-4 hover:underline"
+                    >
+                      Lui demander
+                    </button>
+                  ) : null}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {(messages.length > 0 || occupe) && (
         <div
           className="mb-3 min-h-0 flex-1 space-y-2.5 overflow-y-auto overscroll-contain px-0.5 [scrollbar-width:thin]"
@@ -313,6 +348,29 @@ export default function DemanderMarcel({
             <p className="text-muted-foreground ml-10 text-[13px] font-bold">
               Marcel réfléchit…
             </p>
+          )}
+
+          {/* LA FICHE EXISTE DÉJÀ : Marcel l'a reconnue sans le modèle. Un
+              bouton pour l'ouvrir, et une sortie pour qui veut la sienne. */}
+          {lien && !occupe && (
+            <div className="ml-10 flex flex-wrap items-center gap-2">
+              <Button asChild size="sm" className="rounded-full">
+                <Link href={lien.href}>
+                  {lien.label}
+                  <ArrowRight aria-hidden="true" />
+                </Link>
+              </Button>
+              {relance ? (
+                <button
+                  type="button"
+                  onClick={insister}
+                  disabled={occupeOuPending || !etat.possible}
+                  className="text-primary min-h-9 px-2 text-[11.5px] font-extrabold underline-offset-4 hover:underline disabled:opacity-50"
+                >
+                  Écris-moi la mienne · 1 crédit
+                </button>
+              ) : null}
+            </div>
           )}
 
           {cartes && cartes.length > 0 && !occupe && (
@@ -376,9 +434,19 @@ export default function DemanderMarcel({
               <span className="text-primary bg-primary/10 rounded-full px-2.5 py-1 text-[11px] font-extrabold">
                 {etat.restants > 0
                   ? `${etat.restants} crédits`
-                  : `${solde.jetons} jetons`}
+                  : `${solde.jetons} en recharge`}
               </span>
             </div>
+
+            {sommeil.etat === 'fatigue' && (
+              <p className="bg-secondary mt-2 flex items-center gap-2 rounded-2xl px-3 py-2 text-[11.5px] font-bold">
+                <Moon aria-hidden="true" className="text-primary size-4 shrink-0" />
+                <span className="min-w-0 flex-1">{sommeil.phrase}</span>
+                <Link href="/tresor#recharges" className="text-primary shrink-0 font-extrabold underline-offset-4 hover:underline">
+                  Recharger
+                </Link>
+              </p>
+            )}
 
             {/* Ce que Marcel sait faire — dans le champ, là où l'on décide ce
                 qu'on demande. */}
@@ -589,57 +657,49 @@ export default function DemanderMarcel({
           </p>
         </>
       ) : (
-        // Le mur : deux sorties, jamais une. Et l'une des deux fait grandir
-        // Studuel (les gemmes se gagnent en invitant).
+        // MARCEL DORT (15/10/2026, Lucas : « Marcel doit dormir, il se
+        // réveillera dans X jours, avec en boutique la possibilité de le
+        // recharger »). Jamais « quota » ni « interdit » : il a beaucoup
+        // travaillé. Le gratuit, lui, découvre Studuel+. L'ILLUSTRATION de
+        // Marcel endormi viendra plus tard : la tête de Marcel, un peu éteinte.
         <div className="bg-card mt-auto rounded-[26px] p-4 text-center shadow-[inset_0_0_0_1.5px_color-mix(in_oklch,var(--foreground),transparent_90%),0_14px_26px_-22px_rgba(36,48,79,.9)]">
-          <p className="font-heading text-[15px] font-extrabold">
-            {etat.message}
-          </p>
-
-          {/* LE GRATUIT : Marcel fait partie de Studuel+ (migration 378). Pas
-              de jetons à lui vendre : ils ne lui ouvriraient rien. */}
-          {etat.source === 'abonnement' && (
-            <div className="mt-3 space-y-2">
-              <p className="text-muted-foreground text-[12px] font-semibold text-balance">
-                200 crédits par mois&nbsp;: tes questions à Marcel, ses fiches, et tes avatars dessinés.
-              </p>
-              <Button asChild size="lg" className="w-full">
-                <Link href="/tresor">
-                  <Sparkles aria-hidden="true" />
-                  Découvrir Studuel+
-                </Link>
-              </Button>
+          {sommeil.etat === 'endormi' || sommeil.etat === 'repos' ? (
+            <div className="relative mx-auto mb-2 size-16" aria-hidden="true">
+              <Image
+                src={marcelTete}
+                alt=""
+                width={128}
+                height={128}
+                className="size-16 rounded-full object-contain opacity-80 grayscale-[35%]"
+              />
+              <span className="font-heading text-primary absolute -top-1 -right-2 text-lg font-extrabold">
+                z<span className="text-sm">z</span>
+              </span>
             </div>
+          ) : null}
+          <p className="font-heading text-[16px] font-extrabold">{sommeil.titre}</p>
+          <p className="text-muted-foreground mt-1 text-[12.5px] font-semibold text-balance">{sommeil.phrase}</p>
+
+          {sommeil.etat === 'abonnement' && (
+            <Button asChild size="lg" className="mt-3 w-full">
+              <Link href="/plus">
+                <Sparkles aria-hidden="true" />
+                Découvrir Studuel+
+              </Link>
+            </Button>
           )}
 
-          {etat.source !== 'plafond' && etat.source !== 'abonnement' && (
-            <div className="mt-3 space-y-2">
-              {/* Violet, pas or : c'est un achat en gemmes, comme à la
-                  Boutique — l'or est réservé à l'arène, aux gains et à
-                  Studuel+. */}
-              <Button
-                type="button"
-                size="lg"
-                onClick={acheter}
-                disabled={pending || !peutAcheter(solde.gemmes)}
-                className="w-full"
-              >
-                <Gem aria-hidden="true" />
-                {JETONS_PAR_PACK} jetons · {GEMMES_PAR_PACK} gemmes
+          {sommeil.recharger && (
+            <div className="mt-3 space-y-1.5">
+              <Button asChild size="lg" className="w-full">
+                <Link href="/tresor#recharges">
+                  <BatteryCharging aria-hidden="true" />
+                  Recharger Marcel
+                </Link>
               </Button>
-
               <p className="text-muted-foreground text-[11px] font-semibold">
-                {manqueGemmes(solde.gemmes) ??
-                  'Les gemmes se gagnent en invitant des amis.'}
+                Une recharge ne s’efface pas à la fin du mois.
               </p>
-
-              <Link
-                href="/tresor"
-                className="text-primary flex min-h-11 items-center justify-center gap-1.5 text-xs font-extrabold underline-offset-4 hover:underline"
-              >
-                <Sparkles aria-hidden="true" className="size-3.5" />
-                Ou passer Studuel+ et ne plus y penser
-              </Link>
             </div>
           )}
         </div>

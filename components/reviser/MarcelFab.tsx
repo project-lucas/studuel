@@ -2,9 +2,13 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect } from 'react'
 import PortailFixe from '@/components/PortailFixe'
 import { sfx } from '@/lib/sounds'
 import marcelTete from '@/public/images/nav/marcel.webp'
+
+/** Classe posée sur <html> tant que la tête de Marcel est à l'écran. */
+const CLASSE_MARCEL_FAB = 'marcel-fab'
 
 /**
  * LA PORTE DE MARCEL — sa tête, posée en bas à droite de Réviser.
@@ -43,8 +47,18 @@ import marcelTete from '@/public/images/nav/marcel.webp'
  * Sur une page de matière, la tête emmène chez Marcel AVEC la matière
  * (`/marcel?matiere=<slug>`) : ses modes fiche · exercice · flashcards
  * s'ouvrent alors sur le bon programme, sans que l'élève ait à le redire.
+ *
+ * RÉSERVÉ À STUDUEL+ (15/10/2026, Lucas : « Marcel n'est dispo que pour les
+ * users Studuel+ ») : l'onglet ne le rend que pour un abonné. Tant qu'il est à
+ * l'écran, il pose `html.marcel-fab` : le bouton flottant des quêtes
+ * (components/quetes/BoutonQuetesFlottant) se range alors au-dessus de lui.
+ * L'onglet caché (<Activity>) suspend l'effet, donc retire la classe.
  */
 export default function MarcelFab({ matiere }: { matiere?: string }) {
+  useEffect(() => {
+    document.documentElement.classList.add(CLASSE_MARCEL_FAB)
+    return () => document.documentElement.classList.remove(CLASSE_MARCEL_FAB)
+  }, [])
   const href = matiere
     ? `/marcel?matiere=${encodeURIComponent(matiere)}`
     : '/marcel'

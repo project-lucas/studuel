@@ -7,35 +7,13 @@ import { activityCutoff } from '@/lib/streak'
 import { isHudDataSkipped } from '@/lib/top-hud-routes'
 import { fetchGems } from '@/lib/gems-access'
 import { lireFinBoostXp } from '@/lib/boutique/boosts-server'
-import { compterAmis } from '@/lib/ligue-server'
+import { compterAmis, lireMaPlace } from '@/lib/ligue-server'
+import { echelon } from '@/lib/ligue'
 import { avatarAffiche } from '@/lib/avatar-affiche'
-import TopHud from './TopHud'
+import TopHud, { type RangHud } from './TopHud'
 
 type WalletRow = { xp: number | null; level: number | null }
 
-
-/**
- * LA SÉRIE, en UNE requête. Elle s'affiche désormais dans le bandeau, donc sur
- * TOUS les onglets : la calculer comme le fait l'accueil Réviser — quatre selects
- * sur 400 jours d'activité, puis `computeStreak` — coûterait ces quatre requêtes
- * à chaque page de l'app. La RPC `my_streak` (migration 155, bornée par la 170)
- * fait exactement ce calcul côté serveur ; elle existait déjà pour le classement
- * des séries entre amis, avec ce mot dans sa migration : « sans refaire les 4
- * requêtes d'activité côté page ».
- *
- * Tolérante, comme toute lecture « tardive » du projet : si la RPC manque (base
- * dont la 155 n'est pas passée), on renvoie `null` et le bandeau se contente de
- * ne pas afficher la flamme. Une série absente ne doit pas coûter le niveau et
- * les monnaies.
- */
-async function fetchStreak(
-  supabase: Awaited<ReturnType<typeof createClient>>,
-): Promise<number | null> {
-  const { data, error } = await supabase.rpc('my_streak')
-  if (error || data == null) return null
-  const n = Number(data)
-  return Number.isFinite(n) ? Math.max(0, n) : null
-}
 
 /**
  * Chargeur serveur du bandeau du haut : lit le solde de pièces et calcule le
@@ -61,7 +39,6 @@ export default async function TopHudLoader() {
     return (
       <TopHud
         gems={null}
-        streak={null}
         level={null}
         levelTitle={null}
         progress={0}
@@ -96,7 +73,9 @@ export default async function TopHudLoader() {
   // de plus.
   // Les COFFRES DE PALIER déjà ouverts (556) : la bulle du niveau et la fête
   // de niveau proposent ceux qui restent. Lecture tolérante, dans la vague.
-  const [{ data: hudRow }, gems, streak, boostXpJusqua, nbAmis, paliersOuverts] = await Promise.all([
+  // LE RANG DE LIGUE (15/10/2026) choisit l'anneau autour de l'avatar :
+  // `ligue_ma_place()` (562), une lecture légère, dans la même vague.
+  const [{ data: hudRow }, gems, boostXpJusqua, nbAmis, paliersOuverts, place] = await Promise.all([
     supabase
       .from('profiles')
       .select('avatar, user_wallet(xp, level)')
@@ -108,7 +87,6 @@ export default async function TopHudLoader() {
         user_wallet: WalletRow | WalletRow[] | null
       }>(),
     fetchGems(supabase, user.id),
-    fetchStreak(supabase),
     lireFinBoostXp(supabase, user.id),
     compterAmis(supabase, user.id),
     supabase
@@ -117,7 +95,10 @@ export default async function TopHudLoader() {
       .eq('user_id', user.id)
       .eq('source', 'niveau_palier')
       .then(({ data }) => (data ?? []).map((r: { source_key: string }) => Number(r.source_key)).filter(Number.isFinite)),
+    lireMaPlace(supabase),
   ])
+  const e = place ? echelon(place.echelon) : null
+  const rang: RangHud | null = e ? { rang: e.rang.id, division: e.division, nom: e.nom } : null
   // L'AVATAR DANS LE DISQUE de l'écusson, à la place du numéro de niveau
   // (Lucas, 24/09/2026 : « le 7 fait doublon » avec « NIVEAU 7 ») — le même que
   // l'onglet Moi, résolu ici : DiceBear n'entre pas dans le paquet du bandeau.
@@ -134,7 +115,6 @@ export default async function TopHudLoader() {
     return (
       <TopHud
         gems={gems}
-        streak={streak}
         level={info.level}
         levelTitle={info.title}
         progress={info.progress}
@@ -144,6 +124,7 @@ export default async function TopHudLoader() {
         boostXpJusqua={boostXpJusqua}
         avatar={avatar}
         nbAmis={nbAmis}
+        rang={rang}
       />
     )
   }
@@ -192,7 +173,6 @@ export default async function TopHudLoader() {
   return (
     <TopHud
       gems={gems}
-      streak={streak}
       level={level.level}
       levelTitle={level.title}
       progress={level.progress}

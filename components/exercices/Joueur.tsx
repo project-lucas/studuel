@@ -196,7 +196,7 @@ export default function Joueur({
   return (
     <div className={cn(s.manuel, 'mx-auto flex w-full max-w-xl flex-col gap-4')}>
       {/* La barre du haut : fermer, et une pastille par question. */}
-      <div className="sticky top-16 z-20 flex items-center gap-3 md:top-3 rounded-full bg-[var(--card)]/95 px-2 py-1.5 shadow-[0_0_0_1.5px_var(--border),0_8px_18px_-14px_rgba(36,48,79,0.8)]">
+      <div className="sticky top-[5.5rem] z-20 flex items-center gap-3 md:top-3 rounded-full bg-[var(--card)]/95 px-2 py-1.5 shadow-[0_0_0_1.5px_var(--border),0_8px_18px_-14px_rgba(36,48,79,0.8)]">
         <Link href={retour} aria-label="Retour au cahier" className="flex size-9 shrink-0 items-center justify-center rounded-full text-[var(--muted-foreground)] hover:bg-[var(--muted)]">
           <X className="size-5" strokeWidth={2.6} />
         </Link>

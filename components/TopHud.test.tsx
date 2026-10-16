@@ -20,7 +20,6 @@ import TopHud from '@/components/TopHud'
 
 const PROPS = {
   gems: 40,
-  streak: 3,
   level: 7,
   levelTitle: 'Apprenti',
   progress: 0.5,
@@ -110,20 +109,39 @@ describe('le compteur qui encaisse', () => {
   })
 })
 
-describe('l’écusson', () => {
-  it('montre l’avatar à la place du numéro de niveau, déjà écrit à côté', () => {
+describe('la gélule : l’avatar dans l’anneau de son rang, la barre de niveau', () => {
+  it('pose l’avatar dans l’anneau de son rang, la division en chiffres romains, et ouvre le vestiaire', () => {
     const { container } = render(
-      <TopHud {...PROPS} avatar={{ src: '/images/profil/renard.webp', visage: true }} />,
+      <TopHud
+        {...PROPS}
+        avatar={{ src: '/images/profil/renard.webp', visage: true }}
+        rang={{ rang: 'argent', division: 2, nom: 'Argent II' }}
+      />,
     )
-    const disque = container.querySelector('img[src="/images/profil/renard.webp"]')
-    expect(disque).not.toBeNull()
-    expect(screen.getByText(/Niveau 7/)).toBeInTheDocument()
-    expect(screen.queryByText(/^7$/)).not.toBeInTheDocument()
+    expect(container.querySelector('img[src="/images/profil/renard.webp"]')).not.toBeNull()
+    expect(container.querySelector('img[src="/images/rangs/cadres/argent-2.webp"]')).not.toBeNull()
+    expect(screen.getByText('II')).toBeInTheDocument()
+    const lien = screen.getByRole('link', { name: /Rang Argent II — personnaliser mon avatar/ })
+    expect(lien).toHaveAttribute('href', '/moi/avatar')
+    // Le niveau n'est plus autour de l'avatar : il est écrit à côté de la barre.
+    expect(screen.getByText('Niveau 7')).toBeInTheDocument()
   })
 
-  it('garde le numéro sans avatar connu', () => {
+  it('sans rang connu, garde un anneau blanc et le niveau dans le libellé', () => {
+    const { container } = render(<TopHud {...PROPS} />)
+    expect(container.querySelector('img[src^="/images/rangs/cadres/"]')).toBeNull()
+    expect(screen.getByRole('link', { name: /Niveau 7 — personnaliser mon avatar/ })).toBeInTheDocument()
+  })
+
+  it('écrit l’XP du niveau DANS la barre : « 340 / 700 XP »', () => {
+    render(<TopHud {...PROPS} xp={{ actuel: 1040, plancher: 700, prochain: 1400 }} />)
+    expect(screen.getByText('340 / 700 XP')).toBeInTheDocument()
+    expect(screen.getByRole('progressbar', { name: /Progression vers le niveau 8/ })).toHaveAttribute('aria-valuenow', '49')
+  })
+
+  it('n’affiche plus la série : elle vit dans Réviser', () => {
     render(<TopHud {...PROPS} />)
-    expect(screen.getByText(/^7$/)).toBeInTheDocument()
+    expect(screen.queryByText(/Série : 3 jours/)).not.toBeInTheDocument()
   })
 })
 

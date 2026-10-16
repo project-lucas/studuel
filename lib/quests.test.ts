@@ -9,6 +9,7 @@ import {
   aEncaisser,
   coffreDuJourPret,
   coffreOuvrable,
+  journeeBouclee,
   prochaineAEncaisser,
   queteServie,
   quetesAAnnoncer,
@@ -332,6 +333,20 @@ describe('ce que le navigateur reçoit', () => {
     expect(coffreOuvrable(etat(toutes, [...payees, BONUS_STEP_ID]))).toBe(false)
     // Une quête pas finie : jamais de coffre, même si les autres sont payées.
     expect(coffreOuvrable(etat({ lecon1: 1, reponses10: 10 }, ['lecon1', 'reponses10']))).toBe(false)
+  })
+
+  it('boucle la journée quand tout est encaissé, coffre compris — le bouton flottant s’en va', () => {
+    const toutes = { lecon1: 1, reponses10: 10, partie1: 1 }
+    const payees = ['lecon1', 'reponses10', 'partie1']
+    // Rien de fait, ou des quêtes finies pas encore payées : il reste à faire.
+    expect(journeeBouclee(etat({}))).toBe(false)
+    expect(journeeBouclee(etat(toutes))).toBe(false)
+    // Tout payé mais le coffre fermé : il reste le coffre.
+    expect(journeeBouclee(etat(toutes, payees))).toBe(false)
+    // Tout payé, coffre ouvert : la journée est bouclée.
+    expect(journeeBouclee(etat(toutes, [...payees, BONUS_STEP_ID]))).toBe(true)
+    // Sans quêtes servies, rien n’est bouclé (le bouton ne s’affiche pas non plus).
+    expect(journeeBouclee({ jour: DAY, quetes: [], encaissees: [] })).toBe(false)
   })
 
   it('n’annonce une quête finie qu’une fois, et jamais une quête encaissée', () => {

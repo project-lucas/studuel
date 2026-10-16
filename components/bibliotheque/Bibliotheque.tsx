@@ -49,7 +49,7 @@ export default function Bibliotheque({
   /** Le catalogue de la Boutique a-t-il des capsules (366 + 367) ? */
   capsulesDisponibles: boolean
   fiches: FicheAchetee[]
-  /** Studuel+ : toutes les fiches sont déjà ouvertes, rien à acheter. */
+  /** Studuel+ : sa rente paie ses fiches (le rayon vide le lui rappelle). */
   premium: boolean
   nbDossiers: number
   /** Le carnet (`BentoCarnet`), rendu par la page. */

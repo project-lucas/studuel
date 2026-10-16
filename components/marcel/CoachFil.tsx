@@ -38,6 +38,10 @@ type Etat = {
   messages: Message[]
   /** Les cartes du dernier « flashcards » — en attente de relecture. */
   cartes: CarteIa[] | null
+  /** Un écran qui répond mieux que le modèle (la fiche du catalogue). */
+  lien: { href: string; label: string } | null
+  /** La demande à renvoyer au modèle si l'élève insiste. */
+  relance: { texte: string; matiere: string | null } | null
 }
 
 type FilContexte = Etat & {
@@ -50,6 +54,7 @@ type FilContexte = Etat & {
     texte: string,
     matiere: string | null,
     piece?: PieceJointe | null,
+    forcer?: boolean,
   ) => Promise<DemandeResult>
   ouvrir: (id: string) => void
   nouveau: () => void
@@ -58,7 +63,7 @@ type FilContexte = Etat & {
   rangeable: boolean
 }
 
-const VIDE: Etat = { id: null, titre: null, messages: [], cartes: null }
+const VIDE: Etat = { id: null, titre: null, messages: [], cartes: null, lien: null, relance: null }
 
 const Contexte = createContext<FilContexte | null>(null)
 
@@ -76,6 +81,7 @@ export function CoachFilProvider({ children }: { children: ReactNode }) {
       texte: string,
       matiere: string | null,
       piece: PieceJointe | null = null,
+      forcer = false,
     ): Promise<DemandeResult> => {
       const question = texte.trim()
       if (question.length === 0 && !piece) return Promise.resolve({ ok: false })
@@ -95,6 +101,8 @@ export function CoachFilProvider({ children }: { children: ReactNode }) {
       setEtat((e) => ({
         ...e,
         cartes: null,
+        lien: null,
+        relance: null,
         messages: [...e.messages, provisoire],
       }))
 
@@ -103,6 +111,7 @@ export function CoachFilProvider({ children }: { children: ReactNode }) {
           const res = await demanderAMarcel(question, matiere, etat.id, {
             mode,
             piece,
+            forcer,
           })
 
           setEtat((e) => {
@@ -119,6 +128,8 @@ export function CoachFilProvider({ children }: { children: ReactNode }) {
               id: res.conversationId ?? e.id,
               titre: res.titre ?? e.titre,
               cartes: res.cartes ?? null,
+              lien: res.lien ?? null,
+              relance: res.insister ? { texte: question, matiere } : null,
               messages: [
                 ...e.messages,
                 { id: idLocal(), role: 'marcel', texte: res.reponse },
@@ -145,6 +156,8 @@ export function CoachFilProvider({ children }: { children: ReactNode }) {
         // ressuscite pas un écran de relecture dont les cartes sont peut-être
         // déjà rangées.
         cartes: null,
+        lien: null,
+        relance: null,
       })
     })
   }, [])

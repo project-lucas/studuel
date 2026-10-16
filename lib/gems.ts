@@ -85,16 +85,19 @@ export function isPremiumTier(tier: Tier): boolean {
 }
 
 /**
- * Statut d'accès d'un chapitre. L'abonnement PRIME toujours : un abonné ne
- * dépense jamais de gemme, et s'il se désabonne il retrouve ses chapitres
- * déverrouillés — ceux-là lui appartiennent.
+ * Statut d'accès d'un chapitre. DEPUIS LE 15/10/2026 (migration 580, Lucas :
+ * « 60 gemmes par semaine, soit 2 fiches de révision offertes »), l'abonnement
+ * n'ouvre plus les fiches d'office : un abonné les débloque avec les gemmes de
+ * sa RENTE (lib/studuel-plus/rente), comme tout le monde avec les siennes. Un
+ * chapitre débloqué l'est à vie, abonnement ou pas. `tier` reste dans la
+ * signature : les appelants n'ont pas à changer, et la règle peut revenir.
+ * 'premium' reste un statut connu (une base où la 580 n'est pas passée le rend).
  */
 export function chapterAccess(
-  tier: Tier,
+  _tier: Tier,
   chapterId: string,
   unlockedChapterIds: Iterable<string>,
 ): ChapterAccess {
-  if (isPremiumTier(tier)) return 'premium'
   const unlocked =
     unlockedChapterIds instanceof Set
       ? unlockedChapterIds
@@ -161,7 +164,7 @@ export function missingGemsLabel(gems: number): string | null {
 const UNLOCK_MESSAGES: Record<UnlockResult, string> = {
   unlocked: 'Chapitre débloqué ! Sa fiche est à toi pour toujours, et elle t’attend dans ta bibliothèque.',
   already: 'Tu as déjà débloqué ce chapitre.',
-  premium: 'Ton abonnement t’ouvre déjà tous les chapitres.',
+  premium: 'Ce chapitre est déjà ouvert pour toi.',
   no_gems: `Il te faut ${GEM_COST_CHAPTER} gemmes. Invite un ami ou décroche des couronnes pour en gagner !`,
   not_found: 'Ce chapitre est introuvable.',
   error: 'Impossible de débloquer pour le moment. Réessaie.',

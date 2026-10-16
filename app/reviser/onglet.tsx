@@ -1,5 +1,6 @@
 import { toutLire } from '@/lib/postgrest-pages'
 import LoupeGlobale from '@/components/reviser/LoupeGlobale'
+import LienModeExamen from '@/components/examen/LienModeExamen'
 import Link from 'next/link'
 import { contentLevelFor } from '@/lib/grades'
 import { redirect } from 'next/navigation'
@@ -21,6 +22,8 @@ import ClasseChip from '@/components/reviser/ClasseChip'
 import { isGradeLevel } from '@/lib/grades'
 import SerieBar from '@/components/reviser/SerieBar'
 import MarcelFab from '@/components/reviser/MarcelFab'
+import { PREMIUM_TIERS } from '@/lib/gems'
+import type { Tier } from '@/lib/subscription'
 import SubjectMasteryCelebration from '@/components/SubjectMasteryCelebration'
 import { fetchGauges, gardiensSortis } from '@/lib/traque-server'
 import { createClient } from '@/lib/supabase/server'
@@ -76,6 +79,8 @@ type ProfileRow = {
   tutorial_completed?: boolean | null
   /** Les matières étoilées (359) ; absente tant que la migration dort. */
   matieres_prioritaires?: unknown
+  /** Studuel+ : seul un abonné voit la tête de Marcel. */
+  subscription_tier?: string | null
 }
 
 /**
@@ -165,6 +170,7 @@ export default async function OngletReviser() {
       'daily_goal_minutes',
       'tutorial_completed',
       'matieres_prioritaires',
+      'subscription_tier',
     ]),
     getChapterMastery(supabase, user.id),
     fetchJoursActifs(supabase, user.id),
@@ -613,8 +619,9 @@ export default async function OngletReviser() {
           mène. */}
       <div className="flex flex-col gap-4">
         {/* La tête de Marcel, flottante en bas à droite : depuis qu'il n'a
-                plus d'onglet, c'est LA porte du coach. */}
-        <MarcelFab />
+                plus d'onglet, c'est LA porte du coach. Studuel+ seulement
+                (15/10/2026 : Marcel n'est ouvert qu'aux abonnés). */}
+        {PREMIUM_TIERS.includes((profile?.subscription_tier ?? 'free') as Tier) ? <MarcelFab /> : null}
         {/* TROIS blocs, dans cet ordre : où j'en suis (la série), ce que je
                 reprends (deux sessions), où je vais (mes dossiers). */}
         <SubjectsHome
@@ -670,6 +677,9 @@ export default async function OngletReviser() {
               {/* 2. « On s'y remet ? » — deux sessions à reprendre, pas une
                       réserve qui défile. */}
               <ResumeSessions items={resumeItems} />
+              {/* 3. Le mode examen (15/10/2026), en 3e, 1re et Terminale
+                      seulement : une ligne, le compte à rebours et la phase. */}
+              <LienModeExamen classe={grade} />
             </>
           }
         />

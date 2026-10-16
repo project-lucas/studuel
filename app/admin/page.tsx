@@ -83,6 +83,18 @@ export default async function AdminHomePage() {
         <ChevronRight className="size-5 shrink-0 text-muted-foreground" />
       </Link>
 
+      {/* Ce que coûte Marcel (581) : la marge mesurée, et les votes de la prépa du supérieur (582). */}
+      <Link
+        href="/admin/marcel"
+        className="flex items-center justify-between gap-3 rounded-2xl border bg-card p-4 transition-colors hover:bg-muted"
+      >
+        <span>
+          <span className="font-heading block font-extrabold">Ce que coûte Marcel</span>
+          <span className="block text-sm text-muted-foreground">Jetons, coût par abonné, marge, recharges</span>
+        </span>
+        <ChevronRight className="size-5 shrink-0 text-muted-foreground" />
+      </Link>
+
       <header>
         <h1 className="font-heading text-3xl font-extrabold">Contenu pédagogique</h1>
         <p className="mt-1 text-sm text-muted-foreground">

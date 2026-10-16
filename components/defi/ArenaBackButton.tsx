@@ -14,7 +14,7 @@ import { sfx } from '@/lib/sounds'
  *
  * Position `fixed` aux MÊMES repères que le HUD de l'arène (voir ArenaHud), pour
  * tenir l'angle haut-gauche PEU IMPORTE LE FORMAT : sous la pastille « Niveau »
- * du bandeau flottant sur mobile (`top-14 left-3`), dégagée de la sidebar
+ * du bandeau flottant sur mobile (`top-[5.5rem] left-3`), dégagée de la sidebar
  * (`w-64`) sur desktop (`md:top-4 md:left-[17rem]`).
  *
  * Deux emplois exclusifs : une ACTION (`onClick`, ex. le `onExit` d'un mode de
@@ -32,7 +32,7 @@ export default function ArenaBackButton({
   className?: string
 }) {
   const cls = cn(
-    'fixed top-14 left-3 z-40 inline-flex size-11 items-center justify-center rounded-full bg-card text-foreground shadow-lg ring-1 ring-black/10 backdrop-blur-md transition-transform active:scale-95 md:top-4 md:left-[17rem]',
+    'fixed top-[5.5rem] left-3 z-40 inline-flex size-11 items-center justify-center rounded-full bg-card text-foreground shadow-lg ring-1 ring-black/10 backdrop-blur-md transition-transform active:scale-95 md:top-4 md:left-[17rem]',
     className,
   )
   const icon = <ArrowLeft className="size-5" aria-hidden="true" />

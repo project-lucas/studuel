@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { ChevronRight, Clock, FileText, GraduationCap, Scale } from 'lucide-react'
+import { ChevronRight, Clock, Crown, FileText, GraduationCap, Scale } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
 import type { ExamYear } from '@/lib/annales'
 import { cheminAnnale, type AnneeAnnales } from '@/lib/annales-corrigees/apercu'
@@ -245,13 +245,17 @@ function AnnalesCorrigees({
                     {a.lieu}
                   </span>
                   <span className="mt-0.5 block truncate text-xs font-semibold text-muted-foreground">
-                    Sujet et corrigé
+                    {a.reservee ? 'Corrigé avec Studuel+' : 'Sujet et corrigé'}
                   </span>
                 </span>
-                <ChevronRight
-                  className="size-5 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5"
-                  aria-hidden="true"
-                />
+                {a.reservee ? (
+                  <Crown className="size-5 shrink-0 fill-highlight text-accent-foreground" aria-label="Réservé à Studuel+" />
+                ) : (
+                  <ChevronRight
+                    className="size-5 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5"
+                    aria-hidden="true"
+                  />
+                )}
               </Link>
             </li>
           )),

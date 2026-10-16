@@ -12,6 +12,12 @@
 //
 // Le PLAFOND ABSOLU journalier reste : une limite de COÛT, que rien ne lève.
 //
+// DEPUIS LE 15/10/2026 (migration 581), les jetons s'appellent des CRÉDITS DE
+// RECHARGE à l'écran : ils s'achètent en euros (lib/coach/recharges), plus en
+// gemmes, et ne s'effacent pas en fin de mois. Même solde (`coach_tokens`),
+// même place dans la porte. Les fonctions « en gemmes » plus bas ne servent
+// plus qu'à une base où la 581 n'est pas passée.
+//
 // Logique PURE. Les vrais plafonds sont décidés côté SQL (migration 378,
 // `coach_ask_allowed`) : ce module en est le miroir, pour l'affichage et les
 // court-circuits. Toute évolution doit toucher LES DEUX.
@@ -88,8 +94,8 @@ export function etatDemande(input: DemandeInput): EtatDemande {
       source: 'jeton',
       message:
         credits.jetons === 1
-          ? 'Tes crédits du mois sont passés — il te reste 1 jeton.'
-          : `Tes crédits du mois sont passés — il te reste ${credits.jetons} jetons.`,
+          ? 'Tes crédits du mois sont passés — il te reste 1 crédit de recharge.'
+          : `Tes crédits du mois sont passés — il te reste ${credits.jetons} crédits de recharge.`,
     }
   }
 
@@ -97,7 +103,7 @@ export function etatDemande(input: DemandeInput): EtatDemande {
     ...base,
     possible: false,
     source: 'vide',
-    message: 'Tes crédits du mois sont passés. Ils reviennent le 1er du mois.',
+    message: 'Marcel dort : tes crédits du mois sont passés. Ils reviennent le 1er du mois.',
   }
 }
 

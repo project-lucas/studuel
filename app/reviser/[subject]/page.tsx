@@ -36,6 +36,7 @@ import {
 import { EXAM_PAPER_COLUMNS, parseExamPapers } from '@/lib/exam-papers'
 import { ANNALES_CORRIGEES } from '@/lib/annales-corrigees/registre'
 import { annalesParAnnee } from '@/lib/annales-corrigees/apercu'
+import { marquerReservees } from '@/lib/annales-corrigees/acces'
 import {
   DERNIERE_SESSION_LABEL,
   derniereSession,
@@ -589,7 +590,15 @@ export default async function SubjectPage({
     bossPool,
     gardien,
     papers: parseExamPapers(paperRows),
-    annalesCorrigees: annalesParAnnee(ANNALES_CORRIGEES, subject.slug, level),
+    // Deux annales corrigées par matière en gratuit, toutes avec Studuel+
+    // (15/10/2026, lib/annales-corrigees/acces) : la couronne se pose ici.
+    annalesCorrigees: marquerReservees(
+      annalesParAnnee(ANNALES_CORRIGEES, subject.slug, level),
+      ANNALES_CORRIGEES,
+      subject.slug,
+      level,
+      isPremiumTier((profile?.subscription_tier ?? 'free') as Tier),
+    ),
     cahier: exercicesDuCahier ? { total: exercicesDuCahier } : null,
     themeOuvert: themeOuvert ?? null,
   }

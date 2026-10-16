@@ -19,7 +19,7 @@ export const dynamic = 'force-dynamic'
 
 const AVATAR = portraitSrc('7')
 const FLAMME = '/images/serie/flamme-fixe.webp'
-const GEMME = '/images/monnaie/cristal.webp'
+const GEMME = '/images/monnaie/gemme-v2.webp'
 const QUETES = '/images/defi/icones/quetes-v3.webp'
 
 /** 1 000 015 → « 1 M » : au-delà de 100 000, le compte s'abrège. */

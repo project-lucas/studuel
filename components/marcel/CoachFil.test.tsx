@@ -132,13 +132,14 @@ describe('le fil du coach', () => {
     expect(demanderAMarcel).toHaveBeenNthCalledWith(1, 'Les fractions ?', 'maths', null, {
       mode: 'question',
       piece: null,
+      forcer: false,
     })
     expect(demanderAMarcel).toHaveBeenNthCalledWith(
       2,
       'Les fractions ?',
       'maths',
       'fil-1',
-      { mode: 'question', piece: null },
+      { mode: 'question', piece: null, forcer: false },
     )
   })
 

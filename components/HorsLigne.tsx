@@ -43,7 +43,7 @@ export default function HorsLigne() {
       data-hors-ligne=""
       // z-[60] : au-dessus du bandeau et des mondes plein écran (l'onboarding
       // est `fixed inset-0 z-50`, la pastille y passait dessous).
-      className="pointer-events-none fixed inset-x-0 top-[calc(4rem+env(safe-area-inset-top))] z-[60] flex justify-center px-4"
+      className="pointer-events-none fixed inset-x-0 top-[calc(5.5rem+env(safe-area-inset-top))] z-[60] flex justify-center px-4"
     >
       <span className="pop-in pointer-events-auto flex max-w-sm items-center gap-2.5 rounded-2xl bg-foreground px-4 py-2 text-sm font-bold text-background shadow-lg">
         <WifiOff className="size-4 shrink-0 text-highlight" aria-hidden="true" />

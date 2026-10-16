@@ -85,6 +85,7 @@ export default async function MarcelPage({
     slugsExamen,
     oral: oralDescriptif,
     demande,
+    remarques,
   } = await getMarcelSnapshot(supabase, user.id)
 
   // L'échelle de l'oral n'est chargée QUE sur sa vue : c'est deux requêtes de
@@ -166,7 +167,7 @@ export default async function MarcelPage({
                 utilisesAujourdhui={demande.utilisesAujourdhui}
                 depensesMois={demande.depensesMois}
                 jetons={demande.jetons}
-                gemmes={demande.gemmes}
+                remarques={remarques}
                 matieres={matieres.map((m) => ({ slug: m.slug, name: m.name }))}
                 matiereParDefaut={point.matiere?.slug ?? null}
                 // Lire une photo demande un modèle qui en est capable, et il est

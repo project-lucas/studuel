@@ -8,7 +8,7 @@ import {
   Users,
   Wrench,
 } from 'lucide-react'
-import { basculerStuduelPlusTest } from './abonnement-actions'
+import BasculeStuduelPlus from '@/components/compte/BasculeStuduelPlus'
 import { Button } from '@/components/ui/button'
 import SoundToggle from '@/components/ui/SoundToggle'
 import EnTetePage from '@/components/reviser/EnTetePage'
@@ -77,6 +77,10 @@ export default async function ComptePage() {
           d'homogénéité, 24/09/2026). */}
       <EnTetePage retour={{ fallback: '/moi' }} titre="Mon compte" />
 
+      {/* Coach ou admin : l'interrupteur Studuel+ en tête des réglages, pour
+          passer librement d'une face de l'app à l'autre (561). */}
+      {coach ? <BasculeStuduelPlus actif={tier !== 'free'} /> : null}
+
       <section aria-label="Mon profil" className="carte mx-auto w-full max-w-md p-4">
         <h2 className="titre-section truncate">{profile?.full_name || user.email}</h2>
         <p className="mt-0.5 truncate text-sm font-semibold text-muted-foreground">{user.email}</p>
@@ -97,19 +101,14 @@ export default async function ComptePage() {
               modifier
             </Link>
           </p>
-          {tier === 'free' ? (
-            <p className="text-muted-foreground">
-              Passe à Studuel+ pour débloquer tous les tests premium.
-            </p>
-          ) : null}
-          {coach ? (
-            <form action={basculerStuduelPlusTest} className="pt-1">
-              <Button variant="outline" type="submit">
-                <BadgeCheck className="size-4" />
-                {tier === 'free' ? 'Activer Studuel+ (compte coach)' : 'Repasser en gratuit (compte coach)'}
-              </Button>
-            </form>
-          ) : null}
+          <p>
+            <Link
+              href="/plus"
+              className="-my-2 inline-block py-2 font-medium text-primary underline underline-offset-4"
+            >
+              {tier === 'free' ? 'Ce que comprend Studuel+' : 'Mon Studuel+ : rente, Marcel, mode examen'}
+            </Link>
+          </p>
         </div>
         <div className="mt-4 flex flex-wrap gap-2">
           <form action={signOut}>

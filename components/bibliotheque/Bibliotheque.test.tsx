@@ -118,9 +118,9 @@ describe('Bibliotheque', () => {
     expect(window.location.search).toBe('')
   })
 
-  it('n’invite pas un abonné à acheter des fiches', () => {
+  it('rappelle à un abonné que sa rente paie ses fiches (580)', () => {
     rendre({ fiches: [], premium: true, rayonInitial: 'fiches' })
-    expect(screen.getByText('Toutes tes fiches sont ouvertes')).toBeInTheDocument()
+    expect(screen.getByText('Ta rente paie tes fiches')).toBeInTheDocument()
     expect(screen.queryByText('Débloque ta première fiche')).not.toBeInTheDocument()
   })
 })

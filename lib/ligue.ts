@@ -1,4 +1,5 @@
 import { RANK_TIERS, type RankTier } from '@/lib/rank'
+import { divisionRomaine } from '@/lib/rang-visuel'
 
 // -----------------------------------------------------------------------------
 // LA LIGUE DE LA SEMAINE — l'onglet Amis, « à l'identique de Duolingo » (Lucas,
@@ -33,7 +34,7 @@ export type Echelon = {
   rang: RankTier
   /** 4 → 1 (4 est la plus basse) ; null au sommet. */
   division: number | null
-  /** « Bronze 4 », « Maître ». */
+  /** « Bronze IV », « Maître » — la division en chiffres romains (Lucas, 15/10/2026). */
   nom: string
 }
 
@@ -46,7 +47,7 @@ export function echelon(index: number): Echelon {
   }
   const rang = RANK_TIERS[Math.floor(i / DIVISIONS_PAR_RANG)]
   const division = DIVISIONS_PAR_RANG - (i % DIVISIONS_PAR_RANG)
-  return { index: i, rang, division, nom: `${rang.name} ${division}` }
+  return { index: i, rang, division, nom: `${rang.name} ${divisionRomaine(division)}` }
 }
 
 // ------------------------------------------------------ qui monte, qui descend

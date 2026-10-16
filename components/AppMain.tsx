@@ -46,7 +46,7 @@ export default function AppMain({ children }: { children: ReactNode }) {
           ? 'min-w-0 flex-1'
           : sansBandeau
             ? 'min-w-0 flex-1 px-4 pt-[calc(0.75rem+env(safe-area-inset-top))] pb-24 md:px-8 md:py-10'
-            : 'min-w-0 flex-1 px-4 pt-16 pb-24 md:px-8 md:py-10'
+            : 'min-w-0 flex-1 px-4 pt-[5.5rem] pb-24 md:px-8 md:py-10'
       }
     >
       <div className={pleinEcran ? 'w-full' : 'mx-auto w-full max-w-4xl'}>

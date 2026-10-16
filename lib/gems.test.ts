@@ -25,10 +25,10 @@ import {
 const CHAP = 'chapitre-1'
 
 describe('chapterAccess', () => {
-  it('ouvre tout aux abonnés sans consommer de gemme', () => {
-    expect(chapterAccess('tier1', CHAP, [])).toBe('premium')
-    expect(chapterAccess('tier2', CHAP, [])).toBe('premium')
-    expect(chapterAccess('tier3', CHAP, [])).toBe('premium')
+  it('n’ouvre plus rien d’office aux abonnés : leur rente paie leurs fiches (580)', () => {
+    expect(chapterAccess('tier1', CHAP, [])).toBe('locked')
+    expect(chapterAccess('tier2', CHAP, [])).toBe('locked')
+    expect(chapterAccess('tier3', CHAP, [CHAP])).toBe('unlocked')
   })
 
   it('reconnaît un chapitre déverrouillé à la gemme', () => {
@@ -49,8 +49,8 @@ describe('chapterAccess', () => {
 })
 
 describe('canOpenChapter', () => {
-  it('vaut vrai pour premium et déverrouillé, faux sinon', () => {
-    expect(canOpenChapter('tier1', CHAP, [])).toBe(true)
+  it('vaut vrai pour un chapitre déverrouillé, faux sinon — abonné compris', () => {
+    expect(canOpenChapter('tier1', CHAP, [])).toBe(false)
     expect(canOpenChapter('free', CHAP, [CHAP])).toBe(true)
     expect(canOpenChapter('free', CHAP, [])).toBe(false)
   })
@@ -79,7 +79,8 @@ describe('canSpendGem', () => {
     expect(canSpendGem('free', 5, CHAP, [CHAP])).toBe(false)
   })
 
-  it('refuse de faire payer un abonné', () => {
+  it('fait payer un abonné comme tout le monde', () => {
+    expect(canSpendGem('tier1', GEM_COST_CHAPTER, CHAP, [])).toBe(true)
     expect(canSpendGem('tier1', 5, CHAP, [])).toBe(false)
   })
 })

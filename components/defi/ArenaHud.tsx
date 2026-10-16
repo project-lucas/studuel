@@ -150,7 +150,7 @@ interface ArenaHudProps {
  * Classement à droite — commencent dessous. Les colonnes et le menu ouvert
  * partagent la cote.
  */
-const HUD_TOP = 'top-[calc(env(safe-area-inset-top)+4rem)] md:top-8'
+const HUD_TOP = 'top-[calc(env(safe-area-inset-top)+5.75rem)] md:top-8'
 
 export default function ArenaHud({
   leftTiles = [],

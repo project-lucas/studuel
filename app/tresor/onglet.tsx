@@ -3,6 +3,7 @@ import Marche from '@/components/boutique/Marche'
 import RayonsCapsules from '@/components/boutique/RayonsCapsules'
 import PourTonProfil from '@/components/boutique/PourTonProfil'
 import RayonGemmes from '@/components/boutique/RayonGemmes'
+import RayonRecharges from '@/components/boutique/RayonRecharges'
 import MarqueurBoutiqueVue from '@/components/boutique/MarqueurBoutiqueVue'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
@@ -78,6 +79,10 @@ export default async function OngletBoutique() {
         connecte={user !== null}
         premium={isPremiumTier(tier)}
       />
+
+      {/* Les recharges de Marcel (581) : seulement pour un abonné — au
+          gratuit, Marcel n'est pas ouvert, une recharge ne lui servirait à rien. */}
+      {isPremiumTier(tier) ? <RayonRecharges connecte={user !== null} aujourdhuiIso={maintenant.toISOString()} /> : null}
 
       <RayonsCapsules capsules={catalogue} achats={achats} gemmes={gemmes} connecte={user !== null} />
 

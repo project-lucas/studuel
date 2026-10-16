@@ -238,21 +238,28 @@ export type VolVague = VolJeton & {
   reperes: readonly [number, number, number]
 }
 
-/** Combien d'éclairs pour une vague : généreux, mais lisible (6 à 16). */
+/**
+ * Combien d'éclairs pour une vague : un pour 1,5 XP, de 14 à 32 (15/10/2026,
+ * Lucas : « je veux voir plus d'éclairs d'XP qui apparaissent une fois que
+ * l'on valide une quête » — une quête de 30 XP en lançait 10, elle en lance 20).
+ */
 export function jetonsVague(montant: number): number {
   const m = Number(montant)
   if (!Number.isFinite(m) || m <= 0) return 0
-  return Math.min(VAGUE_MAX, Math.max(VAGUE_MIN, Math.round(m / 3)))
+  return Math.min(VAGUE_MAX, Math.max(VAGUE_MIN, Math.round(m / 1.5)))
 }
 
-export const VAGUE_MIN = 6
-export const VAGUE_MAX = 16
+export const VAGUE_MIN = 14
+export const VAGUE_MAX = 32
 /** Le temps de la gerbe (ms) : tous les éclairs jaillissent ensemble. */
 export const VAGUE_JAILLI = 280
 /** Le temps où la gerbe flotte avant que le premier éclair ne se décroche (ms). */
 export const VAGUE_FLOTTE = 260
-/** L'intervalle entre deux départs (ms) : le rythme de la file. */
-export const VAGUE_CADENCE = 85
+/**
+ * L'intervalle entre deux départs (ms) : le rythme de la file. Resserré quand
+ * la gerbe a doublé, pour qu'une vague pleine rentre toujours en moins de 3 s.
+ */
+export const VAGUE_CADENCE = 50
 /** La traversée d'un éclair jusqu'à la barre (ms). */
 export const VAGUE_TRAJET = 620
 
@@ -262,8 +269,8 @@ export function volVague(i: number, n: number): VolVague {
   const decroche = VAGUE_JAILLI + VAGUE_FLOTTE + index * VAGUE_CADENCE
   const trajet = VAGUE_TRAJET + (index % 3) * 40
   const duree = decroche + trajet
-  // Une gerbe plus large qu'une volée : deux couronnes, l'angle d'or dedans.
-  const rayon = 52 + (index % 2) * 34
+  // Une gerbe plus large qu'une volée : trois couronnes, l'angle d'or dedans.
+  const rayon = 46 + (index % 3) * 28
   return {
     retard: 0,
     duree,

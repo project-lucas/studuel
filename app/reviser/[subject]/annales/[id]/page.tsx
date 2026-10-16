@@ -5,6 +5,10 @@ import { lieuDe, trouverAnnale } from '@/lib/annales-corrigees/apercu'
 import { estMatiereAnnale } from '@/lib/annales-corrigees/matieres'
 import { getCurrentUser } from '@/lib/supabase/user'
 import EcranAnnale from '@/components/annales/EcranAnnale'
+import AnnaleReservee from '@/components/annales/AnnaleReservee'
+import { accesAnnale } from '@/lib/annales-corrigees/acces'
+import { getUserTier } from '@/lib/subscription'
+import { isPremiumTier } from '@/lib/gems'
 
 // UNE ANNALE CORRIGÉE : le sujet officiel (le PDF habillé, à lire ou à
 // télécharger) et le corrigé Studuel, partie par partie.
@@ -34,5 +38,18 @@ export default async function AnnalePage({
   const annale = trouverAnnale(ANNALES_CORRIGEES, subject, id)
   if (!annale || !estMatiereAnnale(subject)) notFound()
   if (!(await getCurrentUser())) redirect('/login')
+  // Deux annales corrigées par matière en gratuit (lib/annales-corrigees/acces) :
+  // au-delà, le corrigé est à Studuel+ — le sujet officiel, lui, reste ouvert.
+  const premium = isPremiumTier(await getUserTier())
+  if (accesAnnale(annale, premium, ANNALES_CORRIGEES) === 'plus') {
+    return (
+      <AnnaleReservee
+        titre={annale.titre}
+        lieu={lieuDe(annale)}
+        sujetHref={`/reviser/${subject}/annales/${id}/sujet`}
+        annalesHref={`/reviser/${subject}?onglet=annales`}
+      />
+    )
+  }
   return <EcranAnnale annale={annale} subject={subject} partie={partie ?? null} />
 }

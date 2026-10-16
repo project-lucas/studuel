@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Lock } from 'lucide-react'
 import { echelon, railLigue, type EtatRail } from '@/lib/ligue'
+import { blasonDeRang } from '@/lib/rang-visuel'
 import { cn } from '@/lib/utils'
 
 /**
@@ -22,9 +23,14 @@ import { cn } from '@/lib/utils'
  * blason qui prend ses couleurs.
  *
  * Depuis le 24/09/2026, le rail suit l'ÉCHELON de la ligue de la semaine
- * (lib/ligue : Bronze 4 → Maître), et non plus les trophées : sous le blason
- * courant s'écrit la division (« Bronze 4 »). L'état de chaque blason vient de
+ * (lib/ligue : Bronze IV → Maître), et non plus les trophées : sous le blason
+ * courant s'écrit la division (« Bronze IV »). L'état de chaque blason vient de
  * `railLigue` (testé) ; ici on ne fait que dessiner.
+ *
+ * Depuis le 15/10/2026, chaque DIVISION a son blason (lib/rang-visuel) : le
+ * courant montre celui de ma division, un rang traversé celui de sa division I
+ * (la plus haute, celle qu'on a quittée en montant), un rang à venir celui de
+ * sa division IV (celle par laquelle on y entrera).
  */
 
 // Resserré le 17/09/2026 (Lucas : « ce bloc doit être plus petit ») : chez
@@ -106,7 +112,10 @@ export default function RailDivisions({ echelon: index }: { echelon: number }) {
               style={{ width: taille, height: taille }}
             >
               <Image
-                src={tier.image}
+                src={blasonDeRang(
+                  tier.id,
+                  tier.hasDivisions ? (etat === 'courante' ? division.division : etat === 'passee' ? 1 : 4) : null,
+                )}
                 alt=""
                 width={224}
                 height={224}

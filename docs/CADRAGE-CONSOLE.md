@@ -2,6 +2,15 @@
 
 Lucas : « prendre de l'avance sur mon espace coach […] des coachs que je recruterai, qui suivront x ou y élèves, moi aussi, mais qui suit l'admin ; il me faut un espace riche et dense ». Puis : « une icône messagerie pour envoyer des messages à tous mes users — mes coachés, les freemium, ou tout le monde », « des sondages de temps en temps », « tous les chantiers côté coach et admin d'abord pour le PC ».
 
+## Deux espaces (16/10/2026)
+
+Lucas : « Studuel c’est l’app ; Scolaria c’est le coaching scolaire qui utilise l’app Studuel ». La barre latérale a un sélecteur en tête :
+
+- **Scolaria · le coaching** — Suivi (Élèves, Messages, Assistant IA) · Organisation (Groupes et codes, Coachs, Supervision) ; un coach non admin a aussi « Message à mes élèves ».
+- **Studuel · l’app** (admin) — Pilotage (Vue d’ensemble, Rétention, Usage des écrans) · Contenu (Studio de contenu, À corriger) · Communication (Annonces et sondages) · Business (Abonnements, Coût de Marcel, Vidéos parents) · Technique (Santé, Erreurs).
+
+Source unique : `lib/console/nav.ts` (`espacesConsole`, `espaceActif`).
+
 ## Ce qui est livré
 
 | Chantier | Où | Migration |

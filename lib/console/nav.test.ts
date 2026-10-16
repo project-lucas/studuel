@@ -1,40 +1,52 @@
 import { describe, expect, it } from 'vitest'
-import { lienActif, sectionsConsole } from './nav'
+import { espaceActif, espacesConsole, lienActif, sectionsConsole } from './nav'
 
-describe('sectionsConsole', () => {
-  it('un coach ne voit que le coaching', () => {
-    const s = sectionsConsole({ coach: true, admin: false })
-    expect(s.map((x) => x.titre)).toEqual(['Coaching'])
+describe('espacesConsole', () => {
+  it('un coach ne voit que Scolaria, avec son message aux élèves', () => {
+    const e = espacesConsole({ coach: true, admin: false })
+    expect(e.map((x) => x.id)).toEqual(['scolaria'])
+    const liens = e[0].sections.flatMap((s) => s.liens.map((l) => l.href))
+    expect(liens).toContain('/coach/diffusion')
+    expect(liens).not.toContain('/admin/coachs')
   })
-  it('l’admin voit le coaching et l’administration', () => {
-    const s = sectionsConsole({ coach: false, admin: true })
-    expect(s.map((x) => x.titre)).toEqual(['Coaching', 'Administration'])
+  it('l’admin voit Scolaria (coachs, supervision) puis Studuel', () => {
+    const e = espacesConsole({ coach: false, admin: true })
+    expect(e.map((x) => x.id)).toEqual(['scolaria', 'studuel'])
+    const scolaria = e[0].sections.flatMap((s) => s.liens.map((l) => l.href))
+    expect(scolaria).toContain('/admin/coachs')
+    expect(scolaria).toContain('/admin/supervision')
+    // La diffusion de l'admin vit dans Studuel › Communication, une seule fois.
+    expect(scolaria).not.toContain('/coach/diffusion')
+    expect(e[1].sections.map((s) => s.titre)).toEqual(['Pilotage', 'Contenu', 'Communication', 'Business', 'Technique'])
   })
   it('personne d’autre ne voit rien', () => {
-    expect(sectionsConsole({ coach: false, admin: false })).toEqual([])
+    expect(espacesConsole({ coach: false, admin: false })).toEqual([])
   })
-  it('chaque lien est unique', () => {
+  it('chaque lien est unique dans la console de l’admin', () => {
     const hrefs = sectionsConsole({ coach: true, admin: true }).flatMap((s) => s.liens.map((l) => l.href))
     expect(new Set(hrefs).size).toBe(hrefs.length)
   })
 })
 
-describe('lienActif', () => {
+describe('lienActif et espaceActif', () => {
+  const espaces = espacesConsole({ coach: true, admin: true })
   const s = sectionsConsole({ coach: true, admin: true })
-  it('la fiche d’un élève allume le Tableau', () => {
+  it('la fiche d’un élève allume Élèves, dans Scolaria', () => {
     expect(lienActif('/coach/eleves/abc', s)).toBe('/coach')
+    expect(espaceActif('/coach/eleves/abc', espaces)?.id).toBe('scolaria')
   })
-  it('le plus long préfixe gagne', () => {
-    expect(lienActif('/coach/messages?fil=x', s)).toBe('/coach/messages')
-    expect(lienActif('/admin/insights', s)).toBe('/admin/insights')
+  it('les coachs sont dans Scolaria même sous /admin', () => {
+    expect(espaceActif('/admin/coachs', espaces)?.id).toBe('scolaria')
   })
-  it('une page du studio allume le Studio', () => {
+  it('une page du studio allume le Studio, dans Studuel', () => {
     expect(lienActif('/admin/matiere/123', s)).toBe('/admin')
+    expect(espaceActif('/admin/matiere/123', espaces)?.id).toBe('studuel')
   })
-  it('une barre finale ne change rien', () => {
+  it('la diffusion de l’admin est dans Studuel', () => {
+    expect(espaceActif('/coach/diffusion?type=sondage', espaces)?.id).toBe('studuel')
+  })
+  it('une barre finale ne change rien ; hors console : rien', () => {
     expect(lienActif('/coach/groupes/', s)).toBe('/coach/groupes')
-  })
-  it('hors console : rien', () => {
     expect(lienActif('/reviser', s)).toBeNull()
   })
 })

@@ -10,6 +10,7 @@ import { examenDe, joursAvantExamen } from '@/lib/examen/parcours'
 import { construireIndex, type IndexFiches } from '@/lib/reviser/recherche-globale'
 import type { Subject } from '@/lib/types'
 import { construireProfil, type ChapitreProfil, type DonneesProfil, type ProfilEleve } from './profil-eleve'
+import { identitePourMarcel, normaliserIdentite } from './carnet-marcel'
 
 // CE QUE MARCEL SAIT DE L'ÉLÈVE, CÔTÉ SERVEUR (15/10/2026). La règle est pure
 // (./profil-eleve) ; ce module rassemble les données en UNE vague : le profil,
@@ -69,7 +70,7 @@ export async function lireProfilPourMarcel(supabase: SupabaseClient, userId: str
       'daily_goal_minutes',
       'selected_subjects',
     ])
-    const [profil, matieres, chapitresClasse, maitrise, { data: controleRows }, joursActifs] = await Promise.all([
+    const [profil, matieres, chapitresClasse, maitrise, { data: controleRows }, joursActifs, carnet] = await Promise.all([
       profilP,
       getSubjectsCached(),
       profilP.then((p) => (p?.grade_level ? getGradeChaptersCached(p.grade_level) : [])),
@@ -81,6 +82,8 @@ export async function lireProfilPourMarcel(supabase: SupabaseClient, userId: str
         .gte('exam_date', aujourdhui)
         .returns<ControleRow[]>(),
       fetchJoursActifs(supabase, userId),
+      // La carte d'identité de la première rencontre (584) : sans elle, rien.
+      supabase.from('marcel_carnet').select('identite').eq('user_id', userId).maybeSingle(),
     ])
 
     const choisies = Array.isArray(profil?.selected_subjects) ? (profil.selected_subjects as string[]) : []
@@ -119,7 +122,13 @@ export async function lireProfilPourMarcel(supabase: SupabaseClient, userId: str
     })
 
     return {
-      profil: construireProfil(donnees),
+      profil: construireProfil({
+        ...donnees,
+        identite: identitePourMarcel(
+          normaliserIdentite(carnet.error ? null : carnet.data?.identite),
+          (slug) => matieres.find((m) => m.slug === slug)?.name ?? null,
+        ),
+      }),
       index: chapitresClasse.length > 0 ? construireIndex(suivies, chapitresClasse) : null,
     }
   } catch (err) {

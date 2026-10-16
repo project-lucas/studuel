@@ -8,9 +8,11 @@ import {
   OBJECTIFS,
   PASSIONS,
   depuisQuand,
+  identitePourMarcel,
   identiteVide,
   normaliserIdentite,
   pucesIdentite,
+  usagesIdentite,
 } from './carnet-marcel'
 
 const nom = (slug: string) => ({ svt: 'SVT', maths: 'Mathématiques' })[slug] ?? null
@@ -71,5 +73,24 @@ describe('miroir de la migration 584', () => {
   it('la longueur et le nombre de notes sont les mêmes', () => {
     expect(sql).toContain(`char_length(texte) BETWEEN 1 AND ${NOTE_MAX_LEN}`)
     expect(sql).toContain(`OFFSET ${NOTES_MAX}`)
+  })
+})
+
+describe('ce que Marcel fait de la carte d’identité', () => {
+  const carte = normaliserIdentite({ passion: 'hand', preferee: 'svt', beteNoire: 'maths', objectif: 'moyenne', moment: 'soir' })
+
+  it('la met en mots pour la consigne, sans rien de libre', () => {
+    const t = identitePourMarcel(carte, nom)
+    expect(t).toContain('le hand')
+    expect(t).toContain('Bête noire : Mathématiques')
+    expect(t).toContain('remonter sa moyenne')
+    expect(identitePourMarcel({}, nom)).toBeNull()
+  })
+
+  it('dit à l’élève ce qu’il en fait', () => {
+    const u = usagesIdentite(carte, nom)
+    expect(u).toContain('Je prends mes exemples dans le hand.')
+    expect(u.some((x) => x.includes('remonter ma moyenne'))).toBe(true)
+    expect(usagesIdentite({}, nom)).toEqual([])
   })
 })

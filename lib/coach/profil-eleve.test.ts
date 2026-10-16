@@ -102,3 +102,12 @@ describe('Marcel a remarqué', () => {
     expect(r[0].id).toBe('debut')
   })
 })
+
+describe('la carte d’identité dans le profil', () => {
+  it('part avec le profil, avant les acquis', () => {
+    const texte = resumePourMarcel(construireProfil({ ...BASE, identite: 'Sa passion : le hand — prends tes exemples dedans.' }))
+    expect(texte).toContain('le hand')
+    expect(texte.indexOf('le hand')).toBeLessThan(texte.indexOf('Acquis') === -1 ? Infinity : texte.indexOf('Acquis'))
+    expect(construireProfil(BASE).identite).toBeNull()
+  })
+})

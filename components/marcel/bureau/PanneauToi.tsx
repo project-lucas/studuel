@@ -14,6 +14,7 @@ import {
   depuisQuand,
   identiteVide,
   pucesIdentite,
+  usagesIdentite,
   type IdentiteMarcel,
   type NoteMarcel,
 } from '@/lib/coach/carnet-marcel'
@@ -65,6 +66,7 @@ export default function PanneauToi({
 
   const nomMatiere = (slug: string) => matieres.find((m) => m.slug === slug)?.name ?? null
   const puces = pucesIdentite(identite, nomMatiere)
+  const usages = usagesIdentite(identite, nomMatiere)
 
   const effacer = (id: string) => {
     sfx.tap()
@@ -115,17 +117,34 @@ export default function PanneauToi({
             </Button>
           </>
         ) : (
+          <>
+          {/* Des ÉTIQUETTES, pas des boutons (Lucas, 16/10 : « à quoi ça sert ? » —
+              la pastille lavande se lisait comme une action) : contour fin,
+              encre neutre. Ce que Marcel en fait est dit juste dessous. */}
           <ul className="mt-2 flex flex-wrap gap-1.5">
             {puces.map((p) => (
-              <li key={p.cle} className="bg-secondary text-primary inline-flex items-center gap-1.5 rounded-full px-2.5 py-1.5 text-[11.5px] font-extrabold">
+              <li key={p.cle} className="text-foreground inline-flex items-center gap-1.5 rounded-lg px-2 py-1 text-[11.5px] font-bold ring-1 ring-[color-mix(in_oklch,var(--primary),white_75%)]">
                 {(() => {
                   const Icone = ICONE_PUCE[p.cle] ?? Sparkles
-                  return <Icone aria-hidden="true" className="size-3.5" strokeWidth={2.6} />
+                  return <Icone aria-hidden="true" className="text-primary size-3.5" strokeWidth={2.6} />
                 })()}
                 {p.label}
               </li>
             ))}
           </ul>
+          {usages.length > 0 ? (
+            <div className="bg-secondary/60 mt-2.5 rounded-xl px-3 py-2">
+              <p className="text-primary text-[11.5px] font-extrabold">Ce que j’en fais</p>
+              <ul className="mt-0.5 space-y-0.5">
+                {usages.map((u) => (
+                  <li key={u} className="text-[12px] leading-snug font-semibold">
+                    {u}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+          </>
         )}
       </section>
 

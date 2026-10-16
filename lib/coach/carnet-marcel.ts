@@ -101,6 +101,46 @@ export function pucesIdentite(id: IdentiteMarcel, nomMatiere: (slug: string) => 
   return puces
 }
 
+// --------------------------------------------- ce que Marcel en FAIT
+//
+// Lucas, 16/10/2026, devant la puce « Remonter ma moyenne » : « à quoi ça sert ? ».
+// La carte n’était qu’AFFICHÉE. Elle part désormais dans le profil envoyé à
+// Marcel (lib/coach/profil-eleve), et l’onglet « Toi » dit, en clair, ce qu’il
+// en fait. Rien de libre : des libellés des listes fermées et des noms de
+// matières du catalogue.
+
+const minuscule = (s: string) => s.charAt(0).toLowerCase() + s.slice(1)
+
+/** La carte, en une ligne pour la consigne du modèle (`null` si elle est vide). */
+export function identitePourMarcel(id: IdentiteMarcel, nomMatiere: (slug: string) => string | null): string | null {
+  const bouts: string[] = []
+  const p = PASSIONS.find((x) => x.id === id.passion)
+  if (p) bouts.push(`Sa passion : ${minuscule(p.label)} — prends tes exemples dedans.`)
+  const pref = id.preferee ? nomMatiere(id.preferee) : null
+  if (pref) bouts.push(`Matière préférée : ${pref}.`)
+  const noire = id.beteNoire ? nomMatiere(id.beteNoire) : null
+  if (noire) bouts.push(`Bête noire : ${noire} — rassure, va pas à pas.`)
+  const o = OBJECTIFS.find((x) => x.id === id.objectif)
+  if (o) bouts.push(`Son objectif de l’année : ${minuscule(o.label).replace(' ma ', ' sa ').replace(' mon ', ' son ')}.`)
+  const m = MOMENTS.find((x) => x.id === id.moment)
+  if (m) bouts.push(`Travaille plutôt ${minuscule(m.label)}.`)
+  return bouts.length > 0 ? bouts.join(' ') : null
+}
+
+/** Ce que Marcel fait de chaque réponse, dit à l’élève dans l’onglet « Toi ». */
+export function usagesIdentite(id: IdentiteMarcel, nomMatiere: (slug: string) => string | null): string[] {
+  const u: string[] = []
+  const p = PASSIONS.find((x) => x.id === id.passion)
+  if (p) u.push(`Je prends mes exemples dans ${minuscule(p.label)}.`)
+  const noire = id.beteNoire ? nomMatiere(id.beteNoire) : null
+  if (noire) u.push(`En ${noire}, je vais pas à pas, sans te brusquer.`)
+  const pref = id.preferee ? nomMatiere(id.preferee) : null
+  if (pref) u.push(`Je m’appuie sur ce que tu aimes en ${pref}.`)
+  const o = OBJECTIFS.find((x) => x.id === id.objectif)
+  if (o) u.push(`Je garde ton objectif en tête : ${minuscule(o.label)}.`)
+  return u
+}
+
 // ------------------------------------------------------------------ les notes
 
 /** Ce qu'une note peut contenir au plus (miroir du CHECK de la 584). */

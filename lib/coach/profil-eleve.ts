@@ -47,6 +47,8 @@ export type DonneesProfil = {
   chapitres: ChapitreProfil[]
   /** L'examen de l'année et son repère (lib/examen/parcours). */
   examen: { nom: string; jours: number } | null
+  /** La carte d'identité de la première rencontre, déjà en mots (lib/coach/carnet-marcel). */
+  identite?: string | null
 }
 
 export type ProfilEleve = {
@@ -64,6 +66,8 @@ export type ProfilEleve = {
   objectifMinutes: number | null
   /** Rien de travaillé encore : Marcel ne suppose pas de lacunes. */
   debutant: boolean
+  /** Ce que l'élève a dit de lui à la première rencontre (listes fermées). */
+  identite: string | null
 }
 
 export const PROFIL_MAX_LEN = 700
@@ -114,6 +118,7 @@ export function construireProfil(d: DonneesProfil): ProfilEleve {
     serie: Math.max(0, Math.floor(d.serie)),
     objectifMinutes: d.objectifMinutes,
     debutant,
+    identite: d.identite ?? null,
   }
 }
 
@@ -142,6 +147,7 @@ export function resumePourMarcel(p: ProfilEleve): string {
   if (p.pointsFaibles.length > 0) {
     lignes.push(`Points faibles : ${p.pointsFaibles.map((c) => `${coupe(c.titre, 48)} (${c.matiere})`).join(' ; ')}.`)
   }
+  if (p.identite) lignes.push(coupe(p.identite, 260))
   if (p.pointsForts.length > 0) {
     lignes.push(`Acquis : ${p.pointsForts.map((c) => coupe(c.titre, 40)).join(' ; ')}.`)
   }

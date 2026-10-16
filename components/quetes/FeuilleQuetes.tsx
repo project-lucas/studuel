@@ -6,6 +6,7 @@ import { Fragment, useRef, useState, useSyncExternalStore, useTransition, type R
 import { Check, ChevronRight, Clock } from 'lucide-react'
 import Feuille from '@/components/boutique/Feuille'
 import XpIcon from '@/components/ui/XpIcon'
+import GemIcon from '@/components/ui/GemIcon'
 import { origineUnique, useRecompenses } from '@/components/recompenses/RecompensesProvider'
 import { claimDailyQuest, openDailyChest } from '@/app/defi/hebdo-actions'
 import {
@@ -13,6 +14,7 @@ import {
   BONUS_STEP_ID,
   PILIER_LIBELLE,
   aEncaisser,
+  butinDuJour,
   coffreDuJourPret,
   coffreOuvrable,
   libelleRenouvellement,
@@ -227,48 +229,75 @@ function CoffreDuJour({
         ? `Encaisse ${aPayer > 1 ? `tes ${aPayer} quêtes` : 'ta dernière quête'} pour l’ouvrir`
         : `Encore ${reste} quête${reste > 1 ? 's' : ''} pour l’ouvrir`
 
+  // LE BUTIN DU JOUR EN GRAND (16/10/2026, Lucas : « je préfère que le coffre
+  // soit plus petit, ou voir directement le montant de gemmes et d'éclairs qu'il
+  // va gagner ») : le coffre passe en vignette, et ce que la journée rapporte
+  // s'écrit en pièces d'or, comme un prix de la Boutique.
+  const butin = butinDuJour(etat)
   return (
-    <section aria-label="Coffre du jour" className="flex flex-col items-center gap-2 text-center">
-      <div className="relative grid size-28 place-items-center">
-        <span aria-hidden="true" className={cn('absolute inset-0 rounded-full bg-secondary', ouvrable && s.disqueAppel)} />
-        <CoffreDuJourDessin
-          ouvert={ouvert}
-          className={cn('relative size-24', ouvrable && s.coffreTremble, dernier && s.coffreSaute)}
-        />
-        {dernier ? (
-          <span key={dernier.cle} className={cn(s.plusFlottant, s.plusCoffre)} aria-hidden="true">
-            +{dernier.xp}
+    <section aria-label="Coffre du jour" className="flex flex-col gap-3">
+      <div className="bg-secondary/60 flex items-center gap-3 rounded-[20px] p-2.5 pr-3">
+        <div className="relative grid size-16 shrink-0 place-items-center">
+          <span aria-hidden="true" className={cn('absolute inset-0 rounded-full bg-card', ouvrable && s.disqueAppel)} />
+          <CoffreDuJourDessin
+            ouvert={ouvert}
+            className={cn('relative size-14', ouvrable && s.coffreTremble, dernier && s.coffreSaute)}
+          />
+          {dernier ? (
+            <span key={dernier.cle} className={cn(s.plusFlottant, s.plusCoffre)} aria-hidden="true">
+              +{dernier.xp}
+            </span>
+          ) : null}
+        </div>
+        <div className="min-w-0 flex-1">
+          <p className="font-heading text-[16px] leading-tight font-extrabold">Coffre du jour</p>
+          <p className="text-[12.5px] leading-snug font-bold" aria-live="polite">
+            {statut}
+          </p>
+          <p className="text-muted-foreground mt-0.5 inline-flex items-center gap-1 text-[11px] font-bold">
+            <Clock className="size-3" aria-hidden="true" />
+            {libelleRenouvellement(minutes)}
+          </p>
+        </div>
+        <span className="font-heading bg-highlight text-foreground inline-flex shrink-0 items-center gap-1 rounded-full px-2 py-0.5 text-[13px] font-extrabold tabular-nums">
+          <XpIcon className="size-4" />+{ALL_DONE_XP}
+        </span>
+      </div>
+
+      {/* Ce que la journée rapporte encore — les quêtes ET le coffre. */}
+      <div
+        className="flex items-center justify-center gap-2.5 rounded-[18px] px-3 py-2"
+        style={{ background: 'color-mix(in oklch, var(--highlight), white 72%)' }}
+        aria-label={`Encore ${butin.resteXp} XP${butin.resteGemmes > 0 ? ` et ${butin.resteGemmes} gemmes` : ''} à gagner aujourd’hui`}
+      >
+        <span className="text-[12.5px] font-extrabold">{butin.resteXp > 0 ? 'À gagner aujourd’hui' : 'Tout est gagné !'}</span>
+        <span className="font-heading inline-flex items-center gap-1 text-[24px] leading-none font-extrabold tabular-nums">
+          <XpIcon className="size-7" eclats />
+          {butin.resteXp > 0 ? butin.resteXp : butin.xp}
+        </span>
+        {butin.gemmes > 0 ? (
+          <span className="font-heading inline-flex items-center gap-1 text-[24px] leading-none font-extrabold tabular-nums">
+            <GemIcon className="size-7" />
+            {butin.resteGemmes > 0 ? butin.resteGemmes : butin.gemmes}
           </span>
         ) : null}
-      </div>
-      <div className="flex flex-col items-center gap-1">
-        <p className="font-heading text-lg leading-tight font-extrabold">Coffre du jour</p>
-        <span className="font-heading inline-flex items-center gap-1 rounded-full bg-highlight px-2.5 py-0.5 text-sm font-extrabold text-foreground tabular-nums">
-          <XpIcon className="size-4" />+{ALL_DONE_XP} XP
-        </span>
       </div>
 
       <Sentier quetes={quetes} payees={payees} />
 
       {ouvrable ? (
-        <BoutonEncaisser
-          ref={bouton}
-          grande
-          xp={ALL_DONE_XP}
-          disabled={pending}
-          humeur={enCharge ? 'charge' : 'appel'}
-          label={`Ouvrir le coffre du jour : ${ALL_DONE_XP} XP`}
-          onClick={() => onOuvrir(bouton.current)}
-        />
+        <div className="flex justify-center">
+          <BoutonEncaisser
+            ref={bouton}
+            grande
+            xp={ALL_DONE_XP}
+            disabled={pending}
+            humeur={enCharge ? 'charge' : 'appel'}
+            label={`Ouvrir le coffre du jour : ${ALL_DONE_XP} XP`}
+            onClick={() => onOuvrir(bouton.current)}
+          />
+        </div>
       ) : null}
-
-      <p className="text-sm font-bold" aria-live="polite">
-        {statut}
-      </p>
-      <p className="inline-flex items-center gap-1 text-xs font-bold text-muted-foreground">
-        <Clock className="size-3" aria-hidden="true" />
-        {libelleRenouvellement(minutes)}
-      </p>
     </section>
   )
 }

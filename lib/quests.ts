@@ -252,6 +252,28 @@ export function aEncaisser(etat: QuetesDuJour): QueteServie[] {
   return etat.quetes.filter((q) => q.done && !payees.has(q.id))
 }
 
+/**
+ * LE BUTIN DU JOUR (16/10/2026, Lucas : « voir directement le montant de
+ * gemmes et d'éclairs qu'il va gagner une fois ses missions validées ») : tout
+ * ce que la journée rapporte, quêtes et coffre, et ce qu'il en reste à prendre.
+ */
+export function butinDuJour(etat: QuetesDuJour): { xp: number; gemmes: number; resteXp: number; resteGemmes: number } {
+  const payees = new Set(etat.encaissees)
+  let xp = ALL_DONE_XP
+  let gemmes = 0
+  let resteXp = payees.has(BONUS_STEP_ID) ? 0 : ALL_DONE_XP
+  let resteGemmes = 0
+  for (const q of etat.quetes) {
+    xp += q.xp
+    gemmes += q.gems
+    if (!payees.has(q.id)) {
+      resteXp += q.xp
+      resteGemmes += q.gems
+    }
+  }
+  return { xp, gemmes, resteXp, resteGemmes }
+}
+
 /** Le coffre du jour : toutes les quêtes finies, et pas encore ouvert. */
 export function coffreDuJourPret(etat: QuetesDuJour): boolean {
   return etat.quetes.length > 0 && etat.quetes.every((q) => q.done) && !etat.encaissees.includes(BONUS_STEP_ID)

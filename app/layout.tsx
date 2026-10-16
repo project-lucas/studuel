@@ -176,9 +176,6 @@ export default async function RootLayout({
               fait entrer l'élève dans son groupe et lui verse ses gains, même
               s'il n'ouvre pas l'onglet Amis (migration 376). Ne rend rien. */}
           {user ? <LigueVeille /> : null}
-          {/* Les quêtes du jour, partout : relecture, annonce « Quête
-              accomplie » et LA feuille des quêtes (bandeau, arène, Réviser). */}
-          {user ? <QuetesGlobales /> : null}
           {/* Les quêtes du jour en bouton flottant, en bas à droite (15/10/2026). */}
           {user ? <BoutonQuetesFlottant /> : null}
           {/* Bandeau du haut streamé : ne bloque pas le rendu de la page. Le
@@ -231,6 +228,12 @@ export default async function RootLayout({
               deux rafraîchissements concurrents. Il ne rend rien tant que
               personne n'a rien gagné. */}
           <RecompensesProvider>
+            {/* Les quêtes du jour, partout : relecture, annonce « Quête
+                accomplie » et LA feuille des quêtes. DANS le fournisseur des
+                récompenses (16/10/2026) : monté au-dessus, son « Encaisser »
+                recevait un `celebrer` inerte — la quête était payée, mais
+                aucun éclair ne volait vers la barre de niveau. */}
+            {user ? <QuetesGlobales /> : null}
             <AppMain>
               <OngletsVivants
                 onglets={{

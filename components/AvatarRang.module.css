@@ -1,0 +1,54 @@
+/*
+ * L'AVATAR DANS L'ANNEAU DE SON RANG — le même dessin que le bandeau du haut
+ * (TopHud), à n'importe quelle taille : le conteneur est un carré qui se mesure
+ * lui-même (`container-type`), la plaque de division s'écrit en `cqw`.
+ */
+.anneau {
+  position: relative;
+  aspect-ratio: 1;
+  container-type: inline-size;
+}
+.photo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  overflow: hidden;
+  border-radius: 50%;
+  background: var(--primary);
+}
+.photo img,
+.photo svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cadre {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+/* Sans rang connu (pas encore de ligue) : un simple anneau blanc cerclé de lavande. */
+.sansRang {
+  width: 84%;
+  height: 84%;
+  box-shadow:
+    0 0 0 3cqw var(--card),
+    0 0 0 5cqw color-mix(in oklch, var(--primary), white 55%);
+}
+.division {
+  position: absolute;
+  left: 50%;
+  translate: -50% -50%;
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 800;
+  font-size: 12.5cqw;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--card);
+  -webkit-text-stroke: 2.6cqw color-mix(in oklch, var(--foreground), black 35%);
+  paint-order: stroke fill;
+  white-space: nowrap;
+}

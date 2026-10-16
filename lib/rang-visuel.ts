@@ -50,3 +50,10 @@ export const TROU_CADRE = 1 / 1.9 + 0.03
 
 /** La plaque du bas de l'anneau (son centre), où s'écrit la division. */
 export const PLAQUE_CADRE_Y = 0.816
+
+/** « IV » → 4 ; `null` sans division (Maître) ou chiffre inconnu. */
+export function divisionDepuisRomain(roman: string | null | undefined): number | null {
+  if (!roman) return null
+  const trouve = Object.entries(ROMAINS).find(([, r]) => r === roman)
+  return trouve ? Number(trouve[0]) : null
+}

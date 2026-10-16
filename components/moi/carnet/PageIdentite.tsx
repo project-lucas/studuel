@@ -4,11 +4,11 @@ import Link from 'next/link'
 import AvatarRender from '@/components/avatar/AvatarRender'
 import BadgeIcone from '@/components/BadgeIcone'
 import RankBadge, { type BadgeRank } from '@/components/defi/RankBadge'
-import PhotoCadree from '@/components/moi/PhotoCadree'
-import { Eclats, Souligne } from '@/components/moi/carnet/Croquis'
+import AvatarRang from '@/components/AvatarRang'
+import { Souligne, Eclats } from '@/components/moi/carnet/Croquis'
 import { avatarPortraitSrc, type AvatarConfig } from '@/lib/avatar'
 import { MAX_EQUIPPED, type BadgeState } from '@/lib/badges'
-import { cadreDuNiveau, libelleCadre, phraseCadreSuivant } from '@/lib/moi/cadre-profil'
+import { divisionDepuisRomain } from '@/lib/rang-visuel'
 import { sfx } from '@/lib/sounds'
 import styles from '@/components/moi/carnet/Pages.module.css'
 
@@ -16,9 +16,12 @@ import styles from '@/components/moi/carnet/Pages.module.css'
 // LA PAGE DE GARDE, À GAUCHE — la photo et le nom (04/10/2026, revue le
 // 05/10/2026).
 //
-// LA PHOTO PORTE SON CADRE (lib/moi/cadre-profil) : au niveau 1, un polaroid
-// scotché — « la photo d'un joueur qui n'est pas classé » (Lucas) — puis, dès
-// les premiers quiz, un cadre de bronze, d'argent, d'or… gagné tout seul.
+// LA PHOTO EST DANS L'ANNEAU DE SON RANG (16/10/2026, Lucas : « le cadre ici
+// dans le profil est toujours moche, il faut que le cadre de la barre de
+// niveau et celui dans l'onglet profil soient similaires ») : le même anneau
+// que le bandeau du haut (components/AvatarRang) — le métal dit le rang de
+// ligue, la plaque la division. Il remplace le polaroid et les cadres de
+// niveau (lib/moi/cadre-profil, qui ne servent plus ici).
 // La toucher ouvre le VESTIAIRE (/moi/avatar : portrait, badges, personnages) ;
 // le crayon et la feuille « Personnaliser » sont partis (Lucas : « c'est en
 // cliquant sur la photo de l'avatar que l'on peut modifier l'avatar »).
@@ -45,8 +48,7 @@ export default function PageIdentite({ data }: { data: IdentiteMoi; abonne: bool
     .map((id) => data.badges.find((b) => b.id === id && b.earned))
     .filter((b): b is BadgeState => b !== undefined)
     .slice(0, MAX_EQUIPPED)
-  const cadre = cadreDuNiveau(data.level)
-  const suivant = phraseCadreSuivant(data.level)
+  const division = divisionDepuisRomain(data.rank.roman)
 
   const photo = portrait ? (
     // eslint-disable-next-line @next/next/no-img-element -- portrait servi tel quel, déjà au bon poids
@@ -60,32 +62,16 @@ export default function PageIdentite({ data }: { data: IdentiteMoi; abonne: bool
       <Link
         href="/moi/avatar"
         onClick={() => sfx.tap()}
-        aria-label={`Changer mon avatar — ${libelleCadre(cadre)}`}
-        className={cadre.id === 'polaroid' ? styles.polaroid : styles.photoCadree}
+        aria-label={`Changer mon avatar — rang ${data.rank.label}`}
+        className={styles.photoCadree}
       >
-        <PhotoCadree
-          niveau={data.level}
-          photo={photo}
-          className="size-full"
-          sansCadre={
-            <>
-              <Eclats className={styles.eclatsPolaroid} />
-              <span className={styles.photo}>{photo}</span>
-              <span aria-hidden="true" className={styles.scotchHaut} />
-              <span aria-hidden="true" className={styles.scotchBas} />
-            </>
-          }
-        />
+        <AvatarRang photo={photo} rang={{ id: data.rank.tier.id, division }} className="w-full" />
       </Link>
 
       <h1 className={styles.nom}>{data.displayName}</h1>
       <Souligne className={styles.souligneNom} />
 
       {ligne ? <p className={styles.surligne}>{ligne}</p> : null}
-      <p className={styles.cadreLigne}>
-        {libelleCadre(cadre)}
-        {suivant ? ` · ${suivant}` : ''}
-      </p>
 
       {/* Les badges mis en avant (choisis au vestiaire), collés comme des autocollants. */}
       {enAvant.length > 0 ? (

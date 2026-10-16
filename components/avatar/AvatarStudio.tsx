@@ -7,7 +7,6 @@ import { ArrowLeft, Check, Lock, Pencil, Sparkles } from 'lucide-react'
 import { applyFreeAvatarField, type AvatarConfig, type FreeAvatarFieldKey } from '@/lib/avatar'
 import type { BadgeState } from '@/lib/badges'
 import { MAX_EQUIPPED } from '@/lib/badges'
-import { cadreDuNiveau, libelleCadre } from '@/lib/moi/cadre-profil'
 import {
   LIBELLE_RARETE,
   NIVEAU_RARETE,
@@ -24,7 +23,9 @@ import AvatarRender from '@/components/avatar/AvatarRender'
 import ItemGrid from '@/components/avatar/ItemGrid'
 import AtelierAvatarIa from '@/components/moi/AtelierAvatarIa'
 import BadgeIcone from '@/components/BadgeIcone'
-import PhotoCadree from '@/components/moi/PhotoCadree'
+import AvatarRang from '@/components/AvatarRang'
+import type { BadgeRank } from '@/components/defi/RankBadge'
+import { divisionDepuisRomain } from '@/lib/rang-visuel'
 import { useTablist } from '@/components/useTablist'
 import { sfx } from '@/lib/sounds'
 import { toast } from '@/lib/toast'
@@ -59,6 +60,7 @@ export default function AvatarStudio({
   name,
   gamertag,
   niveau,
+  rang,
   levelLabel,
   badges,
   initialEquipped,
@@ -68,6 +70,8 @@ export default function AvatarStudio({
   name: string
   gamertag: string | null
   niveau: number
+  /** Le rang de ligue (l'anneau autour de la photo) ; null avant la première XP. */
+  rang: BadgeRank | null
   levelLabel: string
   badges: readonly BadgeState[]
   initialEquipped: readonly string[]
@@ -83,7 +87,6 @@ export default function AvatarStudio({
   const [atelier, setAtelier] = useState(false)
   const [, startTransition] = useTransition()
   const tabs = useTablist(ONGLETS.length, (i) => setOnglet(ONGLETS[i].id))
-  const cadre = cadreDuNiveau(niveau)
   const persoActuel = personnageDuPortrait(config.portrait)
 
   const pickFree = (field: FreeAvatarFieldKey, value: string) => {
@@ -170,20 +173,17 @@ export default function AvatarStudio({
           </Link>
         </div>
         <div key={popKey} className="avatar-pop -mt-6 w-44">
-          <PhotoCadree
-            niveau={niveau}
+          {/* Le même anneau de rang que le bandeau du haut et l'onglet Moi (16/10/2026). */}
+          <AvatarRang
             className="w-full"
             photo={<AvatarRender config={config} forme="blason" className="size-full" />}
-            sansCadre={
-              <span className="block aspect-square w-full overflow-hidden rounded-2xl bg-white p-1.5 shadow-lg">
-                <AvatarRender config={config} forme="blason" className="size-full rounded-xl" />
-              </span>
-            }
+            rang={rang ? { id: rang.tier.id, division: divisionDepuisRomain(rang.roman) } : null}
           />
         </div>
         <p className="font-heading mt-1 text-2xl leading-tight font-extrabold">{name}</p>
         <p className="text-xs font-bold text-white/85">
-          {levelLabel} · {libelleCadre(cadre)}
+          {levelLabel}
+          {rang ? ` · ${rang.label}` : ''}
         </p>
         {editionPseudo ? (
           <form

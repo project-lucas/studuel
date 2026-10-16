@@ -38,6 +38,7 @@ export default async function AvatarStudioPage() {
       name={profil.displayName}
       gamertag={profil.gamertag}
       niveau={profil.summary.level}
+      rang={profil.summary.rank ?? null}
       levelLabel={`Niveau ${profil.summary.level}`}
       badges={profil.badges}
       initialEquipped={profil.equippedBadgeIds}

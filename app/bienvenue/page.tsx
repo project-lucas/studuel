@@ -40,8 +40,11 @@ export default async function BienvenuePage({
   // ou au retour OAuth (où il doit finir son onboarding sur l'écran « plan »).
   // …et sauf après un échec OAuth : l'élève n'est justement PAS connecté, mais
   // s'il l'était par ailleurs on ne veut pas l'expédier avant d'avoir expliqué.
-  // Déjà un compte et un lien d'invitation : le code se saisit dans Mon compte.
-  if (user && !preview && !isFinish && !oauthFailed) redirect(codeInvite ? '/compte' : '/defi')
+  // Connecté : l'arène, lien d'invitation ou pas. (Le 17/10, « lien → Mon
+  // compte » envoyait AUSSI le joueur qui venait de s'inscrire par le lien sur
+  // Mon compte : la revalidation qui suit l'inscription repasse par ici.) Un
+  // compte déjà existant saisit le code dans Mon compte.
+  if (user && !preview && !isFinish && !oauthFailed) redirect('/defi')
 
   // Les couples (matière, niveau) ayant du contenu ne sont plus lus ici : le
   // sélecteur propose tout le programme (voir ci-dessous).

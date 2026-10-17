@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useTransition } from 'react'
-import { Archive, Copy, RefreshCw, Check, Pencil } from 'lucide-react'
+import { Archive, Copy, RefreshCw, Check, Pencil, Link2 } from 'lucide-react'
 import { archiverGroupe, creerGroupe, regenererCode, renommerGroupe } from '@/app/coach/actions'
 import { afficherCode } from '@/lib/coach/code'
 import type { GroupeCoach } from '@/lib/coach/server'
@@ -51,6 +51,7 @@ export default function GroupesPanel({ groupes }: { groupes: GroupeCoach[] }) {
 function CarteGroupe({ groupe }: { groupe: GroupeCoach }) {
   const [enCours, startTransition] = useTransition()
   const [copie, setCopie] = useState(false)
+  const [lienCopie, setLienCopie] = useState(false)
   const [edition, setEdition] = useState(false)
   const [nom, setNom] = useState(groupe.nom)
   const [categorie, setCategorie] = useState(groupe.categorie ?? '')
@@ -62,6 +63,20 @@ function CarteGroupe({ groupe }: { groupe: GroupeCoach }) {
       await navigator.clipboard.writeText(groupe.code)
       setCopie(true)
       setTimeout(() => setCopie(false), 1500)
+    } catch {
+      /* presse-papiers refusé : le code reste lisible à l'écran */
+    }
+  }
+
+  // LE LIEN D'INVITATION (17/10/2026) : à coller en masse dans un groupe de
+  // discussion — il ouvre l'onboarding avec le code déjà posé, et le compte
+  // créé rejoint le groupe (et reçoit Studuel+, migration 594).
+  const lien = () => `${window.location.origin}/bienvenue?code=${groupe.code}`
+  const copierLien = async () => {
+    try {
+      await navigator.clipboard.writeText(lien())
+      setLienCopie(true)
+      setTimeout(() => setLienCopie(false), 1500)
     } catch {
       /* presse-papiers refusé : le code reste lisible à l'écran */
     }
@@ -119,6 +134,14 @@ function CarteGroupe({ groupe }: { groupe: GroupeCoach }) {
       </div>
 
       <div className="mt-3 flex flex-wrap items-center gap-2 text-sm">
+        <button
+          type="button"
+          onClick={copierLien}
+          className="inline-flex h-9 items-center gap-1.5 rounded-full bg-primary px-3 font-extrabold text-primary-foreground"
+        >
+          {lienCopie ? <Check className="size-4" aria-hidden="true" /> : <Link2 className="size-4" aria-hidden="true" />}
+          {lienCopie ? 'Lien copié' : 'Copier le lien d’invitation'}
+        </button>
         <button
           type="button"
           disabled={enCours}
@@ -184,7 +207,7 @@ function NouveauGroupe() {
     >
       <h2 className="titre-section">Nouveau groupe</h2>
       <p className="mt-1 text-sm font-semibold text-muted-foreground">
-        Il reçoit un code à huit caractères : les joueurs le saisissent sur « J’ai un code ».
+        Il reçoit un code à huit caractères et un lien d’invitation : les joueurs l’ouvrent (ou saisissent le code sur « J’ai un code »), et reçoivent Studuel+.
       </p>
       <label className="mt-3 block text-xs font-extrabold tracking-wide text-muted-foreground uppercase" htmlFor="nom-groupe">Nom</label>
       <input id="nom-groupe" name="nom" required maxLength={60} placeholder="U15 garçons" className="mt-1 h-11 w-full rounded-xl border bg-background px-3 text-sm font-bold outline-none focus:border-primary" />

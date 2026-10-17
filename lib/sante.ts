@@ -4678,6 +4678,28 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     // Un e-mail vide : la fonction répond {ok:false} sans rien écrire.
     sonde: { type: 'rpc', fn: 'site_lead_enregistrer', args: { p_email: '', p_profil: '', p_classe: '', p_matiere: '' } },
   },
+  {
+    id: '594',
+    fichier: '594_coach_studuel_plus.sql',
+    feature:
+      'REJOINDRE UN GROUPE DE COACH DONNE STUDUEL+ (17/10/2026, l’entrée des joueurs de basket) : `rattachement_par_code` passe un élève encore gratuit en Studuel+ (tier1) pour 12 mois, une seule fois par compte, journalisé dans `subscription_grants` (source coach) ; rattrapage des élèves déjà rattachés.',
+    siAbsente:
+      'Un joueur qui rejoint un groupe par son code reste gratuit : il faut le basculer à la main dans /admin/abonnements.',
+    // Même signature que la 560 : rien à sonder à la clé anonyme. Contrôle à la main :
+    //   select prosrc like '%594%' from pg_proc where proname = 'rattachement_par_code';  → true
+    sonde: null,
+  },
+  {
+    id: '595',
+    fichier: '595_coach_studuel_plus_plafond.sql',
+    feature:
+      'STUDUEL+ PAR LE COACH : 20 PLACES PAR GROUPE (17/10/2026) : au-delà de 20 octrois coach dans un groupe, le joueur rejoint le groupe mais reste gratuit ; « Nouveau code » garde le même compteur ; la ligne du groupe est verrouillée pendant le rattachement.',
+    siAbsente:
+      'Un code qui circule donne Studuel+ 12 mois à tout le monde, sans limite.',
+    // Même signature que la 560 : contrôle à la main :
+    //   select prosrc like '%c_places%' from pg_proc where proname = 'rattachement_par_code';  → true
+    sonde: null,
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

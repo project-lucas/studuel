@@ -4,6 +4,7 @@ import { getSubjectsCached } from '@/lib/catalog'
 import { getPortesOAuthCached } from '@/lib/supabase/portes-oauth'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { isWelcomeStep } from '@/lib/welcome'
+import { codeValide, normaliserCode } from '@/lib/coach/code'
 
 export const metadata = { title: 'Bienvenue — Studuel' }
 export const dynamic = 'force-dynamic'
@@ -12,12 +13,17 @@ export const dynamic = 'force-dynamic'
 // - ?apercu=1 : prévisualisation même connecté (voir le rendu sans se déco).
 // - ?finish=1 : retour OAuth (compte fraîchement créé) → on applique les
 //   réponses du brouillon local au profil puis on montre le plan final.
+// - ?code=ABCD2345 : le LIEN D'INVITATION d'un groupe de coach (17/10/2026,
+//   les joueurs de basket de Lucas) — le code est vérifié et posé comme si
+//   l'élève l'avait tapé sur « J'ai un code de coach ».
 export default async function BienvenuePage({
   searchParams,
 }: {
-  searchParams: Promise<{ apercu?: string; finish?: string; erreur?: string; etape?: string }>
+  searchParams: Promise<{ apercu?: string; finish?: string; erreur?: string; etape?: string; code?: string }>
 }) {
-  const { apercu, finish, erreur, etape } = await searchParams
+  const { apercu, finish, erreur, etape, code } = await searchParams
+  const codeBrut = normaliserCode(typeof code === 'string' ? code : '')
+  const codeInvite = codeValide(codeBrut) ? codeBrut : undefined
   const preview = apercu === '1'
   // ?etape=<écran> : ouvrir le parcours sur un écran donné — développement
   // seulement (captures, maquettes). En production le paramètre est ignoré.
@@ -34,7 +40,8 @@ export default async function BienvenuePage({
   // ou au retour OAuth (où il doit finir son onboarding sur l'écran « plan »).
   // …et sauf après un échec OAuth : l'élève n'est justement PAS connecté, mais
   // s'il l'était par ailleurs on ne veut pas l'expédier avant d'avoir expliqué.
-  if (user && !preview && !isFinish && !oauthFailed) redirect('/defi')
+  // Déjà un compte et un lien d'invitation : le code se saisit dans Mon compte.
+  if (user && !preview && !isFinish && !oauthFailed) redirect(codeInvite ? '/compte' : '/defi')
 
   // Les couples (matière, niveau) ayant du contenu ne sont plus lus ici : le
   // sélecteur propose tout le programme (voir ci-dessous).
@@ -64,6 +71,7 @@ export default async function BienvenuePage({
       finish={isFinish}
       oauthFailed={oauthFailed}
       etapeInitiale={etapeInitiale}
+      codeInvite={codeInvite}
     />
   )
 }

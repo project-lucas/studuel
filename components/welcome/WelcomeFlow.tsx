@@ -54,6 +54,8 @@ import {
 } from './EngageSteps'
 import SignUpStep from './SignUpStep'
 import CodeCoach from './CodeCoach'
+import { verifierCodeCoach } from '@/app/bienvenue/coach-actions'
+import { libelleGroupe } from '@/lib/coach/code'
 import type { PortesOAuth } from '@/lib/auth-portes'
 
 // Écrans à bouton standard en pied (footer géré par le flux). Les autres
@@ -101,6 +103,7 @@ export default function WelcomeFlow({
   finish = false,
   oauthFailed = false,
   etapeInitiale,
+  codeInvite,
 }: {
   subjects: Subject[]
   /** Les fournisseurs OAuth réellement activés côté Supabase (écran 13). */
@@ -113,6 +116,8 @@ export default function WelcomeFlow({
   oauthFailed?: boolean
   /** L'écran d'ouverture forcé (développement seulement : captures, maquettes). */
   etapeInitiale?: WelcomeStep
+  /** Le code de groupe venu du lien d'invitation (?code=), forme déjà vérifiée. */
+  codeInvite?: string
 }) {
   const router = useRouter()
   const [step, setStep] = useState<WelcomeStep>(
@@ -145,6 +150,19 @@ export default function WelcomeFlow({
       const draft = parseAnswers(lireLocal(STORAGE_KEY))
       setAnswers(draft)
       setDraftLoaded(true)
+      // LIEN D'INVITATION : même chemin que « J'ai un code » (vérification par
+      // le serveur, cookie posé pour le rattachement à l'ouverture de session).
+      if (codeInvite && draft.coachCode !== codeInvite) {
+        void verifierCodeCoach(codeInvite).then((r) => {
+          if (!r.ok) return
+          setAnswers((a) => ({
+            ...a,
+            coachCode: r.code,
+            coachGroupe: libelleGroupe(r.nom, r.categorie, r.coach),
+            profileType: 'eleve',
+          }))
+        })
+      }
       if (finish) {
         // Résultat surveillé : un échec silencieux laisserait l'élève croire
         // son plan enregistré (profil resté vide) sans aucun signal.

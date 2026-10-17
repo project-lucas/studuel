@@ -12,8 +12,6 @@ import { getCurrentUser } from '@/lib/supabase/user'
  */
 export type ResultatCoach = { ok: true } | { ok: false; erreur: string }
 
-const CATEGORIES = ['U11', 'U13', 'U15', 'U17', 'U18', 'U20', 'Seniors', 'Autre'] as const
-
 function categorieSure(brute: unknown): string | null {
   if (typeof brute !== 'string') return null
   const c = brute.trim().slice(0, 30)
@@ -73,8 +71,6 @@ export async function retirerEleve(groupeId: string, eleveId: string): Promise<R
   revalidatePath(`/coach/eleves/${eleveId}`)
   return { ok: true }
 }
-
-export { CATEGORIES as CATEGORIES_GROUPE }
 
 // -----------------------------------------------------------------------------
 // LES ACTIONS GROUPÉES DU TABLEAU (16/10/2026, migrations 587 et 591).

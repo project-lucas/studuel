@@ -39,17 +39,8 @@ import { unlockedSubjectSlugs } from '@/lib/subject-unlock'
 import { getChapterMastery } from '@/lib/mastery-server'
 import { fetchAreneVague1 } from '@/lib/arene-vague1'
 import { reviewQueue } from '@/lib/srs'
-import ClanBanner from '@/components/defi/ClanBanner'
 import DuelHistory from '@/components/defi/DuelHistory'
-import SchoolTournament from '@/components/defi/SchoolTournament'
-import {
-  Gift,
-  // Aliasé : `School` est déjà le TYPE d'une école (lib/clan) dans ce fichier.
-} from 'lucide-react'
-import {
-  MOCK_TOURNAMENT,
-  MOCK_TROPHIES,
-} from '@/lib/defi/mock-data'
+import { MOCK_TROPHIES } from '@/lib/defi/mock-data'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import {
@@ -72,42 +63,18 @@ import {
 } from '@/lib/catalog'
 import { subjectsWithContentAt } from '@/lib/subject-visibility'
 import { normalizeRankedHistory } from '@/lib/defi/history'
-import { normalizeTournamentBoard, type TournamentBoard } from '@/lib/tournament'
 import { toDayKey } from '@/lib/streak'
-import {
-  normalizeRanking,
-  normalizeSchool,
-  activeSchoolId,
-  schoolLevelForGrade,
-  type SchoolLevel,
-  type School,
-} from '@/lib/clan'
-import { clanWeekReward, type ClanWeekBoard } from '@/lib/clan-week'
+import { normalizeRanking } from '@/lib/clan'
 import {
   lastWeekKey,
 } from '@/lib/clan-week-server'
 import { buildTraqueBoard } from '@/lib/traque-server'
 import { resolveCurrentChapter } from '@/lib/chapitre-courant-server'
 import { reasonLabel } from '@/lib/chapitre-courant'
-import { duelGoal } from '@/lib/duel-cta'
 import { fetchMyPalmares } from '@/lib/palmares/palmares-server'
 import type { LignePalmares } from '@/lib/palmares/palmares'
-import ClanWeekCard from '@/components/defi/ClanWeekCard'
-import type { ReactNode } from 'react'
 
 
-// Les colonnes du profil qu'utilise l'arène, toutes migrations confondues :
-// trophies (079), college/lycee_school_id (159). Absentes → `undefined`, et
-// l'écran dégrade comme avant (0 trophée, pas d'école).
-// Icône d'une entrée du menu burger. UNE seule famille (Lucide), UNE seule
-// taille, UNE seule graisse : c'est la régularité qui fait le menu propre. Les
-// objets illustrés (coupe, coffre) reviendront plus tard, mais tous ensemble —
-// deux dessins peints au milieu de cinq pictos au trait, c'était l'écart.
-// Le picto de trait du coffre d'équipe, dans le puits du menu : 24 px, pour
-// peser autant que les objets peints qui l'entourent. En violet depuis que le
-// menu est clair (18/09/2026) : l'or se perdait dans le puits lavande.
-const ORB_ICON = 'size-6 text-primary'
-const ORB_STROKE = 2.2
 
 /**
  * Quiz de la classe par matière (colonne brute `subject`) : cache serveur,
@@ -157,15 +124,12 @@ export default async function OngletDefi() {
 
   // Valeurs par défaut (visiteur non connecté : démo mockée).
   let trophies = MOCK_TROPHIES
-  let clanLabel: string | undefined
-  let clanNode: ReactNode = null
   // Mon rang parmi TOUS les élèves (`national_ranking`, 159) : la bande
   // « Top 90 % » du compte de trophées et de l'écran Classement. Null pour un
   // visiteur ou tant que la base n'a rien dit.
   let classementNational: { rank: number | null; total: number } | null = null
   // Ma division de ligue et ma place (562) : la plaque « Mon rang » du Classement.
   let maPlace: MaPlaceLigue | null = null
-  let hasSchool = true
   let duelEntries: ReturnType<typeof normalizeRankedHistory> = []
   let reviewCount = 0
   // Mon palmarès des modes (352) — vide pour un visiteur ou tant que la
@@ -184,9 +148,6 @@ export default async function OngletDefi() {
   // la roulette. Vide pour le visiteur : les médaillons prennent alors le crème
   // neutre, jamais rien.
   let subjectColors = new Map<string, string>()
-  // Tournoi des écoles : vitrine mockée tant que la migration 162 n'est pas là.
-  let tournament: TournamentBoard = MOCK_TOURNAMENT
-  let tournamentIsDemo = true
   const todayKey = toDayKey(new Date())
 
   // Les trois piliers de la boucle quotidienne, chacun tolérant à l'absence de
@@ -195,8 +156,6 @@ export default async function OngletDefi() {
   // Présence sociale : le prénom d'UN ami en session (RPC friends_live) pour
   // le chip au-dessus du CTA duel. Rien si personne n'est en ligne.
   let onlineFriendName: string | undefined
-  let clanWeek: ClanWeekBoard | null = null
-  let clanReward: { weekKey: string; label: string } | null = null
   // Série, gemmes, niveau, boost et multiplicateur ne se lisent plus ici : la
   // carte du joueur est partie le 03/10/2026, le bandeau du haut (TopHudLoader)
   // les porte sur l'arène comme ailleurs.
@@ -246,22 +205,12 @@ export default async function OngletDefi() {
     // cache serveur.
     const vague1P = fetchAreneVague1(supabase, user.id, todayKey, previousWeek)
     const masteryP = getChapterMastery(supabase, user.id)
+    // Le tournoi des écoles et le coffre du clan ont quitté l'arène le
+    // 17/10/2026 (entrée des joueurs de basket de Lucas : pas d'écoles à faire
+    // concourir) — l'école et le classement du tournoi ne se lisent plus ici.
     const selonClasseP = vague1P.then(async (v) => {
       const p = v.profile
-      const niveau = (v.level as SchoolLevel | null)
-        ?? schoolLevelForGrade(p.grade_level ?? null)
-      const idEcole = activeSchoolId(p, p.grade_level ?? null)
       return Promise.all([
-        idEcole
-          ? supabase
-              .from('schools')
-              .select('id, name, city, level')
-              .eq('id', idEcole)
-              .maybeSingle()
-          : Promise.resolve({ data: null }),
-        // Tournoi des écoles (migration 162) — null tant qu'elle n'est pas là.
-        v.tournamentRes
-          ?? supabase.rpc('school_tournament_standings', { p_level: niveau }),
         // Chapitre courant : dépend de la classe (migration 203).
         p.grade_level
           ? resolveCurrentChapter(supabase, user.id, p.grade_level, todayKey, masteryP)
@@ -285,7 +234,7 @@ export default async function OngletDefi() {
       quizMastery,
       subjectLevels,
       palmaresRes,
-      [schoolRes, tournamentRes, chapterRes, quizCounts, gradeChapters],
+      [chapterRes, quizCounts, gradeChapters],
       placeLigue,
     ] = await Promise.all([
       vague1P,
@@ -314,9 +263,6 @@ export default async function OngletDefi() {
       liveRes,
       matchesRes,
       reviews,
-      weekRes,
-      lastWeekRes,
-      alreadyClaimed,
       gaugesRes,
       overviewRes,
       gameTrophyRes,
@@ -337,13 +283,6 @@ export default async function OngletDefi() {
       Array.isArray(overviewRes.data) ? overviewRes.data : [],
     )
     friendRequests = apercuAmis.incoming.length
-    // Le cycle vient de la base quand la 322 est là (elle le calcule au moment
-    // où elle lit le profil) : c'est lui qui obligeait à une SECONDE vague,
-    // pour une donnée que Postgres avait déjà sous la main. Repli sur la règle
-    // TypeScript, qui reste la référence — un test vérifie que le CASE SQL en
-    // est le miroir exact (lib/clan-level.test.ts).
-    const level = (vague1.level as SchoolLevel | null)
-      ?? schoolLevelForGrade(profile.grade_level ?? null)
 
     duelEntries = normalizeRankedHistory(matchesRes.data)
     reviewCount = reviewQueue(reviews, todayKey).length
@@ -427,51 +366,26 @@ export default async function OngletDefi() {
       })),
       todayKey,
     )
-    const realTournament = normalizeTournamentBoard(tournamentRes.data)
-    if (realTournament) {
-      tournament = realTournament
-      tournamentIsDemo = false
-    }
-
     // MON RANG PARMI TOUS LES ÉLÈVES (national_ranking, 159) : c'est lui que
     // le compte de trophées de l'arène traduit en « Top 90 % ». Les tableaux
     // du menu (clan, national, amis) sont partis avec l'entrée « Classements »
     // du burger (22/09/2026) : l'école se lit dans l'onglet Amis.
     const national = normalizeRanking(natRes.data)
     classementNational = { rank: national.myRank, total: national.total }
-    const currentSchool: School | null = normalizeSchool(schoolRes.data)
-    hasSchool = currentSchool !== null
-
-    clanLabel = level === 'college' ? 'Mon collège' : 'Mon lycée'
-    clanNode = <ClanBanner level={level} current={currentSchool} />
 
     duelReason = chapterRes?.chapter
       ? reasonLabel(chapterRes.chapter, todayKey)
       : undefined
     onlineFriendName = buildLiveSessions(liveRes.data)[0]?.friend.name
-    clanWeek = weekRes
-
-    // Le coffre de la semaine passée : proposé seulement s'il y a vraiment
-    // quelque chose à ouvrir (contribution suffisante, clan classé, et pas
-    // déjà encaissé).
-    if (lastWeekRes && !alreadyClaimed) {
-      const reward = clanWeekReward(
-        lastWeekRes.myClan?.rank ?? null,
-        lastWeekRes.myPoints,
-      )
-      if (reward.tier !== 'aucune') {
-        clanReward = { weekKey: lastWeekRes.weekKey, label: reward.label }
-      }
-    }
   }
 
   // LE BURGER — la porte unique du second rang, façon Clash Royale. La colonne
   // droite portait une cartouche de rang, une grappe de deux objets ET un
   // rouleau : quatre cibles empilées sur le bord d'un écran de jeu. Le rang est
   // parti rejoindre le niveau à gauche (colonne d'identité), et TOUT le reste
-  // est ici, en trois groupes : ce qui se LIT (historique, classements, ligue),
-  // ce qui se GAGNE (tournoi, coffre d'équipe), puis le compte (amis,
-  // réglages — l'engrenage a quitté le bandeau du haut).
+  // est ici, en deux groupes : ce qui se LIT (historique, ligue), puis le
+  // compte (amis, réglages — l'engrenage a quitté le bandeau du haut). Le
+  // tournoi des écoles et le coffre du clan en sont partis le 17/10/2026.
   const menuItems: OrbItem[] = [
     {
       id: 'historique',
@@ -498,66 +412,6 @@ export default async function OngletDefi() {
       label: 'Ligue',
       image: '/images/defi/icones/ligues-v3.webp',
       href: '/amis',
-    },
-    {
-      // L'ÉCOLE, plus le trophée : le trophée est parti au bouton « Classé »
-      // de la rangée de combat, le seul mode qui fasse bouger le compteur de
-      // trophées. Ici l'icône nomme le SUJET du tournoi (comme Users pour
-      // Amis, Gift pour le coffre) — un dessin, un sens.
-      id: 'tournoi',
-      label: 'Tournoi des écoles',
-      image: '/images/defi/icones/tournoi-v3.webp',
-      dividerBefore: true,
-      sheetTitle: 'Tournoi des écoles',
-      sheetContent: (
-        <div className="p-4">
-          <SchoolTournament
-            board={tournament}
-            todayKey={todayKey}
-            isDemo={tournamentIsDemo}
-          />
-        </div>
-      ),
-    },
-    {
-      // La semaine de clan est LE moteur de rétention : un coffre non réclamé
-      // doit se voir depuis l'arène — d'où la pastille reportée sur le burger
-      // quand le menu est fermé. Corail RÉSERVÉ au coffre à réclamer ;
-      // « rejoins ton école » est une information, pas un dû → pastille neutre.
-      id: 'coffre',
-      // Libellé court : le nom du clan tenait sur deux lignes (ou se coupait)
-      // dans une plaque de menu. Il reste le titre de la feuille, là où il a
-      // la place de se lire en entier.
-      // « Coffre du clan » depuis le 24/09/2026 : « coffre d'équipe » est
-      // désormais celui des amis (onglet Amis, migration 379).
-      label: "Coffre du clan",
-      icon: <Gift className={ORB_ICON} strokeWidth={ORB_STROKE} />,
-      // Pastille sans emoji : « 1 » (un coffre à ouvrir) ou « ! » (il manque
-      // une école). Le 🎁 était rendu par la police du SYSTÈME — le seul dessin
-      // de l'écran que le jeu ne contrôlait pas.
-      badge: clanReward ? '1' : user && !hasSchool ? '!' : undefined,
-      badgeTone: clanReward ? ('alert' as const) : ('neutral' as const),
-      sheetTitle: clanLabel ?? 'Mon clan',
-      sheetContent: (
-        <div className="flex flex-col gap-4 p-4">
-          {/* La semaine en cours passe DEVANT : compte à rebours, place du
-              clan, apport personnel. L'école est le contexte (le tournoi a sa
-              propre entrée). */}
-          {clanWeek ? (
-            <ClanWeekCard
-              board={clanWeek}
-              today={todayKey}
-              pendingReward={clanReward}
-            />
-          ) : null}
-          {clanNode ?? (
-            <p className="py-4 text-center text-sm font-semibold text-white/70">
-              Connecte-toi pour rejoindre ton école — elle devient ton clan au
-              classement.
-            </p>
-          )}
-        </div>
-      ),
     },
     {
       // AMIS REVIENT DANS LE MENU (Lucas, 16/09/2026 : « supprime ce bloc ») :
@@ -634,12 +488,6 @@ export default async function OngletDefi() {
         ]
       : []),
   ]
-
-  // L'OBJECTIF DU BOUTON — ce que le CTA dit en plus de sa destination : la
-  // contribution de clan de la semaine et le temps qu'il reste avant dimanche
-  // (façon « 60/700 · Fin dans 3j 23h » de Clash Royale). Null sans semaine de
-  // clan : le bouton retombe alors sur sa seule sous-ligne pédagogique.
-  const goal = duelGoal(clanWeek ? clanWeek.myPoints : null, todayKey)
 
   // LE PLATEAU DU DUEL — une seule liste de matières pour les TROIS objets qui
   // en parlent : la roulette qui la choisit, le bouton COMBAT qui la lance, la
@@ -752,7 +600,6 @@ export default async function OngletDefi() {
                 <CombatButton
                   reason={duelReason}
                   onlineFriendName={onlineFriendName}
-                  goal={goal}
                 />
               }
               right={<SubjectPlate />}

@@ -3,7 +3,7 @@
 import { useState, useTransition } from 'react'
 import { Check, X } from 'lucide-react'
 import { oublierCodeCoach, verifierCodeCoach } from '@/app/bienvenue/coach-actions'
-import { afficherCode, codeValide, normaliserCode } from '@/lib/coach/code'
+import { afficherCode, codeValide, libelleGroupe, normaliserCode } from '@/lib/coach/code'
 
 /**
  * « J'AI UN CODE » — sur l'écran d'intro de l'onboarding (13/10/2026, Lucas :
@@ -82,8 +82,7 @@ export default function CodeCoach({
         setErreur('Code inconnu — vérifie-le avec ton coach.')
         return
       }
-      const libelle = `${r.nom}${r.categorie && r.categorie !== r.nom ? ` · ${r.categorie}` : ''} · coach ${r.coach}`
-      onCode(r.code, libelle)
+      onCode(r.code, libelleGroupe(r.nom, r.categorie, r.coach))
     })
   }
 

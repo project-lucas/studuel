@@ -19,6 +19,11 @@ export function codeValide(code: string): boolean {
   return FORME.test(code)
 }
 
+/** « U15 · coach Lucas » : ce que l'onboarding affiche du groupe rejoint. */
+export function libelleGroupe(nom: string, categorie: string | null, coach: string): string {
+  return `${nom}${categorie && categorie !== nom ? ` · ${categorie}` : ''} · coach ${coach}`
+}
+
 /** « ABCD EFGH » : le code en deux moitiés, plus facile à dicter. */
 export function afficherCode(code: string): string {
   return code.length === 8 ? `${code.slice(0, 4)} ${code.slice(4)}` : code

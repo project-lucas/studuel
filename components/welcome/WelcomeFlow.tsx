@@ -152,7 +152,9 @@ export default function WelcomeFlow({
       setDraftLoaded(true)
       // LIEN D'INVITATION : même chemin que « J'ai un code » (vérification par
       // le serveur, cookie posé pour le rattachement à l'ouverture de session).
-      if (codeInvite && draft.coachCode !== codeInvite) {
+      // Toujours revérifié, même si le brouillon porte déjà ce code : c'est
+      // ce qui repose le cookie s'il a expiré.
+      if (codeInvite) {
         void verifierCodeCoach(codeInvite).then((r) => {
           if (!r.ok) return
           setAnswers((a) => ({
@@ -590,14 +592,17 @@ function IntroStep({
         <OnbButton variant="ghost" asChild className="border-white/80 bg-white/95">
           <Link href="/login">J&apos;ai déjà un compte</Link>
         </OnbButton>
-        <div className="flex items-center justify-center gap-4 text-[13px] font-extrabold text-white/85">
+        {/* flex-wrap : ouvert (champ du code) ou rempli (« Tu rejoins … »), le
+            bloc du code passe SOUS la rangée, en pleine largeur — sur la rangée,
+            il débordait à droite et « Rejoindre » sortait de l'écran (17/10). */}
+        <div className="flex flex-wrap items-center justify-center gap-x-4 text-[13px] font-extrabold text-white/85 has-[form]:[&>.sep]:hidden has-[.badge-code]:[&>.sep]:hidden">
           <button type="button" onClick={onParent} className="min-h-11 underline underline-offset-4">
             Je suis parent
           </button>
-          <span aria-hidden="true">·</span>
+          <span aria-hidden="true" className="sep">·</span>
           {/* « J'ai un code » (13/10/2026) : le joueur d'un centre de formation
               saisit le code de son coach ici, puis continue comme tout le monde. */}
-          <div className="[&_button]:text-white/85 [&_button]:underline-offset-4">
+          <div className="[&>button]:text-white/85 [&>button]:underline-offset-4 has-[form]:order-first has-[form]:mb-1 has-[form]:w-full has-[.badge-code]:order-first has-[.badge-code]:mb-1 has-[.badge-code]:w-full">
             <CodeCoach groupe={coachGroupe} onCode={onCode} onRetrait={onRetrait} />
           </div>
         </div>

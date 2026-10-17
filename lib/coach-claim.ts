@@ -18,11 +18,16 @@ import { COACH_COOKIE, codeValide, normaliserCode } from '@/lib/coach/code'
  * déjà rattaché.
  *
  * Best-effort : aucune erreur ici ne doit compromettre une connexion réussie.
+ *
+ * `codeSecours` (17/10/2026) : le code gardé dans le brouillon de l'onboarding.
+ * Si le cookie a disparu (navigateur qui le refuse, brouillon repris après
+ * deux semaines), l'écran affichait « Tu rejoins … » et le compte naissait
+ * hors du groupe, sans un mot. Le cookie reste prioritaire.
  */
-export async function claimPendingCoachCode(): Promise<void> {
+export async function claimPendingCoachCode(codeSecours?: string | null): Promise<void> {
   try {
     const jar = await cookies()
-    const brut = jar.get(COACH_COOKIE)?.value
+    const brut = jar.get(COACH_COOKIE)?.value ?? codeSecours ?? null
     if (!brut) return
     const code = normaliserCode(brut)
     if (!codeValide(code)) {

@@ -145,8 +145,8 @@ export async function signUpWelcome(input: {
   // best-effort — sans incidence si les migrations 183/159 ne sont pas passées.
   await claimPendingReferral()
   // Le code de coach saisi sur l'intro (« J'ai un code », 560) : même cookie,
-  // même instant.
-  await claimPendingCoachCode()
+  // même instant. Le brouillon porte le code en secours du cookie.
+  await claimPendingCoachCode(a.coachCode)
 
   const schoolName = typeof a.schoolName === 'string' ? a.schoolName.trim() : ''
   if (grade && schoolName.length > 0) {
@@ -238,7 +238,7 @@ export async function applyOnboarding(
     // Le parrainage reste réclamé : il est porté par un cookie, pas par le
     // profil, et n'a rien à voir avec l'écrasement qu'on vient d'éviter.
     await claimPendingReferral()
-    await claimPendingCoachCode()
+    await claimPendingCoachCode(answers.coachCode)
     return { ok: true }
   }
 
@@ -271,7 +271,7 @@ export async function applyOnboarding(
   // Chemin OAuth : la query string du lien d'invitation a été perdue dans la
   // redirection, mais le cookie a survécu — c'est ici qu'on le réclame.
   await claimPendingReferral()
-  await claimPendingCoachCode()
+  await claimPendingCoachCode(answers.coachCode)
 
   // École = clan : si l'élève a renseigné son établissement, on le crée/retrouve
   // et on l'y rattache (le cycle découle de sa classe). Best-effort : un échec

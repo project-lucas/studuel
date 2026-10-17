@@ -1,7 +1,6 @@
 import CarteStudueLPlus from '@/components/boutique/CarteStudueLPlus'
 import Marche from '@/components/boutique/Marche'
 import RayonsCapsules from '@/components/boutique/RayonsCapsules'
-import PourTonProfil from '@/components/boutique/PourTonProfil'
 import RayonGemmes from '@/components/boutique/RayonGemmes'
 import RayonRecharges from '@/components/boutique/RayonRecharges'
 import MarqueurBoutiqueVue from '@/components/boutique/MarqueurBoutiqueVue'
@@ -10,7 +9,7 @@ import { getCurrentUser } from '@/lib/supabase/user'
 import { getUserTier } from '@/lib/subscription'
 import { fetchGems } from '@/lib/gems-access'
 import { lireCatalogueCapsules, lireMesAchats } from '@/lib/capsules-server'
-import { lireBoosts, lireObjetsProfil } from '@/lib/boutique/boosts-server'
+import { lireBoosts } from '@/lib/boutique/boosts-server'
 import { AUCUN_BOOST, OFFRES } from '@/lib/boutique/offres'
 import { isPremiumTier } from '@/lib/gems'
 import { cleSemaineVitrine } from '@/lib/boutique/vue'
@@ -28,7 +27,7 @@ import { PACKS_GEMMES } from '@/lib/boutique/packs-gemmes'
  *      pour les plus chères), lues ensuite dans le carnet ;
  *   4. les GEMMES — trois packs sur une rangée, au gabarit des cartes du
  *      magasin de Clash Royale, demandés par un parent (migration 369) ;
- *   5. pour ton profil — une seule rangée de six objets.
+ *   5. (pour ton profil — masqué le 17/10/2026, pas au point).
  *
  * Chaque catégorie s'ouvre sur SON titre, à la manière du magasin de Clash
  * Royale : plaque dorée, parchemin, rubans (components/boutique/BandeauSection).
@@ -56,20 +55,21 @@ export default async function OngletBoutique() {
   const [supabase, user] = await Promise.all([createClient(), getCurrentUser()])
   const maintenant = new Date()
 
-  const [tier, gemmes, catalogue, achats, boosts, objets] = await Promise.all([
+  const [tier, gemmes, catalogue, achats, boosts] = await Promise.all([
     getUserTier(),
     user ? fetchGems(supabase, user.id) : Promise.resolve(0),
     lireCatalogueCapsules(supabase),
     user ? lireMesAchats(supabase, user.id) : Promise.resolve([]),
     user ? lireBoosts(supabase, user.id) : Promise.resolve(AUCUN_BOOST),
-    user ? lireObjetsProfil(supabase, user.id) : Promise.resolve([]),
   ])
 
   return (
     <div className="flex flex-col gap-9 pb-10">
       {user ? <MarqueurBoutiqueVue semaine={cleSemaineVitrine(maintenant)} /> : null}
 
-      <CarteStudueLPlus tier={tier} />
+      {/* 17/10/2026 (Lucas) : un abonné n'a plus besoin qu'on lui vende
+          Studuel+ — la carte ne s'affiche qu'au gratuit. */}
+      {isPremiumTier(tier) ? null : <CarteStudueLPlus tier={tier} />}
 
       <Marche
         offres={OFFRES}
@@ -88,7 +88,8 @@ export default async function OngletBoutique() {
 
       <RayonGemmes packs={PACKS_GEMMES} connecte={user !== null} />
 
-      <PourTonProfil objets={objets} gemmes={gemmes} connecte={user !== null} />
+      {/* « Pour ton profil » est masqué depuis le 17/10/2026 (Lucas : « pas au
+          point ») — le composant PourTonProfil reste en réserve. */}
     </div>
   )
 }

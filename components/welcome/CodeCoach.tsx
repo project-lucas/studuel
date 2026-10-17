@@ -33,7 +33,7 @@ export default function CodeCoach({
 
   if (groupe) {
     return (
-      <div className="flex items-center justify-between gap-3 rounded-2xl bg-white/70 px-4 py-3 text-left shadow-sm ring-2 ring-primary/15">
+      <div className="badge-code flex items-center justify-between gap-3 rounded-2xl bg-white/70 px-4 py-3 text-left shadow-sm ring-2 ring-primary/15">
         <span className="flex min-w-0 items-center gap-2 text-[14px] font-extrabold" style={{ color: 'var(--onb-ink)' }}>
           <span className="grid size-6 shrink-0 place-items-center rounded-full bg-primary text-primary-foreground">
             <Check className="size-3.5" strokeWidth={3} aria-hidden="true" />

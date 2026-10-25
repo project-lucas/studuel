@@ -61,8 +61,18 @@ export default function manifest(): MetadataRoute.Manifest {
         type: "image/png",
         purpose: "any",
       },
+      // MASKABLE (25/10/2026, préparation de Google Play) : Android découpe
+      // l’icône en rond ou en goutte. L’icône « any » dessine jusqu’aux bords
+      // et y perdait les pointes des crayons ; celle-ci tient dans la zone
+      // sûre (78 %), sur le violet moyen du bord de l’original.
       {
-        src: "/icons/icon-512.png",
+        src: "/icons/icon-maskable-192.png",
+        sizes: "192x192",
+        type: "image/png",
+        purpose: "maskable",
+      },
+      {
+        src: "/icons/icon-maskable-512.png",
         sizes: "512x512",
         type: "image/png",
         purpose: "maskable",

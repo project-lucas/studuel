@@ -14,6 +14,12 @@ const nextConfig: NextConfig = {
       { source: '/reviser/cours/:path*', destination: '/carnet/cours/:path*', permanent: true },
     ]
   },
+  // L'app Android du Play Store (25/10/2026) : Android lit la preuve de
+  // propriété à cette adresse fixe ; elle est calculée par app/api/assetlinks
+  // depuis les variables d'environnement (lib/twa.ts).
+  async rewrites() {
+    return [{ source: '/.well-known/assetlinks.json', destination: '/api/assetlinks' }]
+  },
   experimental: {
     // Cache client du router : un onglet revisité dans les 30 s se raffiche
     // instantanément sans repasser par le serveur (le défaut est 0 s depuis

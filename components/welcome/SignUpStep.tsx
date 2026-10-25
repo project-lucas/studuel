@@ -148,9 +148,15 @@ export default function SignUpStep({
       </div>
 
       <p className="mt-3.5 text-[13px] font-bold" style={{ color: 'var(--onb-mut)' }}>
-        {parent
-          ? 'En continuant, vous acceptez les CGU et la politique de confidentialité.'
-          : 'En continuant, tu acceptes les CGU et la politique de confidentialité.'}
+        {parent ? 'En continuant, vous acceptez les ' : 'En continuant, tu acceptes les '}
+        <Link href="/cgu" className="font-extrabold underline" style={{ color: 'var(--onb-pp)' }}>
+          CGU
+        </Link>
+        {' et la '}
+        <Link href="/confidentialite" className="font-extrabold underline" style={{ color: 'var(--onb-pp)' }}>
+          politique de confidentialité
+        </Link>
+        .
       </p>
       <p className="mt-2 text-[13px] font-semibold" style={{ color: 'var(--onb-mut)' }}>
         {parent ? 'Déjà un compte ? ' : 'Déjà inscrit ? '}

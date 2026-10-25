@@ -15,6 +15,7 @@ import EnTetePage from '@/components/reviser/EnTetePage'
 import NotificationsOptIn from '@/components/NotificationsOptIn'
 import GradeSelector from '@/components/GradeSelector'
 import MonCoach from '@/components/compte/MonCoach'
+import SupprimerCompte from '@/components/compte/SupprimerCompte'
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { signOut } from '@/app/login/actions'
@@ -169,12 +170,22 @@ export default async function ComptePage() {
 
       <NotificationsOptIn />
 
+      {/* LES PAGES LÉGALES ET LA SUPPRESSION DU COMPTE (25/10/2026) : exigées
+          par les stores et le RGPD. Liens internes seulement. */}
+      <nav aria-label="Informations légales" className="mx-auto mt-8 flex w-full max-w-md flex-wrap justify-center gap-x-4 px-2 text-xs font-bold text-muted-foreground">
+        <Link href="/cgu" className="py-2 underline underline-offset-4">CGU</Link>
+        <Link href="/confidentialite" className="py-2 underline underline-offset-4">Confidentialité</Link>
+        <Link href="/mentions-legales" className="py-2 underline underline-offset-4">Mentions légales</Link>
+      </nav>
+
+      <SupprimerCompte abonne={tier !== 'free'} />
+
       {/* LES CRÉDITS — ce que la licence demande, là où l'élève ne le cherche
           pas mais où il est honnête de le mettre : la flamme animée de la
           série (Freepik, Flaticon — licence gratuite avec attribution). Une
           ligne, en bas de la page des réglages, sans lien externe : l'app
           n'ouvre pas de site tiers à un mineur depuis un bas de page. */}
-      <p className="mx-auto mt-8 w-full max-w-md px-2 text-center text-[11px] font-semibold text-muted-foreground">
+      <p className="mx-auto mt-4 w-full max-w-md px-2 text-center text-[11px] font-semibold text-muted-foreground">
         Flamme animée par Freepik (Flaticon).
       </p>
     </div>

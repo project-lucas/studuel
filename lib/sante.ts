@@ -4700,6 +4700,16 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     //   select prosrc like '%c_places%' from pg_proc where proname = 'rattachement_par_code';  → true
     sonde: null,
   },
+  {
+    id: '596',
+    fichier: '596_suppression_compte.sql',
+    feature:
+      'SUPPRIMER SON COMPTE DEPUIS L’APP (25/10/2026, exigé par Apple, Google Play et le RGPD) : `compte_supprimer` (avec le mot « SUPPRIMER ») efface la ligne auth.users de l’appelant, tout suit par les clés étrangères (CASCADE, ou SET NULL pour les messages et journaux, anonymisés) ; refus pour un admin et pour un coach qui a un groupe actif.',
+    siAbsente:
+      'Le bouton « Supprimer mon compte » de Mon compte répond « impossible pour le moment » : un élève ne peut pas effacer ses données sans écrire à l’équipe — refus assuré à l’App Store.',
+    // Révoquée pour anon : l’appel anonyme est refusé (42501), la fonction existe.
+    sonde: { type: 'rpc', fn: 'compte_supprimer', args: { p_confirmation: '' } },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

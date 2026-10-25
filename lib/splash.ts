@@ -51,6 +51,11 @@ const OUTSIDE_GAME_PREFIXES = [
   '/auth',
   '/parents',
   '/admin',
+  // Les pages légales (25/10/2026) : des pages à lire, pas le jeu.
+  '/cgu',
+  '/confidentialite',
+  '/mentions-legales',
+  '/supprimer-mon-compte',
 ] as const
 
 /**

@@ -1,0 +1,412 @@
+{
+  "id": "maths-brevet-2018-metropole",
+  "matiere": "maths",
+  "niveau": "3e",
+  "examen": "brevet",
+  "annee": 2018,
+  "centre": "Métropole",
+  "jour": null,
+  "code": "18GENMATMEAG1",
+  "titre": "Brevet 2018 — Mathématiques",
+  "dureeMin": 120,
+  "coefficient": null,
+  "consigne": "Série générale, calculatrice autorisée : sept exercices indépendants sur 100 points (11, 14, 12, 14, 16, 16 et 17 points), à traiter dans l'ordre que tu veux. La clarté des raisonnements et la qualité de la rédaction comptent, et les essais même non aboutis rapportent des points.",
+  "parties": [
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "Le gros globe de cristal (trophée de la coupe du monde de ski) : 9 kg, 46 cm de haut. Une carte du monde situe Pyeongchang. Le trophée est modélisé par un cylindre de diamètre 6 cm et de hauteur 23 cm, surmonté d'une boule de diamètre 23 cm. Rappels : V_boule = 4/3 π R³, V_cylindre = π r² h.",
+      "theme": "Volumes : boule et cylindre",
+      "points": 11,
+      "minutes": 13,
+      "enBref": [
+        "Pyeongchang est à environ 37° de latitude Nord et 128° de longitude Est : sur la carte, « environ 40° Nord, 130° Est » est accepté.",
+        "La boule a 23 cm de diamètre, donc 11,5 cm de rayon : V = 4/3 × π × 11,5³ ≈ 6 371 cm³.",
+        "Le cylindre (rayon 3 cm, hauteur 23 cm) a un volume de 207π ≈ 650 cm³ ; la boule représente 6 371 / 7 021 ≈ 90,7 % du total : Marie a raison."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Donner approximativement la latitude et la longitude de Pyeongchang, repéré sur la carte.",
+          "blocs": [
+            { "type": "texte", "texte": "La **latitude** se lit sur les parallèles (lignes rouges horizontales), vers le Nord ou le Sud de l'équateur ; la **longitude** sur les méridiens (lignes bleues), vers l'Est ou l'Ouest du méridien 0°. Le point est en Asie de l'Est, un peu en dessous du parallèle 40° Nord, et entre les méridiens 120° Est et 150° Est, plus près de 120°." },
+            { "type": "reponse", "texte": "Pyeongchang se situe approximativement à **38° de latitude Nord** et **128° de longitude Est** (la vraie position est 37,4° N ; 128,4° E). Toute lecture raisonnable, comme « 40° Nord, 130° Est », est acceptée : la question dit « approximativement »." },
+            { "type": "piege", "texte": "N'oublie pas les directions : « 38° » ne veut rien dire sans « Nord », « 128° » sans « Est ». Et ne confonds pas : la latitude se compte à partir de l'équateur (0° à 90°), la longitude à partir du méridien de Greenwich (0° à 180°)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Montrer qu'une valeur approchée du volume de la boule est 6 371 cm³.",
+          "blocs": [
+            { "type": "texte", "texte": "Sur le schéma, la boule occupe les 23 cm du haut : son **diamètre** est 23 cm, son rayon est donc $R = 11{,}5$ cm. On applique la formule rappelée :" },
+            { "type": "formule", "tex": "V_{\\text{boule}} = \\frac{4}{3}\\,\\pi\\,R^3 = \\frac{4}{3} \\times \\pi \\times 11{,}5^3 = \\frac{4}{3} \\times \\pi \\times 1\\,520{,}875 \\approx 6\\,370{,}6 \\text{ cm}^3" },
+            { "type": "reponse", "texte": "Le volume de la boule est $\\frac{4}{3}\\pi \\times 11{,}5^3 \\approx 6\\,371$ cm³." },
+            { "type": "piege", "texte": "Prendre 23 comme rayon donnerait 50 965 cm³, huit fois trop : la question te donne le résultat attendu, c'est un garde-fou. Si tu ne le retrouves pas, cherche l'erreur au lieu de forcer l'arrondi." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Marie affirme que le volume de la boule représente environ 90 % du volume total du trophée. A-t-elle raison ?",
+          "blocs": [
+            { "type": "texte", "texte": "**Le volume du cylindre.** Son diamètre est 6 cm, donc son rayon $r = 3$ cm ; sa hauteur est $46 - 23 = 23$ cm." },
+            { "type": "formule", "tex": "V_{\\text{cyl}} = \\pi \\times 3^2 \\times 23 = 207\\pi \\approx 650{,}3 \\text{ cm}^3" },
+            { "type": "texte", "texte": "**Le volume total**, puis la part de la boule :" },
+            { "type": "formule", "tex": "V_{\\text{total}} \\approx 6\\,371 + 650 = 7\\,021 \\text{ cm}^3 \\qquad \\frac{6\\,371}{7\\,021} \\approx 0{,}907 \\approx 90{,}7\\,\\%" },
+            { "type": "reponse", "texte": "Oui, Marie a raison : la boule représente environ 90,7 % du volume du trophée, soit « environ 90 % »." },
+            { "type": "attendu", "texte": "Le correcteur attend les deux volumes, la somme, et un **quotient** (boule sur total, pas boule sur cylindre). Conclure par une phrase qui répond à la question posée : « oui, elle a raison »." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "Particules fines PM10, du 16 au 25 janvier 2017. Grenoble, relevés journaliers (µg/m³) : 32, 39, 52, 57, 78, 63, 60, 82, 82, 89. Lyon : moyenne 72,5 ; médiane 83,5 ; minimum 22 ; maximum 107.",
+      "theme": "Statistiques : moyenne, étendue",
+      "points": 14,
+      "minutes": 17,
+      "enBref": [
+        "Moyenne de Grenoble : 634 / 10 = 63,4 µg/m³, contre 72,5 à Lyon : Lyon a eu la plus forte concentration moyenne.",
+        "Étendue de Grenoble : 89 − 32 = 57 ; de Lyon : 107 − 22 = 85. À Lyon, les concentrations ont beaucoup plus varié d'un jour à l'autre.",
+        "La médiane de Lyon est 83,5 : sur 10 relevés, au moins 5 sont supérieurs ou égaux à 83,5, donc au-dessus du seuil de 80. L'affirmation est exacte."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Laquelle des deux villes a eu la plus forte concentration moyenne en PM10 entre le 16 et le 25 janvier ?",
+          "blocs": [
+            { "type": "texte", "texte": "La moyenne de Lyon est donnée (72,5). Celle de Grenoble se calcule : la somme des dix relevés divisée par 10." },
+            { "type": "formule", "tex": "\\bar{x}_{\\text{Grenoble}} = \\frac{32 + 39 + 52 + 57 + 78 + 63 + 60 + 82 + 82 + 89}{10} = \\frac{634}{10} = 63{,}4" },
+            { "type": "reponse", "texte": "Grenoble : 63,4 µg/m³ en moyenne ; Lyon : 72,5 µg/m³. C'est **Lyon** qui a eu la plus forte concentration moyenne." },
+            { "type": "astuce", "texte": "Additionne les dix valeurs deux par deux pour ne pas te tromper (32 + 39 = 71, 52 + 57 = 109, 78 + 63 = 141, 60 + 82 = 142, 82 + 89 = 171 ; total 634), et vérifie que la moyenne tombe entre le minimum et le maximum." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Calculer l'étendue des séries de Lyon et de Grenoble. Laquelle a l'étendue la plus importante ? Interpréter.",
+          "blocs": [
+            { "type": "texte", "texte": "L'**étendue** est la différence entre la plus grande et la plus petite valeur de la série." },
+            { "type": "formule", "tex": "e_{\\text{Grenoble}} = 89 - 32 = 57 \\qquad e_{\\text{Lyon}} = 107 - 22 = 85" },
+            { "type": "reponse", "texte": "L'étendue est de 57 µg/m³ à Grenoble et de 85 µg/m³ à Lyon : c'est **Lyon** qui a l'étendue la plus importante. Cela signifie que les concentrations ont davantage varié à Lyon sur ces dix jours : l'écart entre le jour le moins pollué (22) et le plus pollué (107) y est plus grand ; la pollution y a été plus irrégulière, alors qu'à Grenoble les valeurs sont restées plus resserrées." },
+            { "type": "attendu", "texte": "Le mot « interpréter » appelle une phrase sur la situation (la pollution a plus fluctué à Lyon), pas seulement « 85 > 57 »." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "« Du 16 au 25 janvier, le seuil d'alerte de 80 µg/m³ a été dépassé au moins 5 fois à Lyon. » Exact ?",
+          "blocs": [
+            { "type": "texte", "texte": "On n'a pas les relevés de Lyon, mais on a sa **médiane : 83,5**. La série de Lyon compte 10 valeurs (une par jour) ; sa médiane partage la série rangée dans l'ordre croissant en deux moitiés de 5 valeurs : au moins 5 relevés sont supérieurs ou égaux à la médiane." },
+            { "type": "texte", "texte": "Plus précisément, pour 10 valeurs, la médiane est la moyenne de la 5e et de la 6e valeur : si la 6e valeur était inférieure à 83,5, la 5e le serait aussi et leur moyenne serait inférieure à 83,5. Donc la 6e valeur, et avec elle les 7e, 8e, 9e et 10e, sont supérieures ou égales à 83,5, donc strictement supérieures à 80." },
+            { "type": "reponse", "texte": "L'affirmation est **exacte** : la médiane de Lyon étant 83,5, au moins la moitié des 10 relevés, soit au moins 5 jours, dépassent 83,5 µg/m³, et donc le seuil de 80 µg/m³." },
+            { "type": "piege", "texte": "La moyenne (72,5) ne permet pas de conclure : une moyenne inférieure à 80 n'empêche pas d'avoir 5 jours au-dessus. C'est la médiane qui renseigne sur « au moins la moitié des valeurs »." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "Théo a 375 morceaux dans son lecteur, dont 125 de rap ; la lecture aléatoire choisit un morceau au hasard. La probabilité d'écouter du rock est 7/15. Alice a 40 % de rock dans son lecteur.",
+      "theme": "Probabilités",
+      "points": 12,
+      "minutes": 12,
+      "enBref": [
+        "P(rap) = 125/375 = 1/3.",
+        "7/15 des 375 morceaux sont du rock : 375 × 7/15 = 175 morceaux.",
+        "Alice : 40 % = 6/15 ; Théo : 7/15 ≈ 46,7 %. Théo a plus de chances d'écouter du rock."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Quelle est la probabilité que Théo écoute du rap ?",
+          "blocs": [
+            { "type": "texte", "texte": "Tous les morceaux ont la même chance d'être choisis (**équiprobabilité**) : la probabilité est le nombre de morceaux de rap divisé par le nombre total." },
+            { "type": "formule", "tex": "P(\\text{rap}) = \\frac{125}{375} = \\frac{125}{3 \\times 125} = \\frac{1}{3}" },
+            { "type": "reponse", "texte": "$P(\\text{rap}) = \\dfrac{1}{3}$, soit environ 0,33 : une chance sur trois." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "La probabilité d'écouter du rock est 7/15. Combien Théo a-t-il de morceaux de rock ?",
+          "blocs": [
+            { "type": "texte", "texte": "Le nombre de morceaux de rock est $\\frac{7}{15}$ du total. On prend donc $\\frac{7}{15}$ de 375 :" },
+            { "type": "formule", "tex": "375 \\times \\frac{7}{15} = \\frac{375}{15} \\times 7 = 25 \\times 7 = 175" },
+            { "type": "reponse", "texte": "Théo a **175 morceaux de rock**. Vérification : $\\frac{175}{375} = \\frac{7 \\times 25}{15 \\times 25} = \\frac{7}{15}$." },
+            { "type": "astuce", "texte": "Divise d'abord 375 par 15 (= 25) avant de multiplier par 7 : les nombres restent petits et le calcul se fait de tête." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Alice possède 40 % de rock. Si les deux appuient sur « lecture aléatoire », qui a le plus de chances d'écouter du rock ?",
+          "blocs": [
+            { "type": "texte", "texte": "On compare deux probabilités : il faut les écrire sous la même forme. Pour Alice, $40\\,\\% = \\frac{40}{100} = \\frac{2}{5} = \\frac{6}{15}$ ; pour Théo, $\\frac{7}{15}$. Ou en décimal : $\\frac{7}{15} \\approx 0{,}467$ contre $0{,}4$." },
+            { "type": "formule", "tex": "\\frac{6}{15} < \\frac{7}{15} \\quad \\text{soit} \\quad 40\\,\\% < 46{,}7\\,\\%" },
+            { "type": "reponse", "texte": "C'est **Théo** qui a le plus de chances d'écouter du rock : $\\frac{7}{15} \\approx 46{,}7\\,\\%$ contre 40 % pour Alice." },
+            { "type": "piege", "texte": "On ne sait pas combien de morceaux Alice possède, et ça n'a aucune importance : une probabilité se compare à une probabilité, pas à un nombre de morceaux. Ne compare pas 175 à 40." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-4",
+      "titre": "Exercice 4",
+      "nature": "exercice",
+      "enonce": "Figure (pas en vraie grandeur) : les points C, B et E sont alignés ; ABC est rectangle en A, avec l'angle ACB = 61° ; BDC est rectangle en B, avec CB = 7,5 cm et CD = 8,5 cm ; le triangle BFE a BF = 6 cm, FE = 3,2 cm, BE = 6,8 cm.",
+      "theme": "Pythagore, triangles semblables",
+      "points": 14,
+      "minutes": 17,
+      "enBref": [
+        "Pythagore dans BDC rectangle en B : BD² = 8,5² − 7,5² = 16, donc BD = 4 cm.",
+        "Les côtés de BFE (6 ; 3,2 ; 6,8) sont ceux de CBD (7,5 ; 4 ; 8,5) multipliés par 0,8 : les triangles sont semblables.",
+        "L'angle BFE correspond à l'angle droit CBD : il est droit, Sophie a raison (la réciproque de Pythagore le confirme : 6² + 3,2² = 6,8²).",
+        "L'angle ACD vaut 61° + BCD, avec tan(BCD) = 4/7,5, soit BCD ≈ 28,1° : environ 89,1°, pas 90°. Max a tort."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Montrer que la longueur BD est égale à 4 cm.",
+          "blocs": [
+            { "type": "texte", "texte": "Le triangle **BDC est rectangle en B**, son hypoténuse est $[CD]$ (le côté opposé à l'angle droit). D'après le théorème de Pythagore :" },
+            { "type": "formule", "tex": "CD^2 = CB^2 + BD^2 \\quad \\Longrightarrow \\quad BD^2 = CD^2 - CB^2 = 8{,}5^2 - 7{,}5^2 = 72{,}25 - 56{,}25 = 16" },
+            { "type": "formule", "tex": "BD = \\sqrt{16} = 4 \\text{ cm}" },
+            { "type": "reponse", "texte": "Dans le triangle BDC rectangle en B, le théorème de Pythagore donne $BD = \\sqrt{8{,}5^2 - 7{,}5^2} = 4$ cm." },
+            { "type": "attendu", "texte": "La phrase « dans le triangle BDC rectangle en B, d'après le théorème de Pythagore » avant l'égalité : c'est elle qui est notée, autant que le calcul. Et c'est bien l'hypoténuse qui est seule d'un côté de l'égalité." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Montrer que les triangles CBD et BFE sont semblables.",
+          "blocs": [
+            { "type": "texte", "texte": "Deux triangles sont semblables si les longueurs de leurs côtés sont **proportionnelles**. On range les côtés du plus petit au plus grand dans chaque triangle et on compare les quotients." },
+            { "type": "tableau", "entetes": ["Triangle CBD", "Triangle BFE", "Quotient"], "lignes": [
+              ["BD = 4", "FE = 3,2", "3,2 / 4 = 0,8"],
+              ["CB = 7,5", "BF = 6", "6 / 7,5 = 0,8"],
+              ["CD = 8,5", "BE = 6,8", "6,8 / 8,5 = 0,8"]
+            ] },
+            { "type": "texte", "texte": "Les trois quotients sont égaux à 0,8 : les côtés de BFE sont proportionnels à ceux de CBD." },
+            { "type": "reponse", "texte": "Comme $\\frac{FE}{BD} = \\frac{BF}{CB} = \\frac{BE}{CD} = 0{,}8$, les triangles CBD et BFE sont semblables (BFE est une réduction de CBD de rapport 0,8)." },
+            { "type": "astuce", "texte": "Associe toujours le plus petit côté au plus petit, le plus grand au plus grand : c'est le seul appariement qui peut marcher. Si un seul quotient diffère, les triangles ne sont pas semblables." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Sophie affirme que l'angle BFE est un angle droit. A-t-elle raison ?",
+          "blocs": [
+            { "type": "texte", "texte": "**Avec la question 2.** Des triangles semblables ont leurs angles correspondants égaux. L'angle $\\widehat{BFE}$ est entre les côtés $[FB]$ (6) et $[FE]$ (3,2) ; il correspond dans CBD à l'angle entre $[BC]$ (7,5) et $[BD]$ (4), c'est-à-dire $\\widehat{CBD}$, qui est droit." },
+            { "type": "texte", "texte": "**Sans la question 2**, par la réciproque du théorème de Pythagore : le plus grand côté de BFE est $[BE]$." },
+            { "type": "formule", "tex": "BE^2 = 6{,}8^2 = 46{,}24 \\qquad BF^2 + FE^2 = 6^2 + 3{,}2^2 = 36 + 10{,}24 = 46{,}24" },
+            { "type": "reponse", "texte": "Oui, Sophie a raison : comme $BE^2 = BF^2 + FE^2$, d'après la réciproque du théorème de Pythagore, le triangle BFE est rectangle en F, donc $\\widehat{BFE} = 90°$. (On peut aussi dire que $\\widehat{BFE}$ correspond à l'angle droit $\\widehat{CBD}$ dans les triangles semblables.)" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Max affirme que l'angle ACD est un angle droit. A-t-il raison ?",
+          "blocs": [
+            { "type": "texte", "texte": "L'angle $\\widehat{ACD}$ est la somme de $\\widehat{ACB} = 61°$ (donné) et de $\\widehat{BCD}$. Pour cet angle, on travaille dans le triangle BDC rectangle en B : on connaît son côté opposé $BD = 4$ et son côté adjacent $CB = 7{,}5$ (et l'hypoténuse 8,5 : n'importe quel rapport trigonométrique convient)." },
+            { "type": "formule", "tex": "\\tan\\widehat{BCD} = \\frac{BD}{CB} = \\frac{4}{7{,}5} \\quad \\Longrightarrow \\quad \\widehat{BCD} \\approx 28{,}1°" },
+            { "type": "formule", "tex": "\\widehat{ACD} = \\widehat{ACB} + \\widehat{BCD} \\approx 61 + 28{,}1 = 89{,}1°" },
+            { "type": "reponse", "texte": "Non, Max a tort : $\\widehat{ACD} \\approx 89°$, ce qui est proche de 90° mais pas égal. La figure « n'est pas en vraie grandeur », précisément pour qu'on ne puisse pas juger à l'œil." },
+            { "type": "piege", "texte": "Un angle « qui a l'air droit » sur une figure n'est pas droit tant qu'on ne l'a pas prouvé. Ici le calcul tranche : 89,1°. Pense aussi à vérifier le mode degrés de ta calculatrice (arctan(4/7,5) en radians donne 0,49, qui n'aurait aucun sens)." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-5",
+      "titre": "Exercice 5",
+      "nature": "exercice",
+      "enonce": "Programme de calcul : choisir un nombre, le multiplier par 4, ajouter 8, multiplier le résultat par 2. Avec x le nombre choisi, A = 2(4x + 8) donne le résultat ; on pose B = (4 + x)² − x².",
+      "theme": "Programme de calcul, calcul littéral",
+      "points": 16,
+      "minutes": 19,
+      "enBref": [
+        "Avec −1 : −1 × 4 = −4, −4 + 8 = 4, 4 × 2 = 8.",
+        "Pour obtenir 30, on remonte le programme : 30 / 2 = 15, 15 − 8 = 7, 7 / 4 = 1,75.",
+        "A = 8x + 16 et B = 16 + 8x + x² − x² = 8x + 16 : les deux expressions sont égales.",
+        "Affirmation 1 fausse (x = −3 donne −8) ; affirmation 2 vraie : 8x + 16 = 8(x + 2), multiple de 8 si x est entier."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Vérifier que si on choisit −1, le programme donne 8.",
+          "blocs": [
+            { "type": "texte", "texte": "On suit les étapes une à une, en gardant le signe :" },
+            { "type": "formule", "tex": "-1 \\times 4 = -4 \\qquad -4 + 8 = 4 \\qquad 4 \\times 2 = 8" },
+            { "type": "reponse", "texte": "En partant de −1, le programme donne bien **8**." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Le programme donne 30 comme résultat final. Quel est le nombre choisi au départ ?",
+          "blocs": [
+            { "type": "texte", "texte": "**Méthode 1 : remonter le programme** en faisant les opérations inverses dans l'ordre inverse : diviser par 2, soustraire 8, diviser par 4." },
+            { "type": "formule", "tex": "30 \\div 2 = 15 \\qquad 15 - 8 = 7 \\qquad 7 \\div 4 = 1{,}75" },
+            { "type": "texte", "texte": "**Méthode 2 : une équation.** Le résultat vaut $2(4x + 8) = 8x + 16$ :" },
+            { "type": "formule", "tex": "8x + 16 = 30 \\iff 8x = 14 \\iff x = \\frac{14}{8} = \\frac{7}{4} = 1{,}75" },
+            { "type": "reponse", "texte": "Le nombre choisi au départ est **1,75** (soit $\\frac{7}{4}$). Vérification : $1{,}75 \\times 4 = 7$, $7 + 8 = 15$, $15 \\times 2 = 30$." },
+            { "type": "astuce", "texte": "Vérifie toujours en refaisant le programme à l'endroit avec le nombre trouvé : trente secondes qui sauvent les points." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Prouver que les expressions A = 2(4x + 8) et B = (4 + x)² − x² sont égales pour toutes les valeurs de x.",
+          "blocs": [
+            { "type": "texte", "texte": "On développe et on réduit chaque expression ; si on obtient la même forme, elles sont égales pour tout $x$." },
+            { "type": "formule", "tex": "A = 2(4x + 8) = 8x + 16" },
+            { "type": "formule", "tex": "B = (4 + x)^2 - x^2 = 16 + 8x + x^2 - x^2 = 8x + 16" },
+            { "type": "reponse", "texte": "$A = 8x + 16$ et $B = 8x + 16$ : les expressions A et B sont égales pour toute valeur de $x$." },
+            { "type": "piege", "texte": "Tester avec une ou deux valeurs de $x$ ne **prouve** rien pour « toutes les valeurs » : seul le calcul littéral le fait. Et $(4 + x)^2$ n'est pas $16 + x^2$ : l'identité $(a + b)^2 = a^2 + 2ab + b^2$ donne le terme $8x$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Vrai ou faux, en justifiant. Affirmation 1 : le programme donne un résultat positif pour toutes les valeurs de x. Affirmation 2 : si x est un nombre entier, le résultat est un multiple de 8.",
+          "blocs": [
+            { "type": "texte", "texte": "**Affirmation 1.** Pour montrer qu'une affirmation « pour toutes les valeurs » est fausse, un seul **contre-exemple** suffit. Avec $x = -3$ :" },
+            { "type": "formule", "tex": "8 \\times (-3) + 16 = -24 + 16 = -8 < 0" },
+            { "type": "reponse", "texte": "Affirmation 1 : **fausse**. Pour $x = -3$, le programme donne −8, qui est négatif. (Le résultat $8x + 16$ est négatif dès que $x < -2$.)" },
+            { "type": "texte", "texte": "**Affirmation 2.** Ici il faut une preuve générale : on factorise le résultat." },
+            { "type": "formule", "tex": "8x + 16 = 8x + 8 \\times 2 = 8(x + 2)" },
+            { "type": "texte", "texte": "Si $x$ est un entier, $x + 2$ est aussi un entier, et $8(x + 2)$ est 8 multiplié par un entier." },
+            { "type": "reponse", "texte": "Affirmation 2 : **vraie**. Le résultat s'écrit $8(x + 2)$ ; quand $x$ est entier, $x + 2$ l'est aussi, donc le résultat est un multiple de 8." },
+            { "type": "attendu", "texte": "Pour le faux : un contre-exemple chiffré. Pour le vrai : la factorisation par 8, pas une liste d'exemples (8, 16, 24… ne prouve rien)." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-6",
+      "titre": "Exercice 6",
+      "nature": "exercice",
+      "enonce": "Scratch, longueurs en pixels, « s'orienter à 90 » = vers la droite. Programme : (1) quand le drapeau est cliqué, (2) aller à x : 0 y : 0, (3) stylo en position d'écriture, (4) s'orienter à 90, (5) mettre Longueur à 300, (6) Carré, (7) Triangle, (8) avancer de Longueur / 6, (9) mettre Longueur à ___, (10) Carré, (11) Triangle. Bloc Carré : répéter 4 fois (avancer de Longueur ; tourner ↺ de 90°). Bloc Triangle : répéter 3 fois (avancer de Longueur ; tourner ↺ de 120°). Échelle du dessin : 1 cm pour 50 pixels.",
+      "theme": "Scratch : carrés et homothétie",
+      "points": 16,
+      "minutes": 19,
+      "enBref": [
+        "Jusqu'à la ligne 7 : un carré de 300 px (6 cm) et, sur son côté du bas, un triangle équilatéral de 300 px dont la pointe est à l'intérieur du carré.",
+        "Après la ligne 8, le stylo est en (50 ; 0) : il a avancé de 300 / 6 = 50 px vers la droite.",
+        "Pour que la figure ait un axe de symétrie vertical, le petit carré doit mesurer 300 − 2 × 50 = 200 px : ligne 9, « mettre Longueur à 200 ».",
+        "Le petit carré est l'image du grand par une homothétie de rapport 2/3 ; le rapport des aires est (2/3)² = 4/9."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Suivre le lutin pas à pas" },
+        { "type": "texte", "texte": "Le lutin part de l'origine (0 ; 0), stylo baissé, orienté vers la droite, avec Longueur = 300. Le bloc **Carré** fait quatre fois « avancer de 300, tourner à gauche de 90° » : le carré se dessine au-dessus de l'axe des abscisses, à droite de l'origine, et après quatre quarts de tour le lutin est revenu en (0 ; 0), de nouveau orienté vers la droite. Le bloc **Triangle** fait trois fois « avancer de 300, tourner à gauche de 120° » : un triangle équilatéral dont la base est le côté du bas du carré, et dont le sommet est au-dessus, à l'intérieur du carré (la hauteur d'un triangle équilatéral de côté 300 est environ 260 < 300). Après trois tours de 120°, le lutin est de nouveau en (0 ; 0), orienté vers la droite." },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Échelle : 1 cm pour 50 pixels. a) Représenter la figure obtenue si le programme est exécuté jusqu'à la ligne 7 comprise. b) Coordonnées du stylo après la ligne 8 ?",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** À l'échelle, $300 \\div 50 = 6$ cm. On dessine un carré de 6 cm de côté, et un triangle équilatéral de 6 cm de côté qui partage avec lui son côté inférieur, pointe vers le haut à l'intérieur du carré (le sommet est à 5,2 cm de hauteur, un peu en dessous du côté supérieur)." },
+            { "type": "reponse", "texte": "a) Un carré de 6 cm de côté et, posé sur son côté du bas, un triangle équilatéral de 6 cm de côté dont la pointe est dans le carré : c'est la grande figure de l'énoncé." },
+            { "type": "texte", "texte": "**b)** Après la ligne 7 le stylo est revenu en (0 ; 0), orienté vers la droite. La ligne 8 le fait avancer de $300 \\div 6 = 50$ pixels vers la droite." },
+            { "type": "reponse", "texte": "b) Après la ligne 8, le stylo est au point de coordonnées **(50 ; 0)**." },
+            { "type": "astuce", "texte": "Pour « tourner de 90 » et « tourner de 120 » avec la flèche ↺, c'est vers la gauche : le dessin monte au-dessus du point de départ. Vérifie à chaque bloc que le lutin revient à son point de départ avec la même orientation : c'est le cas pour un polygone régulier fermé." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Le programme complet donne une figure qui possède un axe de symétrie vertical. Recopier et compléter la ligne 9.",
+          "blocs": [
+            { "type": "texte", "texte": "Le second carré part de (50 ; 0), avec la même orientation : son côté du bas va de $x = 50$ à $x = 50 + L$, où $L$ est la nouvelle valeur de Longueur. Pour que la figure soit symétrique par rapport à l'axe vertical du grand carré (la droite $x = 150$), il faut laisser le même espace à droite qu'à gauche, soit 50 pixels de chaque côté :" },
+            { "type": "formule", "tex": "L = 300 - 2 \\times 50 = 200" },
+            { "type": "reponse", "texte": "Ligne 9 : **mettre Longueur à 200**. Le petit carré va alors de $x = 50$ à $x = 250$, centré sur l'axe $x = 150$ comme le grand, et le petit triangle (de côté 200) a lui aussi sa pointe sur cet axe." },
+            { "type": "piege", "texte": "Répondre 250 (300 − 50) : le petit carré irait de 50 à 300 et toucherait le bord droit du grand, la figure ne serait plus symétrique. Il faut retirer la marge des deux côtés." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "a) Parmi translation, homothétie, rotation, symétrie axiale, quelle transformation permet d'obtenir le petit carré à partir du grand ? Préciser le rapport de réduction. b) Quel est le rapport des aires entre les deux carrés ?",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** Translation, rotation et symétrie axiale conservent les longueurs : elles donneraient un carré de même taille. Seule l'**homothétie** agrandit ou réduit une figure. Le rapport est celui des côtés :" },
+            { "type": "formule", "tex": "k = \\frac{200}{300} = \\frac{2}{3}" },
+            { "type": "reponse", "texte": "a) Le petit carré est l'image du grand par une **homothétie de rapport $\\frac{2}{3}$** (une réduction, puisque le rapport est inférieur à 1). Son centre est le milieu du côté du bas, le point (150 ; 0), par lequel les deux carrés « se regardent »." },
+            { "type": "texte", "texte": "**b)** Dans une réduction de rapport $k$, les aires sont multipliées par $k^2$ :" },
+            { "type": "formule", "tex": "\\left(\\frac{2}{3}\\right)^2 = \\frac{4}{9} \\qquad \\text{vérification : } \\frac{200^2}{300^2} = \\frac{40\\,000}{90\\,000} = \\frac{4}{9}" },
+            { "type": "reponse", "texte": "b) L'aire du petit carré est égale aux $\\frac{4}{9}$ de l'aire du grand (en cm² : 16 cm² contre 36 cm²)." },
+            { "type": "attendu", "texte": "Le nom de la transformation ET le rapport $\\frac{2}{3}$ ; pour les aires, le carré du rapport, pas le rapport lui-même : c'est l'erreur que la question cherche à repérer. Préciser le centre de l'homothétie n'est pas demandé." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-7",
+      "titre": "Exercice 7",
+      "nature": "exercice",
+      "enonce": "Le hand-spinner : sa vitesse de rotation (en tours par seconde) diminue jusqu'à l'arrêt. Le graphique montre une droite qui part de 20 tours/s à t = 0 et atteint 0 vers t = 93 s. Modèle : V(t) = −0,214 × t + V_initiale.",
+      "theme": "Fonction affine, lecture graphique",
+      "points": 17,
+      "minutes": 20,
+      "enBref": [
+        "Pas de proportionnalité : la droite ne passe pas par l'origine (à t = 0, la vitesse est 20, pas 0).",
+        "Lectures : 20 tours/s au départ ; environ 3 tours/s au bout de 1 min 20 s (80 s) ; arrêt vers 93 s.",
+        "V(30) = −0,214 × 30 + 20 = 13,58 tours/s ; V(t) = 0 pour t = 20 / 0,214 ≈ 93,5 s.",
+        "Le temps d'arrêt vaut V_initiale / 0,214 : il est proportionnel à la vitesse initiale, donc deux fois plus vite au départ = deux fois plus longtemps. Vrai pour ce modèle."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Le temps et la vitesse de rotation sont-ils proportionnels ? Justifier.",
+          "blocs": [
+            { "type": "texte", "texte": "La représentation graphique est une droite, mais elle **ne passe pas par l'origine** : à $t = 0$, la vitesse vaut 20 tours/s et non 0. De plus la vitesse diminue quand le temps augmente, ce qui est impossible pour deux grandeurs proportionnelles (positives)." },
+            { "type": "reponse", "texte": "Non : la droite ne passe pas par l'origine du repère, donc la vitesse de rotation n'est pas proportionnelle au temps. C'est une fonction affine, pas linéaire." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Par lecture graphique : a) vitesse initiale ? b) vitesse au bout de 1 min 20 s ? c) au bout de combien de temps le hand-spinner s'arrête-t-il ?",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** La vitesse initiale est l'ordonnée du point de la droite d'abscisse $t = 0$ : la droite part de 20." },
+            { "type": "reponse", "texte": "a) La vitesse de rotation initiale est **20 tours par seconde**." },
+            { "type": "texte", "texte": "**b)** D'abord convertir : 1 min 20 s = 60 + 20 = **80 s**. On repère 80 sur l'axe des temps, on monte jusqu'à la droite et on lit l'ordonnée : environ 3." },
+            { "type": "reponse", "texte": "b) Au bout de 1 min 20 s, la vitesse est d'environ **3 tours par seconde** (le calcul du 3. donnera 2,88)." },
+            { "type": "texte", "texte": "**c)** Le hand-spinner s'arrête quand la vitesse est nulle : c'est le point où la droite coupe l'axe des abscisses, un peu avant 95." },
+            { "type": "reponse", "texte": "c) Le hand-spinner s'arrête au bout d'environ **93 s** (toute lecture entre 92 et 95 s est acceptée)." },
+            { "type": "piege", "texte": "1 min 20 s, ce n'est pas 120 s ni 1,2 min : c'est 80 s. L'énoncé choisit cette écriture exprès." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "V(t) = −0,214 × t + 20. a) Vitesse au bout de 30 s ? b) Au bout de combien de temps s'arrête-t-il ? Justifier par un calcul. c) Est-il vrai que, d'une manière générale, deux fois plus vite au départ = deux fois plus longtemps ?",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** On remplace $t$ par 30 :" },
+            { "type": "formule", "tex": "V(30) = -0{,}214 \\times 30 + 20 = -6{,}42 + 20 = 13{,}58" },
+            { "type": "reponse", "texte": "a) Au bout de 30 s, la vitesse est de **13,58 tours par seconde** (cohérent avec le graphique, où on lit environ 13,5)." },
+            { "type": "texte", "texte": "**b)** Le hand-spinner s'arrête quand $V(t) = 0$. On résout l'équation :" },
+            { "type": "formule", "tex": "-0{,}214\\,t + 20 = 0 \\iff 0{,}214\\,t = 20 \\iff t = \\frac{20}{0{,}214} \\approx 93{,}46" },
+            { "type": "reponse", "texte": "b) Il s'arrête au bout d'environ **93,5 s**, soit un peu plus d'une minute et demie : c'est bien ce que donnait la lecture graphique." },
+            { "type": "texte", "texte": "**c)** On reprend le calcul du b) avec une vitesse initiale quelconque $V_{\\text{initiale}}$ :" },
+            { "type": "formule", "tex": "-0{,}214\\,t + V_{\\text{initiale}} = 0 \\iff t = \\frac{V_{\\text{initiale}}}{0{,}214}" },
+            { "type": "texte", "texte": "Le temps avant l'arrêt est **proportionnel** à la vitesse initiale (on la divise toujours par le même nombre 0,214). Si on double la vitesse initiale, le temps est doublé : par exemple, lancé à 40 tours/s, il tourne $\\frac{40}{0{,}214} \\approx 186{,}9$ s, soit exactement deux fois 93,46 s." },
+            { "type": "reponse", "texte": "c) Oui, c'est vrai avec ce modèle : le temps d'arrêt $\\dfrac{V_{\\text{initiale}}}{0{,}214}$ est proportionnel à la vitesse initiale, donc un lancer deux fois plus rapide fait tourner le hand-spinner deux fois plus longtemps." },
+            { "type": "attendu", "texte": "Pour le c), le mot « général » demande un raisonnement avec $V_{\\text{initiale}}$ en lettre, ou au moins un calcul avec 40 tours/s comparé à celui de 20 tours/s et la phrase « le temps est proportionnel à la vitesse initiale ». Un seul exemple sans cette phrase ne couvre pas « d'une manière générale »." }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,309 @@
+{
+  "id": "maths-brevet-2023-metropole",
+  "matiere": "maths",
+  "niveau": "3e",
+  "examen": "brevet",
+  "annee": 2023,
+  "centre": "Métropole",
+  "jour": null,
+  "code": "23GENMATMEAG1",
+  "titre": "Brevet 2023 — Mathématiques",
+  "dureeMin": 120,
+  "coefficient": null,
+  "consigne": "Série générale, calculatrice autorisée : cinq exercices de 20 points chacun, sur 100 points. Toutes les réponses doivent être justifiées sauf indication contraire (le QCM de l'exercice 3) ; une trace de recherche, même inachevée, compte.",
+  "parties": [
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "Un opticien a vendu cinq modèles de lunettes de soleil en 2022 (tableur, colonnes B à F) : 1 200 paires à 75 €, 950 à 100 €, 875 à 110 €, 250 à 140 €, 300 à 160 €. La cellule G2 doit contenir le total des paires vendues.",
+      "theme": "Tableur, étendue, moyenne",
+      "points": 20,
+      "minutes": 20,
+      "enBref": [
+        "Étendue des prix : 160 − 75 = 85 €.",
+        "G2 : =SOMME(B2:F2) ; total : 3 575 paires.",
+        "Montant des ventes : 364 250 € ; prix moyen : 364 250 / 3 575 ≈ 101,89 €."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Montrer que l'étendue des prix est de 85 euros.",
+          "blocs": [
+            { "type": "texte", "texte": "L'étendue est l'écart entre le prix le plus élevé (modèle 5, 160 €) et le plus bas (modèle 1, 75 €)." },
+            { "type": "formule", "tex": "160 - 75 = 85" },
+            { "type": "reponse", "texte": "L'étendue des prix est bien de **85 €**." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "a) Quelle formule saisir en G2 pour le nombre total de paires vendues ? b) Calculer ce total.",
+          "blocs": [
+            { "type": "code", "langage": "texte", "code": "=SOMME(B2:F2)\n\nou bien\n\n=B2+C2+D2+E2+F2" },
+            { "type": "reponse", "texte": "a) En G2 : **=SOMME(B2:F2)**." },
+            { "type": "formule", "tex": "1\\,200 + 950 + 875 + 250 + 300 = 3\\,575" },
+            { "type": "reponse", "texte": "b) L'opticien a vendu **3 575 paires** de lunettes de soleil en 2022." },
+            { "type": "piege", "texte": "La plage s'arrête en F2 : G2 est la cellule où l'on écrit, et la ligne 3 (les prix) n'a rien à faire dans ce total." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "a) Calculer le montant total des ventes en euros. b) Calculer le prix moyen d'une paire vendue, au centime près.",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** Pour chaque modèle, le montant est nombre de paires × prix unitaire ; on additionne les cinq montants." },
+            { "type": "tableau", "entetes": ["Modèle", "Calcul", "Montant"], "lignes": [
+              ["1", "1 200 × 75", "90 000 €"],
+              ["2", "950 × 100", "95 000 €"],
+              ["3", "875 × 110", "96 250 €"],
+              ["4", "250 × 140", "35 000 €"],
+              ["5", "300 × 160", "48 000 €"],
+              ["Total", "", "364 250 €"]
+            ] },
+            { "type": "reponse", "texte": "a) Le montant total des ventes est de **364 250 €**." },
+            { "type": "texte", "texte": "**b)** Le prix moyen d'une paire vendue est le montant total divisé par le nombre de paires : c'est une **moyenne pondérée** par les quantités, pas la moyenne des cinq prix." },
+            { "type": "formule", "tex": "\\frac{364\\,250}{3\\,575} \\approx 101{,}888 \\approx 101{,}89" },
+            { "type": "reponse", "texte": "b) Le prix moyen d'une paire vendue est d'environ **101,89 €**." },
+            { "type": "piege", "texte": "La moyenne des cinq prix, (75 + 100 + 110 + 140 + 160) / 5 = 117 €, est fausse : le modèle à 75 € s'est vendu quatre fois plus que celui à 160 €, il pèse plus dans la moyenne. On divise le chiffre d'affaires par le nombre de paires." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "BCDE est un rectangle, BAE un triangle rectangle en A ; la perpendiculaire à (CD) passant par A coupe (CD) en H ; (AE) et (CD) se coupent en F. AB = BC = 4,2 cm ; EB = EF = 7 cm.",
+      "theme": "Pythagore, Thalès, aires",
+      "points": 20,
+      "minutes": 25,
+      "enBref": [
+        "Aire de BCDE : 4,2 × 7 = 29,4 cm².",
+        "Pythagore dans BAE : AE² = 7² − 4,2² = 31,36, AE = 5,6 cm ; aire de ABE : 4,2 × 5,6 / 2 = 11,76 cm².",
+        "(ED) et (HA) sont toutes deux perpendiculaires à (CD), donc parallèles ; Thalès dans FED / FHA : AH = 4,2 × 12,6 / 7 = 7,56 cm."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Montrer que l'aire du rectangle BCDE est égale à 29,4 cm².",
+          "blocs": [
+            { "type": "texte", "texte": "Les côtés du rectangle sont $BC = 4{,}2$ cm et $BE = 7$ cm." },
+            { "type": "formule", "tex": "\\mathcal{A}_{BCDE} = BC \\times BE = 4{,}2 \\times 7 = 29{,}4 \\text{ cm}^2" },
+            { "type": "reponse", "texte": "L'aire du rectangle BCDE est $4{,}2 \\times 7 = 29{,}4$ cm²." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "a) Montrer que AE = 5,6 cm. b) Calculer l'aire du triangle rectangle ABE.",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** Le triangle BAE est rectangle en A : son hypoténuse est $[BE]$. Théorème de Pythagore :" },
+            { "type": "formule", "tex": "BE^2 = AB^2 + AE^2 \\quad \\Longrightarrow \\quad AE^2 = 7^2 - 4{,}2^2 = 49 - 17{,}64 = 31{,}36" },
+            { "type": "formule", "tex": "AE = \\sqrt{31{,}36} = 5{,}6 \\text{ cm}" },
+            { "type": "reponse", "texte": "a) D'après le théorème de Pythagore dans BAE rectangle en A, $AE = 5{,}6$ cm." },
+            { "type": "texte", "texte": "**b)** Dans un triangle rectangle, les deux côtés de l'angle droit jouent le rôle de base et de hauteur." },
+            { "type": "formule", "tex": "\\mathcal{A}_{ABE} = \\frac{AB \\times AE}{2} = \\frac{4{,}2 \\times 5{,}6}{2} = \\frac{23{,}52}{2} = 11{,}76 \\text{ cm}^2" },
+            { "type": "reponse", "texte": "b) L'aire du triangle ABE est de **11,76 cm²**." },
+            { "type": "attendu", "texte": "Pour « montrer que AE = 5,6 », le correcteur veut voir l'égalité de Pythagore écrite avec l'hypoténuse isolée, puis la racine carrée : écrire « 5,6² + 4,2² = 49 » est une vérification, pas une démonstration (on part de ce qu'on veut prouver)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "a) Montrer que (ED) et (HA) sont parallèles. b) Calculer AH.",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** BCDE est un rectangle, donc $(ED) \\perp (CD)$. Par construction, $(AH) \\perp (CD)$. Deux droites perpendiculaires à une même droite sont parallèles." },
+            { "type": "reponse", "texte": "a) $(ED)$ et $(HA)$ sont toutes deux perpendiculaires à $(CD)$, donc **(ED) // (HA)**." },
+            { "type": "texte", "texte": "**b)** Les points F, E, A sont alignés, F, D, H aussi, et (ED) // (HA) : théorème de Thalès dans les triangles FED et FHA. On a besoin de $FA = FE + EA = 7 + 5{,}6 = 12{,}6$ cm et de $ED = BC = 4{,}2$ cm (côtés opposés du rectangle)." },
+            { "type": "formule", "tex": "\\frac{FE}{FA} = \\frac{FD}{FH} = \\frac{ED}{HA} \\quad \\Longrightarrow \\quad \\frac{7}{12{,}6} = \\frac{4{,}2}{HA}" },
+            { "type": "formule", "tex": "HA = \\frac{4{,}2 \\times 12{,}6}{7} = 7{,}56 \\text{ cm}" },
+            { "type": "reponse", "texte": "b) D'après le théorème de Thalès, **AH = 7,56 cm**." },
+            { "type": "astuce", "texte": "Contrôle : AH dépasse ED (4,2) de la hauteur du triangle ABE issue de A, qui vaut $\\frac{2 \\times 11{,}76}{7} = 3{,}36$ ; et $4{,}2 + 3{,}36 = 7{,}56$. Les questions d'un exercice se répondent souvent entre elles." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "QCM sans justification, cinq questions : 60 % de 25 élèves ; la décomposition de 126 ; un sac de 17 jetons rouges, 23 jaunes et 20 bleus ; l'image de [DC] dans l'octogone régulier ABCDEFGH de centre O par la rotation qui transforme A en D ; le volume d'un pavé droit de 2 m × 1,3 m × 1,5 m.",
+      "theme": "QCM : arithmétique, rotation, volume",
+      "points": 20,
+      "minutes": 15,
+      "enBref": [
+        "1 : 25 × 0,6 = 15 filles (B). 2 : 126 = 2 × 3² × 7 (C). 3 : (17 + 23) / 60 = 2/3 (A).",
+        "4 : la rotation qui envoie A sur D décale de trois sommets ; D va sur G et C sur F : [GF] (B).",
+        "5 : 2 × 1,3 × 1,5 = 3,9 m³ = 3 900 L (B)."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Dans une classe de 25 élèves, 60 % sont des filles. Combien de filles ?",
+          "blocs": [
+            { "type": "formule", "tex": "25 \\times \\frac{60}{100} = 15" },
+            { "type": "reponse", "texte": "**Réponse B** : 15 filles." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Quelle est la décomposition en produit de facteurs premiers de 126 ?",
+          "blocs": [
+            { "type": "texte", "texte": "$2 \\times 9 \\times 7$ vaut bien 126 mais 9 n'est pas premier ; $2^2 \\times 5^2 + 2 \\times 13 = 100 + 26 = 126$ est une somme, pas un produit." },
+            { "type": "reponse", "texte": "**Réponse C** : $126 = 2 \\times 3^2 \\times 7$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Sac : 17 rouges, 23 jaunes, 20 bleus. Probabilité d'obtenir un jeton rouge ou jaune ?",
+          "blocs": [
+            { "type": "formule", "tex": "P = \\frac{17 + 23}{17 + 23 + 20} = \\frac{40}{60} = \\frac{2}{3}" },
+            { "type": "reponse", "texte": "**Réponse A** : $\\dfrac{2}{3}$." },
+            { "type": "piege", "texte": "$\\frac{17}{23}$ (réponse C) ne veut rien dire : une probabilité se calcule sur le total des jetons, 60. Et 0,6 serait $\\frac{36}{60}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Octogone régulier ABCDEFGH de centre O : image du segment [DC] par la rotation de centre O qui transforme A en D ?",
+          "blocs": [
+            { "type": "texte", "texte": "Pour aller de A à D, on avance de trois sommets (A → B → C → D) dans le sens inverse des aiguilles d'une montre : c'est une rotation de $3 \\times 45° = 135°$ autour de O. Elle fait avancer chaque sommet de trois rangs : D → E → F → G, et C → D → E → F." },
+            { "type": "reponse", "texte": "**Réponse B** : l'image de [DC] est le segment [GF]." },
+            { "type": "astuce", "texte": "Sur un polygone régulier, une rotation de centre O qui envoie un sommet sur un autre décale tous les sommets du même nombre de rangs, dans le même sens. Compte les rangs avec le doigt." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Volume d'un pavé droit de hauteur 1,5 m et de base 2 m × 1,3 m (1 m³ = 1 000 L) ?",
+          "blocs": [
+            { "type": "formule", "tex": "V = 2 \\times 1{,}3 \\times 1{,}5 = 3{,}9 \\text{ m}^3 = 3\\,900 \\text{ L}" },
+            { "type": "reponse", "texte": "**Réponse B** : 3 900 L." },
+            { "type": "piege", "texte": "2,6 m³ (réponse A) est l'aire de la base, 2 × 1,3, sans la hauteur." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-4",
+      "titre": "Exercice 4",
+      "nature": "exercice",
+      "enonce": "Un escalier de 272 cm de haut : marches de 17 cm de hauteur et 27 cm de profondeur ; vue de profil, A en bas, B au pied du mur, C en haut (ABC rectangle en B). Programme Scratch : (2) s'orienter à 90, (3) effacer tout, (4) stylo en position d'écriture, (5) répéter … fois, (6) tourner ↺ de … degrés, (7) avancer de … pas, (8) tourner ↻ de 90 degrés, (9) avancer de … pas. 1 cm = 1 pas.",
+      "theme": "Trigonométrie et Scratch",
+      "points": 20,
+      "minutes": 20,
+      "enBref": [
+        "272 / 17 = 16 marches ; AB = 16 × 27 = 432 cm.",
+        "tan(BAC) = 272 / 432 ≈ 0,63, donc BAC ≈ 32°, compris entre 25° et 40° : montée agréable.",
+        "Scratch : répéter 16 fois ; tourner ↺ de 90 degrés ; avancer de 17 pas ; (tourner ↻ de 90) ; avancer de 27 pas."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "a) Montrer qu'il faut 16 marches. b) Montrer que AB = 432 cm.",
+          "blocs": [
+            { "type": "formule", "tex": "\\frac{272}{17} = 16" },
+            { "type": "reponse", "texte": "a) Les marches font 17 cm de haut et l'escalier 272 cm : il faut $272 \\div 17 = 16$ marches." },
+            { "type": "texte", "texte": "**b)** Sur la vue de profil, la longueur AB est la somme des profondeurs des 16 marches (la dernière marche se termine au mur, en C)." },
+            { "type": "formule", "tex": "AB = 16 \\times 27 = 432 \\text{ cm}" },
+            { "type": "reponse", "texte": "b) $AB = 16 \\times 27 = 432$ cm." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "L'angle BAC doit être compris entre 25° et 40°. a) Calculer BAC au degré près. b) La montée est-elle agréable ?",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** Dans le triangle ABC rectangle en B, on connaît le côté opposé à $\\widehat{BAC}$ ($BC = 272$) et le côté adjacent ($AB = 432$) : tangente." },
+            { "type": "formule", "tex": "\\tan\\widehat{BAC} = \\frac{BC}{AB} = \\frac{272}{432} \\approx 0{,}630 \\quad \\Longrightarrow \\quad \\widehat{BAC} \\approx 32°" },
+            { "type": "reponse", "texte": "a) $\\widehat{BAC} \\approx 32°$." },
+            { "type": "reponse", "texte": "b) Oui : 32° est compris entre 25° et 40°, la montée est agréable." },
+            { "type": "astuce", "texte": "Le rapport $\\frac{272}{432}$ est aussi $\\frac{17}{27}$, la hauteur d'une marche sur sa profondeur : la pente d'une marche est la pente de l'escalier. Calculatrice en degrés, touche tan⁻¹." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Compléter les lignes 5, 6, 7 et 9 du programme Scratch qui dessine l'escalier.",
+          "blocs": [
+            { "type": "texte", "texte": "Le stylo est orienté vers la droite (ligne 2). Pour chaque marche, il doit monter de 17 (contremarche) puis avancer de 27 (giron) vers la droite. Monter, c'est tourner d'un quart de tour vers la gauche (↺ 90) puis avancer ; la ligne 8 (↻ 90) le remet vers la droite avant le giron. Il y a 16 marches." },
+            { "type": "code", "langage": "texte", "code": "5  répéter 16 fois\n6      tourner ↺ de 90 degrés\n7      avancer de 17 pas\n8      tourner ↻ de 90 degrés\n9      avancer de 27 pas" },
+            { "type": "reponse", "texte": "Ligne 5 : **16** ; ligne 6 : **90** ; ligne 7 : **17** ; ligne 9 : **27**." },
+            { "type": "piege", "texte": "Ne pas inverser 17 et 27 : la ligne 7 vient juste après le virage vers le haut, c'est la hauteur de la marche. Vérifie avec la première marche : monter de 17, puis avancer de 27 vers la droite." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-5",
+      "titre": "Exercice 5",
+      "nature": "exercice",
+      "enonce": "Programme A : choisir un nombre, le multiplier par −2, ajouter 5. Programme B : choisir un nombre, soustraire 5, multiplier par 3, ajouter 11. Les fonctions f(x) = −2x + 5 et g(x) = 3x − 4 sont représentées par deux droites (D1), croissante, et (D2), décroissante, qui se coupent entre x = 1 et x = 2.",
+      "theme": "Programmes et fonctions affines",
+      "points": 20,
+      "minutes": 20,
+      "enBref": [
+        "A(−3) = 6 + 5 = 11 ; B(5,5) = 0,5 × 3 + 11 = 12,5.",
+        "B : 3(x − 5) + 11 = 3x − 15 + 11 = 3x − 4.",
+        "f a un coefficient directeur négatif : (D2) ; g est croissante : (D1). Les droites se coupent vers x ≈ 1,8.",
+        "−2x + 5 = 3x − 4 donne 5x = 9, x = 1,8 : les deux programmes donnent alors 1,4."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "a) Montrer qu'avec −3 au départ, le programme A donne 11. b) Résultat du programme B avec 5,5 ?",
+          "blocs": [
+            { "type": "formule", "tex": "\\text{A : } (-3) \\times (-2) = 6, \\quad 6 + 5 = 11" },
+            { "type": "reponse", "texte": "a) Avec −3, le programme A donne bien **11**." },
+            { "type": "formule", "tex": "\\text{B : } 5{,}5 - 5 = 0{,}5, \\quad 0{,}5 \\times 3 = 1{,}5, \\quad 1{,}5 + 11 = 12{,}5" },
+            { "type": "reponse", "texte": "b) Avec 5,5, le programme B donne **12,5**." },
+            { "type": "piege", "texte": "Moins par moins donne plus : $(-3) \\times (-2) = +6$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Le programme A donne −2x + 5. Montrer que le programme B donne 3x − 4.",
+          "blocs": [
+            { "type": "texte", "texte": "On traduit les étapes de B avec $x$ : soustraire 5 : $x - 5$ ; multiplier par 3 : $3(x - 5)$ ; ajouter 11 :" },
+            { "type": "formule", "tex": "3(x - 5) + 11 = 3x - 15 + 11 = 3x - 4" },
+            { "type": "reponse", "texte": "Le résultat du programme B est $3(x - 5) + 11 = 3x - 4$." },
+            { "type": "attendu", "texte": "Les parenthèses autour de $x - 5$ : c'est tout le résultat de l'étape 2 qui est multiplié par 3. Écrire $x - 5 \\times 3$ est l'erreur que la question cherche." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "a) Associer chaque droite à sa fonction, en justifiant. b) Par lecture graphique, donner le nombre qui a la même image par f et par g.",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** $f(x) = -2x + 5$ a un coefficient directeur négatif (−2) : sa droite **descend** ; elle coupe l'axe des ordonnées en 5. $g(x) = 3x - 4$ a un coefficient directeur positif : sa droite **monte** et passe par (0 ; −4). Sur le graphique, (D1) monte et passe par −4 sur l'axe vertical ; (D2) descend et passe par 5." },
+            { "type": "reponse", "texte": "a) **(D1) représente g** (croissante, ordonnée à l'origine −4) et **(D2) représente f** (décroissante, ordonnée à l'origine 5)." },
+            { "type": "texte", "texte": "**b)** Le nombre qui a la même image par f et par g est l'abscisse du **point d'intersection** des deux droites. Il est entre 1 et 2, plus près de 2 : environ 1,8 (son ordonnée, l'image commune, est environ 1,4)." },
+            { "type": "reponse", "texte": "b) Par lecture graphique, le nombre cherché est environ **1,8**." },
+            { "type": "astuce", "texte": "Deux arguments valent mieux qu'un pour associer : le sens de variation (signe du coefficient directeur) ET l'ordonnée à l'origine. Ou calcule une image, f(2) = 1, et regarde quelle droite passe par (2 ; 1)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Déterminer par le calcul le nombre de départ pour lequel les programmes A et B donnent le même résultat.",
+          "blocs": [
+            { "type": "texte", "texte": "On résout $f(x) = g(x)$ :" },
+            { "type": "formule", "tex": "-2x + 5 = 3x - 4 \\iff 5 + 4 = 3x + 2x \\iff 9 = 5x \\iff x = \\frac{9}{5} = 1{,}8" },
+            { "type": "texte", "texte": "Vérification : $f(1{,}8) = -3{,}6 + 5 = 1{,}4$ et $g(1{,}8) = 5{,}4 - 4 = 1{,}4$." },
+            { "type": "reponse", "texte": "Les deux programmes donnent le même résultat (1,4) pour le nombre de départ **1,8**, ce qui confirme la lecture graphique." },
+            { "type": "attendu", "texte": "« Par le calcul » : l'équation posée et résolue, pas une lecture graphique améliorée. La cohérence avec le 3.b est un plus à signaler en une phrase." }
+          ]
+        }
+      ]
+    }
+  ]
+}

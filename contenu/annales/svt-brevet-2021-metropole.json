@@ -1,0 +1,82 @@
+{
+  "id": "svt-brevet-2021-metropole",
+  "matiere": "svt",
+  "niveau": "3e",
+  "examen": "brevet",
+  "annee": 2021,
+  "centre": "Métropole",
+  "jour": null,
+  "code": "21GENSCMEAG1",
+  "titre": "Brevet 2021 — Sciences : SVT",
+  "dureeMin": 30,
+  "coefficient": null,
+  "consigne": "L'épreuve de sciences du brevet réunit deux disciplines sur la même copie, en 1 h et sur 50 points : la SVT (30 minutes, 25 points), corrigée ici, et la physique-chimie (30 minutes, 25 points, corrigée à part). Calculatrice autorisée. Les essais et les démarches, même non aboutis, comptent.",
+  "parties": [
+    {
+      "id": "svt",
+      "titre": "SVT",
+      "nature": "exercice",
+      "enonce": "Les plantes à feuilles rouges font-elles la photosynthèse ? Document 1 : chromatogrammes d'une feuille verte (carotènes, xanthophylles, chlorophylles a et b, tous marqués « impliqués dans la photosynthèse ») et d'une feuille rouge (les mêmes, plus des anthocyanes, « non impliquées dans la photosynthèse »). Document 2 : deux jours d'obscurité vident les feuilles de leur amidon. Document 3 : trois expériences au test à l'eau iodée (jaune, vire au violet-noir avec l'amidon) : expérience 1, une plante rouge à la lumière et une plante verte à l'obscurité ; expérience 2, deux plantes rouges, une à la lumière, une à l'obscurité ; expérience 3, une plante rouge à la lumière. Document 4 : feuilles verte, rouge, panachée verte-blanche et panachée rouge-blanche, cultivées à la lumière ; les parties blanches n'ont pas de pigments.",
+      "theme": "Photosynthèse et pigments",
+      "points": 25,
+      "minutes": 30,
+      "enBref": [
+        "Question 1 : la feuille rouge contient les mêmes pigments de photosynthèse que la verte (chlorophylles a et b, carotènes, xanthophylles) ; sa couleur vient des anthocyanes, présentes seulement chez elle.",
+        "Question 2 : l'expérience 2, la seule qui compare deux plantes rouges identiques dont seule l'exposition à la lumière change.",
+        "Question 3 : à l'eau iodée, les feuilles vertes et rouges noircissent entièrement ; sur les feuilles panachées, seules les parties colorées noircissent, les parties blanches restent jaunes : pas de pigments, pas de photosynthèse, pas d'amidon."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Lire le sujet avant d'écrire" },
+        { "type": "texte", "texte": "Une question centrale : une feuille rouge, qui n'a pas l'air verte, fait-elle quand même la photosynthèse ? Le document 1 répond par les **pigments**, le document 3 par la **méthode expérimentale**, le document 4 par les **feuilles panachées**. Deux idées de cours à mobiliser : la photosynthèse a besoin de lumière et de chlorophylle ; elle produit du sucre stocké sous forme d'**amidon**, que l'eau iodée colore en violet-noir." },
+        { "type": "astuce", "texte": "Barème : 8 + 8 + 9. La question 3 autorise les schémas légendés : quatre feuilles dessinées avec leurs zones colorées en noir ou laissées jaunes, c'est rapide et très lisible pour le correcteur." },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "À partir des chromatogrammes du document 1, montrer que les feuilles rouges ont des pigments permettant la photosynthèse, et citer les pigments qui pourraient être responsables de leur couleur rouge.",
+          "points": 8,
+          "blocs": [
+            { "type": "texte", "texte": "**Lire les deux chromatogrammes.** Pour la feuille verte, quatre taches, de haut en bas : carotènes, xanthophylles (deux taches), chlorophylles a et chlorophylles b ; les quatre sont marquées d'un astérisque, « pigments impliqués dans la photosynthèse ». Pour la feuille rouge, on retrouve **exactement les mêmes quatre pigments** à la même hauteur, plus une tache supplémentaire en bas : les **anthocyanes**, marquées de deux astérisques, « non impliquées dans la photosynthèse »." },
+            { "type": "texte", "texte": "**En déduire.** La feuille rouge possède les chlorophylles a et b, les carotènes et les xanthophylles : elle a tout ce qu'il faut pour capter la lumière et faire la photosynthèse, même si on ne voit pas sa couleur verte. Ce qui la distingue, c'est la présence des anthocyanes : ce pigment, absent de la feuille verte, est donc le candidat pour expliquer la couleur rouge, qui masque le vert des chlorophylles." },
+            { "type": "reponse", "texte": "Le document 1 montre que la feuille rouge contient les mêmes pigments de la photosynthèse que la feuille verte (chlorophylles a et b, carotènes, xanthophylles) : elle dispose donc des pigments permettant la photosynthèse. Elle contient en plus des **anthocyanes**, absentes de la feuille verte et non impliquées dans la photosynthèse : ce sont elles qui pourraient être responsables de la couleur rouge." },
+            { "type": "attendu", "texte": "Deux parties bien séparées, comme la question. Pour la première, citer les noms des pigments communs ET dire qu'ils sont « impliqués dans la photosynthèse » (la légende) ; pour la seconde, le raisonnement « présent chez la rouge, absent chez la verte »." },
+            { "type": "piege", "texte": "Ne pas attribuer le rouge aux carotènes ou aux xanthophylles (orangés) : ils sont aussi dans la feuille verte, ils ne peuvent pas expliquer une différence de couleur." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "À l'aide des documents 2 et 3, indiquer l'expérience qui permet de tester l'hypothèse « la lumière est nécessaire pour que les plantes à feuilles rouges produisent de l'amidon grâce à la photosynthèse ». Justifier.",
+          "points": 8,
+          "blocs": [
+            { "type": "texte", "texte": "**La règle.** Pour tester le rôle d'un facteur (ici la lumière), on compare deux situations **identiques en tout** sauf ce facteur : même type de plante, même durée, même préparation. Le document 2 explique la préparation commune : trois jours d'obscurité pour vider les feuilles de leur amidon, afin que l'amidon détecté ensuite soit bien celui produit pendant l'expérience." },
+            { "type": "tableau", "entetes": ["Expérience", "Ce qui est comparé", "Verdict"], "lignes": [
+              ["1", "une plante ROUGE à la lumière et une plante VERTE à l'obscurité", "deux facteurs changent à la fois (couleur de la plante et lumière) : on ne saurait pas lequel explique le résultat"],
+              ["2", "deux plantes ROUGES, l'une à la lumière, l'autre à l'obscurité", "un seul facteur varie, la lumière, chez des plantes rouges : c'est celle-là"],
+              ["3", "une seule plante rouge à la lumière", "pas de témoin à l'obscurité : impossible de conclure sur le rôle de la lumière"]
+            ] },
+            { "type": "reponse", "texte": "C'est l'**expérience 2**. Elle compare deux plantes à feuilles rouges, préparées de la même façon (trois jours d'obscurité, document 2), dont une seule différence : l'une est ensuite placée six heures à la lumière, l'autre à l'obscurité. Si seule la feuille de la plante éclairée noircit à l'eau iodée, la lumière est bien nécessaire à la production d'amidon. L'expérience 1 change deux choses à la fois (couleur et lumière), l'expérience 3 n'a pas de témoin." },
+            { "type": "astuce", "texte": "Pour justifier un choix d'expérience, dis toujours pourquoi les deux autres ne conviennent pas : c'est là que se gagnent les points de « justification »." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Avec tous les documents : donner les résultats attendus des tests à l'eau iodée pour les feuilles des quatre expériences du document 4 (schémas légendés et/ou texte), et expliquer la production d'amidon ou son absence dans les différentes parties des feuilles.",
+          "points": 9,
+          "blocs": [
+            { "type": "texte", "texte": "**Le raisonnement.** Toutes les feuilles sont à la lumière, avec eau et sels minéraux (document 4). La photosynthèse, donc la production d'amidon, a lieu là où il y a des **pigments chlorophylliens fonctionnels** : dans les parties vertes, et dans les parties rouges (document 1 et énoncé : les chlorophylles des feuilles rouges sont fonctionnelles). Les parties blanches n'ont aucun pigment (document 4) : pas de capture de lumière, pas de photosynthèse, pas d'amidon." },
+            { "type": "tableau", "entetes": ["Expérience", "Feuille", "Résultat du test à l'eau iodée", "Explication"], "lignes": [
+              ["1", "verte", "toute la feuille violet-noir", "chlorophylles partout : photosynthèse et amidon partout"],
+              ["2", "rouge", "toute la feuille violet-noir", "chlorophylles présentes et fonctionnelles sous les anthocyanes : amidon partout"],
+              ["3", "panachée verte et blanche", "parties vertes violet-noir, parties blanches restent jaunes", "amidon seulement là où il y a des pigments"],
+              ["4", "panachée rouge et blanche", "parties rouges violet-noir, parties blanches restent jaunes", "même raison : le rouge contient des chlorophylles, le blanc non"]
+            ] },
+            { "type": "reponse", "texte": "Quatre schémas de feuilles légendés (« zone violet-noir : amidon présent », « zone jaune : pas d'amidon »), ou le tableau ci-dessus, suivis de l'explication : l'amidon est produit par la photosynthèse, qui exige de la lumière (question 2) et des pigments chlorophylliens ; les feuilles vertes et rouges en contiennent partout, elles noircissent entièrement ; dans les feuilles panachées, seules les zones colorées en possèdent, les zones blanches, sans pigment, ne produisent pas d'amidon et restent jaunes." },
+            { "type": "attendu", "texte": "Les quatre résultats ET l'explication : la moitié des 9 points pour chaque partie. La feuille rouge entièrement noire est le résultat clé du sujet (il répond à la question de départ) ; la feuille panachée rouge-blanche montre que tu as compris que c'est l'absence de pigment, pas la couleur rouge, qui empêche la photosynthèse." },
+            { "type": "piege", "texte": "Prévoir une feuille rouge qui reste jaune « parce qu'elle n'est pas verte » contredit toute la première partie du sujet. Et n'oublie pas de rappeler que les feuilles sont à la lumière : sans cette condition, aucun amidon nulle part." }
+          ]
+        }
+      ]
+    }
+  ]
+}

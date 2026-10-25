@@ -1,0 +1,400 @@
+{
+  "id": "maths-brevet-2017-metropole",
+  "matiere": "maths",
+  "niveau": "3e",
+  "examen": "brevet",
+  "annee": 2017,
+  "centre": "Métropole",
+  "jour": null,
+  "code": "17GENMATMEAG1",
+  "titre": "Brevet 2017 — Mathématiques",
+  "dureeMin": 120,
+  "coefficient": null,
+  "consigne": "Première épreuve du brevet « nouvelle formule » de 2017, notée sur 50 points (plus 5 points de présentation et de langue), calculatrice autorisée : sept exercices indépendants autour de la thématique commune maths-sciences « l'énergie ». Tout est à traiter, dans l'ordre que tu veux ; toute trace de recherche compte.",
+  "parties": [
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "Probabilités : une urne contient des boules vertes et des boules bleues ; on tire une boule, on note sa couleur, on la remet. La probabilité d'obtenir une boule verte est 2/5.",
+      "theme": "Probabilités",
+      "points": 4,
+      "minutes": 10,
+      "enBref": [
+        "Il n'y a que deux couleurs : P(bleue) = 1 − P(verte) = 1 − 2/5 = 3/5. Ce sont des événements contraires.",
+        "Avec remise, chaque tirage est indépendant des précédents : au 7e tirage, la boule bleue garde sa probabilité 3/5, supérieure à 2/5, mais ce n'est pas « à cause » des six vertes.",
+        "8 boules vertes représentent 2/5 de l'urne : l'urne contient 20 boules, donc 12 bleues."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Expliquer pourquoi la probabilité d'obtenir une boule bleue est égale à 3/5.",
+          "blocs": [
+            { "type": "texte", "texte": "L'urne ne contient que des boules vertes et des boules bleues : « obtenir une boule bleue » est l'**événement contraire** de « obtenir une boule verte ». Les probabilités de deux événements contraires s'ajoutent pour donner 1." },
+            { "type": "formule", "tex": "P(\\text{bleue}) = 1 - P(\\text{verte}) = 1 - \\frac{2}{5} = \\frac{5}{5} - \\frac{2}{5} = \\frac{3}{5}" },
+            { "type": "reponse", "texte": "Comme il n'y a que deux couleurs, $P(\\text{bleue}) = 1 - \\frac{2}{5} = \\frac{3}{5}$." },
+            { "type": "attendu", "texte": "Le mot « contraire » (ou la phrase « il n'y a que deux couleurs ») et le calcul $1 - \\frac{2}{5}$. Écrire seulement « 3/5 » sans justifier ne rapporte rien : la question dit « expliquer »." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Paul a obtenu une boule verte à chacun de ses 6 tirages. Au 7e tirage, aura-t-il plus de chances d'obtenir une boule bleue qu'une boule verte ?",
+          "blocs": [
+            { "type": "texte", "texte": "La boule est **remise** dans l'urne et les boules sont mélangées après chaque tirage : l'urne est exactement la même au 7e tirage qu'au premier. Les tirages sont **indépendants** : ce qui s'est passé avant ne change rien aux probabilités." },
+            { "type": "texte", "texte": "Au 7e tirage, $P(\\text{bleue}) = \\frac{3}{5}$ et $P(\\text{verte}) = \\frac{2}{5}$, comme à chaque tirage. Comme $\\frac{3}{5} > \\frac{2}{5}$, la boule bleue est plus probable." },
+            { "type": "reponse", "texte": "Oui, Paul a plus de chances d'obtenir une boule bleue ($\\frac{3}{5}$) qu'une boule verte ($\\frac{2}{5}$), mais c'était déjà le cas à chaque tirage : les six boules vertes précédentes n'y changent rien, puisque la boule est remise à chaque fois." },
+            { "type": "piege", "texte": "Répondre « oui, parce qu'après six vertes, une bleue doit sortir » : c'est faux, le hasard n'a pas de mémoire. La bonne raison est $\\frac{3}{5} > \\frac{2}{5}$, valable à tous les tirages." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Déterminer le nombre de boules bleues sachant qu'il y a 8 boules vertes.",
+          "blocs": [
+            { "type": "texte", "texte": "Appelons $n$ le nombre total de boules. La probabilité d'une verte est le nombre de vertes divisé par le total :" },
+            { "type": "formule", "tex": "\\frac{8}{n} = \\frac{2}{5} \\quad \\Longrightarrow \\quad n = \\frac{8 \\times 5}{2} = 20" },
+            { "type": "texte", "texte": "L'urne contient 20 boules, dont 8 vertes. Le nombre de bleues est donc $20 - 8 = 12$. Vérification : $\\frac{12}{20} = \\frac{3}{5}$, c'est bien la probabilité trouvée à la question 1." },
+            { "type": "reponse", "texte": "L'urne contient **12 boules bleues**." },
+            { "type": "astuce", "texte": "Autre chemin, sans équation : 8 vertes correspondent à $\\frac{2}{5}$, donc $\\frac{1}{5}$ de l'urne vaut 4 boules, et les bleues ($\\frac{3}{5}$) sont $3 \\times 4 = 12$." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "Scratch : un programme trace plusieurs triangles équilatéraux. Script : quand le drapeau est cliqué (1), effacer tout (2), aller à x : −200 y : −100 (3), s'orienter à 90 (4), mettre côté à 100 (5), répéter 5 fois (6) : triangle (7), avancer de côté (8), ajouter à côté −20 (9). Le bloc « triangle » : stylo en position d'écriture, répéter 3 fois (avancer de côté ; tourner de 120 degrés), relever le stylo.",
+      "theme": "Scratch : triangles équilatéraux",
+      "points": 6,
+      "minutes": 15,
+      "enBref": [
+        "Le tracé part du point (−200 ; −100), orienté vers la droite.",
+        "La boucle « répéter 5 fois » dessine 5 triangles, de côtés 100, 80, 60, 40 et 20 pixels, posés les uns à côté des autres sur une même ligne.",
+        "Le deuxième triangle a un côté de 80 pixels : après le premier, la variable côté a perdu 20.",
+        "Pour que chaque triangle suivant s'appuie sur le côté du précédent, on tourne de 60 degrés après avoir avancé : l'instruction se place après la ligne 8 (ou la 9)."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Comprendre le programme avant de répondre" },
+        { "type": "texte", "texte": "Le bloc **triangle** trace un triangle équilatéral de côté « côté » : trois fois « avancer puis tourner de 120° » ; après trois virages de 120° (soit 360°), le lutin revient à son point de départ, **avec la même orientation**. Le script principal, lui, place le lutin, fixe côté = 100, puis répète cinq fois : tracer un triangle, avancer de la longueur du côté (le stylo est relevé, donc sans tracer), diminuer côté de 20." },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Quelles sont les coordonnées du point de départ du tracé ?",
+          "blocs": [
+            { "type": "texte", "texte": "L'instruction 3, « aller à x : −200 y : −100 », place le lutin avant tout tracé." },
+            { "type": "reponse", "texte": "Le tracé part du point de coordonnées **(−200 ; −100)**." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Combien de triangles sont dessinés par le script ?",
+          "blocs": [
+            { "type": "texte", "texte": "Le bloc « triangle » est appelé une fois à chaque passage dans la boucle « répéter 5 fois »." },
+            { "type": "reponse", "texte": "Le script dessine **5 triangles**." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "a) Longueur du côté du deuxième triangle ? b) Tracer à main levée l'allure de la figure obtenue.",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** Au premier passage, côté vaut 100 (instruction 5). À la fin du passage, l'instruction 9 ajoute −20 : côté vaut 80 au deuxième passage, puis 60, 40 et 20." },
+            { "type": "reponse", "texte": "a) Le deuxième triangle a un côté de **80 pixels**." },
+            { "type": "texte", "texte": "**b)** Le lutin est orienté vers la droite et le reste après chaque triangle. Après chaque tracé, il avance de la longueur du côté, donc il se place exactement au sommet droit de la base du triangle qu'il vient de dessiner. La figure est une **rangée de cinq triangles équilatéraux**, posés sur une même ligne horizontale, qui se touchent par un sommet, de plus en plus petits vers la droite (côtés 100, 80, 60, 40, 20), pointes vers le haut." },
+            { "type": "reponse", "texte": "b) Cinq triangles équilatéraux alignés sur une même base horizontale, de tailles décroissantes de gauche à droite, chacun commençant là où finit le précédent." },
+            { "type": "attendu", "texte": "Un croquis avec cinq triangles sur une ligne, en décroissant, suffit : « à main levée » signifie qu'on n'attend ni règle ni mesure exacte, mais la décroissance et l'alignement doivent se voir." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "On modifie le script pour obtenir la figure où chaque triangle s'appuie sur un côté du précédent. Après quelle instruction placer « tourner de 60 degrés » ?",
+          "blocs": [
+            { "type": "texte", "texte": "Dans la nouvelle figure, le deuxième triangle part du sommet droit du premier, mais sa base est inclinée de 60° : il faut donc **tourner de 60°** après avoir avancé le long de la base, juste avant de tracer le triangle suivant. Tourner de 60° vers la gauche (le sens du bloc) oriente le lutin le long du côté du triangle précédent, ce qui explique que les triangles s'emboîtent." },
+            { "type": "texte", "texte": "Si on tournait avant d'avancer (après l'instruction 7), le lutin remonterait le côté gauche du premier triangle jusqu'à son sommet, et la figure serait différente. Si on tournait avant la boucle (après l'instruction 4), le premier triangle lui-même serait incliné, or sa base est horizontale sur la figure." },
+            { "type": "reponse", "texte": "On place « tourner de 60 degrés » **après l'instruction 8** (« avancer de côté »). Placer le bloc après l'instruction 9 donne la même figure, puisque la rotation a lieu avant le triangle suivant dans les deux cas." },
+            { "type": "astuce", "texte": "Pour ce genre de question, simule à la main la position et l'orientation du lutin après chaque instruction, pour les deux premiers triangles seulement : c'est suffisant pour voir où doit aller la rotation." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "Un condensateur en charge : le graphique donne la tension (en V) à ses bornes en fonction du temps (en s). La courbe part de 0, monte vite puis s'aplatit vers 5 V.",
+      "theme": "Lecture graphique, proportionnalité",
+      "points": 4,
+      "minutes": 10,
+      "enBref": [
+        "Ce n'est pas une situation de proportionnalité : la courbe n'est pas une droite passant par l'origine.",
+        "Au bout de 0,2 s, la tension vaut environ 4,3 V (lecture graphique).",
+        "60 % de 5 V font 3 V, atteints au bout d'environ 0,09 s, un peu avant 0,1 s."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "S'agit-il d'une situation de proportionnalité ? Justifier.",
+          "blocs": [
+            { "type": "texte", "texte": "Une situation de proportionnalité se reconnaît sur un graphique à une **droite passant par l'origine**. Ici, la courbe passe bien par l'origine mais elle est **courbée** : elle monte très vite au début, puis de moins en moins. Par exemple, au bout de 0,1 s la tension est d'environ 3,2 V, et au bout de 0,2 s (le double du temps) elle est d'environ 4,3 V, pas 6,4 V." },
+            { "type": "reponse", "texte": "Non : la représentation graphique n'est pas une droite passant par l'origine, donc la tension n'est pas proportionnelle au temps." },
+            { "type": "attendu", "texte": "La justification graphique (pas une droite) suffit. L'exemple chiffré est un plus qui met le correcteur de ton côté." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Quelle est la tension mesurée au bout de 0,2 s ?",
+          "blocs": [
+            { "type": "texte", "texte": "On repère 0,2 sur l'axe des temps (horizontal), on monte jusqu'à la courbe, puis on lit à l'horizontale sur l'axe des tensions. Le point est un peu au-dessus de 4, vers 4,3." },
+            { "type": "reponse", "texte": "Au bout de 0,2 s, la tension est d'environ **4,3 V** (toute lecture entre 4,2 et 4,4 V est acceptée)." },
+            { "type": "astuce", "texte": "Trace les pointillés sur le graphique du sujet (ou décris-les sur ta copie : « je lis l'ordonnée du point de la courbe d'abscisse 0,2 »). Une lecture graphique se justifie en montrant comment on lit." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Au bout de combien de temps la tension aura-t-elle atteint 60 % de la tension maximale, estimée à 5 V ?",
+          "blocs": [
+            { "type": "texte", "texte": "D'abord le calcul : 60 % de 5 V." },
+            { "type": "formule", "tex": "5 \\times \\frac{60}{100} = 3 \\text{ V}" },
+            { "type": "texte", "texte": "Puis la lecture, dans l'autre sens : on repère 3 sur l'axe des tensions, on va à l'horizontale jusqu'à la courbe, et on descend sur l'axe des temps. On arrive un peu avant 0,1 s, vers 0,09 s." },
+            { "type": "reponse", "texte": "La tension atteint 3 V (60 % de 5 V) au bout d'environ **0,09 s**, soit un peu moins d'un dixième de seconde." },
+            { "type": "piege", "texte": "Lire directement « 60 % » sur le graphique n'a pas de sens : il faut d'abord convertir en volts. Et la lecture se fait ici de l'axe vertical vers l'axe horizontal, à l'inverse de la question 2." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-4",
+      "titre": "Exercice 4",
+      "nature": "exercice",
+      "enonce": "Panneaux photovoltaïques. 1) Un tableau donne le prix d'achat du kWh (en centimes d'euros) selon le type d'installation, la puissance et la date d'installation. 2) Une maison : faîte A à 7 m de hauteur, gouttière B à 4,8 m, demi-largeur CB = 4,5 m, longueur du toit 7,5 m ; le pan sud est le rectangle de largeur AB. 3) Des panneaux carrés de 1 m de côté, une bordure libre de 30 cm tout autour.",
+      "theme": "Trigonométrie, Pythagore, pourcentages",
+      "points": 8,
+      "minutes": 20,
+      "enBref": [
+        "Type B, 28 kW, installée en mai 2015 : le tarif est 13,95 centimes par kWh ; 31 420 × 0,1395 ≈ 4 383 €.",
+        "Dans le triangle ABC rectangle en C, AC = 7 − 4,8 = 2,2 m et CB = 4,5 m : tan(ABC) = 2,2/4,5, donc l'angle vaut environ 26°.",
+        "Pythagore : AB² = 2,2² + 4,5² = 25,09, donc AB ≈ 5 m.",
+        "Le pan sud mesure 5 × 7,5 = 37,5 m² ; 20 panneaux de 1 m² couvrent 20/37,5 ≈ 53 %.",
+        "Avec 30 cm de bordure, il reste 4,4 m × 6,9 m : on y range 4 rangées de 6 panneaux, soit 24 ≥ 20. Oui."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "En mai 2015, on installe une centrale de type B, d'une puissance de 28 kW. Vérifier que le prix d'achat de 31 420 kWh est d'environ 4 383 €.",
+          "blocs": [
+            { "type": "texte", "texte": "**Lire le tableau.** Type B, puissance 28 kW : la ligne « 0 à 36 kW » ; date mai 2015 : la colonne « du 01/05/15 au 30/06/15 ». À l'intersection : **13,95 centimes** par kWh, soit 0,1395 €." },
+            { "type": "formule", "tex": "31\\,420 \\times 0{,}1395 = 4\\,383{,}09 \\text{ euros}" },
+            { "type": "reponse", "texte": "Au tarif de 13,95 c€/kWh, les 31 420 kWh sont achetés $31\\,420 \\times 0{,}1395 \\approx 4\\,383$ €." },
+            { "type": "piege", "texte": "Deux pièges : oublier de convertir les centimes en euros (on trouverait 438 309, absurde), et choisir la ligne « 26 à 100 kW » (13,25 c€), qui donne 4 163 € : ce n'est pas la valeur à vérifier, c'est donc la ligne 0 à 36 kW qui a été utilisée." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Déterminer, au degré près, l'angle ABC que forme le pan sud du toit avec l'horizontale.",
+          "blocs": [
+            { "type": "texte", "texte": "**Le triangle ABC est rectangle en C** (le petit carré sur la figure). On connaît le côté opposé à l'angle $\\widehat{ABC}$, c'est $AC$, hauteur entre la gouttière et le faîte : $AC = 7 - 4{,}8 = 2{,}2$ m ; et le côté adjacent $CB = 4{,}5$ m. Opposé et adjacent : c'est la **tangente**." },
+            { "type": "formule", "tex": "\\tan\\widehat{ABC} = \\frac{AC}{CB} = \\frac{2{,}2}{4{,}5} \\approx 0{,}489" },
+            { "type": "formule", "tex": "\\widehat{ABC} = \\arctan\\left(\\frac{2{,}2}{4{,}5}\\right) \\approx 26{,}1°" },
+            { "type": "reponse", "texte": "Le pan sud fait un angle d'environ **26°** avec l'horizontale." },
+            { "type": "attendu", "texte": "Trois choses : « ABC rectangle en C », le calcul de AC = 2,2 m (il n'est pas donné directement), et la formule de la tangente écrite avant la calculatrice. La touche s'appelle tan⁻¹ ou arctan, en mode degrés." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "a) Montrer que AB ≈ 5 m. b) Quel pourcentage du pan sud 20 panneaux carrés de 1 m couvrent-ils (à 1 % près) ? c) Avec une bordure libre de 30 cm tout autour, peut-on installer les 20 panneaux ?",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** Dans le triangle ABC rectangle en C, le théorème de Pythagore donne :" },
+            { "type": "formule", "tex": "AB^2 = AC^2 + CB^2 = 2{,}2^2 + 4{,}5^2 = 4{,}84 + 20{,}25 = 25{,}09" },
+            { "type": "formule", "tex": "AB = \\sqrt{25{,}09} \\approx 5{,}009 \\text{ m}" },
+            { "type": "reponse", "texte": "a) $AB = \\sqrt{25{,}09} \\approx 5$ m." },
+            { "type": "texte", "texte": "**b)** Le pan sud est un rectangle de largeur $AB \\approx 5$ m et de longueur 7,5 m :" },
+            { "type": "formule", "tex": "\\mathcal{A}_{\\text{toit}} = 5 \\times 7{,}5 = 37{,}5 \\text{ m}^2 \\qquad \\mathcal{A}_{\\text{panneaux}} = 20 \\times 1 \\times 1 = 20 \\text{ m}^2" },
+            { "type": "formule", "tex": "\\frac{20}{37{,}5} \\approx 0{,}533 \\approx 53\\,\\%" },
+            { "type": "reponse", "texte": "b) Les 20 panneaux couvrent environ **53 %** du pan sud." },
+            { "type": "texte", "texte": "**c)** La bordure de 30 cm = 0,3 m est enlevée de chaque côté, donc 0,6 m sur chaque dimension. La zone disponible pour les panneaux mesure :" },
+            { "type": "formule", "tex": "(5 - 0{,}6) \\times (7{,}5 - 0{,}6) = 4{,}4 \\text{ m} \\times 6{,}9 \\text{ m}" },
+            { "type": "texte", "texte": "Les panneaux sont des carrés de 1 m accolés : dans la largeur 4,4 m on en range **4** (pas 4,4 : un panneau ne se coupe pas), dans la longueur 6,9 m on en range **6**. Soit $4 \\times 6 = 24$ panneaux au maximum, et il en faut 20 : par exemple 4 rangées de 5, qui occupent 4 m sur 5 m, ce qui tient dans 4,4 m sur 6,9 m." },
+            { "type": "reponse", "texte": "c) Oui : la zone libre (4,4 m × 6,9 m) peut recevoir jusqu'à 24 panneaux accolés, donc les 20 panneaux prévus." },
+            { "type": "piege", "texte": "Raisonner avec les aires (4,4 × 6,9 = 30,36 m² ≥ 20 m²) ne suffit pas : les panneaux sont des carrés entiers, il faut compter combien tiennent en largeur et en longueur. Et n'oublie pas que la bordure est des DEUX côtés : on retire 0,6 m, pas 0,3 m." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-5",
+      "titre": "Exercice 5",
+      "nature": "exercice",
+      "enonce": "Trois questions indépendantes : 1) Pernille Blume a nagé le 50 m en 24,07 s : plus vite qu'un marcheur rapide à 6 km/h ? 2) E = (3x + 8)² − 64 : développer, factoriser en 3x(3x + 16), résoudre E = 0. 3) Distance de freinage d = k × V² (d en m, V en m/s, k = 0,14 sur route mouillée) : vitesse pour une distance de 15 m.",
+      "theme": "Vitesse, identité remarquable, équation",
+      "points": 8,
+      "minutes": 20,
+      "enBref": [
+        "6 km/h, c'est 100 m par minute, soit 30 s pour 50 m ; la nageuse a mis 24,07 s : elle est plus rapide (environ 7,5 km/h).",
+        "E = 9x² + 48x = 3x(3x + 16) ; l'équation E = 0 a deux solutions, 0 et −16/3.",
+        "15 = 0,14 × V² donne V² ≈ 107,1, donc V ≈ 10,4 m/s, soit environ 37 km/h."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Pernille Blume a-t-elle nagé plus rapidement qu'une personne qui marche vite, à 6 km/h ?",
+          "blocs": [
+            { "type": "texte", "texte": "On compare deux vitesses : il faut la même unité. Le plus simple est de calculer le temps qu'un marcheur à 6 km/h met pour 50 m." },
+            { "type": "formule", "tex": "6 \\text{ km/h} = 6\\,000 \\text{ m en } 3\\,600 \\text{ s} \\quad \\Longrightarrow \\quad v = \\frac{6\\,000}{3\\,600} \\approx 1{,}67 \\text{ m/s}" },
+            { "type": "formule", "tex": "t = \\frac{50}{1{,}67} \\approx 30 \\text{ s}" },
+            { "type": "texte", "texte": "Le marcheur met 30 s pour 50 m ; la nageuse n'en a mis que 24,07. Autre présentation : sa vitesse est $\\frac{50}{24{,}07} \\approx 2{,}08$ m/s, soit $2{,}08 \\times 3{,}6 \\approx 7{,}5$ km/h, plus que 6 km/h." },
+            { "type": "reponse", "texte": "Oui : à 6 km/h on met 30 s pour parcourir 50 m, et Pernille Blume a nagé les 50 m en 24,07 s. Sa vitesse, environ 7,5 km/h, dépasse celle du marcheur." },
+            { "type": "astuce", "texte": "Pour passer des m/s aux km/h, multiplie par 3,6 ; des km/h aux m/s, divise par 3,6. Retiens que 6 km/h = 100 m/min, une vitesse de marche rapide." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "E = (3x + 8)² − 64. a) Développer E. b) Montrer que E = 3x(3x + 16). c) Résoudre (3x + 8)² − 64 = 0.",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** On développe le carré avec l'identité $(a + b)^2 = a^2 + 2ab + b^2$, avec $a = 3x$ et $b = 8$ :" },
+            { "type": "formule", "tex": "E = (3x)^2 + 2 \\times 3x \\times 8 + 8^2 - 64 = 9x^2 + 48x + 64 - 64 = 9x^2 + 48x" },
+            { "type": "reponse", "texte": "a) $E = 9x^2 + 48x$." },
+            { "type": "texte", "texte": "**b)** Deux méthodes. Par la forme développée : $9x^2 + 48x = 3x \\times 3x + 3x \\times 16 = 3x(3x + 16)$. Ou directement, puisque $64 = 8^2$, avec l'identité $a^2 - b^2 = (a - b)(a + b)$ :" },
+            { "type": "formule", "tex": "E = (3x + 8)^2 - 8^2 = (3x + 8 - 8)(3x + 8 + 8) = 3x(3x + 16)" },
+            { "type": "reponse", "texte": "b) $E = 3x(3x + 16)$." },
+            { "type": "texte", "texte": "**c)** On utilise la forme factorisée : un produit est nul si et seulement si l'un de ses facteurs est nul." },
+            { "type": "formule", "tex": "3x(3x + 16) = 0 \\iff 3x = 0 \\ \\text{ou} \\ 3x + 16 = 0 \\iff x = 0 \\ \\text{ou} \\ x = -\\frac{16}{3}" },
+            { "type": "reponse", "texte": "c) L'équation a deux solutions : $x = 0$ et $x = -\\dfrac{16}{3}$." },
+            { "type": "piege", "texte": "Développer $(3x + 8)^2$ en $9x^2 + 64$ : le double produit $48x$ ne doit pas disparaître. Et pour le c), ne développe pas : l'équation $9x^2 + 48x = 0$ se résout justement par la factorisation du b)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Quelle est la vitesse d'un véhicule dont la distance de freinage sur route mouillée est 15 m ?",
+          "blocs": [
+            { "type": "texte", "texte": "Sur route mouillée, $k = 0{,}14$. On remplace dans la formule $d = k \\times V^2$ avec $d = 15$ :" },
+            { "type": "formule", "tex": "15 = 0{,}14 \\times V^2 \\quad \\Longrightarrow \\quad V^2 = \\frac{15}{0{,}14} \\approx 107{,}14" },
+            { "type": "formule", "tex": "V = \\sqrt{107{,}14} \\approx 10{,}35 \\text{ m/s}" },
+            { "type": "texte", "texte": "La vitesse est positive, on ne garde que la racine positive. En km/h : $10{,}35 \\times 3{,}6 \\approx 37$ km/h." },
+            { "type": "reponse", "texte": "Le véhicule roulait à environ **10,4 m/s**, soit environ **37 km/h**." },
+            { "type": "attendu", "texte": "La ligne $V^2 = \\dfrac{15}{0{,}14}$ et la racine carrée. Donner le résultat en m/s suffit (c'est l'unité de la formule) ; la conversion en km/h est un plus qui montre que tu sais ce que tu calcules." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-6",
+      "titre": "Exercice 6",
+      "nature": "exercice",
+      "enonce": "L'indice de masse corporelle : IMC = masse / taille² (masse en kg, taille en m) ; surpoids si 25 ≤ IMC < 30, obésité si IMC ≥ 30. 1) Un tableur : ligne 1 tailles (1,69 ; 1,72 ; 1,75 ; 1,78 ; 1,86 ; 1,88), ligne 2 masses (72 ; 85 ; 74 ; 70 ; 115 ; 85), ligne 3 IMC (25,7 ; 28,7 ; 24,2 ; 22,1 ; 33,2 ; 24). 2) Les IMC arrondis des 41 employés : 20 (9), 22 (12), 23 (6), 24 (8), 25 (2), 29 (1), 30 (1), 33 (2).",
+      "theme": "Tableur, moyenne, médiane",
+      "points": 8,
+      "minutes": 20,
+      "enBref": [
+        "Trois employés sur six ont un IMC d'au moins 25 (25,7 ; 28,7 ; 33,2).",
+        "La formule à recopier vers la droite est = B2/(B1*B1) : la masse divisée par la taille au carré, sans dollar.",
+        "IMC moyen : 949/41 ≈ 23. IMC médian : la 21e valeur sur 41, c'est 22 : au moins la moitié des employés ont un IMC inférieur ou égal à 22.",
+        "6 employés sur 41 sont en surpoids ou obèses, soit environ 14,6 % : plus que 5 %, oui."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "a) Combien d'employés sont en surpoids ou en obésité ? b) Quelle formule a-t-on écrite en B3, puis recopiée à droite ?",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** Surpoids ou obésité, c'est un IMC **supérieur ou égal à 25**. Sur la ligne 3 : 25,7 (oui), 28,7 (oui), 24,2 (non), 22,1 (non), 33,2 (oui, obésité), 24 (non)." },
+            { "type": "reponse", "texte": "a) **3 employés** sur 6 sont en surpoids ou en obésité (deux en surpoids, un en obésité)." },
+            { "type": "texte", "texte": "**b)** La formule doit calculer $\\dfrac{\\text{masse}}{\\text{taille}^2}$ avec la masse en B2 et la taille en B1, et rester juste quand on la recopie en C3, D3… (les références doivent se décaler)." },
+            { "type": "tableau", "entetes": ["Formule", "Verdict"], "lignes": [
+              ["= 72/1.69^2", "donne le bon IMC en B3, mais avec des nombres fixes : recopiée à droite, elle donnerait toujours 25,2 (et 72/1,69² ≈ 25,2 d'ailleurs)"],
+              ["= B1/(B2*B2)", "taille divisée par masse au carré : faux"],
+              ["= B2/(B1*B1)", "masse divisée par taille au carré, références relatives : **correcte**"],
+              ["= \\$B2/(\\$B1*\\$B1)", "le \\$ bloque la colonne B : recopiée en C3, elle calculerait encore l'IMC de B"]
+            ] },
+            { "type": "reponse", "texte": "b) La formule est **= B2/(B1*B1)**." },
+            { "type": "astuce", "texte": "Pour un tableur, teste chaque formule sur la cellule C3 : elle doit devenir = C2/(C1*C1). Seules les références sans \\$ se décalent." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "a) IMC moyen des 41 employés, arrondi à l'entier. b) IMC médian, interprétation. c) Au moins 5 % des employés sont-ils en surpoids ou obèses ?",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** C'est une moyenne **pondérée par les effectifs** : chaque IMC compte autant de fois que son effectif." },
+            { "type": "formule", "tex": "\\bar{x} = \\frac{20 \\times 9 + 22 \\times 12 + 23 \\times 6 + 24 \\times 8 + 25 \\times 2 + 29 \\times 1 + 30 \\times 1 + 33 \\times 2}{41}" },
+            { "type": "formule", "tex": "\\bar{x} = \\frac{180 + 264 + 138 + 192 + 50 + 29 + 30 + 66}{41} = \\frac{949}{41} \\approx 23{,}1" },
+            { "type": "reponse", "texte": "a) L'IMC moyen est d'environ **23**." },
+            { "type": "texte", "texte": "**b)** La série compte 41 valeurs (impair) : la médiane est la **21e valeur** une fois les IMC rangés par ordre croissant. On cumule les effectifs : 9 employés à 20, puis $9 + 12 = 21$ employés à 22 ou moins. La 21e valeur est donc 22." },
+            { "type": "reponse", "texte": "b) L'IMC médian est **22** : au moins la moitié des employés ont un IMC inférieur ou égal à 22, et au moins la moitié un IMC supérieur ou égal à 22." },
+            { "type": "texte", "texte": "**c)** Surpoids ou obésité : IMC $\\geq 25$, soit les effectifs de 25, 29, 30 et 33 : $2 + 1 + 1 + 2 = 6$ employés." },
+            { "type": "formule", "tex": "\\frac{6}{41} \\approx 0{,}146 \\approx 14{,}6\\,\\%" },
+            { "type": "reponse", "texte": "c) Oui : 6 employés sur 41, soit environ 14,6 %, sont en surpoids ou obèses, ce qui dépasse 5 %." },
+            { "type": "piege", "texte": "Pour la moyenne, diviser par 8 (le nombre de valeurs différentes) au lieu de 41 : la moyenne de 949 par 8 n'a aucun sens. Et pour la médiane, ne pas confondre la 21e valeur (22) avec le 21e effectif." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-7",
+      "titre": "Exercice 7",
+      "nature": "exercice",
+      "enonce": "La confiture de Léo : 700 g de sucre pour 1 kg de fraises ; il a 1,8 kg de fraises. Il obtient 2,7 L de confiture, qu'il verse dans des pots cylindriques de 6 cm de diamètre et 12 cm de haut, remplis jusqu'à 1 cm du bord. Une étiquette rectangulaire recouvre toute la surface latérale du pot. Rappels : 1 L = 1 000 cm³ ; volume d'un cylindre = π × R² × h.",
+      "theme": "Volume du cylindre, échelle",
+      "points": 7,
+      "minutes": 17,
+      "enBref": [
+        "Proportionnalité : 700 × 1,8 = 1 260 g de sucre.",
+        "Un pot rempli sur 11 cm contient π × 3² × 11 = 99π ≈ 311 cm³ ; 2 700 ÷ 311 ≈ 8,7 : Léo remplit 8 pots entiers.",
+        "L'étiquette a pour longueur le périmètre du pot, π × 6 ≈ 18,8 cm, et pour largeur 12 cm ; à l'échelle 1/3 : un rectangle d'environ 6,3 cm sur 4 cm."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "700 g de sucre pour 1 kg de fraises : quelle quantité de sucre pour 1,8 kg de fraises ?",
+          "blocs": [
+            { "type": "texte", "texte": "La quantité de sucre est proportionnelle à la quantité de fraises : on multiplie 700 g par 1,8." },
+            { "type": "formule", "tex": "700 \\times 1{,}8 = 1\\,260 \\text{ g}" },
+            { "type": "reponse", "texte": "Léo a besoin de **1 260 g de sucre**, soit 1,26 kg." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Léo a obtenu 2,7 L de confiture. Combien de pots cylindriques (diamètre 6 cm, hauteur 12 cm, remplis jusqu'à 1 cm du bord) pourra-t-il remplir ?",
+          "blocs": [
+            { "type": "texte", "texte": "**Le volume de confiture dans un pot.** Le rayon est la moitié du diamètre, $R = 3$ cm, et la hauteur de confiture n'est pas 12 cm mais $12 - 1 = 11$ cm." },
+            { "type": "formule", "tex": "V_{\\text{pot}} = \\pi \\times 3^2 \\times 11 = 99\\pi \\approx 311{,}0 \\text{ cm}^3" },
+            { "type": "texte", "texte": "**Le volume total**, dans la même unité : $2{,}7 \\text{ L} = 2\\,700 \\text{ cm}^3$." },
+            { "type": "formule", "tex": "\\frac{2\\,700}{99\\pi} \\approx 8{,}68" },
+            { "type": "texte", "texte": "Léo peut remplir 8 pots entièrement ; le neuvième ne serait rempli qu'aux deux tiers." },
+            { "type": "reponse", "texte": "Léo pourra remplir **8 pots**." },
+            { "type": "piege", "texte": "Trois erreurs classiques : prendre 6 comme rayon, prendre 12 comme hauteur (le pot est rempli jusqu'à 1 cm du bord), et arrondir 8,68 à 9 : on compte des pots pleins, donc on arrondit vers le bas." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "a) Montrer que la longueur de l'étiquette est d'environ 18,8 cm. b) Dessiner l'étiquette à l'échelle 1/3.",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** L'étiquette fait le tour du pot : sa longueur est le **périmètre** du cercle de base, de diamètre 6 cm." },
+            { "type": "formule", "tex": "P = \\pi \\times d = \\pi \\times 6 \\approx 18{,}85 \\text{ cm}" },
+            { "type": "reponse", "texte": "a) La longueur de l'étiquette est $6\\pi \\approx 18{,}8$ cm. Sa largeur est la hauteur du pot, 12 cm." },
+            { "type": "texte", "texte": "**b)** À l'échelle $\\frac{1}{3}$, toutes les longueurs sont divisées par 3 :" },
+            { "type": "formule", "tex": "\\frac{18{,}8}{3} \\approx 6{,}3 \\text{ cm} \\qquad \\frac{12}{3} = 4 \\text{ cm}" },
+            { "type": "reponse", "texte": "b) On dessine un rectangle de **6,3 cm sur 4 cm**, en indiquant sur le dessin les vraies dimensions (18,8 cm et 12 cm) et l'échelle." },
+            { "type": "attendu", "texte": "Pour le a), la formule du périmètre ($\\pi \\times d$ ou $2\\pi R$) écrite avant le résultat. Pour le b), un rectangle à la règle aux bonnes dimensions, à 1 mm près : le correcteur mesure." }
+          ]
+        }
+      ]
+    }
+  ]
+}

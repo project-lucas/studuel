@@ -1,0 +1,334 @@
+{
+  "id": "maths-brevet-2021-metropole",
+  "matiere": "maths",
+  "niveau": "3e",
+  "examen": "brevet",
+  "annee": 2021,
+  "centre": "Métropole",
+  "jour": null,
+  "code": "21GENMATMEAG1",
+  "titre": "Brevet 2021 — Mathématiques",
+  "dureeMin": 120,
+  "coefficient": null,
+  "consigne": "Série générale, calculatrice autorisée : cinq exercices de 20 points chacun, sur 100 points. Toutes les réponses doivent être justifiées sauf indication contraire ; une trace de recherche, même inachevée, compte. L'annexe (script Scratch de l'exercice 4) est à rendre avec la copie.",
+  "parties": [
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "Feuille de calcul des températures moyennes mensuelles à Tours en 2019 (cellules B2 à M2) : 4,4 ; 7,8 ; 9,6 ; 11,2 ; 13,4 ; 19,4 ; 22,6 ; 20,5 ; 17,9 ; 14,4 ; 8,2 ; 7,8. La cellule N2 doit contenir la moyenne sur l'année. En 2009, la moyenne annuelle était de 11,9 °C.",
+      "theme": "Tableur, moyenne, pourcentage",
+      "points": 20,
+      "minutes": 20,
+      "enBref": [
+        "Novembre (colonne L) : 8,2 °C.",
+        "Étendue : 22,6 − 4,4 = 18,2 °C.",
+        "En N2 : =MOYENNE(B2:M2), ou =SOMME(B2:M2)/12.",
+        "La somme des douze températures vaut 157,2 ; 157,2 / 12 = 13,1 °C.",
+        "De 11,9 à 13,1 : une hausse de 1,2 °C, soit 1,2 / 11,9 ≈ 0,10 : 10 %."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Quelle a été la température moyenne à Tours en novembre 2019 ?",
+          "blocs": [
+            { "type": "texte", "texte": "La ligne 1 donne les mois par leur initiale ; novembre est le onzième mois, colonne L (le deuxième « N » des mois en partant de la fin, entre octobre et décembre)." },
+            { "type": "reponse", "texte": "En novembre 2019, la température moyenne à Tours a été de **8,2 °C**." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Déterminer l'étendue de cette série.",
+          "blocs": [
+            { "type": "texte", "texte": "L'étendue est la différence entre la plus grande valeur (juillet, 22,6) et la plus petite (janvier, 4,4)." },
+            { "type": "formule", "tex": "22{,}6 - 4{,}4 = 18{,}2" },
+            { "type": "reponse", "texte": "L'étendue de la série est de **18,2 °C**." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Quelle formule saisir en N2 pour calculer la température moyenne annuelle ?",
+          "blocs": [
+            { "type": "texte", "texte": "Les douze températures occupent les cellules B2 à M2. La moyenne est leur somme divisée par 12 ; le tableur a une fonction toute faite." },
+            { "type": "code", "langage": "texte", "code": "=MOYENNE(B2:M2)\n\nou bien\n\n=SOMME(B2:M2)/12" },
+            { "type": "reponse", "texte": "En N2 : **=MOYENNE(B2:M2)** (ou =SOMME(B2:M2)/12)." },
+            { "type": "piege", "texte": "Toute formule commence par « = ». La plage est B2:M2 (avec les deux-points), pas B2;M2 et pas A2:M2 : A2 contient du texte." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Vérifier que la température moyenne annuelle est 13,1 °C.",
+          "blocs": [
+            { "type": "formule", "tex": "4{,}4 + 7{,}8 + 9{,}6 + 11{,}2 + 13{,}4 + 19{,}4 + 22{,}6 + 20{,}5 + 17{,}9 + 14{,}4 + 8{,}2 + 7{,}8 = 157{,}2" },
+            { "type": "formule", "tex": "\\frac{157{,}2}{12} = 13{,}1" },
+            { "type": "reponse", "texte": "La moyenne des douze températures est $\\frac{157{,}2}{12} = 13{,}1$ °C." },
+            { "type": "astuce", "texte": "Pour additionner douze décimaux sans erreur, groupe-les par paires qui tombent rond : 4,4 + 7,8 = 12,2 ; 9,6 + 11,2 = 20,8 ; 13,4 + 19,4 = 32,8 ; 22,6 + 20,5 = 43,1 ; 17,9 + 14,4 = 32,3 ; 8,2 + 7,8 = 16. Total 157,2." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "En 2009, la moyenne annuelle était de 11,9 °C. Le pourcentage d'augmentation entre 2009 et 2019, arrondi à l'unité, est-il de 7 %, 10 % ou 13 % ?",
+          "blocs": [
+            { "type": "texte", "texte": "Un pourcentage d'évolution se calcule par rapport à la **valeur de départ** (2009) :" },
+            { "type": "formule", "tex": "\\frac{13{,}1 - 11{,}9}{11{,}9} = \\frac{1{,}2}{11{,}9} \\approx 0{,}1008 \\approx 10\\,\\%" },
+            { "type": "reponse", "texte": "La température moyenne annuelle a augmenté d'environ **10 %** entre 2009 et 2019." },
+            { "type": "piege", "texte": "Diviser par 13,1 (la valeur d'arrivée) donne 9,2 %, soit 9 % : aucune des trois propositions. Et « 1,2 °C de plus » n'est pas un pourcentage." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "Le Futuroscope a reçu 1,9 million de visiteurs en 2019. Un professeur veut répartir 126 garçons et 90 filles en groupes ayant chacun le même nombre de filles et le même nombre de garçons. Marie (1,60 m, en D, à 2 m de A) place son ombre dans celle de la Gyrotour (en C, à 54,25 m de D) ; A, E, B alignés, A, D, C alignés, (DE) et (CB) perpendiculaires à (AC).",
+      "theme": "Arithmétique et Thalès",
+      "points": 20,
+      "minutes": 25,
+      "enBref": [
+        "Il manquait 100 000 visiteurs pour atteindre 2 millions.",
+        "1 900 000 / 365 ≈ 5 205 : « environ 5 200 par jour » est vrai.",
+        "126 = 2 × 3² × 7 et 90 = 2 × 3² × 5 ; diviseurs communs : 1, 2, 3, 6, 9, 18 ; au plus 18 groupes de 7 garçons et 5 filles.",
+        "Thalès dans la configuration ADE / ACB : BC = 1,60 × 56,25 / 2 = 45 m."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Combien aurait-il fallu de visiteurs en plus en 2019 pour atteindre 2 millions ?",
+          "blocs": [
+            { "type": "formule", "tex": "2\\,000\\,000 - 1\\,900\\,000 = 100\\,000" },
+            { "type": "reponse", "texte": "Il aurait fallu **100 000 visiteurs** de plus (0,1 million)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "L'affirmation « il y a eu environ 5 200 visiteurs par jour en 2019 » est-elle vraie ?",
+          "blocs": [
+            { "type": "texte", "texte": "On divise le nombre de visiteurs de l'année par le nombre de jours (2019 n'est pas bissextile : 365 jours)." },
+            { "type": "formule", "tex": "\\frac{1\\,900\\,000}{365} \\approx 5\\,205{,}5" },
+            { "type": "reponse", "texte": "Oui : environ 5 205 visiteurs par jour, soit « environ 5 200 ». L'affirmation est vraie." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "a) Décomposer 126 et 90 en produits de facteurs premiers. b) Trouver tous les entiers qui divisent à la fois 126 et 90. c) En déduire le plus grand nombre de groupes possible, et la composition de chaque groupe.",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** Divisions successives par les nombres premiers :" },
+            { "type": "formule", "tex": "126 = 2 \\times 63 = 2 \\times 3 \\times 21 = 2 \\times 3 \\times 3 \\times 7 = 2 \\times 3^2 \\times 7" },
+            { "type": "formule", "tex": "90 = 2 \\times 45 = 2 \\times 3 \\times 15 = 2 \\times 3 \\times 3 \\times 5 = 2 \\times 3^2 \\times 5" },
+            { "type": "reponse", "texte": "a) $126 = 2 \\times 3^2 \\times 7$ et $90 = 2 \\times 3^2 \\times 5$." },
+            { "type": "texte", "texte": "**b)** Les diviseurs communs sont fabriqués avec les facteurs premiers communs : $2$ et $3^2$ (le 7 et le 5 ne sont pas communs). Le plus grand est $2 \\times 3^2 = 18$, et les diviseurs communs sont les diviseurs de 18." },
+            { "type": "reponse", "texte": "b) Les entiers qui divisent à la fois 126 et 90 sont **1, 2, 3, 6, 9 et 18**." },
+            { "type": "texte", "texte": "**c)** Le nombre de groupes doit diviser 126 (pour les garçons) et 90 (pour les filles) : c'est un diviseur commun, au maximum 18." },
+            { "type": "formule", "tex": "\\frac{126}{18} = 7 \\qquad \\frac{90}{18} = 5" },
+            { "type": "reponse", "texte": "c) Le professeur peut constituer au plus **18 groupes**, de **7 garçons et 5 filles** chacun." },
+            { "type": "attendu", "texte": "Pour le b), la liste complète (six diviseurs), pas seulement 18 : la question dit « tous ». Vérifie chaque candidat sur les deux nombres : 4 divise-t-il 90 ? Non. 7 divise-t-il 90 ? Non." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Calculer la hauteur BC de la Gyrotour.",
+          "blocs": [
+            { "type": "texte", "texte": "**La configuration.** Les points A, D, C sont alignés, ainsi que A, E, B. Les droites (DE) et (CB) sont toutes deux perpendiculaires au sol (AC) (angles droits codés en D et en C), donc **(DE) // (CB)**. On peut appliquer le théorème de Thalès dans les triangles ADE et ACB." },
+            { "type": "formule", "tex": "AC = AD + DC = 2 + 54{,}25 = 56{,}25 \\text{ m}" },
+            { "type": "formule", "tex": "\\frac{AD}{AC} = \\frac{AE}{AB} = \\frac{DE}{CB} \\quad \\Longrightarrow \\quad \\frac{2}{56{,}25} = \\frac{1{,}60}{CB}" },
+            { "type": "formule", "tex": "CB = \\frac{1{,}60 \\times 56{,}25}{2} = 45 \\text{ m}" },
+            { "type": "reponse", "texte": "D'après le théorème de Thalès, la Gyrotour mesure **45 m** de haut." },
+            { "type": "piege", "texte": "AC n'est pas 54,25 : c'est 2 + 54,25. La distance 54,25 m est celle de Marie à la tour, pas celle du bout de l'ombre à la tour. Et il faut écrire la condition « (DE) // (CB) » avec sa justification avant d'invoquer Thalès." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "QCM sans justification. Partie A : une urne contient 7 jetons verts, 4 rouges, 3 bleus et 2 jaunes. Partie B : une rosace de 20 motifs, 10 petits (1 à 10) autour du centre O et 10 grands (11 à 20) à l'extérieur, angle AOB = 36° ; le motif 11 est l'image du motif 1 par l'homothétie de centre O et de rapport 2 ; la droite (d) est l'axe horizontal passant par O.",
+      "theme": "QCM : probabilités, transformations",
+      "points": 20,
+      "minutes": 15,
+      "enBref": [
+        "16 jetons : 7/16 est la probabilité d'un jeton vert (réponse C) ; ne pas tirer un bleu : 13/16 (réponse A).",
+        "Par la symétrie d'axe (d), le motif 20 (en haut à gauche) a pour image le motif 17 (en bas à gauche) : réponse A.",
+        "D'un motif au suivant on tourne de 36° : le motif 3 est l'image du motif 1 par la rotation de centre O et d'angle 72° : réponse B.",
+        "Une homothétie de rapport 2 multiplie les aires par 4 : réponse B."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Partie A : l'urne" },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "À quel événement correspond une probabilité de 7/16 ?",
+          "blocs": [
+            { "type": "texte", "texte": "L'urne contient $7 + 4 + 3 + 2 = 16$ jetons. On calcule les trois probabilités proposées : rouge ou jaune : $\\frac{4 + 2}{16} = \\frac{6}{16}$ ; pas vert : $\\frac{16 - 7}{16} = \\frac{9}{16}$ ; vert : $\\frac{7}{16}$." },
+            { "type": "reponse", "texte": "**Réponse C** : obtenir un jeton vert." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Quelle est la probabilité de ne pas tirer un jeton bleu ?",
+          "blocs": [
+            { "type": "formule", "tex": "P(\\text{pas bleu}) = 1 - P(\\text{bleu}) = 1 - \\frac{3}{16} = \\frac{13}{16}" },
+            { "type": "reponse", "texte": "**Réponse A** : $\\dfrac{13}{16}$." },
+            { "type": "piege", "texte": "La réponse B ($\\frac{3}{16}$) est la probabilité de tirer un bleu, et la C ($\\frac{3}{4}$) vaut $\\frac{12}{16}$, à un jeton près. Le QCM mise sur ces confusions." }
+          ]
+        },
+        { "type": "titre", "texte": "Partie B : la rosace" },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Quelle est l'image du motif 20 par la symétrie d'axe la droite (d) ?",
+          "blocs": [
+            { "type": "texte", "texte": "La droite (d) est horizontale et passe par O : elle partage la rosace en une moitié haute et une moitié basse. Le motif 20 est le grand motif en haut à gauche (entre 19 et 11) ; son symétrique est le grand motif en bas à gauche, à la même distance de (d) : le motif 17 (entre 18 et 16)." },
+            { "type": "reponse", "texte": "**Réponse A** : le motif 17." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Par quelle rotation le motif 3 est-il l'image du motif 1 ?",
+          "blocs": [
+            { "type": "texte", "texte": "Les dix petits motifs font le tour de O : chacun occupe un angle de $360 \\div 10 = 36°$, c'est l'angle $\\widehat{AOB}$. Passer du motif 1 au motif 2 est une rotation de 36° ; du motif 1 au motif 3, deux fois plus." },
+            { "type": "formule", "tex": "2 \\times 36° = 72°" },
+            { "type": "reponse", "texte": "**Réponse B** : une rotation de centre O et d'angle 72°." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "L'aire du motif 11 est-elle égale au double, à 4 fois, ou à la moitié de l'aire du motif 1 ?",
+          "blocs": [
+            { "type": "texte", "texte": "Le motif 11 est l'image du motif 1 par une homothétie de rapport 2 : les longueurs sont doublées, et les aires sont multipliées par $2^2 = 4$." },
+            { "type": "reponse", "texte": "**Réponse B** : l'aire du motif 11 est égale à 4 fois celle du motif 1." },
+            { "type": "attendu", "texte": "Sur un QCM, la justification n'est pas demandée mais une réponse fausse ne retire rien : réponds à tout. Recopie le numéro de la question et la lettre, lisiblement." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-4",
+      "titre": "Exercice 4",
+      "nature": "exercice",
+      "enonce": "Programme de calcul : choisir un nombre ; prendre son carré ; ajouter le triple du nombre de départ ; soustraire 10. Script Scratch (annexe) : (2) demander un nombre, (3) mettre x à réponse, (4) mettre y à x * x, (5) mettre z à y + ( ) * ( ), (6) mettre Résultat à ( ) − ( ), (7) dire le résultat.",
+      "theme": "Programme de calcul, Scratch, équation",
+      "points": 20,
+      "minutes": 20,
+      "enBref": [
+        "Avec 4 : 16 + 12 − 10 = 18. Avec −3 : 9 − 9 − 10 = −10.",
+        "Ligne 5 : mettre z à y + 3 * x ; ligne 6 : mettre Résultat à z − 10.",
+        "Résultat final : x² + 3x − 10 = (x + 5)(x − 2).",
+        "Le résultat est nul pour x = −5 ou x = 2."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Vérifier qu'avec 4 au départ, on obtient 18.",
+          "blocs": [
+            { "type": "formule", "tex": "4^2 = 16 \\qquad 16 + 3 \\times 4 = 16 + 12 = 28 \\qquad 28 - 10 = 18" },
+            { "type": "reponse", "texte": "En partant de 4, le programme donne bien **18**." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Appliquer ce programme au nombre −3.",
+          "blocs": [
+            { "type": "formule", "tex": "(-3)^2 = 9 \\qquad 9 + 3 \\times (-3) = 9 - 9 = 0 \\qquad 0 - 10 = -10" },
+            { "type": "reponse", "texte": "En partant de −3, le programme donne **−10**." },
+            { "type": "piege", "texte": "Le carré de −3 est 9, pas −9 : $(-3)^2 = (-3) \\times (-3)$. Et le triple de −3 est −9, qu'on ajoute : 9 + (−9) = 0." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Compléter les lignes 5 et 6 du script pour qu'il corresponde au programme.",
+          "blocs": [
+            { "type": "texte", "texte": "Le script range le nombre choisi dans x, puis son carré dans y (ligne 4). La ligne 5 doit ajouter le triple du nombre de départ : $y + 3 \\times x$. La ligne 6 soustrait 10 au résultat précédent, qui est z." },
+            { "type": "code", "langage": "texte", "code": "5  mettre z à ( y + ( 3 * x ) )\n6  mettre Résultat à ( z - 10 )" },
+            { "type": "reponse", "texte": "Ligne 5 : les deux cases contiennent **3** et **x** (dans un ordre ou l'autre) ; ligne 6 : **z** et **10**." },
+            { "type": "attendu", "texte": "Sur l'annexe, écrire dans les ovales vides, pas à côté. Mettre « x » et non « 4 » : le script doit marcher pour n'importe quel nombre." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "a) Exprimer le résultat final en fonction de x. b) Vérifier qu'il s'écrit aussi (x + 5)(x − 2). c) Quel(s) nombre(s) choisir pour obtenir 0 ?",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** On traduit chaque étape : carré $x^2$, plus le triple $3x$, moins 10." },
+            { "type": "reponse", "texte": "a) Le résultat final est $x^2 + 3x - 10$." },
+            { "type": "texte", "texte": "**b)** On développe la forme proposée :" },
+            { "type": "formule", "tex": "(x + 5)(x - 2) = x^2 - 2x + 5x - 10 = x^2 + 3x - 10" },
+            { "type": "reponse", "texte": "b) On retrouve $x^2 + 3x - 10$ : le résultat s'écrit bien $(x + 5)(x - 2)$." },
+            { "type": "texte", "texte": "**c)** On veut $x^2 + 3x - 10 = 0$, c'est-à-dire, grâce au b), une **équation produit nul** :" },
+            { "type": "formule", "tex": "(x + 5)(x - 2) = 0 \\iff x + 5 = 0 \\ \\text{ou} \\ x - 2 = 0 \\iff x = -5 \\ \\text{ou} \\ x = 2" },
+            { "type": "texte", "texte": "Vérification : avec 2, $4 + 6 - 10 = 0$ ; avec −5, $25 - 15 - 10 = 0$." },
+            { "type": "reponse", "texte": "c) Il faut choisir **−5 ou 2** au départ pour obtenir 0." },
+            { "type": "astuce", "texte": "Quand un énoncé te fait « vérifier » une forme factorisée, c'est qu'elle sert juste après : la question c) se résout en deux lignes avec elle, et pas du tout sans." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-5",
+      "titre": "Exercice 5",
+      "nature": "exercice",
+      "enonce": "La production de déchets par Français était de 5,2 tonnes par habitant en 2007 ; elle a baissé de 6,5 % entre 2007 et 2017. Un composteur (contenance annoncée : environ 0,5 m³) est formé d'un pavé droit (70 cm de large, 67 cm de profondeur) surmonté d'un prisme droit de 70 cm de long dont la base est le trapèze ABCD : petit côté AD = 39 cm, grand côté CB = 67 cm, côté oblique DC = 53 cm, hauteur DH ; la hauteur totale du composteur est 1,1 m. Formules : aire du trapèze = (petit côté + grand côté) × hauteur / 2 ; volume du prisme droit = aire de la base × hauteur ; volume du pavé = L × l × h.",
+      "theme": "Pourcentage, trapèze, volumes",
+      "points": 20,
+      "minutes": 25,
+      "enBref": [
+        "6,5 % de 5,2 tonnes : 0,338 tonne de moins, soit 338 kg.",
+        "CH = 67 − 39 = 28 cm ; Pythagore dans DHC : DH² = 53² − 28² = 2 025, DH = 45 cm ; aire du trapèze : (39 + 67) × 45 / 2 = 2 385 cm².",
+        "Prisme : 2 385 × 70 = 166 950 cm³ ; pavé : 70 × 67 × 65 = 304 850 cm³ ; total 471 800 cm³ ≈ 0,47 m³, soit « environ 0,5 m³ » : l'affirmation est vraie."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "De combien de tonnes la production annuelle de déchets par Français a-t-elle diminué entre 2007 et 2017 ?",
+          "blocs": [
+            { "type": "texte", "texte": "On calcule 6,5 % de la valeur de 2007 :" },
+            { "type": "formule", "tex": "5{,}2 \\times \\frac{6{,}5}{100} = 5{,}2 \\times 0{,}065 = 0{,}338" },
+            { "type": "reponse", "texte": "La production a diminué de **0,338 tonne** par habitant, soit 338 kg (elle est passée à 4,862 tonnes)." },
+            { "type": "piege", "texte": "La question demande la **diminution**, pas la nouvelle valeur : 0,338 t, et non 4,862 t. Lis bien « de combien »." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "a) Calculer CH. b) Montrer que DH = 45 cm. c) Vérifier que l'aire du trapèze ABCD est 2 385 cm². d) Calculer le volume du composteur ; l'affirmation « contenance d'environ 0,5 m³ » est-elle vraie ?",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** H est le pied de la hauteur issue de D. ADHB a trois angles droits : c'est un rectangle, donc $HB = AD = 39$ cm." },
+            { "type": "formule", "tex": "CH = CB - HB = 67 - 39 = 28 \\text{ cm}" },
+            { "type": "reponse", "texte": "a) $CH = 28$ cm." },
+            { "type": "texte", "texte": "**b)** Le triangle DHC est rectangle en H, d'hypoténuse $[DC]$. Théorème de Pythagore :" },
+            { "type": "formule", "tex": "DC^2 = DH^2 + HC^2 \\quad \\Longrightarrow \\quad DH^2 = 53^2 - 28^2 = 2\\,809 - 784 = 2\\,025" },
+            { "type": "formule", "tex": "DH = \\sqrt{2\\,025} = 45 \\text{ cm}" },
+            { "type": "reponse", "texte": "b) D'après le théorème de Pythagore dans DHC rectangle en H, $DH = 45$ cm." },
+            { "type": "texte", "texte": "**c)** La hauteur du trapèze est DH = 45 cm :" },
+            { "type": "formule", "tex": "\\mathcal{A}_{ABCD} = \\frac{(39 + 67) \\times 45}{2} = \\frac{106 \\times 45}{2} = \\frac{4\\,770}{2} = 2\\,385 \\text{ cm}^2" },
+            { "type": "reponse", "texte": "c) L'aire du trapèze est bien de 2 385 cm²." },
+            { "type": "texte", "texte": "**d)** Le composteur est formé de deux solides. **Le prisme droit** du haut a pour base le trapèze et pour hauteur la largeur du composteur, 70 cm. **Le pavé droit** du bas mesure 70 cm sur 67 cm, et sa hauteur est la hauteur totale moins celle du trapèze : $110 - 45 = 65$ cm." },
+            { "type": "formule", "tex": "V_{\\text{prisme}} = 2\\,385 \\times 70 = 166\\,950 \\text{ cm}^3" },
+            { "type": "formule", "tex": "V_{\\text{pavé}} = 70 \\times 67 \\times 65 = 304\\,850 \\text{ cm}^3" },
+            { "type": "formule", "tex": "V_{\\text{total}} = 166\\,950 + 304\\,850 = 471\\,800 \\text{ cm}^3 = 0{,}4718 \\text{ m}^3" },
+            { "type": "reponse", "texte": "d) Le composteur a un volume de 471 800 cm³, soit environ **0,47 m³**. L'affirmation « environ 0,5 m³ » est **vraie** : 0,47 m³ arrondi au dixième donne 0,5 m³." },
+            { "type": "piege", "texte": "Deux pièges de conversion : 1,1 m = 110 cm (tout en centimètres avant de calculer), et 1 m³ = 1 000 000 cm³ (pas 1 000 ni 10 000). La hauteur du pavé n'est pas 1,1 m : il faut retirer les 45 cm du trapèze." },
+            { "type": "attendu", "texte": "Le découpage en deux solides, clairement nommés, puis l'addition. Même si une sous-question te résiste, utilise les valeurs données (DH = 45, aire = 2 385) pour continuer : les questions « montrer que » sont faites pour ça." }
+          ]
+        }
+      ]
+    }
+  ]
+}

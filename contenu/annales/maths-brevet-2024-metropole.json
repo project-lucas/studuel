@@ -1,0 +1,323 @@
+{
+  "id": "maths-brevet-2024-metropole",
+  "matiere": "maths",
+  "niveau": "3e",
+  "examen": "brevet",
+  "annee": 2024,
+  "centre": "Métropole",
+  "jour": null,
+  "code": "24GENMATMEAG1",
+  "titre": "Brevet 2024 — Mathématiques",
+  "dureeMin": 120,
+  "coefficient": null,
+  "consigne": "Série générale, calculatrice autorisée : cinq exercices sur 100 points (20, 20, 22, 18 et 20 points). Toutes les réponses doivent être justifiées sauf indication contraire (le QCM de l'exercice 4) ; une trace de recherche, même inachevée, compte.",
+  "parties": [
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "La roulette : une bille s'arrête au hasard sur l'un des numéros de 0 à 36, tous équiprobables. Sur la roue, le 0 est à part ; les autres cases sont rouges (claires) ou noires (foncées) : les noires sont 2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35.",
+      "theme": "Probabilités : la roulette",
+      "points": 20,
+      "minutes": 20,
+      "enBref": [
+        "37 numéros équiprobables (de 0 à 36) : P(7) = 1/37.",
+        "Dix cases sont à la fois noires et paires (2, 4, 6, 8, 10, 20, 22, 24, 26, 28) : P = 10/37.",
+        "P(numéro ≤ 6) = 7/37 ; P(numéro ≥ 7) = 1 − 7/37 = 30/37 ≈ 0,81, plus que 3/4 : le joueur a raison."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Expliquer pourquoi la probabilité que la bille s'arrête sur le 7 est 1/37.",
+          "blocs": [
+            { "type": "texte", "texte": "Les numéros vont de 0 à 36 : cela fait **37 numéros** (ne pas oublier le 0). La bille a la même probabilité de s'arrêter sur chacun (équiprobabilité), et une seule case porte le 7." },
+            { "type": "reponse", "texte": "Il y a 37 issues équiprobables et une seule favorable : $P(7) = \\dfrac{1}{37}$." },
+            { "type": "piege", "texte": "Compter 36 numéros : de 0 à 36, il y en a 37. C'est précisément ce que la question veut te faire remarquer." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Probabilité que la bille s'arrête sur une case à la fois noire et paire.",
+          "blocs": [
+            { "type": "texte", "texte": "On lit la roue et on relève les cases noires qui portent un numéro pair : 2, 4, 6, 8, 10, 20, 22, 24, 26, 28. Il y en a 10 (les huit autres cases noires, 11, 13, 15, 17, 29, 31, 33, 35, sont impaires)." },
+            { "type": "formule", "tex": "P(\\text{noire et paire}) = \\frac{10}{37}" },
+            { "type": "reponse", "texte": "$P(\\text{noire et paire}) = \\dfrac{10}{37}$, soit environ 0,27." },
+            { "type": "attendu", "texte": "La liste des dix numéros sur la copie : c'est elle qui justifie le numérateur. Le 0 n'est ni rouge ni noir, il ne compte pas, même s'il est pair." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "a) Probabilité d'un numéro inférieur ou égal à 6 ? b) En déduire la probabilité d'un numéro supérieur ou égal à 7. c) Un joueur affirme avoir plus de 3 chances sur 4 d'obtenir un numéro ≥ 7. A-t-il raison ?",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** Les numéros inférieurs ou égaux à 6 sont 0, 1, 2, 3, 4, 5, 6 : sept numéros." },
+            { "type": "formule", "tex": "P(\\leq 6) = \\frac{7}{37}" },
+            { "type": "reponse", "texte": "a) $P(\\text{numéro} \\leq 6) = \\dfrac{7}{37}$." },
+            { "type": "texte", "texte": "**b)** « Supérieur ou égal à 7 » est l'événement **contraire** de « inférieur ou égal à 6 » (un numéro est l'un ou l'autre, jamais les deux) : « en déduire » invite à utiliser $1 - P$." },
+            { "type": "formule", "tex": "P(\\geq 7) = 1 - \\frac{7}{37} = \\frac{30}{37}" },
+            { "type": "reponse", "texte": "b) $P(\\text{numéro} \\geq 7) = \\dfrac{30}{37}$." },
+            { "type": "texte", "texte": "**c)** On compare $\\frac{30}{37}$ et $\\frac{3}{4}$, en décimal ou en réduisant au même dénominateur :" },
+            { "type": "formule", "tex": "\\frac{30}{37} \\approx 0{,}81 \\quad > \\quad \\frac{3}{4} = 0{,}75 \\qquad \\left(\\text{ou } \\frac{120}{148} > \\frac{111}{148}\\right)" },
+            { "type": "reponse", "texte": "c) Oui, le joueur a raison : $\\frac{30}{37} \\approx 0{,}81$, c'est plus de 3 chances sur 4." },
+            { "type": "astuce", "texte": "Pour comparer deux fractions, le passage en décimal (à la calculatrice) est le plus rapide ; écris les deux valeurs et le signe de comparaison." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "Programme A : choisir un nombre, prendre son carré, multiplier par 2, ajouter le double du nombre de départ, soustraire 4. Programme B (Scratch) : demander un nombre ; Résultat 1 = nombre + 2 ; Résultat 2 = nombre − 1 ; dire Résultat 1 × Résultat 2.",
+      "theme": "Programmes de calcul, Scratch",
+      "points": 20,
+      "minutes": 20,
+      "enBref": [
+        "A(5) = 2 × 25 + 10 − 4 = 56 ; B(−9) = (−7) × (−10) = 70.",
+        "Programme B : E2 = (x + 2)(x − 1) ; programme A : 2x² + 2x − 4.",
+        "2 × (x + 2)(x − 1) = 2(x² + x − 2) = 2x² + 2x − 4 : A est toujours le double de B."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "a) Vérifier qu'avec 5, le programme A donne 56. b) Résultat du programme B avec −9 ?",
+          "blocs": [
+            { "type": "formule", "tex": "\\text{A : } 5^2 = 25, \\quad 25 \\times 2 = 50, \\quad 50 + 2 \\times 5 = 60, \\quad 60 - 4 = 56" },
+            { "type": "reponse", "texte": "a) Avec 5, le programme A donne bien **56**." },
+            { "type": "formule", "tex": "\\text{B : } -9 + 2 = -7, \\quad -9 - 1 = -10, \\quad (-7) \\times (-10) = 70" },
+            { "type": "reponse", "texte": "b) Avec −9, le programme B affiche « Le résultat est **70** »." },
+            { "type": "piege", "texte": "Le programme B calcule deux nombres **à partir du nombre de départ** (pas l'un après l'autre) puis les multiplie. Et $(-7) \\times (-10)$ est positif." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "a) Laquelle des expressions E1 = (x + 2) − 1, E2 = (x + 2)(x − 1), E3 = x + 2 × x − 1 donne le résultat du programme B ? b) Exprimer le résultat du programme A en fonction de x.",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** Résultat 1 vaut $x + 2$, Résultat 2 vaut $x - 1$, et le programme affiche leur produit. E1 est une différence, E3 vaut $x + 2x - 1 = 3x - 1$ (priorité de la multiplication)." },
+            { "type": "reponse", "texte": "a) **E2** $= (x + 2)(x - 1)$. Contrôle avec −9 : $(-7) \\times (-10) = 70$." },
+            { "type": "texte", "texte": "**b)** Étape par étape : carré $x^2$ ; fois 2 : $2x^2$ ; plus le double du nombre : $2x^2 + 2x$ ; moins 4." },
+            { "type": "reponse", "texte": "b) Le programme A donne $2x^2 + 2x - 4$. Contrôle avec 5 : $50 + 10 - 4 = 56$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Démontrer que, quel que soit le nombre choisi, le résultat du programme A est toujours le double du résultat du programme B.",
+          "blocs": [
+            { "type": "texte", "texte": "On calcule le double du résultat de B en développant, et on compare à l'expression de A." },
+            { "type": "formule", "tex": "2 \\times (x + 2)(x - 1) = 2\\,(x^2 - x + 2x - 2) = 2\\,(x^2 + x - 2) = 2x^2 + 2x - 4" },
+            { "type": "reponse", "texte": "$2 \\times (x + 2)(x - 1) = 2x^2 + 2x - 4$, qui est exactement le résultat du programme A : pour tout nombre $x$, le résultat de A est le double de celui de B. (Avec 5 : 56 = 2 × 28, et $(5 + 2)(5 - 1) = 28$.)" },
+            { "type": "attendu", "texte": "« Démontrer… quel que soit le nombre » exige le calcul littéral : des exemples (5 → 56 et 28) illustrent, mais ne démontrent pas. Développe le produit avant de multiplier par 2, ou factorise A par 2 : $2(x^2 + x - 2)$, puis montre que $x^2 + x - 2 = (x + 2)(x - 1)$." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "Un cercle de centre O et de rayon 4,5 cm ; [AB] est un diamètre, D un point du cercle ; B, E, A alignés, D, F, A alignés ; (BD) // (EF) ; BD = 5,4 cm, DA = 7,2 cm, AE = 2,7 cm. Rappel : aire du disque = π × R².",
+      "theme": "Cercle, Pythagore, Thalès, aires",
+      "points": 22,
+      "minutes": 25,
+      "enBref": [
+        "AB = 2 × 4,5 = 9 cm.",
+        "5,4² + 7,2² = 81 = 9² : réciproque de Pythagore, ABD est rectangle en D (ou : triangle inscrit dans un cercle dont un côté est un diamètre).",
+        "Thalès : AF = 2,7 × 7,2 / 9 = 2,16 cm.",
+        "Aire de ABD : 5,4 × 7,2 / 2 = 19,44 cm² ; aire du disque : 20,25π ≈ 63,62 cm² ; le triangle en représente environ 31 %."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Justifier que le diamètre [AB] mesure 9 cm.",
+          "blocs": [
+            { "type": "reponse", "texte": "Un diamètre mesure deux fois le rayon : $AB = 2 \\times 4{,}5 = 9$ cm." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Démontrer que le triangle ABD est rectangle en D.",
+          "blocs": [
+            { "type": "texte", "texte": "**Méthode 1 : réciproque du théorème de Pythagore.** Le plus grand côté est $[AB]$, 9 cm." },
+            { "type": "formule", "tex": "AB^2 = 9^2 = 81 \\qquad BD^2 + DA^2 = 5{,}4^2 + 7{,}2^2 = 29{,}16 + 51{,}84 = 81" },
+            { "type": "texte", "texte": "Comme $AB^2 = BD^2 + DA^2$, d'après la réciproque du théorème de Pythagore, le triangle ABD est rectangle en D." },
+            { "type": "texte", "texte": "**Méthode 2 : le cercle.** D est sur le cercle de diamètre $[AB]$ ; or si un triangle est inscrit dans un cercle ayant un de ses côtés pour diamètre, il est rectangle, et l'angle droit est au sommet opposé au diamètre." },
+            { "type": "reponse", "texte": "Le triangle ABD est rectangle en D : par la réciproque de Pythagore ($5{,}4^2 + 7{,}2^2 = 9^2$), ou parce qu'il est inscrit dans le cercle de diamètre $[AB]$. Une seule méthode suffit." },
+            { "type": "piege", "texte": "Pour la réciproque, l'égalité se vérifie avec le **plus grand** côté seul d'un côté ; écrire « AB² = BD² + DA² donc… » sans avoir calculé les deux membres séparément n'est pas une démonstration." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Calculer AF.",
+          "blocs": [
+            { "type": "texte", "texte": "Les points A, E, B sont alignés, A, F, D aussi, et (EF) // (BD) : théorème de Thalès dans les triangles AEF et ABD (E sur $[AB]$, F sur $[AD]$)." },
+            { "type": "formule", "tex": "\\frac{AE}{AB} = \\frac{AF}{AD} = \\frac{EF}{BD} \\quad \\Longrightarrow \\quad \\frac{2{,}7}{9} = \\frac{AF}{7{,}2}" },
+            { "type": "formule", "tex": "AF = \\frac{2{,}7 \\times 7{,}2}{9} = \\frac{19{,}44}{9} = 2{,}16 \\text{ cm}" },
+            { "type": "reponse", "texte": "D'après le théorème de Thalès, **AF = 2,16 cm**." },
+            { "type": "astuce", "texte": "Le rapport $\\frac{2{,}7}{9} = 0{,}3$ : AEF est une réduction de ABD au coefficient 0,3 ; $0{,}3 \\times 7{,}2 = 2{,}16$. Repérer le coefficient évite une erreur de produit en croix." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "a) Justifier que l'aire du triangle ABD est 19,44 cm². b) Calculer l'aire du disque, arrondie au centième.",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** ABD est rectangle en D : les côtés $[DB]$ et $[DA]$ sont perpendiculaires, l'un sert de base et l'autre de hauteur." },
+            { "type": "formule", "tex": "\\mathcal{A}_{ABD} = \\frac{BD \\times DA}{2} = \\frac{5{,}4 \\times 7{,}2}{2} = \\frac{38{,}88}{2} = 19{,}44 \\text{ cm}^2" },
+            { "type": "reponse", "texte": "a) L'aire du triangle ABD est $\\frac{5{,}4 \\times 7{,}2}{2} = 19{,}44$ cm²." },
+            { "type": "formule", "tex": "\\mathcal{A}_{\\text{disque}} = \\pi \\times 4{,}5^2 = 20{,}25\\,\\pi \\approx 63{,}62 \\text{ cm}^2" },
+            { "type": "reponse", "texte": "b) L'aire du disque est d'environ **63,62 cm²**." },
+            { "type": "piege", "texte": "Le rayon est 4,5, pas 9 : $\\pi \\times 9^2$ donnerait 254 cm², quatre fois trop." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Quel pourcentage de l'aire du disque représente l'aire du triangle ABD ?",
+          "blocs": [
+            { "type": "formule", "tex": "\\frac{19{,}44}{63{,}62} \\approx 0{,}3056 \\approx 30{,}6\\,\\%" },
+            { "type": "reponse", "texte": "Le triangle ABD représente environ **31 %** de l'aire du disque (30,6 %)." },
+            { "type": "attendu", "texte": "Le quotient « partie / tout » puis la conversion en pourcentage ; un arrondi raisonnable (30,6 % ou 31 %) avec le signe ≈." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-4",
+      "titre": "Exercice 4",
+      "nature": "exercice",
+      "enonce": "QCM sans justification, six questions : l'image de −4 par f(x) = 3x − 2 ; (−5)³ ; l'image du point J par la translation qui transforme C en A sur un quadrillage (B, C, G, H en haut ; A, D, J, I au milieu ; F, E, L, K en bas) ; l'antécédent de 3 par une fonction représentée par une droite décroissante passant par (0 ; 3) ; la médiane de sept tailles ; cos α dans un triangle ABC rectangle en A avec AB = 4, AC = 3, BC = 5, α en B.",
+      "theme": "QCM : fonctions, médiane, cosinus",
+      "points": 18,
+      "minutes": 15,
+      "enBref": [
+        "1 : f(−4) = −12 − 2 = −14 (A). 2 : (−5)³ = −125 (A).",
+        "3 : C → A, c'est une case vers la gauche et une vers le bas ; J → E (B). 4 : la droite passe par (0 ; 3), l'antécédent de 3 est 0 (C).",
+        "5 : tailles rangées, la 4e sur 7 est 1,67 m (B). 6 : cos α = AB / BC = 4 / 5 = 0,8 (A)."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "f(x) = 3x − 2 : quelle est l'image de −4 ?",
+          "blocs": [
+            { "type": "formule", "tex": "f(-4) = 3 \\times (-4) - 2 = -12 - 2 = -14" },
+            { "type": "reponse", "texte": "**Réponse A** : −14." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Combien vaut (−5)³ ?",
+          "blocs": [
+            { "type": "formule", "tex": "(-5)^3 = (-5) \\times (-5) \\times (-5) = 25 \\times (-5) = -125" },
+            { "type": "reponse", "texte": "**Réponse A** : −125. (Un nombre négatif élevé à une puissance impaire reste négatif ; −15 serait $-5 \\times 3$.)" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Image du point J par la translation qui transforme C en A ?",
+          "blocs": [
+            { "type": "texte", "texte": "C est en haut, deuxième colonne ; A est au milieu, première colonne : la translation déplace d'une case vers la gauche et d'une case vers le bas. J est au milieu, troisième colonne : une case à gauche et une en bas, on arrive en bas, deuxième colonne, c'est E." },
+            { "type": "reponse", "texte": "**Réponse B** : E." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Quel est l'antécédent de 3 par la fonction f représentée ?",
+          "blocs": [
+            { "type": "texte", "texte": "On cherche $x$ tel que $f(x) = 3$ : on repère 3 sur l'axe des **ordonnées** ; la droite y passe exactement sur l'axe vertical, donc pour $x = 0$." },
+            { "type": "reponse", "texte": "**Réponse C** : 0." },
+            { "type": "piege", "texte": "Les réponses 3 et −3 sont des leurres : il ne s'agit pas de l'image de 3 (qui vaut environ −4,5 sur le graphique), mais du nombre dont l'image est 3." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Médiane des tailles 1,46 ; 1,65 ; 1,6 ; 1,72 ; 1,7 ; 1,67 ; 1,75 ?",
+          "blocs": [
+            { "type": "texte", "texte": "Rangées : 1,46 ; 1,6 ; 1,65 ; **1,67** ; 1,7 ; 1,72 ; 1,75. Sept valeurs, la médiane est la 4e." },
+            { "type": "reponse", "texte": "**Réponse B** : 1,67 m." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6",
+          "intitule": "Triangle ABC rectangle en A, AB = 4, AC = 3, BC = 5, angle α en B : cos α ?",
+          "blocs": [
+            { "type": "formule", "tex": "\\cos\\alpha = \\frac{\\text{adjacent}}{\\text{hypoténuse}} = \\frac{AB}{BC} = \\frac{4}{5} = 0{,}8" },
+            { "type": "reponse", "texte": "**Réponse A** : 0,8." },
+            { "type": "astuce", "texte": "0,6 est le sinus ($\\frac{3}{5}$) et 0,75 la tangente ($\\frac{3}{4}$) : le QCM a mis les trois rapports. Le cosinus, c'est le côté qui touche l'angle sur l'hypoténuse." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-5",
+      "titre": "Exercice 5",
+      "nature": "exercice",
+      "enonce": "Partie A : 330 autocollants et 132 drapeaux à répartir en sachets identiques, tout étant utilisé. Partie B : une piscine en pavé droit de 25 m × 15 m × 2 m, remplie aux 9/10 ; 1 m³ d'eau coûte 4,14 €.",
+      "theme": "Arithmétique et volume",
+      "points": 20,
+      "minutes": 20,
+      "enBref": [
+        "15 sachets : 330 / 15 = 22 mais 132 / 15 = 8,8, impossible.",
+        "330 = 2 × 3 × 5 × 11 ; 132 = 2² × 3 × 11 ; PGCD = 2 × 3 × 11 = 66 sachets, de 5 autocollants et 2 drapeaux.",
+        "Piscine : 25 × 15 × 2 = 750 m³ ; aux 9/10, 675 m³ ; 675 × 4,14 = 2 794,50 €."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Partie A : les sachets" },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Pourquoi n'est-il pas possible de faire 15 sachets ?",
+          "blocs": [
+            { "type": "formule", "tex": "\\frac{330}{15} = 22 \\qquad \\frac{132}{15} = 8{,}8" },
+            { "type": "reponse", "texte": "15 divise 330 mais ne divise pas 132 : on ne peut pas répartir les 132 drapeaux en 15 sachets contenant le même nombre de drapeaux sans qu'il en reste (132 = 15 × 8 + 12). Donc 15 sachets, c'est impossible." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "a) Décomposer 330 et 132 en facteurs premiers. b) En déduire le plus grand nombre de sachets. c) Combien d'autocollants et de drapeaux par sachet ?",
+          "blocs": [
+            { "type": "formule", "tex": "330 = 2 \\times 165 = 2 \\times 3 \\times 55 = 2 \\times 3 \\times 5 \\times 11" },
+            { "type": "formule", "tex": "132 = 2 \\times 66 = 2 \\times 2 \\times 33 = 2^2 \\times 3 \\times 11" },
+            { "type": "reponse", "texte": "a) $330 = 2 \\times 3 \\times 5 \\times 11$ et $132 = 2^2 \\times 3 \\times 11$." },
+            { "type": "texte", "texte": "**b)** Le nombre de sachets doit diviser 330 et 132 ; le plus grand possible est le PGCD, produit des facteurs premiers communs avec leur plus petit exposant : $2 \\times 3 \\times 11$." },
+            { "type": "formule", "tex": "\\text{PGCD}(330\\,;\\,132) = 2 \\times 3 \\times 11 = 66" },
+            { "type": "reponse", "texte": "b) La présidente pourra réaliser au plus **66 sachets**." },
+            { "type": "formule", "tex": "\\frac{330}{66} = 5 \\qquad \\frac{132}{66} = 2" },
+            { "type": "reponse", "texte": "c) Chaque sachet contiendra **5 autocollants et 2 drapeaux**." },
+            { "type": "attendu", "texte": "Le lien « diviseur commun → PGCD » écrit en toutes lettres, et les deux divisions finales : c'est la vérification que tout est utilisé." }
+          ]
+        },
+        { "type": "titre", "texte": "Partie B : la piscine" },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "La piscine (25 m × 15 m × 2 m) est remplie aux 9/10 ; 1 m³ d'eau coûte 4,14 €. Combien coûte le remplissage ?",
+          "blocs": [
+            { "type": "texte", "texte": "**Le volume de la piscine**, pavé droit :" },
+            { "type": "formule", "tex": "V = 25 \\times 15 \\times 2 = 750 \\text{ m}^3" },
+            { "type": "texte", "texte": "**Le volume d'eau**, les neuf dixièmes :" },
+            { "type": "formule", "tex": "750 \\times \\frac{9}{10} = 675 \\text{ m}^3" },
+            { "type": "texte", "texte": "**Le coût**, à 4,14 € le mètre cube :" },
+            { "type": "formule", "tex": "675 \\times 4{,}14 = 2\\,794{,}50" },
+            { "type": "reponse", "texte": "Le remplissage de la piscine coûte **2 794,50 €**." },
+            { "type": "piege", "texte": "Facturer les 750 m³ (3 105 €) oublie que la piscine n'est remplie qu'aux 9/10. Les trois étapes doivent apparaître, avec leurs unités." }
+          ]
+        }
+      ]
+    }
+  ]
+}

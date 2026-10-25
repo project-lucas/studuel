@@ -11,10 +11,23 @@
 
 import type { AnnaleCorrigee } from './types'
 
+import a_francais_2021_metropole from '@/contenu/annales/francais-2021-metropole.json'
+import a_francais_2022_metropole from '@/contenu/annales/francais-2022-metropole.json'
 import a_francais_2023_metropole from '@/contenu/annales/francais-2023-metropole.json'
 import a_francais_2024_asie from '@/contenu/annales/francais-2024-asie.json'
+import a_francais_2024_metropole from '@/contenu/annales/francais-2024-metropole.json'
 import a_francais_2025_asie from '@/contenu/annales/francais-2025-asie.json'
+import a_francais_2025_metropole from '@/contenu/annales/francais-2025-metropole.json'
+import a_francais_2026_metropole from '@/contenu/annales/francais-2026-metropole.json'
+import a_francais_brevet_2017_metropole from '@/contenu/annales/francais-brevet-2017-metropole.json'
+import a_francais_brevet_2018_metropole from '@/contenu/annales/francais-brevet-2018-metropole.json'
+import a_francais_brevet_2019_metropole from '@/contenu/annales/francais-brevet-2019-metropole.json'
+import a_francais_brevet_2021_metropole from '@/contenu/annales/francais-brevet-2021-metropole.json'
+import a_francais_brevet_2022_metropole from '@/contenu/annales/francais-brevet-2022-metropole.json'
+import a_francais_brevet_2023_metropole from '@/contenu/annales/francais-brevet-2023-metropole.json'
+import a_francais_brevet_2024_metropole from '@/contenu/annales/francais-brevet-2024-metropole.json'
 import a_francais_brevet_2025_metropole from '@/contenu/annales/francais-brevet-2025-metropole.json'
+import a_francais_brevet_2026_metropole from '@/contenu/annales/francais-brevet-2026-metropole.json'
 import a_hggsp_2021_zero_1 from '@/contenu/annales/hggsp-2021-zero-1.json'
 import a_hggsp_2021_zero_2 from '@/contenu/annales/hggsp-2021-zero-2.json'
 import a_hggsp_2023_metropole_j2 from '@/contenu/annales/hggsp-2023-metropole-j2.json'
@@ -39,7 +52,15 @@ import a_maths_2025_amerique_nord_j1 from '@/contenu/annales/maths-2025-amerique
 import a_maths_anticipee_2026_generale_sans_spe_metropole from '@/contenu/annales/maths-anticipee-2026-generale-sans-spe-metropole.json'
 import a_maths_anticipee_2026_generale_spe_metropole from '@/contenu/annales/maths-anticipee-2026-generale-spe-metropole.json'
 import a_maths_anticipee_2026_techno_metropole from '@/contenu/annales/maths-anticipee-2026-techno-metropole.json'
+import a_maths_brevet_2017_metropole from '@/contenu/annales/maths-brevet-2017-metropole.json'
+import a_maths_brevet_2018_metropole from '@/contenu/annales/maths-brevet-2018-metropole.json'
+import a_maths_brevet_2019_metropole from '@/contenu/annales/maths-brevet-2019-metropole.json'
+import a_maths_brevet_2021_metropole from '@/contenu/annales/maths-brevet-2021-metropole.json'
+import a_maths_brevet_2022_metropole from '@/contenu/annales/maths-brevet-2022-metropole.json'
+import a_maths_brevet_2023_metropole from '@/contenu/annales/maths-brevet-2023-metropole.json'
+import a_maths_brevet_2024_metropole from '@/contenu/annales/maths-brevet-2024-metropole.json'
 import a_maths_brevet_2025_metropole from '@/contenu/annales/maths-brevet-2025-metropole.json'
+import a_maths_brevet_2026_metropole from '@/contenu/annales/maths-brevet-2026-metropole.json'
 import a_nsi_2023_metropole_j1 from '@/contenu/annales/nsi-2023-metropole-j1.json'
 import a_nsi_2024_centres_etrangers_j1 from '@/contenu/annales/nsi-2024-centres-etrangers-j1.json'
 import a_nsi_2025_asie_j1 from '@/contenu/annales/nsi-2025-asie-j1.json'
@@ -50,7 +71,12 @@ import a_philosophie_2025_amerique_nord from '@/contenu/annales/philosophie-2025
 import a_physique_chimie_2023_metropole_j1 from '@/contenu/annales/physique-chimie-2023-metropole-j1.json'
 import a_physique_chimie_2024_polynesie_j2 from '@/contenu/annales/physique-chimie-2024-polynesie-j2.json'
 import a_physique_chimie_2025_amerique_nord_j1 from '@/contenu/annales/physique-chimie-2025-amerique-nord-j1.json'
+import a_physique_chimie_brevet_2019_metropole from '@/contenu/annales/physique-chimie-brevet-2019-metropole.json'
+import a_physique_chimie_brevet_2021_metropole from '@/contenu/annales/physique-chimie-brevet-2021-metropole.json'
+import a_physique_chimie_brevet_2023_metropole from '@/contenu/annales/physique-chimie-brevet-2023-metropole.json'
+import a_physique_chimie_brevet_2024_metropole from '@/contenu/annales/physique-chimie-brevet-2024-metropole.json'
 import a_physique_chimie_brevet_2025_metropole from '@/contenu/annales/physique-chimie-brevet-2025-metropole.json'
+import a_physique_chimie_brevet_2026_metropole from '@/contenu/annales/physique-chimie-brevet-2026-metropole.json'
 import a_ses_2021_zero_1 from '@/contenu/annales/ses-2021-zero-1.json'
 import a_ses_2023_metropole_j1 from '@/contenu/annales/ses-2023-metropole-j1.json'
 import a_ses_2023_metropole_j2 from '@/contenu/annales/ses-2023-metropole-j2.json'
@@ -60,13 +86,32 @@ import a_svt_2021_zero_1 from '@/contenu/annales/svt-2021-zero-1.json'
 import a_svt_2023_metropole_j1 from '@/contenu/annales/svt-2023-metropole-j1.json'
 import a_svt_2024_amerique_nord_j1 from '@/contenu/annales/svt-2024-amerique-nord-j1.json'
 import a_svt_2025_amerique_nord_j1 from '@/contenu/annales/svt-2025-amerique-nord-j1.json'
+import a_svt_brevet_2018_metropole from '@/contenu/annales/svt-brevet-2018-metropole.json'
+import a_svt_brevet_2019_metropole from '@/contenu/annales/svt-brevet-2019-metropole.json'
+import a_svt_brevet_2021_metropole from '@/contenu/annales/svt-brevet-2021-metropole.json'
+import a_svt_brevet_2022_metropole from '@/contenu/annales/svt-brevet-2022-metropole.json'
+import a_svt_brevet_2023_metropole from '@/contenu/annales/svt-brevet-2023-metropole.json'
 import a_svt_brevet_2025_metropole from '@/contenu/annales/svt-brevet-2025-metropole.json'
+import a_svt_brevet_2026_metropole from '@/contenu/annales/svt-brevet-2026-metropole.json'
 
 export const ANNALES_CORRIGEES: readonly AnnaleCorrigee[] = [
+  a_francais_2021_metropole,
+  a_francais_2022_metropole,
   a_francais_2023_metropole,
   a_francais_2024_asie,
+  a_francais_2024_metropole,
   a_francais_2025_asie,
+  a_francais_2025_metropole,
+  a_francais_2026_metropole,
+  a_francais_brevet_2017_metropole,
+  a_francais_brevet_2018_metropole,
+  a_francais_brevet_2019_metropole,
+  a_francais_brevet_2021_metropole,
+  a_francais_brevet_2022_metropole,
+  a_francais_brevet_2023_metropole,
+  a_francais_brevet_2024_metropole,
   a_francais_brevet_2025_metropole,
+  a_francais_brevet_2026_metropole,
   a_hggsp_2021_zero_1,
   a_hggsp_2021_zero_2,
   a_hggsp_2023_metropole_j2,
@@ -91,7 +136,15 @@ export const ANNALES_CORRIGEES: readonly AnnaleCorrigee[] = [
   a_maths_anticipee_2026_generale_sans_spe_metropole,
   a_maths_anticipee_2026_generale_spe_metropole,
   a_maths_anticipee_2026_techno_metropole,
+  a_maths_brevet_2017_metropole,
+  a_maths_brevet_2018_metropole,
+  a_maths_brevet_2019_metropole,
+  a_maths_brevet_2021_metropole,
+  a_maths_brevet_2022_metropole,
+  a_maths_brevet_2023_metropole,
+  a_maths_brevet_2024_metropole,
   a_maths_brevet_2025_metropole,
+  a_maths_brevet_2026_metropole,
   a_nsi_2023_metropole_j1,
   a_nsi_2024_centres_etrangers_j1,
   a_nsi_2025_asie_j1,
@@ -102,7 +155,12 @@ export const ANNALES_CORRIGEES: readonly AnnaleCorrigee[] = [
   a_physique_chimie_2023_metropole_j1,
   a_physique_chimie_2024_polynesie_j2,
   a_physique_chimie_2025_amerique_nord_j1,
+  a_physique_chimie_brevet_2019_metropole,
+  a_physique_chimie_brevet_2021_metropole,
+  a_physique_chimie_brevet_2023_metropole,
+  a_physique_chimie_brevet_2024_metropole,
   a_physique_chimie_brevet_2025_metropole,
+  a_physique_chimie_brevet_2026_metropole,
   a_ses_2021_zero_1,
   a_ses_2023_metropole_j1,
   a_ses_2023_metropole_j2,
@@ -112,5 +170,11 @@ export const ANNALES_CORRIGEES: readonly AnnaleCorrigee[] = [
   a_svt_2023_metropole_j1,
   a_svt_2024_amerique_nord_j1,
   a_svt_2025_amerique_nord_j1,
+  a_svt_brevet_2018_metropole,
+  a_svt_brevet_2019_metropole,
+  a_svt_brevet_2021_metropole,
+  a_svt_brevet_2022_metropole,
+  a_svt_brevet_2023_metropole,
   a_svt_brevet_2025_metropole,
+  a_svt_brevet_2026_metropole,
 ] as unknown as readonly AnnaleCorrigee[]

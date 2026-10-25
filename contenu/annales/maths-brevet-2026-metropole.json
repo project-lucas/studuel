@@ -1,0 +1,367 @@
+{
+  "id": "maths-brevet-2026-metropole",
+  "matiere": "maths",
+  "niveau": "3e",
+  "examen": "brevet",
+  "annee": 2026,
+  "centre": "Métropole",
+  "jour": null,
+  "code": "26GENMATME1",
+  "titre": "Brevet 2026 — Mathématiques",
+  "dureeMin": 120,
+  "coefficient": 2,
+  "consigne": "Nouvelle formule du brevet 2026, notée sur 20 (coefficient 2) : partie 1, les automatismes (20 minutes, 6 points, SANS calculatrice, neuf questions rapides, copie ramassée à la fin), puis partie 2, raisonnement et résolution de problèmes (1 h 40, 14 points, calculatrice autorisée, quatre exercices dont 2 points pour la clarté et la rédaction). Toutes les réponses de la partie 2 doivent être justifiées ; une trace de recherche compte.",
+  "parties": [
+    {
+      "id": "automatismes",
+      "titre": "Partie 1 : Automatismes",
+      "nature": "exercice",
+      "enonce": "Neuf questions sans calculatrice, sans justification : écriture fractionnaire de 0,75 ; −4,7 + 3,5 ; un tableau de proportionnalité (6 → 18 ; 12 → a) ; une probabilité (10 rouges, 4 bleues, 6 vertes) ; l'équation 10x + 16 = −64 ; la notation scientifique de 0,00458 ; un diagramme circulaire de 24 élèves où la réponse B occupe un quart ; le périmètre d'un rectangle de 10 mm sur 5 mm ; le cosinus de l'angle EDF dans le triangle DEF rectangle en E (DF = 10, DE = 6, EF = 8).",
+      "theme": "Automatismes (sans calculatrice)",
+      "points": 6,
+      "minutes": 20,
+      "enBref": [
+        "1 : 3/4. 2 : −1,2. 3 : a = 36. 4 : 4/20 (B). 5 : x = −8 (C). 6 : 4,58 × 10⁻³ (C).",
+        "7 : un quart de 24, soit 6 élèves. 8 : 30 mm (A). 9 : cos(EDF) = 6/10 = 3/5 (B).",
+        "Vingt minutes pour neuf questions : deux minutes chacune, sans s'attarder ; on recopie le numéro et la réponse."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Donner une écriture de 0,75 sous la forme d'une fraction.",
+          "blocs": [
+            { "type": "formule", "tex": "0{,}75 = \\frac{75}{100} = \\frac{3}{4}" },
+            { "type": "reponse", "texte": "$0{,}75 = \\dfrac{3}{4}$ (ou $\\dfrac{75}{100}$, acceptée aussi)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Calculer la somme −4,7 + 3,5.",
+          "blocs": [
+            { "type": "texte", "texte": "Signes différents : on soustrait les distances à zéro ($4{,}7 - 3{,}5 = 1{,}2$) et on garde le signe du plus grand, le moins." },
+            { "type": "reponse", "texte": "$-4{,}7 + 3{,}5 = -1{,}2$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Tableau de proportionnalité : 6 → 18 et 12 → a. Combien vaut a ?",
+          "blocs": [
+            { "type": "texte", "texte": "Le coefficient de proportionnalité est $18 \\div 6 = 3$ ; ou bien 12 est le double de 6, donc $a$ est le double de 18." },
+            { "type": "reponse", "texte": "$a = 12 \\times 3 = 36$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "10 boules rouges, 4 bleues, 6 vertes : probabilité d'une boule bleue ?",
+          "blocs": [
+            { "type": "formule", "tex": "P(\\text{bleue}) = \\frac{4}{10 + 4 + 6} = \\frac{4}{20} = \\frac{1}{5}" },
+            { "type": "reponse", "texte": "**Réponse B** : $\\dfrac{4}{20}$." },
+            { "type": "piege", "texte": "$\\frac{4}{16}$ (réponse C) divise par le nombre de boules non bleues ; $\\frac{1}{4}$ aussi en version simplifiée. Le dénominateur est le total, 20." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Solution de l'équation 10x + 16 = −64 ?",
+          "blocs": [
+            { "type": "formule", "tex": "10x = -64 - 16 = -80 \\quad \\Longrightarrow \\quad x = -8" },
+            { "type": "reponse", "texte": "**Réponse C** : −8. Vérification : $10 \\times (-8) + 16 = -64$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6",
+          "intitule": "Notation scientifique de 0,00458 ?",
+          "blocs": [
+            { "type": "texte", "texte": "Notation scientifique : un nombre entre 1 et 10 (ici 4,58) multiplié par une puissance de 10. De 4,58 à 0,00458, la virgule recule de trois rangs : $10^{-3}$." },
+            { "type": "reponse", "texte": "**Réponse C** : $4{,}58 \\times 10^{-3}$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "7",
+          "intitule": "Diagramme circulaire de 24 élèves : combien ont choisi la réponse B ?",
+          "blocs": [
+            { "type": "texte", "texte": "Le secteur de la réponse B est délimité par un angle droit (codé) : un quart du disque, donc un quart des élèves." },
+            { "type": "formule", "tex": "\\frac{24}{4} = 6" },
+            { "type": "reponse", "texte": "**6 élèves** ont choisi la réponse B." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "8",
+          "intitule": "Périmètre d'un rectangle de 10 mm sur 5 mm ?",
+          "blocs": [
+            { "type": "formule", "tex": "P = 2 \\times (10 + 5) = 30 \\text{ mm}" },
+            { "type": "reponse", "texte": "**Réponse A** : 30 mm. Un périmètre est une longueur, en mm, pas en mm² ; 50 mm² serait l'aire." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "9",
+          "intitule": "Triangle DEF rectangle en E, DF = 10 cm, DE = 6 cm, EF = 8 cm : cosinus de l'angle EDF ?",
+          "blocs": [
+            { "type": "formule", "tex": "\\cos\\widehat{EDF} = \\frac{\\text{côté adjacent}}{\\text{hypoténuse}} = \\frac{DE}{DF} = \\frac{6}{10} = \\frac{3}{5}" },
+            { "type": "reponse", "texte": "**Réponse B** : $\\dfrac{3}{5}$." },
+            { "type": "astuce", "texte": "L'hypoténuse est toujours en bas d'un cosinus ou d'un sinus : les réponses $\\frac{5}{3}$ et $\\frac{4}{3}$ (plus grandes que 1) sont impossibles d'emblée. Reste à choisir le côté adjacent, $[DE]$, qui touche l'angle en D." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "Médailles de neuf pays aux Jeux Paralympiques de Paris 2024 (or, argent, bronze, total) : Chine 94/76/50/220 ; Grande-Bretagne 49/44/31/124 ; États-Unis 36/42/27/105 ; Pays-Bas 27/17/12/56 ; Brésil 25/26/38/89 ; Italie 24/15/32/71 ; Ukraine 22/28/32/82 ; France 19/28/28/75 ; Australie ?/17/28/63. À Tokyo 2021, le Brésil avait 20 médailles d'argent.",
+      "theme": "Statistiques et pourcentages",
+      "points": 3,
+      "minutes": 18,
+      "enBref": [
+        "Pays-Bas : 27 médailles d'or ; Australie : 63 − 17 − 28 = 18.",
+        "Grande-Bretagne : 31 / 124 = 25 % de bronze, plus de 20 % : vrai.",
+        "Totaux rangés : 56, 63, 71, 75, 82, 89, 105, 124, 220 ; la médiane (5e sur 9) est 82 : au moins la moitié des pays ont 82 médailles ou moins, au moins la moitié 82 ou plus.",
+        "Brésil, argent : de 20 à 26, soit + 6/20 = + 30 %."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Combien de médailles d'or pour les Pays-Bas ?",
+          "blocs": [
+            { "type": "reponse", "texte": "Lecture du tableau : les Pays-Bas ont obtenu **27 médailles d'or**." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Calculer le nombre de médailles d'or de l'Australie.",
+          "blocs": [
+            { "type": "formule", "tex": "63 - 17 - 28 = 18" },
+            { "type": "reponse", "texte": "L'Australie a obtenu **18 médailles d'or** (63 au total, moins 17 d'argent et 28 de bronze)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Montrer que « plus de 20 % des médailles de la Grande-Bretagne sont en bronze ».",
+          "blocs": [
+            { "type": "formule", "tex": "\\frac{31}{124} = 0{,}25 = 25\\,\\%" },
+            { "type": "reponse", "texte": "Le bronze représente $\\frac{31}{124} = 25\\,\\%$ des médailles britanniques, et $25\\,\\% > 20\\,\\%$ : l'affirmation est vraie." },
+            { "type": "astuce", "texte": "Sans calculatrice de tête : 20 % de 124, c'est 24,8 ; or 31 > 24,8. Avec calculatrice, le quotient direct suffit." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "a) Déterminer la médiane des totaux des 9 pays, en précisant la démarche. b) Interpréter ce résultat.",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** On range les neuf totaux dans l'ordre croissant : 56 ; 63 ; 71 ; 75 ; **82** ; 89 ; 105 ; 124 ; 220. Il y a 9 valeurs (impair) : la médiane est la 5e, qui laisse quatre valeurs de chaque côté." },
+            { "type": "reponse", "texte": "a) La médiane de la série est **82 médailles**." },
+            { "type": "reponse", "texte": "b) Au moins la moitié de ces pays ont obtenu 82 médailles ou moins, et au moins la moitié en ont obtenu 82 ou plus : l'Ukraine, avec 82 médailles, est exactement au milieu du classement de ces neuf pays." },
+            { "type": "piege", "texte": "Prendre la valeur du milieu du tableau **sans ranger** donne 89 (le Brésil, 5e ligne) : faux. « Détailler la démarche » signifie écrire la série rangée et dire pourquoi la 5e valeur." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Argent du Brésil : 20 à Tokyo 2021, 26 à Paris 2024. Pourcentage d'augmentation ?",
+          "blocs": [
+            { "type": "formule", "tex": "\\frac{26 - 20}{20} = \\frac{6}{20} = 0{,}3 = 30\\,\\%" },
+            { "type": "reponse", "texte": "Le nombre de médailles d'argent du Brésil a augmenté de **30 %**." },
+            { "type": "attendu", "texte": "La variation (6) divisée par la valeur de **départ** (20), pas par 26. Une phrase de conclusion avec le signe %." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "(BD) et (CE) sont sécantes en A ; (BC) // (DE) ; AB = 6,4 cm, AC = 4,8 cm, AD = 4,8 cm, BC = 8 cm. Les points D et B sont de part et d'autre de A, ainsi que C et E (configuration en papillon).",
+      "theme": "Pythagore, Thalès, triangles semblables",
+      "points": 4,
+      "minutes": 25,
+      "enBref": [
+        "6,4² + 4,8² = 40,96 + 23,04 = 64 = 8² : réciproque de Pythagore, ABC est rectangle en A.",
+        "Thalès : AD/AB = 4,8/6,4 = 0,75, donc DE = 0,75 × 8 = 6 cm et AE = 0,75 × 4,8 = 3,6 cm.",
+        "(BC) // (DE) coupées par (BD) : les angles ABC et ADE sont alternes-internes, donc égaux.",
+        "Deux angles égaux (l'angle droit en A et ABC = ADE) : ABC et ADE sont semblables.",
+        "BCDE a ses diagonales perpendiculaires : aire = BD × CE / 2 = 11,2 × 8,4 / 2 = 47,04 cm²."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Montrer que le triangle ABC est rectangle en A.",
+          "blocs": [
+            { "type": "texte", "texte": "Le plus grand côté de ABC est $[BC]$ (8 cm). On compare $BC^2$ à $AB^2 + AC^2$ :" },
+            { "type": "formule", "tex": "BC^2 = 8^2 = 64 \\qquad AB^2 + AC^2 = 6{,}4^2 + 4{,}8^2 = 40{,}96 + 23{,}04 = 64" },
+            { "type": "reponse", "texte": "Comme $BC^2 = AB^2 + AC^2$, d'après la **réciproque du théorème de Pythagore**, le triangle ABC est rectangle en A." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Montrer que DE = 6 cm et AE = 3,6 cm.",
+          "blocs": [
+            { "type": "texte", "texte": "Les droites (BD) et (CE) se coupent en A, et (BC) // (DE) : théorème de Thalès (configuration « papillon », A entre B et D, entre C et E)." },
+            { "type": "formule", "tex": "\\frac{AD}{AB} = \\frac{AE}{AC} = \\frac{DE}{BC} \\quad \\text{avec} \\quad \\frac{AD}{AB} = \\frac{4{,}8}{6{,}4} = 0{,}75" },
+            { "type": "formule", "tex": "DE = 0{,}75 \\times BC = 0{,}75 \\times 8 = 6 \\text{ cm} \\qquad AE = 0{,}75 \\times AC = 0{,}75 \\times 4{,}8 = 3{,}6 \\text{ cm}" },
+            { "type": "reponse", "texte": "D'après le théorème de Thalès, $DE = 6$ cm et $AE = 3{,}6$ cm." },
+            { "type": "piege", "texte": "Dans le papillon, $\\frac{AD}{AB}$ se compare à $\\frac{AE}{AC}$ (les deux segments issus de A sur chaque droite), pas à $\\frac{AC}{AE}$. Le coefficient 0,75 (ADE est une réduction de ABC) simplifie tout." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Montrer que les angles ABC et ADE sont égaux, en précisant la démarche.",
+          "blocs": [
+            { "type": "texte", "texte": "**Méthode 1 : angles alternes-internes.** Les droites (BC) et (DE) sont parallèles, et la droite (BD) les coupe en B et en D. Les angles $\\widehat{ABC}$ et $\\widehat{ADE}$ sont **alternes-internes** (de part et d'autre de la sécante, entre les parallèles). Or deux droites parallèles coupées par une sécante forment des angles alternes-internes égaux." },
+            { "type": "texte", "texte": "**Méthode 2 : trigonométrie.** Le triangle ADE est rectangle en A, car $\\widehat{DAE}$ est opposé par le sommet à $\\widehat{BAC}$, qui est droit (question 1)." },
+            { "type": "formule", "tex": "\\tan\\widehat{ABC} = \\frac{AC}{AB} = \\frac{4{,}8}{6{,}4} = 0{,}75 \\qquad \\tan\\widehat{ADE} = \\frac{AE}{AD} = \\frac{3{,}6}{4{,}8} = 0{,}75" },
+            { "type": "reponse", "texte": "Les angles $\\widehat{ABC}$ et $\\widehat{ADE}$ sont égaux (environ 36,9°) : ce sont des angles alternes-internes formés par les parallèles (BC) et (DE) et la sécante (BD). Les tangentes égales (0,75) le confirment." },
+            { "type": "attendu", "texte": "« Préciser la démarche » : nommer la propriété (alternes-internes et parallèles) ou poser les deux tangentes. Une seule des deux méthodes suffit, mais rédigée en entier." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Montrer que les triangles ABC et ADE sont semblables.",
+          "blocs": [
+            { "type": "texte", "texte": "Deux triangles qui ont deux angles égaux sont semblables. Ils ont déjà $\\widehat{ABC} = \\widehat{ADE}$ (question 3), et $\\widehat{BAC} = \\widehat{DAE} = 90°$ (angles opposés par le sommet, l'un étant droit)." },
+            { "type": "reponse", "texte": "Les triangles ABC et ADE ont deux angles deux à deux égaux (un angle droit en A, et $\\widehat{ABC} = \\widehat{ADE}$) : ils sont semblables. (Autre preuve : leurs côtés sont proportionnels, de rapport 0,75, d'après Thalès.)" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Déterminer l'aire du quadrilatère BCDE.",
+          "blocs": [
+            { "type": "texte", "texte": "Les diagonales $[BD]$ et $[CE]$ de BCDE se coupent en A à angle droit : le quadrilatère se découpe en **quatre triangles rectangles en A**. On peut les additionner, ou utiliser le fait que l'aire d'un quadrilatère à diagonales perpendiculaires vaut le demi-produit des diagonales." },
+            { "type": "formule", "tex": "BD = 6{,}4 + 4{,}8 = 11{,}2 \\text{ cm} \\qquad CE = 4{,}8 + 3{,}6 = 8{,}4 \\text{ cm}" },
+            { "type": "formule", "tex": "\\mathcal{A}_{BCDE} = \\frac{BD \\times CE}{2} = \\frac{11{,}2 \\times 8{,}4}{2} = 47{,}04 \\text{ cm}^2" },
+            { "type": "texte", "texte": "Par les quatre triangles : $\\frac{6{,}4 \\times 4{,}8}{2} + \\frac{4{,}8 \\times 4{,}8}{2} + \\frac{4{,}8 \\times 3{,}6}{2} + \\frac{6{,}4 \\times 3{,}6}{2} = 15{,}36 + 11{,}52 + 8{,}64 + 11{,}52 = 47{,}04$." },
+            { "type": "reponse", "texte": "L'aire du quadrilatère BCDE est de **47,04 cm²**." },
+            { "type": "astuce", "texte": "Quand une figure est faite de triangles rectangles qui se touchent, découpe-la : chaque morceau se calcule avec « base × hauteur / 2 » sans chercher de formule savante." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "Partie A : la courbe du volume d'une boule (en cm³) en fonction de son rayon (en cm), graduée de 100 en 100 jusqu'à 800. Partie B : des boules pleines de rayon 2,5 cm imprimées en 3D ; V = 4/3 × π × R³ ; une bobine de 1 000 cm³ de plastique ; masse volumique 0,9 g/cm³.",
+      "theme": "Volume d'une boule, lecture graphique",
+      "points": 3,
+      "minutes": 18,
+      "enBref": [
+        "Image de 3,6 : environ 195 cm³ (lecture entre 190 et 200). Pour 660 cm³, le rayon est d'environ 5,4 cm.",
+        "V = 4/3 × π × 2,5³ ≈ 65,45 ≈ 65 cm³.",
+        "1 000 / 65,45 ≈ 15,3 : au plus 15 boules. Masse d'une boule : 0,9 × 65 ≈ 59 g."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Partie A : lecture graphique" },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Déterminer graphiquement l'image de 3,6 par cette fonction.",
+          "blocs": [
+            { "type": "texte", "texte": "On repère 3,6 sur l'axe des rayons (un peu après 3,5, entre 3 et 4), on monte jusqu'à la courbe et on lit le volume : un peu en dessous de 200." },
+            { "type": "reponse", "texte": "L'image de 3,6 est environ **195 cm³** (toute lecture entre 190 et 200 est acceptée ; le calcul donne 195,4)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Le volume d'une boule est 660 cm³. Lire graphiquement son rayon.",
+          "blocs": [
+            { "type": "texte", "texte": "Lecture inverse : on repère 660 sur l'axe des volumes (entre 600 et 700), on va jusqu'à la courbe, on descend sur l'axe des rayons : entre 5 et 5,5." },
+            { "type": "reponse", "texte": "Une boule de 660 cm³ a un rayon d'environ **5,4 cm**." },
+            { "type": "astuce", "texte": "Trace les pointillés sur le graphique ou décris-les : « je lis l'abscisse du point de la courbe d'ordonnée 660 ». Une lecture sans trace ne vaut que la moitié." }
+          ]
+        },
+        { "type": "titre", "texte": "Partie B : l'imprimante 3D" },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Montrer que le volume d'une boule de rayon 2,5 cm, arrondi à l'unité, est 65 cm³.",
+          "blocs": [
+            { "type": "formule", "tex": "V = \\frac{4}{3} \\times \\pi \\times 2{,}5^3 = \\frac{4}{3} \\times \\pi \\times 15{,}625 \\approx 65{,}45 \\text{ cm}^3" },
+            { "type": "reponse", "texte": "$V \\approx 65{,}45$ cm³, soit **65 cm³** arrondi à l'unité." },
+            { "type": "piege", "texte": "$2{,}5^3 = 2{,}5 \\times 2{,}5 \\times 2{,}5 = 15{,}625$, pas $7{,}5$. Tape la formule d'un coup à la calculatrice avec les parenthèses." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Avec une bobine de 1 000 cm³ de plastique, combien de boules peut-on fabriquer au maximum ?",
+          "blocs": [
+            { "type": "formule", "tex": "\\frac{1\\,000}{65{,}45} \\approx 15{,}3" },
+            { "type": "reponse", "texte": "On peut fabriquer au maximum **15 boules** (la seizième ne serait pas entière : 15 × 65,45 ≈ 982 cm³ utilisés, il en manque pour une de plus)." },
+            { "type": "piege", "texte": "On arrondit **vers le bas** : 15,3 boules, c'est 15 boules complètes. Arrondir à 16 est l'erreur attendue." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "La masse volumique du plastique est 0,9 g/cm³. Calculer la masse d'une boule.",
+          "blocs": [
+            { "type": "texte", "texte": "Masse volumique = masse / volume, donc masse = masse volumique × volume : chaque cm³ pèse 0,9 g." },
+            { "type": "formule", "tex": "m = 0{,}9 \\times 65{,}45 \\approx 58{,}9 \\text{ g}" },
+            { "type": "reponse", "texte": "Une boule a une masse d'environ **59 g** (58,5 g si l'on part de 65 cm³ : accepté)." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-4",
+      "titre": "Exercice 4",
+      "nature": "exercice",
+      "enonce": "Des sachets de bonbons avec 112 bonbons à la fraise et 140 au caramel : même nombre de chaque sorte dans chaque sachet, tout est utilisé. On donne 112 = 2⁴ × 7.",
+      "theme": "Arithmétique : PGCD",
+      "points": 2,
+      "minutes": 12,
+      "enBref": [
+        "16 sachets : 112 / 16 = 7 mais 140 / 16 = 8,75, impossible.",
+        "140 = 2² × 5 × 7.",
+        "PGCD(112 ; 140) = 2² × 7 = 28 sachets, de 4 bonbons à la fraise et 5 au caramel."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Peut-on constituer 16 sachets ?",
+          "blocs": [
+            { "type": "formule", "tex": "\\frac{112}{16} = 7 \\qquad \\frac{140}{16} = 8{,}75" },
+            { "type": "reponse", "texte": "Non : 16 divise 112 mais pas 140 (140 = 16 × 8 + 12) ; on ne pourrait pas répartir tous les caramels à égalité." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "112 = 2⁴ × 7. Quelle est la décomposition en facteurs premiers de 140 ?",
+          "blocs": [
+            { "type": "formule", "tex": "140 = 2 \\times 70 = 2 \\times 2 \\times 35 = 2^2 \\times 5 \\times 7" },
+            { "type": "reponse", "texte": "$140 = 2^2 \\times 5 \\times 7$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Nombre maximal de sachets ? Composition de chaque sachet ?",
+          "blocs": [
+            { "type": "texte", "texte": "Le nombre de sachets divise 112 et 140 ; le maximum est le PGCD : facteurs premiers communs avec le plus petit exposant, $2^2$ et $7$." },
+            { "type": "formule", "tex": "\\text{PGCD}(112\\,;\\,140) = 2^2 \\times 7 = 28 \\qquad \\frac{112}{28} = 4 \\qquad \\frac{140}{28} = 5" },
+            { "type": "reponse", "texte": "On peut constituer au maximum **28 sachets**, contenant chacun **4 bonbons à la fraise et 5 bonbons au caramel**." },
+            { "type": "attendu", "texte": "Pour 2 points, le correcteur veut le mot « diviseur commun » (ou PGCD), le calcul $2^2 \\times 7$ à partir des décompositions, et les deux divisions. Le 2⁴ de 112 n'entre pas entier dans le PGCD : on garde la plus petite puissance de 2." }
+          ]
+        }
+      ]
+    }
+  ]
+}

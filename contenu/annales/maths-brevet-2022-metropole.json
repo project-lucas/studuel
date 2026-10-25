@@ -1,0 +1,340 @@
+{
+  "id": "maths-brevet-2022-metropole",
+  "matiere": "maths",
+  "niveau": "3e",
+  "examen": "brevet",
+  "annee": 2022,
+  "centre": "Métropole",
+  "jour": null,
+  "code": "22GENMATMEAG1",
+  "titre": "Brevet 2022 — Mathématiques",
+  "dureeMin": 120,
+  "coefficient": null,
+  "consigne": "Série générale, calculatrice autorisée : cinq exercices de 20 points chacun, sur 100 points. Toutes les réponses doivent être justifiées sauf indication contraire (le QCM de l'exercice 2) ; une trace de recherche, même inachevée, compte.",
+  "parties": [
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "La largeur d'une rivière : sur le schéma, C, E, D sont alignés, A, E, B aussi ; (AC) et (BD) sont perpendiculaires à (AB) ; AE = 20 pas, BE = 5 pas, BD = 1 pas. Un pas vaut 65 cm. Un bâton lâché en E dérive en ligne droite jusqu'à C en 5 secondes.",
+      "theme": "Thalès, Pythagore, vitesse",
+      "points": 20,
+      "minutes": 25,
+      "enBref": [
+        "(AC) et (BD) sont toutes deux perpendiculaires à (AB) : elles sont parallèles.",
+        "Thalès (configuration « papillon ») : AC / BD = EA / EB = 20 / 5, donc AC = 4 pas.",
+        "Pythagore dans CAE : CE² = 4² + 20² = 416, CE ≈ 20,4 pas ≈ 13,3 m.",
+        "Vitesse du bâton : 13,3 / 5 ≈ 2,65 m/s, soit environ 9,5 km/h, inférieure à 10 km/h : vrai."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Démontrer que les droites (AC) et (BD) sont parallèles.",
+          "blocs": [
+            { "type": "texte", "texte": "Le schéma code deux angles droits : en A, entre (AC) et (AB) ; en B, entre (BD) et (AB). Deux droites perpendiculaires à une même troisième droite sont parallèles entre elles." },
+            { "type": "reponse", "texte": "$(AC) \\perp (AB)$ et $(BD) \\perp (AB)$ : si deux droites sont perpendiculaires à une même droite, elles sont parallèles. Donc **(AC) // (BD)**." },
+            { "type": "attendu", "texte": "La propriété énoncée en toutes lettres, avec les deux perpendicularités lues sur le codage. Sans cette question, Thalès ne peut pas s'appliquer ensuite : elle prépare la suivante." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Déterminer, en nombre de pas, la largeur AC de la rivière.",
+          "blocs": [
+            { "type": "texte", "texte": "Les droites (AB) et (CD) se coupent en E ; A, E, B sont alignés, C, E, D aussi, et (AC) // (BD) : c'est une configuration de Thalès (les deux triangles EAC et EBD sont « en papillon » autour de E)." },
+            { "type": "formule", "tex": "\\frac{EA}{EB} = \\frac{EC}{ED} = \\frac{AC}{BD} \\quad \\Longrightarrow \\quad \\frac{20}{5} = \\frac{AC}{1}" },
+            { "type": "formule", "tex": "AC = \\frac{20 \\times 1}{5} = 4" },
+            { "type": "reponse", "texte": "D'après le théorème de Thalès, la rivière a une largeur de **4 pas**." },
+            { "type": "piege", "texte": "Associer AE avec BD ou EB avec AC : dans les rapports de Thalès, chaque fraction met en face un côté du grand triangle et le côté correspondant du petit (EA et EB sont sur la même droite ; AC et BD sont les côtés parallèles)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Un pas vaut 65 cm. Montrer que CE vaut 13,3 m au décimètre près.",
+          "blocs": [
+            { "type": "texte", "texte": "Le triangle CAE est rectangle en A, d'hypoténuse $[CE]$. On travaille d'abord en pas, puis on convertit." },
+            { "type": "formule", "tex": "CE^2 = CA^2 + AE^2 = 4^2 + 20^2 = 16 + 400 = 416 \\quad \\Longrightarrow \\quad CE = \\sqrt{416} \\approx 20{,}4 \\text{ pas}" },
+            { "type": "formule", "tex": "CE \\approx 20{,}396 \\times 0{,}65 \\approx 13{,}26 \\text{ m} \\approx 13{,}3 \\text{ m}" },
+            { "type": "reponse", "texte": "D'après le théorème de Pythagore, $CE = \\sqrt{416}$ pas, soit environ 13,3 m (au décimètre près)." },
+            { "type": "astuce", "texte": "On peut aussi convertir d'abord : CA = 4 × 0,65 = 2,6 m et AE = 20 × 0,65 = 13 m, puis $CE = \\sqrt{2{,}6^2 + 13^2} = \\sqrt{175{,}76} \\approx 13{,}26$ m. Garde la valeur non arrondie de $\\sqrt{416}$ dans la calculatrice avant de multiplier." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Le bâton va de E à C en 5 secondes. a) Sa vitesse en m/s ? b) Est-il vrai qu'il se déplace à une vitesse moyenne inférieure à 10 km/h ?",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** Vitesse = distance / durée, avec la distance en mètres et la durée en secondes." },
+            { "type": "formule", "tex": "v = \\frac{13{,}3}{5} = 2{,}66 \\text{ m/s}" },
+            { "type": "reponse", "texte": "a) Le bâton se déplace à environ **2,7 m/s** (2,66 m/s avec CE = 13,3 m ; 2,65 m/s avec la valeur non arrondie)." },
+            { "type": "texte", "texte": "**b)** On convertit en km/h : 1 m/s = 3,6 km/h (3 600 s dans une heure, 1 000 m dans un kilomètre)." },
+            { "type": "formule", "tex": "2{,}66 \\times 3{,}6 \\approx 9{,}6 \\text{ km/h} < 10 \\text{ km/h}" },
+            { "type": "reponse", "texte": "b) Oui, c'est vrai : environ 9,6 km/h, c'est moins de 10 km/h. (Autre chemin : 10 km/h = 10 000 / 3 600 ≈ 2,78 m/s, et 2,66 < 2,78.)" },
+            { "type": "piege", "texte": "Pour passer des m/s aux km/h on **multiplie** par 3,6 (une vitesse en km/h est un plus grand nombre). Diviser donnerait 0,74 km/h, visiblement absurde pour un bâton qui fait 13 m en 5 s." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "QCM sans justification, cinq questions : la transformation qui envoie la figure 1 sur la figure 2 (mêmes dimensions, même orientation, décalée) ; l'antécédent de 2 par la fonction g dont la droite passe par l'origine et par (1 ; 2) ; la fonction f(x) = 3x² − 7 ; la médiane de 13 performances au lancer du poids ; le coefficient des aires entre deux triangles semblables LAC (2,1 ; 2,4 ; 2,5 cm) et BUT (6,3 ; 7,2 ; 7,5 cm).",
+      "theme": "QCM : fonctions, médiane, aires",
+      "points": 20,
+      "minutes": 15,
+      "enBref": [
+        "1 : translation (A). 2 : g(1) = 2, l'antécédent de 2 est 1 (B). 3 : f(3) = 27 − 7 = 20 (B).",
+        "4 : 13 valeurs rangées, la médiane est la 7e : 4,91 m (B).",
+        "5 : les côtés sont multipliés par 3, les aires par 3² = 9 (C)."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Par quelle transformation la figure 2 est-elle l'image de la figure 1 ?",
+          "blocs": [
+            { "type": "texte", "texte": "La figure 2 a exactement la même forme, la même taille et la même orientation que la figure 1 : elle a simplement glissé (vers la droite et vers le bas, les flèches du schéma le montrent). Une homothétie changerait la taille, une symétrie axiale retournerait la figure." },
+            { "type": "reponse", "texte": "**Réponse A** : une translation." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Quel est l'antécédent de 2 par la fonction g ?",
+          "blocs": [
+            { "type": "texte", "texte": "L'antécédent de 2 est le nombre $x$ tel que $g(x) = 2$. On repère 2 sur l'axe des **ordonnées**, on va jusqu'à la droite, on redescend sur l'axe des abscisses : on lit 1. (La droite passe par l'origine et monte de 2 par unité : $g(x) = 2x$.)" },
+            { "type": "reponse", "texte": "**Réponse B** : 1." },
+            { "type": "piege", "texte": "Image et antécédent se lisent dans des sens opposés : l'image de 2 serait $g(2) = 4$ (réponse C), ce n'est pas ce qui est demandé." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "f(x) = 3x² − 7. Quelle affirmation est correcte ?",
+          "blocs": [
+            { "type": "formule", "tex": "f(2) = 3 \\times 2^2 - 7 = 12 - 7 = 5 \\neq 29 \\qquad f(3) = 3 \\times 3^2 - 7 = 27 - 7 = 20" },
+            { "type": "texte", "texte": "L'affirmation A est fausse (29 viendrait de $(3 \\times 2)^2 - 7$, une erreur de priorité) ; la C aussi : une fonction affine s'écrit $ax + b$, sans $x^2$." },
+            { "type": "reponse", "texte": "**Réponse B** : $f(3) = 20$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Quelle est la médiane de la série des 13 performances ?",
+          "blocs": [
+            { "type": "texte", "texte": "On range les 13 valeurs dans l'ordre croissant : 3,41 ; 3,7 ; 4,01 ; 4,28 ; 4,3 ; 4,62 ; **4,91** ; 5,15 ; 5,25 ; 5,42 ; 5,82 ; 6,07 ; 6,11. Avec 13 valeurs (impair), la médiane est la 7e : six valeurs avant, six après." },
+            { "type": "reponse", "texte": "**Réponse B** : 4,91 m." },
+            { "type": "piege", "texte": "La réponse A (7) est le **rang** de la médiane, pas la médiane. Et sans ranger la série, on tomberait sur 5,15, la 7e valeur dans l'ordre de l'énoncé." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Par quel nombre multiplier l'aire du triangle LAC pour obtenir l'aire du triangle BUT ?",
+          "blocs": [
+            { "type": "formule", "tex": "\\frac{6{,}3}{2{,}1} = \\frac{7{,}2}{2{,}4} = \\frac{7{,}5}{2{,}5} = 3" },
+            { "type": "texte", "texte": "Les longueurs sont multipliées par 3, donc les aires par $3^2 = 9$." },
+            { "type": "reponse", "texte": "**Réponse C** : 9." },
+            { "type": "astuce", "texte": "Agrandissement de rapport $k$ : longueurs × $k$, aires × $k^2$, volumes × $k^3$. Le QCM propose toujours $k$ lui-même (3) pour attraper ceux qui oublient le carré." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "Une collectionneuse a 252 cartes « feu » et 156 cartes « terre ». Elle veut des paquets identiques (même nombre de cartes de chaque type) en utilisant toutes ses cartes, puis tire une carte au hasard.",
+      "theme": "Arithmétique et probabilité",
+      "points": 20,
+      "minutes": 20,
+      "enBref": [
+        "252 = 2² × 3² × 7 (proposition 3) ; 156 = 2² × 3 × 13.",
+        "36 paquets : impossible, 36 ne divise pas 156. Le maximum est le PGCD, 2² × 3 = 12 paquets, de 21 cartes feu et 13 cartes terre.",
+        "P(terre) = 156 / 408 = 13 / 34 ≈ 0,38."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "a) Quelle proposition est la décomposition en facteurs premiers de 252 : 2² × 9 × 7, 2 × 2 × 3 × 21 ou 2² × 3² × 7 ? b) Décomposer 156.",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** Les trois produits valent bien 252, mais une décomposition en facteurs **premiers** ne contient que des nombres premiers : 9 et 21 n'en sont pas." },
+            { "type": "reponse", "texte": "a) **Proposition 3** : $252 = 2^2 \\times 3^2 \\times 7$." },
+            { "type": "formule", "tex": "156 = 2 \\times 78 = 2 \\times 2 \\times 39 = 2^2 \\times 3 \\times 13" },
+            { "type": "reponse", "texte": "b) $156 = 2^2 \\times 3 \\times 13$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "a) Peut-elle faire 36 paquets ? b) Quel est le nombre maximum de paquets ? c) Combien de cartes de chaque type par paquet ?",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** Faire 36 paquets identiques en utilisant toutes les cartes exige que 36 divise 252 **et** 156." },
+            { "type": "formule", "tex": "\\frac{252}{36} = 7 \\qquad \\frac{156}{36} \\approx 4{,}33 \\ (\\text{pas entier})" },
+            { "type": "reponse", "texte": "a) Non : 36 divise 252 mais pas 156 (156 = 36 × 4 + 12), il resterait des cartes « terre »." },
+            { "type": "texte", "texte": "**b)** Le nombre de paquets est un diviseur commun de 252 et 156 ; le maximum est leur PGCD, qu'on lit sur les décompositions en gardant les facteurs communs avec le plus petit exposant : $2^2$ et $3$." },
+            { "type": "formule", "tex": "\\text{PGCD}(252\\,;\\,156) = 2^2 \\times 3 = 12" },
+            { "type": "reponse", "texte": "b) Elle peut réaliser au maximum **12 paquets**." },
+            { "type": "formule", "tex": "\\frac{252}{12} = 21 \\qquad \\frac{156}{12} = 13" },
+            { "type": "reponse", "texte": "c) Chaque paquet contient **21 cartes « feu » et 13 cartes « terre »** (34 cartes)." },
+            { "type": "astuce", "texte": "Le 7 et le 13 des décompositions ne sont pas communs : ils ne vont pas dans le PGCD, et on les retrouve dans la composition des paquets (21 = 3 × 7, 13)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Elle choisit une carte au hasard parmi toutes ses cartes. Probabilité que ce soit une carte « terre » ?",
+          "blocs": [
+            { "type": "texte", "texte": "Situation d'équiprobabilité (cartes indiscernables) : nombre de cartes « terre » sur le nombre total de cartes." },
+            { "type": "formule", "tex": "P(\\text{terre}) = \\frac{156}{252 + 156} = \\frac{156}{408} = \\frac{13 \\times 12}{34 \\times 12} = \\frac{13}{34} \\approx 0{,}38" },
+            { "type": "reponse", "texte": "$P(\\text{terre}) = \\dfrac{13}{34}$, soit environ 0,38." },
+            { "type": "piege", "texte": "Le dénominateur est le total des cartes (408), pas 252 : la carte est tirée « parmi toutes ses cartes ». La simplification par 12 est justement le PGCD de la question 2." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-4",
+      "titre": "Exercice 4",
+      "nature": "exercice",
+      "enonce": "x est un nombre strictement supérieur à 3. Un rectangle a pour côtés x − 3 et x + 7 ; un carré a pour côté x. Script Scratch : (2) demander x, (3) mettre x à réponse, (4) mettre R à x * x, (5) ajouter ( ) * x à R, (6) ajouter ( ) à R, (7) dire regrouper « L'aire du rectangle est » et ( ).",
+      "theme": "Calcul littéral et Scratch",
+      "points": 20,
+      "minutes": 20,
+      "enBref": [
+        "Aire du carré : x².",
+        "Aire du rectangle : (x − 3)(x + 7) = x² + 4x − 21.",
+        "Script : ligne 5, « 4 » ; ligne 6, « −21 » ; ligne 7, « R ». Avec 8 : 64 + 32 − 21 = 75.",
+        "Aires égales : x² + 4x − 21 = x² donne 4x = 21, soit x = 5,25."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Parmi 4x, 4 + x, x² et 2x, recopier l'expression de l'aire du carré.",
+          "blocs": [
+            { "type": "reponse", "texte": "L'aire du carré de côté $x$ est $x \\times x = $ **$x^2$**. (4x est son périmètre.)" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Montrer que l'aire du rectangle est égale à x² + 4x − 21.",
+          "blocs": [
+            { "type": "texte", "texte": "Aire d'un rectangle : longueur × largeur. On développe par double distributivité :" },
+            { "type": "formule", "tex": "(x - 3)(x + 7) = x^2 + 7x - 3x - 21 = x^2 + 4x - 21" },
+            { "type": "reponse", "texte": "L'aire du rectangle est $(x - 3)(x + 7) = x^2 + 4x - 21$." },
+            { "type": "piege", "texte": "$-3 \\times 7 = -21$ : le signe moins ne disparaît pas. Et $7x - 3x = 4x$, pas $10x$." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Compléter les cases vides des lignes 5, 6 et 7 pour que le programme renvoie l'aire du rectangle.",
+          "blocs": [
+            { "type": "texte", "texte": "La ligne 4 met $x^2$ dans R. Il reste à ajouter $4x$, puis $-21$, en suivant la forme développée de la question 2 ; et la ligne 7 doit afficher la variable R." },
+            { "type": "code", "langage": "texte", "code": "5  ajouter ( 4 * x ) à R\n6  ajouter ( -21 ) à R\n7  dire regrouper « L'aire du rectangle est » et ( R ) pendant 2 secondes" },
+            { "type": "reponse", "texte": "Ligne 5 : **4** ; ligne 6 : **−21** ; ligne 7 : **R**." },
+            { "type": "attendu", "texte": "Écrire « −21 » avec son signe : le bloc est « ajouter », il n'existe pas de bloc « soustraire ». Et nommer la ligne pour chaque réponse, comme l'énoncé le demande." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "On a saisi le nombre 8. Que renvoie le programme ?",
+          "blocs": [
+            { "type": "formule", "tex": "8^2 + 4 \\times 8 - 21 = 64 + 32 - 21 = 75 \\qquad \\text{ou} \\qquad (8 - 3)(8 + 7) = 5 \\times 15 = 75" },
+            { "type": "reponse", "texte": "Le programme affiche « L'aire du rectangle est **75** »." },
+            { "type": "astuce", "texte": "Calculer les deux formes (développée et factorisée) est un contrôle gratuit de la question 2 : si elles ne donnent pas la même chose, il y a une erreur de développement." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Quel nombre x choisir pour que l'aire du rectangle soit égale à l'aire du carré ?",
+          "blocs": [
+            { "type": "texte", "texte": "On traduit par une équation, puis on simplifie : les $x^2$ se compensent." },
+            { "type": "formule", "tex": "x^2 + 4x - 21 = x^2 \\iff 4x - 21 = 0 \\iff 4x = 21 \\iff x = \\frac{21}{4} = 5{,}25" },
+            { "type": "texte", "texte": "La condition $x > 3$ est respectée. Vérification : rectangle $2{,}25 \\times 12{,}25 = 27{,}5625$ et carré $5{,}25^2 = 27{,}5625$." },
+            { "type": "reponse", "texte": "Les deux aires sont égales pour **$x = 5{,}25$**." },
+            { "type": "piege", "texte": "Un $x^2$ de chaque côté qui s'annule, ce n'est pas « diviser par $x^2$ » : on soustrait $x^2$ aux deux membres. L'équation devient du premier degré, pas besoin de factoriser." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-5",
+      "titre": "Exercice 5",
+      "nature": "exercice",
+      "enonce": "Une vasque cylindrique (diamètre intérieur 40 cm, hauteur intérieure 15 cm) sous un robinet qui fuit d'une goutte par seconde ; 20 gouttes font 1 mL. Rappels : volume du cylindre = π × rayon² × hauteur ; 1 dm³ = 1 L. Consommation d'eau par habitant : 165 L/jour en 2004, 148 L/jour en 2018.",
+      "theme": "Volume du cylindre, pourcentage",
+      "points": 20,
+      "minutes": 20,
+      "enBref": [
+        "Une journée compte 24 × 60 × 60 = 86 400 secondes, donc 86 400 gouttes.",
+        "Une semaine : 604 800 gouttes, soit 30 240 mL = 30,24 L.",
+        "Vasque : π × 2² × 1,5 = 6π ≈ 18,85 dm³ = 18,85 L.",
+        "30,24 L > 18,85 L : l'eau déborde. Consommation : (165 − 148) / 165 ≈ 0,103, une baisse d'environ 10 %."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Montrer qu'il tombe 86 400 gouttes dans la vasque en une journée complète.",
+          "blocs": [
+            { "type": "texte", "texte": "Une goutte par seconde : il suffit de compter les secondes d'une journée." },
+            { "type": "formule", "tex": "24 \\times 60 \\times 60 = 86\\,400 \\text{ s}" },
+            { "type": "reponse", "texte": "Une journée compte 86 400 secondes, donc **86 400 gouttes** tombent en une journée." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Calculer, en litres, le volume d'eau qui tombe dans la vasque en une semaine.",
+          "blocs": [
+            { "type": "formule", "tex": "86\\,400 \\times 7 = 604\\,800 \\text{ gouttes}" },
+            { "type": "formule", "tex": "\\frac{604\\,800}{20} = 30\\,240 \\text{ mL} = 30{,}24 \\text{ L}" },
+            { "type": "reponse", "texte": "En une semaine, il tombe **30,24 L** d'eau dans la vasque." },
+            { "type": "piege", "texte": "20 gouttes pour 1 mL : on **divise** le nombre de gouttes par 20 (pas on multiplie). Puis 1 L = 1 000 mL." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Montrer que la vasque a un volume de 18,85 litres, arrondi au centilitre près.",
+          "blocs": [
+            { "type": "texte", "texte": "Pour obtenir des litres directement, on convertit en décimètres : rayon $= 40 \\div 2 = 20$ cm $= 2$ dm, hauteur $= 15$ cm $= 1{,}5$ dm." },
+            { "type": "formule", "tex": "V = \\pi \\times 2^2 \\times 1{,}5 = 6\\pi \\approx 18{,}8496 \\text{ dm}^3 \\approx 18{,}85 \\text{ L}" },
+            { "type": "reponse", "texte": "Le volume de la vasque est $6\\pi$ dm³, soit environ **18,85 L**." },
+            { "type": "astuce", "texte": "En centimètres : $\\pi \\times 20^2 \\times 15 = 6\\,000\\pi \\approx 18\\,850$ cm³ ; comme 1 L = 1 000 cm³, on retrouve 18,85 L. Choisis l'unité qui t'évite la conversion finale." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Évacuation fermée, logement inoccupé pendant une semaine : l'eau va-t-elle déborder ?",
+          "blocs": [
+            { "type": "texte", "texte": "On compare le volume d'eau tombé en une semaine (question 2) à la contenance de la vasque (question 3)." },
+            { "type": "formule", "tex": "30{,}24 \\text{ L} > 18{,}85 \\text{ L}" },
+            { "type": "reponse", "texte": "Oui, l'eau va déborder : en une semaine la fuite remplit 30,24 L, plus que les 18,85 L que la vasque peut contenir. (La vasque est pleine au bout d'environ 4,4 jours.)" }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Calculer le pourcentage de diminution de la consommation quotidienne d'eau par habitant entre 2004 (165 L) et 2018 (148 L), arrondi à l'unité.",
+          "blocs": [
+            { "type": "texte", "texte": "La diminution se rapporte à la valeur de **départ**, 165 L. Les 17 litres de la fin du XIXe siècle sont un leurre : la question ne porte que sur 2004 → 2018." },
+            { "type": "formule", "tex": "\\frac{165 - 148}{165} = \\frac{17}{165} \\approx 0{,}103 \\approx 10\\,\\%" },
+            { "type": "reponse", "texte": "La consommation quotidienne d'eau a diminué d'environ **10 %** entre 2004 et 2018." },
+            { "type": "attendu", "texte": "Le quotient « variation / valeur de départ », puis l'arrondi à l'unité. Diviser par 148 donne 11 % : faux." }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "id": "physique-chimie-brevet-2026-metropole",
+  "matiere": "physique-chimie",
+  "niveau": "3e",
+  "examen": "brevet",
+  "annee": 2026,
+  "centre": "Métropole",
+  "jour": null,
+  "code": "26GENSCMEAG1",
+  "titre": "Brevet 2026 — Sciences : physique-chimie",
+  "dureeMin": 30,
+  "coefficient": 2,
+  "consigne": "Nouvelle formule 2026 : l'épreuve de sciences réunit deux disciplines sur la même copie, en 1 h et sur 20 points : la physique-chimie (30 minutes, 10 points), corrigée ici, et la SVT (30 minutes, 10 points, corrigée à part). Calculatrice autorisée. Les essais et les démarches engagés, même non aboutis, sont pris en compte ; deux questions valorisent la qualité de la rédaction.",
+  "parties": [
+    {
+      "id": "physique-chimie",
+      "titre": "Physique-chimie",
+      "nature": "exercice",
+      "enonce": "Les flotteurs profileurs, robots du programme mondial d'observation des océans, mesurent température, pression, salinité, pH, dioxygène dissous. Mesure de la salinité : ions chlorure Cl− et sodium Na+ ; trois compositions proposées pour l'ion chlorure (16, 17 ou 18 électrons, toujours 17 protons et 18 neutrons). Solutions conductrices : circuit générateur-lampe-électrodes plongées dans une cuve ; quatre expériences (eau pure : lampe éteinte ; 50 g de sel par litre : brille un peu ; 100 g de sel : brille beaucoup ; 100 g de sucre : éteinte) ; graphique de l'intensité selon la masse de sel dissous (droite passant par l'origine, 0,5 A pour 60 g). Transfert des données : le satellite parcourt 45 000 km par tour à 7,5 km/s, le transfert n'a lieu qu'à la verticale du flotteur.",
+      "theme": "Ions, conduction, satellite",
+      "points": 10,
+      "minutes": 30,
+      "enBref": [
+        "Question 1 : température, pression, salinité, pH, dioxygène dissous (deux suffisent).",
+        "Question 2 : composition 3 (18 électrons, 17 protons, 18 neutrons) : l'ion chlorure est un atome de chlore qui a gagné un électron, d'où sa charge négative.",
+        "Questions 3 à 5 : ce sont les ions qui conduisent (eau pure et eau sucrée, faites de molécules, n'allument pas la lampe ; l'eau salée, avec ses ions, l'allume, d'autant plus qu'il y en a) ; l'ampèremètre mesure l'intensité ; 0,5 A correspond à 60 g de sel par litre.",
+        "Questions 6 et 7 : un tour dure 45 000 / 7,5 = 6 000 s, le satellite ne repasse donc à la verticale du flotteur que toutes les 6 000 s ; avec plusieurs satellites, les passages, donc les transferts, sont plus fréquents."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Lire le sujet avant d'écrire" },
+        { "type": "texte", "texte": "Sept questions courtes sur 10 points, autour d'un robot des océans : la **lecture** (question 1), l'**atome et l'ion** (2), la **conduction électrique** des solutions (3 à 5), la **vitesse** (6 et 7). Deux points par question au plus : aucune réponse ne doit dépasser cinq lignes, mais les questions 3 et 6 demandent une rédaction ou un calcul complet. Le sujet annonce que la rédaction de la question 3 est « valorisée » : phrases complètes, mots de liaison." },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Citer deux grandeurs que les capteurs équipant les flotteurs peuvent mesurer.",
+          "points": 1,
+          "blocs": [
+            { "type": "reponse", "texte": "Par exemple la **température** et la **pression** de l'eau (le texte cite aussi la salinité, le pH et la quantité de dioxygène dissous)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Choisir la composition correcte de l'ion chlorure parmi : composition 1 (16 électrons, 17 protons, 18 neutrons), composition 2 (17 électrons, 17 protons, 18 neutrons), composition 3 (18 électrons, 17 protons, 18 neutrons). Justifier.",
+          "points": 2,
+          "blocs": [
+            { "type": "texte", "texte": "**Le raisonnement.** Les trois compositions ont 17 protons : c'est bien du chlore, le noyau ne change pas quand un atome devient un ion. L'atome de chlore, neutre, a autant d'électrons que de protons : 17 (composition 2). L'ion chlorure s'écrit Cl$^-$ : il porte **une charge négative**, donc un électron de plus que de protons, soit 18 électrons. Une charge positive (16 électrons, composition 1) donnerait un ion Cl$^+$." },
+            { "type": "reponse", "texte": "**Composition 3** : 18 électrons, 17 protons, 18 neutrons. L'ion chlorure Cl$^-$ se forme quand un atome de chlore (17 protons, 17 électrons) **gagne un électron** ; il a alors un électron de plus que de protons, ce qui explique sa charge « − »." },
+            { "type": "piege", "texte": "Un ion négatif a **plus** d'électrons, pas moins : le signe de la charge vient des électrons en excès (chargés négativement). Et les neutrons ne jouent aucun rôle dans la charge." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "À partir des observations des expériences, expliquer si ce sont les ions ou les molécules qui permettent le passage du courant dans les solutions (rédaction valorisée, deux lignes au minimum).",
+          "points": 2,
+          "blocs": [
+            { "type": "tableau", "entetes": ["Expérience", "Ce que contient la solution", "Lampe"], "lignes": [
+              ["A, eau pure", "molécules d'eau seulement", "éteinte"],
+              ["B, 50 g de sel", "molécules d'eau + ions chlorure et sodium", "brille un peu"],
+              ["C, 100 g de sel", "molécules d'eau + deux fois plus d'ions", "brille beaucoup"],
+              ["D, 100 g de sucre", "molécules d'eau + molécules de sucre", "éteinte"]
+            ] },
+            { "type": "texte", "texte": "**Comparer deux à deux.** A et D ne contiennent que des molécules : la lampe reste éteinte, le courant ne passe pas. B et C contiennent des ions : la lampe brille, le courant passe. Entre B et C, seule la quantité d'ions change, et la lampe brille davantage : plus il y a d'ions, mieux la solution conduit." },
+            { "type": "reponse", "texte": "Rédaction type : « Dans l'eau pure (A) et dans l'eau sucrée (D), qui ne contiennent que des molécules, la lampe ne brille pas : les molécules ne permettent pas le passage du courant. En revanche, dans l'eau salée (B et C), qui contient des ions chlorure et sodium, la lampe brille, et elle brille d'autant plus que la masse de sel dissous, donc le nombre d'ions, est grande. Ce sont donc les **ions** qui permettent le passage du courant électrique dans les solutions. »" },
+            { "type": "attendu", "texte": "Un raisonnement par comparaison, qui cite les expériences par leur lettre, oppose « molécules » et « ions », et conclut. L'expérience D est la clé : elle montre que dissoudre quelque chose ne suffit pas, il faut des ions." },
+            { "type": "astuce", "texte": "Pour une question « rédaction valorisée », écris trois phrases reliées par « en revanche », « de plus », « donc » : c'est ce que le correcteur cherche des yeux." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Donner le nom de l'appareil qui permet de mesurer l'intensité du courant électrique en ampère.",
+          "points": 1,
+          "blocs": [
+            { "type": "reponse", "texte": "Un **ampèremètre**, branché en série dans le circuit, à la place de la lampe." },
+            { "type": "piege", "texte": "Le voltmètre mesure la tension en volts, et se branche en dérivation. Ici il s'agit de l'intensité, en ampères." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5",
+          "intitule": "Déterminer la masse de sel dissous dans un litre d'eau pour une intensité du courant mesurée de 0,5 A.",
+          "points": 1,
+          "blocs": [
+            { "type": "texte", "texte": "Sur le graphique, on part de 0,5 A sur l'axe vertical, on va horizontalement jusqu'à la droite, puis on descend sur l'axe horizontal : on tombe sur un point de mesure, à **60 g**." },
+            { "type": "reponse", "texte": "Pour une intensité de 0,5 A, la masse de sel dissous dans un litre d'eau est de **60 g**." },
+            { "type": "astuce", "texte": "La droite passe par l'origine : l'intensité est proportionnelle à la masse de sel. Avec 0,84 A pour 100 g, on retrouve bien 0,5 A pour 60 g (0,84 × 0,6 ≈ 0,5)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "6",
+          "intitule": "Montrer par un calcul que le flotteur ne peut réaliser qu'un seul transfert de données toutes les 6 000 s.",
+          "points": 2,
+          "blocs": [
+            { "type": "texte", "texte": "**Le raisonnement.** Le transfert n'a lieu que lorsque le satellite est à la verticale du flotteur, c'est-à-dire une fois par tour de Terre. Il suffit donc de calculer la durée d'un tour : la distance parcourue (45 000 km) divisée par la vitesse (7,5 km/s)." },
+            { "type": "formule", "tex": "v = \\frac{d}{t} \\iff t = \\frac{d}{v} = \\frac{45\\,000}{7{,}5} = 6\\,000 \\text{ s}" },
+            { "type": "reponse", "texte": "Le satellite met 45 000 / 7,5 = **6 000 s** (soit 1 h 40 min) pour faire le tour de la Terre. Il ne repasse à la verticale du flotteur qu'une fois par tour : le flotteur ne peut donc transférer ses données qu'une seule fois toutes les 6 000 s." },
+            { "type": "attendu", "texte": "La relation entre vitesse, distance et durée, le calcul avec les unités (km et km/s donnent des secondes), et la phrase qui relie la durée d'un tour à « un seul transfert ». Le calcul seul, sans cette phrase, ne « montre » rien." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "7",
+          "intitule": "Expliquer alors l'avantage d'utiliser plusieurs satellites.",
+          "points": 1,
+          "blocs": [
+            { "type": "reponse", "texte": "Avec plusieurs satellites répartis sur leur orbite, il y en a un à la verticale du flotteur beaucoup plus souvent : les transferts de données sont **plus fréquents** (avec trois satellites, par exemple, toutes les 2 000 s), et les mesures parviennent aux océanographes avec moins de retard." },
+            { "type": "astuce", "texte": "Relie ta réponse à la question 6 avec le mot « alors » du sujet : « Avec un satellite, un transfert toutes les 6 000 s ; avec n satellites, n transferts dans le même temps. »" }
+          ]
+        }
+      ]
+    }
+  ]
+}

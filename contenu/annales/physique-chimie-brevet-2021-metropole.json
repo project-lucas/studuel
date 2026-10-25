@@ -1,0 +1,127 @@
+{
+  "id": "physique-chimie-brevet-2021-metropole",
+  "matiere": "physique-chimie",
+  "niveau": "3e",
+  "examen": "brevet",
+  "annee": 2021,
+  "centre": "Métropole",
+  "jour": null,
+  "code": "21GENSCMEAG1",
+  "titre": "Brevet 2021 — Sciences : physique-chimie",
+  "dureeMin": 30,
+  "coefficient": null,
+  "consigne": "L'épreuve de sciences du brevet réunit deux disciplines sur la même copie, en 1 h et sur 50 points : la physique-chimie (30 minutes, 25 points), corrigée ici, et la SVT (30 minutes, 25 points, corrigée à part). Calculatrice autorisée. Les essais et les démarches, même non aboutis, comptent.",
+  "parties": [
+    {
+      "id": "physique-chimie",
+      "titre": "Physique-chimie",
+      "nature": "exercice",
+      "enonce": "La fonte des glaciers de montagne. Introduction : la hausse de la température de l'air (excès de gaz à effet de serre : vapeur d'eau, CO2, méthane CH4) et la baisse des précipitations font fondre les glaciers. Trois équations proposées pour la combustion complète du méthane. Schéma d'une centrale hydroélectrique (lac de retenue, conduite forcée, turbine, alternateur) et diagramme de l'alternateur (entrée 1, sortie 2, pertes thermiques). Graphique de l'épaisseur de la Mer de Glace : 347 m en 1990, 343 m en 2000, environ 325 m en 2010, 320 m en 2013. Texte : une échelle abandonnée en 1788 retrouvée 4 370 m plus bas en 1832.",
+      "theme": "Combustion, énergie, vitesse",
+      "points": 25,
+      "minutes": 30,
+      "enBref": [
+        "Question 1 : deux causes, la hausse de la température (gaz à effet de serre des activités humaines) et la baisse des précipitations ; CH4 = 1 atome de carbone + 4 atomes d'hydrogène ; la bonne équation est CH4 + 2 O2 → CO2 + 2 H2O, la seule qui conserve les atomes et produit CO2 et eau.",
+        "Question 2 : le lac de retenue stocke de l'énergie potentielle ; l'alternateur reçoit de l'énergie cinétique (1) et fournit de l'énergie électrique (2), avec des pertes thermiques.",
+        "Question 3 : de 2000 à 2010, l'épaisseur passe d'environ 343 m à 325 m, soit 18 m de moins, contre 4 m la décennie précédente : la fonte s'accélère, le réchauffement s'amplifie.",
+        "Question 4 : v = d / t = 4 370 m / 44 ans ≈ 99 m par an."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Lire le sujet avant d'écrire" },
+        { "type": "texte", "texte": "Un thème unique, les glaciers, et quatre chapitres : la **chimie** (molécule, équation de réaction), les **conversions d'énergie**, la **lecture graphique** avec un commentaire, et la **vitesse**. Barème : 9 + 4 + 7 + 5. La question 1 pèse lourd ; la question 4 demande un raisonnement rédigé, pas seulement un résultat." },
+        {
+          "type": "question",
+          "numero": "1a",
+          "intitule": "D'après l'introduction, citer deux causes essentielles de la fonte des glaciers de montagne.",
+          "points": 9,
+          "blocs": [
+            { "type": "reponse", "texte": "Première cause : **l'augmentation de la température de l'air**, liée à l'excès de gaz à effet de serre (vapeur d'eau, dioxyde de carbone, méthane) rejetés par les activités humaines. Deuxième cause : **la diminution des précipitations**, les chutes de neige de l'hiver ne compensant plus la fonte de l'été." },
+            { "type": "attendu", "texte": "Deux causes distinctes, chacune dans une phrase ; « le réchauffement climatique » tout seul n'en fait qu'une. L'introduction les donne noir sur blanc : c'est une question de lecture." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "1b",
+          "intitule": "Donner le nom et le nombre des atomes présents dans la molécule de méthane.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "La formule CH$_4$ se lit lettre par lettre : C est le symbole du carbone, H celui de l'hydrogène ; l'indice 4 compte les atomes d'hydrogène, l'absence d'indice après C vaut 1." },
+            { "type": "reponse", "texte": "Une molécule de méthane CH$_4$ contient **1 atome de carbone** et **4 atomes d'hydrogène**, soit 5 atomes." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "1c",
+          "intitule": "Choisir, parmi CH4 + 2 O2 → CO2 + 2 H2, CH4 + 2 O2 → 2 CO2 + H2O et CH4 + 2 O2 → CO2 + 2 H2O, l'équation de la combustion complète du méthane. Justifier.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Deux critères. **Les produits** : l'énoncé dit qu'une combustion complète donne du dioxyde de carbone CO$_2$ et de l'eau H$_2$O. **La conservation des atomes** : il doit y avoir autant d'atomes de chaque sorte avant et après la flèche." },
+            { "type": "tableau", "entetes": ["Équation", "Produits", "Atomes conservés ?", "Verdict"], "lignes": [
+              ["CH4 + 2 O2 → CO2 + 2 H2", "du dihydrogène, pas d'eau", "O : 4 avant, 2 après", "fausse"],
+              ["CH4 + 2 O2 → 2 CO2 + H2O", "CO2 et eau", "C : 1 avant, 2 après ; H : 4 avant, 2 après", "fausse"],
+              ["CH4 + 2 O2 → CO2 + 2 H2O", "CO2 et eau", "C : 1 / 1 ; H : 4 / 4 ; O : 4 / 4", "correcte"]
+            ] },
+            { "type": "reponse", "texte": "La combustion complète du méthane est modélisée par **CH$_4$ + 2 O$_2$ → CO$_2$ + 2 H$_2$O** : elle produit bien du dioxyde de carbone et de l'eau, et elle conserve les atomes (1 carbone, 4 hydrogènes et 4 oxygènes de chaque côté)." },
+            { "type": "piege", "texte": "La première équation est équilibrée pour C et H mais pas pour O, et surtout elle fabrique du dihydrogène : la combustion est un bilan d'atomes ET un bon choix de produits. Vérifie les trois éléments, pas seulement le carbone." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2a",
+          "intitule": "Quelle forme d'énergie est emmagasinée au niveau du lac de retenue (nucléaire, cinétique, potentielle, chimique, thermique) ?",
+          "points": 4,
+          "blocs": [
+            { "type": "texte", "texte": "L'eau du lac est immobile mais **en hauteur** : elle a de l'énergie en réserve grâce à sa position, qu'elle libère en descendant la conduite forcée." },
+            { "type": "reponse", "texte": "Le lac de retenue emmagasine de l'**énergie potentielle** (de position)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2b",
+          "intitule": "Dans le diagramme de l'alternateur, affecter à 1 et à 2 une forme d'énergie (électrique, chimique, cinétique, lumineuse, thermique) ; la troisième sortie est l'énergie thermique.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "L'alternateur est entraîné par la turbine, qui tourne grâce à l'eau en mouvement : il reçoit de l'énergie de **mouvement**. Il produit du courant, envoyé au transformateur puis aux lignes à haute tension. Une partie est perdue en chaleur (frottements), c'est la flèche « énergie thermique »." },
+            { "type": "reponse", "texte": "1 : **énergie cinétique** (ou mécanique, reçue de la turbine) ; 2 : **énergie électrique** (fournie au réseau)." },
+            { "type": "astuce", "texte": "Un alternateur fait toujours la même conversion : mécanique → électrique. C'est l'inverse d'un moteur. Les pertes sont toujours thermiques." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3a",
+          "intitule": "On montre que la diminution d'épaisseur du glacier entre 1990 et 2000 est de 4 m. Déterminer la diminution entre 2000 et 2010. Justifier.",
+          "points": 7,
+          "blocs": [
+            { "type": "texte", "texte": "Lecture du graphique : en 2000, la courbe est à environ **343 m** ; en 2010, elle est descendue à environ **325 m** (un peu au-dessus de la ligne 320, qu'elle atteint en 2013). Un carreau vaut 2 m, on lit au carreau près." },
+            { "type": "formule", "tex": "343 - 325 = 18 \\text{ m}" },
+            { "type": "reponse", "texte": "Entre 2000 et 2010, l'épaisseur du glacier a diminué d'environ **18 m** (toute valeur entre 17 et 19 m est acceptée), car elle est passée d'environ 343 m à environ 325 m." },
+            { "type": "attendu", "texte": "Les deux lectures (2000 et 2010) écrites, puis la soustraction : c'est la « justification » demandée. Un résultat seul ne la vaut pas." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3b",
+          "intitule": "Comparer les deux diminutions sur dix ans et commenter. Quelle hypothèse formuler à propos du réchauffement climatique ?",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Même durée, dix ans, mais 4 m de perdus entre 1990 et 2000 contre 18 m entre 2000 et 2010 : la fonte a été plus de **quatre fois plus rapide** dans la seconde décennie. Sur le graphique, la pente devient brusquement plus raide après 2000." },
+            { "type": "reponse", "texte": "La diminution est passée de 4 m à 18 m par décennie : la fonte du glacier s'accélère nettement. On peut faire l'hypothèse que le **réchauffement climatique s'amplifie** (la température moyenne augmente de plus en plus vite), puisque la fonte dépend de la température de l'air d'après l'introduction." },
+            { "type": "piege", "texte": "« Commenter » n'est pas répéter les chiffres : il faut dire ce qu'ils signifient (accélération) et relier à la cause (le climat). L'hypothèse doit rester prudente : « on peut supposer que… »." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Établir le raisonnement permettant de calculer la vitesse d'écoulement de la glace de la Mer de Glace, effectuer le calcul et exprimer le résultat en mètre par an.",
+          "points": 5,
+          "blocs": [
+            { "type": "texte", "texte": "**Le raisonnement.** L'échelle abandonnée a été emportée par la glace qui s'écoule : elle a parcouru la même distance que la glace. On connaît la distance (4 370 m, « en aval ») et la durée (de 1788 à 1832). La vitesse moyenne est la distance divisée par la durée." },
+            { "type": "formule", "tex": "t = 1832 - 1788 = 44 \\text{ ans} \\qquad v = \\frac{d}{t} = \\frac{4\\,370}{44} \\approx 99{,}3 \\text{ m/an}" },
+            { "type": "reponse", "texte": "La glace de la Mer de Glace s'écoule à environ **99 m par an** (presque 100 m/an, soit à peu près 27 cm par jour)." },
+            { "type": "attendu", "texte": "Sur 5 points : la phrase qui explique pourquoi l'échelle donne la distance de la glace, la relation $v = d / t$, le calcul de la durée (44 ans), le résultat avec l'unité demandée. Pas de conversion en m/s : « mètre par an » est l'unité exigée." }
+          ]
+        }
+      ]
+    }
+  ]
+}

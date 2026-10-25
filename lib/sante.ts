@@ -4726,7 +4726,33 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     feature:
       'LES ANNALES DU BREVET D’HISTOIRE-GÉO (25/10/2026, chantier des annales) : `annale_connue` redéfinie avec les huit sessions de Métropole 2017 → 2026 importées (contenu/annales/histoire-geo-brevet-*.json) — le miroir que lib/economie.test.ts exige.',
     siAbsente:
-      'Les huit nouvelles annales se lisent, mais « J’ai traité ce sujet » ne lance pas le chrono et ne paie ni XP ni gemmes (annale_commencer et epreuve_recompenser refusent une annale inconnue).',
+      'Rien : la 599 reprend ses huit annales avec les 27 du lot 2. La rejouer APRÈS la 599 effacerait ces 27-là.',
+    // REMPLACÉE (25/10/2026, même jour) : la 599 redéfinit `annale_connue` avec
+    // la liste complète (histoire-géo comprise). Une redéfinition ne se sonde
+    // pas, et celle-ci ne doit jamais être rejouée après la 599.
+    sonde: null,
+    remplaceePar: '599',
+  },
+  {
+    id: '599',
+    fichier: '599_annales_brevet_lot2.sql',
+    feature:
+      'LES ANNALES DU BREVET, LOT 2 (25/10/2026, chantier des annales) : `annale_connue` redéfinie avec les 77 annales du dépôt — les 27 nouvelles de français, maths, physique-chimie et SVT, Métropole 2017 → 2026 (contenu/annales/{francais,maths,physique-chimie,svt}-brevet-*.json), et les 50 de la 598 — le miroir que lib/economie.test.ts exige. Contient la 598.',
+    siAbsente:
+      'Rien : la 600 reprend ses 77 annales avec les 5 du lot 3. La rejouer APRÈS la 600 effacerait ces 5-là.',
+    // REMPLACÉE (25/10/2026, même jour) : la 600 redéfinit `annale_connue` avec
+    // la liste complète (lots 1, 2 et 3). Une redéfinition ne se sonde pas, et
+    // celle-ci ne doit jamais être rejouée après la 600.
+    sonde: null,
+    remplaceePar: '600',
+  },
+  {
+    id: '600',
+    fichier: '600_annales_bac_francais.sql',
+    feature:
+      'LES ANNALES DU BAC DE FRANÇAIS, LOT 3 (25/10/2026, chantier des annales) : `annale_connue` redéfinie avec les 82 annales du dépôt — les 5 nouvelles de l’épreuve anticipée de français, Métropole 2021 (session unique, deux documents réunis en huit parties), 2022, 2024, 2025 et 2026 (contenu/annales/francais-20*-metropole.json), et les 77 de la 599 — le miroir que lib/economie.test.ts exige. Contient la 599 (et la 598).',
+    siAbsente:
+      'Les 40 annales des lots 1, 2 et 3 se lisent, mais « J’ai traité ce sujet » ne lance pas le chrono et ne paie ni XP ni gemmes (annale_commencer et epreuve_recompenser refusent une annale inconnue).',
     // La fonction existe depuis la 557 : une redéfinition ne se sonde pas.
     sonde: null,
   },

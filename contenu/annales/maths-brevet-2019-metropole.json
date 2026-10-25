@@ -1,0 +1,359 @@
+{
+  "id": "maths-brevet-2019-metropole",
+  "matiere": "maths",
+  "niveau": "3e",
+  "examen": "brevet",
+  "annee": 2019,
+  "centre": "Métropole",
+  "jour": null,
+  "code": "19GENMATMEAG1",
+  "titre": "Brevet 2019 — Mathématiques",
+  "dureeMin": 120,
+  "coefficient": null,
+  "consigne": "Série générale, calculatrice autorisée : six exercices indépendants sur 100 points (10, 19, 17, 19, 18 et 17 points), à traiter dans l'ordre que tu veux. La clarté des raisonnements et la qualité de la rédaction comptent, et les essais même non aboutis rapportent des points.",
+  "parties": [
+    {
+      "id": "exercice-1",
+      "titre": "Exercice 1",
+      "nature": "exercice",
+      "enonce": "Un trésor de 69 diamants, 1 150 perles et 4 140 pièces d'or est partagé équitablement entre les marins, sans reste.",
+      "theme": "Arithmétique : facteurs premiers",
+      "points": 10,
+      "minutes": 12,
+      "enBref": [
+        "69 = 3 × 23 ; 1 150 = 2 × 5² × 23 ; 4 140 = 2² × 3² × 5 × 23.",
+        "Le nombre de marins divise les trois nombres : leur seul diviseur commun autre que 1 est 23. Il y a 23 marins, qui reçoivent chacun 3 diamants, 50 perles et 180 pièces."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Décomposer 69, 1 150 et 4 140 en produits de facteurs premiers.",
+          "blocs": [
+            { "type": "texte", "texte": "On divise par les nombres premiers dans l'ordre (2, 3, 5, 7, 11, 13, 17, 19, 23…) tant que c'est possible." },
+            { "type": "formule", "tex": "69 = 3 \\times 23" },
+            { "type": "formule", "tex": "1\\,150 = 2 \\times 575 = 2 \\times 5 \\times 115 = 2 \\times 5 \\times 5 \\times 23 = 2 \\times 5^2 \\times 23" },
+            { "type": "formule", "tex": "4\\,140 = 2 \\times 2\\,070 = 2^2 \\times 1\\,035 = 2^2 \\times 3 \\times 345 = 2^2 \\times 3^2 \\times 115 = 2^2 \\times 3^2 \\times 5 \\times 23" },
+            { "type": "reponse", "texte": "$69 = 3 \\times 23$ ; $1\\,150 = 2 \\times 5^2 \\times 23$ ; $4\\,140 = 2^2 \\times 3^2 \\times 5 \\times 23$." },
+            { "type": "astuce", "texte": "Les critères de divisibilité font gagner du temps : un nombre est divisible par 3 si la somme de ses chiffres l'est (4 + 1 + 4 + 0 = 9), par 5 s'il finit par 0 ou 5. Pour 23, il faut essayer : 69 ÷ 23 = 3. Vérifie toujours en refaisant le produit." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Combien y a-t-il de marins, sachant que toutes les pièces, perles et diamants ont été distribués ?",
+          "blocs": [
+            { "type": "texte", "texte": "Le partage est équitable et sans reste : le nombre de marins est un **diviseur commun** à 69, 1 150 et 4 140. Les décompositions montrent que le seul facteur premier commun aux trois nombres est 23 : leurs diviseurs communs sont donc 1 et 23. Comme le trésor est partagé entre plusieurs marins, il y en a 23." },
+            { "type": "formule", "tex": "\\frac{69}{23} = 3 \\qquad \\frac{1\\,150}{23} = 50 \\qquad \\frac{4\\,140}{23} = 180" },
+            { "type": "reponse", "texte": "Il y a **23 marins** ; chacun reçoit 3 diamants, 50 perles et 180 pièces d'or." },
+            { "type": "attendu", "texte": "Le lien avec la question 1 (« 23 est le seul facteur premier commun ») et la vérification des trois divisions. Le mot PGCD n'est pas obligatoire, mais le raisonnement « diviseur commun » l'est." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-2",
+      "titre": "Exercice 2",
+      "nature": "exercice",
+      "enonce": "Joanna découpe trois triangles dans une plaque rectangulaire ABCD de 4 m sur 2 m. Le triangle ADM est rectangle en A, AD = 2 m, angle ADM = 60° ; M est sur [AB], N sur [DC] avec (MN) perpendiculaire à (DC) ; P est le pied de la perpendiculaire à (DM) passant par N. La partie non utilisée est le rectangle MBCN. Résultats au centième près.",
+      "theme": "Trigonométrie, triangles semblables",
+      "points": 19,
+      "minutes": 23,
+      "enBref": [
+        "Dans ADM rectangle en A : tan(60°) = AM / AD, donc AM = 2 × tan 60° = 2√3 ≈ 3,46 m.",
+        "La chute est le rectangle MBCN de 2 m sur 4 − 3,46 = 0,54 m : environ 1,07 m² sur 8 m², soit 0,13 de la plaque (environ 13 %).",
+        "Les trois triangles sont rectangles avec un angle de 60° et un angle de 30° : ils ont les mêmes angles, donc ils sont semblables.",
+        "Le coefficient de PDN vers AMD est le rapport des hypoténuses DM / DN = 4 / 3,46 ≈ 1,15, inférieur à 1,5 : oui."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Montrer que [AM] mesure environ 3,46 m.",
+          "blocs": [
+            { "type": "texte", "texte": "Dans le triangle ADM **rectangle en A**, on connaît l'angle $\\widehat{ADM} = 60°$ et son côté adjacent $AD = 2$ m ; on cherche le côté opposé $AM$. Adjacent et opposé : c'est la **tangente**." },
+            { "type": "formule", "tex": "\\tan\\widehat{ADM} = \\frac{AM}{AD} \\quad \\Longrightarrow \\quad AM = AD \\times \\tan 60° = 2 \\times \\sqrt{3} \\approx 3{,}46 \\text{ m}" },
+            { "type": "reponse", "texte": "$AM = 2 \\times \\tan 60° \\approx 3{,}46$ m." },
+            { "type": "astuce", "texte": "Au passage, l'hypoténuse : $\\cos 60° = \\frac{AD}{DM}$ donne $DM = \\frac{2}{0{,}5} = 4$ m. Elle servira à la question 4." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Calculer une valeur approchée au centième de la proportion de la plaque qui n'est pas utilisée.",
+          "blocs": [
+            { "type": "texte", "texte": "La partie quadrillée est le rectangle MBCN : sa hauteur est $BC = 2$ m et sa largeur $MB = AB - AM = 4 - 3{,}46 = 0{,}54$ m." },
+            { "type": "formule", "tex": "\\mathcal{A}_{MBCN} = 0{,}54 \\times 2 = 1{,}08 \\text{ m}^2 \\qquad \\mathcal{A}_{ABCD} = 4 \\times 2 = 8 \\text{ m}^2" },
+            { "type": "formule", "tex": "\\frac{1{,}08}{8} = 0{,}135 \\quad (\\text{avec la valeur exacte } AM = 2\\sqrt{3} : \\ \\frac{(4 - 2\\sqrt{3}) \\times 2}{8} \\approx 0{,}134)" },
+            { "type": "reponse", "texte": "Environ **0,13** de la plaque n'est pas utilisée, soit à peu près 13 % (avec AM arrondi à 3,46 on trouve 0,135, accepté aussi : l'énoncé prévient que les arrondis sont au centième)." },
+            { "type": "piege", "texte": "Une proportion est un quotient « partie / tout », sans unité : ne t'arrête pas à l'aire 1,08 m². Et le « tout », c'est la plaque entière (8 m²), pas la partie utilisée." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Démontrer que les triangles AMD, PNM et PDN sont semblables.",
+          "blocs": [
+            { "type": "texte", "texte": "Deux triangles qui ont **deux angles égaux** (donc trois) sont semblables. On cherche les angles de chaque triangle." },
+            { "type": "texte", "texte": "**Triangle AMD** : rectangle en A, $\\widehat{ADM} = 60°$, donc $\\widehat{AMD} = 180 - 90 - 60 = 30°$." },
+            { "type": "texte", "texte": "**Triangle PDN** : rectangle en P (angle droit codé). Son angle en D est $\\widehat{MDN} = \\widehat{ADC} - \\widehat{ADM} = 90° - 60° = 30°$ (ADC est un angle du rectangle ABCD). Donc $\\widehat{PND} = 60°$." },
+            { "type": "texte", "texte": "**Triangle PNM** : rectangle en P. Son angle en M est $\\widehat{PMN} = \\widehat{DMN}$ ; or dans le triangle DMN rectangle en N (car $(MN) \\perp (DC)$), $\\widehat{MDN} = 30°$, donc $\\widehat{DMN} = 60°$. Donc $\\widehat{PNM} = 30°$." },
+            { "type": "reponse", "texte": "Les trois triangles ont tous un angle droit, un angle de 60° et un angle de 30° : ayant les mêmes angles, les triangles AMD, PNM et PDN sont semblables." },
+            { "type": "attendu", "texte": "On ne mesure rien sur la figure : chaque angle doit sortir d'un calcul (somme des angles d'un triangle, angle droit du rectangle). Il suffit de deux angles égaux pour conclure, mais le correcteur veut voir d'où ils viennent." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Le coefficient d'agrandissement pour passer du triangle PDN au triangle AMD est-il plus petit que 1,5 ?",
+          "blocs": [
+            { "type": "texte", "texte": "Le coefficient est le rapport de deux côtés **correspondants**. Le plus sûr : les hypoténuses, $[DM]$ dans AMD et $[DN]$ dans PDN. On a vu $DM = 4$ m. Pour $DN$ : AMND est un rectangle (trois angles droits), donc $DN = AM \\approx 3{,}46$ m. (Ou dans DMN rectangle en N : $DN = DM \\times \\cos 30° = 4 \\times \\frac{\\sqrt{3}}{2} = 2\\sqrt{3}$.)" },
+            { "type": "formule", "tex": "k = \\frac{DM}{DN} = \\frac{4}{2\\sqrt{3}} \\approx 1{,}15" },
+            { "type": "reponse", "texte": "Oui : le coefficient d'agrandissement vaut $\\frac{DM}{DN} \\approx 1{,}15$, ce qui est plus petit que 1,5." },
+            { "type": "piege", "texte": "Associer de mauvais côtés (par exemple AD avec DN) donne un coefficient faux. Dans deux triangles semblables, les côtés correspondants sont en face des angles égaux : les hypoténuses sont en face des angles droits, pas de doute possible." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-3",
+      "titre": "Exercice 3",
+      "nature": "exercice",
+      "enonce": "Un sablier : deux cylindres C1 et C2 de hauteur 4,2 cm et de diamètre 1,5 cm, un cylindre C3, deux demi-sphères de diamètre 1,5 cm. Volume d'un cylindre : V = B × h. 1) Le sable remplit C2 aux deux tiers ; débit 1,98 cm³/min. 2) Quarante tests du temps d'écoulement d'un sablier (de 2 min 22 s à 2 min 38 s, effectifs donnés) ; conditions de vente : étendue < 20 s, médiane entre 2 min 29 s et 2 min 31 s, moyenne entre 2 min 28 s et 2 min 32 s.",
+      "theme": "Volumes et statistiques",
+      "points": 17,
+      "minutes": 20,
+      "enBref": [
+        "C2 a pour rayon 0,75 cm : son volume est π × 0,75² × 4,2 ≈ 7,42 cm³, et les deux tiers font environ 4,95 cm³.",
+        "À 1,98 cm³/min, le sable s'écoule en 4,95 / 1,98 = 2,5 min, soit 2 min 30 s.",
+        "40 tests ont été réalisés. Étendue 16 s, médiane 2 min 29,5 s, moyenne 2 min 30,1 s : les trois conditions sont vérifiées, le sablier n'est pas éliminé."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "a) Le sable remplit C2 aux deux tiers : montrer que son volume est environ 4,95 cm³. b) À un débit constant de 1,98 cm³/min, combien de temps (en minutes et secondes) met le sable à s'écouler ?",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** Le diamètre est 1,5 cm, donc le rayon $r = 0{,}75$ cm. L'aire de base est $\\pi r^2$ et la hauteur 4,2 cm." },
+            { "type": "formule", "tex": "V_{C_2} = \\pi \\times 0{,}75^2 \\times 4{,}2 = \\pi \\times 0{,}5625 \\times 4{,}2 = 2{,}3625\\,\\pi \\approx 7{,}42 \\text{ cm}^3" },
+            { "type": "formule", "tex": "V_{\\text{sable}} = \\frac{2}{3} \\times 2{,}3625\\,\\pi = 1{,}575\\,\\pi \\approx 4{,}95 \\text{ cm}^3" },
+            { "type": "reponse", "texte": "a) Le sable occupe les deux tiers de C2 : $\\frac{2}{3} \\times \\pi \\times 0{,}75^2 \\times 4{,}2 \\approx 4{,}95$ cm³." },
+            { "type": "texte", "texte": "**b)** Le débit est un volume par minute : le temps est le volume divisé par le débit." },
+            { "type": "formule", "tex": "t = \\frac{4{,}95}{1{,}98} = 2{,}5 \\text{ min} = 2 \\text{ min } 30 \\text{ s}" },
+            { "type": "reponse", "texte": "b) Le sable met **2 min 30 s** à s'écouler." },
+            { "type": "piege", "texte": "2,5 min, ce n'est pas 2 min 50 s : 0,5 min = 30 s. Et garde $\\pi$ dans la calculatrice jusqu'au bout (ou $2{,}3625\\pi$) : arrondir le volume de C2 à 7,4 avant de prendre les deux tiers donne 4,93, pas 4,95." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "a) Combien de tests ont été réalisés ? b) Le sablier testé sera-t-il éliminé ?",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** On additionne les effectifs des deux lignes du tableau :" },
+            { "type": "formule", "tex": "1 + 1 + 2 + 6 + 3 + 7 + 6 + 3 + 1 + 2 + 3 + 2 + 3 = 40" },
+            { "type": "reponse", "texte": "a) **40 tests** ont été réalisés." },
+            { "type": "texte", "texte": "**b)** On vérifie les trois conditions l'une après l'autre. Pour simplifier, on compte les secondes au-delà de 2 min (22, 24, 26… 38)." },
+            { "type": "texte", "texte": "**Étendue** : plus grand temps moins plus petit." },
+            { "type": "formule", "tex": "2 \\text{ min } 38 \\text{ s} - 2 \\text{ min } 22 \\text{ s} = 16 \\text{ s} < 20 \\text{ s} \\quad \\checkmark" },
+            { "type": "texte", "texte": "**Médiane** : 40 valeurs, nombre pair ; la médiane est entre la 20e et la 21e valeur rangées dans l'ordre. Effectifs cumulés : 1, 2, 4, 10, 13, puis 20 à « 2 min 29 s », puis 26 à « 2 min 30 s ». La 20e valeur est 2 min 29 s, la 21e est 2 min 30 s." },
+            { "type": "formule", "tex": "\\text{Me} = \\frac{2\\,\\text{min}\\,29\\,\\text{s} + 2\\,\\text{min}\\,30\\,\\text{s}}{2} = 2 \\text{ min } 29{,}5 \\text{ s} \\in [2\\,\\text{min}\\,29\\,\\text{s} \\,;\\, 2\\,\\text{min}\\,31\\,\\text{s}] \\quad \\checkmark" },
+            { "type": "texte", "texte": "**Moyenne** : moyenne pondérée par les effectifs, en secondes au-delà de 2 min." },
+            { "type": "formule", "tex": "\\frac{22 + 24 + 26 \\times 2 + 27 \\times 6 + 28 \\times 3 + 29 \\times 7 + 30 \\times 6 + 31 \\times 3 + 32 + 33 \\times 2 + 34 \\times 3 + 35 \\times 2 + 38 \\times 3}{40} = \\frac{1\\,204}{40} = 30{,}1" },
+            { "type": "texte", "texte": "La moyenne est 2 min 30,1 s, comprise entre 2 min 28 s et 2 min 32 s : troisième condition vérifiée." },
+            { "type": "reponse", "texte": "b) Étendue 16 s (< 20 s), médiane 2 min 29,5 s, moyenne 2 min 30,1 s : les trois conditions sont vérifiées, le sablier **n'est pas éliminé**, il est mis en vente." },
+            { "type": "attendu", "texte": "Les trois indicateurs calculés et comparés chacun à sa condition, puis une conclusion. Sauter la moyenne « parce que les deux premières marchent » coûte un tiers des points : il faut les trois pour vendre." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-4",
+      "titre": "Exercice 4",
+      "nature": "exercice",
+      "enonce": "Deux blocs Scratch. Carré : s'orienter à 90, tourner ↺ de 90°, répéter 4 fois (avancer de 5, tourner ↻ de 90°, avancer de 5), relever le stylo, s'orienter à 90, avancer de 10, stylo en position d'écriture. Tiret : s'orienter à 90, avancer de 10. Script 1 : répéter 23 fois (Carré, Tiret). Script 2 : répéter 46 fois (si nombre aléatoire entre 1 et 2 = 1 alors Carré sinon Tiret). Dessin A : carrés et tirets dans un ordre irrégulier ; dessin B : alternance régulière carré-tiret.",
+      "theme": "Scratch et probabilités",
+      "points": 19,
+      "minutes": 23,
+      "enBref": [
+        "Le bloc Carré trace un carré de 10 pixels (5 cm à l'échelle) ; le stylo part du milieu du côté gauche et arrive au milieu du côté droit, stylo relevé pendant la traversée.",
+        "Script 1 alterne strictement carré-tiret : dessin B. Script 2 tire au hasard : dessin A, où deux carrés ou deux tirets se suivent parfois.",
+        "P(premier élément = carré) = 1/2 ; P(deux carrés) = 1/2 × 1/2 = 1/4.",
+        "Pour une couleur aléatoire : au début de la boucle, « si nombre aléatoire entre 1 et 2 = 1 alors couleur noire, sinon couleur rouge »."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "En prenant 1 cm pour 2 pixels, représenter la figure obtenue par le script Carré, avec les positions de départ et d'arrivée du stylo.",
+          "blocs": [
+            { "type": "texte", "texte": "On suit le stylo. « S'orienter à 90 » puis « tourner ↺ de 90° » : il regarde vers le **haut**. Puis quatre fois : avancer de 5, tourner ↻ de 90° (vers la droite), avancer de 5." },
+            { "type": "tableau", "entetes": ["Passage", "Déplacements", "Position (en pixels, départ en (0 ; 0))"], "lignes": [
+              ["1", "monte de 5, tourne, va à droite de 5", "(0 ; 5) puis (5 ; 5)"],
+              ["2", "va à droite de 5, tourne, descend de 5", "(10 ; 5) puis (10 ; 0)"],
+              ["3", "descend de 5, tourne, va à gauche de 5", "(10 ; −5) puis (5 ; −5)"],
+              ["4", "va à gauche de 5, tourne, monte de 5", "(0 ; −5) puis (0 ; 0)"]
+            ] },
+            { "type": "texte", "texte": "Le tracé est un **carré de 10 pixels de côté**, et le point de départ est le **milieu de son côté gauche**. Ensuite le stylo est relevé, orienté vers la droite, et avance de 10 : il traverse le carré sans tracer et s'arrête au **milieu du côté droit**, où le stylo est rebaissé." },
+            { "type": "reponse", "texte": "À l'échelle (1 cm pour 2 pixels), on dessine un carré de **5 cm** de côté ; on marque le départ D au milieu du côté gauche et l'arrivée A au milieu du côté droit." },
+            { "type": "astuce", "texte": "Fais un tableau position-orientation comme ci-dessus : c'est la seule façon de ne pas se perdre quand le script tourne tantôt à gauche (↺), tantôt à droite (↻)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Attribuer à chaque script la figure dessinée. Justifier.",
+          "blocs": [
+            { "type": "texte", "texte": "Le **script 1** répète 23 fois « Carré puis Tiret » : les éléments alternent toujours, un carré, un tiret, un carré… Le **script 2** choisit 46 fois au hasard entre carré et tiret : rien n'empêche deux carrés ou deux tirets de se suivre." },
+            { "type": "texte", "texte": "Le dessin B montre une alternance parfaitement régulière ; le dessin A contient des carrés collés et des tirets qui se suivent." },
+            { "type": "reponse", "texte": "Le script 1 produit le **dessin B** (alternance régulière de 23 carrés et 23 tirets) ; le script 2 produit le **dessin A** (ordre aléatoire, avec des répétitions)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "On exécute le script 2. a) Probabilité que le premier élément soit un carré ? b) Probabilité que les deux premiers éléments soient des carrés ?",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** « Nombre aléatoire entre 1 et 2 » donne 1 ou 2, avec la même probabilité. Le carré est tracé si c'est 1." },
+            { "type": "reponse", "texte": "a) $P(\\text{carré}) = \\dfrac{1}{2}$." },
+            { "type": "texte", "texte": "**b)** Les deux tirages sont indépendants : on peut faire un arbre à deux niveaux (carré / tiret, puis carré / tiret), qui a quatre issues équiprobables (CC, CT, TC, TT), dont une seule est « deux carrés »." },
+            { "type": "formule", "tex": "P(\\text{carré puis carré}) = \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4}" },
+            { "type": "reponse", "texte": "b) $P(\\text{deux carrés}) = \\dfrac{1}{4}$." },
+            { "type": "attendu", "texte": "Pour le b), l'arbre ou le produit des probabilités, avec le mot « indépendants » ou la liste des quatre issues. Répondre « 1/2 » en pensant que le second tirage ne compte pas est l'erreur visée." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Dans le script 2, on veut une couleur aléatoire (50 % noir, 50 % rouge) pour chaque élément. Écrire les instructions à créer et préciser où les insérer.",
+          "blocs": [
+            { "type": "texte", "texte": "On copie la structure déjà utilisée pour choisir l'élément : un test sur un nombre aléatoire entre 1 et 2, avec deux branches." },
+            { "type": "code", "langage": "texte", "code": "si (nombre aléatoire entre 1 et 2) = 1 alors\n    mettre la couleur du stylo à noir\nsinon\n    mettre la couleur du stylo à rouge" },
+            { "type": "texte", "texte": "Ces instructions doivent s'exécuter **à chaque élément**, avant qu'il soit tracé : on les insère **à l'intérieur de la boucle « répéter 46 fois », juste avant le bloc « si … alors Carré sinon Tiret »** (entre les lignes 6 et 7). Placées avant la boucle, elles ne choisiraient la couleur qu'une seule fois pour tout le dessin." },
+            { "type": "reponse", "texte": "Un bloc « si nombre aléatoire entre 1 et 2 = 1 alors mettre la couleur du stylo à noir, sinon mettre la couleur du stylo à rouge », placé au début de chaque passage de la boucle « répéter 46 fois », avant le choix carré/tiret." },
+            { "type": "piege", "texte": "Il faut un **nouveau** nombre aléatoire, pas réutiliser celui qui choisit carré ou tiret : sinon tous les carrés seraient noirs et tous les tirets rouges, ce qui n'est pas « 50 % de chance » pour chaque élément." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-5",
+      "titre": "Exercice 5",
+      "nature": "exercice",
+      "enonce": "Un tableau : quatre rectangles identiques ①, ②, ③, ④ dans un grand rectangle ABCD d'aire 1,215 m² ; ratio longueur : largeur = 3 : 2 pour les cinq rectangles. ② est en bas à gauche (coin D), ④ en bas à droite (coin C), ③ en haut à droite (coin B, son coin inférieur droit est E sur [BC]), ① est debout au milieu, posé sur la ligne du haut de ② ; F est le coin supérieur gauche de ④.",
+      "theme": "Transformations et homothétie",
+      "points": 18,
+      "minutes": 20,
+      "enBref": [
+        "③ est l'image de ④ par la translation qui transforme C en E ; ③ est l'image de ① par la rotation de centre F et d'angle 90° dans le sens horaire ; ABCD est l'image de ② par l'homothétie de centre D et de rapport 3 (ou de ④ avec le centre C, de ③ avec le centre B).",
+        "L'homothétie de rapport 3 multiplie les aires par 9 : un petit rectangle a pour aire 1,215 / 9 = 0,135 m².",
+        "ABCD mesure 3k sur 2k avec 6k² = 1,215, donc k = 0,45 : longueur 1,35 m, largeur 0,90 m."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Compléter : a) Le rectangle … est l'image du rectangle … par la translation qui transforme C en E. b) Le rectangle ③ est l'image du rectangle … par la rotation de centre F et d'angle 90° dans le sens des aiguilles d'une montre. c) Le rectangle ABCD est l'image du rectangle … par l'homothétie de centre … et de rapport 3.",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** La translation qui envoie C sur E fait glisser vers le haut, de la longueur CE. Le rectangle ④ a son coin en C ; glissé jusqu'à E, il devient le rectangle qui a son coin en E : c'est ③." },
+            { "type": "reponse", "texte": "a) Le rectangle **③** est l'image du rectangle **④** par la translation qui transforme C en E." },
+            { "type": "texte", "texte": "**b)** F est le coin supérieur gauche de ④. Le rectangle ① est debout (sa longueur est verticale) ; en tournant d'un quart de tour dans le sens horaire autour de F, il se couche vers la droite et vient se placer en haut à droite, exactement sur ③ (sa longueur devient horizontale)." },
+            { "type": "reponse", "texte": "b) Le rectangle ③ est l'image du rectangle **①** par la rotation de centre F et d'angle 90° dans le sens des aiguilles d'une montre." },
+            { "type": "texte", "texte": "**c)** Une homothétie de rapport 3 triple les longueurs à partir de son centre. Le rectangle ② a un coin en D ; en triplant ses dimensions depuis D, on obtient ABCD (ses côtés valent trois fois ceux d'un petit rectangle, comme le montre la question 3). Même chose pour ④ depuis C, ou ③ depuis B." },
+            { "type": "reponse", "texte": "c) Le rectangle ABCD est l'image du rectangle **②** par l'homothétie de centre **D** et de rapport 3 (autres réponses possibles : ④ et C, ou ③ et B)." },
+            { "type": "astuce", "texte": "Pour une homothétie, le centre est un point fixe : cherche un sommet commun au petit rectangle et au grand. Pour une rotation, le centre est aussi fixe : F doit toucher à la fois le rectangle de départ et son image, ce que seul ① permet avec ③." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "Quelle est l'aire d'un petit rectangle ?",
+          "blocs": [
+            { "type": "texte", "texte": "Dans une homothétie de rapport 3, les longueurs sont multipliées par 3 et les **aires par $3^2 = 9$**. L'aire de ABCD est donc 9 fois celle d'un petit rectangle." },
+            { "type": "formule", "tex": "\\mathcal{A}_{\\text{petit}} = \\frac{1{,}215}{9} = 0{,}135 \\text{ m}^2" },
+            { "type": "reponse", "texte": "Un petit rectangle a une aire de **0,135 m²** (soit 13,5 dm²)." },
+            { "type": "piege", "texte": "Diviser par 3 au lieu de 9 : les aires suivent le carré du rapport. Tu peux aussi voir que neuf petits rectangles pavent exactement le grand (3 sur 3)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Quelles sont la longueur et la largeur du rectangle ABCD ?",
+          "blocs": [
+            { "type": "texte", "texte": "Le ratio longueur : largeur est 3 : 2 : on note la longueur $3k$ et la largeur $2k$ (en mètres). L'aire vaut $3k \\times 2k = 6k^2$." },
+            { "type": "formule", "tex": "6k^2 = 1{,}215 \\iff k^2 = 0{,}2025 \\iff k = \\sqrt{0{,}2025} = 0{,}45" },
+            { "type": "formule", "tex": "L = 3 \\times 0{,}45 = 1{,}35 \\text{ m} \\qquad \\ell = 2 \\times 0{,}45 = 0{,}90 \\text{ m}" },
+            { "type": "reponse", "texte": "Le rectangle ABCD mesure **1,35 m de longueur** sur **0,90 m de largeur**. Vérification : $1{,}35 \\times 0{,}90 = 1{,}215$ m². (Un petit rectangle mesure donc 0,45 m sur 0,30 m.)" },
+            { "type": "attendu", "texte": "Le ratio traduit en $3k$ et $2k$, l'équation, la racine carrée, et la vérification par le produit. Chercher « à tâtons » deux nombres dont le produit fait 1,215 est accepté si le ratio est vérifié, mais la méthode par $k$ est celle qui rapporte tous les points." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exercice-6",
+      "titre": "Exercice 6",
+      "nature": "exercice",
+      "enonce": "Programme 1 : choisir un nombre, le multiplier par 3, ajouter 1. Programme 2 : choisir un nombre, lui soustraire 1 d'un côté, lui ajouter 2 de l'autre, multiplier les deux nombres obtenus. A(x) est le résultat du programme 1 ; B(x) = (x − 1)(x + 2) celui du programme 2.",
+      "theme": "Programmes de calcul, équation produit",
+      "points": 17,
+      "minutes": 20,
+      "enBref": [
+        "Avec 5 : programme 1 → 16 ; programme 2 → 4 × 7 = 28.",
+        "A(x) = 3x + 1 ; A(x) = 0 pour x = −1/3.",
+        "B(x) = x² + x − 2 ; B(x) − A(x) = x² − 2x − 3 = (x + 1)(x − 3).",
+        "Les deux programmes donnent le même résultat pour x = −1 et x = 3 (équation produit nul)."
+      ],
+      "blocs": [
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Vérifier qu'avec 5 au départ, le programme 1 donne 16 et le programme 2 donne 28.",
+          "blocs": [
+            { "type": "formule", "tex": "\\text{Programme 1 : } 5 \\times 3 = 15, \\quad 15 + 1 = 16" },
+            { "type": "formule", "tex": "\\text{Programme 2 : } 5 - 1 = 4 \\text{ et } 5 + 2 = 7, \\quad 4 \\times 7 = 28" },
+            { "type": "reponse", "texte": "Avec 5, le programme 1 donne bien 16 et le programme 2 donne bien 28." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "a) Exprimer A(x) en fonction de x. b) Quel nombre choisir au départ pour obtenir 0 avec le programme 1 ?",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** On traduit les étapes : $x$, multiplié par 3 : $3x$ ; plus 1 :" },
+            { "type": "reponse", "texte": "a) $A(x) = 3x + 1$." },
+            { "type": "texte", "texte": "**b)** On résout $A(x) = 0$ :" },
+            { "type": "formule", "tex": "3x + 1 = 0 \\iff 3x = -1 \\iff x = -\\frac{1}{3}" },
+            { "type": "reponse", "texte": "b) Il faut choisir $-\\dfrac{1}{3}$ au départ. Vérification : $-\\frac{1}{3} \\times 3 = -1$, et $-1 + 1 = 0$." },
+            { "type": "piege", "texte": "La réponse n'est pas un entier ni un décimal : $-\\frac{1}{3}$ reste en fraction. Écrire « −0,33 » est faux (−0,33 × 3 + 1 = 0,01, pas 0)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Développer et réduire B(x) = (x − 1)(x + 2).",
+          "blocs": [
+            { "type": "texte", "texte": "Double distributivité : chaque terme de la première parenthèse multiplie chaque terme de la seconde." },
+            { "type": "formule", "tex": "B(x) = x \\times x + x \\times 2 - 1 \\times x - 1 \\times 2 = x^2 + 2x - x - 2 = x^2 + x - 2" },
+            { "type": "reponse", "texte": "$B(x) = x^2 + x - 2$. Contrôle avec $x = 5$ : $25 + 5 - 2 = 28$, le résultat de la question 1." },
+            { "type": "astuce", "texte": "Un développement se contrôle en une ligne avec une valeur déjà connue : ici 5 donne 28 dans les deux formes." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "a) Montrer que B(x) − A(x) = (x + 1)(x − 3). b) Quels nombres choisir pour que les deux programmes donnent le même résultat ? Expliquer la démarche.",
+          "blocs": [
+            { "type": "texte", "texte": "**a)** On calcule la différence avec les formes développées, puis on développe le membre de droite pour comparer." },
+            { "type": "formule", "tex": "B(x) - A(x) = x^2 + x - 2 - (3x + 1) = x^2 + x - 2 - 3x - 1 = x^2 - 2x - 3" },
+            { "type": "formule", "tex": "(x + 1)(x - 3) = x^2 - 3x + x - 3 = x^2 - 2x - 3" },
+            { "type": "reponse", "texte": "a) Les deux expressions sont égales à $x^2 - 2x - 3$, donc $B(x) - A(x) = (x + 1)(x - 3)$." },
+            { "type": "texte", "texte": "**b)** Les programmes donnent le même résultat quand $A(x) = B(x)$, c'est-à-dire quand $B(x) - A(x) = 0$. Grâce au a), c'est une **équation produit nul** :" },
+            { "type": "formule", "tex": "(x + 1)(x - 3) = 0 \\iff x + 1 = 0 \\ \\text{ou} \\ x - 3 = 0 \\iff x = -1 \\ \\text{ou} \\ x = 3" },
+            { "type": "texte", "texte": "Vérification : avec 3, $A = 10$ et $B = 2 \\times 5 = 10$ ; avec −1, $A = -2$ et $B = (-2) \\times 1 = -2$." },
+            { "type": "reponse", "texte": "b) Les deux programmes donnent le même résultat pour les nombres **−1 et 3**. Démarche : on cherche $x$ tel que $B(x) - A(x) = 0$, on utilise la forme factorisée du a), et un produit est nul si et seulement si l'un de ses facteurs est nul." },
+            { "type": "piege", "texte": "Soustraire $3x + 1$ sans parenthèses donne $x^2 + x - 2 - 3x + 1$ : le signe du 1 change aussi. Et pour le b), ne développe pas $(x + 1)(x - 3) = 0$ : la forme factorisée est faite pour résoudre." }
+          ]
+        }
+      ]
+    }
+  ]
+}

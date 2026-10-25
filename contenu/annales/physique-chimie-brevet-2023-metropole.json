@@ -1,0 +1,116 @@
+{
+  "id": "physique-chimie-brevet-2023-metropole",
+  "matiere": "physique-chimie",
+  "niveau": "3e",
+  "examen": "brevet",
+  "annee": 2023,
+  "centre": "Métropole",
+  "jour": null,
+  "code": "23GENSCMEAG1",
+  "titre": "Brevet 2023 — Sciences : physique-chimie",
+  "dureeMin": 30,
+  "coefficient": null,
+  "consigne": "L'épreuve de sciences du brevet réunit deux disciplines sur la même copie, en 1 h et sur 50 points : la physique-chimie (30 minutes, 25 points), corrigée ici, et la SVT (30 minutes, 25 points, corrigée à part). Calculatrice autorisée. Les démarches engagées et les essais, même non aboutis, comptent.",
+  "parties": [
+    {
+      "id": "physique-chimie",
+      "titre": "Physique-chimie",
+      "nature": "exercice",
+      "enonce": "La montée du niveau de la mer. Introduction : le niveau marin moyen a monté d'environ 15 cm entre 1900 et 2000, pour moitié par dilatation thermique de l'eau, pour moitié par fonte des glaciers continentaux ; les zones côtières sont de plus en plus exposées aux inondations, avec des infiltrations d'eau de mer dans les eaux souterraines. Extrait de la classification périodique, avec pour chaque élément le nombre de nucléons A en haut et le numéro atomique Z en bas (sodium : 23 et 11). Expérience : de l'eau à 5 °C dans un ballon surmonté d'un tube, posé sur une balance dans une pièce à 25 °C ; la masse reste constante ; graphique de la masse volumique de l'eau, de 1 000,0 kg/m³ à 5 °C à 997,0 kg/m³ à 25 °C. Mission Sentinel-6A : satellite en orbite à 1 336 km d'altitude, radar altimètre dont les ondes radio (300 000 km/s) font l'aller-retour jusqu'à la mer en 8,9 ms.",
+      "theme": "Atome, dilatation, altimétrie radar",
+      "points": 25,
+      "minutes": 30,
+      "enBref": [
+        "Question 1 : des inondations plus fréquentes des zones côtières, et des infiltrations d'eau de mer dans les eaux souterraines qui dégradent la qualité de l'eau (santé, récoltes détruites).",
+        "Question 2 : Na ; 11 protons (numéro atomique Z = 11) ; 23 − 11 = 12 neutrons (nucléons moins protons).",
+        "Question 3 : à 5 °C, la masse volumique vaut 1 000,0 kg/m³ ; elle diminue quand la température monte ; la masse étant constante (balance), le même nombre de kilogrammes occupe plus de volume : l'eau se dilate et monte dans le tube.",
+        "Question 4 : d = v × t = 300 000 × 0,0089 = 2 670 km pour l'aller-retour, donc 1 335 km pour la distance altimétrique, ce qui concorde avec l'altitude de 1 336 km."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Lire le sujet avant d'écrire" },
+        { "type": "texte", "texte": "Un thème, la montée des océans, et quatre chapitres : la **lecture** d'un texte, l'**atome** (classification périodique), la **masse volumique** avec un raisonnement sans calcul, et la **vitesse** d'une onde avec un calcul à commenter. Barème : 2 + 7 + 8 + 8. Les questions 3b et 4 demandent une démarche rédigée : c'est là que se jouent les points." },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Citer deux conséquences de l'augmentation du niveau marin moyen.",
+          "points": 2,
+          "blocs": [
+            { "type": "reponse", "texte": "D'après le texte : **de plus en plus de zones côtières sont exposées aux inondations**, dont la fréquence augmentera ; et l'eau de mer peut **s'infiltrer dans les eaux souterraines**, ce qui détériore la qualité de l'eau et peut entraîner des problèmes de santé et la destruction des récoltes." },
+            { "type": "astuce", "texte": "Deux conséquences, deux phrases, chacune prise dans le texte. Les problèmes de santé et les récoltes détruites sont des conséquences des infiltrations : les citer en précision, pas comme deux idées de plus." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2a",
+          "intitule": "Donner le symbole de l'élément sodium.",
+          "points": 7,
+          "blocs": [
+            { "type": "reponse", "texte": "Le symbole du sodium est **Na** (de son nom latin *natrium*)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2b",
+          "intitule": "Donner le nombre de protons contenus dans le noyau d'un atome de sodium.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Dans la case du sodium, le nombre écrit **en bas** à gauche est le numéro atomique Z, défini dans l'énoncé comme le nombre de protons du noyau." },
+            { "type": "reponse", "texte": "Le numéro atomique du sodium est Z = 11 : son noyau contient **11 protons**." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2c",
+          "intitule": "Indiquer le nombre de neutrons contenus dans le noyau d'un atome de sodium. Expliquer la démarche.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Le nombre écrit **en haut**, A = 23, est le nombre de nucléons, c'est-à-dire le nombre total de particules du noyau : protons et neutrons ensemble. Pour avoir les neutrons seuls, on retire les protons." },
+            { "type": "formule", "tex": "N = A - Z = 23 - 11 = 12" },
+            { "type": "reponse", "texte": "Le noyau de l'atome de sodium contient **12 neutrons** : 23 nucléons moins 11 protons." },
+            { "type": "piege", "texte": "Ne pas inverser A et Z : la légende « X » du tableau le rappelle, nucléons en haut, numéro atomique en bas. Et le nombre d'électrons (11, comme les protons dans un atome neutre) n'est pas demandé." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3a",
+          "intitule": "Indiquer, à l'aide du graphique, la valeur de la masse volumique de l'eau à la température initiale de 5 °C.",
+          "points": 8,
+          "blocs": [
+            { "type": "texte", "texte": "Le premier point de la courbe, tout à gauche, est au-dessus de la graduation 5 °C, sur la ligne horizontale **1 000,0**." },
+            { "type": "reponse", "texte": "À 5 °C, la masse volumique de l'eau vaut environ **1 000,0 kg/m³** (999,9 kg/m³ est accepté)." },
+            { "type": "attendu", "texte": "La valeur avec son unité, kg/m³ : un nombre sans unité ne vaut pas la totalité des points." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3b",
+          "intitule": "À partir du graphique, expliquer sans calcul pourquoi le niveau de l'eau dans le tube monte lorsque la température de l'eau augmente. Détailler précisément le raisonnement.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "**Étape 1, le graphique.** La courbe descend : quand la température passe de 5 °C à 25 °C, la masse volumique de l'eau **diminue**, de 1 000,0 à 997,0 kg/m³." },
+            { "type": "texte", "texte": "**Étape 2, la masse.** La balance indique que la masse de l'ensemble reste constante : il y a toujours la même quantité d'eau, rien ne s'évapore, rien n'est ajouté." },
+            { "type": "texte", "texte": "**Étape 3, le lien.** La masse volumique est la masse divisée par le volume. Si la masse ne change pas et que la masse volumique diminue, c'est que le **volume augmente** : la même eau occupe plus de place. C'est la dilatation thermique définie dans l'introduction." },
+            { "type": "formule", "tex": "\\rho = \\frac{m}{V} \\quad \\text{avec } m \\text{ constante : } \\rho \\searrow \\implies V \\nearrow" },
+            { "type": "reponse", "texte": "Le graphique montre que la masse volumique de l'eau diminue quand sa température augmente (de 1 000,0 kg/m³ à 5 °C à 997,0 kg/m³ à 25 °C). Or la masse d'eau est constante (la balance ne bouge pas). Comme la masse volumique est le rapport de la masse au volume, une masse volumique plus petite à masse égale signifie un volume plus grand : l'eau se dilate. Le ballon étant déjà plein, ce volume supplémentaire ne peut aller que dans le tube, où le niveau monte." },
+            { "type": "attendu", "texte": "« Détailler précisément » veut dire quatre idées dans l'ordre : la lecture du graphique (ρ diminue), la masse constante, la relation entre masse, volume et masse volumique, la conclusion sur le volume et le tube. Pas de calcul, mais la relation écrite en toutes lettres ou en formule." },
+            { "type": "piege", "texte": "Écrire « il y a plus d'eau » ou « l'eau s'évapore et pousse » contredit la balance. Ce n'est pas la quantité d'eau qui change, c'est la place qu'elle prend. C'est exactement le mécanisme de la moitié de la montée des mers décrite au début du sujet." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "Déterminer la distance altimétrique mesurée par Sentinel-6A lorsque le signal met 8,9 ms (0,0089 s) pour l'aller-retour entre le satellite et la surface de la mer. Expliquer la démarche, préciser la relation utilisée et commenter le résultat.",
+            "points": 8,
+          "blocs": [
+            { "type": "texte", "texte": "**La démarche.** Le signal radio parcourt, à vitesse constante, la distance satellite-mer deux fois : à l'aller et au retour. La distance totale est la vitesse multipliée par la durée ; la distance altimétrique en est la moitié." },
+            { "type": "formule", "tex": "d = v \\times t \\qquad d_{\\text{aller-retour}} = 300\\,000 \\times 0{,}0089 = 2\\,670 \\text{ km}" },
+            { "type": "formule", "tex": "d_{\\text{altimétrique}} = \\frac{2\\,670}{2} = 1\\,335 \\text{ km}" },
+            { "type": "reponse", "texte": "Avec la relation $d = v \\times t$ et une durée en secondes, le signal parcourt 2 670 km pendant l'aller-retour ; la distance entre le satellite et la surface de la mer est donc d'environ **1 335 km**. **Commentaire :** ce résultat est très proche de l'altitude de l'orbite, 1 336 km : il est cohérent, puisque le satellite mesure sa hauteur au-dessus de la mer. L'écart de 1 km tient à la précision des données du sujet (la durée est arrondie au dixième de milliseconde, et 0,1 ms correspond déjà à 15 km) ; en réalité, le radar chronomètre au milliardième de seconde pour obtenir le niveau marin à quelques centimètres près." },
+            { "type": "attendu", "texte": "Sur 8 points : la relation écrite, l'unité de la durée en secondes, le calcul, la division par deux avec sa raison (aller-retour), et un commentaire qui compare à 1 336 km. Une démarche sans la division par deux garde une partie des points si le commentaire relève l'incohérence." },
+            { "type": "piege", "texte": "Oublier l'aller-retour donne 2 670 km, deux fois l'altitude du satellite : impossible. C'est justement ce que « commenter le résultat » doit te faire remarquer. Et 300 000 km/s avec 0,0089 s donne des kilomètres, pas des mètres : garde l'unité jusqu'au bout." }
+          ]
+        }
+      ]
+    }
+  ]
+}

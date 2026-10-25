@@ -1,0 +1,133 @@
+{
+  "id": "physique-chimie-brevet-2019-metropole",
+  "matiere": "physique-chimie",
+  "niveau": "3e",
+  "examen": "brevet",
+  "annee": 2019,
+  "centre": "Métropole",
+  "jour": null,
+  "code": "19GENSCMEAG1",
+  "titre": "Brevet 2019 — Sciences : physique-chimie",
+  "dureeMin": 30,
+  "coefficient": null,
+  "consigne": "L'épreuve de sciences du brevet réunit deux disciplines sur la même copie, en 1 h et sur 50 points : la physique-chimie (30 minutes, 25 points), corrigée ici, et la SVT (30 minutes, 25 points, corrigée à part). Calculatrice autorisée. Les essais et les démarches, même non aboutis, comptent.",
+  "parties": [
+    {
+      "id": "physique-chimie",
+      "titre": "Physique-chimie",
+      "nature": "exercice",
+      "enonce": "Les carottes de glace et le climat. Document 1 : un modèle de l'atome d'oxygène (1 : les points autour ; 2 : une boule marquée + dans le centre ; 3 : une boule sans signe dans le centre ; 4 : l'accolade autour du centre). Document 2 : fiches des atomes oxygène 16, 17 et 18 (numéro atomique 8, 8 électrons, 16, 17 ou 18 nucléons). Document 3 : le pourcentage en volume de CO2 dans l'air de 1810 à 2010 (0,028 % en 1810, 0,030 % vers 1910, 0,031 % en 1950, 0,037 % vers 2000, 0,039 % en 2010). Document 4 : g = 9,76 N/kg à l'Illimani, 9,79 N/kg au col du Dôme, 9,82 N/kg à Vostok.",
+      "theme": "Atome, CO2 et poids",
+      "points": 25,
+      "minutes": 30,
+      "enBref": [
+        "Question 1 : 1 électrons, 2 proton, 3 neutron, 4 noyau ; les trois atomes ont 8 protons, car le numéro atomique est 8 (ou parce qu'un atome neutre a autant de protons que d'électrons) ; ils diffèrent par leurs neutrons.",
+        "Question 2 : 0,030 % en 1910 ; 0,037 % atteint vers 2000 ; de 1810 à 1950, hausse lente de 0,028 à 0,031 % ; de 1950 à 2010, hausse rapide de 0,031 à 0,039 % ; en prolongeant la courbe, environ 0,041 % en 2020, mais une extrapolation suppose que la tendance continue.",
+        "Question 3 : un cylindre debout, le poids représenté par une flèche verticale vers le bas de 2,36 cm partant du centre ; m = P / g = 236 / 9,82 ≈ 24,0 kg."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Lire le sujet avant d'écrire" },
+        { "type": "texte", "texte": "Trois questions, trois chapitres : l'**atome** (document 1 et 2), la lecture d'un **graphique** avec son esprit critique (document 3), et le **poids** (document 4). Le barème (7 + 8,5 + 9,5) met l'accent sur les deux dernières : la question 2d (critiquer une méthode) et la question 3b (expliquer une démarche) rapportent des points à ceux qui rédigent." },
+        {
+          "type": "question",
+          "numero": "1a",
+          "intitule": "Légender le document 1 : noyau, électrons, proton, neutron.",
+          "points": 7,
+          "blocs": [
+            { "type": "texte", "texte": "Le modèle de l'atome : un **noyau** central, minuscule, fait de **protons** (chargés positivement, dessinés avec un +) et de **neutrons** (sans charge, sans signe), entouré d'**électrons** (chargés négativement) qui occupent un grand espace vide." },
+            { "type": "tableau", "entetes": ["Numéro", "Ce qu'on voit", "Légende"], "lignes": [
+              ["1", "les petits points dispersés autour", "électrons"],
+              ["2", "une boule marquée + dans l'amas central", "proton"],
+              ["3", "une boule sans signe dans l'amas central", "neutron"],
+              ["4", "l'accolade qui entoure tout l'amas central", "noyau"]
+            ] },
+            { "type": "reponse", "texte": "1 : électrons ; 2 : proton ; 3 : neutron ; 4 : noyau." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "1b",
+          "intitule": "Quel est le nombre de protons dans chacun des trois atomes d'oxygène ? Justifier par une phrase.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Deux justifications possibles, tirées du document 2. Le **numéro atomique** d'un atome est son nombre de protons : il vaut 8 pour les trois fiches. Ou bien : un atome est électriquement **neutre**, il a autant de protons (+) que d'électrons (−) ; les trois fiches indiquent 8 électrons." },
+            { "type": "reponse", "texte": "Les trois atomes d'oxygène ont **8 protons** chacun, car leur numéro atomique est 8 (et un atome neutre a autant de protons que d'électrons, soit 8). Ils ne diffèrent que par leur nombre de neutrons : 16 − 8 = 8, 17 − 8 = 9 et 18 − 8 = 10 neutrons." },
+            { "type": "attendu", "texte": "La phrase de justification est exigée (« justifier par une phrase ») : le mot « numéro atomique » ou « neutre », et pas seulement le chiffre 8. Le calcul des neutrons est un plus qui montre qu'on a compris ce qui distingue oxygène 16, 17 et 18." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2a",
+          "intitule": "D'après le document 3, pourcentage en volume de CO2 dans l'air en 1910 ?",
+          "points": 8.5,
+          "blocs": [
+            { "type": "texte", "texte": "On repère 1910 sur l'axe des années, on monte jusqu'à la courbe, on lit à gauche : la courbe est sur la ligne 0,030." },
+            { "type": "reponse", "texte": "En 1910, l'air contenait environ **0,030 %** de CO2 en volume." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2b",
+          "intitule": "En quelle année ce pourcentage a-t-il atteint 0,037 % ?",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Lecture inverse : on part de 0,037 sur l'axe vertical, on rejoint la courbe, on descend : on arrive sur la graduation 2000." },
+            { "type": "reponse", "texte": "Le pourcentage de 0,037 % a été atteint vers **2000**." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2c",
+          "intitule": "Comparer, avec des données du graphe, l'évolution du pourcentage de CO2 entre 1810 et 1950, puis entre 1950 et 2010.",
+          "points": null,
+          "blocs": [
+            { "type": "tableau", "entetes": ["Période", "Début", "Fin", "Hausse", "Durée"], "lignes": [
+              ["1810 → 1950", "0,028 %", "0,031 %", "+ 0,003 point", "140 ans"],
+              ["1950 → 2010", "0,031 %", "0,039 %", "+ 0,008 point", "60 ans"]
+            ] },
+            { "type": "texte", "texte": "La première période est longue et la hausse faible (la courbe est presque plate, avec un léger palier vers 1940-1950) ; la seconde est plus courte et la hausse presque trois fois plus forte : la courbe se redresse nettement. Par décennie : environ 0,0002 point avant 1950, contre 0,0013 point après, six fois plus vite." },
+            { "type": "reponse", "texte": "De 1810 à 1950, le pourcentage de CO2 augmente lentement, de 0,028 % à 0,031 % en 140 ans ; de 1950 à 2010, il augmente beaucoup plus vite, de 0,031 % à 0,039 % en seulement 60 ans. L'augmentation s'accélère fortement après 1950." },
+            { "type": "attendu", "texte": "« En citant des données du graphe » : quatre valeurs lues (début et fin de chaque période), puis la comparaison des rythmes. Une seule phrase sans chiffres ne vaut que la moitié." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2d",
+          "intitule": "Quelle valeur pourrait atteindre ce pourcentage en 2020 ? Décrire et critiquer la méthode utilisée.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "**La méthode : prolonger la courbe.** Sur la dernière décennie, le pourcentage est passé de 0,037 % (2000) à 0,039 % (2010), soit + 0,002 point en dix ans. Si la même hausse se poursuit, on obtient environ 0,041 % en 2020 ; comme la courbe s'accélère, la vraie valeur pourrait être un peu plus haute (0,041 à 0,042 %)." },
+            { "type": "texte", "texte": "**La critique.** C'est une **extrapolation** : on suppose que l'évolution future ressemble à l'évolution passée. Rien ne le garantit : les émissions de CO2 dépendent des activités humaines (consommation d'énergie fossile, politiques climatiques, crises économiques) qui peuvent changer le rythme dans un sens ou dans l'autre. De plus, la lecture graphique est imprécise (une petite erreur de pente se répercute sur dix ans) et la courbe ne donne pas de mesure au-delà de 2010 pour vérifier." },
+            { "type": "reponse", "texte": "En prolongeant la tendance des dix dernières années (+ 0,002 point par décennie), le pourcentage atteindrait environ **0,041 %** en 2020. Mais cette prévision suppose que la hausse continue au même rythme : elle n'est qu'une estimation, qui ne tient compte ni des efforts de réduction des émissions ni d'une accélération possible, et elle repose sur une lecture graphique approximative." },
+            { "type": "astuce", "texte": "« Critiquer la méthode » n'est pas « dire qu'elle est fausse » : c'est nommer ce qu'elle suppose (la tendance continue) et ce qui pourrait la mettre en défaut. Deux limites bien formulées valent tous les points." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3a",
+          "intitule": "Un cylindre de glace de 3 m, de poids P = 236 N, extrait à Vostok. Le schématiser en position verticale et représenter son poids par un segment fléché, à l'échelle 1 cm pour 100 N.",
+          "points": 9.5,
+          "blocs": [
+            { "type": "texte", "texte": "Le poids est une force : on la représente par un **vecteur** qui a quatre caractéristiques. Point d'application : le centre de gravité du cylindre (son centre, au milieu de la hauteur). Direction : la **verticale**. Sens : **vers le bas** (vers le centre de la Terre). Valeur : 236 N, traduite par la longueur du segment." },
+            { "type": "formule", "tex": "\\text{longueur} = \\frac{236}{100} = 2{,}36 \\text{ cm}" },
+            { "type": "reponse", "texte": "Un rectangle debout (le cylindre vu de côté), un point G en son centre, et depuis G une flèche verticale vers le bas de 2,36 cm (environ 2,4 cm), légendée $\\vec{P}$ = 236 N, avec l'échelle indiquée à côté : « 1 cm ↔ 100 N »." },
+            { "type": "piege", "texte": "La flèche part du centre du cylindre, pas de sa base ni de son sommet, et elle est verticale même si le cylindre penchait. Oublier d'écrire l'échelle sur le schéma coûte un point." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3b",
+          "intitule": "Avec le document 4 et la question 3a, calculer la masse du cylindre de glace de Vostok en kilogrammes. Expliquer la démarche et écrire la relation utilisée.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "**La relation.** Le poids d'un objet est proportionnel à sa masse : $P = m \\times g$, avec $P$ en newtons, $m$ en kilogrammes et $g$ l'intensité de la pesanteur en N/kg. **La démarche** : la carotte vient de Vostok, le document 4 donne $g = 9{,}82$ N/kg à cet endroit (pas 9,76 ni 9,79, qui valent pour d'autres glaciers) ; on isole $m$." },
+            { "type": "formule", "tex": "P = m \\times g \\quad \\Longrightarrow \\quad m = \\frac{P}{g} = \\frac{236}{9{,}82} \\approx 24{,}0 \\text{ kg}" },
+            { "type": "reponse", "texte": "D'après $P = m \\times g$, la masse du cylindre de glace est $m = \\dfrac{236}{9{,}82} \\approx 24$ kg." },
+            { "type": "attendu", "texte": "Le choix de la bonne valeur de g (Vostok) expliqué en une phrase, la relation écrite en lettres avant les nombres, le résultat avec son unité et un arrondi raisonnable. Avec 9,76 ou 9,79 on trouverait 24,2 ou 24,1 kg : le correcteur verra que la ligne du tableau a été mal lue." },
+            { "type": "astuce", "texte": "Pour vérifier l'ordre de grandeur : un cylindre de glace de 3 m de long et d'une dizaine de centimètres de diamètre fait quelques dizaines de litres ; la glace pèse un peu moins de 1 kg par litre. 24 kg est cohérent." }
+          ]
+        }
+      ]
+    }
+  ]
+}

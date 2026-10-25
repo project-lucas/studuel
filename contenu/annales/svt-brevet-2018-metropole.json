@@ -1,0 +1,99 @@
+{
+  "id": "svt-brevet-2018-metropole",
+  "matiere": "svt",
+  "niveau": "3e",
+  "examen": "brevet",
+  "annee": 2018,
+  "centre": "Métropole",
+  "jour": null,
+  "code": "18GENSCMEAG1",
+  "titre": "Brevet 2018 — Sciences : SVT",
+  "dureeMin": 30,
+  "coefficient": null,
+  "consigne": "L'épreuve de sciences du brevet réunit deux disciplines sur la même copie, en 1 h et sur 50 points. En 2018, c'étaient la SVT (30 minutes, 25 points), corrigée ici, et la technologie (30 minutes, 25 points, non corrigée). Calculatrice interdite cette année-là. Les essais et les démarches, même non aboutis, comptent.",
+  "parties": [
+    {
+      "id": "svt",
+      "titre": "SVT",
+      "nature": "exercice",
+      "enonce": "Le tétanos : un patient blessé par un outil de jardinage arrive aux urgences. Document 1 : le calendrier vaccinal (diphtérie-tétanos-polio à 2 mois, 4 mois, 11 mois, 6 ans, 11-13 ans, 25 ans, 45 ans, 65 ans puis tous les 10 ans). Document 2 : le test rapide de dosage des anticorps anti-toxine tétanique (une bande colorée = test négatif, deux bandes = positif). Document 3 : l'arbre décisionnel (vaccination à jour ? test ? protocoles A, B, C) et ses notes : les antibiotiques stoppent l'infection bactérienne, la sérothérapie protège presque tout de suite mais quelques jours, seule la vaccination immunise plus de 10 ans.",
+      "theme": "Immunité : vaccin et sérothérapie",
+      "points": 25,
+      "minutes": 30,
+      "enBref": [
+        "Question 1 : à 33 ans, le patient aurait dû recevoir le rappel de 25 ans ; sa dernière injection date de ses 13 ans, il n'est plus à jour.",
+        "Question 2 : un schéma de la plaquette avec la zone de dépôt (goutte de sang + diluant) et la zone de lecture qui montre UNE seule bande colorée, titré « test négatif ».",
+        "Question 3a : vaccination à jour ? NON → test rapide des anticorps → absence d'anticorps → protocole C.",
+        "Question 3b : sans anticorps, il faut en injecter tout de suite (sérothérapie, quelques jours) ; le vaccin prend le relais pour plus de 10 ans mais met du temps à agir ; les antibiotiques combattent les bactéries de la plaie, pas la toxine."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Lire le sujet avant d'écrire" },
+        { "type": "texte", "texte": "Le sujet suit un médecin aux urgences, du carnet de santé (document 1) au traitement (document 3) en passant par le test sanguin (document 2). Chaque question s'appuie sur UN document nommé : la réponse doit le citer, en relever une information précise, puis conclure. Deux idées du cours servent partout : un **vaccin** apprend au corps à fabriquer ses propres anticorps (lent, durable) ; une **sérothérapie** injecte des anticorps tout faits (immédiat, bref)." },
+        { "type": "astuce", "texte": "Repère le barème : 7 + 6 + 5 + 7 = 25 points. La question 3b vaut autant que la 1 : réserve-lui du temps et trois arguments, un par élément du protocole." },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Le patient (33 ans) a été vacciné contre le tétanos à 2 mois, 4 mois, 11 mois, 6 ans et 13 ans. À partir du document 1, justifier qu'il n'est plus à jour.",
+          "points": 7,
+          "blocs": [
+            { "type": "texte", "texte": "**Ce que dit le document 1.** Pour le vaccin diphtérie-tétanos-poliomyélite, les injections recommandées sont à 2 mois, 4 mois, 11 mois, 6 ans, 11-13 ans, puis **25 ans**, 45 ans, 65 ans et tous les dix ans ensuite. Être à jour, dit la note, c'est avoir reçu toutes les injections prévues pour son âge." },
+            { "type": "texte", "texte": "**Ce que dit le carnet du patient.** Il a bien reçu les cinq premières injections (2 mois, 4 mois, 11 mois, 6 ans, 13 ans, ce qui correspond à la case 11-13 ans). Mais il a 33 ans : l'injection prévue à **25 ans** aurait dû être faite, et elle ne figure pas dans son carnet. Sa dernière injection remonte à vingt ans." },
+            { "type": "reponse", "texte": "D'après le document 1, un adulte doit recevoir un rappel contre le tétanos à 25 ans. Le patient, âgé de 33 ans, n'a reçu aucune injection depuis ses 13 ans : le rappel de 25 ans manque, il n'est donc plus à jour dans sa vaccination contre le tétanos." },
+            { "type": "attendu", "texte": "Le correcteur attend la comparaison explicite calendrier / carnet, et le rappel manquant nommé (25 ans). Dire « ça fait longtemps » sans citer l'âge du rappel ne suffit pas." },
+            { "type": "piege", "texte": "La colonne « 11-13 ans » couvre l'injection faite à 13 ans : ne compte pas cette injection comme un manque. Et le rappel « tous les 10 ans » ne commence qu'après 65 ans." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2",
+          "intitule": "À partir du document 2, réaliser le schéma légendé d'une plaquette-test correspondant à un résultat négatif, pour un patient qui n'est plus immunisé.",
+          "points": 6,
+          "blocs": [
+            { "type": "texte", "texte": "**Ce que doit montrer le schéma.** Le document 2 explique qu'après dépôt d'une goutte de sang et de diluant, une ou deux bandes apparaissent dans la zone de lecture : **une seule bande** = test négatif (patient non ou insuffisamment protégé) ; deux bandes = positif. Pour un patient qui n'est plus immunisé, on dessine donc une seule bande." },
+            { "type": "liste", "items": [
+              "Un rectangle pour la plaquette, avec à gauche un petit rond : la **zone de dépôt**, où l'on dessine la goutte de sang et les gouttes de diluant.",
+              "À droite, une fenêtre rectangulaire : la **zone de lecture**, avec **une seule bande colorée** dessinée en travers.",
+              "Les légendes, reliées par des traits à la règle : plaquette-test ; zone de dépôt d'une goutte de sang et de diluant ; zone de lecture ; bande colorée unique.",
+              "Un titre : « Plaquette-test après 10 minutes : résultat négatif (une seule bande), patient non immunisé contre le tétanos »."
+            ], "ordonnee": false },
+            { "type": "reponse", "texte": "Un schéma au crayon, propre, qui reprend la plaquette du document 2 avec une seule bande colorée dans la zone de lecture, quatre légendes et un titre qui précise « résultat négatif »." },
+            { "type": "attendu", "texte": "Sur 6 points, le titre et les légendes comptent autant que le dessin. Ce qui est évalué : la bande UNIQUE (le résultat), et le lien, écrit dans le titre, entre « une bande », « négatif » et « non immunisé »." },
+            { "type": "astuce", "texte": "Un schéma de SVT se fait au crayon à papier, à la règle pour les traits de légende, sans flèche qui se croise, et toujours avec un titre. C'est une grille que tous les correcteurs appliquent." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3a",
+          "intitule": "À partir du document 3, citer les étapes de l'arbre décisionnel qui amènent le médecin à appliquer le protocole C.",
+          "points": 5,
+          "blocs": [
+            { "type": "texte", "texte": "On suit l'arbre depuis le haut, en choisissant à chaque losange la branche qui correspond au patient." },
+            { "type": "liste", "items": [
+              "Première question de l'arbre : « Vaccination contre le tétanos à jour ? » Réponse **NON** (question 1).",
+              "On passe donc au « Test de dosage rapide des anticorps anti-toxine tétanique ».",
+              "Résultat du test : **absence d'anticorps** (test négatif, une seule bande, question 2).",
+              "Cette branche mène au **protocole C**."
+            ], "ordonnee": true },
+            { "type": "reponse", "texte": "Vaccination non à jour → test rapide de dosage des anticorps → absence d'anticorps (test négatif) → protocole C : sérothérapie immédiate, vaccination immédiate, antibiotiques." },
+            { "type": "piege", "texte": "Si le test avait été positif (présence d'anticorps), on serait allé au protocole B (antibiotiques + mise à jour du vaccin, sans sérothérapie). Cite bien la branche « absence d'anticorps », c'est elle qui distingue B de C." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3b",
+          "intitule": "Le protocole C comporte la sérothérapie immédiate, la vaccination immédiate et la prise d'antibiotiques. À partir du document 3, justifier la nécessité de ces trois éléments pour ce patient blessé avec un outil de jardinage.",
+          "points": 7,
+          "blocs": [
+            { "type": "texte", "texte": "La situation : une plaie souillée par un outil de jardinage, chez un patient qui **n'a plus d'anticorps** contre la toxine tétanique. Trois dangers, trois réponses." },
+            { "type": "texte", "texte": "**La sérothérapie immédiate.** La note (2) du document 3 dit qu'elle est une injection d'anticorps anti-toxine, à protection **quasi immédiate**. Le patient n'a aucun anticorps : si la bactérie du tétanos est entrée par la plaie, sa toxine peut agir dès maintenant. Les anticorps injectés la neutralisent tout de suite. Mais cette protection ne dure que quelques jours : elle ne suffit pas seule." },
+            { "type": "texte", "texte": "**La vaccination immédiate.** La note (3) précise que **seule la vaccination** assure une immunisation de plus de dix ans. Le vaccin déclenche la production d'anticorps par les lymphocytes du patient lui-même (document 2, note sur les anticorps), ce qui prend du temps : d'où l'intérêt de la sérothérapie en attendant, puis du vaccin pour une protection durable, et pour remettre le patient à jour." },
+            { "type": "texte", "texte": "**Les antibiotiques.** La note (1) rappelle qu'un outil de jardinage porte de nombreuses bactéries : la plaie risque de s'infecter. Les antibiotiques **stoppent l'infection** due à ces bactéries. En revanche ils n'agissent pas sur la toxine déjà produite, ce qui justifie encore les deux autres éléments." },
+            { "type": "reponse", "texte": "Les trois éléments se complètent : la sérothérapie protège tout de suite contre la toxine (le patient n'a pas d'anticorps) mais seulement quelques jours ; la vaccination immédiate lance une immunité durable (plus de dix ans) qui prend le relais ; les antibiotiques combattent les bactéries apportées par l'outil, contre lesquelles anticorps anti-toxine et vaccin ne font rien." },
+            { "type": "attendu", "texte": "Trois paragraphes, un par élément, chacun avec une information tirée du document 3 (les notes numérotées) et une phrase de lien avec le patient (« comme il n'a pas d'anticorps… », « comme l'outil est couvert de bactéries… »). Le mot « complémentaires » ou l'idée de relais (court terme / long terme) fait la différence." },
+            { "type": "astuce", "texte": "Pour ne rien oublier : immédiat ou durable ? contre la toxine ou contre les bactéries ? Chaque élément répond à l'une de ces deux questions, et c'est ce croisement que le correcteur veut lire." }
+          ]
+        }
+      ]
+    }
+  ]
+}

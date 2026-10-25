@@ -106,7 +106,9 @@ export function validerAnnale(a, nomFichier) {
   if (typeof a.code !== 'string') erreurs.push(`${ou} : code doit être une chaîne`)
   if (!(a.jour === null || a.jour === 1 || a.jour === 2)) erreurs.push(`${ou} : jour`)
   if (!(a.dureeMin > 0)) erreurs.push(`${ou} : dureeMin`)
-  if (!existsSync(path.join(SUJETS, a.id + '.pdf'))) erreurs.push(`${ou} : pas de sujet ${a.id}.pdf dans assets-sources/annales/sujets/`)
+  // Les sujets officiels restent hors git (docs/annales-chantier.md) : on ne les
+  // exige que sur une machine qui a le dossier des sources.
+  if (existsSync(SUJETS) && !existsSync(path.join(SUJETS, a.id + '.pdf'))) erreurs.push(`${ou} : pas de sujet ${a.id}.pdf dans assets-sources/annales/sujets/`)
   if (!Array.isArray(a.parties) || a.parties.length === 0) erreurs.push(`${ou} : aucune partie`)
   const ids = new Set()
   for (const p of a.parties ?? []) {

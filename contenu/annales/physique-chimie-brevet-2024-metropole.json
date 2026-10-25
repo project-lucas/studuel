@@ -1,0 +1,143 @@
+{
+  "id": "physique-chimie-brevet-2024-metropole",
+  "matiere": "physique-chimie",
+  "niveau": "3e",
+  "examen": "brevet",
+  "annee": 2024,
+  "centre": "Métropole",
+  "jour": null,
+  "code": "24GENSCMEAG1",
+  "titre": "Brevet 2024 — Sciences : physique-chimie",
+  "dureeMin": 30,
+  "coefficient": null,
+  "consigne": "L'épreuve de sciences du brevet réunit deux disciplines sur la même copie, en 1 h et sur 50 points. En 2024, c'étaient la physique-chimie (30 minutes, 25 points), corrigée ici, et la technologie (30 minutes, 25 points, non corrigée). Calculatrice autorisée. Les essais et les démarches, même non aboutis, comptent.",
+  "parties": [
+    {
+      "id": "physique-chimie",
+      "titre": "Physique-chimie",
+      "nature": "exercice",
+      "enonce": "Les Jeux olympiques de Paris 2024 et le centre aquatique. Piscine et équilibre de l'eau : pH idéal de 7,2 à 7,8 ; au-dessus de 8, la désinfection au chlore n'est plus efficace et le calcaire augmente ; en dessous de 7, irritations de la peau et des yeux et durée de vie réduite des équipements métalliques. Le rouge de phénol, C19H14O5S, indicateur coloré : jaune de 0 à 6,6, orange de 6,6 à 8,4, rouge de 8,4 à 14 ; le test de l'agent de maintenance donne une couleur rouge. Action des ions H+ sur le fer : Fe + 2 H+ → Fe2+ + H2. Banque de tests : flamme (dihydrogène, détonation), allumette incandescente (dioxygène, se rallume), soude (Fe2+ précipité vert, Fe3+ précipité rouille). Plongeon à 10 m : vitesse au contact de l'eau limitée à 80 km/h ; graphiques simulés de l'énergie cinétique (d'environ 250 J au départ à environ 6 900 J à l'impact) et de la vitesse (d'environ 2,8 m/s à environ 14 m/s à l'impact, à t ≈ 1,6 s).",
+      "theme": "pH, réaction chimique, plongeon",
+      "points": 25,
+      "minutes": 30,
+      "enBref": [
+        "Question 1 : en dessous de pH 7, l'eau irrite la peau et les yeux et abîme les équipements métalliques.",
+        "Question 2 : rouge → pH entre 8,4 et 14, donc supérieur à 7 : eau basique ; la molécule contient du carbone, de l'hydrogène, de l'oxygène et du soufre.",
+        "Questions 3 et 4 : molécule H2, atome Fe, ion H+ (ou Fe2+) ; les produits sont Fe2+ et H2, donc P1 (précipité vert) et P3 (détonation).",
+        "Question 5 : l'énergie cinétique baisse un peu jusqu'à 0,2 s puis augmente de plus en plus vite jusqu'à environ 6 900 J ; c'est l'énergie potentielle (de position) qui se convertit ; le plongeon dure environ 1,6 s ; à l'impact, v ≈ 14 m/s = 50,4 km/h, en dessous des 80 km/h : la norme est respectée."
+      ],
+      "blocs": [
+        { "type": "titre", "texte": "Lire le sujet avant d'écrire" },
+        { "type": "texte", "texte": "Deux moitiés bien séparées. La **chimie** de la piscine (questions 1 à 4, 13 points) : pH, indicateur coloré, formule d'une molécule, équation de réaction et tests d'identification. La **mécanique** du plongeon (question 5, 12 points) : lecture de deux graphiques, conversion d'énergie, et une vitesse à convertir en km/h pour la comparer à une norme. Les questions 1 à 4 sont courtes : expédie-les proprement pour garder quinze minutes à la question 5." },
+        {
+          "type": "question",
+          "numero": "1",
+          "intitule": "Donner les deux inconvénients d'une eau de piscine dont le pH est inférieur à 7.",
+          "points": 2,
+          "blocs": [
+            { "type": "reponse", "texte": "D'après le texte, si le pH tombe en dessous de 7 : **le confort des baigneurs n'est plus assuré** (irritations de la peau et des yeux) et **la durée de vie des équipements, notamment métalliques, est réduite**." },
+            { "type": "piege", "texte": "Le chlore inefficace et le calcaire sont les inconvénients d'un pH **trop élevé** (au-dessus de 8) : ne pas les mélanger avec ceux d'un pH trop bas." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2a",
+          "intitule": "Indiquer si l'eau de la piscine testée par l'agent de maintenance a un caractère acide, basique ou neutre. Justifier.",
+          "points": 6,
+          "blocs": [
+            { "type": "texte", "texte": "Le test au rouge de phénol donne une couleur **rouge**. D'après le tableau, le rouge correspond à un pH compris entre 8,4 et 14. Rappel de cours : pH < 7, solution acide ; pH = 7, neutre ; pH > 7, basique." },
+            { "type": "reponse", "texte": "La couleur rouge indique un pH entre 8,4 et 14, donc supérieur à 7 : l'eau de la piscine a un caractère **basique**. Elle est d'ailleurs au-dessus de la plage recommandée (7,2 à 7,8), et même au-dessus de 8 : la désinfection au chlore n'est plus efficace." },
+            { "type": "attendu", "texte": "Les deux maillons : la couleur → la zone de pH (chiffres du tableau), puis la zone de pH → « basique » par la règle des 7. La remarque sur la plage du CIO est un plus qui montre que tu as lu l'introduction." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "2b",
+          "intitule": "Le symbole S de la formule C19H14O5S correspond à l'atome de soufre. Donner le nom des autres atomes qui constituent la molécule de rouge de phénol.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "On lit la formule symbole par symbole, l'indice comptant les atomes : C$_{19}$, H$_{14}$, O$_5$, S." },
+            { "type": "reponse", "texte": "La molécule contient, en plus du soufre, des atomes de **carbone** (C, 19 atomes), d'**hydrogène** (H, 14 atomes) et d'**oxygène** (O, 5 atomes)." },
+            { "type": "astuce", "texte": "Les nombres ne sont pas demandés, mais les écrire ne coûte rien et montre que tu sais lire un indice. Attention : O est l'oxygène, pas « l'or » ; H est l'hydrogène, pas « l'hélium » (He)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "3",
+          "intitule": "Citer, parmi les formules de l'équation Fe + 2 H+ → Fe2+ + H2, la formule d'une molécule, celle d'un atome et celle d'un ion.",
+          "points": 3,
+          "blocs": [
+            { "type": "texte", "texte": "Trois familles à reconnaître à l'écriture : un **atome** s'écrit avec un seul symbole sans charge ; une **molécule** est un assemblage d'atomes sans charge (indice) ; un **ion** porte une charge en exposant (+ ou −)." },
+            { "type": "tableau", "entetes": ["Formule", "Nature", "Pourquoi"], "lignes": [
+              ["Fe", "atome", "un symbole, pas de charge"],
+              ["H+", "ion", "charge + en exposant (un proton seul)"],
+              ["Fe2+", "ion", "charge 2+ en exposant"],
+              ["H2", "molécule", "deux atomes d'hydrogène liés, pas de charge"]
+            ] },
+            { "type": "reponse", "texte": "Molécule : **H$_2$** (dihydrogène). Atome : **Fe** (fer). Ion : **H$^+$** (ion hydrogène) ou **Fe$^{2+}$** (ion fer II)." },
+            { "type": "piege", "texte": "Le 2 devant H+ est un coefficient (deux ions), pas un indice : « 2 H+ » n'est pas une molécule. L'exposant fait l'ion, l'indice fait la molécule." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "4",
+          "intitule": "On a fait réagir du fer avec les ions H+ dans un tube à essai. Avec la banque de données et l'équation, écrire les numéros des propositions correctes : P1, précipité vert avec la soude ; P2, précipité rouille avec la soude ; P3, détonation à l'approche d'une flamme ; P4, l'allumette incandescente se rallume.",
+          "points": 2,
+          "blocs": [
+            { "type": "texte", "texte": "**Qu'est-ce qui est formé ?** D'après l'équation, les produits sont les ions **Fe$^{2+}$** et le **dihydrogène H$_2$**. Il suffit de croiser avec la banque de tests : Fe$^{2+}$ + soude → précipité **vert** ; H$_2$ + flamme → **détonation**. Le précipité rouille signale Fe$^{3+}$, qui n'est pas formé ; l'allumette qui se rallume signale le dioxygène, absent de la réaction." },
+            { "type": "reponse", "texte": "Propositions correctes : **P1** et **P3**." },
+            { "type": "attendu", "texte": "Les deux numéros, et rien d'autre ; une proposition fausse ajoutée fait perdre des points. Une ligne de justification (« les produits sont Fe2+ et H2 ») sécurise la réponse." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5a",
+          "intitule": "Décrire l'évolution de l'énergie cinétique du plongeur au cours du temps.",
+          "points": 12,
+          "blocs": [
+            { "type": "texte", "texte": "On lit le premier graphique de gauche à droite. Au départ (t = 0), l'énergie cinétique vaut environ 250 J : le plongeur a une petite vitesse d'impulsion. Elle **diminue légèrement** jusqu'à environ 100 J vers t = 0,2 s (le plongeur monte, il ralentit au sommet de son saut). Puis elle **augmente de plus en plus vite** : la courbe se redresse, 1 000 J vers 0,7 s, 2 300 J à 1 s, 4 200 J à 1,3 s, jusqu'à environ **6 900 J à l'impact**, vers 1,6 s." },
+            { "type": "reponse", "texte": "L'énergie cinétique diminue d'abord faiblement pendant les deux premiers dixièmes de seconde (d'environ 250 J à environ 100 J), puis elle augmente de plus en plus rapidement jusqu'à l'impact, où elle atteint environ 6 900 J." },
+            { "type": "attendu", "texte": "Deux phases décrites (une petite baisse, puis une hausse accélérée), avec des valeurs lues sur le graphique et leur unité, le joule. « Elle augmente » tout court ne décrit pas le début de la courbe." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5b",
+          "intitule": "Nommer la forme d'énergie qui est convertie en énergie cinétique au cours du plongeon.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Le plongeur part de 10 m de haut : il possède une réserve d'énergie liée à son altitude, qui se transforme en énergie de mouvement pendant la chute." },
+            { "type": "reponse", "texte": "C'est l'**énergie potentielle** (de position, ou de pesanteur) qui est convertie en énergie cinétique au cours du plongeon." },
+            { "type": "astuce", "texte": "Pendant la chute, la somme énergie potentielle + énergie cinétique reste à peu près constante (on néglige l'air) : ce qui est perdu en hauteur est gagné en vitesse. Une phrase comme celle-ci montre que tu comprends la conversion, pas seulement son nom." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5c",
+          "intitule": "Indiquer la durée du plongeon en seconde, notée ti.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "Sur les deux graphiques, la ligne pointillée « impact » coupe l'axe des temps un peu après 1,6 s." },
+            { "type": "reponse", "texte": "Le plongeon dure environ **t$_i$ ≈ 1,6 s** (1,62 s en lisant finement)." }
+          ]
+        },
+        {
+          "type": "question",
+          "numero": "5d",
+          "intitule": "À l'aide des graphiques, déterminer si la vitesse au moment de l'impact, notée vi, permet de respecter la norme de sécurité sur la vitesse atteinte lors du contact avec l'eau.",
+          "points": null,
+          "blocs": [
+            { "type": "texte", "texte": "**Lire la vitesse à l'impact.** Sur le second graphique, à t$_i$ ≈ 1,6 s, la courbe de vitesse arrive à environ **14 m/s**." },
+            { "type": "texte", "texte": "**Mettre dans la même unité que la norme.** La norme est en km/h, la lecture en m/s. Un mètre par seconde, c'est 3 600 m par heure, soit 3,6 km/h." },
+            { "type": "formule", "tex": "v_i \\approx 14 \\text{ m/s} = 14 \\times 3{,}6 \\text{ km/h} \\approx 50 \\text{ km/h}" },
+            { "type": "texte", "texte": "**Comparer.** 50 km/h est nettement inférieur à 80 km/h. On peut aussi convertir la norme dans l'autre sens : 80 km/h = 80 / 3,6 ≈ 22 m/s, et 14 m/s < 22 m/s." },
+            { "type": "reponse", "texte": "À l'impact, la vitesse du plongeur est d'environ 14 m/s, soit 14 × 3,6 ≈ 50 km/h. C'est inférieur à la limite de 80 km/h fixée par la fédération : **la norme de sécurité est respectée**." },
+            { "type": "attendu", "texte": "La lecture (14 m/s) avec sa justification (à l'instant de l'impact), la conversion écrite (× 3,6), la comparaison et la conclusion en une phrase. Toute démarche partielle est prise en compte : une lecture correcte sans conversion rapporte déjà des points." },
+            { "type": "piege", "texte": "Comparer 14 à 80 sans convertir conclurait juste par hasard : les unités sont différentes. Et on ne divise pas par 3,6 pour passer de m/s à km/h : on multiplie (un m/s, c'est plus rapide qu'un km/h)." },
+            { "type": "astuce", "texte": "Vérification de cohérence entre les deux graphiques : avec $E_c = \\frac{1}{2} m v^2$, 6 900 J et 14 m/s donnent une masse d'environ 70 kg, celle d'un plongeur adulte. Les deux courbes racontent la même chute." }
+          ]
+        }
+      ]
+    }
+  ]
+}

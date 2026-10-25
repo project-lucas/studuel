@@ -271,18 +271,33 @@ async function couverture(doc, P, meta, nbPages) {
     x += w + 8
   }
 
-  // Carte « Ce qui t'attend ».
-  let y = yPill - 26
+  // Carte « Ce qui t'attend ». Elle doit tenir AU-DESSUS de l'encart doré,
+  // posé au plus bas à 70 pt : un sujet à sept ou huit parties (brevet de
+  // maths, bac de français 2021 et ses deux commentaires) débordait sous lui
+  // (25/10/2026). On raccourcit d'abord les énoncés (4 lignes → aucune), puis
+  // la consigne (→ 2, → 1 ligne), puis l'interligne entre les parties.
   const cw = W - 80
-  const lignes = []
-  if (meta.consigne) for (const l of couper(meta.consigne, P.texte, 11, cw - 40)) lignes.push({ t: l, p: P.texte, s: 11, c: C.encre, h: 15 })
-  const items = meta.parties.map((p) => ({
-    titre: p.titre,
-    lignes: couper(p.enonce, P.texte, 10.5, cw - 76).slice(0, 4),
-  }))
-  const hItems = items.reduce((s, it) => s + 16 + it.lignes.length * 14 + 8, 0)
-  const hCarte = 58 + lignes.length * 15 + (items.length ? hItems + 6 : 0) + 10
-  y -= hCarte
+  const hOr = 74
+  const haut = yPill - 26
+  const dispo = haut - (70 + hOr + 22)
+  const consigneLignes = meta.consigne ? couper(meta.consigne, P.texte, 11, cw - 40) : []
+  const enonces = meta.parties.map((p) => ({ titre: p.titre, lignes: couper(p.enonce, P.texte, 10.5, cw - 76) }))
+  let lignes = []
+  let items = []
+  let pas = 8
+  let hCarte = 0
+  essais: for (const maxConsigne of [consigneLignes.length, 2, 1]) {
+    for (const maxLignes of [4, 3, 2, 1, 0]) {
+      for (pas of [8, 4]) {
+        lignes = consigneLignes.slice(0, maxConsigne).map((l) => ({ t: l, p: P.texte, s: 11, c: C.encre, h: 15 }))
+        items = enonces.map((it) => ({ titre: it.titre, lignes: it.lignes.slice(0, maxLignes) }))
+        const hItems = items.reduce((s, it) => s + 16 + it.lignes.length * 14 + pas, 0)
+        hCarte = 58 + lignes.length * 15 + (items.length ? hItems + 6 : 0) + 10
+        if (hCarte <= dispo) break essais
+      }
+    }
+  }
+  let y = haut - hCarte
   carte(page, 40, y - 4, cw, hCarte, 20, { color: C.bord })
   carte(page, 40, y, cw, hCarte, 20, { color: C.blanc })
   let yy = y + hCarte - 34
@@ -303,11 +318,10 @@ async function couverture(doc, P, meta, nbPages) {
       page.drawText(l, { x: 90, y: yy, size: 10.5, font: P.texte, color: C.gris })
       yy -= 14
     }
-    yy -= 8
+    yy -= pas
   })
 
   // Encart doré : le corrigé est dans l'app.
-  const hOr = 74
   const yOr = Math.max(y - 22 - hOr, 70)
   carte(page, 40, yOr - 4, cw, hOr, 20, { color: hex('#e0a114') })
   carte(page, 40, yOr, cw, hOr, 20, { color: C.or })

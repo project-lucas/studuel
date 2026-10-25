@@ -49,8 +49,14 @@ export const PRESTATAIRES: readonly Prestataire[] = [
   {
     nom: 'Supabase Inc.',
     role: 'base de données, connexion au compte, fichiers',
-    lieu: `${A_COMPLETER} : région de l’instance Supabase (tableau de bord › Settings › General)`,
+    lieu: 'serveurs à Francfort (Allemagne) ; société aux États-Unis',
     donnees: 'le compte et toutes les données de l’app',
+  },
+  {
+    nom: 'Cloudflare Inc.',
+    role: 'le stockage des fiches de révision en PDF',
+    lieu: 'serveurs en Europe de l’Ouest ; société aux États-Unis',
+    donnees: 'l’adresse IP, le temps de télécharger une fiche offerte depuis le site ; rien depuis l’app (c’est notre serveur qui lit le fichier)',
   },
   {
     nom: 'DeepSeek',

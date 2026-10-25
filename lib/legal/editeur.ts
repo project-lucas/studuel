@@ -14,11 +14,11 @@ export function aCompleter(valeur: string): boolean {
 
 export const EDITEUR = {
   marque: 'Studuel',
-  raisonSociale: `${A_COMPLETER} : nom de la société (ou nom et prénom de l’entrepreneur individuel)`,
-  forme: `${A_COMPLETER} : forme juridique et capital (SAS au capital de … €, EI…)`,
-  siret: `${A_COMPLETER} : SIRET`,
-  adresse: `${A_COMPLETER} : adresse du siège`,
-  directeurPublication: `${A_COMPLETER} : directeur de la publication`,
+  raisonSociale: 'Lucas Potier, entrepreneur individuel',
+  forme: 'Entreprise individuelle (micro-entreprise), immatriculée le 1er juin 2024',
+  siret: '890 776 388 00039 (SIREN 890 776 388)',
+  adresse: '21 rue des Jonquilles, 77360 Vaires-sur-Marne, France',
+  directeurPublication: 'Lucas Potier',
   email: 'contact@studuel.app',
   site: 'studuel.app',
   mediateur: `${A_COMPLETER} : médiateur de la consommation (nom et site)`,

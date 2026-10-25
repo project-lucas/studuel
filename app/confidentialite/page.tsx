@@ -111,11 +111,10 @@ export default function ConfidentialitePage() {
         <ul className="list-disc space-y-1 pl-5">
           <li>Ton compte et ta progression : tant que ton compte existe.</li>
           <li>
-            Un compte inactif : supprimé après <Valeur v={`${A_COMPLETER} : durée (la CNIL recommande 3 ans au plus)`} />{' '}
-            sans connexion.
+            Un compte inactif : supprimé après 3 ans sans connexion.
           </li>
           <li>
-            Le journal technique : <Valeur v={`${A_COMPLETER} : durée (12 mois conseillés)`} />.
+            Le journal technique : 12 mois.
           </li>
           <li>Les traces de paiement : 10 ans, comme l’exige la loi.</li>
         </ul>

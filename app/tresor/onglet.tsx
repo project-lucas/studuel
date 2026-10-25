@@ -14,6 +14,8 @@ import { AUCUN_BOOST, OFFRES } from '@/lib/boutique/offres'
 import { isPremiumTier } from '@/lib/gems'
 import { cleSemaineVitrine } from '@/lib/boutique/vue'
 import { PACKS_GEMMES } from '@/lib/boutique/packs-gemmes'
+import { sansPrixEuros } from '@/lib/canal'
+import { estAppPlay } from '@/lib/canal-server'
 
 
 /**
@@ -55,12 +57,13 @@ export default async function OngletBoutique() {
   const [supabase, user] = await Promise.all([createClient(), getCurrentUser()])
   const maintenant = new Date()
 
-  const [tier, gemmes, catalogue, achats, boosts] = await Promise.all([
+  const [tier, gemmes, catalogue, achats, boosts, appPlay] = await Promise.all([
     getUserTier(),
     user ? fetchGems(supabase, user.id) : Promise.resolve(0),
     lireCatalogueCapsules(supabase),
     user ? lireMesAchats(supabase, user.id) : Promise.resolve([]),
     user ? lireBoosts(supabase, user.id) : Promise.resolve(AUCUN_BOOST),
+    estAppPlay(),
   ])
 
   return (
@@ -69,7 +72,9 @@ export default async function OngletBoutique() {
 
       {/* 17/10/2026 (Lucas) : un abonné n'a plus besoin qu'on lui vende
           Studuel+ — la carte ne s'affiche qu'au gratuit. */}
-      {isPremiumTier(tier) ? null : <CarteStudueLPlus tier={tier} />}
+      {/* L'app Android du Play Store ne vend rien en euros (lib/canal) : ni
+          Studuel+, ni recharges, ni gemmes, ni capsule payée par carte. */}
+      {isPremiumTier(tier) || appPlay ? null : <CarteStudueLPlus tier={tier} />}
 
       <Marche
         offres={OFFRES}
@@ -82,11 +87,11 @@ export default async function OngletBoutique() {
 
       {/* Les recharges de Marcel (581) : seulement pour un abonné — au
           gratuit, Marcel n'est pas ouvert, une recharge ne lui servirait à rien. */}
-      {isPremiumTier(tier) ? <RayonRecharges connecte={user !== null} aujourdhuiIso={maintenant.toISOString()} /> : null}
+      {isPremiumTier(tier) && !appPlay ? <RayonRecharges connecte={user !== null} aujourdhuiIso={maintenant.toISOString()} /> : null}
 
-      <RayonsCapsules capsules={catalogue} achats={achats} gemmes={gemmes} connecte={user !== null} />
+      <RayonsCapsules capsules={appPlay ? sansPrixEuros(catalogue) : catalogue} achats={achats} gemmes={gemmes} connecte={user !== null} />
 
-      <RayonGemmes packs={PACKS_GEMMES} connecte={user !== null} />
+      {appPlay ? null : <RayonGemmes packs={PACKS_GEMMES} connecte={user !== null} />}
 
       {/* « Pour ton profil » est masqué depuis le 17/10/2026 (Lucas : « pas au
           point ») — le composant PourTonProfil reste en réserve. */}

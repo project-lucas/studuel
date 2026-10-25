@@ -118,6 +118,14 @@
     try {
       sessionStorage.setItem('studuel:lancement', String(Math.round(Date.now() - performance.now())));
     } catch (e) {}
+    // L'app Android du Play Store (lib/canal.ts, dont c'est la copie de
+    // `doitMarquerPlay`) : un cookie d'un an, lu par le serveur pour cacher
+    // tout achat en euros.
+    try {
+      if (/(?:^|[?&])canal=play(?:&|$)/.test(location.search) || document.referrer.indexOf('android-app://') === 0) {
+        document.cookie = 'studuel_canal=play; path=/; max-age=31536000; samesite=lax; secure';
+      }
+    } catch (e) {}
     // Élève connecté (cookie de session Supabase) : droit à l'arène, sans le
     // détour de `/` qui ne fait que rediriger. Sinon `/` décide (accueil).
     var connecte = /(?:^|;\s*)sb-[^=;]+-auth-token(?:\.\d+)?=/.test(document.cookie);

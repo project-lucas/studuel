@@ -43,7 +43,7 @@ Le plus simple : **PWABuilder** (pwabuilder.com), dans le navigateur.
 2. Réglages :
    - Package ID : `app.studuel`
    - App name : `Studuel` · Short name : `Studuel`
-   - Start URL : `/lancement.html`
+   - Start URL : `/lancement.html?canal=play` (**indispensable** : c'est ce qui cache les euros)
    - Theme color `#7a3fe0` · Background color `#25184c` · Display : standalone · Orientation : portrait
    - Signing key : *Create new* — **garder précieusement** le fichier `.keystore` et ses
      mots de passe (dans un gestionnaire de mots de passe, pas dans le dépôt)
@@ -108,7 +108,16 @@ partage au sens de la fiche.
   (à dessiner), **au moins 4 captures** de téléphone (Réviser, un quiz, l'arène, Marcel).
 - **Catégorie** : Éducation · **E-mail de contact** : `contact@studuel.app`
 
-## 6. ⚠️ Deux points bloquants avant d'envoyer en production
+## 6. Les deux points bloquants — LEVÉS le 25/10/2026
+
+- **Euros (voie A, choix de Lucas)** : l'app Android démarre sur `/lancement.html?canal=play`
+  (à régler comme *Start URL* dans PWABuilder), qui pose le cookie `studuel_canal=play`
+  (`lib/canal.ts`) ; la Boutique, `/plus` et l'espace parents ne montrent alors aucune
+  offre en euros. Les capsules restent achetables en gemmes.
+- **Signaler une réponse de l'IA** : « Signaler » sous chaque réponse de Marcel
+  (migration 597), relu sur /admin/signalements-ia.
+
+Historique de ce qui bloquait :
 
 1. **Les paiements en euros.** Dans une app du Play Store, un contenu numérique
    (Studuel+, gemmes, capsules, recharges de Marcel) se vend par **Google Play

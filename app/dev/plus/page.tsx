@@ -56,6 +56,7 @@ export default async function ApercuPlus({
   return (
     <EcranPlus
       abonne={abonne !== '0'}
+      achatPossible
       rente={
         rente === 'absente'
           ? null

@@ -10,6 +10,7 @@ import { lireRente } from '@/lib/studuel-plus/rente-server'
 import { etatsDesPiliers } from '@/lib/studuel-plus/etats'
 import { examenDe, joursAvantExamen } from '@/lib/examen/parcours'
 import { ANNALES_CORRIGEES } from '@/lib/annales-corrigees/registre'
+import { estAppPlay } from '@/lib/canal-server'
 
 export const metadata = { title: 'Studuel+ — Studuel' }
 export const dynamic = 'force-dynamic'
@@ -22,11 +23,12 @@ export default async function PagePlus() {
   if (!user) redirect('/login')
   const supabase = await createClient()
 
-  const [profil, tier, rente, { data: credits }] = await Promise.all([
+  const [profil, tier, rente, { data: credits }, appPlay] = await Promise.all([
     readRowTolerant<{ grade_level: string | null }>(supabase, 'profiles', 'id', user.id, ['grade_level']),
     getUserTierFor(supabase, user.id),
     lireRente(supabase),
     supabase.rpc('credits_etat'),
+    estAppPlay(),
   ])
 
   const abonne = isPremiumTier(tier)
@@ -37,6 +39,7 @@ export default async function PagePlus() {
   return (
     <EcranPlus
       abonne={abonne}
+      achatPossible={!appPlay}
       rente={rente}
       etatDe={etatsDesPiliers({
         abonne,

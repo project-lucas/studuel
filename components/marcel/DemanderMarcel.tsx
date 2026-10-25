@@ -47,6 +47,8 @@ import type { Tier } from '@/lib/subscription'
 import { useCoachFil } from './CoachFil'
 import CartesProposees from './CartesProposees'
 import ReponseMarcel from './ReponseMarcel'
+import SignalerReponse from './SignalerReponse'
+import { questionAvant } from '@/lib/ia-signalement'
 import PoseMarcel from './PoseMarcel'
 import { useDictee } from './useDictee'
 import { useHauteurChamp } from './useHauteurChamp'
@@ -424,8 +426,12 @@ export default function DemanderMarcel({
                 {/* La réponse est mise en page (titres, sections, puces) par
                     ReponseMarcel : une fiche affichée en texte brut montrerait
                     ses dièses et ses tirets. */}
-                <div className="bg-card max-w-[85%] rounded-[18px] rounded-bl-md p-3 shadow-[inset_0_0_0_1.5px_color-mix(in_oklch,var(--foreground),transparent_90%)]">
-                  <ReponseMarcel texte={message.texte} />
+                <div className="max-w-[85%]">
+                  <div className="bg-card rounded-[18px] rounded-bl-md p-3 shadow-[inset_0_0_0_1.5px_color-mix(in_oklch,var(--foreground),transparent_90%)]">
+                    <ReponseMarcel texte={message.texte} />
+                  </div>
+                  {/* Signaler la réponse (597) : exigé par Google Play pour une IA. */}
+                  <SignalerReponse question={questionAvant(messages, message.id)} reponse={message.texte} />
                 </div>
               </div>
             ),

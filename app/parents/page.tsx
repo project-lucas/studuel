@@ -24,6 +24,7 @@ import {
   type ParentPrefs,
 } from '@/lib/parents-suivi'
 import { sousTitreParents } from '@/lib/parents-entete'
+import { estAppPlay } from '@/lib/canal-server'
 
 export const metadata = { title: 'Espace parents — Studuel' }
 export const dynamic = 'force-dynamic'
@@ -90,7 +91,7 @@ export default async function ParentsPage() {
   // Le catalogue (slug → nom de matière), les vidéos et les réglages se
   // chargent EN PARALLÈLE des tableaux de bord : ce sont trois lectures
   // indépendantes, les enchaîner n'ajoutait que de l'attente.
-  const [reports, subjects, videosResult, prefsResult] = await Promise.all([
+  const [reports, subjects, videosResult, prefsResult, appPlay] = await Promise.all([
     Promise.all(
       children.map(async (child, i) => {
         const { data, error } = await supabase.rpc('child_dashboard', {
@@ -126,6 +127,7 @@ export default async function ParentsPage() {
       .select('child_id, weekly_goal_minutes, alert_after_days')
       .eq('parent_id', user.id)
       .returns<PrefsRow[]>(),
+    estAppPlay(),
   ])
 
   const videos = videosResult.data ?? []
@@ -201,7 +203,8 @@ export default async function ParentsPage() {
         prefs={prefsByChild.get(r.childId) ?? DEFAULT_PARENT_PREFS}
         disponible={prefsDisponibles}
       />
-      <OffrirStuduelPlus childName={r.displayName} contact={user.email ?? null} />
+      {/* L'app Android du Play Store ne vend pas Studuel+ (lib/canal). */}
+      {appPlay ? null : <OffrirStuduelPlus childName={r.displayName} contact={user.email ?? null} />}
     </div>
   )
 

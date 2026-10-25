@@ -4,6 +4,7 @@ import {
   Bug,
   CreditCard,
   Eye,
+  Flag,
   Gift,
   GraduationCap,
   HeartPulse,
@@ -43,6 +44,7 @@ const ICONES: Record<Nom, LucideIcon> = {
   studio: BookOpen,
   demandes: Inbox,
   leads: Gift,
+  signalementsIa: Flag,
 }
 
 export default function IconeConsole({ nom, className }: { nom: Nom; className?: string }) {

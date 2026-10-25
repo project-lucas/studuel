@@ -4710,6 +4710,16 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     // Révoquée pour anon : l’appel anonyme est refusé (42501), la fonction existe.
     sonde: { type: 'rpc', fn: 'compte_supprimer', args: { p_confirmation: '' } },
   },
+  {
+    id: '597',
+    fichier: '597_ia_signalements.sql',
+    feature:
+      'SIGNALER UNE RÉPONSE DE L’IA (25/10/2026, exigé par Google Play) : sous chaque réponse de Marcel, « Signaler » (faux · choquant · autre) range la question et la réponse dans `ia_signalements` par `ia_signaler` (élève connecté, 20 par jour) ; l’admin les relit sur /admin/signalements-ia ; un compte supprimé emporte ses signalements.',
+    siAbsente:
+      'Le bouton « Signaler » répond « impossible pour le moment » et la page Signalements IA de la console dit que la migration manque : refus probable à l’examen de Google Play.',
+    // Révoquée pour anon : l’appel anonyme est refusé (42501), la fonction existe.
+    sonde: { type: 'rpc', fn: 'ia_signaler', args: { p_outil: '', p_raison: '', p_question: '', p_reponse: '' } },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

@@ -22,7 +22,7 @@ const PUBLIC = path.join(ROOT, 'public')
 //
 // LA RÈGLE, DONC : `public/` ne contient que ce qui est SERVI. Les sources
 // vivent dans `assets-sources/`. Ce test le vérifie sur deux plans — aucun
-// fichier lourd, et aucun PNG hors des deux icônes PWA — pour que l'oubli soit
+// fichier lourd, et aucun PNG hors des icônes PWA — pour que l'oubli soit
 // rouge en CI plutôt que découvert sur une facture de bande passante.
 // -----------------------------------------------------------------------------
 
@@ -34,7 +34,14 @@ const POIDS_MAX_KO = 600
  * Tout le reste de l'app est en webp — un PNG qui apparaît ailleurs est une
  * source qui a échappé au rangement.
  */
-const PNG_AUTORISES = new Set(['icons/icon-192.png', 'icons/icon-512.png'])
+// Les icônes « maskable » (25/10/2026, Google Play) : la même icône avec sa
+// marge de sécurité, pour les masques ronds d'Android.
+const PNG_AUTORISES = new Set([
+  'icons/icon-192.png',
+  'icons/icon-512.png',
+  'icons/icon-maskable-192.png',
+  'icons/icon-maskable-512.png',
+])
 
 /**
  * LES SUJETS D'ANNALES (public/annales/*.pdf, 25/09/2026) sont des DOCUMENTS
@@ -85,7 +92,7 @@ describe('poids de public/', () => {
     ).toEqual([])
   })
 
-  it('ne contient pas de PNG hors des deux icônes PWA', () => {
+  it('ne contient pas de PNG hors des icônes PWA', () => {
     const intrus = fichiers
       .filter((f) => f.chemin.toLowerCase().endsWith('.png'))
       .filter((f) => !PNG_AUTORISES.has(f.chemin))

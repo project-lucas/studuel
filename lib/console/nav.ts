@@ -33,6 +33,7 @@ export type IconeConsole =
   | 'studio'
   | 'demandes'
   | 'leads'
+  | 'signalementsIa'
 
 export type LienConsole = {
   href: string
@@ -75,6 +76,7 @@ const L = {
   sante: { href: '/admin/sante', libelle: 'Santé', icone: 'sante', aide: 'Les migrations et la configuration.' },
   demandes: { href: '/admin/demandes', libelle: 'Demandes de bilan', icone: 'demandes', aide: 'Les parents qui demandent un bilan sur le site Scolaria.' },
   leads: { href: '/admin/leads', libelle: 'Fiches offertes', icone: 'leads', aide: 'Les visiteurs du site qui demandent leurs 10 fiches, et les inscrits au supérieur.' },
+  signalementsIa: { href: '/admin/signalements-ia', libelle: 'Signalements IA', icone: 'signalementsIa', aide: 'Les réponses de Marcel signalées par les élèves.' },
   erreurs: { href: '/admin/erreurs', libelle: 'Erreurs', icone: 'erreurs', aide: 'Les pannes remontées par l’app.' },
 } satisfies Record<string, LienConsole>
 
@@ -106,7 +108,7 @@ export function espacesConsole(roles: { coach: boolean; admin: boolean }): Espac
       accueil: '/admin/insights',
       sections: [
         { titre: 'Pilotage', liens: [L.insights, L.retention, L.usage] },
-        { titre: 'Contenu', liens: [L.studio, L.contenu] },
+        { titre: 'Contenu', liens: [L.studio, L.contenu, L.signalementsIa] },
         { titre: 'Communication', liens: [L.diffusion, L.leads] },
         { titre: 'Business', liens: [L.abonnements, L.marcel, L.parents] },
         { titre: 'Technique', liens: [L.sante, L.erreurs] },

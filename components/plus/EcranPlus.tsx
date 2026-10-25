@@ -34,9 +34,11 @@ export type DonneesEcranPlus = {
   etatDe: Record<PilierId, string>
   /** La rente lue en base (580) ; `null` : pas encore là. */
   rente: { depuisMs: number; maintenantMs: number; total: number } | null
+  /** L'app Android du Play Store ne vend pas Studuel+ (lib/canal). */
+  achatPossible: boolean
 }
 
-export default function EcranPlus({ abonne, etatDe, rente }: DonneesEcranPlus) {
+export default function EcranPlus({ abonne, etatDe, rente, achatPossible }: DonneesEcranPlus) {
   return (
     <div className="pb-10">
       <EnTetePage
@@ -102,7 +104,7 @@ export default function EcranPlus({ abonne, etatDe, rente }: DonneesEcranPlus) {
           </ul>
         </section>
 
-        {!abonne ? (
+        {!abonne && achatPossible ? (
           <Button asChild size="xl" shine className="w-full">
             <Link href="/tresor">
               <Crown aria-hidden="true" />

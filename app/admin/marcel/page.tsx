@@ -45,12 +45,12 @@ export default async function AdminMarcelPage() {
       <header>
         <h1 className="font-heading text-3xl font-extrabold">Ce que coûte Marcel</h1>
         <p className="text-muted-foreground mt-1 text-sm">
-          Modèle configuré : <strong>{modele}</strong> · un crédit coûte en moyenne {libelleCout(credit)}.
+          Modèle configuré : <strong>{modele}</strong> · un café (une demande) coûte en moyenne {libelleCout(credit)}.
         </p>
       </header>
 
       <section className="carte p-4">
-        <h2 className="titre-section">L’estimation : un abonné qui vide ses {CREDITS_MENSUELS} crédits</h2>
+        <h2 className="titre-section">L’estimation : un abonné qui boit ses {CREDITS_MENSUELS} cafés</h2>
         <table className="mt-3 w-full text-sm">
           <tbody>
             <tr>

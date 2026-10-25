@@ -9,14 +9,16 @@ export const dynamic = 'force-dynamic'
 // haut que le dernier fêté (localStorage). Ici, on la rejoue à volonté :
 //
 //   /dev/niveau                    8 → 9, la distance au prochain coffre
-//   /dev/niveau?de=4&a=5           un palier : le coffre à ouvrir
+//   /dev/niveau?n=7                6 → 7 (le niveau atteint, tout court)
+//   /dev/niveau?n=2                1 → 2 : la section « Débloqué » (Marcel, l'arène…)
+//   /dev/niveau?de=4&a=5           un palier : le coffre à ouvrir (la pluie, puis le ruban)
 //   /dev/niveau?de=6&a=8           deux niveaux d'un coup
 //   /dev/niveau?part=0.4           déjà 40 % du niveau suivant
 //   /dev/niveau?ouverts=5          coffres déjà ouverts : la distance au prochain
 export default async function ApercuNiveauPage({
   searchParams,
 }: {
-  searchParams: Promise<{ de?: string; a?: string; part?: string; ouverts?: string }>
+  searchParams: Promise<{ n?: string; de?: string; a?: string; part?: string; ouverts?: string }>
 }) {
   if (process.env.NODE_ENV === 'production') notFound()
   const q = await searchParams
@@ -24,7 +26,7 @@ export default async function ApercuNiveauPage({
     const n = Math.floor(Number(v))
     return Number.isFinite(n) && n >= 1 ? n : defaut
   }
-  const a = entier(q.a, 9)
+  const a = entier(q.a ?? q.n, 9)
   const de = Math.min(entier(q.de, a - 1), a - 1)
   const part = Math.min(1, Math.max(0, Number(q.part) || 0.08))
   const ouverts = (q.ouverts ?? '').split(',').map(Number).filter((n) => Number.isInteger(n) && n > 0)

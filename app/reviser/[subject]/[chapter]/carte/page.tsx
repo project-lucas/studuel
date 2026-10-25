@@ -18,6 +18,7 @@ import { Button } from '@/components/ui/button'
 import LecteurPdf from '@/components/annales/LecteurPdf'
 import { fichePdfDe, hrefFichePdf } from '@/lib/fiches/pdf'
 import { urlFlouFiche } from '@/lib/fiches/pdf-server'
+import { rouleauFiche } from '@/lib/fiche-ecrin-server'
 
 /** Les phrases du lecteur PDF, au féminin de la fiche. */
 const TEXTES_FICHE = { ouverture: 'Ouverture de la fiche…', erreur: 'La fiche ne s’affiche pas ici', fin: 'fin de la fiche' }
@@ -72,6 +73,8 @@ export default async function MindMapPage({
   const access = chapterAccess(tier, chapterId, unlockedChapters)
   const unlocked = access !== 'locked'
   const fichePdf = fichePdfDe(chapterId)
+  // L'écrin de déblocage (25/10/2026) : la fiche roulée si elle est dessinée.
+  const rouleau = unlocked ? null : rouleauFiche()
 
   // Carte rédigée à la main d'abord. À défaut — c'est le cas de la quasi-
   // totalité des chapitres — on la DÉRIVE du cours : le chapitre au centre, une
@@ -147,7 +150,7 @@ export default async function MindMapPage({
               crans={CRANS_FICHE}
             />
           ) : (
-            <UnlockChapterCard chapterId={chapterId} gems={gems}>
+            <UnlockChapterCard chapterId={chapterId} gems={gems} titre={chapter.title} rouleau={rouleau}>
               {/* LA FICHE FLOUTÉE (Lucas, 13/10/2026 : « toutes doivent être
                   floutées tant que le user n'a pas utilisé 30 gemmes ») : une
                   image fabriquée au dépôt, illisible, publique — le PDF, lui,
@@ -185,7 +188,7 @@ export default async function MindMapPage({
             La fiche n&apos;a pas pu être chargée. Réessaie dans un instant.
           </p>
         ) : (
-          <UnlockChapterCard chapterId={chapterId} gems={gems}>
+          <UnlockChapterCard chapterId={chapterId} gems={gems} titre={chapter.title} rouleau={rouleau}>
             {/* LEURRE, pas la vraie carte : le flou n'est que du CSS, le texte
                 partait quand même dans le HTML (« afficher le code source »
                 suffisait à lire le contenu payant). L'aperçu est une silhouette

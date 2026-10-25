@@ -10,10 +10,14 @@ import type { TraqueCard } from '@/lib/traque'
 
 /**
  * L'APERÇU DU POP-UP DE LA TRAQUE — développement seulement, sans compte ni
- * lecture : cinq gardiens de démonstration dans l'enveloppe réelle
+ * lecture : des gardiens de démonstration dans l'enveloppe réelle
  * (`SheetShell format="popup"`), ouverte à l'arrivée, à rouvrir d'un bouton.
+ *
+ * Un état par affiche (25/10/2026) : `debusque` (sorti, 42 min), `chasse`
+ * (en chasse à 40 %), `indisponible` (pas son jour), `expire` (recouché, la
+ * jauge à la moitié), `vide`, et `defaut` qui les montre tous.
  */
-export type EtatApercuTraque = 'defaut' | 'vide'
+export type EtatApercuTraque = 'defaut' | 'vide' | 'debusque' | 'chasse' | 'indisponible' | 'expire'
 
 function carte(
   bossId: string,
@@ -47,48 +51,62 @@ function carte(
 
 const DANS_42_MIN = 42 * 60_000
 
-export function cartesDemo(): TraqueCard[] {
-  return [
-    carte('grammatork', 'Français', 'francais', 100, {
-      status: 'debusque',
-      rank: 2,
-      remainingMs: DANS_42_MIN,
-      endsAt: Date.now() + DANS_42_MIN,
-      backOn: null,
-      xp: 60,
-    }),
-    carte('plasma', 'Physique-Chimie', 'physique-chimie', 20, {
-      enChasse: true,
-      backOn: null,
-    }),
-    // INDISPONIBLES aujourd'hui (576) : le ruban sur la scène, pas de jauge.
-    carte('nox', "l'Ombre du Bulletin", '', 0, {
-      status: 'indisponible',
-      backOn: 'dimanche',
-      hint: 'Revient dimanche',
-      xp: 90,
-      gemmes: 20,
-    }),
-    carte('chronos', 'HGGSP', 'hggsp', 50, { enChasse: true, backOn: null }),
-    carte('mitochondrix', 'SVT', 'svt', 0, {
-      status: 'indisponible',
-      backOn: 'jeudi',
-      hint: 'Revient jeudi',
-      rank: 3,
-      xp: 60,
-      gemmes: 10,
-    }),
-    carte('bigben', 'Anglais', 'anglais', 100, {
-      status: 'debusque',
-      remainingMs: 0,
-      endsAt: Date.now() - 60_000,
-    }),
-  ]
+const DEBUSQUE = () =>
+  carte('grammatork', 'Français', 'francais', 100, {
+    status: 'debusque',
+    rank: 2,
+    remainingMs: DANS_42_MIN,
+    endsAt: Date.now() + DANS_42_MIN,
+    xp: 45,
+    gemmes: 8,
+  })
+/** En chasse à 40 % : cours et quiz tenus pour faits, il reste les cartes. */
+const CHASSE = () => carte('plasma', 'Physique-Chimie', 'physique-chimie', 40)
+/** En chasse, à peine entamé : les trois gestes à faire. */
+const ENTAME = () => carte('chronos', 'HGGSP', 'hggsp', 8)
+// INDISPONIBLES aujourd'hui (576) : le ruban sur la scène, pas de jauge.
+const NOX = () =>
+  carte('nox', "l'Ombre du Bulletin", '', 0, {
+    status: 'indisponible',
+    enChasse: false,
+    backOn: 'dimanche',
+    hint: 'Revient dimanche',
+    xp: 90,
+    gemmes: 20,
+  })
+const INDISPONIBLE = () =>
+  carte('mitochondrix', 'SVT', 'svt', 0, {
+    status: 'indisponible',
+    enChasse: false,
+    backOn: 'jeudi',
+    hint: 'Revient jeudi',
+    rank: 3,
+    xp: 60,
+    gemmes: 10,
+  })
+/** Recouché plus tôt dans la journée : la jauge repart de la moitié. */
+const EXPIRE = () => carte('bigben', 'Anglais', 'anglais', 50, { status: 'expire' })
+
+export function cartesDemo(etat: EtatApercuTraque = 'defaut'): TraqueCard[] {
+  switch (etat) {
+    case 'vide':
+      return []
+    case 'debusque':
+      return [DEBUSQUE()]
+    case 'chasse':
+      return [CHASSE()]
+    case 'indisponible':
+      return [INDISPONIBLE()]
+    case 'expire':
+      return [EXPIRE()]
+    default:
+      return [DEBUSQUE(), CHASSE(), NOX(), ENTAME(), INDISPONIBLE(), EXPIRE()]
+  }
 }
 
 export default function ApercuTraque({ etat }: { etat: EtatApercuTraque }) {
   const [ouverte, setOuverte] = useState(true)
-  const cards = etat === 'vide' ? [] : cartesDemo()
+  const cards = cartesDemo(etat)
 
   return (
     <>

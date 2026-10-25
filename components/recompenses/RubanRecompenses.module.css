@@ -1,0 +1,238 @@
+/* LE RUBAN DE RÉCOMPENSES (RubanRecompenses.tsx) — un écran plein, au-dessus
+   des feuilles (z-70) et de la fête de niveau (z-55), SOUS le bandeau en volée
+   (z-80) et la couche des jetons (z-90) : à la fermeture, les éclairs partent
+   des cartes et passent DEVANT le voile qui s'efface.
+
+   Règle de l'app : on n'anime QUE `transform` et `opacity`, avec des valeurs
+   littérales. Sous « mouvement réduit », tout saute : les cartes sont là. */
+
+.voile {
+  position: fixed;
+  inset: 0;
+  z-index: 75;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: max(1.25rem, env(safe-area-inset-top)) 1.25rem max(1.25rem, env(safe-area-inset-bottom));
+  color: var(--ink-on-dark);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  background:
+    radial-gradient(80% 55% at 50% 42%, color-mix(in oklch, var(--primary) 72%, transparent), transparent 72%),
+    color-mix(in oklch, var(--carte-sombre-fond), transparent 3%);
+  animation: voileEntre 220ms ease-out both;
+}
+.voile[data-sortie] {
+  pointer-events: none;
+  animation: voileSort 280ms ease-in both;
+}
+
+/* La lumière tournante : un cône d'or en rayons, masqué en disque, qui tourne
+   derrière la scène. Peint une fois, puis seulement tourné (transform). */
+.lumiere {
+  position: absolute;
+  left: 50%;
+  top: 44%;
+  width: 150vmax;
+  height: 150vmax;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    from 0deg,
+    color-mix(in oklch, var(--highlight) 34%, transparent) 0deg 9deg,
+    transparent 9deg 24deg
+  );
+  mask-image: radial-gradient(circle, black 0%, transparent 46%);
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation:
+    lumiereEntre 600ms 150ms ease-out both,
+    lumiereTourne 26s linear infinite;
+  will-change: transform;
+}
+
+.etincelles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.etincelle {
+  position: absolute;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, white, var(--highlight) 55%, transparent 72%);
+  opacity: 0;
+  animation: scintille 2.4s ease-in-out infinite;
+}
+
+.scene {
+  position: relative;
+  width: 100%;
+  max-width: 23rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  text-align: center;
+  outline: none;
+}
+
+.sousTitre {
+  margin-top: -0.4rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in oklch, var(--highlight) 85%, white);
+  animation: monte 400ms 350ms ease-out both;
+}
+
+/* ------------------------------------------------------------- les cartes */
+
+.cartes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+  margin-top: 0.6rem;
+}
+
+/* Une carte par unité : la plaque blanche à liseré lavande des OBJETS à gagner
+   (`.carte-plaque`), en plus grand, avec son socle. Elle jaillit du sol. */
+.carte {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  width: 8.6rem;
+  padding: 1.1rem 0.6rem 0.9rem;
+  border-radius: 1.4rem;
+  background: var(--card);
+  color: var(--foreground);
+  border: 3px solid var(--carte-liseret);
+  box-shadow:
+    0 6px 0 color-mix(in oklch, var(--primary), white 55%),
+    0 22px 40px -18px rgb(0 0 0 / 0.55);
+  opacity: 0;
+  transform-origin: 50% 100%;
+  animation: cartePop 560ms cubic-bezier(0.2, 1.3, 0.4, 1) both;
+}
+.carte[data-unite='gemme'] {
+  border-color: color-mix(in oklch, var(--primary), white 40%);
+}
+.carte[data-unite='xp'] {
+  border-color: color-mix(in oklch, var(--highlight), white 30%);
+  box-shadow:
+    0 6px 0 color-mix(in oklch, var(--highlight), black 15%),
+    0 22px 40px -18px rgb(0 0 0 / 0.55);
+}
+
+.objet {
+  display: grid;
+  place-items: center;
+  width: 5rem;
+  height: 5rem;
+  animation: flotte 3s 1s ease-in-out infinite;
+}
+.icone {
+  width: 4.4rem;
+  height: 4.4rem;
+  filter: drop-shadow(0 6px 10px rgb(0 0 0 / 0.22));
+}
+
+.montant {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 2.3rem;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: color-mix(in oklch, var(--primary), black 35%);
+}
+.carte[data-unite='xp'] .montant {
+  color: color-mix(in oklch, var(--highlight), black 38%);
+}
+.libelle {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+/* L'invitation du bas : elle respire. C'est AUSSI le bouton (clavier, lecteur
+   d'écran) ; le tap sur le voile ferme pareil. */
+.indice {
+  margin-top: 0.8rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: color-mix(in oklch, var(--ink-on-dark) 85%, transparent);
+  background: transparent;
+  cursor: pointer;
+  animation:
+    monte 400ms 1100ms ease-out both,
+    respire 2s 1500ms ease-in-out infinite;
+}
+.indice:focus-visible {
+  outline: 3px solid var(--highlight);
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------ images-clés */
+
+@keyframes voileEntre {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes voileSort {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@keyframes lumiereEntre {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes lumiereTourne {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes scintille {
+  0%, 100% { opacity: 0; transform: scale(0.3); }
+  50% { opacity: 1; transform: scale(1); }
+}
+@keyframes monte {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes cartePop {
+  0% { opacity: 0; transform: translateY(40px) scale(0.5); }
+  65% { opacity: 1; transform: translateY(-6px) scale(1.07); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes flotte {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(-3deg); }
+}
+@keyframes respire {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(0.97); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .voile,
+  .voile * {
+    animation: none !important;
+  }
+  .carte {
+    opacity: 1;
+  }
+  .lumiere,
+  .etincelles {
+    display: none;
+  }
+}

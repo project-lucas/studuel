@@ -116,6 +116,7 @@ export default function CombatButton({
           }}
           aria-label={label}
           title={reason ? `${target.label} · ${active.subject} — ${reason}` : undefined}
+          data-tour="arene-duel"
           className={`${shell} arena-plate--gold arena-plate--press cursor-pointer focus-visible:ring-4 focus-visible:ring-white/70 focus-visible:outline-none ${
             hasPresence ? 'duel-pulse' : ''
           }`}

@@ -2,29 +2,37 @@
 // MARCEL DORT (15/10/2026, Lucas : « comme pour Claude, des recharges de
 // crédit ; Marcel doit dormir, il se réveillera dans X jours s'il a atteint la
 // limite, avec en boutique la possibilité de le recharger — super lors des
-// périodes d'examen »).
+// périodes d'examen »), puis MARCEL AU CAFÉ (25/10/2026 : « quand Marcel est
+// épuisé : Marcel qui dort, animé ; en appuyant sur une tasse de café il se
+// réveille »).
 //
 // Une limite atteinte ne se dit jamais « interdit » ni « quota » : Marcel a
-// beaucoup travaillé, il DORT, et il se réveille le 1er du mois (ses crédits
-// reviennent) — ou tout de suite, avec une recharge. Quatre états :
+// beaucoup travaillé, il DORT, et il se réveille le 1er du mois (ses cafés
+// reviennent) — ou tout de suite, si on lui offre un café (une recharge,
+// achetée en euros : c'est le serveur qui décide, jamais un réveil gratuit).
+// Cinq états :
 //
 //   • `eveille`  — il reste de quoi parler ;
-//   • `fatigue`  — il reste peu (≤ 10 % des crédits du mois, sans recharge) :
+//   • `fatigue`  — il reste peu (≤ 10 % des cafés du mois, sans recharge) :
 //                  il bâille, on prévient AVANT le mur ;
-//   • `endormi`  — plus de crédits du mois ni de recharge : il dort jusqu'au 1er ;
+//   • `reveille` — les cafés du mois sont bus mais une recharge le tient
+//                  debout : c'est l'état d'après le café, il le dit (pose
+//                  `cafe`, « Marcel est réveillé ! ») ;
+//   • `endormi`  — plus de café du mois ni de recharge : il dort jusqu'au 1er ;
 //   • `repos`    — le plafond de facture du jour est atteint (50 appels) : il se
-//                  repose jusqu'à demain, rien ne le réveille (pas même une
-//                  recharge : c'est une limite de COÛT, cf. lib/coach/jetons).
+//                  repose jusqu'à demain, rien ne le réveille (pas même un
+//                  café : c'est une limite de COÛT, cf. lib/coach/jetons).
 //
 // Logique PURE ; la base décide (coach_ask_allowed, 378), ceci n'est que
-// l'affichage. Les « jetons de Prof » de la 215 sont devenus les CRÉDITS DE
+// l'affichage. Les « jetons de Prof » de la 215 sont devenus les CAFÉS DE
 // RECHARGE : même solde (`coach_tokens.balance`), même place dans la porte.
 // -----------------------------------------------------------------------------
 
 import { MOIS_FR } from '@/lib/time'
+import { motCafes } from './credits'
 import type { EtatDemande } from './jetons'
 
-export type EtatMarcel = 'eveille' | 'fatigue' | 'endormi' | 'repos' | 'abonnement'
+export type EtatMarcel = 'eveille' | 'fatigue' | 'reveille' | 'endormi' | 'repos' | 'abonnement'
 
 export type Sommeil = {
   etat: EtatMarcel
@@ -36,7 +44,7 @@ export type Sommeil = {
   joursAvantReveil: number
   /** Le jour du réveil, `YYYY-MM-DD` (UTC). */
   reveilLe: string
-  /** Proposer une recharge ? (jamais au plafond du jour, jamais au gratuit) */
+  /** Proposer un café (une recharge) ? (jamais au plafond du jour, jamais au gratuit) */
   recharger: boolean
 }
 
@@ -92,7 +100,8 @@ export function sommeilDe(
       ...base,
       etat: 'repos',
       titre: 'Marcel se repose.',
-      phrase: 'Tu as beaucoup travaillé aujourd’hui : il revient demain matin, frais.',
+      // Espace insécable avant le deux-points : il ne part pas seul à la ligne.
+      phrase: 'Tu as beaucoup travaillé aujourd’hui : il revient demain matin, frais.',
     }
   }
 
@@ -100,10 +109,21 @@ export function sommeilDe(
     return {
       etat: 'endormi',
       titre: 'Marcel dort.',
-      phrase: `Il a répondu à toutes tes questions du mois. Il se réveille ${dans(jours)}, ${libelleReveil(reveilLe)} — ou tout de suite avec une recharge.`,
+      phrase: `Il a bu tous ses cafés du mois. Il se réveille ${dans(jours)}, ${libelleReveil(reveilLe)} — ou tout de suite si tu lui offres un café.`,
       joursAvantReveil: jours,
       reveilLe,
       recharger: true,
+    }
+  }
+
+  // Les cafés du mois sont bus, la recharge le tient debout : il vient d'être
+  // réveillé par un café, et il le dit.
+  if (demande.source === 'jeton') {
+    return {
+      ...base,
+      etat: 'reveille',
+      titre: 'Marcel est réveillé !',
+      phrase: `Merci pour le café. Il lui en reste ${motCafes(demande.jetons)} de recharge, qui ne s’effacent pas.`,
     }
   }
 
@@ -113,7 +133,7 @@ export function sommeilDe(
       ...base,
       etat: 'fatigue',
       titre: 'Marcel commence à bâiller.',
-      phrase: `Encore ${demande.restants} crédit${demande.restants > 1 ? 's' : ''} avant qu’il s’endorme jusqu’au ${libelleReveil(reveilLe).replace('le ', '')}.`,
+      phrase: `Encore ${motCafes(demande.restants)} avant qu’il s’endorme jusqu’au ${libelleReveil(reveilLe).replace('le ', '')}.`,
       recharger: true,
     }
   }

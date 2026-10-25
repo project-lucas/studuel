@@ -41,13 +41,25 @@ export function estBureauMarcel(pathname: string): boolean {
   return pathname === '/marcel' || pathname === '/dev/marcel'
 }
 
+/**
+ * LA PAGE DU JOUEUR N'A PAS DE BANDEAU (25/10/2026, chantier « le jeu
+ * vivant ») : c'est l'écran qu'ouvre l'avatar du bandeau, et il redit tout ce
+ * que la gélule porte — l'avatar dans l'anneau de son rang, le niveau et sa
+ * barre — en grand, plein écran, avec son propre retour et ses Paramètres.
+ * Deux fois le même niveau à dix pixels d'écart, c'est l'erreur du 04/09/2026
+ * sur Moi. `/dev/joueur` suit, pour que l'aperçu ressemble à l'écran.
+ */
+export function estPageJoueur(pathname: string): boolean {
+  return pathname === '/joueur' || pathname === '/dev/joueur'
+}
+
 /** Le bandeau du haut doit-il être masqué sur ce chemin ? */
 export function isHudHidden(pathname: string): boolean {
   return (
     // L'ARÈNE A RETROUVÉ LE BANDEAU le 03/10/2026 (Lucas : la carte du joueur
     // sombre est remplacée « proprement » par la gélule lavande) : elle n'est
     // plus dans cette liste.
-    estChromeMasque(pathname) || estOngletMoi(pathname) || estBureauMarcel(pathname)
+    estChromeMasque(pathname) || estOngletMoi(pathname) || estBureauMarcel(pathname) || estPageJoueur(pathname)
   )
 }
 

@@ -71,7 +71,7 @@ puis `bubblewrap build` — demande le JDK 17 et le SDK Android.)
 | Question | Réponse |
 |---|---|
 | Règles de confidentialité | `https://studuel.app/confidentialite` |
-| Accès à l'app | Fournir un compte de test (e-mail + mot de passe) pour l'examinateur |
+| Accès à l'app | « Tout ou partie des fonctionnalités sont soumises à des restrictions d'accès » → compte de démonstration `demo.playstore@studuel.app` (élève de 3e, prénom Léa, créé le 25/10/2026 ; mot de passe remis à Lucas hors dépôt). Instructions pour l'examinateur : « Ouvrir l'app, toucher *J'ai déjà un compte*, saisir l'e-mail et le mot de passe. » À passer en Studuel+ (`subscription_tier`) pour que l'examinateur voie Marcel en entier |
 | Annonces | Non, l'app ne contient pas de publicité |
 | Classification du contenu | Questionnaire IARC — catégorie *Éducation* ; pas de violence, chat entre utilisateurs : **oui** (messagerie coach, pseudos visibles) |
 | Public cible | **Les tranches d'âge réelles : 9-12 ans, 13-15, 16-17** (la 6e commence à 11 ans). Inclure moins de 13 ans soumet l'app au **programme Familles** : pas de SDK publicitaire (aucun), politique de confidentialité (faite), contenu adapté |
@@ -84,29 +84,105 @@ puis `bubblewrap build` — demande le JDK 17 et le SDK Android.)
 Données collectées, **toutes chiffrées en transit**, **aucune vendue**, **aucune
 partagée à des fins publicitaires** ; l'utilisateur **peut demander leur suppression**.
 
-| Type de données | Collectée | Pourquoi |
-|---|---|---|
-| Adresse e-mail | Oui | Gestion du compte |
-| Nom (pseudo choisi) | Oui | Fonctionnalités de l'app, gestion du compte |
-| Messages dans l'app (messagerie coach, questions à Marcel) | Oui | Fonctionnalités de l'app |
-| Photos (jointes à Marcel ou au coach, facultatif) | Oui | Fonctionnalités de l'app |
-| Activité dans l'app (pages, interactions, progression) | Oui | Fonctionnalités, statistiques |
-| Plantages, diagnostics | Oui | Statistiques, correction |
-| Historique d'achats (abonnement) | Oui | Fonctionnalités de l'app |
-| Localisation, contacts, identifiants publicitaires | **Non** | — |
+**Les trois questions d'ouverture du formulaire** (25/10/2026) :
 
-« Partagées » au sens de Google : **non** — les prestataires (Vercel, Supabase,
-DeepSeek, OpenAI, Google Gemini) sont des sous-traitants, ce qui n'est pas un
-partage au sens de la fiche.
+| Question | Réponse |
+|---|---|
+| L'app collecte-t-elle ou partage-t-elle des données utilisateur ? | **Oui** |
+| Toutes les données collectées sont-elles chiffrées en transit ? | **Oui** (HTTPS partout) |
+| Proposez-vous un moyen de demander la suppression des données ? | **Oui** : dans l'app (Compte → Supprimer mon compte) et sur `https://studuel.app/supprimer-mon-compte` |
+| Examen de sécurité indépendant (MASA) | Non |
+| Engagement envers le règlement Familles | Oui (public cible dès 9-12 ans) |
+
+**Puis, type par type** — « Partagée » est **Non** partout : les prestataires
+(Vercel, Supabase, Cloudflare, DeepSeek, OpenAI, Google Gemini, Anthropic) sont des
+sous-traitants qui traitent pour notre compte, ce qui n'est pas un partage au sens
+de la fiche. Aucune donnée n'est vendue ni utilisée pour de la publicité.
+
+| Catégorie Google | Type | Collectée | Obligatoire ? | Traitée de façon éphémère ? | Finalités à cocher |
+|---|---|---|---|---|---|
+| Informations personnelles | Adresse e-mail | Oui | Obligatoire | Non | Gestion du compte, communications du développeur |
+| Informations personnelles | Nom (prénom ou pseudo choisi) | Oui | Obligatoire | Non | Fonctionnalités de l'app, gestion du compte |
+| Informations personnelles | Autres infos (classe, matières suivies, objectif du jour) | Oui | Obligatoire | Non | Fonctionnalités de l'app, personnalisation |
+| Messages | Autres messages dans l'app (questions à Marcel, messagerie coach ↔ élève ↔ parent) | Oui | Facultatif | Non | Fonctionnalités de l'app |
+| Photos et vidéos | Photos (cahier joint à Marcel ou au coach) | Oui | Facultatif | Non | Fonctionnalités de l'app |
+| Fichiers et documents | Fichiers texte joints à Marcel | Oui | Facultatif | Non | Fonctionnalités de l'app |
+| Activité dans l'app | Interactions dans l'app (pages vues, parties jouées, progression, séries) | Oui | Obligatoire | Non | Fonctionnalités de l'app, statistiques, personnalisation |
+| Activité dans l'app | Autres contenus générés par l'utilisateur (dossiers de cours écrits dans Ma bibliothèque, notes confiées à Marcel) | Oui | Facultatif | Non | Fonctionnalités de l'app |
+| Informations sur l'app et performances | Journaux de plantage, diagnostics (`erreur_signaler`) | Oui | Obligatoire | Non | Statistiques, fonctionnalités de l'app |
+| Informations financières | Historique des achats (statut Studuel+, achats en gemmes) | Oui | Obligatoire | Non | Fonctionnalités de l'app |
+| Appareil ou autres identifiants | Adresse technique de notification (si l'élève active les rappels) | Oui | Facultatif | Non | Fonctionnalités de l'app |
+| Position, contacts, calendrier, santé, audio, historique web, SMS | — | **Non** | — | — | — |
+
+Détails qui comptent : le **micro** passe par la dictée du navigateur (l'app ne
+reçoit que du texte, jamais d'enregistrement) ; aucun **identifiant publicitaire** ;
+aucun SDK tiers de mesure. La version Play ne vend rien en euros (`estAppPlay()`),
+l'historique d'achats ne décrit donc que le statut d'abonnement et les gemmes.
 
 ### Fiche du Store
 
-- **Nom** : Studuel — Réviser en jouant
-- **Description courte** (80 car.) : `Révise de la 6e à la Terminale : quiz, fiches, duels et un coach IA.`
-- **Description longue** : à écrire avec le plan de contenu (point c).
-- **Visuels** : icône 512 × 512 (`public/icons/icon-512.png`), **bannière 1024 × 500**
-  (à dessiner), **au moins 4 captures** de téléphone (Réviser, un quiz, l'arène, Marcel).
-- **Catégorie** : Éducation · **E-mail de contact** : `contact@studuel.app`
+Le kit est prêt depuis le 25/10/2026 : les textes ci-dessous, les visuels dans
+`assets-sources/play-store/` (captures 1080 × 1920 habillées, bannière 1024 × 500,
+icône 512), produits par le script du scratchpad `play-kit/rendre.mjs` à partir
+des pages `/dev/*` et d'un compte de démo.
+
+- **Nom** (30 car. max) : `Studuel : réviser en jouant` (27)
+- **Description courte** (80 car. max) : `Révise de la 6e à la Terminale : quiz, fiches, duels et un coach IA.` (68)
+- **Catégorie** : Éducation · **Tags** : Éducation, Révisions, Quiz · **E-mail de contact** : `contact@studuel.app`
+- **Visuels** : icône 512 × 512 (`public/icons/icon-512.png`), bannière 1024 × 500
+  (`assets-sources/play-store/banniere-1024x500.png`), **huit captures** de téléphone
+  maximum parmi les neuf de `assets-sources/play-store/v2/` (version validée par Lucas
+  le 25/10/2026 : fonds à rayons, téléphone incliné, Marcel redessiné d'après sa
+  référence, poses dans `assets-sources/play-store/marcel/` ; la version sobre reste
+  à la racine). On garde les huit premières ; « 09-parents » en réserve ou à la place
+  de « 08-carnet ».
+- **Textes des captures** (validés le 25/10/2026). L'ordre suit la lecture de la
+  fiche : l'image 1 est vue par tout le monde, la 3 par une minorité. La 1 dit ce
+  qu'est l'app et pour qui, la 2 rassure sur le sérieux (parent), la 3 montre le jeu.
+  Une idée par image, un seul mot fort en couleur, jamais de vocabulaire de loterie
+  (« gagne gros ») pour un public mineur.
+
+  | # | Titre (mot fort en gras) | Sous-titre |
+  |---|---|---|
+  | 01 | Révise en **jouant**, de la 6e à la Tle | Cours, quiz au chrono, duels entre amis et Marcel, ton coach. |
+  | 02 | Ton **programme**, du début à la fin | Cours, fiche, quiz et exercices pour chaque chapitre du programme officiel. |
+  | 03 | Réponds vite, **gagne de l'XP** | Des quiz au chrono. Tes erreurs reviennent jusqu'à ce que ça rentre. |
+  | 04 | **Marcel**, ton coach perso | Il sait où tu en es, prépare ta séance et répond à tes questions. |
+  | 05 | Entre dans l'**arène** ! | Défie tes amis en duel, débusque les gardiens, gagne des trophées. |
+  | 06 | Monte en **ligue** ! | 30 joueurs, une semaine : qui révise le plus monte de division. |
+  | 07 | Le brevet et le bac, **sans stress** | Les vrais sujets, corrigés par Studuel, et ce qui tombe chaque année. |
+  | 08 | Collectionne tes **victoires** | Série, trophées, badges, cadres : tout est dans ton carnet. |
+  | 09 | Pour les **parents** | La semaine racontée : ce qu'il a révisé, son point fort, le prochain contrôle. |
+- **Description longue** (4 000 car. max) :
+
+```
+Studuel, c'est la révision qui se joue comme un jeu, de la 6e à la Terminale.
+
+TOUT TON PROGRAMME, CHAPITRE PAR CHAPITRE
+Maths, français, histoire-géo, anglais, espagnol, allemand, physique-chimie, SVT, SES, philosophie, HGGSP, enseignement scientifique, NSI, les spécialités des voies générale et technologique… Chaque matière a son dossier : le cours, la fiche de révision, le quiz, le cahier d'exercices et les annales. Tu sais toujours où tu en es et ce qu'il te reste à voir.
+
+DES QUIZ QUI T'APPRENNENT VRAIMENT
+Les quiz se jouent au chrono. Tu te trompes ? Studuel t'explique la bonne réponse et garde tes erreurs dans « Mes erreurs » pour que tu puisses y revenir. Chaque bonne réponse rapporte de l'XP.
+
+MARCEL, TON COACH
+Marcel connaît ta classe, tes matières et ton prochain contrôle. Il te prépare une séance du jour, répond à tes questions, corrige tes exercices et réexplique un cours autrement. En 3e, 1re et Terminale, son mode Examen te mène jusqu'au brevet et au bac : où tu en es, les gestes de la semaine, les épreuves, le jour J.
+
+2 900 FICHES DE RÉVISION ET LES ANNALES CORRIGÉES
+Une fiche par chapitre, claire et illustrée. Les vrais sujets du brevet et du bac, avec un corrigé rédigé par Studuel et le récap de ce qui est tombé chaque année, pour réviser ce qui compte.
+
+L'ARÈNE : DÉFIE TES AMIS
+Des duels en course à 1 000 points contre un ami ou un rival, des jeux par matière (Calcul mental, Capitales du monde, Anatomie express, Le Musée…) et des gardiens à débusquer. Tu gagnes de l'XP à chaque partie.
+
+LA LIGUE DE LA SEMAINE
+Chaque semaine, tu joues dans un groupe de 30 à l'XP. Les meilleurs montent de division. Ta série de jours, tes trophées, tes badges et ta collection vivent dans ton carnet.
+
+POUR LES PARENTS
+Un espace parents qui raconte la semaine de votre enfant en quelques phrases : ce qui a été révisé, le point fort, ce qu'il faut surveiller, le prochain contrôle. Un parent peut suivre plusieurs enfants.
+
+Studuel est fait en France, en français, sans publicité.
+
+Classes : 6e, 5e, 4e, 3e, 2de, 1re, Terminale (voies générale et technologique).
+```
 
 ## 6. Les deux points bloquants — LEVÉS le 25/10/2026
 

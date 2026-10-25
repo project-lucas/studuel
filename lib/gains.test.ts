@@ -19,6 +19,10 @@ import {
   dureeVague,
   jetonsVague,
   volVague,
+  PLUIE_GEMMES,
+  dureePluie,
+  goutteGemme,
+  phraseGains,
   type Gain,
 } from './gains'
 
@@ -265,5 +269,58 @@ describe('la vague, façon Clash Royale', () => {
     expect(dureeVague(10)).toBe(Math.max(...Array.from({ length: 10 }, (_, i) => volVague(i, 10).duree)))
     // Une vague de seize reste sous trois secondes : satisfaisant, pas interminable.
     expect(dureeVague(16)).toBeLessThan(3000)
+  })
+})
+
+describe('le ruban de récompenses', () => {
+  it('dit les gains en une phrase, avec « et » avant le dernier', () => {
+    expect(
+      phraseGains([
+        { unite: 'gemme', montant: 5 },
+        { unite: 'xp', montant: 40 },
+      ]),
+    ).toBe('Tu as gagné 40 XP et 5 gemmes.')
+    expect(phraseGains([{ unite: 'gemme', montant: 1 }])).toBe('Tu as gagné 1 gemme.')
+  })
+
+  it('ne dit rien quand il n’y a rien à fêter', () => {
+    expect(phraseGains([])).toBe('')
+    expect(phraseGains([{ unite: 'xp', montant: 0 }])).toBe('')
+    expect(phraseGains(undefined)).toBe('')
+  })
+})
+
+describe('la pluie de gemmes du coffre de palier', () => {
+  it('fait tomber dix cristaux, un par un, jamais en salve', () => {
+    const retards = Array.from({ length: PLUIE_GEMMES }, (_, i) => goutteGemme(i, PLUIE_GEMMES).retard)
+    for (let i = 1; i < retards.length; i += 1) expect(retards[i]).toBeGreaterThan(retards[i - 1])
+  })
+
+  it('éparpille les gouttes : deux cristaux ne tombent pas au même endroit', () => {
+    const x = new Set(Array.from({ length: PLUIE_GEMMES }, (_, i) => goutteGemme(i, PLUIE_GEMMES).x))
+    expect(x.size).toBe(PLUIE_GEMMES)
+  })
+
+  it('alterne le sens de rotation et varie les tailles', () => {
+    expect(goutteGemme(0, 10).sens).not.toBe(goutteGemme(1, 10).sens)
+    const echelles = new Set(Array.from({ length: 10 }, (_, i) => goutteGemme(i, 10).echelle))
+    expect(echelles.size).toBeGreaterThan(1)
+    for (const e of echelles) expect(e).toBeGreaterThanOrEqual(0.7)
+  })
+
+  it('est DÉTERMINISTE et borne un index hors plage', () => {
+    expect(goutteGemme(3, 10)).toEqual(goutteGemme(3, 10))
+    expect(goutteGemme(99, 10)).toEqual(goutteGemme(9, 10))
+  })
+
+  it('sait quand la pluie est finie, et reste courte', () => {
+    expect(dureePluie(0)).toBe(0)
+    const fin = dureePluie(PLUIE_GEMMES)
+    for (let i = 0; i < PLUIE_GEMMES; i += 1) {
+      const g = goutteGemme(i, PLUIE_GEMMES)
+      expect(g.retard + g.duree).toBeLessThanOrEqual(fin)
+    }
+    // Une pluie de dix tient sous deux secondes : le ruban suit sans attendre.
+    expect(fin).toBeLessThan(2000)
   })
 })

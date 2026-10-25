@@ -3,7 +3,14 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { FeteNiveauScene } from '@/components/niveau/FeteNiveau'
+import { gemmesPalier } from '@/lib/niveaux'
 import { walletLevelInfo, xpForLevel } from '@/lib/wallet'
+
+/** Sans compte, le coffre « s'ouvre » après le temps d'une vraie réponse. */
+async function ouvrirPalierDemo(palier: number) {
+  await new Promise((r) => setTimeout(r, 700))
+  return { ok: true as const, gemmes: gemmesPalier(palier) }
+}
 
 /** La fête de niveau rejouable (voir page.tsx). */
 export default function ApercuNiveau({
@@ -46,6 +53,7 @@ export default function ApercuNiveau({
           paliersOuverts={ouverts}
           xp={{ actuel, plancher, prochain }}
           onFermer={() => setOuverte(false)}
+          ouvrirPalier={ouvrirPalierDemo}
         />
       ) : null}
     </div>

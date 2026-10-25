@@ -21,7 +21,7 @@
 // Module PUR : aucune requête, importable côté client.
 // -----------------------------------------------------------------------------
 
-import { CREDITS_MENSUELS } from '@/lib/coach/credits'
+import { CAFES_MENSUELS } from '@/lib/coach/credits'
 import { GEM_COST_CHAPTER } from '@/lib/gems'
 import { FICHES_PAR_SEMAINE, RENTE_GEMMES_SEMAINE } from './rente'
 
@@ -50,7 +50,9 @@ export const PILIERS: readonly Pilier[] = [
   {
     id: 'marcel',
     titre: 'Marcel, ton guide',
-    promesse: `${CREDITS_MENSUELS} crédits par mois pour lui parler`,
+    // Les CAFÉS (25/10/2026) : le mot de l'écran pour ce que Marcel consomme à
+    // chaque demande — « crédit » ne s'écrit plus nulle part.
+    promesse: `${CAFES_MENSUELS} cafés par mois pour lui parler`,
     detail:
       'Il connaît tes contrôles, tes points faibles et ton examen : il te dit quoi travailler avant que tu le demandes, et il t’explique jusqu’à ce que tu comprennes.',
     href: '/marcel',

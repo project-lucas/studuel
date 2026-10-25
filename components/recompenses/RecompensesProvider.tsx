@@ -30,6 +30,7 @@ import {
 } from '@/lib/gains'
 import { emettreGain, premierCentreVisible, selecteurCible } from '@/lib/hud-gains'
 import { sfx } from '@/lib/sounds'
+import RubanRecompenses from '@/components/recompenses/RubanRecompenses'
 
 /**
  * LE VOL DES RÉCOMPENSES — le geste de Clash Royale, monté une seule fois pour
@@ -55,9 +56,28 @@ type Origine = { x: number; y: number }
 type Contexte = {
   /** Fait voler des gains vers le bandeau. Sans gain positif : ne fait rien. */
   celebrer: (gains: readonly Gain[], origines?: OriginesParUnite, options?: OptionsVolee) => void
+  /**
+   * LE RUBAN « RÉCOMPENSES » (25/10/2026) : un écran plein qui fête les gains,
+   * fermé d'un tap n'importe où — à la fermeture, la vague part des cartes
+   * vers le bandeau. Pour les gains qu'on ENCAISSE en cérémonie : un coffre,
+   * un gardien abattu, une annale traitée, le coffre de palier. Les autres
+   * écrans de fin gardent le panneau. Sans gain positif : ne fait rien.
+   */
+  ouvrirRuban: (gains: readonly Gain[], options?: OptionsRuban) => void
 }
 
 export type OriginesParUnite = Partial<Record<UniteGain, Origine | null>>
+
+export type OptionsRuban = {
+  /** Le titre du ruban (défaut : « Récompenses »). */
+  titre?: string
+  /** Une ligne sous le ruban : d'où vient le gain. */
+  sousTitre?: string
+  /** Appelé à la fermeture, quand la vague part. */
+  onFerme?: () => void
+}
+
+type Ruban = { cle: number; gains: Gain[]; options: OptionsRuban }
 
 /**
  * `vague` : la gerbe de Clash Royale — tous les éclairs jaillissent ensemble,
@@ -81,7 +101,7 @@ export function useRecompenses(): Contexte {
   return ctx ?? INERTE
 }
 
-const INERTE: Contexte = { celebrer: () => {} }
+const INERTE: Contexte = { celebrer: () => {}, ouvrirRuban: () => {} }
 
 /**
  * Toutes les unités partent du MÊME point — celui d'un bouton, d'une carte.
@@ -267,18 +287,55 @@ export default function RecompensesProvider({
     [router],
   )
 
-  const valeur = useMemo<Contexte>(() => ({ celebrer }), [celebrer])
+  // LE RUBAN. Un seul à la fois : un second appel remplace le premier (la clé
+  // remonte le composant, qui rejoue son entrée). Les gains sont agrégés ici,
+  // une fois, pour que les cartes et la vague disent la même chose.
+  // (Le même ruban vit dans un ref, écrit au même moment que l'état : la
+  // fermeture le lit sans se réabonner à chaque ouverture.)
+  const [ruban, setRuban] = useState<Ruban | null>(null)
+  const rubanRef = useRef<Ruban | null>(null)
 
-  // Développement seulement : rejouer une volée depuis la console
-  // (`__celebrer([{ unite: 'xp', montant: 40 }])`) sans finir un quiz.
+  const ouvrirRuban = useCallback((gains: readonly Gain[], options?: OptionsRuban) => {
+    const propres = agregerGains(gains)
+    if (propres.length === 0) return
+    const r: Ruban = { cle: (prochainId += 1), gains: propres, options: options ?? {} }
+    rubanRef.current = r
+    setRuban(r)
+  }, [])
+
+  // Au tap : la vague part des cartes, puis le ruban s'efface et se démonte.
+  const fermerRuban = useCallback(
+    (origines: OriginesParUnite) => {
+      const r = rubanRef.current
+      if (!r) return
+      celebrer(r.gains, origines, { vague: true })
+      r.options.onFerme?.()
+    },
+    [celebrer],
+  )
+  const finirRuban = useCallback(() => {
+    rubanRef.current = null
+    setRuban(null)
+  }, [])
+
+  const valeur = useMemo<Contexte>(() => ({ celebrer, ouvrirRuban }), [celebrer, ouvrirRuban])
+
+  // Développement seulement : rejouer une volée ou un ruban depuis la console
+  // (`__celebrer([{ unite: 'xp', montant: 40 }])`, `__ouvrirRuban(…)`) sans
+  // finir un quiz.
   useEffect(() => {
     if (process.env.NODE_ENV !== 'development') return
-    const w = window as unknown as { __celebrer?: Contexte['celebrer'] }
+    const w = window as unknown as {
+      __celebrer?: Contexte['celebrer']
+      __ouvrirRuban?: Contexte['ouvrirRuban']
+    }
     w.__celebrer = celebrer
+    w.__ouvrirRuban = ouvrirRuban
     return () => {
       delete w.__celebrer
+      delete w.__ouvrirRuban
     }
-  }, [celebrer])
+  }, [celebrer, ouvrirRuban])
 
   const retirer = useCallback((id: number) => {
     setJetons((prec) => prec.filter((j) => j.id !== id))
@@ -287,6 +344,23 @@ export default function RecompensesProvider({
   return (
     <RecompensesContext.Provider value={valeur}>
       {children}
+      {/* Le ruban, SOUS la couche des jetons (z-75 contre z-90) : à la
+          fermeture, les éclairs partent des cartes et passent devant le voile
+          qui s'efface. Même règle de montage que les jetons : rien au premier
+          rendu, donc rien à hydrater. */}
+      {ruban
+        ? createPortal(
+            <RubanRecompenses
+              key={ruban.cle}
+              gains={ruban.gains}
+              titre={ruban.options.titre}
+              sousTitre={ruban.options.sousTitre}
+              onFermer={fermerRuban}
+              onFini={finirRuban}
+            />,
+            document.body,
+          )
+        : null}
       {/* AUCUN ÉTAT « MONTÉ » ICI, ET C'EST VOLONTAIRE. Le portail a besoin de
           `document`, absent au rendu serveur — mais la liste de jetons ne se
           remplit QUE dans `celebrer`, appelé depuis un geste de l'élève. Au

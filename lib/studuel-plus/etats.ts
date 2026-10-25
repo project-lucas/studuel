@@ -23,7 +23,7 @@ export function etatsDesPiliers({
 }): Record<PilierId, string> {
   return {
     marcel: abonne
-      ? `${creditsRestants} crédit${creditsRestants > 1 ? 's' : ''} ce mois-ci${creditsRecharge > 0 ? ` · ${creditsRecharge} en recharge` : ''}`
+      ? `${creditsRestants} café${creditsRestants > 1 ? 's' : ''} ce mois-ci${creditsRecharge > 0 ? ` · ${creditsRecharge} en recharge` : ''}`
       : 'Le point du jour reste ouvert à tous',
     examen:
       examen && examen.jours >= 0

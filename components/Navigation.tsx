@@ -10,6 +10,10 @@ import { estChromeMasque } from '@/lib/quiz-chrome'
 import { sfx } from '@/lib/sounds'
 import { NAV_TABS, cheminAffiche, type NavIconName, type OngletVise } from '@/lib/nav-tabs'
 import { prechargerOnglet } from '@/components/PrechargeurOnglets'
+import { verrouDeLOnglet } from '@/lib/decouverte/etat'
+import { fermerVerrou, useEtatDecouverte, useVerrouOuvert } from '@/components/decouverte/store'
+import { OngletVerrouilleMobile, OngletVerrouilleSidebar } from '@/components/decouverte/OngletVerrouille'
+import FeuilleVerrou from '@/components/decouverte/FeuilleVerrou'
 import amisIcone from '@/public/images/nav/amis.webp'
 import reviserIcone from '@/public/images/nav/reviser.webp'
 import defiIcone from '@/public/images/nav/defi.webp'
@@ -110,6 +114,16 @@ export default function Navigation({
   }
   const affiche = cheminAffiche(pathname, vise)
 
+  // LA DÉCOUVERTE PROGRESSIVE (25/10/2026, cadrage « le jeu vivant » § E) :
+  // pour un compte créé depuis la 601, Défi s'ouvre au niveau 2, Amis et
+  // Boutique au niveau 3 (lib/decouverte/catalogue). L'état vient du serveur
+  // par le magasin (components/decouverte/store, rempli par DecouverteVeille
+  // dans la vague du bandeau) ; tant qu'il n'a rien dit, tout est ouvert. Un
+  // onglet fermé est un dessin gris sous cadenas qui ouvre une feuille, jamais
+  // un lien. Réviser et Moi ne se ferment jamais.
+  const etatDecouverte = useEtatDecouverte()
+  const verrouOuvert = useVerrouOuvert()
+
   // Routes sans chrome : parcours d'accueil (façon Duolingo) ET sessions plein
   // écran (quiz, dictée). Le verdict est pris ICI, sur `usePathname()`, et non
   // dans le layout racine : celui-ci est serveur et n'est pas re-rendu lors
@@ -173,6 +187,15 @@ export default function Navigation({
             // le dessin par défaut que si le slot n'est pas fourni du tout —
             // hors du layout, dans un test, un récit d'histoire.
             const slot = icon === AVATAR_ICON ? avatarSlot : null
+
+            const verrou = verrouDeLOnglet(path.slice(1), etatDecouverte)
+            if (verrou?.onglet) {
+              return (
+                <li key={path} className="tab-cell relative z-10 flex-1">
+                  <OngletVerrouilleMobile name={name} onglet={verrou.onglet} icone={ICONES[icon]} verrou={verrou} />
+                </li>
+              )
+            }
 
             return (
               <li key={path} className="tab-cell relative z-10 flex-1">
@@ -319,6 +342,15 @@ export default function Navigation({
           {links.map(({ name, path, icon, center }) => {
             const active = isActive(path)
 
+            const verrou = verrouDeLOnglet(path.slice(1), etatDecouverte)
+            if (verrou?.onglet) {
+              return (
+                <li key={path}>
+                  <OngletVerrouilleSidebar name={name} onglet={verrou.onglet} icone={ICONES[icon]} verrou={verrou} />
+                </li>
+              )
+            }
+
             return (
               <li key={path}>
                 <Link
@@ -379,6 +411,14 @@ export default function Navigation({
           </Link>
         </div>
       </nav>
+
+      {/* « Se débloque au niveau 2 — encore 60 XP » : la feuille de l'onglet
+          fermé qu'on vient de toucher (une seule, pour les deux barres). */}
+      <FeuilleVerrou
+        verrou={verrouOuvert ? verrouDeLOnglet(verrouOuvert, etatDecouverte) : null}
+        xp={etatDecouverte.xp}
+        onClose={fermerVerrou}
+      />
     </>
   )
 }

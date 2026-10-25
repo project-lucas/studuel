@@ -1,0 +1,218 @@
+/*
+ * LE CHOIX DU PORTRAIT (25/10/2026, chantier « le jeu vivant ») — le gabarit
+ * « propre, clair, masculin d'un côté / féminin de l'autre » demandé par Lucas :
+ * en haut le GRAND aperçu du personnage choisi, en pied, posé sur son socle
+ * devant le mur crème quadrillé de l'app ; au milieu les deux onglets ; dessous
+ * la grille des bustes ; en bas « Confirmer ».
+ *
+ * Tokens seulement. Les deux animations (l'entrée du personnage, la grille qui
+ * change d'onglet) n'écrivent que transform et opacity, en valeurs littérales,
+ * et durent moins de 300 ms ; sous mouvement réduit, rien ne bouge.
+ */
+
+/* ---------- la scène de l'aperçu ---------- */
+.scene {
+  position: relative;
+  /* Assez haut pour que le personnage se lise en pied, assez bas pour que la
+     deuxième rangée de la grille reste visible sous les onglets. */
+  height: clamp(220px, 34dvh, 300px);
+  overflow: hidden;
+  border-radius: var(--carte-rayon);
+  box-shadow:
+    inset 0 0 0 2px color-mix(in oklch, var(--primary), white 68%),
+    var(--carte-ombre);
+}
+/* Le halo violet doux derrière le personnage : il le détache du mur. */
+.halo {
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  width: 72%;
+  max-width: 260px;
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    color-mix(in oklch, var(--primary), transparent 74%) 0%,
+    color-mix(in oklch, var(--primary), transparent 90%) 48%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+/* Le socle : une ellipse d'ombre sous les pieds. */
+.socle {
+  position: absolute;
+  left: 50%;
+  bottom: 7%;
+  width: 44%;
+  max-width: 170px;
+  height: 7%;
+  translate: -50% 50%;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    color-mix(in oklch, var(--primary), transparent 48%) 0%,
+    color-mix(in oklch, var(--primary), transparent 80%) 55%,
+    transparent 74%
+  );
+  pointer-events: none;
+}
+/* Le personnage, les pieds posés au centre du socle. */
+.heros {
+  position: absolute;
+  left: 50%;
+  bottom: 7%;
+  height: 86%;
+  width: auto;
+  max-width: 60%;
+  translate: -50% 0;
+  object-fit: contain;
+  object-position: bottom center;
+  filter: drop-shadow(0 6px 8px color-mix(in oklch, var(--primary), transparent 72%));
+  animation: choix-entre 260ms ease-out both;
+}
+@keyframes choix-entre {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+/* Pas encore de choix : une silhouette en pointillés, à la place du héros. */
+.vide {
+  position: absolute;
+  left: 50%;
+  bottom: 7%;
+  display: grid;
+  place-items: center;
+  width: 92px;
+  height: 78%;
+  translate: -50% 0;
+  border: 2px dashed color-mix(in oklch, var(--primary), transparent 55%);
+  border-radius: 46px 46px 28px 28px;
+  color: color-mix(in oklch, var(--primary), transparent 35%);
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 800;
+  font-size: 44px;
+}
+/* L'étiquette du coin : « Ton personnage ». */
+.etiquette {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  padding: 4px 10px;
+  border-radius: 99px;
+  background: var(--card);
+  box-shadow: 0 2px 0 color-mix(in oklch, var(--primary), white 62%);
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--primary);
+}
+
+/* ---------- les deux onglets ---------- */
+.onglets {
+  display: flex;
+  gap: 6px;
+  margin-top: 14px;
+  padding: 4px;
+  border-radius: 99px;
+  background: var(--secondary);
+}
+.onglet {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 44px;
+  border-radius: 99px;
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  color: var(--secondary-foreground);
+  transition:
+    background-color 140ms ease,
+    color 140ms ease,
+    transform 100ms ease;
+}
+.onglet:active {
+  transform: scale(0.97);
+}
+.ongletActif {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: 0 2px 0 color-mix(in oklch, var(--primary), black 28%);
+}
+
+/* ---------- la grille des bustes ---------- */
+.grille {
+  margin-top: 12px;
+  animation: choix-grille 180ms ease-out both;
+}
+@keyframes choix-grille {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.case {
+  position: relative;
+  aspect-ratio: 1;
+  width: 100%;
+  overflow: visible;
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow:
+    0 0 0 2px color-mix(in oklch, var(--primary), white 72%),
+    0 3px 0 2px color-mix(in oklch, var(--primary), white 58%);
+  transition:
+    transform 100ms ease,
+    box-shadow 120ms ease;
+}
+.case:active {
+  transform: scale(0.94);
+}
+.case img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+}
+.caseChoisie {
+  box-shadow:
+    0 0 0 3px var(--primary),
+    0 3px 0 3px color-mix(in oklch, var(--primary), black 28%);
+}
+.coche {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow:
+    0 0 0 2px var(--card),
+    0 2px 0 2px color-mix(in oklch, var(--primary), black 28%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heros,
+  .grille {
+    animation: none;
+  }
+}

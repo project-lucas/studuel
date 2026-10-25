@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import XpIcon from '@/components/ui/XpIcon'
 import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
+import { useRecompenses } from '@/components/recompenses/RecompensesProvider'
 import { commencerAnnale, terminerAnnale } from '@/app/reviser/[subject]/annales/actions'
 import { ANNALE_MINUTES_MIN, BAREME_XP, gemmesEpreuve } from '@/lib/economie'
 import type { Gain } from '@/lib/gains'
@@ -22,6 +23,7 @@ export default function ValiderAnnale({ annaleId }: { annaleId: string }) {
   const [message, setMessage] = useState<string | null>(null)
   const [gains, setGains] = useState<Gain[]>([])
   const [pending, start] = useTransition()
+  const { ouvrirRuban } = useRecompenses()
 
   useEffect(() => {
     let vivant = true
@@ -44,6 +46,9 @@ export default function ValiderAnnale({ annaleId }: { annaleId: string }) {
         setGains(r.gains)
         setEtat('traitee')
         setMessage(null)
+        // Le ruban « Récompenses » (25/10/2026) : la plus grosse récompense de
+        // l'app se fête plein écran ; la vague part au tap.
+        ouvrirRuban(r.gains, { sousTitre: 'Sujet du bac traité' })
       } else if (r.raison === 'trop_tot') {
         setMessage(
           `Prends le temps de composer : encore ${r.minutes} min sur ce sujet avant de le valider.`,
@@ -60,7 +65,7 @@ export default function ValiderAnnale({ annaleId }: { annaleId: string }) {
           <CheckCircle2 className="size-5" aria-hidden="true" />
           Sujet traité
         </p>
-        <PanneauRecompenses gains={gains} titre="Gagné" className="w-full" />
+        <PanneauRecompenses gains={gains} titre="Gagné" className="w-full" sansVol />
       </section>
     )
   }

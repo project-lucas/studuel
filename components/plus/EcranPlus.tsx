@@ -13,7 +13,7 @@ import { promesseRente } from '@/lib/studuel-plus/rente'
  * être suivis, guidés, que l'on pense pour eux, avant eux »).
  *
  * Deux visages : l'ABONNÉ y trouve ce que son abonnement lui rapporte
- * AUJOURD'HUI (sa rente à récolter, les crédits de Marcel, son jour J), le
+ * AUJOURD'HUI (sa rente à récolter, les cafés de Marcel, son jour J), le
  * GRATUIT y lit les cinq piliers et ce qu'il en garde sans payer — jamais un
  * mur nu. Les piliers viennent de lib/studuel-plus/formule : la carte de la
  * Boutique et cet écran disent la même chose. Écran sans lecture : la page

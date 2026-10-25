@@ -33,6 +33,7 @@ export default function BoutonQuetesFlottant() {
   if (!etat || etat.quetes.length === 0 || journeeBouclee(etat) || isHudHidden(pathname)) return null
   return (
     <div
+      data-tour="quetes"
       className={cn(
         'quetes-fab fixed right-4 z-40 md:bottom-8',
         pathname === '/defi' ? 'bottom-[12.25rem]' : 'bottom-24 [html.marcel-fab_&]:bottom-[10.75rem] [html.champ-marcel_&]:bottom-[var(--champ-marcel)]',

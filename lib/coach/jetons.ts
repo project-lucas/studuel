@@ -2,21 +2,27 @@
 // La PORTE de Marcel, et les JETONS DE PROF — la monnaie de son temps.
 //
 // Depuis le 24/09/2026, Marcel se paie en CRÉDITS DU MOIS (lib/coach/credits :
-// 200 pour Studuel+, une question = 1 crédit) et le gratuit ne l'a plus
-// (« pas de Marcel pour le gratuit : il sera plus intéressant dans le
-// descriptif de Studuel+ »). Les jetons de Prof, achetés en gemmes, restent
-// une RALLONGE pour l'abonné qui a tout dépensé.
+// 200 pour Studuel+, une question = 1) et le gratuit ne l'a plus (« pas de
+// Marcel pour le gratuit : il sera plus intéressant dans le descriptif de
+// Studuel+ »). Les jetons de Prof, achetés en gemmes, restent une RALLONGE pour
+// l'abonné qui a tout dépensé.
+//
+// DEPUIS LE 25/10/2026, À L'ÉCRAN, TOUT CELA S'APPELLE DU CAFÉ (Lucas : « c'est
+// plus marrant de recharger Marcel avec du café ») : les crédits du mois sont
+// ses cafés du mois, les crédits de recharge ses cafés de recharge. Les noms
+// du code (`credit`, `jeton`, `coach_tokens`) ne bougent pas : seuls les
+// messages de ce module parlent de café.
 //
 // RÈGLE D'OR, écrite ici parce qu'elle est le produit :
 //   les jetons achètent du TEMPS de Marcel, jamais une réponse toute faite.
 //
 // Le PLAFOND ABSOLU journalier reste : une limite de COÛT, que rien ne lève.
 //
-// DEPUIS LE 15/10/2026 (migration 581), les jetons s'appellent des CRÉDITS DE
-// RECHARGE à l'écran : ils s'achètent en euros (lib/coach/recharges), plus en
-// gemmes, et ne s'effacent pas en fin de mois. Même solde (`coach_tokens`),
-// même place dans la porte. Les fonctions « en gemmes » plus bas ne servent
-// plus qu'à une base où la 581 n'est pas passée.
+// DEPUIS LE 15/10/2026 (migration 581), les jetons sont les CAFÉS DE RECHARGE :
+// ils s'achètent en euros (lib/coach/recharges), plus en gemmes, et ne
+// s'effacent pas en fin de mois. Même solde (`coach_tokens`), même place dans
+// la porte. Les fonctions « en gemmes » plus bas ne servent plus qu'à une base
+// où la 581 n'est pas passée.
 //
 // Logique PURE. Les vrais plafonds sont décidés côté SQL (migration 378,
 // `coach_ask_allowed`) : ce module en est le miroir, pour l'affichage et les
@@ -24,11 +30,12 @@
 // -----------------------------------------------------------------------------
 
 import type { Tier } from '../subscription'
-import { COUT_QUESTION, etatCredits, motCredits } from './credits'
+import { CAFES_MENSUELS, COUT_QUESTION, etatCredits, motCafes } from './credits'
 
 /**
- * Appels maximum par jour et par élève, crédits et jetons compris. Ce n'est
- * pas une limite d'usage mais une limite de facture : elle ne se lève avec rien.
+ * Appels maximum par jour et par élève, cafés du mois et de recharge compris.
+ * Ce n'est pas une limite d'usage mais une limite de facture : elle ne se lève
+ * avec rien.
  */
 export const PLAFOND_ABSOLU = 50
 
@@ -43,9 +50,9 @@ export type EtatDemande = {
   /** Marcel peut-il répondre maintenant ? */
   possible: boolean
   source: SourceAppel
-  /** Crédits du mois restants. */
+  /** Cafés du mois restants. */
   restants: number
-  /** Solde de jetons. */
+  /** Cafés de recharge (le solde de `coach_tokens`). */
   jetons: number
   /** Ce qu'on affiche à l'élève, toujours à l'endroit (« il te reste », jamais « interdit »). */
   message: string
@@ -55,7 +62,7 @@ export type DemandeInput = {
   tier: Tier
   /** Appels déjà passés aujourd'hui (pour le plafond de facture). */
   utilisesAujourdhui: number
-  /** Crédits déjà dépensés ce mois-ci. */
+  /** Cafés du mois déjà bus. */
   depensesMois: number
   jetons: number
 }
@@ -75,7 +82,7 @@ export function etatDemande(input: DemandeInput): EtatDemande {
       ...base,
       possible: false,
       source: 'abonnement',
-      message: 'Marcel fait partie de Studuel+ : 200 crédits par mois pour lui poser tes questions.',
+      message: `Marcel fait partie de Studuel+ : ${CAFES_MENSUELS} cafés par mois pour lui poser tes questions.`,
     }
   }
 
@@ -84,7 +91,7 @@ export function etatDemande(input: DemandeInput): EtatDemande {
   }
 
   if (credits.restants >= COUT_QUESTION) {
-    return { ...base, possible: true, source: 'credit', message: `Il te reste ${motCredits(credits.restants)} ce mois-ci.` }
+    return { ...base, possible: true, source: 'credit', message: `Il te reste ${motCafes(credits.restants)} ce mois-ci.` }
   }
 
   if (credits.jetons > 0) {
@@ -92,10 +99,7 @@ export function etatDemande(input: DemandeInput): EtatDemande {
       ...base,
       possible: true,
       source: 'jeton',
-      message:
-        credits.jetons === 1
-          ? 'Tes crédits du mois sont passés — il te reste 1 crédit de recharge.'
-          : `Tes crédits du mois sont passés — il te reste ${credits.jetons} crédits de recharge.`,
+      message: `Tes cafés du mois sont bus — il te reste ${motCafes(credits.jetons)} de recharge.`,
     }
   }
 
@@ -103,7 +107,7 @@ export function etatDemande(input: DemandeInput): EtatDemande {
     ...base,
     possible: false,
     source: 'vide',
-    message: 'Marcel dort : tes crédits du mois sont passés. Ils reviennent le 1er du mois.',
+    message: 'Marcel dort : il n’a plus de café. Ses cafés reviennent le 1er du mois.',
   }
 }
 

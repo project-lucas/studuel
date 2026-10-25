@@ -29,7 +29,7 @@ import type { PlacementQuestion } from '@/lib/placement'
 import Image from 'next/image'
 import accueilImage from '@/public/images/onboarding/accueil.webp'
 import OnbButton from './OnbButton'
-import TutoStep from './TutoStep'
+import Cinematique, { PrechargeCinematique } from './Cinematique'
 import MarcelParle, { POSES } from './MarcelParle'
 import { ProgressHeader } from './OnbBits'
 import {
@@ -312,7 +312,14 @@ export default function WelcomeFlow({
         <ProgressHeader progress={progress} onBack={back} />
       ) : null}
 
-      {step === 'placementQuiz' ? (
+      {step === 'tuto' ? (
+        // LA CINÉMATIQUE D'OUVERTURE (25/10/2026) remplace les trois diapos du
+        // tuto, qui disaient la même chose. L'étape garde sa clé `tuto` (le
+        // chemin, la reprise et les tests n'y voient rien) ; elle se joue
+        // plein écran, hors du <main> à gouttières. « Passer » et « C'est
+        // parti » mènent tous deux à l'écran suivant : la classe.
+        <Cinematique onFin={next} />
+      ) : step === 'placementQuiz' ? (
         <div className="mx-auto flex min-h-0 w-full max-w-md flex-1 flex-col">
           <PlacementQuizStep
             progress={progress ?? 0.4}
@@ -353,24 +360,29 @@ export default function WelcomeFlow({
     switch (step) {
       case 'intro':
         return (
-          <IntroStep
-            onStart={() => {
-              // Sans écran profil (13/10/2026), l'élève est le défaut.
-              setAnswers((a) => ({ ...a, profileType: a.profileType ?? 'eleve' }))
-              go(nextStep('intro', { ...answers, profileType: answers.profileType ?? 'eleve' }) ?? 'tuto')
-            }}
-            onParent={() => {
-              setAnswers((a) => ({ ...a, profileType: 'parent' }))
-              go('parentIntro')
-            }}
-            coachGroupe={answers.coachGroupe}
-            onCode={(code, libelle) =>
-              // Un code de coach, c'est un élève : on le présuppose, l'écran
-              // suivant le laisse encore changer.
-              setAnswers((a) => ({ ...a, coachCode: code, coachGroupe: libelle, profileType: 'eleve' }))
-            }
-            onRetrait={() => setAnswers((a) => ({ ...a, coachCode: null, coachGroupe: null }))}
-          />
+          <>
+            {/* Les tableaux de la cinématique se chargent pendant que l'élève
+                lit l'accueil : au tap, le premier fondu est net. */}
+            <PrechargeCinematique />
+            <IntroStep
+              onStart={() => {
+                // Sans écran profil (13/10/2026), l'élève est le défaut.
+                setAnswers((a) => ({ ...a, profileType: a.profileType ?? 'eleve' }))
+                go(nextStep('intro', { ...answers, profileType: answers.profileType ?? 'eleve' }) ?? 'tuto')
+              }}
+              onParent={() => {
+                setAnswers((a) => ({ ...a, profileType: 'parent' }))
+                go('parentIntro')
+              }}
+              coachGroupe={answers.coachGroupe}
+              onCode={(code, libelle) =>
+                // Un code de coach, c'est un élève : on le présuppose, l'écran
+                // suivant le laisse encore changer.
+                setAnswers((a) => ({ ...a, coachCode: code, coachGroupe: libelle, profileType: 'eleve' }))
+              }
+              onRetrait={() => setAnswers((a) => ({ ...a, coachCode: null, coachGroupe: null }))}
+            />
+          </>
         )
       case 'profil':
         return (
@@ -398,7 +410,8 @@ export default function WelcomeFlow({
           />
         )
       case 'tuto':
-        return <TutoStep onDone={next} />
+        // Rendu hors du <main>, en plein écran : voir <Cinematique> plus haut.
+        return null
       case 'grade':
         return (
           <GradeStep

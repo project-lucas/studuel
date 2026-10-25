@@ -47,6 +47,48 @@ export function portraitSrc(key: PortraitKey): string {
 }
 
 /**
+ * LE PORTRAIT EN PIED (25/10/2026, chantier « le jeu vivant ») : le même
+ * personnage que le buste v2, debout, détouré (≈ 200 × 600 px, fond
+ * transparent), servi depuis `public/images/profil/pied/`. C'est lui qu'on
+ * voit en grand dans le choix d'avatar et sur la page du joueur (/joueur).
+ * Les treize sont livrés ; un écran qui le montre garde le buste en repli si
+ * l'image venait à manquer (`onError`).
+ */
+export function portraitPiedSrc(key: PortraitKey): string {
+  return `/images/profil/pied/${key}.webp`
+}
+
+/**
+ * GARÇONS D'UN CÔTÉ, FILLES DE L'AUTRE (25/10/2026, Lucas : « un gabarit de
+ * choix d'avatar propre, clair, masculin d'un côté / féminin de l'autre »).
+ * La répartition a été faite EN REGARDANT les treize bustes v2 ; aucun n'est
+ * ambigu, donc aucun ne figure dans les deux listes (un portrait ambigu le
+ * pourrait : les listes ne sont pas exclusives par construction). L'ordre est
+ * celui de PORTRAIT_KEYS — c'est l'ordre de la grille.
+ */
+export const PORTRAITS_GARCONS: readonly PortraitKey[] = ['2', '3', '5', '7', '9', '12', '13']
+export const PORTRAITS_FILLES: readonly PortraitKey[] = ['4', '6', '8', '10', '11', '14']
+
+export type GenrePortrait = 'garcons' | 'filles'
+
+export const PORTRAITS_PAR_GENRE: Readonly<Record<GenrePortrait, readonly PortraitKey[]>> = {
+  garcons: PORTRAITS_GARCONS,
+  filles: PORTRAITS_FILLES,
+}
+
+/**
+ * L'onglet à ouvrir pour un portrait déjà choisi : celui où il figure. Sans
+ * choix (ou portrait inconnu des deux listes), l'onglet des garçons — le
+ * premier de la rangée, pas un jugement.
+ */
+export function genreDuPortrait(key: unknown): GenrePortrait {
+  if (isPortraitKey(key) && PORTRAITS_FILLES.includes(key) && !PORTRAITS_GARCONS.includes(key)) {
+    return 'filles'
+  }
+  return 'garcons'
+}
+
+/**
  * LE CADRAGE « VISAGE » d'un blason dans un rond.
  *
  * Le blason est un écu : posé tel quel dans un disque (couloir du duel, ligne

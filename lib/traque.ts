@@ -645,6 +645,109 @@ export function featuredCard(cards: readonly TraqueCard[]): TraqueCard | null {
   return [...ready].sort((a, b) => a.remainingMs - b.remainingMs)[0]
 }
 
+// ------------------------------------------------------ L'AFFICHE DU GARDIEN
+//
+// LE JEU VIVANT (25/10/2026, docs/CADRAGE-JEU-VIVANT.md § C) : chaque tanière
+// du jour se lit comme un AVIS DE RECHERCHE — « il part dans 6 h 12 », trois
+// gestes à faire avec un bouton chacun, le gain en grand. Tout ce qui se
+// calcule vit ici, pur ; `BossSheet` ne fait que poser.
+
+const JOUR_MS = 86_400_000
+
+/**
+ * La FIN DU JOUR DE TRAQUE (ms epoch) du jour `dayKey` : le prochain minuit
+ * UTC. C'est la clé du jour de la 576 (`day_key`, `(now() AT TIME ZONE
+ * 'utc')::date`) : c'est à cet instant que la jauge repart de zéro et que le
+ * gardien du jour change — pas à minuit heure de Paris (où il reste une ou
+ * deux heures de plus). Viser Paris aurait fait dire « il part dans 23 h » à
+ * 0 h 30 alors qu'il part dans 1 h 30.
+ */
+export function finDuJourDeTraque(dayKey: string): number {
+  const debut = Date.parse(`${dayKey}T00:00:00Z`)
+  return Number.isFinite(debut) ? debut + JOUR_MS : Number.NaN
+}
+
+/** La fin du jour de traque EN COURS à cet instant (le client égrène depuis là). */
+export function finDuJourCourant(nowMs: number): number {
+  const d = new Date(nowMs)
+  return Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate() + 1)
+}
+
+/** « Il part dans 6 h 12 », « Il part dans 42 min », « Il part dans moins d'une minute », « Il est parti ». */
+export function departLabel(ms: number): string {
+  if (!(ms > 0)) return 'Il est parti'
+  return `Il part dans ${countdownLabel(ms)}`
+}
+
+/** Un des trois gestes de l'affiche. */
+export type GesteTraque = {
+  cle: 'lecon' | 'quiz' | 'cartes'
+  /** « Lire 1 cours ». */
+  libelle: string
+  /** Points nominaux du geste (barème `TRAQUE_POINTS`). */
+  points: number
+  /** Points du jour à atteindre pour le cocher : la somme cumulée des gestes. */
+  seuil: number
+  fait: boolean
+  /** Où aller le faire : Réviser, filtré sur la matière. */
+  href: string
+}
+
+/**
+ * LES TROIS GESTES qui débusquent le gardien, dans l'ordre d'une séance :
+ * lire un cours (15), finir un quiz de chapitre (25), puis réviser ce qu'il
+ * reste en cartes de la file « À revoir » (4 chacune) — le dernier geste est
+ * ÉLASTIQUE : son compte de cartes est ce qui manque vraiment à la jauge, il
+ * descend au fil des points du jour, et la somme des trois atteint toujours
+ * le seuil. Nominal, donc prudent : un quiz rapporte aussi ses bonnes
+ * réponses, la jauge se remplit plutôt plus vite que l'affiche ne le promet.
+ *
+ * L'APPROXIMATION, assumée : la jauge ne sait pas QUEL geste a produit ses
+ * points. Un geste est coché quand les points du jour atteignent sa somme
+ * cumulée (15, 40, 100) — un élève qui n'a fait que des cartes voit « Lire 1
+ * cours » coché. Ce que l'affiche dit alors reste vrai : « tu en es là, voilà
+ * ce qu'il reste ».
+ */
+export function gestesPourTraquer(card: Pick<TraqueCard, 'points' | 'subjectSlug'>): GesteTraque[] {
+  const points = Math.max(0, Math.floor(card.points))
+  const dossier = card.subjectSlug ? `/reviser/${card.subjectSlug}` : '/reviser'
+  const revoir = card.subjectSlug
+    ? `/reviser/revoir?matiere=${encodeURIComponent(card.subjectSlug)}`
+    : '/reviser/revoir'
+  const seuilLecon = TRAQUE_POINTS.lecon
+  const seuilQuiz = seuilLecon + TRAQUE_POINTS.quiz_chapitre
+  // Ce qui manque après les deux premiers gestes ; une fois la jauge pleine,
+  // on réécrit le compte nominal (« Réviser 15 cartes », coché), jamais zéro.
+  const reste = TRAQUE_SEUIL - Math.min(Math.max(points, seuilQuiz), TRAQUE_SEUIL)
+  const cartes = Math.ceil((reste > 0 ? reste : TRAQUE_SEUIL - seuilQuiz) / TRAQUE_POINTS.carte)
+  return [
+    {
+      cle: 'lecon',
+      libelle: 'Lire 1 cours',
+      points: TRAQUE_POINTS.lecon,
+      seuil: seuilLecon,
+      fait: points >= seuilLecon,
+      href: dossier,
+    },
+    {
+      cle: 'quiz',
+      libelle: 'Finir 1 quiz',
+      points: TRAQUE_POINTS.quiz_chapitre,
+      seuil: seuilQuiz,
+      fait: points >= seuilQuiz,
+      href: dossier,
+    },
+    {
+      cle: 'cartes',
+      libelle: cartes === 1 ? 'Réviser 1 carte' : `Réviser ${cartes} cartes`,
+      points: cartes * TRAQUE_POINTS.carte,
+      seuil: TRAQUE_SEUIL,
+      fait: points >= TRAQUE_SEUIL,
+      href: revoir,
+    },
+  ]
+}
+
 /** Normalise une ligne `boss_gauges` lue en base. */
 export function normalizeGauge(raw: unknown): TraqueGauge | null {
   if (!raw || typeof raw !== 'object') return null

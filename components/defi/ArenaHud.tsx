@@ -488,6 +488,7 @@ function RailTileFace({
         onClick={() => sfx.tap()}
         className={className}
         aria-label={tile.label}
+        data-tour={tile.id === 'boss' ? 'arene-boss' : undefined}
       >
         {contenu}
       </Link>
@@ -504,6 +505,7 @@ function RailTileFace({
       className={className}
       aria-label={tile.label}
       aria-haspopup="dialog"
+      data-tour={tile.id === 'boss' ? 'arene-boss' : undefined}
     >
       {contenu}
     </button>

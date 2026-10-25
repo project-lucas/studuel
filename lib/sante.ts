@@ -4756,6 +4756,26 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     // La fonction existe depuis la 557 : une redéfinition ne se sonde pas.
     sonde: null,
   },
+  {
+    id: '601',
+    fichier: '601_decouvertes.sql',
+    feature:
+      'LA DÉCOUVERTE PROGRESSIVE (25/10/2026, cadrage « le jeu vivant » § E) : `decouvertes` (une ligne par élève et clé du catalogue lib/decouverte/catalogue.ts, CASCADE), `profiles.decouverte_depuis` posé par défaut pour les profils créés APRÈS la migration — les comptes existants reçoivent NULL dans la même migration et voient tout —, `decouverte_marquer(p_cle)` bornée aux huit clés (la seule porte d’écriture) et `mes_decouvertes()`.',
+    siAbsente:
+      'Rien de visible : la lecture du bandeau tolère l’absence (colonne 42703, RPC PGRST202) et laisse tous les onglets ouverts ; les mini-tours ne sont pas mémorisés en base (le navigateur seul s’en souvient) et un nouveau compte voit l’arène, la ligue et la boutique dès le premier jour.',
+    // Révoquée pour anon : l’appel anonyme est refusé (42501), la fonction existe.
+    sonde: { type: 'rpc', fn: 'decouverte_marquer', args: { p_cle: '' } },
+  },
+  {
+    id: '602',
+    fichier: '602_courrier.sql',
+    feature:
+      'LE COURRIER (25/10/2026, cadrage « le jeu vivant » § G) : `courrier` (une lettre par destinataire — marcel · cadeau · coach · ami · nouveaute —, `gains` jsonb, lue / encaissée, CASCADE, lisible par soi seul, aucune écriture directe), `courrier_deposer` (service_role seul), la lettre de bienvenue de Marcel avec 50 XP par TRIGGER à la création du profil (jamais pour un parent) et au rattrapage des comptes existants, `courrier_lire`, `courrier_tout_lire`, `courrier_encaisser` (une seule fois : wallet_grant_xp + gem_events à la clé courrier/<id>), `courrier_tout_encaisser`, `courrier_boite` (lettres + diffusions 588 + défis reçus 558, une vague), `courrier_non_lus` ; sources `courrier` ajoutées aux CHECK de xp_events et gem_events.',
+    siAbsente:
+      'La page /courrier dit que la boîte n’est pas encore ouverte, le bouton flottant reste caché (la route GET /api/courrier répond 0), personne ne reçoit la lettre de bienvenue ; rien d’autre ne casse.',
+    // Révoquée pour anon : l’appel anonyme est refusé (42501), la fonction existe.
+    sonde: { type: 'rpc', fn: 'courrier_non_lus', args: {} },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

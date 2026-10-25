@@ -260,11 +260,13 @@ export default function TopHud({
           <div className={s.gelule}>
             {/* L'AVATAR DANS L'ANNEAU DE SON RANG — le métal dit le rang de
                 ligue, la plaque du bas sa division en chiffres romains. Le
-                toucher ouvre le vestiaire : « les élèves vont cliquer dessus,
+                toucher ouvre LA PAGE DU JOUEUR (/joueur, 25/10/2026 : le héros
+                en pied, le rang, ses chiffres, les Paramètres — le vestiaire
+                reste à un tap depuis elle) : « les élèves vont cliquer dessus,
                 c'est certain ». */}
             <Link
-              href="/moi/avatar"
-              aria-label={`${rang ? `Rang ${rang.nom}` : `Niveau ${level}`} — personnaliser mon avatar`}
+              href="/joueur"
+              aria-label={`${rang ? `Rang ${rang.nom}` : `Niveau ${level}`} — ma page de joueur`}
               title={rang?.nom ?? levelTitle ?? undefined}
               className={s.rang}
             >

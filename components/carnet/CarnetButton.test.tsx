@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 
-import { TOUR_STEPS } from '@/lib/tour'
+import { DECOUVERTES } from '@/lib/decouverte/catalogue'
 import CarnetButton from './CarnetButton'
 
 // -----------------------------------------------------------------------------
@@ -10,7 +10,9 @@ import CarnetButton from './CarnetButton'
 // Ce bouton a déjà déménagé trois fois : tuile pleine largeur en bas de page,
 // puis bouton-icône rond dans la rangée de commandes, puis bouton libellé sur
 // la ligne du titre. À chaque déménagement, `data-tour="carnet-switch"` doit
-// suivre — c'est la cible de l'étape « Ma bibliothèque » du tour guidé.
+// suivre — c'est la cible du mini-tour « Ma bibliothèque » de la découverte
+// progressive (lib/decouverte/catalogue, depuis le 25/10/2026 ; avant, une
+// étape du tour guidé).
 //
 // L'oublier ne casse RIEN de visible : `nextAvailableStep` ne trouve pas la
 // cible, considère l'étape hors écran et la SAUTE. Le tour continue, une étape
@@ -18,12 +20,12 @@ import CarnetButton from './CarnetButton'
 // -----------------------------------------------------------------------------
 
 describe('CarnetButton', () => {
-  it('porte la cible du tour guidé, où qu’il déménage', () => {
+  it('porte la cible du mini-tour, où qu’il déménage', () => {
     const { container } = render(
       <CarnetButton coursesCount={3} questionsCount={42} />,
     )
-    // La cible existe bien dans le tour : le test ne garde pas une chaîne morte.
-    expect(TOUR_STEPS.some((s) => s.target === 'carnet-switch')).toBe(true)
+    // La cible existe bien dans le catalogue : le test ne garde pas une chaîne morte.
+    expect(DECOUVERTES.some((d) => d.etapes.some((e) => e.cible === 'carnet-switch'))).toBe(true)
     expect(container.querySelector('[data-tour="carnet-switch"]')).not.toBeNull()
   })
 

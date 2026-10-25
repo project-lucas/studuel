@@ -69,6 +69,9 @@ export default function Bureau({
       <div
         role="tablist"
         aria-label="Le bureau de Marcel"
+        // `data-tour="marcel-bureau"` : l'ancre du mini-tour « Marcel »
+        // (découverte progressive, lib/decouverte/catalogue.ts).
+        data-tour="marcel-bureau"
         className="bg-secondary grid shrink-0 gap-1 rounded-2xl p-1"
         style={{ gridTemplateColumns: `repeat(${onglets.length}, minmax(0, 1fr))` }}
       >

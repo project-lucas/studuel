@@ -18,6 +18,11 @@ describe('la formule Studuel+', () => {
     expect(avantages).toMatch(/60 gemmes par semaine/)
   })
 
+  it('paie Marcel en cafés, plus en crédits', () => {
+    expect(pilier('marcel').promesse).toBe('200 cafés par mois pour lui parler')
+    for (const p of PILIERS) expect(`${p.titre} ${p.promesse} ${p.detail} ${p.gratuit}`).not.toMatch(/cr[ée]dit/i)
+  })
+
   it('donne deux annales par matière au gratuit', () => {
     expect(ANNALES_GRATUITES_PAR_MATIERE).toBe(2)
     expect(pilier('annales').gratuit).toMatch(/^2 annales/)

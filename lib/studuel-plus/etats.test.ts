@@ -4,7 +4,7 @@ import { etatsDesPiliers } from './etats'
 describe('ce que chaque pilier dit à un élève', () => {
   it('compte les crédits et la recharge de l’abonné', () => {
     const e = etatsDesPiliers({ abonne: true, classe: '3e', creditsRestants: 1, creditsRecharge: 50, examen: null, annales: 42 })
-    expect(e.marcel).toBe('1 crédit ce mois-ci · 50 en recharge')
+    expect(e.marcel).toBe('1 café ce mois-ci · 50 en recharge')
     expect(e.annales).toBe('42 sujets, tous ouverts pour toi')
   })
 

@@ -161,6 +161,7 @@ export default function SerieBar({
   return (
     <section
       aria-label="Ta série"
+      data-tour="serie"
       className="carte p-3.5"
     >
       {/* Ligne du haut : la flamme et son compte à gauche, les deux commandes

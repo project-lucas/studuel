@@ -7,7 +7,6 @@ import {
   ArrowLeft,
   ArrowRight,
   ArrowUp,
-  BatteryCharging,
   BookMarked,
   Camera,
   ChevronDown,
@@ -30,7 +29,7 @@ import { sfx } from '@/lib/sounds'
 import { toast } from '@/lib/toast'
 import { rangerDansCarnet } from '@/app/marcel/conversations-actions'
 import { etatDemande } from '@/lib/coach/jetons'
-import { creditsMensuels } from '@/lib/coach/credits'
+import { cafesMensuels, motCafes } from '@/lib/coach/credits'
 import { sommeilDe } from '@/lib/coach/sommeil'
 import type { DemandeResult } from '@/app/marcel/actions'
 import type { Remarque } from '@/lib/coach/remarques'
@@ -50,6 +49,8 @@ import ReponseMarcel from './ReponseMarcel'
 import SignalerReponse from './SignalerReponse'
 import { questionAvant } from '@/lib/ia-signalement'
 import PoseMarcel from './PoseMarcel'
+import MarcelEndormi, { LIEN_CAFE, MarcelReveille } from './MarcelEndormi'
+import { Dosette } from './CompteurCafes'
 import { useDictee } from './useDictee'
 import { useHauteurChamp } from './useHauteurChamp'
 import { lirePdf } from '@/lib/coach/lire-pdf'
@@ -114,8 +115,9 @@ export default function DemanderMarcel({
 }: {
   tier: Tier
   utilisesAujourdhui: number
-  /** Crédits dépensés ce mois-ci (migration 378). */
+  /** Cafés du mois déjà bus (migration 378 : `coach_credits_*`). */
   depensesMois: number
+  /** Cafés de recharge (`coach_tokens`), achetés en euros, sans date. */
   jetons: number
   /** « Marcel a remarqué » : montré tant que le fil est vide (lib/coach/remarques). */
   remarques?: Remarque[]
@@ -209,8 +211,8 @@ export default function DemanderMarcel({
   })
   const occupeOuPending = occupe || pending
   // MARCEL DORT (15/10/2026) : la limite atteinte se dit en sommeil, avec son
-  // réveil (le 1er du mois) et la recharge qui le réveille tout de suite.
-  const sommeil = sommeilDe(etat, creditsMensuels(tier), new Date())
+  // réveil (le 1er du mois) et le café qui le réveille tout de suite (25/10).
+  const sommeil = sommeilDe(etat, cafesMensuels(tier), new Date())
 
   /** Une entrée du menu du « + » : l'appareil photo, la galerie, un fichier, ou les phrases. */
   const ouvrirEntree = (cle: string) => {
@@ -287,7 +289,7 @@ export default function DemanderMarcel({
           setSolde((s) => ({
             ...s,
             utilises: s.utilises + 1,
-            // Un crédit du mois, ou — au-delà — un jeton.
+            // Un café du mois, ou — au-delà — un café de recharge.
             depenses: etat.source === 'credit' ? s.depenses + 1 : s.depenses,
             jetons:
               etat.source === 'jeton' ? Math.max(0, s.jetons - 1) : s.jetons,
@@ -310,7 +312,7 @@ export default function DemanderMarcel({
         } else if (res.abonnement) {
           toast('Marcel fait partie de Studuel+.', 'error')
         } else if (res.quota) {
-          toast('Marcel s’est endormi : tes crédits sont passés.', 'error')
+          toast('Marcel s’est endormi : il n’a plus de café.', 'error')
           setSolde((s) => ({ ...s, utilises: s.utilises + 1 }))
         } else if (res.unavailable) {
           toast('Marcel ne peut pas répondre pour le moment.', 'error')
@@ -463,7 +465,7 @@ export default function DemanderMarcel({
                   disabled={occupeOuPending || !etat.possible}
                   className="text-primary min-h-9 px-2 text-[11.5px] font-extrabold underline-offset-4 hover:underline disabled:opacity-50"
                 >
-                  Écris-moi la mienne · 1 crédit
+                  Écris-moi la mienne · {motCafes(1)}
                 </button>
               ) : null}
             </div>
@@ -602,7 +604,7 @@ export default function DemanderMarcel({
                 ) : null}
 
                 {/* LA LIGNE DU HAUT, seulement quand on prépare une demande : le
-                    mode armé, la matière et les crédits sur UNE ligne (avant :
+                    mode armé, la matière et les cafés sur UNE ligne (avant :
                     trois lignes qui couvraient les outils). */}
                 {!compact ? (
                   <div className="relative z-[1] flex items-center gap-1.5 px-1 pt-0.5 pb-1.5">
@@ -641,8 +643,10 @@ export default function DemanderMarcel({
                         <ChevronDown aria-hidden="true" className="text-muted-foreground pointer-events-none absolute right-2 size-3.5" />
                       </span>
                     ) : null}
-                    <span className="text-primary bg-primary/10 ml-auto shrink-0 rounded-full px-2 py-1 text-[11px] font-extrabold">
-                      {etat.restants > 0 ? `${etat.restants} crédits` : `${solde.jetons} en recharge`}
+                    {/* Les cafés qui restent — la dosette, icône du café partout. */}
+                    <span className="text-primary bg-primary/10 ml-auto inline-flex shrink-0 items-center gap-1 rounded-full py-0.5 pr-2 pl-1 text-[11px] font-extrabold tabular-nums">
+                      <Dosette taille={18} immobile />
+                      {etat.restants > 0 ? motCafes(etat.restants) : `${motCafes(solde.jetons)} de recharge`}
                     </span>
                   </div>
                 ) : null}
@@ -651,11 +655,16 @@ export default function DemanderMarcel({
                   <p className="bg-secondary mx-1 mb-1.5 flex items-center gap-2 rounded-2xl px-3 py-2 text-[11.5px] font-bold">
                     <Moon aria-hidden="true" className="text-primary size-4 shrink-0" />
                     <span className="min-w-0 flex-1">{sommeil.phrase}</span>
-                    <Link href="/tresor#recharges" className="text-primary shrink-0 font-extrabold underline-offset-4 hover:underline">
-                      Recharger
+                    <Link href={LIEN_CAFE} className="text-primary shrink-0 font-extrabold underline-offset-4 hover:underline">
+                      Offrir un café
                     </Link>
                   </p>
                 ) : null}
+
+                {/* MARCEL EST RÉVEILLÉ ! (25/10/2026) : les cafés du mois sont
+                    bus, le café de recharge le tient debout — il le dit, la
+                    tasse à la main. */}
+                {sommeil.etat === 'reveille' && !compact ? <MarcelReveille sommeil={sommeil} className="mx-1 mb-1.5" /> : null}
 
                 {outils}
 
@@ -681,8 +690,10 @@ export default function DemanderMarcel({
                 ) : null}
 
                 {/* LA LIGNE DU CHAMP : « + », la saisie qui grandit avec le texte
-                    (cinq lignes au plus), le micro, l'envoi. Toujours une ligne. */}
-                <div className="relative z-[1] flex items-end gap-1.5">
+                    (cinq lignes au plus), le micro, l'envoi. Toujours une ligne.
+                    `data-tour="marcel-champ"` : l'ancre du mini-tour « Marcel »
+                    (découverte progressive, lib/decouverte/catalogue.ts). */}
+                <div data-tour="marcel-champ" className="relative z-[1] flex items-end gap-1.5">
                   <button
                     type="button"
                     onClick={() => {
@@ -809,33 +820,15 @@ export default function DemanderMarcel({
               </Button>
             </div>
           ) : (
-            // MARCEL DORT (15/10/2026) : la limite atteinte se dit en sommeil,
-            // avec son réveil et la recharge qui le réveille tout de suite.
+            // MARCEL DORT (15/10/2026, animé le 25/10/2026) : la limite atteinte
+            // se dit en sommeil — il respire, ses z montent, et la TASSE posée à
+            // côté le réveille (elle mène au café de la Boutique ; au plafond du
+            // jour, pas de tasse : il revient demain).
             <div
               ref={refChamp}
-              className="bg-card rounded-[24px] p-4 text-center shadow-[inset_0_0_0_1.5px_color-mix(in_oklch,var(--foreground),transparent_90%),0_-6px_24px_-14px_rgba(36,48,79,.55)]"
+              className="bg-card rounded-[24px] px-3 pt-2 pb-2.5 shadow-[inset_0_0_0_1.5px_color-mix(in_oklch,var(--foreground),transparent_90%),0_-6px_24px_-14px_rgba(36,48,79,.55)]"
             >
-              {sommeil.etat === 'endormi' || sommeil.etat === 'repos' ? (
-                <div className="relative mx-auto mb-1 w-fit" aria-hidden="true">
-                  <PoseMarcel pose="dort" hauteur={88} className="object-contain" />
-                  <span className="font-heading text-primary absolute top-0 -right-3 text-lg font-extrabold">
-                    z<span className="text-sm">z</span>
-                  </span>
-                </div>
-              ) : null}
-              <p className="font-heading text-[16px] font-extrabold">{sommeil.titre}</p>
-              <p className="text-muted-foreground mt-1 text-[12.5px] font-semibold text-balance">{sommeil.phrase}</p>
-              {sommeil.recharger && (
-                <div className="mt-3 space-y-1.5">
-                  <Button asChild size="lg" className="w-full">
-                    <Link href="/tresor#recharges">
-                      <BatteryCharging aria-hidden="true" />
-                      Recharger Marcel
-                    </Link>
-                  </Button>
-                  <p className="text-muted-foreground text-[11px] font-semibold">Une recharge ne s’efface pas à la fin du mois.</p>
-                </div>
-              )}
+              <MarcelEndormi sommeil={sommeil} />
             </div>
           )}
         </div>

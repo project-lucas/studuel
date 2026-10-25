@@ -11,7 +11,9 @@ import PanneauToi from '@/components/marcel/bureau/PanneauToi'
 import PanneauOutils from '@/components/marcel/bureau/PanneauOutils'
 import { construireProfil } from '@/lib/coach/profil-eleve'
 import { remarquesDe } from '@/lib/coach/remarques'
-import { CREDITS_MENSUELS } from '@/lib/coach/credits'
+import { CAFES_MENSUELS, cafesMensuels } from '@/lib/coach/credits'
+import { etatDemande } from '@/lib/coach/jetons'
+import { sommeilDe } from '@/lib/coach/sommeil'
 import { couvertureFor, type ChapitreCouvert } from '@/lib/coach/couverture'
 import { bulleDuJour, decorDuMoment, parseOnglet, poseDuMoment, seanceDuJour, type ControleBureau } from '@/lib/coach/bureau'
 import { normaliserIdentite } from '@/lib/coach/carnet-marcel'
@@ -26,15 +28,18 @@ export const dynamic = 'force-dynamic'
 //   /dev/marcel?onglet=radar     un onglet (aujourdhui, radar, toi, outils)
 //   /dev/marcel?heure=21         la séance express (15 h, 18 h, 21 h…)
 //   /dev/marcel?etat=gratuit     le gratuit : bureau offert, outils couronnés
-//   /dev/marcel?etat=fatigue     il bâille (12 crédits, aucune recharge)
-//   /dev/marcel?etat=endormi     il dort jusqu'au 1er, « Recharger Marcel »
+//   /dev/marcel?etat=fatigue     il bâille (12 cafés, aucune recharge)
+//   /dev/marcel?etat=endormi     il dort jusqu'au 1er, animé, la tasse « Réveiller Marcel »
+//   /dev/marcel?etat=reveille    les cafés du mois bus, 40 cafés de recharge :
+//                                « Marcel est réveillé ! », la tasse à la main
 //   /dev/marcel?etat=repos       le plafond du jour (50 appels)
 //   /dev/marcel?toi=vide         la première rencontre pas encore faite
 // Envoyer une question appelle la vraie action : sans session, elle refuse.
 const ETATS: Record<string, { tier: Tier; depenses: number; jetons: number; utilises: number }> = {
-  eveille: { tier: 'tier1', depenses: 25, jetons: 0, utilises: 3 },
-  fatigue: { tier: 'tier1', depenses: CREDITS_MENSUELS - 12, jetons: 0, utilises: 3 },
-  endormi: { tier: 'tier1', depenses: CREDITS_MENSUELS, jetons: 0, utilises: 3 },
+  eveille: { tier: 'tier1', depenses: 26, jetons: 0, utilises: 3 },
+  fatigue: { tier: 'tier1', depenses: CAFES_MENSUELS - 12, jetons: 0, utilises: 3 },
+  endormi: { tier: 'tier1', depenses: CAFES_MENSUELS, jetons: 0, utilises: 3 },
+  reveille: { tier: 'tier1', depenses: CAFES_MENSUELS, jetons: 40, utilises: 3 },
   repos: { tier: 'tier1', depenses: 20, jetons: 0, utilises: 50 },
   gratuit: { tier: 'free', depenses: 0, jetons: 0, utilises: 0 },
 }
@@ -122,13 +127,26 @@ export default async function ApercuMarcel({
     { id: 'n2', texte: 'Ta prof de maths note sévèrement la rédaction', creeLe: '2026-10-09T18:00:00Z' },
     { id: 'n3', texte: 'Exposé sur les volcans le 28 octobre', creeLe: '2026-10-15T18:00:00Z' },
   ]
-  const credits = ouvert ? CREDITS_MENSUELS - e.depenses + e.jetons : null
+  const cafes = ouvert ? CAFES_MENSUELS - e.depenses + e.jetons : null
+  // Comme app/marcel/page.tsx : réveillé par un café, Marcel le dit en tête.
+  const sommeil = sommeilDe(
+    etatDemande({ tier: e.tier, utilisesAujourdhui: e.utilises, depensesMois: e.depenses, jetons: e.jetons }),
+    cafesMensuels(e.tier),
+    new Date(),
+  )
+  const reveille = sommeil.etat === 'reveille'
 
   return (
     <div className="px-4">
       <CoachFilProvider>
         <div className="flex h-[calc(100dvh-4.5rem)] min-h-[26rem] flex-col">
-          <EnTeteBureau bulle={bulleDuJour(heure, CONTROLES[0], AUJOURDHUI)} decor={decorDuMoment(heure)} pose={poseDuMoment(heure)} avecHistorique={false} />
+          <EnTeteBureau
+            bulle={reveille ? `${sommeil.titre} ${sommeil.phrase}` : bulleDuJour(heure, CONTROLES[0], AUJOURDHUI)}
+            decor={decorDuMoment(heure)}
+            pose={reveille ? 'cafe' : poseDuMoment(heure)}
+            avecHistorique={false}
+            cafes={cafes}
+          />
           <DemanderMarcel
             tier={e.tier}
             utilisesAujourdhui={e.utilises}
@@ -164,7 +182,7 @@ export default async function ApercuMarcel({
                       maintenant="2026-10-16T18:00:00Z"
                     />
                   ),
-                  outils: <PanneauOutils ouvert={ouvert} credits={credits} />,
+                  outils: <PanneauOutils ouvert={ouvert} cafes={cafes} />,
                   examen: examen ? <PanneauExamen vue={examen} ouvert={ouvert} /> : undefined,
                 }}
               />

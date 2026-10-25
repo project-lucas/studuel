@@ -12,16 +12,26 @@
 // Vingt-quatre outils, rangés par ce que l'élève veut FAIRE (Comprendre,
 // Réviser, S'entraîner, Corriger), six par famille. Un outil mène :
 //   • soit à un MODE du champ (lib/coach/outils) — il arme la consigne, et la
-//     demande coûte un crédit, comme une question ;
+//     demande coûte UN CAFÉ, comme une question (lib/coach/credits) ;
 //   • soit à une PAGE qui existe déjà (la méthode, l'oral, le contrôle blanc,
-//     la file « À revoir », le mode examen) — elle ne coûte rien.
+//     la file « À revoir », le mode examen) — elle est OFFERTE.
 // Chaque outil a SON dessin dans la famille de la barre d'onglets
 // (scripts/marcel-illustrations.mjs) ; six reprennent celui de leur support
 // dans Réviser.
 //
+// LE COÛT EN CAFÉ (25/10/2026, Lucas : « corrige le coût en café de chaque
+// outil ») : il est écrit au bas de chaque bloc — « 1 » et la dosette pour un
+// mode, « Offert » pour une page — et la tête des outils dit le solde et le
+// barème (« Il te reste 174 cafés · une demande = 1 café »). Un seul barème :
+// `coach_ask_allowed` ne connaît pas de coût par outil ; des outils à plusieurs
+// cafés demanderaient une migration. Les `mots` de chaque outil ne s'affichent
+// plus (Lucas : « retire le sous-texte gris ») : ils restent la description
+// lue par les lecteurs d'écran.
+//
 // Logique PURE et testée (catalogue-outils.test.ts).
 // -----------------------------------------------------------------------------
 
+import { COUT_QUESTION, motCafes } from './credits'
 import type { ModeCle } from './outils'
 
 export type FamilleOutil = 'comprendre' | 'reviser' | 'entrainer' | 'corriger'
@@ -31,7 +41,7 @@ export type CibleOutil = { type: 'mode'; mode: ModeCle } | { type: 'page'; href:
 export type Outil = {
   id: string
   label: string
-  /** Quelques mots sous le nom, dans le bloc carré. */
+  /** Quelques mots qui disent ce qu'on obtient — lus par les lecteurs d'écran, plus affichés. */
   mots: string
   famille: FamilleOutil
   cible: CibleOutil
@@ -84,4 +94,17 @@ export const OUTILS: Outil[] = [
 
 export function outilsDe(famille: FamilleOutil): Outil[] {
   return OUTILS.filter((o) => o.famille === famille)
+}
+
+/** Ce qu'un outil coûte : des cafés (un mode du champ) ou rien (une page). */
+export type CoutOutil = { type: 'cafes'; cafes: number } | { type: 'offert' }
+
+export function coutOutil(outil: Pick<Outil, 'cible'>): CoutOutil {
+  return outil.cible.type === 'page' ? { type: 'offert' } : { type: 'cafes', cafes: COUT_QUESTION }
+}
+
+/** « 1 café » ou « Offert » — ce que lit un lecteur d'écran au bas du bloc. */
+export function libelleCoutOutil(outil: Pick<Outil, 'cible'>): string {
+  const cout = coutOutil(outil)
+  return cout.type === 'offert' ? 'Offert' : motCafes(cout.cafes)
 }

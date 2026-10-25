@@ -1,0 +1,52 @@
+/* ==========================================================================
+   LES BLOCS D'OUTILS DE MARCEL (PanneauOutils.tsx), 25/10/2026 — Lucas :
+   « améliore les blocs (la bordure blanche est trop simple) ». Une PLAQUE
+   crème à bord lavande : un dégradé doux (le haut tire vers le mur crème, le
+   bas vers le blanc de la carte), une ombre portée NETTE de 3 px en lavande
+   — la plaque est posée, comme un objet —, et le dessin qui déborde du haut
+   comme un objet posé dessus. Tout en tokens du design system.
+   ========================================================================== */
+
+.bloc {
+  --liseret: var(--carte-liseret);
+  --socle: color-mix(in oklch, var(--primary), white 62%);
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 18px;
+  border: 1.5px solid var(--liseret);
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--card), var(--background) 38%) 0%,
+    var(--card) 58%
+  );
+  box-shadow:
+    0 3px 0 var(--socle),
+    inset 0 1px 0 white;
+  transition:
+    transform 120ms ease-out,
+    box-shadow 120ms ease-out;
+}
+.bloc:active {
+  transform: scale(0.97) translateY(2px);
+  box-shadow:
+    0 1px 0 var(--socle),
+    inset 0 1px 0 white;
+}
+.bloc:focus-visible {
+  outline: 3px solid var(--highlight);
+  outline-offset: 2px;
+}
+
+/* Le gratuit : la plaque reste, un peu éteinte ; la couronne dit le reste. */
+.ferme {
+  --socle: color-mix(in oklch, var(--primary), white 78%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bloc {
+    transition: none;
+  }
+}

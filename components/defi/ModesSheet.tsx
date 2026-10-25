@@ -162,6 +162,7 @@ export default function ModesSheet({
         aria-haspopup="dialog"
         aria-label="Modes de jeu — jeux par matière, Blitz, Chrono, Survie et boss"
         title="Modes de jeu — Blitz, Chrono, Survie, Boss"
+        data-tour="arene-modes"
         className={`arena-plate arena-plate--clair arena-plate--press ${FLANK_CLASS} flex cursor-pointer flex-col items-center justify-center focus-visible:ring-4 focus-visible:ring-white/60 focus-visible:outline-none`}
         style={{ background: plaqueBlanche() }}
       >

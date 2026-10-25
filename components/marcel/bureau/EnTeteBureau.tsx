@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import BoutonHistorique from '../BoutonHistorique'
+import CompteurCafes from '../CompteurCafes'
 import PoseMarcel, { type Pose } from '../PoseMarcel'
 import decorJour from '@/public/images/marcel/decor/jour.webp'
 import decorSoir from '@/public/images/marcel/decor/soir.webp'
@@ -29,6 +30,10 @@ const DECORS = { jour: decorJour, soir: decorSoir } as const
  * l'autre (la largeur de l'écran, quelle que soit la marge de la page),
  * passe sous l'encoche, et gagne la hauteur libérée — Marcel y grandit.
  *
+ * LE COMPTEUR DE CAFÉS (25/10/2026) : dans le coin droit, une pilule blanche
+ * avec la dosette qui bascule et le nombre de cafés restants (du mois et de
+ * recharge) — absente pour le gratuit, qui n'a pas de café.
+ *
  * Le titre de la page reste « Coach Marcel », lu par les lecteurs d'écran.
  */
 export default function EnTeteBureau({
@@ -36,12 +41,15 @@ export default function EnTeteBureau({
   decor,
   pose = 'salut',
   avecHistorique = true,
+  cafes = null,
 }: {
   bulle: string
   decor: Decor
   pose?: Pose
   /** L'historique des conversations (absent de l'aperçu sans compte). */
   avecHistorique?: boolean
+  /** Les cafés restants de l'abonné (mois + recharge) ; `null` : gratuit, rien. */
+  cafes?: number | null
 }) {
   return (
     // Repliée (components/marcel/replie : un panneau qu'on fait défiler, une
@@ -80,7 +88,10 @@ export default function EnTeteBureau({
         >
           <ArrowLeft aria-hidden="true" className="size-5" strokeWidth={2.6} />
         </Link>
-        {avecHistorique ? <BoutonHistorique /> : null}
+        <div className="flex items-center gap-2">
+          {cafes !== null ? <CompteurCafes cafes={cafes} taille="pilule" /> : null}
+          {avecHistorique ? <BoutonHistorique /> : null}
+        </div>
       </div>
 
       <PoseMarcel

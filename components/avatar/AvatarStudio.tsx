@@ -2,9 +2,10 @@
 
 import { useState, useTransition } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { ArrowLeft, Check, Lock, Pencil, Sparkles } from 'lucide-react'
-import { applyFreeAvatarField, type AvatarConfig, type FreeAvatarFieldKey } from '@/lib/avatar'
+import { applyFreeAvatarField, type AvatarConfig } from '@/lib/avatar'
+import { isPortraitKey, type PortraitKey } from '@/lib/portraits'
 import type { BadgeState } from '@/lib/badges'
 import { MAX_EQUIPPED } from '@/lib/badges'
 import {
@@ -20,7 +21,7 @@ import {
 import { choisirPersonnageAction, setAvatarFieldAction } from '@/app/moi/avatar/actions'
 import { setEquippedBadges, updateGamertag } from '@/app/defi/profile-actions'
 import AvatarRender from '@/components/avatar/AvatarRender'
-import ItemGrid from '@/components/avatar/ItemGrid'
+import ChoixPortrait from '@/components/avatar/ChoixPortrait'
 import AtelierAvatarIa from '@/components/moi/AtelierAvatarIa'
 import BadgeIcone from '@/components/BadgeIcone'
 import AvatarRang from '@/components/AvatarRang'
@@ -35,7 +36,10 @@ import { cn } from '@/lib/utils'
 // LE VESTIAIRE (revu le 05/10/2026). En haut, la photo dans son cadre gagné
 // (lib/moi/cadre-profil), le nom et le pseudo qui se change d'un toucher. En
 // bas, trois onglets :
-//   · PORTRAIT — les treize avatars libres ;
+//   · PORTRAIT — les treize avatars libres, dans le gabarit partagé
+//     `ChoixPortrait` (25/10/2026 : le personnage en pied en grand aperçu,
+//     Garçons / Filles, la grille) ; on choisit, puis « Confirmer » enregistre
+//     — un seul geste, le brouillon ne touche pas au compte avant ;
 //   · BADGES — le milieu et la fin du jeu (Lucas) : tous les badges, gagnés en
 //     couleurs, à gagner en OMBRE ; un badge gagné se met en avant (trois au
 //     plus), un badge en ombre dit comment on l'obtient ;
@@ -85,23 +89,45 @@ export default function AvatarStudio({
   const [pseudo, setPseudo] = useState(gamertag ?? '')
   const [editionPseudo, setEditionPseudo] = useState(false)
   const [atelier, setAtelier] = useState(false)
+  // Le portrait en BROUILLON de l'onglet Portrait : choisi dans la grille, il
+  // n'est écrit qu'au « Confirmer ». Part du portrait porté, s'il en est un.
+  const [brouillon, setBrouillon] = useState<PortraitKey | null>(() =>
+    isPortraitKey(initialConfig.portrait) ? initialConfig.portrait : null,
+  )
+  const [enregistrement, setEnregistrement] = useState(false)
   const [, startTransition] = useTransition()
+  const router = useRouter()
   const tabs = useTablist(ONGLETS.length, (i) => setOnglet(ONGLETS[i].id))
   const persoActuel = personnageDuPortrait(config.portrait)
 
-  const pickFree = (field: FreeAvatarFieldKey, value: string) => {
-    if (config[field] === value) return
-    sfx.tap()
+  // Retour : d'où l'on vient (le carnet de Moi, ou la page du joueur depuis le
+  // 25/10/2026) ; sans historique (adresse tapée), le carnet.
+  const retour = () => {
+    sfx.back()
+    if (window.history.length > 1) router.back()
+    else router.push('/moi')
+  }
+
+  const confirmerPortrait = () => {
+    if (!brouillon) return
+    if (config.portrait === brouillon) {
+      toast('C’est déjà ton portrait.')
+      return
+    }
     const prev = config
-    const next = applyFreeAvatarField(prev, field, value)
+    const next = applyFreeAvatarField(prev, 'portrait', brouillon)
     if (next === prev) return
     setConfig(next)
     setPopKey((k) => k + 1)
+    setEnregistrement(true)
     startTransition(async () => {
-      const { ok } = await setAvatarFieldAction(field, value)
-      if (!ok) {
+      const { ok } = await setAvatarFieldAction('portrait', brouillon)
+      setEnregistrement(false)
+      if (ok) {
+        toast('Portrait enregistré.')
+      } else {
         setConfig(prev)
-        toast('Impossible d’enregistrer ce réglage pour le moment.', 'error')
+        toast('Impossible d’enregistrer ce portrait pour le moment.', 'error')
       }
     })
   }
@@ -164,13 +190,14 @@ export default function AvatarStudio({
       {/* --- En haut : la photo dans son cadre, le nom, le pseudo ---------- */}
       <div className="relative flex shrink-0 flex-col items-center bg-gradient-to-b from-[color-mix(in_oklch,var(--primary),black_35%)] to-primary px-4 pt-3 pb-4 text-white">
         <div className="flex w-full items-center">
-          <Link
-            href="/moi"
-            aria-label="Retour à Moi"
+          <button
+            type="button"
+            onClick={retour}
+            aria-label="Retour"
             className="flex size-11 items-center justify-center rounded-full bg-white/90 text-foreground shadow-md transition active:scale-90"
           >
             <ArrowLeft className="size-5" strokeWidth={2.6} aria-hidden="true" />
-          </Link>
+          </button>
         </div>
         <div key={popKey} className="avatar-pop -mt-6 w-44">
           {/* Le même anneau de rang que le bandeau du haut et l'onglet Moi (16/10/2026). */}
@@ -281,14 +308,14 @@ export default function AvatarStudio({
                 </span>
               </span>
             </button>
-            <ItemGrid
-              categories={[]}
-              freeFields={['portrait']}
-              catalog={[]}
-              config={persoActuel ? { ...config, portrait: '' } : config}
-              ownedIds={new Set()}
-              onTap={() => {}}
-              onPickFree={pickFree}
+            {/* Le gabarit partagé avec l'onboarding : l'aperçu en pied, Garçons /
+                Filles, la grille, « Confirmer » qui enregistre (action serveur
+                setAvatarFieldAction, validée côté serveur). */}
+            <ChoixPortrait
+              choisi={brouillon}
+              onChoisir={setBrouillon}
+              onConfirmer={confirmerPortrait}
+              enCours={enregistrement}
             />
             </>
           ) : onglet === 'badges' ? (

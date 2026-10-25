@@ -2,17 +2,19 @@ import { describe, expect, test } from 'vitest'
 import {
   TOUR_STEPS,
   bubblePosition,
+  etapesDeDecouverte,
   nextAvailableStep,
   spotlightRect,
   EDGE_MARGIN,
 } from './tour'
+import { decouverteParCle } from './decouverte/catalogue'
 
 const viewport = { width: 400, height: 800 }
 
-describe('TOUR_STEPS', () => {
-  test('contient 7 étapes aux ids uniques', () => {
-    expect(TOUR_STEPS).toHaveLength(7)
-    expect(new Set(TOUR_STEPS.map((s) => s.id)).size).toBe(7)
+describe('TOUR_STEPS (premiers pas)', () => {
+  test('contient 5 étapes aux ids uniques', () => {
+    expect(TOUR_STEPS).toHaveLength(5)
+    expect(new Set(TOUR_STEPS.map((s) => s.id)).size).toBe(5)
   })
 
   test('commence par une étape de bienvenue sans cible', () => {
@@ -20,11 +22,21 @@ describe('TOUR_STEPS', () => {
     expect(TOUR_STEPS.slice(1).every((s) => s.target !== null)).toBe(true)
   })
 
-  test('couvre les 5 onglets de la bottom nav', () => {
+  test('ne montre que ce qu’on a le premier jour : Réviser, la série, les quêtes, Marcel', () => {
+    expect(TOUR_STEPS.map((s) => s.target)).toEqual([null, 'tab-reviser', 'serie', 'quetes', 'marcel-fab'])
+  })
+
+  test('ne cite plus les onglets que la découverte progressive ferme', () => {
     const targets = TOUR_STEPS.map((s) => s.target)
-    for (const tab of ['reviser', 'defi', 'amis', 'moi', 'tresor']) {
-      expect(targets).toContain(`tab-${tab}`)
+    for (const tab of ['defi', 'amis', 'tresor']) {
+      expect(targets).not.toContain(`tab-${tab}`)
     }
+  })
+
+  test('reprend mot pour mot les bulles de la découverte « reviser »', () => {
+    const reviser = decouverteParCle('reviser')!
+    const milieu = TOUR_STEPS.slice(1, 1 + reviser.etapes.length)
+    expect(milieu.map((s) => s.text)).toEqual(reviser.etapes.map((e) => e.texte))
   })
 })
 
@@ -88,9 +100,9 @@ describe('nextAvailableStep', () => {
     expect(nextAvailableStep(TOUR_STEPS, hasAll, 2)).toBe(2)
   })
 
-  test("saute une étape dont la cible est absente (carnet hors de l'écran)", () => {
-    const sansCarnet = (t: string) => t !== 'carnet-switch'
-    expect(nextAvailableStep(TOUR_STEPS, sansCarnet, 2)).toBe(3)
+  test('saute une étape dont la cible est absente (la série hors de l’écran)', () => {
+    const sansSerie = (t: string) => t !== 'serie'
+    expect(nextAvailableStep(TOUR_STEPS, sansSerie, 2)).toBe(3)
   })
 
   test('renvoie null après la dernière étape', () => {
@@ -98,7 +110,23 @@ describe('nextAvailableStep', () => {
   })
 
   test('remonte en arrière avec direction -1', () => {
-    const sansCarnet = (t: string) => t !== 'carnet-switch'
-    expect(nextAvailableStep(TOUR_STEPS, sansCarnet, 2, -1)).toBe(1)
+    const sansSerie = (t: string) => t !== 'serie'
+    expect(nextAvailableStep(TOUR_STEPS, sansSerie, 2, -1)).toBe(1)
+  })
+})
+
+describe('etapesDeDecouverte', () => {
+  test('ouvre par une bulle centrée « Nouveau : … » puis suit le catalogue', () => {
+    const defi = decouverteParCle('defi')!
+    const etapes = etapesDeDecouverte(defi)
+    expect(etapes[0]).toMatchObject({ target: null, title: 'Nouveau : L’arène', text: defi.phrase })
+    expect(etapes.slice(1).map((e) => e.target)).toEqual(['tab-defi', 'arene-duel', 'arene-modes'])
+    expect(new Set(etapes.map((e) => e.id)).size).toBe(etapes.length)
+  })
+
+  test('la bulle d’annonce reste quand aucune ancre n’est à l’écran', () => {
+    const etapes = etapesDeDecouverte(decouverteParCle('gardiens')!)
+    expect(nextAvailableStep(etapes, () => false, 0)).toBe(0)
+    expect(nextAvailableStep(etapes, () => false, 1)).toBeNull()
   })
 })

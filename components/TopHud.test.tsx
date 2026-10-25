@@ -110,7 +110,7 @@ describe('le compteur qui encaisse', () => {
 })
 
 describe('la gélule : l’avatar dans l’anneau de son rang, la barre de niveau', () => {
-  it('pose l’avatar dans l’anneau de son rang, la division en chiffres romains, et ouvre le vestiaire', () => {
+  it('pose l’avatar dans l’anneau de son rang, la division en chiffres romains, et ouvre la page du joueur', () => {
     const { container } = render(
       <TopHud
         {...PROPS}
@@ -121,8 +121,10 @@ describe('la gélule : l’avatar dans l’anneau de son rang, la barre de nivea
     expect(container.querySelector('img[src="/images/profil/renard.webp"]')).not.toBeNull()
     expect(container.querySelector('img[src="/images/rangs/cadres/argent-2.webp"]')).not.toBeNull()
     expect(screen.getByText('II')).toBeInTheDocument()
-    const lien = screen.getByRole('link', { name: /Rang Argent II — personnaliser mon avatar/ })
-    expect(lien).toHaveAttribute('href', '/moi/avatar')
+    // Depuis le 25/10/2026, l'avatar ouvre la page du joueur (`/joueur`), qui
+    // mène elle-même au vestiaire.
+    const lien = screen.getByRole('link', { name: /Rang Argent II — ma page de joueur/ })
+    expect(lien).toHaveAttribute('href', '/joueur')
     // Le niveau n'est plus autour de l'avatar : il est écrit à côté de la barre.
     expect(screen.getByText('Niveau 7')).toBeInTheDocument()
   })
@@ -130,7 +132,7 @@ describe('la gélule : l’avatar dans l’anneau de son rang, la barre de nivea
   it('sans rang connu, garde un anneau blanc et le niveau dans le libellé', () => {
     const { container } = render(<TopHud {...PROPS} />)
     expect(container.querySelector('img[src^="/images/rangs/cadres/"]')).toBeNull()
-    expect(screen.getByRole('link', { name: /Niveau 7 — personnaliser mon avatar/ })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Niveau 7 — ma page de joueur/ })).toBeInTheDocument()
   })
 
   it('écrit l’XP du niveau DANS la barre : « 340 / 700 XP »', () => {

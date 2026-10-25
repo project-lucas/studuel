@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState, useSyncExternalStore, useTransition } from 'react'
+import { useEffect, useRef, useSyncExternalStore } from 'react'
 import { createPortal } from 'react-dom'
 import Image from 'next/image'
 import coffrePalier from '@/public/images/niveau/coffre-palier-ferme.webp'
@@ -8,27 +8,36 @@ import ConfettiRain from '@/components/ConfettiRain'
 import { Button } from '@/components/ui/button'
 import XpIcon from '@/components/ui/XpIcon'
 import { CristalIcon } from '@/components/ui/MonnaieIcon'
-import { origineUnique, useRecompenses } from '@/components/recompenses/RecompensesProvider'
-import { ouvrirPalierNiveau } from '@/app/niveau-actions'
+import RubanOr from '@/components/recompenses/RubanOr'
+import { CoffresPalier } from '@/components/niveau/CoffrePalier'
+import Debloque from '@/components/niveau/Debloque'
+import type { OuverturePalier } from '@/app/niveau-actions'
+import { decouvertesAuNiveau, type Decouverte } from '@/lib/decouverte/catalogue'
 import { estPalier, gemmesPalier, niveauxAFeter, paliersAOuvrir, prochainPalier } from '@/lib/niveaux'
-import type { Gain } from '@/lib/gains'
 import { buzz, sfx } from '@/lib/sounds'
 import s from './FeteNiveau.module.css'
 
+export { CoffresPalier } from '@/components/niveau/CoffrePalier'
+
 // -----------------------------------------------------------------------------
-// LA FÊTE DE NIVEAU (03/10/2026 ; refaite le 04/10/2026, Lucas : « tout le
-// système d'XP, de gain de niveau, d'animation de gain de niveau, tout doit
-// être impeccable »).
+// LA FÊTE DE NIVEAU (03/10/2026 ; refaite le 04/10/2026 ; REFAITE FAÇON « LEVEL
+// UP » LE 25/10/2026, cadrage « le jeu vivant » § B : le niveau est un
+// ÉVÉNEMENT, comme dans le jeu que Lucas a montré).
 //
 // Le navigateur retient le dernier niveau qu'il a FÊTÉ (localStorage) : quand
-// le bandeau en affiche un plus haut — c'est-à-dire juste après que les éclairs
-// d'une fin de partie y ont atterri —, l'écran entier devient la fête : le
-// grand éclair jaillit sur ses rayons, l'ancien chiffre s'envole, le nouveau
-// tombe à sa place, et dessous ce qui vient — le coffre de palier à ouvrir
-// tous les 5 niveaux, ou la distance au prochain. Depuis la 557, un niveau ne
-// verse plus de gemme : la fête EST la récompense, le coffre de palier est la
-// rareté. La première fois, rien : on retient le niveau sans fêter ce qui a
-// été gagné avant cette version.
+// le bandeau en affiche un plus haut — juste après que les éclairs d'une fin de
+// partie y ont atterri —, l'écran entier devient la fête :
+//   · le ruban d'or « Niveau 7 ! » se pose et ondule ;
+//   · le BADGE du niveau arrive en tournant et en grossissant, sur ses rayons,
+//     une onde, une couronne d'étincelles ;
+//   · « avant → après » : Niv. 6, la barre qui se remplit, Niv. 7 ;
+//   · la section « DÉBLOQUÉ » : ce que le niveau ouvre, lu dans le catalogue
+//     des découvertes, chaque nouveauté avec son bouton « Découvrir » ;
+//   · le coffre de palier à ouvrir (tous les 5 niveaux : la pluie de gemmes,
+//     puis le ruban de récompenses), ou la distance au prochain.
+// Depuis la 557, un niveau ne verse plus de gemme : la fête EST la récompense,
+// le coffre de palier est la rareté. La première fois, rien : on retient le
+// niveau sans fêter ce qui a été gagné avant cette version.
 // -----------------------------------------------------------------------------
 
 const CLE_VU = 'studuel-niveau-fete'
@@ -101,6 +110,13 @@ export default function FeteNiveau({
   )
 }
 
+/** Tout ce que les niveaux franchis (de `depuis` exclu à `level` inclus) ouvrent. */
+export function nouveautesEntre(depuis: number, level: number): Decouverte[] {
+  const out: Decouverte[] = []
+  for (let n = Math.max(1, Math.floor(depuis) + 1); n <= level; n += 1) out.push(...decouvertesAuNiveau(n))
+  return out
+}
+
 export function FeteNiveauScene({
   level,
   depuis,
@@ -108,6 +124,7 @@ export function FeteNiveauScene({
   paliersOuverts,
   xp,
   onFermer,
+  ouvrirPalier,
 }: {
   level: number
   depuis: number
@@ -115,18 +132,20 @@ export function FeteNiveauScene({
   paliersOuverts: number[]
   xp: XpDuNiveau | null
   onFermer: () => void
+  /** L'ouverture d'un coffre de palier — l'aperçu `/dev/niveau` en passe une fausse. */
+  ouvrirPalier?: (palier: number) => Promise<OuverturePalier>
 }) {
   const bouton = useRef<HTMLButtonElement>(null)
   const sauts = level - depuis
   const auNavigateur = useSyncExternalStore(abonnerRien, () => true, () => false)
 
-  // Le son et la vibration partent avec l'éclair, une seule fois ; le bouton
+  // Le son et la vibration partent avec le badge, une seule fois ; le bouton
   // prend le focus pour qu'Entrée referme la fête.
   useEffect(() => {
     const t = setTimeout(() => {
       sfx.levelUp()
       buzz(true, 5)
-    }, 260)
+    }, 300)
     bouton.current?.focus({ preventScroll: true })
     return () => clearTimeout(t)
   }, [])
@@ -151,14 +170,22 @@ export function FeteNiveauScene({
       ? Math.min(1, Math.max(0, (xp.actuel - xp.plancher) / (xp.prochain - xp.plancher)))
       : 0
   const reste = xp && xp.prochain !== null ? Math.max(0, xp.prochain - xp.actuel) : null
+  const nouveautes = nouveautesEntre(depuis, level)
 
   return createPortal(
     <div className={s.voile} role="dialog" aria-modal="true" aria-label={`Niveau ${level} atteint`}>
       <div className={s.confettis}>
         <ConfettiRain />
       </div>
+      <div className={s.lumiere} aria-hidden="true" />
 
       <div className={s.scene}>
+        <div className={s.ruban}>
+          <RubanOr ondule>{sauts > 1 ? `+${sauts} niveaux !` : `Niveau ${level} !`}</RubanOr>
+        </div>
+        <h2 className="sr-only">Niveau {level} atteint</h2>
+
+        {/* LE BADGE : il arrive en tournant et en grossissant, sur ses rayons. */}
         <div className={s.embleme} aria-hidden="true">
           <div className={s.halo} />
           <div className={s.rayonsCadre}>
@@ -171,21 +198,29 @@ export function FeteNiveauScene({
               <span className={s.etincelle} data-loin={i % 2} />
             </div>
           ))}
-          <XpIcon eclats className={`${s.eclair} size-34`} />
+          <div className={s.medaille}>
+            <span className={s.chiffre}>{level}</span>
+            <XpIcon className={s.fermoir} />
+          </div>
         </div>
 
-        <p className={s.surtitre}>{sauts > 1 ? `+${sauts} niveaux` : 'Nouveau niveau'}</p>
-        <p className={s.chiffres} aria-hidden="true">
-          <span className={s.ancien}>{depuis}</span>
-          <span className={s.nouveau}>{level}</span>
+        {/* AVANT → APRÈS : l'ancien niveau, la barre qui se remplit, le nouveau. */}
+        <p className={s.passage} aria-label={`Du niveau ${depuis} au niveau ${level}`}>
+          <span className={s.avant}>Niv. {depuis}</span>
+          <span className={s.piste} aria-hidden="true">
+            <i />
+          </span>
+          <span className={s.apres}>Niv. {level}</span>
         </p>
-        <h2 className="sr-only">Niveau {level} !</h2>
+
         {levelTitle ? <p className={s.titre}>{levelTitle}</p> : null}
         <p className={s.phrase}>Tout ce que tu as travaillé t’a fait monter. Continue comme ça !</p>
 
+        <Debloque decouvertes={nouveautes} onDecouvrir={onFermer} />
+
         <div className={s.suite}>
           {palierAtteint ? (
-            <CoffresPalier niveau={level} ouverts={paliersOuverts} sombre />
+            <CoffresPalier niveau={level} ouverts={paliersOuverts} sombre ouvrir={ouvrirPalier} />
           ) : (
             <div className={s.prochain}>
               <Image src={coffrePalier} alt="" aria-hidden="true" width={256} height={256} loading="eager" unoptimized className="size-12 shrink-0 object-contain opacity-90" />
@@ -221,77 +256,5 @@ export function FeteNiveauScene({
       </div>
     </div>,
     document.body,
-  )
-}
-
-/**
- * Les coffres de palier atteints et pas encore ouverts — un bouton par coffre.
- * Partagé par la fête de niveau (`sombre`, sur son voile violet) et la bulle
- * du niveau du bandeau.
- */
-export function CoffresPalier({
-  niveau,
-  ouverts,
-  sombre = false,
-}: {
-  niveau: number
-  ouverts: number[]
-  sombre?: boolean
-}) {
-  const [ouvertsIci, setOuvertsIci] = useState<number[]>([])
-  const [message, setMessage] = useState<string | null>(null)
-  const [pending, start] = useTransition()
-  const { celebrer } = useRecompenses()
-  const bouton = useRef<HTMLButtonElement>(null)
-  const restants = paliersAOuvrir(niveau, [...ouverts, ...ouvertsIci])
-  if (restants.length === 0) return message ? <p className="text-xs font-bold text-muted-foreground">{message}</p> : null
-  const palier = restants[0]
-
-  const ouvrir = () => {
-    if (pending) return
-    sfx.tap()
-    start(async () => {
-      const r = await ouvrirPalierNiveau(palier)
-      if (r.ok) {
-        sfx.coin()
-        setOuvertsIci((v) => [...v, palier])
-        const gains: Gain[] = [{ unite: 'gemme', montant: r.gemmes }]
-        celebrer(gains, origineUnique(bouton.current, gains))
-        setMessage(null)
-      } else if (r.raison === 'deja_ouvert') {
-        setOuvertsIci((v) => [...v, palier])
-      } else {
-        setMessage(r.raison === 'bientot' ? 'Les coffres de palier arrivent très bientôt.' : 'Le coffre ne s’est pas ouvert. Réessaie.')
-      }
-    })
-  }
-
-  return (
-    <div
-      className={
-        sombre
-          ? 'flex w-full flex-col items-center gap-2 rounded-2xl bg-white/10 p-3 ring-1 ring-white/15'
-          : 'flex w-full flex-col items-center gap-2 rounded-2xl bg-secondary/60 p-3'
-      }
-    >
-      {/* Le coffre de palier dessiné (03/10/2026) : violet royal, étoile d'or. */}
-      <Image
-        src={coffrePalier}
-        alt=""
-        aria-hidden="true"
-        width={256}
-        height={256}
-        loading="eager"
-        unoptimized
-        className={pending ? 'size-20 animate-pulse object-contain' : 'size-20 object-contain'}
-      />
-      <p className={sombre ? 'font-heading text-sm font-extrabold text-white' : 'font-heading text-sm font-extrabold text-foreground'}>
-        Coffre du niveau {palier}
-      </p>
-      <Button ref={bouton} type="button" onClick={ouvrir} disabled={pending} className="gap-1.5">
-        Ouvrir · <CristalIcon className="size-4" />+{gemmesPalier(palier)}
-      </Button>
-      {message ? <p className="text-xs font-bold text-muted-foreground">{message}</p> : null}
-    </div>
   )
 }

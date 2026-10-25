@@ -1,0 +1,361 @@
+/* L'ÉCRIN DE DÉBLOCAGE D'UNE FICHE (EcrinFiche.tsx, ConfirmationFiche.tsx).
+   Un plateau violet profond à bague d'or, la fiche roulée au centre sur une
+   lumière qui tourne, le bouton d'or en bas. Tokens seulement ; les
+   mouvements n'animent que `transform` et `opacity`, en valeurs littérales. */
+
+.ecrin {
+  --prune: color-mix(in oklch, var(--primary), black 45%);
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 21rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 1.1rem 1.1rem 1.2rem;
+  overflow: hidden;
+  border-radius: var(--carte-rayon);
+  text-align: center;
+  color: var(--ink-on-dark);
+  background:
+    radial-gradient(90% 60% at 50% 32%, color-mix(in oklch, var(--primary) 70%, transparent), transparent 70%),
+    var(--carte-sombre-fond);
+  border: 3px solid var(--highlight);
+  box-shadow:
+    0 0 0 3px var(--prune),
+    inset 0 2px 0 rgb(255 255 255 / 0.18),
+    0 10px 0 var(--prune),
+    0 26px 50px -20px rgb(0 0 0 / 0.6);
+  animation: ecrinEntre 500ms cubic-bezier(0.2, 1.2, 0.4, 1) both;
+}
+
+/* La lumière qui tourne derrière l'objet : un cône d'or, masqué en disque. */
+.lumiere {
+  position: absolute;
+  left: 50%;
+  top: 36%;
+  width: 34rem;
+  height: 34rem;
+  border-radius: 50%;
+  pointer-events: none;
+  background: repeating-conic-gradient(
+    from 0deg,
+    color-mix(in oklch, var(--highlight) 30%, transparent) 0deg 10deg,
+    transparent 10deg 26deg
+  );
+  mask-image: radial-gradient(circle, black 0%, transparent 38%);
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: tourne 28s linear infinite;
+  will-change: transform;
+}
+
+.surtitre {
+  position: relative;
+  padding: 0.2rem 0.8rem;
+  border-radius: 999px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--prune);
+  background: linear-gradient(180deg, color-mix(in oklch, var(--highlight), white 30%), var(--highlight));
+  box-shadow: 0 2px 0 color-mix(in oklch, var(--highlight), black 30%);
+}
+.rubanOuverte {
+  position: relative;
+  z-index: 1;
+}
+
+/* ------------------------------------------------------------- l'objet */
+
+.scene {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 11rem;
+  height: 9.6rem;
+  margin-top: 0.2rem;
+}
+.scene > * {
+  grid-area: 1 / 1;
+}
+.ombre {
+  align-self: end;
+  width: 7rem;
+  height: 1.1rem;
+  margin-bottom: 0.2rem;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.2) 60%, transparent);
+}
+.objet {
+  position: relative;
+  display: block;
+  width: 8.4rem;
+  height: 8.4rem;
+  animation: flotte 3.2s ease-in-out infinite;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 14px rgb(0 0 0 / 0.4));
+}
+/* Le sceau du repli (tant que le rouleau n'est pas dessiné) : un disque
+   violet à bague d'or, une étoile dedans, posé sur un coin de la fiche. */
+.sceau {
+  position: absolute;
+  right: 0.2rem;
+  bottom: 0.9rem;
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  color: var(--highlight);
+  background: radial-gradient(circle at 40% 35%, color-mix(in oklch, var(--primary), white 25%), var(--primary) 60%, var(--prune));
+  border: 3px solid var(--highlight);
+  box-shadow:
+    0 0 0 2px var(--prune),
+    0 4px 8px rgb(0 0 0 / 0.4);
+}
+
+/* L'OUVERTURE : le rouleau se replie et part, la fiche déroulée arrive en
+   grandissant ; deux ondes, les éclats griffonnés de part et d'autre. */
+.objetPart {
+  animation: objetPart 360ms cubic-bezier(0.5, 0, 0.8, 0.4) both;
+}
+/* La fiche déroulée arrive PENDANT que la roulée s'efface (chevauchement dès
+   200 ms) : la scène n'est jamais vide, l'une passe le relais à l'autre. */
+.objetArrive {
+  animation:
+    objetArrive 720ms 200ms both,
+    flotte 3.2s 920ms ease-in-out infinite;
+}
+.onde {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 3px solid color-mix(in oklch, var(--highlight) 85%, white);
+  opacity: 0;
+  animation: onde 900ms 380ms ease-out both;
+}
+.onde2 {
+  animation-delay: 560ms;
+}
+.eclats {
+  width: 3rem;
+  height: 3rem;
+  color: var(--highlight);
+  opacity: 0;
+  animation: eclat 700ms 520ms ease-out both;
+}
+.eclatsGauche {
+  justify-self: start;
+  align-self: start;
+  margin: 0.6rem 0 0 -0.2rem;
+}
+.eclatsDroite {
+  justify-self: end;
+  align-self: start;
+  margin: 0.6rem -0.2rem 0 0;
+}
+
+/* -------------------------------------------------------------- les textes */
+
+.titre {
+  position: relative;
+  margin-top: 0.2rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 1.15;
+  text-wrap: balance;
+  color: white;
+  text-shadow: 0 2px 0 var(--prune);
+}
+.phrase {
+  position: relative;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: color-mix(in oklch, var(--ink-on-dark) 80%, transparent);
+}
+
+/* Le bouton d'or : la recette `.olympe-gold` de l'app (celle du « Encaisser »
+   du coffre d'équipe), en pilule large, le prix en pastille blanche. */
+.boutonOr {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  min-height: 3.25rem;
+  margin-top: 0.5rem;
+  padding: 0 1.2rem;
+  border-radius: 999px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+.boutonOr:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+.boutonOr:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 2px;
+}
+.prix {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.15rem 0.45rem 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.78);
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+.solde {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.1rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: color-mix(in oklch, var(--ink-on-dark) 85%, transparent);
+  text-wrap: balance;
+}
+.lienPlus {
+  position: relative;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: color-mix(in oklch, var(--ink-on-dark) 65%, transparent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.lienPlus:hover {
+  color: var(--ink-on-dark);
+}
+
+/* ---------------------------------------------------------- confirmation */
+
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 1.25rem 1.25rem;
+  text-align: center;
+  color: var(--foreground);
+}
+.confirmationObjet {
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  animation: flotte 3.2s ease-in-out infinite;
+}
+.confirmationTitre {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.1rem;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.confirmationPhrase {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
+  text-wrap: balance;
+}
+.compte {
+  display: flex;
+  width: 100%;
+  margin-top: 0.2rem;
+  border-radius: var(--carte-rayon);
+  background: var(--card);
+  box-shadow: var(--carte-ombre);
+}
+.compte > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  padding: 0.6rem 0.5rem;
+}
+.compte > div + div {
+  border-left: 1px solid var(--border);
+}
+.compte dt {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+.compte dd {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.2rem;
+  font-variant-numeric: tabular-nums;
+}
+.confirmation .boutonOr {
+  margin-top: 0.2rem;
+}
+
+/* ------------------------------------------------------------ images-clés */
+
+@keyframes ecrinEntre {
+  from { opacity: 0; transform: translateY(14px) scale(0.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes tourne {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+@keyframes flotte {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(-2deg); }
+}
+@keyframes objetPart {
+  0% { opacity: 1; transform: scale(1) rotate(0deg); }
+  100% { opacity: 0; transform: scale(0.3) rotate(-14deg); }
+}
+@keyframes objetArrive {
+  0% { opacity: 0; transform: scale(0.3) rotate(10deg); animation-timing-function: ease-out; }
+  30% { opacity: 1; transform: scale(0.78) rotate(5deg); animation-timing-function: cubic-bezier(0.2, 1.4, 0.4, 1); }
+  70% { opacity: 1; transform: scale(1.12) rotate(-2deg); animation-timing-function: ease-in-out; }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+@keyframes onde {
+  0% { opacity: 0.9; transform: scale(0.5); }
+  100% { opacity: 0; transform: scale(2.2); }
+}
+@keyframes eclat {
+  0% { opacity: 0; transform: scale(0.4); }
+  40% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 0; transform: scale(1.3); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ecrin,
+  .ecrin * {
+    animation: none !important;
+  }
+  .lumiere,
+  .onde,
+  .eclats,
+  .objetPart {
+    display: none;
+  }
+  .confirmationObjet {
+    animation: none;
+  }
+}

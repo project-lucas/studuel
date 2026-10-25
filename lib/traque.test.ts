@@ -8,9 +8,13 @@ import {
   chasseOfDay,
   countdownLabel,
   crossedPalier,
+  departLabel,
   emptyGauge,
   featuredCard,
   feedChapters,
+  finDuJourCourant,
+  finDuJourDeTraque,
+  gestesPourTraquer,
   gaugePercent,
   gaugeRatio,
   gaugeStatus,
@@ -630,5 +634,85 @@ describe('chaptersBySubject — le combat porte sur ce qui vient d’être révi
       CHAPITRES,
     )
     expect(out.size).toBe(0)
+  })
+})
+
+// L'AFFICHE DU GARDIEN (25/10/2026, cadrage « Le jeu vivant » § C) : le compte
+// à rebours vise la FIN DU JOUR DE TRAQUE (minuit UTC, la clé du jour de la
+// 576), et trois gestes nominaux, cochés par seuil de points, mènent à la jauge
+// pleine.
+describe("l'affiche — il part à la fin du jour de traque", () => {
+  it('vise le prochain minuit UTC du jour de traque, pas minuit à Paris', () => {
+    expect(finDuJourDeTraque(LUNDI)).toBe(Date.parse('2026-07-28T00:00:00.000Z'))
+    expect(Number.isNaN(finDuJourDeTraque('pas-une-date'))).toBe(true)
+  })
+
+  it('retrouve la même borne depuis un instant du jour', () => {
+    const soir = Date.parse('2026-07-27T21:48:00.000Z')
+    expect(finDuJourCourant(soir)).toBe(finDuJourDeTraque(LUNDI))
+    // À 0 h 30 heure de Paris l'été (22 h 30 UTC), le gardien est encore là 1 h 30.
+    expect(finDuJourCourant(Date.parse('2026-07-27T22:30:00.000Z')) - Date.parse('2026-07-27T22:30:00.000Z')).toBe(
+      90 * 60_000,
+    )
+  })
+
+  it('égrène « Il part dans … » en heures, minutes, puis moins d’une minute', () => {
+    expect(departLabel(6 * 3_600_000 + 12 * 60_000)).toBe('Il part dans 6 h 12')
+    expect(departLabel(42 * 60_000)).toBe('Il part dans 42 min')
+    expect(departLabel(30_000)).toBe("Il part dans moins d'une minute")
+    expect(departLabel(0)).toBe('Il est parti')
+    expect(departLabel(-5)).toBe('Il est parti')
+  })
+})
+
+describe("l'affiche — trois gestes pour débusquer", () => {
+  const gestes = (points: number, subjectSlug = 'maths') => gestesPourTraquer({ points, subjectSlug })
+
+  it('propose cours, quiz, puis les cartes qui manquent, et la somme fait la jauge', () => {
+    const g = gestes(0)
+    expect(g.map((x) => x.libelle)).toEqual(['Lire 1 cours', 'Finir 1 quiz', 'Réviser 15 cartes'])
+    expect(g.map((x) => x.points)).toEqual([15, 25, 60])
+    expect(g.map((x) => x.seuil)).toEqual([15, 40, TRAQUE_SEUIL])
+    expect(g.every((x) => !x.fait)).toBe(true)
+    expect(g.reduce((t, x) => t + x.points, 0)).toBeGreaterThanOrEqual(TRAQUE_SEUIL)
+  })
+
+  it('mène à Réviser filtré sur la matière — le dossier, puis la file « À revoir »', () => {
+    const [lecon, quiz, cartes] = gestes(0, 'physique-chimie')
+    expect(lecon.href).toBe('/reviser/physique-chimie')
+    expect(quiz.href).toBe('/reviser/physique-chimie')
+    expect(cartes.href).toBe('/reviser/revoir?matiere=physique-chimie')
+    // Sans slug (gardien hors sélection), Réviser tout court.
+    expect(gestes(0, '').map((x) => x.href)).toEqual(['/reviser', '/reviser', '/reviser/revoir'])
+  })
+
+  it('coche par seuil de points : l’approximation assumée', () => {
+    expect(gestes(14).map((x) => x.fait)).toEqual([false, false, false])
+    expect(gestes(15).map((x) => x.fait)).toEqual([true, false, false])
+    expect(gestes(40).map((x) => x.fait)).toEqual([true, true, false])
+    expect(gestes(99).map((x) => x.fait)).toEqual([true, true, false])
+    expect(gestes(TRAQUE_SEUIL).map((x) => x.fait)).toEqual([true, true, true])
+  })
+
+  it('le dernier geste compte ce qui manque VRAIMENT, et descend avec les points du jour', () => {
+    expect(gestes(20)[2].libelle).toBe('Réviser 15 cartes') // les deux premiers gestes d'abord
+    expect(gestes(50)[2].libelle).toBe('Réviser 13 cartes') // la moitié (après une fenêtre manquée)
+    expect(gestes(64)[2]).toMatchObject({ libelle: 'Réviser 9 cartes', points: 36 })
+    expect(gestes(97)[2]).toMatchObject({ libelle: 'Réviser 1 carte', points: 4 })
+    // Jauge pleine : le compte nominal, coché — jamais « 0 carte ».
+    expect(gestes(120)[2]).toMatchObject({ libelle: 'Réviser 15 cartes', fait: true })
+  })
+
+  it('tient le même compte que « N cartes de plus » une fois cours et quiz faits', () => {
+    for (const points of [40, 52, 76, 96]) {
+      const attendu = Number(restantLabel(points).match(/\d+/)?.[0])
+      expect(gestes(points)[2].points / TRAQUE_POINTS.carte).toBe(attendu)
+      expect(gestes(points)[2].libelle).toBe(`Réviser ${attendu} carte${attendu > 1 ? 's' : ''}`)
+    }
+  })
+
+  it('ne lit jamais des points absurdes', () => {
+    expect(gestes(-10).map((x) => x.fait)).toEqual([false, false, false])
+    expect(gestes(Number.NaN)[2].libelle).toBe('Réviser 15 cartes')
   })
 })

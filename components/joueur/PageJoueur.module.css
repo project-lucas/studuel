@@ -1,0 +1,333 @@
+/*
+ * LA PAGE DU JOUEUR (/joueur, 25/10/2026, chantier « le jeu vivant ») — Lucas :
+ * « un meilleur rendu lorsque l'on clique sur l'avatar en haut à gauche », avec
+ * l'icône des Paramètres dans cet espace. Plein écran, sur le mur crème de
+ * l'app (`.tab-bg`, posé par le layout : la page ne pose aucun fond) : le
+ * héros en pied au centre, dans un halo violet et devant l'anneau de son rang,
+ * sur son socle d'ombre ; son nom en Baloo 2, « Niveau 7 · Argent II », la
+ * barre d'XP ; quatre chiffres en cartes ; trois portes.
+ *
+ * Tokens seulement. Les trois animations en continu (le héros qui flotte, son
+ * ombre qui respire à l'inverse, le halo) n'écrivent que transform et
+ * opacity, en valeurs littérales, sur 4 s ; sous mouvement réduit, rien ne
+ * bouge. L'entrée des blocs est un petit « monte » de 320 ms.
+ */
+
+.page {
+  position: fixed;
+  inset: 0;
+  /* Au-dessus de la barre d'onglets (z-50) : la page a son propre retour ;
+     sous les feuilles (z-70) et le bandeau en volée (z-80). */
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: calc(env(safe-area-inset-top) + 10px) 16px calc(env(safe-area-inset-bottom) + 18px);
+}
+
+/* ---------- la barre du haut : retour à gauche, Paramètres à droite ---------- */
+.barreHaut {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: space-between;
+}
+.rond {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--card);
+  color: var(--foreground);
+  box-shadow:
+    0 0 0 2px color-mix(in oklch, var(--primary), white 62%),
+    0 3px 0 2px color-mix(in oklch, var(--primary), white 48%);
+  transition: transform 120ms ease-out;
+}
+.rond:active {
+  transform: scale(0.92);
+}
+
+/* ---------- la scène du héros ---------- */
+.scene {
+  position: relative;
+  flex: none;
+  height: clamp(280px, 46dvh, 420px);
+  margin-top: -14px;
+}
+.halo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(84vw, 340px);
+  aspect-ratio: 1;
+  translate: -50% -52%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    color-mix(in oklch, var(--primary), transparent 66%) 0%,
+    color-mix(in oklch, var(--primary), transparent 85%) 42%,
+    transparent 68%
+  );
+  pointer-events: none;
+  animation: joueur-halo 4s ease-in-out infinite;
+}
+/* L'anneau de son rang de ligue, en grand derrière lui (lib/rang-visuel). */
+.anneau {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(68vw, 280px);
+  aspect-ratio: 1;
+  translate: -50% -56%;
+  opacity: 0.9;
+  pointer-events: none;
+}
+.socle {
+  position: absolute;
+  left: 50%;
+  bottom: 4%;
+  width: min(48vw, 200px);
+  height: 28px;
+  translate: -50% 50%;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    color-mix(in oklch, var(--primary), transparent 42%) 0%,
+    color-mix(in oklch, var(--primary), transparent 76%) 52%,
+    transparent 74%
+  );
+  pointer-events: none;
+  animation: joueur-ombre 4s ease-in-out infinite;
+}
+.heros {
+  position: absolute;
+  left: 50%;
+  bottom: 4%;
+  height: 94%;
+  width: auto;
+  max-width: 72%;
+  translate: -50% 0;
+  object-fit: contain;
+  object-position: bottom center;
+  filter: drop-shadow(0 10px 12px color-mix(in oklch, var(--primary), transparent 64%));
+  animation: joueur-flotte 4s ease-in-out infinite;
+}
+/* Le repli : le buste dans l'anneau de son rang (components/AvatarRang). */
+.busteFlotte {
+  position: absolute;
+  left: 50%;
+  /* Posé sur le socle, comme les pieds du héros : l'anneau ne flotte pas
+     loin au-dessus de son ombre. */
+  bottom: 0;
+  width: min(64vw, 250px);
+  /* L'image de l'anneau garde une marge transparente sous sa plaque : on la
+     descend un peu pour que la plaque touche presque l'ombre. */
+  translate: -50% 5%;
+  filter: drop-shadow(0 12px 14px color-mix(in oklch, var(--primary), transparent 60%));
+  animation: joueur-flotte 4s ease-in-out infinite;
+}
+@keyframes joueur-flotte {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+@keyframes joueur-ombre {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.86);
+    opacity: 0.72;
+  }
+}
+@keyframes joueur-halo {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.92;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+/* ---------- l'identité : classe, nom, rang, barre d'XP ---------- */
+.identite {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2px;
+  text-align: center;
+}
+.classe {
+  padding: 3px 10px;
+  border-radius: 99px;
+  background: var(--card);
+  box-shadow: 0 2px 0 color-mix(in oklch, var(--primary), white 62%);
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--primary);
+}
+.nom {
+  margin-top: 6px;
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--foreground);
+  text-wrap: balance;
+}
+.rangLigne {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 1;
+  color: color-mix(in oklch, var(--primary), black 30%);
+}
+.barre {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(100%, 280px);
+  height: 22px;
+  margin-top: 10px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: var(--card);
+  box-shadow: inset 0 0 0 2px color-mix(in oklch, var(--primary), white 66%);
+}
+.remplissage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 99px;
+  background: linear-gradient(color-mix(in oklch, var(--primary), white 30%), var(--primary));
+}
+.chiffres {
+  position: relative;
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  color: var(--card);
+  -webkit-text-stroke: 2.5px color-mix(in oklch, var(--primary), black 30%);
+  paint-order: stroke fill;
+}
+.reste {
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted-foreground);
+}
+
+/* ---------- les quatre chiffres ---------- */
+.rangee {
+  display: grid;
+  flex: none;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 14px;
+}
+.tuile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 9px 4px 8px;
+}
+.tuileIcone {
+  display: grid;
+  place-items: center;
+  height: 32px;
+}
+.tuileValeur {
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--foreground);
+}
+.tuileLibelle {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--muted-foreground);
+}
+.amisIcone {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+/* ---------- les portes ---------- */
+.actions {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+/* ---------- l'entrée des blocs ---------- */
+.monte {
+  animation: joueur-monte 320ms ease-out both;
+}
+.monte:nth-child(3) {
+  animation-delay: 60ms;
+}
+.monte:nth-child(4) {
+  animation-delay: 120ms;
+}
+.monte:nth-child(5) {
+  animation-delay: 180ms;
+}
+@keyframes joueur-monte {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .halo,
+  .socle,
+  .heros,
+  .busteFlotte,
+  .monte {
+    animation: none;
+  }
+}

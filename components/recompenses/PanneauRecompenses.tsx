@@ -50,12 +50,19 @@ export default function PanneauRecompenses({
    * le bandeau ne change pas.
    */
   compact = false,
+  /**
+   * Les pastilles SANS la volée : quand le ruban de récompenses (25/10/2026)
+   * a déjà fait voler ces gains vers le bandeau, le panneau les rappelle sur
+   * l'écran de fin sans les verser une seconde fois au compteur.
+   */
+  sansVol = false,
 }: {
   gains: readonly Gain[]
   titre?: string
   className?: string
   delai?: number
   compact?: boolean
+  sansVol?: boolean
 }) {
   const propres = agregerGains(gains)
   const { celebrer } = useRecompenses()
@@ -69,7 +76,7 @@ export default function PanneauRecompenses({
   const signature = propres.map((g) => `${g.unite}:${g.montant}`).join('|')
 
   useEffect(() => {
-    if (envole.current || signature.length === 0) return
+    if (sansVol || envole.current || signature.length === 0) return
     envole.current = true
 
     const t = setTimeout(() => {
@@ -89,7 +96,7 @@ export default function PanneauRecompenses({
     }, delai)
 
     return () => clearTimeout(t)
-  }, [signature, delai, celebrer])
+  }, [signature, delai, celebrer, sansVol])
 
   if (propres.length === 0) return null
 

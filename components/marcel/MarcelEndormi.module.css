@@ -1,0 +1,116 @@
+/* ==========================================================================
+   MARCEL ENDORMI (MarcelEndormi.tsx) — il respire, ses « z » montent, la tasse
+   posée à côté tremble d'impatience. Animations en continu : `transform` et
+   `opacity` seulement, valeurs littérales (CLAUDE.md) ; tout est immobile sous
+   mouvement réduit.
+   ========================================================================== */
+
+/* La cage thoracique se soulève : scaleY 1 → 1.03 sur 3 s, depuis les pieds. */
+@keyframes marcel-respire {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.03);
+  }
+}
+.corps {
+  transform-origin: 50% 100%;
+  animation: marcel-respire 3s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Trois « z » qui montent vers la droite en grossissant, puis s'effacent ;
+   décalés d'une seconde chacun pour qu'il y en ait toujours un en l'air. */
+@keyframes marcel-z {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.6);
+  }
+  18% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(16px, -38px) scale(1.25);
+  }
+}
+.z {
+  position: absolute;
+  opacity: 0;
+  animation: marcel-z 3s ease-out infinite;
+  will-change: transform, opacity;
+}
+.z:nth-child(2) {
+  animation-delay: 1s;
+}
+.z:nth-child(3) {
+  animation-delay: 2s;
+}
+
+/* Deux petites étoiles qui scintillent près de la lune. */
+@keyframes marcel-etoile {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+.etoile {
+  animation: marcel-etoile 2.6s ease-in-out infinite;
+}
+.etoile:nth-child(2) {
+  animation-delay: 1.3s;
+}
+
+/* La tasse tremble doucement (±3°), posée sur sa soucoupe. */
+@keyframes tasse-tremble {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+.tasse {
+  transform-origin: 50% 90%;
+  animation: tasse-tremble 1.6s ease-in-out infinite;
+  will-change: transform;
+}
+/* La vapeur de la tasse (dans l'image) : un léger va-et-vient vertical de tout
+   l'objet suffit à la faire vivre ; au toucher, la tasse se soulève. */
+.tasseBouton:active .tasse {
+  animation: none;
+  transform: translateY(-3px) rotate(0deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .corps,
+  .z,
+  .etoile,
+  .tasse {
+    animation: none;
+  }
+  /* Les « z » restent lisibles, posés en escalier. */
+  .z {
+    opacity: 0.8;
+  }
+  .z:nth-child(1) {
+    transform: translate(0, 0) scale(0.7);
+  }
+  .z:nth-child(2) {
+    transform: translate(8px, -18px) scale(0.95);
+  }
+  .z:nth-child(3) {
+    transform: translate(16px, -36px) scale(1.2);
+  }
+  .etoile {
+    opacity: 0.8;
+  }
+}

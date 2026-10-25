@@ -333,7 +333,7 @@ export default function MesAmis({
   const sommet = libelleMultiplicateur(multiplicateurXp(AMIS_MAX, false))
 
   return (
-    <section aria-label="Mes amis" className="carte flex flex-col gap-4 p-3.5 text-foreground">
+    <section aria-label="Mes amis" data-tour="amis-places" className="carte flex flex-col gap-4 p-3.5 text-foreground">
       <div className="flex items-center justify-between gap-2">
         <NomDuGroupe squadName={squadName} canRename={canRenameSquad} />
         {amis.length > 0 ? <BoutonDefierCoin actif={enDefi} onClick={() => setEnDefi((v) => !v)} /> : null}

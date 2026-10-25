@@ -161,8 +161,11 @@ export default function ArenaVivante({
             </span>
           ))}
         </div>
-        {/* Les bulles, toujours dans l'eau qui reçoit : le pied de la chute
-            ou le bassin de la fontaine. */}
+        {/* Les bulles qui crèvent, au pied d'une CHUTE seulement. Sur la
+            fontaine, elles flottaient au milieu du bassin, loin du jet
+            (Lucas, 25/10/2026 : « retire les bulles au milieu de la fontaine ») :
+            là, les retombées et l'embrun suffisent. */}
+        {scene.cascade.sens === 'monte' ? null : (
         <div className={styles.jaillissement} style={zone(scene.ecume)}>
           {BULLES.map((b, i) => (
             <span
@@ -179,6 +182,7 @@ export default function ArenaVivante({
             />
           ))}
         </div>
+        )}
 
         {/* La BRUME qui remonte le long de la chute : des bouffées qui naissent
             au pied, s'ouvrent et se dissipent à mi-hauteur. */}

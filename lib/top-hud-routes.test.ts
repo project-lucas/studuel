@@ -36,6 +36,16 @@ describe('isHudHidden', () => {
     // Garde-fou : `startsWith('/bienvenue')` seul masquerait aussi celle-ci.
     expect(isHudHidden('/bienvenue-parents')).toBe(false)
   })
+
+  it('le masque sur la page du joueur, comme sur le bureau de Marcel (25/10/2026)', () => {
+    // La page redit le niveau, la barre et l'anneau de rang en grand : le
+    // bandeau ferait doublon, et c'est lui qui y mène.
+    expect(isHudHidden('/joueur')).toBe(true)
+    expect(isHudHidden('/dev/joueur')).toBe(true)
+    expect(isHudHidden('/marcel')).toBe(true)
+    // Pas de sous-route : une page qui s'appellerait « /joueurs » garde le sien.
+    expect(isHudHidden('/joueurs')).toBe(false)
+  })
 })
 
 describe('isHudLevelHidden', () => {

@@ -1,6 +1,8 @@
-// Tour guidé post-onboarding : les étapes (contenu) et la géométrie pure
+// Tour guidé « premiers pas » : les étapes (contenu) et la géométrie pure
 // (spotlight + position de bulle) du composant TourGuide. Tout ce qui se
 // calcule est ici, testable sans DOM.
+
+import { decouverteParCle } from '@/lib/decouverte/catalogue'
 
 export type TourStep = {
   id: string
@@ -11,51 +13,40 @@ export type TourStep = {
   text: string
 }
 
-// Les étapes validées : une par onglet + Mon carnet. Toutes les cibles vivent
-// sur /reviser (bottom nav incluse) : pas de navigation à gérer. Une étape dont
-// la cible est absente au moment du tour est sautée (cf. nextAvailableStep).
+/**
+ * LES PREMIERS PAS (25/10/2026, cadrage « le jeu vivant » § E). Le tour en
+ * sept bulles passait en revue les cinq onglets — dont trois que la
+ * découverte progressive ferme à un nouveau compte. Il ne montre plus que ce
+ * qu'on a sous la main le premier jour : Réviser, la série, les quêtes, puis
+ * Marcel. Les trois bulles de Réviser sont CELLES DU CATALOGUE (la découverte
+ * `reviser`) : une seule source pour ses mots. Les autres fonctionnalités se
+ * présentent elles-mêmes, le jour où leur niveau les ouvre (mini-tours de
+ * components/decouverte/DecouverteVeille).
+ *
+ * Toutes les cibles vivent sur /reviser (barre d'onglets comprise) : pas de
+ * navigation à gérer. Une étape dont la cible est absente au moment du tour
+ * est sautée (cf. nextAvailableStep).
+ */
+const REVISER = decouverteParCle('reviser')
+
 export const TOUR_STEPS: TourStep[] = [
   {
     id: 'bienvenue',
     target: null,
     title: 'Bienvenue sur Studuel 👋',
-    text: 'Fais le tour en 30 secondes : on te montre où tout se trouve.',
+    text: 'Fais le tour en 20 secondes : on te montre par où commencer.',
   },
+  ...(REVISER?.etapes ?? []).map((e) => ({
+    id: e.cible ?? 'reviser',
+    target: e.cible,
+    title: e.titre,
+    text: e.texte,
+  })),
   {
-    id: 'reviser',
-    target: 'tab-reviser',
-    title: 'Réviser',
-    text: 'Ton programme, tes cours et ta file du jour — c’est ici que tout commence.',
-  },
-  {
-    id: 'carnet',
-    target: 'carnet-switch',
-    title: 'Ma bibliothèque',
-    text: 'Tes propres cours, tes capsules et tes fiches achetées : tout ce qui est à toi, rangé ici.',
-  },
-  {
-    id: 'defi',
-    target: 'tab-defi',
-    title: 'Défi',
-    text: 'Duels et match classé : gagne des trophées en répondant plus vite que les autres.',
-  },
-  {
-    id: 'amis',
-    target: 'tab-amis',
-    title: 'Amis',
-    text: 'Ton équipe, ton école et vos classements.',
-  },
-  {
-    id: 'moi',
-    target: 'tab-moi',
-    title: 'Moi',
-    text: 'Ta série, ton temps de travail, ta moyenne et tes habitudes.',
-  },
-  {
-    id: 'tresor',
-    target: 'tab-tresor',
-    title: 'Boutique',
-    text: 'Ton coffre du jour, tes pièces, et tout ce qu’elles ouvrent.',
+    id: 'marcel',
+    target: 'marcel-fab',
+    title: 'Marcel, ton coach',
+    text: 'Une question, un exercice qui bloque ? Marcel t’explique, sans donner la réponse toute faite.',
   },
 ]
 
@@ -128,4 +119,26 @@ export function nextAvailableStep(
     if (step.target === null || hasTarget(step.target)) return i
   }
   return null
+}
+
+/**
+ * Les bulles d'un MINI-TOUR de découverte : une bulle d'annonce centrée
+ * (« Nouveau : … », toujours affichée, même quand aucune ancre n'est à
+ * l'écran) puis les étapes du catalogue, qui se sautent comme les autres.
+ */
+export function etapesDeDecouverte(d: {
+  cle: string
+  nom: string
+  phrase: string
+  etapes: readonly { cible: string | null; titre: string; texte: string }[]
+}): TourStep[] {
+  return [
+    { id: `${d.cle}-nouveau`, target: null, title: `Nouveau : ${d.nom}`, text: d.phrase },
+    ...d.etapes.map((e, i) => ({
+      id: `${d.cle}-${e.cible ?? i}`,
+      target: e.cible,
+      title: e.titre,
+      text: e.texte,
+    })),
+  ]
 }

@@ -34,6 +34,7 @@ import LigueVeille from "@/components/LigueVeille";
 import AnnoncesVeille from "@/components/annonces/AnnoncesVeille";
 import QuetesGlobales from "@/components/quetes/QuetesGlobales";
 import BoutonQuetesFlottant from "@/components/quetes/BoutonQuetesFlottant";
+import BoutonCourrierFlottant from "@/components/courrier/BoutonCourrierFlottant";
 import NavAmisBadge from "@/components/amis/ligue/NavAmisBadge";
 // Capteur « le premier écran est peint » : autorise le rideau à lever.
 import AppReadyBeacon from "@/components/AppReadyBeacon";
@@ -181,6 +182,8 @@ export default async function RootLayout({
           {user ? <AnnoncesVeille /> : null}
           {/* Les quêtes du jour en bouton flottant, en bas à droite (15/10/2026). */}
           {user ? <BoutonQuetesFlottant /> : null}
+          {/* Le courrier en bouton flottant, au-dessus des quêtes, seulement s'il y a du non-lu (25/10/2026, migration 602). */}
+          {user ? <BoutonCourrierFlottant /> : null}
           {/* Bandeau du haut streamé : ne bloque pas le rendu de la page. Le
               repli est une barre vide de même hauteur (aucun saut de mise en
               page). */}

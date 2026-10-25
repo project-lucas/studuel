@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button'
 import { useSortieAnimee } from '@/components/useSortieAnimee'
 import { useDialogFocus } from '@/lib/use-dialog'
 import { DEMANDE_MAX, IDEES_AVATAR, messageRefus, refusDemande } from '@/lib/avatar-ia'
-import { COUT_AVATAR } from '@/lib/coach/credits'
+import { CAFES_MENSUELS, COUT_AVATAR, motCafes } from '@/lib/coach/credits'
 import { garderAvatarIa, ouvrirAtelierAvatar, type AtelierAvatar } from '@/app/moi/avatar-ia-actions'
 import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
@@ -21,6 +21,8 @@ import marcelTete from '@/public/images/nav/marcel.webp'
 // son avatar, il a la suggestion de faire un prompt à Marcel pour changer le
 // rendu ; cela consomme ses crédits, autant de fois que ses crédits mensuels
 // le permettent »). Nano Banana (Gemini 2.5 Flash Image), migration 378.
+// Depuis le 25/10/2026, les crédits s'appellent des CAFÉS à l'écran
+// (lib/coach/credits) : un avatar dessiné = 25 cafés.
 //
 // La feuille s'ouvre au toucher de l'avatar, dans l'onglet Moi : un champ, des
 // idées à toucher, ce que ça coûte ; puis Marcel dessine (une dizaine de
@@ -40,11 +42,11 @@ const MESSAGES: Record<Refus, string> = {
   connexion: 'Reconnecte-toi pour demander un avatar à Marcel.',
   demande: 'Dis-en un peu plus à Marcel : quel personnage veux-tu ?',
   abonnement: 'L’avatar dessiné fait partie de Studuel+.',
-  credits: `Il te faut ${COUT_AVATAR} crédits : ils reviennent le 1er du mois.`,
+  credits: `Il te faut ${motCafes(COUT_AVATAR)} : ils reviennent le 1er du mois.`,
   plafond: 'Marcel a assez dessiné pour aujourd’hui. Reviens demain !',
   indisponible: 'Marcel ne peut pas dessiner pour l’instant. Réessaie plus tard.',
-  bloque: 'Marcel ne peut pas dessiner ça. Essaie un autre personnage : tes crédits te sont rendus.',
-  panne: 'Marcel n’a pas réussi à dessiner. Réessaie : tes crédits te sont rendus.',
+  bloque: 'Marcel ne peut pas dessiner ça. Essaie un autre personnage : tes cafés te sont rendus.',
+  panne: 'Marcel n’a pas réussi à dessiner. Réessaie : tes cafés te sont rendus.',
 }
 
 const sAbonner = () => () => {}
@@ -202,8 +204,8 @@ export default function AtelierAvatarIa({
         {!abonne ? (
           <div className="flex flex-col gap-3 rounded-2xl bg-highlight/12 p-4 text-center ring-1 ring-highlight/35">
             <p className="text-sm font-semibold text-balance">
-              L’avatar dessiné fait partie de <strong className="font-extrabold">Studuel+</strong>&nbsp;: 200 crédits par
-              mois pour Marcel, et {COUT_AVATAR} crédits un avatar.
+              L’avatar dessiné fait partie de <strong className="font-extrabold">Studuel+</strong>&nbsp;: {CAFES_MENSUELS} cafés par
+              mois pour Marcel, et {motCafes(COUT_AVATAR)} un avatar.
             </p>
             <Button asChild size="lg" className="w-full">
               <Link href="/tresor">
@@ -305,7 +307,7 @@ export default function AtelierAvatarIa({
               Dessiner mon avatar
             </Button>
             <p className="-mt-1 text-center text-xs font-semibold text-muted-foreground">
-              {COUT_AVATAR} crédits
+              {motCafes(COUT_AVATAR)}
               {restants !== null ? ` · il t’en reste ${restants} ce mois-ci` : ''}
             </p>
 

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { Sparkles } from 'lucide-react'
 import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
+import { useRecompenses } from '@/components/recompenses/RecompensesProvider'
 import BossMode from '@/components/BossMode'
 import { sfx } from '@/lib/sounds'
 import type { Boss, BossRank } from '@/lib/bosses'
@@ -58,6 +59,7 @@ export default function TraqueCombat({
   chapter: { title: string; href: string } | null
 }) {
   const router = useRouter()
+  const { ouvrirRuban } = useRecompenses()
   const [result, setResult] = useState<TraqueVictory | null>(null)
 
   // Le compte à rebours rendu par le serveur se périme à la seconde suivante :
@@ -77,7 +79,12 @@ export default function TraqueCombat({
     claimTraqueVictory(boss.id)
       .then((r) => {
         setResult(r)
-        if (r.xp > 0) sfx.complete()
+        if (r.xp > 0) {
+          sfx.complete()
+          // Le ruban « Récompenses » (25/10/2026) : un gardien abattu se fête
+          // plein écran ; la vague part au tap, le panneau de fin ne revole pas.
+          ouvrirRuban([{ unite: 'xp', montant: r.xp }], { sousTitre: `${boss.name} vaincu` })
+        }
       })
       .catch(() => {})
   }
@@ -87,7 +94,7 @@ export default function TraqueCombat({
   // pire que d'attendre une seconde.
   const rewardSlot = result?.won ? (
     <div className="flex w-full max-w-sm flex-col items-center gap-3">
-      <PanneauRecompenses gains={[{ unite: 'xp', montant: result.xp }]} titre="Gagné" className="w-full" />
+      <PanneauRecompenses gains={[{ unite: 'xp', montant: result.xp }]} titre="Gagné" className="w-full" sansVol />
 
       {/* LE geste qui referme la boucle : la gemme ouvre les supports écrits
           d'un chapitre, à vie. On le propose là, à chaud, sur le chapitre que

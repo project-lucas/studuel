@@ -198,7 +198,7 @@ export default function OralAtelier({
         : r.abonnement
           ? 'L’avis de Marcel fait partie de Studuel+. L’atelier, lui, reste ouvert.'
           : r.quota
-          ? 'Tes crédits du mois sont passés. L’atelier, lui, reste ouvert.'
+          ? 'Marcel n’a plus de café ce mois-ci. L’atelier, lui, reste ouvert.'
           : r.unavailable
             ? 'L’avis de Marcel n’est pas disponible pour l’instant.'
             : 'Marcel n’a pas réussi à répondre. Réessaie.',

@@ -23,7 +23,7 @@ vi.mock('next/navigation', () => ({
   usePathname: () => '/reviser',
 }))
 vi.mock('@/lib/sounds', () => ({
-  sfx: { coin: vi.fn(), tap: vi.fn(), complete: vi.fn() },
+  sfx: { coin: vi.fn(), tap: vi.fn(), complete: vi.fn(), perle: vi.fn() },
 }))
 
 import RecompensesProvider, {
@@ -43,6 +43,16 @@ function Cible({ unite }: { unite: string }) {
       }}
     />
   )
+}
+
+/** Ouvre le ruban au montage, comme le ferait un coffre qui vient de s'ouvrir. */
+function OuvreurDeRuban({ gains }: { gains: Gain[] }) {
+  const { ouvrirRuban } = useRecompenses()
+  useEffect(() => {
+    ouvrirRuban(gains, { sousTitre: 'Coffre d’équipe' })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+  return <p>écran de fin</p>
 }
 
 /** Déclenche une volée au montage, comme le ferait un écran de fin. */
@@ -206,5 +216,64 @@ describe('hors fournisseur', () => {
     ).not.toThrow()
     await act(async () => void vi.advanceTimersByTime(3000))
     expect(recus).toEqual([])
+  })
+})
+
+describe('le ruban de récompenses', () => {
+  it('s’ouvre en dialogue avec la phrase des gains, et ne vole RIEN tant qu’on ne l’a pas touché', async () => {
+    // Le ruban est une cérémonie : la vague attend le tap. Un compteur qui
+    // monterait derrière un écran plein ne se verrait pas.
+    render(
+      <RecompensesProvider>
+        <Cible unite="gemme" />
+        <OuvreurDeRuban gains={[{ unite: 'gemme', montant: 10 }]} />
+      </RecompensesProvider>,
+    )
+    const dialogue = screen.getByRole('dialog', { name: 'Récompenses' })
+    expect(dialogue).toHaveTextContent('Tu as gagné 10 gemmes.')
+    expect(dialogue).toHaveTextContent('Coffre d’équipe')
+    await act(async () => void vi.advanceTimersByTime(3000))
+    expect(recus).toEqual([])
+  })
+
+  it('part en vague au tap, dépose EXACTEMENT le montant, puis se démonte', async () => {
+    render(
+      <RecompensesProvider>
+        <Cible unite="gemme" />
+        <OuvreurDeRuban gains={[{ unite: 'gemme', montant: 10 }]} />
+      </RecompensesProvider>,
+    )
+    await act(async () => {
+      screen.getByRole('dialog', { name: 'Récompenses' }).click()
+    })
+    await act(async () => void vi.advanceTimersByTime(4000))
+    expect(recus.length).toBeGreaterThan(1)
+    expect(recus.reduce((s, d) => s + d.montant, 0)).toBe(10)
+    expect(screen.queryByRole('dialog', { name: 'Récompenses' })).not.toBeInTheDocument()
+  })
+
+  it('ne s’ouvre pas pour rien', () => {
+    render(
+      <RecompensesProvider>
+        <OuvreurDeRuban gains={[{ unite: 'xp', montant: 0 }]} />
+      </RecompensesProvider>,
+    )
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
+  })
+
+  it('un second tap ne fait pas voler deux fois', async () => {
+    render(
+      <RecompensesProvider>
+        <Cible unite="gemme" />
+        <OuvreurDeRuban gains={[{ unite: 'gemme', montant: 10 }]} />
+      </RecompensesProvider>,
+    )
+    const dialogue = screen.getByRole('dialog', { name: 'Récompenses' })
+    await act(async () => {
+      dialogue.click()
+      dialogue.click()
+    })
+    await act(async () => void vi.advanceTimersByTime(4000))
+    expect(recus.reduce((s, d) => s + d.montant, 0)).toBe(10)
   })
 })

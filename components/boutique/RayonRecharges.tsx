@@ -8,26 +8,44 @@ import CarteMagasin, { EcrinMagasin, type IllustrationMagasin } from '@/componen
 import Feuille from '@/components/boutique/Feuille'
 import FormulaireDemandeCarte from '@/components/boutique/FormulaireDemandeCarte'
 import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
+import PoseMarcel from '@/components/marcel/PoseMarcel'
 import { demanderRechargeMarcel } from '@/app/tresor/recharges-actions'
 import { libelleEuros } from '@/lib/capsules'
-import { enPeriodeExamens, prixParQuestion, rechargesDansLOrdre, type Recharge } from '@/lib/coach/recharges'
+import { motCafes } from '@/lib/coach/credits'
+import { enPeriodeExamens, prixParCafe, rechargesDansLOrdre, type ObjetCafe, type Recharge } from '@/lib/coach/recharges'
 import { sfx } from '@/lib/sounds'
-import marcelRecharge from '@/public/images/marcel/poses/recharge.webp'
+import tasse from '@/public/images/marcel/cafe/tasse.webp'
+import grandeTasse from '@/public/images/marcel/cafe/grande-tasse.webp'
+import thermos from '@/public/images/marcel/cafe/thermos.webp'
 
 /**
- * LES RECHARGES DE MARCEL (15/10/2026, Lucas : « comme pour Claude, des
- * recharges de crédit […] super lors des périodes d'examen »). Trois cartes au
- * gabarit des packs de gemmes ; en période d'examens, le Pack examens passe en
- * tête. Une recharge se paie en EUROS (jamais en gemmes : la marge de l'IA ne
- * se paie pas avec une monnaie gratuite), sur le même circuit qu'un pack :
- * une demande, un parent paie, les crédits arrivent.
+ * LE CAFÉ DE MARCEL (25/10/2026, Lucas : « les recharges de Marcel deviennent
+ * le café (dosette, grosse tasse…), c'est plus marrant de recharger Marcel
+ * avec du café qu'avec des capsules éclair ») — ex-« Recharger Marcel » du
+ * 15/10/2026. Trois cartes au gabarit des packs de gemmes (CarteMagasin, le
+ * magasin de Clash Royale) : Dosette · Grande tasse · Thermos, le nombre de
+ * cafés en étiquette, l'objet dessiné posé dans l'écrin avec son ombre, le
+ * prix en bas ; en période d'examens, le Thermos passe en tête. Marcel, sa
+ * tasse à la main (pose `cafe`), présente le rayon.
  *
- * L’ILLUSTRATION : Marcel qui brandit sa batterie (16/10/2026,
- * scripts/marcel-illustrations.mjs).
+ * Un café se paie en EUROS (jamais en gemmes : la marge de l'IA ne se paie
+ * pas avec une monnaie gratuite), sur le même circuit qu'un pack : une
+ * demande, un parent paie, les cafés arrivent — et Marcel se réveille.
+ *
+ * LES ILLUSTRATIONS : les objets détourés de public/images/marcel/cafe/ (en
+ * import statique, URL à empreinte de contenu). `largeur` : la boîte de
+ * l'image en % de l'écrin — la tasse est large, le thermos est haut.
  */
-const ILLUSTRATION: IllustrationMagasin = { image: marcelRecharge, largeur: 96 }
+const ILLUSTRATIONS: Record<ObjetCafe, IllustrationMagasin> = {
+  tasse: { image: tasse, largeur: 78 },
+  'grande-tasse': { image: grandeTasse, largeur: 76 },
+  thermos: { image: thermos, largeur: 66 },
+}
 
-/** Aucune recharge ouverte — une CONSTANTE : `useFermeAuMasquage` la veut stable. */
+/** La teinte des cartes : celle de Marcel depuis le 15/10 (une teinte par article). */
+const TEINTE = 'turquoise'
+
+/** Aucun café ouvert — une CONSTANTE : `useFermeAuMasquage` la veut stable. */
 const FERME: { id: string | null; open: boolean } = { id: null, open: false }
 
 export default function RayonRecharges({ connecte, aujourdhuiIso }: { connecte: boolean; aujourdhuiIso: string }) {
@@ -40,13 +58,18 @@ export default function RayonRecharges({ connecte, aujourdhuiIso }: { connecte: 
   return (
     <section id="recharges" aria-labelledby="recharges-titre" className="flex scroll-mt-20 flex-col gap-4">
       <BandeauSection id="recharges-titre" variante="ruban">
-        Recharger Marcel
+        Le café de Marcel
       </BandeauSection>
-      <p className="text-muted-foreground -mt-2 px-4 text-center text-[12.5px] font-semibold text-balance">
-        {enPeriodeExamens(date)
-          ? 'C’est la période des examens : Marcel reste éveillé tant que tu en as besoin.'
-          : 'Marcel dort quand tes crédits du mois sont passés. Une recharge le réveille tout de suite, et ne s’efface pas.'}
-      </p>
+
+      {/* Marcel, sa tasse à la main, dit à quoi sert le café. */}
+      <div className="mx-auto -mt-1 flex w-full max-w-[26rem] items-end gap-2 px-3">
+        <PoseMarcel pose="cafe" hauteur={84} className="shrink-0 object-contain drop-shadow-[0_8px_8px_rgba(36,48,79,.25)]" />
+        <p className="bg-card relative mb-2 min-w-0 flex-1 rounded-2xl px-3 py-2 text-[12.5px] leading-snug font-bold shadow-[var(--carte-ombre)] before:absolute before:bottom-4 before:-left-[7px] before:border-y-[7px] before:border-r-[8px] before:border-y-transparent before:border-r-[var(--card)] before:content-['']">
+          {enPeriodeExamens(date)
+            ? 'C’est la période des examens : avec un thermos, je reste éveillé tant que tu as besoin de moi.'
+            : 'Quand mes cafés du mois sont bus, je dors. Offre-moi un café : je me réveille tout de suite, et il ne s’efface pas.'}
+        </p>
+      </div>
 
       <ul className="mx-auto grid w-full max-w-[26rem] grid-cols-3 gap-1.5">
         {recharges.map((r) => (
@@ -54,10 +77,10 @@ export default function RayonRecharges({ connecte, aujourdhuiIso }: { connecte: 
             <CarteMagasin
               titre={r.titre}
               etiquette={`+${r.credits}`}
-              teinte="turquoise"
-              illustration={ILLUSTRATION}
+              teinte={TEINTE}
+              illustration={ILLUSTRATIONS[r.objet]}
               bas={libelleEuros(r.prixEuros)}
-              ariaLabel={`${r.titre} : ${r.credits} crédits pour Marcel, ${libelleEuros(r.prixEuros)}`}
+              ariaLabel={`${r.titre} : ${motCafes(r.credits)} pour Marcel, ${libelleEuros(r.prixEuros)}`}
               onClick={() => {
                 sfx.tap()
                 setChoix({ id: r.id, open: true })
@@ -113,33 +136,32 @@ function FeuilleRecharge({
   return (
     <Feuille open={open} onClose={onClose} label={recharge.titre}>
       <div className="mx-auto mt-6 w-40">
-        <EcrinMagasin etiquette={`+${recharge.credits}`} teinte="turquoise" illustration={ILLUSTRATION} className="w-full" />
+        <EcrinMagasin etiquette={`+${recharge.credits}`} teinte={TEINTE} illustration={ILLUSTRATIONS[recharge.objet]} className="w-full" />
       </div>
       <h2 className="font-heading mt-3 text-center text-2xl font-extrabold">{recharge.titre}</h2>
       <p className="text-muted-foreground mt-1 text-center text-sm font-bold">
-        {recharge.accroche} · {recharge.credits} questions à Marcel
+        {recharge.accroche} · {motCafes(recharge.credits)} pour Marcel
       </p>
       <p className="text-muted-foreground mt-0.5 text-center text-xs font-semibold">
-        {libelleEuros(recharge.prixEuros)}, soit {prixParQuestion(recharge)}
+        {libelleEuros(recharge.prixEuros)}, soit {prixParCafe(recharge)}
       </p>
 
       <div className="mt-5 flex flex-col gap-2">
         {envoyee ? (
-          <p
-            role="status"
-            aria-live="polite"
-            className="bg-secondary text-secondary-foreground rounded-2xl px-3 py-2.5 text-center text-sm font-semibold"
-          >
-            C’est noté ! On recontacte ton parent pour le paiement, et Marcel se réveille dès qu’il est confirmé.
-          </p>
+          <div role="status" aria-live="polite" className="bg-secondary text-secondary-foreground flex items-end gap-2 rounded-2xl px-3 py-2.5">
+            <PoseMarcel pose="cafe" hauteur={56} className="shrink-0 object-contain" />
+            <p className="text-sm font-semibold">
+              C’est noté ! On recontacte ton parent pour le paiement, et je me réveille dès qu’il est confirmé.
+            </p>
+          </div>
         ) : !connecte ? (
           <Button size="lg" className="w-full rounded-full font-bold" onClick={() => router.push('/login')}>
-            Connecte-toi pour recharger Marcel
+            Connecte-toi pour offrir un café à Marcel
           </Button>
         ) : (
           <FormulaireDemandeCarte
             id={`recharge-${recharge.id}`}
-            intro={`Un parent paie ${libelleEuros(recharge.prixEuros)} par carte, et les ${recharge.credits} crédits arrivent dès que le paiement est confirmé. Ils ne s’effacent pas à la fin du mois.`}
+            intro={`Un parent paie ${libelleEuros(recharge.prixEuros)} par carte, et les ${motCafes(recharge.credits)} arrivent dès que le paiement est confirmé. Ils ne s’effacent pas à la fin du mois.`}
             contact={contact}
             onContact={setContact}
             enCours={enCours}

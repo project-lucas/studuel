@@ -23,7 +23,9 @@ import { getOralSnapshot } from '@/lib/coach/oral-server'
 import { lireOngletExamen } from '@/lib/examen/onglet-server'
 import { entrainementsFor } from '@/lib/coach/entrainement'
 import { decorDuMoment, parseOnglet, poseDuMoment } from '@/lib/coach/bureau'
-import { creditsMensuels } from '@/lib/coach/credits'
+import { cafesMensuels } from '@/lib/coach/credits'
+import { etatDemande } from '@/lib/coach/jetons'
+import { sommeilDe } from '@/lib/coach/sommeil'
 import { PREMIUM_TIERS } from '@/lib/gems'
 import { parseVue, titreVue } from '@/lib/coach/marcel-vues'
 import { visionDisponible } from '@/lib/coach/ia-vision'
@@ -102,9 +104,14 @@ export default async function MarcelPage({
   // Marcel est ouvert à Studuel+ ; le gratuit voit tout le bureau, mais les
   // outils, les notes et le champ y sont couronnés.
   const ouvert = PREMIUM_TIERS.includes(demande.tier)
-  const credits = ouvert
-    ? Math.max(0, creditsMensuels(demande.tier) - demande.depensesMois) + demande.jetons
+  // LES CAFÉS (25/10/2026) : ce qu'il reste à boire, du mois et de recharge.
+  const cafes = ouvert
+    ? Math.max(0, cafesMensuels(demande.tier) - demande.depensesMois) + demande.jetons
     : null
+  // MARCEL EST RÉVEILLÉ ! — les cafés du mois bus, un café de recharge le
+  // tient debout : il le dit en tête du bureau, la tasse à la main.
+  const sommeil = sommeilDe(etatDemande(demande), cafesMensuels(demande.tier), new Date())
+  const reveille = sommeil.etat === 'reveille'
 
   // L'échelle de l'oral n'est chargée QUE sur sa vue : c'est deux requêtes de
   // plus, et l'écran d'accueil n'en a aucun besoin.
@@ -144,9 +151,10 @@ export default async function MarcelPage({
                   seule bande au lieu de la rangée « retour · série · historique »
                   puis du personnage. La série vit dans Réviser. */}
               <EnTeteBureau
-                bulle={bureau.bulle}
+                bulle={reveille ? `${sommeil.titre} ${sommeil.phrase}` : bureau.bulle}
                 decor={decorDuMoment(bureau.heure)}
-                pose={poseDuMoment(bureau.heure)}
+                pose={reveille ? 'cafe' : poseDuMoment(bureau.heure)}
+                cafes={cafes}
               />
 
               {catalogueVide && (
@@ -207,7 +215,7 @@ export default async function MarcelPage({
                           maintenant={new Date().toISOString()}
                         />
                       ),
-                      outils: <PanneauOutils ouvert={ouvert} credits={credits} />,
+                      outils: <PanneauOutils ouvert={ouvert} cafes={cafes} />,
                       examen: ongletExamen ? <PanneauExamen vue={ongletExamen} ouvert={ouvert} /> : undefined,
                     }}
                   />

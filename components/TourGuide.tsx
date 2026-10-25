@@ -6,6 +6,9 @@ import { useSearchParams } from 'next/navigation'
 import { sfx } from '@/lib/sounds'
 import { useDialogFocus } from '@/lib/use-dialog'
 import { completeTutorial } from '@/app/reviser/actions'
+import { marquerDecouverte } from '@/app/decouverte-actions'
+import { CLE_PREMIERS_PAS } from '@/lib/decouverte/etat'
+import { marquerVueEnLocal } from '@/components/decouverte/store'
 import {
   lireTourVu,
   marquerTourVu,
@@ -18,10 +21,12 @@ import {
   nextAvailableStep,
   spotlightRect,
   type Rect,
+  type TourStep,
 } from '@/lib/tour'
 
 // Cherche l'élément data-tour VISIBLE (la bottom nav mobile et la sidebar
-// desktop portent la même ancre ; l'une des deux est display:none).
+// desktop portent la même ancre ; l'une des deux est display:none — et un
+// onglet gardé vivant mais caché par <Activity> a un rectangle nul).
 function findTargetRect(target: string): Rect | null {
   const nodes = document.querySelectorAll<HTMLElement>(
     `[data-tour="${target}"]`,
@@ -38,24 +43,22 @@ function findTargetRect(target: string): Rect | null {
 const hasTarget = (target: string) => findTargetRect(target) !== null
 
 /**
- * Tour guidé post-onboarding : spotlight sur l'élément + bulle explicative +
- * Suivant / Passer. Se lance à la première connexion — d'après la colonne
- * `profiles.tutorial_completed` (migration 188) quand elle existe, sinon
- * d'après la mémoire locale du navigateur (cf. lib/tour-local, qui explique
- * pourquoi ce repli existe : sans lui, le tour ne partait jamais) — ou via
- * `?tour=1` (bouton « Revoir le tutoriel » du compte). Les étapes dont la
- * cible est absente (ex. file du jour vide) sont sautées automatiquement.
+ * LES BULLES D'UN TOUR : spotlight sur l'élément + bulle explicative +
+ * Suivant / Passer. Le moteur commun du tour « premiers pas » (ci-dessous) et
+ * des mini-tours de la découverte progressive (components/decouverte/
+ * DecouverteVeille). Le parent ne le monte qu'au moment de partir ; la
+ * première étape disponible est cherchée au montage, et les étapes dont la
+ * cible est absente de l'écran sont sautées (nextAvailableStep). `onFin`
+ * reçoit `true` si l'élève est allé au bout, `false` s'il a passé.
  */
-export default function TourGuide({
-  etatEnBase,
+export function BullesTour({
+  etapes,
+  onFin,
 }: {
-  // `undefined` = la colonne `tutorial_completed` (188) n'existe pas encore.
-  etatEnBase: EtatTourEnBase
+  etapes: TourStep[]
+  onFin: (complet: boolean) => void
 }) {
-  const params = useSearchParams()
-  const forced = params.get('tour') === '1'
-
-  // null = tour inactif. L'étape courante pilote tout le rendu.
+  // null = en attente de la première étape. L'étape courante pilote tout le rendu.
   const [stepIndex, setStepIndex] = useState<number | null>(null)
   const [targetRect, setTargetRect] = useState<Rect | null>(null)
   const [bubbleSize, setBubbleSize] = useState({ width: 300, height: 160 })
@@ -65,47 +68,48 @@ export default function TourGuide({
   // page assombrie derrière le spotlight.
   useDialogFocus(bubbleRef, stepIndex !== null)
 
-  // Lancement : petit délai pour laisser la page s'installer.
-  //
-  // La décision se prend DANS le minuteur, pas au rendu : elle consulte la
-  // mémoire locale (`lireTourVu`), qui n'existe que dans le navigateur. La
-  // calculer pendant le rendu ferait diverger le HTML du serveur de celui du
-  // client — et la calculer dans un `setState` d'effet déclencherait un rendu
-  // en cascade pour rien.
+  // `onFin` par une référence : la recherche de la première étape ne dépend
+  // que des étapes, pas de l'identité du rappel du parent.
+  const onFinRef = useRef(onFin)
   useEffect(() => {
-    const timer = setTimeout(() => {
-      if (!forced && !tourDoitDemarrer(etatEnBase, lireTourVu())) return
-      const first = nextAvailableStep(TOUR_STEPS, hasTarget, 0)
-      if (first !== null) setStepIndex(first)
-    }, 600)
-    return () => clearTimeout(timer)
-  }, [etatEnBase, forced])
+    onFinRef.current = onFin
+  }, [onFin])
 
-  const finish = useCallback((completed: boolean) => {
-    sfx.tap()
-    setStepIndex(null)
-    // Deux mémoires, et c'est voulu : la base (qui suit l'élève d'un appareil
-    // à l'autre) et le navigateur (qui prend le relais tant que la 188 dort).
-    // Sans la seconde, l'échec silencieux de la première faisait revenir le
-    // tour à CHAQUE visite.
-    marquerTourVu()
-    completeTutorial().catch(() => {})
-    if (completed) sfx.complete()
-  }, [])
+  // La première étape se cherche À L'IMAGE SUIVANTE : les ancres sont alors
+  // mesurables (mise en page faite), et l'état se pose depuis un rappel, pas
+  // depuis le corps de l'effet.
+  useEffect(() => {
+    const id = window.requestAnimationFrame(() => {
+      const first = nextAvailableStep(etapes, hasTarget, 0)
+      if (first === null) onFinRef.current(false)
+      else setStepIndex(first)
+    })
+    return () => window.cancelAnimationFrame(id)
+  }, [etapes])
+
+  const finish = useCallback(
+    (completed: boolean) => {
+      sfx.tap()
+      setStepIndex(null)
+      onFin(completed)
+      if (completed) sfx.complete()
+    },
+    [onFin],
+  )
 
   const goNext = useCallback(() => {
     if (stepIndex === null) return
     sfx.tap()
-    const next = nextAvailableStep(TOUR_STEPS, hasTarget, stepIndex + 1)
+    const next = nextAvailableStep(etapes, hasTarget, stepIndex + 1)
     if (next === null) finish(true)
     else setStepIndex(next)
-  }, [stepIndex, finish])
+  }, [etapes, stepIndex, finish])
 
   // Mesure de la cible de l'étape courante, re-calculée au resize/scroll.
   useEffect(() => {
     if (stepIndex === null) return
     const measure = () => {
-      const target = TOUR_STEPS[stepIndex].target
+      const target = etapes[stepIndex].target
       setTargetRect(target ? findTargetRect(target) : null)
     }
     measure()
@@ -115,7 +119,7 @@ export default function TourGuide({
       window.removeEventListener('resize', measure)
       window.removeEventListener('scroll', measure, true)
     }
-  }, [stepIndex])
+  }, [etapes, stepIndex])
 
   // Taille réelle de la bulle (sa hauteur dépend du texte de l'étape).
   useLayoutEffect(() => {
@@ -138,19 +142,18 @@ export default function TourGuide({
 
   if (stepIndex === null || typeof document === 'undefined') return null
 
-  const step = TOUR_STEPS[stepIndex]
+  const step = etapes[stepIndex]
   const viewport = { width: window.innerWidth, height: window.innerHeight }
   const spot = step.target && targetRect ? spotlightRect(targetRect, viewport) : null
   const bubble = bubblePosition(spot, bubbleSize, viewport)
-  const isLast =
-    nextAvailableStep(TOUR_STEPS, hasTarget, stepIndex + 1) === null
+  const isLast = nextAvailableStep(etapes, hasTarget, stepIndex + 1) === null
   const stepNumber = stepIndex + 1
 
   return createPortal(
     <div
       role="dialog"
       aria-modal="true"
-      aria-label={`Tour guidé, étape ${stepNumber} sur ${TOUR_STEPS.length} : ${step.title}`}
+      aria-label={`Tour guidé, étape ${stepNumber} sur ${etapes.length} : ${step.title}`}
       className="fixed inset-0 z-[95]"
     >
       {/* Spotlight : un trou transparent, l'ombre géante assombrit le reste.
@@ -181,7 +184,7 @@ export default function TourGuide({
         style={{ top: bubble.top, left: bubble.left }}
       >
         <p className="text-xs font-bold text-muted-foreground tabular-nums">
-          {stepNumber}/{TOUR_STEPS.length}
+          {stepNumber}/{etapes.length}
         </p>
         <h2 className="font-heading mt-1 text-xl font-extrabold text-foreground">
           {step.title}
@@ -207,4 +210,58 @@ export default function TourGuide({
     </div>,
     document.body,
   )
+}
+
+/**
+ * LE TOUR « PREMIERS PAS » (monté dans Réviser) : Réviser, la série, les
+ * quêtes, Marcel — quatre bulles après la bienvenue (lib/tour). Se lance à la
+ * première connexion — d'après la colonne `profiles.tutorial_completed`
+ * (migration 188) quand elle existe, sinon d'après la mémoire locale du
+ * navigateur (cf. lib/tour-local, qui explique pourquoi ce repli existe : sans
+ * lui, le tour ne partait jamais) — ou via `?tour=1` (bouton « Revoir le
+ * tutoriel » du compte).
+ *
+ * Depuis le 25/10/2026 il est aussi LE mini-tour de la découverte « reviser »
+ * (catalogue) : en finissant, il la marque comme vue, et l'annonce
+ * automatique de DecouverteVeille ne la relance jamais par-dessus.
+ */
+export default function TourGuide({
+  etatEnBase,
+}: {
+  // `undefined` = la colonne `tutorial_completed` (188) n'existe pas encore.
+  etatEnBase: EtatTourEnBase
+}) {
+  const params = useSearchParams()
+  const forced = params.get('tour') === '1'
+  const [actif, setActif] = useState(false)
+
+  // Lancement : petit délai pour laisser la page s'installer.
+  //
+  // La décision se prend DANS le minuteur, pas au rendu : elle consulte la
+  // mémoire locale (`lireTourVu`), qui n'existe que dans le navigateur. La
+  // calculer pendant le rendu ferait diverger le HTML du serveur de celui du
+  // client — et la calculer dans un `setState` d'effet déclencherait un rendu
+  // en cascade pour rien.
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!forced && !tourDoitDemarrer(etatEnBase, lireTourVu())) return
+      setActif(true)
+    }, 600)
+    return () => clearTimeout(timer)
+  }, [etatEnBase, forced])
+
+  const finir = useCallback(() => {
+    setActif(false)
+    // Deux mémoires, et c'est voulu : la base (qui suit l'élève d'un appareil
+    // à l'autre) et le navigateur (qui prend le relais tant que la 188 dort).
+    // Sans la seconde, l'échec silencieux de la première faisait revenir le
+    // tour à CHAQUE visite.
+    marquerTourVu()
+    completeTutorial().catch(() => {})
+    marquerVueEnLocal(CLE_PREMIERS_PAS)
+    marquerDecouverte(CLE_PREMIERS_PAS).catch(() => {})
+  }, [])
+
+  if (!actif) return null
+  return <BullesTour etapes={TOUR_STEPS} onFin={finir} />
 }

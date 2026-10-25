@@ -149,7 +149,7 @@ export default function Marche({
 
   return (
     // `id="marche"` : la bulle du multiplicateur d'XP du bandeau y mène (« Potion d'XP → »).
-    <section id="marche" aria-labelledby="marche-titre" className="flex scroll-mt-20 flex-col gap-4">
+    <section id="marche" aria-labelledby="marche-titre" data-tour="tresor-marche" className="flex scroll-mt-20 flex-col gap-4">
       <BandeauSection id="marche-titre" variante="ruban">
         Marché
       </BandeauSection>

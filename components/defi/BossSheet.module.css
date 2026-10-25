@@ -5,16 +5,23 @@
 
    Chaque gardien est SA SCÈNE — la bannière 16:9 qui sert déjà le mode Boss de
    l'arène et le billet de la porte Jeux — et n'y porte que SON NOM, cerné. Tout
-   le reste vit dans la bande blanche dessous : l'état en légende, la jauge
-   d'or, le bouton et le gain. Le gardien INDISPONIBLE aujourd'hui (576 : un
-   jour de semaine chacun, le week-end tous) n'est qu'une ombre barrée d'un
-   RUBAN — sa scène s'éteint (un filtre POSÉ, jamais animé), sa jauge
-   disparaît ; ceux du jour restent en pleine lumière, c'est eux qu'on vient
-   chercher ; le débusqué se cercle d'or. */
+   le reste vit dans la bande blanche dessous. Le gardien INDISPONIBLE
+   aujourd'hui (576 : un jour de semaine chacun, le week-end tous) n'est qu'une
+   ombre barrée d'un RUBAN — sa scène s'éteint (un filtre POSÉ, jamais animé),
+   sa jauge disparaît ; ceux du jour restent en pleine lumière, c'est eux qu'on
+   vient chercher ; le débusqué se cercle d'or.
+
+   L'AFFICHE (25/10/2026, « Le jeu vivant » § C) : la tanière du jour est un
+   AVIS DE RECHERCHE — un bandeau PARCHEMIN épinglé au-dessus de la scène,
+   déchiré en bas, le rang tamponné ; dans la bande blanche le temps qui reste,
+   la jauge, trois gestes à cocher avec leur bouton, la récompense en grand.
+   Tout en tokens (parchemin = l'accent, or = le highlight, encre = leurs
+   contreparties), aucune animation. */
 
 .taniere {
   --contour: color-mix(in oklch, var(--foreground), black 50%);
   --prune: color-mix(in oklch, var(--primary), black 70%);
+  --or-sombre: color-mix(in oklch, var(--highlight), black 28%);
   position: relative;
   overflow: hidden;
   border-radius: var(--carte-rayon);
@@ -25,6 +32,158 @@
   box-shadow:
     var(--carte-ombre),
     0 0 0 3px var(--highlight);
+}
+
+/* ─────────────────────────────── le bandeau parchemin (l'affiche) */
+
+/* L'ombre portée suit la déchirure : elle est posée sur le cadre, la découpe
+   sur le parchemin lui-même (un clip-path emporterait sa propre ombre). */
+.parcheminCadre {
+  position: relative;
+  z-index: 2;
+  /* La déchirure mord sur la scène, comme une feuille épinglée par-dessus. */
+  margin-bottom: -0.45rem;
+  filter: drop-shadow(0 2px 2px color-mix(in oklch, var(--prune), transparent 45%));
+}
+.parchemin {
+  --encre: var(--accent-foreground);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  min-height: 3.1rem;
+  padding: 0.4rem 3.75rem 0.85rem;
+  color: var(--encre);
+  background:
+    /* le grain du papier : de fines fibres verticales à peine visibles */
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 9px,
+      color-mix(in oklch, var(--encre), transparent 94%) 9px 10px
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in oklch, var(--accent), white 45%) 0%,
+      var(--accent) 50%,
+      color-mix(in oklch, var(--accent), var(--highlight) 40%) 100%
+    );
+  /* La déchirure du bas : une dentelure irrégulière, en valeurs littérales. */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 7px),
+    96.5% 100%,
+    93% calc(100% - 5px),
+    89.5% 100%,
+    86% calc(100% - 7px),
+    82.5% 100%,
+    79% calc(100% - 4px),
+    75.5% 100%,
+    72% calc(100% - 7px),
+    68.5% 100%,
+    65% calc(100% - 5px),
+    61.5% 100%,
+    58% calc(100% - 7px),
+    54.5% 100%,
+    51% calc(100% - 4px),
+    47.5% 100%,
+    44% calc(100% - 7px),
+    40.5% 100%,
+    37% calc(100% - 5px),
+    33.5% 100%,
+    30% calc(100% - 7px),
+    26.5% 100%,
+    23% calc(100% - 4px),
+    19.5% 100%,
+    16% calc(100% - 7px),
+    12.5% 100%,
+    9% calc(100% - 5px),
+    5.5% 100%,
+    2% calc(100% - 7px),
+    0 100%
+  );
+}
+/* Les deux clous qui l'épinglent. */
+.parchemin::before,
+.parchemin::after {
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 35%,
+    color-mix(in oklch, var(--encre), white 55%),
+    var(--encre) 70%
+  );
+}
+.parchemin::before {
+  left: 0.75rem;
+}
+.parchemin::after {
+  right: 0.75rem;
+}
+/* « DÉBUSQUÉ ! » : le même parchemin passé à l'or. */
+.parchemin[data-or] {
+  --encre: color-mix(in oklch, var(--highlight), black 55%);
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 9px,
+      color-mix(in oklch, var(--encre), transparent 94%) 9px 10px
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in oklch, var(--highlight), white 55%) 0%,
+      color-mix(in oklch, var(--highlight), white 15%) 50%,
+      var(--highlight) 100%
+    );
+}
+/* Le titre, entre deux filets doubles. */
+.parcheminTitre {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  /* Le dernier interlettrage tirerait le mot à gauche : on le compense. */
+  padding-left: 0.18em;
+}
+.parcheminTitre::before,
+.parcheminTitre::after {
+  content: '';
+  flex: none;
+  width: 1.25rem;
+  border-top: 3px double color-mix(in oklch, var(--encre), transparent 40%);
+}
+.parcheminSous {
+  font-size: 0.58rem;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+/* Le tampon du rang, posé de travers à droite. */
+.tampon {
+  position: absolute;
+  top: 50%;
+  right: 0.9rem;
+  padding: 0.18rem 0.4rem;
+  border: 2px solid currentColor;
+  border-radius: 0.3rem;
+  font-size: 0.58rem;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0.85;
+  transform: translateY(-50%) rotate(8deg);
 }
 
 /* ─────────────────────────────── la scène : le nom, rien d'autre */
@@ -63,6 +222,10 @@
   paint-order: stroke fill;
   text-shadow: 0 0.08em 0 var(--contour);
 }
+/* Sous le parchemin, le nom descend d'un cran pour ne pas passer sous la déchirure. */
+.parcheminCadre + .scene .nom {
+  top: 1.1rem;
+}
 
 /* ─────────────────────────────── la bande blanche */
 
@@ -73,16 +236,16 @@
   padding: 0.625rem 0.75rem 0.75rem;
 }
 
-/* La légende de la jauge : l'état à gauche (« 12 cartes de plus », « Il
-   disparaît dans 42 min »), le pourcentage à droite. */
+/* La légende de la jauge : le temps qui reste à gauche (« Il part dans
+   6 h 12 », « Il disparaît dans 42 min »), le pourcentage à droite. */
 .legende {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   line-height: 1.2;
-  color: var(--muted-foreground);
+  color: var(--foreground);
 }
 .etat {
   display: inline-flex;
@@ -91,11 +254,14 @@
   gap: 0.3rem;
 }
 .etat[data-or] {
-  color: color-mix(in oklch, var(--highlight), black 28%);
+  color: var(--or-sombre);
+}
+.taniere[data-repos] .etat {
+  color: var(--muted-foreground);
 }
 .pct {
   flex: none;
-  color: var(--foreground);
+  color: var(--primary);
 }
 
 /* La jauge : une piste lavande, l'or qui la remplit. */
@@ -117,28 +283,180 @@
   transition: width 0.7s ease-out;
 }
 
+/* ─────────────────────────────── les trois gestes */
+
+.gestes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0.125rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.geste {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+  padding: 0 0.125rem 0 0.25rem;
+  font-size: 0.86rem;
+  font-weight: 800;
+  color: var(--foreground);
+}
+.geste + .geste {
+  border-top: 1px solid color-mix(in oklch, var(--border), transparent 40%);
+}
+/* La coche : un rond vide à faire, vert et coché une fois fait. */
+.coche {
+  display: inline-flex;
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid color-mix(in oklch, var(--primary), transparent 60%);
+  color: var(--success-foreground);
+}
+.geste[data-fait] .coche {
+  border-color: var(--success);
+  background: var(--success);
+}
+.gesteLibelle {
+  flex: 1;
+  min-width: 0;
+}
+.geste[data-fait] .gesteLibelle {
+  color: var(--muted-foreground);
+}
+.gestePoints {
+  flex: none;
+  font-size: 0.74rem;
+  font-weight: 800;
+  color: var(--or-sombre);
+}
+.geste[data-fait] .gestePoints {
+  color: var(--muted-foreground);
+}
+/* « Aller » : la petite pilule violette de chaque geste à faire. */
+.aller {
+  display: inline-flex;
+  flex: none;
+  height: 2.25rem;
+  align-items: center;
+  gap: 0.05rem;
+  padding: 0 0.5rem 0 0.85rem;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-size: 0.78rem;
+  box-shadow: 0 2px 0 color-mix(in oklch, var(--primary), black 55%);
+}
+.aller:focus-visible {
+  outline: none;
+  box-shadow:
+    0 2px 0 color-mix(in oklch, var(--primary), black 55%),
+    0 0 0 3px color-mix(in oklch, var(--highlight), transparent 40%);
+}
+
+/* ─────────────────────────────── la récompense, en grand */
+
+.gains {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-top: 0.125rem;
+  padding: 0.45rem 0.75rem 0.55rem;
+  border-radius: 1rem;
+  background: var(--secondary);
+  color: var(--muted-foreground);
+}
+.gainsRang {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+/* En or tant que le gardien est à prendre aujourd'hui. */
+.gains[data-or] {
+  color: var(--or-sombre);
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--accent), white 40%),
+    var(--accent)
+  );
+  box-shadow:
+    inset 0 0 0 2px color-mix(in oklch, var(--highlight), transparent 55%),
+    0 3px 0 color-mix(in oklch, var(--highlight), black 22%);
+}
+.gainsTitre {
+  font-size: 0.58rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+.gain {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.gainUnite {
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+}
+
+/* ─────────────────────────────── le bouton */
+
 .actions {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   margin-top: 0.125rem;
 }
-/* Le gain : l'XP en jeu, DORÉ le jour de chasse (XP ×2). */
-.xp {
-  display: inline-flex;
+.btn {
+  display: flex;
+  flex: 1;
   height: 2.75rem;
-  flex: none;
   align-items: center;
-  gap: 0.25rem;
-  padding: 0 0.75rem;
+  justify-content: center;
+  gap: 0.5rem;
   border-radius: 999px;
-  background: var(--secondary);
-  color: var(--foreground);
   font-size: 0.9rem;
 }
-.xp[data-or] {
-  background: var(--highlight);
-  box-shadow: 0 2px 0 color-mix(in oklch, var(--highlight), black 30%);
+.btn:focus-visible {
+  outline: none;
+}
+/* Violet = l'action : aller réviser. */
+.btnViolet {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: 0 4px 0 color-mix(in oklch, var(--primary), black 62%);
+}
+.btnViolet:focus-visible {
+  box-shadow:
+    0 4px 0 color-mix(in oklch, var(--primary), black 62%),
+    0 0 0 4px color-mix(in oklch, var(--highlight), transparent 40%);
+}
+/* Or = le gain : défier le gardien sorti. */
+.btnOr {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--highlight), white 25%),
+    color-mix(in oklch, var(--highlight), black 10%)
+  );
+  color: var(--foreground);
+  box-shadow: 0 4px 0 color-mix(in oklch, var(--highlight), black 42%);
+}
+.btnOr:focus-visible {
+  box-shadow:
+    0 4px 0 color-mix(in oklch, var(--highlight), black 42%),
+    0 0 0 4px color-mix(in oklch, var(--primary), transparent 60%);
 }
 .note {
   display: flex;

@@ -108,13 +108,21 @@ describe('poids de public/', () => {
     ).toEqual([])
   })
 
-  it('garde public/ sous 20 Mo au total', () => {
+  // Le budget total suit le contenu SERVI, jamais une source oubliée (les deux
+  // tests ci-dessus restent les vrais garde-fous). 20 Mo le 31/08/2026 ;
+  // 24 Mo le 25/10/2026 : le chantier « jeu vivant » a ajouté ~1 Mo réellement
+  // affiché (13 portraits en pied de 600 px, 5 tableaux de la cinématique,
+  // le café de Marcel, le rouleau de fiche, l'enveloppe du courrier) et
+  // public/ était déjà à 20 Mo.
+  const TOTAL_MAX_MO = 24
+
+  it(`garde public/ sous ${TOTAL_MAX_MO} Mo au total`, () => {
     const totalMo = fichiers.reduce((s, f) => s + f.ko, 0) / 1024
     expect(
       Math.round(totalMo),
       `public/ pèse ${totalMo.toFixed(1)} Mo. Ce dossier part en entier dans` +
         ` chaque déploiement : il ne doit contenir que ce qui est servi.`,
-    ).toBeLessThanOrEqual(20)
+    ).toBeLessThanOrEqual(TOTAL_MAX_MO)
   })
 
   it('garde chaque sujet d’annale sous 2 Mo, et le dossier sous 25 Mo', () => {

@@ -1,0 +1,56 @@
+/* LE BOUTON FLOTTANT DU COURRIER (25/10/2026). Deux mouvements, transform et
+   opacité seulement, valeurs littérales : l'entrée (celle du bouton des
+   quêtes) et, tant qu'une lettre attend, l'enveloppe qui se balance un instant
+   toutes les quatre secondes — un objet qui bouge se remarque, un objet qui
+   bouge tout le temps s'oublie. */
+
+.fab {
+  animation: entree 0.42s var(--ease) both;
+}
+
+.enveloppe {
+  transform-origin: 50% 85%;
+  animation: balance 4s ease-in-out infinite;
+}
+
+@keyframes entree {
+  0% {
+    transform: translateY(12px) scale(0.6);
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(-2px) scale(1.06);
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes balance {
+  0%,
+  72%,
+  100% {
+    transform: rotate(0deg);
+  }
+  78% {
+    transform: rotate(-8deg);
+  }
+  84% {
+    transform: rotate(7deg);
+  }
+  90% {
+    transform: rotate(-4deg);
+  }
+  95% {
+    transform: rotate(2deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fab,
+  .enveloppe {
+    animation: none;
+  }
+}

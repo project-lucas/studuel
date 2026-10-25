@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { describe, expect, it } from 'vitest'
-import { FAMILLES, OUTILS, outilsDe } from './catalogue-outils'
+import { FAMILLES, OUTILS, coutOutil, libelleCoutOutil, outilsDe } from './catalogue-outils'
 import { MODES } from './outils'
 import { parseVue } from './marcel-vues'
 import { parseOnglet } from './bureau'
@@ -29,6 +29,19 @@ describe('le catalogue des outils de Marcel', () => {
       expect(o.mots.length, o.id).toBeLessThanOrEqual(28)
       expect(o.label.length, o.id).toBeLessThanOrEqual(20)
     }
+  })
+
+  it('coûte un café pour un mode, rien pour une page — jamais « crédit »', () => {
+    for (const o of OUTILS) {
+      if (o.cible.type === 'page') {
+        expect(coutOutil(o)).toEqual({ type: 'offert' })
+        expect(libelleCoutOutil(o)).toBe('Offert')
+      } else {
+        expect(coutOutil(o)).toEqual({ type: 'cafes', cafes: 1 })
+        expect(libelleCoutOutil(o)).toBe('1 café')
+      }
+    }
+    expect(OUTILS.filter((o) => coutOutil(o).type === 'offert').map((o) => o.id)).toEqual(['erreurs', 'controle', 'examen', 'oral', 'methode'])
   })
 
   it('chaque mode visé existe dans le champ', () => {

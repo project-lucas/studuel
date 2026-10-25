@@ -300,3 +300,76 @@ export function dureeVolee(n: number): number {
   }
   return fin
 }
+
+// ------------------------------------------------------------------ le ruban
+
+/**
+ * LE RUBAN DE RÉCOMPENSES (25/10/2026, cadrage « le jeu vivant » § B) : la
+ * phrase que le lecteur d'écran entend quand le ruban s'ouvre — les cartes,
+ * elles, sont muettes. « Tu as gagné 40 XP et 5 gemmes. » Les gains passent
+ * par `agregerGains` : même ordre, mêmes montants que les cartes affichées.
+ * Rien à annoncer : chaîne vide (le ruban ne s'ouvre pas).
+ */
+export function phraseGains(gains: readonly Gain[] | null | undefined): string {
+  const propres = agregerGains(gains)
+  if (propres.length === 0) return ''
+  const libelles = propres.map((g) => libelleGain(g))
+  const liste =
+    libelles.length === 1
+      ? libelles[0]
+      : `${libelles.slice(0, -1).join(', ')} et ${libelles[libelles.length - 1]}`
+  return `Tu as gagné ${liste}.`
+}
+
+// ---------------------------------------------------------- la pluie de gemmes
+
+/** Les cristaux qui tombent d'un coffre de palier ouvert : dix, toujours. */
+export const PLUIE_GEMMES = 10
+/** Le temps entre deux gouttes (ms) : une pluie, pas une salve. */
+export const PLUIE_CADENCE = 70
+/** La chute d'un cristal (ms), la plus courte ; les autres traînent un peu. */
+export const PLUIE_CHUTE = 760
+
+export type GoutteGemme = {
+  /** Écart horizontal au départ, en px (négatif = vers la gauche). */
+  x: number
+  /** Départ, en ms après l'ouverture du coffre. */
+  retard: number
+  /** Durée de la chute, en ms. */
+  duree: number
+  /** Le sens de la rotation en tombant : alterne d'une goutte à l'autre. */
+  sens: 'gauche' | 'droite'
+  /** La taille relative du cristal (0,7 → 1,1) : tous ne sont pas au même plan. */
+  echelle: number
+}
+
+/**
+ * Le trajet de la goutte `i` d'une pluie de `n`.
+ *
+ * Comme les jetons, RIEN N'EST TIRÉ AU SORT : la pluie se rejoue à l'identique,
+ * donc se teste et se règle. L'écart horizontal suit l'angle d'or (aucune goutte
+ * ne tombe sur une autre), les durées tournent sur trois valeurs pour que les
+ * cristaux n'atterrissent pas en rang, et la taille alterne sur quatre plans.
+ */
+export function goutteGemme(i: number, n: number): GoutteGemme {
+  const total = Math.max(1, Math.floor(n))
+  const index = Math.min(Math.max(0, Math.floor(i)), total - 1)
+  return {
+    x: Math.round(Math.cos(index * ANGLE_OR) * (28 + (index % 3) * 18)),
+    retard: index * PLUIE_CADENCE,
+    duree: PLUIE_CHUTE + (index % 3) * 90,
+    sens: index % 2 === 0 ? 'droite' : 'gauche',
+    echelle: 0.7 + (index % 4) * 0.13,
+  }
+}
+
+/** Quand la dernière goutte a touché le sol (ms) : le moment d'ouvrir le ruban. */
+export function dureePluie(n: number): number {
+  if (n <= 0) return 0
+  let fin = 0
+  for (let i = 0; i < n; i += 1) {
+    const g = goutteGemme(i, n)
+    fin = Math.max(fin, g.retard + g.duree)
+  }
+  return fin
+}

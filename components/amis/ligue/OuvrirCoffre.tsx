@@ -7,7 +7,7 @@ import Feuille from '@/components/boutique/Feuille'
 import { Button } from '@/components/ui/button'
 import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import XpIcon from '@/components/ui/XpIcon'
-import { origineUnique, useRecompenses } from '@/components/recompenses/RecompensesProvider'
+import { useRecompenses } from '@/components/recompenses/RecompensesProvider'
 import { useFermeAuMasquage } from '@/components/useFermeAuMasquage'
 import { ouvrirCoffre } from '@/app/amis/ligue-actions'
 import {
@@ -50,7 +50,7 @@ export default function OuvrirCoffre({ pret }: { pret: CoffrePret }) {
   const [encaisse, setEncaisse] = useState(false)
   const [pending, start] = useTransition()
   const bouton = useRef<HTMLButtonElement>(null)
-  const { celebrer } = useRecompenses()
+  const { ouvrirRuban } = useRecompenses()
   const router = useRouter()
   useFermeAuMasquage(setOuverte, false)
 
@@ -71,8 +71,9 @@ export default function OuvrirCoffre({ pret }: { pret: CoffrePret }) {
     if (resultat.ok && !encaisse) {
       setEncaisse(true)
       annoncerCoffrePret(false)
-      const gains = gainsOuverture(resultat)
-      celebrer(gains, origineUnique(bouton.current, gains))
+      // Le ruban « Récompenses » (25/10/2026) : la feuille se ferme, le ruban
+      // fête ce que le serveur a versé, et la vague part au tap.
+      ouvrirRuban(gainsOuverture(resultat), { sousTitre: `Coffre d’équipe · niveau ${resultat.niveau}` })
     } else if (!resultat.ok && resultat.raison === 'deja_ouvert') {
       annoncerCoffrePret(false)
       router.refresh()

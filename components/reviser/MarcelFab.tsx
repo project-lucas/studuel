@@ -72,6 +72,7 @@ export default function MarcelFab({ matiere }: { matiere?: string }) {
         onClick={() => sfx.tap()}
         aria-label="Demander à Marcel, ton coach"
         title="Marcel, ton coach"
+        data-tour="marcel-fab"
         className="coach-fab bg-card fixed right-4 bottom-24 z-40 flex size-16 items-center justify-center overflow-hidden rounded-full md:bottom-8"
       >
         {/* Enveloppe : elle porte le frétillement du survol. S'il vivait sur

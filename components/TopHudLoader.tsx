@@ -10,6 +10,9 @@ import { lireFinBoostXp } from '@/lib/boutique/boosts-server'
 import { compterAmis, lireMaPlace } from '@/lib/ligue-server'
 import { echelon } from '@/lib/ligue'
 import { avatarAffiche } from '@/lib/avatar-affiche'
+import { lireEtatDecouverte } from '@/lib/decouverte/server'
+import { ETAT_TOUT_OUVERT } from '@/lib/decouverte/etat'
+import DecouverteVeille from './decouverte/DecouverteVeille'
 import TopHud, { type RangHud } from './TopHud'
 
 type WalletRow = { xp: number | null; level: number | null }
@@ -37,14 +40,18 @@ export default async function TopHudLoader() {
 
   if (!user) {
     return (
-      <TopHud
-        gems={null}
-        level={null}
-        levelTitle={null}
-        progress={0}
-        userLabel={null}
-        boostXpJusqua={null}
-      />
+      <>
+        <TopHud
+          gems={null}
+          level={null}
+          levelTitle={null}
+          progress={0}
+          userLabel={null}
+          boostXpJusqua={null}
+        />
+        {/* Un visiteur voit tout ; la veille ne sert qu'à `?decouvrir=` (aperçus /dev). */}
+        <DecouverteVeille etat={ETAT_TOUT_OUVERT} />
+      </>
     )
   }
 
@@ -75,7 +82,10 @@ export default async function TopHudLoader() {
   // de niveau proposent ceux qui restent. Lecture tolérante, dans la vague.
   // LE RANG DE LIGUE (15/10/2026) choisit l'anneau autour de l'avatar :
   // `ligue_ma_place()` (562), une lecture légère, dans la même vague.
-  const [{ data: hudRow }, gems, boostXpJusqua, nbAmis, paliersOuverts, place] = await Promise.all([
+  // LA DÉCOUVERTE PROGRESSIVE (25/10/2026, 601) : les clés déjà vues et
+  // `decouverte_depuis`, tolérantes (migration absente = tout ouvert), dans
+  // la même vague — la barre d'onglets en tire ses cadenas.
+  const [{ data: hudRow }, gems, boostXpJusqua, nbAmis, paliersOuverts, place, decouverte] = await Promise.all([
     supabase
       .from('profiles')
       .select('avatar, user_wallet(xp, level)')
@@ -96,6 +106,7 @@ export default async function TopHudLoader() {
       .eq('source', 'niveau_palier')
       .then(({ data }) => (data ?? []).map((r: { source_key: string }) => Number(r.source_key)).filter(Number.isFinite)),
     lireMaPlace(supabase),
+    lireEtatDecouverte(supabase, user.id),
   ])
   const e = place ? echelon(place.echelon) : null
   const rang: RangHud | null = e ? { rang: e.rang.id, division: e.division, nom: e.nom } : null
@@ -113,19 +124,24 @@ export default async function TopHudLoader() {
   if (walletRow && walletRow.xp != null) {
     const info = walletLevelInfo(Math.max(0, Number(walletRow.xp) || 0))
     return (
-      <TopHud
-        gems={gems}
-        level={info.level}
-        levelTitle={info.title}
-        progress={info.progress}
-        xp={{ actuel: info.currentXp, plancher: xpForLevel(info.level), prochain: info.nextAt }}
-        paliersOuverts={paliersOuverts}
-        userLabel={userLabel}
-        boostXpJusqua={boostXpJusqua}
-        avatar={avatar}
-        nbAmis={nbAmis}
-        rang={rang}
-      />
+      <>
+        <TopHud
+          gems={gems}
+          level={info.level}
+          levelTitle={info.title}
+          progress={info.progress}
+          xp={{ actuel: info.currentXp, plancher: xpForLevel(info.level), prochain: info.nextAt }}
+          paliersOuverts={paliersOuverts}
+          userLabel={userLabel}
+          boostXpJusqua={boostXpJusqua}
+          avatar={avatar}
+          nbAmis={nbAmis}
+          rang={rang}
+        />
+        <DecouverteVeille
+          etat={{ niveau: info.level, xp: info.currentXp, vues: decouverte.vues, depuis: decouverte.depuis }}
+        />
+      </>
     )
   }
 
@@ -171,15 +187,20 @@ export default async function TopHudLoader() {
   const level = levelFor(xp)
 
   return (
-    <TopHud
-      gems={gems}
-      level={level.level}
-      levelTitle={level.title}
-      progress={level.progress}
-      userLabel={userLabel}
-      boostXpJusqua={boostXpJusqua}
-      avatar={avatar}
-      nbAmis={nbAmis}
-    />
+    <>
+      <TopHud
+        gems={gems}
+        level={level.level}
+        levelTitle={level.title}
+        progress={level.progress}
+        userLabel={userLabel}
+        boostXpJusqua={boostXpJusqua}
+        avatar={avatar}
+        nbAmis={nbAmis}
+      />
+      <DecouverteVeille
+        etat={{ niveau: level.level, xp, vues: decouverte.vues, depuis: decouverte.depuis }}
+      />
+    </>
   )
 }

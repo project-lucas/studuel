@@ -2,6 +2,7 @@
 // composant client ne reçoit que ces aperçus (quelques centaines d'octets),
 // jamais le corpus. Pur et testé.
 
+import { hrefSujet } from './sujet'
 import type { AnnaleCorrigee, Examen, NaturePartie, Niveau } from './types'
 
 export type AnnaleApercu = {
@@ -12,8 +13,8 @@ export type AnnaleApercu = {
   /** « Amérique du Nord · jour 1 », « Sujet zéro n° 1 ». */
   lieu: string
   dureeMin: number
-  /** Les parties, par leur titre court (« Sujet 1 », « Exercice 2 »). */
-  parties: { titre: string; nature: NaturePartie }[]
+  /** Les parties, par leur titre court (« Sujet 1 », « Exercice 2 ») et le thème tombé (recap.ts). */
+  parties: { titre: string; nature: NaturePartie; theme: string }[]
   /** Le corrigé est réservé à Studuel+ (./acces : deux annales offertes par matière). */
   reservee?: boolean
 }
@@ -24,9 +25,12 @@ export function lieuDe(a: Pick<AnnaleCorrigee, 'centre' | 'jour'>): string {
   return a.jour ? `${a.centre} · jour ${a.jour}` : a.centre
 }
 
-/** Chemin public du sujet habillé (public/annales/<id>.pdf). */
-export function pdfSujet(id: string): string {
-  return `/annales/${id}.pdf`
+/**
+ * L'adresse du sujet habillé : la route GET /api/annales/<id>/sujet (R2, avec
+ * repli sur public/annales — lib/annales-corrigees/sujet.ts, 25/10/2026).
+ */
+export function pdfSujet(id: string, options: { telecharger?: boolean } = {}): string {
+  return hrefSujet(id, options)
 }
 
 /** Chemin de la page d'une annale dans le dossier de la matière. */
@@ -57,7 +61,7 @@ export function annalesParAnnee(
         annee: a.annee,
         lieu: lieuDe(a),
         dureeMin: a.dureeMin,
-        parties: a.parties.map((p) => ({ titre: p.titre, nature: p.nature })),
+        parties: a.parties.map((p) => ({ titre: p.titre, nature: p.nature, theme: p.theme })),
       }),
     )
     .sort((x, y) => y.annee - x.annee || x.lieu.localeCompare(y.lieu, 'fr'))

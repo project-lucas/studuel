@@ -4720,6 +4720,16 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     // Révoquée pour anon : l’appel anonyme est refusé (42501), la fonction existe.
     sonde: { type: 'rpc', fn: 'ia_signaler', args: { p_outil: '', p_raison: '', p_question: '', p_reponse: '' } },
   },
+  {
+    id: '598',
+    fichier: '598_annales_brevet_histoire_geo.sql',
+    feature:
+      'LES ANNALES DU BREVET D’HISTOIRE-GÉO (25/10/2026, chantier des annales) : `annale_connue` redéfinie avec les huit sessions de Métropole 2017 → 2026 importées (contenu/annales/histoire-geo-brevet-*.json) — le miroir que lib/economie.test.ts exige.',
+    siAbsente:
+      'Les huit nouvelles annales se lisent, mais « J’ai traité ce sujet » ne lance pas le chrono et ne paie ni XP ni gemmes (annale_commencer et epreuve_recompenser refusent une annale inconnue).',
+    // La fonction existe depuis la 557 : une redéfinition ne se sonde pas.
+    sonde: null,
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

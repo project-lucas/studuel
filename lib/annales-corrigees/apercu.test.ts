@@ -27,6 +27,7 @@ function annale(
       titre: `Sujet ${i + 1}`,
       nature,
       enonce: 'Q ?',
+      theme: `Thème ${i + 1}`,
       enBref: ['a', 'b'],
       blocs: [{ type: 'texte', texte: 'x' }],
     })),

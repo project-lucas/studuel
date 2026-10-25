@@ -1,0 +1,367 @@
+/* =============================================================================
+   LE CORRIGÉ FAÇON FICHE DE RÉVISION (25/10/2026, Lucas : « que le rendu soit
+   propre tel une fiche de révision — inspire-toi du design de nos fiches »).
+
+   La direction artistique des fiches PDF (scripts/fiches/gabarit.css : cartes
+   blanches cernées d'encre sur un socle dur, rubans penchés, post-its scotchés,
+   surligneur jaune, numéros en pastille) transposée à l'écran, EN TOKENS
+   SÉMANTIQUES de la DA crème & violet (app/globals.css) — pas une couleur en
+   dur : l'encre est `--foreground`, le ruban `--primary`, le surligneur
+   `--highlight`, le post-it `--secondary`, l'attendu `--accent`, le piège
+   `--destructive`, la bonne réponse `--success`.
+
+   Importée par EcranAnnale (composant serveur), rendue partout où le corrigé
+   s'affiche. Les transformations (rubans penchés, post-it de travers) sont
+   STATIQUES : rien ne s'anime ici.
+   ========================================================================== */
+
+.corrige {
+  --corrige-encre: var(--foreground);
+  --corrige-trait: 2.5px;
+  --corrige-socle: color-mix(in oklch, var(--foreground), transparent 84%);
+  --corrige-ombre: color-mix(in oklch, var(--foreground), transparent 90%);
+  --corrige-baloo: var(--font-baloo), var(--font-nunito), system-ui, sans-serif;
+}
+
+/* ---------- la tête de fiche ---------- */
+.corrige-etiquettes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 9px;
+}
+.corrige-pilule {
+  display: inline-block;
+  font-family: var(--corrige-baloo);
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 1;
+  padding: 6px 12px 4px;
+  border-radius: 999px;
+  border: var(--corrige-trait) solid var(--corrige-encre);
+  box-shadow: 0 3px 0 var(--corrige-socle);
+  white-space: nowrap;
+}
+.corrige-pilule--violet {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+.corrige-pilule--jaune {
+  color: var(--corrige-encre);
+  background: var(--highlight);
+  transform: rotate(-2deg);
+}
+.corrige-mention {
+  margin-left: auto;
+  font-family: var(--corrige-baloo);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--secondary-foreground);
+  opacity: 0.75;
+  white-space: nowrap;
+}
+.corrige-titre {
+  font-family: var(--corrige-baloo);
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  color: var(--corrige-encre);
+}
+/* Le surligneur sous le titre : un dégradé posé bas, qui suit le retour à la
+   ligne (box-decoration-break), là où un pseudo-élément absolu casserait sur
+   deux lignes de 390 px. */
+.corrige-surligne {
+  padding: 0 0.12em;
+  background-image: linear-gradient(
+    to top,
+    transparent 10%,
+    color-mix(in oklch, var(--highlight), transparent 15%) 10% 50%,
+    transparent 50%
+  );
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+.corrige-accroche {
+  font-family: var(--corrige-baloo);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--primary);
+}
+
+/* ---------- la carte cernée d'encre ---------- */
+.corrige-carte {
+  position: relative;
+  background: var(--card);
+  color: var(--card-foreground);
+  border: var(--corrige-trait) solid var(--corrige-encre);
+  border-radius: 18px;
+  box-shadow: 0 5px 0 var(--corrige-socle);
+}
+.corrige-carte[data-teinte='jaune'] {
+  background: var(--accent);
+}
+.corrige-carte[data-teinte='lavande'] {
+  background: var(--secondary);
+}
+.corrige-carte[data-teinte='corail'] {
+  border-color: var(--destructive);
+  background: color-mix(in oklch, var(--destructive), white 91%);
+}
+.corrige-carte[data-teinte='vert'] {
+  background: color-mix(in oklch, var(--success), white 88%);
+}
+/* Une carte coiffée d'un ruban laisse la place au ruban qui déborde en haut. */
+.corrige-carte--rubanee {
+  margin-top: 14px;
+  padding-top: 22px;
+}
+
+/* ---------- le ruban penché ---------- */
+.corrige-ruban {
+  display: inline-block;
+  max-width: calc(100% - 24px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--corrige-baloo);
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 1;
+  color: var(--primary-foreground);
+  background: var(--primary);
+  border: var(--corrige-trait) solid var(--corrige-encre);
+  border-radius: 10px;
+  padding: 6px 12px 4px;
+  transform: rotate(-2deg);
+  box-shadow: 0 3px 0 var(--corrige-socle);
+}
+.corrige-ruban--coin {
+  position: absolute;
+  top: -15px;
+  left: 12px;
+}
+.corrige-ruban b {
+  margin-right: 5px;
+  color: var(--highlight);
+  font-weight: 800;
+}
+.corrige-ruban[data-teinte='jaune'] {
+  background: var(--highlight);
+  color: var(--corrige-encre);
+}
+.corrige-ruban[data-teinte='jaune'] b {
+  color: var(--primary-foreground);
+}
+.corrige-ruban[data-teinte='corail'] {
+  background: var(--destructive);
+}
+.corrige-ruban[data-teinte='vert'] {
+  background: var(--success);
+}
+/* L'intertitre d'une partie (« I. … », « Partie A ») : le même ruban, posé
+   dans le fil du texte, sur une ligne à lui — un titre long tient sur deux
+   lignes plutôt que d'être coupé. */
+.corrige-ruban--fil {
+  display: inline-block;
+  max-width: 100%;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  line-height: 1.15;
+  margin: 10px 0 2px 4px;
+  transform: rotate(-1.2deg);
+}
+
+/* ---------- le post-it (le conseil Studuel) ---------- */
+.corrige-postit {
+  position: relative;
+  margin-top: 14px;
+  padding: 22px 14px 12px;
+  background: var(--secondary);
+  border-radius: 4px 4px 20px 4px;
+  transform: rotate(-1deg);
+  box-shadow:
+    0 6px 0 var(--corrige-ombre),
+    0 13px 18px -11px color-mix(in oklch, var(--foreground), transparent 55%);
+}
+/* Le scotch : deux jaunes en rayures, un peu de travers. */
+.corrige-postit::before {
+  content: '';
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  width: 96px;
+  height: 24px;
+  margin-left: -48px;
+  border-radius: 2px;
+  background: repeating-linear-gradient(
+    135deg,
+    color-mix(in oklch, var(--highlight), transparent 15%) 0 8px,
+    color-mix(in oklch, var(--highlight), white 40%) 8px 16px
+  );
+  transform: rotate(2.5deg);
+}
+.corrige-postit h4 {
+  font-family: var(--corrige-baloo);
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 1;
+  color: var(--secondary-foreground);
+}
+
+/* ---------- pastilles ---------- */
+.corrige-num {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border: var(--corrige-trait) solid var(--corrige-encre);
+  font-family: var(--corrige-baloo);
+  font-weight: 800;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  box-shadow: 0 2px 0 var(--corrige-socle);
+}
+.corrige-num--large {
+  width: auto;
+  min-width: 30px;
+  padding: 0 8px;
+  border-radius: 15px;
+  font-size: 13px;
+}
+.corrige-pastille {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: var(--corrige-trait) solid var(--corrige-encre);
+  color: var(--primary-foreground);
+}
+.corrige-pastille--ok {
+  background: var(--success);
+}
+.corrige-croix {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+  background: var(--destructive);
+  color: var(--primary-foreground);
+}
+
+/* ---------- le surligneur dans le texte ---------- */
+.corrige-mark {
+  padding: 1px 4px 0;
+  border-radius: 4px 2px 5px 2px;
+  color: inherit;
+  background: color-mix(in oklch, var(--highlight), transparent 35%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* ---------- la bonne réponse ---------- */
+.corrige-reponse {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 10px 12px;
+  border: 2px dashed color-mix(in oklch, var(--primary), transparent 45%);
+  border-radius: 14px;
+  background: var(--card);
+}
+
+/* ---------- liste, tableau, citation ---------- */
+.corrige-liste {
+  display: grid;
+  gap: 7px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.corrige-liste li {
+  display: grid;
+  grid-template-columns: 10px 1fr;
+  gap: 9px;
+  align-items: start;
+}
+.corrige-liste li::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  margin-top: 7px;
+  border-radius: 3px;
+  background: var(--primary);
+}
+.corrige-liste--ordonnee {
+  counter-reset: corrige;
+}
+.corrige-liste--ordonnee li {
+  grid-template-columns: 24px 1fr;
+  gap: 8px;
+}
+.corrige-liste--ordonnee li::before {
+  counter-increment: corrige;
+  content: counter(corrige);
+  width: 24px;
+  height: 24px;
+  margin-top: 0;
+  border-radius: 50%;
+  border: 2px solid var(--corrige-encre);
+  background: var(--card);
+  color: var(--corrige-encre);
+  font-family: var(--corrige-baloo);
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+}
+.corrige-tableau {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  line-height: 1.3;
+}
+.corrige-tableau th {
+  font-family: var(--corrige-baloo);
+  font-weight: 800;
+  font-size: 12.5px;
+  text-align: left;
+  padding: 6px 8px;
+  background: var(--secondary);
+  color: var(--secondary-foreground);
+  border-bottom: 2px solid var(--corrige-encre);
+}
+.corrige-tableau td {
+  padding: 6px 8px;
+  vertical-align: top;
+  border-bottom: 1.5px solid color-mix(in oklch, var(--primary), transparent 75%);
+}
+.corrige-tableau tr:last-child td {
+  border-bottom: 0;
+}
+.corrige-tableau td:first-child {
+  font-weight: 800;
+}
+.corrige-citation {
+  padding: 2px 10px;
+  border-left: 3px solid var(--highlight);
+  font-family: var(--corrige-baloo);
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1.2;
+  color: var(--secondary-foreground);
+}

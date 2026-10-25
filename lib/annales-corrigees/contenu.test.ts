@@ -16,10 +16,13 @@ describe('contenu/annales', () => {
     expect(validerAnnale(annale, f)).toEqual([])
   })
 
-  it.each(fichiers)('%s a son sujet habillé dans public/annales', (f) => {
-    // Sans lui, le bouton « Lire le sujet » mènerait à une 404 :
-    // node scripts/annales-sujets.mjs <id>
-    expect(existsSync(path.join(RACINE, 'public', 'annales', f.replace('.json', '.pdf')))).toBe(true)
+  it.each(fichiers)('%s a son sujet habillé (public/annales ou annales-out)', (f) => {
+    // Sans lui, « Lire le sujet » n'aurait rien à servir :
+    // node scripts/annales-sujets.mjs <id> — puis scripts/annales-deposer.mjs
+    // pour qu'il parte sur R2 (public/annales est plafonné à 25 Mo).
+    const pdf = f.replace('.json', '.pdf')
+    const habille = ['annales-out', path.join('public', 'annales')].some((d) => existsSync(path.join(RACINE, d, pdf)))
+    expect(habille).toBe(true)
   })
 
   it('chaque corrigé écrit est au registre', () => {

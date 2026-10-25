@@ -5,6 +5,7 @@ import { ANNALES_CORRIGEES } from '@/lib/annales-corrigees/registre'
 import { cheminAnnale, lieuDe, pdfSujet, trouverAnnale } from '@/lib/annales-corrigees/apercu'
 import { MATIERES_ANNALES, estMatiereAnnale } from '@/lib/annales-corrigees/matieres'
 import { titreEpreuve } from '@/lib/annales-corrigees/epreuve'
+import { nomTelechargementSujet } from '@/lib/annales-corrigees/sujet'
 import { getCurrentUser } from '@/lib/supabase/user'
 import EnTetePage from '@/components/reviser/EnTetePage'
 import { Button } from '@/components/ui/button'
@@ -33,7 +34,7 @@ export default async function SujetPage({ params }: { params: Promise<{ subject:
         sousTitre={`${titre} · ${MATIERES_ANNALES[subject].court} · ${lieuDe(annale)}`}
         droite={
           <Button asChild size="icon" variant="outline" aria-label="Télécharger le sujet en PDF">
-            <a href={src} download={`${annale.id}-studuel.pdf`}>
+            <a href={pdfSujet(annale.id, { telecharger: true })} download={nomTelechargementSujet(annale.id)}>
               <Download aria-hidden="true" />
             </a>
           </Button>

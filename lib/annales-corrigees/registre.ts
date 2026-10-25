@@ -20,7 +20,15 @@ import a_hggsp_2021_zero_2 from '@/contenu/annales/hggsp-2021-zero-2.json'
 import a_hggsp_2023_metropole_j2 from '@/contenu/annales/hggsp-2023-metropole-j2.json'
 import a_hggsp_2024_centres_etrangers_j1 from '@/contenu/annales/hggsp-2024-centres-etrangers-j1.json'
 import a_hggsp_2025_amerique_nord_j1 from '@/contenu/annales/hggsp-2025-amerique-nord-j1.json'
+import a_histoire_geo_brevet_2017_metropole from '@/contenu/annales/histoire-geo-brevet-2017-metropole.json'
+import a_histoire_geo_brevet_2018_metropole from '@/contenu/annales/histoire-geo-brevet-2018-metropole.json'
+import a_histoire_geo_brevet_2019_metropole from '@/contenu/annales/histoire-geo-brevet-2019-metropole.json'
+import a_histoire_geo_brevet_2021_metropole from '@/contenu/annales/histoire-geo-brevet-2021-metropole.json'
+import a_histoire_geo_brevet_2022_metropole from '@/contenu/annales/histoire-geo-brevet-2022-metropole.json'
+import a_histoire_geo_brevet_2023_metropole from '@/contenu/annales/histoire-geo-brevet-2023-metropole.json'
+import a_histoire_geo_brevet_2024_metropole from '@/contenu/annales/histoire-geo-brevet-2024-metropole.json'
 import a_histoire_geo_brevet_2025_metropole from '@/contenu/annales/histoire-geo-brevet-2025-metropole.json'
+import a_histoire_geo_brevet_2026_metropole from '@/contenu/annales/histoire-geo-brevet-2026-metropole.json'
 import a_hlp_2023_metropole_j1 from '@/contenu/annales/hlp-2023-metropole-j1.json'
 import a_hlp_2024_centres_etrangers_j1 from '@/contenu/annales/hlp-2024-centres-etrangers-j1.json'
 import a_hlp_2025_amerique_nord_secours from '@/contenu/annales/hlp-2025-amerique-nord-secours.json'
@@ -64,7 +72,15 @@ export const ANNALES_CORRIGEES: readonly AnnaleCorrigee[] = [
   a_hggsp_2023_metropole_j2,
   a_hggsp_2024_centres_etrangers_j1,
   a_hggsp_2025_amerique_nord_j1,
+  a_histoire_geo_brevet_2017_metropole,
+  a_histoire_geo_brevet_2018_metropole,
+  a_histoire_geo_brevet_2019_metropole,
+  a_histoire_geo_brevet_2021_metropole,
+  a_histoire_geo_brevet_2022_metropole,
+  a_histoire_geo_brevet_2023_metropole,
+  a_histoire_geo_brevet_2024_metropole,
   a_histoire_geo_brevet_2025_metropole,
+  a_histoire_geo_brevet_2026_metropole,
   a_hlp_2023_metropole_j1,
   a_hlp_2024_centres_etrangers_j1,
   a_hlp_2025_amerique_nord_secours,

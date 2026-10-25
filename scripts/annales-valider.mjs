@@ -17,6 +17,8 @@ const SUJETS = path.join(RACINE, 'assets-sources', 'annales', 'sujets')
 const MATIERES = ['philosophie', 'hlp', 'hggsp', 'ses', 'maths', 'physique-chimie', 'svt', 'nsi', 'francais', 'histoire-geo']
 const NATURES = ['dissertation', 'explication', 'commentaire', 'etude', 'essai', 'interpretation', 'composee', 'exercice']
 const LANGAGES = ['python', 'sql', 'texte']
+/** Le thème d'une partie tient sur une ligne de la frise du récap. */
+const THEME_MAX = 40
 
 function formulesDuTexte(t) {
   // `$…$` en ligne ; un `\$` échappé n'ouvre rien.
@@ -97,7 +99,9 @@ export function validerAnnale(a, nomFichier) {
   if (!MATIERES.includes(a.matiere)) erreurs.push(`${ou} : matiere inconnue « ${a.matiere} »`)
   if (!['Tle', '1re', '3e'].includes(a.niveau)) erreurs.push(`${ou} : niveau`)
   if (!['bac', 'bac-anticipe', 'brevet'].includes(a.examen)) erreurs.push(`${ou} : examen`)
-  if (!Number.isInteger(a.annee) || a.annee < 2020) erreurs.push(`${ou} : annee`)
+  // Le bac nouvelle formule date de 2021 ; le brevet réformé, dont le programme
+  // n'a pas changé, de 2017 (docs/annales-chantier.md).
+  if (!Number.isInteger(a.annee) || a.annee < 2017) erreurs.push(`${ou} : annee`)
   for (const k of ['centre', 'titre', 'consigne']) if (!a[k]) erreurs.push(`${ou} : ${k} manquant`)
   if (typeof a.code !== 'string') erreurs.push(`${ou} : code doit être une chaîne`)
   if (!(a.jour === null || a.jour === 1 || a.jour === 2)) erreurs.push(`${ou} : jour`)
@@ -112,6 +116,10 @@ export function validerAnnale(a, nomFichier) {
     if (!p.titre) erreurs.push(`${o} : titre`)
     if (!NATURES.includes(p.nature)) erreurs.push(`${o} : nature inconnue « ${p.nature} »`)
     verifierTexte(p.enonce, `${o} › enonce`, erreurs)
+    // Le thème tombé (recap.ts) : court, sans balisage, jamais vide.
+    if (typeof p.theme !== 'string' || p.theme.trim() === '') erreurs.push(`${o} : theme manquant (le chapitre ou la notion tombée)`)
+    else if (p.theme.length > THEME_MAX) erreurs.push(`${o} : theme trop long (${p.theme.length} > ${THEME_MAX} caractères)`)
+    else if (/[*$`<>]/.test(p.theme)) erreurs.push(`${o} : theme sans balisage (ni gras, ni formule)`)
     if (!Array.isArray(p.enBref) || p.enBref.length < 2 || p.enBref.length > 6) erreurs.push(`${o} : enBref doit compter 2 à 6 phrases`)
     else p.enBref.forEach((t, i) => verifierTexte(t, `${o} › enBref ${i + 1}`, erreurs))
     verifierBlocs(p.blocs, o, erreurs)

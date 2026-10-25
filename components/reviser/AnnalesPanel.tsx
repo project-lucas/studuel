@@ -6,6 +6,7 @@ import { sfx } from '@/lib/sounds'
 import type { ExamYear } from '@/lib/annales'
 import { cheminAnnale, type AnneeAnnales } from '@/lib/annales-corrigees/apercu'
 import { sigleEpreuve } from '@/lib/annales-corrigees/epreuve'
+import RecapAnnales from '@/components/annales/RecapAnnales'
 import {
   formatCoefficient,
   formatDuration,
@@ -221,10 +222,14 @@ function AnnalesCorrigees({
   return (
     <section aria-labelledby="annales-corrigees">
       {/* Des BLOCS, simplement (Lucas, 12/10/2026) : l'année, le centre, et
-          c'est tout — plus de phrase grise ni de pilule « Sujet + corrigé ». */}
-      <h2 id="annales-corrigees" className="titre-section mb-3">
-        Les sujets tombés, corrigés
-      </h2>
+          c'est tout — plus de phrase grise ni de pilule « Sujet + corrigé ».
+          Dans l'angle, le RÉCAP des sujets tombés par année (25/10/2026). */}
+      <div className="mb-3 flex items-center justify-between gap-3">
+        <h2 id="annales-corrigees" className="titre-section">
+          Les sujets tombés, corrigés
+        </h2>
+        <RecapAnnales subject={subject} annales={annales} />
+      </div>
       <ul className="flex flex-col gap-2.5">
         {annales.flatMap((groupe) =>
           groupe.annales.map((a) => (

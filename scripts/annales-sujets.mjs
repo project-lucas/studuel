@@ -5,7 +5,11 @@
 //   node scripts/annales-sujets.mjs <id> …     → seulement ceux-là
 //
 // Source : assets-sources/annales/sujets/<id>.pdf — le sujet OFFICIEL du
-// ministère, tel quel. Sortie : public/annales/<id>.pdf.
+// ministère, tel quel. Sortie (25/10/2026) : `annales-out/<id>.pdf`, hors git,
+// à déposer sur Cloudflare R2 par scripts/annales-deposer.mjs — sauf pour les
+// sujets qui vivent DÉJÀ dans `public/annales/` (les 42 premiers, servis par
+// Vercel), qui y sont réécrits. `public/annales` est plafonné à 25 Mo
+// (lib/public-poids.test.ts) : un nouveau sujet n'y entre plus.
 //
 // CE QUE LE SCRIPT CHANGE, ET CE QU'IL NE TOUCHE PAS. Le contenu du sujet est
 // reproduit SANS MODIFICATION : chaque page officielle est posée, réduite de
@@ -31,7 +35,13 @@ const RACINE = path.resolve(import.meta.dirname, '..')
 const SOURCES = path.join(RACINE, 'assets-sources', 'annales', 'sujets')
 const POLICES = path.join(RACINE, 'assets-sources', 'annales', 'polices')
 const CORRIGES = path.join(RACINE, 'contenu', 'annales')
-const SORTIE = path.join(RACINE, 'public', 'annales')
+const SORTIE_PUBLIC = path.join(RACINE, 'public', 'annales')
+const SORTIE_LOCALE = path.join(RACINE, 'annales-out')
+
+/** Où écrire un sujet habillé : là où il est déjà servi, sinon hors git. */
+function dossierDeSortie(id) {
+  return existsSync(path.join(SORTIE_PUBLIC, `${id}.pdf`)) ? SORTIE_PUBLIC : SORTIE_LOCALE
+}
 
 // Copie de lib/annales-corrigees/matieres.ts (un .mjs ne lit pas le TS).
 const MATIERES = {
@@ -388,10 +398,11 @@ async function habiller(id) {
     page.drawText('studuel · annales corrigées', { x: cote, y: 10, size: 7.5, font: P.texte, color: C.gris })
   })
 
-  mkdirSync(SORTIE, { recursive: true })
+  const sortie = dossierDeSortie(id)
+  mkdirSync(sortie, { recursive: true })
   const octets = await doc.save({ useObjectStreams: true })
-  writeFileSync(path.join(SORTIE, `${id}.pdf`), octets)
-  return { id, pages: nb, ko: Math.round(octets.length / 1024) }
+  writeFileSync(path.join(sortie, `${id}.pdf`), octets)
+  return { id, pages: nb, ko: Math.round(octets.length / 1024), ou: path.relative(RACINE, sortie) }
 }
 
 const demandes = process.argv.slice(2)
@@ -401,7 +412,7 @@ const ids = demandes.length
 for (const id of ids) {
   try {
     const r = await habiller(id)
-    console.log(`✓ ${r.id} — ${r.pages} p. + couverture, ${r.ko} Ko`)
+    console.log(`✓ ${r.id} — ${r.pages} p. + couverture, ${r.ko} Ko → ${r.ou}/`)
   } catch (e) {
     console.log(`✗ ${id} : ${e.message}`)
     process.exitCode = 1

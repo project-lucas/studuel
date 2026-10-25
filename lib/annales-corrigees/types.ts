@@ -70,6 +70,15 @@ export type PartieCorrigee = {
   nature: NaturePartie
   /** L'énoncé tel que le sujet le pose (la question de dissertation, le titre de l'exercice). */
   enonce: string
+  /**
+   * LE THÈME TOMBÉ (25/10/2026, Lucas : « un récap des sujets tombés par
+   * année, pour que l'élève voie tout de suite ce qui tombe le plus souvent »).
+   * Le chapitre ou la notion que la partie mobilise, en 40 caractères au plus
+   * (« Première Guerre mondiale », « Mers et océans », « Suites et récurrence ») —
+   * toujours la MÊME graphie d'une annale à l'autre : c'est sur ce texte que
+   * `recap.ts` compte les fréquences. Lu sur l'énoncé, jamais deviné.
+   */
+  theme: string
   points?: number | null
   /** Durée conseillée pour cette partie, en minutes. */
   minutes?: number | null

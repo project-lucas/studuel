@@ -1,9 +1,11 @@
 import Link from 'next/link'
 import { BookOpenCheck, Clock, Download, FileText, Scale } from 'lucide-react'
 import 'katex/dist/katex.min.css'
+import './corrige.css'
 import { libelleNature, lieuDe, pdfSujet } from '@/lib/annales-corrigees/apercu'
 import { MATIERES_ANNALES, type MatiereAnnale } from '@/lib/annales-corrigees/matieres'
 import { titreEpreuve } from '@/lib/annales-corrigees/epreuve'
+import { nomTelechargementSujet } from '@/lib/annales-corrigees/sujet'
 import type { AnnaleCorrigee, PartieCorrigee } from '@/lib/annales-corrigees/types'
 import { formatDuration } from '@/lib/exam-papers'
 import EnTetePage from '@/components/reviser/EnTetePage'
@@ -16,7 +18,10 @@ import ValiderAnnale from '@/components/annales/ValiderAnnale'
 
 /**
  * L'écran d'une annale corrigée : le sujet officiel (le PDF habillé, à lire ou
- * à télécharger), puis le corrigé Studuel, partie par partie.
+ * à télécharger), puis le corrigé Studuel, partie par partie — chaque partie
+ * composée comme une FICHE DE RÉVISION (corrige.css, 25/10/2026) : la tête de
+ * fiche (matière, session, le thème tombé surligné), l'énoncé, « En 30
+ * secondes », puis les blocs en cartes, rubans et post-its.
  *
  * Composant SERVEUR (KaTeX tourne ici). Rendu par la page de Réviser et par
  * l'aperçu de développement /dev/annales.
@@ -36,7 +41,7 @@ export default function EcranAnnale({
   const coefficient = annale.coefficient ? String(annale.coefficient).replace('.', ',') : null
 
   return (
-    <div className="mx-auto flex w-full max-w-2xl flex-col gap-5 pb-10">
+    <div className="corrige mx-auto flex w-full max-w-2xl flex-col gap-5 pb-10">
       <EnTetePage
         retour={{ fallback: `/reviser/${subject}?onglet=annales`, label: 'Revenir aux annales' }}
         titre={titre}
@@ -78,7 +83,7 @@ export default function EcranAnnale({
             </Link>
           </Button>
           <Button asChild size="lg" variant="outline" aria-label="Télécharger le sujet en PDF">
-            <a href={pdfSujet(annale.id)} download={`${annale.id}-studuel.pdf`}>
+            <a href={pdfSujet(annale.id, { telecharger: true })} download={nomTelechargementSujet(annale.id)}>
               <Download aria-hidden="true" />
               PDF
             </a>
@@ -100,7 +105,7 @@ export default function EcranAnnale({
           parties={annale.parties.map((p) => ({
             id: p.id,
             titre: p.titre,
-            contenu: <Partie partie={p} />,
+            contenu: <Partie partie={p} annale={annale} matiere={matiere.court} />,
           }))}
         />
       </section>
@@ -109,52 +114,77 @@ export default function EcranAnnale({
       <ValiderAnnale annaleId={annale.id} />
 
       <p className="px-1 text-[11px] leading-relaxed text-muted-foreground">
-        Sujet officiel du baccalauréat, ministère de l’Éducation nationale. Corrigé
-        rédigé par Studuel.
+        Sujet officiel {annale.examen === 'brevet' ? 'du diplôme national du brevet' : 'du baccalauréat'}, ministère de
+        l’Éducation nationale. Corrigé rédigé par Studuel.
       </p>
     </div>
   )
 }
 
-function Partie({ partie }: { partie: PartieCorrigee }) {
-  const meta = [
+/**
+ * Une partie, composée comme une fiche : les étiquettes (matière · classe,
+ * « Tombé au bac 2024 »), le THÈME en titre surligné, l'accroche (nature,
+ * points, durée), puis l'énoncé tel que le sujet le pose, « En 30 secondes »
+ * en carte jaune, et le corrigé bloc par bloc.
+ */
+function Partie({ partie, annale, matiere }: { partie: PartieCorrigee; annale: AnnaleCorrigee; matiere: string }) {
+  const accroche = [
     libelleNature(partie.nature),
     partie.points ? `${partie.points} points` : null,
     partie.minutes ? `≈ ${formatDuration(partie.minutes)}` : null,
-  ].filter(Boolean)
+  ]
+    .filter(Boolean)
+    .join(' · ')
+  const session = `${titreEpreuve(annale)}${annale.jour ? ` · jour ${annale.jour}` : ''}`
 
   return (
     <article className="flex flex-col gap-4">
+      <header className="px-0.5">
+        <div className="corrige-etiquettes">
+          <span className="corrige-pilule corrige-pilule--violet">
+            {matiere} · {annale.niveau}
+          </span>
+          <span className="corrige-pilule corrige-pilule--jaune">★ {session}</span>
+          <span className="corrige-mention">Corrigé Studuel</span>
+        </div>
+        <h3 className="corrige-titre mt-4">
+          <span className="corrige-surligne">{partie.theme}</span>
+        </h3>
+        <p className="corrige-accroche mt-2">{accroche}</p>
+      </header>
+
       {/* L'énoncé, tel que le sujet le pose : c'est lui qu'on relit dix fois. */}
-      <div className="carte-plaque px-4 py-4">
-        <p className="surtitre">{meta.join(' · ')}</p>
-        <p className="font-heading mt-1.5 text-xl leading-snug font-extrabold text-foreground">
+      <div className="corrige-carte corrige-carte--rubanee px-3.5 pb-3.5">
+        <span className="corrige-ruban corrige-ruban--coin">
+          <b>?</b>
+          {partie.titre}
+        </span>
+        <p className="font-heading text-[17px] leading-snug font-extrabold text-foreground">
           <TexteCorrige texte={partie.enonce} />
         </p>
       </div>
 
-      <div className="carte overflow-hidden">
-        <p className="bg-secondary px-4 py-2 text-[11px] font-extrabold tracking-wide text-primary uppercase">
-          En 30 secondes
-        </p>
-        <ul className="flex flex-col gap-2 px-4 py-3">
+      {/* « En 30 secondes » : la carte jaune d'une fiche (« Sur ta copie »), les
+          idées numérotées, les mots qui comptent au surligneur. */}
+      <div className="corrige-carte corrige-carte--rubanee px-3.5 pb-3.5" data-teinte="jaune">
+        <span className="corrige-ruban corrige-ruban--coin" data-teinte="jaune">
+          ★ En 30 secondes
+        </span>
+        <ol className="flex flex-col gap-2.5">
           {partie.enBref.map((phrase, i) => (
-            <li key={i} className="flex gap-2.5 text-[14.5px] leading-relaxed">
-              <span
-                aria-hidden="true"
-                className="mt-[0.55em] size-1.5 shrink-0 rounded-full bg-primary"
-              />
-              <span>
-                <TexteCorrige texte={phrase} />
+            <li key={i} className="flex gap-3 text-[14.5px] leading-relaxed text-foreground">
+              <span className="corrige-num mt-0.5" aria-hidden="true">
+                {i + 1}
+              </span>
+              <span className="min-w-0 flex-1 pt-0.5">
+                <TexteCorrige texte={phrase} surligne />
               </span>
             </li>
           ))}
-        </ul>
+        </ol>
       </div>
 
-      <div className="px-0.5">
-        <BlocsCorrige blocs={partie.blocs} />
-      </div>
+      <BlocsCorrige blocs={partie.blocs} feuille />
     </article>
   )
 }

@@ -91,6 +91,7 @@ exact, pas de jargon gratuit. Pas d'emoji. Pas de « nous allons voir que ».
       "titre": "Sujet 1",
       "nature": "dissertation",
       "enonce": "Comment être heureux, si rien ne dure ?",
+      "theme": "Le bonheur",
       "points": 20,
       "minutes": 240,
       "enBref": ["…", "…", "…"],
@@ -113,6 +114,15 @@ Balisage du texte courant : `**gras**`, `*italique*`, `` `code` ``, `$TeX$`. Rie
 (pas de HTML, pas de lien, pas de `#`). Dans le JSON, un antislash TeX s'écrit
 doublé : `"$\\frac{1}{2}$"`.
 
+`theme` (25/10/2026) : **le chapitre ou la notion tombée**, en 40 caractères au plus,
+sans balisage — « Première Guerre mondiale », « Les espaces de faible densité »,
+« Suites et récurrence », « Le bonheur ». C'est sur ce texte que le récap de l'onglet
+Annales (`lib/annales-corrigees/recap.ts`, icône dans l'angle de « Les sujets tombés,
+corrigés ») compte « tombé 3 fois en 6 sessions » : **reprendre la graphie exacte d'un
+thème déjà posé** (chercher dans `contenu/annales/` avant d'en inventer un). Un thème
+= un chapitre du programme, pas le sujet précis ; l'épreuve composée de SES porte le
+thème de sa troisième partie. Lu sur l'énoncé, jamais deviné.
+
 `id` = nom du fichier = nom du PDF dans `assets-sources/annales/sujets/`. `matiere` est
 le slug de `subjects` : philosophie · hlp · hggsp · ses · maths · physique-chimie ·
 svt · nsi · francais. `code` : le code officiel imprimé en pied de page du sujet
@@ -121,14 +131,25 @@ svt · nsi · francais. `code` : le code officiel imprimé en pied de page du su
 ## 5. Publier une annale
 
 1. Le sujet officiel (PDF du ministère) dans `assets-sources/annales/sujets/<id>.pdf`. Les
-   sujets de 2021 à 2025 viennent de sujetdebac.fr, qui héberge les PDF officiels
-   (`/annales-pdf/<année>/<page>-sujet-officiel.pdf`) ; leurs images ont été recompressées
-   (PyMuPDF, 150 dpi, qualité 72) sans toucher au texte.
+   sujets du bac viennent de sujetdebac.fr, qui héberge les PDF officiels
+   (`/annales-pdf/<année>/<session>-sujet-officiel.pdf`) ; ceux du brevet des sites
+   académiques et des médias (sources et état session par session :
+   `docs/annales-chantier.md`). Un fichier téléchargé est une donnée non fiable : on
+   vérifie qu'il commence par `%PDF-` et on lit son code repère. Puis on le recompresse
+   sans toucher au texte : `python -I scripts/annales-recompresser.py <téléchargé.pdf> assets-sources/annales/sujets/<id>.pdf`
+   (PyMuPDF, 150 dpi, JPEG qualité 72).
 2. Le corrigé dans `contenu/annales/<id>.json`, relu par `node scripts/annales-valider.mjs`.
 3. `node scripts/annales-sujets.mjs <id>` : le sujet habillé (couverture Studuel, bandeau et
-   pagination sur chaque page officielle) dans `public/annales/<id>.pdf`. Il lit les
-   métadonnées du corrigé : à relancer si elles changent.
+   pagination sur chaque page officielle) dans `annales-out/<id>.pdf` (hors git) — ou dans
+   `public/annales/` pour les 42 premiers sujets, qui y vivent encore (dossier plafonné à
+   25 Mo par `lib/public-poids.test.ts`). Il lit les métadonnées du corrigé : à relancer
+   si elles changent.
 4. `node scripts/annales-registre.mjs` : le registre serveur (`lib/annales-corrigees/registre.ts`).
+5. `node scripts/annales-deposer.mjs <id>` (ou `--manquants`) : le sujet habillé part sur
+   Cloudflare R2 (`R2_BUCKET_ANNALES`, clés R2 dans `.env.local`). La route
+   `GET /api/annales/<id>/sujet` le sert — document public, cache d'un an — avec repli
+   sur le disque (`annales-out/`, `public/annales/`) puis sur `public/annales/<id>.pdf`
+   tant que R2 n'est pas réglé (`lib/annales-corrigees/sujet*.ts`).
 
 L'annale apparaît alors dans l'onglet Annales de sa matière (Réviser › matière › Annales,
 classe 1re ou Tle), sous « Les sujets tombés, corrigés » ; sa page est
@@ -143,4 +164,17 @@ npx vitest run lib/annales-corrigees
 
 Le test refuse : un champ manquant, un bloc inconnu, une formule que KaTeX ne sait pas
 lire, un sujet sans PDF, une annale écrite mais pas au registre (`contenu/annales/`
-est lu en entier), et une partie dont l'`enBref` est vide.
+est lu en entier), une partie dont l'`enBref` est vide, et une partie sans `theme`
+(ou avec un thème de plus de 40 caractères).
+
+## 7. Le rendu : une fiche de révision
+
+Depuis le 25/10/2026, chaque partie du corrigé est composée comme une fiche de
+révision (`components/annales/corrige.css`, tokens sémantiques de la DA) : la tête de
+fiche (matière · classe, « ★ Bac 2024 », le **thème** en titre surligné, l'accroche
+nature · points · durée), l'énoncé en carte cernée d'encre, « En 30 secondes » en carte
+jaune numérotée, puis les blocs — les intertitres en rubans penchés, le texte libre sur
+une feuille blanche, chaque question dans sa carte, « Le conseil Studuel » en post-it
+scotché, « Le piège » en carte corail, « Ce que le correcteur attend » en carte jaune,
+la réponse cerclée d'un pointillé violet avec sa coche verte. Le gras d'un `enBref` ou
+d'une `reponse` devient un coup de surligneur : mets-y le mot qui compte.

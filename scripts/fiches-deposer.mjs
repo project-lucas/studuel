@@ -1,12 +1,19 @@
-// DÉPOSER LES FICHES PDF DANS SUPABASE STORAGE (migration 563).
+// DÉPOSER LES FICHES PDF (Cloudflare R2) ET LEURS APERÇUS (Supabase Storage).
 //
+//   node scripts/fiches-deposer.mjs [niveau] [matière] --sans-apercus
+//       les PDF seuls, vers R2 : pas besoin de la clé service de Supabase
 //   SUPABASE_SERVICE_ROLE_KEY=… node scripts/fiches-deposer.mjs [niveau] [matière]
+//       les PDF et les aperçus
 //     --sans-pdf       ne dépose que les aperçus
 //     --sans-apercus   ne dépose que les PDF
+//     --manquants      (PDF sur R2) saute ceux qui y sont déjà, à la même taille
 //
 // Pour chaque fiche du registre : le PDF rendu par scripts/fiches-rendre.mjs
 // (`fiches-out/<niveau>/<matière>/<slug>.pdf`, hors git) part dans le bucket
-// PRIVÉ `fiches` sous `<chapter_id>.pdf` ; son illustration
+// PRIVÉ de Cloudflare R2 (`R2_BUCKET_FICHES`, depuis le 25/10/2026 : les PDF
+// faisaient dépasser le gigaoctet gratuit de Supabase) sous `<chapter_id>.pdf` ;
+// sans les variables R2 dans `.env.local`, il part comme avant dans le bucket
+// Supabase `fiches` ; son illustration
 // (`assets-sources/fiches/illustrations/…/<slug>.webp`, hors git) part en
 // 360 px dans le bucket PUBLIC `fiches-apercus` sous `<chapter_id>.webp` ; et
 // LA PAGE FLOUTÉE — le PNG rendu, réduit à 640 px et flouté jusqu'à
@@ -17,12 +24,15 @@
 // LA CLÉ SERVICE ne vit nulle part dans le dépôt ni sur Vercel : elle se passe
 // en variable d'environnement le temps du dépôt, depuis le dashboard Supabase
 // (Project settings → API). L'URL du projet est lue dans `.env.local`
-// (NEXT_PUBLIC_SUPABASE_URL) à défaut de SUPABASE_URL.
+// (NEXT_PUBLIC_SUPABASE_URL) à défaut de SUPABASE_URL. Les clés R2 (jeton
+// « lecture et écriture » limité au bucket) sont lues dans `.env.local`, qui
+// n'est pas suivi par git.
 
 import fs from 'node:fs'
 import path from 'node:path'
 import sharp from 'sharp'
 import { createClient } from '@supabase/supabase-js'
+import { AwsClient } from 'aws4fetch'
 import { listerFiches } from './fiches-rendre.mjs'
 
 const RACINE = path.resolve(import.meta.dirname, '..')
@@ -47,25 +57,63 @@ function variableLocale(nom) {
   return ligne?.slice(nom.length + 1).trim().replace(/^["']|["']$/g, '')
 }
 
-const url = process.env.SUPABASE_URL ?? variableLocale('NEXT_PUBLIC_SUPABASE_URL')
-const cle = process.env.SUPABASE_SERVICE_ROLE_KEY
-if (!url || !cle) {
-  console.error('Il faut SUPABASE_URL (ou NEXT_PUBLIC_SUPABASE_URL dans .env.local) et SUPABASE_SERVICE_ROLE_KEY.')
-  process.exit(1)
-}
+const variable = (nom) => process.env[nom] ?? variableLocale(nom)
 
 const args = process.argv.slice(2)
 const options = new Set(args.filter((a) => a.startsWith('--')))
 const [niveau, matiere] = args.filter((a) => !a.startsWith('--'))
 const avecPdf = !options.has('--sans-pdf')
 const avecApercus = !options.has('--sans-apercus')
+const manquantsSeuls = options.has('--manquants')
 
-const supabase = createClient(url, cle, { auth: { persistSession: false, autoRefreshToken: false } })
+// Miroir de lib/fiches/r2.ts (configR2).
+const r2 = (() => {
+  const compte = variable('R2_ACCOUNT_ID')
+  const cleId = variable('R2_ACCESS_KEY_ID')
+  const secret = variable('R2_SECRET_ACCESS_KEY')
+  const bucket = variable('R2_BUCKET_FICHES')
+  if (!compte || !cleId || !secret || !bucket) return null
+  return {
+    base: `https://${compte}.r2.cloudflarestorage.com/${bucket}`,
+    client: new AwsClient({ accessKeyId: cleId, secretAccessKey: secret, service: 's3', region: 'auto' }),
+  }
+})()
+const pdfSurR2 = avecPdf && r2 !== null
+
+const url = process.env.SUPABASE_URL ?? variableLocale('NEXT_PUBLIC_SUPABASE_URL')
+const cle = process.env.SUPABASE_SERVICE_ROLE_KEY
+const besoinSupabase = avecApercus || (avecPdf && !pdfSurR2)
+if (besoinSupabase && (!url || !cle)) {
+  console.error('Il faut SUPABASE_URL (ou NEXT_PUBLIC_SUPABASE_URL dans .env.local) et SUPABASE_SERVICE_ROLE_KEY.')
+  console.error('(Pour les PDF seuls vers R2 : --sans-apercus, avec R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY et R2_BUCKET_FICHES dans .env.local.)')
+  process.exit(1)
+}
+const supabase = besoinSupabase ? createClient(url, cle, { auth: { persistSession: false, autoRefreshToken: false } }) : null
 
 /** Dépose un objet ; lève une erreur lisible si Storage refuse. */
 async function deposer(bucket, nom, corps, contentType) {
   const { error } = await supabase.storage.from(bucket).upload(nom, corps, { contentType, upsert: true })
   if (error) throw new Error(`${bucket}/${nom} : ${error.message}`)
+}
+
+/** La taille d'un objet déjà sur R2, ou null s'il n'y est pas. */
+async function tailleSurR2(nom) {
+  const reponse = await r2.client.fetch(`${r2.base}/${encodeURIComponent(nom)}`, { method: 'HEAD' })
+  if (reponse.status === 404) return null
+  if (!reponse.ok) throw new Error(`R2 ${nom} : HEAD ${reponse.status}`)
+  return Number(reponse.headers.get('content-length'))
+}
+
+/** Dépose un PDF sur R2 ; rend false s'il y était déjà (avec --manquants). */
+async function deposerSurR2(nom, corps) {
+  if (manquantsSeuls && (await tailleSurR2(nom)) === corps.length) return false
+  const reponse = await r2.client.fetch(`${r2.base}/${encodeURIComponent(nom)}`, {
+    method: 'PUT',
+    body: corps,
+    headers: { 'Content-Type': 'application/pdf' },
+  })
+  if (!reponse.ok) throw new Error(`R2 ${nom} : PUT ${reponse.status} ${(await reponse.text()).slice(0, 200)}`)
+  return true
 }
 
 /** Dépose une fiche ; rend ce qui a été fait, ou ce qui manquait. */
@@ -78,8 +126,11 @@ async function deposerFiche({ niveau, matiere, index }) {
 
   if (avecPdf) {
     if (fs.existsSync(pdf)) {
-      await deposer(BUCKET_FICHES, `${index.chapitre}.pdf`, fs.readFileSync(pdf), 'application/pdf')
-      fait.push('pdf')
+      const corps = fs.readFileSync(pdf)
+      if (!pdfSurR2) {
+        await deposer(BUCKET_FICHES, `${index.chapitre}.pdf`, corps, 'application/pdf')
+        fait.push('pdf')
+      } else if (await deposerSurR2(`${index.chapitre}.pdf`, corps)) fait.push('pdf')
     } else manque.push(path.relative(RACINE, pdf))
   }
   if (avecApercus) {
@@ -102,7 +153,7 @@ if (fiches.length === 0) {
   console.error('Aucune fiche ne correspond.')
   process.exit(1)
 }
-console.log(`${fiches.length} fiche(s) → ${url} (${[avecPdf && 'PDF', avecApercus && 'aperçus'].filter(Boolean).join(' + ')})`)
+console.log(`${fiches.length} fiche(s) : ${[avecPdf && `PDF → ${pdfSurR2 ? 'Cloudflare R2' : url}`, avecApercus && `aperçus → ${url}`].filter(Boolean).join(' ; ')}`)
 
 let deposees = 0
 let manquantes = 0

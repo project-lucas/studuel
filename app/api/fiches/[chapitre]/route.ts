@@ -1,14 +1,15 @@
 import { createClient } from '@/lib/supabase/server'
 import { getCurrentUser } from '@/lib/supabase/user'
 import { fichePdfDe, nomDeTelechargement } from '@/lib/fiches/pdf'
-import { urlSigneeFiche } from '@/lib/fiches/pdf-server'
+import { lireFichePdf } from '@/lib/fiches/pdf-server'
 
 // LE PDF D'UNE FICHE DE RÉVISION — `/api/fiches/<chapitre>` (`?dl=1` pour
 // l'enregistrer au lieu de le lire).
 //
-// La route obtient une URL signée par la SESSION de l'élève — Storage ne la
-// signe que si la policy de la migration 563 le permet (abonné, ou chapitre
-// déverrouillé en gemmes) — puis SERT le fichier elle-même, en même origine.
+// L'accès se décide avec la SESSION de l'élève (`fiche_pdf_acces`, 563 :
+// abonné, ou chapitre déverrouillé en gemmes) ; le PDF est lu sur Cloudflare
+// R2 (ou, sans R2 configuré, dans Storage) puis SERVI par la route elle-même,
+// en même origine.
 // Pas une redirection : la fiche se lit DANS l'app (pdf.js, `LecteurPdf`), et
 // pdf.js lit par `fetch` — un renvoi vers le domaine de Storage aurait buté
 // sur CORS et les requêtes de plage. Une page A4 pèse ~1 Mo : ce passage par
@@ -26,22 +27,22 @@ export async function GET(request: Request, { params }: { params: Promise<{ chap
 
   const telecharger = new URL(request.url).searchParams.get('dl') === '1'
   const supabase = await createClient()
-  const signee = await urlSigneeFiche(supabase, chapitre)
-  if (!signee) {
-    // Pas d'accès (ou bucket pas encore en place) : pas d'oracle sur la cause.
+  const lecture = await lireFichePdf(supabase, chapitre)
+  if (!lecture.ok && lecture.raison === 'refus') {
+    // Pas d'accès : pas d'oracle sur la cause.
     return new Response('Cette fiche n’est pas débloquée.', {
       status: 403,
       headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'private, no-store' },
     })
   }
 
-  const pdf = await fetch(signee, { cache: 'no-store' })
-  if (!pdf.ok || !pdf.body) {
+  if (!lecture.ok) {
     return new Response('La fiche n’a pas pu être chargée.', {
       status: 502,
       headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'private, no-store' },
     })
   }
+  const pdf = lecture.pdf
   const nom = nomDeTelechargement(fiche)
   const entetes = new Headers({
     'Content-Type': 'application/pdf',

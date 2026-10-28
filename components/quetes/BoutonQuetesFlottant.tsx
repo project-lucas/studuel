@@ -36,7 +36,7 @@ export default function BoutonQuetesFlottant() {
       data-tour="quetes"
       className={cn(
         'quetes-fab fixed right-4 z-40 md:bottom-8',
-        pathname === '/defi' ? 'bottom-[12.25rem]' : 'bottom-24 [html.marcel-fab_&]:bottom-[10.75rem] [html.champ-marcel_&]:bottom-[var(--champ-marcel)]',
+        pathname === '/defi' ? 'bottom-[12.25rem]' : 'bottom-24 [html.marcel-fab_&]:bottom-[10.75rem] [html.memoire-fab_&]:bottom-[10.75rem] md:[html.memoire-fab_&]:bottom-[6.75rem] [html.champ-marcel_&]:bottom-[var(--champ-marcel)]',
       )}
     >
       <PastilleQuetes grand />

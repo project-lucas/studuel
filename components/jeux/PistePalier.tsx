@@ -54,7 +54,7 @@ export default function PistePalier({
           la ligne et ses crans, puis SOUS chaque cran le taux de réussite qui
           l'ouvre (Lucas, 24/09/2026 : « supprime le texte en dessous, mets le
           pourcentage sous les checkpoints » — la phrase « 1 gemme par étoile —
-          60 %, 80 % et 95 % » prenait deux lignes pour dire ce que les crans
+          60 %, 80 % et 100 % » prenait deux lignes pour dire ce que les crans
           disent seuls). Les taux viennent de STAR_ACCURACY : jamais écrits à
           la main, ils ne peuvent pas mentir sur la règle. Un peu de marge à
           droite pour que le dernier jeton et le dernier taux ne débordent pas. */}

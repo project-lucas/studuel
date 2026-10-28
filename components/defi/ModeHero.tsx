@@ -14,6 +14,10 @@ import styles from './ModeHero.module.css'
  * prend le motif losange des billets et la VIGNETTE de la matière — la même
  * que dans son dossier de Réviser.
  *
+ * La pastille de la matière qui flottait en haut à gauche de l’image est
+ * partie le 26/10/2026 (Lucas : « la matière est citée deux fois, il faut n’en
+ * garder qu’une ») : l’en-tête de ModeStage la porte déjà, avec la vignette.
+ *
  * À poser en PREMIER dans le contenu d'un ModeStage : il sort de son padding
  * pour occuper toute la largeur.
  */
@@ -61,26 +65,6 @@ export default function ModeHero({
         </span>
       ) : null}
 
-      {matiere ? (
-        <span
-          className={cn(
-            styles.matiere,
-            'font-heading absolute top-3 left-4 z-10 inline-flex items-center gap-1.5 rounded-full py-1 pr-3 pl-1 text-xs font-extrabold text-white',
-          )}
-        >
-          {matiere.vignette ? (
-            <Image
-              src={matiere.vignette}
-              alt=""
-              aria-hidden="true"
-              width={48}
-              height={48}
-              className="size-6 object-contain"
-            />
-          ) : null}
-          {matiere.nom}
-        </span>
-      ) : null}
 
       <div className="absolute inset-x-4 bottom-5 z-10 flex flex-col items-start gap-1">
         <h1

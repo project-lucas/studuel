@@ -69,7 +69,7 @@ describe('starsFor', () => {
 
   it('annonce le seuil de l’étoile suivante, et rien au sommet', () => {
     expect(nextStarAccuracy(0)).toBe(0.6)
-    expect(nextStarAccuracy(2)).toBe(0.95)
+    expect(nextStarAccuracy(2)).toBe(1)
     expect(nextStarAccuracy(3)).toBeNull()
   })
 })

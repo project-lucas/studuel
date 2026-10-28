@@ -10,11 +10,11 @@
 // ce qu'il reste à faire pour le prochain.
 //
 // L'AXE EST LA PRÉCISION, pas le score : les étoiles se gagnent à 60, 80 et
-// 95 % de bonnes réponses (lib/jeux/paliers, STAR_ACCURACY), et chaque étoile
+// 100 % de bonnes réponses (lib/jeux/paliers, STAR_ACCURACY), et chaque étoile
 // paie son XP (ses gemmes avant la 557). Le curseur se place donc au meilleur taux de réussite du
 // palier ; le score, lui, s'écrit sur l'étiquette du curseur (« Record 6000 »).
 // Les trois segments de la piste ont la même longueur à l'écran quelle que
-// soit leur largeur en pourcentage (0 → 60, 60 → 80, 80 → 95) : ce qui se lit,
+// soit leur largeur en pourcentage (0 → 60, 60 → 80, 80 → 100) : ce qui se lit,
 // c'est « à mi-chemin du prochain jalon », pas une échelle de pourcentages.
 //
 // Pur, testé.

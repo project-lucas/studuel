@@ -13,6 +13,8 @@
 // -----------------------------------------------------------------------------
 import { ordinal, standingFor, type Standing } from '@/lib/percentile'
 import { PALIER_LEVELS, isPalierLevel, type PalierLevel } from '@/lib/jeux/paliers'
+import { parseCaps } from '@/lib/jeux/palier-temps'
+import type { SeuilTemps } from '@/lib/economie'
 
 /** Ma place sur un palier, telle que la base la connaît. */
 export type PalierTimeStanding = {
@@ -23,6 +25,11 @@ export type PalierTimeStanding = {
   rank: number
   /** Nombre de joueurs classés sur ce palier, moi compris. */
   total: number
+  /**
+   * Les CAPS DE RAPIDITÉ déjà payés sur ce palier (603 : top 50 / 30 / 15 / 5 /
+   * 1 %), du plus large au plus serré. Vide avant la 603, ou sans cap franchi.
+   */
+  seuils: readonly SeuilTemps[]
 }
 
 export type PalierStandings = Partial<Record<PalierLevel, PalierTimeStanding>>
@@ -64,7 +71,8 @@ export function speedLabelFor(
 }
 
 /**
- * Normalise ce que renvoie la RPC `palier_standings` (migration 313).
+ * Normalise ce que renvoie la RPC `palier_standings` (migration 313) — ou
+ * `palier_temps_etat` (603), la même chose plus les caps payés (`seuils`).
  *
  * Tolérante par construction, comme `parseGradeStandings` : la RPC peut manquer
  * (migration pas encore exécutée), rendre `null` (visiteur) ou une forme
@@ -92,6 +100,7 @@ export function parsePalierStandings(raw: unknown): PalierStandings {
       bestMs: Math.round(bestMs),
       rank: Math.round(rank),
       total: Math.round(total),
+      seuils: parseCaps(row.seuils),
     }
   }
   return standings

@@ -35,8 +35,9 @@ import type { GameRun } from '@/lib/jeux/run'
 export function usePalierRun(gameId: string, palier: PalierRun | null) {
   const [outcome, setOutcome] = useState<PalierOutcome | null>(null)
   const [standing, setStanding] = useState<PalierTimeStanding | null>(null)
-  // L'XP que les étoiles de CETTE partie ont rapportée (migration 557),
-  // null tant que le serveur n'a pas répondu — ou quand il n'y a rien eu.
+  // L'XP que les étoiles de CETTE partie ont rapportée (migration 557) ET
+  // celle des caps de rapidité qu'elle a franchis (603) — UNE ligne d'XP dans
+  // le bilan ; null tant que le serveur n'a pas répondu, ou s'il n'y a rien eu.
   const [xpEtoiles, setXpEtoiles] = useState<number | null>(null)
   const partieRef = useRef(0)
   // Éclatées ici plutôt que lues dans le callback : deux nombres ont une
@@ -82,7 +83,12 @@ export function usePalierRun(gameId: string, palier: PalierRun | null) {
       if (next.timeMs === null) return
       recordPalierTime(gameId, level, next.timeMs)
         .then((place) => {
-          if (partie === partieRef.current) setStanding(place)
+          if (partie !== partieRef.current) return
+          setStanding(place)
+          // LES CAPS DE RAPIDITÉ (603) : la place paie, une fois pour toutes,
+          // chaque cap franchi (top 50 %, 30, 15, 5, 1) — ajouté à l'XP des
+          // étoiles, sans attendre l'autre réponse.
+          if (place && place.xp > 0) setXpEtoiles((prev) => (prev ?? 0) + place.xp)
         })
         .catch(() => {
           // Migration 313 pas encore passée, ou réseau : pas de pourcentage,

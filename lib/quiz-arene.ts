@@ -139,7 +139,7 @@ export function objectifCouronne(total: number): number {
 }
 
 /**
- * Les étoiles d'un quiz, sur les seuils des paliers de jeu (60 / 80 / 95 %).
+ * Les étoiles d'un quiz, sur les seuils des paliers de jeu (60 / 80 / 100 %).
  * Pas de plancher à une étoile comme dans une partie gagnée : un quiz se
  * termine toujours, aller au bout n'y est pas un exploit — seule l'exactitude
  * compte, et un 5/10 n'a rien décroché.

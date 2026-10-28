@@ -92,8 +92,10 @@ export function palierTitle(level: PalierLevel): string {
  * Les trois seuils d'étoile, en TAUX DE RÉUSSITE. On note l'exactitude et non
  * le score : le score dépend de la mécanique (un sprint en rapporte dix fois
  * plus qu'une expédition), le taux de réussite se compare d'un jeu à l'autre.
+ * La troisième étoile exige le SANS-FAUTE (26/10/2026, Lucas : « remplace les
+ * 95 % par 100 % ») : à 95 %, une partie de vingt questions en tolérait une.
  */
-export const STAR_ACCURACY = { one: 0.6, two: 0.8, three: 0.95 } as const
+export const STAR_ACCURACY = { one: 0.6, two: 0.8, three: 1 } as const
 
 /**
  * Les étoiles d'une partie. Une partie PERDUE plafonne à une étoile, si bonne

@@ -12,7 +12,10 @@ import XpIcon from '@/components/ui/XpIcon'
 import { reclamerEtoilesPalier } from '@/app/defi/palier-actions'
 import PalierStars from '@/components/jeux/PalierStars'
 import PistePalier from '@/components/jeux/PistePalier'
+import BarreTemps from '@/components/jeux/BarreTemps'
 import { MECHANIC_ICON } from '@/components/jeux/icons'
+import MatiereChip from '@/components/jeux/MatiereChip'
+import { gameTalon } from '@/lib/defi/modes-catalog'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import type { GameFormat } from '@/lib/jeux/formats'
@@ -40,10 +43,7 @@ import {
   resteAReclamer,
   type EtoilesParPalier,
 } from '@/lib/jeux/palier-gemmes'
-import {
-  speedLabelFor,
-  type PalierStandings,
-} from '@/lib/jeux/palier-standing'
+import type { PalierStandings, PalierTimeStanding } from '@/lib/jeux/palier-standing'
 import {
   coteTitle,
   hasUltime,
@@ -55,6 +55,7 @@ import {
   worldLabel,
   type UltimeStanding,
 } from '@/lib/jeux/ultime-standing'
+import styles from './PalierMap.module.css'
 
 /**
  * LA CARTE DU JEU — l'échelle des cinq paliers d'un salon.
@@ -188,14 +189,11 @@ export default function PalierMap({
     <ModeStage
       title={name}
       Icon={MECHANIC_ICON[format.params.mechanic]}
+      illustration={gameTalon(format.id) ?? null}
       theme={format.theme}
       scene={scene}
       onExit={() => router.push('/defi')}
-      headerRight={
-        <span className="shrink-0 rounded-full bg-[color:var(--jeu-accent)]/12 px-2.5 py-1 text-[11px] font-bold text-[color:var(--jeu-accent)]">
-          <span aria-hidden="true">{subjectEmoji}</span> {subject}
-        </span>
-      }
+      headerRight={<MatiereChip nom={subject} vignette={subjectVignette} emoji={subjectEmoji} />}
     >
       {/* L'AMBIANCE DU JEU : sa scène (celle de son billet), sa robe, son
           titre — l'écran continue le billet qu'on vient de toucher. */}
@@ -253,18 +251,28 @@ export default function PalierMap({
         <ol className="relative flex flex-col gap-3">
           {suivant !== null ? (
             <li key={`suivant-${suivant}`}>
+              {/* Le barreau qui attend : la même plaque que les autres, en
+                  pointillés, son médaillon cadenassé — et la seule ligne qui
+                  dit ce qu'il faut pour le faire apparaître. */}
               <p
-                className="flex items-center gap-2 rounded-3xl border-2 border-dashed border-foreground/15 px-4 py-3 text-sm font-bold text-muted-foreground"
+                className={cn(styles.verrou, 'flex items-center gap-3 rounded-[1.4rem] px-3.5 py-2.5 text-sm text-muted-foreground')}
                 aria-label={`Palier ${suivant}, ${palierDef(suivant).name} — encore ${starsMissingFor(progress, floor, suivant)} étoile${starsMissingFor(progress, floor, suivant) > 1 ? 's' : ''} au palier ${palierDef(sommet).name} pour le faire apparaître.`}
               >
-                <Lock className="size-4 shrink-0" strokeWidth={2.6} aria-hidden="true" />
-                <span>
-                  Palier {suivant} · {palierDef(suivant).name} — encore{' '}
-                  <strong className="text-foreground">
-                    {starsMissingFor(progress, floor, suivant)} étoile
-                    {starsMissingFor(progress, floor, suivant) > 1 ? 's' : ''}
-                  </strong>{' '}
-                  au palier {palierDef(sommet).name}
+                <span aria-hidden="true" className={cn(styles.medaillonVerrou, 'grid size-11 shrink-0 place-items-center rounded-full')}>
+                  <Lock className="size-5" strokeWidth={2.6} />
+                </span>
+                <span className="min-w-0">
+                  <span className="font-heading block text-base leading-tight font-extrabold text-foreground/70">
+                    Palier {suivant} · {palierDef(suivant).name}
+                  </span>
+                  <span className="block text-xs font-bold">
+                    Encore{' '}
+                    <strong className="text-foreground">
+                      {starsMissingFor(progress, floor, suivant)} étoile
+                      {starsMissingFor(progress, floor, suivant) > 1 ? 's' : ''}
+                    </strong>{' '}
+                    au palier {palierDef(sommet).name}
+                  </span>
                 </span>
               </p>
             </li>
@@ -285,7 +293,7 @@ export default function PalierMap({
                 best={bestAt(progress, level)}
                 accuracy={accuracyAt(progress, level)}
                 timeMs={standings[level]?.bestMs ?? bestTimeAt(progress, level)}
-                speed={speedLabelFor(standings[level])}
+                standing={standings[level] ?? null}
                 acquises={acquises[level - 1] ?? 0}
               />
             </motion.li>
@@ -443,7 +451,28 @@ function UltimeRow({
   )
 }
 
-/** Un barreau du donjon : un palier OUVERT, ce qu'il contient, et par où y entrer. */
+/**
+ * UN BARREAU DU DONJON — un palier OUVERT, ce qu'il contient, et par où y entrer.
+ *
+ * REDESSINÉ LE 26/10/2026 (Lucas : « fais de plus jolis blocs, avec un design
+ * plus travaillé, le bloc blanc est bof ») : la carte s'ouvre sur une BANDE à
+ * la robe du jeu (`--jeu-accent` éclairci, rayures en diagonale posées une
+ * fois) qui porte le médaillon du numéro — un rond à socle, comme les plaques
+ * de l'arène —, le nom du palier et ses étoiles ; dessous, sur le blanc, la
+ * promesse du palier et le bouton sur une même ligne, puis la piste des
+ * étoiles en pleine largeur (elle était serrée entre le numéro et le bouton).
+ * La carte a un socle (ombre portée dure) et, quand c'est le palier en cours,
+ * l'anneau violet de l'action.
+ *
+ * LE MÊME SOIR, Lucas : « il faut rappeler le niveau sur chaque palier ; en
+ * dessous il faut rappeler le précédent record de temps sur ce palier et une
+ * barre horizontale qui montrerait où il se situe sur l'ensemble des users » :
+ * la bande dit « PALIER N » au-dessus du nom, et la BARRE DE RAPIDITÉ
+ * (components/jeux/BarreTemps, migration 603) s'installe sous la piste des
+ * étoiles dès que le palier est gagné, sur les formats qui ont un chrono. Le
+ * chrono et la phrase de classement ont quitté la ligne de record de la piste
+ * pour elle. Seul son curseur bouge en continu.
+ */
 function PalierRow({
   format,
   level,
@@ -452,7 +481,7 @@ function PalierRow({
   best,
   accuracy,
   timeMs,
-  speed,
+  standing,
   acquises,
 }: {
   format: GameFormat
@@ -464,8 +493,8 @@ function PalierRow({
   accuracy: number | null
   /** Meilleur temps de bouclage, ou null tant que le palier n'a pas été gagné. */
   timeMs: number | null
-  /** « Top 5 % des joueurs », ou null quand il n'y a rien d'honnête à dire. */
-  speed: string | null
+  /** Ma place au chrono et les caps payés (313 + 603), ou null : classé nulle part. */
+  standing: PalierTimeStanding | null
   /** Étoiles décrochées sur ce palier (locales ou déjà payées), pour ses gains. */
   acquises: number
 }) {
@@ -479,94 +508,89 @@ function PalierRow({
     ? ` — ${recompense.xp} XP à gagner${recompense.gemmes > 0 ? ` et ${recompense.gemmes} gemmes` : ''}`
     : ''
 
-  const body = (
-    <>
-      {/* Le numéro du palier, dans la robe du jeu. */}
-      <span
-        aria-hidden="true"
-        className="font-heading grid size-14 shrink-0 place-items-center rounded-2xl bg-[color:var(--jeu-accent)] text-2xl font-extrabold text-[color:var(--jeu-ink)] shadow-sm"
-      >
-        {level}
-      </span>
-
-      <span className="min-w-0 flex-1">
-        <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
-          <span className="font-heading text-lg font-extrabold">{def.name}</span>
-          <PalierStars stars={stars} size="sm" />
-          {isCurrent ? (
-            <span className="font-heading rounded-full bg-primary px-2 py-0.5 text-[10px] font-extrabold tracking-wide text-primary-foreground uppercase">
-              En cours
-            </span>
-          ) : null}
-        </span>
-
-        <span className="mt-0.5 block text-sm text-muted-foreground">{def.tagline}</span>
-
-        {/* Les jetons descriptifs (« 9 escales », « 10 s / escale ») sont partis
-            le 24/09/2026 — Lucas : « pas clairs ». Ne pas les remettre. */}
-        {/* LA PISTE DU PALIER (22/09/2026) : une ligne, les trois jalons de
-            gemmes (migration 373 : une par étoile, au tarif du palier), et le
-            curseur du record dessus — au meilleur taux de réussite, l'axe des
-            étoiles. Elle réunit les anciens jetons « Gains » et la ligne
-            « Record ». Le chrono de bouclage n'y figure que là où il veut dire
-            quelque chose (`hasTimeRecord`) — sur un sprint de 40 secondes, tout
-            le monde met 40 secondes. Le pourcentage de place ne s'affiche
-            qu'au-delà de 100 joueurs classés (`speedLabelFor`). */}
-        <PistePalier
-          level={level}
-          stars={stars}
-          acquises={acquises}
-          accuracy={accuracy}
-          best={best}
-          timeMs={timed ? (timeMs as number) : null}
-          speed={speed}
-          unlocked
-        />
-      </span>
-
-      {/* LE BOUTON : « Jouer » au palier 1 ; à partir du 2, la récompense qui
-          reste à prendre — l'éclair (et la gemme, le jour où il y en aura). */}
-      <span
-        aria-hidden="true"
-        className={cn(
-          'font-heading flex h-11 shrink-0 items-center gap-1 self-center rounded-2xl px-3 text-sm font-extrabold tabular-nums transition-colors duration-200',
-          isCurrent
-            ? 'bg-primary text-primary-foreground shadow-md'
-            : 'bg-primary/10 text-primary',
-        )}
-      >
-        <Play className="size-4 fill-current" />
-        {promesse ? (
-          <>
-            <XpIcon className="ml-0.5 size-5" />+{recompense.xp}
-            {recompense.gemmes > 0 ? (
-              <>
-                <GemIcon className="ml-1 size-4" />+{recompense.gemmes}
-              </>
-            ) : null}
-          </>
-        ) : (
-          <span className="ml-0.5">{recompense !== null ? 'Rejouer' : 'Jouer'}</span>
-        )}
-      </span>
-    </>
-  )
-
-  const shell =
-    'flex items-start gap-3 rounded-3xl p-3.5 text-left ring-1 transition-colors duration-200'
-
   return (
     <Link
       href={`/defi/jeux/${format.id}/${level}`}
       onClick={() => sfx.tap()}
       aria-label={`Jouer le palier ${level}, ${def.name} — ${stars} étoile${stars > 1 ? 's' : ''} sur 3${libelleGain}`}
       className={cn(
-        shell,
-        'cursor-pointer bg-card shadow-sm hover:bg-[color:var(--jeu-accent)]/8 focus-visible:ring-4 focus-visible:ring-primary/50 focus-visible:outline-none',
-        isCurrent ? 'ring-2 ring-primary' : 'ring-black/5',
+        styles.carte,
+        'block cursor-pointer overflow-hidden rounded-[1.4rem] bg-card text-left transition-transform duration-150 hover:-translate-y-0.5 active:translate-y-px focus-visible:ring-4 focus-visible:ring-primary/50 focus-visible:outline-none',
+        isCurrent ? styles.carteEnCours : null,
       )}
     >
-      {body}
+      {/* LA BANDE : la robe du jeu, le médaillon, le nom, les étoiles. */}
+      <span className={cn(styles.bande, 'flex items-center gap-3 px-3.5 py-2.5')}>
+        <span aria-hidden="true" className={cn(styles.medaillon, 'font-heading grid size-11 shrink-0 place-items-center rounded-full text-xl font-extrabold')}>
+          {level}
+        </span>
+        <span className="flex min-w-0 flex-1 flex-col gap-1">
+          <span className="text-[10px] leading-none font-extrabold tracking-[0.08em] uppercase opacity-75">
+            Palier {level}
+          </span>
+          <span className="flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span className="font-heading text-lg leading-none font-extrabold">{def.name}</span>
+            <PalierStars stars={stars} size="md" />
+          </span>
+        </span>
+        {isCurrent ? (
+          <span className="font-heading shrink-0 rounded-full bg-primary px-2 py-0.5 text-[10px] font-extrabold tracking-wide text-primary-foreground uppercase shadow-sm">
+            En cours
+          </span>
+        ) : null}
+      </span>
+
+      <span className="block px-3.5 pt-2.5 pb-3">
+        {/* La promesse du palier et LE BOUTON, sur une ligne : « Jouer » au
+            palier 1 ; à partir du 2, la récompense qui reste à prendre —
+            l'éclair (et la gemme, le jour où il y en aura). */}
+        <span className="flex items-center justify-between gap-3">
+          <span className="min-w-0 text-sm leading-snug text-muted-foreground">{def.tagline}</span>
+          <span
+            aria-hidden="true"
+            className={cn(
+              'font-heading flex h-10 shrink-0 items-center gap-1 rounded-full px-3.5 text-sm font-extrabold tabular-nums',
+              isCurrent
+                ? 'bg-primary text-primary-foreground shadow-[0_3px_0_color-mix(in_oklch,var(--primary),black_30%)]'
+                : 'bg-primary/10 text-primary',
+            )}
+          >
+            <Play className="size-4 fill-current" />
+            {promesse ? (
+              <>
+                <XpIcon className="ml-0.5 size-5" />+{recompense.xp}
+                {recompense.gemmes > 0 ? (
+                  <>
+                    <GemIcon className="ml-1 size-4" />+{recompense.gemmes}
+                  </>
+                ) : null}
+              </>
+            ) : (
+              <span className="ml-0.5">{recompense !== null ? 'Rejouer' : 'Jouer'}</span>
+            )}
+          </span>
+        </span>
+
+        {/* Les jetons descriptifs (« 9 escales », « 10 s / escale ») sont partis
+            le 24/09/2026 — Lucas : « pas clairs ». Ne pas les remettre. */}
+        {/* LA PISTE DU PALIER (22/09/2026) : une ligne, les trois jalons d'XP
+            (une étoile chacun, au tarif du palier), et le curseur du record
+            dessus — au meilleur taux de réussite, l'axe des étoiles. Le chrono
+            de bouclage et la place, eux, sont sur la BARRE DE RAPIDITÉ
+            dessous (26/10/2026) — là où le format a un chrono (`hasTimeRecord`) :
+            sur un sprint de 40 secondes, tout le monde met 40 secondes. */}
+        <PistePalier
+          level={level}
+          stars={stars}
+          acquises={acquises}
+          accuracy={accuracy}
+          best={best}
+          timeMs={null}
+          speed={null}
+          unlocked
+        />
+        {timed ? <BarreTemps timeMs={timeMs as number} standing={standing} /> : null}
+      </span>
     </Link>
   )
 }

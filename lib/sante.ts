@@ -4776,6 +4776,16 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     // Révoquée pour anon : l’appel anonyme est refusé (42501), la fonction existe.
     sonde: { type: 'rpc', fn: 'courrier_non_lus', args: {} },
   },
+  {
+    id: '603',
+    fichier: '603_palier_temps_xp.sql',
+    feature:
+      'LES CAPS DE RAPIDITÉ des paliers (26/10/2026) : source `palier_temps` ajoutée à xp_events_source_check, `palier_temps_xp` (top 50 / 30 / 15 / 5 / 1 % → 5 / 10 / 15 / 25 / 40 XP, miroir de lib/economie), `palier_temps_seuils_payes` (lus dans xp_events), `palier_temps_enregistrer` (le temps par record_palier_time de la 313, puis chaque cap franchi payé UNE fois par wallet_grant_xp dès dix joueurs classés), `palier_temps_etat` (les places de palier_standings + les caps payés).',
+    siAbsente:
+      'La fin de partie retombe sur record_palier_time et la carte du jeu sur palier_standings (313) : la barre de rapidité s’affiche sans cap payé et aucune XP de cap n’est versée ; rien d’autre ne casse.',
+    // Révoquée pour anon : l’appel anonyme est refusé (42501), la fonction existe.
+    sonde: { type: 'rpc', fn: 'palier_temps_etat', args: { p_game_id: '' } },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

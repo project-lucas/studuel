@@ -66,10 +66,10 @@ export default function BoutonCourrierFlottant({ demo = false }: { demo?: boolea
   const position = quetesVisibles
     ? arene
       ? 'bottom-[18rem] md:bottom-[7.75rem]'
-      : 'bottom-[11.75rem] md:bottom-[7.75rem] [html.marcel-fab_&]:bottom-[16.5rem] [html.champ-marcel_&]:bottom-[calc(var(--champ-marcel)+5.75rem)]'
+      : 'bottom-[11.75rem] md:bottom-[7.75rem] [html.marcel-fab_&]:bottom-[16.5rem] [html.memoire-fab_&]:bottom-[16.5rem] md:[html.memoire-fab_&]:bottom-[12.5rem] [html.champ-marcel_&]:bottom-[calc(var(--champ-marcel)+5.75rem)]'
     : arene
       ? 'bottom-[12.25rem] md:bottom-8'
-      : 'bottom-24 md:bottom-8 [html.marcel-fab_&]:bottom-[10.75rem] [html.champ-marcel_&]:bottom-[var(--champ-marcel)]'
+      : 'bottom-24 md:bottom-8 [html.marcel-fab_&]:bottom-[10.75rem] [html.memoire-fab_&]:bottom-[10.75rem] md:[html.memoire-fab_&]:bottom-[6.75rem] [html.champ-marcel_&]:bottom-[var(--champ-marcel)]'
 
   return (
     <div data-tour="courrier" className={cn(styles.fab, 'fixed right-4 z-40', position)}>

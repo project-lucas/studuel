@@ -49,10 +49,10 @@ function lire(f: string): FichierExercices | null {
 export default async function ApercuExercices({
   searchParams,
 }: {
-  searchParams: Promise<{ f?: string; i?: string; livre?: string; sens?: string; sommaire?: string }>
+  searchParams: Promise<{ f?: string; i?: string; livre?: string; sens?: string }>
 }) {
   if (process.env.NODE_ENV === 'production') notFound()
-  const { f, i, livre: modeLivre, sens, sommaire } = await searchParams
+  const { f, i, livre: modeLivre, sens } = await searchParams
 
   if (f && i !== undefined) {
     const fichier = lire(f)
@@ -97,7 +97,7 @@ export default async function ApercuExercices({
             />
           )
           return livre ? (
-            <Liseuse livre={livre} chapitreId={ex.chapitre} position={ex.position} sommaireOuvert={sommaire === '1'} sens={sens === 'suivante' || sens === 'precedente' ? sens : null}>
+            <Liseuse livre={livre} chapitreId={ex.chapitre} position={ex.position} sens={sens === 'suivante' || sens === 'precedente' ? sens : null}>
               {joueur}
             </Liseuse>
           ) : (

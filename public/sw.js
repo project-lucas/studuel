@@ -19,7 +19,11 @@
  *     quand le réseau manque. C'est ce qui rend lisibles « les cours déjà
  *     lus ». Jamais `/api`, `/auth`, `/admin`, `/login`, ni une réponse
  *     redirigée ; les préchargements partiels du routeur ne sont pas gardés
- *     (ils ne suffiraient pas à peindre un écran).
+ *     (ils ne suffiraient pas à peindre un écran). Jamais en développement
+ *     non plus : les chunks n'y sont pas en cache, une page resservie
+ *     arriverait en HTML nu (27/10/2026 : un onglet laissé sur un port où
+ *     plus rien n'écoutait montrait le garde portrait, l'écran de lancement
+ *     et l'avatar à la suite, sans style).
  *   · tout ce qui n'est pas GET, ou pas de cette origine (Supabase, Google
  *     Fonts) : pas touché.
  *
@@ -199,6 +203,12 @@ self.addEventListener('fetch', (event) => {
     repondre(event, () => cachePuisReseau(request, CACHE_IMAGES, MAX_IMAGES))
     return
   }
+
+  // En développement, les chunks ne sont pas en cache (ci-dessus) : une page
+  // resservie du cache arriverait sans style ni script. On laisse la
+  // navigation échouer franchement — le navigateur dit « connexion refusée »
+  // plutôt que de peindre du HTML nu.
+  if (DEV) return
 
   // Une navigation (l'adresse tapée, un rechargement, un lien hors routeur).
   if (request.mode === 'navigate') {

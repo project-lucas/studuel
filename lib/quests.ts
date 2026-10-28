@@ -304,8 +304,10 @@ export function journeeBouclee(etat: QuetesDuJour): boolean {
 }
 
 /** La prochaine pièce à toucher, celle qui bat pour appeler le doigt. */
-export function prochaineAEncaisser(etat: QuetesDuJour): QueteServie | null {
-  return aEncaisser(etat)[0] ?? null
+export function prochaineAEncaisser(etat: QuetesDuJour, enVol?: ReadonlySet<string>): QueteServie | null {
+  // `enVol` (26/10/2026) : les quêtes dont l'encaissement est parti et n'est
+  // pas encore revenu — la feuille passe à la suivante sans attendre.
+  return aEncaisser(etat).find((q) => !enVol?.has(q.id)) ?? null
 }
 
 /**

@@ -3,9 +3,8 @@
 import { useCallback, useEffect, useRef, useState, type ReactNode, type TouchEvent } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { BookOpen, ChevronLeft, ChevronRight, Lock, X } from 'lucide-react'
+import { BookOpen, ChevronLeft, ChevronRight, Lock } from 'lucide-react'
 import { avecSens, sensDuGeste, voisinage, type Livre, type PageLivre } from '@/lib/exercices/livre'
-import SommaireLivre from './SommaireLivre'
 import s from './livre.module.css'
 
 /** Ce qu'on touche pour répondre ne tourne jamais la page. */
@@ -15,16 +14,20 @@ const INTERACTIF = 'input, textarea, select, button, a, label, [role="button"], 
  * LA LISEUSE — un exercice présenté comme la page d'un manuel numérique.
  * En tête, le titre courant (le thème, le chapitre) et le folio « p. 7 / 24 »,
  * avec une barre d'avancée découpée par chapitre ; en pied, de quoi tourner la
- * page vers la précédente ou la suivante, et le sommaire au centre. On tourne
- * aussi d'un glissé du doigt ou avec les flèches du clavier. La page qui entre
- * « tourne » (transform et opacité seulement).
+ * page vers la précédente ou la suivante. On tourne aussi d'un glissé du doigt
+ * ou avec les flèches du clavier. La page qui entre « tourne » (transform et
+ * opacité seulement).
+ *
+ * Plus de sommaire en tiroir (26/10/2026, Lucas : « je ne pense pas que ce
+ * soit nécessaire… renvoyer simplement au chapitre ou exercice suivant ») : la
+ * page suivante passe d'elle-même au chapitre d'après, et le cahier propose
+ * le chapitre suivant en pied.
  */
 export default function Liseuse({
   livre,
   chapitreId,
   position,
   sens,
-  sommaireOuvert = false,
   children,
 }: {
   livre: Livre
@@ -32,12 +35,9 @@ export default function Liseuse({
   position: number
   /** Le sens dans lequel on vient de tourner la page (animation d'entrée). */
   sens: 'suivante' | 'precedente' | null
-  /** Ouvre le sommaire d'emblée (aperçu de développement). */
-  sommaireOuvert?: boolean
   children: ReactNode
 }) {
   const router = useRouter()
-  const [sommaire, setSommaire] = useState(sommaireOuvert)
   const [refus, setRefus] = useState(false)
   const depart = useRef<{ x: number; y: number } | null>(null)
   const v = voisinage(livre, chapitreId, position)
@@ -63,20 +63,10 @@ export default function Liseuse({
       if (cible?.closest('input, textarea, select, [contenteditable="true"]')) return
       if (e.key === 'ArrowRight') tourner(v.suivante, 'suivante')
       if (e.key === 'ArrowLeft') tourner(v.precedente, 'precedente')
-      if (e.key === 'Escape') setSommaire(false)
     }
     window.addEventListener('keydown', auClavier)
     return () => window.removeEventListener('keydown', auClavier)
   }, [v, tourner])
-
-  useEffect(() => {
-    if (!sommaire) return
-    const avant = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
-    return () => {
-      document.body.style.overflow = avant
-    }
-  }, [sommaire])
 
   if (!v) return <>{children}</>
 
@@ -157,10 +147,6 @@ export default function Liseuse({
           ) : (
             <span className={s.bordLivre + ' self-center'}>Début du manuel</span>
           )}
-          <button type="button" className={s.boutonSommaire} onClick={() => setSommaire(true)} aria-haspopup="dialog">
-            <BookOpen className="size-5" aria-hidden="true" />
-            Sommaire
-          </button>
           {v.suivante ? (
             <button
               type="button"
@@ -191,30 +177,6 @@ export default function Liseuse({
           <p className={s.bordLivre}>Glisse la page du doigt pour la tourner.</p>
         )}
       </footer>
-
-      {sommaire ? (
-        <>
-          <div className={s.voile} onClick={() => setSommaire(false)} aria-hidden="true" />
-          <div className={s.tiroir} role="dialog" aria-modal="true" aria-label="Sommaire du manuel">
-            <span className={s.languette} aria-hidden="true" />
-            <div className="mb-3 flex items-center gap-2">
-              <div className="min-w-0 flex-1">
-                <p className="surtitre">Sommaire</p>
-                <p className="font-heading text-xl leading-tight font-extrabold">{livre.titre}</p>
-              </div>
-              <button
-                type="button"
-                onClick={() => setSommaire(false)}
-                className="flex size-9 items-center justify-center rounded-full bg-[var(--card)] shadow-[0_0_0_1.5px_var(--border)]"
-                aria-label="Fermer le sommaire"
-              >
-                <X className="size-4" />
-              </button>
-            </div>
-            <SommaireLivre livre={livre} courante={{ chapitreId, position }} onChoisir={() => setSommaire(false)} />
-          </div>
-        </>
-      ) : null}
     </div>
   )
 }

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import {
   ArrowLeft,
   ArrowUp,
+  ChevronRight,
   Crown,
   Hourglass,
   LoaderCircle,
@@ -12,8 +13,10 @@ import {
   RefreshCw,
   RotateCcw,
   Send,
+  Timer,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import ChoixNiveau from '@/components/exercices/ChoixNiveau'
 import LessonRichContent from '@/components/LessonRichContent'
 import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
 import { SEUIL_GEMMES } from '@/lib/economie'
@@ -205,51 +208,59 @@ export default function ControleBlanc({
   if (phase.nom === 'consigne') {
     return (
       <div className="mx-auto flex w-full max-w-md flex-col gap-5">
-        <ChoixDifficulte
+        {/* Le niveau, aux ÉTOILES — le même gabarit que le cahier (26/10/2026). */}
+        <ChoixNiveau
+          label="Niveau du sujet"
           valeur={servi.difficulte}
+          options={DIFFICULTES.map((d) => ({ valeur: d, etoiles: d, libelle: libelleDifficulte(d) }))}
           onChoisir={(d) => {
             if (d === servi.difficulte) return
             sfx.tap()
             charger(d, false)
           }}
         />
+        {/* LE BLOC D'ENTRÉE, SIMPLIFIÉ (26/10/2026, Lucas : « simplifie le bloc
+            introductif du contrôle, valable pour tous ») : le genre du sujet en
+            surtitre, le titre, la consigne, puis une seule ligne de deux jetons
+            (la durée, la note) à la place des deux cases et de la liste du
+            barème — le barème reste à portée, replié. Le niveau n'est plus
+            répété ici : la pastille au-dessus le dit déjà. */}
         <div className="rounded-3xl bg-card p-5 shadow-sm ring-1 ring-black/5">
-          <span className="bg-primary/10 text-primary inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-extrabold tracking-wide uppercase">
-            <PenLine className="size-3.5" aria-hidden="true" />
-            {libelleStyle(servi.style)} · {libelleDifficulte(servi.difficulte)}
-          </span>
-          <h2 className="font-heading mt-3 text-xl font-extrabold text-balance">{exercice.titre}</h2>
+          <p className="surtitre">{libelleStyle(servi.style)}</p>
+          <h2 className="font-heading mt-1 text-xl font-extrabold text-balance">{exercice.titre}</h2>
           <p className="text-muted-foreground mt-2 text-sm leading-relaxed">{exercice.consigne}</p>
 
-          <dl className="mt-4 grid grid-cols-2 gap-3 text-sm">
-            <div className="rounded-2xl bg-muted/60 p-3">
-              <dt className="surtitre">Durée</dt>
-              <dd className="font-heading mt-0.5 text-lg font-extrabold tabular-nums">
-                {exercice.dureeMin} min
-              </dd>
-            </div>
-            <div className="rounded-2xl bg-muted/60 p-3">
-              <dt className="surtitre">Noté sur</dt>
-              <dd className="font-heading mt-0.5 text-lg font-extrabold tabular-nums">20</dd>
-            </div>
-          </dl>
+          <div className="mt-4 flex flex-wrap items-center gap-2 text-sm font-extrabold">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1.5 tabular-nums">
+              <Timer className="size-4 text-primary" aria-hidden="true" />
+              {exercice.dureeMin} min
+            </span>
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-muted px-3 py-1.5 tabular-nums">
+              <PenLine className="size-4 text-primary" aria-hidden="true" />
+              Noté sur 20
+            </span>
+          </div>
 
-          <h3 className="titre-section mt-4">Barème</h3>
-          <ul className="mt-1.5 flex flex-col gap-1 text-sm">
-            {exercice.bareme.map((b) => (
-              <li key={b.critere} className="flex items-baseline justify-between gap-3">
-                <span>{b.critere}</span>
-                <span className="font-mono text-xs font-bold text-muted-foreground tabular-nums">
-                  {b.points} pt{b.points > 1 ? 's' : ''}
-                </span>
-              </li>
-            ))}
-          </ul>
+          <details className="group mt-3">
+            <summary className="flex cursor-pointer list-none items-center gap-1 text-xs font-bold text-muted-foreground [&::-webkit-details-marker]:hidden">
+              <ChevronRight className="size-3.5 transition-transform group-open:rotate-90" aria-hidden="true" />
+              Voir le barème
+            </summary>
+            <ul className="mt-2 flex flex-col gap-1 text-sm">
+              {exercice.bareme.map((b) => (
+                <li key={b.critere} className="flex items-baseline justify-between gap-3">
+                  <span>{b.critere}</span>
+                  <span className="font-mono text-xs font-bold text-muted-foreground tabular-nums">
+                    {b.points} pt{b.points > 1 ? 's' : ''}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </details>
         </div>
 
         <p className="text-muted-foreground text-center text-xs text-balance">
-          Le chrono démarre quand tu commences. À la sonnerie, la copie est
-          ramassée telle quelle, comme en classe.
+          À la sonnerie, la copie est ramassée telle quelle, comme en classe.
         </p>
 
         <Button className="min-h-12 w-full rounded-full text-base" onClick={() => commencer(servi)}>
@@ -482,59 +493,6 @@ export default function ControleBlanc({
       >
         Abandonner le contrôle
       </Link>
-    </div>
-  )
-}
-
-/**
- * LE NIVEAU DU SUJET — trois pastilles, une seule allumée. Le violet est celui
- * de l'action (choisir), pas une récompense. Un groupe de boutons radio pour
- * le lecteur d'écran : « Niveau du sujet, Moyen, sélectionné ».
- */
-function ChoixDifficulte({
-  valeur,
-  onChoisir,
-}: {
-  valeur: Difficulte
-  onChoisir: (d: Difficulte) => void
-}) {
-  return (
-    <div
-      role="radiogroup"
-      aria-label="Niveau du sujet"
-      className="grid grid-cols-3 gap-1 rounded-full bg-muted p-1"
-    >
-      {DIFFICULTES.map((d) => {
-        const actif = d === valeur
-        return (
-          <button
-            key={d}
-            type="button"
-            role="radio"
-            aria-checked={actif}
-            onClick={() => onChoisir(d)}
-            className={cn(
-              'font-heading flex min-h-11 cursor-pointer items-center justify-center gap-1 rounded-full text-sm font-extrabold transition',
-              actif
-                ? 'bg-primary text-primary-foreground shadow-sm'
-                : 'text-muted-foreground hover:text-foreground',
-            )}
-          >
-            <span aria-hidden="true" className="flex gap-0.5">
-              {DIFFICULTES.map((n) => (
-                <span
-                  key={n}
-                  className={cn(
-                    'size-1.5 rounded-full',
-                    n <= d ? 'bg-current' : 'bg-current opacity-25',
-                  )}
-                />
-              ))}
-            </span>
-            {libelleDifficulte(d)}
-          </button>
-        )
-      })}
     </div>
   )
 }

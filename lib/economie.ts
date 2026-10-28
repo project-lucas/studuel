@@ -116,6 +116,38 @@ export function xpEtoilePalier(palier: number): number {
   const p = entier(palier)
   return p >= 1 && p <= 5 ? 5 * p : 0
 }
+/**
+ * LES CAPS DE RAPIDITÉ d'un palier (26/10/2026, migration 603 — Lucas : « chaque
+ * palier atteint (top 50 %, top 30, top 15, top 5 %…) serait du gain d'XP »).
+ * Sur un palier GAGNÉ, la place de mon meilleur chrono parmi tous les joueurs
+ * paie, une fois pour toutes, chaque cap franchi : top 50 % → 5 XP, 30 % → 10,
+ * 15 % → 15, 5 % → 25, 1 % → 40 (95 XP par palier, 475 par jeu — à côté des
+ * 225 XP des étoiles). MIROIR de `palier_temps_xp`.
+ */
+export const SEUILS_TEMPS = [50, 30, 15, 5, 1] as const
+export type SeuilTemps = (typeof SEUILS_TEMPS)[number]
+export function xpSeuilTemps(pct: number): number {
+  switch (pct) {
+    case 50:
+      return 5
+    case 30:
+      return 10
+    case 15:
+      return 15
+    case 5:
+      return 25
+    case 1:
+      return 40
+    default:
+      return 0
+  }
+}
+/**
+ * Sous dix joueurs classés sur le palier, un « top 1 % » ne désigne personne
+ * et « top 50 % » bougerait au premier copain qui joue : rien ne se paie.
+ * MIROIR de la 603 (`palier_temps_enregistrer`).
+ */
+export const COHORTE_MIN_SEUILS_TEMPS = 10
 /** La victoire contre un gardien de la Traque : XP fixe (plus de ×2 depuis la 576 : on ne le combat que ses jours). */
 export function xpTraque(rang: number, nox: boolean): number {
   if (nox) return 90

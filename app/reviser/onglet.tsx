@@ -633,14 +633,14 @@ export default async function OngletReviser() {
           examBySubject={examBySubject}
           emptySlugs={emptySlugs}
           gardiens={gardiens}
+          /* La classe à l'extrémité GAUCHE de la rangée (26/10/2026, Lucas),
+             les réglages de la grille à droite. */
+          classeSlot={<ClasseChip court current={isGradeLevel(grade) ? grade : null} />}
           commandesSlot={
-            <>
-              {/* La loupe GLOBALE (12/10/2026) : une fiche, dans toutes les
-                  matières de la classe — avant, la loupe ne vivait que dans
-                  chaque dossier. */}
-              <LoupeGlobale />
-              <ClasseChip court current={isGradeLevel(grade) ? grade : null} />
-            </>
+            /* La loupe GLOBALE (12/10/2026) : une fiche, dans toutes les
+               matières de la classe — avant, la loupe ne vivait que dans
+               chaque dossier. */
+            <LoupeGlobale />
           }
           topSlot={
             /* DEUX blocs avant les matières, plus cinq. L'accueil empilait

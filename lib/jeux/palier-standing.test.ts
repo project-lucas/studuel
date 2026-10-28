@@ -13,6 +13,7 @@ const place = (rank: number, total: number) => ({
   bestMs: 84_000,
   rank,
   total,
+  seuils: [],
 })
 
 describe('speedStanding', () => {
@@ -69,7 +70,7 @@ describe('parsePalierStandings', () => {
       { palier: 1, best_ms: 42_000, rank: 3, total: 200 },
       { palier: 4, best_ms: 91_500, rank: 12, total: 200 },
     ])
-    expect(standings[1]).toEqual({ level: 1, bestMs: 42_000, rank: 3, total: 200 })
+    expect(standings[1]).toEqual({ level: 1, bestMs: 42_000, rank: 3, total: 200, seuils: [] })
     expect(standings[4]?.bestMs).toBe(91_500)
     expect(standings[2]).toBeUndefined()
     expect(hasAnyStanding(standings)).toBe(true)

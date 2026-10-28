@@ -1,0 +1,22 @@
+/* L'entrée du chrono de lecture : il glisse du bord, une fois, en transform et
+   opacité (valeurs littérales — règle des animations de l'app). */
+.pilule {
+  animation: chrono-entree 0.42s cubic-bezier(0.22, 0.8, 0.3, 1) both;
+}
+
+@keyframes chrono-entree {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pilule {
+    animation: none;
+  }
+}

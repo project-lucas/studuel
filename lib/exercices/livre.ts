@@ -52,6 +52,27 @@ export type Livre = {
 export const hrefPage = (matiere: string, chapitreId: string, position: number) =>
   `/reviser/${matiere}/${chapitreId}/exercice/${position}`
 
+/** L'adresse du cahier d'un chapitre (son sommaire à trois exercices). */
+export const hrefCahier = (matiere: string, chapitreId: string) => `/reviser/${matiere}/${chapitreId}/exercice`
+
+/**
+ * Le chapitre qui SUIT dans le manuel du thème — son cahier —, ou null au bout
+ * du livre, hors livre, ou sans livre. Depuis le 26/10/2026, c'est ce que le
+ * cahier propose en pied à la place du sommaire du manuel (Lucas : « renvoyer
+ * simplement au chapitre ou exercice suivant »).
+ */
+export function chapitreSuivant(
+  livre: Livre | null,
+  chapitreId: string,
+  matiere: string,
+): { titre: string; href: string } | null {
+  if (!livre) return null
+  const i = livre.sections.findIndex((s) => s.id === chapitreId)
+  if (i < 0) return null
+  const suivante = livre.sections[i + 1]
+  return suivante ? { titre: suivante.titre, href: hrefCahier(matiere, suivante.id) } : null
+}
+
 /**
  * Assemble le livre : les chapitres dans l'ordre donné, leurs exercices par
  * position. Un chapitre sans exercice n'a pas de page (il n'apparaît pas).

@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Fragment, useRef, useState, useSyncExternalStore, useTransition, type ReactNode } from 'react'
+import { Fragment, useRef, useState, useSyncExternalStore, type ReactNode } from 'react'
 import { Check, ChevronRight, Clock } from 'lucide-react'
 import Feuille from '@/components/boutique/Feuille'
 import XpIcon from '@/components/ui/XpIcon'
@@ -75,6 +75,12 @@ type DernierGain = { id: string; xp: number; cle: number }
  * encaissées, la grande pièce paraît sous le coffre, qui frémit : c'est la
  * cinquième vague, la plus grosse.
  *
+ * EN POP-UP depuis le 26/10/2026 (Lucas : « appuyer le côté pop-up, une page
+ * moins grande, j'aimerais voir le bas ») : une carte centrée (`Feuille`
+ * format `popup`) plutôt qu'une feuille collée en bas qui coupait la dernière
+ * quête ; et LES ENCAISSEMENTS PARTENT EN VOL, un appel par pièce, sans
+ * attendre la réponse de la précédente (voir ContenuQuetes).
+ *
  * Ouverte depuis la pastille du bandeau, la tuile de l'arène ou le bandeau
  * « Quête accomplie » — une seule feuille pour toute l'app, montée une fois
  * dans la mise en page (components/quetes/QuetesGlobales). Elle ne calcule
@@ -85,7 +91,7 @@ export default function FeuilleQuetes() {
   const ouverte = useFeuilleQuetesOuverte()
   const etat = useQuetesDuJour()
   return (
-    <Feuille open={ouverte && etat !== null} onClose={fermerFeuilleQuetes} label="Quêtes du jour">
+    <Feuille open={ouverte && etat !== null} onClose={fermerFeuilleQuetes} label="Quêtes du jour" format="popup">
       {etat ? <ContenuQuetes etat={etat} /> : null}
     </Feuille>
   )
@@ -94,16 +100,34 @@ export default function FeuilleQuetes() {
 function ContenuQuetes({ etat }: { etat: QuetesDuJour }) {
   const minutes = useMinutesAvantMinuit()
   const { celebrer } = useRecompenses()
-  const [pending, start] = useTransition()
-  // La pièce touchée (une quête, ou « coffre ») : elle seule se ramasse.
-  const [enCharge, setEnCharge] = useState<string | null>(null)
-  const [dernier, setDernier] = useState<DernierGain | null>(null)
+  // LES ENCAISSEMENTS EN VOL (26/10/2026, Lucas : « j'avais les 4 missions
+  // validées, les éclairs de l'une, mais je devais attendre avant de pouvoir
+  // récupérer les autres — je ne veux pas ralentir l'animation des éclairs,
+  // seulement pouvoir cliquer plus vite sur les quatre boutons »). Avant, UNE
+  // transition pour toute la feuille : le temps de la réponse du serveur,
+  // tous les boutons étaient grisés. Chaque pièce part désormais dans SON
+  // appel ; une pièce en vol se ramasse (`charge`), les autres restent
+  // touchables, et la vague de chaque réponse part dès qu'elle arrive — les
+  // vagues se superposent, le bandeau les additionne.
+  const [enCours, setEnCours] = useState<ReadonlySet<string>>(() => new Set())
+  // Ce qui vient d'être encaissé, par quête : deux éclats peuvent vivre ensemble.
+  const [derniers, setDerniers] = useState<Readonly<Record<string, DernierGain>>>({})
 
   const faites = etat.quetes.filter((q) => q.done).length
   const payees = new Set(etat.encaissees)
   const coffreOuvert = payees.has(BONUS_STEP_ID)
   const ouvrable = coffreOuvrable(etat)
-  const prochaine = prochaineAEncaisser(etat)
+  const prochaine = prochaineAEncaisser(etat, enCours)
+
+  const partir = (id: string) => setEnCours((prec) => new Set(prec).add(id))
+  const arriver = (id: string) =>
+    setEnCours((prec) => {
+      const suite = new Set(prec)
+      suite.delete(id)
+      return suite
+    })
+  const noterGain = (id: string, xp: number) =>
+    setDerniers((prec) => ({ ...prec, [id]: { id, xp, cle: Date.now() } }))
 
   /** La vague : ce qui a été VERSÉ jaillit de la pièce touchée. */
   const faireVoler = (xp: number, bouton: HTMLElement | null) => {
@@ -112,52 +136,63 @@ function ContenuQuetes({ etat }: { etat: QuetesDuJour }) {
   }
 
   const encaisserQuete = (q: QueteServie, bouton: HTMLButtonElement | null) => {
-    if (pending) return
-    setEnCharge(q.id)
+    if (enCours.has(q.id) || payees.has(q.id)) return
+    partir(q.id)
     sfx.tap()
-    start(async () => {
-      const demo = lireEncaisseurDemo()
-      const r = demo ? await demo(q.id) : await claimDailyQuest(q.id)
-      setEnCharge(null)
-      if (!r.claimed) {
+    void (async () => {
+      try {
+        const demo = lireEncaisseurDemo()
+        const r = demo ? await demo(q.id) : await claimDailyQuest(q.id)
+        arriver(q.id)
+        if (!r.claimed) {
+          void relireQuetes()
+          return
+        }
+        buzz(true, 1)
+        marquerEncaissees([q.id], r.allDone)
+        noterGain(q.id, r.xp)
+        faireVoler(r.xp, bouton)
+      } catch {
+        // Réseau : la pièce se repose, la feuille relit l'état.
+        arriver(q.id)
         void relireQuetes()
-        return
       }
-      buzz(true, 1)
-      marquerEncaissees([q.id], r.allDone)
-      setDernier({ id: q.id, xp: r.xp, cle: Date.now() })
-      faireVoler(r.xp, bouton)
-    })
+    })()
   }
 
   const ouvrirCoffre = (bouton: HTMLButtonElement | null) => {
-    if (pending) return
-    setEnCharge(BONUS_STEP_ID)
+    if (enCours.has(BONUS_STEP_ID)) return
+    partir(BONUS_STEP_ID)
     sfx.tap()
-    start(async () => {
-      const demo = lireEncaisseurDemo()
-      const r = demo ? await demo(BONUS_STEP_ID) : await openDailyChest()
-      setEnCharge(null)
-      if (!r.claimed) {
+    void (async () => {
+      try {
+        const demo = lireEncaisseurDemo()
+        const r = demo ? await demo(BONUS_STEP_ID) : await openDailyChest()
+        arriver(BONUS_STEP_ID)
+        if (!r.claimed) {
+          void relireQuetes()
+          return
+        }
+        sfx.treasure()
+        buzz(true, 3)
+        marquerEncaissees(
+          etat.quetes.map((q) => q.id),
+          r.allDone,
+        )
+        noterGain(BONUS_STEP_ID, r.xp)
+        faireVoler(r.xp, bouton)
+      } catch {
+        arriver(BONUS_STEP_ID)
         void relireQuetes()
-        return
       }
-      sfx.treasure()
-      buzz(true, 3)
-      marquerEncaissees(
-        etat.quetes.map((q) => q.id),
-        r.allDone,
-      )
-      setDernier({ id: BONUS_STEP_ID, xp: r.xp, cle: Date.now() })
-      faireVoler(r.xp, bouton)
-    })
+    })()
   }
 
   const humeur = (id: string): HumeurPiece =>
-    enCharge === id ? 'charge' : prochaine?.id === id && !pending ? 'appel' : 'repos'
+    enCours.has(id) ? 'charge' : prochaine?.id === id ? 'appel' : 'repos'
 
   return (
-    <div className="flex flex-col gap-4 pt-1">
+    <div className="flex flex-col gap-3 pt-1">
       <h2 className="font-heading pr-12 text-2xl leading-tight font-extrabold">Quêtes du jour</h2>
 
       <CoffreDuJour
@@ -167,9 +202,9 @@ function ContenuQuetes({ etat }: { etat: QuetesDuJour }) {
         ouvert={coffreOuvert}
         ouvrable={ouvrable}
         minutes={minutes}
-        pending={pending}
-        enCharge={enCharge === BONUS_STEP_ID}
-        dernier={dernier?.id === BONUS_STEP_ID ? dernier : null}
+        pending={enCours.has(BONUS_STEP_ID)}
+        enCharge={enCours.has(BONUS_STEP_ID)}
+        dernier={derniers[BONUS_STEP_ID] ?? null}
         onOuvrir={ouvrirCoffre}
       />
 
@@ -183,8 +218,8 @@ function ContenuQuetes({ etat }: { etat: QuetesDuJour }) {
             q={q}
             encaissee={payees.has(q.id)}
             humeur={humeur(q.id)}
-            pending={pending}
-            dernier={dernier?.id === q.id ? dernier : null}
+            pending={enCours.has(q.id)}
+            dernier={derniers[q.id] ?? null}
             onEncaisser={encaisserQuete}
           />
         ))}
@@ -438,7 +473,7 @@ function LigneQuete({
     )
   }
 
-  const rangee = 'flex items-center gap-3 p-3'
+  const rangee = 'flex items-center gap-3 px-3 py-2.5'
   if (!q.done && !encaissee) {
     return (
       <li>

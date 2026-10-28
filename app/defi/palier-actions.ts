@@ -53,10 +53,16 @@ export async function reclamerEtoilesPalier(
   return reponse.ok ? { xp: reponse.xp, etoiles: reponse.etoiles } : null
 }
 
+/** Ma place après la partie, et l'XP que les caps de rapidité viennent de verser (603). */
+export type PalierTimeRecorded = PalierTimeStanding & { xp: number }
+
 /**
  * Enregistre le TEMPS DE BOUCLAGE d'un palier et rend la place qu'il donne
  * (« top 5 % des joueurs »), en un seul aller-retour : l'écran de fin de partie
- * a besoin des deux au même instant.
+ * a besoin des deux au même instant. Depuis la 603, le même appel PAIE les
+ * caps de rapidité franchis (top 50 / 30 / 15 / 5 / 1 %, une fois pour toutes,
+ * dès dix joueurs classés) et rend `xp`, ce que cet appel a versé — repli sur
+ * la 313 seule (`record_palier_time`, xp = 0) tant que la 603 manque.
  *
  * Appelée UNIQUEMENT après une partie gagnée — c'est le hook client qui tient
  * cette règle (lib/jeux/use-palier-run), et la RPC la re-vérifie à sa façon en
@@ -71,7 +77,7 @@ export async function recordPalierTime(
   gameId: string,
   palier: number,
   elapsedMs: number,
-): Promise<PalierTimeStanding | null> {
+): Promise<PalierTimeRecorded | null> {
   if (!isPalierLevel(palier)) return null
   if (!isPlausibleTime(elapsedMs)) return null
 
@@ -79,11 +85,16 @@ export async function recordPalierTime(
   if (!user) return null
 
   const supabase = await createClient()
-  const { data, error } = await supabase.rpc('record_palier_time', {
+  const args = {
     p_game_id: String(gameId).slice(0, 64),
     p_palier: palier,
     p_ms: Math.round(elapsedMs),
-  })
+  }
+  const neuf = await supabase.rpc('palier_temps_enregistrer', args)
+  // La 603 manque encore : la 313 seule range le temps et rend la place.
+  const reponse =
+    neuf.error && isMissingSchemaObject(neuf.error) ? await supabase.rpc('record_palier_time', args) : neuf
+  const { data, error } = reponse
 
   if (error || !data) {
     // Un refus (jeu hors catalogue, borne de chrono) n'est pas une panne : on ne
@@ -94,5 +105,8 @@ export async function recordPalierTime(
     return null
   }
 
-  return parsePalierStandings([data])[palier] ?? null
+  const place = parsePalierStandings([data])[palier]
+  if (!place) return null
+  const xp = Math.floor(Number((data as Record<string, unknown>).xp ?? 0))
+  return { ...place, xp: Number.isFinite(xp) ? Math.max(0, xp) : 0 }
 }

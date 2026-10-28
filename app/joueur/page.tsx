@@ -3,7 +3,14 @@ import { getProfileData } from '@/app/defi/profile-actions'
 import PageJoueur, { type JoueurData } from '@/components/joueur/PageJoueur'
 import { avatarAffiche } from '@/lib/avatar-affiche'
 import { lireGelsSerie } from '@/lib/boutique/boosts-server'
-import { barreNiveau, piedDuPortrait, xpSemaineDepuisClassement } from '@/lib/joueur'
+import {
+  barreNiveau,
+  bureauDuPortrait,
+  DECOR_JOUEUR,
+  periodeInitiale,
+  piedDuPortrait,
+  xpSemaineDepuisClassement,
+} from '@/lib/joueur'
 import { fetchJoursActifs } from '@/lib/jours-actifs'
 import { compterAmis } from '@/lib/ligue-server'
 import { computeStreak } from '@/lib/streak'
@@ -25,6 +32,10 @@ export const dynamic = 'force-dynamic'
 // est TOUJOURS celui de la gélule), ma ligne de `classement_amis()` pour l'XP
 // de la semaine (558), le compte d'amis (celui du multiplicateur), et les
 // journées actives + gels pour la série — la même recette que Réviser et Moi.
+// Le DÉCOR (27/10/2026) : l'élève assis à son bureau, dans sa chambre, à
+// l'heure du jour — la scène de son portrait (`bureauDuPortrait`), la plage du
+// premier rendu à l'heure de Paris (`periodeInitiale`) ; la chambre vide
+// (`DECOR_JOUEUR`, 26/10) reste le repli des avatars sans scène.
 export default async function JoueurPage() {
   const [supabase, user] = await Promise.all([createClient(), getCurrentUser()])
   if (!user) redirect('/login')
@@ -52,6 +63,9 @@ export default async function JoueurPage() {
     trophees: profil.summary.trophies,
     xpSemaine: xpSemaineDepuisClassement(classement),
     nbAmis,
+    bureau: bureauDuPortrait(profil.avatar.portrait),
+    periode: periodeInitiale(new Date()),
+    decor: DECOR_JOUEUR,
   }
 
   return <PageJoueur data={data} />

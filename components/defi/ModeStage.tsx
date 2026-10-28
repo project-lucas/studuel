@@ -38,6 +38,7 @@ import { sfx } from '@/lib/sounds'
 export default function ModeStage({
   title,
   Icon,
+  illustration = null,
   tone = 'light',
   theme,
   scene,
@@ -48,6 +49,14 @@ export default function ModeStage({
 }: {
   title: string
   Icon: LucideIcon
+  /**
+   * L'ILLUSTRATION du mode à la place du pictogramme (26/10/2026, Lucas :
+   * « nous avons les icônes, les illustrations — les icônes du mode de jeu et
+   * de la matière doivent être changées ») : le talon du billet du jeu
+   * (`/images/defi/jeux/<id>-talon.webp`), posé sur une plaque blanche.
+   * Sans elle, le pictogramme Lucide d'avant.
+   */
+  illustration?: string | null
   tone?: 'light' | 'dark'
   /**
    * Robe du mode : le nom d'une classe `.jeu-*` de globals.css (sans le préfixe).
@@ -97,7 +106,7 @@ export default function ModeStage({
       </WorldBackdrop>
     <div
       className={cn(
-        '-mx-4 -mt-16 -mb-24 flex min-h-dvh flex-col pt-12 md:-mx-8 md:-my-10 md:pt-0',
+        '-mx-4 -mt-[5.5rem] -mb-24 flex min-h-dvh flex-col pt-[5.25rem] md:-mx-8 md:-my-10 md:pt-0',
         dark
           ? 'mode-stage-dark text-white'
           : themed
@@ -108,8 +117,13 @@ export default function ModeStage({
       {/* L'EN-TÊTE RESTE EN PLACE (Lucas, 24/09/2026 : « laisse-le fixe, et
           cache la barre de niveau, série et gemmes durant le défilement »).
           Collé sous le bandeau tant qu'on est en haut ; dès qu'on défile, le
-          bandeau s'efface et l'en-tête MONTE à sa place (translation de 3 rem,
-          la hauteur de `top-12`) — un seul bandeau à l'écran, jamais deux.
+          bandeau s'efface et l'en-tête MONTE à sa place (translation de
+          5,25 rem, la valeur de `top-[5.25rem]`) — un seul bandeau à l'écran,
+          jamais deux. 26/10/2026 (Lucas : « ça se superpose presque, descends
+          un peu le tout ») : la gélule du 15/10 fait 4,75 rem, l'en-tête
+          collait à `top-12` (3 rem) dessous — il se pose désormais 0,5 rem sous
+          elle, et la scène remonte d'autant (`-mt-[5.5rem]`, la marge de
+          `AppMain`) pour que rien ne change ailleurs.
           Au-dessus du contenu (z-30) : la carte des paliers pose son contenu en
           `relative z-10` ; à égalité, il passait PAR-DESSUS l'en-tête au
           défilement (« Drapeau affiché… » lu à travers, 24/09/2026).
@@ -118,8 +132,8 @@ export default function ModeStage({
           passait dessous se lisait à travers. */}
       <header
         className={cn(
-          'sticky top-12 z-30 flex items-center gap-3 px-4 py-3 transition-transform duration-200 ease-out motion-reduce:transition-none md:top-0',
-          '[html.hud-replie_&]:-translate-y-12 md:[html.hud-replie_&]:translate-y-0',
+          'sticky top-[5.25rem] z-30 flex items-center gap-3 px-4 py-3 transition-transform duration-200 ease-out motion-reduce:transition-none md:top-0',
+          '[html.hud-replie_&]:-translate-y-[5.25rem] md:[html.hud-replie_&]:translate-y-0',
           dark
             ? 'border-b border-white/10 bg-[color-mix(in_oklch,var(--primary),black_44%)]'
             : themed
@@ -150,19 +164,28 @@ export default function ModeStage({
         >
           <ArrowLeft className="size-5" strokeWidth={2.4} aria-hidden="true" />
         </button>
-        <span
-          aria-hidden="true"
-          className={cn(
-            'grid size-9 shrink-0 place-items-center rounded-xl',
-            dark
-              ? 'bg-white/12 text-white'
-              : themed
-                ? 'bg-[color:var(--jeu-accent)] text-[color:var(--jeu-ink)]'
-                : 'bg-primary/10 text-primary',
-          )}
-        >
-          <Icon className="size-5" />
-        </span>
+        {illustration ? (
+          <span
+            aria-hidden="true"
+            className="grid size-10 shrink-0 place-items-center overflow-hidden rounded-xl bg-card shadow-sm ring-1 ring-black/5"
+          >
+            <Image src={illustration} alt="" width={80} height={80} className="size-9 object-contain" />
+          </span>
+        ) : (
+          <span
+            aria-hidden="true"
+            className={cn(
+              'grid size-9 shrink-0 place-items-center rounded-xl',
+              dark
+                ? 'bg-white/12 text-white'
+                : themed
+                  ? 'bg-[color:var(--jeu-accent)] text-[color:var(--jeu-ink)]'
+                  : 'bg-primary/10 text-primary',
+            )}
+          >
+            <Icon className="size-5" />
+          </span>
+        )}
         <h1 className="font-heading min-w-0 flex-1 truncate text-base font-extrabold tracking-wide uppercase italic">
           {title}
         </h1>

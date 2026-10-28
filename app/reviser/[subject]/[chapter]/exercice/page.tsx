@@ -3,7 +3,7 @@ import { notFound, redirect } from 'next/navigation'
 import { Crown } from 'lucide-react'
 import Cahier from '@/components/exercices/Cahier'
 import PageChapitre from '@/components/exercices/PageChapitre'
-import SommaireLivre from '@/components/exercices/livre/SommaireLivre'
+import { chapitreSuivant } from '@/lib/exercices/livre'
 import { chargerLivre } from '@/lib/exercices/livre-server'
 import ControleBlanc from '@/components/exercice/ControleBlanc'
 import { Button } from '@/components/ui/button'
@@ -68,14 +68,17 @@ export default async function ExercicePage({
       {aUnCahier ? (
         <div className="flex flex-col gap-5">
           {!premium ? <PorteStudueLPlus titre={chapter.title} retour={backHref} cahier /> : null}
-          <Cahier lignes={lignes} base={`${backHref}/exercice`} premium={premium} controle={premium} />
-          {premium && livre && livre.sections.length > 1 ? (
-            <section className="carte mx-auto w-full max-w-xl p-4">
-              <p className="surtitre">Le manuel du thème</p>
-              <h2 className="titre-section mb-3">{livre.titre}</h2>
-              <SommaireLivre livre={livre} courante={{ chapitreId: chapter.id, position: 0 }} />
-            </section>
-          ) : null}
+          {/* Plus de sommaire du manuel sous le cahier (26/10/2026, Lucas : « je
+              ne pense pas que ce soit nécessaire… renvoyer simplement au
+              chapitre ou exercice suivant ») : le cahier se termine par le
+              chapitre suivant du thème, quand il y en a un. */}
+          <Cahier
+            lignes={lignes}
+            base={`${backHref}/exercice`}
+            premium={premium}
+            controle={premium}
+            chapitreSuivant={premium ? chapitreSuivant(livre, chapter.id, subject.slug) : null}
+          />
         </div>
       ) : premium ? (
         <ControleBlanc chapterId={chapter.id} chapterTitle={chapter.title} backHref={backHref} />

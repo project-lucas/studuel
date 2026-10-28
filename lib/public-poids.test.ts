@@ -113,8 +113,10 @@ describe('poids de public/', () => {
   // 24 Mo le 25/10/2026 : le chantier « jeu vivant » a ajouté ~1 Mo réellement
   // affiché (13 portraits en pied de 600 px, 5 tableaux de la cinématique,
   // le café de Marcel, le rouleau de fiche, l'enveloppe du courrier) et
-  // public/ était déjà à 20 Mo.
-  const TOTAL_MAX_MO = 24
+  // public/ était déjà à 20 Mo. 30 Mo le 27/10/2026 : LE BUREAU DU JOUEUR —
+  // 78 scènes peintes (13 portraits × 6 heures du jour, 752 × 1344, ~95 Ko
+  // chacune, 7,2 Mo en tout), dont chaque élève n'en charge qu'une à la fois.
+  const TOTAL_MAX_MO = 30
 
   it(`garde public/ sous ${TOTAL_MAX_MO} Mo au total`, () => {
     const totalMo = fichiers.reduce((s, f) => s + f.ko, 0) / 1024

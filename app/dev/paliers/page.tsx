@@ -6,6 +6,7 @@ import { programmeSlug } from '@/lib/jeux/programme'
 import { gameScene } from '@/lib/defi/modes-catalog'
 import { subjectVignette } from '@/lib/subject-style'
 import { palierFloor } from '@/lib/jeux/paliers'
+import type { PalierStandings } from '@/lib/jeux/palier-standing'
 import Semeur from './Semeur'
 
 export const dynamic = 'force-dynamic'
@@ -16,7 +17,14 @@ export const dynamic = 'force-dynamic'
 // ci la rend sans base, avec les étoiles posées dans le stockage local :
 //
 //   /dev/paliers?jeu=capitales           jamais joué
-//   /dev/paliers?jeu=capitales&joue=1    un palier fini, un en cours, un entamé
+//   /dev/paliers?jeu=capitales&joue=1    un palier fini, un en cours, un entamé,
+//                                        avec des places au chrono (barre de rapidité)
+
+/** Des places de démonstration : 3e sur 12 (deux caps), 140e sur 1 250 (trois caps). */
+const STANDINGS_DEMO: PalierStandings = {
+  1: { level: 1, bestMs: 62_000, rank: 3, total: 12, seuils: [50, 30] },
+  2: { level: 2, bestMs: 81_500, rank: 140, total: 1_250, seuils: [50, 30, 15] },
+}
 export default async function ApercuPaliersPage({
   searchParams,
 }: {
@@ -40,7 +48,7 @@ export default async function ApercuPaliersPage({
         subjectVignette={subjectVignette(programmeSlug(found.salon.subject)) ?? null}
         scene={gameScene(found.game.id) ?? null}
         floor={palierFloor(null)}
-        standings={{}}
+        standings={q.joue === '1' ? STANDINGS_DEMO : {}}
         ultime={null}
         etoilesPayees={null}
       />

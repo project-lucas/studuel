@@ -1,6 +1,7 @@
 import LessonCompleteButton from '@/components/LessonCompleteButton'
 import LessonPrintButton from '@/components/LessonPrintButton'
 import LessonRichContent from '@/components/LessonRichContent'
+import ModeMemoire from '@/components/ModeMemoire'
 import EnTetePage from '@/components/reviser/EnTetePage'
 import SupportChips from '@/components/reviser/SupportChips'
 import { compterMots } from '@/lib/lecture'
@@ -68,7 +69,12 @@ export default async function CoursPage({
       />
 
       <div className="mt-6">
-        <LessonRichContent content={lesson.content ?? 'Contenu à venir.'} />
+        {/* Le mode mémoire (26/10/2026) : un bouton cache les mots-clés du
+            cours, un tap sur chacun le révèle. Le cours reste rendu par le
+            serveur, l'enveloppe ne fait que poser le cache. */}
+        <ModeMemoire>
+          <LessonRichContent content={lesson.content ?? 'Contenu à venir.'} />
+        </ModeMemoire>
 
         {/* Le pied de page : une invitation à continuer DANS l'app. Sur
             papier, un bouton qui ne se clique pas n'est qu'une tache. */}
@@ -84,22 +90,24 @@ export default async function CoursPage({
               l'exercice du MÊME chapitre, il fallait remonter à la page
               matière et changer d'onglet. Les supports sont ici, rangés sous
               leurs verbes et calés sur la leçon qu'on vient de lire. */}
+          {/* COMPACT, À L'HORIZONTALE (26/10/2026, Lucas : « compacte, mets les
+              blocs à l'horizontale plutôt qu'à la verticale, j'aimerais limiter
+              le scrolling ») : la grille de grandes tuiles sous deux verbes
+              faisait deux écrans ; ici, la rangée de raccourcis de la fiche du
+              programme (`layout="fiche"`), tous sur UNE ligne, et un titre d'une
+              ligne. Le cours est déjà dessus : la rangée le laisse de côté. */}
           {supports.length > 0 ? (
-            <section className="mt-8" aria-labelledby="suite-du-chapitre">
-              <h2
-                id="suite-du-chapitre"
-                className="titre-section text-center"
-              >
+            <section className="carte mt-6 p-3" aria-labelledby="suite-du-chapitre">
+              <h2 id="suite-du-chapitre" className="titre-section px-1 text-base">
                 Et maintenant ?
               </h2>
-              <p className="mt-0.5 mb-5 text-center text-sm text-muted-foreground">
-                Le cours est lu — voici de quoi le faire tenir.
-              </p>
-              <SupportChips
-                chips={supports}
-                layout="grid"
-                label={`S’entraîner sur ${chapter.title}`}
-              />
+              <div className="mt-1.5">
+                <SupportChips
+                  chips={supports.filter((c) => c.kind !== 'cours')}
+                  layout="fiche"
+                  label={`S’entraîner sur ${chapter.title}`}
+                />
+              </div>
             </section>
           ) : null}
         </div>

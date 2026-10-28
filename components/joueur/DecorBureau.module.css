@@ -1,0 +1,166 @@
+/*
+ * LE BUREAU DU JOUEUR (27/10/2026) — la scène peinte de l'élève à son bureau,
+ * à l'heure du jour, et sa lampe qui vit. Voir DecorBureau.tsx.
+ *
+ * Tokens seulement ; les animations en continu n'écrivent que transform et
+ * opacity, en valeurs littérales (la règle de la fontaine) ; sous mouvement
+ * réduit, la lueur reste posée et les poussières disparaissent.
+ */
+
+/* ---------- la boîte : la géométrie de la peinture (752 × 1344) ---------- */
+.boite {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  z-index: 0;
+  /* Un téléphone est plus étroit que la peinture : la hauteur remplit l'écran
+     et les bords sont rognés à parts égales — ce que faisait `object-fit:
+     cover` centré en haut, mais dans une BOÎTE qui garde les proportions de
+     l'image, pour que la lampe, posée en % de l'image, tombe juste. */
+  height: 100%;
+  aspect-ratio: 752 / 1344;
+  translate: -50% 0;
+  pointer-events: none;
+  user-select: none;
+  /* La lumière de la lampe : le jaune solaire, éclairci. */
+  --lampe: color-mix(in oklch, var(--highlight), white 40%);
+}
+/* Un écran plus large que la peinture (tablette) : la largeur remplit, le bas
+   déborde derrière le panneau. */
+@media (min-aspect-ratio: 752 / 1344) {
+  .boite {
+    width: 100%;
+    height: auto;
+  }
+}
+.image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* La nouvelle plage se monte par-dessus l'ancienne et apparaît en fondu. */
+.fondu {
+  animation: bureau-fondu 500ms ease both;
+}
+@keyframes bureau-fondu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ---------- la lampe de bureau ---------- */
+/* L'ampoule est à 22 % / 38,3 % de l'image, la même place sur les 78 scènes
+   (mesurée sur les pixels de la peinture). */
+.halo,
+.coeur {
+  position: absolute;
+  left: 22%;
+  top: 38.3%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  translate: -50% -50%;
+}
+/* La lueur, large, qui respire. */
+.halo {
+  width: 50%;
+  background: radial-gradient(
+    circle,
+    color-mix(in oklch, var(--lampe) 72%, transparent) 0%,
+    color-mix(in oklch, var(--lampe) 36%, transparent) 28%,
+    color-mix(in oklch, var(--lampe) 11%, transparent) 52%,
+    transparent 70%
+  );
+  opacity: 0.7;
+  animation: bureau-respire 3.4s ease-in-out infinite;
+}
+/* Le cœur de l'ampoule, qui vacille. */
+.coeur {
+  width: 24%;
+  background: radial-gradient(
+    circle,
+    color-mix(in oklch, var(--lampe), white 45%) 0%,
+    color-mix(in oklch, var(--lampe) 34%, transparent) 45%,
+    transparent 70%
+  );
+  opacity: 0.75;
+  animation: bureau-vacille 1.9s ease-in-out infinite;
+}
+@keyframes bureau-respire {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.07);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+}
+@keyframes bureau-vacille {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  37% {
+    transform: scale(0.96);
+    opacity: 0.9;
+  }
+  63% {
+    transform: scale(1.04);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+}
+
+/* Les poussières qui montent dans la lumière. */
+.poussiere {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--lampe);
+  opacity: 0;
+  animation: bureau-poussiere 5.5s linear infinite;
+}
+@keyframes bureau-poussiere {
+  0% {
+    transform: translate(0, 0) scale(0.6);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  50% {
+    transform: translate(14px, -40px) scale(1);
+    opacity: 0.7;
+  }
+  85% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(-10px, -90px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .halo,
+  .coeur,
+  .fondu {
+    animation: none;
+  }
+  .poussiere {
+    display: none;
+  }
+}

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { construireLivre, pagesReussies, sensDuGeste, voisinage, type PageSource } from './livre'
+import { chapitreSuivant, construireLivre, pagesReussies, sensDuGeste, voisinage, type PageSource } from './livre'
 
 const page = (chapitreId: string, position: number, etat: PageSource['etat'] = 'ouvert'): PageSource => ({
   chapitreId,
@@ -65,6 +65,20 @@ describe('voisinage', () => {
 
   it('rend null pour une page absente du livre', () => {
     expect(voisinage(livre, 'vide', 1)).toBeNull()
+  })
+})
+
+describe('chapitreSuivant', () => {
+  const livre = construireLivre('Le thème', 'maths', chapitres, sources)
+
+  it('mène au cahier du chapitre qui suit, en sautant un chapitre sans exercice', () => {
+    expect(chapitreSuivant(livre, 'a', 'maths')).toEqual({ titre: 'Chapitre B', href: '/reviser/maths/b/exercice' })
+  })
+
+  it('ne propose rien au bout du livre, hors du livre, ou sans livre', () => {
+    expect(chapitreSuivant(livre, 'b', 'maths')).toBeNull()
+    expect(chapitreSuivant(livre, 'inconnu', 'maths')).toBeNull()
+    expect(chapitreSuivant(null, 'a', 'maths')).toBeNull()
   })
 })
 

@@ -325,6 +325,8 @@ describe('ce que le navigateur reçoit', () => {
     expect(coffreOuvrable(etat(toutes))).toBe(false)
     // Une encaissée : la suivante appelle.
     expect(prochaineAEncaisser(etat(toutes, ['lecon1']))?.id).toBe('reponses10')
+    // En vol (26/10/2026) : une quête dont l'encaissement est parti ne bloque plus la suivante.
+    expect(prochaineAEncaisser(etat(toutes), new Set(['lecon1']))?.id).toBe('reponses10')
     expect(coffreOuvrable(etat(toutes, ['lecon1', 'reponses10']))).toBe(false)
     // Les trois encaissées : plus de pièce, le coffre s'ouvre — une seule fois.
     const payees = ['lecon1', 'reponses10', 'partie1']

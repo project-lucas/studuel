@@ -1,0 +1,49 @@
+/*
+ * LES BARREAUX DU DONJON — la carte d'un palier (26/10/2026).
+ *
+ * Tout est en tokens : la robe du jeu (`--jeu-accent` / `--jeu-ink`, posées
+ * par ModeStage selon le thème du jeu) et les tokens de la DA. Les rayures de
+ * la bande sont un dégradé répété, posé une fois — rien n'est animé.
+ */
+
+.carte {
+  box-shadow:
+    0 0 0 1.5px var(--border),
+    0 4px 0 var(--border);
+}
+
+.carteEnCours {
+  box-shadow:
+    0 0 0 2px var(--primary),
+    0 4px 0 color-mix(in oklch, var(--primary), white 55%);
+}
+
+.bande {
+  color: var(--foreground);
+  background-color: color-mix(in oklch, var(--jeu-accent), white 82%);
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0 14px,
+    color-mix(in oklch, var(--jeu-accent), transparent 86%) 14px 20px
+  );
+  border-bottom: 1.5px solid color-mix(in oklch, var(--jeu-accent), white 62%);
+}
+
+.medaillon {
+  background: var(--jeu-accent);
+  color: var(--jeu-ink);
+  box-shadow:
+    0 0 0 2.5px var(--card),
+    0 3px 0 2.5px color-mix(in oklch, var(--jeu-accent), black 28%);
+}
+
+/* Le palier qui attend : une plaque en pointillés, son médaillon cadenassé. */
+.verrou {
+  border: 2px dashed color-mix(in oklch, var(--foreground), transparent 80%);
+  background: color-mix(in oklch, var(--card), transparent 45%);
+}
+
+.medaillonVerrou {
+  background: color-mix(in oklch, var(--foreground), white 82%);
+  color: color-mix(in oklch, var(--foreground), white 35%);
+}

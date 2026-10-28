@@ -1,0 +1,48 @@
+/*
+ * LA BARRE DE RAPIDITÉ (26/10/2026) — trois mouvements, transform seulement,
+ * valeurs littérales. Les deux premiers sont une ENTRÉE : la piste se remplit
+ * et le rail du curseur glisse de la gauche jusqu'à la place (le `from` seul
+ * est écrit ; l'arrivée est la valeur posée en ligne par le composant). Le
+ * troisième est en continu : le curseur pousse de 4 px vers la droite, la
+ * direction du prochain cap. Sous mouvement réduit, rien ne bouge.
+ */
+
+.remplissage {
+  transform-origin: left center;
+  animation: barre-remplit 900ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+@keyframes barre-remplit {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+.rail {
+  animation: barre-rail 900ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+@keyframes barre-rail {
+  from {
+    transform: translateX(0);
+  }
+}
+
+.curseur {
+  animation: barre-pousse 1.8s ease-in-out 1s infinite;
+}
+@keyframes barre-pousse {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .remplissage,
+  .rail,
+  .curseur {
+    animation: none;
+  }
+}

@@ -222,7 +222,11 @@ export default function TopHud({
   const dansNiveau =
     xp && xp.prochain !== null && xp.prochain > xp.plancher
       ? {
-          fait: Math.max(0, xp.actuel + xpGagnee - xp.plancher),
+          // Plafonnée au pas du niveau (26/10/2026, Lucas : « 309 sur 300 ? ») :
+          // l'XP encaissée pendant la volée peut franchir le seuil avant que le
+          // rafraîchissement n'apporte le niveau suivant — la barre dit alors
+          // « 300 / 300 », pleine, et la fête de niveau prend le relais.
+          fait: Math.min(xp.prochain - xp.plancher, Math.max(0, xp.actuel + xpGagnee - xp.plancher)),
           pas: xp.prochain - xp.plancher,
         }
       : null

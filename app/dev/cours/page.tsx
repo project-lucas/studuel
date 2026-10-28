@@ -1,7 +1,12 @@
 import { createClient } from '@supabase/supabase-js'
 import { notFound } from 'next/navigation'
+import LessonCompleteButton from '@/components/LessonCompleteButton'
 import LessonRichContent from '@/components/LessonRichContent'
+import ModeMemoire from '@/components/ModeMemoire'
 import EnTetePage from '@/components/reviser/EnTetePage'
+import SupportChips from '@/components/reviser/SupportChips'
+import { buildChapterSupports } from '@/lib/chapter-supports'
+import { compterMots } from '@/lib/lecture'
 import { typographie } from '@/lib/typographie'
 
 export const dynamic = 'force-dynamic'
@@ -50,6 +55,14 @@ export default async function ApercuCours({
     .maybeSingle<{ title: string; level: string; subjects: { name: string } | null }>()
   const titre = typographie(chapitre?.title ?? lesson.title)
   const matiere = chapitre?.subjects?.name ?? ''
+  const supports = buildChapterSupports({
+    subjectSlug: 'maths',
+    chapterId: 'chapitre',
+    lessons: [{ id: 'lecon', title: lesson.title, quizId: 'quiz', questionCount: 12, best: null, ownQuiz: true, read: false }],
+    carte: { available: true, locked: true },
+    exercice: { best: null, premium: false, cahier: { reussis: 0, total: 3 } },
+    erreurs: 0,
+  })
 
   return (
     <div className="feuille-impression mx-auto w-full max-w-2xl">
@@ -62,7 +75,23 @@ export default async function ApercuCours({
           .join(' · ')}
       />
       <div className="mt-6">
-        <LessonRichContent content={lesson.content ?? 'Contenu à venir.'} />
+        {/* Les mêmes habillages que la vraie page (26/10/2026) : le mode
+            mémoire autour du texte, le chrono de lecture et le pied compact.
+            L'identifiant de leçon n'est pas un UUID : rien n'est enregistré. */}
+        <ModeMemoire>
+          <LessonRichContent content={lesson.content ?? 'Contenu à venir.'} />
+        </ModeMemoire>
+        <div className="sans-papier mt-8 border-t pt-6">
+          <LessonCompleteButton lessonId="apercu" initialDone={false} mots={compterMots(lesson.content)} />
+          <section className="carte mt-6 p-3" aria-labelledby="suite-du-chapitre">
+            <h2 id="suite-du-chapitre" className="titre-section px-1 text-base">
+              Et maintenant ?
+            </h2>
+            <div className="mt-1.5">
+              <SupportChips chips={supports.filter((c) => c.kind !== 'cours')} layout="fiche" label="S’entraîner" />
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   )

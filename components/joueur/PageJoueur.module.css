@@ -1,16 +1,21 @@
 /*
- * LA PAGE DU JOUEUR (/joueur, 25/10/2026, chantier « le jeu vivant ») — Lucas :
- * « un meilleur rendu lorsque l'on clique sur l'avatar en haut à gauche », avec
- * l'icône des Paramètres dans cet espace. Plein écran, sur le mur crème de
- * l'app (`.tab-bg`, posé par le layout : la page ne pose aucun fond) : le
- * héros en pied au centre, dans un halo violet et devant l'anneau de son rang,
- * sur son socle d'ombre ; son nom en Baloo 2, « Niveau 7 · Argent II », la
- * barre d'XP ; quatre chiffres en cartes ; trois portes.
+ * LA PAGE DU JOUEUR (/joueur, 25/10/2026, chantier « le jeu vivant ») — REVUE
+ * LE 26/10/2026. Lucas : « le personnage bouge de haut en bas, il ne semble pas
+ * vivant ; le cadre derrière est bof ; un fond d'écran derrière l'avatar, avec
+ * les informations par-dessus comme sur ce rendu d'un jeu ».
  *
- * Tokens seulement. Les trois animations en continu (le héros qui flotte, son
- * ombre qui respire à l'inverse, le halo) n'écrivent que transform et
- * opacity, en valeurs littérales, sur 4 s ; sous mouvement réduit, rien ne
- * bouge. L'entrée des blocs est un petit « monte » de 320 ms.
+ * Le DÉCOR est la chambre de l'élève la nuit (`DECOR_JOUEUR`), en plein écran
+ * (`.decor`, object-fit cover) sous un voile qui s'assombrit vers le bas ; le
+ * héros en pied se tient dessus, sans anneau, LES PIEDS DERRIÈRE LE PANNEAU
+ * (`.panneau`, opaque, remonte de 72 px sur `.scene`) ; en bas, UN PANNEAU
+ * SOMBRE (la recette `carte-sombre` : `--carte-sombre-fond`, `--ink-on-dark`)
+ * porte le nom, le rang, la barre d'XP, les quatre chiffres et deux portes.
+ *
+ * Tokens seulement. Les animations en continu — le héros qui VIT (il respire
+ * depuis les pieds, se balance, change d'appui, sur 5,2 s), l'ombre du buste
+ * qui suit, les étincelles qui montent — n'écrivent que transform et opacity,
+ * en valeurs littérales ; sous mouvement réduit, rien ne bouge. L'entrée du
+ * panneau est un petit « monte » de 320 ms.
  */
 
 .page {
@@ -19,11 +24,48 @@
   /* Au-dessus de la barre d'onglets (z-50) : la page a son propre retour ;
      sous les feuilles (z-70) et le bandeau en volée (z-80). */
   z-index: 60;
-  display: flex;
-  flex-direction: column;
   overflow-y: auto;
   overscroll-behavior: contain;
-  padding: calc(env(safe-area-inset-top) + 10px) 16px calc(env(safe-area-inset-bottom) + 18px);
+  background: var(--carte-sombre-fond);
+}
+
+/* ---------- le décor : la cour d'honneur, puis le voile ---------- */
+.decor {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  pointer-events: none;
+  user-select: none;
+}
+.voile {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--carte-sombre-fond), transparent 70%) 0%,
+    transparent 20%,
+    transparent 46%,
+    color-mix(in oklch, var(--carte-sombre-fond), transparent 40%) 100%
+  );
+}
+
+/* La colonne de contenu, au-dessus du décor. */
+.colonne {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 30rem;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: calc(env(safe-area-inset-top) + 10px) 16px calc(env(safe-area-inset-bottom) + 16px);
 }
 
 /* ---------- la barre du haut : retour à gauche, Paramètres à droite ---------- */
@@ -55,89 +97,80 @@
 /* ---------- la scène du héros ---------- */
 .scene {
   position: relative;
+  /* Sous le panneau, qui remonte sur les pieds du héros. */
+  z-index: 0;
   flex: none;
-  height: clamp(280px, 46dvh, 420px);
-  margin-top: -14px;
+  height: clamp(330px, 54dvh, 500px);
+  margin-top: -8px;
 }
-.halo {
+.etincelle {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  width: min(84vw, 340px);
-  aspect-ratio: 1;
-  translate: -50% -52%;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    color-mix(in oklch, var(--primary), transparent 66%) 0%,
-    color-mix(in oklch, var(--primary), transparent 85%) 42%,
-    transparent 68%
-  );
+  background: var(--highlight);
+  box-shadow: 0 0 10px 2px color-mix(in oklch, var(--highlight), transparent 45%);
+  opacity: 0;
   pointer-events: none;
-  animation: joueur-halo 4s ease-in-out infinite;
-}
-/* L'anneau de son rang de ligue, en grand derrière lui (lib/rang-visuel). */
-.anneau {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: min(68vw, 280px);
-  aspect-ratio: 1;
-  translate: -50% -56%;
-  opacity: 0.9;
-  pointer-events: none;
+  animation: joueur-etincelle 5s ease-in-out infinite;
 }
 .socle {
   position: absolute;
   left: 50%;
-  bottom: 4%;
-  width: min(48vw, 200px);
-  height: 28px;
+  bottom: 2%;
+  width: min(50vw, 210px);
+  height: 30px;
   translate: -50% 50%;
   border-radius: 50%;
   background: radial-gradient(
     ellipse at center,
-    color-mix(in oklch, var(--primary), transparent 42%) 0%,
-    color-mix(in oklch, var(--primary), transparent 76%) 52%,
+    color-mix(in oklch, var(--carte-sombre-fond), transparent 25%) 0%,
+    color-mix(in oklch, var(--carte-sombre-fond), transparent 62%) 50%,
     transparent 74%
   );
   pointer-events: none;
-  animation: joueur-ombre 4s ease-in-out infinite;
+  animation: joueur-ombre 5.2s ease-in-out infinite;
 }
 .heros {
   position: absolute;
   left: 50%;
-  bottom: 4%;
-  height: 94%;
+  bottom: 0;
+  height: 100%;
   width: auto;
-  max-width: 72%;
+  max-width: 80%;
   translate: -50% 0;
   object-fit: contain;
   object-position: bottom center;
-  filter: drop-shadow(0 10px 12px color-mix(in oklch, var(--primary), transparent 64%));
-  animation: joueur-flotte 4s ease-in-out infinite;
+  /* Il respire et se balance DEPUIS LES PIEDS, pas depuis le nombril. */
+  transform-origin: 50% 100%;
+  filter: drop-shadow(0 14px 16px color-mix(in oklch, var(--carte-sombre-fond), transparent 45%));
+  animation: joueur-vit 5.2s ease-in-out infinite;
 }
 /* Le repli : le buste dans l'anneau de son rang (components/AvatarRang). */
 .busteFlotte {
   position: absolute;
   left: 50%;
-  /* Posé sur le socle, comme les pieds du héros : l'anneau ne flotte pas
-     loin au-dessus de son ombre. */
   bottom: 0;
   width: min(64vw, 250px);
-  /* L'image de l'anneau garde une marge transparente sous sa plaque : on la
-     descend un peu pour que la plaque touche presque l'ombre. */
   translate: -50% 5%;
-  filter: drop-shadow(0 12px 14px color-mix(in oklch, var(--primary), transparent 60%));
-  animation: joueur-flotte 4s ease-in-out infinite;
+  transform-origin: 50% 100%;
+  filter: drop-shadow(0 12px 14px color-mix(in oklch, var(--carte-sombre-fond), transparent 45%));
+  animation: joueur-vit 5.2s ease-in-out infinite;
 }
-@keyframes joueur-flotte {
-  0%,
-  100% {
-    transform: translateY(0);
+/* Le héros vit : un appui à droite, puis l'inspiration, puis l'appui à gauche. */
+@keyframes joueur-vit {
+  0% {
+    transform: translateX(0) rotate(0deg) scale(1, 1);
+  }
+  24% {
+    transform: translateX(2px) rotate(0.7deg) scale(1.008, 0.992);
   }
   50% {
-    transform: translateY(-9px);
+    transform: translateX(0) rotate(0deg) scale(0.996, 1.014);
+  }
+  76% {
+    transform: translateX(-2px) rotate(-0.7deg) scale(1.008, 0.992);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg) scale(1, 1);
   }
 }
 @keyframes joueur-ombre {
@@ -147,41 +180,56 @@
     opacity: 1;
   }
   50% {
-    transform: scale(0.86);
-    opacity: 0.72;
+    transform: scale(0.93);
+    opacity: 0.8;
   }
 }
-@keyframes joueur-halo {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 0.92;
+@keyframes joueur-etincelle {
+  0% {
+    transform: translateY(0) scale(0.5);
+    opacity: 0;
   }
-  50% {
-    transform: scale(1.05);
-    opacity: 1;
+  18% {
+    opacity: 0.95;
+  }
+  62% {
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateY(-64px) scale(1);
+    opacity: 0;
   }
 }
 
-/* ---------- l'identité : classe, nom, rang, barre d'XP ---------- */
-.identite {
+/* ---------- le panneau sombre : identité, barre d'XP, chiffres, portes ---------- */
+.panneau {
+  position: relative;
+  /* Devant la scène : il recouvre les pieds du héros, comme la carte d'un jeu. */
+  z-index: 1;
   display: flex;
   flex: none;
   flex-direction: column;
   align-items: center;
-  margin-top: 2px;
+  margin-top: -72px;
+  padding: 18px 16px 16px;
+  border-radius: 28px;
+  /* Opaque : le héros est DERRIÈRE, ses jambes ne doivent pas transparaître. */
+  background: var(--carte-sombre-fond);
+  color: var(--ink-on-dark);
+  box-shadow:
+    0 0 0 2px color-mix(in oklch, var(--primary), transparent 50%),
+    var(--carte-ombre);
   text-align: center;
 }
 .classe {
   padding: 3px 10px;
   border-radius: 99px;
-  background: var(--card);
-  box-shadow: 0 2px 0 color-mix(in oklch, var(--primary), white 62%);
+  background: color-mix(in oklch, var(--ink-on-dark), transparent 86%);
   font-family: var(--font-heading), sans-serif;
   font-weight: 800;
   font-size: 12px;
   line-height: 1.2;
-  color: var(--primary);
+  color: var(--ink-on-dark);
 }
 .nom {
   margin-top: 6px;
@@ -190,19 +238,19 @@
   font-size: 2rem;
   line-height: 1.05;
   letter-spacing: -0.01em;
-  color: var(--foreground);
+  color: var(--ink-on-dark);
   text-wrap: balance;
 }
 .rangLigne {
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-top: 4px;
+  margin-top: 6px;
   font-family: var(--font-heading), sans-serif;
   font-weight: 800;
   font-size: 15px;
   line-height: 1;
-  color: color-mix(in oklch, var(--primary), black 30%);
+  color: var(--highlight);
 }
 .barre {
   position: relative;
@@ -210,11 +258,11 @@
   place-items: center;
   width: min(100%, 280px);
   height: 22px;
-  margin-top: 10px;
+  margin-top: 12px;
   overflow: hidden;
   border-radius: 99px;
-  background: var(--card);
-  box-shadow: inset 0 0 0 2px color-mix(in oklch, var(--primary), white 66%);
+  background: color-mix(in oklch, var(--ink-on-dark), transparent 84%);
+  box-shadow: inset 0 0 0 2px color-mix(in oklch, var(--ink-on-dark), transparent 82%);
 }
 .remplissage {
   position: absolute;
@@ -222,7 +270,7 @@
   top: 0;
   bottom: 0;
   border-radius: 99px;
-  background: linear-gradient(color-mix(in oklch, var(--primary), white 30%), var(--primary));
+  background: linear-gradient(90deg, var(--primary), color-mix(in oklch, var(--primary), white 32%));
 }
 .chiffres {
   position: relative;
@@ -232,21 +280,21 @@
   line-height: 1;
   white-space: nowrap;
   font-variant-numeric: tabular-nums;
-  color: var(--card);
-  -webkit-text-stroke: 2.5px color-mix(in oklch, var(--primary), black 30%);
+  color: var(--ink-on-dark);
+  -webkit-text-stroke: 2.5px color-mix(in oklch, var(--carte-sombre-fond), black 25%);
   paint-order: stroke fill;
 }
 .reste {
-  margin-top: 5px;
+  margin-top: 6px;
   font-size: 12px;
   font-weight: 700;
-  color: var(--muted-foreground);
+  color: color-mix(in oklch, var(--ink-on-dark), transparent 35%);
 }
 
 /* ---------- les quatre chiffres ---------- */
 .rangee {
   display: grid;
-  flex: none;
+  width: 100%;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 8px;
   margin-top: 14px;
@@ -257,6 +305,8 @@
   align-items: center;
   gap: 2px;
   padding: 9px 4px 8px;
+  border-radius: 16px;
+  background: color-mix(in oklch, var(--ink-on-dark), transparent 90%);
 }
 .tuileIcone {
   display: grid;
@@ -269,7 +319,7 @@
   font-size: 20px;
   line-height: 1;
   font-variant-numeric: tabular-nums;
-  color: var(--foreground);
+  color: var(--ink-on-dark);
 }
 .tuileLibelle {
   font-size: 10px;
@@ -277,7 +327,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   white-space: nowrap;
-  color: var(--muted-foreground);
+  color: color-mix(in oklch, var(--ink-on-dark), transparent 40%);
 }
 .amisIcone {
   display: grid;
@@ -285,36 +335,27 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: var(--secondary);
-  color: var(--primary);
+  background: color-mix(in oklch, var(--primary), white 25%);
+  color: var(--card);
 }
 
 /* ---------- les portes ---------- */
 .actions {
-  display: flex;
-  flex: none;
-  flex-direction: column;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
   margin-top: 14px;
 }
 
-/* ---------- l'entrée des blocs ---------- */
+/* ---------- l'entrée du panneau ---------- */
 .monte {
   animation: joueur-monte 320ms ease-out both;
-}
-.monte:nth-child(3) {
-  animation-delay: 60ms;
-}
-.monte:nth-child(4) {
-  animation-delay: 120ms;
-}
-.monte:nth-child(5) {
-  animation-delay: 180ms;
 }
 @keyframes joueur-monte {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
@@ -323,11 +364,14 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .halo,
+  .etincelle,
   .socle,
   .heros,
   .busteFlotte,
   .monte {
     animation: none;
+  }
+  .etincelle {
+    display: none;
   }
 }

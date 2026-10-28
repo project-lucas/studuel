@@ -5,7 +5,7 @@ describe('positionSurPiste', () => {
   it('place les trois seuils aux tiers de la piste', () => {
     expect(positionSurPiste(0.6)).toBeCloseTo(1 / 3)
     expect(positionSurPiste(0.8)).toBeCloseTo(2 / 3)
-    expect(positionSurPiste(0.95)).toBe(1)
+    expect(positionSurPiste(0.95)).toBeCloseTo(2 / 3 + 0.75 / 3)
     expect(positionSurPiste(1)).toBe(1)
   })
 
@@ -13,7 +13,7 @@ describe('positionSurPiste', () => {
     expect(positionSurPiste(0)).toBe(0)
     expect(positionSurPiste(0.3)).toBeCloseTo(1 / 6)
     expect(positionSurPiste(0.7)).toBeCloseTo(0.5)
-    expect(positionSurPiste(0.875)).toBeCloseTo(5 / 6)
+    expect(positionSurPiste(0.9)).toBeCloseTo(5 / 6)
   })
 
   it('borne les valeurs aberrantes', () => {
@@ -28,9 +28,9 @@ describe('pistePalier', () => {
     expect(p.jalons.map((j) => j.at)).toEqual([1 / 3, 2 / 3, 1])
     expect(p.jalons.map((j) => j.xp)).toEqual([15, 15, 15])
     expect(p.jalons.map((j) => j.gagne)).toEqual([true, true, false])
-    expect(p.jalons.map((j) => j.seuil)).toEqual([0.6, 0.8, 0.95])
-    expect(p.prochainSeuil).toBe(0.95)
-    expect(p.fill).toBeCloseTo(2 / 3 + (0.05 / 0.15) / 3)
+    expect(p.jalons.map((j) => j.seuil)).toEqual([0.6, 0.8, 1])
+    expect(p.prochainSeuil).toBe(1)
+    expect(p.fill).toBeCloseTo(2 / 3 + (0.05 / 0.2) / 3)
   })
 
   it('un palier jamais joué a le curseur à zéro et aucun seuil atteint', () => {
@@ -46,7 +46,7 @@ describe('pistePalier', () => {
     expect(p.fill).toBeCloseTo(2 / 3)
     // Et une précision mémorisée plus basse que le seuil des étoiles ne compte pas.
     const q = pistePalier({ level: 2, stars: 3, acquises: 3, accuracy: 0.5 })
-    expect(q.accuracy).toBe(0.95)
+    expect(q.accuracy).toBe(1)
     expect(q.fill).toBe(1)
     expect(q.prochainSeuil).toBeNull()
   })

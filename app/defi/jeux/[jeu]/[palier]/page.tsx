@@ -25,6 +25,7 @@ import { exigerAccesJeu } from '@/lib/jeux/acces-server'
 import { createClient } from '@/lib/supabase/server'
 import { fetchGameGhost } from '@/lib/jeux/ghost-server'
 import { programmeSlug } from '@/lib/jeux/programme'
+import { subjectVignette } from '@/lib/subject-style'
 import { nowMs } from '@/lib/defi-modes'
 import type { GradeLevel } from '@/lib/types'
 
@@ -131,6 +132,7 @@ export default async function SalonPalierPage({
         name={found.game.name}
         subject={found.salon.subject}
         subjectEmoji={found.salon.emoji}
+        subjectVignette={subjectVignette(programmeSlug(found.salon.subject)) ?? null}
         scene={gameScene(found.game.id) ?? null}
         ghost={ghost}
       />
@@ -149,6 +151,7 @@ export default async function SalonPalierPage({
         name={found.game.name}
         subject={found.salon.subject}
         subjectEmoji={found.salon.emoji}
+        subjectVignette={subjectVignette(programmeSlug(found.salon.subject)) ?? null}
         scene={gameScene(found.game.id) ?? null}
         ghost={ghost}
       />
@@ -169,6 +172,7 @@ export default async function SalonPalierPage({
       name={found.game.name}
       subject={found.salon.subject}
       subjectEmoji={found.salon.emoji}
+      subjectVignette={subjectVignette(programmeSlug(found.salon.subject)) ?? null}
       scene={gameScene(found.game.id) ?? null}
       ghost={ghost}
     />

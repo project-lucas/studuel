@@ -5,12 +5,15 @@ import { derniereDefinition } from '@/lib/migrations-lecture'
 import {
   ACTIVITES_XP,
   BAREME_XP,
+  COHORTE_MIN_SEUILS_TEMPS,
   PLAFOND_GEMMES_SEMAINE,
+  SEUILS_TEMPS,
   gemmesEpreuve,
   gemmesExerciceCahier,
   xpActivite,
   xpDansLePlafond,
   xpEtoilePalier,
+  xpSeuilTemps,
   xpTraque,
   gemmesTraque,
   type Epreuve,
@@ -141,5 +144,33 @@ describe('miroir SQL (557)', () => {
       const sql = sqlDe(fn)
       expect(sql, fn).not.toMatch(/INSERT INTO public\.gem_events/)
     }
+  })
+})
+
+describe('miroir SQL (603) — les caps de rapidité', () => {
+  /** Le corps de la fonction (603 pose REVOKE et GRANT APRÈS la définition : sqlDe, qui cherche la dernière mention, tomberait dessus). */
+  function corpsDe(fn: string): string {
+    const found = derniereDefinition(fn)
+    expect(found, `aucune migration ne définit ${fn}`).not.toBeNull()
+    const sql = found!.sql
+    const debut = sql.indexOf(`CREATE OR REPLACE FUNCTION public.${fn}(`)
+    expect(debut, fn).toBeGreaterThanOrEqual(0)
+    const ouvre = sql.indexOf('AS $', debut) + 5
+    return sql.slice(debut, sql.indexOf('$', ouvre))
+  }
+
+  it('palier_temps_xp paie les mêmes caps que xpSeuilTemps', () => {
+    const sql = corpsDe('palier_temps_xp')
+    for (const pct of SEUILS_TEMPS) {
+      expect(sql, `cap ${pct} %`).toMatch(new RegExp(`WHEN ${pct}\\s+THEN ${xpSeuilTemps(pct)}\\b`))
+    }
+    expect(sql).toMatch(/ELSE 0/)
+  })
+
+  it('palier_temps_enregistrer ne paie rien sous la même cohorte, aux mêmes caps', () => {
+    const sql = corpsDe('palier_temps_enregistrer')
+    expect(sql).toContain(`>= ${COHORTE_MIN_SEUILS_TEMPS}`)
+    expect(sql).toContain(`ARRAY[${SEUILS_TEMPS.join(', ')}]`)
+    expect(sql).toMatch(/v_rank \* 100 <= v_seuil \* v_total/)
   })
 })

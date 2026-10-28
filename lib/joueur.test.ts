@@ -1,5 +1,19 @@
+import { existsSync } from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { describe, expect, it } from 'vitest'
-import { barreNiveau, ligneRang, piedDuPortrait, xpSemaineDepuisClassement } from './joueur'
+import { ARENA_SCHEDULE } from './arena-background'
+import {
+  barreNiveau,
+  bureauDuPortrait,
+  DECOR_JOUEUR,
+  decorBureau,
+  ligneRang,
+  periodeInitiale,
+  piedDuPortrait,
+  xpSemaineDepuisClassement,
+} from './joueur'
+import { PORTRAIT_KEYS } from './portraits'
 import { walletLevelInfo } from './wallet'
 
 describe('barreNiveau', () => {
@@ -53,5 +67,45 @@ describe('piedDuPortrait', () => {
     expect(piedDuPortrait('perso:charlemagne')).toBeNull()
     expect(piedDuPortrait('')).toBeNull()
     expect(piedDuPortrait(undefined)).toBeNull()
+  })
+})
+
+describe('DECOR_JOUEUR', () => {
+  it('est une image servie depuis public/images/joueur', () => {
+    expect(DECOR_JOUEUR).toMatch(/^\/images\/joueur\/[a-z-]+\.webp$/)
+  })
+})
+
+describe('bureauDuPortrait', () => {
+  it('n’assoit au bureau que les treize portraits libres', () => {
+    expect(bureauDuPortrait('7')).toBe('7')
+    expect(bureauDuPortrait('perso:charlemagne')).toBeNull()
+    expect(bureauDuPortrait('')).toBeNull()
+    expect(bureauDuPortrait(undefined)).toBeNull()
+  })
+})
+
+describe('decorBureau', () => {
+  it('nomme la scène par le portrait et la plage', () => {
+    expect(decorBureau('7', 'night')).toBe('/images/joueur/bureau/7-night.webp')
+  })
+
+  it('a ses 78 scènes servies (13 portraits × 6 plages)', () => {
+    const PUBLIC = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'public')
+    const manquantes = PORTRAIT_KEYS.flatMap((k) =>
+      ARENA_SCHEDULE.map((s) => decorBureau(k, s.period)).filter((src) => !existsSync(path.join(PUBLIC, src))),
+    )
+    expect(manquantes).toEqual([])
+  })
+})
+
+describe('periodeInitiale', () => {
+  it('lit la plage à l’heure de Paris, pas en UTC', () => {
+    // 21 h 30 UTC un 27 octobre = 22 h 30 à Paris (heure d'hiver) : la nuit.
+    expect(periodeInitiale(new Date('2026-10-27T21:30:00Z'))).toBe('night')
+    // 11 h 30 UTC un 1er juillet = 13 h 30 à Paris (heure d'été) : midi.
+    expect(periodeInitiale(new Date('2026-07-01T11:30:00Z'))).toBe('noon')
+    // 4 h 30 UTC un 1er juillet = 6 h 30 à Paris : l'aube, alors qu'en UTC c'est encore la nuit.
+    expect(periodeInitiale(new Date('2026-07-01T04:30:00Z'))).toBe('dawn')
   })
 })

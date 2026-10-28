@@ -1,0 +1,135 @@
+/*
+ * LE MODE MÉMOIRE — les mots-clés du cours sous un cache (26/10/2026).
+ *
+ * Quand le cache est posé, chaque terme en gras (`**…**` du contenu, rendu en
+ * <strong> par LessonRichContent) devient une plaque hachurée à la lavande : le
+ * texte reste dans la page, à sa largeur exacte (couleur transparente, pas
+ * `visibility`), pour que rien ne bouge autour. Un tap le révèle sur un fond
+ * jaune pâle ; un second tap le recache. Les couleurs sont des tokens de la DA.
+ *
+ * LE BOUTON FLOTTANT (le même jour) : un rond blanc de 56 px à bague lavande
+ * et socle, comme les ronds de la page du joueur, l'œil fermé étoilé dedans ;
+ * actif, la bague passe au violet et la pastille compte les notions cachées.
+ * Entrée en transform/opacité, rien en continu.
+ */
+
+.trous :global(strong):not([data-revele]) {
+  color: transparent;
+  background: repeating-linear-gradient(
+    135deg,
+    color-mix(in oklch, var(--primary), white 78%) 0 5px,
+    color-mix(in oklch, var(--primary), white 90%) 5px 10px
+  );
+  border-radius: 0.4em;
+  box-shadow: 0 0 0 2px color-mix(in oklch, var(--primary), white 78%);
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Un italique dans le gras (« **querelle du *Cid*** ») suit la cache. */
+.trous :global(strong):not([data-revele]) * {
+  color: transparent;
+}
+
+.trous :global(strong)[data-revele] {
+  background: color-mix(in oklch, var(--highlight), white 70%);
+  border-radius: 0.4em;
+  box-shadow: 0 0 0 2px color-mix(in oklch, var(--highlight), white 70%);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ---------- le bouton flottant ---------- */
+.fab {
+  animation: memoire-entre 320ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+.bouton {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--card);
+  box-shadow:
+    0 0 0 2.5px color-mix(in oklch, var(--primary), white 62%),
+    0 4px 0 2px color-mix(in oklch, var(--primary), white 48%),
+    0 14px 24px -12px color-mix(in oklch, var(--primary), black 40%);
+  cursor: pointer;
+  transition: transform 120ms ease-out;
+  -webkit-tap-highlight-color: transparent;
+}
+.bouton:active {
+  transform: scale(0.92);
+}
+.icone {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+.actif {
+  box-shadow:
+    0 0 0 3px var(--primary),
+    0 4px 0 2px color-mix(in oklch, var(--primary), black 28%),
+    0 14px 24px -12px color-mix(in oklch, var(--primary), black 40%);
+}
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 99px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  line-height: 22px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  box-shadow: 0 0 0 2px var(--card);
+}
+.etiquette {
+  animation: memoire-etiquette 240ms ease-out both;
+}
+@keyframes memoire-entre {
+  from {
+    opacity: 0;
+    transform: scale(0.7) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes memoire-etiquette {
+  from {
+    opacity: 0;
+    transform: translateX(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fab,
+  .etiquette {
+    animation: none;
+  }
+}
+
+@media print {
+  .trous :global(strong) {
+    color: inherit !important;
+    background: none !important;
+    box-shadow: none !important;
+  }
+  .fab {
+    display: none;
+  }
+}

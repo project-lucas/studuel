@@ -3,6 +3,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import ModeStage from '@/components/defi/ModeStage'
+import MatiereChip from '@/components/jeux/MatiereChip'
+import { gameTalon } from '@/lib/defi/modes-catalog'
 import AnatomyBoard, { AnatomyCorrection } from '@/components/jeux/AnatomyBoard'
 import GameHud from '@/components/jeux/GameHud'
 import GameOutcome from '@/components/jeux/GameOutcome'
@@ -59,6 +61,7 @@ export default function AnatomyTable({
   name,
   subject,
   subjectEmoji,
+  subjectVignette = null,
   scene = null,
   ghost,
 }: {
@@ -81,6 +84,8 @@ export default function AnatomyTable({
   name: string
   subject: string
   subjectEmoji: string
+  /** La vignette du dossier de la matière (Réviser), ou null : l'emoji. */
+  subjectVignette?: string | null
   /** Meilleur score d'un ami sur ce jeu, à battre (lib/jeux/ghost-server). */
   ghost?: GameGhost | null
 }) {
@@ -289,15 +294,12 @@ export default function AnatomyTable({
     <ModeStage
       title={name}
       Icon={MECHANIC_ICON[format.params.mechanic]}
+      illustration={gameTalon(format.id) ?? null}
       theme={format.theme}
       scene={scene}
       onExit={exit}
       backLabel={palier ? 'Retour aux paliers' : undefined}
-      headerRight={
-        <span className="shrink-0 rounded-full bg-[color:var(--jeu-accent)]/12 px-2.5 py-1 text-[11px] font-bold text-[color:var(--jeu-accent)]">
-          <span aria-hidden="true">{subjectEmoji}</span> {subject}
-        </span>
-      }
+      headerRight={<MatiereChip nom={subject} vignette={subjectVignette} emoji={subjectEmoji} />}
     >
       <div className="min-h-[70dvh] pt-1 pb-6">
         {phase === 'intro' ? (

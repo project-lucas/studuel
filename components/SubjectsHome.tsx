@@ -541,6 +541,7 @@ export default function SubjectsHome({
   gardiens = {},
   topSlot,
   commandesSlot,
+  classeSlot,
 }: {
   subjects: Subject[]
   selected: string[] | null
@@ -574,6 +575,8 @@ export default function SubjectsHome({
    *  classe (03/10/2026 — elle a quitté le bandeau du haut, qui porte
    *  désormais les quêtes du jour). */
   commandesSlot?: React.ReactNode
+  /** La puce de classe, posée à l'extrémité GAUCHE de la rangée des commandes. */
+  classeSlot?: React.ReactNode
 }) {
   // UNE horloge pour toute la liste, et pas une par carte : c'est elle qui
   // égrène le compte à rebours des gardiens et qui éteint un dossier dès que sa
@@ -694,7 +697,13 @@ export default function SubjectsHome({
             actif le dit déjà en haut de l'écran, et une grille de matières se
             reconnaît sans qu'on la nomme. Seule la culture générale garde le
             sien, plus bas — c'est ce qui la distingue du programme. */}
-        <div className="flex items-center justify-end gap-2 px-1">
+        <div className="flex items-center justify-between gap-2 px-1">
+          {/* LA CLASSE À L'EXTRÉMITÉ GAUCHE (26/10/2026, Lucas : « transfère le
+              changement de classe sur l'extrémité à gauche ») : elle dit l'année
+              du programme qu'on regarde, les réglages de la grille restent à
+              droite. Un `<span>` vide quand il n'y a rien, pour que
+              `justify-between` pousse quand même les commandes à droite. */}
+          <div className="flex items-center">{classeSlot ?? null}</div>
           <div className="flex items-center gap-2">
             {/* Le crayon SEUL : « Modifier mes matières » écrit en toutes
                 lettres au-dessus d'une grille qui ne contient que des matières,

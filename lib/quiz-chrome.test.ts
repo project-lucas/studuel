@@ -148,6 +148,9 @@ describe('estPleinEcran — l’aperçu de la fin de duel', () => {
     expect(estPleinEcran('/dev/duel')).toBe(true)
     expect(estPleinEcran('/dev/duel?m=Anglais&e=victoire')).toBe(true)
   })
+  it('ouvre aussi l’aperçu du duel des héros en plein écran', () => {
+    expect(estPleinEcran('/dev/duel-heros')).toBe(true)
+  })
   it('ne prend pas une autre page de /dev pour la course', () => {
     expect(estPleinEcran('/dev/duel-pokemon')).toBe(false)
     expect(estPleinEcran('/dev')).toBe(false)

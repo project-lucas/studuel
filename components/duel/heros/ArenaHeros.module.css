@@ -1,0 +1,607 @@
+/* L'ARÈNE DES HÉROS — voir ArenaHeros.tsx. Transform et opacité seulement,
+   valeurs littérales dans les images-clés ; chaque animation existe en deux
+   exemplaires identiques (_a / _b) pour se rejouer coup après coup. */
+
+.arene {
+  position: relative;
+  height: clamp(18rem, 49dvh, 28rem);
+  overflow: hidden;
+  border-radius: 1.5rem;
+  border: 3px solid color-mix(in oklab, var(--primary) 30%, var(--card));
+  box-shadow: 0 6px 0 color-mix(in oklab, var(--foreground) 35%, transparent);
+  isolation: isolate;
+}
+
+.decor {
+  object-fit: cover;
+  object-position: center 72%;
+  z-index: -2;
+}
+
+.voile {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in oklab, var(--foreground) 10%, transparent) 0%,
+    transparent 40%,
+    color-mix(in oklab, var(--foreground) 40%, transparent) 100%
+  );
+}
+
+/* --- les combattants ------------------------------------------------------ */
+
+.combattant {
+  position: absolute;
+}
+
+.combattant[data-camp='rival'] {
+  right: 3%;
+  top: 15%;
+  width: 38%;
+  height: 47%;
+}
+
+.combattant[data-camp='moi'] {
+  left: 1%;
+  bottom: 1%;
+  width: 50%;
+  height: 64%;
+}
+
+.plateau {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  bottom: -5%;
+  height: 18%;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    color-mix(in oklab, var(--foreground) 50%, transparent) 0%,
+    color-mix(in oklab, var(--foreground) 22%, transparent) 45%,
+    transparent 70%
+  );
+}
+
+.souffle,
+.geste,
+.miroir {
+  position: absolute;
+  inset: 0;
+}
+
+.souffle {
+  animation: respire 2.4s ease-in-out infinite;
+}
+
+.combattant[data-camp='moi'] .souffle {
+  animation-delay: -1.2s;
+}
+
+.combattant[data-pose='ko'] .souffle {
+  animation: none;
+}
+
+.combattant[data-camp='rival'] .miroir {
+  transform: scaleX(-1);
+}
+
+.sprite {
+  object-fit: contain;
+  object-position: center bottom;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+.visible {
+  opacity: 1;
+}
+
+/* Le voile blanc du coup encaissé : un filtre FIXE, seule l'opacité bouge. */
+.flash {
+  filter: brightness(0) invert(1);
+}
+
+.flash_a {
+  animation: flash_a 420ms ease-out 160ms both;
+}
+.flash_b {
+  animation: flash_b 420ms ease-out 160ms both;
+}
+
+.chute {
+  animation: chute 520ms cubic-bezier(0.3, 1.6, 0.5, 1) both;
+}
+
+.attaque_moi_a {
+  animation: fente_moi_a 560ms cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+.attaque_moi_b {
+  animation: fente_moi_b 560ms cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+.attaque_rival_a {
+  animation: fente_rival_a 560ms cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+.attaque_rival_b {
+  animation: fente_rival_b 560ms cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+.touche_a {
+  animation: touche_a 420ms ease-out 160ms;
+}
+.touche_b {
+  animation: touche_b 420ms ease-out 160ms;
+}
+
+/* --- les plaques de PV ---------------------------------------------------- */
+
+.plaque {
+  position: absolute;
+  z-index: 2;
+  width: 52%;
+  padding: 0.35rem 0.6rem 0.45rem;
+  border-radius: 1rem;
+  background: var(--card);
+  color: var(--foreground);
+  border: 3px solid color-mix(in oklab, var(--primary) 26%, var(--card));
+  box-shadow: 0 4px 0 color-mix(in oklab, var(--foreground) 28%, transparent);
+}
+
+.plaque[data-camp='rival'] {
+  top: 4%;
+  left: 3%;
+}
+
+.plaque[data-camp='moi'] {
+  right: 3%;
+  bottom: 5%;
+}
+
+.plaqueHaut {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+.nom {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.95rem;
+  line-height: 1.1;
+}
+
+.classe {
+  flex-shrink: 0;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+.barre {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.25rem;
+}
+
+.pv {
+  padding: 0.05rem 0.3rem;
+  border-radius: 0.35rem;
+  background: var(--foreground);
+  color: var(--highlight);
+  font-size: 0.55rem;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.rail {
+  position: relative;
+  flex: 1;
+  height: 0.55rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--foreground) 14%, transparent);
+}
+
+.fantome,
+.remplissage {
+  position: absolute;
+  inset: 0;
+  transform-origin: left center;
+  border-radius: 999px;
+}
+
+/* La barre fantôme : les dégâts restent visibles un instant, puis fondent. */
+.fantome {
+  background: color-mix(in oklab, var(--destructive) 55%, var(--card));
+  transition: transform 700ms ease-in 280ms;
+}
+
+.remplissage {
+  transition: transform 320ms ease-out;
+}
+
+.remplissage[data-ton='plein'] {
+  background: var(--success);
+}
+.remplissage[data-ton='entame'] {
+  background: var(--highlight);
+}
+.remplissage[data-ton='critique'] {
+  background: var(--destructive);
+}
+
+.chiffres {
+  display: block;
+  margin-top: 0.15rem;
+  text-align: right;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+/* --- l'impact, les dégâts, le critique ------------------------------------ */
+
+.impact {
+  position: absolute;
+  z-index: 3;
+  width: 30%;
+  aspect-ratio: 1;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.impact[data-cible='rival'] {
+  left: 60%;
+  top: 22%;
+}
+
+.impact[data-cible='moi'] {
+  left: 10%;
+  top: 42%;
+}
+
+.impactCritique {
+  width: 44%;
+}
+
+.impactCritique[data-cible='rival'] {
+  left: 52%;
+  top: 14%;
+}
+
+.impactCritique[data-cible='moi'] {
+  left: 4%;
+  top: 34%;
+}
+
+.impact_a {
+  animation: impact_a 560ms ease-out 170ms both;
+}
+.impact_b {
+  animation: impact_b 560ms ease-out 170ms both;
+}
+
+.eclat {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    var(--card) 0%,
+    color-mix(in oklab, var(--highlight) 85%, var(--card)) 22%,
+    color-mix(in oklab, var(--highlight) 45%, transparent) 46%,
+    transparent 70%
+  );
+}
+
+/* La croix de lumière du Templier : une croix pattée (bras évasés), blanche
+   sur un liseré rouge, auréolée d'or. Le filtre est FIXE. */
+.croix {
+  position: absolute;
+  inset: 18%;
+  filter: drop-shadow(0 0 6px var(--highlight));
+}
+
+.croix::before,
+.croix::after {
+  content: '';
+  position: absolute;
+  clip-path: polygon(33% 0, 67% 0, 55% 45%, 100% 33%, 100% 67%, 55% 55%, 67% 100%, 33% 100%, 45% 55%, 0 67%, 0 33%, 45% 45%);
+}
+
+.croix::before {
+  inset: 0;
+  background: var(--destructive);
+}
+
+.croix::after {
+  inset: 9%;
+  background: var(--card);
+}
+
+.degats {
+  position: absolute;
+  z-index: 4;
+  font-size: 1.7rem;
+  line-height: 1;
+  color: var(--card);
+  text-shadow:
+    0 3px 0 var(--destructive),
+    0 0 10px color-mix(in oklab, var(--foreground) 60%, transparent);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.degats[data-cible='rival'] {
+  left: 58%;
+  top: 12%;
+}
+
+.degats[data-cible='moi'] {
+  left: 20%;
+  top: 40%;
+}
+
+.degats_a {
+  animation: degats_a 900ms ease-out 200ms both;
+}
+.degats_b {
+  animation: degats_b 900ms ease-out 200ms both;
+}
+
+.critique {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.6rem;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--highlight);
+  text-shadow:
+    0 3px 0 var(--foreground),
+    0 0 12px color-mix(in oklab, var(--foreground) 55%, transparent);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.critique small {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--card);
+}
+
+.critique_a {
+  animation: critique_a 1300ms ease-out both;
+}
+.critique_b {
+  animation: critique_b 1300ms ease-out both;
+}
+
+.secousse_a {
+  animation: secousse_a 380ms ease-out 180ms;
+}
+.secousse_b {
+  animation: secousse_b 380ms ease-out 180ms;
+}
+
+/* --- l'entrée en scène et le K.O. ----------------------------------------- */
+
+.arene[data-entree='true'] .combattant[data-camp='rival'] {
+  animation: entree_rival 650ms cubic-bezier(0.2, 0.9, 0.3, 1.15) both;
+}
+
+.arene[data-entree='true'] .combattant[data-camp='moi'] {
+  animation: entree_moi 650ms cubic-bezier(0.2, 0.9, 0.3, 1.15) 120ms both;
+}
+
+.arene[data-entree='true'] .plaque {
+  animation: plaque 400ms ease-out 650ms both;
+}
+
+.vs {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: 44%;
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-size: 3.6rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--highlight);
+  text-shadow:
+    0 4px 0 var(--foreground),
+    0 0 18px color-mix(in oklab, var(--foreground) 60%, transparent);
+  animation: vs 500ms cubic-bezier(0.3, 1.5, 0.5, 1) 750ms both;
+}
+
+.ko {
+  position: absolute;
+  z-index: 6;
+  left: 34%;
+  top: 46%;
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-size: 3.4rem;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--card);
+  text-shadow:
+    0 4px 0 var(--destructive),
+    0 0 20px color-mix(in oklab, var(--foreground) 65%, transparent);
+  animation: ko 650ms cubic-bezier(0.3, 1.6, 0.5, 1) 250ms both;
+}
+
+/* Le tampon se pose À CÔTÉ du héros assommé, jamais sur lui. */
+.ko[data-camp='moi'] {
+  left: 40%;
+  top: 30%;
+}
+
+/* --- les images-clés ------------------------------------------------------ */
+
+@keyframes respire {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes fente_moi_a {
+  0% { transform: translate(0, 0) scale(1); }
+  35% { transform: translate(38%, -20%) scale(1.06); }
+  60% { transform: translate(34%, -18%) scale(1.04); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes fente_moi_b {
+  0% { transform: translate(0, 0) scale(1); }
+  35% { transform: translate(38%, -20%) scale(1.06); }
+  60% { transform: translate(34%, -18%) scale(1.04); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes fente_rival_a {
+  0% { transform: translate(0, 0) scale(1); }
+  35% { transform: translate(-40%, 22%) scale(1.08); }
+  60% { transform: translate(-36%, 20%) scale(1.06); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes fente_rival_b {
+  0% { transform: translate(0, 0) scale(1); }
+  35% { transform: translate(-40%, 22%) scale(1.08); }
+  60% { transform: translate(-36%, 20%) scale(1.06); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes touche_a {
+  0%, 100% { transform: translateX(0); }
+  15% { transform: translateX(-8%); }
+  30% { transform: translateX(6%); }
+  45% { transform: translateX(-4%); }
+  60% { transform: translateX(2%); }
+}
+@keyframes touche_b {
+  0%, 100% { transform: translateX(0); }
+  15% { transform: translateX(-8%); }
+  30% { transform: translateX(6%); }
+  45% { transform: translateX(-4%); }
+  60% { transform: translateX(2%); }
+}
+
+@keyframes flash_a {
+  0% { opacity: 0; }
+  25% { opacity: 0.85; }
+  100% { opacity: 0; }
+}
+@keyframes flash_b {
+  0% { opacity: 0; }
+  25% { opacity: 0.85; }
+  100% { opacity: 0; }
+}
+
+@keyframes chute {
+  0% { transform: translateY(-18%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes impact_a {
+  0% { opacity: 0; transform: scale(0.2) rotate(-20deg); }
+  25% { opacity: 1; transform: scale(1.1) rotate(0deg); }
+  100% { opacity: 0; transform: scale(1.35) rotate(8deg); }
+}
+@keyframes impact_b {
+  0% { opacity: 0; transform: scale(0.2) rotate(-20deg); }
+  25% { opacity: 1; transform: scale(1.1) rotate(0deg); }
+  100% { opacity: 0; transform: scale(1.35) rotate(8deg); }
+}
+
+@keyframes degats_a {
+  0% { opacity: 0; transform: translateY(0) scale(0.6); }
+  20% { opacity: 1; transform: translateY(-6px) scale(1.2); }
+  70% { opacity: 1; transform: translateY(-26px) scale(1); }
+  100% { opacity: 0; transform: translateY(-40px) scale(1); }
+}
+@keyframes degats_b {
+  0% { opacity: 0; transform: translateY(0) scale(0.6); }
+  20% { opacity: 1; transform: translateY(-6px) scale(1.2); }
+  70% { opacity: 1; transform: translateY(-26px) scale(1); }
+  100% { opacity: 0; transform: translateY(-40px) scale(1); }
+}
+
+@keyframes critique_a {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(2); }
+  18% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -60%) scale(1); }
+}
+@keyframes critique_b {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(2); }
+  18% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -60%) scale(1); }
+}
+
+@keyframes secousse_a {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-6px, 3px); }
+  40% { transform: translate(5px, -3px); }
+  60% { transform: translate(-3px, 2px); }
+  80% { transform: translate(2px, -1px); }
+}
+@keyframes secousse_b {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-6px, 3px); }
+  40% { transform: translate(5px, -3px); }
+  60% { transform: translate(-3px, 2px); }
+  80% { transform: translate(2px, -1px); }
+}
+
+@keyframes entree_rival {
+  0% { opacity: 0; transform: translateX(130%); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes entree_moi {
+  0% { opacity: 0; transform: translateX(-130%); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes plaque {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes vs {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(3); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+@keyframes ko {
+  0% { opacity: 0; transform: translate(-50%, -110%) scale(1.8); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .souffle,
+  .secousse_a,
+  .secousse_b,
+  .touche_a,
+  .touche_b,
+  .attaque_moi_a,
+  .attaque_moi_b,
+  .attaque_rival_a,
+  .attaque_rival_b,
+  .arene[data-entree='true'] .combattant[data-camp='rival'],
+  .arene[data-entree='true'] .combattant[data-camp='moi'] {
+    animation: none;
+  }
+}

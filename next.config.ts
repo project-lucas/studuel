@@ -6,6 +6,10 @@ const nextConfig: NextConfig = {
   // nature (jamais dans un build de prod) — on la coupe aussi en dev pour ne
   // pas polluer l'aperçu mobile. Les erreurs de compilation restent affichées.
   devIndicators: false,
+  // Le téléphone de Lucas sur le Wi-Fi de la maison (29/10/2026) : sans cette
+  // ligne, le serveur de dev refuse ses requêtes vers les ressources de dev
+  // (la page s'affiche sans JavaScript). Sans effet en production.
+  allowedDevOrigins: ['192.168.1.22'],
   // Le carnet a quitté Réviser le 15/09/2026 : ses cours vivent sous
   // `/carnet/cours`. Les anciens liens (favoris, notifications, historique
   // du navigateur) continuent de mener au bon écran.

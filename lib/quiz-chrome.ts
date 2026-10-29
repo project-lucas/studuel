@@ -63,6 +63,9 @@ const PREFIXES_PLEIN_ECRAN = [
   // barre d'onglets, et la carte du bilan paraissait dépasser alors que la
   // vraie course, plein écran, la loge entière (13/10/2026).
   '/dev/duel',
+  // L'APERÇU DU DUEL DES HÉROS (29/10/2026) : la même course, peau Pokémon,
+  // à juger sur téléphone — plein écran pour la même raison.
+  '/dev/duel-heros',
 ] as const
 
 /**

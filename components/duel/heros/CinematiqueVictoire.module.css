@@ -1,0 +1,144 @@
+/* LA CINÉMATIQUE DE VICTOIRE — voir CinematiqueVictoire.tsx. */
+
+.scene {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  overflow: hidden;
+  background: var(--foreground);
+  color: var(--card);
+}
+
+.tableau {
+  position: absolute;
+  inset: 0;
+  animation: fondu 450ms ease-out both;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+  user-select: none;
+}
+
+.tableau[data-mouvement='avance'] .image {
+  animation: avance 1900ms ease-out both;
+}
+.tableau[data-mouvement='droite'] .image {
+  animation: droite 1900ms ease-out both;
+}
+.tableau[data-mouvement='recule'] .image {
+  animation: recule 3200ms ease-out both;
+}
+
+/* Le bas s'assombrit pour que le titre se lise sur n'importe quel tableau. */
+.lueur {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in oklab, var(--foreground) 35%, transparent) 0%,
+    transparent 22%,
+    transparent 58%,
+    color-mix(in oklab, var(--foreground) 70%, transparent) 100%
+  );
+}
+
+.zone {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.titre {
+  position: absolute;
+  z-index: 4;
+  left: 1rem;
+  right: 1rem;
+  bottom: calc(env(safe-area-inset-bottom) + 3rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+.victoire {
+  font-size: clamp(3rem, 15vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1;
+  color: var(--highlight);
+  text-shadow:
+    0 5px 0 var(--foreground),
+    0 0 26px color-mix(in oklab, var(--highlight) 60%, transparent);
+  animation: tampon 600ms cubic-bezier(0.3, 1.6, 0.5, 1) 250ms both;
+}
+
+.devise {
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-shadow: 0 2px 6px color-mix(in oklab, var(--foreground) 80%, transparent);
+  animation: monte 500ms ease-out 700ms both;
+}
+
+.signature {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.85;
+  animation: monte 500ms ease-out 950ms both;
+}
+
+.passer {
+  position: absolute;
+  z-index: 5;
+  top: calc(env(safe-area-inset-top) + 0.75rem);
+  right: 0.75rem;
+  min-height: 2.75rem;
+  padding: 0 1rem;
+  border-radius: 999px;
+  border: 2px solid color-mix(in oklab, var(--card) 60%, transparent);
+  background: color-mix(in oklab, var(--foreground) 45%, transparent);
+  color: var(--card);
+  font-weight: 800;
+  font-size: 0.85rem;
+}
+
+@keyframes fondu {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes avance {
+  0% { transform: scale(1.02); }
+  100% { transform: scale(1.12); }
+}
+@keyframes droite {
+  0% { transform: scale(1.12) translateX(-3%); }
+  100% { transform: scale(1.12) translateX(3%); }
+}
+@keyframes recule {
+  0% { transform: scale(1.16); }
+  100% { transform: scale(1.02); }
+}
+@keyframes tampon {
+  0% { opacity: 0; transform: scale(2.4); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes monte {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tableau[data-mouvement] .image,
+  .victoire {
+    animation: none;
+  }
+}

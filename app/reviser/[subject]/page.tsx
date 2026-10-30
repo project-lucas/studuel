@@ -11,6 +11,8 @@ import {
   getSubjectsCached,
   getProgrammeCached,
   getProgrammeFresh,
+  getQuizQuestionCountsCached,
+  getBossVivierCached,
   type CatalogChapter,
 } from '@/lib/catalog'
 import { contentLevelOf } from '@/lib/subject-visibility'
@@ -45,7 +47,6 @@ import {
 import { getReviewItems } from '@/lib/srs'
 import { xpRestantFiche } from '@/lib/reviser/programme'
 import { suiteDeFiche } from '@/lib/reviser/suite'
-import { parseGradeStandings } from '@/lib/percentile'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
 import type { ModeQuestion } from '@/lib/defi-modes'
 import {
@@ -60,7 +61,6 @@ import { toDayKey } from '@/lib/streak'
 import {
   CHAPTER_COLUMNS,
   LESSON_COLUMNS,
-  type QuizQuestion,
   type Subject,
 } from '@/lib/types'
 
@@ -79,9 +79,9 @@ function shuffle<T>(arr: T[]): T[] {
 // Le boss de la matière pioche large mais borné : assez de variété pour un
 // combat (10-18 PV), sans embarquer tout le programme dans la page.
 const BOSS_POOL_SIZE = 60
-// Le nombre de quiz tirés au sort pour nourrir ce pool : une dizaine de quiz
-// font 60 à 100 questions, de quoi le remplir sans lire toute la matière.
-const BOSS_QUIZ_SAMPLE = 10
+// Le rattachement des questions de la file « À revoir » à leurs quiz se lit
+// par lots : au-delà de ~150 identifiants, l'adresse de la requête déborde.
+const IN_PAR_LOT = 150
 
 // Page matière = template GÉNÉRIQUE unique : tout vient de Supabase (matière,
 // chapitres, contenus par mode, progression, notions à revoir). Ajouter une
@@ -146,16 +146,22 @@ export default async function SubjectPage({
   // dupliqué en base.
   const level = contentLevelOf(subject, grade)
 
-  // VAGUE B, LANCÉE AVANT LE PROGRAMME. Tout ce qui ne dépend que de l'élève,
-  // de la matière et du niveau part MAINTENANT, pendant que le programme se
-  // lit : la page enchaînait cinq allers-retours en file indienne (profil →
-  // programme → données personnelles → carnet → questions du carnet), soit
-  // ~500 ms de serveur pour ouvrir un dossier. Il en reste trois.
+  // UNE SEULE VAGUE, CHAÎNÉE (30/10/2026, chantier latence). Tout part dès
+  // l'arrivée du profil ; ce qui dépend d'une autre lecture y est accroché
+  // (`.then`) au lieu d'attendre toute une vague. Avant, la page enchaînait
+  // trois vagues, et la dernière attendait la plus lente de la deuxième.
   //
+  // - le programme (chapitres → leçons → quiz), cache serveur, repli
+  //   authentifié s'il revient vide ; les sessions de quiz s'y accrochent ;
   // - lesson_completions → plancher d'avancement des chapitres ;
-  // - review_items (file du jour) → bloc « À revoir » et « X à revoir » ;
-  // - my_grade_standings (223) → place de l'élève dans la matière. RPC
-  //   SECURITY DEFINER : la RLS de `profiles` interdit toute jointure ;
+  // - review_items (file du jour) → bloc « À revoir », « X à revoir ». Le
+  //   rattachement des questions de la file à leurs quiz ne lit QUE ces
+  //   questions-là (au plus 300) ;
+  // - le compte de questions par quiz : cache serveur PARTAGÉ avec le Défi et
+  //   Marcel (`catalog_quiz_question_counts`, 354). La page relisait tous les
+  //   identifiants de questions de la matière pour les compter : 3 888 lignes
+  //   en quatre pages à la file pour le français de 1re, 1,1 s à elle seule ;
+  // - le vivier du boss, cache serveur par matière et niveau (`getBossVivierCached`) ;
   // - chapters.theme/discipline (234/247), select ISOLÉ et toléré : tant que
   //   les migrations ne sont pas exécutées, PostgREST répond « column does not
   //   exist », `data` arrive à null et la liste reste à plat. Ces colonnes ne
@@ -168,23 +174,131 @@ export default async function SubjectPage({
   //   écusson et rien d'autre ;
   // - les cours du CARNET rattachés à la matière (316), isolés : sans la
   //   colonne, la liste est vide et le dossier est exactement ce qu'il était ;
+  //   leurs questions et leurs états s'y accrochent ;
   // - le COMPTE des exercices du cahier (372), sans une seule ligne (`head`) :
   //   il décide si la porte « Exercices » existe et ce qu'elle annonce. Filtré
   //   par la jointure, pas par une liste d'identifiants (260 fiches de lecture
   //   ne tiennent pas dans une adresse). Le cahier lui-même se lit quand on
   //   ouvre la porte (app/api/reviser/cahier). Table absente : pas de porte.
   //
-  // ⚠️ NI GEMMES NI SÉRIE : elles étaient lues ici pour deux pastilles du
-  // header qui DOUBLONNAIENT le bandeau du haut (`TopHud`, présent sur toutes
-  // les pages) — quatre requêtes de moins à chaque ouverture d'une matière.
-  const vagueB = Promise.all([
+  // ⚠️ LA PLACE DANS LE NIVEAU N'EST PLUS LUE ICI. `my_grade_standings` (223)
+  // balaie les sessions de toute la cohorte : la ligne « Top 10 % » arrive
+  // après l'ouverture (`PlaceDansLaMatiere`, route GET /api/classement-niveau).
+  // ⚠️ NI GEMMES NI SÉRIE : le bandeau du haut (`TopHud`) les montre déjà.
+  const programmeP = (async () => {
+    const enCache = await getProgrammeCached(subject.id, level)
+    if (enCache.length > 0) return enCache
+    const { data } = await supabase
+      .from('chapters')
+      .select(`${CHAPTER_COLUMNS}, lessons(${LESSON_COLUMNS}, quizzes(id))`)
+      .eq('subject_id', subject.id)
+      .eq('level', level)
+      .order('position', { ascending: true })
+      .order('position', { ascending: true, referencedTable: 'lessons' })
+      .returns<CatalogChapter[]>()
+    return data ?? []
+  })()
+
+  type SessionRow = {
+    quiz_id: string | null
+    score: number
+    total: number
+    created_at: string | null
+  }
+  // PAGINÉ (20/09/2026) : un élève assidu dépasse les 1 000 sessions sur une
+  // matière, et PostgREST coupe à 1 000 sans le dire — les meilleurs scores
+  // des fiches les plus anciennes disparaissaient, et le quiz du chapitre
+  // (ouvert quand chaque fiche a été testée) se re-verrouillait tout seul.
+  const sessionsP = programmeP.then((catalogue) => {
+    const ids = catalogue.flatMap((c) => c.lessons.flatMap((l) => l.quizzes.map((q) => q.id)))
+    if (ids.length === 0) return { data: [] as SessionRow[] }
+    return toutLire<SessionRow>((from, to) =>
+      supabase
+        .from('test_sessions')
+        // `created_at` : la date de la dernière session, pour le drapeau
+        // posé sur la fiche où l'élève s'est arrêté (lib/derniere-session).
+        .select('quiz_id, score, total, created_at')
+        .eq('user_id', user.id)
+        .in('quiz_id', ids)
+        .order('id', { ascending: true })
+        .range(from, to)
+        .returns<SessionRow[]>(),
+    )
+  })
+
+  // La file du jour, puis le quiz de chacune de SES questions.
+  const revueP = getReviewItems(supabase, user.id).then(async (items) => {
+    const questionIds = items.filter((i) => i.item_kind === 'question').map((i) => i.item_id)
+    const lots: string[][] = []
+    for (let i = 0; i < questionIds.length; i += IN_PAR_LOT) {
+      lots.push(questionIds.slice(i, i + IN_PAR_LOT))
+    }
+    const lus = await Promise.all(
+      lots.map((lot) =>
+        supabase
+          .from('quiz_questions')
+          .select('id, quiz_id')
+          .in('id', lot)
+          .returns<{ id: string; quiz_id: string }[]>(),
+      ),
+    )
+    return { items, refs: lus.flatMap((r) => r.data ?? []) }
+  })
+
+  const carnetP = Promise.resolve(
+    supabase
+      .from('carnet_courses')
+      .select('id, title, icon, color, subject_id')
+      .eq('owner_id', user.id)
+      .eq('subject_id', subject.id)
+      .limit(20),
+  )
+  type CarnetQuestion = { id: string; course_id: string }
+  type CarnetEtat = { question_id: string; due_at: string }
+  const carnetSuiteP = carnetP.then(
+    async ({ data }): Promise<[CarnetQuestion[] | null, CarnetEtat[] | null]> => {
+      const ids = (data ?? []).map((c) => String(c.id))
+      if (ids.length === 0) return [[], []]
+      const [questions, etats] = await Promise.all([
+        supabase
+          .from('carnet_questions')
+          .select('id, course_id')
+          .in('course_id', ids)
+          .returns<CarnetQuestion[]>(),
+        supabase
+          .from('carnet_question_states')
+          .select('question_id, due_at')
+          .eq('user_id', user.id)
+          .returns<CarnetEtat[]>(),
+      ])
+      return [questions.data, etats.data]
+    },
+  )
+
+  const [
+    catalogue,
+    { data: sessions },
+    { items: reviewItems, refs: questionRefs },
+    { data: completions },
+    comptesDeQuestions,
+    vivierDuBoss,
+    { data: themeRows },
+    { data: paperRows },
+    gardien,
+    { data: carnetRows },
+    [carnetQuestions, carnetEtats],
+    { count: exercicesDuCahier },
+  ] = await Promise.all([
+    programmeP,
+    sessionsP,
+    revueP,
     supabase
       .from('lesson_completions')
       .select('lesson_id, created_at')
       .eq('user_id', user.id)
       .returns<{ lesson_id: string; created_at: string }[]>(),
-    getReviewItems(supabase, user.id),
-    supabase.rpc('my_grade_standings'),
+    getQuizQuestionCountsCached(),
+    getBossVivierCached(subject.id, level),
     supabase
       .from('chapters')
       .select('id, theme, discipline')
@@ -202,149 +316,15 @@ export default async function SubjectPage({
       name: subject.name,
       slug: subject.slug,
     }),
-    supabase
-      .from('carnet_courses')
-      .select('id, title, icon, color, subject_id')
-      .eq('owner_id', user.id)
-      .eq('subject_id', subject.id)
-      .limit(20),
+    carnetP,
+    carnetSuiteP,
     supabase
       .from('exercices')
       .select('id, chapters!inner(subject_id, level)', { count: 'exact', head: true })
       .eq('chapters.subject_id', subject.id)
       .eq('chapters.level', level),
   ])
-  // La vague est attendue plus bas ; si la page sort avant (programme vide,
-  // erreur), son rejet éventuel ne doit pas devenir un « rejet non géré ».
-  vagueB.catch(() => {})
-
-  // Programme de la matière (chapitres → leçons → quiz), servi par le cache
-  // serveur, avec le même repli authentifié.
-  let catalog = await getProgrammeCached(subject.id, level)
-  if (catalog.length === 0) {
-    const { data } = await supabase
-      .from('chapters')
-      .select(`${CHAPTER_COLUMNS}, lessons(${LESSON_COLUMNS}, quizzes(id))`)
-      .eq('subject_id', subject.id)
-      .eq('level', level)
-      .order('position', { ascending: true })
-      .order('position', { ascending: true, referencedTable: 'lessons' })
-      .returns<CatalogChapter[]>()
-    catalog = data ?? []
-  }
-
-  const quizIds = catalog.flatMap((c) =>
-    c.lessons.flatMap((l) => l.quizzes.map((q) => q.id)),
-  )
-
-  // La vague B est (presque) arrivée pendant la lecture du programme : on la
-  // récupère ici, parce que la vague C a besoin des cours du carnet.
-  const [
-    { data: completions },
-    reviewItems,
-    { data: standingsRow },
-    { data: themeRows },
-    { data: paperRows },
-    gardien,
-    { data: carnetRows },
-    { count: exercicesDuCahier },
-  ] = await vagueB
-  const carnetIds = (carnetRows ?? []).map((c) => String(c.id))
-
-  // LE BOSS NE PIOCHE PLUS DANS TOUT LE PROGRAMME. La page lisait les COLONNES
-  // COMPLÈTES (énoncé, options, explication) de TOUTES les questions de la
-  // matière — plusieurs centaines de lignes de texte — pour en garder soixante
-  // au hasard. C'était la lecture la plus lourde du dossier. On tire d'abord
-  // au sort quelques quiz, et seules LEURS questions arrivent en entier ; le
-  // compte de questions par quiz et le rattachement SRS, eux, n'ont besoin que
-  // des identifiants.
-  const bossQuizIds = shuffle(quizIds).slice(0, BOSS_QUIZ_SAMPLE)
-
-  // VAGUE C : ce qui dépend du programme (les quiz) ou du carnet (ses cours).
-  // - test_sessions → meilleur score par quiz (« 7/10 ») ;
-  // - quiz_questions (id, quiz) → compte de cartes/questions par quiz et
-  //   rattachement des items SRS de la matière ;
-  // - quiz_questions (colonnes complètes, quiz tirés au sort) → pool du Boss ;
-  // - carnet_questions / carnet_question_states → compteurs du carnet.
-  const [
-    { data: sessions },
-    { data: questionRefs },
-    { data: bossQuestions },
-    { data: carnetQuestions },
-    { data: carnetEtats },
-  ] = await Promise.all([
-    // PAGINÉ (20/09/2026) : un élève assidu dépasse les 1 000 sessions sur une
-    // matière, et PostgREST coupe à 1 000 sans le dire — les meilleurs scores
-    // des fiches les plus anciennes disparaissaient, et le quiz du chapitre
-    // (ouvert quand chaque fiche a été testée) se re-verrouillait tout seul.
-    quizIds.length
-      ? toutLire<{
-          quiz_id: string | null
-          score: number
-          total: number
-          created_at: string | null
-        }>((from, to) =>
-          supabase
-            .from('test_sessions')
-            // `created_at` : la date de la dernière session, pour le drapeau
-            // posé sur la fiche où l'élève s'est arrêté (lib/derniere-session).
-            .select('quiz_id, score, total, created_at')
-            .eq('user_id', user.id)
-            .in('quiz_id', quizIds)
-            .order('id', { ascending: true })
-            .range(from, to)
-            .returns<
-              {
-                quiz_id: string | null
-                score: number
-                total: number
-                created_at: string | null
-              }[]
-            >(),
-        )
-      : Promise.resolve({
-          data: [] as {
-            quiz_id: string | null
-            score: number
-            total: number
-            created_at: string | null
-          }[],
-        }),
-    // Paginé : une matière de 1re dépasse les 1 000 questions, et PostgREST
-    // coupe à 1 000 sans le dire (lib/postgrest-pages).
-    quizIds.length
-      ? toutLire((from, to) =>
-          supabase
-            .from('quiz_questions')
-            .select('id, quiz_id')
-            .in('quiz_id', quizIds)
-            .order('id', { ascending: true })
-            .range(from, to)
-            .returns<{ id: string; quiz_id: string }[]>(),
-        )
-      : Promise.resolve({ data: [] as { id: string; quiz_id: string }[] }),
-    bossQuizIds.length
-      ? supabase
-          .from('quiz_questions')
-          .select(
-            'id, quiz_id, question, kind, options, correct_index, explanation, position',
-          )
-          .in('quiz_id', bossQuizIds)
-          .returns<QuizQuestion[]>()
-      : Promise.resolve({ data: [] as QuizQuestion[] }),
-    carnetIds.length > 0
-      ? supabase
-          .from('carnet_questions')
-          .select('id, course_id')
-          .in('course_id', carnetIds)
-      : Promise.resolve({ data: [] as { id: string; course_id: string }[] }),
-    carnetIds.length > 0
-      ? supabase
-          .from('carnet_question_states')
-          .select('question_id, due_at')
-          .eq('user_id', user.id)
-      : Promise.resolve({ data: [] as { question_id: string; due_at: string }[] }),
-  ])
+  let catalog = catalogue
 
   // Meilleur essai par quiz (ratio ET score/total, pour le libellé « 7/10 »).
   const bestByQuiz = new Map<string, { score: number; total: number; ratio: number }>()
@@ -357,12 +337,14 @@ export default async function SubjectPage({
   }
   const completed = new Set((completions ?? []).map((c) => c.lesson_id))
 
-  // Questions par quiz : compte (cartes/questions) + rattachement SRS.
-  const questionCountByQuiz = new Map<string, number>()
+  // Questions par quiz (cache partagé) et quiz de chaque question de la file.
+  const questionCountByQuiz = new Map<string, number>(comptesDeQuestions)
+  const quizIds = new Set(
+    catalog.flatMap((c) => c.lessons.flatMap((l) => l.quizzes.map((q) => q.id))),
+  )
   const quizByQuestion = new Map<string, string>()
-  for (const q of questionRefs ?? []) {
-    questionCountByQuiz.set(q.quiz_id, (questionCountByQuiz.get(q.quiz_id) ?? 0) + 1)
-    quizByQuestion.set(q.id, q.quiz_id)
+  for (const q of questionRefs) {
+    if (quizIds.has(q.quiz_id)) quizByQuestion.set(q.id, q.quiz_id)
   }
 
   // Notions faibles de CETTE matière dans la file SRS du jour : items marqués
@@ -524,7 +506,7 @@ export default async function SubjectPage({
 
   // Onglet « Boss » : pool 100 % matière — le boss de la matière est le même
   // pour toutes les classes, seul le programme joué change.
-  const validQuestions = (bossQuestions ?? []).filter(
+  const validQuestions = vivierDuBoss.filter(
     (q) =>
       Array.isArray(q.options) &&
       q.options.length >= 2 &&
@@ -547,13 +529,6 @@ export default async function SubjectPage({
       }
     })
 
-  // Place de l'élève dans CETTE matière, parmi son niveau (223). L'appariement
-  // se fait sur le nom affichable de la matière : c'est ce que porte
-  // `quizzes.subject`, donc ce sur quoi la RPC agrège.
-  const standings = parseGradeStandings(standingsRow)
-  const subjectStanding =
-    standings.maitrise.find((m) => m.subject === subject.name)?.standing ?? null
-
   // La progression de chaque discipline, pour les matières qui en réunissent
   // deux : l'onglet « Géographie » compte ses fiches, pas celles du dossier.
   // Calculée ici, où les VALEURS d'avancement (0..1) existent encore — un
@@ -571,8 +546,9 @@ export default async function SubjectPage({
     subject: { slug: subject.slug, name: subject.name, color: subject.color },
     premium: isPremiumTier((profile?.subscription_tier ?? 'free') as Tier),
     grade,
-    gradeLevel: standings.grade,
-    standing: subjectStanding,
+    gradeLevel: grade,
+    // Lue après l'ouverture (`PlaceDansLaMatiere`) : voir la vague plus haut.
+    standing: null,
     progress,
     progressByDiscipline,
     // LE DRAPEAU DE LA DERNIÈRE SESSION (Lucas, 17/09/2026) : la fiche du quiz
@@ -610,7 +586,7 @@ export default async function SubjectPage({
   // n'existerait pas encore au moment de résoudre le paramètre.
   const initialMode = modeFromParam(
     onglet,
-    modesFor(standings.grade, disciplinesOf(chapters), subject.slug, Boolean(exercicesDuCahier)),
+    modesFor(grade, disciplinesOf(chapters), subject.slug, Boolean(exercicesDuCahier)),
   )
   // L'ENCYCLOPÉDIE EST UNE AUTRE PAGE. Un lien `?onglet=encyclopedie` — partagé,
   // ou reconstruit par une barre d'onglets — ne doit pas ouvrir ce dossier avec

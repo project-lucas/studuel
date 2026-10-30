@@ -117,8 +117,17 @@ describe('planifierRonde', () => {
 describe('dossiersAPrecharger', () => {
   it('prend les premiers dossiers de la grille, dans l’ordre', () => {
     expect(
-      dossiersAPrecharger(['maths', 'francais', 'histoire', 'svt', 'anglais']),
-    ).toEqual(['/reviser/maths', '/reviser/francais', '/reviser/histoire'])
+      dossiersAPrecharger([
+        'maths', 'francais', 'histoire', 'svt', 'anglais', 'espagnol', 'physique',
+      ]),
+    ).toEqual([
+      '/reviser/maths',
+      '/reviser/francais',
+      '/reviser/histoire',
+      '/reviser/svt',
+      '/reviser/anglais',
+      '/reviser/espagnol',
+    ])
   })
 
   it('accepte une grille plus courte', () => {

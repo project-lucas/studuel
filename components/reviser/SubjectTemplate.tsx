@@ -3,6 +3,7 @@
 import { useMemo, useState, type ReactNode } from 'react'
 import { useRouter } from 'next/navigation'
 import StandingLine from '@/components/StandingLine'
+import PlaceDansLaMatiere from '@/components/reviser/PlaceDansLaMatiere'
 import GardienBadge from '@/components/reviser/GardienBadge'
 import BanniereMatiere from '@/components/reviser/BanniereMatiere'
 import PortesMatiere, { type PorteVue } from '@/components/reviser/PortesMatiere'
@@ -171,7 +172,15 @@ export default function SubjectTemplate({
         standing={
           data.standing ? (
             <StandingLine standing={data.standing} grade={data.gradeLevel} className="mt-0.5" />
-          ) : null
+          ) : (
+            // Sans place fournie par la page (le cas réel depuis le 30/10/2026),
+            // la ligne arrive après l'ouverture du dossier.
+            <PlaceDansLaMatiere
+              matiere={data.subject.name}
+              grade={data.gradeLevel}
+              className="mt-0.5"
+            />
+          )
         }
       />
 

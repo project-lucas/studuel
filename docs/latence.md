@@ -278,6 +278,45 @@ Reste vrai : la **première** ouverture après une pause paie le démarrage à f
 de la fonction Vercel (~0,8 s) plus le rideau (450 ms minimum). Ce point n'est
 pas réglé par ce chantier (voir ci-dessous).
 
+## Le dossier d'une matière (30/10/2026)
+
+Lucas : « lorsque l'on ouvre n'importe quel dossier d'une matière, il y a de la
+latence, quelques secondes ». Mesuré sur son compte, Français de 1re, serveur de
+dev, mêmes conditions (son onglet ouvert, rechargé à chaque recompilation) :
+
+| | Code serveur par ouverture |
+|---|---|
+| Avant | 4,9 à 5,2 s (3,3 à 4,1 s plus tôt dans la soirée) |
+| Après | 0,65 à 1,2 s ; les lectures seules se bouclent en 36 à 66 ms |
+
+Ce qui coûtait, chronométré lecture par lecture :
+1. **`my_grade_standings` : 1,4 s**, et elle ralentissait tout le reste de la
+   vague B (3,4 s) : elle balaie les sessions de quiz de TOUTE la cohorte du
+   niveau. Son coût grandit avec le nombre d'élèves : à 50 000 élèves, c'était
+   le mur. Elle n'est plus sur le chemin du dossier : la ligne « Top 10 % »
+   arrive après l'ouverture (`PlaceDansLaMatiere`, `GET /api/classement-niveau`,
+   une lecture pour toutes les matières, gardée 5 min par le navigateur).
+2. **Les identifiants de toutes les questions de la matière : 1,1 à 1,2 s**
+   (3 888 lignes en quatre pages à la file pour le français de 1re), lus pour
+   compter les questions de chaque quiz. Le compte vient du cache serveur
+   partagé `getQuizQuestionCountsCached` (RPC 354) ; le rattachement des
+   questions de la file « À revoir » ne lit plus que celles-là (au plus 300,
+   par lots de 150).
+3. **Trois vagues en file** : la dernière attendait la plus lente de la
+   deuxième. Il n'y a plus qu'une vague, chaînée : les sessions s'accrochent au
+   programme, les questions du carnet à ses cours.
+4. **Le vivier du boss** (questions complètes de dix quiz tirés au sort, à
+   chaque ouverture) : un cache serveur par matière et niveau
+   (`getBossVivierCached`, vingt quiz tirés une fois par fenêtre de 5 min).
+
+Côté téléphone, Réviser précharge maintenant les **six** premiers dossiers de la
+grille (trois avant) : un dossier ne coûte plus qu'une poignée de lectures
+filtrées par l'élève.
+
+Reste à faire : `my_grade_standings` est toujours appelée par l'onglet Moi et
+la carte de joueur. Le vrai remède est un classement PRÉCALCULÉ (une table
+rafraîchie par un cron, lue par une ligne), à écrire en migration.
+
 ## Ce qui reste
 
 - **Démarrage à froid** : un ping externe toutes les 5 min sur `/login`

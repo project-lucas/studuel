@@ -147,8 +147,13 @@ export function planifierRonde(
  * sont préchargés à leur tour — après les onglets, qui passent d'abord : le
  * premier onglet part à `DELAI_PREMIER_PRECHARGEMENT_MS`, le dernier des quatre
  * trois espacements plus tard ; les dossiers prennent la suite avec une marge.
+ *
+ * SIX DOSSIERS depuis le 30/10/2026 (trois avant). Un dossier coûtait 3 à 5 s
+ * de serveur, dont une RPC qui balayait toute la cohorte du niveau : en
+ * précharger plus aurait chargé la base. Il en coûte désormais une poignée de
+ * lectures filtrées par l'élève, le reste sort du cache serveur.
  */
-export const DOSSIERS_PRECHARGES = 3
+export const DOSSIERS_PRECHARGES = 6
 export const DELAI_PREMIER_DOSSIER_MS =
   DELAI_PREMIER_PRECHARGEMENT_MS + 4 * ESPACEMENT_MS + 600
 

@@ -8,8 +8,7 @@ import {
   nextArenaSlot,
   type ArenaPeriod,
 } from '@/lib/arena-background'
-import { decorBureau } from '@/lib/joueur'
-import type { PortraitKey } from '@/lib/portraits'
+import { decorBureau, type PortraitAuBureau } from '@/lib/joueur'
 import { cn } from '@/lib/utils'
 import s from './DecorBureau.module.css'
 
@@ -38,7 +37,7 @@ import s from './DecorBureau.module.css'
 // -----------------------------------------------------------------------------
 
 type Props = {
-  portrait: PortraitKey
+  portrait: PortraitAuBureau
   /** La plage du premier rendu, calculée par le serveur à l'heure de Paris. */
   initiale: ArenaPeriod
   /** L'image a manqué : la page retombe sur la chambre vide et le héros debout. */

@@ -14,7 +14,7 @@
 // -----------------------------------------------------------------------------
 
 import { SCENE_DICTEE, TALON_DICTEE, type ModeTicket } from '@/lib/defi/modes-catalog'
-import type { Boss } from '@/lib/bosses'
+import { accorde, type Boss } from '@/lib/bosses'
 import { peutAffronter, type GardienVue } from '@/lib/reviser/gardien'
 import { subjectVignette } from '@/lib/subject-style'
 
@@ -71,7 +71,7 @@ export function billetGardien(
           : `${boss.name} rôde`,
       tagline: ouvert
         ? debusque
-          ? `Il disparaît dans ${gardien.detail}`
+          ? `${accorde(boss, 'Il', 'Elle')} disparaît dans ${gardien.detail}`
           : `${boss.epithet} · le gardien de ${subject.name}`
         : gardien.phrase,
       emoji: boss.emoji,

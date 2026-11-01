@@ -5,7 +5,8 @@
    0,3 s  le BADGE arrive en tournant et en grossissant, les rayons s'ouvrent
           derrière lui, une onde part, les étincelles fusent en couronne ;
    1,2 s  AVANT → APRÈS : la barre se remplit de l'ancien niveau au nouveau ;
-   1,7 s  « Débloqué » (une ligne après l'autre), puis le coffre et « Continuer ».
+   1,6 s  « Récompenses » : une carte par gain (écran ouvert, cadre, titre),
+          puis le coffre et « Continuer ».
 
    Règle de l'app : on n'anime QUE `transform` et `opacity`, avec des valeurs
    littérales dans les images-clés. L'état FINAL est l'état de base de chaque
@@ -241,32 +242,20 @@
   animation: remplit 800ms 1250ms cubic-bezier(0.2, 0.8, 0.3, 1) both;
 }
 
-.titre {
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.35rem;
-  line-height: 1.2;
-  margin-top: 0.3rem;
-  animation: monte 400ms 1400ms ease-out both;
-}
-.phrase {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: color-mix(in oklch, var(--ink-on-dark) 78%, transparent);
-  animation: monte 400ms 1500ms ease-out both;
-}
+/* ------------------------------------------------------------ récompenses */
 
-/* --------------------------------------------------------------- débloqué */
-
-.debloque {
+/* Une carte par gain (29/10/2026, components/niveau/RecompensesNiveau) : la
+   plaque blanche à liseré d'or des objets gagnés, sur son socle — la même
+   que les cartes du ruban de récompenses et de la fin de duel. */
+.recompenses {
   width: 100%;
-  margin-top: 0.6rem;
+  margin-top: 0.9rem;
   display: flex;
   flex-direction: column;
-  gap: 0.45rem;
-  animation: monte 400ms 1650ms ease-out both;
+  gap: 0.55rem;
+  animation: monte 400ms 1550ms ease-out both;
 }
-.debloqueTitre {
+.recompensesTitre {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -278,51 +267,68 @@
   text-transform: uppercase;
   color: color-mix(in oklch, var(--highlight) 85%, white);
 }
-.lignes {
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-}
-.ligne {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  padding: 0.5rem 0.6rem 0.5rem 0.5rem;
-  border-radius: var(--carte-rayon);
-  text-align: left;
-  background: var(--card);
-  color: var(--foreground);
-  box-shadow: 0 4px 0 color-mix(in oklch, var(--primary), white 55%);
-  opacity: 0;
-  animation: lignePop 480ms cubic-bezier(0.2, 1.3, 0.4, 1) both;
-}
-.dessin {
+.cartesGain {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6.4rem, 1fr));
+  gap: 0.65rem;
+  padding: 0 0 0.4rem;
+  list-style: none;
+}
+.cartesGain[data-seule] {
+  grid-template-columns: minmax(0, 9.5rem);
+  justify-content: center;
+}
+.carteGain {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.55rem 0.5rem 0.65rem;
+  border-radius: 1.2rem;
+  color: var(--foreground);
+  background: var(--card);
+  border: 3px solid color-mix(in oklch, var(--highlight), white 30%);
+  box-shadow:
+    0 5px 0 color-mix(in oklch, var(--highlight), black 15%),
+    0 16px 28px -16px rgb(0 0 0 / 0.6);
+  transform-origin: 50% 100%;
+  animation: gainJaillit 520ms cubic-bezier(0.2, 1.3, 0.4, 1) both;
+}
+.carteGenre {
+  font-family: var(--font-heading);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: color-mix(in oklch, var(--highlight), black 35%);
+}
+.carteVisuel {
+  display: grid;
+  width: 3.6rem;
+  height: 3.6rem;
   place-items: center;
-  width: 2.9rem;
-  height: 2.9rem;
-  flex-shrink: 0;
   border-radius: 50%;
+  color: color-mix(in oklch, var(--highlight), black 30%);
+  background: color-mix(in oklch, var(--highlight) 16%, var(--card));
+  box-shadow: inset 0 0 0 2px color-mix(in oklch, var(--highlight), transparent 55%);
+}
+.carteGain[data-type='decouverte'] .carteVisuel {
+  color: var(--primary);
   background: var(--secondary);
   box-shadow: inset 0 0 0 2px color-mix(in oklch, var(--primary), transparent 75%);
 }
-.ligneTexte {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  flex: 1;
+.carteImage {
+  width: 2.9rem;
+  height: 2.9rem;
+  object-fit: contain;
 }
-.ligneNom {
+.carteNom {
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   line-height: 1.15;
-}
-.lignePhrase {
-  font-size: 0.72rem;
-  font-weight: 600;
-  line-height: 1.25;
-  color: var(--muted-foreground);
+  overflow-wrap: anywhere;
 }
 
 /* -------------------------------------------------------------- la suite */
@@ -333,7 +339,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  animation: monte 450ms 1800ms ease-out both;
+  animation: monte 450ms 1900ms ease-out both;
 }
 
 .prochain {
@@ -570,9 +576,9 @@
   60% { opacity: 1; transform: scale(1.18); }
   100% { opacity: 1; transform: scale(1); }
 }
-@keyframes lignePop {
-  0% { opacity: 0; transform: translateX(-16px) scale(0.96); }
-  100% { opacity: 1; transform: translateX(0) scale(1); }
+@keyframes gainJaillit {
+  0% { opacity: 0; transform: translateY(14px) scale(0.5); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
 }
 @keyframes barre {
   from { transform: scaleX(0); }
@@ -602,9 +608,6 @@
   .voile,
   .voile * {
     animation: none !important;
-  }
-  .ligne {
-    opacity: 1;
   }
   .lumiere,
   .onde,

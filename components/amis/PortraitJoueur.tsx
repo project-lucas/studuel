@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import type { AvatarAffiche } from '@/lib/avatar-affiche'
+import { herosVisageSrc, isHerosKey } from '@/lib/heros/eleves'
 import { PORTRAIT_FACE_CROP, portraitDe, portraitSrc } from '@/lib/portraits'
 import { idAvatarIa, srcAvatarIa } from '@/lib/avatar-ia'
 import { imagePersonnage, personnageDuPortrait } from '@/lib/personnages-historiques'
@@ -38,7 +39,10 @@ export default function PortraitJoueur({
       ? { src: srcAvatarIa(ia), visage: false }
       : perso
         ? { src: imagePersonnage(perso.id), visage: false }
-        : null)
+        : // Un héros : son visage est déjà recadré, on ne zoome pas dessus.
+          isHerosKey(portrait)
+          ? { src: herosVisageSrc(portrait), visage: false }
+          : null)
   return (
     <span
       aria-hidden="true"

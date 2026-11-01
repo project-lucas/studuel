@@ -956,7 +956,8 @@ describe('QuizPlayer — l’écran de fin en XP', () => {
     expect(jauge).toHaveAttribute('aria-valuenow', '2')
     expect(jauge).toHaveAttribute('aria-valuemax', '4')
     expect(
-      screen.getByText(/Réponds correctement à toutes les questions/),
+      // Moitié franchie : la phrase dit ce qui MANQUE (effet Zeigarnik, lib/boucle-ouverte).
+      screen.getByText(/Plus que 2 questions à maîtriser pour valider ce quiz/),
     ).toBeInTheDocument()
   })
 

@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Fragment, useRef, useState, useSyncExternalStore, type ReactNode } from 'react'
 import { Check, ChevronRight, Clock } from 'lucide-react'
+import { plusQueCourt } from '@/lib/boucle-ouverte'
 import Feuille from '@/components/boutique/Feuille'
 import XpIcon from '@/components/ui/XpIcon'
 import GemIcon from '@/components/ui/GemIcon'
@@ -426,8 +427,16 @@ function LigneQuete({
                 style={{ transform: `scaleX(${ratio})` }}
               />
             </span>
-            <span className="text-xs font-extrabold text-muted-foreground tabular-nums">
-              {fait}/{q.goal}
+            {/* Passé la moitié, ce qui MANQUE (28/10/2026, effet Zeigarnik) :
+                « plus que 4 » tire plus fort que « 6/10 ». La barre garde le
+                compte exact pour le lecteur d'écran. */}
+            <span
+              className={cn(
+                'text-xs font-extrabold tabular-nums',
+                !q.done && plusQueCourt(fait, q.goal) ? 'text-primary' : 'text-muted-foreground',
+              )}
+            >
+              {(!q.done && plusQueCourt(fait, q.goal)) || `${fait}/${q.goal}`}
             </span>
           </span>
         ) : (

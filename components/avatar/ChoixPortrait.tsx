@@ -5,9 +5,11 @@ import { Check, Mars, Venus } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useTablist } from '@/components/useTablist'
 import { OptionGroup } from '@/components/welcome/OnbBits'
+import { herosEleve, herosParGenre, herosSceneSrc, herosVisageSrc, isHerosKey, type HerosKey } from '@/lib/heros/eleves'
 import {
   PORTRAITS_PAR_GENRE,
   genreDuPortrait,
+  isPortraitClassique,
   portraitPiedSrc,
   portraitSrc,
   type GenrePortrait,
@@ -35,6 +37,11 @@ import s from './ChoixPortrait.module.css'
 //     l'onboarding garde son bouton de pied (« C'est moi », WelcomeFlow), le
 //     vestiaire enregistre au « Confirmer ».
 //
+// LES HÉROS AU VESTIAIRE (01/11/2026, Lucas : « on doit voir maintenant les
+// nouveaux perso ») : dans chaque onglet, les HÉROS d'abord (leur visage ; à
+// l'aperçu, leur scène, leur surnom et leur caractère), puis les anciens
+// blasons. Un compte d'avant les héros peut ainsi en prendre un.
+//
 // Le composant ne sait rien du compte : il reçoit le choix et le rend. Un seul
 // geste de confirmation, pas de texte sous les vignettes (« un visage se
 // reconnaît, il ne se lit pas »).
@@ -46,7 +53,7 @@ const ONGLETS: readonly { id: GenrePortrait; label: string; Icone: typeof Mars }
 ]
 
 export default function ChoixPortrait({
-  choisi,
+  choisi: choisiBrut,
   onChoisir,
   onConfirmer,
   libelleConfirmer = 'Confirmer',
@@ -64,10 +71,15 @@ export default function ChoixPortrait({
   className?: string
 }) {
   const id = useId()
+  const choisi = isPortraitClassique(choisiBrut) || isHerosKey(choisiBrut) ? choisiBrut : null
+  const herosChoisi = isHerosKey(choisi) ? herosEleve(choisi) : null
   // L'onglet ouvert : celui du portrait déjà choisi, puis au doigt.
-  const [genre, setGenre] = useState<GenrePortrait>(() => genreDuPortrait(choisi))
+  const [genre, setGenre] = useState<GenrePortrait>(() =>
+    herosChoisi ? herosChoisi.genre : genreDuPortrait(isPortraitClassique(choisi) ? choisi : null),
+  )
   const tabs = useTablist(ONGLETS.length, (i) => setGenre(ONGLETS[i].id))
   const liste = PORTRAITS_PAR_GENRE[genre]
+  const heros = herosParGenre(genre)
   const nomGenre = genre === 'garcons' ? 'Garçon' : 'Fille'
 
   return (
@@ -76,7 +88,20 @@ export default function ChoixPortrait({
       <div className={cn('tab-bg', s.scene)} aria-live="polite">
         <span aria-hidden="true" className={s.halo} />
         <span aria-hidden="true" className={s.socle} />
-        {choisi ? (
+        {herosChoisi ? (
+          <>
+            {/* eslint-disable-next-line @next/next/no-img-element -- scène peinte servie telle quelle */}
+            <img key={herosChoisi.cle} src={herosSceneSrc(herosChoisi.cle as HerosKey)} alt="" draggable={false} className={s.sceneHeros} />
+            <span aria-hidden="true" className={s.voileHeros} />
+            <span className={s.plaqueHeros}>
+              <span className={s.peupleHeros}>{herosChoisi.peuple}</span>
+              <span className={cn('font-heading font-extrabold', s.nomHeros)}>{herosChoisi.titre}</span>
+              <span className={s.traitsHeros}>
+                {herosChoisi.qualites.join(' · ')} · <em>{herosChoisi.travers.toLowerCase()}</em>
+              </span>
+            </span>
+          </>
+        ) : choisi && isPortraitClassique(choisi) ? (
           // eslint-disable-next-line @next/next/no-img-element -- personnage détouré servi tel quel
           <img
             key={choisi}
@@ -92,9 +117,11 @@ export default function ChoixPortrait({
             ?
           </span>
         )}
-        <span aria-hidden="true" className={s.etiquette}>
-          {choisi ? 'Ton personnage' : 'Choisis ton personnage'}
-        </span>
+        {herosChoisi ? null : (
+          <span aria-hidden="true" className={s.etiquette}>
+            {choisi ? 'Ton personnage' : 'Choisis ton personnage'}
+          </span>
+        )}
       </div>
 
       {/* --- Garçons / Filles --------------------------------------------- */}
@@ -129,7 +156,37 @@ export default function ChoixPortrait({
         {/* `key={genre}` : la grille se remonte à chaque onglet, et rejoue
             son entrée. OptionGroup porte le `radiogroup` et les flèches. */}
         <div key={genre} className={s.grille}>
-          <OptionGroup label={`Portraits de ${genre === 'garcons' ? 'garçons' : 'filles'}`} className="grid grid-cols-4 gap-3 px-1 pt-1">
+          <p className={cn('titre-section', s.rubrique)}>Héros</p>
+          <OptionGroup label={`Héros ${genre === 'garcons' ? 'garçons' : 'filles'}`} className="grid grid-cols-4 gap-3 px-1 pt-1">
+            {heros.map((h) => {
+              const selected = h.cle === choisi
+              return (
+                <button
+                  key={h.cle}
+                  type="button"
+                  role="radio"
+                  aria-checked={selected}
+                  aria-label={`${h.titre}, ${h.peuple.toLowerCase()}`}
+                  onClick={() => {
+                    if (selected) return
+                    sfx.tap()
+                    onChoisir(h.cle as HerosKey)
+                  }}
+                  className={cn(s.case, selected && s.caseChoisie)}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element -- visage recadré servi tel quel */}
+                  <img src={herosVisageSrc(h.cle as HerosKey)} alt="" width={384} height={384} loading="lazy" draggable={false} />
+                  {selected ? (
+                    <span aria-hidden="true" className={s.coche}>
+                      <Check className="size-3.5" strokeWidth={3.5} />
+                    </span>
+                  ) : null}
+                </button>
+              )
+            })}
+          </OptionGroup>
+          <p className={cn('titre-section', s.rubrique)}>Blasons</p>
+          <OptionGroup label={`Blasons de ${genre === 'garcons' ? 'garçons' : 'filles'}`} className="grid grid-cols-4 gap-3 px-1 pt-1">
             {liste.map((p, i) => {
               const selected = p === choisi
               return (

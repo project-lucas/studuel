@@ -11,10 +11,12 @@ import FeteNiveau, { CoffresPalier } from '@/components/niveau/FeteNiveau'
 import { gemmesPalier, prochainPalier } from '@/lib/niveaux'
 import type { UniteGain } from '@/lib/gains'
 import { ecouterGains } from '@/lib/hud-gains'
+import { niveauEnDirect } from '@/lib/niveau-en-direct'
 import { AMIS_MAX, libelleMultiplicateur, multiplicateurXp } from '@/lib/ligue'
 import { PORTRAIT_FACE_CROP } from '@/lib/portraits'
 import type { AvatarAffiche } from '@/lib/avatar-affiche'
 import {
+  estDuel,
   isHudAccountHidden,
   isHudHidden,
   isHudOverDarkScene,
@@ -183,13 +185,20 @@ export default function TopHud({
   const accountHref = userLabel ? '/compte' : '/login'
   const accountActive = pathname === '/compte' || pathname.startsWith('/login')
   const connected = level !== null
-  // La barre suit l'XP encaissée pendant la volée ; elle plafonne à 100 % —
-  // la fête de niveau prend le relais au rafraîchissement qui suit.
+  // LE NIVEAU EN DIRECT (29/10/2026, Lucas : la barre remplie doit ouvrir la
+  // fête TOUT DE SUITE) : l'XP encaissée pendant la volée compte au niveau
+  // qu'elle donne, sans attendre que le serveur soit relu — la barre passe au
+  // niveau suivant à l'éclair qui la remplit, et la fête s'ouvre avec lui.
+  const vif = level !== null && xp ? niveauEnDirect(level, levelTitle, xp, xpGagnee) : null
+  const niveau = vif?.niveau ?? level
+  const titreNiveau = vif ? vif.titre : levelTitle
+  const xpVif = vif?.xp ?? xp
+  // La barre suit l'XP encaissée pendant la volée (déjà comptée dans `xpVif`).
   const pct =
-    xp && xp.prochain !== null && xp.prochain > xp.plancher
+    xpVif && xpVif.prochain !== null && xpVif.prochain > xpVif.plancher
       ? Math.min(
           100,
-          Math.round(((xp.actuel + xpGagnee - xp.plancher) / (xp.prochain - xp.plancher)) * 100),
+          Math.round(((xpVif.actuel - xpVif.plancher) / (xpVif.prochain - xpVif.plancher)) * 100),
         )
       : Math.round(progress * 100)
   // Scène sombre (arène) : les pastilles prennent le verre de nuit du HUD de
@@ -220,14 +229,14 @@ export default function TopHud({
   // Réviser, les quêtes dans components/quetes/BoutonQuetesFlottant. Le
   // bandeau ne capte pas les taps : seule la gélule est cliquable.
   const dansNiveau =
-    xp && xp.prochain !== null && xp.prochain > xp.plancher
+    xpVif && xpVif.prochain !== null && xpVif.prochain > xpVif.plancher
       ? {
           // Plafonnée au pas du niveau (26/10/2026, Lucas : « 309 sur 300 ? ») :
           // l'XP encaissée pendant la volée peut franchir le seuil avant que le
           // rafraîchissement n'apporte le niveau suivant — la barre dit alors
           // « 300 / 300 », pleine, et la fête de niveau prend le relais.
-          fait: Math.min(xp.prochain - xp.plancher, Math.max(0, xp.actuel + xpGagnee - xp.plancher)),
-          pas: xp.prochain - xp.plancher,
+          fait: Math.min(xpVif.prochain - xpVif.plancher, Math.max(0, xpVif.actuel - xpVif.plancher)),
+          pas: xpVif.prochain - xpVif.plancher,
         }
       : null
   const photo = avatar ? (
@@ -256,7 +265,11 @@ export default function TopHud({
     >
       {connected ? (
         <>
-          {dissimule ? null : <FeteNiveau level={level} levelTitle={levelTitle} paliersOuverts={paliersOuverts} xp={xp} />}
+          {/* La fête peut s'ouvrir partout, bandeau rangé compris (fin de
+              quiz), sauf pendant un duel : elle attend alors la page suivante. */}
+          {niveau !== null && !estDuel(pathname) ? (
+            <FeteNiveau level={niveau} paliersOuverts={paliersOuverts} xp={xpVif} />
+          ) : null}
 
           {/* LA GÉLULE (15/10/2026) : l'avatar dans l'anneau de son rang qui
               en déborde, le niveau et sa barre, le multiplicateur dans sa
@@ -270,15 +283,15 @@ export default function TopHud({
                 c'est certain ». */}
             <Link
               href="/joueur"
-              aria-label={`${rang ? `Rang ${rang.nom}` : `Niveau ${level}`} — ma page de joueur`}
-              title={rang?.nom ?? levelTitle ?? undefined}
+              aria-label={`${rang ? `Rang ${rang.nom}` : `Niveau ${niveau}`} — ma page de joueur`}
+              title={rang?.nom ?? titreNiveau ?? undefined}
               className={s.rang}
             >
               <span
                 className={cn(s.photo, !rang && s.sansRang)}
                 style={rang ? { width: `${TROU_CADRE * 100}%`, height: `${TROU_CADRE * 100}%` } : undefined}
               >
-                {photo ?? <span className={s.niveauSeul}>{level}</span>}
+                {photo ?? <span className={s.niveauSeul}>{niveau}</span>}
               </span>
               {rang ? (
                 <>
@@ -314,16 +327,16 @@ export default function TopHud({
                 onClick={() => togglePurse('niveau')}
                 aria-expanded={openPurse === 'niveau'}
                 aria-controls="bourse-niveau"
-                aria-label={`Niveau ${level} : ce qu’il reste pour le niveau ${level + 1}`}
+                aria-label={`Niveau ${niveau} : ce qu’il reste pour le niveau ${(niveau ?? 0) + 1}`}
                 className={s.niveauBouton}
               >
                 <span aria-hidden="true" className={s.titre}>
-                  Niveau {level}
+                  Niveau {niveau}
                 </span>
                 <span
                   className={s.barre}
                   role="progressbar"
-                  aria-label={`Progression vers le niveau ${level + 1}`}
+                  aria-label={`Progression vers le niveau ${(niveau ?? 0) + 1}`}
                   aria-valuemin={0}
                   aria-valuemax={100}
                   aria-valuenow={pct}
@@ -352,12 +365,12 @@ export default function TopHud({
               {openPurse === 'niveau' ? (
                 <BulleHud
                   id="bourse-niveau"
-                  titre={`Niveau ${level}${levelTitle ? ` · ${levelTitle}` : ''}`}
+                  titre={`Niveau ${niveau}${titreNiveau ? ` · ${titreNiveau}` : ''}`}
                   titreClassName={dark ? 'text-highlight' : 'text-primary'}
                   dark={dark}
                   pointeClassName="left-8"
                 >
-                  <BulleNiveau level={level} pct={pct} xp={xp} dark={dark} paliersOuverts={paliersOuverts} />
+                  <BulleNiveau level={niveau ?? 1} pct={pct} xp={xpVif} dark={dark} paliersOuverts={paliersOuverts} />
                 </BulleHud>
               ) : null}
             </div>

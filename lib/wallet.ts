@@ -129,16 +129,16 @@ export function levelFromXp(xp: number): number {
 // Titres fun par niveau (jamais scolaires) — hérités de l'ancien système,
 // re-mappés sur les nouveaux paliers. Au-delà du dernier, le titre reste.
 const LEVEL_TITLES = [
-  'Nouveau 🐣',
-  'Apprenti 🌱',
-  'Curieux 🔍',
-  'Régulier 🔁',
-  'Sérieux 📈',
-  'Cerveau en construction 🧠',
-  'Machine à réviser ⚙️',
-  'Stratège 🎯',
-  'Expert 🏅',
-  'Légende 👑',
+  'Nouveau',
+  'Apprenti',
+  'Curieux',
+  'Régulier',
+  'Sérieux',
+  'Cerveau en construction',
+  'Machine à réviser',
+  'Stratège',
+  'Expert',
+  'Légende',
 ] as const
 
 export type WalletLevelInfo = {

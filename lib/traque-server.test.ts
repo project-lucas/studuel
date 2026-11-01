@@ -135,7 +135,7 @@ describe('les gardiens sortis', () => {
     // affiche un boss se lirait comme un bug.
     expect(bossForSubject('EMC').id).toBe('nox')
     const g = gardiensSortis(carte([sortie('EMC')]), matieres('EMC'), MAINTENANT)
-    expect(g.emc?.boss).toBe('Nox')
+    expect(g.emc?.boss).toBe('Le Proviseur')
   })
 
   it('encaisse des jauges illisibles sans rien colorer', () => {

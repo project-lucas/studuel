@@ -29,6 +29,12 @@ export type SuiteFiche = {
   /** Le mot du bouton : « Cours », « Quiz », « Revoir ». */
   label: string
   href: string
+  /**
+   * La leçon que vise un bouton « Cours » : c'est par elle que le dossier
+   * retrouve la lecture ENTAMÉE dans le navigateur (lib/lecture-entamee) et
+   * dit « lu à 60 % ». Absente pour « Quiz » et « Revoir ».
+   */
+  lessonId?: string
 }
 
 /** Une leçon de la fiche, vue par la suite. */
@@ -53,10 +59,11 @@ export const hrefCours = (subjectSlug: string, chapterId: string, lessonId: stri
 
 export const hrefQuiz = (quizId: string) => `/test/${quizId}`
 
-const suite = (genre: GenreSuite, href: string): SuiteFiche => ({
+const suite = (genre: GenreSuite, href: string, lessonId?: string): SuiteFiche => ({
   genre,
   label: LIBELLES_SUITE[genre],
   href,
+  ...(lessonId ? { lessonId } : {}),
 })
 
 /**
@@ -80,7 +87,7 @@ export function suiteDeFiche(input: {
   if (terminee) return revoir
 
   for (const lecon of lecons) {
-    if (!lecon.lue) return suite('cours', hrefCours(subjectSlug, chapterId, lecon.id))
+    if (!lecon.lue) return suite('cours', hrefCours(subjectSlug, chapterId, lecon.id), lecon.id)
     if (lecon.quizId && (lecon.meilleur ?? 0) < COMPLETE_THRESHOLD) {
       return suite('quiz', hrefQuiz(lecon.quizId))
     }

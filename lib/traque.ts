@@ -18,7 +18,7 @@
 // Cadrage complet : docs/CADRAGE-TRAQUE-BOSS.md
 // -----------------------------------------------------------------------------
 
-import { bossById, type Boss, type BossRank } from '@/lib/bosses'
+import { accorde, bossById, type Boss, type BossRank } from '@/lib/bosses'
 
 // --------------------------------------------------------------- le barème
 
@@ -217,9 +217,9 @@ export function restantLabel(points: number): string {
 }
 
 /** « Delta est à 5 cartes de sortir de sa tanière. » */
-export function teaseLabel(bossName: string, points: number): string {
+export function teaseLabel(bossName: string, points: number, feminin = false): string {
   const missing = pointsMissing(points)
-  if (missing === 0) return `${bossName} est prêt à sortir !`
+  if (missing === 0) return `${bossName} est ${feminin ? 'prête' : 'prêt'} à sortir !`
   const cartes = Math.ceil(missing / TRAQUE_POINTS.carte)
   const unite = cartes === 1 ? 'carte' : 'cartes'
   return `${bossName} est à ${cartes} ${unite} de sortir de sa tanière.`
@@ -588,10 +588,10 @@ export function traqueCard(
     endsAt: status === 'debusque' ? windowEndMs(gauge) : null,
     hint:
       status === 'debusque'
-        ? `Il disparaît dans ${countdownLabel(remainingMs(gauge, nowMs))}`
+        ? `${accorde(boss, 'Il', 'Elle')} disparaît dans ${countdownLabel(remainingMs(gauge, nowMs))}`
         : status === 'indisponible'
           ? `Revient ${nextChasseDay(boss.id, dayKey) ?? 'bientôt'}`
-          : teaseLabel(boss.name, points),
+          : teaseLabel(boss.name, points, boss.feminin),
     xp: xpForVictory(rank, boss.id === NOX_BOSS_ID),
     gemmes: gemsForVictory(rank, boss.id === NOX_BOSS_ID),
   }
@@ -674,9 +674,9 @@ export function finDuJourCourant(nowMs: number): number {
 }
 
 /** « Il part dans 6 h 12 », « Il part dans 42 min », « Il part dans moins d'une minute », « Il est parti ». */
-export function departLabel(ms: number): string {
-  if (!(ms > 0)) return 'Il est parti'
-  return `Il part dans ${countdownLabel(ms)}`
+export function departLabel(ms: number, feminin = false): string {
+  if (!(ms > 0)) return feminin ? 'Elle est partie' : 'Il est parti'
+  return `${feminin ? 'Elle' : 'Il'} part dans ${countdownLabel(ms)}`
 }
 
 /** Un des trois gestes de l'affiche. */

@@ -20,6 +20,7 @@ import { drawQuizSession } from '@/lib/questions/server-draw'
 import { loadQuestionStates } from '@/lib/questions/server'
 import type { QuestionState } from '@/lib/questions/engine'
 import { getChapterMastery } from '@/lib/mastery-server'
+import { lireBrouillonDuQuiz } from '@/lib/quiz-brouillon-server'
 import { toutLire } from '@/lib/postgrest-pages'
 import {
   ENTRAINEMENT_MINIMUM,
@@ -156,7 +157,9 @@ export default async function QuizPage({
   //
   // LE QUIZ SUIVANT est cherché dans le même souffle : il ne dépend que du
   // catalogue et de l'avancement du chapitre, pas de la séance.
-  const [deck, quizSuivant] = await Promise.all([
+  // LA MANCHE INACHEVÉE gardée en base (604, 28/10/2026) part dans le même
+  // souffle : nulle sans compte ou tant que la migration dort.
+  const [deck, quizSuivant, brouillonServeur] = await Promise.all([
     composerSeance({
       supabase,
       user,
@@ -173,6 +176,7 @@ export default async function QuizPage({
       quizId: quiz.id,
       chapitre: quiz.lesson?.chapter ?? null,
     }),
+    user ? lireBrouillonDuQuiz(supabase, user.id, quiz.id) : Promise.resolve(null),
   ])
 
   // Ce que le chapitre a DÉJÀ acquis parmi ces questions : l'écran de fin y
@@ -224,6 +228,7 @@ export default async function QuizPage({
           // L'écran de fin en XP : ce qui est acquis, et la tentation d'après.
           maitrise={maitrise}
           quizSuivant={quizSuivant}
+          brouillonServeur={brouillonServeur}
         />
       </>
     )

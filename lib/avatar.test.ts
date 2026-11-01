@@ -12,7 +12,7 @@ import {
   freeAvatarField,
   normalizeAvatarConfig,
 } from './avatar'
-import { PORTRAIT_KEYS } from './portraits'
+import { PORTRAIT_KEYS, PORTRAITS_CLASSIQUES, portraitSrc } from './portraits'
 
 describe('AVATAR_FIELDS / DEFAULT_AVATAR', () => {
   it("le défaut respecte chaque liste d'options", () => {
@@ -194,9 +194,15 @@ describe('portrait', () => {
     expect(applyFreeAvatarField(DEFAULT_AVATAR, 'portrait', 'nawak')).toBe(DEFAULT_AVATAR)
   })
 
-  it('chaque portrait déclaré existe dans public/images/profil/v2', () => {
-    for (const key of PORTRAIT_KEYS) {
+  it('chaque blason déclaré existe dans public/images/profil/v2', () => {
+    for (const key of PORTRAITS_CLASSIQUES) {
       expect(existsSync(join(process.cwd(), 'public', 'images', 'profil', 'v2', `${key}.webp`))).toBe(true)
+    }
+  })
+
+  it('chaque portrait déclaré, héros compris, a son image servie', () => {
+    for (const key of PORTRAIT_KEYS) {
+      expect(existsSync(join(process.cwd(), 'public', portraitSrc(key))), key).toBe(true)
     }
   })
 })

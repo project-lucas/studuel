@@ -17,8 +17,6 @@ import {
   type Source,
 } from '@/lib/welcome'
 import { schoolLevelForGrade, SCHOOL_LEVEL_LABEL } from '@/lib/clan'
-import type { PortraitKey } from '@/lib/portraits'
-import ChoixPortrait from '@/components/avatar/ChoixPortrait'
 import PencilLogo from './PencilLogo'
 import MarcelParle from './MarcelParle'
 import ChoixMatieres from './ChoixMatieres'
@@ -557,35 +555,3 @@ export function DailyGoalStep({
   )
 }
 
-// ---------------------------------------------------------------------------
-// Écran 10bis — Ton avatar (le blason de joueur), ajouté le 16/09/2026
-//
-// Treize portraits peints (lib/portraits.ts), un seul à choisir. L'écran vient
-// JUSTE APRÈS le mini-quiz et JUSTE AVANT le compte : l'élève vient de jouer,
-// il se donne un visage, puis il l'enregistre. Le choix voyage dans le brouillon
-// (`answers.avatar`) jusqu'au metadata d'inscription.
-//
-// Depuis le 25/10/2026 (chantier « le jeu vivant »), l'écran est le gabarit
-// partagé `ChoixPortrait` (components/avatar) : le personnage choisi EN PIED
-// en grand aperçu, les onglets Garçons / Filles, la grille des bustes. Le
-// bouton de validation reste celui du pied de l'onboarding (« C'est moi »,
-// WelcomeFlow) : le composant ne rend pas le sien ici.
-// ---------------------------------------------------------------------------
-export function AvatarStep({
-  answers,
-  onPick,
-}: {
-  answers: OnboardingAnswers
-  onPick: (portrait: PortraitKey) => void
-}) {
-  return (
-    <div className="flex flex-1 flex-col">
-      <MarcelParle
-        pose="cadre"
-        titre="Et toi, tu ressembles à quoi ?"
-        sous="C’est lui qui te représentera face à tes rivaux. Tu pourras le changer au vestiaire."
-      />
-      <ChoixPortrait choisi={answers.avatar} onChoisir={onPick} className="pt-4 pb-2" />
-    </div>
-  )
-}

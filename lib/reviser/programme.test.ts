@@ -293,6 +293,12 @@ describe('resumeDuMonde — la ligne grise sous le titre d’un thème', () => {
     ).toBe('1 fiche · Contrôle dans 3 jours')
   })
 
+  test('passé la moitié, un thème entamé dit ce qui manque (effet Zeigarnik)', () => {
+    expect(resume([finie('a', 'T'), finie('b', 'T'), entamee('c', 'T')])).toBe(
+      '2/3 fiches · plus que 1',
+    )
+  })
+
   test('un thème terminé le dit', () => {
     expect(resume([finie('a', 'T'), finie('b', 'T')])).toBe('2/2 fiches · Terminé')
   })

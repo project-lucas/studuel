@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { recordTestSession } from '@/app/test/actions'
@@ -23,6 +23,24 @@ import {
 } from '@/lib/quiz-chrono'
 import { motion, useReducedMotion } from 'framer-motion'
 import { compteAcquises, type QuizSuivant } from '@/lib/quiz-suivant'
+import {
+  chronoDeReprise,
+  copieEncoreValable,
+  creerBrouillon,
+  estFrais,
+  plusRecent,
+  reconstruirePaquet,
+  type BrouillonQuiz,
+} from '@/lib/quiz-brouillon'
+import {
+  oublierBrouillon,
+  poserBrouillon,
+  recopierBrouillon,
+  stockBrouillons,
+  stockCloses,
+} from '@/lib/quiz-brouillon-local'
+import { UNITES, plusQue } from '@/lib/boucle-ouverte'
+import RepriseManche from '@/components/quiz/RepriseManche'
 import {
   preparerCelebration,
   type Celebration,
@@ -115,6 +133,7 @@ export default function QuizPlayer({
   maitrise = null,
   quizSuivant = null,
   chrono = true,
+  brouillonServeur = null,
 }: {
   quizId: string
   title: string
@@ -171,6 +190,12 @@ export default function QuizPlayer({
    * rythme de la course. `false` pour un écran qui n'en veut pas.
    */
   chrono?: boolean
+  /**
+   * LA MANCHE INACHEVÉE gardée en base (migration 604), lue par la page : elle
+   * sert quand l'élève a commencé sur un autre appareil. Le brouillon du
+   * navigateur, s'il est plus récent, passe devant (lib/quiz-brouillon).
+   */
+  brouillonServeur?: BrouillonQuiz | null
 }) {
   // L'illustration du dossier de la matière — absente pour un quiz détaché.
   const vignette = subjectSlug ? subjectVignette(subjectSlug) : undefined
@@ -267,6 +292,72 @@ export default function QuizPlayer({
   // Rejeu partiel : le paquet en cours ne couvre plus tout le quiz.
   const isPartial = questions.length < allQuestions.length
 
+  // ---------------------------------------------------------------------------
+  // LA MANCHE INACHEVÉE (effet Zeigarnik, 28/10/2026 — lib/quiz-brouillon).
+  //
+  // Chaque réponse validée garde la manche dans le navigateur ; à l'ouverture,
+  // une manche gardée de moins d'un jour est PROPOSÉE (« Reprendre à la
+  // question 7 ») par-dessus la première question, chrono suspendu. Seuls les
+  // quiz du catalogue (`record`) sont gardés : un quiz personnel n'a pas
+  // d'adresse où revenir. Le serveur, lui, ne voit rien de neuf — il juge la
+  // manche à la fin, comme avant.
+  // ---------------------------------------------------------------------------
+  const stockLocal = useSyncExternalStore(
+    stockBrouillons.abonner,
+    stockBrouillons.lire,
+    stockBrouillons.serveur,
+  )
+  // Les manches closes ICI : la copie de la base ne les ressuscite pas.
+  const closes = useSyncExternalStore(
+    stockCloses.abonner,
+    stockCloses.lire,
+    stockCloses.serveur,
+  )
+  // L'heure d'ouverture, figée : « moins d'un jour » se juge une fois.
+  const [ouverture] = useState(() => Date.now())
+  // L'élève a tranché (reprendre ou recommencer), ou a déjà répondu.
+  const [repriseTranchee, setRepriseTranchee] = useState(false)
+  const candidatReprise =
+    record && !repriseTranchee && index === 0 && choices.length === 0 && !valide && !finished
+      ? plusRecent(stockLocal[quizId] ?? null, copieEncoreValable(brouillonServeur, closes))
+      : null
+  const brouillonARepris =
+    candidatReprise && estFrais(candidatReprise, ouverture) ? candidatReprise : null
+  const paquetRepris = brouillonARepris
+    ? reconstruirePaquet(brouillonARepris, allQuestions)
+    : null
+  const propositionOuverte = paquetRepris !== null
+  // Ce qui reste à recopier en base quand l'élève quittera l'écran : la manche
+  // à jour, ou `null` pour l'effacer. Rien tant que rien n'a changé.
+  const aRecopierRef = useRef<{ brouillon: BrouillonQuiz | null } | null>(null)
+
+  useEffect(() => {
+    if (!record) return
+    const envoyer = () => {
+      const r = aRecopierRef.current
+      if (!r) return
+      aRecopierRef.current = null
+      recopierBrouillon(quizId, r.brouillon)
+    }
+    const surMasquage = () => {
+      if (document.visibilityState === 'hidden') envoyer()
+    }
+    document.addEventListener('visibilitychange', surMasquage)
+    window.addEventListener('pagehide', envoyer)
+    return () => {
+      document.removeEventListener('visibilitychange', surMasquage)
+      window.removeEventListener('pagehide', envoyer)
+      envoyer()
+    }
+  }, [record, quizId])
+
+  /** La manche est close (finie, abandonnée, recommencée) : on l'oublie partout. */
+  const oublierManche = () => {
+    if (!record) return
+    oublierBrouillon(quizId)
+    aRecopierRef.current = { brouillon: null }
+  }
+
   // Réponses de la session pour la répétition espacée (SRS + Revanche) —
   // envoyées en une fois à la fin, en « fire and forget ».
   const reviewsRef = useRef<ReviewAnswer[]>([])
@@ -300,8 +391,10 @@ export default function QuizPlayer({
   // l'explication coûterait des secondes et l'élève apprendrait à ne pas la
   // lire — l'inverse du but. Suspendu aussi quand l'onglet est caché, comme
   // le Contre-la-montre du salon. À zéro : `horsDelai`, et l'écran d'abandon.
+  // Suspendu aussi tant que la manche inachevée est proposée : le choix
+  // « reprendre ou recommencer » ne coûte pas de secondes.
   useEffect(() => {
-    if (!chrono || finished || valide || horsDelai) return
+    if (!chrono || finished || valide || horsDelai || propositionOuverte) return
     const id = setInterval(() => {
       if (typeof document !== 'undefined' && document.visibilityState !== 'visible')
         return
@@ -310,10 +403,16 @@ export default function QuizPlayer({
       if (tempsEcoule(secondesRef.current)) {
         sfx.wrong()
         setHorsDelai(true)
+        // À zéro la manche est abandonnée : la garder pour plus tard
+        // contournerait la règle du chrono.
+        if (record) {
+          oublierBrouillon(quizId)
+          aRecopierRef.current = { brouillon: null }
+        }
       }
     }, 1000)
     return () => clearInterval(id)
-  }, [chrono, finished, valide, horsDelai])
+  }, [chrono, finished, valide, horsDelai, propositionOuverte, record, quizId])
 
   // Verrou synchrone anti double-tap sur une option : `selected` (state) ne se
   // met à jour qu'au prochain rendu ; sans ce ref, deux taps rapprochés
@@ -332,6 +431,8 @@ export default function QuizPlayer({
     setFinished(true)
     setSecondesAffichees(secondesTravail)
     sfx.complete()
+    // La manche est bouclée : plus rien à reprendre.
+    oublierManche()
     // Quiz personnel (bibliothèque) : on ne persiste rien (ni session, ni SRS).
     if (!record) return
 
@@ -415,6 +516,64 @@ export default function QuizPlayer({
       subject,
       good,
     })
+    setRepriseTranchee(true)
+    // LA MANCHE GARDÉE, réponse après réponse. Pas sur la dernière question :
+    // l'élève qui la quitte avant « Continuer » retrouvera la manche à
+    // l'avant-dernière plutôt qu'un brouillon déjà complet, que rien ne sait
+    // reprendre.
+    const choixApres = [...choices, choix ?? SANS_REPONSE]
+    if (record && choixApres.length < questions.length) {
+      const b = creerBrouillon({
+        quizId,
+        titre: title,
+        matiere: subject,
+        subjectSlug,
+        questionIds: questions.map((q) => q.id),
+        choix: choixApres,
+        secondes: chrono ? secondesRef.current : null,
+        maintenant: new Date(),
+      })
+      poserBrouillon(b)
+      aRecopierRef.current = { brouillon: b }
+    }
+  }
+
+  /**
+   * REPRENDRE LA MANCHE : le paquet du brouillon, ses réponses, et la question
+   * suivante. Les réponses déjà données repartent dans la file de répétition
+   * espacée (elles n'avaient pas été envoyées : tout part à la fin).
+   */
+  const reprendre = (b: BrouillonQuiz, paquet: QuizQuestion[]) => {
+    setRepriseTranchee(true)
+    setQuestions(paquet)
+    setChoices(b.choix)
+    setIndex(b.choix.length)
+    setSelected(null)
+    setValide(false)
+    setStreak(0)
+    setMissStreak(0)
+    setBest(0)
+    reviewsRef.current = b.choix.map((c, i) => ({
+      kind: 'question' as const,
+      id: paquet[i].id,
+      subject,
+      good: c === paquet[i].correct_index,
+    }))
+    lockedRef.current = false
+    const secondes = chronoDeReprise(b.secondes) ?? budgetChrono(paquet.length - b.choix.length)
+    secondesRef.current = secondes
+    setSecondesRestantes(secondes)
+    setBudget(Math.max(budgetChrono(paquet.length), secondes))
+    // La manche reprise redevient celle de cet appareil.
+    if (record) {
+      poserBrouillon(b)
+      aRecopierRef.current = { brouillon: b }
+    }
+  }
+
+  const recommencerSansReprise = () => {
+    setRepriseTranchee(true)
+    oublierManche()
   }
 
   // Passer à la suite (ou terminer) une fois le feedback lu.
@@ -458,6 +617,9 @@ export default function QuizPlayer({
 
   // Repart sur un paquet donné (le quiz entier, ou seulement les erreurs).
   const replay = (deck: QuizQuestion[]) => {
+    // Une manche abandonnée (« Réessayer ») ou rejouée repart de zéro.
+    oublierManche()
+    setRepriseTranchee(true)
     setQuestions(deck)
     setIndex(0)
     setChoices([])
@@ -677,9 +839,17 @@ export default function QuizPlayer({
               />
             </div>
             <p className="mt-3 text-sm font-semibold text-pretty text-muted-foreground">
+              {/* La boucle ouverte (28/10/2026) : passé la moitié, la carte
+                  dit ce qui MANQUE — « plus que 3 » tire plus fort qu'un
+                  « 7/10 » qui ne promet rien. Le compte, lui, reste exact. */}
               {quizValide
                 ? 'Quiz validé ! Toutes les questions sont maîtrisées.'
-                : 'Réponds correctement à toutes les questions de ce quiz pour le valider !'}
+                : (() => {
+                    const reste = plusQue(acquises, totalMaitrise, UNITES.question)
+                    return reste
+                      ? `${reste} à maîtriser pour valider ce quiz !`
+                      : 'Réponds correctement à toutes les questions de ce quiz pour le valider !'
+                  })()}
             </p>
           </section>
 
@@ -1074,6 +1244,13 @@ export default function QuizPlayer({
           : { paddingBottom: 'env(safe-area-inset-bottom)' }
       }
     >
+      {brouillonARepris && paquetRepris ? (
+        <RepriseManche
+          brouillon={brouillonARepris}
+          onReprendre={() => reprendre(brouillonARepris, paquetRepris)}
+          onRecommencer={recommencerSansReprise}
+        />
+      ) : null}
       <div className="relative z-10 mx-auto flex w-full max-w-xl flex-1 flex-col">
         {/* LA RANGÉE DU HAUT : quitter · progression · son.
             L'anneau « Question 4/8 » vivait au MILIEU de l'écran, entre le
@@ -1086,6 +1263,15 @@ export default function QuizPlayer({
             fallback={backHref}
             label="Quitter le quiz"
             className="shrink-0 shadow-sm"
+            // Une manche du catalogue est GARDÉE depuis le 28/10/2026 : dire
+            // « tu perdras ta progression » serait faux — et la vraie phrase
+            // est celle qui fait revenir.
+            {...(record && choices.length + (valide ? 1 : 0) > 0
+              ? {
+                  title: 'Tu fais une pause ?',
+                  body: `Ta manche est gardée : ${choices.length + (valide ? 1 : 0)}/${questions.length}. Tu la reprendras là où tu t’arrêtes, jusqu’à demain.`,
+                }
+              : {})}
           >
             <X className="size-5" aria-hidden="true" />
           </QuitGuardButton>

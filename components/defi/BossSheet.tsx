@@ -8,7 +8,7 @@ import GemIcon from '@/components/ui/GemIcon'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { CLOCK_STEP_MS, useClock } from '@/lib/use-clock'
-import { RANK_LABELS, MAX_BOSS_RANK } from '@/lib/bosses'
+import { accorde, RANK_LABELS, MAX_BOSS_RANK, SCENE_POSITION_DEFAUT } from '@/lib/bosses'
 import {
   countdownLabel,
   departLabel,
@@ -161,7 +161,7 @@ function Taniere({ card, now }: { card: TraqueCard; now: number | null }) {
       {affiche || libre ? (
         <div className={s.parcheminCadre}>
           <div className={cn(s.parchemin, 'font-heading font-extrabold')} data-or={libre ? '' : undefined}>
-            <span className={s.parcheminTitre}>{libre ? 'Débusqué' : 'Recherché'}</span>
+            <span className={s.parcheminTitre}>{libre ? accorde(boss, 'Débusqué', 'Débusquée') : accorde(boss, 'Recherché', 'Recherchée')}</span>
             <span className={s.parcheminSous}>{libre ? 'à abattre maintenant' : 'aujourd’hui seulement'}</span>
             <span className={s.tampon}>{RANK_LABELS[card.rank]}</span>
           </div>
@@ -177,7 +177,8 @@ function Taniere({ card, now }: { card: TraqueCard; now: number | null }) {
             aria-hidden="true"
             fill
             sizes="(max-width: 448px) 100vw, 420px"
-            className="object-cover object-[70%_45%]"
+            className="object-cover"
+            style={{ objectPosition: boss.scenePosition ?? SCENE_POSITION_DEFAUT }}
           />
         ) : boss.image ? (
           // Un boss sans scène (il n'y en a plus, mais le type le permet) :
@@ -209,7 +210,7 @@ function Taniere({ card, now }: { card: TraqueCard; now: number | null }) {
             {libre ? (
               <>
                 <Hourglass className="size-3.5 shrink-0" strokeWidth={2.6} aria-hidden="true" />
-                Il disparaît dans {countdownLabel(remaining)}
+                {accorde(boss, 'Il', 'Elle')} disparaît dans {countdownLabel(remaining)}
               </>
             ) : repos ? (
               <>
@@ -219,7 +220,7 @@ function Taniere({ card, now }: { card: TraqueCard; now: number | null }) {
             ) : (
               <>
                 <Hourglass className="size-3.5 shrink-0" strokeWidth={2.6} aria-hidden="true" />
-                {depart === null ? 'Aujourd’hui seulement' : departLabel(depart)}
+                {depart === null ? 'Aujourd’hui seulement' : departLabel(depart, boss.feminin)}
               </>
             )}
           </span>

@@ -8,12 +8,15 @@ import {
   bureauDuPortrait,
   DECOR_JOUEUR,
   decorBureau,
+  FEUILLE_BUREAU,
   ligneRang,
   periodeInitiale,
+  tailleNom,
   piedDuPortrait,
   xpSemaineDepuisClassement,
 } from './joueur'
-import { PORTRAIT_KEYS } from './portraits'
+import { HEROS_KEYS } from './heros/eleves'
+import { PORTRAITS_CLASSIQUES } from './portraits'
 import { walletLevelInfo } from './wallet'
 
 describe('barreNiveau', () => {
@@ -77,8 +80,9 @@ describe('DECOR_JOUEUR', () => {
 })
 
 describe('bureauDuPortrait', () => {
-  it('n’assoit au bureau que les treize portraits libres', () => {
+  it('n’assoit au bureau que les treize portraits libres et les quinze héros', () => {
     expect(bureauDuPortrait('7')).toBe('7')
+    expect(bureauDuPortrait('troll-pont')).toBe('troll-pont')
     expect(bureauDuPortrait('perso:charlemagne')).toBeNull()
     expect(bureauDuPortrait('')).toBeNull()
     expect(bureauDuPortrait(undefined)).toBeNull()
@@ -92,7 +96,20 @@ describe('decorBureau', () => {
 
   it('a ses 78 scènes servies (13 portraits × 6 plages)', () => {
     const PUBLIC = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'public')
-    const manquantes = PORTRAIT_KEYS.flatMap((k) =>
+    const manquantes = PORTRAITS_CLASSIQUES.flatMap((k) =>
+      ARENA_SCHEDULE.map((s) => decorBureau(k, s.period)).filter((src) => !existsSync(path.join(PUBLIC, src))),
+    )
+    expect(manquantes).toEqual([])
+  })
+
+  it('garde un héros à la nuit tant que ses autres plages ne sont pas peintes', () => {
+    expect(decorBureau('troll-pont', 'noon')).toBe('/images/joueur/bureau/troll-pont-night.webp')
+    expect(decorBureau('troll-pont', 'night')).toBe('/images/joueur/bureau/troll-pont-night.webp')
+  })
+
+  it('a la scène de chaque héros servie, à chaque plage', () => {
+    const PUBLIC = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'public')
+    const manquantes = HEROS_KEYS.flatMap((k) =>
       ARENA_SCHEDULE.map((s) => decorBureau(k, s.period)).filter((src) => !existsSync(path.join(PUBLIC, src))),
     )
     expect(manquantes).toEqual([])
@@ -107,5 +124,25 @@ describe('periodeInitiale', () => {
     expect(periodeInitiale(new Date('2026-07-01T11:30:00Z'))).toBe('noon')
     // 4 h 30 UTC un 1er juillet = 6 h 30 à Paris : l'aube, alors qu'en UTC c'est encore la nuit.
     expect(periodeInitiale(new Date('2026-07-01T04:30:00Z'))).toBe('dawn')
+  })
+})
+
+describe('tailleNom', () => {
+  it('garde un prénom court en grand et rapetisse un nom long pour le ruban', () => {
+    expect(tailleNom('Lucas')).toBe('grand')
+    expect(tailleNom('Maximilien')).toBe('moyen')
+    expect(tailleNom('Marie-Antoinette')).toBe('petit')
+  })
+
+  it('ignore les espaces autour et compte les lettres accentuées pour une', () => {
+    expect(tailleNom('  Léa  ')).toBe('grand')
+    expect(tailleNom('Séraphine')).toBe('grand')
+  })
+})
+
+describe('FEUILLE_BUREAU', () => {
+  it('est servie', () => {
+    const PUBLIC = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'public')
+    expect(existsSync(path.join(PUBLIC, FEUILLE_BUREAU))).toBe(true)
   })
 })

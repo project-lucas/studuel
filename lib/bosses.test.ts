@@ -1,5 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import {
+  accorde,
+  bossById,
   bossForSubject,
   dominantSubject,
   rankFromVictories,
@@ -20,6 +22,21 @@ const q = (subject: string | null): ModeQuestion => ({
   correctIndex: 0,
   explanation: null,
   subject,
+})
+
+describe('accorde — le genre du gardien', () => {
+  it('accorde au féminin Mme Guerre, au masculin les autres', () => {
+    const guerre = bossById('delta')!
+    expect(guerre.name).toBe('Mme Guerre')
+    expect(accorde(guerre, 'vaincu', 'vaincue')).toBe('vaincue')
+    expect(accorde(bossById('grammatork')!, 'vaincu', 'vaincue')).toBe('vaincu')
+  })
+
+  it('donne à chaque scène refaite un cadrage de bannière valide', () => {
+    for (const b of ALL_BOSSES) {
+      if (b.scenePosition) expect(b.scenePosition).toMatch(/^\d{1,3}% \d{1,3}%$/)
+    }
+  })
 })
 
 describe('bossForSubject', () => {

@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import {
   PORTRAIT_KEYS,
+  PORTRAITS_CLASSIQUES,
   PORTRAITS_FILLES,
   PORTRAITS_GARCONS,
   PORTRAITS_PAR_GENRE,
@@ -21,7 +22,7 @@ describe('portraitPiedSrc', () => {
 describe('la répartition garçons / filles', () => {
   it('couvre les treize portraits, sans en oublier', () => {
     const couverts = new Set([...PORTRAITS_GARCONS, ...PORTRAITS_FILLES])
-    for (const key of PORTRAIT_KEYS) expect(couverts.has(key), key).toBe(true)
+    for (const key of PORTRAITS_CLASSIQUES) expect(couverts.has(key), key).toBe(true)
   })
 
   it('ne cite que des clés servies, chacune une seule fois par liste', () => {

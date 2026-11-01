@@ -10,6 +10,8 @@ import MarcelTete from '@/components/reviser/MarcelTete'
 import XpIcon from '@/components/ui/XpIcon'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
+import { pourcentLu } from '@/lib/lecture-entamee'
+import { useLectureEntamee } from '@/components/reviser/useLectureEntamee'
 import { subjectVignette } from '@/lib/subject-style'
 import { teinteMatiere } from '@/lib/reviser/teinte'
 import type { Reprise } from '@/lib/reviser/programme'
@@ -74,6 +76,10 @@ export default function BanniereMatiere({
 }) {
   const vignette = subjectVignette(subject.slug)
   const compte = `${progress.done}/${progress.total} ${unit}s`
+  // Le cours ENTAMÉ de la fiche à reprendre (28/10/2026, effet Zeigarnik) :
+  // le bouton dit alors « Reprendre la lecture · lu à 60 % ».
+  const suiteReprise = reprise?.fiche.suite
+  const lecture = useLectureEntamee(suiteReprise?.genre === 'cours' ? suiteReprise.lessonId : null)
   const termine = progress.total > 0 && progress.done >= progress.total
 
   return (
@@ -138,8 +144,9 @@ export default function BanniereMatiere({
           <span className={s.ctaQuoi}>
             <span className={s.ctaSur}>
               {[
-                reprise.libelle,
+                lecture ? 'Reprendre la lecture' : reprise.libelle,
                 reprise.rang !== null ? `Fiche ${reprise.rang}` : null,
+                lecture ? `lu à ${pourcentLu(lecture.part)} %` : null,
               ]
                 .filter(Boolean)
                 .join(' · ')}

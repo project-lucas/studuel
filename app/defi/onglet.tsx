@@ -1,4 +1,5 @@
 import { redirect } from 'next/navigation'
+import { accorde } from '@/lib/bosses'
 import { contentLevelFor } from '@/lib/grades'
 import { PREMIUM_TIERS } from '@/lib/gems'
 import type { Tier } from '@/lib/subscription'
@@ -467,7 +468,7 @@ export default async function OngletDefi() {
           {
             id: 'boss',
             label: traqueFeatured
-              ? `${traqueFeatured.boss.name} est sorti de sa tanière — ouvrir la carte des gardiens`
+              ? `${traqueFeatured.boss.name} est ${accorde(traqueFeatured.boss, 'sorti', 'sortie')} de sa tanière — ouvrir la carte des gardiens`
               : 'Les gardiens — remplis leur jauge en révisant',
             // Le VISAGE du gardien n'apparaît que s'il est SORTI ; tant qu'il
             // rôde, la tuile ne montre que le sceau des gardiens. C'est ce
@@ -583,9 +584,20 @@ export default async function OngletDefi() {
 
                 Le flanc droit ne mène plus à la Route des trophées (partie dans
                 le HUD) : il porte la MATIÈRE, et un tap ouvre la feuille de
-                sélection. Modes garde le flanc gauche. */}
+                sélection.
+
+                01/11/2026, demande de Lucas : la MATIÈRE passe à GAUCHE et le dé
+                des modes à DROITE. On lit « Maths · DUEL » (la matière qualifie
+                le combat) et le pouce droit atteint les jeux sans s'étirer. */}
             <ArenaActionBar
-              left={
+              left={<SubjectPlate />}
+              center={
+                <CombatButton
+                  reason={duelReason}
+                  onlineFriendName={onlineFriendName}
+                />
+              }
+              right={
                 <ModesSheet
                   todayKey={todayKey}
                   liveDuel={!!user}
@@ -596,13 +608,6 @@ export default async function OngletDefi() {
                   premium={isPremium}
                 />
               }
-              center={
-                <CombatButton
-                  reason={duelReason}
-                  onlineFriendName={onlineFriendName}
-                />
-              }
-              right={<SubjectPlate />}
             />
           </div>
         </div>

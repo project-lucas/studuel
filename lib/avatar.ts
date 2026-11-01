@@ -37,6 +37,7 @@
 import { createAvatar } from '@dicebear/core'
 import { estAvatarIa, idAvatarIa, srcAvatarIa } from '@/lib/avatar-ia'
 import { openPeeps } from '@dicebear/collection'
+import { isHerosKey } from '@/lib/heros/eleves'
 import { PORTRAIT_KEYS, isPortraitKey, portraitSrc } from '@/lib/portraits'
 import { imagePersonnage, personnageDuPortrait } from '@/lib/personnages-historiques'
 
@@ -398,9 +399,13 @@ export function avatarPortraitSrc(cfg: AvatarConfig): string | null {
   return isPortraitKey(cfg.portrait) ? portraitSrc(cfg.portrait) : null
 }
 
-/** Un avatar dessiné est un portrait carré entier : on ne le recadre pas sur le visage. */
+/**
+ * Un avatar dessiné est un portrait carré entier : on ne le recadre pas sur le
+ * visage. Le visage d'un HÉROS (lib/heros/eleves) est déjà recadré sur la tête
+ * par scripts/heros-eleves.mjs : le zoom des blasons le rognerait (01/11/2026).
+ */
 export function avatarEstDessine(cfg: AvatarConfig): boolean {
-  return estAvatarIa(cfg.portrait) || personnageDuPortrait(cfg.portrait) !== null
+  return estAvatarIa(cfg.portrait) || personnageDuPortrait(cfg.portrait) !== null || isHerosKey(cfg.portrait)
 }
 
 // Data-URI de l'avatar — à passer directement à <img src> (aucun HTML injecté,

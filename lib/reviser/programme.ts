@@ -14,6 +14,7 @@
 // Rien ici ne touche au navigateur ni à la base : tout se teste.
 // -----------------------------------------------------------------------------
 
+import { plusQueCourt } from '@/lib/boucle-ouverte'
 import { XP_AWARDS, xpPourCouronnes } from '@/lib/wallet'
 import {
   CROWN_THRESHOLDS,
@@ -168,7 +169,11 @@ export function resumeDuMonde(monde: Monde): string {
   const { done, total } = monde.avancement
   const fiches = `${total} fiche${total > 1 ? 's' : ''}`
   if (monde.etat === 'termine') return `${total}/${fiches} · Terminé`
-  const compte = monde.etat === 'entame' ? `${done}/${fiches}` : fiches
+  // Passé la moitié, le thème dit ce qui MANQUE (28/10/2026, effet
+  // Zeigarnik) : « 3/5 fiches · plus que 2 ». Le compte reste exact.
+  const reste = monde.etat === 'entame' ? plusQueCourt(done, total) : null
+  const compte =
+    monde.etat === 'entame' ? `${done}/${fiches}${reste ? ` · ${reste}` : ''}` : fiches
   return monde.controle ? `${compte} · ${monde.controle.label}` : compte
 }
 

@@ -1,4 +1,7 @@
 /**
+ * ⚠️ PÉRIMÉ (01/11/2026) pour les boss : leurs images viennent de
+ * scripts/boss-profs.mjs (les profs du lore). Ne pas relancer pour eux.
+ *
  * Fabrique LE LOT D'ILLUSTRATIONS DU 03/10/2026 (priorité 1 de
  * docs/illustrations-a-creer.md, générées avec Nano Banana 2 Lite) :
  *

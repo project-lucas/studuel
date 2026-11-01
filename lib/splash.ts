@@ -16,7 +16,7 @@ export const SPLASH_TIPS: readonly string[] = [
   'Krach mise gros sur tes hésitations.',
   'El Toro charge dès que tu doutes.',
   'Sylvarok repousse plus vite que tes révisions.',
-  'Nox se nourrit des chapitres jamais ouverts.',
+  'Le Proviseur lit tous les bulletins, même les tiens.',
   'Une carte ratée revient le lendemain. Toujours.',
   'Dix minutes par jour battent deux heures le dimanche.',
   'Le mode du jour rapporte deux fois plus d’XP.',

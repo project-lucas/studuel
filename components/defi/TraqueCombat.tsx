@@ -8,7 +8,7 @@ import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
 import { useRecompenses } from '@/components/recompenses/RecompensesProvider'
 import BossMode from '@/components/BossMode'
 import { sfx } from '@/lib/sounds'
-import type { Boss, BossRank } from '@/lib/bosses'
+import { accorde, type Boss, type BossRank } from '@/lib/bosses'
 import type { ModeQuestion } from '@/lib/defi-modes'
 import { GEM_COST_CHAPTER } from '@/lib/gems'
 import { countdownLabel } from '@/lib/traque'
@@ -83,7 +83,7 @@ export default function TraqueCombat({
           sfx.complete()
           // Le ruban « Récompenses » (25/10/2026) : un gardien abattu se fête
           // plein écran ; la vague part au tap, le panneau de fin ne revole pas.
-          ouvrirRuban([{ unite: 'xp', montant: r.xp }], { sousTitre: `${boss.name} vaincu` })
+          ouvrirRuban([{ unite: 'xp', montant: r.xp }], { sousTitre: `${boss.name} ${accorde(boss, 'vaincu', 'vaincue')}` })
         }
       })
       .catch(() => {})
@@ -128,7 +128,7 @@ export default function TraqueCombat({
           <Hourglass className="size-3.5 shrink-0" strokeWidth={2.8} aria-hidden="true" />
           {windowOpen
             ? `${boss.name} reste défiable ${remaining === null ? 'encore un moment' : countdownLabel(remaining)}`
-            : `${boss.name} s’est recouché — il faudra le redébusquer en révisant.`}
+            : `${boss.name} s’est ${accorde(boss, 'recouché — il faudra le', 'recouchée — il faudra la')} redébusquer en révisant.`}
         </p>
       ) : null}
 

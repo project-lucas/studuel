@@ -7,6 +7,8 @@ import IconeTheme from '@/components/reviser/IconeTheme'
 import SupportChips from '@/components/reviser/SupportChips'
 import { useFavorisProgramme } from '@/components/reviser/useFavorisProgramme'
 import { useSupportsDeFiche } from '@/components/reviser/useSupportsDeFiche'
+import { useLectureEntamee } from '@/components/reviser/useLectureEntamee'
+import { pourcentLu } from '@/lib/lecture-entamee'
 import { Button } from '@/components/ui/button'
 import XpIcon from '@/components/ui/XpIcon'
 import { cn } from '@/lib/utils'
@@ -436,6 +438,9 @@ function FicheLigne({
 }) {
   const panneau = `fiche-${chapter.id}`
   const commencee = chapter.status !== 'non_commence'
+  // Le cours entamé (28/10/2026, effet Zeigarnik) : « lu à 60 % » dit le
+  // chemin déjà fait, là où le bouton de la fiche ne disait que « Cours ».
+  const lecture = useLectureEntamee(chapter.suite?.genre === 'cours' ? chapter.suite.lessonId : null)
 
   return (
     <>
@@ -492,6 +497,9 @@ function FicheLigne({
               ) : null}
               {/* Plus de « ~3 min » (14/10/2026, Lucas : « ne précise plus le temps »). */}
               {commencee ? <span>{STATUS_LABELS[chapter.status]}</span> : null}
+              {lecture ? (
+                <span className="font-extrabold text-primary">Cours lu à {pourcentLu(lecture.part)} %</span>
+              ) : null}
               {estSuite && chapter.xpRestant > 0 ? (
                 <span className="inline-flex items-center gap-0.5">
                   <XpIcon className="size-3" />+{chapter.xpRestant} XP

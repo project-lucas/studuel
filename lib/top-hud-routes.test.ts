@@ -1,5 +1,6 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, test } from 'vitest'
 import {
+  estDuel,
   isHudAccountHidden,
   isHudDataSkipped,
   isHudHidden,
@@ -115,5 +116,19 @@ describe('isHudDataSkipped', () => {
     // l'écart entre les deux verdicts — ne pas « simplifier » en les fusionnant.
     expect(isHudHidden('/test/abc-123')).toBe(true)
     expect(isHudDataSkipped('/test/abc-123')).toBe(false)
+  })
+})
+
+describe('estDuel', () => {
+  test('le duel classé, le duel rapide et leurs aperçus', () => {
+    expect(estDuel('/defi/programme/maths')).toBe(true)
+    expect(estDuel('/defi/duel-rapide')).toBe(true)
+    expect(estDuel('/dev/duel-heros')).toBe(true)
+  })
+
+  test('partout ailleurs, la fête peut s’ouvrir — un quiz compris', () => {
+    expect(estDuel('/defi')).toBe(false)
+    expect(estDuel('/test/abc')).toBe(false)
+    expect(estDuel('/reviser')).toBe(false)
   })
 })

@@ -116,7 +116,13 @@ describe('poids de public/', () => {
   // public/ était déjà à 20 Mo. 30 Mo le 27/10/2026 : LE BUREAU DU JOUEUR —
   // 78 scènes peintes (13 portraits × 6 heures du jour, 752 × 1344, ~95 Ko
   // chacune, 7,2 Mo en tout), dont chaque élève n'en charge qu'une à la fois.
-  const TOTAL_MAX_MO = 30
+  // 33 Mo le 31/10/2026 : LES HÉROS DE L'ACADÉMIE — 15 scènes 9:16 (720 px,
+  // ~105 Ko) et leurs 15 visages (384 px, ~20 Ko), 1,9 Mo en tout
+  // (scripts/heros-eleves.mjs) ; public/ était déjà à 29,4 Mo.
+  // 34 Mo le 01/11/2026 : les 15 héros s'assoient au bureau de nuit de /joueur
+  // (752 × 1344, ~90 Ko, 1,4 Mo) et les boss deviennent les profs du lore
+  // (51 images remplacées, 4,1 → 4,7 Mo, scripts/boss-profs.mjs).
+  const TOTAL_MAX_MO = 34
 
   it(`garde public/ sous ${TOTAL_MAX_MO} Mo au total`, () => {
     const totalMo = fichiers.reduce((s, f) => s + f.ko, 0) / 1024

@@ -27,6 +27,7 @@ import {
   RANK_STATS,
   RANK_LABELS,
   MAX_BOSS_RANK,
+  accorde,
   type Boss,
   type BossRank,
 } from '@/lib/bosses'
@@ -418,7 +419,7 @@ export default function BossArena({
           <p role="status" aria-live="polite" className="sr-only">
             {answered
               ? selected === question?.correctIndex
-                ? `Bonne réponse, ${boss.name} est touché`
+                ? `Bonne réponse, ${boss.name} est ${accorde(boss, 'touché', 'touchée')}`
                 : 'Mauvaise réponse, tu perds un cœur'
               : ''}
           </p>
@@ -561,7 +562,7 @@ function Outcome({
 
       <div>
         <h2 className="font-heading text-2xl font-extrabold">
-          {won ? `${boss.name} est vaincu !` : `${boss.name} t’a eu…`}
+          {won ? `${boss.name} est ${accorde(boss, 'vaincu', 'vaincue')} !` : `${boss.name} t’a eu…`}
         </h2>
         <p className="font-heading mt-1 text-base italic text-white/80">
           « {won ? boss.defeat : boss.victory} »
@@ -581,7 +582,7 @@ function Outcome({
           )}
         >
           {rankedUp
-            ? `${boss.name} passe au ${RANK_LABELS[rank].toLowerCase()} — ${RANK_STATS[rank].hp} PV. Il reviendra plus fort.`
+            ? `${boss.name} passe au ${RANK_LABELS[rank].toLowerCase()} — ${RANK_STATS[rank].hp} PV. ${accorde(boss, 'Il reviendra plus fort', 'Elle reviendra plus forte')}.`
             : rank === MAX_BOSS_RANK
               ? `Rang max — tu domines ${boss.name}. 👑`
               : `Coups placés — l'XP est à toi.`}

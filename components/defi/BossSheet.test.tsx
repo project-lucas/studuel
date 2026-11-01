@@ -113,7 +113,7 @@ describe('BossSheet — les tanières', () => {
     render(<BossSheet cards={[atlas()]} />)
     const article = screen.getByRole('article')
     expect(within(article).getByText('Atlas')).toBeTruthy()
-    expect(scene(article).getAttribute('src')).toBe('/images/boss/atlas-scene.webp')
+    expect(scene(article).getAttribute('src')).toBe('/images/boss/atlas-prof-v4-scene.webp')
     // Le bandeau parchemin, le rang tamponné, le compte à rebours du jour.
     expect(within(article).getByText('Recherché')).toBeTruthy()
     expect(within(article).getByText('aujourd’hui seulement')).toBeTruthy()
@@ -258,7 +258,7 @@ describe('BossSheet — les tanières', () => {
       .getAllByRole('article')
       .map((a) => within(a).getByRole('heading', { level: 3 }).textContent)
     // Le sorti, puis les gardiens du jour par jauge, puis l'indisponible en queue.
-    expect(noms).toEqual(['Grammatork', 'Atlas', 'Dr Plasma', 'Nox'])
+    expect(noms).toEqual(['Grammatork', 'Atlas', 'Dr Plasma', 'Le Proviseur'])
   })
 
   it('sans gardien, invite à réviser', () => {

@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation'
 import PageJoueur, { type JoueurData } from '@/components/joueur/PageJoueur'
 import { isArenaPeriod } from '@/lib/arena-background'
 import { avatarDataUri, DEFAULT_AVATAR } from '@/lib/avatar'
-import { barreNiveau, bureauDuPortrait, DECOR_JOUEUR, periodeInitiale, piedDuPortrait } from '@/lib/joueur'
+import { barreNiveau, bureauDuPortrait, decorDuPortrait, periodeInitiale, piedDuPortrait } from '@/lib/joueur'
 import { blasonDeLigue } from '@/lib/ligue-place'
 import { isPortraitKey, portraitSrc, type PortraitKey } from '@/lib/portraits'
 import { walletLevelInfo } from '@/lib/wallet'
@@ -20,6 +20,7 @@ export const dynamic = 'force-dynamic'
 //   /dev/joueur?pied=0          le repli du repli : le buste dans l'anneau (avatar composé)
 //   /dev/joueur?echelon=20      Maître (0 = Bronze IV … 20) ; ?echelon=sans → anneau blanc
 //   /dev/joueur?neuf=1          un compte neuf : niveau 1, rien encore
+//   /dev/joueur?nom=Marie-Antoinette   un long nom sur le ruban de la feuille
 //   /dev/joueur?vue=choix       le gabarit ChoixPortrait (vestiaire : avec « Confirmer »)
 //   /dev/joueur?vue=choix&vide=1   … sans portrait choisi (premier passage)
 
@@ -35,6 +36,7 @@ export default async function ApercuJoueurPage({
     neuf?: string
     vue?: string
     vide?: string
+    nom?: string
   }>
 }) {
   if (process.env.NODE_ENV === 'production') notFound()
@@ -55,7 +57,7 @@ export default async function ApercuJoueurPage({
   const sansBureau = sansPied || q.bureau === '0'
   const rang = q.echelon === 'sans' ? null : blasonDeLigue(q.echelon === undefined ? 6 : Number(q.echelon) || 0)
   const data: JoueurData = {
-    nom: neuf ? 'Sacha' : 'Lucas',
+    nom: q.nom?.trim() || (neuf ? 'Sacha' : 'Lucas'),
     classe: '3e',
     bureau: sansBureau ? null : bureauDuPortrait(portrait),
     periode: isArenaPeriod(q.arena) ? q.arena : periodeInitiale(new Date()),
@@ -69,7 +71,7 @@ export default async function ApercuJoueurPage({
     trophees: neuf ? 0 : 1284,
     xpSemaine: neuf ? 0 : 732,
     nbAmis: neuf ? 0 : 3,
-    decor: DECOR_JOUEUR,
+    decor: decorDuPortrait(portrait),
   }
   return <PageJoueur data={data} />
 }

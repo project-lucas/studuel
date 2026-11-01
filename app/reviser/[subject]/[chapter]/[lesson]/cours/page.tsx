@@ -2,6 +2,7 @@ import LessonCompleteButton from '@/components/LessonCompleteButton'
 import LessonPrintButton from '@/components/LessonPrintButton'
 import LessonRichContent from '@/components/LessonRichContent'
 import ModeMemoire from '@/components/ModeMemoire'
+import SuiviLecture from '@/components/cours/SuiviLecture'
 import EnTetePage from '@/components/reviser/EnTetePage'
 import SupportChips from '@/components/reviser/SupportChips'
 import { compterMots } from '@/lib/lecture'
@@ -72,9 +73,23 @@ export default async function CoursPage({
         {/* Le mode mémoire (26/10/2026) : un bouton cache les mots-clés du
             cours, un tap sur chacun le révèle. Le cours reste rendu par le
             serveur, l'enveloppe ne fait que poser le cache. */}
-        <ModeMemoire>
-          <LessonRichContent content={lesson.content ?? 'Contenu à venir.'} />
-        </ModeMemoire>
+        {/* Le cours ENTAMÉ (28/10/2026, effet Zeigarnik) : jusqu'où l'élève a
+            lu, gardé dans le navigateur, et « Reprendre où tu t'étais
+            arrêté » à la réouverture. */}
+        <SuiviLecture
+          lecon={{
+            lessonId: lesson.id,
+            titre: chapter.title,
+            matiere: subject.name,
+            subjectSlug: subject.slug,
+            href: `/reviser/${subject.slug}/${chapter.id}/${lesson.id}/cours`,
+          }}
+          dejaLu={Boolean(completion)}
+        >
+          <ModeMemoire>
+            <LessonRichContent content={lesson.content ?? 'Contenu à venir.'} />
+          </ModeMemoire>
+        </SuiviLecture>
 
         {/* Le pied de page : une invitation à continuer DANS l'app. Sur
             papier, un bouton qui ne se clique pas n'est qu'une tache. */}

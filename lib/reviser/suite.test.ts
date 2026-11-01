@@ -19,6 +19,8 @@ describe('suiteDeFiche', () => {
       genre: 'cours',
       label: 'Cours',
       href: '/reviser/maths/c1/l1/cours',
+      // La leçon visée : le dossier y retrouve la lecture entamée.
+      lessonId: 'l1',
     })
   })
 

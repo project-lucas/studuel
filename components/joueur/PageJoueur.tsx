@@ -13,13 +13,14 @@ import XpIcon from '@/components/ui/XpIcon'
 import type { ArenaPeriod } from '@/lib/arena-background'
 import type { AvatarAffiche } from '@/lib/avatar-affiche'
 import { compteCourt } from '@/lib/compte-court'
-import { ligneRang, type BarreNiveau } from '@/lib/joueur'
+import { ligneRang, type BarreNiveau, type PortraitAuBureau } from '@/lib/joueur'
 import type { BlasonLigue } from '@/lib/ligue-place'
-import { PORTRAIT_FACE_CROP, type PortraitKey } from '@/lib/portraits'
+import { PORTRAIT_FACE_CROP } from '@/lib/portraits'
 import { divisionDepuisRomain } from '@/lib/rang-visuel'
 import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
 import DecorBureau from './DecorBureau'
+import FicheBureau from './FicheBureau'
 import s from './PageJoueur.module.css'
 
 // -----------------------------------------------------------------------------
@@ -65,6 +66,14 @@ import s from './PageJoueur.module.css'
 // panneau tombe sous le bureau. La chambre vide et le héros debout restent le
 // repli (avatar sans scène, image manquante).
 //
+// REVUE LE 28/10/2026 (Lucas : « incorporer proprement les infos sur la
+// façade du bureau, sur la partie en bois ») : sur la scène peinte, PLUS DE
+// PANNEAU — LA FEUILLE PUNAISÉE SUR LA FAÇADE (components/joueur/FicheBureau,
+// `FEUILLE_BUREAU` de lib/joueur) porte le nom, le rang, la jauge, les chiffres
+// et les deux portes dans les emplacements d'une feuille peinte, posée en %
+// de la peinture.
+// Le panneau sombre ne reste que pour le repli sans scène.
+//
 // Les données viennent du serveur (app/joueur/page.tsx, une seule vague) ; ce
 // composant ne fait que dessiner. Le bandeau est masqué ici
 // (lib/top-hud-routes) : la page le redit en grand.
@@ -90,7 +99,7 @@ export type JoueurData = {
   /** Amis acceptés ; null si inconnu. */
   nbAmis: number | null
   /** Le portrait assis à son bureau (ses six scènes) ; null → `decor` et le héros d'avant. */
-  bureau: PortraitKey | null
+  bureau: PortraitAuBureau | null
   /** La plage du premier rendu, à l'heure de Paris (`periodeInitiale`, lib/joueur). */
   periode: ArenaPeriod
   /** Le décor de repli derrière le héros : la chambre vide la nuit (`DECOR_JOUEUR`, lib/joueur). */
@@ -163,26 +172,30 @@ export default function PageJoueur({ data }: { data: JoueurData }) {
           </Link>
         </div>
 
-        {/* --- Le héros, sur le décor, les pieds derrière le panneau — ou, assis
-            dans la scène peinte, rien d'autre que l'espace du bureau ---------- */}
-        <div className={s.scene}>
-          {bureau ? null : (
-            <SceneDebout
-              data={data}
-              heroEnPied={heroEnPied}
-              onPiedCasse={() => setPiedCasse(true)}
-              photo={photo}
-              rang={rang}
-              division={division}
-            />
-          )}
-        </div>
-
-        {/* --- Le panneau : identité, barre d'XP, chiffres, portes ------------ */}
-        <section aria-label="Mon profil" className={cn(s.panneau, s.monte)}>
-          <Panneau data={data} />
-        </section>
+        {/* --- Assis dans la scène peinte : la feuille punaisée sur la façade du
+            bureau porte tout (FicheBureau, posée sur la peinture, hors de la
+            colonne). Sinon, le héros debout sur le décor de repli, les pieds
+            derrière le panneau sombre ------------------------------------- */}
+        {bureau ? null : (
+          <>
+            <div className={s.scene}>
+              <SceneDebout
+                data={data}
+                heroEnPied={heroEnPied}
+                onPiedCasse={() => setPiedCasse(true)}
+                photo={photo}
+                rang={rang}
+                division={division}
+              />
+            </div>
+            <section aria-label="Mon profil" className={cn(s.panneau, s.monte)}>
+              <Panneau data={data} />
+            </section>
+          </>
+        )}
       </div>
+
+      {bureau ? <FicheBureau data={data} /> : null}
     </div>
   )
 }

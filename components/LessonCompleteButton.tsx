@@ -7,6 +7,7 @@ import { completeLesson } from '@/app/reviser/actions'
 import { origineUnique, useRecompenses } from '@/components/recompenses/RecompensesProvider'
 import { relireQuetes } from '@/components/quetes/store'
 import { secondesDeLecture } from '@/lib/lecture'
+import { oublierLecture } from '@/lib/lecture-entamee-local'
 import { cn } from '@/lib/utils'
 import styles from './LessonCompleteButton.module.css'
 
@@ -87,6 +88,9 @@ export default function LessonCompleteButton({
         return
       }
       sfx.complete()
+      // La boucle est bouclée : le cours n'est plus « entamé », la carte de
+      // Réviser ne le rappellera plus.
+      oublierLecture(lessonId)
       const origines = origineUnique(ref.current, gains)
       setDone(true)
       celebrer(gains, origines)

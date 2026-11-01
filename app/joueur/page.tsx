@@ -6,7 +6,7 @@ import { lireGelsSerie } from '@/lib/boutique/boosts-server'
 import {
   barreNiveau,
   bureauDuPortrait,
-  DECOR_JOUEUR,
+  decorDuPortrait,
   periodeInitiale,
   piedDuPortrait,
   xpSemaineDepuisClassement,
@@ -65,7 +65,7 @@ export default async function JoueurPage() {
     nbAmis,
     bureau: bureauDuPortrait(profil.avatar.portrait),
     periode: periodeInitiale(new Date()),
-    decor: DECOR_JOUEUR,
+    decor: decorDuPortrait(profil.avatar.portrait),
   }
 
   return <PageJoueur data={data} />

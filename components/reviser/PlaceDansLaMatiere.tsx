@@ -4,9 +4,11 @@ import { useEffect, useState } from 'react'
 import StandingLine from '@/components/StandingLine'
 import { parseGradeStandings, type GradeStandings } from '@/lib/percentile'
 
-// Une lecture pour toutes les matières, gardée cinq minutes : ouvrir dix
-// dossiers d'affilée ne coûte qu'un appel à `my_grade_standings`.
-const DUREE_MEMOIRE_MS = 5 * 60 * 1000
+// Une lecture pour toutes les matières, gardée trente secondes : ouvrir dix
+// dossiers d'affilée ne coûte qu'un appel, et la place gagnée en jouant se voit
+// au retour dans le dossier (la 605 calcule l'élève en direct, Lucas : « s'il
+// bat son classement mais ne le voit pas, il va croire que ça bugue »).
+const DUREE_MEMOIRE_MS = 30 * 1000
 let memoire: { promesse: Promise<GradeStandings | null>; depuis: number } | null = null
 
 function lireClassement(): Promise<GradeStandings | null> {

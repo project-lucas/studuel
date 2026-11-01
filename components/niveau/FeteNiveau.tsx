@@ -10,9 +10,9 @@ import XpIcon from '@/components/ui/XpIcon'
 import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import RubanOr from '@/components/recompenses/RubanOr'
 import { CoffresPalier } from '@/components/niveau/CoffrePalier'
-import Debloque from '@/components/niveau/Debloque'
+import RecompensesNiveau from '@/components/niveau/RecompensesNiveau'
 import type { OuverturePalier } from '@/app/niveau-actions'
-import { decouvertesAuNiveau, type Decouverte } from '@/lib/decouverte/catalogue'
+import { gainsDuPassage } from '@/lib/niveau-recompenses'
 import { estPalier, gemmesPalier, niveauxAFeter, paliersAOuvrir, prochainPalier } from '@/lib/niveaux'
 import { buzz, sfx } from '@/lib/sounds'
 import s from './FeteNiveau.module.css'
@@ -31,12 +31,15 @@ export { CoffresPalier } from '@/components/niveau/CoffrePalier'
 //   · le BADGE du niveau arrive en tournant et en grossissant, sur ses rayons,
 //     une onde, une couronne d'étincelles ;
 //   · « avant → après » : Niv. 6, la barre qui se remplit, Niv. 7 ;
-//   · la section « DÉBLOQUÉ » : ce que le niveau ouvre, lu dans le catalogue
-//     des découvertes, chaque nouveauté avec son bouton « Découvrir » ;
+//   · les RÉCOMPENSES (29/10/2026, Lucas : « on ne voit pas les récompenses du
+//     gain de niveau ») : une carte par gain — l'écran ouvert (avec son bouton
+//     « Découvrir »), le cadre de la photo, le nouveau titre
+//     (lib/niveau-recompenses) ;
 //   · le coffre de palier à ouvrir (tous les 5 niveaux : la pluie de gemmes,
 //     puis le ruban de récompenses), ou la distance au prochain.
-// Depuis la 557, un niveau ne verse plus de gemme : la fête EST la récompense,
-// le coffre de palier est la rareté. La première fois, rien : on retient le
+// Depuis la 557, un niveau ne verse plus de gemme : le coffre de palier est la
+// rareté. Depuis le 29/10/2026 la fête s'ouvre À L'ÉCLAIR qui remplit la barre
+// (lib/niveau-en-direct), partout sauf pendant un duel (TopHud, estDuel). La première fois, rien : on retient le
 // niveau sans fêter ce qui a été gagné avant cette version.
 // -----------------------------------------------------------------------------
 
@@ -78,12 +81,10 @@ export type XpDuNiveau = { actuel: number; plancher: number; prochain: number | 
 
 export default function FeteNiveau({
   level,
-  levelTitle,
   paliersOuverts,
   xp = null,
 }: {
   level: number
-  levelTitle: string | null
   paliersOuverts: number[]
   xp?: XpDuNiveau | null
 }) {
@@ -102,7 +103,6 @@ export default function FeteNiveau({
     <FeteNiveauScene
       level={level}
       depuis={fete[0] - 1}
-      levelTitle={levelTitle}
       paliersOuverts={paliersOuverts}
       xp={xp}
       onFermer={() => ecrireVu(level)}
@@ -110,17 +110,9 @@ export default function FeteNiveau({
   )
 }
 
-/** Tout ce que les niveaux franchis (de `depuis` exclu à `level` inclus) ouvrent. */
-export function nouveautesEntre(depuis: number, level: number): Decouverte[] {
-  const out: Decouverte[] = []
-  for (let n = Math.max(1, Math.floor(depuis) + 1); n <= level; n += 1) out.push(...decouvertesAuNiveau(n))
-  return out
-}
-
 export function FeteNiveauScene({
   level,
   depuis,
-  levelTitle,
   paliersOuverts,
   xp,
   onFermer,
@@ -128,7 +120,6 @@ export function FeteNiveauScene({
 }: {
   level: number
   depuis: number
-  levelTitle: string | null
   paliersOuverts: number[]
   xp: XpDuNiveau | null
   onFermer: () => void
@@ -170,7 +161,7 @@ export function FeteNiveauScene({
       ? Math.min(1, Math.max(0, (xp.actuel - xp.plancher) / (xp.prochain - xp.plancher)))
       : 0
   const reste = xp && xp.prochain !== null ? Math.max(0, xp.prochain - xp.actuel) : null
-  const nouveautes = nouveautesEntre(depuis, level)
+  const gains = gainsDuPassage(depuis, level)
 
   return createPortal(
     <div className={s.voile} role="dialog" aria-modal="true" aria-label={`Niveau ${level} atteint`}>
@@ -213,10 +204,7 @@ export function FeteNiveauScene({
           <span className={s.apres}>Niv. {level}</span>
         </p>
 
-        {levelTitle ? <p className={s.titre}>{levelTitle}</p> : null}
-        <p className={s.phrase}>Tout ce que tu as travaillé t’a fait monter. Continue comme ça !</p>
-
-        <Debloque decouvertes={nouveautes} onDecouvrir={onFermer} />
+        <RecompensesNiveau gains={gains} onDecouvrir={onFermer} />
 
         <div className={s.suite}>
           {palierAtteint ? (

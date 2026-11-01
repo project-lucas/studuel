@@ -7,8 +7,9 @@ import { getCurrentUser } from '@/lib/supabase/user'
 // matière l'attendait avant de s'afficher, pour une ligne de la bannière
 // (« Top 10 % des 3e »). Le dossier s'ouvre désormais sans elle, et la ligne
 // arrive par cette route, demandée UNE fois pour toutes les matières (la
-// réponse porte la maîtrise de chacune) et gardée en mémoire par le navigateur
-// (`components/reviser/PlaceDansLaMatiere`).
+// réponse porte la maîtrise de chacune) et gardée 30 s par le navigateur
+// (`components/reviser/PlaceDansLaMatiere`). Depuis la 605, l'appel ne coûte
+// plus qu'une poignée de comptages d'index.
 //
 // Route GET et pas Server Action : Next exécute les actions une par une, une
 // lecture d'affichage ferait la queue devant les vraies actions de l'écran.
@@ -23,6 +24,7 @@ export async function GET(): Promise<Response> {
 
   return Response.json(
     { classement: data },
-    { headers: { 'Cache-Control': 'private, max-age=300' } },
+    // Jamais de cache HTTP : la place gagnée en jouant doit se voir au retour.
+    { headers: { 'Cache-Control': 'no-store' } },
   )
 }

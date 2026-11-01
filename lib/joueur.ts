@@ -10,7 +10,8 @@
 
 import { arenaPeriodAt, type ArenaPeriod } from '@/lib/arena-background'
 import { lireClassementAmis } from '@/lib/moi/classement-amis'
-import { isPortraitKey, portraitPiedSrc, type PortraitKey } from '@/lib/portraits'
+import { herosSceneSrc, isHerosKey, type HerosKey } from '@/lib/heros/eleves'
+import { isPortraitClassique, portraitPiedSrc, type PortraitClassique } from '@/lib/portraits'
 import { parisHourMinute } from '@/lib/time'
 import { xpForLevel, type WalletLevelInfo } from '@/lib/wallet'
 
@@ -64,7 +65,7 @@ export function xpSemaineDepuisClassement(brut: unknown): number | null {
  * la page montre alors le buste dans l'anneau de rang.
  */
 export function piedDuPortrait(portrait: unknown): string | null {
-  return isPortraitKey(portrait) ? portraitPiedSrc(portrait) : null
+  return isPortraitClassique(portrait) ? portraitPiedSrc(portrait) : null
 }
 
 /**
@@ -76,6 +77,15 @@ export function piedDuPortrait(portrait: unknown): string | null {
  * debout ou le buste posé dessus.
  */
 export const DECOR_JOUEUR = '/images/joueur/chambre.webp'
+
+/**
+ * LE DÉCOR D'UN HÉROS (31/10/2026) : un élève-héros (lib/heros/eleves) n'a ni
+ * bureau peint ni pose en pied — sa page s'ouvre sur SA scène, celle qu'il a
+ * choisie à l'onboarding. Les autres gardent la chambre.
+ */
+export function decorDuPortrait(portrait: unknown): string {
+  return isHerosKey(portrait) ? herosSceneSrc(portrait) : DECOR_JOUEUR
+}
 
 /**
  * LE BUREAU DU JOUEUR (27/10/2026, Lucas : « l'avatar assis au bureau, en
@@ -92,14 +102,31 @@ export const DECOR_JOUEUR = '/images/joueur/chambre.webp'
  * Un personnage historique, un avatar dessiné par Marcel ou composé n'ont pas
  * de scène : null, la page garde `DECOR_JOUEUR` et l'ancien héros.
  */
-export function bureauDuPortrait(portrait: unknown): PortraitKey | null {
-  return isPortraitKey(portrait) ? portrait : null
+export function bureauDuPortrait(portrait: unknown): PortraitAuBureau | null {
+  return isPortraitClassique(portrait) || isHerosKey(portrait) ? portrait : null
 }
 
-/** L'image de la scène d'un portrait à une plage du jour. */
-export function decorBureau(portrait: PortraitKey, periode: ArenaPeriod): string {
-  return `/images/joueur/bureau/${portrait}-${periode}.webp`
+/** Un portrait qui a sa scène au bureau : un des treize blasons ou un héros. */
+export type PortraitAuBureau = PortraitClassique | HerosKey
+
+/**
+ * L'image de la scène d'un portrait à une plage du jour.
+ *
+ * LES HÉROS AU BUREAU (01/11/2026, Lucas : « fais tous les perso avec le fond
+ * nuit derrière, on verra plus tard pour les faire à chaque moment de la
+ * journée ») : chacun des quinze héros a SA scène de nuit, la même chambre que
+ * les blasons (GPT Image 2.5, la scène de nuit du roux + la scène du héros,
+ * « change ONLY the person »), PNG dans `assets-sources/joueur/bureau/heros/`.
+ * Tant que les cinq autres plages n'existent pas, un héros reste à la nuit
+ * quelle que soit l'heure — ajouter une plage = l'ajouter à `PLAGES_HEROS`.
+ */
+export function decorBureau(portrait: PortraitAuBureau, periode: ArenaPeriod): string {
+  const plage = isHerosKey(portrait) && !PLAGES_HEROS.includes(periode) ? 'night' : periode
+  return `/images/joueur/bureau/${portrait}-${plage}.webp`
 }
+
+/** Les plages déjà peintes pour les héros au bureau. */
+export const PLAGES_HEROS: readonly ArenaPeriod[] = ['night']
 
 /**
  * La plage du PREMIER rendu, côté serveur : l'heure de Paris (le serveur
@@ -108,4 +135,29 @@ export function decorBureau(portrait: PortraitKey, periode: ArenaPeriod): string
  */
 export function periodeInitiale(now: Date): ArenaPeriod {
   return arenaPeriodAt(parisHourMinute(now).hour)
+}
+
+/**
+ * LA FEUILLE PUNAISÉE SUR LA FAÇADE DU BUREAU (28/10/2026, Lucas : « incorporer
+ * proprement les infos sur la façade du bureau », puis « va pour le parchemin,
+ * plus Studuel, pas trop détaillé, qu'on ait vraiment l'impression que c'est
+ * collé ou accroché à la façade ») : une feuille PEINTE À PART (GPT Image 2.5
+ * dans le style des illustrations de l'app, agrandie, détourée, l'ombre
+ * portée cuite dedans), punaisée aux quatre coins, avec ses emplacements
+ * VIDES — le ruban du nom, le médaillon du rang, la jauge d'XP, quatre cases,
+ * deux sceaux. L'écran n'écrit dedans que les mots, les nombres et les icônes
+ * de l'app (components/joueur/FicheBureau). Posée en % de la peinture, elle
+ * tient sur les 78 scènes à toute heure sans les retoucher.
+ * 1 500 × 1 008, master PNG dans `assets-sources/joueur/feuille/`.
+ */
+export const FEUILLE_BUREAU = '/images/joueur/feuille-bureau.webp'
+
+/** La taille du nom sur le ruban : un long nom rapetisse pour tenir dans la partie plate (49 % de la feuille). */
+export type TailleNom = 'grand' | 'moyen' | 'petit'
+
+export function tailleNom(nom: string): TailleNom {
+  const n = [...nom.trim()].length
+  if (n <= 9) return 'grand'
+  if (n <= 13) return 'moyen'
+  return 'petit'
 }

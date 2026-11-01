@@ -15,10 +15,18 @@
 // CE MODULE N'IMPORTE RIEN : il est lu par le parcours d'accueil (client, avant
 // tout compte) comme par le rendu d'avatar, et ne doit pas tirer DiceBear dans
 // le bundle de /bienvenue.
+//
+// LES HÉROS (31/10/2026) : les quinze élèves-héros de l'académie
+// (lib/heros/eleves) sont des portraits comme les autres — leur clé va dans
+// `AvatarConfig.portrait`, leur VISAGE recadré sert d'avatar partout. Les
+// treize blasons restent valides (les élèves d'avant les gardent) et seuls
+// eux servent de blason fixe à qui n'a rien choisi (`portraitPourId`).
 // -----------------------------------------------------------------------------
 
-/** Les clés servies : le nom du fichier source, sans extension. Liste FERMÉE. */
-export const PORTRAIT_KEYS = [
+import { HEROS_KEYS, herosVisageSrc, isHerosKey, type HerosKey } from '@/lib/heros/eleves'
+
+/** Les treize blasons d'origine. Liste FERMÉE. */
+export const PORTRAITS_CLASSIQUES = [
   '2',
   '3',
   '4',
@@ -34,14 +42,24 @@ export const PORTRAIT_KEYS = [
   '14',
 ] as const
 
-export type PortraitKey = (typeof PORTRAIT_KEYS)[number]
+export type PortraitClassique = (typeof PORTRAITS_CLASSIQUES)[number]
+
+export type PortraitKey = PortraitClassique | HerosKey
+
+/** Toutes les clés valides : les blasons, puis les héros. */
+export const PORTRAIT_KEYS: readonly PortraitKey[] = [...PORTRAITS_CLASSIQUES, ...HEROS_KEYS]
+
+export function isPortraitClassique(value: unknown): value is PortraitClassique {
+  return typeof value === 'string' && (PORTRAITS_CLASSIQUES as readonly string[]).includes(value)
+}
 
 export function isPortraitKey(value: unknown): value is PortraitKey {
   return typeof value === 'string' && (PORTRAIT_KEYS as readonly string[]).includes(value)
 }
 
-/** L'URL publique d'un blason. */
+/** L'URL publique d'un blason — ou du visage d'un héros. */
 export function portraitSrc(key: PortraitKey): string {
+  if (isHerosKey(key)) return herosVisageSrc(key)
   // v2 : les portraits redessinés le 04/10/2026 (scripts/profil-ecusson.mjs).
   return `/images/profil/v2/${key}.webp`
 }
@@ -54,7 +72,7 @@ export function portraitSrc(key: PortraitKey): string {
  * Les treize sont livrés ; un écran qui le montre garde le buste en repli si
  * l'image venait à manquer (`onError`).
  */
-export function portraitPiedSrc(key: PortraitKey): string {
+export function portraitPiedSrc(key: PortraitClassique): string {
   return `/images/profil/pied/${key}.webp`
 }
 
@@ -66,12 +84,12 @@ export function portraitPiedSrc(key: PortraitKey): string {
  * pourrait : les listes ne sont pas exclusives par construction). L'ordre est
  * celui de PORTRAIT_KEYS — c'est l'ordre de la grille.
  */
-export const PORTRAITS_GARCONS: readonly PortraitKey[] = ['2', '3', '5', '7', '9', '12', '13']
-export const PORTRAITS_FILLES: readonly PortraitKey[] = ['4', '6', '8', '10', '11', '14']
+export const PORTRAITS_GARCONS: readonly PortraitClassique[] = ['2', '3', '5', '7', '9', '12', '13']
+export const PORTRAITS_FILLES: readonly PortraitClassique[] = ['4', '6', '8', '10', '11', '14']
 
 export type GenrePortrait = 'garcons' | 'filles'
 
-export const PORTRAITS_PAR_GENRE: Readonly<Record<GenrePortrait, readonly PortraitKey[]>> = {
+export const PORTRAITS_PAR_GENRE: Readonly<Record<GenrePortrait, readonly PortraitClassique[]>> = {
   garcons: PORTRAITS_GARCONS,
   filles: PORTRAITS_FILLES,
 }
@@ -82,7 +100,7 @@ export const PORTRAITS_PAR_GENRE: Readonly<Record<GenrePortrait, readonly Portra
  * premier de la rangée, pas un jugement.
  */
 export function genreDuPortrait(key: unknown): GenrePortrait {
-  if (isPortraitKey(key) && PORTRAITS_FILLES.includes(key) && !PORTRAITS_GARCONS.includes(key)) {
+  if (isPortraitClassique(key) && PORTRAITS_FILLES.includes(key) && !PORTRAITS_GARCONS.includes(key)) {
     return 'filles'
   }
   return 'garcons'
@@ -122,7 +140,7 @@ export const PORTRAIT_FACE_CROP = {
 export function portraitPourId(id: string): PortraitKey {
   let h = 0
   for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0
-  return PORTRAIT_KEYS[h % PORTRAIT_KEYS.length]
+  return PORTRAITS_CLASSIQUES[h % PORTRAITS_CLASSIQUES.length]
 }
 
 /** Le blason à montrer : le choix de l'élève, ou son blason fixe. */

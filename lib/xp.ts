@@ -45,16 +45,16 @@ export function computeXp(input: {
 
 // Paliers cumulés → titres fun (jamais scolaires).
 const LEVELS: { xp: number; title: string }[] = [
-  { xp: 0, title: 'Nouveau 🐣' },
-  { xp: 100, title: 'Apprenti 🌱' },
-  { xp: 250, title: 'Curieux 🔍' },
-  { xp: 500, title: 'Régulier 🔁' },
-  { xp: 900, title: 'Sérieux 📈' },
-  { xp: 1400, title: 'Cerveau en construction 🧠' },
-  { xp: 2000, title: 'Machine à réviser ⚙️' },
-  { xp: 3000, title: 'Stratège 🎯' },
-  { xp: 4500, title: 'Expert 🏅' },
-  { xp: 6500, title: 'Légende 👑' },
+  { xp: 0, title: 'Nouveau' },
+  { xp: 100, title: 'Apprenti' },
+  { xp: 250, title: 'Curieux' },
+  { xp: 500, title: 'Régulier' },
+  { xp: 900, title: 'Sérieux' },
+  { xp: 1400, title: 'Cerveau en construction' },
+  { xp: 2000, title: 'Machine à réviser' },
+  { xp: 3000, title: 'Stratège' },
+  { xp: 4500, title: 'Expert' },
+  { xp: 6500, title: 'Légende' },
 ]
 
 export type LevelInfo = {

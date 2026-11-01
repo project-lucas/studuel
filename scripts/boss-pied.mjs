@@ -1,4 +1,7 @@
 /**
+ * ⚠️ PÉRIMÉ (01/11/2026) pour les boss : leurs images viennent de
+ * scripts/boss-profs.mjs (les profs du lore). Ne pas relancer pour eux.
+ *
  * Fabrique LES PORTRAITS EN PIED DES BOSS (04/10/2026) — l'illustration
  * verticale 9:16, le boss de la tête aux pieds dans son décor, qu'on voit dès
  * qu'il sort de sa tanière (BossApparition), à l'accueil de son combat et à la

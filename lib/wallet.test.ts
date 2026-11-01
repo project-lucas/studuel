@@ -94,11 +94,11 @@ describe('niveaux (100 XP × niveau)', () => {
     expect(info.level).toBe(2)
     expect(info.nextAt).toBe(300)
     expect(info.progress).toBeCloseTo(0.25)
-    expect(info.title).toBe('Apprenti 🌱')
+    expect(info.title).toBe('Apprenti')
   })
 
   it('garde le dernier titre au-delà des paliers connus', () => {
-    expect(walletLevelInfo(xpForLevel(25)).title).toBe('Légende 👑')
+    expect(walletLevelInfo(xpForLevel(25)).title).toBe('Légende')
   })
 })
 

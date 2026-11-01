@@ -18,7 +18,7 @@
 // SILHOUETTE. Le buste ne se révèle qu'au débusquage. L'anneau n'est donc pas
 // un indicateur de plus, c'est un compte à rebours vers une apparition.
 // -----------------------------------------------------------------------------
-import type { Boss } from '@/lib/bosses'
+import { accorde, type Boss } from '@/lib/bosses'
 import { countdownLabel, restantLabel, type TraqueCard } from '@/lib/traque'
 
 export type GardienEtat =
@@ -101,7 +101,7 @@ export function gardienVue(card: TraqueCard | null): GardienVue {
         : 'traque'
 
   const titre = sorti
-    ? `${card.boss.name} est sorti !`
+    ? `${card.boss.name} est ${accorde(card.boss, 'sorti', 'sortie')} !`
     : repos
       ? `${card.boss.name} se repose`
       : `${card.boss.name} rôde`
@@ -125,9 +125,9 @@ export function gardienVue(card: TraqueCard | null): GardienVue {
     bulle: sorti ? BULLE_DISPONIBLE : null,
     xp: card.xp,
     aria: sorti
-      ? `${card.boss.name}, ${card.boss.epithet}, est sorti de sa tanière — il disparaît dans ${countdownLabel(card.remainingMs)}`
+      ? `${card.boss.name}, ${card.boss.epithet}, est ${accorde(card.boss, 'sorti', 'sortie')} de sa tanière — ${accorde(card.boss, 'il', 'elle')} disparaît dans ${countdownLabel(card.remainingMs)}`
       : repos
-        ? `${card.boss.name} est indisponible aujourd’hui — il revient ${card.backOn ?? 'bientôt'}`
+        ? `${card.boss.name} est indisponible aujourd’hui — ${accorde(card.boss, 'il', 'elle')} revient ${card.backOn ?? 'bientôt'}`
         : `${card.boss.name} rôde — jauge à ${card.percent} %, ${restantLabel(card.points)}`,
   }
 }

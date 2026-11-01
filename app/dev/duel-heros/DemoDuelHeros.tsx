@@ -3,48 +3,113 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowLeft } from 'lucide-react'
-import WorldBackdrop from '@/components/WorldBackdrop'
+import { ArrowLeft, Swords } from 'lucide-react'
 import QuestionCard from '@/components/duel/QuestionCard'
-import ArenaHeros, { type CoupDate } from '@/components/duel/heros/ArenaHeros'
+import ArenaHeros, { type CoupDate, type JoueurDuel } from '@/components/duel/heros/ArenaHeros'
 import CinematiqueVictoire, { PrechargeVictoire } from '@/components/duel/heros/CinematiqueVictoire'
-import VictoiresHeros from '@/components/duel/heros/VictoiresHeros'
-import { Button } from '@/components/ui/button'
-import styles from '@/components/duel/Course.module.css'
+import FinDuelHeros from '@/components/duel/heros/FinDuelHeros'
 import { COURSE_MAX_MS, GOAL_POINTS, courseClock, goldenIndex, pointsForAnswer } from '@/lib/duel/course'
 import { botOpponent, opponentTimeline } from '@/lib/duel/opponent'
 import { rivalStateAt } from '@/lib/duel/rival'
-import { TEMPLIER, type CinematiqueVictoire as Cinematique } from '@/lib/heros/catalogue'
-import { coupDeReponse, pvRestants, victoireJouee } from '@/lib/heros/combat'
+import { BAREME_XP } from '@/lib/economie'
+import type { Gain } from '@/lib/gains'
+import { ARENE_HEROS, TEMPLIER } from '@/lib/heros/catalogue'
+import { coupDeReponse, pvRestants, victoireParDefaut } from '@/lib/heros/combat'
+import { applyGameResult } from '@/lib/trophy-road'
 import { cn } from '@/lib/utils'
 import { QUESTIONS_DEMO } from './questions'
+import s from './DemoDuelHeros.module.css'
 
 // LA DÉMO DU DUEL DES HÉROS (29/10/2026) — un duel jouable de bout en bout
 // avec le Templier, pour juger le rendu sur téléphone avant de brancher la
 // vraie course. Les RÈGLES sont celles de la course classée (lib/duel :
 // points, série, question dorée, rival rejoué sur sa ligne de temps) ; seule
 // la PEAU change. Rien n'est envoyé au serveur, rien n'est écrit.
+//
+// Retours de Lucas le soir même : plus de fond violet, la lice de l'académie
+// derrière le combat (le SABLE sous les héros, pas le château) ; l'avatar et
+// le rang de l'élève sur sa plaque ; une fin de partie gamifiée dont les
+// barres montent en direct ; « comme Brawl Stars » : Rejouer cherche une
+// nouvelle partie (un autre adversaire), Quitter ramène à l'arène. L'XP et les
+// trophées de la démo s'additionnent d'une partie à l'autre, sans rien verser.
 
-type Phase = 'vs' | 'combat' | 'ko' | 'victoire' | 'bilan'
+type Phase = 'recherche' | 'vs' | 'combat' | 'ko' | 'victoire' | 'bilan'
 type Camp = 'moi' | 'rival'
 
+const MS_RECHERCHE = 2200
 const MS_VS = 2600
 const MS_SUIVANTE = 650
 const MS_AVANT_KO = 450
 const MS_KO = 1900
-const BOT = 'malo'
+/** Les robots de la démo, un nouveau à chaque partie (les plus abordables). */
+const BOTS_DEMO = ['malo', 'tom', 'naim', 'rayan', 'gabriel', 'ilyes'] as const
+/** Démo : les trophées du duel avant la première partie. */
+const TROPHEES_DEPART = 86
 
 type Moi = { score: number; combo: number; answered: number; correct: number }
 const MOI_ZERO: Moi = { score: 0, combo: 0, answered: 0, correct: 0 }
 
-export default function DemoDuelHeros() {
+/** L'adversaire robot : ses portraits possibles et le rang de l'élève (un robot est réglé sur lui). */
+export type RivalDemo = Omit<JoueurDuel, 'nom' | 'photo'> & { portraits: readonly string[] }
+/** La matière du duel (démo) : les trophées se comptent par matière. */
+export type MatiereDemo = { nom: string; vignette: string | null }
+
+export default function DemoDuelHeros({
+  moi,
+  rival,
+  matiere,
+  xpDepart,
+}: {
+  moi: JoueurDuel
+  rival: RivalDemo
+  matiere: MatiereDemo
+  /** L'XP cumulée de l'élève (ou de l'élève de démonstration). */
+  xpDepart: number
+}) {
   const [partie, setPartie] = useState(1)
-  return <Partie key={partie} partie={partie} onRejouer={() => setPartie((p) => p + 1)} />
+  const [xp, setXp] = useState(xpDepart)
+  const [trophees, setTrophees] = useState(TROPHEES_DEPART)
+
+  const rejouer = useCallback((gainXp: number, deltaTrophees: number) => {
+    setXp((v) => v + gainXp)
+    setTrophees((v) => Math.max(0, v + deltaTrophees))
+    setPartie((p) => p + 1)
+  }, [])
+
+  return (
+    <Partie
+      key={partie}
+      partie={partie}
+      moi={moi}
+      rivalDemo={rival}
+      matiere={matiere}
+      xpAvant={xp}
+      tropheesAvant={trophees}
+      onRejouer={rejouer}
+    />
+  )
 }
 
-function Partie({ partie, onRejouer }: { partie: number; onRejouer: () => void }) {
+function Partie({
+  partie,
+  moi: moiJoueur,
+  rivalDemo,
+  matiere,
+  xpAvant,
+  tropheesAvant,
+  onRejouer,
+}: {
+  partie: number
+  moi: JoueurDuel
+  rivalDemo: RivalDemo
+  matiere: MatiereDemo
+  xpAvant: number
+  tropheesAvant: number
+  onRejouer: (gainXp: number, deltaTrophees: number) => void
+}) {
   const seed = `demo-heros-${partie}`
-  const adversaire = useMemo(() => botOpponent(BOT, 0), [])
+  const botId = BOTS_DEMO[(partie - 1) % BOTS_DEMO.length]
+  const adversaire = useMemo(() => botOpponent(botId, tropheesAvant), [botId, tropheesAvant])
   const timeline = useMemo(
     () => (adversaire ? opponentTimeline(adversaire, seed) : null) ?? { events: [], finalScore: 0, goalAtMs: null },
     [adversaire, seed],
@@ -52,8 +117,15 @@ function Partie({ partie, onRejouer }: { partie: number; onRejouer: () => void }
   const doree = useMemo(() => goldenIndex(seed), [seed])
   // Une partie ne commence pas toujours par la même question.
   const depart = (partie * 7) % QUESTIONS_DEMO.length
+  const rivalNom = adversaire?.identity.name ?? 'Rival'
+  const rivalJoueur: JoueurDuel = {
+    nom: rivalNom,
+    photo: { src: rivalDemo.portraits[(partie - 1) % rivalDemo.portraits.length], visage: true },
+    rang: rivalDemo.rang,
+    rangLabel: rivalDemo.rangLabel,
+  }
 
-  const [phase, setPhase] = useState<Phase>('vs')
+  const [phase, setPhase] = useState<Phase>('recherche')
   const [maintenant, setMaintenant] = useState(0)
   const [moi, setMoi] = useState<Moi>(MOI_ZERO)
   const [rivalScore, setRivalScore] = useState(0)
@@ -63,11 +135,8 @@ function Partie({ partie, onRejouer }: { partie: number; onRejouer: () => void }
   const [shake, setShake] = useState(0)
   const [coup, setCoup] = useState<CoupDate | null>(null)
   const [ko, setKo] = useState<Camp | null>(null)
-  const [gagnant, setGagnant] = useState<Camp | null>(null)
   const [fin, setFin] = useState<'ko' | 'temps'>('ko')
-  const [possedees, setPossedees] = useState<string[]>([])
-  const [choisie, setChoisie] = useState('serment')
-  const [apercu, setApercu] = useState<Cinematique | null>(null)
+  const [gagnant, setGagnant] = useState<Camp | null>(null)
 
   const departRef = useRef(0)
   const montreeRef = useRef(0)
@@ -90,14 +159,18 @@ function Partie({ partie, onRejouer }: { partie: number; onRejouer: () => void }
     window.setTimeout(() => setPhase(vainqueur === 'moi' ? 'victoire' : 'bilan'), MS_KO)
   }, [])
 
-  // L'écran VS, puis le coup d'envoi.
+  // La recherche d'un adversaire, l'écran VS, puis le coup d'envoi.
   useEffect(() => {
-    const t = window.setTimeout(() => {
+    const trouve = window.setTimeout(() => setPhase('vs'), MS_RECHERCHE)
+    const envoi = window.setTimeout(() => {
       departRef.current = performance.now()
       montreeRef.current = departRef.current
       setPhase('combat')
-    }, MS_VS)
-    return () => window.clearTimeout(t)
+    }, MS_RECHERCHE + MS_VS)
+    return () => {
+      window.clearTimeout(trouve)
+      window.clearTimeout(envoi)
+    }
   }, [])
 
   // L'horloge : le rival frappe quand sa ligne de temps le dit.
@@ -175,40 +248,70 @@ function Partie({ partie, onRejouer }: { partie: number; onRejouer: () => void }
     }, MS_SUIVANTE)
   }
 
-  const victoire = victoireJouee(TEMPLIER, choisie, possedees)
+  const victoire = victoireParDefaut(TEMPLIER)
   const msRestantes = Math.max(0, COURSE_MAX_MS - maintenant)
+  const gagne = gagnant === 'moi'
+  // Une défaite ne retire jamais d'XP : la course rapporte toujours la sienne.
+  // Les trophées suivent la route des trophées (lib/trophy-road).
+  const xpGagnee = gagne ? BAREME_XP.duel.maxPartie : BAREME_XP.duel.base
+  const deltaTrophees = applyGameResult(tropheesAvant, gagne).delta
+  const gains: Gain[] = [
+    { unite: 'xp', montant: xpGagnee },
+    ...(deltaTrophees > 0 ? [{ unite: 'trophee' as const, montant: deltaTrophees }] : []),
+  ]
 
   return (
-    <div className="course-scene robe-purple" data-teinte="violet">
-      <WorldBackdrop className={styles.fond} teinte="violet" />
+    <div className={s.scene}>
       <PrechargeVictoire victoire={victoire} />
 
-      <header className="course-entete">
-        <Link href="/defi" aria-label="Retour à l’arène" className="course-retour">
-          <ArrowLeft className="size-5" strokeWidth={2.4} aria-hidden="true" />
+      <header className={s.entete}>
+        <Link href="/defi" aria-label="Retour à l’arène" className={s.retour}>
+          <ArrowLeft className="size-5" strokeWidth={2.6} aria-hidden="true" />
         </Link>
-        <span className="course-matiere min-w-0 truncate">Duel des héros · démo</span>
-        <span role="timer" className={cn('course-chrono', msRestantes <= 10_000 && phase === 'combat' && 'course-chrono--urgent')}>
+        <span className={cn(s.titre, 'font-heading font-extrabold')}>Duel des héros</span>
+        <span
+          role="timer"
+          className={cn(s.chrono, 'font-heading tabular-nums')}
+          data-urgent={msRestantes <= 10_000 && phase === 'combat' ? 'true' : undefined}
+        >
           {courseClock(msRestantes)}
         </span>
       </header>
 
-      <div className="course-corps">
+      {/* La lice : le décor est calé sur ELLE (le sable sous les héros), pas
+          sur l'écran — sinon les chevaliers se battaient devant le château. */}
+      <div className={s.lice}>
+        <div className={s.fond} aria-hidden="true">
+          <Image unoptimized src={ARENE_HEROS} alt="" width={900} height={1613} priority className={s.decor} />
+        </div>
         <ArenaHeros
-          moi={{ nom: 'Toi', heros: TEMPLIER, score: moi.score }}
-          rival={{ nom: adversaire?.identity.name ?? 'Rival', heros: TEMPLIER, score: rivalScore }}
+          moi={{ joueur: moiJoueur, heros: TEMPLIER, score: moi.score }}
+          rival={{ joueur: rivalJoueur, heros: TEMPLIER, score: rivalScore }}
           coup={coup}
           maintenant={maintenant}
           ko={ko}
           fin={fin}
-          entree={phase === 'vs'}
+          entree={phase === 'recherche' || phase === 'vs'}
+          recherche={phase === 'recherche'}
         />
+      </div>
 
-        {phase === 'vs' ? (
+      <div className={s.bas}>
+        {phase === 'recherche' ? (
+          <div className={cn('course-carte', s.recherche)} role="status">
+            <span className={s.recherchePicto} aria-hidden="true">
+              <Swords className="size-7" strokeWidth={2.4} />
+            </span>
+            <p className="font-heading text-lg font-extrabold">Recherche d’un adversaire…</p>
+            <p className="text-sm font-semibold opacity-75">
+              {matiere.nom} · {TEMPLIER.nom}
+            </p>
+          </div>
+        ) : phase === 'vs' ? (
           <div className="course-carte text-center">
-            <p className="font-heading text-lg font-extrabold">Le Templier entre en lice</p>
+            <p className="font-heading text-lg font-extrabold">{rivalNom} entre en lice !</p>
             <p className="mt-1 text-sm opacity-80">
-              Chaque bonne réponse lance sa <strong>Charge du bouclier</strong>. La question dorée frappe en critique.
+              Chaque bonne réponse lance ta <strong>Charge du bouclier</strong>. La question dorée frappe en critique.
             </p>
           </div>
         ) : phase === 'combat' ? (
@@ -223,103 +326,33 @@ function Partie({ partie, onRejouer }: { partie: number; onRejouer: () => void }
             onAnswer={repondre}
           />
         ) : phase === 'ko' ? (
-          <div className="course-gel" role="status">
-            <span className={cn('course-gel-mot', gagnant !== 'moi' && 'course-gel-mot--perdu')}>
+          <div className={s.gel} role="status" data-perdu={gagne ? undefined : 'true'}>
+            <span className="font-heading font-extrabold">
               {fin === 'temps'
-                ? gagnant === 'moi'
+                ? gagne
                   ? 'Temps ! Tu mènes'
-                  : 'Temps ! Il mène'
-                : gagnant === 'moi'
+                  : `Temps ! ${rivalNom} mène`
+                : gagne
                   ? 'K.O. ! Bien joué'
                   : 'Tu es K.O.'}
             </span>
           </div>
-        ) : phase === 'bilan' ? (
-          <Bilan
-            gagne={gagnant === 'moi'}
-            moi={moi}
-            possedees={possedees}
-            choisie={choisie}
-            onVoir={setApercu}
-            onChoisir={setChoisie}
-            onDebloquer={(id) => {
-              setPossedees((p) => (p.includes(id) ? p : [...p, id]))
-              setChoisie(id)
-            }}
-            onRejouer={onRejouer}
-          />
         ) : null}
       </div>
 
+      {phase === 'bilan' ? (
+        <FinDuelHeros
+          gagne={gagne}
+          matiere={matiere}
+          gains={gains}
+          xpAvant={xpAvant}
+          tropheesAvant={tropheesAvant}
+          onRejouer={() => onRejouer(xpGagnee, deltaTrophees)}
+        />
+      ) : null}
       {phase === 'victoire' ? (
         <CinematiqueVictoire heros={TEMPLIER} victoire={victoire} onFin={() => setPhase('bilan')} />
       ) : null}
-      {apercu ? <CinematiqueVictoire heros={TEMPLIER} victoire={apercu} onFin={() => setApercu(null)} /> : null}
-    </div>
-  )
-}
-
-function Bilan({
-  gagne,
-  moi,
-  possedees,
-  choisie,
-  onVoir,
-  onChoisir,
-  onDebloquer,
-  onRejouer,
-}: {
-  gagne: boolean
-  moi: Moi
-  possedees: readonly string[]
-  choisie: string
-  onVoir: (v: Cinematique) => void
-  onChoisir: (id: string) => void
-  onDebloquer: (id: string) => void
-  onRejouer: () => void
-}) {
-  return (
-    <div className="flex flex-col gap-3 pb-6">
-      <div className="flex items-center gap-3 rounded-3xl bg-card p-3 text-foreground">
-        <div className="relative size-20 shrink-0">
-          <Image
-            unoptimized
-            src={gagne ? TEMPLIER.poses.face : TEMPLIER.poses.ko}
-            alt=""
-            fill
-            sizes="80px"
-            className="object-contain object-bottom"
-          />
-        </div>
-        <div className="min-w-0">
-          <p className="font-heading text-xl leading-tight font-extrabold">
-            {gagne ? 'Victoire !' : 'Le Templier se relève…'}
-          </p>
-          <p className="text-sm text-muted-foreground">
-            {moi.correct} bonne{moi.correct > 1 ? 's' : ''} réponse{moi.correct > 1 ? 's' : ''} sur {moi.answered}
-            {gagne ? '' : ' — la revanche t’attend.'}
-          </p>
-        </div>
-      </div>
-
-      <Button size="xl" onClick={onRejouer}>
-        {gagne ? 'Rejouer' : 'Revanche'}
-      </Button>
-
-      <section className="rounded-3xl bg-card p-3 text-foreground">
-        <h2 className="font-heading text-base font-extrabold">Tes cinématiques de victoire</h2>
-        <p className="mb-3 text-xs text-muted-foreground">
-          Elles fêtent la victoire, elles ne la donnent jamais. Démo : débloquer ne débite aucune gemme.
-        </p>
-        <VictoiresHeros
-          heros={TEMPLIER}
-          possedees={possedees}
-          choisie={choisie}
-          onVoir={onVoir}
-          onChoisir={onChoisir}
-          onDebloquer={onDebloquer}
-        />
-      </section>
     </div>
   )
 }

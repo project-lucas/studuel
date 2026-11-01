@@ -4,11 +4,11 @@ import { decouvertesAuNiveau } from '@/lib/decouverte/catalogue'
 
 // LA FÊTE DE NIVEAU, à l'assemblage (refaite façon « Level Up » le 25/10/2026).
 //
-// Ce qui ne se vérifie qu'ici : que la section « Débloqué » lit bien le
-// catalogue des découvertes pour le niveau franchi (et tous les niveaux
-// sautés d'un coup), que chaque nouveauté mène à sa page avec `?decouvrir=`,
-// que rien ne s'affiche quand un niveau n'ouvre rien, et que le coffre de
-// palier garde son bouton d'or.
+// Ce qui ne se vérifie qu'ici : que les RÉCOMPENSES (29/10/2026) montrent une
+// carte par gain du passage (lib/niveau-recompenses, testé à part), que
+// chaque écran ouvert mène à sa page avec `?decouvrir=`, que rien ne
+// s'affiche quand un niveau ne rapporte rien, et que le coffre de palier garde
+// son bouton d'or.
 
 vi.mock('@/lib/sounds', () => ({
   sfx: { levelUp: vi.fn(), tap: vi.fn(), treasure: vi.fn() },
@@ -18,7 +18,8 @@ vi.mock('@/app/niveau-actions', () => ({
   ouvrirPalierNiveau: vi.fn(async () => ({ ok: true, gemmes: 10 })),
 }))
 
-import { FeteNiveauScene, nouveautesEntre } from '@/components/niveau/FeteNiveau'
+import { FeteNiveauScene } from '@/components/niveau/FeteNiveau'
+import { gainsDuPassage } from '@/lib/niveau-recompenses'
 
 beforeEach(() => {
   vi.useFakeTimers()
@@ -32,7 +33,6 @@ function monter(level: number, depuis: number, ouverts: number[] = []) {
     <FeteNiveauScene
       level={level}
       depuis={depuis}
-      levelTitle="Apprenti"
       paliersOuverts={ouverts}
       xp={{ actuel: 120, plancher: 100, prochain: 300 }}
       onFermer={() => {}}
@@ -40,37 +40,31 @@ function monter(level: number, depuis: number, ouverts: number[] = []) {
   )
 }
 
-describe('la section « Débloqué »', () => {
-  it('liste ce que le niveau ouvre, avec un bouton « Découvrir » vers la page et sa clé', () => {
-    const attendues = decouvertesAuNiveau(2)
-    expect(attendues.length).toBeGreaterThan(0)
+describe('les récompenses', () => {
+  it('montre une carte par gain : l’écran ouvert avec « Découvrir », le titre', () => {
+    const ouverts = decouvertesAuNiveau(4)
+    expect(ouverts.length).toBeGreaterThan(0)
 
-    monter(2, 1)
+    monter(4, 3)
 
-    expect(screen.getByRole('heading', { name: /Débloqué/ })).toBeInTheDocument()
-    for (const d of attendues) {
-      expect(screen.getByText(d.nom)).toBeInTheDocument()
-    }
+    expect(screen.getByRole('heading', { name: /Récompenses/ })).toBeInTheDocument()
+    for (const g of gainsDuPassage(3, 4)) expect(screen.getByText(g.nom)).toBeInTheDocument()
+    expect(screen.getByText('Nouveau titre')).toBeInTheDocument()
     const liens = screen.getAllByRole('link', { name: 'Découvrir' })
-    expect(liens.map((l) => l.getAttribute('href'))).toEqual(
-      attendues.map((d) => `${d.href}?decouvrir=${d.cle}`),
-    )
+    expect(liens.map((l) => l.getAttribute('href'))).toEqual(ouverts.map((d) => `${d.href}?decouvrir=${d.cle}`))
   })
 
-  it('cumule les nouveautés quand plusieurs niveaux sont franchis d’un coup', () => {
-    const attendues = nouveautesEntre(1, 3)
-    expect(attendues.map((d) => d.cle)).toEqual([
-      ...decouvertesAuNiveau(2).map((d) => d.cle),
-      ...decouvertesAuNiveau(3).map((d) => d.cle),
-    ])
+  it('cumule les écrans quand plusieurs niveaux sont franchis d’un coup', () => {
+    const ecrans = gainsDuPassage(1, 3).filter((g) => g.type === 'decouverte')
+    expect(ecrans.length).toBe(decouvertesAuNiveau(2).length + decouvertesAuNiveau(3).length)
     monter(3, 1)
-    expect(screen.getAllByRole('link', { name: 'Découvrir' })).toHaveLength(attendues.length)
+    expect(screen.getAllByRole('link', { name: 'Découvrir' })).toHaveLength(ecrans.length)
   })
 
-  it('ne s’affiche pas quand le niveau n’ouvre rien', () => {
-    expect(decouvertesAuNiveau(9)).toEqual([])
-    monter(9, 8)
-    expect(screen.queryByRole('heading', { name: /Débloqué/ })).not.toBeInTheDocument()
+  it('ne s’affiche pas quand le niveau ne rapporte rien', () => {
+    expect(gainsDuPassage(13, 14)).toEqual([])
+    monter(14, 13, [5, 10])
+    expect(screen.queryByRole('heading', { name: /Récompenses/ })).not.toBeInTheDocument()
   })
 })
 

@@ -4786,6 +4786,26 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     // Révoquée pour anon : l’appel anonyme est refusé (42501), la fonction existe.
     sonde: { type: 'rpc', fn: 'palier_temps_etat', args: { p_game_id: '' } },
   },
+  {
+    id: '604',
+    fichier: '604_quiz_brouillons.sql',
+    feature:
+      'LA MANCHE INACHEVÉE GARDÉE EN BASE (28/10/2026, effet Zeigarnik) : `quiz_brouillons` (une ligne par élève et quiz — la manche en cours décrite par lib/quiz-brouillon, JSONB borné à 8 Ko —, CASCADE sur le compte et le quiz, RLS : l’élève lit, écrit et efface les siennes seulement), écrite par la route POST /api/quiz/brouillon quand l’élève quitte le quiz, lue par la page du quiz (« Reprendre à la question 7 ») et par Réviser (« Tu t’étais arrêté là ») ; elle ne rapporte rien, le serveur juge la manche à la fin.',
+    siAbsente:
+      'La manche inachevée reste gardée dans le navigateur seul : la reprise marche sur le même appareil, pas d’un appareil à l’autre ; la route répond 503 sans bruit et les lectures rendent « aucune manche ».',
+    // Révoquée pour anon : la lecture anonyme est refusée (42501), la table existe.
+    sonde: { type: 'table', table: 'quiz_brouillons' },
+  },
+  {
+    id: '605',
+    fichier: '605_classement_photo.sql',
+    feature:
+      'LE CLASSEMENT DU NIVEAU SANS BALAYER LA COHORTE (30/10/2026) : `my_grade_standings` (223) réécrite, même signature et même réponse — trophées et assiduité comptés en direct par les index de `profiles`, la maîtrise de l’élève calculée en direct sur ses seules sessions et comparée à une PHOTO des autres (`classement_maitrise_photo`, `classement_photo_etat`), reprise par `classement_photo_reprendre` aux heures de révision (semaine 12/17/19/21 h, mercredi et week-end 10/14/17/19/21 h, heure de Paris) via la tâche pg_cron `classement-photo` (`classement_photo_tic`, à 5 de chaque heure).',
+    siAbsente:
+      'La 223 reste en place : chaque appel agrège les sessions de toute la cohorte (1,4 s mesuré le 30/10/2026, et la base ralentie pendant ce temps). Le dossier de matière ne l’attend plus (ligne « Top X % » lue après l’ouverture), mais Moi et la carte de joueur, si.',
+    // Révoquée pour anon : la lecture anonyme est refusée (42501), la table existe.
+    sonde: { type: 'table', table: 'classement_maitrise_photo' },
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

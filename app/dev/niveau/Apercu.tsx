@@ -49,7 +49,6 @@ export default function ApercuNiveau({
           key={tour}
           level={a}
           depuis={de}
-          levelTitle={titre}
           paliersOuverts={ouverts}
           xp={{ actuel, plancher, prochain }}
           onFermer={() => setOuverte(false)}

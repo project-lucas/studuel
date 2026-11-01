@@ -38,6 +38,8 @@ const CACHE_COQUILLE = `${VERSION}-coquille`
 const CACHE_STATIQUE = `${VERSION}-statique`
 const CACHE_IMAGES = `${VERSION}-images`
 const CACHE_PAGES = `${VERSION}-pages`
+// La coquille sonde le serveur toutes les 5 s (28/10/2026) : toucher ce
+// fichier la fait recharger dans le cache à la prochaine installation.
 const PAGE_HORS_LIGNE = '/hors-ligne.html'
 const PRECACHE = [PAGE_HORS_LIGNE, '/images/nav/marcel.webp']
 const MAX_IMAGES = 400

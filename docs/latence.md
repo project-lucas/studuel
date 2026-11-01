@@ -313,9 +313,15 @@ Côté téléphone, Réviser précharge maintenant les **six** premiers dossiers
 grille (trois avant) : un dossier ne coûte plus qu'une poignée de lectures
 filtrées par l'élève.
 
-Reste à faire : `my_grade_standings` est toujours appelée par l'onglet Moi et
-la carte de joueur. Le vrai remède est un classement PRÉCALCULÉ (une table
-rafraîchie par un cron, lue par une ligne), à écrire en migration.
+**La 605 (écrite le même soir, à exécuter)** règle le calcul lui-même, pour Moi
+et la carte de joueur aussi : `my_grade_standings` garde sa réponse mais ne
+balaie plus la cohorte. L'élève est calculé EN DIRECT sur ses seules sessions
+(sa place bouge dès qu'il progresse, demande de Lucas), les autres sont lus
+dans une PHOTO reprise aux heures de révision (semaine 12/17/19/21 h, mercredi
+et week-end 10/14/17/19/21 h, heure de Paris, pg_cron). Trophées et assiduité
+se comptent en direct par index. Sur PGlite : mêmes places que la 223 pour 120
+élèves sur 120 au moment de la photo. La route garde la place 30 s, sans cache
+HTTP.
 
 ## Ce qui reste
 

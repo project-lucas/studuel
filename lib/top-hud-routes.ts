@@ -53,6 +53,23 @@ export function estPageJoueur(pathname: string): boolean {
   return pathname === '/joueur' || pathname === '/dev/joueur'
 }
 
+/**
+ * PENDANT UN DUEL, PAS DE FÊTE DE NIVEAU (29/10/2026, Lucas : « le gain de
+ * niveau peut apparaître n'importe où sauf durant un duel »). Le duel classé
+ * (`/defi/programme/<matière>`, lancé par le bouton DUEL), le duel rapide et
+ * leurs aperçus. La fête n'est pas perdue : le navigateur retient le dernier
+ * niveau fêté, elle s'ouvre sur la page suivante.
+ */
+export function estDuel(pathname: string): boolean {
+  const chemin = (typeof pathname === 'string' ? pathname : '').split('?')[0]
+  return (
+    chemin.startsWith('/defi/programme/') ||
+    chemin === '/defi/duel-rapide' ||
+    chemin === '/dev/duel' ||
+    chemin === '/dev/duel-heros'
+  )
+}
+
 /** Le bandeau du haut doit-il être masqué sur ce chemin ? */
 export function isHudHidden(pathname: string): boolean {
   return (

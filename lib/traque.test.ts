@@ -121,10 +121,12 @@ describe('libellés — jamais un pourcentage nu', () => {
       'Delta est à 5 cartes de sortir de sa tanière.',
     )
     expect(teaseLabel('Delta', 100)).toBe('Delta est prêt à sortir !')
+    // Un gardien au féminin (Mme Guerre) s'accorde.
+    expect(teaseLabel('Mme Guerre', 100, true)).toBe('Mme Guerre est prête à sortir !')
   })
 
   it('annonce l’apparition façon message éclair', () => {
-    expect(apparitionMessage(DELTA)).toBe('Delta a surgi de sa tanière !')
+    expect(apparitionMessage(DELTA)).toBe('Mme Guerre a surgi de sa tanière !')
   })
 
   it('met en forme le compte à rebours', () => {
@@ -258,7 +260,7 @@ describe('cartes de la feuille Boss', () => {
     const c = card({ points: 80 })
     expect(c.status).toBe('traque')
     expect(c.percent).toBe(80)
-    expect(c.hint).toBe('Delta est à 5 cartes de sortir de sa tanière.')
+    expect(c.hint).toBe('Mme Guerre est à 5 cartes de sortir de sa tanière.')
   })
 
   it('bascule sur le compte à rebours dès que le boss est sorti', () => {
@@ -267,7 +269,8 @@ describe('cartes de la feuille Boss', () => {
       debusqueAt: '2026-07-27T17:45:00.000Z',
     })
     expect(c.status).toBe('debusque')
-    expect(c.hint).toBe('Il disparaît dans 45 min')
+    // Mme Guerre (Delta) est au féminin.
+    expect(c.hint).toBe('Elle disparaît dans 45 min')
   })
 
   it('redescend la jauge à la moitié quand la fenêtre est passée', () => {
@@ -662,6 +665,8 @@ describe("l'affiche — il part à la fin du jour de traque", () => {
     expect(departLabel(30_000)).toBe("Il part dans moins d'une minute")
     expect(departLabel(0)).toBe('Il est parti')
     expect(departLabel(-5)).toBe('Il est parti')
+    expect(departLabel(42 * 60_000, true)).toBe('Elle part dans 42 min')
+    expect(departLabel(0, true)).toBe('Elle est partie')
   })
 })
 

@@ -8,9 +8,17 @@ export type Boss = {
   id: string
   name: string
   epithet: string // « le Golem du Calcul » — affiché sous le nom
+  // Un gardien au FÉMININ (Mme Guerre) : les phrases de la traque s'accordent
+  // par `accorde` (« Elle disparaît », « vaincue »). Absent = masculin.
+  feminin?: boolean
   emoji: string
   image?: string // buste détouré (public/images/boss/*.webp) — repli emoji si absent
   scene?: string // scène 16:9 (public/images/boss/*-scene.webp) — bannière des billets
+  // Cadrage de la scène dans la bannière basse de l'affiche (object-position) :
+  // la bannière ne montre qu'une bande de la scène, il faut y voir le PROF
+  // (01/11/2026, Lucas sur Grammatork et Kaiser Fang : « on ne le voit pas »).
+  // Défaut : SCENE_POSITION_DEFAUT.
+  scenePosition?: string
   intro: string // punchline à l'entrée de l'arène
   defeat: string // ce qu'il dit quand l'élève le bat
   victory: string // ce qu'il dit quand il gagne
@@ -18,18 +26,31 @@ export type Boss = {
 
 type BossEntry = Boss & { match: RegExp }
 
+/** Accorde un mot au genre du gardien : `accorde(boss, 'prêt', 'prête')`. */
+export function accorde(boss: Pick<Boss, 'feminin'>, masculin: string, feminin: string): string {
+  return boss.feminin ? feminin : masculin
+}
+
+/** Cadrage par défaut d'une scène de boss dans la bannière de l'affiche. */
+export const SCENE_POSITION_DEFAUT = '70% 45%'
+
 // L'ordre compte : « Sciences économiques et sociales » et « Enseignement
 // scientifique » contiennent tous deux « scient » — les matchs les plus
 // spécifiques passent d'abord, « scient » sert de filet en fin de liste.
 const CATALOG: BossEntry[] = [
   {
-    // DA v2 : androïde π au monocle (nom provisoire, id historique conservé).
+    // LES PROFS DU LORE (01/11/2026) : chaque boss est le prof d'une matière,
+    // peint dans une scène de son quotidien à l'Académie — assets-sources/heros/LORE-STUDUEL.md.
+    // Les ids restent ceux de la base (supabase/165), les noms suivent le lore.
+    // 01/11/2026 soir, Lucas : « renomme-la Mme Guerre » (l'id reste delta).
     id: 'delta',
-    name: 'Delta',
-    epithet: "l'Androïde du Calcul",
+    name: 'Mme Guerre',
+    feminin: true,
+    epithet: "l'Elfe des Glaces",
     emoji: '🧮',
-    image: '/images/boss/delta.webp',
-    scene: '/images/boss/delta-scene.webp',
+    image: '/images/boss/delta-prof-v2.webp',
+    scene: '/images/boss/delta-prof-v2-scene.webp',
+    scenePosition: '70% 0%',
     intro: 'Tes probabilités de victoire ? Proches de zéro.',
     defeat: 'Impossible… mes calculs étaient parfaits !',
     victory: 'CQFD. Reviens quand tu sauras compter.',
@@ -40,8 +61,9 @@ const CATALOG: BossEntry[] = [
     name: 'Grammatork',
     epithet: "l'Ogre des Accords",
     emoji: '👹',
-    image: '/images/boss/grammatork.webp',
-    scene: '/images/boss/grammatork-scene.webp',
+    image: '/images/boss/grammatork-prof-v2.webp',
+    scene: '/images/boss/grammatork-prof-v2-scene.webp',
+    scenePosition: '70% 20%',
     intro: 'Un participe mal accordé et je te dévore.',
     defeat: 'Incroyable… pas une seule faute…',
     victory: 'Dévoré. Comme prévu, sans accord.',
@@ -50,35 +72,38 @@ const CATALOG: BossEntry[] = [
   {
     id: 'imperator',
     name: 'Imperator',
-    epithet: "l'Aigle de Rome",
+    epithet: 'le Dernier Légionnaire',
     emoji: '🦅',
-    image: '/images/boss/imperator.webp',
-    scene: '/images/boss/imperator-scene.webp',
+    image: '/images/boss/imperator-prof.webp',
+    scene: '/images/boss/imperator-prof-scene.webp',
     intro: 'Ave. Ceux qui vont réviser te saluent.',
     defeat: 'Tu quoque… tu m’as vaincu.',
     victory: 'Veni, vidi, vici.',
     match: /latin/,
   },
   {
-    // DA v2 : Chronos devient Atlas, le cartographe fantôme (id conservé).
+    // Atlas, la tortue millénaire capitaine qui dessine ses cartes, la carte du monde
+    // peinte sur la carapace (01/11/2026 soir) ; il était à la bataille (id historique conservé).
     id: 'chronos',
     name: 'Atlas',
-    epithet: 'le Cartographe Fantôme',
+    epithet: 'le Capitaine Millénaire',
     emoji: '🧭',
-    image: '/images/boss/atlas.webp',
-    scene: '/images/boss/atlas-scene.webp',
-    intro: 'J’ai cartographié ta défaite avant ton arrivée.',
-    defeat: 'Ma carte… s’efface…',
+    image: '/images/boss/atlas-prof-v4.webp',
+    scene: '/images/boss/atlas-prof-v4-scene.webp',
+    scenePosition: '70% 30%',
+    intro: 'J’étais à cette bataille. Toi, tu n’y étais pas.',
+    defeat: 'Mille ans… et personne ne m’avait battu.',
     victory: 'Perdu ? Comme en Histoire : les vaincus s’oublient.',
     match: /hist|geo|gsp/,
   },
   {
     id: 'bigben',
     name: 'Big Ben',
-    epithet: 'le Dragon d’Albion',
-    emoji: '🐉',
-    image: '/images/boss/bigben.webp',
-    scene: '/images/boss/bigben-scene.webp',
+    epithet: 'la Garde des Îles de Brume',
+    emoji: '💂',
+    image: '/images/boss/bigben-prof-v2.webp',
+    scene: '/images/boss/bigben-prof-v2-scene.webp',
+    scenePosition: '70% 20%',
     intro: 'You shall not pass… ton contrôle.',
     defeat: 'Well played, mate…',
     victory: 'Game over. Try again, rookie.',
@@ -87,10 +112,10 @@ const CATALOG: BossEntry[] = [
   {
     id: 'eltoro',
     name: 'El Toro',
-    epithet: 'le Taureau de l’Arène',
+    epithet: 'le Taureau des Terres du Soleil',
     emoji: '🐂',
-    image: '/images/boss/eltoro.webp',
-    scene: '/images/boss/eltoro-scene.webp',
+    image: '/images/boss/eltoro-prof.webp',
+    scene: '/images/boss/eltoro-prof-scene.webp',
     intro: '¿Listo? Cette arène est à moi.',
     defeat: 'Olé… tu m’as eu.',
     victory: '¡Adiós! Reviens réviser tes conjugaisons.',
@@ -99,36 +124,37 @@ const CATALOG: BossEntry[] = [
   {
     id: 'plasma',
     name: 'Dr Plasma',
-    epithet: 'le Savant Instable',
+    epithet: "l'Alchimiste Instable",
     emoji: '⚡',
-    image: '/images/boss/plasma.webp',
-    scene: '/images/boss/plasma-scene.webp',
+    image: '/images/boss/plasma-prof-v2.webp',
+    scene: '/images/boss/plasma-prof-v2-scene.webp',
+    scenePosition: '70% 15%',
     intro: 'Tu vas fondre avant moi.',
     defeat: 'Mes atomes… se dispersent !',
     victory: 'Réaction terminée : tu t’es fait oxyder.',
     match: /phys|chim/,
   },
   {
-    // DA v2 : Mitochondrix devient Sylvarok, colosse végétal (id conservé).
+    // Sylvarok, le druide (id historique conservé).
     id: 'mitochondrix',
     name: 'Sylvarok',
-    epithet: 'le Colosse de la Biosphère',
+    epithet: 'le Druide des Serres',
     emoji: '🌿',
-    image: '/images/boss/sylvarok.webp',
-    scene: '/images/boss/sylvarok-scene.webp',
+    image: '/images/boss/sylvarok-prof.webp',
+    scene: '/images/boss/sylvarok-prof-scene.webp',
     intro: 'Chaque écosystème a son prédateur : moi.',
     defeat: 'Je retourne à l’humus…',
     victory: 'La sélection naturelle a parlé.',
     match: /svt|vie|terre|biol/,
   },
   {
-    // DA v2 : Bugzilla devient Glitch, hacker fantôme (id conservé).
+    // Glitch, le gobelin bricoleur (id historique conservé).
     id: 'bugzilla',
     name: 'Glitch',
-    epithet: 'le Fantôme du Réseau',
+    epithet: 'le Bricoleur Gobelin',
     emoji: '👾',
-    image: '/images/boss/glitch.webp',
-    scene: '/images/boss/glitch-scene.webp',
+    image: '/images/boss/glitch-prof.webp',
+    scene: '/images/boss/glitch-prof-scene.webp',
     intro: 'Erreur ligne 1 : toi.',
     defeat: 'Segmentation fault… core dumped…',
     victory: 'Il te reste des bugs à corriger.',
@@ -137,10 +163,10 @@ const CATALOG: BossEntry[] = [
   {
     id: 'mecatron',
     name: 'Mécatron',
-    epithet: 'la Machine Impitoyable',
+    epithet: "l'Automate des Nains",
     emoji: '🤖',
-    image: '/images/boss/mecatron.webp',
-    scene: '/images/boss/mecatron-scene.webp',
+    image: '/images/boss/mecatron-prof.webp',
+    scene: '/images/boss/mecatron-prof-scene.webp',
     intro: 'Analyse terminée : adversaire obsolète.',
     defeat: 'Erreur… système… corrompu…',
     victory: 'Mise à jour requise. Reviens patché.',
@@ -149,37 +175,39 @@ const CATALOG: BossEntry[] = [
   {
     id: 'krach',
     name: 'Krach',
-    epithet: 'le Loup des Marchés',
-    emoji: '🐺',
-    image: '/images/boss/krach.webp',
-    scene: '/images/boss/krach-scene.webp',
+    epithet: 'le Corbeau de la Guilde',
+    emoji: '🐦',
+    image: '/images/boss/krach-prof-v2.webp',
+    scene: '/images/boss/krach-prof-v2-scene.webp',
+    scenePosition: '70% 20%',
     intro: 'Tes actions sont en chute libre.',
     defeat: 'Mon empire… fait faillite !',
     victory: 'Liquidé. L’offre a dépassé la demande.',
     match: /econom|social|\bses\b/,
   },
   {
-    // DA v2 : le Sphinx devient Socratus, marbre pensant (id conservé).
+    // Socratus, le Sage du cloître (id historique conservé).
     id: 'sphinx',
     name: 'Socratus',
-    epithet: 'le Maître du Doute',
+    epithet: 'le Sage du Cloître',
     emoji: '🏛️',
-    image: '/images/boss/socratus.webp',
-    scene: '/images/boss/socratus-scene.webp',
+    image: '/images/boss/socratus-prof.webp',
+    scene: '/images/boss/socratus-prof-scene.webp',
     intro: 'Réponds, ou doute à jamais.',
     defeat: 'Enfin… quelqu’un qui pense.',
     victory: 'Tu sais désormais que tu ne sais rien.',
     match: /philo/,
   },
   {
-    // DA v2 : Nova devient Astro, esprit du cosmos (id conservé).
+    // Nova, l'astronome de la tour.
     id: 'nova',
-    name: 'Astro',
-    epithet: "l'Esprit du Cosmos",
+    name: 'Nova',
+    epithet: "l'Astronome de la Tour",
     emoji: '🌌',
-    image: '/images/boss/astro.webp',
-    scene: '/images/boss/astro-scene.webp',
-    intro: 'Je brille depuis le Big Bang. Et toi ?',
+    image: '/images/boss/nova-prof-v2.webp',
+    scene: '/images/boss/nova-prof-v2-scene.webp',
+    scenePosition: '70% 5%',
+    intro: 'J’ai compté toutes les étoiles. Je compterai tes fautes.',
     defeat: 'Mon éclat… faiblit…',
     victory: 'Retourne graviter autour de tes leçons.',
     match: /scient/,
@@ -187,13 +215,13 @@ const CATALOG: BossEntry[] = [
   {
     id: 'coach-turbo',
     name: 'Coach Turbo',
-    epithet: 'le Sergent du Chrono',
+    epithet: "le Maître d'Armes",
     emoji: '🏋️',
-    // -v2 : le buste a changé le 14/10/2026 (le vrai coach, celui de la scène) ;
-    // une NOUVELLE adresse, parce que l'optimiseur d'images ressert l'ancien
-    // dessin sous l'ancienne (le piège des portraits de profil, cf. profil/v2).
-    image: '/images/boss/coach-turbo-v2.webp',
-    scene: '/images/boss/coach-turbo-scene.webp',
+    // Le maître d'armes de la cour d'honneur. Chaque image refaite est servie
+    // sous une NOUVELLE adresse (-prof) : l'optimiseur ressert l'ancien dessin
+    // sous l'ancienne.
+    image: '/images/boss/coach-turbo-prof.webp',
+    scene: '/images/boss/coach-turbo-prof-scene.webp',
     intro: 'Échauffement terminé ? Le chrono tourne déjà.',
     defeat: 'Battu sur le fil… joli sprint, champion.',
     victory: 'Trop lent ! Vingt pompes et retour en révision.',
@@ -202,10 +230,11 @@ const CATALOG: BossEntry[] = [
   {
     id: 'kaiser-fang',
     name: 'Kaiser Fang',
-    epithet: "le Général d'Acier",
+    epithet: 'le Seigneur des Monts du Nord',
     emoji: '🎖️',
-    image: '/images/boss/kaiser-fang.webp',
-    scene: '/images/boss/kaiser-fang-scene.webp',
+    image: '/images/boss/kaiser-fang-prof-v2.webp',
+    scene: '/images/boss/kaiser-fang-prof-v2-scene.webp',
+    scenePosition: '70% 5%',
     intro: 'Achtung ! Ici, on ne conjugue pas à moitié.',
     defeat: 'Mein Gott… quelle précision…',
     victory: 'Zurück ! Révise tes déclinaisons, soldat.',
@@ -214,10 +243,10 @@ const CATALOG: BossEntry[] = [
   {
     id: 'fiscus',
     name: 'Fiscus',
-    epithet: 'le Percepteur Implacable',
+    epithet: 'le Percepteur de la Guilde',
     emoji: '🪶',
-    image: '/images/boss/fiscus.webp',
-    scene: '/images/boss/fiscus-scene.webp',
+    image: '/images/boss/fiscus-prof.webp',
+    scene: '/images/boss/fiscus-prof-scene.webp',
     intro: 'Tout se paie. Surtout tes erreurs.',
     defeat: 'Mon registre… en faillite…',
     victory: 'Taxé ! Chaque faute a un prix.',
@@ -228,16 +257,16 @@ const CATALOG: BossEntry[] = [
 // Filet de sécurité : matière inconnue ou pool sans matière.
 export const FALLBACK_BOSS: Boss = {
   id: 'nox',
-  name: 'Nox',
-  epithet: "l'Ombre du Bulletin",
-  emoji: '🌑',
-  // -v2 : la miniature de Lucas (14/10/2026), détourée par le service d'images ;
-  // nouvelle adresse, l'optimiseur ressert l'ancien dessin sous l'ancienne.
-  image: '/images/boss/nox-v2.webp',
-  scene: '/images/boss/nox-scene.webp',
-  intro: 'Toutes les matières m’appartiennent.',
-  defeat: 'La lumière… non !',
-  victory: 'Retourne réviser, petit mortel.',
+  name: 'Le Proviseur',
+  epithet: 'le Dragon de l’Académie',
+  emoji: '🐉',
+  // Le PROVISEUR (01/11/2026), le vieux dragon qui dirige l'Académie, remplace
+  // Nox ; l'id 'nox' reste celui de la base (supabase/165).
+  image: '/images/boss/proviseur-prof.webp',
+  scene: '/images/boss/proviseur-prof-scene.webp',
+  intro: 'J’ai lu tous tes bulletins. Tous.',
+  defeat: 'Remarquable… je le noterai au bulletin.',
+  victory: 'Retourne réviser. Je relirai ton dossier.',
 }
 
 // Tous les boss (catalogue + Nox), sans leur regexp de matching — pour la
@@ -259,8 +288,10 @@ export const ALL_BOSSES: Boss[] = [...CATALOG.map(stripMatch), FALLBACK_BOSS]
 // que le buste (`bigben.webp` → `bigben-pied.webp`), fabriqués par
 // `node scripts/boss-pied.mjs` ; lib/assets.test.ts vérifie qu'ils existent.
 const PORTRAITS_PIED: ReadonlySet<string> = new Set([
-  'astro', 'atlas', 'bigben', 'coach-turbo-v2', 'delta', 'eltoro', 'fiscus', 'glitch', 'grammatork',
-  'imperator', 'kaiser-fang', 'krach', 'mecatron', 'nox', 'plasma', 'socratus', 'sylvarok',
+  // 01/11/2026 : les PROFS du lore (assets-sources/heros/boss/lore/, scripts/boss-profs.mjs).
+  'atlas-prof-v4', 'bigben-prof-v2', 'coach-turbo-prof', 'delta-prof-v2', 'eltoro-prof', 'fiscus-prof', 'glitch-prof',
+  'grammatork-prof-v2', 'imperator-prof', 'kaiser-fang-prof-v2', 'krach-prof-v2', 'mecatron-prof', 'nova-prof-v2',
+  'plasma-prof-v2', 'proviseur-prof', 'socratus-prof', 'sylvarok-prof',
 ])
 
 /** Le portrait en pied d'un boss (9:16), ou `null` s'il n'en a pas encore. */

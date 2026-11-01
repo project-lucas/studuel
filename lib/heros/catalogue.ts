@@ -24,6 +24,12 @@ export type PosesHeros = {
   ko: string
 }
 
+/** Vers où regarde chaque pose telle qu'elle est dessinée. L'arène retourne
+ *  celles qui tournent le dos à l'adversaire (29/10/2026, Lucas : « le perso
+ *  du joueur n'est pas tourné vers le bon endroit ») : moi, je regarde à
+ *  droite, l'adversaire à gauche. */
+export type RegardsHeros = Record<keyof PosesHeros, 'gauche' | 'droite'>
+
 /** L'attaque fétiche : jouée à chaque bonne réponse, en critique sur la dorée. */
 export type AttaqueHeros = {
   nom: string
@@ -52,12 +58,19 @@ export type Heros = {
   /** Une phrase : la silhouette et la blague, ce qui fait qu'on le reconnaît. */
   devise: string
   poses: PosesHeros
+  regards: RegardsHeros
   attaque: AttaqueHeros
   /** La première est celle par défaut — elle doit être offerte. */
   victoires: readonly CinematiqueVictoire[]
 }
 
 const DOSSIER = '/images/heros'
+
+/** L'ARÈNE DE L'ACADÉMIE (29/10/2026, Lucas : « un autre endroit lié à
+ *  l'académie mais tourné vers l'arène, pour appuyer le côté défi », « pas de
+ *  fond violet ») : la lice de l'académie, gradins et bannières, peinte dans
+ *  la DA de la cour d'honneur. Elle couvre tout l'écran du duel des héros. */
+export const ARENE_HEROS = `${DOSSIER}/arene/academie-arene.webp`
 
 export const TEMPLIER: Heros = {
   id: 'templier',
@@ -68,8 +81,10 @@ export const TEMPLIER: Heros = {
     dos: `${DOSSIER}/templier/dos.webp`,
     attaqueFace: `${DOSSIER}/templier/attaque-face.webp`,
     attaqueDos: `${DOSSIER}/templier/attaque-dos.webp`,
-    ko: `${DOSSIER}/templier/ko.webp`,
+    // v2 (29/10) : le bouclier sortait du cadre de la planche, coupé net.
+    ko: `${DOSSIER}/templier/ko-v2.webp`,
   },
+  regards: { face: 'droite', dos: 'gauche', attaqueFace: 'droite', attaqueDos: 'droite', ko: 'droite' },
   attaque: { nom: 'Charge du bouclier', cri: 'Pour la connaissance !' },
   victoires: [
     {

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import type { Subject } from '@/lib/types'
@@ -32,8 +32,9 @@ import OnbButton from './OnbButton'
 import Cinematique, { PrechargeCinematique } from './Cinematique'
 import MarcelParle, { POSES } from './MarcelParle'
 import { ProgressHeader } from './OnbBits'
+import ChoixHeros from '@/components/heros/ChoixHeros'
+import type { HerosKey } from '@/lib/heros/eleves'
 import {
-  AvatarStep,
   DailyGoalStep,
   GoalStep,
   GradeStep,
@@ -71,13 +72,10 @@ const STANDARD_FOOTER: WelcomeStep[] = [
   'school',
   'subjects',
   'dailyGoal',
-  'avatar',
 ]
 
 /** Le libellé du bouton de pied quand ce n'est pas « Continuer ». */
-const FOOTER_LABEL: Partial<Record<WelcomeStep, string>> = {
-  avatar: 'C’est moi',
-}
+const FOOTER_LABEL: Partial<Record<WelcomeStep, string>> = {}
 
 function lireLocal(cle: string): string | null {
   try {
@@ -128,6 +126,8 @@ export default function WelcomeFlow({
   // identiques (pas d'écart d'hydratation) ; le brouillon localStorage est
   // chargé juste après, au montage côté client (effet ci-dessous).
   const [answers, setAnswers] = useState<OnboardingAnswers>(() => parseAnswers(null))
+  // Le héros choisi à l'écran « Choisis ton héros » (components/heros/ChoixHeros).
+  const choisirHeros = useCallback((avatar: HerosKey) => setAnswers((a) => ({ ...a, avatar })), [])
   const [draftLoaded, setDraftLoaded] = useState(false)
   const [questions, setQuestions] = useState<PlacementQuestion[]>([])
   const [loadingQuiz, setLoadingQuiz] = useState(false)
@@ -289,7 +289,7 @@ export default function WelcomeFlow({
   }
 
   const progress = stepProgress(step)
-  const showFlowHeader = progress !== null && step !== 'placementQuiz'
+  const showFlowHeader = progress !== null && step !== 'placementQuiz' && step !== 'avatar'
 
   // Retour OAuth (?finish=1) : on attend d'avoir chargé le brouillon avant
   // d'afficher le plan — évite un flash de valeurs par défaut. Identique côté
@@ -319,6 +319,10 @@ export default function WelcomeFlow({
         // plein écran, hors du <main> à gouttières. « Passer » et « C'est
         // parti » mènent tous deux à l'écran suivant : la classe.
         <Cinematique onFin={next} />
+      ) : step === 'avatar' ? (
+        // LE CHOIX DU HÉROS (31/10/2026) : la scène du héros en plein écran,
+        // hors du <main> à gouttières, avec son propre retour et son bouton.
+        <ChoixHeros choisi={answers.avatar} onChoisir={choisirHeros} onConfirmer={next} onRetour={back} />
       ) : step === 'placementQuiz' ? (
         <div className="mx-auto flex min-h-0 w-full max-w-md flex-1 flex-col">
           <PlacementQuizStep
@@ -495,12 +499,8 @@ export default function WelcomeFlow({
           />
         )
       case 'avatar':
-        return (
-          <AvatarStep
-            answers={answers}
-            onPick={(avatar) => setAnswers((a) => ({ ...a, avatar }))}
-          />
-        )
+        // Rendu hors du <main>, en plein écran : voir <ChoixHeros> plus haut.
+        return null
       case 'signup':
         return (
           <SignUpStep

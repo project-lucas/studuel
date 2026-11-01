@@ -83,11 +83,20 @@
     <button type="button" class="btn btn-primaire" onclick="location.reload()">Réessayer</button>
     <button type="button" class="btn btn-secondaire" onclick="if (history.length > 1) history.back(); else location.href = '/'">Retour</button>
   </div>
-  <p class="etat" id="etat">La page se rechargera toute seule dès que le réseau reviendra.</p>
+  <p class="etat" id="etat">La page se rechargera toute seule dès que la connexion reviendra.</p>
 </main>
 <script>
   // Dès que le réseau revient, on retente la page demandée.
   window.addEventListener('online', function () { location.reload() })
+  // Le réseau peut être là et le SERVEUR absent (serveur de dev éteint puis
+  // relancé, wifi à portail) : l'évènement 'online' ne part jamais. On sonde
+  // donc le serveur toutes les 5 s, et on recharge dès qu'il répond (28/10/2026).
+  setInterval(function () {
+    if (!navigator.onLine) return
+    fetch('/manifest.webmanifest', { cache: 'no-store' })
+      .then(function (r) { if (r.ok) location.reload() })
+      .catch(function () {})
+  }, 5000)
 </script>
 </body>
 </html>

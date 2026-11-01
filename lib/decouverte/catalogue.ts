@@ -150,7 +150,7 @@ export const DECOUVERTES: readonly Decouverte[] = [
     niveau: 4,
     href: '/defi',
     onglet: null,
-    dessin: '/images/boss/atlas.webp',
+    dessin: '/images/boss/atlas-prof-v4.webp',
     etapes: [
       { cible: 'arene-boss', titre: 'Les gardiens', texte: 'Révise une matière le jour de son gardien : sa jauge se remplit, et tu as une heure pour l’abattre.' },
     ],

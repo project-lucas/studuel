@@ -1,0 +1,40 @@
+# Codemagic : fabrique l'app iPhone de Studuel (coque natif/ios) et l'envoie sur TestFlight.
+# Lancement à la main depuis Codemagic. À régler une fois dans Codemagic : l'intégration
+# App Store Connect « studuel_asc » (la même clé API que Montgo convient).
+workflows:
+  studuel-ios:
+    name: Studuel iOS → TestFlight
+    max_build_duration: 45
+    instance_type: mac_mini_m2
+    working_directory: natif/ios
+    integrations:
+      app_store_connect: studuel_asc
+    environment:
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: app.studuel
+      vars:
+        XCODE_PROJECT: ios/App/App.xcodeproj
+        XCODE_SCHEME: App
+        APP_STORE_APPLE_ID: 6830370384
+      node: 22
+      xcode: latest
+    scripts:
+      - name: Dépendances et synchronisation iOS
+        script: |
+          npm ci
+          npx cap sync ios
+      - name: Profils de signature
+        script: xcode-project use-profiles
+      - name: Numéro de build
+        script: |
+          LATEST=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APPLE_ID" || echo 0)
+          cd ios/App && agvtool new-version -all $((LATEST + 1))
+      - name: Paquet .ipa
+        script: xcode-project build-ipa --project "$XCODE_PROJECT" --scheme "$XCODE_SCHEME"
+    artifacts:
+      - build/ios/ipa/*.ipa
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true

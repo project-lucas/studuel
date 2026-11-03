@@ -8,6 +8,7 @@ import RaceTrack from '@/components/duel/RaceTrack'
 import QuestionCard from '@/components/duel/QuestionCard'
 import VsScreen from '@/components/duel/VsScreen'
 import DuelResult, { Confettis } from '@/components/duel/DuelResult'
+import CourseHeros, { type CampHeros } from '@/components/duel/heros/CourseHeros'
 import { useCourse, LAST_SECONDS } from '@/components/duel/useCourse'
 import type { AvatarConfig } from '@/lib/avatar'
 import type { ModeQuestion } from '@/lib/defi-modes'
@@ -28,6 +29,9 @@ export type DuelCourseProps = {
   opponent: Opponent
   me: { name: string; avatar: AvatarConfig; trophies: number }
   hrefs: { revanche: string; nouveau: string; arene: string }
+  /** Le COMBAT DES HÉROS (02/11/2026) : la même course, jouée dans la lice
+   *  (CourseHeros) ; le verdict garde son écran. Absent : la piste d'avant. */
+  heros?: { moi: CampHeros; rival: CampHeros }
 }
 
 /**
@@ -51,6 +55,7 @@ export default function DuelCourse({
   opponent,
   me,
   hrefs,
+  heros,
 }: DuelCourseProps) {
   const router = useRouter()
   const view = useCourse({ pool, subjectSlug, seed, opponent })
@@ -67,6 +72,10 @@ export default function DuelCourse({
   const quitter = () => {
     sfx.back()
     router.push(hrefs.arene)
+  }
+
+  if (heros && view.phase !== 'result') {
+    return <CourseHeros view={view} moi={heros.moi} rival={heros.rival} subject={subject} onQuitter={quitter} />
   }
 
   return (

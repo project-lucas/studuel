@@ -634,3 +634,36 @@
     transition: none;
   }
 }
+
+/* ─────────────────────────────── le premier plan (01/11/2026)
+
+   Lucas : « légèrement effacer les autres chapitres lorsque l'élève clique sur
+   l'un d'eux », « et ce qu'il y a autour » d'une fiche ouverte. Rien ne
+   disparaît ni ne se désactive : on estompe, un tap sur un thème estompé
+   l'ouvre et le ramène au premier plan. Opacité seule, en transition. */
+.monde,
+.ligne,
+.fiches > * {
+  transition: opacity 220ms ease;
+}
+.monde {
+  scroll-margin-top: 4.5rem;
+}
+/* Un thème ouvert par l'élève : les autres s'estompent. */
+.liste[data-focus] > li > .monde:not([data-focus-actif]),
+/* Une fiche ouverte : les autres thèmes s'estompent… */
+.liste:has(.fiche[data-depliee]) > li > .monde:not(:has(.fiche[data-depliee])) {
+  opacity: 0.5;
+}
+/* … et dans son thème, les autres fiches et le quiz du thème aussi. */
+ul:has(> .ligne .fiche[data-depliee]) > .ligne:not(:has(.fiche[data-depliee])),
+.fiches:has(.fiche[data-depliee]) > :not(ul) {
+  opacity: 0.5;
+}
+@media (prefers-reduced-motion: reduce) {
+  .monde,
+  .ligne,
+  .fiches > * {
+    transition: none;
+  }
+}

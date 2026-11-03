@@ -1,0 +1,39 @@
+/* LE SEUIL DE LA TANIÈRE — la scène peinte du gardien derrière le combat,
+   floutée et assombrie (le filtre est FIXE : rien ne s'y anime). Elle couvre
+   la lice ; la carte de question repose dessous sur le fond de la scène. */
+
+.fond {
+  position: absolute;
+  /* Jusque derrière la carte de question : la tanière remplit l'écran. */
+  inset: -6rem -0.75rem -20rem;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.decor {
+  object-fit: cover;
+  object-position: 62% 40%;
+  filter: blur(6px) saturate(1.15) brightness(0.72);
+  transform: scale(1.08);
+}
+
+/* Le sol de la tanière, plus sombre sous les pieds, et le haut qui se fond. */
+.fond::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, color-mix(in oklab, var(--foreground) 35%, transparent), transparent 28%),
+    linear-gradient(to top, color-mix(in oklab, var(--foreground) 55%, transparent), transparent 40%);
+}
+
+/* LE COMBAT EN PLEIN ÉCRAN dans une page qui a son propre gabarit (la
+   Traque) : la lice recouvre tout, bandeau et barre d'onglets compris. */
+.plein {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  /* Sous la carte, le sol de la tanière, pas le sable de la lice. */
+  --sable: color-mix(in oklab, var(--foreground) 82%, var(--primary));
+}

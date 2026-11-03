@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
-import { render, screen, within } from '@testing-library/react'
-import BossSheet from './BossSheet'
+import { fireEvent, render, screen, within } from '@testing-library/react'
+import BossSheet, { Taniere } from './BossSheet'
 import { bossById, FALLBACK_BOSS } from '@/lib/bosses'
 import type { TraqueCard } from '@/lib/traque'
 
@@ -137,9 +137,9 @@ describe('BossSheet — les tanières', () => {
     const liste = gestes(article)
     const lignes = within(liste).getAllByRole('listitem')
     expect(lignes.map((l) => l.textContent)).toEqual([
-      'Lire 1 cours — fait+15',
-      'Finir 1 quiz — fait+25',
-      'Réviser 13 cartes+52Aller',
+      'Lire 1 cours — fait+15 %',
+      'Finir 1 quiz — fait+25 %',
+      'Réviser 13 cartes+52 %Aller',
     ])
     // À 50 %, cours et quiz sont tenus pour faits : plus de bouton ; il reste les cartes.
     expect(within(liste).queryByRole('link', { name: 'Lire 1 cours : aller' })).toBeNull()
@@ -166,7 +166,7 @@ describe('BossSheet — les tanières', () => {
     expect(article.hasAttribute('data-libre')).toBe(true)
     expect(article.hasAttribute('data-ombre')).toBe(false)
     expect(within(article).getByText('Débusqué')).toBeTruthy()
-    expect(within(article).getByText('à abattre maintenant')).toBeTruthy()
+    expect(within(article).getByText('à battre maintenant')).toBeTruthy()
     expect(within(article).getByText('Rang II')).toBeTruthy()
     expect(within(article).getByText(/Il disparaît dans 42 min/)).toBeTruthy()
     expect(within(article).queryByRole('list', { name: /Trois gestes/ })).toBeNull()
@@ -211,10 +211,10 @@ describe('BossSheet — les tanières', () => {
     expect(article.hasAttribute('data-ombre')).toBe(false)
     expect(article.hasAttribute('data-repos')).toBe(false)
     expect(within(article).queryByText(/Indisponible/)).toBeNull()
-    // Le gain est doré ce jour-là, et dit ses deux unités.
+    // Le gain est doré ce jour-là ; les icônes disent les unités.
     const gains = within(article).getByLabelText('30 XP et 5 gemmes en cas de victoire')
     expect(gains.hasAttribute('data-or')).toBe(true)
-    expect(gains.textContent).toBe('Récompense30XP5gemmes')
+    expect(gains.textContent).toBe('305')
   })
 
   it('un gardien recouché sous les yeux de l’élève : le dit, et renvoie réviser', () => {
@@ -265,5 +265,26 @@ describe('BossSheet — les tanières', () => {
     render(<BossSheet cards={[]} />)
     expect(screen.getByText('Aucun gardien en vue')).toBeTruthy()
     expect(screen.getByRole('link', { name: 'Aller réviser' }).getAttribute('href')).toBe('/reviser')
+  })
+})
+
+describe('L’affiche dans la porte Boss du dossier de matière (01/11/2026)', () => {
+  it('les gestes du dossier et « Réviser » ouvrent la porte Programme, sur place', () => {
+    const versProgramme = vi.fn()
+    render(<Taniere card={plasma()} now={Date.now()} versProgramme={versProgramme} />)
+    const article = screen.getByRole('article')
+    // « Finir 1 quiz » est un bouton (le cours, à 20 points, est coché) ; les cartes gardent leur lien.
+    fireEvent.click(within(article).getByRole('button', { name: 'Finir 1 quiz : aller' }))
+    fireEvent.click(within(article).getByRole('button', { name: 'Réviser Physique-Chimie →' }))
+    expect(versProgramme).toHaveBeenCalledTimes(2)
+    expect(within(article).getByRole('link', { name: /cartes : aller/ }).getAttribute('href')).toBe(
+      '/reviser/revoir?matiere=physique-chimie',
+    )
+  })
+
+  it('dit le rang qu’il prend vaincu, sans titre au-dessus du gain', () => {
+    render(<Taniere card={plasma()} now={Date.now()} versProgramme={() => {}} />)
+    expect(screen.queryByText(/Pourquoi l’affronter/)).toBeNull()
+    expect(screen.getByText(/passe au Rang II : plus coriace, mieux payé/)).toBeTruthy()
   })
 })

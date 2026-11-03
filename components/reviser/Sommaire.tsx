@@ -123,6 +123,10 @@ export default function Sommaire({
   )
   // Ce que l'élève a lui-même plié ou déplié ; le reste suit la règle d'arrivée.
   const [plis, setPlis] = useState<Record<string, boolean>>({})
+  // LE THÈME AU PREMIER PLAN (01/11/2026, Lucas : « légèrement effacer les
+  // autres chapitres lorsque l'élève clique sur l'un d'eux ») : le dernier
+  // thème que l'élève a lui-même ouvert. À l'arrivée, rien n'est estompé.
+  const [focus, setFocus] = useState<string | null>(null)
   const [recherche, setRecherche] = useState(false)
   const [query, setQuery] = useState('')
 
@@ -163,10 +167,15 @@ export default function Sommaire({
   const cherchable = chapters.length >= SEUIL_RECHERCHE
   const estOuvert = (cle: string) => plis[cle] ?? cle === parDefaut
 
-  const basculerMonde = (monde: Monde) => {
+  const basculerMonde = (monde: Monde, tete?: HTMLElement) => {
     sfx.tap()
     const ouvre = !estOuvert(monde.cle)
     setPlis((p) => ({ ...p, [monde.cle]: ouvre }))
+    if (ouvre) setFocus(monde.cle)
+    else if (focus === monde.cle) setFocus(null)
+    // Le thème ouvert bas dans l'écran remonte en haut : ses fiches se
+    // déplient sous les yeux, pas sous le pli.
+    if (ouvre && tete) amenerEnHaut(tete)
     // Replier un thème replie aussi la fiche qu'il abritait.
     if (!ouvre && monde.fiches.some((f) => f.id === fiche)) fermer()
     onTheme?.(ouvre ? monde.cle : null)
@@ -287,7 +296,11 @@ export default function Sommaire({
           ) : null}
         </>
       ) : enMondes ? (
-        <ul className={s.liste} aria-label={`Le programme de ${subjectName}`}>
+        <ul
+          className={s.liste}
+          aria-label={`Le programme de ${subjectName}`}
+          data-focus={focus && estOuvert(focus) ? '' : undefined}
+        >
           {ordonnes.map((monde, i) => {
             const ouvert = estOuvert(monde.cle)
             const favori = estFavori(monde, choix)
@@ -298,12 +311,13 @@ export default function Sommaire({
                   className={s.monde}
                   aria-label={monde.titre}
                   data-ouvert={ouvert ? '' : undefined}
+                  data-focus-actif={focus === monde.cle ? '' : undefined}
                   data-presse={monde.controle && monde.etat !== 'termine' ? '' : undefined}
                 >
                   <div className={s.tete}>
                     <button
                       type="button"
-                      onClick={() => basculerMonde(monde)}
+                      onClick={(e) => basculerMonde(monde, e.currentTarget)}
                       aria-expanded={ouvert}
                       aria-controls={panneau}
                       className={s.teteCorps}
@@ -365,6 +379,22 @@ export default function Sommaire({
  * suit la courbe d'encouragement (`lib/reviser/programme`) : violette en
  * marche, or une fois le thème terminé.
  */
+/** Part de la hauteur d'écran sous laquelle un thème qu'on ouvre remonte. */
+const SEUIL_REMONTEE = 0.5
+
+/**
+ * Remonte la carte du thème en haut de l'écran quand on l'ouvre dans la moitié
+ * basse (la marge sous la barre collante est `scroll-margin-top` de .monde).
+ * Après le rendu (rAF) : la carte s'est dépliée, on la place, pas son ancienne
+ * hauteur. Sans animation pour qui l'a demandé au système.
+ */
+function amenerEnHaut(tete: HTMLElement) {
+  const carte = tete.closest('section')
+  if (!carte || carte.getBoundingClientRect().top < window.innerHeight * SEUIL_REMONTEE) return
+  const doux = !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  requestAnimationFrame(() => carte.scrollIntoView({ block: 'start', behavior: doux ? 'smooth' : 'auto' }))
+}
+
 function AnneauMonde({ jauge, etat, nom }: { jauge: number; etat: EtatMonde; nom: NomIcone }) {
   const TAILLE = 44
   const EPAISSEUR = 5

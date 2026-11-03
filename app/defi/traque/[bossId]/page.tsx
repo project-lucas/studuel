@@ -1,5 +1,8 @@
 import { notFound, redirect } from 'next/navigation'
 import TraqueCombat from '@/components/defi/TraqueCombat'
+import { normalizeAvatarConfig } from '@/lib/avatar'
+import { avatarAffiche } from '@/lib/avatar-affiche'
+import { herosDuPortrait } from '@/lib/combat/combattants'
 import { bossById, bossForSubject } from '@/lib/bosses'
 import { getSubjectsCached } from '@/lib/catalog'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
@@ -201,9 +204,9 @@ export default async function TraquePage({
 
   const { data: profile } = await supabase
     .from('profiles')
-    .select('grade_level')
+    .select('grade_level, full_name, avatar')
     .eq('id', user.id)
-    .maybeSingle<{ grade_level: string | null }>()
+    .maybeSingle<{ grade_level: string | null; full_name: string | null; avatar: unknown }>()
   const grade = profile?.grade_level ?? null
   if (!grade) redirect('/onboarding')
 
@@ -239,6 +242,19 @@ export default async function TraquePage({
       ? `/reviser/${freshest.subjects.slug}/${freshest.id}`
       : null
 
+  // LE COMBAT DES HÉROS (02/11/2026) : l'élève entre dans la lice avec le
+  // héros de son portrait (le repli s'il n'en a pas encore choisi).
+  const avatar = normalizeAvatarConfig(profile?.avatar)
+  const heros = {
+    cle: herosDuPortrait(avatar.portrait),
+    moi: {
+      nom: (profile?.full_name ?? '').trim().split(' ')[0] || 'Toi',
+      photo: avatarAffiche(avatar, 160),
+      rang: null,
+      rangLabel: null,
+    },
+  }
+
   return (
     // La salle de combat : le décor de l'arène passe SOUS un voile de nuit
     // (.traque-salle). Sans lui, le combat s'écrivait à l'encre du monde crème
@@ -252,6 +268,7 @@ export default async function TraquePage({
         pool={pool}
         endsAt={windowEndMs(gauge)}
         attempts={gauge.attempts}
+        heros={heros}
         chapter={
           freshest && chapterHref
             ? { title: freshest.title, href: chapterHref }

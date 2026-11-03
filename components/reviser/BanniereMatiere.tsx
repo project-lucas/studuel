@@ -6,7 +6,6 @@ import { ArrowRight, Crown } from 'lucide-react'
 import BackButton from '@/components/BackButton'
 import SubjectIcon from '@/components/SubjectIcon'
 import Attente from '@/components/reviser/Attente'
-import MarcelTete from '@/components/reviser/MarcelTete'
 import XpIcon from '@/components/ui/XpIcon'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
@@ -37,7 +36,7 @@ function tailleDuNom(nom: string): 'court' | 'moyen' | 'long' {
  *
  *   [retour] Nom de la matière                      (l'objet)
  *            Programme de 1re · Top 8 % des 1re
- *   [===== barre d'or : 3/19 fiches =====] [gardien] [Marcel]
+ *   [============ barre d'or : 3/19 fiches ============]
  *   [ REPRENDRE · FICHE 4 · ~8 MIN                       (→) ]
  *   [ Titre de la fiche            ⚡ +110 XP à gagner       ]
  *
@@ -56,7 +55,6 @@ export default function BanniereMatiere({
   progress,
   jauge,
   standing = null,
-  gardien = null,
   reprise,
 }: {
   subject: { slug: string; name: string; color: string }
@@ -69,8 +67,6 @@ export default function BanniereMatiere({
   jauge: number
   /** La place de l'élève dans la matière (« Top 8 % des 3e »), s'il y en a une. */
   standing?: ReactNode
-  /** L'écusson du gardien, déjà rendu (`GardienBadge`). */
-  gardien?: ReactNode
   /** La fiche à reprendre ; `null` quand tout est terminé (ou qu'il n'y a rien). */
   reprise: Reprise | null
 }) {
@@ -131,8 +127,6 @@ export default function BanniereMatiere({
           <span className={s.plein} style={{ width: `${jauge}%` }} />
           <span className={s.compte}>{compte}</span>
         </div>
-        {gardien ? <span className={s.tete}>{gardien}</span> : null}
-        <MarcelTete matiere={subject.slug} />
       </div>
 
       {reprise ? (

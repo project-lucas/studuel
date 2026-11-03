@@ -8,6 +8,7 @@ import programmeImage from '@/public/images/supports/programme.webp'
 import cahierImage from '@/public/images/supports/cahier.webp'
 import jeuxImage from '@/public/images/defi/icones/modes-v4.webp'
 import annalesImage from '@/public/images/defi/icones/historique-v3.webp'
+import bossImage from '@/public/images/defi/icones/boss-v3.webp'
 import s from './BanniereMatiere.module.css'
 
 /**
@@ -19,7 +20,8 @@ import s from './BanniereMatiere.module.css'
  * scripts/supports-icones.mjs, clés `programme` et `cahier`. Le bloc-notes du
  * support « Exercice » reste à la tuile de chaque fiche, pas à la porte. Les
  * ANNALES empruntent l'horloge de l'historique de l'arène (les sujets déjà
- * tombés) en attendant leur dessin.
+ * tombés) en attendant leur dessin. Le BOSS (01/11/2026) porte le casque à
+ * cornes du bouton « Gardiens » de l'arène, le même qu'au talon de son billet.
  *
  * Importés, pas désignés par leur chemin : l'import donne une adresse à
  * empreinte de contenu (cf. SupportChips).
@@ -27,8 +29,9 @@ import s from './BanniereMatiere.module.css'
 const IMAGES: Record<ClePorte, StaticImageData> = {
   programme: programmeImage,
   exercices: cahierImage,
-  jeu: jeuxImage,
   annales: annalesImage,
+  jeu: jeuxImage,
+  boss: bossImage,
 }
 
 export type PorteVue = Porte & {
@@ -39,8 +42,9 @@ export type PorteVue = Porte & {
 }
 
 /**
- * LE RAIL DE PORTES du dossier de matière (05/10/2026) : Programme · Cahier
- * d'exercices · Jeux · Annales, à la place de six pilules à plat.
+ * LE RAIL DE PORTES du dossier de matière (05/10/2026) : Programme ·
+ * Exercices · Annales · Jeux · Boss (ordre du 01/11/2026), à la place de six
+ * pilules à plat.
  *
  * Ce sont des onglets (la page reste la même, le contenu change dessous), mais
  * dessinés comme les objets qu'ils ouvrent : c'est ce qui donne au dossier sa

@@ -215,13 +215,15 @@ const CATALOG: BossEntry[] = [
   {
     id: 'coach-turbo',
     name: 'Coach Turbo',
-    epithet: "le Maître d'Armes",
+    epithet: "le Coach de l'Arène",
     emoji: '🏋️',
-    // Le maître d'armes de la cour d'honneur. Chaque image refaite est servie
+    // Le coach de l'arène, sifflet et chrono (scène de référence du 30/10, remise
+    // le 01/11/2026 à la demande de Lucas). Chaque image refaite est servie
     // sous une NOUVELLE adresse (-prof) : l'optimiseur ressert l'ancien dessin
     // sous l'ancienne.
-    image: '/images/boss/coach-turbo-prof.webp',
-    scene: '/images/boss/coach-turbo-prof-scene.webp',
+    image: '/images/boss/coach-turbo-prof-v2.webp',
+    scene: '/images/boss/coach-turbo-prof-v2-scene.webp',
+    scenePosition: '70% 12%',
     intro: 'Échauffement terminé ? Le chrono tourne déjà.',
     defeat: 'Battu sur le fil… joli sprint, champion.',
     victory: 'Trop lent ! Vingt pompes et retour en révision.',
@@ -289,7 +291,7 @@ export const ALL_BOSSES: Boss[] = [...CATALOG.map(stripMatch), FALLBACK_BOSS]
 // `node scripts/boss-pied.mjs` ; lib/assets.test.ts vérifie qu'ils existent.
 const PORTRAITS_PIED: ReadonlySet<string> = new Set([
   // 01/11/2026 : les PROFS du lore (assets-sources/heros/boss/lore/, scripts/boss-profs.mjs).
-  'atlas-prof-v4', 'bigben-prof-v2', 'coach-turbo-prof', 'delta-prof-v2', 'eltoro-prof', 'fiscus-prof', 'glitch-prof',
+  'atlas-prof-v4', 'bigben-prof-v2', 'coach-turbo-prof-v2', 'delta-prof-v2', 'eltoro-prof', 'fiscus-prof', 'glitch-prof',
   'grammatork-prof-v2', 'imperator-prof', 'kaiser-fang-prof-v2', 'krach-prof-v2', 'mecatron-prof', 'nova-prof-v2',
   'plasma-prof-v2', 'proviseur-prof', 'socratus-prof', 'sylvarok-prof',
 ])

@@ -101,7 +101,8 @@ export default function ModeTicket({
             alt=""
             fill
             sizes="(max-width: 448px) 70vw, 300px"
-            className="object-cover object-[70%_45%]"
+            className="object-cover"
+            style={{ objectPosition: ticket.scenePosition ?? '70% 45%' }}
           />
         </span>
       ) : ticket.vignette ? (

@@ -4,7 +4,6 @@ import { useMemo, useState, type ReactNode } from 'react'
 import { useRouter } from 'next/navigation'
 import StandingLine from '@/components/StandingLine'
 import PlaceDansLaMatiere from '@/components/reviser/PlaceDansLaMatiere'
-import GardienBadge from '@/components/reviser/GardienBadge'
 import BanniereMatiere from '@/components/reviser/BanniereMatiere'
 import PortesMatiere, { type PorteVue } from '@/components/reviser/PortesMatiere'
 import SegmentRayons from '@/components/reviser/SegmentRayons'
@@ -13,6 +12,10 @@ import Sommaire from '@/components/reviser/Sommaire'
 import CahierMatiere from '@/components/reviser/CahierMatiere'
 import { prechargerCahier } from '@/components/reviser/useCahierMatiere'
 import TrainingPanel from '@/components/reviser/TrainingPanel'
+import GardienMatiere from '@/components/reviser/GardienMatiere'
+import PrechargeAuRepos from '@/components/PrechargeAuRepos'
+import { TAILLES_SCENE_GARDIEN } from '@/components/defi/BossSheet'
+import MarcelFab from '@/components/reviser/MarcelFab'
 import ExamBanner from '@/components/reviser/ExamBanner'
 import AnnalesPanel from '@/components/reviser/AnnalesPanel'
 import {
@@ -29,7 +32,7 @@ import {
 } from '@/lib/subject-template'
 import { examYearFor } from '@/lib/annales'
 import { hrefEncyclopedie } from '@/lib/encyclopedie/matieres'
-import { afficheEcusson, gardienVue, matiereSansGardien } from '@/lib/reviser/gardien'
+import { gardienVue, matiereSansGardien } from '@/lib/reviser/gardien'
 import { jaugeDesFiches, repriseDuProgramme } from '@/lib/reviser/programme'
 
 /** Écrit un paramètre de l'adresse sans empiler d'entrée d'historique. */
@@ -135,14 +138,12 @@ export default function SubjectTemplate({
   const nomDuRayon = rayon.discipline ? disciplineLabel(rayon.discipline) : null
   const exam = examYearFor(data.gradeLevel)
 
-  // LE GARDIEN. Un seul modèle de vue, lu par l'écusson de la bannière, par
-  // celui de la barre collante, par la bulle de la porte et par le billet :
-  // quatre lectures indépendantes de la même jauge finiraient par se contredire.
+  // LE GARDIEN : sa bulle « Boss disponible » sur la porte Boss. L'écusson
+  // rond de la bannière et de la barre collante est retiré le 01/11/2026
+  // (Lucas : « le cercle on supprime ») — la jauge et le temps vivent dans
+  // la porte Boss, sur l'affiche.
   const gardien = gardienVue(data.gardien)
   const sansGardien = matiereSansGardien(data.subject.slug)
-  const aEcusson = afficheEcusson(gardien) && !sansGardien
-  // Toucher l'écusson mène là où le gardien se combat.
-  const versLeGardien = () => changerOnglet('jeu')
 
   // Plus de compte sous le nom des portes (13/10/2026, Lucas : « retire les
   // sous-textes ») : « 30 fiches · 111 exercices · 2 jeux » redisait ce que la
@@ -151,11 +152,17 @@ export default function SubjectTemplate({
     ...p,
     // L'exercice est de l'offre Studuel+ : la couronne nomme l'offre.
     couronne: p.key === 'exercices' && !data.premium,
-    bulle: p.key === 'jeu' && !sansGardien ? gardien.bulle : null,
+    bulle: p.key === 'boss' && !sansGardien ? gardien.bulle : null,
   }))
+
+  // Pendant que la bannière s'anime, la porte Boss se prépare : la scène de
+  // l'affiche du gardien, dans la variante qu'elle demandera.
+  const sceneGardien = data.gardien && !sansGardien ? data.gardien.boss.scene : null
+  const imagesDuGardien = sceneGardien ? [{ src: sceneGardien, sizes: TAILLES_SCENE_GARDIEN }] : []
 
   return (
     <div>
+      <PrechargeAuRepos pages={[]} images={imagesDuGardien} />
       <BanniereMatiere
         subject={data.subject}
         grade={data.grade}
@@ -164,11 +171,6 @@ export default function SubjectTemplate({
         progress={progress}
         jauge={jauge}
         reprise={reprise}
-        gardien={
-          aEcusson ? (
-            <GardienBadge vue={gardien} size="sm" tone="light" onSelect={versLeGardien} />
-          ) : null
-        }
         standing={
           data.standing ? (
             <StandingLine standing={data.standing} grade={data.gradeLevel} className="mt-0.5" />
@@ -197,15 +199,15 @@ export default function SubjectTemplate({
 
       <SubjectStickyBar
         name={data.subject.name}
-        slug={slug}
         progress={progress}
         jauge={jauge}
-        gardien={
-          aEcusson ? (
-            <GardienBadge vue={gardien} size="sm" tone="light" onSelect={versLeGardien} />
-          ) : null
-        }
       />
+
+      {/* MARCEL EN BOUTON FLOTTANT (02/11/2026, Lucas : « en bas de la page, en
+          icône flottante, et les quêtes plus haut ») : sa tête quitte la
+          bannière, où elle faisait petit, et rejoint le coin de l'accueil de
+          Réviser. Elle pose `html.marcel-fab` : les quêtes montent au-dessus. */}
+      <MarcelFab matiere={slug} />
 
       {/* Le contenu de la porte ouverte, posé sur le mur quadrillé. Le `key`
           rejoue la petite animation d'entrée à chaque changement — la seule
@@ -261,19 +263,19 @@ export default function SubjectTemplate({
               annales={data.annalesCorrigees}
             />
           </div>
+        ) : porte === 'boss' && !sansGardien ? (
+          // La porte « Boss » (01/11/2026) : le gardien de la matière, seul.
+          <GardienMatiere
+            subject={data.subject}
+            card={data.gardien}
+            versProgramme={() => changerOnglet(tabId(rayon))}
+          />
         ) : (
-          // La porte « Jeux » porte DEUX familles, dans cet ordre : le gardien
-          // de la matière (le rendez-vous), puis les jeux de l'arène (on joue
-          // tout de suite).
+          // La porte « Jeux » : les jeux de l'arène (on joue tout de suite).
           <div className="mt-4 flex flex-col gap-3">
             {/* La dictée est un BILLET dans TrainingPanel depuis le 12/10/2026
                 (elle était une carte à part, ici). */}
-            <TrainingPanel
-              subject={data.subject}
-              bossPool={data.bossPool}
-              gardien={gardien}
-              premium={data.premium ?? false}
-            />
+            <TrainingPanel subject={data.subject} premium={data.premium ?? false} />
           </div>
         )}
       </div>

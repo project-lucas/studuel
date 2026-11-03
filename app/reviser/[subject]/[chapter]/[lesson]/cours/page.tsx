@@ -2,10 +2,12 @@ import LessonCompleteButton from '@/components/LessonCompleteButton'
 import LessonPrintButton from '@/components/LessonPrintButton'
 import LessonRichContent from '@/components/LessonRichContent'
 import ModeMemoire from '@/components/ModeMemoire'
+import PrechargeAuRepos from '@/components/PrechargeAuRepos'
 import SuiviLecture from '@/components/cours/SuiviLecture'
 import EnTetePage from '@/components/reviser/EnTetePage'
 import SupportChips from '@/components/reviser/SupportChips'
 import { compterMots } from '@/lib/lecture'
+import { pagesAuRepos } from '@/lib/precharge-repos'
 import { typographie } from '@/lib/typographie'
 import { loadLessonContext } from '../data'
 import { loadChapterSupports } from '../../supports'
@@ -51,6 +53,9 @@ export default async function CoursPage({
     // sur le mur crème de l'app, sans bandeau coloré ni feuille opaque (audit
     // du 23/09/2026) : l'en-tête est celui de toutes les pages de Réviser.
     <div className="feuille-impression mx-auto w-full max-w-2xl">
+      {/* Pendant la lecture (des minutes, sans réseau), la suite se prépare :
+          le quiz, la leçon suivante, le cahier (lib/precharge-repos). */}
+      <PrechargeAuRepos pages={pagesAuRepos(supports.filter((c) => c.kind !== 'cours' || !c.href.endsWith(`/${lesson.id}/cours`)))} />
       {/* `entete-cours` : sur papier, le bloc print remplace l'en-tête par un
           filet sous le titre. Le retour et l'impression se font face dans la
           rangée `sans-papier` d'EnTetePage : l'un ramène en arrière, l'autre

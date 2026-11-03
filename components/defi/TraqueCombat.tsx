@@ -7,6 +7,8 @@ import { Sparkles } from 'lucide-react'
 import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
 import { useRecompenses } from '@/components/recompenses/RecompensesProvider'
 import BossMode from '@/components/BossMode'
+import type { JoueurCombat } from '@/components/combat/ArenaCombat'
+import type { HerosKey } from '@/lib/heros/eleves'
 import { sfx } from '@/lib/sounds'
 import { accorde, type Boss, type BossRank } from '@/lib/bosses'
 import type { ModeQuestion } from '@/lib/defi-modes'
@@ -42,6 +44,7 @@ export default function TraqueCombat({
   pool,
   chapter,
   endsAt,
+  heros,
 }: {
   boss: Boss
   rank: BossRank
@@ -57,6 +60,8 @@ export default function TraqueCombat({
    * combat n'a pas à connaître la carte des routes de Réviser.
    */
   chapter: { title: string; href: string } | null
+  /** L'élève et son héros : le combat se joue dans la lice (CombatGardien). */
+  heros?: { moi: JoueurCombat; cle: HerosKey }
 }) {
   const router = useRouter()
   const { ouvrirRuban } = useRecompenses()
@@ -138,6 +143,7 @@ export default function TraqueCombat({
         rank={rank}
         pool={pool}
         onOutcome={onOutcome}
+        heros={heros}
         rewardSlot={rewardSlot}
         // Perdre ne consomme plus la fenêtre : tant qu'elle court, la revanche
         // est là, tout de suite, sans repasser par l'arène.

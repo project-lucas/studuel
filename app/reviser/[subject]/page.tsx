@@ -12,7 +12,6 @@ import {
   getProgrammeCached,
   getProgrammeFresh,
   getQuizQuestionCountsCached,
-  getBossVivierCached,
   type CatalogChapter,
 } from '@/lib/catalog'
 import { contentLevelOf } from '@/lib/subject-visibility'
@@ -47,8 +46,6 @@ import {
 import { getReviewItems } from '@/lib/srs'
 import { xpRestantFiche } from '@/lib/reviser/programme'
 import { suiteDeFiche } from '@/lib/reviser/suite'
-import { permuteQuizOptions } from '@/lib/quiz-shuffle'
-import type { ModeQuestion } from '@/lib/defi-modes'
 import {
   normalizeExamList,
   activeExams,
@@ -66,19 +63,6 @@ import {
 
 export const dynamic = 'force-dynamic'
 
-// Mélange (Fisher-Yates) — pour varier le pool du boss d'une visite à l'autre.
-function shuffle<T>(arr: T[]): T[] {
-  const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[a[i], a[j]] = [a[j], a[i]]
-  }
-  return a
-}
-
-// Le boss de la matière pioche large mais borné : assez de variété pour un
-// combat (10-18 PV), sans embarquer tout le programme dans la page.
-const BOSS_POOL_SIZE = 60
 // Le rattachement des questions de la file « À revoir » à leurs quiz se lit
 // par lots : au-delà de ~150 identifiants, l'adresse de la requête déborde.
 const IN_PAR_LOT = 150
@@ -161,7 +145,6 @@ export default async function SubjectPage({
   //   Marcel (`catalog_quiz_question_counts`, 354). La page relisait tous les
   //   identifiants de questions de la matière pour les compter : 3 888 lignes
   //   en quatre pages à la file pour le français de 1re, 1,1 s à elle seule ;
-  // - le vivier du boss, cache serveur par matière et niveau (`getBossVivierCached`) ;
   // - chapters.theme/discipline (234/247), select ISOLÉ et toléré : tant que
   //   les migrations ne sont pas exécutées, PostgREST répond « column does not
   //   exist », `data` arrive à null et la liste reste à plat. Ces colonnes ne
@@ -281,7 +264,6 @@ export default async function SubjectPage({
     { items: reviewItems, refs: questionRefs },
     { data: completions },
     comptesDeQuestions,
-    vivierDuBoss,
     { data: themeRows },
     { data: paperRows },
     gardien,
@@ -298,7 +280,6 @@ export default async function SubjectPage({
       .eq('user_id', user.id)
       .returns<{ lesson_id: string; created_at: string }[]>(),
     getQuizQuestionCountsCached(),
-    getBossVivierCached(subject.id, level),
     supabase
       .from('chapters')
       .select('id, theme, discipline')
@@ -504,31 +485,6 @@ export default async function SubjectPage({
 
   const progress = subjectProgress(values)
 
-  // Onglet « Boss » : pool 100 % matière — le boss de la matière est le même
-  // pour toutes les classes, seul le programme joué change.
-  const validQuestions = vivierDuBoss.filter(
-    (q) =>
-      Array.isArray(q.options) &&
-      q.options.length >= 2 &&
-      q.correct_index >= 0 &&
-      q.correct_index < q.options.length,
-  )
-  const bossPool: ModeQuestion[] = shuffle(validQuestions)
-    .slice(0, BOSS_POOL_SIZE)
-    .map((q) => {
-      const shuffled = permuteQuizOptions(q.kind, q.options, q.correct_index, q.id)
-      return {
-        id: q.id,
-        prompt: q.question,
-        options: shuffled.options,
-        correctIndex: shuffled.correctIndex,
-        explanation: q.explanation,
-        // Convention de l'Arène : le nom affichable (« Anglais »), comme
-        // quizzes.subject — bossForSubject normalise dans tous les cas.
-        subject: subject.name,
-      }
-    })
-
   // La progression de chaque discipline, pour les matières qui en réunissent
   // deux : l'onglet « Géographie » compte ses fiches, pas celles du dossier.
   // Calculée ici, où les VALEURS d'avancement (0..1) existent encore — un
@@ -563,7 +519,6 @@ export default async function SubjectPage({
     examOnTop: examBannerOnTop(progress.pct, daysToExam),
     weakCount,
     chapters,
-    bossPool,
     gardien,
     papers: parseExamPapers(paperRows),
     // Deux annales corrigées par matière en gratuit, toutes avec Studuel+

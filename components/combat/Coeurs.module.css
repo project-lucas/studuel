@@ -1,0 +1,214 @@
+/* LA RANGÉE DE CŒURS — voir Coeurs.tsx. Transform et opacité seulement,
+   valeurs littérales dans les images-clés ; chaque animation existe en deux
+   exemplaires identiques (_a / _b) pour se rejouer coup après coup. */
+
+.rangee {
+  --coeur: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.12rem;
+}
+
+.rangee[data-taille='sm'] {
+  --coeur: 1.05rem;
+  gap: 0.08rem;
+}
+
+.coeur {
+  position: relative;
+  flex: none;
+  width: var(--coeur);
+  aspect-ratio: 675 / 587;
+}
+
+.vide,
+.plein,
+.moitie,
+.brisure,
+.eclats {
+  position: absolute;
+  inset: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.vide {
+  background-image: url('/images/combat/coeurs/vide.webp');
+}
+
+.plein {
+  background-image: url('/images/combat/coeurs/plein.webp');
+}
+
+/* Le morceau perdu : il garde sa couleur jusqu'à l'impact, flashe blanc,
+   puis s'éteint. Le flash est un calque blanc FIXE dont seule l'opacité
+   bouge (l'animation porte sur l'élément entier). */
+.perdu {
+  animation-duration: 520ms;
+  animation-timing-function: ease-out;
+  animation-delay: var(--delai);
+  animation-fill-mode: both;
+}
+
+.perdu_a {
+  animation-name: perdu_a;
+}
+.perdu_b {
+  animation-name: perdu_b;
+}
+
+/* Le cœur qui se brise : plein jusqu'à l'impact, puis il disparaît et ses
+   deux moitiés tombent en s'écartant. */
+.avantBrise {
+  animation-duration: 120ms;
+  animation-delay: var(--delai);
+  animation-fill-mode: both;
+}
+.avantBrise_a {
+  animation-name: eteint_a;
+}
+.avantBrise_b {
+  animation-name: eteint_b;
+}
+
+.moitie {
+  opacity: 0;
+  animation-duration: 760ms;
+  animation-timing-function: cubic-bezier(0.3, 0, 0.7, 1);
+  animation-delay: var(--delai);
+  animation-fill-mode: both;
+}
+
+.gauche {
+  background-image: url('/images/combat/coeurs/moitie-gauche.webp');
+  background-position: left center;
+  inset: 0 39% 0 0;
+}
+
+.droite {
+  background-image: url('/images/combat/coeurs/moitie-droite.webp');
+  background-position: right center;
+  inset: 0 0 0 39%;
+}
+
+.gauche_a {
+  animation-name: gauche_a;
+}
+.gauche_b {
+  animation-name: gauche_b;
+}
+.droite_a {
+  animation-name: droite_a;
+}
+.droite_b {
+  animation-name: droite_b;
+}
+
+/* Trois éclats blancs qui partent du centre. */
+.eclats {
+  opacity: 0;
+  animation-duration: 420ms;
+  animation-timing-function: ease-out;
+  animation-delay: var(--delai);
+  animation-fill-mode: both;
+  background:
+    radial-gradient(circle at 50% 50%, var(--card) 0 18%, transparent 22%),
+    radial-gradient(circle at 15% 20%, var(--card) 0 7%, transparent 9%),
+    radial-gradient(circle at 85% 25%, var(--card) 0 7%, transparent 9%),
+    radial-gradient(circle at 50% 95%, var(--card) 0 6%, transparent 8%);
+}
+.eclats_a {
+  animation-name: eclats_a;
+}
+.eclats_b {
+  animation-name: eclats_b;
+}
+
+/* Le dernier cœur bat. */
+.battant .plein {
+  animation: bat 1s ease-in-out infinite;
+}
+
+.compte {
+  margin-left: 0.25rem;
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+@keyframes perdu_a {
+  0% { opacity: 1; transform: scale(1); }
+  30% { opacity: 1; transform: scale(1.18); }
+  100% { opacity: 0; transform: scale(0.7); }
+}
+@keyframes perdu_b {
+  0% { opacity: 1; transform: scale(1); }
+  30% { opacity: 1; transform: scale(1.18); }
+  100% { opacity: 0; transform: scale(0.7); }
+}
+
+@keyframes eteint_a {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes eteint_b {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes gauche_a {
+  0% { opacity: 1; transform: translate(0, 0) rotate(0deg); }
+  25% { opacity: 1; transform: translate(-28%, -18%) rotate(-14deg); }
+  100% { opacity: 0; transform: translate(-60%, 120%) rotate(-50deg); }
+}
+@keyframes gauche_b {
+  0% { opacity: 1; transform: translate(0, 0) rotate(0deg); }
+  25% { opacity: 1; transform: translate(-28%, -18%) rotate(-14deg); }
+  100% { opacity: 0; transform: translate(-60%, 120%) rotate(-50deg); }
+}
+@keyframes droite_a {
+  0% { opacity: 1; transform: translate(0, 0) rotate(0deg); }
+  25% { opacity: 1; transform: translate(28%, -22%) rotate(16deg); }
+  100% { opacity: 0; transform: translate(70%, 110%) rotate(55deg); }
+}
+@keyframes droite_b {
+  0% { opacity: 1; transform: translate(0, 0) rotate(0deg); }
+  25% { opacity: 1; transform: translate(28%, -22%) rotate(16deg); }
+  100% { opacity: 0; transform: translate(70%, 110%) rotate(55deg); }
+}
+
+@keyframes eclats_a {
+  0% { opacity: 0; transform: scale(0.4); }
+  20% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.9); }
+}
+@keyframes eclats_b {
+  0% { opacity: 0; transform: scale(0.4); }
+  20% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.9); }
+}
+
+@keyframes bat {
+  0%, 100% { transform: scale(1); }
+  12% { transform: scale(1.2); }
+  24% { transform: scale(1); }
+  36% { transform: scale(1.12); }
+  48% { transform: scale(1); }
+}
+
+/* Mouvement réduit : le morceau perdu s'éteint sans bouger, le cœur se vide
+   sans se briser, le dernier ne bat pas. */
+@media (prefers-reduced-motion: reduce) {
+  .battant .plein,
+  .moitie,
+  .eclats {
+    animation: none;
+    opacity: 0;
+  }
+  .perdu_a,
+  .perdu_b,
+  .avantBrise_a,
+  .avantBrise_b {
+    animation-name: eteint_a;
+  }
+}

@@ -21,6 +21,8 @@ import { COURSE_QUESTION_BUFFER } from '@/lib/duel/course'
 import { botOpponent, type Opponent } from '@/lib/duel/opponent'
 import { chooseOpponent, fetchReplayCandidates } from '@/lib/duel/opponent-server'
 import type { ModeQuestion } from '@/lib/defi-modes'
+import { avatarAffiche } from '@/lib/avatar-affiche'
+import { herosDuPortrait, herosDuRival } from '@/lib/combat/combattants'
 
 export const metadata = { title: 'Duel classé — Studuel' }
 export const dynamic = 'force-dynamic'
@@ -218,6 +220,27 @@ export default async function ProgrammePage({
   const base = `/defi/programme/${wanted}`
   const revancheVs = opponent.kind === 'bot' ? `bot:${opponent.botId}` : `replay:${opponent.replayId}`
 
+  // LE COMBAT DES HÉROS : mon héros est celui de mon portrait ; un élève
+  // rejoué garde le sien, un robot en reçoit un fixe (sa graine = son id).
+  const monAvatar = normalizeAvatarConfig(profile?.avatar)
+  const monHeros = herosDuPortrait(monAvatar.portrait)
+  const rival = opponent.identity
+  const heros = {
+    moi: {
+      heros: monHeros,
+      joueur: { nom: firstName, photo: avatarAffiche(monAvatar, 160), rang: null, rangLabel: `${myTrophies} trophées` },
+    },
+    rival: {
+      heros: herosDuRival(rival.avatar.portrait, revancheVs, monHeros),
+      joueur: {
+        nom: rival.name,
+        photo: avatarAffiche(rival.avatar, 160),
+        rang: null,
+        rangLabel: `${rival.trophies} trophées`,
+      },
+    },
+  }
+
   return (
     <DuelCourse
       pool={pool.slice(0, COURSE_QUESTION_BUFFER)}
@@ -226,9 +249,10 @@ export default async function ProgrammePage({
       subjectEmoji={emoji}
       seed={seed}
       opponent={opponent}
+      heros={heros}
       me={{
         name: firstName,
-        avatar: normalizeAvatarConfig(profile?.avatar),
+        avatar: monAvatar,
         trophies: myTrophies,
       }}
       hrefs={{

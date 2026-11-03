@@ -20,6 +20,9 @@ import { subjectVignette } from '@/lib/subject-style'
 
 export const LIEN_DICTEE = '/reviser/francais/dictee'
 
+/** L'emblème des gardiens, au talon de leur billet (le même que le bouton « Gardiens » de l'arène). */
+export const EMBLEME_GARDIEN = '/images/defi/icones/boss-v3.webp'
+
 /** La dictée du français : un billet rose, la vignette du dossier en corps. */
 export function billetDictee(): ModeTicket {
   return {
@@ -75,12 +78,16 @@ export function billetGardien(
           : `${boss.epithet} · le gardien de ${subject.name}`
         : gardien.phrase,
       emoji: boss.emoji,
-      image: boss.image ?? null,
+      // Le TALON porte l'EMBLÈME des gardiens (le casque à cornes du bouton
+      // « Gardiens » de l'arène), pas le prof une seconde fois : 01/11/2026,
+      // Lucas — « mettre l'icône de boss pour mieux dissocier », sur tous les gardiens.
+      image: EMBLEME_GARDIEN,
       // Le corps du billet est la SCÈNE du boss (13/10/2026, Lucas : « il faut
       // que tu utilises les boss en mode scène ») — la même bannière 16:9 que
       // sur le mode Boss de l'arène ; la vignette du dossier n'est que le repli
       // d'un boss sans scène.
       scene: boss.scene ?? null,
+      scenePosition: boss.scenePosition,
       vignette: subjectVignette(subject.slug),
       // PAS SON JOUR (576) : un ruban le dit par-dessus la scène, le billet
       // s'éteint — on ne traque un gardien que le jour où il sort.

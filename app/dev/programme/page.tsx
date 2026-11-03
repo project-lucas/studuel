@@ -37,8 +37,8 @@ export const dynamic = 'force-dynamic'
 //   /dev/programme?matiere=svt         (physique-chimie, enseignement-scientifique)
 //   /dev/programme?onglet=exercices    une porte ouverte (jeu, annales, programme:fiches)
 //   /dev/programme?premium=1           un abonné Studuel+ (plus de couronne)
-//   /dev/programme?gardien=1           le gardien de la matière rôde (son écusson)
-//   /dev/programme?gardien=sorti       il est sorti : la bulle sur la porte Jeux
+//   /dev/programme?gardien=1&onglet=boss   le gardien rôde : son affiche dans la porte Boss
+//   /dev/programme?gardien=sorti       il est sorti : la bulle sur la porte Boss
 //   /dev/programme?place=1             la place de l'élève (« Top 10 % des 3e »)
 
 type Ligne = { theme: string | null; titre: string; avancement: number; rayon?: string }
@@ -250,7 +250,6 @@ export default async function ApercuProgramme({
     examOnTop: false,
     weakCount: 0,
     chapters,
-    bossPool: [],
     gardien: gardien
       ? {
           boss: bossForSubject(slug),

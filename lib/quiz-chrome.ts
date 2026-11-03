@@ -66,6 +66,15 @@ const PREFIXES_PLEIN_ECRAN = [
   // L'APERÇU DU DUEL DES HÉROS (29/10/2026) : la même course, peau Pokémon,
   // à juger sur téléphone — plein écran pour la même raison.
   '/dev/duel-heros',
+  // L'APERÇU D'UNE DICTÉE (01/11/2026) : la vraie session, plein écran comme
+  // celle de `/reviser/francais/dictee/<slug>/jouer`.
+  '/dev/dictee',
+  // L'APERÇU DU COMBAT DE GARDIEN (02/11/2026) : la Traque sous la peau du
+  // combat des héros — plein écran comme la Traque elle-même.
+  '/dev/combat-boss',
+  // L'APERÇU DE LA VRAIE COURSE EN COMBAT DE HÉROS (02/11/2026) : DuelCourse
+  // de production contre un robot — plein écran comme la course elle-même.
+  '/dev/course-heros',
 ] as const
 
 /**

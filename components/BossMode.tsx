@@ -1,6 +1,9 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
+import type { JoueurCombat } from '@/components/combat/ArenaCombat'
+import CombatGardien, { gardienCombattable } from '@/components/combat/CombatGardien'
+import type { HerosKey } from '@/lib/heros/eleves'
 import Image from 'next/image'
 import { Heart, Zap, RotateCcw, Star, Swords } from 'lucide-react'
 import XpIcon from '@/components/ui/XpIcon'
@@ -52,6 +55,9 @@ type Phase = 'intro' | 'playing' | 'done'
 // Visage du boss dans un médaillon : buste détouré si la DA est prête,
 // emoji sinon. Le parent donne la taille (size-*) et le fond ; l'image
 // déborde légèrement du cadre (scale) pour l'effet « portrait d'arène ».
+/** Dans la lice : le temps du K.O. et de la réplique du gardien. */
+const MS_KO_HEROS = 2800
+
 function BossFace({ boss, px }: { boss: Boss; px: number }) {
   if (!boss.image) return <span aria-hidden="true">{boss.emoji}</span>
   return (
@@ -80,6 +86,7 @@ export default function BossMode({
   rewardSlot,
   canRetry = false,
   scene = null,
+  heros,
 }: {
   pool: ModeQuestion[]
   onExit: () => void
@@ -113,6 +120,12 @@ export default function BossMode({
    * Absente ailleurs (Traque, onglet d'une matière), qui ont leur propre décor.
    */
   scene?: string | null
+  /**
+   * LE COMBAT DES HÉROS (02/11/2026) : l'élève et son héros. Présent, et le
+   * gardien ayant ses poses, le combat se joue dans la lice (CombatGardien) —
+   * mêmes règles, autre peau. Le boss de la semaine garde l'écran d'avant.
+   */
+  heros?: { moi: JoueurCombat; cle: HerosKey }
 }) {
   // Le Boss sonne CUIVRE : fanfare courte et franche, dents de scie. Un combat
   // de boss doit s'annoncer à l'oreille comme un événement, pas comme un quiz.
@@ -162,6 +175,7 @@ export default function BossMode({
   const startRef = useRef(0)
 
   const question = pool.length > 0 ? pool[qIndex % pool.length] : null
+  const enHeros = heros !== undefined && !eventFight && gardienCombattable(character.id)
   const answered = selected !== null
 
   // La Traque se joue SUR le décor de l'arène (voile de nuit), pas sur le fond
@@ -304,6 +318,8 @@ export default function BossMode({
     setCorrect(newCorrect)
     setAnsweredCount(newAnswered)
     const result = bossOutcome(newBoss)
+    // Dans la lice, le K.O. se joue avant l'écran de fin (sa réplique comprise).
+    const delai = result && enHeros ? MS_KO_HEROS : 700
     advanceTimerRef.current = window.setTimeout(() => {
       if (result) {
         finish(result, newCorrect, newAnswered, newBoss.lives)
@@ -311,7 +327,7 @@ export default function BossMode({
         setQIndex((n) => n + 1)
         setSelected(null)
       }
-    }, 700)
+    }, delai)
   }
 
   // Étoiles de rang — partagées entre l'intro et l'arène.
@@ -679,6 +695,26 @@ export default function BossMode({
 
   // ----------------------------------------------------------------- combat
   if (!question) return null
+
+  if (enHeros && heros) {
+    return (
+      <CombatGardien
+        gardien={character}
+        rang={rank}
+        pv={boss.hp}
+        pvMax={stats.hp}
+        vies={boss.lives}
+        viesMax={stats.lives}
+        repondues={answeredCount}
+        question={question}
+        selected={selected}
+        onAnswer={answer}
+        onAbandon={onExit}
+        moi={heros.moi}
+        herosCle={heros.cle}
+      />
+    )
+  }
 
   return (
     <div className="mx-auto flex max-w-xl flex-col gap-3">

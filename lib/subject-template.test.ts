@@ -159,7 +159,6 @@ describe('modeFromParam', () => {
   })
 
   test('les anciennes clés de format retombent sur « Mode de jeu »', () => {
-    expect(modeFromParam('boss', tabs)).toBe('jeu')
     expect(modeFromParam('quiz', tabs)).toBe('jeu')
     expect(modeFromParam('flashcards', tabs)).toBe('jeu')
     expect(modeFromParam('cartes', tabs)).toBe('jeu')
@@ -173,6 +172,14 @@ describe('modeFromParam', () => {
 
   test('« erreurs », qui n’a plus d’onglet, retombe sur le programme', () => {
     expect(modeFromParam('erreurs', tabs)).toBe('programme')
+  })
+
+  test('« boss » ouvre la porte du gardien (01/11/2026), les jeux là où il n’y en a pas', () => {
+    const maths = modesFor('Tle', [], 'maths')
+    expect(modeFromParam('boss', maths)).toBe('boss')
+    expect(modeFromParam('gardien', maths)).toBe('boss')
+    expect(modeFromParam('traque', maths)).toBe('boss')
+    expect(modeFromParam('boss', modesFor('4e', [], 'arts-plastiques'))).toBe('jeu')
   })
 
   test('un onglet que la classe n’a pas ne s’ouvre pas', () => {
@@ -193,10 +200,11 @@ describe('modesFor', () => {
 
   test('« Annales » s’ajoute en 3e, 1re et Tle', () => {
     for (const grade of ['3e', '1re', 'Tle']) {
+      // Les annales AVANT les jeux depuis le 01/11/2026.
       expect(modesFor(grade).map((m) => m.key)).toEqual([
         'programme',
-        'jeu',
         'annales',
+        'jeu',
       ])
     }
   })
@@ -204,15 +212,27 @@ describe('modesFor', () => {
   test('sans classe connue, on reste sur les deux onglets sûrs', () => {
     expect(modesFor(null).map((m) => m.key)).toEqual(['programme', 'jeu'])
   })
+
+  test('la porte Boss ferme le rail, sauf pour une matière sans gardien', () => {
+    expect(modesFor('3e', [], 'maths', true).map((m) => m.key)).toEqual([
+      'programme',
+      'exercices',
+      'annales',
+      'jeu',
+      'boss',
+    ])
+    expect(modesFor('4e', [], 'arts-plastiques').map((m) => m.key)).toEqual(['programme', 'jeu'])
+  })
 })
 
 describe('la porte Exercices — le cahier de la matière', () => {
   test('elle n’existe que si la matière a un cahier', () => {
-    expect(modesFor('4e', [], 'maths').map((m) => m.key)).toEqual(['programme', 'jeu'])
+    expect(modesFor('4e', [], 'maths').map((m) => m.key)).toEqual(['programme', 'jeu', 'boss'])
     expect(modesFor('4e', [], 'maths', true).map((m) => m.key)).toEqual([
       'programme',
       'exercices',
       'jeu',
+      'boss',
     ])
   })
 
@@ -224,8 +244,9 @@ describe('la porte Exercices — le cahier de la matière', () => {
       'programme:geographie',
       'encyclopedie',
       'exercices',
-      'jeu',
       'annales',
+      'jeu',
+      'boss',
     ])
   })
 
@@ -242,17 +263,18 @@ describe('les portes et les rayons', () => {
   const francais = modesFor('1re', ['programme', 'fiches', 'grammaire', 'anciens'], 'francais', true)
   const histoireGeo = modesFor('3e', ['histoire', 'geographie'], 'histoire-geo', true)
 
-  test('quatre portes au plus, une par clé, « Programme » en tête (ex-« Cours », 12/10/2026)', () => {
-    expect(portesDe(francais).map((p) => p.label)).toEqual(['Programme', 'Cahier d’exercices', 'Jeux', 'Annales'])
-    expect(portesDe(modesFor('5e', [], 'maths')).map((p) => p.label)).toEqual(['Programme', 'Jeux'])
+  test('cinq portes au plus, une par clé, « Programme » en tête, « Boss » en dernier (01/11/2026)', () => {
+    expect(portesDe(francais).map((p) => p.label)).toEqual(['Programme', 'Exercices', 'Annales', 'Jeux', 'Boss'])
+    expect(portesDe(modesFor('5e', [], 'maths')).map((p) => p.label)).toEqual(['Programme', 'Jeux', 'Boss'])
   })
 
   test('l’encyclopédie n’est pas une porte : c’est un rayon de Cours', () => {
     expect(portesDe(histoireGeo).map((p) => p.key)).toEqual([
       'programme',
       'exercices',
-      'jeu',
       'annales',
+      'jeu',
+      'boss',
     ])
     expect(rayonsDe(histoireGeo).map((r) => r.label)).toEqual([
       'Histoire',
@@ -435,11 +457,12 @@ describe('disciplinesOf', () => {
 
 describe('modesFor — l’onglet Encyclopédie', () => {
   test('n’apparaît que pour la matière qui en a une', () => {
-    expect(modesFor('4e', [], 'maths').map((t) => t.key)).toEqual(['programme', 'jeu'])
+    expect(modesFor('4e', [], 'maths').map((t) => t.key)).toEqual(['programme', 'jeu', 'boss'])
     expect(modesFor('4e', [], 'histoire-geo').map((t) => t.key)).toEqual([
       'programme',
       'encyclopedie',
       'jeu',
+      'boss',
     ])
   })
 
@@ -451,8 +474,9 @@ describe('modesFor — l’onglet Encyclopédie', () => {
       'Histoire',
       'Géographie',
       'Encyclopédie',
-      'Mode de jeu',
       'Annales',
+      'Mode de jeu',
+      'Boss',
     ])
   })
 
@@ -460,8 +484,8 @@ describe('modesFor — l’onglet Encyclopédie', () => {
     expect(modesFor('Tle', ['histoire', 'geographie']).map((t) => t.key)).toEqual([
       'programme',
       'programme',
-      'jeu',
       'annales',
+      'jeu',
     ])
   })
 
@@ -478,8 +502,8 @@ describe('modesFor et tabId — les matières à deux disciplines', () => {
     const tabs = modesFor('3e')
     expect(tabs.map((t) => t.label)).toEqual([
       'Programme',
-      'Mode de jeu',
       'Annales',
+      'Mode de jeu',
     ])
     expect(tabs.every((t) => t.discipline === undefined)).toBe(true)
   })
@@ -489,22 +513,22 @@ describe('modesFor et tabId — les matières à deux disciplines', () => {
     expect(tabs.map((t) => t.label)).toEqual([
       'Histoire',
       'Géographie',
-      'Mode de jeu',
       'Annales',
+      'Mode de jeu',
     ])
     expect(tabs.map(tabId)).toEqual([
       'programme:histoire',
       'programme:geographie',
-      'jeu',
       'annales',
+      'jeu',
     ])
   })
 
   test('une seule discipline ne dédouble rien', () => {
     expect(modesFor('Tle', ['histoire']).map((t) => t.label)).toEqual([
       'Programme',
-      'Mode de jeu',
       'Annales',
+      'Mode de jeu',
     ])
   })
 
@@ -539,15 +563,15 @@ describe('modesFor — les trois rayons du français', () => {
       'Programme',
       'Fiches',
       'Grammaire',
-      'Mode de jeu',
       'Annales',
+      'Mode de jeu',
     ])
     expect(tabs.map(tabId)).toEqual([
       'programme:programme',
       'programme:fiches',
       'programme:grammaire',
-      'jeu',
       'annales',
+      'jeu',
     ])
   })
 

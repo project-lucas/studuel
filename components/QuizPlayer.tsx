@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react'
+import PrechargeAuRepos from '@/components/PrechargeAuRepos'
 import Link from 'next/link'
 import Image from 'next/image'
 import { recordTestSession } from '@/app/test/actions'
@@ -761,6 +762,9 @@ export default function QuizPlayer({
         key="quiz-fin"
         className="min-h-svh px-4 pt-6 pb-16 text-foreground md:px-8 md:pt-8"
       >
+        {/* Pendant la vague des récompenses, la suite se prépare : le quiz
+            suivant, puis la page d'où l'on vient (lib/precharge-repos). */}
+        <PrechargeAuRepos pages={quizSuivant ? [quizSuivant.href, backHref] : [backHref]} />
         {/* La Traque : si ce quiz a fait déborder la jauge, le gardien surgit
             PAR-DESSUS le bilan. Il se monte en portail (document.body), donc sa
             position dans cet arbre n'a aucune incidence sur la mise en page. */}

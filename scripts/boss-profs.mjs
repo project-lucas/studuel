@@ -36,7 +36,7 @@ const BOSS = {
   glitch: 'glitch-prof',
   krach: 'krach-prof-v2',
   nova: 'nova-prof-v2',
-  'coach-turbo': 'coach-turbo-prof',
+  'coach-turbo': 'coach-turbo-prof-v2',
   'kaiser-fang': 'kaiser-fang-prof-v2',
   fiscus: 'fiscus-prof',
   proviseur: 'proviseur-prof',

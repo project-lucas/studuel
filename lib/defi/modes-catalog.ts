@@ -54,6 +54,8 @@ export type ModeTicket = {
    * corps porte la vignette de la matière, ou sa robe seule.
    */
   scene?: string | null
+  /** Cadrage de la scène (object-position), défaut '70% 45%' — le gardien y suit `boss.scenePosition`. */
+  scenePosition?: string
   /** L'objet détouré du TALON (à droite de la perforation). Repli : l'emoji. */
   image?: string | null
   /** Vignette du dossier de la matière (art de repli du corps). */

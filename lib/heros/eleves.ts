@@ -93,12 +93,22 @@ export function herosParGenre(genre: GenreHeros): readonly HerosEleve[] {
   return HEROS_ELEVES.filter((h) => h.genre === genre)
 }
 
+// Un héros REDESSINÉ est servi sous une adresse neuve (`-v2`…) : l'optimiseur
+// d'images ressert l'ancien dessin sous l'ancienne adresse. Même table dans
+// scripts/heros-eleves.mjs (01/11/2026 : le Mage de feu refait, plus épique).
+const VERSION_IMAGE: Partial<Record<HerosKey, number>> = { 'demi-elfe-mage': 2 }
+
+function baseImage(cle: HerosKey): string {
+  const v = VERSION_IMAGE[cle]
+  return v ? `${cle}-v${v}` : cle
+}
+
 /** La scène du héros (9:16, 720 px de large). */
 export function herosSceneSrc(cle: HerosKey): string {
-  return `/images/heros/eleves/${cle}.webp`
+  return `/images/heros/eleves/${baseImage(cle)}.webp`
 }
 
 /** Le visage du héros (carré 384 px) : son avatar partout dans l'app. */
 export function herosVisageSrc(cle: HerosKey): string {
-  return `/images/heros/eleves/${cle}-visage.webp`
+  return `/images/heros/eleves/${baseImage(cle)}-visage.webp`
 }

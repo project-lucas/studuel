@@ -9,7 +9,9 @@ import {
   Minus,
   Plus,
   RotateCw,
+  Scroll,
   SkipBack,
+  SkipForward,
   Volume2,
   X,
 } from 'lucide-react'
@@ -17,7 +19,9 @@ import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import {
+  corrigerDictee,
   formatNote,
+  noteSur20,
   type Correction,
 } from '@/lib/francais/dictee/correction'
 import {
@@ -32,12 +36,34 @@ import type { Gain } from '@/lib/gains'
 import { useLecteurDictee } from '@/components/francais/dictee/LecteurDictee'
 import CorrectionDictee from '@/components/francais/dictee/CorrectionDictee'
 
-export type SegmentDictee = { position: number; texte: string }
+export type SegmentDictee = {
+  position: number
+  texte: string
+  /** L'enregistrement du morceau DICTÉ (ponctuation dite), s'il existe. */
+  audio?: string | null
+}
 
-/** Les caractères accentués que le clavier d'un téléphone cache. */
-const ACCENTS = ['é', 'è', 'ê', 'à', 'ç', 'î', 'ô', 'û', '«', '»']
+/**
+ * LE CONTEXTE de la dictée (01/11/2026, Lucas : « une dictée intéressante est
+ * liée à un contexte politique intéressant : on la replace, et cela nous
+ * marque ») — l'écran qui ouvre la session, avant la première écoute.
+ */
+export type ContexteDictee = {
+  /** « 25 décembre 1792 ». */
+  date: string
+  /** « Testament de Louis XVI (extraits, orthographe modernisée) ». */
+  source: string
+  /** Trois paragraphes au plus : qui, où, pourquoi ces mots. */
+  paragraphes: string[]
+}
 
-type Etape = 'ecoute' | 'support' | 'ecriture' | 'papier' | 'score'
+/**
+ * Les caractères que le clavier d'un téléphone cache derrière un appui long —
+ * le œ de « cœur » et les majuscules accentuées compris.
+ */
+const ACCENTS = ['é', 'è', 'ê', 'à', 'ç', 'œ', 'ù', 'î', 'ï', 'ô', 'û', 'É', 'À', '«', '»']
+
+type Etape = 'contexte' | 'ecoute' | 'support' | 'ecriture' | 'papier' | 'score'
 
 /**
  * LA SESSION DE DICTÉE — cinq temps, un seul composant.
@@ -61,15 +87,27 @@ export default function DicteeSession({
   titre,
   segments,
   retourHref,
+  audioIntegral = null,
+  contexte = null,
+  apercu = false,
 }: {
   dicteeId: string
   titre: string
   segments: SegmentDictee[]
   retourHref: string
+  /** L'enregistrement de la lecture d'une traite. */
+  audioIntegral?: string | null
+  /** L'écran d'ouverture : la date, la source, l'histoire de ces mots. */
+  contexte?: ContexteDictee | null
+  /**
+   * APERÇU (pages /dev) : la copie se corrige ici, rien n'est envoyé ni
+   * enregistré — même règle que la démo, sans compte.
+   */
+  apercu?: boolean
 }) {
   const router = useRouter()
   const { etat, supporte, lire, couper } = useLecteurDictee()
-  const [etape, setEtape] = useState<Etape>('ecoute')
+  const [etape, setEtape] = useState<Etape>(contexte ? 'contexte' : 'ecoute')
   const [indexSegment, setIndexSegment] = useState(0)
   const [copie, setCopie] = useState('')
   const [erreursPapier, setErreursPapier] = useState(0)
@@ -93,6 +131,14 @@ export default function DicteeSession({
     couper()
   }, [etape, couper])
 
+  // LE MORCEAU SE DICTE TOUT SEUL quand on arrive dessus (Suivant, Précédent,
+  // ou l'entrée dans l'écriture) : c'est ce que fait un professeur. « Réécouter »
+  // le rejoue à la demande.
+  useEffect(() => {
+    if (etape !== 'ecriture' || !segment) return
+    lire(segment.texte, segment.audio)
+  }, [etape, segment, lire])
+
   const inserer = (caractere: string) => {
     const zone = zoneRef.current
     if (!zone) return
@@ -112,6 +158,21 @@ export default function DicteeSession({
   // qui jouent déjà le clic.
   const terminer = (support: SupportDictee) => {
     if (pending) return
+    if (apercu) {
+      // L'aperçu corrige ici, avec la même fonction que le serveur.
+      const correction = corrigerDictee(texteEntier, support === 'papier' ? '' : copie)
+      const note =
+        support === 'papier'
+          ? noteSur20({
+              motsAttendus: correction.motsAttendus,
+              motsJustes: correction.motsAttendus - Math.min(erreursPapier, correction.motsAttendus),
+            })
+          : noteSur20(correction)
+      setResultat({ note, correction, gains: [], support })
+      setEtape('score')
+      sfx.complete()
+      return
+    }
     startTransition(async () => {
       const res = await enregistrerDictee(
         dicteeId,
@@ -123,6 +184,47 @@ export default function DicteeSession({
       setEtape('score')
       sfx.complete()
     })
+  }
+
+  // ---------------------------------------------------------------- contexte
+  if (etape === 'contexte' && contexte) {
+    return (
+      <div className="flex min-h-svh flex-col bg-[color-mix(in_oklab,var(--foreground),black_8%)] px-5 py-4 text-white">
+        <div className="mx-auto flex w-full max-w-xl flex-1 flex-col">
+          <button
+            type="button"
+            onClick={() => router.push(retourHref)}
+            aria-label="Quitter la dictée"
+            className="flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-full bg-white text-foreground shadow-sm"
+          >
+            <ArrowLeft className="size-5" aria-hidden="true" />
+          </button>
+
+          <p className="mt-6 flex items-center gap-2 text-sm font-extrabold tracking-wide text-highlight uppercase">
+            <Scroll className="size-4" aria-hidden="true" />
+            {contexte.date}
+          </p>
+          <h1 className="font-heading mt-1 text-3xl leading-tight font-extrabold text-balance">
+            {titre}
+          </h1>
+
+          {/* L'HISTOIRE DE CES MOTS : on les écrit mieux quand on sait qui les
+              a dits, et pourquoi. */}
+          <div className="mt-5 flex flex-col gap-3 text-[0.98rem] leading-relaxed text-white/90">
+            {contexte.paragraphes.map((p) => (
+              <p key={p}>{p}</p>
+            ))}
+          </div>
+          <p className="mt-4 text-xs font-semibold text-white/55">{contexte.source}</p>
+
+          <div className="flex-1" aria-hidden="true" />
+
+          <Button type="button" size="xl" onClick={() => setEtape('ecoute')} className="mt-6 w-full">
+            Écouter la dictée
+          </Button>
+        </div>
+      </div>
+    )
   }
 
   // ------------------------------------------------------------------ écoute
@@ -167,7 +269,7 @@ export default function DicteeSession({
               type="button"
               onClick={() => {
                 sfx.tap()
-                lire(texteEntier)
+                lire(texteEntier, audioIntegral)
               }}
               aria-label="Écouter la dictée en entier"
               className="flex size-14 cursor-pointer items-center justify-center rounded-full bg-white/15 text-white transition active:scale-95"
@@ -278,7 +380,7 @@ export default function DicteeSession({
                   type="button"
                   onClick={() => {
                     sfx.tap()
-                    lire(s.texte)
+                    lire(s.texte, s.audio)
                   }}
                   className="flex w-full cursor-pointer items-center gap-3 rounded-2xl border-2 border-black/10 bg-card px-4 py-3 text-left"
                 >
@@ -379,8 +481,11 @@ export default function DicteeSession({
             className="mt-3 min-h-64 flex-1 resize-none rounded-3xl border-2 border-primary/30 bg-card p-4 text-base leading-relaxed text-foreground outline-none placeholder:text-muted-foreground/60 focus:border-primary/60"
           />
 
-          {/* LE BALADEUR : revenir, réécouter, les accents, et la suite. */}
-          <div className="mt-3 flex shrink-0 items-center gap-2">
+          {/* LE BALADEUR (01/11/2026, « le mode doit être carré ») : une rangée
+              lisible au pouce — revenir, RÉÉCOUTER en grand avec le numéro du
+              morceau, avancer —, les accents dessous, puis l'action. Le morceau
+              se dicte tout seul quand on arrive dessus. */}
+          <div className="mt-3 flex shrink-0 items-center justify-between gap-2 rounded-3xl bg-card p-2 shadow-sm">
             <button
               type="button"
               disabled={indexSegment === 0}
@@ -389,7 +494,7 @@ export default function DicteeSession({
                 setIndexSegment((i) => Math.max(0, i - 1))
               }}
               aria-label="Morceau précédent"
-              className="flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-full text-foreground disabled:opacity-30"
+              className="flex size-12 shrink-0 cursor-pointer items-center justify-center rounded-full bg-muted text-foreground transition active:scale-95 disabled:opacity-30"
             >
               <SkipBack className="size-5" aria-hidden="true" />
             </button>
@@ -397,45 +502,65 @@ export default function DicteeSession({
               type="button"
               onClick={() => {
                 sfx.tap()
-                if (segment) lire(segment.texte)
+                if (segment) lire(segment.texte, segment.audio)
               }}
-              aria-label="Réécouter ce morceau"
-              className="flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-full text-foreground"
+              aria-label={`Réécouter le morceau ${indexSegment + 1} sur ${segments.length}`}
+              className="flex h-12 min-w-0 flex-1 cursor-pointer items-center justify-center gap-2 rounded-full bg-primary/10 px-4 font-heading font-extrabold text-primary transition active:scale-95"
             >
-              <Volume2 className="size-5" aria-hidden="true" />
+              <Volume2
+                className={cn('size-5 shrink-0', etat === 'lecture' && 'animate-pulse')}
+                aria-hidden="true"
+              />
+              Réécouter
+              <span className="text-sm font-bold text-primary/70 tabular-nums">
+                {indexSegment + 1}/{segments.length}
+              </span>
             </button>
-
-            {/* Les accents que le clavier d'un téléphone cache derrière un appui
-                long : sur une dictée, les chercher coûte plus cher que de les
-                écrire. */}
-            <div className="flex min-w-0 flex-1 gap-1 overflow-x-auto">
-              {ACCENTS.map((c) => (
-                <button
-                  key={c}
-                  type="button"
-                  onClick={() => inserer(c)}
-                  aria-label={`Insérer ${c}`}
-                  className="flex size-9 shrink-0 cursor-pointer items-center justify-center rounded-full bg-muted text-sm font-bold text-foreground"
-                >
-                  {c}
-                </button>
-              ))}
-            </div>
-
-            <Button
+            <button
               type="button"
-              size="lg"
-              disabled={pending}
+              disabled={dernierSegment}
               onClick={() => {
-                if (dernierSegment) terminer('telephone')
-                else setIndexSegment((i) => i + 1)
+                sfx.tap()
+                setIndexSegment((i) => Math.min(segments.length - 1, i + 1))
               }}
-              className="shrink-0"
+              aria-label="Morceau suivant"
+              className="flex size-12 shrink-0 cursor-pointer items-center justify-center rounded-full bg-muted text-foreground transition active:scale-95 disabled:opacity-30"
             >
-              <Check aria-hidden="true" />
-              {dernierSegment ? 'Terminer' : 'Suivant'}
-            </Button>
+              <SkipForward className="size-5" aria-hidden="true" />
+            </button>
           </div>
+
+          {/* Les accents que le clavier d'un téléphone cache derrière un appui
+              long : sur une dictée, les chercher coûte plus cher que de les
+              écrire. */}
+          <div className="mt-2 flex shrink-0 gap-1 overflow-x-auto pb-1">
+            {ACCENTS.map((c) => (
+              <button
+                key={c}
+                type="button"
+                onClick={() => inserer(c)}
+                aria-label={`Insérer ${c}`}
+                className="flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-xl bg-muted text-base font-bold text-foreground"
+              >
+                {c}
+              </button>
+            ))}
+          </div>
+
+          {/* L'action : le morceau suivant, et au dernier, CORRIGER. */}
+          <Button
+            type="button"
+            size="xl"
+            disabled={pending}
+            onClick={() => {
+              if (dernierSegment) terminer('telephone')
+              else setIndexSegment((i) => i + 1)
+            }}
+            className="mt-2 w-full shrink-0"
+          >
+            <Check aria-hidden="true" />
+            {pending ? 'Correction…' : dernierSegment ? 'Corriger' : 'Morceau suivant'}
+          </Button>
         </div>
       </div>
     )

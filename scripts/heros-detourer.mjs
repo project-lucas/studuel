@@ -6,7 +6,10 @@
 // l'armure, ni dans le surcot, ni dans la croix rouge du Templier : c'est la
 // couleur de clé la plus sûre pour cette palette.
 //
-//   node scripts/heros-detourer.mjs <planche> <dossier> <nom1> [nom2] [nom3]
+//   node scripts/heros-detourer.mjs <planche> <dossier> <nom1> [nom2] [nom3] [--cle=magenta] [--hauteur=720] [--qualite=88]
+//
+// --cle=magenta (02/11/2026) : fond MAGENTA pur (#FF00FF) pour les personnages
+// qui portent du vert — le Mage de feu, les orcs, le troll, Grammatork.
 //
 // Chaque pose est repérée comme une tache connexe, isolée de ses voisines,
 // recadrée au plus juste, ramenée à HAUTEUR px de haut.
@@ -14,13 +17,17 @@ import sharp from 'sharp'
 import path from 'node:path'
 import fs from 'node:fs'
 
-const [, , planche, dossier, ...noms] = process.argv
+const args = process.argv.slice(2)
+const CLE = (args.find((a) => a.startsWith("--cle=")) ?? "--cle=vert").slice(6)
+const [planche, dossier, ...noms] = args.filter((a) => !a.startsWith("--"))
 if (!planche || !dossier || noms.length === 0) {
   console.error('usage : node scripts/heros-detourer.mjs <planche> <dossier> <nom1> [nom2] [nom3]')
   process.exit(1)
 }
 
-const HAUTEUR = 720
+const option = (nom, defaut) => Number((args.find((a) => a.startsWith(`--${nom}=`)) ?? `=${defaut}`).split("=")[1])
+const HAUTEUR = option("hauteur", 720)
+const QUALITE = option("qualite", 88)
 const MARGE = 12
 // Écart de vert (g − max(r, b)) : au-dessus de PLEIN, c'est du fond ; entre
 // BORD et PLEIN, un bord adouci (antialiasing du dessin).
@@ -35,7 +42,7 @@ for (let i = 0; i < px.length; i += 4) {
   const r = px[i]
   const g = px[i + 1]
   const b = px[i + 2]
-  const ecart = g - Math.max(r, b)
+  const ecart = CLE === "magenta" ? Math.min(r, b) - g : g - Math.max(r, b)
   if (ecart >= PLEIN) {
     px[i + 3] = 0
     continue
@@ -43,8 +50,14 @@ for (let i = 0; i < px.length; i += 4) {
   if (ecart > BORD) {
     px[i + 3] = Math.round(255 * (1 - (ecart - BORD) / (PLEIN - BORD)))
   }
-  // Dévertissage : un reflet vert sur l'acier redevient gris.
-  if (ecart > 0) px[i + 1] = Math.max(r, b)
+  // Dévertissage : un reflet vert sur l'acier redevient gris (au magenta : le
+  // rose des bords redescend vers le vert de la même tache).
+  if (ecart > 0) {
+    if (CLE === "magenta") {
+      px[i] = r - ecart
+      px[i + 2] = b - ecart
+    } else px[i + 1] = Math.max(r, b)
+  }
 }
 
 // Les poses = les plus grandes taches connexes (sur une grille réduite, CASE
@@ -100,7 +113,11 @@ if (grandes.length < noms.length) {
 }
 // À quelle pose appartient chaque tache.
 const poseDe = new Map()
+// Les poussières (quelques cases : un reste de lettre, un point de bord) ne
+// rejoignent personne : elles s'effacent.
+const POUSSIERE = 12
 for (const t of taches) {
+  if (t.n <= POUSSIERE && !grandes.includes(t)) continue
   let meilleure = 0
   let dist = Infinity
   grandes.forEach((g, k) => {
@@ -158,7 +175,7 @@ for (const [k, nom] of noms.entries()) {
   await sharp(seule, { raw: { width, height, channels: 4 } })
     .extract({ left, top, width: w, height: h })
     .resize({ height: Math.min(HAUTEUR, h) })
-    .webp({ quality: 88, alphaQuality: 90, effort: 6 })
+    .webp({ quality: QUALITE, alphaQuality: 90, effort: 6 })
     .toFile(sortie)
   const { size } = fs.statSync(sortie)
   console.log(`${sortie} — ${w}×${h} → ${Math.round(size / 1024)} Ko`)

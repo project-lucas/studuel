@@ -8,7 +8,6 @@ import {
   type Subject,
   type Chapter,
   type Lesson,
-  type QuizQuestion,
 } from '@/lib/types'
 
 // Catalogue en cache serveur : matières, chapitres et leçons sont identiques
@@ -303,43 +302,6 @@ export const getProgrammeCached = unstable_cache(getProgrammeFresh, ['catalog-pr
   revalidate: CATALOG_TTL_SECONDS,
   tags: ['catalog'],
 })
-
-// Le nombre de quiz tirés au sort pour le vivier du boss d'une matière : une
-// vingtaine de quiz font 200 à 300 questions, de quoi varier soixante questions
-// d'une visite à l'autre.
-const BOSS_VIVIER_QUIZ = 20
-
-/**
- * LE VIVIER DU BOSS d'une matière à un niveau (30/10/2026, chantier latence).
- *
- * La page matière lisait à CHAQUE ouverture les questions complètes de dix quiz
- * tirés au sort, dans une vague qui attendait le programme. Ce sont des faits
- * de catalogue, les mêmes pour tous les élèves : le tirage se fait ici, une fois
- * par fenêtre de cache, et la page ne fait plus que mélanger et couper. Sans
- * dépendance à l'élève, la lecture part dès l'arrivée du profil.
- */
-export const getBossVivierCached = unstable_cache(
-  async (subjectId: string, grade: string): Promise<QuizQuestion[]> => {
-    const programme = await getProgrammeCached(subjectId, grade)
-    const quizIds = programme.flatMap((c) =>
-      c.lessons.flatMap((l) => l.quizzes.map((q) => q.id)),
-    )
-    if (quizIds.length === 0) return []
-    const tirage = [...quizIds]
-    for (let i = tirage.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1))
-      ;[tirage[i], tirage[j]] = [tirage[j], tirage[i]]
-    }
-    const { data } = await anonClient()
-      .from('quiz_questions')
-      .select('id, quiz_id, question, kind, options, correct_index, explanation, position')
-      .in('quiz_id', tirage.slice(0, BOSS_VIVIER_QUIZ))
-      .returns<QuizQuestion[]>()
-    return data ?? []
-  },
-  ['catalog-boss-vivier'],
-  { revalidate: CATALOG_TTL_SECONDS, tags: ['catalog'] },
-)
 
 /**
  * Les DISCIPLINES d'une matière à ce niveau, dans l'ordre du programme

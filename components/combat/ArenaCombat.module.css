@@ -1,0 +1,980 @@
+/* L'ARÈNE DU COMBAT — voir ArenaCombat.tsx. Transform et opacité seulement,
+   valeurs littérales dans les images-clés ; chaque animation existe en deux
+   exemplaires identiques (_a / _b) pour se rejouer coup après coup.
+
+   Le calendrier d'un coup (MS_IMPACT = 440 ms) :
+     0     → 300 ms  l'attaquant fond en avant (fente), pose d'attaque ;
+     100   → 440 ms  le projectile vole ;
+     440   → 960 ms  l'impact, le recul de la cible, le chiffre, les cœurs. */
+
+.arene {
+  position: relative;
+  flex: 1;
+  min-height: 17rem;
+  isolation: isolate;
+}
+
+.camera {
+  position: absolute;
+  inset: 0;
+}
+
+/* --- les combattants ------------------------------------------------------ */
+
+.combattant {
+  position: absolute;
+}
+
+/* L'adversaire se tient sur le sable de la lice, au pied des gradins ; moi,
+   au premier plan, les pieds sous le bord de la carte de question. */
+.combattant[data-camp='rival'] {
+  right: 1%;
+  bottom: 22%;
+  width: 42%;
+  height: 50%;
+}
+
+.combattant[data-camp='moi'] {
+  left: -3%;
+  bottom: -7%;
+  width: 58%;
+  height: 72%;
+}
+
+/* Le prof-boss est plus grand qu'un élève : il occupe le seuil de sa tanière. */
+.arene[data-variante='boss'] .combattant[data-camp='rival'] {
+  right: -3%;
+  bottom: 25%;
+  width: 48%;
+  height: 54%;
+}
+
+/* Assis, il est plus bas que debout : on le remonte pour qu'il ne disparaisse
+   pas sous la carte. */
+.combattant[data-camp='moi'][data-pose='ko'] {
+  bottom: 4%;
+}
+
+.plateau {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: -4%;
+  height: 14%;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    color-mix(in oklab, var(--foreground) 45%, transparent) 0%,
+    color-mix(in oklab, var(--foreground) 18%, transparent) 45%,
+    transparent 70%
+  );
+}
+
+.esquive,
+.souffle,
+.geste,
+.calque {
+  position: absolute;
+  inset: 0;
+}
+
+.souffle {
+  animation: respire 2.4s ease-in-out infinite;
+}
+
+.combattant[data-camp='moi'] .souffle {
+  animation-delay: -1.2s;
+}
+
+.combattant[data-pose='ko'] .souffle {
+  animation: none;
+}
+
+/* Chaque pose porte son propre sens : on retourne celles qui tournent le dos
+   à l'adversaire (catalogue, `regards`). */
+.miroir {
+  transform: scaleX(-1);
+}
+
+.sprite {
+  object-fit: contain;
+  object-position: center bottom;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+}
+
+.visible {
+  opacity: 1;
+}
+
+/* La bascule des poses : la pose de repos s'efface le temps de l'attaque (ou
+   du coup encaissé), la pose d'attaque (ou « touché ») la remplace. */
+.cacheAttaque_a {
+  animation: cache_a 620ms linear both;
+}
+.cacheAttaque_b {
+  animation: cache_b 620ms linear both;
+}
+.montreAttaque_a {
+  animation: montre_a 620ms linear both;
+}
+.montreAttaque_b {
+  animation: montre_b 620ms linear both;
+}
+
+.cacheTouche_a {
+  animation: cache_a 420ms linear 440ms;
+}
+.cacheTouche_b {
+  animation: cache_b 420ms linear 440ms;
+}
+.montreTouche_a {
+  animation: montre_a 420ms linear 440ms;
+}
+.montreTouche_b {
+  animation: montre_b 420ms linear 440ms;
+}
+
+/* Le voile blanc du coup encaissé : un filtre FIXE, seule l'opacité bouge. */
+.flash {
+  filter: brightness(0) invert(1);
+}
+
+.flash_a {
+  animation: flash_a 380ms ease-out 440ms both;
+}
+.flash_b {
+  animation: flash_b 380ms ease-out 440ms both;
+}
+
+.chute {
+  animation: chute 520ms cubic-bezier(0.3, 1.6, 0.5, 1) both;
+}
+
+/* La fente : l'attaquant prend son élan (recul), fond vers l'autre, TIENT
+   l'instant de l'impact (le « hit-stop » des jeux de combat), revient. */
+.fente_moi_a {
+  animation: fente_moi_a 760ms cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+.fente_moi_b {
+  animation: fente_moi_b 760ms cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+.fente_rival_a {
+  animation: fente_rival_a 760ms cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+.fente_rival_b {
+  animation: fente_rival_b 760ms cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+.recul_moi_a {
+  animation: recul_moi_a 460ms ease-out 440ms;
+}
+.recul_moi_b {
+  animation: recul_moi_b 460ms ease-out 440ms;
+}
+.recul_rival_a {
+  animation: recul_rival_a 460ms ease-out 440ms;
+}
+.recul_rival_b {
+  animation: recul_rival_b 460ms ease-out 440ms;
+}
+
+/* L'esquive : un pas de côté, et retour. */
+.esquive_moi_a {
+  animation: esquive_moi_a 520ms cubic-bezier(0.2, 0.9, 0.3, 1) 300ms;
+}
+.esquive_moi_b {
+  animation: esquive_moi_b 520ms cubic-bezier(0.2, 0.9, 0.3, 1) 300ms;
+}
+.esquive_rival_a {
+  animation: esquive_rival_a 520ms cubic-bezier(0.2, 0.9, 0.3, 1) 300ms;
+}
+.esquive_rival_b {
+  animation: esquive_rival_b 520ms cubic-bezier(0.2, 0.9, 0.3, 1) 300ms;
+}
+
+/* --- les plaques -----------------------------------------------------------
+   La pilule blanche du HUD de l'arène : l'avatar dans l'anneau de son rang
+   déborde à gauche (à droite pour moi), le nom, la rangée de CŒURS, et sur
+   ma plaque la jauge du super. */
+
+.plaque {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: min(66%, 16rem);
+  padding: 0.3rem 0.65rem 0.4rem 0.3rem;
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--foreground);
+  border: 3px solid color-mix(in oklab, var(--primary) 24%, var(--card));
+  box-shadow:
+    0 4px 0 color-mix(in oklab, var(--primary) 45%, var(--foreground)),
+    0 10px 18px color-mix(in oklab, var(--foreground) 28%, transparent);
+}
+
+.plaque[data-camp='rival'] {
+  top: 1%;
+  left: 1%;
+}
+
+.plaque[data-camp='moi'] {
+  right: 1%;
+  bottom: 3%;
+  flex-direction: row-reverse;
+  padding: 0.3rem 0.3rem 0.4rem 0.65rem;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 3.4rem;
+  margin: -0.85rem 0 -0.85rem -0.55rem;
+  filter: drop-shadow(0 3px 0 color-mix(in oklab, var(--foreground) 35%, transparent));
+}
+
+.plaque[data-camp='moi'] .avatar {
+  margin: -0.85rem -0.55rem -0.85rem 0;
+}
+
+.corps {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.18rem;
+  min-width: 0;
+}
+
+.plaqueHaut {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.nom {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+.rang {
+  flex-shrink: 0;
+  margin-left: auto;
+  padding: 0.05rem 0.4rem;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--primary) 12%, var(--card));
+  color: color-mix(in oklab, var(--primary) 80%, var(--foreground));
+  font-size: 0.6rem;
+  font-weight: 900;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+/* La jauge du super : trois crans, l'or se remplit à chaque bonne réponse
+   d'affilée — la troisième déclenche l'attaque fétiche en GRAND. */
+.super {
+  display: flex;
+  align-items: center;
+  gap: 0.18rem;
+}
+
+.cran {
+  width: 1.25rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--foreground) 16%, var(--card));
+  transform: skewX(-18deg);
+}
+
+.cran[data-plein='true'] {
+  background: linear-gradient(to bottom, color-mix(in oklab, var(--highlight) 55%, var(--card)), var(--highlight) 60%);
+  animation: cran 320ms cubic-bezier(0.3, 1.6, 0.5, 1) both;
+}
+
+.superMot {
+  margin-left: 0.2rem;
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--foreground) 70%, var(--card));
+}
+
+/* --- le projectile -------------------------------------------------------- */
+
+/* Le trajet couvre toute l'arène : ses % de translation sont ceux de l'arène. */
+.trajet {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.projectile {
+  position: absolute;
+  width: 26%;
+  aspect-ratio: 1;
+}
+
+/* Il part de la main de l'attaquant, incliné sur sa route. */
+.projectile[data-camp='moi'] {
+  left: 40%;
+  top: 54%;
+  transform: translate(-50%, -50%) rotate(-12deg);
+}
+
+.projectile[data-camp='rival'] {
+  left: 68%;
+  top: 46%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+}
+
+.projectileSuper {
+  width: 44%;
+}
+
+.dessin {
+  position: absolute;
+  inset: 0;
+}
+
+.vfx {
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+
+.vol_moi_a {
+  animation: vol_moi_a 340ms cubic-bezier(0.45, 0, 0.9, 0.6) 100ms forwards;
+}
+.vol_moi_b {
+  animation: vol_moi_b 340ms cubic-bezier(0.45, 0, 0.9, 0.6) 100ms forwards;
+}
+.vol_rival_a {
+  animation: vol_rival_a 340ms cubic-bezier(0.45, 0, 0.9, 0.6) 100ms forwards;
+}
+.vol_rival_b {
+  animation: vol_rival_b 340ms cubic-bezier(0.45, 0, 0.9, 0.6) 100ms forwards;
+}
+
+/* L'attaque ratée : le projectile passe À CÔTÉ de la cible (qui fait un pas
+   de côté) et file hors de la lice en s'éteignant. */
+.vol_moi_rate_a {
+  animation: vol_moi_rate_a 560ms cubic-bezier(0.45, 0, 0.9, 0.6) 100ms forwards;
+}
+.vol_moi_rate_b {
+  animation: vol_moi_rate_b 560ms cubic-bezier(0.45, 0, 0.9, 0.6) 100ms forwards;
+}
+.vol_rival_rate_a {
+  animation: vol_rival_rate_a 560ms cubic-bezier(0.45, 0, 0.9, 0.6) 100ms forwards;
+}
+.vol_rival_rate_b {
+  animation: vol_rival_rate_b 560ms cubic-bezier(0.45, 0, 0.9, 0.6) 100ms forwards;
+}
+
+/* --- l'impact, les dégâts, l'annonce -------------------------------------- */
+
+.impact {
+  position: absolute;
+  z-index: 3;
+  width: 36%;
+  aspect-ratio: 1;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.impact[data-cible='rival'] {
+  left: 60%;
+  top: 30%;
+}
+
+.impact[data-cible='moi'] {
+  left: 8%;
+  top: 46%;
+}
+
+.impactFort {
+  width: 48%;
+}
+
+.impactFort[data-cible='rival'] {
+  left: 54%;
+  top: 24%;
+}
+
+.impactFort[data-cible='moi'] {
+  left: 2%;
+  top: 40%;
+}
+
+/* L'éclat d'or du critique, par-dessus l'impact. */
+.eclatCritique {
+  z-index: 4;
+}
+
+.impact_a {
+  animation: impact_a 560ms ease-out 440ms both;
+}
+.impact_b {
+  animation: impact_b 560ms ease-out 440ms both;
+}
+
+.degats {
+  position: absolute;
+  z-index: 5;
+  font-size: 1.9rem;
+  line-height: 1;
+  color: var(--card);
+  text-shadow:
+    0 3px 0 var(--destructive),
+    0 0 10px color-mix(in oklab, var(--foreground) 60%, transparent);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.degats[data-cible='rival'] {
+  left: 64%;
+  top: 22%;
+}
+
+.degats[data-cible='moi'] {
+  left: 26%;
+  top: 44%;
+}
+
+.degats_a {
+  animation: degats_a 900ms ease-out 470ms both;
+}
+.degats_b {
+  animation: degats_b 900ms ease-out 470ms both;
+}
+
+/* « Coup critique ! » ou le nom de l'attaque fétiche au super, et son cri. */
+.annonce {
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.6rem;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--highlight);
+  text-shadow:
+    0 3px 0 var(--foreground),
+    0 0 12px color-mix(in oklab, var(--foreground) 55%, transparent);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.annonce[data-super='true'] {
+  font-size: 1.8rem;
+}
+
+.annonce small {
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--card);
+}
+
+.annonce_a {
+  animation: annonce_a 1400ms ease-out both;
+}
+.annonce_b {
+  animation: annonce_b 1400ms ease-out both;
+}
+
+.motEsquive {
+  position: absolute;
+  z-index: 5;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--card);
+  text-shadow:
+    0 3px 0 var(--primary),
+    0 0 10px color-mix(in oklab, var(--foreground) 55%, transparent);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.motEsquive[data-camp='moi'] {
+  left: 30%;
+  top: 40%;
+}
+
+.motEsquive[data-camp='rival'] {
+  left: 60%;
+  top: 22%;
+}
+
+.motEsquive_a {
+  animation: degats_a 900ms ease-out 360ms both;
+}
+.motEsquive_b {
+  animation: degats_b 900ms ease-out 360ms both;
+}
+
+/* --- la caméra ------------------------------------------------------------ */
+
+.secousse_a {
+  animation: secousse_a 380ms ease-out 440ms;
+}
+.secousse_b {
+  animation: secousse_b 380ms ease-out 440ms;
+}
+
+/* Le super : la caméra pousse vers la cible, tient, revient. L'origine est
+   fixe (la cible), seule la transformation bouge. */
+.pousse_moi_a,
+.pousse_moi_b {
+  transform-origin: 78% 44%;
+}
+.pousse_rival_a,
+.pousse_rival_b {
+  transform-origin: 26% 66%;
+}
+.pousse_moi_a,
+.pousse_rival_a {
+  animation: pousse_a 1100ms cubic-bezier(0.3, 0.7, 0.3, 1);
+}
+.pousse_moi_b,
+.pousse_rival_b {
+  animation: pousse_b 1100ms cubic-bezier(0.3, 0.7, 0.3, 1);
+}
+
+/* Mon dernier cœur : le bord de l'écran rougit et bat (la vignette de
+   danger des jeux de tir), sous les plaques. */
+.alerte {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 52%,
+    color-mix(in oklab, var(--destructive) 40%, transparent) 88%,
+    color-mix(in oklab, var(--destructive) 62%, transparent) 100%
+  );
+  pointer-events: none;
+  animation: alerte 1s ease-in-out infinite;
+}
+
+/* --- l'entrée en scène, la réplique, le K.O. ------------------------------ */
+
+.arene[data-entree='true'] .combattant[data-camp='rival'] {
+  animation: entree_rival 650ms cubic-bezier(0.2, 0.9, 0.3, 1.15) both;
+}
+
+.arene[data-entree='true'] .combattant[data-camp='moi'] {
+  animation: entree_moi 650ms cubic-bezier(0.2, 0.9, 0.3, 1.15) 120ms both;
+}
+
+/* La boîte de dialogue prend la place de ma plaque, comme dans Pokémon. */
+.arene[data-replique='true'] .plaque[data-camp='moi'] {
+  opacity: 0;
+}
+
+.arene[data-entree='true'] .plaque {
+  animation: plaque 400ms ease-out 650ms both;
+}
+
+.vs {
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  top: 44%;
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-size: 3.6rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--highlight);
+  text-shadow:
+    0 4px 0 var(--foreground),
+    0 0 18px color-mix(in oklab, var(--foreground) 60%, transparent);
+  animation: vs 500ms cubic-bezier(0.3, 1.5, 0.5, 1) 750ms both;
+}
+
+/* La boîte de dialogue façon Pokémon : bord épais, coins doux, le texte
+   s'écrit lettre à lettre, la flèche bat quand il est fini. */
+.replique {
+  position: absolute;
+  z-index: 7;
+  left: 3%;
+  right: 3%;
+  bottom: 3%;
+  margin: 0;
+  padding: 0.75rem 2rem 0.85rem 0.95rem;
+  border-radius: 1rem;
+  background: var(--card);
+  color: var(--foreground);
+  border: 4px solid color-mix(in oklab, var(--primary) 70%, var(--foreground));
+  box-shadow:
+    inset 0 0 0 3px color-mix(in oklab, var(--primary) 14%, var(--card)),
+    0 5px 0 color-mix(in oklab, var(--primary) 45%, var(--foreground)),
+    0 12px 22px color-mix(in oklab, var(--foreground) 30%, transparent);
+  font-size: 1.05rem;
+  line-height: 1.3;
+  animation: plaque 260ms ease-out both;
+}
+
+.lettre {
+  opacity: 0;
+  white-space: pre-wrap;
+  animation: lettre 1ms linear both;
+}
+
+.suite {
+  position: absolute;
+  right: 0.8rem;
+  bottom: 0.7rem;
+  width: 0.7rem;
+  height: 0.55rem;
+  background: color-mix(in oklab, var(--primary) 75%, var(--foreground));
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  opacity: 0;
+  animation: suite 800ms ease-in-out infinite both;
+}
+
+.ko {
+  position: absolute;
+  z-index: 6;
+  left: 40%;
+  top: 30%;
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-size: 3.4rem;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--card);
+  text-shadow:
+    0 4px 0 var(--destructive),
+    0 0 20px color-mix(in oklab, var(--foreground) 65%, transparent);
+  animation: ko 650ms cubic-bezier(0.3, 1.6, 0.5, 1) 250ms both;
+}
+
+/* Le tampon se pose À CÔTÉ du héros assommé, jamais sur lui. */
+.ko[data-camp='moi'] {
+  left: 46%;
+  top: 24%;
+}
+
+/* --- les images-clés ------------------------------------------------------ */
+
+@keyframes respire {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes cache_a {
+  0%, 92% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes cache_b {
+  0%, 92% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes montre_a {
+  0%, 92% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes montre_b {
+  0%, 92% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes fente_moi_a {
+  0% { transform: translate(0, 0) scale(1); }
+  12% { transform: translate(-4%, 2%) scale(0.98); }
+  38% { transform: translate(14%, -8%) scale(1.05); }
+  62% { transform: translate(14%, -8%) scale(1.05); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes fente_moi_b {
+  0% { transform: translate(0, 0) scale(1); }
+  12% { transform: translate(-4%, 2%) scale(0.98); }
+  38% { transform: translate(14%, -8%) scale(1.05); }
+  62% { transform: translate(14%, -8%) scale(1.05); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes fente_rival_a {
+  0% { transform: translate(0, 0) scale(1); }
+  12% { transform: translate(4%, -2%) scale(0.98); }
+  38% { transform: translate(-16%, 9%) scale(1.07); }
+  62% { transform: translate(-16%, 9%) scale(1.07); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes fente_rival_b {
+  0% { transform: translate(0, 0) scale(1); }
+  12% { transform: translate(4%, -2%) scale(0.98); }
+  38% { transform: translate(-16%, 9%) scale(1.07); }
+  62% { transform: translate(-16%, 9%) scale(1.07); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes recul_moi_a {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  14% { transform: translate(-9%, 4%) rotate(-4deg); }
+  32% { transform: translate(5%, -1%) rotate(2deg); }
+  52% { transform: translate(-3%, 1%) rotate(-1deg); }
+  72% { transform: translate(1%, 0) rotate(0deg); }
+}
+@keyframes recul_moi_b {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  14% { transform: translate(-9%, 4%) rotate(-4deg); }
+  32% { transform: translate(5%, -1%) rotate(2deg); }
+  52% { transform: translate(-3%, 1%) rotate(-1deg); }
+  72% { transform: translate(1%, 0) rotate(0deg); }
+}
+@keyframes recul_rival_a {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  14% { transform: translate(10%, -3%) rotate(5deg); }
+  32% { transform: translate(-5%, 1%) rotate(-2deg); }
+  52% { transform: translate(3%, 0) rotate(1deg); }
+  72% { transform: translate(-1%, 0) rotate(0deg); }
+}
+@keyframes recul_rival_b {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  14% { transform: translate(10%, -3%) rotate(5deg); }
+  32% { transform: translate(-5%, 1%) rotate(-2deg); }
+  52% { transform: translate(3%, 0) rotate(1deg); }
+  72% { transform: translate(-1%, 0) rotate(0deg); }
+}
+
+@keyframes esquive_moi_a {
+  0%, 100% { transform: translateX(0); }
+  30%, 60% { transform: translateX(-16%); }
+}
+@keyframes esquive_moi_b {
+  0%, 100% { transform: translateX(0); }
+  30%, 60% { transform: translateX(-16%); }
+}
+@keyframes esquive_rival_a {
+  0%, 100% { transform: translateX(0); }
+  30%, 60% { transform: translateX(18%); }
+}
+@keyframes esquive_rival_b {
+  0%, 100% { transform: translateX(0); }
+  30%, 60% { transform: translateX(18%); }
+}
+
+@keyframes flash_a {
+  0% { opacity: 0; }
+  20% { opacity: 0.9; }
+  100% { opacity: 0; }
+}
+@keyframes flash_b {
+  0% { opacity: 0; }
+  20% { opacity: 0.9; }
+  100% { opacity: 0; }
+}
+
+@keyframes chute {
+  0% { transform: translateY(-18%); }
+  100% { transform: translateY(0); }
+}
+
+/* Le vol : apparaît petit à la main, grossit en route, s'éteint sur la cible
+   (l'impact prend le relais à la même image). */
+@keyframes vol_moi_a {
+  0% { opacity: 1; transform: translate(0, 0) scale(0.55); }
+  96% { opacity: 1; transform: translate(36%, -8%) scale(1); }
+  100% { opacity: 0; transform: translate(38%, -8.5%) scale(1); }
+}
+@keyframes vol_moi_b {
+  0% { opacity: 1; transform: translate(0, 0) scale(0.55); }
+  96% { opacity: 1; transform: translate(36%, -8%) scale(1); }
+  100% { opacity: 0; transform: translate(38%, -8.5%) scale(1); }
+}
+@keyframes vol_rival_a {
+  0% { opacity: 1; transform: translate(0, 0) scale(0.55); }
+  96% { opacity: 1; transform: translate(-40%, 15%) scale(1.1); }
+  100% { opacity: 0; transform: translate(-42%, 16%) scale(1.1); }
+}
+@keyframes vol_rival_b {
+  0% { opacity: 1; transform: translate(0, 0) scale(0.55); }
+  96% { opacity: 1; transform: translate(-40%, 15%) scale(1.1); }
+  100% { opacity: 0; transform: translate(-42%, 16%) scale(1.1); }
+}
+
+@keyframes vol_moi_rate_a {
+  0% { opacity: 1; transform: translate(0, 0) scale(0.55); }
+  60% { opacity: 1; transform: translate(36%, -14%) scale(1); }
+  100% { opacity: 0; transform: translate(62%, -24%) scale(0.9); }
+}
+@keyframes vol_moi_rate_b {
+  0% { opacity: 1; transform: translate(0, 0) scale(0.55); }
+  60% { opacity: 1; transform: translate(36%, -14%) scale(1); }
+  100% { opacity: 0; transform: translate(62%, -24%) scale(0.9); }
+}
+@keyframes vol_rival_rate_a {
+  0% { opacity: 1; transform: translate(0, 0) scale(0.55); }
+  60% { opacity: 1; transform: translate(-40%, 22%) scale(1.1); }
+  100% { opacity: 0; transform: translate(-70%, 36%) scale(1.2); }
+}
+@keyframes vol_rival_rate_b {
+  0% { opacity: 1; transform: translate(0, 0) scale(0.55); }
+  60% { opacity: 1; transform: translate(-40%, 22%) scale(1.1); }
+  100% { opacity: 0; transform: translate(-70%, 36%) scale(1.2); }
+}
+
+@keyframes impact_a {
+  0% { opacity: 0; transform: scale(0.3) rotate(-18deg); }
+  18% { opacity: 1; transform: scale(1.12) rotate(0deg); }
+  55% { opacity: 1; transform: scale(1.2) rotate(4deg); }
+  100% { opacity: 0; transform: scale(1.4) rotate(8deg); }
+}
+@keyframes impact_b {
+  0% { opacity: 0; transform: scale(0.3) rotate(-18deg); }
+  18% { opacity: 1; transform: scale(1.12) rotate(0deg); }
+  55% { opacity: 1; transform: scale(1.2) rotate(4deg); }
+  100% { opacity: 0; transform: scale(1.4) rotate(8deg); }
+}
+
+@keyframes degats_a {
+  0% { opacity: 0; transform: translateY(0) scale(0.5); }
+  18% { opacity: 1; transform: translateY(-8px) scale(1.3); }
+  32% { opacity: 1; transform: translateY(-12px) scale(1); }
+  75% { opacity: 1; transform: translateY(-28px) scale(1); }
+  100% { opacity: 0; transform: translateY(-42px) scale(1); }
+}
+@keyframes degats_b {
+  0% { opacity: 0; transform: translateY(0) scale(0.5); }
+  18% { opacity: 1; transform: translateY(-8px) scale(1.3); }
+  32% { opacity: 1; transform: translateY(-12px) scale(1); }
+  75% { opacity: 1; transform: translateY(-28px) scale(1); }
+  100% { opacity: 0; transform: translateY(-42px) scale(1); }
+}
+
+@keyframes annonce_a {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(2); }
+  16% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -62%) scale(1); }
+}
+@keyframes annonce_b {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(2); }
+  16% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -62%) scale(1); }
+}
+
+@keyframes secousse_a {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-7px, 4px); }
+  40% { transform: translate(6px, -3px); }
+  60% { transform: translate(-4px, 2px); }
+  80% { transform: translate(2px, -1px); }
+}
+@keyframes secousse_b {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-7px, 4px); }
+  40% { transform: translate(6px, -3px); }
+  60% { transform: translate(-4px, 2px); }
+  80% { transform: translate(2px, -1px); }
+}
+
+@keyframes pousse_a {
+  0%, 100% { transform: scale(1); }
+  35% { transform: scale(1.14); }
+  55% { transform: scale(1.14) translate(-3px, 2px); }
+  62% { transform: scale(1.14) translate(3px, -2px); }
+  70% { transform: scale(1.12); }
+}
+@keyframes pousse_b {
+  0%, 100% { transform: scale(1); }
+  35% { transform: scale(1.14); }
+  55% { transform: scale(1.14) translate(-3px, 2px); }
+  62% { transform: scale(1.14) translate(3px, -2px); }
+  70% { transform: scale(1.12); }
+}
+
+@keyframes cran {
+  0% { transform: skewX(-18deg) scale(0.4); }
+  100% { transform: skewX(-18deg) scale(1); }
+}
+
+@keyframes alerte {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.9; }
+}
+
+@keyframes entree_rival {
+  0% { opacity: 0; transform: translateX(130%); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes entree_moi {
+  0% { opacity: 0; transform: translateX(-130%); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes plaque {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes vs {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(3); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+@keyframes lettre {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes suite {
+  0%, 100% { opacity: 1; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(3px); }
+}
+@keyframes ko {
+  0% { opacity: 0; transform: translate(-50%, -110%) scale(1.8); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+/* Mouvement réduit : plus de fente, de vol, de secousse ni de poussée ; le
+   coup se lit à l'impact (qui apparaît sans grossir), au chiffre et aux cœurs. */
+@media (prefers-reduced-motion: reduce) {
+  .souffle,
+  .secousse_a,
+  .secousse_b,
+  .pousse_moi_a,
+  .pousse_moi_b,
+  .pousse_rival_a,
+  .pousse_rival_b,
+  .fente_moi_a,
+  .fente_moi_b,
+  .fente_rival_a,
+  .fente_rival_b,
+  .recul_moi_a,
+  .recul_moi_b,
+  .recul_rival_a,
+  .recul_rival_b,
+  .esquive_moi_a,
+  .esquive_moi_b,
+  .esquive_rival_a,
+  .esquive_rival_b,
+  .alerte,
+  .arene[data-entree='true'] .combattant[data-camp='rival'],
+  .arene[data-entree='true'] .combattant[data-camp='moi'] {
+    animation: none;
+  }
+  .vol_moi_a,
+  .vol_moi_b,
+  .vol_rival_a,
+  .vol_rival_b,
+  .vol_moi_rate_a,
+  .vol_moi_rate_b,
+  .vol_rival_rate_a,
+  .vol_rival_rate_b {
+    animation: none;
+    opacity: 0;
+  }
+  .alerte {
+    opacity: 0.6;
+  }
+}

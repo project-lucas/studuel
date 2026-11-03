@@ -53,6 +53,18 @@ Le plus simple : **PWABuilder** (pwabuilder.com), dans le navigateur.
 (Alternative en ligne de commande : `npx @bubblewrap/cli init --manifest https://studuel.app/manifest.webmanifest`
 puis `bubblewrap build` — demande le JDK 17 et le SDK Android.)
 
+**FAIT LE 02/11/2026** (par la ligne de commande, sans PWABuilder) : le paquet signé est
+`C:/Users/potier/Documents/cles/paquets/studuel-1.0.0-1.aab` (version 1.0.0, code 1). Le projet
+Android généré par Bubblewrap vit hors du dépôt, dans `C:/Users/potier/dev/studuel-twa` ; sa
+configuration est copiée dans `assets-sources/play-store/twa-manifest.json` (minSdk 24 : exigé par
+`androidbrowserhelper`). La clé d'ENVOI est `Documents/cles/studuel-upload.jks` (alias `upload`,
+mot de passe dans le `.txt` à côté — à mettre dans un gestionnaire de mots de passe et à
+sauvegarder hors du PC) ; Google signe l'app avec SA clé (Play App Signing). Empreinte SHA-256 de la
+clé d'envoi : `AE:C7:17:20:99:AF:AD:31:8C:B6:4F:92:0C:17:D3:BB:9A:DC:C6:CF:4D:26:B2:B8:29:6B:C2:EB:76:2D:83:2A`.
+`bubblewrap build` refuse le SDK installé en ligne de commande : on compile avec
+`gradlew bundleRelease` (JDK 17, `C:/Users/potier/dev/jdk17`) puis on signe avec `jarsigner`.
+Une nouvelle version : monter `appVersionCode` dans `twa-manifest.json` ET dans `app/build.gradle`.
+
 ## 4. Relier l'app au site (sinon : barre d'adresse en haut de l'app)
 
 1. Play Console › l'app › *Test et publication* › *Intégrité de l'app* › *Signature

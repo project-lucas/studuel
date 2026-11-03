@@ -7,8 +7,8 @@
 import { isExamYear } from '@/lib/annales'
 import { aUneEncyclopedie } from '@/lib/encyclopedie/matieres'
 import { LESSON_FLOOR } from '@/lib/mastery'
+import { matiereSansGardien } from '@/lib/reviser/gardien'
 import type { ExamProximity } from '@/lib/next-exam'
-import type { ModeQuestion } from '@/lib/defi-modes'
 import type { TraqueCard } from '@/lib/traque'
 import type { ExamPaper } from '@/lib/exam-papers'
 import type { AnneeAnnales } from '@/lib/annales-corrigees/apercu'
@@ -26,7 +26,7 @@ import type { SuiteFiche } from '@/lib/reviser/suite'
 // Boss (un panneau, pas une liste) prend la tête. « Annales » ne s'ajoute que
 // les années à examen.
 
-export type ModeKey = 'programme' | 'encyclopedie' | 'exercices' | 'jeu' | 'annales'
+export type ModeKey = 'programme' | 'encyclopedie' | 'exercices' | 'jeu' | 'annales' | 'boss'
 
 /**
  * Pictogramme d'un onglet, désigné par son NOM (le composant fait la
@@ -174,9 +174,18 @@ export function modesFor(
   // « il n'est pas accessible tout de suite, il faut fouiller »). Il ne
   // s'ouvrait que depuis un chapitre : thème, fiche, support, cahier.
   if (aCahier) tabs.push({ key: 'exercices', label: 'Exercices' })
-  // La manette : c'est l'onglet qui se JOUE (boss, jeux de l'arène, défis).
-  tabs.push({ key: 'jeu', label: 'Mode de jeu', icon: 'manette' })
+  // Les ANNALES avant les jeux depuis le 01/11/2026 (Lucas : « programme,
+  // exercices, annales, jeux, boss ») : le travail d'abord, le jeu ensuite.
   if (isExamYear(grade)) tabs.push({ key: 'annales', label: 'Annales' })
+  // La manette : c'est l'onglet qui se JOUE (jeux de l'arène, défis).
+  tabs.push({ key: 'jeu', label: 'Mode de jeu', icon: 'manette' })
+  // LE GARDIEN a sa porte à lui, la dernière (01/11/2026) : il se cachait en
+  // tête de la porte Jeux, où son billet se confondait avec ceux des jeux.
+  // Une matière sans gardien (les arts plastiques) n'a pas la porte, ni un
+  // appel sans matière.
+  if (subjectSlug && !matiereSansGardien(subjectSlug)) {
+    tabs.push({ key: 'boss', label: 'Boss' })
+  }
   return tabs
 }
 
@@ -210,9 +219,11 @@ export type ClePorte = Exclude<ModeKey, 'encyclopedie'>
  */
 export const PORTE_LABELS: Record<ClePorte, string> = {
   programme: 'Programme',
-  exercices: 'Cahier d’exercices',
-  jeu: 'Jeux',
+  // « Exercices » tout court depuis le 01/11/2026 : cinq portes sur 390 px.
+  exercices: 'Exercices',
   annales: 'Annales',
+  jeu: 'Jeux',
+  boss: 'Boss',
 }
 
 export type Porte = { key: ClePorte; label: string }
@@ -250,7 +261,7 @@ export function rayonCourt(label: string): string {
   return label === 'Anciens programmes' ? 'Anciens' : label
 }
 
-// Anciennes clés d'URL (`?onglet=boss`, `?onglet=quiz`… depuis la feuille Modes
+// Anciennes clés d'URL (`?onglet=quiz`… depuis la feuille Modes
 // de jeu et les liens déjà partagés), les noms d'onglets d'avant le renommage,
 // et « erreurs » qui n'a plus d'onglet : toutes restent valides et retombent
 // sur l'onglet qui porte désormais leur contenu. Valeur inconnue — ou onglet
@@ -266,7 +277,8 @@ const LEGACY_MODE_ALIASES: Record<string, ModeKey> = {
   flashcards: 'jeu',
   cartes: 'jeu',
   defis: 'jeu',
-  boss: 'jeu',
+  gardien: 'boss',
+  traque: 'boss',
 }
 
 /**
@@ -288,13 +300,17 @@ export function modeFromParam(
   if (exact) return tabId(exact)
   // 2. une clé seule : on ouvre le PREMIER onglet qui la porte — sur une
   //    matière à deux disciplines, `?onglet=programme` ouvre l'histoire.
-  const key = (['programme', 'encyclopedie', 'exercices', 'jeu', 'annales'] as ModeKey[]).includes(
+  const key = (['programme', 'encyclopedie', 'exercices', 'jeu', 'annales', 'boss'] as ModeKey[]).includes(
     raw as ModeKey,
   )
     ? (raw as ModeKey)
     : LEGACY_MODE_ALIASES[raw]
-  // Un onglet que cette classe n'a pas (annales en 4e) ne s'ouvre pas.
-  const tab = key ? modes.find((m) => m.key === key) : undefined
+  // Un onglet que cette classe n'a pas (annales en 4e) ne s'ouvre pas — sauf
+  // le gardien d'une matière qui n'en a pas : ses anciens liens menaient aux jeux.
+  const tab = key
+    ? (modes.find((m) => m.key === key) ??
+      (key === 'boss' ? modes.find((m) => m.key === 'jeu') : undefined))
+    : undefined
   return tab ? tabId(tab) : undefined
 }
 
@@ -1011,9 +1027,6 @@ export type SubjectTemplateData = {
   examOnTop: boolean
   weakCount: number
   chapters: ChapterRow[]
-  // Onglet « Boss » : pool de questions 100 % matière pour affronter le boss
-  // de la matière (le même de la 6e à la Terminale — bossForSubject côté client).
-  bossPool: ModeQuestion[]
   /**
    * La carte du gardien de la matière — sa jauge de traque (migration 212).
    * `null` quand elle est illisible : la page n'affiche alors pas d'écusson et

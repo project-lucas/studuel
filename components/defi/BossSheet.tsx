@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Check, ChevronRight, Hourglass, Moon, Swords } from 'lucide-react'
 import XpIcon from '@/components/ui/XpIcon'
-import GemIcon from '@/components/ui/GemIcon'
+import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 import { CLOCK_STEP_MS, useClock } from '@/lib/use-clock'
@@ -17,6 +17,7 @@ import {
   sortCards,
   type TraqueCard,
 } from '@/lib/traque'
+import type { BossRank } from '@/lib/bosses'
 import s from './BossSheet.module.css'
 
 /**
@@ -65,6 +66,10 @@ import s from './BossSheet.module.css'
  * ce composant ne recalcule QUE les comptes à rebours, qui se périmeraient
  * sinon dès la seconde suivant le rendu.
  */
+/** La largeur de la scène de l'affiche : le préchargement demande la MÊME
+ *  variante à l'optimiseur d'images (components/PrechargeAuRepos). */
+export const TAILLES_SCENE_GARDIEN = '(max-width: 448px) 100vw, 420px'
+
 export default function BossSheet({ cards }: { cards: TraqueCard[] }) {
   // Une horloge unique pour toute la feuille : le rendu serveur est figé, la
   // fenêtre d'une heure et le jour, eux, s'écoulent. On égrène à la demi-minute
@@ -100,7 +105,7 @@ export default function BossSheet({ cards }: { cards: TraqueCard[] }) {
       <p className="px-0.5 text-[0.78rem] leading-snug font-bold text-muted-foreground">
         Remplis la jauge du gardien du jour : il sort, et tu as{' '}
         <strong className="text-foreground">une heure</strong>
-        {' '}pour l&apos;abattre.
+        {' '}pour le battre.
       </p>
 
       {/* LE PREMIER BLOC EST LE GARDIEN LE PLUS PROCHE D'ÊTRE DÉFIÉ (Lucas,
@@ -119,7 +124,24 @@ export default function BossSheet({ cards }: { cards: TraqueCard[] }) {
   )
 }
 
-function Taniere({ card, now }: { card: TraqueCard; now: number | null }) {
+/**
+ * L'AFFICHE D'UN GARDIEN — une tanière de la feuille, et depuis le 01/11/2026
+ * le contenu de la porte « Boss » du dossier de matière (Lucas : la porte doit
+ * dire la progression, dans combien de temps, et POURQUOI l'affronter).
+ *
+ * `versProgramme` : posée sur la page de la matière, l'affiche n'y renvoie pas
+ * par un lien (ce serait la même page) — les gestes « Lire 1 cours », « Finir 1
+ * quiz » et le bouton « Réviser » ouvrent la porte Programme.
+ */
+export function Taniere({
+  card,
+  now,
+  versProgramme,
+}: {
+  card: TraqueCard
+  now: number | null
+  versProgramme?: () => void
+}) {
   const ready = card.status === 'debusque'
   // LA RARETÉ (576) : pas son jour — un ruban sur la scène, pas de jauge.
   const repos = card.status === 'indisponible'
@@ -148,6 +170,9 @@ function Taniere({ card, now }: { card: TraqueCard; now: number | null }) {
   // la moitié au prochain rendu.
   const gestes = affiche && !expired ? gestesPourTraquer(card) : []
   const { boss } = card
+  const dossier = card.subjectSlug ? `/reviser/${card.subjectSlug}` : '/reviser'
+  // Ce qu'une victoire change : le rang suivant, plus coriace et mieux payé.
+  const rangSuivant = card.rank < MAX_BOSS_RANK ? RANK_LABELS[(card.rank + 1) as BossRank] : null
 
   return (
     <article
@@ -162,7 +187,7 @@ function Taniere({ card, now }: { card: TraqueCard; now: number | null }) {
         <div className={s.parcheminCadre}>
           <div className={cn(s.parchemin, 'font-heading font-extrabold')} data-or={libre ? '' : undefined}>
             <span className={s.parcheminTitre}>{libre ? accorde(boss, 'Débusqué', 'Débusquée') : accorde(boss, 'Recherché', 'Recherchée')}</span>
-            <span className={s.parcheminSous}>{libre ? 'à abattre maintenant' : 'aujourd’hui seulement'}</span>
+            <span className={s.parcheminSous}>{libre ? 'à battre maintenant' : 'aujourd’hui seulement'}</span>
             <span className={s.tampon}>{RANK_LABELS[card.rank]}</span>
           </div>
         </div>
@@ -176,7 +201,7 @@ function Taniere({ card, now }: { card: TraqueCard; now: number | null }) {
             alt=""
             aria-hidden="true"
             fill
-            sizes="(max-width: 448px) 100vw, 420px"
+            sizes={TAILLES_SCENE_GARDIEN}
             className="object-cover"
             style={{ objectPosition: boss.scenePosition ?? SCENE_POSITION_DEFAUT }}
           />
@@ -259,10 +284,23 @@ function Taniere({ card, now }: { card: TraqueCard; now: number | null }) {
                   {geste.libelle}
                   {geste.fait ? <span className="sr-only"> — fait</span> : null}
                 </span>
-                <span className={cn(s.gestePoints, 'tabular-nums')} aria-label={`${geste.points} points`}>
-                  +{geste.points}
+                <span className={cn(s.gestePoints, 'tabular-nums')} aria-label={`${geste.points} % de la jauge`}>
+                  +{geste.points} %
                 </span>
-                {geste.fait ? null : (
+                {geste.fait ? null : versProgramme && geste.href === dossier ? (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      sfx.tap()
+                      versProgramme()
+                    }}
+                    className={cn(s.aller, 'olympe-press font-heading font-extrabold')}
+                    aria-label={`${geste.libelle} : aller`}
+                  >
+                    Aller
+                    <ChevronRight className="size-4" strokeWidth={2.8} aria-hidden="true" />
+                  </button>
+                ) : (
                   <Link
                     href={geste.href}
                     onClick={() => sfx.tap()}
@@ -286,20 +324,26 @@ function Taniere({ card, now }: { card: TraqueCard; now: number | null }) {
           data-or={!repos && !expired ? '' : undefined}
           aria-label={`${card.xp} XP et ${card.gemmes} gemmes en cas de victoire`}
         >
-          <span className={s.gainsTitre}>Récompense</span>
+          {/* Les icônes disent ce que c'est (Lucas, 02/11/2026) : ni titre, ni
+              « XP », ni « gemmes » — l'éclair et le cristal de toute l'app. */}
           <span className={s.gainsRang}>
             <span className={cn(s.gain, 'font-heading font-extrabold tabular-nums')}>
-              <XpIcon className="size-6" />
+              <XpIcon className="size-7" />
               {card.xp}
-              <span className={s.gainUnite}>XP</span>
             </span>
             <span className={cn(s.gain, 'font-heading font-extrabold tabular-nums')}>
-              <GemIcon className="size-6" />
+              <CristalIcon className="size-7" />
               {card.gemmes}
-              <span className={s.gainUnite}>{card.gemmes === 1 ? 'gemme' : 'gemmes'}</span>
             </span>
           </span>
         </div>
+
+        {/* POURQUOI L'AFFRONTER, la suite : la victoire le fait monter de rang. */}
+        {!repos && rangSuivant ? (
+          <p className={s.note}>
+            {accorde(boss, 'Vaincu, il', 'Vaincue, elle')} passe au {rangSuivant} : plus coriace, mieux payé.
+          </p>
+        ) : null}
 
         <div className={s.actions}>
           {libre ? (
@@ -311,9 +355,20 @@ function Taniere({ card, now }: { card: TraqueCard; now: number | null }) {
               <Swords className="size-4" strokeWidth={2.6} aria-hidden="true" />
               Défier {boss.name}
             </Link>
+          ) : versProgramme ? (
+            <button
+              type="button"
+              onClick={() => {
+                sfx.tap()
+                versProgramme()
+              }}
+              className={cn(s.btn, s.btnViolet, 'olympe-press font-heading font-extrabold')}
+            >
+              Réviser {card.subject} →
+            </button>
           ) : (
             <Link
-              href={card.subjectSlug ? `/reviser/${card.subjectSlug}` : '/reviser'}
+              href={dossier}
               onClick={() => sfx.tap()}
               className={cn(s.btn, s.btnViolet, 'olympe-press font-heading font-extrabold')}
             >

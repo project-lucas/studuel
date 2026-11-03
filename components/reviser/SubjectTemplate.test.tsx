@@ -66,7 +66,6 @@ const dossier = (
     examOnTop: false,
     weakCount: 0,
     chapters,
-    bossPool: [],
     gardien: null,
     papers: [],
     annalesCorrigees: [],
@@ -133,9 +132,13 @@ describe('SubjectTemplate — la bannière', () => {
     expect(screen.queryByRole('link', { name: /Commencer|Reprendre/ })).not.toBeInTheDocument()
   })
 
-  it('Marcel est amarré dans l’en-tête, avec la matière sous le bras', () => {
+  // Marcel a quitté l’en-tête (02/11/2026, Lucas : « en bas de la page, en
+  // icône flottante, et les quêtes plus haut ») : un bouton flottant, la
+  // matière toujours sous le bras.
+  it('Marcel flotte en bas de page, avec la matière sous le bras', () => {
     render(<SubjectTemplate data={dossier(simple)} />)
-    const marcel = within(screen.getByRole('banner')).getByRole('link', {
+    expect(within(screen.getByRole('banner')).queryByRole('link', { name: 'Demander à Marcel, ton coach' })).toBeNull()
+    const marcel = screen.getByRole('link', {
       name: 'Demander à Marcel, ton coach',
     })
     expect(marcel).toHaveAttribute('href', '/marcel?matiere=francais')
@@ -143,32 +146,43 @@ describe('SubjectTemplate — la bannière', () => {
 })
 
 describe('SubjectTemplate — les portes', () => {
-  it('Programme · Cahier d’exercices · Jeux · Annales, Programme ouverte, rien sous les noms', () => {
+  it('Programme · Exercices · Annales · Jeux · Boss, Programme ouverte, rien sous les noms', () => {
     render(<SubjectTemplate data={dossier(simple)} />)
     const portes = within(
       screen.getByRole('navigation', { name: 'Les portes du dossier' }),
     ).getAllByRole('button')
     expect(portes.map((p) => p.textContent)).toEqual([
       'Programme',
-      'Cahier d’exercices (Studuel+)',
-      expect.stringMatching(/^Jeux/),
+      'Exercices (Studuel+)',
       expect.stringMatching(/^Annales/),
+      expect.stringMatching(/^Jeux/),
+      expect.stringMatching(/^Boss/),
     ])
     expect(porte(/^Programme/)).toHaveAttribute('aria-current', 'page')
+  })
+
+  it('la porte Boss ouvre le gardien de la matière, la porte Jeux ne le montre plus', () => {
+    render(<SubjectTemplate data={dossier(simple)} />)
+    fireEvent.click(porte(/^Boss/))
+    expect(porte(/^Boss/)).toHaveAttribute('aria-current', 'page')
+    expect(screen.getByRole('heading', { name: /Le gardien · Français/ })).toBeInTheDocument()
+    expect(window.location.search).toBe('?onglet=boss')
+    fireEvent.click(porte(/^Jeux/))
+    expect(screen.queryByRole('heading', { name: /Le gardien/ })).not.toBeInTheDocument()
   })
 
   it('une matière sans cahier n’a pas de porte Cahier d’exercices', () => {
     render(<SubjectTemplate data={dossier(simple, { cahier: null })} />)
     expect(
       within(screen.getByRole('navigation', { name: 'Les portes du dossier' })).queryByRole('button', {
-        name: /Cahier d’exercices/,
+        name: /^Exercices/,
       }),
     ).not.toBeInTheDocument()
   })
 
   it('un abonné ne voit pas la couronne', () => {
     render(<SubjectTemplate data={dossier(simple, { premium: true })} />)
-    expect(porte(/^Cahier d’exercices/)).not.toHaveTextContent('Studuel+')
+    expect(porte(/^Exercices/)).not.toHaveTextContent('Studuel+')
   })
 
   it('la porte Cahier d’exercices ouvre le cahier de la matière, avec son marque-page', () => {
@@ -190,9 +204,9 @@ describe('SubjectTemplate — les portes', () => {
       }),
     )
     render(<SubjectTemplate data={dossier(simple)} />)
-    fireEvent.click(porte(/^Cahier d’exercices/))
+    fireEvent.click(porte(/^Exercices/))
 
-    expect(porte(/^Cahier d’exercices/)).toHaveAttribute('aria-current', 'page')
+    expect(porte(/^Exercices/)).toHaveAttribute('aria-current', 'page')
     expect(screen.getByRole('heading', { name: 'Cahier d’exercices' })).toBeInTheDocument()
     expect(screen.getByText('Ton marque-page · page 2 sur 6')).toBeInTheDocument()
     expect(screen.getByRole('link', { name: 'Ouvrir' })).toHaveAttribute(
@@ -210,7 +224,7 @@ describe('SubjectTemplate — les portes', () => {
     // (La fiche à reprendre prépare SES supports dès l'affichage : ce n'est
     // pas le cahier.)
     expect(fetch).not.toHaveBeenCalledWith(expect.stringContaining('/api/reviser/cahier'), expect.anything())
-    fireEvent.pointerDown(porte(/^Cahier d’exercices/))
+    fireEvent.pointerDown(porte(/^Exercices/))
     expect(fetch).toHaveBeenCalledWith(
       '/api/reviser/cahier?matiere=francais',
       expect.anything(),

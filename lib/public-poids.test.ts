@@ -122,7 +122,12 @@ describe('poids de public/', () => {
   // 34 Mo le 01/11/2026 : les 15 héros s'assoient au bureau de nuit de /joueur
   // (752 × 1344, ~90 Ko, 1,4 Mo) et les boss deviennent les profs du lore
   // (51 images remplacées, 4,1 → 4,7 Mo, scripts/boss-profs.mjs).
-  const TOTAL_MAX_MO = 34
+  // 42 Mo le 02/11/2026 : LE COMBAT DES HÉROS (docs/CADRAGE-COMBAT-HEROS.md) —
+  // 15 héros × 6 poses et 17 profs-boss × 3 poses détourés (640 px de haut,
+  // ~33 Ko, 6,2 Mo, scripts/combat-sprites.mjs) et leurs 32 attaques fétiches
+  // (projectile + impact, 300 px, 2,2 Mo). Un combat n'en charge que DEUX
+  // personnages (~0,5 Mo), préchargés pendant la recherche d'adversaire.
+  const TOTAL_MAX_MO = 42
 
   it(`garde public/ sous ${TOTAL_MAX_MO} Mo au total`, () => {
     const totalMo = fichiers.reduce((s, f) => s + f.ko, 0) / 1024

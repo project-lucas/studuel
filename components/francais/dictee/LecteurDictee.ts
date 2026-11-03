@@ -11,11 +11,11 @@ import {
 /**
  * LA VOIX DE LA DICTÉE.
  *
- * La synthèse vocale du navigateur (Web Speech API) lit le texte du segment.
- * Pas de fichiers audio : ils demanderaient un studio avant la première dictée
- * et des mégaoctets à servir pour chacune. La colonne `audio_url` existe en base
- * pour le jour où un enregistrement humain remplace la voix — le contrat de ce
- * hook ne changera pas.
+ * UNE VRAIE VOIX D'ABORD (01/11/2026) : chaque morceau a son enregistrement
+ * (ElevenLabs, `scripts/dictees-audio.mjs`, la ponctuation dite à voix haute
+ * comme le fait un professeur) — `lire(texte, audio)` le joue. Sans fichier,
+ * ou s'il ne se charge pas, la synthèse vocale du navigateur (Web Speech API)
+ * lit le texte : la dictée reste faisable.
  *
  * DEUX RÉGLAGES QUI FONT TOUTE LA DIFFÉRENCE :
  *   • le DÉBIT est ralenti. Une dictée lue au débit d'une notification est
@@ -48,6 +48,9 @@ export function useLecteurDictee() {
   const [etat, setEtat] = useState<EtatLecture>('muet')
   const [pret, setPret] = useState(false)
   const voixRef = useRef<SpeechSynthesisVoice | null>(null)
+  // Le lecteur des enregistrements : un seul, réutilisé, pour qu'un morceau
+  // ne parle jamais par-dessus un autre.
+  const audioRef = useRef<HTMLAudioElement | null>(null)
   const supporte = useSyncExternalStore(
     sansAbonnement,
     lireSupport,
@@ -77,7 +80,15 @@ export function useLecteurDictee() {
     }
   }, [supporte])
 
-  const lire = useCallback((texte: string) => {
+  // Quitter l'écran fait taire l'enregistrement en cours.
+  useEffect(
+    () => () => {
+      audioRef.current?.pause()
+    },
+    [],
+  )
+
+  const direAvecLaSynthese = useCallback((texte: string) => {
     if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
     const t = String(texte ?? '').trim()
     if (t.length === 0) return
@@ -95,9 +106,37 @@ export function useLecteurDictee() {
     synth.speak(message)
   }, [])
 
+  const lire = useCallback(
+    (texte: string, audio?: string | null) => {
+      if (typeof window === 'undefined') return
+      // On coupe TOUJOURS avant de relancer, l'enregistrement comme la synthèse.
+      audioRef.current?.pause()
+      if ('speechSynthesis' in window) window.speechSynthesis.cancel()
+      if (!audio) {
+        direAvecLaSynthese(texte)
+        return
+      }
+      // Un lecteur neuf par morceau (l'ancien est déjà coupé) : le navigateur
+      // garde le fichier en cache, et aucun écouteur ne survit au morceau.
+      const lecteur = new Audio(audio)
+      lecteur.addEventListener('ended', () => setEtat('muet'))
+      // Fichier introuvable ou réseau coupé : la voix du navigateur prend le relais.
+      lecteur.addEventListener('error', () => direAvecLaSynthese(texte))
+      audioRef.current = lecteur
+      setEtat('lecture')
+      lecteur.play().catch(() => {
+        // Lecture refusée (navigateur qui exige un geste) : on se tait, le
+        // bouton « Réécouter » est là.
+        setEtat('muet')
+      })
+    },
+    [direAvecLaSynthese],
+  )
+
   const couper = useCallback(() => {
-    if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
-    window.speechSynthesis.cancel()
+    if (typeof window === 'undefined') return
+    audioRef.current?.pause()
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel()
     setEtat('muet')
   }, [])
 

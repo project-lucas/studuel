@@ -152,7 +152,7 @@ export const DECOUVERTES: readonly Decouverte[] = [
     onglet: null,
     dessin: '/images/boss/atlas-prof-v4.webp',
     etapes: [
-      { cible: 'arene-boss', titre: 'Les gardiens', texte: 'Révise une matière le jour de son gardien : sa jauge se remplit, et tu as une heure pour l’abattre.' },
+      { cible: 'arene-boss', titre: 'Les gardiens', texte: 'Révise une matière le jour de son gardien : sa jauge se remplit, et tu as une heure pour le battre.' },
     ],
   },
 ] as const

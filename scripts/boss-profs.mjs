@@ -42,6 +42,10 @@ const BOSS = {
   proviseur: 'proviseur-prof',
   socratus: 'socratus-prof',
   mecatron: 'mecatron-prof',
+  // 03/11/2026 : les gardiens du supérieur (un par secteur).
+  themistor: 'themistor-prof',
+  asclepion: 'asclepion-prof',
+  psyche: 'psyche-prof',
 }
 
 // Décalage horizontal du buste, en fraction du côté (négatif = vers la gauche) :
@@ -140,7 +144,10 @@ async function buste(source, destination, decalage = 0) {
     .toFile(destination)
 }
 
+// `node scripts/boss-profs.mjs themistor psyche` : seulement ces sources.
+const demandes = process.argv.slice(2)
 for (const [source, base] of Object.entries(BOSS)) {
+  if (demandes.length > 0 && !demandes.includes(source)) continue
   const scene = await sharp(`${SOURCES}/${source}-scene.png`)
     .resize(1024, 576, { fit: 'cover' })
     .webp({ quality: 80 })

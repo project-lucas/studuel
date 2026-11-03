@@ -1,11 +1,15 @@
 import { describe, expect, it } from 'vitest'
 import { GRADE_LEVELS } from '@/lib/types'
+import { cycleOf } from '@/lib/grades'
 import {
   PROGRAMME_PAR_CLASSE,
   estDansLaClasse,
   programmeDeClasse,
   titreAChoisir,
 } from '@/lib/programme-classes'
+
+// Le supérieur n'a ni anglais d'office ni LV2 : ses règles sont dans lib/superieur/cursus.test.ts.
+const CLASSES_SCOLAIRES = GRADE_LEVELS.filter((g) => cycleOf(g) !== 'superieur')
 
 const CULTURE = ['economie', 'entrepreneuriat', 'figures-historiques', 'finances-personnelles', 'fiscalite']
 const tout = (g: keyof typeof PROGRAMME_PAR_CLASSE) => [
@@ -49,7 +53,7 @@ describe('PROGRAMME_PAR_CLASSE', () => {
   })
 
   it('met la LV2 en choix et l’anglais d’office', () => {
-    for (const g of GRADE_LEVELS) {
+    for (const g of CLASSES_SCOLAIRES) {
       expect(PROGRAMME_PAR_CLASSE[g].obligatoires, g).toContain('anglais')
       expect(PROGRAMME_PAR_CLASSE[g].obligatoires, g).not.toContain('allemand')
       expect(PROGRAMME_PAR_CLASSE[g].obligatoires, g).not.toContain('espagnol')

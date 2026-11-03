@@ -20,6 +20,7 @@ import { CONJUGAISON_TIER_BRIEF } from '@/lib/jeux/conjugaison-eclair'
 import { INSTRUMENT_TIER_BRIEF } from '@/lib/jeux/classe-instrument'
 import { COMPOSE_TIER_BRIEF } from '@/lib/jeux/qui-a-compose'
 import { MUSEE_TIER_BRIEF } from '@/lib/jeux/le-musee'
+import { TRIBUNAL_TIER_BRIEF } from '@/lib/jeux/quel-tribunal'
 
 /**
  * Les trois coefficients d'un palier :
@@ -277,4 +278,5 @@ const BANK_BRIEFS: Record<string, Record<PalierLevel, string>> = {
   'classe-instrument': INSTRUMENT_TIER_BRIEF,
   'qui-a-compose': COMPOSE_TIER_BRIEF,
   'le-musee': MUSEE_TIER_BRIEF,
+  'quel-tribunal': TRIBUNAL_TIER_BRIEF,
 }

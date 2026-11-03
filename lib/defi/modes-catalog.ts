@@ -22,7 +22,7 @@ import {
   modeScene,
   type GameModeId,
 } from '@/lib/defi-modes'
-import { SALONS } from '@/lib/jeux/catalog'
+import { SALONS, salonsPour } from '@/lib/jeux/catalog'
 import { formatTeaser, gameFormat } from '@/lib/jeux/formats'
 import { gameBestKey } from '@/lib/jeux/records'
 import { LIEN_STUDUEL_PLUS, jeuLibre, jeuOuvert } from '@/lib/jeux/acces'
@@ -98,6 +98,8 @@ export const TEINTE_MATIERE: Record<string, TeinteBillet> = {
   Sport: 'corail',
   // Arts plastiques (14/10/2026) : le rose que la matière porte déjà en base.
   'Arts plastiques': 'rose',
+  // Le supérieur (03/11/2026) : l'ambre de la boiserie du prétoire.
+  'Institutions juridictionnelles': 'ambre',
 }
 
 /** La teinte de chaque mode de l'Arène. */
@@ -163,6 +165,8 @@ const GAME_SCENE_IDS = [
   'muscles-express',
   // Arts plastiques, 14/10/2026 : la galerie du Musée, un cadre doré au talon.
   'le-musee',
+  // Le supérieur, 03/11/2026 : le prétoire de Quel tribunal ?, balance et maillet au talon.
+  'quel-tribunal',
 ]
 
 export function gameScene(id: string): string | undefined {
@@ -200,6 +204,8 @@ const GAME_TALON_IDS = [
   'muscles-express',
   // Arts plastiques, 14/10/2026 : la galerie du Musée, un cadre doré au talon.
   'le-musee',
+  // Le supérieur, 03/11/2026 : balance et maillet (le cadre du Musée en référence).
+  'quel-tribunal',
 ]
 
 /** L'objet du talon d'un jeu de salon, quand il est dessiné. */
@@ -279,8 +285,12 @@ export type SectionMatiere = {
  * tous. Le bouton « tous les modes » déplie le reste : jeux Studuel+ (sous
  * cadenas pour qui ne l'a pas) et jeux « Bientôt ».
  */
-export function sectionsMatieres(premium: boolean, tout = true): SectionMatiere[] {
-  return SALONS.map((s) => {
+export function sectionsMatieres(
+  premium: boolean,
+  tout = true,
+  classe?: string | null,
+): SectionMatiere[] {
+  return salonsPour(classe).map((s) => {
     const tickets = subjectGameTickets(s.subject, { premium })
     const libre = tickets.find((t) => t.gameId !== undefined && jeuLibre(t.gameId))
     return {
@@ -293,9 +303,9 @@ export function sectionsMatieres(premium: boolean, tout = true): SectionMatiere[
 }
 
 /** Combien de billets de jeux la vue par défaut garde repliés. */
-export function modesReplies(premium: boolean): number {
-  const tous = sectionsMatieres(premium, true).reduce((n, s) => n + s.tickets.length, 0)
-  const visibles = sectionsMatieres(premium, false).reduce((n, s) => n + s.tickets.length, 0)
+export function modesReplies(premium: boolean, classe?: string | null): number {
+  const tous = sectionsMatieres(premium, true, classe).reduce((n, s) => n + s.tickets.length, 0)
+  const visibles = sectionsMatieres(premium, false, classe).reduce((n, s) => n + s.tickets.length, 0)
   return tous - visibles
 }
 
@@ -394,11 +404,14 @@ export function vueModes({
   premium,
   tout,
   connecte,
+  classe,
 }: {
   dayKey: string
   premium: boolean
   tout: boolean
   connecte: boolean
+  /** La classe de l'élève : les salons du supérieur ne vont qu'à leurs étudiants. */
+  classe?: string | null
 }): {
   vedette: ModeTicket | null
   sections: SectionMatiere[]
@@ -413,9 +426,9 @@ export function vueModes({
   ]
   return {
     vedette,
-    sections: sectionsMatieres(premium, tout),
+    sections: sectionsMatieres(premium, tout, classe),
     arene: tout ? areneComplete : [],
-    replies: modesReplies(premium) + areneComplete.length,
+    replies: modesReplies(premium, classe) + areneComplete.length,
   }
 }
 

@@ -28,6 +28,7 @@ import type { PlancheId } from '@/lib/jeux/planches'
 import { buildClasseInstrumentPool } from '@/lib/jeux/classe-instrument'
 import { buildQuiAComposePool } from '@/lib/jeux/qui-a-compose'
 import { buildMuseePool } from '@/lib/jeux/le-musee'
+import { buildQuelTribunalPool } from '@/lib/jeux/quel-tribunal'
 
 // Chaque id marqué `implemented: true` au catalogue doit figurer dans EXACTEMENT
 // un des quatre registres de ce fichier : QCM (ici), ordre, compte, zones. La
@@ -60,6 +61,8 @@ export const POOL_BUILDERS: Record<
   'classe-instrument': (seed, count, tier) => buildClasseInstrumentPool(seed, count, tier),
   'qui-a-compose': (seed, count, tier) => buildQuiAComposePool(seed, count, tier),
   'le-musee': (seed, count, tier) => buildMuseePool(seed, count, tier),
+  // Le supérieur (03/11/2026) : la L1 droit.
+  'quel-tribunal': (seed, count, tier) => buildQuelTribunalPool(seed, count, tier),
 }
 
 /** Le pool d'un jeu par id, ou null si aucune banque n'est enregistrée. */

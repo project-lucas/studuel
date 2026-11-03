@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { SALONS } from '@/lib/jeux/catalog'
+import { SALONS, salonsPour } from '@/lib/jeux/catalog'
 import { PROGRAMME_GAME_ID, programmeSlug } from '@/lib/jeux/programme'
 import {
   bestNextGame,
@@ -15,8 +15,10 @@ const EMPTY = new Map<string, number>()
 describe('buildRoster', () => {
   it('rend une entrée par matière du catalogue', () => {
     const roster = buildRoster(EMPTY)
-    expect(roster).toHaveLength(SALONS.length)
-    expect(roster.map((r) => r.subject)).toEqual(SALONS.map((s) => s.subject))
+    // Sans classe : les salons du supérieur restent cachés (lib/jeux/catalog).
+    expect(roster).toHaveLength(salonsPour(null).length)
+    expect(roster.map((r) => r.subject)).toEqual(salonsPour(null).map((s) => s.subject))
+    expect(buildRoster(EMPTY, { classe: 'L1 droit' })).toHaveLength(SALONS.length)
   })
 
   it('donne à chaque matière au moins un jeu de salon, plus son Programme', () => {

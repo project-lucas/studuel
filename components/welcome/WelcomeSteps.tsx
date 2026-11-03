@@ -4,6 +4,7 @@ import type { ReactNode } from 'react'
 import { cn } from '@/lib/utils'
 import { type Subject } from '@/lib/types'
 import { GRADE_CYCLES } from '@/lib/grades'
+import { CURSUS, classeSup } from '@/lib/superieur/cursus'
 import {
   GOALS,
   GRADE_LABELS,
@@ -395,6 +396,45 @@ function GradeCell({
   )
 }
 
+/**
+ * Le supérieur, rangé PAR CURSUS (03/11/2026) : « Droit · L1 L2 L3 » se lit
+ * d'un coup d'œil, là où treize cases « L1 Droit, L2 Droit… » à plat faisaient
+ * chercher sa licence dans une liste. Le PASS, d'une seule année, a sa ligne.
+ */
+function ClassesSuperieur({
+  titre,
+  classe,
+  onPick,
+}: {
+  titre: string
+  classe: string | null
+  onPick: (grade: string) => void
+}) {
+  return (
+    <div className="flex flex-col gap-[11px]">
+      <h3 className="titre-section">{titre}</h3>
+      {CURSUS.map((c) => (
+        <div key={c.id} className="flex flex-col gap-[7px]">
+          <p className="text-[13px] font-extrabold text-muted-foreground">{c.nom}</p>
+          <div className={cn('grid gap-[11px]', c.annees.length > 1 ? 'grid-cols-3' : 'grid-cols-2')}>
+            {c.annees.map((annee) => {
+              const g = classeSup(c, annee)
+              return (
+                <GradeCell
+                  key={g}
+                  label={annee}
+                  selected={classe === g}
+                  onPick={() => onPick(g)}
+                />
+              )
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}
+
 export function GradeStep({
   answers,
   subjects,
@@ -430,7 +470,15 @@ export function GradeStep({
           {/* L'app va de la 6e à la Terminale (13/10/2026, Lucas) : le primaire
               n'est plus proposé à l'inscription — treize cases dont cinq sans
               programme faisaient chercher un 3e dans une grille de CE1. */}
-          {GRADE_CYCLES.filter((cycle) => cycle.id !== 'primaire').map((cycle) => (
+          {GRADE_CYCLES.filter((cycle) => cycle.id !== 'primaire').map((cycle) =>
+            cycle.id === 'superieur' ? (
+              <ClassesSuperieur
+                key={cycle.id}
+                titre={cycle.label}
+                classe={answers.grade}
+                onPick={onPick}
+              />
+            ) : (
             <div key={cycle.id} className="flex flex-col gap-[11px]">
               <h3 className="titre-section">
                 {cycle.label}
@@ -446,7 +494,8 @@ export function GradeStep({
                 ))}
               </div>
             </div>
-          ))}
+            ),
+          )}
         </OptionGroup>
       </div>
     </div>

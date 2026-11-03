@@ -3,6 +3,7 @@
 // leurs preuves dans la matière) et les ÉQUIPES (2v2 entre amis, ouverts à
 // tous — on gagne ou on perd ensemble). Les composants ne font qu'afficher.
 import { MASTERY_THRESHOLDS, type ChapterMastery } from '@/lib/mastery'
+import { MATIERES_SUP, matieresDeClasse } from '@/lib/superieur/cursus'
 
 // ------------------------------------------------------------------ salons
 
@@ -30,6 +31,8 @@ export type SalonGameId =
   // Arts plastiques (14/10/2026) : l'histoire de l'art par les œuvres.
   | 'le-musee'
   | 'muscles-express'
+  // Le supérieur (03/11/2026) : le premier jeu des étudiants, en droit.
+  | 'quel-tribunal'
 
 export type SalonGame = {
   id: string
@@ -240,7 +243,44 @@ export const SALONS: Salon[] = [
       },
     ],
   },
+  // --- Le supérieur (03/11/2026) -----------------------------------------------
+  // Lucas : « il faudra également créer les modes de jeu ». Un salon par
+  // MATIÈRE d'étudiant, comme au lycée ; le modèle est celui de la L1 droit
+  // (lib/jeux/quel-tribunal). Les jeux prévus pour les autres cursus sont
+  // listés dans docs/CADRAGE-SUPERIEUR.md, aucun n'est annoncé « Bientôt ».
+  {
+    subject: 'Institutions juridictionnelles',
+    emoji: '⚖️',
+    games: [
+      {
+        id: 'quel-tribunal',
+        name: 'Quel tribunal ?',
+        emoji: '⚖️',
+        tagline: 'Une affaire, quatre juridictions : qui est compétent ?',
+        implemented: true,
+      },
+    ],
+  },
 ]
+
+// QUI VOIT QUEL SALON (03/11/2026). Les salons du collège et du lycée restent
+// ouverts à tous, comme avant. Un salon d'une matière du SUPÉRIEUR ne se
+// montre qu'aux étudiants dont l'année suit cette matière : un élève de 4e ne
+// voit pas « Institutions juridictionnelles » dans sa roulette de duel. Sans
+// classe connue (visiteur), il reste caché.
+const SLUG_SUP_PAR_NOM = new Map(MATIERES_SUP.map((m) => [m.nom, m.slug] as const))
+
+/** Vrai si ce salon se montre à un élève de cette classe. */
+export function salonVisiblePour(subject: string, classe?: string | null): boolean {
+  const slug = SLUG_SUP_PAR_NOM.get(subject)
+  if (!slug) return true
+  return typeof classe === 'string' && matieresDeClasse(classe).includes(slug)
+}
+
+/** Les salons que cette classe voit, dans l'ordre du catalogue. */
+export function salonsPour(classe?: string | null): Salon[] {
+  return SALONS.filter((s) => salonVisiblePour(s.subject, classe))
+}
 
 // LES JEUX RETIRÉS (Lucas, 19/09/2026 : « trop de modes de jeu ») : Duel
 // d'orthographe (Chasse à la faute tient la même compétence), Le compte est

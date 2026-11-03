@@ -142,6 +142,8 @@ const BANQUES: Record<GradeCycle, PlacementQuestion[]> = {
   primaire: FALLBACK_PRIMAIRE,
   college: FALLBACK_COLLEGE,
   lycee: FALLBACK_LYCEE,
+  // Pas encore de quiz de placement du supérieur : celui du lycée, le plus proche.
+  superieur: FALLBACK_LYCEE,
 }
 
 export function fallbackPlacement(grade: string | null): PlacementQuestion[] {

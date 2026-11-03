@@ -10,7 +10,7 @@
 // de la Route des trophées (le bilan par matière). Les deux écrans lisaient
 // sinon le catalogue chacun de leur côté, et auraient fini par ne plus proposer
 // la même chose.
-import { SALONS } from '@/lib/jeux/catalog'
+import { salonsPour } from '@/lib/jeux/catalog'
 import { gameFormat, formatTeaser } from '@/lib/jeux/formats'
 import {
   PROGRAMME_GAME_ID,
@@ -59,6 +59,8 @@ export type RosterOptions = {
    * sur l'arène sans explication.
    */
   programmeReady?: ReadonlySet<string>
+  /** La classe de l'élève : un salon du supérieur ne se montre qu'à ses étudiants. */
+  classe?: string | null
 }
 
 /** Clé de lecture des compteurs : « slug:jeu ». */
@@ -92,7 +94,7 @@ export function buildRoster(
   trophies: ReadonlyMap<string, number>,
   options: RosterOptions = {},
 ): RosterSubject[] {
-  return SALONS.map((salon) => {
+  return salonsPour(options.classe).map((salon) => {
     const slug = programmeSlug(salon.subject)
 
     const games: RosterGame[] = salon.games

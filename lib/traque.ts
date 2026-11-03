@@ -408,12 +408,18 @@ const WEEKDAY_NAMES = [
   'dimanche',
 ] as const
 
-/** Boss en chasse par jour de semaine (ids du catalogue lib/bosses). */
+/**
+ * Boss en chasse par jour de semaine (ids du catalogue lib/bosses). Miroir :
+ * `traque_en_chasse` (dernière définition : 607). Les gardiens du supérieur
+ * (03/11/2026) ont chacun leur jour, comme les autres : Thémistor (droit) le
+ * mardi, Dame Psyché le mercredi, Asclépion (santé) le jeudi — Krach (éco) et
+ * le Coach (STAPS) gardent le vendredi.
+ */
 const CHASSE_BY_WEEKDAY: readonly (readonly string[])[] = [
   ['delta', 'imperator', 'nova'], // lundi — Maths · Latin · Enseignement scientifique
-  ['grammatork', 'plasma', 'fiscus'], // mardi — Français · Physique-Chimie · Gestion
-  ['chronos', 'bigben', 'sphinx'], // mercredi — Histoire-Géo (Atlas) · Anglais · Philosophie
-  ['mitochondrix', 'eltoro', 'mecatron'], // jeudi — SVT (Sylvarok) · Espagnol · Technologie
+  ['grammatork', 'plasma', 'fiscus', 'themistor'], // mardi — Français · Physique-Chimie · Gestion · Droit
+  ['chronos', 'bigben', 'sphinx', 'psyche'], // mercredi — Histoire-Géo (Atlas) · Anglais · Philosophie · Psychologie
+  ['mitochondrix', 'eltoro', 'mecatron', 'asclepion'], // jeudi — SVT (Sylvarok) · Espagnol · Technologie · Santé
   ['kaiser-fang', 'krach', 'coach-turbo', 'bugzilla'], // vendredi — Allemand · SES · Sport · NSI
   [], // samedi — rattrapage : TOUS (cf. isEnChasse)
   [], // dimanche — rattrapage : TOUS + Nox

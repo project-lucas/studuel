@@ -10,6 +10,11 @@ import { programmeGroups } from '@/lib/subject-groups'
 import { cycleOf, isTechno } from '@/lib/grades'
 import { cheminMigration, nomsDesMigrations } from '@/lib/migrations-lecture'
 
+// Les classes de l'école, du collège et du lycée. Le SUPÉRIEUR (03/11/2026) a
+// ses propres règles — pas d'anglais d'office, pas de culture générale, une
+// licence n'a pas dix matières — gardées par lib/superieur/cursus.test.ts.
+const CLASSES_SCOLAIRES = GRADE_LEVELS.filter((g) => cycleOf(g) !== 'superieur')
+
 // Ces gardes relisent les 22 Mo de `supabase/` : sous charge (un serveur de dev
 // qui compile à côté), les 5 s par défaut de Vitest ne suffisent pas et le test
 // échoue pour une raison qui n'a rien à voir avec ce qu'il garde. Un garde qui
@@ -142,7 +147,7 @@ describe('chaque classe a un programme complet', () => {
   // obligerait à inventer une matière qui n'existe pas à l'école.
   const minimumFor = (grade: string) => (cycleOf(grade) === 'primaire' ? 9 : 10)
 
-  for (const grade of GRADE_LEVELS) {
+  for (const grade of CLASSES_SCOLAIRES) {
     it(`${grade} propose au moins ${minimumFor(grade)} matières au programme`, () => {
       const ofLevel = programme.filter((s) => s.levels.includes(grade))
       expect(
@@ -165,7 +170,7 @@ describe('chaque classe a un programme complet', () => {
         ? [...COMMUN, 'francais', 'sciences-technologie']
         : [...COMMUN, 'francais', 'svt']
 
-    for (const grade of GRADE_LEVELS) {
+    for (const grade of CLASSES_SCOLAIRES) {
       for (const slug of socleFor(grade)) {
         // Le français s'arrête en 1re (la philosophie prend le relais en Tle),
         // dans les deux voies.
@@ -208,7 +213,7 @@ describe('chaque classe a un programme complet', () => {
     // les mêmes qu'en 6e. Elles restent proposées partout ailleurs, 1re TECHNO
     // comprise (voir le commentaire sur l'EPS plus haut : ce sont les seules
     // matières d'expression de sa grille).
-    const attendus = GRADE_LEVELS.filter((g) => g !== '1re')
+    const attendus = CLASSES_SCOLAIRES.filter((g) => g !== '1re')
     for (const slug of ['arts-plastiques', 'musique']) {
       expect(catalogue.get(slug)?.levels, slug).toEqual([...attendus])
     }
@@ -323,7 +328,7 @@ describe('rangement de l’accueil', () => {
   })
 
   it('donne à chaque classe un programme rempli et sa culture générale', () => {
-    for (const grade of GRADE_LEVELS) {
+    for (const grade of CLASSES_SCOLAIRES) {
       const { groups, culture } = shownFor(grade)
       expect(groups.flatMap((g) => g.items).length, grade).toBeGreaterThan(0)
       expect(culture.length, `${grade} : pas de culture générale`).toBeGreaterThan(0)

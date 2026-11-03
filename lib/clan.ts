@@ -16,7 +16,16 @@ import { cycleOf, type GradeCycle } from '@/lib/grades'
 // dur — et c'est la deuxième qui a été oubliée quand le primaire est arrivé :
 // un élève de CP se retrouvait dans un clan de COLLÈGE, à qui l'app disait
 // « ton collège devient ton clan ».
-export type SchoolLevel = GradeCycle
+//
+// LE SUPÉRIEUR (03/11/2026) n'a pas encore d'école en base (ni colonne
+// `profiles.*_school_id`, ni `schools.level`). Il suit donc le REPLI du SQL :
+// le CASE de la 322 envoie toute classe inconnue sur « college », et ce module
+// doit dire la même chose (lib/clan-level.test.ts). Sans école enregistrée —
+// l'écran « Ton établissement » est hors du chemin de l'onboarding — l'étudiant
+// n'a simplement pas de clan. Le clan universitaire est un chantier à part
+// (docs/CADRAGE-SUPERIEUR.md) ; le TON des verdicts, lui, est celui du lycée
+// (lib/verdict).
+export type SchoolLevel = Exclude<GradeCycle, 'superieur'>
 
 export const SCHOOL_LEVELS: readonly SchoolLevel[] = ['primaire', 'college', 'lycee']
 
@@ -31,7 +40,8 @@ export const SCHOOL_LEVEL_LABEL: Record<SchoolLevel, string> = {
  * cf. `cycleOf`, qui porte cette règle et son repli.
  */
 export function schoolLevelForGrade(grade: string | null | undefined): SchoolLevel {
-  return cycleOf(grade)
+  const cycle = cycleOf(grade)
+  return cycle === 'superieur' ? 'college' : cycle
 }
 
 export function isSchoolLevel(v: unknown): v is SchoolLevel {

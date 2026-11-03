@@ -127,7 +127,12 @@ describe('poids de public/', () => {
   // ~33 Ko, 6,2 Mo, scripts/combat-sprites.mjs) et leurs 32 attaques fétiches
   // (projectile + impact, 300 px, 2,2 Mo). Un combat n'en charge que DEUX
   // personnages (~0,5 Mo), préchargés pendant la recherche d'adversaire.
-  const TOTAL_MAX_MO = 42
+  // 45 Mo le 03/11/2026 : LE SUPÉRIEUR (docs/CADRAGE-SUPERIEUR.md) — 60 vignettes
+  // de matières d'étudiants (320 px, ~30 Ko, 1,7 Mo, scripts/vignettes-superieur.mjs)
+  // et trois gardiens de secteur (buste, scène, en pied : 0,4 Mo) ; un étudiant
+  // ne charge que les vignettes de son année. Marge pour la scène et le talon
+  // des jeux du supérieur et les sprites de combat des trois gardiens.
+  const TOTAL_MAX_MO = 45
 
   it(`garde public/ sous ${TOTAL_MAX_MO} Mo au total`, () => {
     const totalMo = fichiers.reduce((s, f) => s + f.ko, 0) / 1024

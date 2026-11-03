@@ -41,6 +41,8 @@ const PAR_MATIERE: Record<string, TeinteMatiere> = {
   musique: 'indigo',
   sport: 'corail',
   'arts-plastiques': 'rose',
+  // Le supérieur (03/11/2026) : la L1 droit et son salon, Quel tribunal ?
+  'institutions-juridictionnelles': 'ambre',
 }
 
 /** Les autres suivent la couleur que la base leur donne (`subjects.color`). */

@@ -28,10 +28,29 @@ import {
   Rocket,
   Scale,
   ScrollText,
+  Stethoscope,
   Sigma,
   TrendingUp,
   type LucideIcon,
 } from 'lucide-react'
+import { CURSUS, MATIERES_SUP, type IdCursus } from '@/lib/superieur/cursus'
+
+// LE SUPÉRIEUR (03/11/2026) : l'icône de trait d'une matière est celle de son
+// SECTEUR — soixante matières, cinq familles. La vignette peinte, elle, est
+// propre à chaque matière (VIGNETTE_SLUGS) : c'est elle qu'on voit d'abord.
+const ICONE_SECTEUR: Record<IdCursus, LucideIcon> = {
+  droit: Scale,
+  eco: TrendingUp,
+  psycho: Brain,
+  staps: Dumbbell,
+  sante: Stethoscope,
+}
+
+function iconesSup(): Record<string, LucideIcon> {
+  return Object.fromEntries(
+    CURSUS.flatMap((c) => c.matieres.map((m) => [m.slug, ICONE_SECTEUR[c.id]] as const)),
+  )
+}
 
 // Icône de trait sobre par matière (clé `subjects.slug`), en remplacement des
 // emojis colorés — cohérent avec le thème marine/orange.
@@ -98,6 +117,7 @@ const SUBJECT_ICONS: Record<string, LucideIcon> = {
   biotechnologies: FlaskConical,
   spcl: FlaskConical,
   'biochimie-biologie-biotechnologie': Microscope,
+  ...iconesSup(),
 }
 
 export function subjectIcon(slug: string): LucideIcon {
@@ -337,6 +357,10 @@ const VIGNETTE_SLUGS: string[] = [
   'sport',
   'svt',
   'technologie',
+  // Le supérieur (03/11/2026) : une vignette par matière, peinte sur le
+  // même modèle (scripts/vignettes-superieur.mjs) ; lib/superieur/cursus.test.ts
+  // vérifie que chacune a son fichier.
+  ...MATIERES_SUP.map((m) => m.slug),
   // Les matières absentes de cette liste passent par VIGNETTE_ALIASES quand une
   // matière sœur peut leur prêter son dessin. Le Grand oral, dernier à n'avoir
   // ni l'un ni l'autre, a reçu le sien le 03/10/2026 (le pupitre au micro).

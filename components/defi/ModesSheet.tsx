@@ -77,6 +77,7 @@ export default function ModesSheet({
   liveDuel = false,
   palmares = [],
   premium = false,
+  classe = null,
 }: {
   todayKey: string
   /** Élève connecté : les billets « Duel en direct » (QR) et « Mode Coop » rejoignent la liste. */
@@ -85,6 +86,8 @@ export default function ModesSheet({
   palmares?: readonly LignePalmares[]
   /** Abonné Studuel+ : tous les jeux de chaque matière s'ouvrent. */
   premium?: boolean
+  /** La classe de l'élève : les salons du supérieur ne vont qu'à leurs étudiants. */
+  classe?: string | null
 }) {
   const [open, setOpen] = useState(false)
   // Un billet touché quitte l'arène : au retour, la feuille est refermée.
@@ -130,6 +133,7 @@ export default function ModesSheet({
     premium,
     tout,
     connecte: liveDuel,
+    classe,
   })
   const modes = funModeTickets(todayKey)
   const places = placesDeLaSemaine(palmares)

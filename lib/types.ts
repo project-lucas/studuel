@@ -29,8 +29,26 @@ export const GRADE_LEVELS = [
   '1re techno',
   'Tle',
   'Tle techno',
+  // LE SUPÉRIEUR (03/11/2026) : une classe par cursus et par année, comme la
+  // voie techno — le cursus et ses matières vivent dans lib/superieur/cursus.ts,
+  // qui doit redonner exactement cette liste (un test le vérifie).
+  'L1 droit',
+  'L2 droit',
+  'L3 droit',
+  'PASS',
+  'L1 staps',
+  'L2 staps',
+  'L3 staps',
+  'L1 psycho',
+  'L2 psycho',
+  'L3 psycho',
+  'L1 eco',
+  'L2 eco',
+  'L3 eco',
 ] as const
 export type GradeLevel = (typeof GRADE_LEVELS)[number]
+/** Les classes du supérieur (« L1 droit », « PASS »…), sous-ensemble de GradeLevel. */
+export type ClasseSup = Extract<GradeLevel, 'PASS' | `L${1 | 2 | 3} ${string}`>
 
 // Réviser : matières → chapitres → leçons (migration 008).
 export type SubjectCategory =

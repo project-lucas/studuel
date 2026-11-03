@@ -165,6 +165,8 @@ export type GameTheme =
   | 'muscle'
   /** Arts plastiques (14/10/2026) : Le Musée. */
   | 'musee'
+  /** Le supérieur (03/11/2026) : Quel tribunal ?, la boiserie du prétoire. */
+  | 'tribunal'
   /** Le jeu « Programme » (lib/jeux/programme.ts) — hors catalogue des salons. */
   | 'programme'
 
@@ -624,6 +626,28 @@ export const GAME_FORMATS: Record<SalonGameId, GameFormat> = {
       lose: 'Séance d’anatomie conseillée',
     },
     params: { mechanic: 'expedition', expedition: { stops: 8, questionSeconds: 14 } },
+  },
+
+  // --- Le supérieur (03/11/2026) -------------------------------------------
+  // La compétence juridictionnelle de L1 droit (lib/jeux/quel-tribunal) : une
+  // affaire, la juridiction compétente. La banque monte avec le palier — la
+  // première instance, puis les recours, puis les cours suprêmes et l'Europe.
+  'quel-tribunal': {
+    id: 'quel-tribunal',
+    theme: 'tribunal',
+    timbre: 'velours',
+    layout: 'liste',
+    rule: '9 affaires à orienter vers le bon juge, 15 secondes chacune — personne ne t’élimine.',
+    emoji: '⚖️',
+    lexicon: {
+      verb: 'Qui est compétent ?',
+      step: 'affaire',
+      steps: 'affaires',
+      hit: 'affaire bien orientée',
+      win: 'L’audience est levée !',
+      lose: 'Incompétence soulevée',
+    },
+    params: { mechanic: 'expedition', expedition: { stops: 9, questionSeconds: 15 } },
   },
 }
 

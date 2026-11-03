@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { ALL_BOSSES, bossById, bossForSubject } from '@/lib/bosses'
+import { ALL_BOSSES, BOSSES_SUP, bossById, bossForSubject } from '@/lib/bosses'
 import {
   chaptersBySubject,
   apparitionAlive,
@@ -208,7 +208,8 @@ describe('calendrier de la chasse', () => {
 
   it('mêle chaque jour une scientifique et une littéraire ou une langue', () => {
     const mercredi = chasseOfDay(MERCREDI).map((b) => b.id)
-    expect(mercredi).toEqual(['chronos', 'bigben', 'sphinx'])
+    // Dame Psyché (psychologie, supérieur) partage le mercredi (607).
+    expect(mercredi).toEqual(['chronos', 'bigben', 'sphinx', 'psyche'])
     // Le week-end, la liste est vide : c'est « tout le monde », pas « personne ».
     expect(chasseOfDay(SAMEDI)).toEqual([])
   })
@@ -561,13 +562,16 @@ describe('accord avec le catalogue des boss', () => {
     const semaine = [LUNDI, MARDI, MERCREDI, '2026-07-30', '2026-07-31'].map((day) =>
       chasseOfDay(day).map((b) => b.id),
     )
-    // Trois gardiens par jour, quatre le vendredi : les seize du catalogue.
-    expect(semaine.map((ids) => ids.length)).toEqual([3, 3, 3, 3, 4])
+    // Trois gardiens le lundi, quatre les autres jours : les seize du
+    // catalogue et les trois gardiens du supérieur (607), un jour chacun.
+    expect(semaine.map((ids) => ids.length)).toEqual([3, 4, 4, 4, 4])
     const tous = semaine.flat()
     expect(new Set(tous).size).toBe(tous.length)
     for (const id of tous) expect(bossById(id)).toBeDefined()
     // Chaque gardien du catalogue a son jour — sauf Nox, qui n'a que le dimanche.
-    const catalogue = ALL_BOSSES.map((b) => b.id).filter((id) => bossById(id) !== undefined && id !== 'nox')
+    const catalogue = [...ALL_BOSSES, ...BOSSES_SUP]
+      .map((b) => b.id)
+      .filter((id) => bossById(id) !== undefined && id !== 'nox')
     expect([...tous].sort()).toEqual([...catalogue].sort())
     expect(isEnChasse('nox', SAMEDI)).toBe(false)
     expect(isEnChasse('nox', DIMANCHE)).toBe(true)

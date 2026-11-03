@@ -171,6 +171,8 @@ export default async function OngletDefi() {
   // Abonné Studuel+ ? Décide de la pastille d'appel du HUD. `false` par défaut :
   // un visiteur non connecté est justement la cible du message.
   let isPremium = false
+  // La classe de l'élève : les salons du supérieur ne vont qu'à leurs étudiants.
+  let classeEleve: string | null = null
 
 
   if (user) {
@@ -280,6 +282,7 @@ export default async function OngletDefi() {
       (profile.subscription_tier ?? 'free') as Tier,
     )
     trophies = Math.max(0, Number(profile.trophies) || 0)
+    classeEleve = profile.grade_level ?? null
     const apercuAmis = mapFriendsOverview(
       Array.isArray(overviewRes.data) ? overviewRes.data : [],
     )
@@ -314,7 +317,7 @@ export default async function OngletDefi() {
         .map(([slug]) => slug),
     )
 
-    roster = buildRoster(trophyMap(trophyRows), { programmeReady })
+    roster = buildRoster(trophyMap(trophyRows), { programmeReady, classe: classeEleve })
 
     // LE LADDER PAR MATIÈRE. Il se DÉDUIT des compteurs déjà lus : le total
     // d'une matière est la somme de ses jeux, et le rang n'est qu'une lecture
@@ -606,6 +609,7 @@ export default async function OngletDefi() {
                   // total de trophées a quitté la feuille pour l'arène, sous
                   // la carte du joueur — 22/09/2026.)
                   premium={isPremium}
+                  classe={classeEleve}
                 />
               }
             />

@@ -4806,6 +4806,48 @@ export const MIGRATIONS_SANTE: readonly MigrationSante[] = [
     // Révoquée pour anon : la lecture anonyme est refusée (42501), la table existe.
     sonde: { type: 'table', table: 'classement_maitrise_photo' },
   },
+  {
+    id: '606',
+    fichier: '606_matieres_superieur.sql',
+    feature:
+      'LES MATIÈRES DU SUPÉRIEUR (03/11/2026) : 60 matières pour les cinq cursus du Pareto Parcoursup — droit (L1-L3), PASS, STAPS, psychologie, économie-gestion (L1-L3) — chacune pour les seules classes du supérieur qui la suivent (`subjects.levels`), générées depuis lib/superieur/cursus.ts. Le contenu vit à la classe exacte, sans alias.',
+    siAbsente:
+      'Un étudiant qui choisit « L1 droit » ou « PASS » à l’onboarding n’a aucune matière : Réviser est vide. Rien ne casse pour le collège et le lycée. À exécuter AVANT toute migration de contenu du supérieur.',
+    sonde: { type: 'ligne', table: 'subjects', colonne: 'slug', valeur: 'droit-civil' },
+  },
+  {
+    id: '607',
+    fichier: '607_traque_gardiens_superieur.sql',
+    feature:
+      'LES GARDIENS DU SUPÉRIEUR DANS LA TRAQUE (03/11/2026) : `traque_en_chasse` réécrite (même signature) avec trois gardiens de secteur de plus — Thémistor (droit) le mardi, Dame Psyché (psychologie) le mercredi, Asclépion (santé) le jeudi. Miroir de lib/traque.CHASSE_BY_WEEKDAY.',
+    siAbsente:
+      'La 576 reste en place : les trois gardiens ne sont « en chasse » pour la base que le week-end ; la semaine, l’app annonce leur jour mais aucun point ne monte. Rien ne casse pour le collège et le lycée.',
+    // Non sondable : la fonction existe depuis la 212, seul son corps change
+    // (CREATE OR REPLACE). Contrôle à la main :
+    //   select public.traque_en_chasse('themistor', date '2026-11-03');
+    //   → true (avant la 607 : false)
+    sonde: null,
+  },
+  {
+    id: '608',
+    fichier: '608_sup_droit_civil_l1.sql',
+    feature:
+      'LE PREMIER CONTENU DU SUPÉRIEUR (03/11/2026) : le Droit civil de L1 droit — 11 chapitres (introduction au droit, personnes, famille), 11 cours au niveau licence avec un cas pratique en syllogisme, 11 quiz de 12 questions. Le modèle de la série des matières d’étudiants. À exécuter après la 606.',
+    siAbsente:
+      'Le Droit civil s’affiche « Bientôt » pour un étudiant de L1 droit : la matière existe (606), sans chapitre.',
+    sonde: { type: 'ligne', table: 'chapters', colonne: 'id', valeur: '47d777f5-7d7a-5bce-9993-ae1ba024bda1' },
+  },
+  {
+    id: '609',
+    fichier: '609_jeu_quel_tribunal.sql',
+    feature:
+      'QUEL TRIBUNAL ?, LE PREMIER JEU DU SUPÉRIEUR (03/11/2026, Lucas : « il faudra également créer les modes de jeu ») — `game_catalog` (238) et `mode_catalog` (355) connaissent `quel-tribunal` et le « programme » des Institutions juridictionnelles (L1 droit). À exécuter après la 606.',
+    siAbsente:
+      'Quel tribunal ? se joue, mais `apply_game_trophies` refuse ses trophées et ses scores ne se classent pas au palmarès.',
+    // Non sondable à la clé anonyme. Contrôle à la main :
+    //   select * from public.game_catalog where subject_slug = 'institutions-juridictionnelles';  → 2 lignes
+    sonde: null,
+  },
 ] as const
 
 /** Verdict d'une sonde exécutée. */

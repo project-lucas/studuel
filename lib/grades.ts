@@ -1,4 +1,5 @@
-import { GRADE_LEVELS, type GradeLevel } from '@/lib/types'
+import { GRADE_LEVELS, type ClasseSup, type GradeLevel } from '@/lib/types'
+import { CLASSES_SUP, courtClasseSup, nomClasseSup } from '@/lib/superieur/cursus'
 
 // -----------------------------------------------------------------------------
 // LES CLASSES, LEURS CYCLES, ET L'ALIAS DE LA VOIE TECHNOLOGIQUE.
@@ -28,7 +29,10 @@ import { GRADE_LEVELS, type GradeLevel } from '@/lib/types'
 // partout ailleurs (cf. lib/subject-visibility).
 // -----------------------------------------------------------------------------
 
-export type GradeCycle = 'primaire' | 'college' | 'lycee'
+// LE SUPÉRIEUR (03/11/2026) est un quatrième cycle : ses classes (« L1 droit »,
+// « PASS »…) viennent de lib/superieur/cursus.ts. Il n'a pas encore son clan
+// (pas d'école « université » en base) : lib/clan le replie sur le lycée.
+export type GradeCycle = 'primaire' | 'college' | 'lycee' | 'superieur'
 
 export type CycleDef = {
   id: GradeCycle
@@ -50,6 +54,7 @@ export const GRADE_CYCLES: readonly CycleDef[] = [
     label: 'Lycée',
     grades: ['2de', '1re', '1re techno', 'Tle', 'Tle techno'],
   },
+  { id: 'superieur', label: 'Études supérieures', grades: CLASSES_SUP as readonly GradeLevel[] },
 ] as const
 
 const CYCLE_OF = new Map<string, GradeCycle>(
@@ -96,6 +101,11 @@ export function contentLevelFor(grade: string | null | undefined): string {
 
 // --- Écriture ----------------------------------------------------------------
 
+/** Les libellés des classes du supérieur, dérivés de leur cursus (jamais recopiés). */
+function libellesSup(ecrire: (classe: string) => string): Record<ClasseSup, string> {
+  return Object.fromEntries(CLASSES_SUP.map((c) => [c, ecrire(c)])) as Record<ClasseSup, string>
+}
+
 /**
  * Le nom complet d'une classe, tel qu'on le dit à l'élève. « Tle » ne se
  * prononce pas : c'est « Terminale ». Le primaire s'écrit comme il se dit.
@@ -115,6 +125,7 @@ export const GRADE_FULL_LABELS: Record<GradeLevel, string> = {
   '1re techno': 'Première techno',
   Tle: 'Terminale',
   'Tle techno': 'Terminale techno',
+  ...libellesSup(nomClasseSup),
 }
 
 /** L'écriture courte du design (exposants), pour une pastille ou un menu. */
@@ -133,6 +144,7 @@ export const GRADE_SHORT_LABELS: Record<GradeLevel, string> = {
   '1re techno': '1ʳᵉ techno',
   Tle: 'Terminale',
   'Tle techno': 'Terminale techno',
+  ...libellesSup(courtClasseSup),
 }
 
 /**

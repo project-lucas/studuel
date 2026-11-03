@@ -1,4 +1,5 @@
-import type { GradeLevel } from '@/lib/types'
+import type { ClasseSup, GradeLevel } from '@/lib/types'
+import { CLASSES_SUP, matieresDeClasse } from '@/lib/superieur/cursus'
 
 /**
  * LE PROGRAMME OFFICIEL, CLASSE PAR CLASSE — ce que l'élève a FORCÉMENT
@@ -204,6 +205,20 @@ export const PROGRAMME_PAR_CLASSE: Record<GradeLevel, ProgrammeClasse> = {
     ],
     aChoisir: [...SPECIALITES_TECHNO_TLE, ...LANGUES_VIVANTES_2],
   },
+  ...programmesSup(),
+}
+
+/**
+ * LE SUPÉRIEUR (03/11/2026) : TOUTES les matières de l'année sont cochées
+ * d'office. Une licence n'a pas la même maquette d'une faculté à l'autre :
+ * l'étudiant fait le tri au stylo (« Éditer » de Réviser), plutôt que de
+ * chercher sa matière dans une liste décochée. Dérivé du catalogue des
+ * cursus (lib/superieur/cursus.ts), jamais recopié.
+ */
+function programmesSup(): Record<ClasseSup, ProgrammeClasse> {
+  return Object.fromEntries(
+    CLASSES_SUP.map((classe): [string, ProgrammeClasse] => [classe, { obligatoires: matieresDeClasse(classe), aChoisir: [] }]),
+  ) as Record<ClasseSup, ProgrammeClasse>
 }
 
 /** Le programme d'une classe, ou `null` pour une classe inconnue. */

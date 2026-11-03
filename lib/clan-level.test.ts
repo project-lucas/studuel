@@ -77,7 +77,8 @@ describe('le CASE de la 322 est le miroir de cycleOf', () => {
     const auSql = new Set([...branche('primaire'), ...branche('lycee')])
     for (const cycle of GRADE_CYCLES) {
       for (const g of cycle.grades) {
-        const attendu = cycle.id !== 'college'
+        // Le supérieur n'a pas de branche : il suit le repli, comme le collège.
+        const attendu = cycle.id !== 'college' && cycle.id !== 'superieur'
         expect(auSql.has(g), `${g} (${cycle.id})`).toBe(attendu)
       }
     }
@@ -88,8 +89,10 @@ describe('le CASE de la 322 est le miroir de cycleOf', () => {
     // diverge, c'est ici qu'on l'apprend.
     for (const cycle of GRADE_CYCLES) {
       for (const g of cycle.grades) {
-        expect(schoolLevelForGrade(g)).toBe(cycleOf(g))
-        expect(schoolLevelForGrade(g)).toBe(cycle.id)
+        // Le supérieur, sans école en base, suit le repli SQL : « college ».
+        const attendu = cycle.id === 'superieur' ? 'college' : cycle.id
+        expect(schoolLevelForGrade(g)).toBe(attendu)
+        if (cycle.id !== 'superieur') expect(schoolLevelForGrade(g)).toBe(cycleOf(g))
       }
     }
   })

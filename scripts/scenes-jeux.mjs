@@ -49,6 +49,9 @@ const SCENES = {
   // Arts plastiques, 14/10/2026 : la galerie du Musée (Nano Banana 2.1, la scène
   // d'Anatomie express en référence).
   'le-musee': 'le-musee.png',
+  // Le supérieur, 03/11/2026 : le prétoire de Quel tribunal ? (Nano Banana 2.1,
+  // la scène du Musée en référence).
+  'quel-tribunal': 'quel-tribunal.png',
 }
 
 const demandes = process.argv.slice(2)

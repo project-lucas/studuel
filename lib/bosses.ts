@@ -3,6 +3,7 @@
 // vit en localStorage, comme les records des autres modes.
 
 import type { ModeQuestion } from '@/lib/defi-modes'
+import { CURSUS } from '@/lib/superieur/cursus'
 
 export type Boss = {
   id: string
@@ -256,6 +257,68 @@ const CATALOG: BossEntry[] = [
   },
 ]
 
+// LES GARDIENS DU SUPÉRIEUR (03/11/2026, Lucas : « un boss par grand secteur,
+// pas un boss par matière »). UN gardien garde TOUTES les matières de son
+// cursus : Thémistor le droit civil comme le droit pénal. L'économie-gestion
+// garde Krach et STAPS le Coach Turbo, déjà profs de la même discipline.
+//
+// HORS DE ALL_BOSSES, À DESSEIN : la rotation du boss de la semaine (et son
+// miroir SQL, supabase/194) ne doit pas changer — un collégien n'a rien à
+// faire face au juge du droit. `bossById` les trouve quand même.
+const GARDIENS_SUP: Boss[] = [
+  {
+    id: 'themistor',
+    name: 'Thémistor',
+    epithet: 'le Lion de la Haute Cour',
+    emoji: '⚖️',
+    image: '/images/boss/themistor-prof.webp',
+    scene: '/images/boss/themistor-prof-scene.webp',
+    intro: 'La Cour est ouverte. Tu connais tes articles ?',
+    defeat: 'Objection… rejetée. Tu as gagné ta cause.',
+    victory: 'Jugement rendu : à revoir, avec dépens.',
+  },
+  {
+    id: 'asclepion',
+    name: 'Asclépion',
+    epithet: 'le Héron de l’Infirmerie',
+    emoji: '🩺',
+    image: '/images/boss/asclepion-prof.webp',
+    scene: '/images/boss/asclepion-prof-scene.webp',
+    intro: 'Respire. Et dis-moi tout ce que tu sais.',
+    defeat: 'Diagnostic : tu es prêt pour le concours.',
+    victory: 'Je te prescris trois chapitres. Matin et soir.',
+  },
+  {
+    id: 'psyche',
+    name: 'Dame Psyché',
+    epithet: 'la Phalène des Songes',
+    feminin: true,
+    emoji: '🦋',
+    image: '/images/boss/psyche-prof.webp',
+    scene: '/images/boss/psyche-prof-scene.webp',
+    intro: 'Détends-toi… et dis-moi à quoi tu penses.',
+    defeat: 'Fascinant. Ton esprit m’a échappé.',
+    victory: 'Je lis en toi : tu as encore des doutes.',
+  },
+]
+
+/** Les gardiens propres au supérieur (hors rotation hebdomadaire). */
+export const BOSSES_SUP: readonly Boss[] = GARDIENS_SUP
+
+// Le gardien de chaque matière du supérieur, par slug ET par nom : la Traque
+// appelle `bossForSubject` avec le nom de la matière, l'arène de Réviser avec
+// son slug. La correspondance est exacte — aucune expression régulière : les
+// noms du supérieur trompaient celles des matières du lycée (« Histologie »
+// tombait sur l'histoire, « Physiologie » sur la physique).
+const GARDIEN_SUP_PAR_MATIERE: ReadonlyMap<string, string> = new Map(
+  CURSUS.flatMap((c) =>
+    c.matieres.flatMap((m) => [
+      [m.slug, c.gardien] as const,
+      [normalize(m.nom), c.gardien] as const,
+    ]),
+  ),
+)
+
 // Filet de sécurité : matière inconnue ou pool sans matière.
 export const FALLBACK_BOSS: Boss = {
   id: 'nox',
@@ -276,6 +339,14 @@ export const FALLBACK_BOSS: Boss = {
 // ⚠️ L'ORDRE et les ids sont dupliqués dans supabase/165 (claim_weekly_trophy
 // recalcule le trophée de la semaine en SQL) : tout changement ici exige une
 // nouvelle migration miroir.
+function normalize(s: string): string {
+  return s
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .trim()
+}
+
 const stripMatch = ({ match, ...boss }: BossEntry): Boss => {
   void match
   return boss
@@ -294,6 +365,8 @@ const PORTRAITS_PIED: ReadonlySet<string> = new Set([
   'atlas-prof-v4', 'bigben-prof-v2', 'coach-turbo-prof-v2', 'delta-prof-v2', 'eltoro-prof', 'fiscus-prof', 'glitch-prof',
   'grammatork-prof-v2', 'imperator-prof', 'kaiser-fang-prof-v2', 'krach-prof-v2', 'mecatron-prof', 'nova-prof-v2',
   'plasma-prof-v2', 'proviseur-prof', 'socratus-prof', 'sylvarok-prof',
+  // 03/11/2026 : les gardiens du supérieur.
+  'themistor-prof', 'asclepion-prof', 'psyche-prof',
 ])
 
 /** Le portrait en pied d'un boss (9:16), ou `null` s'il n'en a pas encore. */
@@ -310,14 +383,9 @@ export function portraitBoss(boss: Boss): string | null {
 
 /** Un boss par son id — `undefined` si l'id ne désigne rien (lien trafiqué). */
 export function bossById(id: string): Boss | undefined {
-  return ALL_BOSSES.find((b) => b.id === id)
+  return ALL_BOSSES.find((b) => b.id === id) ?? GARDIENS_SUP.find((b) => b.id === id)
 }
 
-const normalize = (s: string) =>
-  s
-    .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
-    .toLowerCase()
 
 // ⚠️ Le résultat repasse par `bossById` : la regexp de matching ne doit JAMAIS
 // sortir du catalogue. Un boss traverse la frontière serveur → client (cartes
@@ -325,6 +393,8 @@ const normalize = (s: string) =>
 export function bossForSubject(subject: string | null): Boss {
   if (!subject) return FALLBACK_BOSS
   const n = normalize(subject)
+  const sup = GARDIEN_SUP_PAR_MATIERE.get(n) ?? GARDIEN_SUP_PAR_MATIERE.get(subject.trim())
+  if (sup) return bossById(sup) ?? FALLBACK_BOSS
   const entry = CATALOG.find((b) => b.match.test(n))
   return (entry && bossById(entry.id)) ?? FALLBACK_BOSS
 }

@@ -1,4 +1,5 @@
 import { schoolLevelForGrade, type SchoolLevel } from './clan'
+import { cycleOf } from './grades'
 
 // Le mot de la fin d'une session de quiz — logique pure.
 //
@@ -70,7 +71,10 @@ export function verdictFor(
   ratio: number,
   grade?: string | null,
 ): Verdict {
-  return TONS[schoolLevelForGrade(grade)][verdictPalier(ratio)]
+  // L'étudiant n'a pas de clan (repli « college » de lib/clan) mais il parle
+  // comme un lycéen qui prépare un examen : c'est le ton du lycée.
+  const ton = cycleOf(grade) === 'superieur' ? 'lycee' : schoolLevelForGrade(grade)
+  return TONS[ton][verdictPalier(ratio)]
 }
 
 /**

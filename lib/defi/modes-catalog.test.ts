@@ -12,7 +12,7 @@ import {
 } from '@/lib/defi/modes-catalog'
 import { gameBestKey } from '@/lib/jeux/records'
 import { GAME_MODES, featuredModeId } from '@/lib/defi-modes'
-import { SALONS } from '@/lib/jeux/catalog'
+import { SALONS, salonsPour } from '@/lib/jeux/catalog'
 import { formatTeaser, gameFormat } from '@/lib/jeux/formats'
 import { LIEN_STUDUEL_PLUS, jeuLibre } from '@/lib/jeux/acces'
 
@@ -109,15 +109,24 @@ describe('le freemium des billets', () => {
 
   it('« tous les modes » déplie le reste, et dit combien il en cache', () => {
     const tous = sectionsMatieres(false, true).reduce((n, s) => n + s.tickets.length, 0)
-    expect(tous).toBe(SALONS.reduce((n, s) => n + s.games.length, 0))
-    expect(modesReplies(false)).toBe(tous - SALONS.length)
+    // Sans classe (un visiteur, un collégien) : les salons du supérieur restent cachés.
+    const visibles = salonsPour(null)
+    expect(tous).toBe(visibles.reduce((n, s) => n + s.games.length, 0))
+    expect(modesReplies(false)).toBe(tous - visibles.length)
     expect(modesReplies(true)).toBe(modesReplies(false))
   })
 
   it('les sections suivent le catalogue des salons, matière par matière', () => {
     const sections = sectionsMatieres(false)
-    expect(sections.map((s) => s.subject)).toEqual(SALONS.map((s) => s.subject))
+    expect(sections.map((s) => s.subject)).toEqual(salonsPour(null).map((s) => s.subject))
     for (const s of sections) expect(s.vignette).toMatch(/^\/images\/matieres\/vignettes\//)
+  })
+
+  it('montre le salon du droit à l’étudiant de L1 droit, et à lui seul', () => {
+    const pour = (classe: string | null) => sectionsMatieres(false, true, classe).map((s) => s.subject)
+    expect(pour('L1 droit')).toContain('Institutions juridictionnelles')
+    expect(pour('3e')).not.toContain('Institutions juridictionnelles')
+    expect(pour('L1 droit')).toHaveLength(SALONS.length)
   })
 })
 

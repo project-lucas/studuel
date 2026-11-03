@@ -23,6 +23,8 @@ const SQL = readFileSync(
 const SQL_578 = readFileSync(cheminMigration('578_jeux_musique_sport.sql'), 'utf8')
 // Le Musée (arts plastiques, 14/10/2026) par la 579.
 const SQL_579 = readFileSync(cheminMigration('579_jeu_le_musee.sql'), 'utf8')
+// Quel tribunal ? (le supérieur, 03/11/2026) par la 609.
+const SQL_609 = readFileSync(cheminMigration('609_jeu_quel_tribunal.sql'), 'utf8')
 
 function pairsOf(sql: string, nom: string): string[] {
   const insert = sql.split('INSERT INTO public.game_catalog')[1]
@@ -33,7 +35,7 @@ function pairsOf(sql: string, nom: string): string[] {
 
 /** Les couples (slug de matière, id de jeu) réellement insérés : la 238, puis la 578. */
 function seededPairs(): Set<string> {
-  return new Set([...pairsOf(SQL, '238'), ...pairsOf(SQL_578, '578'), ...pairsOf(SQL_579, '579')])
+  return new Set([...pairsOf(SQL, '238'), ...pairsOf(SQL_578, '578'), ...pairsOf(SQL_579, '579'), ...pairsOf(SQL_609, '609')])
 }
 
 /** Ce que le code attend : les jeux jouables + le Programme dans chaque matière. */
@@ -88,7 +90,9 @@ describe('la liste blanche du serveur suit le catalogue du code', () => {
     // le 14/10/2026 (« le classement de sport tu peux l'oublier »). Avec le
     // Programme, deux jeux porteurs de trophées — l'exception est assumée.
     // Sport et arts plastiques n'ont qu'un jeu de salon (Muscles express, Le Musée) en plus du Programme.
-    const DEUX_SUFFISENT = new Set(['sport', 'arts-plastiques'])
+    // Le supérieur (03/11/2026) commence par un jeu par matière : le modèle
+    // de la L1 droit, les suivants au cadrage (docs/CADRAGE-SUPERIEUR.md).
+    const DEUX_SUFFISENT = new Set(['sport', 'arts-plastiques', 'institutions-juridictionnelles'])
     for (const [slug, count] of counts) {
       expect(count, `${slug} n’a que ${count} jeu(x)`).toBeGreaterThanOrEqual(
         DEUX_SUFFISENT.has(slug) ? 2 : 3,

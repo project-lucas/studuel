@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // La coque iPhone (Capacitor) : projet natif généré, hors de l'app web.
+    "natif/**",
     // Contenu scolaire : des modules de DONNÉES (un gros littéral exporté par
     // défaut), pas du code applicatif. La règle « nomme ton export par défaut »
     // n'y apporte rien, et leur validité est vérifiée autrement — le

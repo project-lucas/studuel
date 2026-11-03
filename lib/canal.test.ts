@@ -8,6 +8,11 @@ describe('doitMarquerPlay', () => {
     expect(doitMarquerPlay('?x=1&canal=play', '')).toBe(true)
   })
 
+  it('reconnaît le paramètre de lancement de l’app iPhone', () => {
+    expect(doitMarquerPlay('?canal=ios', '')).toBe(true)
+    expect(doitMarquerPlay('?canal=iosx', '')).toBe(false)
+  })
+
   it('reconnaît le référent posé par Chrome dans l’app Android', () => {
     expect(doitMarquerPlay('', 'android-app://app.studuel/')).toBe(true)
   })
@@ -43,7 +48,7 @@ describe('l’écran de lancement statique', () => {
   })
 
   it('reconnaît les deux mêmes signaux', () => {
-    expect(html).toContain('canal=play')
+    expect(html).toContain('canal=(?:play|ios)')
     expect(html).toContain('android-app://')
   })
 })

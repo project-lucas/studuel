@@ -13,13 +13,18 @@
 // Le cookie vit dans Chrome, que l'app Android partage : sur un téléphone où
 // l'app Play est installée, le site ouvert dans Chrome cache aussi les euros.
 // C'est le sens prudent — jamais l'inverse.
+//
+// L'app iPhone (03/11/2026) suit la même voie : Apple exige aussi son propre
+// paiement. Elle démarre sur `/lancement.html?canal=ios` et reçoit le même
+// cookie « play » (= version d'un store, sans euros). Son WebView a ses
+// propres cookies : Safari n'est pas touché.
 
 export const COOKIE_CANAL = 'studuel_canal'
 export const CANAL_PLAY = 'play'
 
-/** Le lancement vient-il de l'app Android du Play Store ? */
+/** Le lancement vient-il d'une app de store (Android du Play Store ou iPhone) ? */
 export function doitMarquerPlay(search: string, referrer: string): boolean {
-  return /(?:^|[?&])canal=play(?:&|$)/.test(search) || referrer.startsWith('android-app://')
+  return /(?:^|[?&])canal=(?:play|ios)(?:&|$)/.test(search) || referrer.startsWith('android-app://')
 }
 
 /** La valeur du cookie dit-elle « version Play » ? */

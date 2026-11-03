@@ -1,0 +1,16 @@
+{
+  "appId": "app.studuel",
+  "appName": "Studuel",
+  "webDir": "www",
+  "backgroundColor": "#25184c",
+  "server": {
+    "url": "https://studuel.app/lancement.html?canal=ios",
+    "allowNavigation": ["studuel.app", "*.studuel.app"],
+    "errorPath": "hors-ligne.html"
+  },
+  "ios": {
+    "contentInset": "never",
+    "backgroundColor": "#25184c",
+    "limitsNavigationsToAppBoundDomains": false
+  }
+}

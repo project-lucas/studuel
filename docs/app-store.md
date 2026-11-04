@@ -20,13 +20,28 @@ du Play Store (`lib/canal.ts`) : `?canal=ios` pose le même cookie `studuel_cana
 Studuel+, les packs de gemmes, les recharges de Marcel et le paiement des capsules par carte. Le WebView de
 l'app a ses propres cookies : Safari n'est pas touché.
 
+## Captures iPhone
+
+Les neuf captures 6,9″ (1320 × 2868, PNG sans alpha) sont dans `assets-sources/app-store/iphone-6.9/`
+(`01-reviser` → `09-parents`). Ce sont les scènes et les textes du kit Play Store v2 validé par Lucas le
+25/10/2026 (`docs/google-play.md`, « Fiche du Store »), refaites au format iPhone : même fond à rayons,
+même téléphone incliné, mêmes poses de Marcel. Le titre prend la place gagnée en haut. Aucune n'affiche
+de prix en euros. On en envoie huit au plus ; « 09-parents » reste en réserve, comme sur Google Play.
+
+Pour les refaire : `node assets-sources/app-store/rendre-iphone.mjs [scène…]` depuis la racine du dépôt
+(Playwright et sharp du projet). Les captures d'écran brutes du kit Play n'existent plus : le script
+récupère le téléphone dans les PNG de `assets-sources/play-store/v2/`. Il rejoue la scène v2 pour isoler
+Marcel et les objets, les retire du PNG, puis redessine en pleine résolution le fond, le titre, Marcel
+et les objets. Pour changer l'écran d'une capture, il faut d'abord refaire la capture Play v2.
+`assets-sources/` est ignoré par git : ces fichiers ne vivent que sur le PC de Lucas.
+
 ## Reste à faire
 
 1. **Contrat « Apps payantes »** (App Store Connect → Business). Il n'est pas obligatoire pour une app gratuite
    sans achat intégré, mais il faut renseigner le statut de commerçant (règlement européen DSA).
 2. **Construire l'app** : il n'y a pas de Mac. Codemagic construit `natif/ios/ios/App` et l'envoie sur
    TestFlight (clé API App Store Connect à créer par Lucas).
-3. **Fiche** : captures iPhone 6,9″ (1320 × 2868) ou 6,5″, description (reprendre `docs/google-play.md`),
+3. **Fiche** : captures iPhone prêtes (ci-dessus), description (reprendre `docs/google-play.md`),
    URL de confidentialité `https://studuel.app/confidentialite`, catégorie Éducation, classification d'âge.
    Ne pas cocher la catégorie « Enfants » : elle interdit tout outil d'analyse tiers.
 4. **Compte de démonstration pour Apple** : la revue se connecte. Créer un compte élève de test et le

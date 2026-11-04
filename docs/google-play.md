@@ -227,3 +227,12 @@ Historique de ce qui bloquait :
 2. *Test fermé* (obligatoire 14 jours / 12 testeurs pour un compte personnel).
 3. *Production*. Premier examen de Google : quelques jours, parfois plus pour une
    app destinée aux moins de 13 ans.
+
+## État au 04/11/2026
+
+- Compte Play Console « Lucas dev » : **compte d'organisation** (pas de test fermé obligatoire de 14 jours).
+- Release **1.0.0 (1)** publiée en **test interne**, liste de testeurs « Moi ».
+- Fiche Play Store complète (textes, icône, bannière, 8 captures), catégorie Enseignement, contact `contact@studuel.app`.
+- Faits : règles de confidentialité, annonces, classification (PEGI 3 / ESRB Tout public).
+- Vercel (Production) : `ANDROID_PACKAGE=app.studuel` et `ANDROID_SHA256` = empreinte de la clé de signature Google (`01:BE:83:…:48:66`) + clé d'envoi. **Il faut un redéploiement de production pour que `/.well-known/assetlinks.json` les serve.**
+- Reste (Lucas) : « Informations de connexion » (compte démo), qui débloque « Cible et contenu », qui débloque l'envoi de « Sécurité des données » (brouillon prêt) ; médiateur de la consommation (CM2C recommandé) dans `lib/legal/editeur.ts`.

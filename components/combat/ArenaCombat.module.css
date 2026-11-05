@@ -415,6 +415,99 @@
   top: 40%;
 }
 
+/* --- l’éclat de l’impact : boule de lumière, onde, étincelles (05/11/2026) --
+   Remonté à chaque coup (key) : une seule copie des images-clés suffit. Il
+   part à MS_IMPACT (440 ms), comme la peinture de l’impact. */
+.eclat {
+  position: absolute;
+  z-index: 3;
+  width: 36%;
+  aspect-ratio: 1;
+  pointer-events: none;
+}
+.eclat[data-cible='rival'] {
+  left: 60%;
+  top: 30%;
+}
+.eclat[data-cible='moi'] {
+  left: 8%;
+  top: 46%;
+}
+.eclatFort {
+  width: 48%;
+}
+.eclatFort[data-cible='rival'] {
+  left: 54%;
+  top: 24%;
+}
+.eclatFort[data-cible='moi'] {
+  left: 2%;
+  top: 40%;
+}
+.boule {
+  position: absolute;
+  inset: 12%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    white 0%,
+    color-mix(in oklab, var(--highlight) 75%, white) 28%,
+    color-mix(in oklab, var(--warning) 70%, transparent) 52%,
+    transparent 70%
+  );
+  opacity: 0;
+  animation: eclat-boule 520ms cubic-bezier(0.2, 0.8, 0.3, 1) 440ms both;
+}
+.onde {
+  position: absolute;
+  inset: 14%;
+  border-radius: 50%;
+  border: 4px solid color-mix(in oklab, var(--highlight) 80%, white);
+  opacity: 0;
+  animation: eclat-onde 480ms ease-out 470ms both;
+}
+.rayon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+}
+.etincelle {
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: color-mix(in oklab, var(--highlight) 65%, white);
+  box-shadow: 0 0 8px var(--highlight);
+  opacity: 0;
+  animation: etincelle 560ms cubic-bezier(0.15, 0.8, 0.3, 1) 450ms both;
+}
+.eclatFort .etincelle {
+  animation-name: etincelle-fort;
+}
+@keyframes eclat-boule {
+  0% { opacity: 0; transform: scale(0.2); }
+  15% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.5); }
+}
+@keyframes eclat-onde {
+  0% { opacity: 0.95; transform: scale(0.3); }
+  100% { opacity: 0; transform: scale(1.8); }
+}
+@keyframes etincelle {
+  0% { opacity: 1; transform: translateX(0) scale(1.2); }
+  70% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(64px) scale(0.3); }
+}
+@keyframes etincelle-fort {
+  0% { opacity: 1; transform: translateX(0) scale(1.5); }
+  70% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(104px) scale(0.3); }
+}
+
 /* L'éclat d'or du critique, par-dessus l'impact. */
 .eclatCritique {
   z-index: 4;
@@ -427,17 +520,26 @@
   animation: impact_b 560ms ease-out 440ms both;
 }
 
+/* Le chiffre des dégâts en OR cerné d’encre prune, qui claque puis monte
+   (05/11/2026, d’après la référence de Lucas : un gros chiffre orangé, lisible
+   sur n’importe quel décor). */
 .degats {
   position: absolute;
   z-index: 5;
-  font-size: 1.9rem;
+  font-size: 2.7rem;
   line-height: 1;
-  color: var(--card);
+  color: var(--highlight);
+  -webkit-text-stroke: 7px color-mix(in oklch, var(--primary), black 70%);
+  paint-order: stroke fill;
   text-shadow:
-    0 3px 0 var(--destructive),
-    0 0 10px color-mix(in oklab, var(--foreground) 60%, transparent);
+    0 4px 0 color-mix(in oklch, var(--primary), black 70%),
+    0 0 18px color-mix(in oklab, var(--warning) 75%, transparent);
   opacity: 0;
   pointer-events: none;
+}
+
+.degatsFort {
+  font-size: 3.4rem;
 }
 
 .degats[data-cible='rival'] {
@@ -840,18 +942,18 @@
 }
 
 @keyframes degats_a {
-  0% { opacity: 0; transform: translateY(0) scale(0.5); }
-  18% { opacity: 1; transform: translateY(-8px) scale(1.3); }
-  32% { opacity: 1; transform: translateY(-12px) scale(1); }
-  75% { opacity: 1; transform: translateY(-28px) scale(1); }
-  100% { opacity: 0; transform: translateY(-42px) scale(1); }
+  0% { opacity: 0; transform: translateY(0) scale(0.3); }
+  14% { opacity: 1; transform: translateY(-6px) scale(1.45); }
+  28% { opacity: 1; transform: translateY(-10px) scale(1); }
+  75% { opacity: 1; transform: translateY(-30px) scale(1); }
+  100% { opacity: 0; transform: translateY(-46px) scale(0.95); }
 }
 @keyframes degats_b {
-  0% { opacity: 0; transform: translateY(0) scale(0.5); }
-  18% { opacity: 1; transform: translateY(-8px) scale(1.3); }
-  32% { opacity: 1; transform: translateY(-12px) scale(1); }
-  75% { opacity: 1; transform: translateY(-28px) scale(1); }
-  100% { opacity: 0; transform: translateY(-42px) scale(1); }
+  0% { opacity: 0; transform: translateY(0) scale(0.3); }
+  14% { opacity: 1; transform: translateY(-6px) scale(1.45); }
+  28% { opacity: 1; transform: translateY(-10px) scale(1); }
+  75% { opacity: 1; transform: translateY(-30px) scale(1); }
+  100% { opacity: 0; transform: translateY(-46px) scale(0.95); }
 }
 
 @keyframes annonce_a {
@@ -976,5 +1078,8 @@
   }
   .alerte {
     opacity: 0.6;
+  }
+  .eclat {
+    display: none;
   }
 }

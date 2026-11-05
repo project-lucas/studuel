@@ -97,7 +97,7 @@ export default function LessonCompleteButton({
       const origines = origineUnique(ref.current, gains)
       setDone(true)
       celebrer(gains, origines)
-      // La pastille du bandeau et « Quête accomplie », sans attendre l'écran suivant.
+      // Le bouton flottant des quêtes se remplit, sans attendre l'écran suivant.
       void relireQuetes()
     })
   }, [done, finAtteinte, secondes, requis, lessonId, celebrer])

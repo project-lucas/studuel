@@ -129,6 +129,12 @@ const ARENA_RECORD_KEY: Partial<Record<GameModeId, string>> = {
   survie: SURVIE_BEST_STORAGE_KEY,
 }
 
+// Cadrage d'une scène de mode quand le défaut ('70% 45%') coupe son gag :
+// le crocodile de Survie est au ras du bas de la peinture (05/11/2026).
+const ARENA_SCENE_POSITION: Partial<Record<GameModeId, string>> = {
+  survie: '70% 85%',
+}
+
 const ARENA_EMOJI: Record<GameModeId, string> = {
   duel: '👻',
   blitz: '⏱️',
@@ -362,6 +368,7 @@ export function funModeTickets(dayKey: string): ModeTicket[] {
       emoji: ARENA_EMOJI[m.id] ?? '🎮',
       image: modeImage(m.id),
       scene: modeScene(m.id),
+      scenePosition: ARENA_SCENE_POSITION[m.id],
       href: `/defi/jouer?mode=${m.id}`,
       chip: REGLE_MODE[m.id],
       badge: vedette ? 'Mode du jour' : undefined,

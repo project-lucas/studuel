@@ -372,7 +372,7 @@ function Partie({
             </p>
           </div>
         ) : phase === 'vs' ? (
-          <div className="course-carte text-center">
+          <div className={cn('course-carte text-center', s.attente)}>
             <p className="mt-1 text-sm opacity-80">
               Chaque bonne réponse lance ta <strong>{monHeros.attaque.nom}</strong>. Trois d’affilée : le super. La
               question dorée frappe en critique.

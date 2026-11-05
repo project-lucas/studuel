@@ -12,7 +12,7 @@ import {
   journeeBouclee,
   prochaineAEncaisser,
   queteServie,
-  quetesAAnnoncer,
+  partFaite,
   QUEST_CATALOG,
   QUETES_RETIREES,
   QUESTS_PER_DAY,
@@ -351,10 +351,11 @@ describe('ce que le navigateur reçoit', () => {
     expect(journeeBouclee({ jour: DAY, quetes: [], encaissees: [] })).toBe(false)
   })
 
-  it('n’annonce une quête finie qu’une fois, et jamais une quête encaissée', () => {
-    const e = etat({ lecon1: 1, reponses10: 10 })
-    expect(quetesAAnnoncer(e, []).map((q) => q.id)).toEqual(['lecon1', 'reponses10'])
-    expect(quetesAAnnoncer(e, ['lecon1']).map((q) => q.id)).toEqual(['reponses10'])
-    expect(quetesAAnnoncer(etat({ lecon1: 1 }, ['lecon1']), [])).toEqual([])
+  it('remplit le tronçon de chaque quête à sa part faite, plein une fois finie', () => {
+    expect(partFaite({ goal: 10, current: 0, done: false })).toBe(0)
+    expect(partFaite({ goal: 10, current: 5, done: false })).toBe(0.5)
+    expect(partFaite({ goal: 10, current: 14, done: false })).toBe(1)
+    expect(partFaite({ goal: 1, current: 0, done: true })).toBe(1)
+    expect(partFaite({ goal: 0, current: 3, done: false })).toBe(0)
   })
 })

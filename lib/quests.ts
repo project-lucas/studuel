@@ -311,13 +311,15 @@ export function prochaineAEncaisser(etat: QuetesDuJour, enVol?: ReadonlySet<stri
 }
 
 /**
- * « Quête accomplie » : les quêtes finies que l'élève n'a encore ni vues
- * annoncées ni encaissées. `annoncees` vient du navigateur (une liste par
- * jour) : une quête finie la veille au soir n'est pas réannoncée au réveil.
+ * La part faite d'une quête, de 0 à 1 : son tronçon d'anneau sur le bouton
+ * flottant se remplit au fil de la journée (05/11/2026, Lucas : « je préfère
+ * juste voir l'icône flottante des quêtes se remplir petit à petit, avec le
+ * numéro » — plus de bandeau « Quête accomplie » ni de musique).
  */
-export function quetesAAnnoncer(etat: QuetesDuJour, annoncees: readonly string[]): QueteServie[] {
-  const deja = new Set(annoncees)
-  return aEncaisser(etat).filter((q) => !deja.has(q.id))
+export function partFaite(q: Pick<QueteServie, 'goal' | 'current' | 'done'>): number {
+  if (q.done) return 1
+  if (!(q.goal > 0)) return 0
+  return Math.min(Math.max(q.current / q.goal, 0), 1)
 }
 
 // --- Événements de jeu → avancement -------------------------------------------------

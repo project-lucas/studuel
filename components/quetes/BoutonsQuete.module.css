@@ -68,23 +68,6 @@
   55% { transform: translateY(0) scale(0.97, 1.03); }
 }
 
-/* --- Le bandeau « Quête accomplie » : il descend, attend, remonte ------------ */
-.annonce {
-  animation: descend 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
-}
-.annonce[data-sortie] {
-  animation: remonte 0.3s ease-in both;
-}
-@keyframes descend {
-  from { transform: translateY(-140%); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-@keyframes remonte {
-  from { transform: translateY(0); opacity: 1; }
-  to { transform: translateY(-140%); opacity: 0; }
-}
-
-
 /* --- Les trois humeurs de la pièce (14/10/2026 : une quête à la fois) -------- */
 /* L'onde d'or qui bat autour de la prochaine pièce à toucher. */
 .cristalOnde {
@@ -137,9 +120,7 @@
 @media (prefers-reduced-motion: reduce) {
   .cristalOnde,
   .cristalRayons,
-  .cristalDisque,
-  .annonce,
-  .annonce[data-sortie] {
+  .cristalDisque {
     animation: none;
   }
 }

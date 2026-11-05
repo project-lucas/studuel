@@ -320,13 +320,17 @@ function Attaque({ coup, parite, c }: { coup: Coup; parite: 'a' | 'b'; c: Combat
           <Image unoptimized src={impact} alt="" fill sizes="40vw" className={s.vfx} />
         </span>
       )}
+      {coup.rate ? null : <Eclat key={coup.id} cible={cible} fort={coup.critique || coup.super} />}
       {coup.critique ? (
         <span className={cn(s.impact, s.eclatCritique, s[`impact_${parite}`])} data-cible={cible} aria-hidden="true">
           <Image unoptimized src={ECLAT_CRITIQUE} alt="" fill sizes="40vw" className={s.vfx} />
         </span>
       ) : null}
       {coup.degats !== null ? (
-        <span className={cn(s.degats, s[`degats_${parite}`], 'font-heading font-extrabold tabular-nums')} data-cible={cible}>
+        <span
+          className={cn(s.degats, s[`degats_${parite}`], (coup.critique || coup.super) && s.degatsFort, 'font-heading font-extrabold tabular-nums')}
+          data-cible={cible}
+        >
           −{coup.degats}
         </span>
       ) : null}
@@ -337,6 +341,30 @@ function Attaque({ coup, parite, c }: { coup: Coup; parite: 'a' | 'b'; c: Combat
         </span>
       ) : null}
     </>
+  )
+}
+
+/** Les directions des étincelles (degrés) : huit, un peu décalées de l'axe. */
+const ANGLES_ETINCELLES = [20, 65, 110, 155, 200, 245, 290, 335]
+
+/**
+ * L'ÉCLAT DE L'IMPACT (05/11/2026, Lucas : « les animations des attaques,
+ * celle qui touche l'adversaire », d'après une référence de jeu mobile) : une
+ * boule de lumière qui gonfle, une onde, huit étincelles qui fusent — par-dessus
+ * la peinture de l'impact. Tout en CSS, transform et opacité ; remonté à chaque
+ * coup (`key`), il rejoue sans le jeu de parité.
+ */
+function Eclat({ cible, fort }: { cible: Camp; fort: boolean }) {
+  return (
+    <span className={cn(s.eclat, fort && s.eclatFort)} data-cible={cible} aria-hidden="true">
+      <span className={s.boule} />
+      <span className={s.onde} />
+      {ANGLES_ETINCELLES.map((a) => (
+        <span key={a} className={s.rayon} style={{ transform: `rotate(${a}deg)` }}>
+          <span className={s.etincelle} />
+        </span>
+      ))}
+    </span>
   )
 }
 

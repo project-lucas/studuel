@@ -116,3 +116,4 @@ récompense, un seul univers et deux réglages). Détail et calendrier :
   l'onglet est coupé, et Réviser a désormais sa demande (coupée par défaut).
   `MusiqueToggle`, `LigneInterrupteur` et la variante « réglage » de
   `SoundToggle` sont retirés.
+- **L’IMPACT QUI CLAQUE ET LA CARTE D’ATTENTE PLEINE (05/11/2026)** : d’après une référence de Lucas (gros éclat de feu, gros chiffre orangé), chaque coup porté ajoute un `Eclat` CSS par-dessus la peinture de l’impact (boule de lumière, onde, huit étincelles ; remonté par `key`, transform et opacité) et le chiffre des dégâts passe en OR cerné de prune, 2,7 rem (3,4 au critique et au super). Pendant la recherche, le VS et le décompte, la carte du bas prend toute sa hauteur plancher (`.attente` de `Lice.module.css`) : courte, elle laissait une bande de sable vide sous l’arène et la plaque du joueur retombait sur son héros.

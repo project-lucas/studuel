@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { aEncaisser, coffreDuJourPret } from '@/lib/quests'
+import { aEncaisser, coffreDuJourPret, partFaite } from '@/lib/quests'
 import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
 import { ouvrirFeuilleQuetes, useQuetesDuJour } from './store'
@@ -52,6 +52,9 @@ export default function PastilleQuetes({ dark = false, grand = false }: { dark?:
         )}
       >
         <svg viewBox="0 0 44 44" className="absolute inset-0 -rotate-90" aria-hidden="true">
+          {/* Un tronçon par quête : le rail, puis l'or qui le REMPLIT à la part
+              faite (5 réponses sur 10 = la moitié) — une transition d'un coup,
+              à chaque avancée, jamais en boucle. */}
           {etat.quetes.map((q, i) => (
             <circle
               key={q.id}
@@ -63,9 +66,28 @@ export default function PastilleQuetes({ dark = false, grand = false }: { dark?:
               strokeLinecap="round"
               strokeDasharray={`${troncon - 6} ${TOUR}`}
               strokeDashoffset={-i * troncon}
-              style={{ stroke: q.done ? 'var(--highlight)' : dark && !grand ? 'rgb(255 255 255 / 0.2)' : 'var(--secondary)' }}
+              style={{ stroke: dark && !grand ? 'rgb(255 255 255 / 0.2)' : 'var(--secondary)' }}
             />
           ))}
+          {etat.quetes.map((q, i) => {
+            const part = partFaite(q)
+            return (
+              <circle
+                key={`${q.id}-or`}
+                cx="22"
+                cy="22"
+                r={R}
+                fill="none"
+                strokeWidth={grand ? 3 : 3.5}
+                strokeLinecap="round"
+                strokeDasharray={`${(troncon - 6) * part} ${TOUR}`}
+                strokeDashoffset={-i * troncon}
+                className="transition-[stroke-dasharray,opacity] duration-700 ease-out motion-reduce:transition-none"
+                // À zéro, le bout arrondi dessinerait encore un point d'or.
+                style={{ stroke: 'var(--highlight)', opacity: part > 0 ? 1 : 0 }}
+              />
+            )
+          })}
         </svg>
         <Image
           src="/images/defi/icones/quetes-v3.webp"
@@ -77,8 +99,10 @@ export default function PastilleQuetes({ dark = false, grand = false }: { dark?:
         />
         {nbDus > 0 && grand ? (
           <span
+            // Une récompense de plus à encaisser : le nombre saute (pop-spring).
+            key={nbDus}
             aria-hidden="true"
-            className="font-heading absolute -top-1 -right-1 grid h-5.5 min-w-5.5 place-items-center rounded-full bg-destructive px-1.5 text-[13px] leading-none font-extrabold text-white tabular-nums ring-[2.5px] ring-card"
+            className="pop-spring font-heading absolute -top-1 -right-1 grid h-5.5 min-w-5.5 place-items-center rounded-full bg-destructive px-1.5 text-[13px] leading-none font-extrabold text-white tabular-nums ring-[2.5px] ring-card"
           >
             {nbDus}
           </span>

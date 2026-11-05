@@ -141,7 +141,7 @@ export default function CourseHeros({
 
       <div className={s.bas}>
         {view.phase === 'vs' || view.phase === 'countdown' ? (
-          <div className="course-carte text-center">
+          <div className={cn('course-carte text-center', s.attente)}>
             {view.phase === 'countdown' ? (
               <p
                 key={view.count}

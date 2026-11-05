@@ -12,9 +12,13 @@ export const ARENA_IMAGE = '/images/arene/cour-noon.webp'
 
 export type GameModeId = 'duel' | 'blitz' | 'chrono' | 'survie' | 'boss'
 
-// Affiches illustrées des tuiles de mode (style cartoon des vignettes
-// matières, fond transparent). Ajouter l'id ici dès que l'image est déposée
-// dans public/images/defi/modes/<id>.webp — repli sur l'icône filigrane sinon.
+// L'objet du TALON de chaque mode (05/11/2026) : les anciennes affiches
+// (`modes/<id>.webp` — taches de couleur, crayons, compas) détonnaient à côté
+// des talons des jeux de salon ; elles sont redessinées DANS LA FAMILLE de la
+// barre d'onglets (cerne prune, violet · or · crème) et passent par la même
+// chaîne que les autres talons (`node scripts/talons-jeux.mjs`, originaux
+// `assets-sources/talons-jeux/mode-<id>.png`). Inventaire des écarts :
+// assets-sources/illustrations-jeux/INVENTAIRE.md.
 const MODE_IMAGE_IDS: GameModeId[] = [
   'duel',
   'blitz',
@@ -25,19 +29,20 @@ const MODE_IMAGE_IDS: GameModeId[] = [
 
 export function modeImage(id: GameModeId): string | undefined {
   return MODE_IMAGE_IDS.includes(id)
-    ? `/images/defi/modes/${id}.webp`
+    ? `/images/defi/jeux/mode-${id}-talon.webp`
     : undefined
 }
 
 // Scènes plein-fond des billets de mode : le corps du billet les affiche en
-// décor derrière le titre. REPEINTES le 05/11/2026 (Lucas : « refaire les
-// illustrations des modes de jeu pour une meilleure cohérence visuelle, une DA
-// drôle, pas de paillettes ») dans la DA des héros et des profs du lore — un
-// élève de l'Académie, un gag par mode, l'action à droite, le titre à gauche ;
-// Nano Banana 2.1, sources dans assets-sources/modes-v2/. Adresse neuve
-// `-scene-v2` : l'optimiseur d'images ressert l'ancienne sous le même nom.
+// décor derrière le titre. REMANIÉES le 05/11/2026 (Lucas : repérer ce qui
+// « sort du design global » et l'adapter) : chaque ancienne scène — mascotte
+// néon, sablier sci-fi, ados en sweat — est REPEINTE dans la famille des
+// scènes de jeux de salon (nuages peints sarcelle et violet, projecteur doré,
+// sujet à droite) en GARDANT son sujet et son énergie. Sources dans
+// assets-sources/illustrations-jeux/remaniees/. Adresses neuves `-scene-v3`, puis `-v4` :
+// l'optimiseur d'images ressert l'ancienne sous le même nom.
 // Ajouter l'id ici dès que la scène est déposée dans
-// public/images/defi/modes/<id>-scene-v2.webp — repli sur la robe unie sinon.
+// public/images/defi/modes/<id>-scene-v3|v4.webp — repli sur la robe unie sinon.
 const MODE_SCENE_IDS: GameModeId[] = [
   'duel',
   'blitz',
@@ -46,10 +51,15 @@ const MODE_SCENE_IDS: GameModeId[] = [
   'boss',
 ]
 
+// Chaque scène a SON ciel (05/11/2026, Lucas : « le fond est similaire, même
+// couleur verte de fumée ») : recolorée à la teinte de son billet, adresse
+// neuve `-v4`. Survie (nuages rouges) et Boss (salle du trône) gardent la v3.
+const MODE_SCENE_V4: readonly GameModeId[] = ['duel', 'blitz', 'chrono']
+
 export function modeScene(id: GameModeId): string | undefined {
-  return MODE_SCENE_IDS.includes(id)
-    ? `/images/defi/modes/${id}-scene-v2.webp`
-    : undefined
+  if (!MODE_SCENE_IDS.includes(id)) return undefined
+  const version = MODE_SCENE_V4.includes(id) ? 'v4' : 'v3'
+  return `/images/defi/modes/${id}-scene-${version}.webp`
 }
 
 export type GameMode = {

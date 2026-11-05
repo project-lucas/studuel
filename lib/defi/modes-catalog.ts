@@ -129,12 +129,6 @@ const ARENA_RECORD_KEY: Partial<Record<GameModeId, string>> = {
   survie: SURVIE_BEST_STORAGE_KEY,
 }
 
-// Cadrage d'une scène de mode quand le défaut ('70% 45%') coupe son gag :
-// le crocodile de Survie est au ras du bas de la peinture (05/11/2026).
-const ARENA_SCENE_POSITION: Partial<Record<GameModeId, string>> = {
-  survie: '70% 85%',
-}
-
 const ARENA_EMOJI: Record<GameModeId, string> = {
   duel: '👻',
   blitz: '⏱️',
@@ -175,10 +169,35 @@ const GAME_SCENE_IDS = [
   'quel-tribunal',
 ]
 
+// Scènes des jeux de salon (05/11/2026) : REMANIÉES pour rejoindre la famille
+// (même sujet, même gag), puis chacune avec SON ciel, recoloré à la teinte de
+// son billet (Lucas : « le fond est similaire, même couleur verte de fumée »).
+// Adresse neuve `-scene-v4` (l'optimiseur ressert l'ancienne). Celles qui ne
+// sont pas listées gardent leur scène d'origine (ciel déjà à elles).
+// Inventaire : assets-sources/illustrations-jeux/INVENTAIRE.md.
+const GAME_SCENE_V4 = new Set<string>([
+  'traduction-flash',
+  'traduccion-flash',
+  'capitales',
+  'calcul-mental',
+  'conjugaison-eclair',
+  'chasse-elements',
+  'bonne-unite',
+  'frise-folle',
+  'chasse-faute',
+  'programme',
+  'anatomie-express',
+  'classe-instrument',
+  'le-musee',
+  'muscles-express',
+  'quel-tribunal',
+])
+
 export function gameScene(id: string): string | undefined {
-  return GAME_SCENE_IDS.includes(id)
-    ? `/images/defi/jeux/${id}-scene.webp`
-    : undefined
+  if (!GAME_SCENE_IDS.includes(id)) return undefined
+  return GAME_SCENE_V4.has(id)
+    ? `/images/defi/jeux/${id}-scene-v4.webp`
+    : `/images/defi/jeux/${id}-scene.webp`
 }
 
 // LES OBJETS DES TALONS des billets de jeux (12-13/10/2026, Lucas : « fais le
@@ -368,7 +387,6 @@ export function funModeTickets(dayKey: string): ModeTicket[] {
       emoji: ARENA_EMOJI[m.id] ?? '🎮',
       image: modeImage(m.id),
       scene: modeScene(m.id),
-      scenePosition: ARENA_SCENE_POSITION[m.id],
       href: `/defi/jouer?mode=${m.id}`,
       chip: REGLE_MODE[m.id],
       badge: vedette ? 'Mode du jour' : undefined,
@@ -386,8 +404,8 @@ export function coopTicket(): ModeTicket {
     name: 'Mode Coop',
     tagline: 'À deux, par un code d’invitation : on s’entraide au lieu de s’affronter',
     emoji: '🤝',
-    image: '/images/defi/modes/coop.webp',
-    scene: '/images/defi/modes/coop-scene-v2.webp',
+    image: '/images/defi/jeux/mode-coop-talon.webp',
+    scene: '/images/defi/modes/coop-scene-v4.webp',
     href: '/defi/jouer?mode=coop',
     chip: 'À deux, en direct',
   }
@@ -447,7 +465,7 @@ export function duelDirectTicket(): ModeTicket {
     name: 'Duel en direct',
     tagline: 'Invite un ami par QR : la même partie, en même temps',
     emoji: '⚔️',
-    image: '/images/defi/modes/amidefi.webp',
+    image: '/images/defi/jeux/mode-amidefi-talon.webp',
     scene: modeScene('duel'),
     href: '/defi/duel-rapide',
     chip: 'Avec un ami',

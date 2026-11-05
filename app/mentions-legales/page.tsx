@@ -41,6 +41,7 @@ export default function MentionsLegalesPage() {
 
       <Section titre="Crédits">
         <p>Flamme animée par Freepik (Flaticon).</p>
+        <p>Drapeaux du jeu « Capitales du monde » : flag-icons, © Panayiotis Lipiridis, licence MIT.</p>
       </Section>
 
       <Section titre="Signaler un contenu">

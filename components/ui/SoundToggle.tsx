@@ -10,9 +10,11 @@ import {
   subscribeSound,
 } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
-import LigneInterrupteur from '@/components/ui/LigneInterrupteur'
 
 /**
+ * Le bouton d'icône du son (en-tête des sessions) ; le réglage complet, avec
+ * son volume, vit dans Paramètres (components/ui/ReglagesSon).
+ *
  * L'interrupteur du son — et de l'haptique, qui suit le même réglage.
  *
  * POURQUOI IL DÉMÉNAGE. Il n'existait qu'à UN endroit dans toute l'app :
@@ -33,17 +35,7 @@ import LigneInterrupteur from '@/components/ui/LigneInterrupteur'
  * en classe a le droit de l'apprendre par un « pop » discret plutôt que par la
  * fanfare de fin de session, trente secondes plus tard.
  */
-export default function SoundToggle({
-  variant = 'icone',
-  className,
-}: {
-  /**
-   * `icone` : le bouton discret des en-têtes de session.
-   * `reglage` : la ligne complète d'une page de réglages (libellé + état).
-   */
-  variant?: 'icone' | 'reglage'
-  className?: string
-}) {
+export default function SoundToggle({ className }: { className?: string }) {
   const on = useSyncExternalStore(subscribeSound, isSoundOn, getSoundOnServer)
 
   const basculer = () => {
@@ -55,38 +47,19 @@ export default function SoundToggle({
     if (suivant) sfx.notice('success')
   }
 
-  if (variant === 'icone') {
-    return (
-      <button
-        type="button"
-        aria-label={on ? 'Couper le son' : 'Activer le son'}
-        aria-pressed={on}
-        title={on ? 'Couper le son' : 'Activer le son'}
-        onClick={basculer}
-        className={cn(
-          'text-muted-foreground hover:text-foreground cursor-pointer transition-colors',
-          className,
-        )}
-      >
-        {on ? <Volume2 className="size-4" /> : <VolumeX className="size-4" />}
-      </button>
-    )
-  }
-
   return (
-    <LigneInterrupteur
-      on={on}
-      onBasculer={basculer}
-      icone={
-        on ? (
-          <Volume2 className="size-4" strokeWidth={2.4} aria-hidden="true" />
-        ) : (
-          <VolumeX className="size-4" strokeWidth={2.4} aria-hidden="true" />
-        )
-      }
-      titre="Effets"
-      etat={on ? 'Activés — les retours de l’app et les jeux sonnent.' : 'Coupés — plus aucun bruitage ni vibration.'}
-      className={className}
-    />
+    <button
+      type="button"
+      aria-label={on ? 'Couper le son' : 'Activer le son'}
+      aria-pressed={on}
+      title={on ? 'Couper le son' : 'Activer le son'}
+      onClick={basculer}
+      className={cn(
+        'text-muted-foreground hover:text-foreground cursor-pointer transition-colors',
+        className,
+      )}
+    >
+      {on ? <Volume2 className="size-4" /> : <VolumeX className="size-4" />}
+    </button>
   )
 }

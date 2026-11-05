@@ -1,9 +1,13 @@
+import { existsSync } from 'node:fs'
+import path from 'node:path'
 import { describe, expect, it } from 'vitest'
 import {
   CAPITALES_OPTIONS,
   COUNTRIES,
   buildCapitalesPool,
+  codeDrapeau,
   deNomPays,
+  drapeauSrc,
 } from './capitales'
 
 describe('dataset des capitales', () => {
@@ -66,6 +70,30 @@ describe('buildCapitalesPool', () => {
       expect(continents.every(Boolean)).toBe(true)
       // …et viennent du même continent (chaque continent a ≥ 4 pays).
       expect(new Set(continents).size).toBe(1)
+    }
+  })
+})
+
+describe('les drapeaux en image (05/11/2026)', () => {
+  it('lit le code ISO d’un drapeau emoji', () => {
+    expect(codeDrapeau('🇲🇬')).toBe('mg')
+    expect(codeDrapeau('🇫🇷')).toBe('fr')
+    expect(drapeauSrc('🇬🇧')).toBe('/images/drapeaux/gb.webp')
+  })
+
+  it('n’écrit plus aucun emoji de drapeau dans l’énoncé (Windows affichait « MG »)', () => {
+    const pool = buildCapitalesPool('drapeaux', COUNTRIES.length)
+    for (const q of pool) {
+      expect(q.prompt).not.toMatch(/[\u{1F1E6}-\u{1F1FF}]/u)
+      expect(q.prompt.startsWith('Quelle est la capitale')).toBe(true)
+      expect(q.drapeau).toMatch(/^\/images\/drapeaux\/[a-z]{2}\.webp$/)
+      expect(q.imageAlt).toMatch(/^Drapeau /)
+    }
+  })
+
+  it('a une image générée pour chaque pays (scripts/drapeaux.mjs)', () => {
+    for (const c of COUNTRIES) {
+      expect(existsSync(path.join(process.cwd(), 'public', drapeauSrc(c.flag)))).toBe(true)
     }
   })
 })

@@ -454,10 +454,25 @@ export default function GameTable({
                 />
               </div>
             ) : null}
+            {/* LE DRAPEAU (Capitales du monde) : une image, la même partout —
+                l'emoji de drapeau s'écrivait « MG » sous Windows. Plus petit
+                que l'œuvre du Musée : il désigne, il ne se contemple pas. */}
+            {question.drapeau ? (
+              <div key={question.id} className="animate-in fade-in zoom-in-95 mt-3 flex justify-center duration-300">
+                <Image
+                  src={question.drapeau}
+                  alt={question.imageAlt ?? ''}
+                  width={160}
+                  height={120}
+                  priority
+                  className="h-auto w-32 rounded-lg shadow-md ring-1 ring-black/10"
+                />
+              </div>
+            ) : null}
             <h2
               className={cn(
                 'font-heading mt-1 mb-4 font-extrabold text-balance',
-                question.image ? 'mt-3 text-xl' : 'text-2xl',
+                question.image || question.drapeau ? 'mt-3 text-xl' : 'text-2xl',
               )}
             >
               {question.prompt}

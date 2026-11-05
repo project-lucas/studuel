@@ -8,6 +8,7 @@ import { origineUnique, useRecompenses } from '@/components/recompenses/Recompen
 import { relireQuetes } from '@/components/quetes/store'
 import { secondesDeLecture } from '@/lib/lecture'
 import { oublierLecture } from '@/lib/lecture-entamee-local'
+import { signalerSupportsPerimes } from '@/lib/supports-perimes'
 import { cn } from '@/lib/utils'
 import styles from './LessonCompleteButton.module.css'
 
@@ -91,6 +92,8 @@ export default function LessonCompleteButton({
       // La boucle est bouclée : le cours n'est plus « entamé », la carte de
       // Réviser ne le rappellera plus.
       oublierLecture(lessonId)
+      // La tuile « Cours » du sommaire prend sa coche verte au retour.
+      signalerSupportsPerimes()
       const origines = origineUnique(ref.current, gains)
       setDone(true)
       celebrer(gains, origines)

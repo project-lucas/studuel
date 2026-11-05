@@ -1,4 +1,5 @@
 import OngletReviser from '@/app/reviser/onglet'
+import MusiqueDeFond from '@/components/son/MusiqueDeFond'
 
 /**
  * L'onglet dans son EMPLACEMENT (route parallèle `@reviser`) : lors d'une
@@ -7,5 +8,12 @@ import OngletReviser from '@/app/reviser/onglet'
  * construit qu'une fois. Le titre de la page vit dans `app/reviser/page.tsx`.
  */
 export default function EmplacementReviser() {
-  return <OngletReviser />
+  return (
+    <>
+      {/* La musique de fond dans Réviser : COUPÉE par défaut (on y lit), l'élève
+          peut l'allumer dans Paramètres (ReglagesSon, 05/11/2026). */}
+      <MusiqueDeFond piste="arene" onglet="reviser" />
+      <OngletReviser />
+    </>
+  )
 }

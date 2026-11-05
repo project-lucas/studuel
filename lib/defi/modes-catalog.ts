@@ -380,7 +380,7 @@ export function coopTicket(): ModeTicket {
     tagline: 'À deux, par un code d’invitation : on s’entraide au lieu de s’affronter',
     emoji: '🤝',
     image: '/images/defi/modes/coop.webp',
-    scene: '/images/defi/modes/coop-scene.webp',
+    scene: '/images/defi/modes/coop-scene-v2.webp',
     href: '/defi/jouer?mode=coop',
     chip: 'À deux, en direct',
   }

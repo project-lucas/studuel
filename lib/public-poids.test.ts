@@ -132,7 +132,12 @@ describe('poids de public/', () => {
   // et trois gardiens de secteur (buste, scène, en pied : 0,4 Mo) ; un étudiant
   // ne charge que les vignettes de son année. Marge pour la scène et le talon
   // des jeux du supérieur et les sprites de combat des trois gardiens.
-  const TOTAL_MAX_MO = 45
+  // 48 Mo le 05/11/2026 : le SON au choix et les DRAPEAUX — deux thèmes de
+  // fond de plus (« Le rempart », « La taverne », 45 s à 96 kb/s, 1,06 Mo,
+  // scripts/musiques-themes.mjs), dont l'élève ne charge que celui qu'il a
+  // choisi, et les 81 drapeaux de « Capitales du monde » (320 px, 0,24 Mo,
+  // scripts/drapeaux.mjs) ; public/ était déjà à 45,3 Mo.
+  const TOTAL_MAX_MO = 48
 
   it(`garde public/ sous ${TOTAL_MAX_MO} Mo au total`, () => {
     const totalMo = fichiers.reduce((s, f) => s + f.ko, 0) / 1024

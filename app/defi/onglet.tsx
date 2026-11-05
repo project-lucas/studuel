@@ -515,7 +515,7 @@ export default async function OngletDefi() {
       <FigerArene />
       {/* La musique de l'arène, douce (lib/musique) : elle se tait quand on
           quitte l'onglet et cède la place au combat. */}
-      <MusiqueDeFond piste="arene" />
+      <MusiqueDeFond piste="arene" onglet="defi" />
       {/* Rythme vertical : gap-4 (2x) entre la scène/le podium et le groupe
           d'action du bas, qui règle son espacement interne sur gap-2 (x).
 

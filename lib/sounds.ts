@@ -2,7 +2,8 @@
 // jingles premium (assets Mixkit dans public/sounds/) pour les moments forts.
 // Utilisable uniquement côté client ; préférence persistée en localStorage.
 
-import { audioContexte } from '@/lib/audio-contexte'
+import { audioContexte, sortieEffets } from '@/lib/audio-contexte'
+import { getVolume } from '@/lib/volumes'
 import { demiTonsPerle, jouerSon } from '@/lib/sons-studuel'
 import { comboSemitones, comboTier, transpose, buzzPattern } from '@/lib/juice'
 import {
@@ -102,7 +103,7 @@ function note(
   gain.gain.setValueAtTime(0.0001, t0)
   gain.gain.exponentialRampToValueAtTime(peak, t0 + 0.012)
   gain.gain.exponentialRampToValueAtTime(0.0001, t0 + duration)
-  osc.connect(gain).connect(audio.destination)
+  osc.connect(gain).connect(sortieEffets(audio))
   osc.start(t0)
   osc.stop(t0 + duration + 0.05)
 }
@@ -129,7 +130,7 @@ function playAsset(name: AssetName, volume: number, fallback?: () => void) {
     assetCache.set(name, el)
   }
   el.currentTime = 0
-  el.volume = volume
+  el.volume = volume * getVolume('effets')
   el.play().catch(() => fallback?.())
 }
 
@@ -203,7 +204,7 @@ export const sfx = {
     gain.gain.setValueAtTime(0.0001, t0)
     gain.gain.exponentialRampToValueAtTime(vite ? 0.05 : 0.09, t0 + duree * 0.35)
     gain.gain.exponentialRampToValueAtTime(0.0001, t0 + duree)
-    source.connect(filtre).connect(gain).connect(audio.destination)
+    source.connect(filtre).connect(gain).connect(sortieEffets(audio))
     source.start(t0)
     source.stop(t0 + duree + 0.02)
     if (!vite) uiVibrate(6)

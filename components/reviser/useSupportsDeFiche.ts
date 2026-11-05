@@ -1,6 +1,7 @@
 'use client'
 
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from 'react'
+import { abonnerSupports, versionSupports } from '@/lib/supports-perimes'
 import type { SupportChip } from '@/lib/subject-template'
 
 /**
@@ -18,6 +19,10 @@ import type { SupportChip } from '@/lib/subject-template'
  * `preparer(id)` part quand le doigt se pose sur la ligne, une centaine de
  * millisecondes avant le tap, et pour la fiche à reprendre dès l'affichage.
  * Une requête en vol n'est jamais doublée.
+ *
+ * LE CACHE PÉRIME (05/11/2026) : un cours lu jusqu'au bout (`LessonCompleteButton`)
+ * appelle `signalerSupportsPerimes` ; au retour, le sommaire oublie tout et
+ * relit la fiche ouverte — la tuile « Cours » prend sa coche verte.
  */
 export function useSupportsDeFiche(
   subjectSlug: string,
@@ -41,13 +46,16 @@ export function useSupportsDeFiche(
     (id: string): Promise<SupportChip[]> => {
       const deja = enVol.current.get(id)
       if (deja) return deja
+      const lueA = versionSupports()
       const promesse = fetch(
         `/api/reviser/supports?matiere=${encodeURIComponent(subjectSlug)}&fiche=${encodeURIComponent(id)}`,
       )
         .then((r) => (r.ok ? (r.json() as Promise<SupportChip[]>) : []))
         .catch(() => [] as SupportChip[])
         .then((chips) => {
-          if (vivant.current) setSupports((s) => (s[id] ? s : { ...s, [id]: chips }))
+          // Une réponse partie avant un « périmé » ne remplit pas le cache neuf.
+          if (vivant.current && lueA === versionSupports())
+            setSupports((s) => (s[id] ? s : { ...s, [id]: chips }))
           return chips
         })
       enVol.current.set(id, promesse)
@@ -59,6 +67,20 @@ export function useSupportsDeFiche(
   useEffect(() => {
     if (preparerDabord) void preparer(preparerDabord)
   }, [preparerDabord, preparer])
+
+  // Un ref (et non un effet sur [version] seul) : sous <Activity>, les effets
+  // rejouent à chaque retour sur l'onglet, et le cache ne doit tomber que si
+  // quelque chose a VRAIMENT changé depuis la dernière lecture.
+  const version = useSyncExternalStore(abonnerSupports, versionSupports, () => 0)
+  const versionVue = useRef(version)
+  useEffect(() => {
+    if (versionVue.current === version) return
+    versionVue.current = version
+    enVol.current.clear()
+    setSupports({})
+    if (fiche) void preparer(fiche)
+    else if (preparerDabord) void preparer(preparerDabord)
+  }, [version, fiche, preparer, preparerDabord])
 
   const charger = useCallback(
     (id: string) => {

@@ -10,7 +10,7 @@
 // différente chaque fois (`playbackRate`), et iOS ignore le volume d'un
 // élément <audio>.
 
-import { audioContexte } from '@/lib/audio-contexte'
+import { audioContexte, sortieEffets } from '@/lib/audio-contexte'
 import { attenuerMusique } from '@/lib/musique'
 
 export const NOMS_SONS = [
@@ -115,7 +115,7 @@ export function jouerSon(nom: NomSon, options: OptionsSon = {}, repli?: () => vo
     source.playbackRate.value = tauxDeLecture(options.demiTons ?? 0)
     const gain = audio.createGain()
     gain.gain.value = Math.max(0, Math.min(1, options.volume ?? 0.8))
-    source.connect(gain).connect(audio.destination)
+    source.connect(gain).connect(sortieEffets(audio))
     source.start()
     if (options.attenuer) attenuerMusique(tampon.duration / source.playbackRate.value)
   })

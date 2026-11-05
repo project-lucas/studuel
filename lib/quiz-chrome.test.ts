@@ -65,6 +65,22 @@ describe('estPleinEcran', () => {
   })
 })
 
+describe('estPleinEcran — une partie de jeu de salon (05/11/2026)', () => {
+  it('ouvre la partie d’un palier et l’épreuve ultime en plein écran', () => {
+    expect(estPleinEcran('/defi/jeux/capitales/2')).toBe(true)
+    expect(estPleinEcran('/defi/jeux/calcul-mental/5?x=1')).toBe(true)
+    expect(estPleinEcran('/defi/jeux/capitales/ultime')).toBe(true)
+    expect(estChromeMasque('/defi/jeux/capitales/2')).toBe(true)
+  })
+
+  it('GARDE le chrome sur la carte des paliers et la liste des jeux', () => {
+    expect(estPleinEcran('/defi/jeux/capitales')).toBe(false)
+    expect(estPleinEcran('/defi/jeux/capitales/')).toBe(false)
+    expect(estPleinEcran('/defi/jeux')).toBe(false)
+    expect(estPleinEcran('/defi/jeux/capitales/2/autre')).toBe(false)
+  })
+})
+
 describe('estChromeMasque', () => {
   it('masque le chrome sur une session de quiz — le cas du 2026-08-28', () => {
     // Le défaut n'était pas dans ce verdict mais dans l'endroit où il était

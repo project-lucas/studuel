@@ -107,7 +107,11 @@ export function buildChapterSupports(
   // de cours, il ne pointe pas sur la leçon qu'on vient de lire (elle est à
   // l'écran) mais sur la SUIVANTE — et disparaît sur la dernière du chapitre,
   // où il n'y a plus rien à lire.
-  const coursLesson = focus ? (lessons[focusIndex + 1] ?? null) : (lessons[0] ?? null)
+  // Hors pied de cours (le sommaire), la tuile mène à la première leçon NON
+  // LUE ; tout lu, elle revient à la première, cochée (05/11/2026).
+  const coursLesson = focus
+    ? (lessons[focusIndex + 1] ?? null)
+    : (lessons.find((l) => !l.read) ?? lessons[0] ?? null)
   if (coursLesson) {
     chips.push({
       kind: 'cours',

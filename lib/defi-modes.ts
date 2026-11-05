@@ -29,10 +29,15 @@ export function modeImage(id: GameModeId): string | undefined {
     : undefined
 }
 
-// Scènes plein-fond des billets de mode (bannières 16:9 du batch 12 des
-// prompts) : le corps du billet les affiche en décor derrière le titre.
+// Scènes plein-fond des billets de mode : le corps du billet les affiche en
+// décor derrière le titre. REPEINTES le 05/11/2026 (Lucas : « refaire les
+// illustrations des modes de jeu pour une meilleure cohérence visuelle, une DA
+// drôle, pas de paillettes ») dans la DA des héros et des profs du lore — un
+// élève de l'Académie, un gag par mode, l'action à droite, le titre à gauche ;
+// Nano Banana 2.1, sources dans assets-sources/modes-v2/. Adresse neuve
+// `-scene-v2` : l'optimiseur d'images ressert l'ancienne sous le même nom.
 // Ajouter l'id ici dès que la scène est déposée dans
-// public/images/defi/modes/<id>-scene.webp — repli sur la robe unie sinon.
+// public/images/defi/modes/<id>-scene-v2.webp — repli sur la robe unie sinon.
 const MODE_SCENE_IDS: GameModeId[] = [
   'duel',
   'blitz',
@@ -43,7 +48,7 @@ const MODE_SCENE_IDS: GameModeId[] = [
 
 export function modeScene(id: GameModeId): string | undefined {
   return MODE_SCENE_IDS.includes(id)
-    ? `/images/defi/modes/${id}-scene.webp`
+    ? `/images/defi/modes/${id}-scene-v2.webp`
     : undefined
 }
 
@@ -182,6 +187,13 @@ export type ModeQuestion = {
    */
   image?: string
   imageAlt?: string
+  /**
+   * LE DRAPEAU de la question (Capitales du monde, 05/11/2026) : une image
+   * (`/images/drapeaux/<code>.webp`), plus petite que l'œuvre du Musée, posée
+   * au-dessus de l'énoncé. Il remplace l'emoji de drapeau que Windows
+   * affichait en deux lettres. `imageAlt` le décrit.
+   */
+  drapeau?: string
 }
 
 // ------------------------------------------------------------------- duel BO3

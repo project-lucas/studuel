@@ -10,8 +10,7 @@ import {
 } from 'lucide-react'
 import BasculeStuduelPlus from '@/components/compte/BasculeStuduelPlus'
 import { Button } from '@/components/ui/button'
-import SoundToggle from '@/components/ui/SoundToggle'
-import MusiqueToggle from '@/components/ui/MusiqueToggle'
+import ReglagesSon from '@/components/ui/ReglagesSon'
 import EnTetePage from '@/components/reviser/EnTetePage'
 import NotificationsOptIn from '@/components/NotificationsOptIn'
 import GradeSelector from '@/components/GradeSelector'
@@ -165,11 +164,9 @@ export default async function ComptePage() {
           le bouton dedans. Sur une app qui sonne à chaque tap, c'était le
           réglage le plus demandé et le plus caché. Sa place est ici, avec les
           autres réglages de compte. */}
-      <div className="mx-auto mt-4 flex w-full max-w-md flex-col gap-3">
-        <SoundToggle variant="reglage" />
-        {/* La musique, à part des effets (05/11/2026, lib/musique). */}
-        <MusiqueToggle />
-      </div>
+      {/* La musique, à part des effets (05/11/2026, lib/musique) ; chacun son
+          curseur de volume, et le thème de fond au choix (ReglagesSon). */}
+      <ReglagesSon />
 
       <NotificationsOptIn />
 

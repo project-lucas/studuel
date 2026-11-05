@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
-import MusiqueToggle from '@/components/ui/MusiqueToggle'
-import SoundToggle from '@/components/ui/SoundToggle'
+import ReglagesSon from '@/components/ui/ReglagesSon'
 import { lancerEntreeCombat } from '@/lib/entree-combat'
 import { demanderMusique, type Piste } from '@/lib/musique'
 import { sfx } from '@/lib/sounds'
@@ -50,8 +49,7 @@ export default function Banc() {
       </div>
 
       <p className="surtitre text-muted-foreground mt-3">Réglages</p>
-      <SoundToggle variant="reglage" />
-      <MusiqueToggle />
+      <ReglagesSon />
     </div>
   )
 }

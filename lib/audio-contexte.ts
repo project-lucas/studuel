@@ -10,6 +10,8 @@
 // touché — c'est le navigateur qui le garantit, et `aDejaInteragi` le dit au
 // code qui voudrait lancer une musique.
 
+import { getVolume } from '@/lib/volumes'
+
 let ctx: AudioContext | null = null
 
 export function audioContexte(): AudioContext | null {
@@ -21,6 +23,20 @@ export function audioContexte(): AudioContext | null {
   }
   if (ctx.state === 'suspended' && aDejaInteragi()) void ctx.resume()
   return ctx
+}
+
+// LA SORTIE DES EFFETS (05/11/2026) : bips synthétisés et bruitages enregistrés
+// passent par UN gain commun, réglé par le curseur « Effets » de /compte
+// (lib/volumes). La musique a son propre gain (lib/musique).
+let busEffets: GainNode | null = null
+
+export function sortieEffets(audio: AudioContext): AudioNode {
+  if (!busEffets || busEffets.context !== audio) {
+    busEffets = audio.createGain()
+    busEffets.connect(audio.destination)
+  }
+  busEffets.gain.value = getVolume('effets')
+  return busEffets
 }
 
 /** L'élève a-t-il déjà touché la page (tap, clic, touche) ? */

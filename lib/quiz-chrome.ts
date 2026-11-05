@@ -81,7 +81,23 @@ const PREFIXES_PLEIN_ECRAN = [
   '/dev/course-heros',
   // L'APERÇU DE « MES ERREURS » (05/11/2026) : plein écran comme la session.
   '/dev/erreurs',
+  // L'APERÇU D'UNE PARTIE DE SALON (05/11/2026) : plein écran comme la partie.
+  '/dev/jeu',
 ] as const
+
+/**
+ * UNE PARTIE D'UN JEU DE SALON (05/11/2026) : `/defi/jeux/<jeu>/<palier>` et
+ * l'épreuve ultime `/defi/jeux/<jeu>/ultime` — les mêmes raisons que le quiz
+ * (le bouton Quêtes se posait sur la zone de jeu, la barre d'onglets volait la
+ * place des réponses). La CARTE DES PALIERS (`/defi/jeux/<jeu>`) n'en est pas :
+ * c'est une page de navigation, elle garde son chrome. Un préfixe ne suffit
+ * pas à les distinguer, d'où le compte exact des segments.
+ */
+const PARTIE_DE_SALON = /^\/defi\/jeux\/[^/]+\/[^/]+\/?$/
+
+export function estPartieDeSalon(chemin: string): boolean {
+  return PARTIE_DE_SALON.test(chemin)
+}
 
 /**
  * Cette route s'ouvre-t-elle en plein écran ?
@@ -105,6 +121,7 @@ export function estPleinEcran(pathname: string): boolean {
   if (p.length === 0) return false
   // Une éventuelle chaîne de requête n'appartient pas au chemin.
   const chemin = p.split('?')[0]
+  if (estPartieDeSalon(chemin)) return true
   return PREFIXES_PLEIN_ECRAN.some(
     (prefixe) =>
       // `startsWith(prefixe)` suffit — les préfixes portent déjà leur barre

@@ -39,6 +39,22 @@ describe('ce que la fiche dit de l’avancement', () => {
     expect(lue.find((c) => c.kind === 'cours')?.done).toBe(true)
   })
 
+  test('chapitre à plusieurs leçons : la tuile mène à la première NON LUE, cochée quand tout est lu', () => {
+    // 05/11/2026 : seule la première leçon comptait — lire la deuxième ne
+    // cochait rien, et la tuile renvoyait toujours à la leçon déjà lue.
+    const moitie = buildChapterSupports(input([lesson({ id: 'l1', read: true }), lesson({ id: 'l2' })]))
+    const coursMoitie = moitie.find((c) => c.kind === 'cours')
+    expect(coursMoitie?.href).toBe('/reviser/anglais/ch1/l2/cours')
+    expect(coursMoitie?.done).toBe(false)
+
+    const tout = buildChapterSupports(
+      input([lesson({ id: 'l1', read: true }), lesson({ id: 'l2', read: true })]),
+    )
+    const coursTout = tout.find((c) => c.kind === 'cours')
+    expect(coursTout?.href).toBe('/reviser/anglais/ch1/l1/cours')
+    expect(coursTout?.done).toBe(true)
+  })
+
   test('coche le QUIZ à partir du seuil de maîtrise, pas avant', () => {
     const rate = buildChapterSupports(
       input([lesson({ id: 'l1', best: { score: 5, total: 10, ratio: 0.5 } })]),

@@ -74,3 +74,45 @@ récompense, un seul univers et deux réglages). Détail et calendrier :
   à 96 kb/s (arène 541 Ko).
 - La musique de l'onglet Défi suit les onglets vivants : masqué sous
   `<Activity>`, l'onglet démonte ses effets et rend sa demande.
+
+## Les parties de salon en plein écran et les drapeaux en image (05/11/2026)
+
+- Une PARTIE (`/defi/jeux/<jeu>/<palier>`, `…/ultime`) s'ouvre en plein écran
+  (`estPartieDeSalon` dans `lib/quiz-chrome.ts`, compte exact des segments) :
+  le bouton Quêtes se posait sur la zone de jeu. La CARTE DES PALIERS
+  (`/defi/jeux/<jeu>`) garde son chrome. `ModeStage` lit le même verdict : en
+  plein écran, ni marges négatives ni décalage sous le bandeau, l'en-tête se
+  colle en haut (zone sûre de l'encoche). L'aperçu `/dev/jeu` aussi.
+- « Capitales du monde » écrivait le drapeau en EMOJI dans l'énoncé ; Windows
+  n'en a pas et affichait « MG ». Le drapeau est une image
+  (`ModeQuestion.drapeau`, `public/images/drapeaux/<code>.webp`, 81 pays,
+  239 Ko) générée par `scripts/drapeaux.mjs` depuis flag-icons (MIT, crédité
+  dans `/mentions-legales`) ; un pays ajouté demande de rejouer le script (un
+  test vérifie que chaque image existe).
+## La musique de fond hors de l'arène, les volumes et le thème au choix (05/11/2026)
+
+- Lucas : la musique de fond aussi dans Amis, Moi et la Boutique, jamais dans
+  Réviser ; pouvoir la couper partout, baisser le son, changer de musique.
+  `<MusiqueDeFond piste="arene" />` est posée dans les EMPLACEMENTS des
+  onglets (`app/@amis|@moi|@tresor/<onglet>/page.tsx`) : masqué sous
+  `<Activity>`, un onglet rend sa demande ; d'un onglet à l'autre la boucle
+  continue sans repartir de zéro (même lecteur).
+- Deux curseurs de VOLUME (`lib/volumes.ts`, réglage du navigateur, 100 % =
+  le niveau d'avant) : la musique (`niveau()` de `lib/musique`, suit en
+  direct) et les effets (un gain commun `sortieEffets` dans
+  `lib/audio-contexte`, par lequel passent `lib/sounds` et `lib/sons-studuel`).
+  L'interrupteur reste le geste qui coupe tout.
+- Le THÈME DE FOND au choix (`THEMES` de `lib/musique`) : « La cour
+  d'honneur » (défaut), « Le rempart », « La taverne », composés par
+  ElevenLabs (`scripts/musiques-themes.mjs`, `/v1/music`, 45 s, instrumental) ;
+  le combat et la victoire ne changent pas. Toucher un thème dans `/compte` le
+  fait entendre (`ReglagesSon`) ; aperçu `/dev/entree-combat`.- Le soir même, la carte « Son » de `/compte` devient COMPACTE, façon Clash
+  Royale (Lucas) : une ligne par canal (icône, nom, curseur, interrupteur),
+  le thème en trois pastilles (Académie · Rempart · Taverne), puis « Musique
+  dans les onglets » : les cinq icônes de la barre, en couleur = la musique y
+  joue, grisée = elle s'y tait, un tap bascule. Défaut : partout sauf Réviser
+  (`ONGLETS_MUSIQUE_DEFAUT`, `basculerOngletMusique`, réglage
+  `studuel-musique-onglets`) ; `MusiqueDeFond onglet=…` ne demande rien quand
+  l'onglet est coupé, et Réviser a désormais sa demande (coupée par défaut).
+  `MusiqueToggle`, `LigneInterrupteur` et la variante « réglage » de
+  `SoundToggle` sont retirés.

@@ -251,6 +251,25 @@ export function deNomPays(nom: string): string {
   return `de ${nom}`
 }
 
+// Le premier des 26 « indicateurs régionaux » Unicode (🇦) : un drapeau emoji
+// en est une PAIRE, dont chaque moitié vaut une lettre du code ISO du pays.
+const INDICATEUR_A = 0x1f1e6
+
+/** Le code ISO à deux lettres d'un drapeau emoji (« 🇲🇬 » → « mg »). */
+export function codeDrapeau(emoji: string): string {
+  return [...emoji]
+    .map((c) => String.fromCharCode((c.codePointAt(0) ?? INDICATEUR_A) - INDICATEUR_A + 97))
+    .join('')
+}
+
+/**
+ * L'image du drapeau, générée par `scripts/drapeaux.mjs` (flag-icons, MIT) dans
+ * `public/images/drapeaux/` — un pays ajouté ici demande de rejouer le script.
+ */
+export function drapeauSrc(emoji: string): string {
+  return `/images/drapeaux/${codeDrapeau(emoji)}.webp`
+}
+
 export function buildCapitalesPool(seed: string, count = 30): ModeQuestion[] {
   const rng = seededRng(`capitales:${seed}`)
   const picked = shuffleWith(rng, COUNTRIES).slice(
@@ -277,7 +296,11 @@ export function buildCapitalesPool(seed: string, count = 30): ModeQuestion[] {
     const options = shuffleWith(rng, [country.capital, ...decoys])
     return {
       id: `jx-cap-${country.flag}`,
-      prompt: `${country.flag} Quelle est la capitale ${deNomPays(country.name)} ?`,
+      // Le drapeau est une IMAGE au-dessus de l'énoncé, plus un emoji dedans :
+      // Windows n'a pas d'emoji de drapeau et écrivait « MG » (05/11/2026).
+      prompt: `Quelle est la capitale ${deNomPays(country.name)} ?`,
+      drapeau: drapeauSrc(country.flag),
+      imageAlt: `Drapeau ${deNomPays(country.name)}`,
       options,
       correctIndex: options.indexOf(country.capital),
       explanation: `${country.capital} est la capitale ${deNomPays(country.name)}.`,

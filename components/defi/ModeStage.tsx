@@ -4,7 +4,9 @@ import type { ReactNode } from 'react'
 import Image from 'next/image'
 import { ArrowLeft, type LucideIcon } from 'lucide-react'
 import WorldBackdrop from '@/components/WorldBackdrop'
+import { usePathname } from 'next/navigation'
 import { useHudAuDefilement } from '@/components/useHudAuDefilement'
+import { estPleinEcran } from '@/lib/quiz-chrome'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
 
@@ -90,6 +92,12 @@ export default function ModeStage({
   // Le bandeau du haut s'efface dès qu'on défile, revient en haut de page ;
   // l'en-tête du mode monte alors à sa place (classes `[html.hud-replie_&]`).
   useHudAuDefilement()
+  // EN PLEIN ÉCRAN (une partie de jeu de salon, 05/11/2026 — lib/quiz-chrome) :
+  // ni bandeau ni barre d'onglets, et <main> ne pose plus ses marges. Les
+  // marges négatives qui couvraient le gabarit, le décalage sous le bandeau et
+  // la réserve de la barre du bas tomberaient alors à faux : l'en-tête se colle
+  // en haut de l'écran (sous l'encoche), le bas ne garde que la zone sûre.
+  const pleinEcran = estPleinEcran(usePathname() ?? '')
   const back = backLabel ?? 'Retour à l’Arène'
   return (
     <>
@@ -106,7 +114,9 @@ export default function ModeStage({
       </WorldBackdrop>
     <div
       className={cn(
-        '-mx-4 -mt-[5.5rem] -mb-24 flex min-h-dvh flex-col pt-[5.25rem] md:-mx-8 md:-my-10 md:pt-0',
+        pleinEcran
+          ? 'flex min-h-dvh flex-col'
+          : '-mx-4 -mt-[5.5rem] -mb-24 flex min-h-dvh flex-col pt-[5.25rem] md:-mx-8 md:-my-10 md:pt-0',
         dark
           ? 'mode-stage-dark text-white'
           : themed
@@ -132,8 +142,12 @@ export default function ModeStage({
           passait dessous se lisait à travers. */}
       <header
         className={cn(
-          'sticky top-[5.25rem] z-30 flex items-center gap-3 px-4 py-3 transition-transform duration-200 ease-out motion-reduce:transition-none md:top-0',
-          '[html.hud-replie_&]:-translate-y-[5.25rem] md:[html.hud-replie_&]:translate-y-0',
+          pleinEcran
+            ? 'sticky top-0 z-30 flex items-center gap-3 px-4 pt-[calc(0.75rem+env(safe-area-inset-top))] pb-3'
+            : [
+                'sticky top-[5.25rem] z-30 flex items-center gap-3 px-4 py-3 transition-transform duration-200 ease-out motion-reduce:transition-none md:top-0',
+                '[html.hud-replie_&]:-translate-y-[5.25rem] md:[html.hud-replie_&]:translate-y-0',
+              ],
           dark
             ? 'border-b border-white/10 bg-[color-mix(in_oklch,var(--primary),black_44%)]'
             : themed
@@ -194,7 +208,12 @@ export default function ModeStage({
 
       {/* Le contenu du mode, centré, avec la marge basse qui dégage la barre
           d'onglets (safe-area comprise). */}
-      <div className="mx-auto w-full max-w-xl flex-1 px-4 pt-3 pb-[calc(6rem+env(safe-area-inset-bottom))]">
+      <div
+        className={cn(
+          'mx-auto w-full max-w-xl flex-1 px-4 pt-3',
+          pleinEcran ? 'pb-[calc(1.5rem+env(safe-area-inset-bottom))]' : 'pb-[calc(6rem+env(safe-area-inset-bottom))]',
+        )}
+      >
         {children}
       </div>
     </div>

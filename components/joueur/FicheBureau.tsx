@@ -7,7 +7,7 @@ import FlammeAnimee from '@/components/FlammeAnimee'
 import TropheeIcone from '@/components/ui/TropheeIcone'
 import XpIcon from '@/components/ui/XpIcon'
 import { compteCourt } from '@/lib/compte-court'
-import { FEUILLE_BUREAU, ligneRang, tailleNom, type TailleNom } from '@/lib/joueur'
+import { chambreAuJour, feuilleBureau, ligneRang, tailleNom, type TailleNom } from '@/lib/joueur'
 import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
 import type { JoueurData } from './PageJoueur'
@@ -36,6 +36,10 @@ import s from './FicheBureau.module.css'
 // les deux portes (le carnet, le courrier) sur les sceaux — leur cible tactile
 // est le sceau, son ruban et son libellé (≥ 44 px).
 //
+// AU JOUR (05/11/2026) : sur une chambre repeinte dans la DA de la fenêtre du
+// Défi (`chambreAuJour`, lib/joueur), la feuille est sa variante à l'ombre
+// courte (`feuilleBureau`) et les libellés des portes passent sur une plaque.
+//
 // Posée en % de la peinture du bureau (le calque a la géométrie de la scène,
 // comme DecorBureau), elle tient sur les 78 scènes, à toute heure, sur tout
 // écran ; dedans, tout est en % de la feuille et en `cqw` (FicheBureau.module.css).
@@ -50,12 +54,14 @@ export default function FicheBureau({ data }: { data: JoueurData }) {
   // Le blason a manqué : le niveau en or, jamais d'image cassée.
   const [blasonCasse, setBlasonCasse] = useState(false)
   const niveauSuivant = barre.level + 1
+  // Chambre au jour (DA de la fenêtre) : le sol est clair, les libellés des portes passent sur une plaque.
+  const auJour = chambreAuJour(data.bureau)
 
   return (
     <section aria-label="Mon profil" className={s.calque}>
       <div className={cn(s.feuille, s.pose)}>
         {/* eslint-disable-next-line @next/next/no-img-element -- la feuille peinte, servie telle quelle */}
-        <img src={FEUILLE_BUREAU} alt="" width={1500} height={1008} draggable={false} className={s.papier} />
+        <img src={feuilleBureau(data.bureau)} alt="" width={1500} height={1008} draggable={false} className={s.papier} />
 
         {/* --- le ruban : le nom, la classe --------------------------------- */}
         <h1 className={cn(s.nom, CLASSE_NOM[tailleNom(data.nom)])}>
@@ -115,8 +121,8 @@ export default function FicheBureau({ data }: { data: JoueurData }) {
         </ul>
 
         {/* --- les deux sceaux : les portes ---------------------------------- */}
-        <Porte href="/moi" libelle="Mon carnet" icone={<NotebookPen aria-hidden="true" />} className={s.porteCarnet} />
-        <Porte href="/courrier" libelle="Courrier" icone={<Mail aria-hidden="true" />} className={s.porteCourrier} />
+        <Porte href="/moi" libelle="Mon carnet" icone={<NotebookPen aria-hidden="true" />} className={s.porteCarnet} auJour={auJour} />
+        <Porte href="/courrier" libelle="Courrier" icone={<Mail aria-hidden="true" />} className={s.porteCourrier} auJour={auJour} />
       </div>
     </section>
   )
@@ -133,12 +139,17 @@ function Case({ icone, valeur, libelle, titre }: { icone: ReactNode; valeur: num
   )
 }
 
-/** Une porte sur un sceau : l'icône en crème sur le sceau peint, le libellé sous ses rubans. */
-function Porte({ href, libelle, icone, className }: { href: string; libelle: string; icone: ReactNode; className: string }) {
+type PorteProps = { href: string; libelle: string; icone: ReactNode; className: string; auJour: boolean }
+
+/**
+ * Une porte sur un sceau : l'icône en crème sur le sceau peint, le libellé sous
+ * ses rubans — en clair sur le sol sombre, sur une plaque dans la chambre au jour.
+ */
+function Porte({ href, libelle, icone, className, auJour }: PorteProps) {
   return (
     <Link href={href} onClick={() => sfx.tap()} className={cn(s.porte, className)}>
       <span className={s.sceau}>{icone}</span>
-      <span className={s.porteLibelle}>{libelle}</span>
+      <span className={cn(s.porteLibelle, auJour && s.porteLibelleJour)}>{libelle}</span>
     </Link>
   )
 }

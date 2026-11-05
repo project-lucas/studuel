@@ -8,7 +8,7 @@ import { sfx } from '@/lib/sounds'
 import { lancerEntreeCombat } from '@/lib/entree-combat'
 import { hrefCourseNeuve } from '@/lib/jeux/programme'
 import { prechargerOnglet } from '@/components/PrechargeurOnglets'
-import ArenaBackdrop from '@/components/ArenaBackdrop'
+import FenetreVivante from '@/components/defi/FenetreVivante'
 import { FLANK_CLASS } from '@/components/defi/ArenaActionBar'
 import {
   annonceRecherche,
@@ -151,8 +151,11 @@ export default function MatchmakingOverlay({
             de la route du duel — mais la cour qui se fige d'un coup se lisait
             comme un écran qui plante. La scène de la page continue de tourner
             dessous, cachée : ~3-4 points de fil principal de plus, le temps
-            de la recherche. */}
-        <ArenaBackdrop />
+            de la recherche.
+            05/11/2026 : le décor de l'onglet est LA FENÊTRE VIVANTE
+            (components/defi/DecorArene) — le rideau la rejoue donc, à
+            l'identique, au lieu de la cour d'honneur. */}
+        <FenetreVivante />
       </div>
 
       {/* Voile de LECTURE, pas de masquage : sombre en haut et en bas, où se

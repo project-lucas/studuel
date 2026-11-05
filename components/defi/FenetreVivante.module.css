@@ -1,0 +1,634 @@
+/* --- LA FENÊTRE VIVANTE : l'école vue de la fenêtre de la chambre ----------
+   Posée par components/defi/FenetreVivante.tsx ; géométrie et données dans
+   lib/arena-fenetre.ts (la planche fait 768 × 1376, tout s'y rapporte).
+
+   TROIS PLANS, du fond vers l'œil :
+     .boite > .vue    la vue, FIXE (affiche, vidéo, nuages, oiseaux, eau, fumée)
+     .pierre          le cadre de pierre et son lierre, immobile
+     .proche          le rai de lumière et la poussière
+
+   RÈGLE DU PROJET : une animation en continu n'anime QUE `transform` et
+   `opacity`, avec des valeurs littérales (jamais de var() dans une image-clé,
+   ni ombre, ni filtre, ni fond). lib/arena-fenetre.test.ts le vérifie sur ce
+   fichier. */
+
+/* Le mur : la couleur de la pierre au-dessus de la fenêtre. Le cadre mesure la
+   boîte du fond ; ses unités cqw / cqh calculent l'unité de planche. */
+.cadre {
+  /* Jetons de substitution : les unités cqw / cqh se résolvent là où ils sont
+     utilisés (dans .planche et .socle, dont .cadre est le conteneur). */
+  --tete: 84px;
+  --pied: calc(188px + env(safe-area-inset-bottom));
+  --u: clamp(100cqw / 768, (100cqh - var(--pied) - var(--tete)) / 1117, 100cqw / 688);
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  container-type: size;
+  pointer-events: none;
+  background: #deceb4;
+}
+
+/* LA PLANCHE. `--u` vaut UN pixel de planche à l'écran.
+   Sur un téléphone, la fenêtre se cale entre le bandeau du haut et la rangée
+   de combat : le haut du linteau sous le bandeau (`--tete`), le dessus de
+   l'appui sous les plaques du DUEL (`--pied`, mesuré depuis le bas de l'écran :
+   barre d'onglets + rangée de combat). Bornée : jamais plus étroite que
+   l'écran, jamais au point de rogner tout le montant de pierre. */
+.planche {
+  position: absolute;
+  width: calc(768 * var(--u));
+  height: calc(1376 * var(--u));
+  left: calc((100cqw - 768 * var(--u)) / 2);
+  top: calc(100cqh - var(--pied) - 1137 * var(--u));
+}
+
+/* Sous l'appui, le mur continue (couleur du bas de la peinture). */
+.socle {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100cqh - var(--pied) + 237 * var(--u));
+  bottom: 0;
+  background: #b9a68a;
+}
+
+/* Les deux fondus des bords, sur écran large seulement (voir plus bas). */
+.fondu {
+  display: none;
+}
+
+/* Écran large (tablette couchée, ordinateur) : la fenêtre prend toute la
+   hauteur, centrée dans le mur ; ses bords se fondent dans la pierre.
+   Le fondu est un DÉGRADÉ OPAQUE posé par-dessus, à la couleur du mur — pas un
+   masque sur la planche : un masque sur un contenu animé (vidéo, nuages,
+   poussières) oblige à recomposer toute la surface à chaque image. */
+@media (min-width: 768px) {
+  .cadre {
+    --u: calc(100cqh / 1376);
+  }
+  .planche {
+    top: 0;
+  }
+  .socle {
+    display: none;
+  }
+  .fondu {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: calc(38.4 * var(--u));
+  }
+  .fonduGauche {
+    left: calc((100cqw - 768 * var(--u)) / 2);
+    background: linear-gradient(90deg, rgb(222 206 180) 0, rgb(222 206 180 / 0) 100%);
+  }
+  .fonduDroit {
+    right: calc((100cqw - 768 * var(--u)) / 2);
+    background: linear-gradient(270deg, rgb(222 206 180) 0, rgb(222 206 180 / 0) 100%);
+  }
+}
+
+/* --- 1. LA VUE -------------------------------------------------------------- */
+
+/* La boîte de la vue (posée en % de la planche par le composant). Elle est
+   FIXE (Lucas, 05/11/2026) : une première version la faisait dériver lentement
+   sous le cadre et suivre la souris — il l'a lue comme une image qui tremble.
+   Ne pas remettre d'animation ici : tout ce qui bouge vit DANS la vue.
+   Rien n'en sort (un nuage qui traverse, sur écran large, passerait sinon sur
+   le mur à côté de la fenêtre). */
+.boite {
+  position: absolute;
+  overflow: hidden;
+}
+.vue {
+  position: absolute;
+  inset: 0;
+}
+
+.affiche,
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* La vidéo se pose en fondu sur l'affiche, quand elle joue vraiment. */
+.video {
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+.videoPrete {
+  opacity: 1;
+}
+
+/* Les nuages : chaque bande fait la largeur de la vue et la traverse ; le
+   nuage est posé à son bord gauche. Une seule image-clé pour tous : deux nuages
+   d'un même couloir vont donc à la même vitesse. */
+.couloir {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  animation: traverse linear infinite;
+  will-change: transform;
+}
+@keyframes traverse {
+  from {
+    transform: translate3d(-36%, 0, 0);
+  }
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+.nuage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: auto;
+  display: block;
+}
+.nuageMiroir {
+  transform: scaleX(-1);
+}
+
+/* Le vol d'oiseaux : une bande qui monte en traversant, puis attend hors champ. */
+.vol {
+  position: absolute;
+  left: 0;
+  top: 24%;
+  width: 100%;
+  height: 5%;
+  animation: vol 64s linear infinite;
+  animation-delay: -9s;
+  will-change: transform;
+}
+@keyframes vol {
+  0% {
+    transform: translate3d(-14%, 0, 0);
+  }
+  62% {
+    transform: translate3d(108%, -190%, 0);
+  }
+  100% {
+    transform: translate3d(108%, -190%, 0);
+  }
+}
+.oiseau {
+  position: absolute;
+  width: 1.9%;
+  aspect-ratio: 2 / 1;
+  animation: bat 0.62s ease-in-out infinite alternate;
+}
+.oiseau svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+@keyframes bat {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0.28);
+  }
+}
+
+/* LA CHOUETTE AU COURRIER fait sa tournée (lib/arena-fenetre.ts, HIBOU).
+   Quatre boîtes emboîtées, une transformation chacune :
+     .hibouX      où elle est, de gauche à droite (en % de la largeur de la vue)
+     .hibouY      à quelle hauteur (en % de la hauteur de la vue)
+     .hibouCorps  son allure : elle penche du côté où elle va, rapetisse au loin
+     .hibouBande  ses ailes : la bande de poses défile case par case (steps)
+   X et Y ont chacun leurs images-clés et s'adoucissent à chaque étape : la
+   trajectoire ondule au lieu de tirer des droites. Les 44 s de la tournée,
+   une boucle où on la voit presque tout le temps :
+     0 →  6 %   à sa place, comme sur la peinture
+     6 → 23 %   elle traverse le ciel vers la gauche, sous le dragon, et file
+                derrière le lierre
+    23 → 25 %   cachée, elle fait demi-tour (la seule sortie de la tournée)
+    25 → 44 %   elle revient lancée par la gauche, toujours sous le dragon
+    38 → 55 %   elle monte au milieu du ciel, entre le dragon et sa place
+    55 → 76 %   elle plane en haut vers la droite, devant les nuages
+    76 → 90 %   elle redescend se poser à sa place
+   Sous le dragon elle passe à 34 % et plus, au-dessus à 13 % et moins ; elle
+   ne change de hauteur qu'à droite de lui. Seul X a une allure par étape
+   (`animation-timing-function` dans les images-clés) : elle sort en
+   accélérant et rentre lancée, sinon elle s'attarde, cachée, au bord. */
+.hibouX,
+.hibouY {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+/* Le raccourci complet, nom compris, sur chaque boîte : écrit sans nom puis
+   complété par `animation-name`, il perdait sa durée à la compilation. */
+.hibouX {
+  animation: hibou-x 44s ease-in-out 0s infinite;
+}
+.hibouY {
+  animation: hibou-y 44s ease-in-out 0s infinite;
+}
+@keyframes hibou-x {
+  0% {
+    transform: translate3d(74.7%, 0, 0);
+  }
+  6% {
+    transform: translate3d(74.7%, 0, 0);
+    animation-timing-function: ease-in;
+  }
+  23% {
+    transform: translate3d(-10%, 0, 0);
+    animation-timing-function: linear;
+  }
+  25% {
+    transform: translate3d(-10%, 0, 0);
+    animation-timing-function: ease-out;
+  }
+  44% {
+    transform: translate3d(56%, 0, 0);
+  }
+  57% {
+    transform: translate3d(54%, 0, 0);
+  }
+  75% {
+    transform: translate3d(72%, 0, 0);
+  }
+  90% {
+    transform: translate3d(74.7%, 0, 0);
+  }
+  100% {
+    transform: translate3d(74.7%, 0, 0);
+  }
+}
+@keyframes hibou-y {
+  0% {
+    transform: translate3d(0, 31.5%, 0);
+  }
+  6% {
+    transform: translate3d(0, 31.5%, 0);
+  }
+  16% {
+    transform: translate3d(0, 36%, 0);
+  }
+  23% {
+    transform: translate3d(0, 35%, 0);
+  }
+  25% {
+    transform: translate3d(0, 34.5%, 0);
+  }
+  38% {
+    transform: translate3d(0, 35%, 0);
+  }
+  55% {
+    transform: translate3d(0, 12.5%, 0);
+  }
+  66% {
+    transform: translate3d(0, 11%, 0);
+  }
+  76% {
+    transform: translate3d(0, 13%, 0);
+  }
+  90% {
+    transform: translate3d(0, 31.5%, 0);
+  }
+  100% {
+    transform: translate3d(0, 31.5%, 0);
+  }
+}
+.hibouCorps {
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: hibou-allure 44s ease-in-out 0s infinite;
+}
+@keyframes hibou-allure {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg) scale(1);
+  }
+  6% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg) scale(1);
+  }
+  11% {
+    transform: translate3d(-50%, -50%, 0) rotate(-9deg) scale(0.99);
+  }
+  23% {
+    transform: translate3d(-50%, -50%, 0) rotate(-8deg) scale(0.92);
+  }
+  25% {
+    transform: translate3d(-50%, -50%, 0) rotate(8deg) scale(0.92);
+  }
+  38% {
+    transform: translate3d(-50%, -50%, 0) rotate(8deg) scale(0.94);
+  }
+  47% {
+    transform: translate3d(-50%, -50%, 0) rotate(2deg) scale(0.9);
+  }
+  55% {
+    transform: translate3d(-50%, -50%, 0) rotate(-2deg) scale(0.84);
+  }
+  60% {
+    transform: translate3d(-50%, -50%, 0) rotate(6deg) scale(0.84);
+  }
+  76% {
+    transform: translate3d(-50%, -50%, 0) rotate(5deg) scale(0.86);
+  }
+  85% {
+    transform: translate3d(-50%, -50%, 0) rotate(-3deg) scale(0.95);
+  }
+  90% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg) scale(1);
+  }
+}
+/* La fenêtre d'UNE pose ; la bande entière défile dessous. */
+.hibouAiles {
+  overflow: hidden;
+  width: 100%;
+}
+.hibouBande {
+  display: block;
+  height: 100%;
+  max-width: none;
+  animation: hibou-bat infinite;
+}
+@keyframes hibou-bat {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+/* Les éclats de la rivière : une étoile à quatre branches qui s'allume et s'éteint. */
+.eclat {
+  position: absolute;
+  aspect-ratio: 1;
+  margin: 0;
+  background: #fff;
+  clip-path: polygon(50% 0, 58% 42%, 100% 50%, 58% 58%, 50% 100%, 42% 58%, 0 50%, 42% 42%);
+  opacity: 0;
+  animation: scintille ease-in-out infinite;
+}
+@keyframes scintille {
+  0% {
+    transform: translate3d(-50%, -50%, 0) scale(0.3) rotate(0deg);
+    opacity: 0;
+  }
+  45% {
+    transform: translate3d(-50%, -50%, 0) scale(1) rotate(18deg);
+    opacity: 0.95;
+  }
+  70% {
+    transform: translate3d(-50%, -50%, 0) scale(0.6) rotate(26deg);
+    opacity: 0.35;
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) scale(0.3) rotate(30deg);
+    opacity: 0;
+  }
+}
+
+/* La cascade : des filets blancs glissent dans la boîte de la chute. */
+.chute {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 30% 30% 12% 12%;
+}
+.filet {
+  position: absolute;
+  top: 0;
+  width: 16%;
+  height: 34%;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9) 45%, rgba(255, 255, 255, 0));
+  animation: coule 1.25s linear infinite;
+}
+@keyframes coule {
+  from {
+    transform: translate3d(0, -110%, 0);
+  }
+  to {
+    transform: translate3d(0, 310%, 0);
+  }
+}
+.ecume {
+  position: absolute;
+  aspect-ratio: 1.7;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.4) 45%, rgba(255, 255, 255, 0) 72%);
+  animation: mousse 2.3s ease-in-out infinite;
+}
+@keyframes mousse {
+  0% {
+    transform: translate3d(-50%, -50%, 0) scale(0.8);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate3d(-50%, -58%, 0) scale(1.12);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) scale(0.8);
+    opacity: 0.45;
+  }
+}
+
+/* La fumée de la cheminée : des volutes qui montent en s'ouvrant. */
+.volute {
+  position: absolute;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 72%);
+  opacity: 0;
+  animation: monte 6.4s ease-out infinite;
+}
+@keyframes monte {
+  0% {
+    transform: translate3d(-50%, -50%, 0) scale(0.5);
+    opacity: 0;
+  }
+  18% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate3d(150%, -420%, 0) scale(1.9);
+    opacity: 0;
+  }
+}
+
+/* --- 2. LE CADRE ------------------------------------------------------------ */
+
+.pierre {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* --- 3. LE PLAN PROCHE ------------------------------------------------------ */
+
+.proche {
+  position: absolute;
+  inset: 0;
+}
+
+/* Le rai de lumière qui descend de la gauche, par-dessus la pierre et la vue. */
+.rayon {
+  position: absolute;
+  inset: -6%;
+  background:
+    linear-gradient(
+      116deg,
+      rgba(255, 246, 220, 0) 24%,
+      rgba(255, 246, 220, 0.3) 36%,
+      rgba(255, 246, 220, 0.1) 47%,
+      rgba(255, 246, 220, 0) 58%
+    ),
+    linear-gradient(
+      116deg,
+      rgba(255, 250, 235, 0) 52%,
+      rgba(255, 250, 235, 0.16) 60%,
+      rgba(255, 250, 235, 0) 68%
+    );
+  animation: respire 11s ease-in-out infinite;
+}
+@keyframes respire {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* La poussière dorée : un grain et son halo, sur trois trajectoires. */
+.grain {
+  position: absolute;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 250, 230, 0.95) 0%, rgba(255, 228, 160, 0.55) 38%, rgba(255, 228, 160, 0) 70%);
+  opacity: 0;
+  animation: ease-in-out infinite;
+}
+.trajet1 {
+  animation-name: flotte-1;
+}
+.trajet2 {
+  animation-name: flotte-2;
+}
+.trajet3 {
+  animation-name: flotte-3;
+}
+@keyframes flotte-1 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.6);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.85;
+  }
+  60% {
+    transform: translate3d(180%, -420%, 0) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate3d(320%, -760%, 0) scale(0.7);
+    opacity: 0;
+  }
+}
+@keyframes flotte-2 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.8);
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  55% {
+    transform: translate3d(-240%, -300%, 0) scale(1.1);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate3d(-120%, -680%, 0) scale(0.6);
+    opacity: 0;
+  }
+}
+@keyframes flotte-3 {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.7);
+    opacity: 0;
+  }
+  30% {
+    transform: translate3d(140%, -160%, 0) scale(1);
+    opacity: 0.8;
+  }
+  70% {
+    transform: translate3d(60%, -460%, 0) scale(0.9);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate3d(220%, -640%, 0) scale(0.6);
+    opacity: 0;
+  }
+}
+
+/* --- Figé : mouvement réduit, ou décor posé sans vie ------------------------ */
+
+.fige .couloir,
+.fige .hibouX,
+.fige .hibouY,
+.fige .hibouCorps,
+.fige .hibouBande,
+.fige .vol,
+.fige .oiseau,
+.fige .eclat,
+.fige .filet,
+.fige .ecume,
+.fige .volute,
+.fige .rayon,
+.fige .grain {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .couloir,
+  .rayon {
+    animation: none;
+  }
+  /* La chouette reste là où elle était peinte, ailes ouvertes. */
+  .hibouX,
+  .hibouY,
+  .hibouCorps,
+  .hibouBande {
+    animation: none;
+  }
+  .hibouX {
+    transform: translate3d(74.7%, 0, 0);
+  }
+  .hibouY {
+    transform: translate3d(0, 31.5%, 0);
+  }
+  .hibouCorps {
+    transform: translate3d(-50%, -50%, 0);
+  }
+  .hibouBande {
+    transform: translate3d(-43.75%, 0, 0);
+  }
+  .vol,
+  .eclat,
+  .filet,
+  .ecume,
+  .volute,
+  .grain {
+    display: none;
+  }
+}

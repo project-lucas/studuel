@@ -4,9 +4,11 @@
  *
  * Fabrique, depuis les dessins Higgsfield (Nano Banana Pro) rangés dans
  * assets-sources/moi-carnet/ :
- *   - public/images/moi/carnet/bureau.webp — le bureau vu de dessus (livre,
- *     plante, crayon, cahier aux quatre coins ; le centre est libre : le carnet
- *     s'y pose) ;
+ *   - public/images/moi/carnet/bureau-v2.webp — le bureau vu de dessus, AU
+ *     JOUR (05/11/2026, repeint dans la DA de la fenêtre du Défi par Nano
+ *     Banana 2.1, l'ancien bureau + la fenêtre en références : bois miel,
+ *     appui de pierre et lierre, livre lavande, plante, plume, rouleau scellé
+ *     aux quatre coins ; le centre est libre : le carnet s'y pose) ;
  *   - papier.webp — une tuile de papier crème, répétée sur chaque page ;
  *   - doodle-<nom>.webp — douze croquis à l'encre violette, détourés : ce sont
  *     les illustrations écrites « à la main » sur les pages.
@@ -25,12 +27,13 @@ const OUT = 'public/images/moi/carnet'
 await mkdir(OUT, { recursive: true })
 
 // --- Le bureau -----------------------------------------------------------------
-// 900 px de large suffisent : il est couvert au centre par le carnet, et ses
-// bords sont des objets flous de lumière chaude, pas des détails à lire.
-await sharp(`${SRC}/bureau-v1.png`)
+// 900 px de large suffisent : il est couvert au centre par le carnet. Servi
+// sous un nouveau nom à chaque repeinte (cache d'un an) : bureau-v1.png était
+// le bureau sombre du 04/10, bureau-v2.png est le bureau au jour.
+await sharp(`${SRC}/bureau-v2.png`)
   .resize({ width: 900 })
   .webp({ quality: 78 })
-  .toFile(`${OUT}/bureau.webp`)
+  .toFile(`${OUT}/bureau-v2.webp`)
 
 // --- Le papier -----------------------------------------------------------------
 await sharp(`${SRC}/papier-v1.png`)

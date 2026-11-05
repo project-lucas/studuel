@@ -154,13 +154,76 @@
   }
 }
 
+/* ---------- la chambre au jour (05/11/2026) ---------- */
+/* Le plan proche de la fenêtre du Défi (FenetreVivante), dans la chambre : un
+   rai de soleil qui descend de la fenêtre et respire, trois grains de poussière
+   dorée qui montent dedans. La lampe est éteinte : ni halo ni cœur. */
+.rayon {
+  position: absolute;
+  inset: 0;
+  --soleil: color-mix(in oklch, var(--highlight), white 78%);
+  background: linear-gradient(
+    116deg,
+    transparent 30%,
+    color-mix(in oklch, var(--soleil) 30%, transparent) 42%,
+    color-mix(in oklch, var(--soleil) 9%, transparent) 52%,
+    transparent 62%
+  );
+  animation: bureau-rai 11s ease-in-out infinite;
+}
+@keyframes bureau-rai {
+  0% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.55;
+  }
+}
+.grain {
+  position: absolute;
+  width: 1.2%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  --soleil: color-mix(in oklch, var(--highlight), white 70%);
+  background: radial-gradient(
+    circle,
+    color-mix(in oklch, var(--soleil), white 60%) 0%,
+    color-mix(in oklch, var(--soleil) 55%, transparent) 38%,
+    transparent 70%
+  );
+  opacity: 0;
+  animation: bureau-grain 9.5s ease-in-out infinite;
+}
+@keyframes bureau-grain {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.6);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.85;
+  }
+  60% {
+    transform: translate3d(180%, -420%, 0) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate3d(320%, -760%, 0) scale(0.7);
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .halo,
   .coeur,
-  .fondu {
+  .fondu,
+  .rayon {
     animation: none;
   }
-  .poussiere {
+  .poussiere,
+  .grain {
     display: none;
   }
 }

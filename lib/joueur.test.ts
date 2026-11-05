@@ -6,9 +6,13 @@ import { ARENA_SCHEDULE } from './arena-background'
 import {
   barreNiveau,
   bureauDuPortrait,
+  chambreAuJour,
   DECOR_JOUEUR,
   decorBureau,
   FEUILLE_BUREAU,
+  FEUILLE_BUREAU_JOUR,
+  feuilleBureau,
+  HEROS_AU_JOUR,
   ligneRang,
   periodeInitiale,
   tailleNom,
@@ -107,6 +111,18 @@ describe('decorBureau', () => {
     expect(decorBureau('troll-pont', 'night')).toBe('/images/joueur/bureau/troll-pont-night.webp')
   })
 
+  it('ouvre la chambre AU JOUR d’un héros repeint dans la DA de la fenêtre, à toute heure', () => {
+    expect(chambreAuJour('elfe-rodeur')).toBe(true)
+    expect(decorBureau('elfe-rodeur', 'night')).toBe('/images/joueur/bureau/elfe-rodeur-jour.webp')
+    expect(decorBureau('elfe-rodeur', 'noon')).toBe('/images/joueur/bureau/elfe-rodeur-jour.webp')
+  })
+
+  it('ne met au jour ni un blason ni un héros pas encore repeint', () => {
+    expect(chambreAuJour('7')).toBe(false)
+    expect(chambreAuJour('troll-pont')).toBe(HEROS_AU_JOUR.includes('troll-pont'))
+    expect(HEROS_AU_JOUR.every((k) => HEROS_KEYS.includes(k))).toBe(true)
+  })
+
   it('a la scène de chaque héros servie, à chaque plage', () => {
     const PUBLIC = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'public')
     const manquantes = HEROS_KEYS.flatMap((k) =>
@@ -144,5 +160,18 @@ describe('FEUILLE_BUREAU', () => {
   it('est servie', () => {
     const PUBLIC = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'public')
     expect(existsSync(path.join(PUBLIC, FEUILLE_BUREAU))).toBe(true)
+  })
+})
+
+describe('feuilleBureau', () => {
+  it('punaise la feuille du jour sur une chambre au jour, l’autre partout ailleurs', () => {
+    expect(feuilleBureau('elfe-rodeur')).toBe(FEUILLE_BUREAU_JOUR)
+    expect(feuilleBureau('7')).toBe(FEUILLE_BUREAU)
+    expect(feuilleBureau(null)).toBe(FEUILLE_BUREAU)
+  })
+
+  it('a la feuille du jour servie', () => {
+    const PUBLIC = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'public')
+    expect(existsSync(path.join(PUBLIC, FEUILLE_BUREAU_JOUR))).toBe(true)
   })
 })

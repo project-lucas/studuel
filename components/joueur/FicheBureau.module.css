@@ -329,6 +329,19 @@
     0 0.3cqw 0 color-mix(in oklch, var(--carte-sombre-fond), transparent 10%),
     0 0 1.2cqw color-mix(in oklch, var(--carte-sombre-fond), transparent 30%);
 }
+/* Chambre au jour (DA de la fenêtre, 05/11/2026) : le sol est clair, le libellé
+   passe sur la plaque du jeu — blanche, liseré lavande, comme les boutons ronds. */
+.porteLibelleJour {
+  margin-top: 4.2cqw;
+  padding: 0.75cqw 1.9cqw 0.6cqw;
+  border-radius: 99px;
+  background: var(--card);
+  color: var(--foreground);
+  text-shadow: none;
+  box-shadow:
+    0 0 0 0.35cqw color-mix(in oklch, var(--primary), white 62%),
+    0 0.5cqw 0 0.35cqw color-mix(in oklch, var(--primary), white 48%);
+}
 
 /* ---------- l'entrée : la feuille se pose ---------- */
 .pose {

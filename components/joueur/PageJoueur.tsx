@@ -13,7 +13,7 @@ import XpIcon from '@/components/ui/XpIcon'
 import type { ArenaPeriod } from '@/lib/arena-background'
 import type { AvatarAffiche } from '@/lib/avatar-affiche'
 import { compteCourt } from '@/lib/compte-court'
-import { ligneRang, type BarreNiveau, type PortraitAuBureau } from '@/lib/joueur'
+import { chambreAuJour, ligneRang, type BarreNiveau, type PortraitAuBureau } from '@/lib/joueur'
 import type { BlasonLigue } from '@/lib/ligue-place'
 import { PORTRAIT_FACE_CROP } from '@/lib/portraits'
 import { divisionDepuisRomain } from '@/lib/rang-visuel'
@@ -74,6 +74,13 @@ import s from './PageJoueur.module.css'
 // de la peinture.
 // Le panneau sombre ne reste que pour le repli sans scène.
 //
+// REVUE LE 05/11/2026 (Lucas : « homogénéiser le profil sur la DA du fond de
+// l'onglet Défi ») : la chambre d'un héros de `HEROS_AU_JOUR` (lib/joueur) est
+// repeinte au trait et aux pastels de la fenêtre vivante, en plein jour. Sur
+// elle, PAS DE VOILE SOMBRE (la scène est claire, les boutons ronds et la
+// feuille s'y lisent seuls) et les libellés des deux portes passent sur une
+// plaque blanche au liseré lavande (FicheBureau, `.porteLibelleJour`).
+//
 // Les données viennent du serveur (app/joueur/page.tsx, une seule vague) ; ce
 // composant ne fait que dessiner. Le bandeau est masqué ici
 // (lib/top-hud-routes) : la page le redit en grand.
@@ -130,6 +137,8 @@ export default function PageJoueur({ data }: { data: JoueurData }) {
   const { rang } = data
   const division = rang ? divisionDepuisRomain(rang.roman) : null
   const bureau = sceneCassee ? null : data.bureau
+  // La chambre repeinte au jour (DA de la fenêtre) : pas de voile sombre dessus.
+  const auJour = bureau !== null && chambreAuJour(bureau)
   const heroEnPied = data.pied !== null && !piedCasse
 
   // Retour : d'où l'on vient (n'importe quel onglet, par le bandeau) ; sans
@@ -159,7 +168,7 @@ export default function PageJoueur({ data }: { data: JoueurData }) {
         // eslint-disable-next-line @next/next/no-img-element -- décor peint, servi tel quel
         <img src={data.decor} alt="" draggable={false} className={s.decor} />
       )}
-      <span aria-hidden="true" className={s.voile} />
+      {auJour ? null : <span aria-hidden="true" className={s.voile} />}
 
       <div className={s.colonne}>
         {/* --- Retour · Paramètres ------------------------------------------ */}

@@ -54,6 +54,17 @@ const ANNALES = 'annales/'
 const ANNALE_MAX_KO = 2048
 const ANNALES_MAX_MO = 25
 
+/**
+ * LA BOUCLE VIDÉO DE LA FENÊTRE (public/images/arene/fenetre/*.mp4, 05/11/2026)
+ * est un fichier SERVI, pas une source oubliée : la vue de l'arène, où seuls
+ * les élèves de la cour, le duel, le dragon et le moulin bougent
+ * (lib/arena-fenetre.ts). Une vidéo ne se convertit pas en webp ; elle a donc
+ * son propre plafond, 2 Mo par boucle. Elle ne se charge qu'APRÈS l'affiche
+ * (webp, ~225 ko), jamais en économie de données ni en mouvement réduit.
+ */
+const BOUCLES = 'images/arene/fenetre/'
+const BOUCLE_MAX_KO = 2048
+
 type Fichier = { chemin: string; ko: number }
 
 function fichiersDe(dir: string, base = ''): Fichier[] {
@@ -71,9 +82,11 @@ describe('poids de public/', () => {
   const tous = fichiersDe(PUBLIC)
   const annales = tous.filter((f) => f.chemin.startsWith(ANNALES) && f.chemin.endsWith('.pdf'))
   const fichiers = tous.filter((f) => !annales.includes(f))
+  const boucles = fichiers.filter((f) => f.chemin.startsWith(BOUCLES) && f.chemin.endsWith('.mp4'))
 
   it('ne sert aucun fichier de plus de 600 ko', () => {
     const lourds = fichiers
+      .filter((f) => !boucles.includes(f))
       .filter((f) => f.ko > POIDS_MAX_KO)
       .sort((a, b) => b.ko - a.ko)
       .map((f) => `${f.chemin} (${f.ko} ko)`)
@@ -137,7 +150,10 @@ describe('poids de public/', () => {
   // scripts/musiques-themes.mjs), dont l'élève ne charge que celui qu'il a
   // choisi, et les 81 drapeaux de « Capitales du monde » (320 px, 0,24 Mo,
   // scripts/drapeaux.mjs) ; public/ était déjà à 45,3 Mo.
-  const TOTAL_MAX_MO = 48
+  // 50 Mo le 05/11/2026 : LA FENÊTRE VIVANTE de l'arène (lib/arena-fenetre.ts) —
+  // la boucle vidéo de la vue (1,7 Mo), son affiche (0,22 Mo), le cadre de
+  // pierre détouré (0,12 Mo) et trois nuages (0,04 Mo) ; public/ était à 46,7 Mo.
+  const TOTAL_MAX_MO = 50
 
   it(`garde public/ sous ${TOTAL_MAX_MO} Mo au total`, () => {
     const totalMo = fichiers.reduce((s, f) => s + f.ko, 0) / 1024
@@ -146,6 +162,11 @@ describe('poids de public/', () => {
       `public/ pèse ${totalMo.toFixed(1)} Mo. Ce dossier part en entier dans` +
         ` chaque déploiement : il ne doit contenir que ce qui est servi.`,
     ).toBeLessThanOrEqual(TOTAL_MAX_MO)
+  })
+
+  it('garde chaque boucle vidéo du décor sous 2 Mo', () => {
+    const lourdes = boucles.filter((f) => f.ko > BOUCLE_MAX_KO).map((f) => `${f.chemin} (${f.ko} ko)`)
+    expect(lourdes, 'Boucle trop lourde : ré-encode-la (moins d’images, CRF plus haut).').toEqual([])
   })
 
   it('garde chaque sujet d’annale sous 2 Mo, et le dossier sous 25 Mo', () => {

@@ -119,14 +119,36 @@ export type PortraitAuBureau = PortraitClassique | HerosKey
  * « change ONLY the person »), PNG dans `assets-sources/joueur/bureau/heros/`.
  * Tant que les cinq autres plages n'existent pas, un héros reste à la nuit
  * quelle que soit l'heure — ajouter une plage = l'ajouter à `PLAGES_HEROS`.
+ *
+ * LA CHAMBRE AU JOUR (05/11/2026) : un héros de `HEROS_AU_JOUR` s'ouvre sur sa
+ * chambre repeinte dans la DA de la fenêtre du Défi, à toute heure.
  */
 export function decorBureau(portrait: PortraitAuBureau, periode: ArenaPeriod): string {
+  if (chambreAuJour(portrait)) return `/images/joueur/bureau/${portrait}-jour.webp`
   const plage = isHerosKey(portrait) && !PLAGES_HEROS.includes(periode) ? 'night' : periode
   return `/images/joueur/bureau/${portrait}-${plage}.webp`
 }
 
 /** Les plages déjà peintes pour les héros au bureau. */
 export const PLAGES_HEROS: readonly ArenaPeriod[] = ['night']
+
+/**
+ * LES CHAMBRES REPEINTES DANS LA DA DE LA FENÊTRE (05/11/2026, Lucas :
+ * « homogénéiser le profil ; la DA à respecter, c'est le fond de l'onglet
+ * Défi ») : la MÊME chambre, au pixel près (fenêtre, bureau, lampe, sol — la
+ * feuille punaisée en dépend), redessinée au trait d'encre et aux pastels de
+ * la fenêtre vivante (components/defi/FenetreVivante), en plein jour, la vue
+ * de l'école derrière la vitre. Nano Banana 2.1, la scène de nuit + la fenêtre
+ * en références ; PNG dans `assets-sources/joueur/bureau/heros/<clé>-jour.png`.
+ * La fenêtre du Défi n'existe qu'au jour : ces chambres aussi, à toute heure.
+ * Un modèle d'abord (le Rôdeur) ; repeindre un héros = l'ajouter ici.
+ */
+export const HEROS_AU_JOUR: readonly HerosKey[] = ['elfe-rodeur']
+
+/** Vrai si la chambre de ce portrait est repeinte au jour, dans la DA de la fenêtre. */
+export function chambreAuJour(portrait: unknown): boolean {
+  return isHerosKey(portrait) && HEROS_AU_JOUR.includes(portrait)
+}
 
 /**
  * La plage du PREMIER rendu, côté serveur : l'heure de Paris (le serveur
@@ -151,6 +173,21 @@ export function periodeInitiale(now: Date): ArenaPeriod {
  * 1 500 × 1 008, master PNG dans `assets-sources/joueur/feuille/`.
  */
 export const FEUILLE_BUREAU = '/images/joueur/feuille-bureau.webp'
+
+/**
+ * LA MÊME FEUILLE, AU JOUR (05/11/2026) : l'ombre cuite dans `FEUILLE_BUREAU`
+ * est une grande nappe prune qui déborde jusqu'aux bords de l'image — elle se
+ * fond dans la façade de nuit, elle pose une bande sombre sur une chambre
+ * repeinte au jour. Cette variante (scripts/feuille-jour.mjs, depuis le même
+ * master) garde la feuille au pixel près et cuit une ombre de dessin, courte
+ * et brun chaud. Même géométrie : les emplacements mesurés ne bougent pas.
+ */
+export const FEUILLE_BUREAU_JOUR = '/images/joueur/feuille-bureau-jour.webp'
+
+/** La feuille à punaiser sur la façade du bureau de ce portrait : celle du jour sur une chambre au jour. */
+export function feuilleBureau(portrait: unknown): string {
+  return chambreAuJour(portrait) ? FEUILLE_BUREAU_JOUR : FEUILLE_BUREAU
+}
 
 /** La taille du nom sur le ruban : un long nom rapetisse pour tenir dans la partie plate (49 % de la feuille). */
 export type TailleNom = 'grand' | 'moyen' | 'petit'

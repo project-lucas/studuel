@@ -8,7 +8,7 @@ import {
   nextArenaSlot,
   type ArenaPeriod,
 } from '@/lib/arena-background'
-import { decorBureau, type PortraitAuBureau } from '@/lib/joueur'
+import { chambreAuJour, decorBureau, type PortraitAuBureau } from '@/lib/joueur'
 import { cn } from '@/lib/utils'
 import s from './DecorBureau.module.css'
 
@@ -34,6 +34,13 @@ import s from './DecorBureau.module.css'
 // poussières qui montent dans la lumière — transform et opacité seulement, en
 // valeurs littérales (DecorBureau.module.css), posés en % de l'IMAGE : la boîte
 // a la géométrie de la peinture, la lampe tombe juste sur tout écran.
+//
+// LA CHAMBRE AU JOUR (05/11/2026, Lucas : « homogénéiser le profil sur la DA du
+// fond de l'onglet Défi ») : un héros de `HEROS_AU_JOUR` (lib/joueur) a sa
+// chambre repeinte au trait et aux pastels de la fenêtre vivante, en plein
+// jour — UNE scène à toute heure, comme la fenêtre. La lampe est éteinte : à
+// sa place, le plan proche de la fenêtre du Défi (un rai de soleil qui
+// respire, trois grains de poussière dorée), opacité et transform seulement.
 // -----------------------------------------------------------------------------
 
 type Props = {
@@ -51,10 +58,20 @@ const POUSSIERES: readonly { x: number; y: number; retard: number }[] = [
   { x: 28, y: 45, retard: -3.6 },
 ]
 
+/** La poussière dorée dans le rai de soleil (chambre au jour) : position en % de l'image, retard. */
+const GRAINS: readonly { x: number; y: number; retard: number }[] = [
+  { x: 40, y: 44, retard: 0 },
+  { x: 30, y: 52, retard: -3.2 },
+  { x: 47, y: 38, retard: -6.1 },
+]
+
 export default function DecorBureau({ portrait, initiale, onErreur }: Props) {
   const [periode, setPeriode] = useState<ArenaPeriod>(initiale)
+  const auJour = chambreAuJour(portrait)
 
   useEffect(() => {
+    // La chambre au jour n'a qu'une scène : ni horloge ni préchargement.
+    if (auJour) return
     // Override de test (dev uniquement) : fige la plage demandée, sans timer.
     const forcee =
       process.env.NODE_ENV !== 'production' ? new URLSearchParams(window.location.search).get('arena') : null
@@ -85,7 +102,7 @@ export default function DecorBureau({ portrait, initiale, onErreur }: Props) {
       window.clearTimeout(timer)
       document.removeEventListener('visibilitychange', onVisibilityChange)
     }
-  }, [portrait])
+  }, [portrait, auJour])
 
   // La couche précédente reste sous la nouvelle le temps du fondu — état
   // ajusté pendant le rendu (comparaison avec la valeur précédente), pas d'effet.
@@ -113,15 +130,30 @@ export default function DecorBureau({ portrait, initiale, onErreur }: Props) {
           onError={p === pile.courante ? onErreur : undefined}
         />
       ))}
-      <span className={s.halo} />
-      <span className={s.coeur} />
-      {POUSSIERES.map((g, i) => (
-        <span
-          key={i}
-          className={s.poussiere}
-          style={{ left: `${g.x}%`, top: `${g.y}%`, animationDelay: `${g.retard}s` }}
-        />
-      ))}
+      {auJour ? (
+        <>
+          <span className={s.rayon} />
+          {GRAINS.map((g) => (
+            <span
+              key={g.retard}
+              className={s.grain}
+              style={{ left: `${g.x}%`, top: `${g.y}%`, animationDelay: `${g.retard}s` }}
+            />
+          ))}
+        </>
+      ) : (
+        <>
+          <span className={s.halo} />
+          <span className={s.coeur} />
+          {POUSSIERES.map((g, i) => (
+            <span
+              key={i}
+              className={s.poussiere}
+              style={{ left: `${g.x}%`, top: `${g.y}%`, animationDelay: `${g.retard}s` }}
+            />
+          ))}
+        </>
+      )}
     </div>
   )
 }

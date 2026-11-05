@@ -13,6 +13,7 @@ import { Button } from '@/components/ui/button'
 import AnswerBoard from '@/components/jeux/AnswerBoard'
 import { cn } from '@/lib/utils'
 import { gameSfx, sfx } from '@/lib/sounds'
+import { useMusique } from '@/components/son/MusiqueDeFond'
 import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
 import type { Gain } from '@/lib/gains'
 import { recordChallenge } from '@/app/defi/actions'
@@ -366,6 +367,11 @@ export default function BossMode({
       ))}
     </span>
   )
+
+  // La musique : le combat dès la tanière, la victoire ou le silence à la
+  // fin (lib/musique). Avant le premier retour anticipé : c'est un hook.
+  const piste = phase === 'done' ? (outcome === 'won' ? 'victoire' : null) : 'combat'
+  useMusique(piste, piste === 'combat')
 
   // ------------------------------------------------------------------- intro
   if (phase === 'intro') {

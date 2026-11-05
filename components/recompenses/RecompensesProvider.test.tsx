@@ -23,7 +23,7 @@ vi.mock('next/navigation', () => ({
   usePathname: () => '/reviser',
 }))
 vi.mock('@/lib/sounds', () => ({
-  sfx: { coin: vi.fn(), tap: vi.fn(), complete: vi.fn(), perle: vi.fn() },
+  sfx: { coin: vi.fn(), tap: vi.fn(), complete: vi.fn(), perle: vi.fn(), scintillement: vi.fn() },
 }))
 
 import RecompensesProvider, {

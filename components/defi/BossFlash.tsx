@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { motion, useReducedMotion } from 'framer-motion'
 import { ChevronRight, Swords } from 'lucide-react'
 import { sfx } from '@/lib/sounds'
+import { lancerEntreeCombat } from '@/lib/entree-combat'
 import { accorde } from '@/lib/bosses'
 import { CLOCK_STEP_MS, useClock } from '@/lib/use-clock'
 import { apparitionMessage, countdownLabel, type TraqueCard } from '@/lib/traque'
@@ -54,7 +55,10 @@ export default function BossFlash({ card }: { card: TraqueCard }) {
     >
       <Link
         href={`/defi/traque/${card.boss.id}`}
-        onClick={() => sfx.tap()}
+        onClick={(e) => {
+          e.preventDefault()
+          lancerEntreeCombat(`/defi/traque/${card.boss.id}`)
+        }}
         aria-label={`${apparitionMessage(card.boss, card.attempts)} ${accorde(card.boss, 'Il', 'Elle')} disparaît dans ${countdownLabel(remaining)}. Le défier maintenant.`}
         className="traque-eclair olympe-press flex items-center gap-3 rounded-2xl px-3 py-2 focus-visible:ring-4 focus-visible:ring-highlight/70 focus-visible:outline-none"
       >

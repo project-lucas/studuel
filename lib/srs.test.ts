@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import {
+  compterErreurs,
   SRS_INTERVALS,
   addDays,
   reviewAfterAnswer,
@@ -259,5 +260,22 @@ describe('sanitizeReviewAnswers', () => {
 
   it('tolère une entrée non-tableau', () => {
     expect(sanitizeReviewAnswers(null as unknown as ReviewAnswer[])).toEqual([])
+  })
+})
+
+describe('compterErreurs', () => {
+  it('sépare les erreurs à venger du reste de la file du jour', () => {
+    const items = [
+      { due_date: '2026-11-10', in_revanche: true },
+      { due_date: '2026-11-01', in_revanche: true },
+      { due_date: '2026-11-05', in_revanche: false },
+      { due_date: '2026-11-04', in_revanche: false },
+      { due_date: '2026-11-06', in_revanche: false },
+    ]
+    expect(compterErreurs(items, '2026-11-05')).toEqual({ aVenger: 2, aRevoir: 2 })
+  })
+
+  it('rend zéro partout pour une file vide', () => {
+    expect(compterErreurs([], '2026-11-05')).toEqual({ aVenger: 0, aRevoir: 0 })
   })
 })

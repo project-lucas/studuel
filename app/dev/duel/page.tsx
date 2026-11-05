@@ -36,8 +36,9 @@ export default async function ApercuDuel({
   const vignette = subjectVignette(programmeSlug(salon.subject)) ?? null
   const teinte = TEINTE_MATIERE[salon.subject] ?? 'violet'
   const victoire = e === 'victoire'
-  const moi = { name: 'Toi', avatar: DEFAULT_AVATAR, score: victoire ? 1000 : 678, goalAtMs: victoire ? 71_000 : null }
-  const rival = { name: 'Manon', avatar: DEFAULT_AVATAR, score: victoire ? 842 : 711, goalAtMs: null, isBot: false }
+  const moi = { name: 'Toi', avatar: { ...DEFAULT_AVATAR, portrait: 'elfe-rodeur' }, // le héros aux humeurs peintes
+    score: victoire ? 1000 : 678, goalAtMs: victoire ? 71_000 : null }
+  const rival = { name: 'Manon', avatar: { ...DEFAULT_AVATAR, portrait: 'humaine-luth' }, score: victoire ? 842 : 711, goalAtMs: null, isBot: false }
   const xp = victoire ? 20 : 10
   const serveur: DuelCourseOutcome | null =
     e === 'attente'

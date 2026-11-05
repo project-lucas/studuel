@@ -5,6 +5,7 @@ import { createPortal } from 'react-dom'
 import { useRouter } from 'next/navigation'
 import { motion, useReducedMotion } from 'framer-motion'
 import { sfx } from '@/lib/sounds'
+import { lancerEntreeCombat } from '@/lib/entree-combat'
 import { hrefCourseNeuve } from '@/lib/jeux/programme'
 import { prechargerOnglet } from '@/components/PrechargeurOnglets'
 import ArenaBackdrop from '@/components/ArenaBackdrop'
@@ -87,8 +88,9 @@ export default function MatchmakingOverlay({
       if (p >= 1) {
         if (!parti.current) {
           parti.current = true
-          sfx.battle()
-          router.push(cible)
+          // Adversaire trouvé : l'entrée au flash blanc prend le relais, et
+          // c'est elle qui navigue, sous le blanc (lib/entree-combat).
+          lancerEntreeCombat(cible)
         }
         return
       }

@@ -74,8 +74,9 @@ describe('portraitPourId', () => {
 })
 
 describe('portraitDe', () => {
-  it('garde le blason choisi par l’élève', () => {
-    expect(portraitDe('7', 'x')).toBe('7')
+  it('garde le héros choisi, et change un ancien blason en son héros', () => {
+    expect(portraitDe('troll-pont', 'x')).toBe('troll-pont')
+    expect(portraitDe('7', 'x')).toBe('demi-elfe-orage')
   })
 
   it('retombe sur le blason fixe quand le choix est vide ou inconnu', () => {

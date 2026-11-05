@@ -1,0 +1,115 @@
+/* L'ENTRÉE EN COMBAT AU FLASH BLANC (05/11/2026) — lib/entree-combat.ts.
+   transform et opacity seulement, valeurs littérales dans les images-clés.
+   Les délais suivent TEMPS_ENTREE (voile 0, onde 150, vitesse 400, blanc 850,
+   plein 1100). */
+
+.scene {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  overflow: hidden;
+  pointer-events: auto;
+  touch-action: none;
+}
+
+.voile,
+.blanc,
+.onde,
+.lignes {
+  position: absolute;
+  pointer-events: none;
+}
+
+.voile {
+  inset: 0;
+  background: var(--foreground);
+  opacity: 0;
+  animation: voile 150ms ease-out forwards;
+}
+
+.onde {
+  left: 50%;
+  top: 50%;
+  width: 60vmin;
+  height: 60vmin;
+  margin: -30vmin 0 0 -30vmin;
+  border-radius: 9999px;
+  border: 5px solid white;
+  opacity: 0;
+  transform: scale(0.15);
+  animation: onde 450ms cubic-bezier(0.2, 0.7, 0.3, 1) 150ms forwards;
+}
+
+.lignes {
+  left: 50%;
+  top: 50%;
+  /* 100 unités du viewBox = 60vmax : les pointes s'arrêtent à 15-30vmax du
+     centre, le milieu reste dégagé (là où apparaîtra l'adversaire). */
+  width: 120vmax;
+  height: 120vmax;
+  margin: -60vmax 0 0 -60vmax;
+  opacity: 0;
+  transform: scale(1.6) rotate(0deg);
+  animation: lignes 450ms cubic-bezier(0.3, 0.6, 0.4, 1) 400ms forwards;
+}
+
+.lignes polygon {
+  fill: white;
+}
+
+.blanc {
+  inset: 0;
+  background: white;
+  opacity: 0;
+  /* ease-in : il monte en accélérant, comme dans la vidéo (166 → 232). */
+  animation: blanc 250ms cubic-bezier(0.55, 0, 1, 0.45) 850ms forwards;
+}
+
+/* Tap pendant la montée : droit au blanc. */
+.saute .blanc {
+  animation: none;
+  opacity: 1;
+}
+
+.fondu {
+  animation: fondu 400ms ease-out forwards;
+}
+
+@keyframes voile {
+  from { opacity: 0; }
+  to { opacity: 0.55; }
+}
+
+@keyframes onde {
+  0% { opacity: 0.95; transform: scale(0.15); }
+  100% { opacity: 0; transform: scale(2.8); }
+}
+
+@keyframes lignes {
+  0% { opacity: 0; transform: scale(1.6) rotate(0deg); }
+  100% { opacity: 0.9; transform: scale(1) rotate(6deg); }
+}
+
+@keyframes blanc {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fondu {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Mouvement réduit : un simple fondu au blanc, rien qui bouge. */
+@media (prefers-reduced-motion: reduce) {
+  .onde,
+  .lignes {
+    display: none;
+  }
+  .voile {
+    animation-duration: 1ms;
+  }
+  .blanc {
+    animation-duration: 250ms;
+  }
+}

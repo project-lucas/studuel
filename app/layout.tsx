@@ -28,6 +28,7 @@ import Toaster from "@/components/Toaster";
 import HorsLigne from "@/components/HorsLigne";
 import RecompensesProvider from "@/components/recompenses/RecompensesProvider";
 import OngletsVivants from "@/components/OngletsVivants";
+import EntreeCombat from "@/components/combat/EntreeCombat";
 // Écran de chargement au lancement, façon jeu mobile (illustration + barre).
 import SplashScreen from "@/components/SplashScreen";
 import LigueVeille from "@/components/LigueVeille";
@@ -256,6 +257,9 @@ export default async function RootLayout({
           </RecompensesProvider>
         </div>
         <Toaster />
+        {/* L'entrée en combat au flash blanc : une scène pour toute l'app, qui
+            survit à la navigation qu'elle cache (lib/entree-combat). */}
+        <EntreeCombat />
         <HorsLigne />
       </body>
     </html>

@@ -10,6 +10,7 @@ import {
   subscribeSound,
 } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
+import LigneInterrupteur from '@/components/ui/LigneInterrupteur'
 
 /**
  * L'interrupteur du son — et de l'haptique, qui suit le même réglage.
@@ -73,53 +74,19 @@ export default function SoundToggle({
   }
 
   return (
-    <button
-      type="button"
-      onClick={basculer}
-      aria-pressed={on}
-      className={cn(
-        'carte focus-visible:ring-primary/50 flex w-full cursor-pointer items-center gap-3 p-4 text-left focus-visible:ring-2 focus-visible:outline-none',
-        className,
-      )}
-    >
-      <span
-        className={cn(
-          'flex size-9 shrink-0 items-center justify-center rounded-lg',
-          on ? 'bg-primary/10 text-primary' : 'bg-muted text-muted-foreground',
-        )}
-      >
-        {on ? (
+    <LigneInterrupteur
+      on={on}
+      onBasculer={basculer}
+      icone={
+        on ? (
           <Volume2 className="size-4" strokeWidth={2.4} aria-hidden="true" />
         ) : (
           <VolumeX className="size-4" strokeWidth={2.4} aria-hidden="true" />
-        )}
-      </span>
-      <span className="min-w-0 flex-1">
-        <span className="titre-section block">
-          Sons et vibrations
-        </span>
-        <span className="text-muted-foreground mt-0.5 block text-sm font-semibold">
-          {on
-            ? 'Activés — les retours de l’app et les jeux sonnent.'
-            : 'Coupés — l’app reste entièrement silencieuse.'}
-        </span>
-      </span>
-      {/* Un interrupteur dessiné plutôt qu'une case : c'est le geste qu'un
-          élève connaît de son téléphone, et il dit son état sans être lu. */}
-      <span
-        aria-hidden="true"
-        className={cn(
-          'flex h-6 w-11 shrink-0 items-center rounded-full p-0.5 transition-colors',
-          on ? 'bg-primary' : 'bg-muted-foreground/30',
-        )}
-      >
-        <span
-          className={cn(
-            'size-5 rounded-full bg-white shadow-sm transition-transform',
-            on && 'translate-x-5',
-          )}
-        />
-      </span>
-    </button>
+        )
+      }
+      titre="Effets"
+      etat={on ? 'Activés — les retours de l’app et les jeux sonnent.' : 'Coupés — plus aucun bruitage ni vibration.'}
+      className={className}
+    />
   )
 }

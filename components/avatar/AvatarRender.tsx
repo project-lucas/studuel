@@ -2,7 +2,8 @@
 
 import { useMemo } from 'react'
 import { avatarDataUri, avatarEstDessine, avatarPortraitSrc, type AvatarConfig } from '@/lib/avatar'
-import { PORTRAIT_FACE_CROP } from '@/lib/portraits'
+import { PORTRAIT_FACE_CROP, portraitActuel } from '@/lib/portraits'
+import { isHerosKey } from '@/lib/heros/eleves'
 import { BannerArt, EquipmentArt } from '@/components/avatar/vestiaire-assets'
 import { cn } from '@/lib/utils'
 
@@ -36,6 +37,7 @@ export default function AvatarRender({
   className?: string
 }) {
   const portrait = avatarPortraitSrc(config)
+  const estHeros = isHerosKey(portraitActuel(config.portrait))
   // 320 px de rendu : net jusqu'en grand format, mis en cache par config.
   // Pas composé quand un blason le remplace — DiceBear n'est pas gratuit.
   const uri = useMemo(() => (portrait ? null : avatarDataUri(config, 320)), [config, portrait])
@@ -50,7 +52,13 @@ export default function AvatarRender({
       {portrait ? (
         // Un avatar dessiné par Marcel est un portrait carré : entier, arrondi
         // par le cadre — jamais recadré sur le visage comme un blason.
-        forme === 'blason' || avatarEstDessine(config) ? (
+        // Un HÉROS (05/11/2026) est déjà un visage recadré sur sa tête
+        // (scripts/heros-eleves.mjs) : le zoomer encore comme un blason
+        // rognait le front et coupait les visages de profil.
+        estHeros ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={portrait} alt="" className={cn('relative size-full object-cover', forme === 'visage' && 'rounded-full')} />
+        ) : forme === 'blason' || avatarEstDessine(config) ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={portrait} alt="" className="relative size-full object-contain" />
         ) : (

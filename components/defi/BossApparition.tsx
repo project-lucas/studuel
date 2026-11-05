@@ -2,13 +2,13 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import { useRouter } from 'next/navigation'
 import { motion, useReducedMotion } from 'framer-motion'
 import { Swords } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { bossById } from '@/lib/bosses'
 import BossPortrait from '@/components/defi/BossPortrait'
 import { sfx } from '@/lib/sounds'
+import { lancerEntreeCombat } from '@/lib/entree-combat'
 import { CLOCK_STEP_MS, useClock } from '@/lib/use-clock'
 import { useDialogFocus } from '@/lib/use-dialog'
 import {
@@ -56,7 +56,6 @@ export default function BossApparition({
   apparition: TraqueApparition
   onClose?: () => void
 }) {
-  const router = useRouter()
   const reduce = useReducedMotion()
   const now = useClock(CLOCK_STEP_MS)
   const [visible, setVisible] = useState(false)
@@ -115,7 +114,7 @@ export default function BossApparition({
   const fight = () => {
     setVisible(false)
     onClose?.()
-    router.push(`/defi/traque/${boss.id}`)
+    lancerEntreeCombat(`/defi/traque/${boss.id}`)
   }
 
   return createPortal(

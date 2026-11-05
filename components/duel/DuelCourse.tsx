@@ -15,6 +15,7 @@ import type { ModeQuestion } from '@/lib/defi-modes'
 import { courseClock } from '@/lib/duel/course'
 import { opponentCaption, type Opponent } from '@/lib/duel/opponent'
 import { sfx } from '@/lib/sounds'
+import { useMusique } from '@/components/son/MusiqueDeFond'
 import { cn } from '@/lib/utils'
 import { subjectVignette } from '@/lib/subject-style'
 import { TEINTE_MATIERE } from '@/lib/defi/modes-catalog'
@@ -68,6 +69,11 @@ export default function DuelCourse({
   // L'illustration de la matière (son dossier dans Réviser) et sa teinte.
   const vignette = subjectVignette(subjectSlug) ?? null
   const teinte = TEINTE_MATIERE[subject] ?? 'violet'
+
+  // La musique de combat dès la rencontre, la victoire au résultat, le
+  // silence sur une défaite (lib/musique).
+  const enResultat = view.phase === 'result'
+  useMusique(enResultat ? (won ? 'victoire' : null) : 'combat', !enResultat)
 
   const quitter = () => {
     sfx.back()

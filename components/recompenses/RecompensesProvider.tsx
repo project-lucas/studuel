@@ -301,6 +301,8 @@ export default function RecompensesProvider({
     const r: Ruban = { cle: (prochainId += 1), gains: propres, options: options ?? {} }
     rubanRef.current = r
     setRuban(r)
+    // La récompense APPARAÎT : un scintillement (lib/sons-studuel).
+    sfx.scintillement()
   }, [])
 
   // Au tap : la vague part des cartes, puis le ruban s'efface et se démonte.

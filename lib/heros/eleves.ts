@@ -110,5 +110,6 @@ export function herosSceneSrc(cle: HerosKey): string {
 
 /** Le visage du héros (carré 384 px) : son avatar partout dans l'app. */
 export function herosVisageSrc(cle: HerosKey): string {
-  return `/images/heros/eleves/${baseImage(cle)}-visage.webp`
+  // « visage2 » : le recadrage sur la tête du 05/11/2026, sous une adresse neuve.
+  return `/images/heros/eleves/${baseImage(cle)}-visage2.webp`
 }

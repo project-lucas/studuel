@@ -11,7 +11,7 @@ import { decouvertesAuNiveau } from '@/lib/decouverte/catalogue'
 // son bouton d'or.
 
 vi.mock('@/lib/sounds', () => ({
-  sfx: { levelUp: vi.fn(), tap: vi.fn(), treasure: vi.fn() },
+  sfx: { levelUp: vi.fn(), tap: vi.fn(), treasure: vi.fn(), coffreTremble: vi.fn() },
   buzz: vi.fn(),
 }))
 vi.mock('@/app/niveau-actions', () => ({

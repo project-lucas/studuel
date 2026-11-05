@@ -13,6 +13,7 @@ import {
   normalizeAvatarConfig,
 } from './avatar'
 import { PORTRAIT_KEYS, PORTRAITS_CLASSIQUES, portraitSrc } from './portraits'
+import { HEROS_KEYS } from './heros/eleves'
 
 describe('AVATAR_FIELDS / DEFAULT_AVATAR', () => {
   it("le défaut respecte chaque liste d'options", () => {
@@ -158,27 +159,35 @@ describe('rendu DiceBear', () => {
 
 // --- Le portrait (blason peint, lib/portraits) — 16/09/2026 -------------------
 describe('portrait', () => {
-  it('est un champ libre, OBLIGATOIRE (plus d’avatar dessiné), dont les options sont les clés de lib/portraits', () => {
+  it('est un champ libre, OBLIGATOIRE, dont les options sont les seuls HÉROS (05/11/2026)', () => {
     const field = freeAvatarField('portrait')
     expect(field).not.toBeNull()
     expect(field?.allowNone).toBe(false)
-    expect(field?.options).toEqual(PORTRAIT_KEYS)
-    expect(DEFAULT_AVATAR.portrait).toBe(PORTRAIT_KEYS[0])
+    expect(field?.options).toEqual(HEROS_KEYS)
+    expect(DEFAULT_AVATAR.portrait).toBe(HEROS_KEYS[0])
   })
 
   it('normalise une config qui ne porte que le portrait (le JSON du metadata d’inscription)', () => {
+    expect(normalizeAvatarConfig({ portrait: 'troll-pont' }).portrait).toBe('troll-pont')
+    // Un ancien blason (élève humain) devient son héros au relu.
     const cfg = normalizeAvatarConfig({ portrait: '7' })
-    expect(cfg.portrait).toBe('7')
+    expect(cfg.portrait).toBe('demi-elfe-orage')
     // Le reste part du défaut : l'avatar composé reste valide dessous.
     expect(cfg.head).toBe(DEFAULT_AVATAR.head)
     expect(cfg.banner).toBe(DEFAULT_AVATAR.banner)
   })
 
-  it('rejette un portrait hors liste, et une vieille config sans portrait reçoit le premier blason', () => {
-    expect(normalizeAvatarConfig({ portrait: '99' }).portrait).toBe(PORTRAIT_KEYS[0])
-    expect(normalizeAvatarConfig({ portrait: 7 }).portrait).toBe(PORTRAIT_KEYS[0])
-    expect(normalizeAvatarConfig({ portrait: '' }).portrait).toBe(PORTRAIT_KEYS[0])
-    expect(normalizeAvatarConfig({ head: 'afro' }).portrait).toBe(PORTRAIT_KEYS[0])
+  it('rejette un portrait hors liste, et une vieille config sans portrait reçoit le premier héros', () => {
+    expect(normalizeAvatarConfig({ portrait: '99' }).portrait).toBe(HEROS_KEYS[0])
+    expect(normalizeAvatarConfig({ portrait: 7 }).portrait).toBe(HEROS_KEYS[0])
+    expect(normalizeAvatarConfig({ portrait: '' }).portrait).toBe(HEROS_KEYS[0])
+    expect(normalizeAvatarConfig({ head: 'afro' }).portrait).toBe(HEROS_KEYS[0])
+  })
+
+  it('ne rend plus JAMAIS un blason (élève humain), quel que soit le stocké', () => {
+    for (const key of PORTRAITS_CLASSIQUES) {
+      expect(HEROS_KEYS as readonly string[]).toContain(normalizeAvatarConfig({ portrait: key }).portrait)
+    }
   })
 
   it('avatarPortraitSrc rend l’URL du blason, ou null pour une config brute sans blason', () => {
@@ -187,8 +196,10 @@ describe('portrait', () => {
   })
 
   it('se choisit librement, sans passer par la caisse, mais ne se retire pas', () => {
-    const avec = applyFreeAvatarField(DEFAULT_AVATAR, 'portrait', '14')
-    expect(avec.portrait).toBe('14')
+    const avec = applyFreeAvatarField(DEFAULT_AVATAR, 'portrait', 'elfe-course')
+    expect(avec.portrait).toBe('elfe-course')
+    // Un blason ne se choisit plus.
+    expect(applyFreeAvatarField(DEFAULT_AVATAR, 'portrait', '14')).toBe(DEFAULT_AVATAR)
     expect(applyFreeAvatarField(avec, 'portrait', '')).toBe(avec)
     // Hors liste : config inchangée (même référence), rien à écrire.
     expect(applyFreeAvatarField(DEFAULT_AVATAR, 'portrait', 'nawak')).toBe(DEFAULT_AVATAR)

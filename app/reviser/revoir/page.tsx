@@ -19,7 +19,7 @@ import { getReviewItems, reviewQueue } from '@/lib/srs'
 import { permuteQuizOptions } from '@/lib/quiz-shuffle'
 import type { QuizQuestion, DeckCard } from '@/lib/types'
 
-export const metadata = { title: 'À revoir — Studuel' }
+export const metadata = { title: 'Mes erreurs — Studuel' }
 export const dynamic = 'force-dynamic'
 
 // Une session « À revoir » reste courte : la régularité bat le marathon.
@@ -48,8 +48,8 @@ export default async function RevoirPage({
       <div className="flex flex-col gap-6">
         <EnTetePage
           retour={{ fallback: '/reviser', label: 'Retour à Réviser' }}
-          titre="À revoir"
-          sousTitre="Ta file de révision espacée — chaque chose au bon moment."
+          titre="Mes erreurs"
+          sousTitre="Venge tes erreurs, puis révise ce que ta mémoire s’apprête à oublier."
         />
         <Card className="mx-auto w-full max-w-md">
           <CardHeader>
@@ -199,14 +199,9 @@ export default async function RevoirPage({
           ce compteur, un élève qui ne révise QUE par le SRS affichait 0 min de
           temps de travail, sur /moi comme chez ses parents. */}
       <WorkTimer />
-      {/* L'en-tête commun de Réviser : un H1 seul, sans retour, était une
-          recette à part (audit du 23/09/2026). */}
-      <EnTetePage
-        retour={{ fallback: '/reviser', label: 'Retour à Réviser' }}
-        titre={subjectName ? `À revoir · ${subjectName}` : 'À revoir'}
-        sousTitre="Revanche d'abord, puis ce que ta mémoire s'apprête à oublier."
-      />
-      <ReviewPlayer items={items} />
+      {/* Plein écran depuis le 05/11/2026 (lib/quiz-chrome) : la session porte
+          son propre en-tête (croix, progression, plaque de la Revanche). */}
+      <ReviewPlayer items={items} titre={subjectName ? `Mes erreurs · ${subjectName}` : 'Mes erreurs'} />
     </div>
   )
 }

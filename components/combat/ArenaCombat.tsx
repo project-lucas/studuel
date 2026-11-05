@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect } from 'react'
 import Image from 'next/image'
 import AvatarRang from '@/components/AvatarRang'
 import type { AvatarAffiche } from '@/lib/avatar-affiche'
@@ -8,6 +9,7 @@ import { dernierCoeur, type Coeurs } from '@/lib/combat/coeurs'
 import { ECLAT_CRITIQUE, type CleDePose, type Combattant } from '@/lib/combat/combattants'
 import { PORTRAIT_FACE_CROP } from '@/lib/portraits'
 import type { RankTierId } from '@/lib/rank'
+import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
 import RangeeCoeurs from './Coeurs'
 import s from './ArenaCombat.module.css'
@@ -86,6 +88,16 @@ export default function ArenaCombat({
   const perteDe = (camp: Camp, coeurs: Coeurs) =>
     coup && cible === camp ? { id: coup.id, avant: coeursAvant(coeurs, coup) } : null
   const alerte = !ko && !recherche && dernierCoeur(moi.coeurs)
+
+  // Le son de l'impact, calé sur l'image (MS_IMPACT) : un coup franc, ou le
+  // coup lourd et cristallin du critique et du super. Une esquive ne tape rien.
+  const coupId = coup?.id ?? null
+  const coupSonore = coup && !coup.rate ? (coup.critique || coup.super ? 'fort' : 'franc') : null
+  useEffect(() => {
+    if (coupId === null || coupSonore === null) return
+    const m = window.setTimeout(() => sfx.impact(coupSonore === 'fort'), MS_IMPACT)
+    return () => window.clearTimeout(m)
+  }, [coupId, coupSonore])
 
   return (
     <section

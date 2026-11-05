@@ -2,19 +2,39 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { ArrowRight, Check, Flame, Swords, X } from 'lucide-react'
+import { Check, Swords, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import { sfx, buzz } from '@/lib/sounds'
 import ComboBadge from '@/components/ComboBadge'
 import QuitGuardButton from '@/components/QuitGuardButton'
 import SoundToggle from '@/components/ui/SoundToggle'
+import AnswerBoard from '@/components/jeux/AnswerBoard'
+import QuizFeedbackMascotte from '@/components/QuizFeedbackMascotte'
 import { finishReviewSession } from '@/app/reviser/actions'
 import BossApparition from '@/components/defi/BossApparition'
 import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
+import { feedbackTitle, reactionSrc } from '@/lib/quiz-feedback'
 import type { Gain } from '@/lib/gains'
 import type { TraqueApparition } from '@/lib/traque'
 import type { ReviewAnswer } from '@/lib/srs'
+
+// -----------------------------------------------------------------------------
+// LA SESSION « MES ERREURS » (file « À revoir » : Revanche + révision espacée).
+//
+// Refaite le 05/11/2026 (Lucas : « son visuel est à refaire ») sur la grammaire
+// du quiz, plein écran (lib/quiz-chrome) :
+//   · en tête, la croix, la barre de progression, le son ;
+//   · la PLAQUE DE LA REVANCHE (carte sombre) : le compte des erreurs qu'il
+//     reste à venger, qui DESCEND sous les yeux à chaque erreur vengée — c'est
+//     le compteur qu'on a envie de vider ;
+//   · la question dans une carte, les réponses sur `AnswerBoard` (le plateau
+//     du quiz et des jeux : une seule grammaire du verdict dans l'app) ;
+//   · le verdict dans la feuille du quiz (`QuizFeedbackMascotte`), avec la
+//     bonne réponse et l'explication ;
+//   · la fin : les erreurs vengées en grand, puis ce qui a été VERSÉ.
+// La logique d'enregistrement (finishReviewSession) n'a pas bougé.
+// -----------------------------------------------------------------------------
 
 // Un item jouable de la file « À revoir » : la question (ou carte) complète,
 // avec son drapeau Revanche (erreur à venger).
@@ -48,33 +68,44 @@ type Result = {
   gains: Gain[]
 }
 
-// La session « À revoir aujourd'hui » : la file SRS + Revanche, jouée d'une
-// traite. Chaque réponse reprogramme l'item (succès = plus tard, erreur =
-// demain + Revanche) ; vider la Revanche paye un bonus en pièces.
-export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
+const ICONE_ERREURS = '/images/supports/erreurs.webp'
+
+export default function ReviewPlayer({
+  items,
+  titre = 'Mes erreurs',
+}: {
+  items: ReviewPlayItem[]
+  /** « Mes erreurs », ou « Mes erreurs · Anglais » filtré sur une matière. */
+  titre?: string
+}) {
   const router = useRouter()
   const [index, setIndex] = useState(0)
   const [selected, setSelected] = useState<number | null>(null)
   const [revealed, setRevealed] = useState(false)
   const [answers, setAnswers] = useState<ReviewAnswer[]>([])
   const [done, setDone] = useState(false)
-  // Bonnes réponses d'affilée : la file « À revoir » mérite la même
-  // récompense qui monte que le quiz et les flashcards.
+  // Bonnes réponses d'affilée (badge de série, illustration du verdict) et
+  // ratés d'affilée (le verdict console plus fort au troisième).
   const [streak, setStreak] = useState(0)
+  const [rates, setRates] = useState(0)
   const [result, setResult] = useState<Result | null>(null)
   // Garde anti-double-soumission : un double-tap sur la dernière carte pourrait
   // sinon enregistrer la session deux fois (ligne dupliquée en base).
   const finishedRef = useRef(false)
-  // Verrou d'avancement : sans lui, deux taps rapprochés sur « Suivant » /
-  // « Je savais » (avant que React re-rende) franchissent tous deux la garde et
-  // font `setIndex(i => i+1)` deux fois → un item sauté, jamais présenté ni
-  // enregistré. Comme l'avancement est synchrone, on ne relâche le verrou qu'au
-  // changement d'`index` (après re-rendu), pas dans le même tick.
+  // Verrou d'avancement : sans lui, deux taps rapprochés sur « Continuer »
+  // franchissent tous deux la garde et sautent un item. On ne le relâche
+  // qu'au changement d'`index` (après re-rendu), pas dans le même tick.
   const advancingRef = useRef(false)
 
   const item = items[index]
   const answered = selected !== null
-  const revancheCount = items.filter((i) => i.inRevanche).length
+  const revancheTotal = items.filter((i) => i.inRevanche).length
+  const vengees = answers.filter((a, i) => a.good && items[i]?.inRevanche).length
+  // L'item en cours compte dès que la réponse juste est donnée : le compteur
+  // tombe au moment du « Vengée ! », pas un écran plus tard.
+  const vengeeEnDirect =
+    item?.kind === 'question' && item.inRevanche && answered && selected === item.correctIndex ? 1 : 0
+  const restants = Math.max(0, revancheTotal - vengees - vengeeEnDirect)
 
   useEffect(() => {
     advancingRef.current = false
@@ -88,23 +119,14 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
     finishReviewSession(finalAnswers)
       .then(setResult)
       .catch(() =>
-        setResult({
-          saved: false,
-          revancheCleared: false,
-          coins: 0,
-          apparition: null,
-          gains: [],
-        }),
+        setResult({ saved: false, revancheCleared: false, coins: 0, apparition: null, gains: [] }),
       )
   }
 
   const next = (good: boolean) => {
     if (!item || advancingRef.current) return
     advancingRef.current = true
-    const newAnswers: ReviewAnswer[] = [
-      ...answers,
-      { kind: item.kind, id: item.id, subject: item.subject, good },
-    ]
+    const newAnswers: ReviewAnswer[] = [...answers, { kind: item.kind, id: item.id, subject: item.subject, good }]
     setAnswers(newAnswers)
     if (index + 1 >= items.length) {
       finish(newAnswers)
@@ -115,18 +137,29 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
     }
   }
 
+  const repondre = (i: number) => {
+    if (!item || item.kind !== 'question' || answered) return
+    const juste = i === item.correctIndex
+    setSelected(i)
+    const nextStreak = juste ? streak + 1 : 0
+    setStreak(nextStreak)
+    setRates(juste ? 0 : rates + 1)
+    if (juste) sfx.correctCombo(nextStreak)
+    else sfx.wrong()
+    buzz(juste, nextStreak)
+  }
+
   // ------------------------------------------------------------------- vide
   if (items.length === 0) {
     return (
-      <div className="flex flex-col items-center gap-4 pt-10 text-center">
-        <div className="text-5xl">🌿</div>
-        {/* La page porte déjà le H1 (« À revoir ») : ici, un h2. */}
-        <h2 className="font-heading text-2xl font-extrabold">Rien à revoir !</h2>
-        <p className="max-w-xs text-sm text-muted-foreground">
-          Ta mémoire est à jour. Continue tes leçons et tes quiz — la file se
-          remplira toute seule, au bon moment.
+      <div className="mx-auto flex min-h-[70svh] max-w-md flex-col items-center justify-center gap-4 px-4 text-center">
+        {/* eslint-disable-next-line @next/next/no-img-element -- illustration de la famille nav */}
+        <img src={ICONE_ERREURS} alt="" width={120} height={120} className="size-28" />
+        <h1 className="font-heading text-3xl font-extrabold">Aucune erreur à venger</h1>
+        <p className="text-muted-foreground max-w-xs text-sm">
+          Ta mémoire est à jour. Chaque erreur de quiz ou de duel viendra s’ajouter ici, au bon moment.
         </p>
-        <Button onClick={() => router.push('/reviser')}>
+        <Button size="xl" className="mt-2 w-full max-w-xs" onClick={() => router.push('/reviser')}>
           Retour à Réviser
         </Button>
       </div>
@@ -136,58 +169,54 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
   // ------------------------------------------------------------------- fin
   if (done) {
     const correct = answers.filter((a) => a.good).length
-    const ratio = answers.length > 0 ? correct / answers.length : 0
+    const vengeesFin = answers.filter((a, i) => a.good && items[i]?.inRevanche).length
     return (
-      <div className="flex flex-col items-center gap-5 pt-8 text-center">
+      <div className="mx-auto flex min-h-[80svh] max-w-md flex-col items-center justify-center gap-5 px-4 text-center">
         {/* La Traque : la session vient peut-être de faire sortir un gardien.
             Rendu en portail — sa place ici ne change rien à la mise en page. */}
         {result?.apparition ? (
           <BossApparition
             apparition={result.apparition}
-            onClose={() =>
-              setResult((r) => (r ? { ...r, apparition: null } : r))
-            }
+            onClose={() => setResult((r) => (r ? { ...r, apparition: null } : r))}
           />
         ) : null}
 
-        <div className="animate-in zoom-in text-6xl duration-500">
-          {ratio >= 0.8 ? '🧠' : ratio >= 0.5 ? '💪' : '🌱'}
-        </div>
-        <div>
-          <h2 className="font-heading text-2xl font-extrabold">
-            {ratio >= 0.8
-              ? 'Mémoire affûtée !'
-              : ratio >= 0.5
-                ? 'Bien repris !'
-                : 'Ça reviendra vite !'}
-          </h2>
-          <p className="mt-1 text-muted-foreground">
-            {correct}/{answers.length} retenues — chaque item est reprogrammé
-            au bon moment.
+        <div className="carte-sombre animate-in zoom-in-90 fade-in flex w-full flex-col items-center gap-2 px-5 pt-6 pb-5 duration-500">
+          <span className="bg-highlight text-foreground grid size-16 place-items-center rounded-full shadow-[0_4px_0_0_rgba(0,0,0,0.25)]">
+            <Swords className="size-8" strokeWidth={2.4} aria-hidden="true" />
+          </span>
+          <p className="surtitre opacity-80">{titre}</p>
+          <h1 className="font-heading text-[2rem] leading-none font-extrabold">
+            {revancheTotal > 0
+              ? vengeesFin === revancheTotal
+                ? 'Toutes vengées !'
+                : `${vengeesFin} vengée${vengeesFin > 1 ? 's' : ''} sur ${revancheTotal}`
+              : 'Mémoire affûtée !'}
+          </h1>
+          <p className="text-sm opacity-85">
+            {correct}/{answers.length} justes — chaque question revient au bon moment.
           </p>
         </div>
 
         {/* L'XP de la révision vole vers le bandeau — une fois le rideau du
             gardien refermé, sinon les jetons voleraient derrière lui. */}
         {result && !result.apparition ? (
-          <PanneauRecompenses gains={result.gains} titre="Gagné" className="w-full max-w-xs" />
+          <PanneauRecompenses gains={result.gains} titre="Gagné" className="w-full" />
         ) : null}
 
         {result?.revancheCleared ? (
-          <p className="animate-in slide-in-from-bottom-2 flex items-center gap-2 rounded-full bg-highlight px-5 py-2 text-sm font-bold duration-500">
-            <Swords className="size-4" /> Revanche vidée !
+          <p className="animate-in slide-in-from-bottom-2 bg-highlight flex items-center gap-2 rounded-full px-5 py-2 text-sm font-extrabold duration-500">
+            <Swords className="size-4" aria-hidden="true" /> Revanche vidée !
           </p>
         ) : null}
 
-        <p className="text-sm text-muted-foreground">
-          {result === null
-            ? ''
-            : result.saved
-              ? '✓ Session enregistrée — ta série continue 🔥'
-              : 'Session non enregistrée (connecte-toi pour garder ta progression).'}
-        </p>
+        {result !== null && !result.saved ? (
+          <p className="text-muted-foreground text-sm">
+            Session non enregistrée (connecte-toi pour garder ta progression).
+          </p>
+        ) : null}
 
-        <Button onClick={() => router.push('/reviser')}>
+        <Button size="xl" className="w-full" onClick={() => router.push('/reviser')}>
           Retour à Réviser
         </Button>
       </div>
@@ -198,210 +227,158 @@ export default function ReviewPlayer({ items }: { items: ReviewPlayItem[] }) {
   if (!item) return null
 
   return (
-    <div className="mx-auto flex max-w-xl flex-col gap-3">
-      <div className="flex items-center justify-between text-sm text-muted-foreground">
-        {/* Croix « quitter » gardée : même pattern que le quiz — la session
-            en cours serait perdue, on confirme avant de sortir. */}
+    <div className="mx-auto flex max-w-xl flex-col gap-4 px-1 pb-48">
+      {/* --- En tête : quitter, progression, son ------------------------- */}
+      <div className="flex items-center gap-3">
+        {/* Croix « quitter » gardée : même pattern que le quiz. */}
         <QuitGuardButton fallback="/reviser" label="Quitter la session">
           <X className="size-5" aria-hidden="true" />
         </QuitGuardButton>
-        <span className="font-mono tabular-nums">
-          {index + 1}/{items.length}
-        </span>
-        {revancheCount > 0 ? (
-          <span className="flex items-center gap-1 text-xs font-semibold">
-            <Swords className="size-3.5 text-primary" /> {revancheCount} à
-            venger
-          </span>
-        ) : (
-          <span className="flex items-center gap-1 text-xs font-semibold">
-            <Flame className="size-3.5 text-primary" /> Révision espacée
-          </span>
-        )}
-        {/* Badge de SÉRIE, même grammaire que le quiz et les flashcards. La
-            région `aria-live` reste toujours montée : un lecteur d'écran
-            n'annonce que le changement d'une région déjà présente. */}
-        <span aria-live="polite" className="min-h-6">
-          <ComboBadge streak={streak} />
-        </span>
+        <div
+          className="bg-foreground/10 h-3.5 flex-1 overflow-hidden rounded-full"
+          role="progressbar"
+          aria-label="Progression de la session"
+          aria-valuemin={0}
+          aria-valuemax={items.length}
+          aria-valuenow={index}
+          aria-valuetext={`Question ${index + 1} sur ${items.length}`}
+        >
+          <div
+            className="bg-primary h-full rounded-full transition-[width] duration-500"
+            style={{ width: `${Math.max(4, ((index + (answered || revealed ? 1 : 0)) / items.length) * 100)}%` }}
+          />
+        </div>
         <SoundToggle />
       </div>
-      <div
-        className="h-2 w-full overflow-hidden rounded-full bg-muted"
-        role="progressbar"
-        aria-label="Progression de la session"
-        aria-valuemin={0}
-        aria-valuemax={items.length}
-        aria-valuenow={index}
-        aria-valuetext={`Item ${index + 1} sur ${items.length}`}
-      >
-        <div
-          className="h-full rounded-full bg-highlight transition-all"
-          style={{ width: `${(index / items.length) * 100}%` }}
-        />
-      </div>
 
-      <div className="flex items-center gap-2">
-        {item.subject ? (
-          <p className="text-xs font-semibold text-muted-foreground uppercase">
-            {item.subject}
-          </p>
-        ) : null}
-        {item.inRevanche ? (
-          <span className="flex items-center gap-1 rounded-full bg-primary px-2 py-0.5 text-[10px] font-bold text-primary-foreground">
-            <Swords className="size-3" aria-hidden="true" /> Revanche
-          </span>
-        ) : null}
-      </div>
-
-      {item.kind === 'question' ? (
-        <div className="flex flex-col gap-2">
-          <h2 className="font-heading mb-1 text-xl font-extrabold text-balance">
-            {item.prompt}
-          </h2>
-          {item.options.map((option, i) => {
-            const isCorrect = i === item.correctIndex
-            const isSelected = i === selected
-            return (
-              <button
-                key={i}
-                type="button"
-                disabled={answered}
-                onClick={() => {
-                  setSelected(i)
-                  const nextStreak = isCorrect ? streak + 1 : 0
-                  setStreak(nextStreak)
-                  if (isCorrect) sfx.correctCombo(nextStreak)
-                  else sfx.wrong()
-                  buzz(isCorrect, nextStreak)
-                }}
-                className={cn(
-                  'flex items-center justify-between gap-3 rounded-2xl border px-4 py-3 text-left text-sm font-medium transition-all',
-                  !answered &&
-                    'hover:border-primary/40 hover:bg-accent hover:text-accent-foreground active:scale-[0.99]',
-                  answered &&
-                    isCorrect &&
-                    'border-success bg-success/10 text-success',
-                  answered &&
-                    isSelected &&
-                    !isCorrect &&
-                    'border-destructive bg-destructive/10 text-destructive',
-                  answered && !isSelected && !isCorrect && 'opacity-50',
-                )}
+      {/* --- La plaque de la Revanche ----------------------------------- */}
+      <div className="carte-sombre flex items-center gap-3 px-4 py-3">
+        {/* eslint-disable-next-line @next/next/no-img-element -- illustration de la famille nav */}
+        <img src={ICONE_ERREURS} alt="" width={56} height={56} className="size-12 shrink-0" />
+        <div className="min-w-0 flex-1">
+          <p className="surtitre opacity-75">{titre}</p>
+          {revancheTotal > 0 ? (
+            <p className="font-heading text-lg leading-tight font-extrabold">
+              <span
+                // `key` : le chiffre rejoue son entrée à chaque erreur vengée.
+                key={restants}
+                className="text-highlight animate-in zoom-in-50 inline-block tabular-nums duration-300"
               >
-                {option}
-                {answered && isCorrect ? (
-                  <Check className="size-4 shrink-0" />
-                ) : null}
-                {answered && isSelected && !isCorrect ? (
-                  <X className="size-4 shrink-0" />
-                ) : null}
-              </button>
-            )
-          })}
-
-          <p
-            role="status"
-            aria-live="polite"
-            className={cn(
-              'text-sm font-semibold',
-              !answered && 'sr-only',
-              answered &&
-                selected === item.correctIndex &&
-                'text-success',
-              answered && selected !== item.correctIndex && 'text-destructive',
-            )}
-          >
-            {answered
-              ? selected === item.correctIndex
-                ? item.inRevanche
-                  ? 'Vengée ! ✓'
-                  : 'Bonne réponse ✓'
-                : 'Mauvaise réponse ✗ — elle revient demain'
-              : ''}
-          </p>
-
-          {answered && item.explanation ? (
-            <p className="rounded-2xl bg-muted p-3 text-sm text-muted-foreground">
-              {item.explanation}
+                {restants}
+              </span>{' '}
+              {restants > 1 ? 'erreurs à venger' : restants === 1 ? 'erreur à venger' : 'tout est vengé !'}
             </p>
+          ) : (
+            <p className="font-heading text-lg leading-tight font-extrabold">Révision espacée</p>
+          )}
+        </div>
+        <div className="flex flex-col items-end gap-1">
+          <span className="font-heading text-sm font-extrabold tabular-nums opacity-80">
+            {index + 1}/{items.length}
+          </span>
+          {/* Badge de SÉRIE : la région `aria-live` reste toujours montée. */}
+          <span aria-live="polite" className="min-h-6">
+            <ComboBadge streak={streak} variant="arene" />
+          </span>
+        </div>
+      </div>
+
+      {/* --- La question ------------------------------------------------ */}
+      <div key={item.id} className="carte animate-in fade-in slide-in-from-right-4 flex flex-col gap-3 p-5 duration-300">
+        <div className="flex flex-wrap items-center gap-2">
+          {item.subject ? <p className="surtitre text-muted-foreground">{item.subject}</p> : null}
+          {item.inRevanche ? (
+            <span className="bg-primary text-primary-foreground flex items-center gap-1 rounded-full px-2.5 py-0.5 text-[11px] font-extrabold">
+              <Swords className="size-3" aria-hidden="true" /> Revanche
+            </span>
           ) : null}
-
-          <Button
-            className="mt-1 self-end rounded-full"
-            disabled={!answered}
-            onClick={() => next(selected === item.correctIndex)}
-          >
-            Suivant <ArrowRight className="size-4" />
-          </Button>
         </div>
-      ) : (
-        <div className="flex flex-col gap-3">
-          <button
-            type="button"
-            onClick={() => {
-              if (!revealed) {
-                sfx.flip()
-                setRevealed(true)
-              }
-            }}
-            className="flex min-h-48 w-full flex-col items-center justify-center gap-3 rounded-2xl bg-card p-6 text-center ring-1 ring-foreground/10 transition-all active:scale-[0.99]"
-          >
-            <p className="font-heading text-2xl font-semibold text-balance">
-              {item.front}
-            </p>
-            {revealed ? (
-              <p className="animate-in fade-in text-lg font-medium text-primary duration-300">
-                {item.back}
-              </p>
-            ) : (
-              <p className="text-xs text-muted-foreground">
-                Touche pour voir la réponse
-              </p>
-            )}
-          </button>
 
-          <div
-            aria-hidden={!revealed}
-            className={cn(
-              'grid grid-cols-2 gap-2 transition-opacity',
-              !revealed && 'pointer-events-none opacity-0',
-            )}
-          >
-            <Button
-              variant="outline"
-              size="lg"
-              tabIndex={revealed ? undefined : -1}
-              className="rounded-full"
+        {item.kind === 'question' ? (
+          <>
+            <h2 className="font-heading text-xl leading-snug font-extrabold text-balance">{item.prompt}</h2>
+            <AnswerBoard
+              options={item.options}
+              correctIndex={item.correctIndex}
+              selected={selected}
+              revealed={answered}
+              layout="liste"
+              onAnswer={repondre}
+            />
+          </>
+        ) : (
+          <>
+            <button
+              type="button"
               onClick={() => {
-                setStreak(0)
-                sfx.wrong()
-                buzz(false, 0)
-                next(false)
+                if (!revealed) {
+                  sfx.flip()
+                  setRevealed(true)
+                }
               }}
+              className="bg-secondary/60 flex min-h-48 w-full flex-col items-center justify-center gap-3 rounded-2xl p-6 text-center transition-transform active:scale-[0.99]"
             >
-              À revoir
-            </Button>
-            <Button
-              size="lg"
-              tabIndex={revealed ? undefined : -1}
-              // Violet, pas vert : « Je savais » est une ACTION ; le vert reste
-              // au verdict (la carte, les pastilles).
-              className="rounded-full"
-              onClick={() => {
-                const nextStreak = streak + 1
-                setStreak(nextStreak)
-                sfx.correctCombo(nextStreak)
-                buzz(true, nextStreak)
-                next(true)
-              }}
+              <p className="font-heading text-2xl font-extrabold text-balance">{item.front}</p>
+              {revealed ? (
+                <p className="animate-in fade-in text-primary text-lg font-bold duration-300">{item.back}</p>
+              ) : (
+                <p className="text-muted-foreground text-xs font-bold">Touche pour voir la réponse</p>
+              )}
+            </button>
+            <div
+              aria-hidden={!revealed}
+              className={cn('grid grid-cols-2 gap-2 transition-opacity', !revealed && 'pointer-events-none opacity-0')}
             >
-              <Check className="size-4" /> Je savais
-            </Button>
-          </div>
-        </div>
-      )}
+              <Button
+                variant="outline"
+                size="xl"
+                tabIndex={revealed ? undefined : -1}
+                onClick={() => {
+                  setStreak(0)
+                  sfx.wrong()
+                  buzz(false, 0)
+                  next(false)
+                }}
+              >
+                À revoir
+              </Button>
+              <Button
+                size="xl"
+                tabIndex={revealed ? undefined : -1}
+                onClick={() => {
+                  const nextStreak = streak + 1
+                  setStreak(nextStreak)
+                  sfx.correctCombo(nextStreak)
+                  buzz(true, nextStreak)
+                  next(true)
+                }}
+              >
+                <Check className="size-4" aria-hidden="true" /> Je savais
+              </Button>
+            </div>
+          </>
+        )}
+      </div>
 
+      {/* --- Le verdict : la feuille du quiz ---------------------------- */}
+      {item.kind === 'question' ? (
+        <QuizFeedbackMascotte
+          open={answered}
+          good={selected === item.correctIndex}
+          imageSrc={reactionSrc(selected === item.correctIndex, selected === item.correctIndex ? streak : rates)}
+          title={
+            selected === item.correctIndex
+              ? item.inRevanche
+                ? 'Vengée !'
+                : feedbackTitle(true, streak, item.id)
+              : 'Elle revient demain'
+          }
+          correctAnswer={item.options[item.correctIndex]}
+          explanation={item.explanation}
+          ctaLabel={index + 1 >= items.length ? 'Voir mon bilan' : 'Continuer'}
+          onContinue={() => next(selected === item.correctIndex)}
+        />
+      ) : null}
     </div>
   )
 }

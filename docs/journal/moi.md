@@ -27,3 +27,33 @@ Paragraphes déplacés mot pour mot depuis CLAUDE.md le 16/10/2026 (il dépassai
 
 - **LES HÉROS PARTOUT (01/11/2026, Lucas : « faits tous les persos avec le fond nuit derrière… chaque perso doit symboliser des qualités ou défauts… pour mon compte mets-moi un perso aléatoire »)** : chaque héros a deux QUALITÉS, un TRAVERS et une phrase « c'est toi » (`qualites`, `travers`, `cestToi` de `lib/heros/eleves.ts`), montrés au choix du héros de l'onboarding (pastilles or, travers en pointillé) et dans le vestiaire ; les 15 héros s'assoient au BUREAU DE NUIT de `/joueur` (`public/images/joueur/bureau/<héros>-night.webp`, GPT Image 2.5 en « change only the person » sur la scène du roux ; `PLAGES_HEROS = ['night']`, une autre heure retombe sur la nuit en attendant les cinq autres) ; le vestiaire (`ChoixPortrait`) a une rubrique « Héros » au-dessus des blasons, aperçu = la scène du héros ; un visage de héros n'est JAMAIS zoomé par `PORTRAIT_FACE_CROP` (`avatarEstDessine`, `PortraitJoueur`).
 - **CHAQUE HÉROS DANS SA CHAMBRE (01/11/2026, soir, Lucas : « je veux que la chambre soit adaptée aux couleurs du personnage avec quelques objets qu'aurait probablement le personnage… on garde la fenêtre qui permet de voir l'école, le reste est personnalisé »)** : les 15 scènes de nuit repeintes (GPT Image 2.5, référence 1 = l'ancienne scène, référence 2 = la scène du héros ; jobs dans le scratchpad de la session 5e17abe0, `jobs-v1.json`). FIGÉS : fenêtre et château, bureau (façade = support de la feuille punaisée), lampe (le halo CSS est posé dessus), sol, cadrage. PERSONNALISÉS : bannières à l'emblème du héros (plus de couronnes violettes), guirlande, couvre-lit, étagère, objets au mur, objet à la place du globe (statuettes du troll, harpon de l'elfe des glaces, médailles de la Fusée, enclume du nain…). POSES revues sur les remarques de Lucas : la barde écrit les yeux ouverts, sourire bouche fermée ; la gobeline n'a plus rien sous la lèvre ; la Fusée sourit sans montrer les dents ; le Caïd travaille, accoudé, joue sur le poing (« facile, mais il bosse ») ; l'elfe de l'ombre a un visage calme et neutre ; l'Appel de l'orage est concentré, plus en colère ; l'orc au chien ne rit plus aux éclats ; l'elfe des glaces est gardé tel quel. ⚠️ Le modèle « glisse » la scène de 15 à 36 px vers le haut sur la moitié des images : chaque scène est RECALÉE par calcul sur l'ancienne (échelle + décalage par axe, mesurés sur la fenêtre, la lampe et la façade — script `aligne.mjs` du scratchpad), résidu ≤ 4 px. Anciennes scènes dans `assets-sources/joueur/bureau/heros/ancien-2026-11-01/`.
+
+## Plus aucun élève humain (05/11/2026)
+
+Lucas : « en haut, on voit toujours les anciens avatars humains ; sur mon profil, en bas à droite, on voit toujours l'humain ». Son compte portait encore un des treize blasons (élèves humains en sweat violet, `/images/profil/v2/`), toujours valides depuis les héros du 31/10 : le bandeau, l'onglet Moi de la barre, le duel, le combat et l'écran de victoire les montraient. Décision : chaque blason a SON héros, du même genre, fixé une fois pour toutes (`HEROS_DU_BLASON` dans `lib/portraits.ts` : 7 garçons → les sept premiers héros garçons, 6 filles → les six héroïnes), converti À LA LECTURE par `portraitActuel` dans `normalizeAvatarConfig` (toute config d'avatar) et `portraitDe` (les listes qui ne lisent que la clé, `PortraitJoueur`, `FicheJoueur`). `portraitPourId` (élève sans choix) rend un héros fixe. Le champ `portrait` n'accepte plus que `HEROS_KEYS` ; `ChoixPortrait` (vestiaire) n'a plus de rangée « Blasons ». Pas de migration SQL : la clé en base est réécrite au prochain choix ; les images des blasons restent dans `public/` (la page /joueur et les scènes au bureau des blasons ne servent plus, à ranger plus tard). Les personnages historiques et l'avatar dessiné par Marcel ne bougent pas.
+
+## Les visages des héros recadrés, leurs humeurs au duel (05/11/2026)
+
+Lucas : « les images des persos ne sont pas bien mises, chacun a une scène
+différente, fais attention à leur rendu » (capture : elfe-rodeur dans l'anneau
+du bandeau, perdu dans sa capuche), puis, sur l'écran de fin du duel : « voir
+le cadre des joueurs et un visage qui change s'il a gagné ou perdu, use
+Higgsfield pour les variantes ».
+
+- Deux défauts : le recadrage d'origine (31/10) était approximatif pour
+  plusieurs héros (gobeline-mur, elfe-ombre, naine-poney coupés au bord d'un
+  rond), et `AvatarRender` zoomait encore à 125 % (`PORTRAIT_FACE_CROP`, fait
+  pour les anciens blasons) un visage déjà recadré. Recadrage refait d'après
+  une planche quadrillée par héros (centre entre le haut des cheveux et le
+  menton) ; servi sous `-visage2.webp` (l'ancienne adresse resterait en cache) ;
+  les anciens `-visage.webp` sont retirés de `public/`.
+- L'écran de fin (`DuelResult`) : chaque joueur dans l'anneau de son rang de
+  ligue (`AvatarRang`, plaque de division), le gagnant agrandi et auréolé d'or,
+  le perdant penché et un peu éteint (plus de bascule à 78° qui cachait le
+  visage). Les humeurs : Nano Banana 2.1, la tête recadrée de la scène en
+  référence (1024 px), même style ; victoire = grand sourire, poing levé,
+  étincelles ; défaite = moue, larmes de dessin animé, goutte de sueur,
+  oreilles basses (« comique, pas tragique »). 1,5 crédit l'image. Modèle fait
+  sur elfe-rodeur ; les quatorze autres attendent la validation de Lucas.
+
+**La série des humeurs (05/11/2026, suite).** Après le modèle elfe-rodeur, les quatorze autres héros ont reçu leurs deux visages (victoire, défaite), peints par Higgsfield (Nano Banana 2.1, la tête de la scène en référence, 28 images, ≈ 42 crédits). Tous vérifiés sur planche (même héros que la référence, bonne expression). Cadrage par héros et par humeur dans `CADRAGES` de `scripts/heros-humeurs.mjs` (côté 0,7 de l'image : à 0,62 les bouches des orcs et du troll étaient coupées) ; `HUMEURS_PRETES` contient les quinze, et le test vérifie qu'aucun héros n'en manque. Sources dans `assets-sources/heros/eleves/humeurs/`, 724 Ko servis dans `public/images/heros/eleves/humeurs/`.

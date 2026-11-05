@@ -235,3 +235,49 @@ export async function getReviewItems(
   if (error) console.error('[srs] file « À revoir » indisponible:', error.message)
   return data ?? []
 }
+
+// ------------------------------------------------------- la carte « Mes erreurs »
+// (05/11/2026, Lucas : « pour affronter un boss on doit revoir ses erreurs, or
+// c'est une page qu'on ne voit nulle part ») : l'accueil Réviser montre la
+// porte de la session, avec ce qu'il y a dedans.
+
+export type CompteErreurs = {
+  /** Erreurs en Revanche (à venger). */
+  aVenger: number
+  /** Le reste de la file du jour : items dus, hors Revanche. */
+  aRevoir: number
+}
+
+/** Les deux comptes de la file du jour, sur les mêmes règles que `reviewQueue`. */
+export function compterErreurs(
+  items: readonly Pick<ReviewItem, 'due_date' | 'in_revanche'>[],
+  todayKey: string,
+): CompteErreurs {
+  let aVenger = 0
+  let aRevoir = 0
+  for (const i of items) {
+    if (i.in_revanche) aVenger += 1
+    else if (isDue(i, todayKey)) aRevoir += 1
+  }
+  return { aVenger, aRevoir }
+}
+
+/**
+ * Les comptes, lus pour l'accueil Réviser : deux colonnes, le même filtre
+ * borné que `getReviewItems`. Une panne = zéro partout (la carte se tait).
+ */
+export async function lireCompteErreurs(
+  supabase: SupabaseClient,
+  userId: string,
+): Promise<CompteErreurs> {
+  const today = new Date().toISOString().slice(0, 10)
+  const { data, error } = await supabase
+    .from('review_items')
+    .select('due_date, in_revanche')
+    .eq('user_id', userId)
+    .or(`due_date.lte.${today},in_revanche.eq.true`)
+    .limit(300)
+    .returns<Pick<ReviewItem, 'due_date' | 'in_revanche'>[]>()
+  if (error) console.error('[srs] compte « Mes erreurs » indisponible:', error.message)
+  return compterErreurs(data ?? [], today)
+}

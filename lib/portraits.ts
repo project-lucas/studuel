@@ -130,20 +130,54 @@ export const PORTRAIT_FACE_CROP = {
 } as const
 
 /**
- * UN BLASON POUR UN ÉLÈVE QUI N'EN A PAS CHOISI (onglet Amis, 17/09/2026).
- *
- * Les listes de l'onglet Amis dessinaient chacun par un emoji d'animal. Elles
- * montrent désormais un blason : celui de l'élève s'il en a choisi un, sinon
- * un blason FIXE déduit de son identifiant — le même à chaque visite, pour
- * qu'on reconnaisse un camarade d'un jour à l'autre.
+ * LES BLASONS DEVIENNENT DES HÉROS (05/11/2026, Lucas : « on voit toujours les
+ * anciens avatars humains »). Les comptes d'avant le 31/10 portent encore un
+ * des treize blasons (élèves humains en sweat) : on ne les montre plus nulle
+ * part. Chaque blason a SON héros, du même genre, fixé une fois pour toutes —
+ * un élève retrouve toujours le même personnage. La conversion se fait À LA
+ * LECTURE (normalizeAvatarConfig, portraitDe) : aucune migration SQL, la clé
+ * en base sera réécrite au prochain choix au vestiaire.
  */
-export function portraitPourId(id: string): PortraitKey {
-  let h = 0
-  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0
-  return PORTRAITS_CLASSIQUES[h % PORTRAITS_CLASSIQUES.length]
+const HEROS_DU_BLASON: Readonly<Record<PortraitClassique, HerosKey>> = {
+  // Garçons (PORTRAITS_GARCONS) → les sept premiers héros garçons.
+  '2': 'elfe-rodeur',
+  '3': 'demi-elfe-mage',
+  '5': 'nain-forge',
+  '7': 'demi-elfe-orage',
+  '9': 'elfe-ombre',
+  '12': 'elfe-harpon',
+  '13': 'orc-classe',
+  // Filles (PORTRAITS_FILLES) → les six héroïnes.
+  '4': 'gobeline-mur',
+  '6': 'naine-poney',
+  '8': 'elfe-cerf-volant',
+  '10': 'humaine-luth',
+  '11': 'gobeline-lectrice',
+  '14': 'elfe-course',
 }
 
-/** Le blason à montrer : le choix de l'élève, ou son blason fixe. */
-export function portraitDe(choisi: unknown, id: string): PortraitKey {
-  return isPortraitKey(choisi) ? choisi : portraitPourId(id)
+export function herosDuBlason(blason: PortraitClassique): HerosKey {
+  return HEROS_DU_BLASON[blason]
+}
+
+/** Un blason est remplacé par son héros ; toute autre valeur passe telle quelle. */
+export function portraitActuel<T>(value: T): T | HerosKey {
+  return isPortraitClassique(value) ? HEROS_DU_BLASON[value] : value
+}
+
+/**
+ * UN HÉROS POUR UN ÉLÈVE QUI N'EN A PAS CHOISI (onglet Amis, 17/09/2026 ;
+ * héros depuis le 05/11/2026). Un héros FIXE déduit de son identifiant — le
+ * même à chaque visite, pour qu'on reconnaisse un camarade d'un jour à l'autre.
+ */
+export function portraitPourId(id: string): HerosKey {
+  let h = 0
+  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0
+  return HEROS_KEYS[h % HEROS_KEYS.length]
+}
+
+/** Le héros à montrer : celui de l'élève (un blason devient son héros), ou son héros fixe. */
+export function portraitDe(choisi: unknown, id: string): HerosKey {
+  const actuel = portraitActuel(choisi)
+  return isHerosKey(actuel) ? actuel : portraitPourId(id)
 }

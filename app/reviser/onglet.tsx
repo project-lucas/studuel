@@ -18,6 +18,8 @@ import TourGuide from '@/components/TourGuide'
 import SubjectsHome from '@/components/SubjectsHome'
 import ResumeSessions, { type ResumeItem } from '@/components/ResumeSessions'
 import BoucleOuverte from '@/components/reviser/BoucleOuverte'
+import CarteErreurs from '@/components/reviser/CarteErreurs'
+import { lireCompteErreurs } from '@/lib/srs'
 import { lireDernierBrouillon } from '@/lib/quiz-brouillon-server'
 import CarnetButton from '@/components/carnet/CarnetButton'
 import ClasseChip from '@/components/reviser/ClasseChip'
@@ -165,6 +167,9 @@ export default async function OngletReviser() {
     // l'index de l'élève, nulle tant que la migration dort. Le navigateur a
     // la sienne ; celle-ci sert à reprendre ce qui a été commencé ailleurs.
     brouillonServeur,
+    // LA FILE « MES ERREURS » (05/11/2026) : deux colonnes bornées, pour la
+    // carte qui mène à la session — dans la vague déjà partie.
+    compteErreurs,
   ] = await Promise.all([
     readRowTolerant<ProfileRow>(supabase, 'profiles', 'id', user.id, [
       'full_name',
@@ -231,6 +236,7 @@ export default async function OngletReviser() {
     compterCapsulesNonOuvertes(supabase, user.id),
     lireGelsSerie(supabase, user.id),
     lireDernierBrouillon(supabase, user.id),
+    lireCompteErreurs(supabase, user.id),
   ])
 
   const grade = profile.grade_level ?? null
@@ -687,6 +693,10 @@ export default async function OngletReviser() {
                       ouverte. Avant la recommandation : ce qu'on a commencé
                       tire plus fort que ce qu'on nous conseille. */}
               <BoucleOuverte brouillonServeur={brouillonServeur} />
+              {/* 2 bis. « Mes erreurs » (05/11/2026) : la Revanche et la
+                      file du jour, qu'on doit vider avant un gardien — la
+                      session n'avait aucune porte sur cet écran. */}
+              <CarteErreurs compte={compteErreurs} />
               {/* 3. « On s'y remet ? » — deux sessions à reprendre, pas une
                       réserve qui défile. */}
               <ResumeSessions items={resumeItems} />

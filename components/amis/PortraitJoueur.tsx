@@ -1,7 +1,6 @@
-import Image from 'next/image'
 import type { AvatarAffiche } from '@/lib/avatar-affiche'
-import { herosVisageSrc, isHerosKey } from '@/lib/heros/eleves'
-import { PORTRAIT_FACE_CROP, portraitDe, portraitSrc } from '@/lib/portraits'
+import { herosVisageSrc } from '@/lib/heros/eleves'
+import { PORTRAIT_FACE_CROP, portraitDe } from '@/lib/portraits'
 import { idAvatarIa, srcAvatarIa } from '@/lib/avatar-ia'
 import { imagePersonnage, personnageDuPortrait } from '@/lib/personnages-historiques'
 import { cn } from '@/lib/utils'
@@ -12,6 +11,8 @@ import { cn } from '@/lib/utils'
  * Le blason peint (lib/portraits), cadré sur le visage dans un rond — plus
  * d'emoji d'animal. `portrait` est le choix de l'élève (clé, '' ou absent) ;
  * à défaut, un blason fixe déduit de `id`. La taille vient de `className`.
+ * Depuis le 05/11/2026, un blason devient son HÉROS et un élève sans choix
+ * reçoit un héros fixe (lib/portraits : portraitDe) — plus d'élève humain.
  *
  * `avatar` (déjà résolu par le serveur, lib/avatar-affiche) l'emporte : c'est
  * MON avatar, tel que l'onglet Moi le montre — un avatar composé n'est pas un
@@ -33,44 +34,27 @@ export default function PortraitJoueur({
   const ia = idAvatarIa(portrait)
   // Un personnage historique débloqué (`perso:<id>`) : son portrait entier.
   const perso = personnageDuPortrait(portrait)
-  const affiche =
+  const affiche: AvatarAffiche =
     avatar ??
     (ia
       ? { src: srcAvatarIa(ia), visage: false }
       : perso
         ? { src: imagePersonnage(perso.id), visage: false }
         : // Un héros : son visage est déjà recadré, on ne zoome pas dessus.
-          isHerosKey(portrait)
-          ? { src: herosVisageSrc(portrait), visage: false }
-          : null)
+          { src: herosVisageSrc(portraitDe(portrait, id)), visage: false })
   return (
     <span
       aria-hidden="true"
       className={cn('relative block shrink-0 overflow-hidden rounded-full bg-primary/10', className)}
     >
-      {affiche ? (
-        // L'image telle quelle, en pleine définition (384 px pour un blason).
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={affiche.src}
-          alt=""
-          className={affiche.visage ? 'absolute max-w-none object-contain select-none' : 'size-full object-cover select-none'}
-          style={affiche.visage ? PORTRAIT_FACE_CROP : undefined}
-        />
-      ) : (
-        <Image
-          src={portraitSrc(portraitDe(portrait, id))}
-          alt=""
-          width={120}
-          height={120}
-          // Le cadrage visage affiche l'image à 180 % de la case : 144 px pour
-          // la plus grande (80 px, la fenêtre « Fais équipe »). Servie à 100 px,
-          // elle était floue (24/09/2026).
-          sizes="160px"
-          className="absolute max-w-none object-contain select-none"
-          style={PORTRAIT_FACE_CROP}
-        />
-      )}
+      {/* L'image telle quelle, en pleine définition (384 px pour un héros). */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={affiche.src}
+        alt=""
+        className={affiche.visage ? 'absolute max-w-none object-contain select-none' : 'size-full object-cover select-none'}
+        style={affiche.visage ? PORTRAIT_FACE_CROP : undefined}
+      />
     </span>
   )
 }

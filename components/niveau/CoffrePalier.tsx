@@ -87,7 +87,8 @@ export function CoffresPalier({
 
   const ouvrir = () => {
     if (pending) return
-    sfx.tap()
+    // Le coffre tremble le temps de la réponse : l'attente s'entend aussi.
+    sfx.coffreTremble()
     start(async () => {
       const r = await demander(palier)
       if (r.ok) {

@@ -28,12 +28,12 @@ describe('les élèves-héros', () => {
     expect(isPortraitKey('elfe-rodeur')).toBe(true)
     expect(isHerosKey('elfe-rodeur')).toBe(true)
     expect(isHerosKey('7')).toBe(false)
-    expect(portraitSrc('elfe-rodeur')).toBe('/images/heros/eleves/elfe-rodeur-visage.webp')
+    expect(portraitSrc('elfe-rodeur')).toBe('/images/heros/eleves/elfe-rodeur-visage2.webp')
   })
 
-  it('ne servent jamais de blason fixe à qui n’a rien choisi', () => {
+  it('servent de héros fixe à qui n’a rien choisi (05/11/2026 : plus de blason)', () => {
     for (const id of ['a', 'b0b', 'c-123', 'zzzz', 'élève']) {
-      expect(PORTRAITS_CLASSIQUES as readonly string[]).toContain(portraitPourId(id))
+      expect(HEROS_KEYS as readonly string[]).toContain(portraitPourId(id))
     }
   })
 

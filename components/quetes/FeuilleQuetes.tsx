@@ -164,7 +164,7 @@ function ContenuQuetes({ etat }: { etat: QuetesDuJour }) {
   const ouvrirCoffre = (bouton: HTMLButtonElement | null) => {
     if (enCours.has(BONUS_STEP_ID)) return
     partir(BONUS_STEP_ID)
-    sfx.tap()
+    sfx.coffreTremble()
     void (async () => {
       try {
         const demo = lireEncaisseurDemo()

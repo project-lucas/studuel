@@ -6,15 +6,7 @@ import { Button } from '@/components/ui/button'
 import { useTablist } from '@/components/useTablist'
 import { OptionGroup } from '@/components/welcome/OnbBits'
 import { herosEleve, herosParGenre, herosSceneSrc, herosVisageSrc, isHerosKey, type HerosKey } from '@/lib/heros/eleves'
-import {
-  PORTRAITS_PAR_GENRE,
-  genreDuPortrait,
-  isPortraitClassique,
-  portraitPiedSrc,
-  portraitSrc,
-  type GenrePortrait,
-  type PortraitKey,
-} from '@/lib/portraits'
+import { portraitActuel, type GenrePortrait, type PortraitKey } from '@/lib/portraits'
 import { sfx } from '@/lib/sounds'
 import { cn } from '@/lib/utils'
 import s from './ChoixPortrait.module.css'
@@ -41,6 +33,10 @@ import s from './ChoixPortrait.module.css'
 // nouveaux perso ») : dans chaque onglet, les HÉROS d'abord (leur visage ; à
 // l'aperçu, leur scène, leur surnom et leur caractère), puis les anciens
 // blasons. Un compte d'avant les héros peut ainsi en prendre un.
+//
+// PLUS DE BLASONS (05/11/2026, Lucas : « on voit toujours les anciens avatars
+// humains ») : seuls les héros se choisissent ; un ancien blason arrive ici
+// déjà converti en son héros (lib/portraits : portraitActuel).
 //
 // Le composant ne sait rien du compte : il reçoit le choix et le rend. Un seul
 // geste de confirmation, pas de texte sous les vignettes (« un visage se
@@ -71,16 +67,13 @@ export default function ChoixPortrait({
   className?: string
 }) {
   const id = useId()
-  const choisi = isPortraitClassique(choisiBrut) || isHerosKey(choisiBrut) ? choisiBrut : null
-  const herosChoisi = isHerosKey(choisi) ? herosEleve(choisi) : null
-  // L'onglet ouvert : celui du portrait déjà choisi, puis au doigt.
-  const [genre, setGenre] = useState<GenrePortrait>(() =>
-    herosChoisi ? herosChoisi.genre : genreDuPortrait(isPortraitClassique(choisi) ? choisi : null),
-  )
+  const actuel = portraitActuel(choisiBrut)
+  const choisi = isHerosKey(actuel) ? actuel : null
+  const herosChoisi = choisi ? herosEleve(choisi) : null
+  // L'onglet ouvert : celui du héros déjà choisi, puis au doigt.
+  const [genre, setGenre] = useState<GenrePortrait>(() => herosChoisi?.genre ?? 'garcons')
   const tabs = useTablist(ONGLETS.length, (i) => setGenre(ONGLETS[i].id))
-  const liste = PORTRAITS_PAR_GENRE[genre]
   const heros = herosParGenre(genre)
-  const nomGenre = genre === 'garcons' ? 'Garçon' : 'Fille'
 
   return (
     <div className={className}>
@@ -101,17 +94,6 @@ export default function ChoixPortrait({
               </span>
             </span>
           </>
-        ) : choisi && isPortraitClassique(choisi) ? (
-          // eslint-disable-next-line @next/next/no-img-element -- personnage détouré servi tel quel
-          <img
-            key={choisi}
-            src={portraitPiedSrc(choisi)}
-            alt={`Ton personnage : ${nomGenre.toLowerCase()} ${liste.indexOf(choisi) + 1}`}
-            width={200}
-            height={600}
-            draggable={false}
-            className={s.heros}
-          />
         ) : (
           <span role="img" aria-label="Aucun personnage choisi" className={s.vide}>
             ?
@@ -119,7 +101,7 @@ export default function ChoixPortrait({
         )}
         {herosChoisi ? null : (
           <span aria-hidden="true" className={s.etiquette}>
-            {choisi ? 'Ton personnage' : 'Choisis ton personnage'}
+            Choisis ton héros
           </span>
         )}
       </div>
@@ -156,7 +138,6 @@ export default function ChoixPortrait({
         {/* `key={genre}` : la grille se remonte à chaque onglet, et rejoue
             son entrée. OptionGroup porte le `radiogroup` et les flèches. */}
         <div key={genre} className={s.grille}>
-          <p className={cn('titre-section', s.rubrique)}>Héros</p>
           <OptionGroup label={`Héros ${genre === 'garcons' ? 'garçons' : 'filles'}`} className="grid grid-cols-4 gap-3 px-1 pt-1">
             {heros.map((h) => {
               const selected = h.cle === choisi
@@ -176,35 +157,6 @@ export default function ChoixPortrait({
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element -- visage recadré servi tel quel */}
                   <img src={herosVisageSrc(h.cle as HerosKey)} alt="" width={384} height={384} loading="lazy" draggable={false} />
-                  {selected ? (
-                    <span aria-hidden="true" className={s.coche}>
-                      <Check className="size-3.5" strokeWidth={3.5} />
-                    </span>
-                  ) : null}
-                </button>
-              )
-            })}
-          </OptionGroup>
-          <p className={cn('titre-section', s.rubrique)}>Blasons</p>
-          <OptionGroup label={`Blasons de ${genre === 'garcons' ? 'garçons' : 'filles'}`} className="grid grid-cols-4 gap-3 px-1 pt-1">
-            {liste.map((p, i) => {
-              const selected = p === choisi
-              return (
-                <button
-                  key={p}
-                  type="button"
-                  role="radio"
-                  aria-checked={selected}
-                  aria-label={`${nomGenre} ${i + 1}`}
-                  onClick={() => {
-                    if (selected) return
-                    sfx.tap()
-                    onChoisir(p)
-                  }}
-                  className={cn(s.case, selected && s.caseChoisie)}
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element -- buste servi tel quel */}
-                  <img src={portraitSrc(p)} alt="" width={384} height={384} loading="lazy" draggable={false} />
                   {selected ? (
                     <span aria-hidden="true" className={s.coche}>
                       <Check className="size-3.5" strokeWidth={3.5} />

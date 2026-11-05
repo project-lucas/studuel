@@ -37,8 +37,8 @@
 import { createAvatar } from '@dicebear/core'
 import { estAvatarIa, idAvatarIa, srcAvatarIa } from '@/lib/avatar-ia'
 import { openPeeps } from '@dicebear/collection'
-import { isHerosKey } from '@/lib/heros/eleves'
-import { PORTRAIT_KEYS, isPortraitKey, portraitSrc } from '@/lib/portraits'
+import { HEROS_KEYS, isHerosKey } from '@/lib/heros/eleves'
+import { isPortraitKey, portraitActuel, portraitSrc } from '@/lib/portraits'
 import { imagePersonnage, personnageDuPortrait } from '@/lib/personnages-historiques'
 
 // -----------------------------------------------------------------------------
@@ -261,7 +261,9 @@ export const DEFAULT_BANNER: (typeof BANNER_KEYS)[number] = 'uni-lavande'
 export const AVATAR_FIELDS: readonly AvatarField[] = [
   // Plus d'« avatar dessiné » (Lucas, 03/10/2026) : le portrait est obligatoire,
   // un compte d'avant sans blason reçoit le premier au relu (normalizeAvatarConfig).
-  { key: 'portrait', label: 'Portrait', kind: 'style', options: PORTRAIT_KEYS, allowNone: false },
+  // Depuis le 05/11/2026, seuls les HÉROS se choisissent : un ancien blason est
+  // converti en son héros au relu (lib/portraits : portraitActuel).
+  { key: 'portrait', label: 'Portrait', kind: 'style', options: HEROS_KEYS, allowNone: false },
   { key: 'skinColor', label: 'Peau', kind: 'color', options: SKIN_COLORS, allowNone: false },
   { key: 'head', label: 'Coiffure', kind: 'style', options: HEADS, allowNone: false },
   { key: 'face', label: 'Expression', kind: 'style', options: FACES, allowNone: false },
@@ -313,7 +315,7 @@ export function applyFreeAvatarField(
 // Avatar par défaut (proposé au premier passage) — neutre et souriant, haut
 // violet et fond violet clair de la marque.
 export const DEFAULT_AVATAR: AvatarConfig = {
-  portrait: PORTRAIT_KEYS[0],
+  portrait: HEROS_KEYS[0],
   skinColor: 'edb98a',
   head: 'short1',
   face: 'smile',
@@ -328,7 +330,9 @@ export const DEFAULT_AVATAR: AvatarConfig = {
 // Ramène n'importe quelle entrée (valeur DB ou payload d'action) à une config
 // valide : chaque champ est contraint à sa liste d'options, repli sur le défaut.
 export function normalizeAvatarConfig(input: unknown): AvatarConfig {
-  const raw = (input ?? {}) as Record<string, unknown>
+  const brut = (input ?? {}) as Record<string, unknown>
+  // Un ancien blason (élève humain) devient son héros AVANT la validation.
+  const raw: Record<string, unknown> = { ...brut, portrait: portraitActuel(brut.portrait) }
   const pick = (field: AvatarField): string => {
     const v = raw[field.key]
     if (field.allowNone && v === '') return ''

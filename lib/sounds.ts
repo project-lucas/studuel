@@ -2,6 +2,8 @@
 // jingles premium (assets Mixkit dans public/sounds/) pour les moments forts.
 // Utilisable uniquement côté client ; préférence persistée en localStorage.
 
+import { audioContexte } from '@/lib/audio-contexte'
+import { demiTonsPerle, jouerSon } from '@/lib/sons-studuel'
 import { comboSemitones, comboTier, transpose, buzzPattern } from '@/lib/juice'
 import {
   correctTones,
@@ -80,18 +82,7 @@ export function getSoundOnServer(): boolean {
   return false
 }
 
-let ctx: AudioContext | null = null
-
-function ensureCtx(): AudioContext | null {
-  if (typeof window === 'undefined') return null
-  if (!ctx) {
-    const Ctor = window.AudioContext
-    if (!Ctor) return null
-    ctx = new Ctor()
-  }
-  if (ctx.state === 'suspended') void ctx.resume()
-  return ctx
-}
+const ensureCtx = audioContexte
 
 // Une note avec une petite enveloppe pour éviter les clics.
 function note(
@@ -271,10 +262,14 @@ export const sfx = {
   // pluie de pièces de Clash Royale : la récompense s'ENTEND rentrer.
   perle(rang: number) {
     if (!isSoundOn()) return
-    const GAMME = [0, 2, 4, 7, 9]
-    const r = Math.max(0, Math.min(14, Math.floor(rang)))
-    const demiTons = Math.floor(r / 5) * 12 + GAMME[r % 5]
-    note(880 * Math.pow(2, demiTons / 12), 0, 0.09, 'triangle', 0.035)
+    // Depuis le 05/11/2026 : le TIC enregistré (cristal), transposé note par
+    // note — même gamme, même montée, mais un vrai son plutôt qu'un bip.
+    jouerSon('tic', { volume: 0.55, demiTons: demiTonsPerle(rang) }, () => {
+      const GAMME = [0, 2, 4, 7, 9]
+      const r = Math.max(0, Math.min(14, Math.floor(rang)))
+      const demiTons = Math.floor(r / 5) * 12 + GAMME[r % 5]
+      note(880 * Math.pow(2, demiTons / 12), 0, 0.09, 'triangle', 0.035)
+    })
   },
   // Déblocage (badge, chapitre, mode) : notification satisfaisante.
   unlock() {
@@ -284,14 +279,53 @@ export const sfx = {
       note(1046.5, 0.1, 0.18) // do aigu
     })
   },
-  // Ouverture du coffre : cascade scintillante.
+  // Ouverture du coffre : le couvercle saute dans un éclat doré (enregistré).
   treasure() {
     if (!isSoundOn()) return
-    playAsset('treasure', 0.4, () => {
-      note(783.99, 0, 0.09) // sol
-      note(1046.5, 0.09, 0.09) // do aigu
-      note(1318.51, 0.18, 0.2, 'triangle', 0.045) // mi aigu
-    })
+    jouerSon('coffre-ouvre', { volume: 0.85, attenuer: true }, () =>
+      playAsset('treasure', 0.4, () => {
+        note(783.99, 0, 0.09) // sol
+        note(1046.5, 0.09, 0.09) // do aigu
+        note(1318.51, 0.18, 0.2, 'triangle', 0.045) // mi aigu
+      }),
+    )
+  },
+  // Le coffre qui TREMBLE avant de s'ouvrir : l'attente s'entend.
+  coffreTremble() {
+    if (!isSoundOn()) return
+    jouerSon('coffre-tremble', { volume: 0.7 })
+    uiVibrate([8, 40, 8, 40, 8])
+  },
+  // Une récompense APPARAÎT (le ruban, une carte de gain) : un scintillement.
+  scintillement() {
+    if (!isSoundOn()) return
+    jouerSon('scintillement', { volume: 0.6, attenuer: true })
+  },
+  // Une gemme ramassée.
+  piece() {
+    if (!isSoundOn()) return
+    jouerSon('piece', { volume: 0.6 })
+  },
+  // L'ENTRÉE EN COMBAT (EntreeCombat) : le stinger qui monte au tap, le
+  // souffle des lignes de vitesse, l'éclat du blanc.
+  rencontre() {
+    if (!isSoundOn()) return
+    jouerSon('rencontre', { volume: 0.85 }, () => playTones(battleTones()))
+    uiVibrate([14, 30, 22])
+  },
+  vitesse() {
+    if (!isSoundOn()) return
+    jouerSon('vitesse', { volume: 0.7 })
+  },
+  flash() {
+    if (!isSoundOn()) return
+    jouerSon('flash', { volume: 0.8 })
+    uiVibrate(20)
+  },
+  // Les coups du combat des héros (ArenaCombat).
+  impact(critique = false) {
+    if (!isSoundOn()) return
+    jouerSon(critique ? 'critique' : 'impact', { volume: critique ? 0.85 : 0.65 })
   },
   // Montée de niveau : envolée triomphante.
   levelUp() {

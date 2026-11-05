@@ -154,33 +154,24 @@
   align-items: center;
   gap: 2px;
 }
-/* Le sprite : carré arrondi, cerne prune, liseré blanc — le combattant de la
-   planche, sans son plateau. */
+/* Le joueur dans l'anneau de son rang (AvatarRang), au visage de son issue
+   (05/11/2026) : plus de carré cerné — le cadre de rang dit qui il est. */
 .sprite {
   position: relative;
-  width: 96px;
-  height: 96px;
-  border-radius: 22px;
-  overflow: hidden;
-  background: color-mix(in oklch, var(--primary), black 25%);
-  box-shadow:
-    0 0 0 3px var(--prune),
-    0 0 0 6px #fff,
-    0 12px 20px -8px rgb(0 0 0 / 0.7);
+  width: 116px;
+  height: 116px;
+  filter: drop-shadow(0 10px 12px rgb(0 0 0 / 0.45));
 }
+/* Le gagnant : un peu plus grand, auréolé d'or. Le filtre est POSÉ, jamais animé. */
 .spriteTouche {
-  box-shadow:
-    0 0 0 3px var(--prune),
-    0 0 0 6px var(--or),
-    0 0 28px 6px color-mix(in oklch, var(--highlight), transparent 45%);
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 16px color-mix(in oklch, var(--highlight), transparent 25%))
+    drop-shadow(0 10px 12px rgb(0 0 0 / 0.45));
 }
-/* Le perdant : basculé et grisé. Le filtre est POSÉ, jamais animé. */
+/* Le perdant : penché, un peu éteint — son visage en larmes dit le reste. */
 .spriteKo {
-  filter: grayscale(0.7) brightness(0.72);
-  transform: rotate(78deg) translate(6px, 6px);
-  box-shadow:
-    0 0 0 3px var(--prune),
-    0 0 0 6px rgb(255 255 255 / 0.4);
+  transform: rotate(-8deg) translateY(6px) scale(0.94);
+  filter: grayscale(0.3) brightness(0.88) drop-shadow(0 10px 12px rgb(0 0 0 / 0.45));
 }
 .nom {
   margin-top: 10px;

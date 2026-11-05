@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { ArrowLeft, Check, Lock, Pencil, Sparkles } from 'lucide-react'
 import { applyFreeAvatarField, type AvatarConfig } from '@/lib/avatar'
-import { isPortraitKey, type PortraitKey } from '@/lib/portraits'
+import { isPortraitKey, portraitActuel, type PortraitKey } from '@/lib/portraits'
 import type { BadgeState } from '@/lib/badges'
 import { MAX_EQUIPPED } from '@/lib/badges'
 import {
@@ -92,7 +92,7 @@ export default function AvatarStudio({
   // Le portrait en BROUILLON de l'onglet Portrait : choisi dans la grille, il
   // n'est écrit qu'au « Confirmer ». Part du portrait porté, s'il en est un.
   const [brouillon, setBrouillon] = useState<PortraitKey | null>(() =>
-    isPortraitKey(initialConfig.portrait) ? initialConfig.portrait : null,
+    isPortraitKey(portraitActuel(initialConfig.portrait)) ? (portraitActuel(initialConfig.portrait) as PortraitKey) : null,
   )
   const [enregistrement, setEnregistrement] = useState(false)
   const [, startTransition] = useTransition()

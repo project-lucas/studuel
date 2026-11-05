@@ -7,6 +7,7 @@ import XpIcon from '@/components/ui/XpIcon'
 import { CristalIcon } from '@/components/ui/MonnaieIcon'
 import { cn } from '@/lib/utils'
 import { sfx } from '@/lib/sounds'
+import { lancerEntreeCombat } from '@/lib/entree-combat'
 import { CLOCK_STEP_MS, useClock } from '@/lib/use-clock'
 import { accorde, RANK_LABELS, MAX_BOSS_RANK, SCENE_POSITION_DEFAUT } from '@/lib/bosses'
 import {
@@ -349,7 +350,10 @@ export function Taniere({
           {libre ? (
             <Link
               href={`/defi/traque/${boss.id}`}
-              onClick={() => sfx.tap()}
+              onClick={(e) => {
+                e.preventDefault()
+                lancerEntreeCombat(`/defi/traque/${boss.id}`)
+              }}
               className={cn(s.btn, s.btnOr, 'olympe-press font-heading font-extrabold')}
             >
               <Swords className="size-4" strokeWidth={2.6} aria-hidden="true" />

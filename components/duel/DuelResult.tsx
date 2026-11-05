@@ -5,6 +5,8 @@ import Link from 'next/link'
 import { RefreshCw, Shuffle, Swords } from 'lucide-react'
 import ArenaBackdrop from '@/components/ArenaBackdrop'
 import AvatarRender from '@/components/avatar/AvatarRender'
+import AvatarRang from '@/components/AvatarRang'
+import { herosDeLAvatar, herosHumeurSrc } from '@/lib/heros/humeurs'
 import XpIcon from '@/components/ui/XpIcon'
 import PanneauRecompenses from '@/components/recompenses/PanneauRecompenses'
 import { Button } from '@/components/ui/button'
@@ -236,10 +238,27 @@ function Combattant({
   echelon: number | null
 }) {
   const division = index === null ? null : echelon(index)
+  const heros = herosDeLAvatar(camp.avatar?.portrait)
   return (
     <div className={styles.combattant}>
+      {/* LE JOUEUR DANS L'ANNEAU DE SON RANG, au visage de son issue (05/11/2026,
+          Lucas : « voir le cadre des joueurs, un visage qui change s'il a
+          gagné ou perdu ») : un héros sourit poing levé ou pleure à chaudes
+          larmes de dessin animé (lib/heros/humeurs) ; un autre avatar garde
+          son visage. */}
       <div className={cn(styles.sprite, gagnant ? styles.spriteTouche : styles.spriteKo)}>
-        <AvatarRender config={camp.avatar} className="size-full" />
+        <AvatarRang
+          photo={
+            heros ? (
+              // eslint-disable-next-line @next/next/no-img-element -- visage servi tel quel (384 px)
+              <img src={herosHumeurSrc(heros, gagnant ? 'victoire' : 'defaite')} alt="" draggable={false} />
+            ) : (
+              <AvatarRender config={camp.avatar} className="size-full" />
+            )
+          }
+          rang={division ? { id: division.rang.id, division: division.division } : null}
+          className="size-full"
+        />
         {camp.isBot ? <span className="course-robot">IA</span> : null}
       </div>
       <p className={styles.nom}>{label}</p>

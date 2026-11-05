@@ -31,6 +31,7 @@ import ArenaHud, {
 } from '@/components/defi/ArenaHud'
 import ArenaHero from '@/components/defi/ArenaHero'
 import FigerArene from '@/components/defi/FigerArene'
+import MusiqueDeFond from '@/components/son/MusiqueDeFond'
 import {
   buildSubjectLadders,
   defaultSubject,
@@ -512,6 +513,9 @@ export default async function OngletDefi() {
     <div className="-mx-4 -mt-16 -mb-24 flex h-dvh flex-col overflow-hidden px-3 pt-14 pb-[calc(5.75rem+env(safe-area-inset-bottom))] md:mx-0 md:-my-10 md:pt-4 md:pb-4">
       {/* L'arène ne défile pas : le document est figé le temps de cet écran. */}
       <FigerArene />
+      {/* La musique de l'arène, douce (lib/musique) : elle se tait quand on
+          quitte l'onglet et cède la place au combat. */}
+      <MusiqueDeFond piste="arene" />
       {/* Rythme vertical : gap-4 (2x) entre la scène/le podium et le groupe
           d'action du bas, qui règle son espacement interne sur gap-2 (x).
 

@@ -40,6 +40,10 @@
 const PREFIXES_PLEIN_ECRAN = [
   // La session de quiz.
   '/test/',
+  // LA SESSION « MES ERREURS » (05/11/2026) : une session comme le quiz, avec
+  // sa croix et sa feuille de verdict — le bandeau recouvrait son retour et la
+  // barre d'onglets volait la place des réponses. Page exacte (sans barre).
+  '/reviser/revoir',
   // Une DICTÉE — présentation et session. Elles portent leur propre héros
   // sombre et leur propre bouton en bas d'écran : gardées dans le gabarit de
   // l'app, elles héritaient de ses marges (pt-16, pb-24) par-dessus leur
@@ -75,6 +79,8 @@ const PREFIXES_PLEIN_ECRAN = [
   // L'APERÇU DE LA VRAIE COURSE EN COMBAT DE HÉROS (02/11/2026) : DuelCourse
   // de production contre un robot — plein écran comme la course elle-même.
   '/dev/course-heros',
+  // L'APERÇU DE « MES ERREURS » (05/11/2026) : plein écran comme la session.
+  '/dev/erreurs',
 ] as const
 
 /**
